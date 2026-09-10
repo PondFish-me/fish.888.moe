@@ -1,0 +1,412 @@
+{
+  "paper": "数学二",
+  "year": 2002,
+  "count": 20,
+  "questions": [
+    {
+      "id": 952,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 满足初始条件 $\\displaystyle \\left.y\\right|_{x=0}=1,\\\\ \\left.y^{\\prime}\\right|_{x=0}=\\frac{1}{2}$ 的特解是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\sqrt{x+1}$",
+      "analysis": "方法一 令 $y^{\\prime}=p$, 则 $\\displaystyle y^{\\prime \\prime}=p \\frac{\\mathrm{d} p}{\\mathrm{d} y}$, \r\n\r\n方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 化为 $\\displaystyle y p \\frac{\\mathrm{d} p}{\\mathrm{d} y}+p^2=0$.\r\n\r\n因为 $p \\neq 0$, 所以 $\\displaystyle \\frac{\\mathrm{d} p}{\\mathrm{d} y}+\\frac{1}{y} p=0$, \r\n\r\n解得 $\\displaystyle p=C_1 \\mathrm{e}^{-\\int \\frac{1}{y} \\mathrm{d} y}=\\frac{C_1}{y}$,\r\n\r\n由 $\\displaystyle y(0)=1, y^{\\prime}(0)=\\frac{1}{2}$, 得 $\\displaystyle C_1=\\frac{1}{2}$, \r\n\r\n于是 $\\displaystyle y y^{\\prime}=\\frac{1}{2}$, 解得 $\\displaystyle \\frac{1}{2} y^2=\\frac{x}{2}+C$.\r\n\r\n由 $y(0)=1$, 得 $\\displaystyle C=\\frac{1}{2}$, 故 $y=\\sqrt{x+1}$\r\n\r\n方法二 由 $y y^{\\prime \\prime}+y^{\\prime 2}=0$, 得 $\\left(y y^{\\prime}\\right)^{\\prime}=0$, \r\n\r\n解得 $y y^{\\prime}=C_1$. 由 $y(0)=1, y^{\\prime}(0)=\\dfrac{1}{2}$, \r\n\r\n得 $C_1=\\dfrac{1}{2}$, 即 $y y^{\\prime}=\\dfrac{1}{2}$ 或 $\\left(y^2\\right)^{\\prime}=1$, \r\n\r\n解得 $y^2=x+C_2$, 由 $y(0)=1$, \r\n\r\n得 $C_2=1$, 故满足初始条件的特解为 $y=\\sqrt{x+1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "看出 yy''+y'² 恰是 (yy')' 是本题关键，硬套 y''=p·dp/dy 也行但绕",
+        "两次积分要用两个初值：先由 y(0),y'(0) 定 yy'=1/2，再由 y(0) 定平方后的常数"
+      ],
+      "key_point": "(yy')'=0 ⇒ yy'=1/2 ⇒ y²=x+1 ⇒ y=√(x+1)。"
+    },
+    {
+      "id": 957,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 在 $(0,+\\infty)$ 内有界且可导,则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
+        "B": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
+        "C": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$",
+        "D": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$"
+      },
+      "answer": "B",
+      "analysis": "若 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x) \\neq 0$, \r\n\r\n不妨设 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=A>0$.\r\n\r\n取 $\\displaystyle \\varepsilon_0=\\frac{A}{2}>0$, 则存在 $X>0$, \r\n\r\n当 $x>X$ 时, $\\displaystyle \\left|f^{\\prime}(x)-A\\right|<\\frac{A}{2}$, \r\n\r\n于是 $\\displaystyle f^{\\prime}(x)>\\frac{A}{2}$.\r\n\r\n当 $x>X$ 时, $f(x)-f(X)=f^{\\prime}(\\xi)(x-X)$, \r\n\r\n其中 $\\xi \\in(X, x)$,\r\n\r\n则 $\\displaystyle f(x)>f(X)+\\frac{A}{2}(x-X)$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow+\\infty}\\left[f(X)+\\frac{A}{2}(x-X)\\right]=+\\infty$, \r\n\r\n所以 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, \r\n\r\n与 $f(x)$ 有界矛盾, 应选 $(\\mathrm{B})$",
+      "wrong_options": {
+        "A": "f(x)→0 推不出 f'(x)→0：可造衰减振荡函数（如 sin(x²)/x 型），值趋 0 但导数不趋 0。",
+        "C": "把 x→+∞ 的结论错移到 x→0⁺：端点邻域内无界性论证失效，命题不真。",
+        "D": "f' 在 0⁺ 存在极限也推不出该极限为 0，0 点处无'有界⇒导数趋0'的机制。"
+      },
+      "pitfalls": [
+        "正确项是'f' 存在极限则必为 0'：由中值定理 f(x)-f(X)=f'(ξ)(x-X)，f' 有非零极限会让 f 无界",
+        "有界性只在 x→+∞ 处产生矛盾；A/C/D 混淆了极限方向或颠倒了 f 与 f' 的因果"
+      ],
+      "key_point": "设 lim f'=A≠0，由拉格朗日中值定理 f(x)≈f(X)+A(x-X)/... 无界，矛盾，故 lim f'=0，选 B。"
+    },
+    {
+      "id": 967,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 4 阶方阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}\\right), \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 均为 $4$ 维列向量, 其中 $\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 线性无关, $\\boldsymbol{\\alpha}_{1}=2 \\boldsymbol{\\alpha}_{2}-\\boldsymbol{\\alpha}_{3}$. 如果 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{4}$, 求线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解",
+      "options": {},
+      "answer": "$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
+      "analysis": "因为 $\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 线性无关, 而 $\\boldsymbol{\\alpha}_1=2 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 的秩为 $3$, 于是 $r(\\boldsymbol{A})=3$. \r\n\r\n又因为 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n所以 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=3,\\\\\r\n \\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系含一个线性无关的解向量,\r\n\r\n而 $\\boldsymbol{A x}=\\mathbf{0}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{\\alpha}_1-2 \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3+0 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系为 $\\boldsymbol{\\xi}=(1,-2,1,0)^{\\mathrm{T}}$,\r\n\r\n又 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\boldsymbol{\\beta}$ \r\n\r\n且 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n则方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 的特解为 $\\boldsymbol{\\eta}=(1,1,1,1)^{\\mathrm{T}}$, \r\n\r\n故方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解为\r\n\r\n$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "α₂,α₃,α₄ 无关且 α₁=2α₂-α₃ ⇒ r(A)=3，Ax=0 基础解系恰含一个向量",
+        "关系 α₁-2α₂+α₃=0 直接读出齐次解 (1,-2,1,0)ᵀ；β=α₁+α₂+α₃+α₄ 直接读出特解 (1,1,1,1)ᵀ，不必解方程"
+      ],
+      "key_point": "r(A)=3，齐次解 (1,-2,1,0)ᵀ、特解 (1,1,1,1)ᵀ，通解 x=k(1,-2,1,0)ᵀ+(1,1,1,1)ᵀ。"
+    },
+    {
+      "id": 1582,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1-\\mathrm{e}^{\\tan x}}{\\arcsin \\frac{x}{2}}, & x>0 \\\\ a \\mathrm{e}^{2 x}, & x \\leqslant 0\\end{array}\\right.$ 在 $x=0$ 处连续, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "-2",
+      "analysis": "$\\displaystyle f(0+0)=\\lim _{x \\rightarrow 0^{+}} f(x)\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{-\\tan x}{\\frac{x}{2}}=-2,\\\\\r\nf(0)=f(0-0)=a$,\r\n\r\n由 $f(x)$ 在 $x=0$ 连续, 得 $a=-2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=0 处 f(0)=ae^0=a 来自 x≤0 分支，等号成立才连续",
+        "右极限用等价无穷小 1-e^{tanx}~-tanx~-x、arcsin(x/2)~x/2，比值 -2"
+      ],
+      "key_point": "右极限=-2=f(0)=a，故 a=-2。"
+    },
+    {
+      "id": 1583,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "位于曲线 $y=x \\mathrm{e}^{-x}(x \\geqslant 0)$ 下方、 $x$ 轴上方的无界图形的面积为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "所求的面积为 $\\displaystyle A=\\int_0^{+\\infty} x \\mathrm{e}^{-x} \\mathrm{d} x=\\Gamma(2)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "区域无界，面积是反常积分，收敛性由 xe^{-x} 指数衰减保证",
+        "∫₀^{+∞}xe^{-x}dx=Γ(2)=1!=1，别算成2"
+      ],
+      "key_point": "面积=∫₀^{+∞}xe^{-x}dx=1。"
+    },
+    {
+      "id": 1584,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left[\\sqrt{1+\\cos \\frac{\\pi}{n}}+\\sqrt{1+\\cos \\frac{2 \\pi}{n}}+\\cdots+\\sqrt{1+\\cos \\frac{n \\pi}{n}}\\right]=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2 \\sqrt{2}}{\\pi}$",
+      "analysis": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left(\\sqrt{1+\\cos \\frac{\\pi}{n}}+\\sqrt{1+\\cos \\frac{2 \\pi}{n}}+\\cdots+\\sqrt{1+\\cos \\frac{n \\pi}{n}}\\right) \\\\\r\n= \\int_0^1 \\sqrt{1+\\cos \\pi x} \\mathrm{d} x \\\\\r\n= \\frac{1}{\\pi} \\int_0^\\pi \\sqrt{1+\\cos x} \\mathrm{d} x\\\\\r\n=\\frac{2 \\sqrt{2}}{\\pi} \\int_0^\\pi \\cos \\frac{x}{2} \\mathrm{d}\\left(\\frac{x}{2}\\right)\\\\\r\n=\\frac{2 \\sqrt{2}}{\\pi}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "和式 (1/n)Σf(k/n) 对应 ∫₀¹f(x)dx，区间是 [0,1] 不是 [0,π]",
+        "1+cosπx=2cos²(πx/2)，开根取绝对值，在 [0,1] 上 cos(πx/2)≥0"
+      ],
+      "key_point": "黎曼和 →∫₀¹√(1+cosπx)dx=2√2/π。"
+    },
+    {
+      "id": 1585,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "矩阵 $\\left(\\begin{array}{ccc}0 & -2 & -2 \\\\ 2 & 2 & -2 \\\\ -2 & -2 & 2\\end{array}\\right)$ 的非零特征值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda & 2 & 2 \\\\ -2 & \\lambda-2 & 2 \\\\ 2 & 2 & \\lambda-2\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccc}\r\n\\lambda & 0 & 2 \\\\\r\n-2 & \\lambda-4 & 2 \\\\\r\n0 & 0 & \\lambda\r\n\\end{array}\\right|\\\\\r\n=\\lambda^2(\\lambda-4)=0$,\r\n\r\n得 $\\lambda_1=\\lambda_2=0, \\lambda_3=4$, 故 $\\boldsymbol{A}$ 的非零特征值为 $4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "行列式含公因子可先列变换化简再展开，避免硬展开出错",
+        "λ=0 是二重根，非零特征值只有 4"
+      ],
+      "key_point": "|λE-A|=λ²(λ-4)，非零特征值为 4。"
+    },
+    {
+      "id": 1586,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u)$ 可导, $y=f\\left(x^2\\right)$, 当自变量 $x$ 在 $x=-1$ 处取得增量 $\\Delta x=-0.1$ 时, 相应的函数增量 $\\Delta y$ 的线性主部为 $0.1$ , 则 $f^{\\prime}(1)=(\\quad)$",
+      "options": {
+        "A": "$-1$",
+        "B": "$0.1$",
+        "C": "$1$",
+        "D": "$0.5$"
+      },
+      "answer": "D",
+      "analysis": "$y^{\\prime}=2 x f^{\\prime}\\left(x^2\\right), y^{\\prime}(-1)=-2 f^{\\prime}(1),\\\\\r\n\\mathrm{d} y=y^{\\prime}(-1) \\Delta x$,\r\n\r\n由题意得 $0.1=-2 f^{\\prime}(1) \\cdot(-0.1)$, \r\n\r\n解得 $\\displaystyle f^{\\prime}(1)=\\frac{1}{2}$, 应选 (D)",
+      "wrong_options": {
+        "A": "把 y'(-1)=-2f'(1) 的符号或系数弄错得 -1",
+        "B": "直接把主部 0.1 当成 f'(1)",
+        "C": "漏掉复合的系数 2x 得 f'(1)=1"
+      },
+      "pitfalls": [
+        "线性主部=微分=y'(-1)·Δx，注意 y'(-1)=2(-1)f'(1)=-2f'(1) 带负号",
+        "0.1=-2f'(1)·(-0.1) 两个负号相乘为正，解得 f'(1)=1/2"
+      ],
+      "key_point": "dy=-2f'(1)·(-0.1)=0.1 ⟹ f'(1)=1/2，选D。"
+    },
+    {
+      "id": 1587,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, 则下列函数中, 必为偶函数的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^x f\\left(t^2\\right) \\mathrm{d} t$",
+        "B": "$\\displaystyle \\int_0^x f^2(t) \\mathrm{d} t$",
+        "C": "$\\displaystyle \\int_0^x t[f(t)-f(-t)] \\mathrm{d} t$",
+        "D": "$\\displaystyle \\int_0^x t[f(t)+f(-t)] \\mathrm{d} t$"
+      },
+      "answer": "D",
+      "analysis": "因为 $t[f(t)+f(-t)]$ 为奇函数, \r\n\r\n所以 $\\displaystyle \\int_0^x t[f(t)+f(-t)] \\mathrm{d} t$ 为偶函数, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "f(t²) 偶，∫₀ˣ偶函数为奇函数，非偶",
+        "B": "f²(t) 奇偶性不定，积分奇偶性不定",
+        "C": "t[f(t)-f(-t)] 为偶，其变限积分为奇函数"
+      },
+      "pitfalls": [
+        "∫₀ˣh 为偶⟺h 为奇（对 x 求导后偶=奇矛盾，须 h 奇）",
+        "t[f(t)+f(-t)] 是奇×偶=奇，故积分偶；D 正确"
+      ],
+      "key_point": "被积 t[f(t)+f(-t)] 为奇函数，其变限积分为偶函数，选D。"
+    },
+    {
+      "id": 1588,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $y=y(x)$ 是二阶常系数微分方程 $y^{\\prime \\prime}+p y^{\\prime}+q y=\\mathrm{e}^{3 x}$ 满足初始条件 $y(0)=y^{\\prime}(0)=0$ 的特解, 则当 $x \\rightarrow 0$ 时, 函数 $\\displaystyle \\frac{\\ln \\left(1+x^2\\right)}{y(x)}$ 的极限 $(\\quad)$",
+      "options": {
+        "A": "不存在",
+        "B": "等于 $1$",
+        "C": "等于 $2$",
+        "D": "等于 $3$"
+      },
+      "answer": "C",
+      "analysis": "将 $y(0)=y^{\\prime}(0)=0$ 代入原方程得 $y^{\\prime \\prime}(0)=1$,\r\n则 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\ln \\left(1+x^2\\right)}{y(x)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2}{y(x)}\\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{x}{y^{\\prime}(x)}\\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{1}{\\frac{y^{\\prime}(x)-y^{\\prime}(0)}{x}}\\\\\r\n=\\frac{2}{y^{\\prime \\prime}(0)}=2$\r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "误判分母 y(x) 趋0速度得极限不存在",
+        "B": "只除一次或漏系数得1",
+        "D": "把 y''(0) 或系数算错得3"
+      },
+      "pitfalls": [
+        "无需解出 y(x)，把 y(0)=y'(0)=0 代方程直接得 y''(0)=1",
+        "ln(1+x²)~x²，再用 y(0)=y'(0)=0 及导数定义得极限=2/y''(0)=2"
+      ],
+      "key_point": "代入得 y''(0)=1，极限=2/y''(0)=2，选C。"
+    },
+    {
+      "id": 1589,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关, 向量 $\\boldsymbol{\\beta}_1$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 而向量 $\\boldsymbol{\\beta}_2$ 不能由向量 $\\boldsymbol{\\alpha}_1$, $\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 则对于任意常数 $k$, 必有 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, k \\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2$ 线性无关",
+        "B": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, k \\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2$ 线性相关",
+        "C": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\beta}_1+k \\boldsymbol{\\beta}_2$ 线性无关",
+        "D": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\beta}_1+k \\boldsymbol{\\beta}_2$ 线性相关"
+      },
+      "answer": "A",
+      "analysis": "因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关, \r\n\r\n且 $k \\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2$ 不可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示,\r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_z, \\boldsymbol{\\alpha}_3, k \\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2$ 线性无关, 应选 (A)",
+      "wrong_options": {
+        "B": "把无关误判为相关",
+        "C": "β₁+kβ₂ 当 k=0 退化为可表出的 β₁，不能保证无关",
+        "D": "把 A 的正确结论判成相关"
+      },
+      "pitfalls": [
+        "kβ₁+β₂：β₁ 可表出、β₂ 不可表出，其和永远含不可表出成分，故不可表出",
+        "C 项 β₁+kβ₂ 当 k=0 变成 β₁（可表出），加入后相关，故 C 不恒成立"
+      ],
+      "key_point": "kβ₁+β₂ 恒不可由 α 组表出，故 α₁,α₂,α₃,kβ₁+β₂ 线性无关，选A。"
+    },
+    {
+      "id": 1590,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线的极坐标方程是 $r=1-\\cos \\theta$, 求该曲线上对应于 $\\theta=\\dfrac{\\pi}{6}$ 处的切线与法线的直角坐标方程",
+      "options": {},
+      "answer": "切线方程为 $y=x-\\dfrac{3 \\sqrt{3}}{4}+\\dfrac{5}{4}$, \r\n\r\n法线方程为 $y=-x+\\dfrac{\\sqrt{3}}{4}-\\dfrac{1}{4}$",
+      "analysis": "曲线的参数方程是 $\\left\\{\\begin{array}{l}x=(1-\\cos \\theta) \\cos \\theta \\\\ y=(1-\\cos \\theta) \\sin \\theta \\end{array}\\right.$ \r\n\r\n当 $\\displaystyle \\theta=\\frac{\\pi}{6}$ 时, \r\n\r\n曲线上对应的点的坐标为 $\\displaystyle M_0\\left(\\frac{\\sqrt{3}}{2}-\\frac{3}{4}, \\frac{1}{2}-\\frac{\\sqrt{3}}{4}\\right),\\\\\r\n\\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} \\theta}{\\mathrm{d} x / \\mathrm{d} \\theta}\\\\\r\n=\\frac{\\sin ^2 \\theta+(1-\\cos \\theta) \\cos \\theta}{\\sin \\theta \\cos \\theta-(1-\\cos \\theta) \\sin \\theta}\\\\\r\n\\left. \\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{\\theta=\\frac{\\pi}{6}}=1$\r\n\r\n切线方程为 $y=x-\\dfrac{3 \\sqrt{3}}{4}+\\dfrac{5}{4}$,\r\n\r\n法线方程为 $y=-x+\\dfrac{\\sqrt{3}}{4}-\\dfrac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "r=1-cosθ 要先化 x=(1-cosθ)cosθ、y=(1-cosθ)sinθ 再参数求导",
+        "θ=π/6 处切点坐标含 √3/2-3/4 等，代入别算错；法线斜率取切线负倒数"
+      ],
+      "key_point": "参数求导得 θ=π/6 处斜率1，切线 y=x-3√3/4+5/4，法线 y=-x+√3/4-1/4。"
+    },
+    {
+      "id": 1591,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $ f(x)=\\left\\{\\begin{array}{ll}2 x+\\dfrac{3}{2} x^2, & -1 \\leqslant x<0 \\\\ \\dfrac{x \\mathrm{e}^x}{\\left(\\mathrm{e}^x+1\\right)^2}, & 0 \\leqslant x \\leqslant 1 \\end{array}\\right.$ \r\n\r\n求函数 $\\displaystyle F(x)=\\int_{-1}^x f(t) \\mathrm{d} t$ 的表达式",
+      "options": {},
+      "answer": "$F(x)= \\begin{cases}\\dfrac{x^3}{2}+x^2-\\dfrac{1}{2}, & -1 \\leqslant x<0 \\\\\r\n-\\dfrac{x}{\\mathrm{e}^x+1}-\\ln \\dfrac{\\mathrm{e}^x+1}{\\mathrm{e}^x}+\\ln 2-\\dfrac{1}{2}, & 0 \\leqslant x \\leqslant 1\\end{cases}$",
+      "analysis": "当 $-1 \\leqslant x<0$ 时,\r\n\r\n$\\displaystyle F(x)=\\int_{-1}^x\\left(2 t+\\frac{3}{2} t^2\\right) \\mathrm{d} t=\\frac{x^3}{2}+x^2-\\frac{1}{2}$\r\n\r\n当 $0 \\leqslant x \\leqslant 1$ 时,\r\n\r\n$\\displaystyle F(x)=\\int_{-1}^0\\left(2 t+\\frac{3}{2} t^2\\right) \\mathrm{d} t+\\int_0^x \\frac{t \\mathrm{e}^t}{\\left(\\mathrm{e}^t+1\\right)^2} \\mathrm{d} t \\\\\r\n=-\\frac{1}{2}-\\int_0^x t \\mathrm{d}\\left(\\frac{1}{\\mathrm{e}^t+1}\\right) \\\\\r\n=-\\frac{1}{2}-\\left.\\frac{t}{\\mathrm{e}^t+1}\\right|_0 ^x+\\int_0^x \\frac{\\mathrm{d} t}{\\mathrm{e}^t+1} \\\\\r\n=-\\frac{1}{2}-\\frac{x}{\\mathrm{e}^x+1}+\\left.\\left(t-\\ln \\left(\\mathrm{e}^t+1\\right)\\right)\\right|_0 ^x \\\\\r\n=-\\frac{x}{\\mathrm{e}^x+1}-\\ln \\frac{\\mathrm{e}^x+1}{\\mathrm{e}^x}+\\ln 2-\\frac{1}{2}$\r\n\r\n故 $F(x)= \\begin{cases}\\dfrac{x^3}{2}+x^2-\\dfrac{1}{2}, & -1 \\leqslant x<0 \\\\\r\n-\\dfrac{x}{\\mathrm{e}^x+1}-\\ln \\dfrac{\\mathrm{e}^x+1}{\\mathrm{e}^x}+\\ln 2-\\dfrac{1}{2}, & 0 \\leqslant x \\leqslant 1\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x≥0 段要先积满 [-1,0]（得 -1/2）再加 [0,x] 段，保证 F 连续",
+        "tⁿeᵗ/(eᵗ+1)² 凑成 -t·d(1/(eᵗ+1)) 再分部，别硬拆"
+      ],
+      "key_point": "分段积分：x<0 得 x³/2+x²-1/2；x≥0 分部得含 ln 表达式。"
+    },
+    {
+      "id": 1592,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 在 $(0,+\\infty)$ 内可导, $f(x)>0,\\\\ \\displaystyle \r\n\\lim _{x \\to +\\infty} f(x)=1$, 且满足 $\\displaystyle \\lim _{h \\rightarrow 0}\\left[\\frac{f(x+h x)}{f(x)}\\right]^{\\frac{1}{h}}=\\mathrm{e}^{\\frac{1}{x}}$, 求 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=\\mathrm{e}^{-\\frac{1}{x}}$",
+      "analysis": "由 $\\displaystyle \\lim _{h \\rightarrow 0}\\left[\\frac{f(x+h x)}{f(x)}\\right]^{\\frac{1}{h}}=\\\\\r\n\\lim _{h \\rightarrow 0}\\left\\{\\left[1+\\frac{f(x+h x)-f(x)}{f(x)}\\right]^{\\frac{f(x)}{f(x+h x)-f(x)}}\\right\\}^{x \\cdot \\frac{f(x+h x)-f(x)}{f(x) h x}}\\\\\r\n=\\mathrm{e}^{\\frac{x f^{\\prime}(x)}{f(x)}}$\r\n\r\n得 $ \\dfrac{x f^{\\prime}(x)}{f(x)}=\\dfrac{1}{x}$, \r\n\r\n解得 $f(x)=C \\mathrm{e}^{\\int \\frac{1}{x^2} \\mathrm{d} x}=\\mathrm{Ce}^{-\\frac{1}{x}}$\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=1$, 得 $C=1$, \r\n\r\n故 $f(x)=\\mathrm{e}^{-\\frac{1}{x}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "[f(x+hx)/f(x)]^{1/h} 是 1^∞ 型，取对数极限得指数 x·f'(x)/f(x)",
+        "解得 f=Ce^{-1/x}，由 lim_{x→∞}f=1 得 C=1"
+      ],
+      "key_point": "极限化得 f'/f=1/x²，解 f=Ce^{-1/x}，C=1，f=e^{-1/x}。"
+    },
+    {
+      "id": 1593,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $x \\mathrm{d} y+(x-2 y) \\mathrm{d} x=0$ 的一个解 $y=y(x)$, 使得由曲线 $y=y(x)$ 与直线 $x=1, x=2$ 以及 $x$ 轴所围成的平面图形绕 $x$ 轴旋转一周的旋转体体积最小",
+      "options": {},
+      "answer": "$y=x-\\dfrac{75}{124} x^2$",
+      "analysis": "$x \\mathrm{d} y+(x-2 y) \\mathrm{d} x=0$ \r\n\r\n化为 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}-\\frac{2}{x} y=-1$, \r\n\r\n解得  $\\displaystyle y=\\left[\\int(-1) \\mathrm{e}^{\\int-\\frac{2}{x} d x} \\mathrm{d} x+C\\right] \\mathrm{e}^{-\\int-\\frac{2}{x} \\mathrm{d} d x} \\\\ \r\n=C x^2+x,\\\\\r\nV=\\pi \\int_1^2\\left(C x^2+x\\right)^2 \\mathrm{d} x\\\\\r\n=\\pi\\left(\\frac{31}{5} C^2+\\frac{15}{2} C+\\frac{7}{3}\\right)$,\r\n\r\n令 $V^{\\prime}=\\pi\\left(\\dfrac{62}{5} C+\\dfrac{15}{2}\\right)=0$ 得 $C=-\\dfrac{75}{124}$,\r\n\r\n因为 $V^{\\prime \\prime}=\\dfrac{62}{5} \\pi>0$, 所以 $C=-\\dfrac{75}{124}$ 时, 体积最小, \r\n\r\n故 $y=x-\\dfrac{75}{124} x^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "通解含任意常数 C，体积 V 是 C 的二次函数，对 C（非 x）求导求最小",
+        "V''=62π/5>0 确认是最小值，C=-75/124"
+      ],
+      "key_point": "通解 y=Cx²+x，V(C) 最小在 C=-75/124，故 y=x-75/124·x²。"
+    },
+    {
+      "id": 1594,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某闸门的形状与大小如图所示, 其中直线 $l$ 为对称轴, 闸门的 上部为矩形 $A B C D$, 下部由二次抛物线与线段 $A B$ 所围成. 当水面与闸门的上端相平时, 要使闸门矩形部分承受的水压力与下部承受的水压力之比为 $5: 4$, 闸门矩形部分的高 $h$ 应为多少米?\n\n![闸门形状与尺寸](/uploads/books/e0c25a08822236631666aa178bb73b9e5a7049d5ee231671f8aa25514fd023df.jpg)",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "建立坐标系如图所示\r\n\r\n抛物线方程为 $y=x^2$,\r\n\r\n设闸门上部的压力大小为 $F_1$,\r\n\r\n取 $[y, y+\\mathrm{d} y] \\subset[1, h+1]$,\r\n\r\n$\\mathrm{d} F_1=\\rho g(h+1-y) \\cdot 2 \\cdot \\mathrm{d} y$, \r\n\r\n则\r\n$\\displaystyle F_1=2 \\rho g \\int_1^{h+1}(h+1-y) \\mathrm{d} y=\\rho g h^2 ;$\r\n\r\n设下部的压力大小为 $F_2$,\r\n\r\n取 $[y, y+\\mathrm{d} y] \\subset[0,1]$,\r\n\r\n$\\mathrm{d} F_2=\\rho g(h+1-y) \\cdot 2 \\sqrt{y} \\mathrm{d} y$, 则\r\n\r\n$\\displaystyle F_2=2 \\rho g \\int_0^1(h+1-y) \\sqrt{y} \\mathrm{d} y=4 \\rho g\\left(\\frac{h}{3}+\\frac{2}{15}\\right)$,\r\n\r\n由 $F_1: F_2=5: 4$ 得 $h=2$, 即闸门高度应为 2 米",
+      "wrong_options": {},
+      "pitfalls": [
+        "压力微元 dF=ρg·(液面到该层深度)·宽度·dy，深度随 y 变化不是常数",
+        "抛物线段宽度为 2√y（由 y=x²），与矩形段宽度2不同，积分限也不同"
+      ],
+      "key_point": "F₁=ρgh²、F₂=4ρg(h/3+2/15)，由 5:4 解得 h=2。"
+    },
+    {
+      "id": 1595,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $0<x_1<3, x_{n+1}=\\sqrt{x_n\\left(3-x_n\\right)}\\\\ (n=1,2, \\cdots)$, 证明数列 $\\left\\{x_n\\right\\}$ 的极限存在, 并求此极限",
+      "options": {},
+      "answer": "$\\dfrac{3}{2}$",
+      "analysis": "由 $\\displaystyle x_{n+1} \\leqslant \\frac{x_n+\\left(3-x_n\\right)}{2}=\\frac{3}{2}$, \r\n\r\n得数列 $\\left\\{x_n\\right\\}$ 有上界;\r\n\r\n由 $\\displaystyle x_{n+1}-x_n=\\sqrt{x_n\\left(3-x_n\\right)}-x_n\\\\\r\n=\\frac{2 x_n\\left(\\frac{3}{2}-x_n\\right)}{\\sqrt{x_n\\left(3-x_n\\right)}+x_n} \\geqslant 0$, \r\n\r\n得 $\\left\\{x_n\\right\\}$ 单调递增, \r\n\r\n由极限存在定理得数列 $\\left\\{x_n\\right\\}$ 极限存在.\r\n\r\n令 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\\\ x_n=A, x_{n+1}=\\sqrt{x_n\\left(3-x_n\\right)}$ \r\n两边取极限得 \r\n\r\n$A=\\sqrt{A(3-A)}$, 解得 $A=\\dfrac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先证有界（均值不等式给上界3/2）再证单调，两者缺一不可用单调有界准则",
+        "求极限对递推式两边取极限解方程 A=√(A(3-A))，舍去不合理根"
+      ],
+      "key_point": "单调递增有上界 3/2，极限 A 满足 A=√(A(3-A))，得 A=3/2。"
+    },
+    {
+      "id": 1596,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $0<a<b$, 证明不等式 \r\n\r\n$\\dfrac{2 a}{a^2+b^2}<\\dfrac{\\ln b-\\ln a}{b-a}<\\dfrac{1}{\\sqrt{a b}}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "由拉格朗日中值定理得 $\\displaystyle \\frac{\\ln b-\\ln a}{b-a}=\\frac{1}{\\xi}(a<\\xi<b)$,\r\n\r\n由 $\\displaystyle \\frac{1}{\\xi}>\\frac{1}{b}>\\frac{2 a}{a^2+b^2}$ \r\n\r\n得 $\\displaystyle \\frac{2 a}{a^2+b^2}<\\frac{\\ln b-\\ln a}{b-a}$;\r\n\r\n$\\displaystyle \\frac{1}{\\sqrt{a b}}>\\frac{\\ln b-\\ln a}{b-a}$ 等价于 $\\displaystyle \\frac{b-a}{\\sqrt{a b}}>\\ln b-\\ln a$, \r\n\r\n即 $\\displaystyle \\frac{\\sqrt{b}}{\\sqrt{a}}-\\frac{\\sqrt{a}}{\\sqrt{b}}>\\ln b-\\ln a$,\r\n\r\n令 $\\displaystyle f(x)=\\frac{\\sqrt{x}}{\\sqrt{a}}-\\frac{\\sqrt{a}}{\\sqrt{x}}-(\\ln x-\\ln a), f(a)=0,\\\\ \r\nf^{\\prime}(x)=\\frac{1}{2 \\sqrt{a} \\cdot \\sqrt{x}}+\\frac{\\sqrt{a}}{2 x \\sqrt{x}}-\\frac{1}{x}=\\frac{(\\sqrt{x}-\\sqrt{a})^2}{2 \\sqrt{a} x \\sqrt{x}}>0(x>a)$,\r\n\r\n由 $\\left\\{\\begin{array}{l}f(a)=0 \\\\ f^{\\prime}(x)>0(x>a)\\end{array}\\right.$ 得 $f(x)>0(x>a)$,\r\n\r\n因为 $b>a$, 所以 $f(b)>0$, \r\n\r\n即 $\\displaystyle \\frac{\\sqrt{b}}{\\sqrt{a}}-\\frac{\\sqrt{a}}{\\sqrt{b}}>\\ln b-\\ln a$,\r\n\r\n故 $\\dfrac{2 a}{a^2+b^2}<\\dfrac{\\ln b-\\ln a}{b-a}<\\dfrac{1}{\\sqrt{a b}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "左端用拉格朗日 1/ξ 结合 1/ξ>1/b>2a/(a²+b²)（后者由 a²+b²>2ab 即 b>2a·b... 均值放缩）",
+        "右端不能只靠中值定理，需构造辅助函数并用 f(a)=0、f'>0 证 f(b)>0"
+      ],
+      "key_point": "拉格朗日证左端，辅助函数单调性证右端，得双侧不等式。"
+    },
+    {
+      "id": 1597,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 的某个邻域内具有二阶连续导数, 且 $f(0) \\neq 0, f^{\\prime}(0) \\neq 0, f^{\\prime \\prime}(0) \\neq 0$. 证明: 存在唯一的一组实数 $\\lambda_1, \\lambda_2, \\lambda_3$, 使得当 $h \\rightarrow 0$ 时, $\\lambda_1 f(h)+\\lambda_2 f(2 h)+\\lambda_3 f(3 h)-$ $f(0)$ 是比 $h^2$ 高阶的无穷小",
+      "options": {},
+      "answer": "略",
+      "analysis": "设 $\\lambda_1 f(h)+\\lambda_2 f(2 h)+\\lambda_3 f(3 h)-f(0)=o\\left(h^2\\right)$,\r\n\r\n取 $h=0$ 得 $\\lambda_1 f(0)+\\lambda_2 f(0)+\\lambda_3 f(0)-f(0)=0$,\r\n\r\n由 $f(0) \\neq 0$ 得 $\\lambda_1+\\lambda_2+\\lambda_3=1$,\r\n\r\n由 $\\lambda_1 f(h)+\\lambda_2 f(2 h)+\\lambda_3 f(3 h)-f(0)=o\\left(h^2\\right)$, \r\n\r\n得 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{\\lambda_1 f(h)+\\lambda_2 f(2 h)+\\lambda_3 f(3 h)-f(0)}{h}=0$,\r\n\r\n而 $\\displaystyle \\lim _{h \\rightarrow 0}\\left[\\lambda_1 \\frac{f(h)-f(0)}{h}+2 \\lambda_2 \\frac{f(2 h)-f(0)}{2 h}+3 \\lambda_3 \\frac{f(3 h)-f(0)}{3 h}\\right]\\\\\r\n=\\left(\\lambda_1+2 \\lambda_2+3 \\lambda_3\\right) f^{\\prime}(0)$\r\n\r\n所以 $\\left(\\lambda_1+2 \\lambda_2+3 \\lambda_3\\right) f^{\\prime}(0)=0$,\r\n\r\n再由 $f^{\\prime}(0) \\neq 0$ 得 $\\lambda_1+2 \\lambda_2+3 \\lambda_3=0$\r\n\r\n由 $\\lambda_1 f^{\\prime}(h)+2 \\lambda_2 f^{\\prime}(2 h)+3 \\lambda_3 f^{\\prime}(3 h)=o(h)$ \r\n\r\n得 $\\displaystyle \r\n\\lim _{h \\rightarrow 0} \\frac{\\lambda_1 f^{\\prime}(h)+2 \\lambda_2 f^{\\prime}(2 h)+3 \\lambda_3 f^{\\prime}(3 h)}{h}=0$\r\n\r\n而\r\n\r\n$\\displaystyle  \\lim _{h \\rightarrow 0} \\frac{\\lambda_1 f^{\\prime}(h)+2 \\lambda_2 f^{\\prime}(2 h)+3 \\lambda_3 f^{\\prime}(3 h)}{h} \\\\\r\n= \\lim _{h \\rightarrow 0}\\left[\\lambda_1 \\frac{f^{\\prime}(h)-f^{\\prime}(0)}{h}+4 \\lambda_2 \\frac{f^{\\prime}(2 h)-f^{\\prime}(0)}{2 h}+9 \\lambda_3 \\frac{f^{\\prime}(3 h)-f^{\\prime}(0)}{3 h}\\right] \\\\\r\n= \\left(\\lambda_1+4 \\lambda_2+9 \\lambda_3\\right) f^{\\prime \\prime}(0)$\r\n\r\n且 $f^{\\prime \\prime}(0) \\neq 0$, 则 $\\lambda_1+4 \\lambda_2+9 \\lambda_3=0$\r\n\r\n因为 $\\left|\\begin{array}{lll}1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 4 & 9\\end{array}\\right|=(3-1)(3-2)(2-1)=2 \\neq 0$, \r\n\r\n所以存在唯一一组常数 $\\lambda_1, \\lambda_2, \\lambda_3$, 使得\r\n\r\n$\\lambda_1 f(h)+\\lambda_2 f(2 h)+\\lambda_3 f(3 h)-f(0)=o\\left(h^2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三个条件分别由 h⁰、h¹、h² 阶为0导出，每次用导数定义提取 f'(0)、f''(0) 系数",
+        "系数矩阵是范德蒙德行列式（结点1,2,3）=2≠0，故解存在且唯一"
+      ],
+      "key_point": "逐阶提取得3个线性方程，系数范德蒙德行列式≠0，唯一确定 λ₁,λ₂,λ₃。"
+    },
+    {
+      "id": 1598,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}, \\boldsymbol{B}$ 为 3 阶矩阵, 且满足 $2 \\boldsymbol{A}^{-1} \\boldsymbol{B}=\\boldsymbol{B}-4 \\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 是 3 阶单位矩阵\r\n\r\n(1) 证明: 矩阵 $\\boldsymbol{A}-2 \\boldsymbol{E}$ 可逆;\r\n\r\n(2) 若 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & -2 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, 求矩阵 $\\boldsymbol{A}$",
+      "options": {},
+      "answer": "(2) $\\left(\\begin{array}{ccc}0 & 2 & 0 \\\\ -1 & -1 & 0 \\\\ 0 & 0 & -2\\end{array}\\right)$",
+      "analysis": "(1) 由 $2 \\boldsymbol{A}^{-1} \\boldsymbol{B}=\\boldsymbol{B}-4 \\boldsymbol{E}$ 得 $2 \\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{B}-4 \\boldsymbol{A}$, \r\n\r\n整理得 $(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=4 \\boldsymbol{A}$,\r\n\r\n因为 $\\boldsymbol{A}$ 可逆, 所以 $\\boldsymbol{A}-2 \\boldsymbol{E}$ 可逆.\r\n\r\n(2) 由 $2 \\boldsymbol{A}^{-1} \\boldsymbol{B}=\\boldsymbol{B}-4 \\boldsymbol{E}$ 得 $2 \\boldsymbol{B}=\\boldsymbol{A}(\\boldsymbol{B}-4 \\boldsymbol{E})$, \r\n\r\n解得 $\\boldsymbol{A}=2 \\boldsymbol{B}(\\boldsymbol{B}-4 \\boldsymbol{E})^{-1}$,\r\n\r\n求得 $(\\boldsymbol{B}-4 \\boldsymbol{E})^{-1}=\\dfrac{1}{8}\\left(\\begin{array}{ccc}\r\n-2 & 2 & 0 \\\\\r\n-1 & -3 & 0 \\\\\r\n0 & 0 & -4\r\n\\end{array}\\right)$\r\n\r\n故 $\\boldsymbol{A}\\\\\r\n=\\dfrac{1}{4}\\left(\\begin{array}{ccc}1 & -2 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)\\left(\\begin{array}{ccc}-2 & 2 & 0 \\\\ -1 & -3 & 0 \\\\ 0 & 0 & -4\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{ccc}0 & 2 & 0 \\\\ -1 & -1 & 0 \\\\ 0 & 0 & -2\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1)由 (A-2E)B=4A，右边 4A 可逆⟹左边乘积可逆⟹A-2E 可逆",
+        "(2)从 2A⁻¹B=B-4E 变形要小心 A⁻¹ 位置，整理成 A=2B(B-4E)⁻¹"
+      ],
+      "key_point": "(A-2E)B=4A 得 A-2E 可逆；A=2B(B-4E)⁻¹ 算得所求矩阵。"
+    }
+  ]
+}

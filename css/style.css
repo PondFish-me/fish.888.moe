@@ -1,0 +1,519 @@
+/* ── 墨 · 真题库 ────────────────────────────────
+   Palette 宣纸 / 深墨 / 朱砂
+   Type  Noto Serif SC + Spectral (display)
+         Noto Sans SC + Inter (UI)
+   Layout Two-column: sidebar | single-question canvas
+   Signature  朱砂下划线  reveal animation on analysis
+   ----------------------------------------------- */
+
+/* ── Tokens ──────────────────────────────────── */
+:root {
+  --ink:       #1A1A1A;
+  --ink-soft:  #4A4643;
+  --muted:     #6B6560;
+  --rule:      #D9D3C7;
+  --rule-light:#EDE8DD;
+  --paper:     #FBF8F1;
+  --paper-warm:#F7F1E6;
+  --verm:      #C8102E;          /* 朱砂红 */
+  --verm-light:#FDEDED;
+  --correct:   #2E7D32;
+  --correct-bg:#E8F5E9;
+  --wrong:     #C8102E;
+  --wrong-bg:  #FDEDED;
+  --cat-a:     #C8102E;          /* 数一 */
+  --cat-b:     #2E6B9A;          /* 数二 */
+  --cat-c:     #3A7D44;          /* 数三 */
+
+  --fs-base: 1rem;
+  --fs-xs:  .8125rem;
+  --fs-sm:  .9375rem;
+  --fs-lg:  1.125rem;
+  --fs-xl:  1.375rem;
+  --fs-2xl: 1.688rem;
+  --fs-hero: 2.5rem;
+
+  --line: 1.7;
+  --radius: 3px;
+  --sidebar-w: 260px;
+  --max-w: 820px;
+}
+
+/* ── Reset ───────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', system-ui, sans-serif;
+  line-height: var(--line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+img, svg { display: block; max-width: 100%; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: none; cursor: pointer; }
+
+/* focus visible */
+:focus-visible {
+  outline: 2px solid var(--verm);
+  outline-offset: 2px;
+}
+
+/* ── Typography ──────────────────────────────── */
+.display {
+  font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.2;
+}
+.body { font-family: 'Noto Sans SC', sans-serif; }
+.meta {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-xs);
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+h1,h2,h3,h4 { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.25; }
+
+/* ── Page shell ──────────────────────────────── */
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+/* ── Header ──────────────────────────────────── */
+.header {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.seal {
+  width: 42px; height: 42px;
+  border: 2px solid var(--verm);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  color: var(--verm);
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: .875rem;
+  line-height: 1;
+  transform: rotate(-3deg);
+  letter-spacing: -.02em;
+  flex-shrink: 0;
+}
+.header__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.header__sub {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+.header__stats {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  display: flex;
+  gap: 1rem;
+}
+.header__stats strong { color: var(--ink); }
+
+/* hamburger (mobile) */
+.menu-btn {
+  display: none;
+  width: 36px; height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.menu-btn span {
+  display: block;
+  width: 16px; height: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ── Sidebar ─────────────────────────────────── */
+.sidebar {
+  border-right: 1px solid var(--rule);
+  background: var(--paper-warm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sidebar__nav {
+  padding: 1rem .75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.cat-btn {
+  text-align: left;
+  padding: .625rem .75rem;
+  border-radius: var(--radius);
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--ink-soft);
+  border-left: 3px solid transparent;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.cat-btn:hover { background: var(--rule-light); color: var(--ink); }
+.cat-btn[data-cat="数学一"].active { color: var(--cat-a); border-color: var(--cat-a); background: var(--verm-light); }
+.cat-btn[data-cat="数学二"].active { color: var(--cat-b); border-color: var(--cat-b); background: #EBF3FB; }
+.cat-btn[data-cat="数学三"].active { color: var(--cat-c); border-color: var(--cat-c); background: #EDF7EE; }
+.cat-btn .count { float: right; opacity: .6; font-weight: 400; }
+
+/* year list */
+.sidebar__years {
+  flex: 1;
+  overflow-y: auto;
+  padding: .75rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+.years-group { margin-bottom: 1rem; }
+.years-group__label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: .08em;
+  margin-bottom: .375rem;
+  padding-left: .25rem;
+}
+.year-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: .4375rem .5rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  transition: background .15s;
+}
+.year-btn:hover { background: var(--rule-light); color: var(--ink); }
+.year-btn.active { background: var(--ink); color: var(--paper); }
+.year-btn .meta-check { float: right; color: var(--correct); opacity: 0; }
+.year-btn.done .meta-check { opacity: .7; }
+
+/* ── Main ────────────────────────────────────── */
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+/* mode tabs */
+.mode-bar {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+.mode-tab {
+  padding: .375rem .875rem;
+  border-radius: 99px;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  transition: all .15s;
+}
+.mode-tab:hover { color: var(--ink); border-color: var(--ink); }
+.mode-tab.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.divider { width: 1px; height: 20px; background: var(--rule); margin: 0 .25rem; }
+.progress-text {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+/* toolbar */
+.tool-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1.5rem;
+  border-bottom: 1px solid var(--rule-light);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .375rem .75rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  transition: background .15s, color .15s;
+}
+.btn:hover { background: var(--rule-light); color: var(--ink); }
+.btn--primary {
+  background: var(--verm);
+  color: #fff;
+  border-color: var(--verm);
+}
+.btn--primary:hover { background: #a00d24; border-color: #a00d24; color: #fff; }
+.btn--icon { padding: .375rem; }
+
+/* question canvas */
+.canvas {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2.5rem 1.5rem 6rem;
+  scrollbar-width: thin;
+}
+.canvas-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* empty / placeholder */
+.empty {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  text-align: center;
+  color: var(--muted);
+}
+.empty__icon { font-size: 3rem; margin-bottom: .75rem; opacity: .4; }
+.empty__text { font-family: 'Noto Serif SC', serif; font-size: var(--fs-lg); }
+
+/* ── Question card ───────────────────────────── */
+.card { margin-bottom: 2rem; }
+.card__header {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--rule);
+}
+.card__num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-2xl);
+  font-weight: 900;
+  color: var(--verm);
+  line-height: 1;
+}
+.card__type {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  letter-spacing: .12em;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: .125rem .5rem;
+  border-radius: 99px;
+}
+.card__diff {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-left: auto;
+  letter-spacing: .04em;
+}
+
+.card__stem {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-lg);
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  padding-left: .25rem;
+}
+
+/* options */
+.options { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
+.opt {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .75rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+  position: relative;
+}
+.opt:hover:not(.disabled) { border-color: var(--ink); background: var(--paper-warm); }
+.opt.selected { border-color: var(--ink); background: var(--rule-light); }
+.opt.correct { border-color: var(--correct); background: var(--correct-bg); }
+.opt.wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+.opt.disabled { cursor: default; }
+.opt__marker {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border: 2px solid var(--rule);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 1px;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.opt.selected .opt__marker { border-color: var(--ink); color: var(--ink); background: var(--rule-light); }
+.opt.correct .opt__marker { border-color: var(--correct); color: #fff; background: var(--correct); }
+.opt.wrong .opt__marker { border-color: var(--wrong); color: #fff; background: var(--wrong); }
+.opt__text { font-size: var(--fs-sm); line-height: 1.6; flex: 1; }
+.opt__badge {
+  display: none;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .06em;
+  padding: .125rem .5rem;
+  border-radius: 99px;
+  margin-left: .5rem;
+  flex-shrink: 0;
+}
+.opt.correct .opt__badge { display: inline-block; background: var(--correct); color: #fff; }
+.opt.wrong .opt__badge { display: inline-block; background: var(--wrong); color: #fff; }
+
+/* analysis */
+.analysis {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--verm);
+  border-radius: var(--radius);
+  background: var(--paper-warm);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .5s cubic-bezier(.4,0,.2,1), opacity .4s ease, padding .5s cubic-bezier(.4,0,.2,1);
+}
+.analysis.visible {
+  max-height: 4000px;
+  opacity: 1;
+  padding: 1.25rem 1.5rem;
+}
+.analysis__label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  letter-spacing: .12em;
+  color: var(--verm);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+/* 朱砂线 — 签名动画元素 */
+.analysis__label::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--verm);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .6s cubic-bezier(.4,0,.2,1);
+}
+.analysis.visible .analysis__label::after { transform: scaleX(1); }
+
+.analysis__body {
+  font-size: var(--fs-sm);
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+.analysis__body p { margin-bottom: .75rem; }
+.analysis__body p:last-child { margin-bottom: 0; }
+.analysis__body ul, .analysis__body ol { padding-left: 1.25rem; margin-bottom: .75rem; }
+.analysis__body li { margin-bottom: .25rem; }
+.analysis__body strong { color: var(--ink); font-weight: 600; }
+.analysis__answer {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .25rem .75rem;
+  background: var(--verm);
+  color: #fff;
+  border-radius: var(--radius);
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+/* navigation between questions */
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.nav-hint {
+  font-family: 'Noto Serif SC', serif;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+kbd {
+  display: inline-block;
+  padding: .125rem .375rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: .75rem;
+  background: var(--paper-warm);
+  color: var(--muted);
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 860px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .menu-btn { display: flex; }
+  .canvas { padding: 1.5rem 1rem 5rem; }
+  .header__stats { display: none; }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+/* ── KaTeX overrides ─────────────────────────── */
+.katex { font-size: 1em !important; }
+.katex-display { margin: .75em 0; overflow-x: auto; overflow-y: hidden; }

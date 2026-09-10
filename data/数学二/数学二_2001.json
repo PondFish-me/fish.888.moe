@@ -1,0 +1,412 @@
+{
+  "paper": "数学二",
+  "year": 2001,
+  "count": 20,
+  "questions": [
+    {
+      "id": 976,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](/figures/976.jpg)",
+      "options": {
+        "A": "![](/figures/976-a.jpg)",
+        "B": "![](/figures/976-b.jpg)",
+        "C": "![](/figures/976-c.jpg)",
+        "D": "![](/figures/976-d.jpg)"
+      },
+      "answer": "D",
+      "analysis": "当 $x<0$ 时, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (A), (C) 不对; \r\n\r\n在 $x=0$ 的右邻域内, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "x<0 时 f 单调增本应 f'≥0，A 图此处取负值，把递增段的切线斜率符号读反。",
+        "B": "x=0 右邻域 f 单调增 f'≥0，B 图此处为负，漏判右侧单调性对应的导数符号。",
+        "C": "同 A，x<0 段 f 递增却给出 f'<0，仍是把递增误当导数为负。"
+      },
+      "pitfalls": [
+        "判据是导数符号对应原函数单调性，不是图形形状相似",
+        "x<0 与 x=0 右侧两段都要 f'≥0，任一段符号不符即排除"
+      ],
+      "key_point": "f 递增处 f'≥0、递减处 f'≤0，逐段核对符号，仅 D 全部相符。"
+    },
+    {
+      "id": 1563,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 1} \\frac{\\sqrt{3-x}-\\sqrt{1+x}}{x^2+x-2}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{\\sqrt{2}}{6}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 1} \\frac{\\sqrt{3-x}-\\sqrt{1+x}}{x^2+x-2}\\\\\r\n=\\lim _{x \\rightarrow 1} \\frac{\\sqrt{3-x}-\\sqrt{1+x}}{(x+2)(x-1)} \\\\\r\n=\\lim _{x \\rightarrow 1} \\frac{1}{(x+2)(\\sqrt{3-x}+\\sqrt{1+x})} \\cdot \\frac{2(1-x)}{x-1} \\\\\r\n=-\\frac{\\sqrt{2}}{6}$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 1} \\frac{\\sqrt{3-x}-\\sqrt{1+x}}{x^2+x-2}\\\\\r\n=\\lim _{x \\rightarrow 1} \\frac{1}{2 x+1} \\cdot\\left(-\\frac{1}{2 \\sqrt{3-x}}-\\frac{1}{2 \\sqrt{1+x}}\\right)\\\\\r\n=-\\frac{\\sqrt{2}}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "有理化后分子出现 2(1-x)，与分母 (x-1) 约得 -1，符号别丢",
+        "分母先因式分解定位零因子 (x-1)，否则看不出 0/0 结构"
+      ],
+      "key_point": "分子有理化并约去 (x-1)，极限=1/[(1+2)(√2+√2)]·(-2)=-√2/6。"
+    },
+    {
+      "id": 1564,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 由方程 $\\mathrm{e}^{2 x+y}-\\cos x y=\\mathrm{e}-1$ 所确定, 则曲线 $y=f(x)$ 在点 $(0,1)$ 处的法线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{1}{2} x+1$",
+      "analysis": "$\\mathrm{e}^{2 x+y}-\\cos x y=\\mathrm{e}-1$ 两边对 $x$ 求导得\r\n\r\n$\\displaystyle\r\n\\mathrm{e}^{2 x+y} \\cdot\\left(2+\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+\\sin x y \\cdot\\left(y+x \\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)=0$,\r\n\r\n将 $x=0, y=1$ 代入得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=-2$,\r\n\r\n则法线方程为 $y-1=\\dfrac{1}{2}(x-0)$, 即 $y=\\frac{1}{2} x+1$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "求的是法线不是切线，斜率要取切线斜率 -2 的负倒数 1/2",
+        "cos(xy) 对x求导要用乘积+链式：sin(xy)·(y+xy')"
+      ],
+      "key_point": "隐函数求导得 y'(0)=-2，法线斜率 1/2，过 (0,1) 得 y=x/2+1。"
+    },
+    {
+      "id": 1565,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^3+\\sin ^2 x\\right) \\cos ^2 x \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{8}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^3+\\sin ^2 x\\right) \\cos ^2 x \\mathrm{d} x \\\\\r\n=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\sin ^2 x \\cos ^2 x \\mathrm{d} x=2 \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\cos ^2 x \\mathrm{d} x \\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\cdot\\left(1-\\sin ^2 x\\right) \\mathrm{d} x\\\\\r\n=2\\left(I_2-I_4\\right) \\\\\r\n=2\\left(\\frac{\\pi}{4}-\\frac{3}{4} \\cdot \\frac{\\pi}{4}\\right)=\\frac{\\pi}{8}$\r\n\r\n方法二\r\n\r\n$\\displaystyle \r\n\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^3+\\sin ^2 x\\right) \\cos ^2 x \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\cos ^2 x \\mathrm{d} x \\\\\r\n=\\frac{1}{4} \\int_0^{\\frac{\\pi}{2}} \\sin ^2 2 x \\mathrm{d}(2 x)\\\\\r\n=\\frac{1}{4} \\int_0^\\pi \\sin ^2 x \\mathrm{d} x \\\\\r\n=\\frac{1}{2} \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\mathrm{d} x=\\frac{\\pi}{8}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x³cos²x 是奇函数，对称区间积分为0，先扔掉再算，别硬积",
+        "偶函数化 2∫₀^{π/2}，Wallis 公式 I₂=π/4、I₄=3π/16 不要记错"
+      ],
+      "key_point": "奇项为0，2∫₀^{π/2}sin²cos²=2(I₂-I₄)=π/8。"
+    },
+    {
+      "id": 1566,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "过点 $\\displaystyle \\left(\\frac{1}{2}, 0\\right)$ 且满足关系式 $\\displaystyle y^{\\prime} \\arcsin x+\\frac{y}{\\sqrt{1-x^2}}=1$ 的曲线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y \\arcsin x=x-\\dfrac{1}{2}$",
+      "analysis": "方法一\r\n由 $y^{\\prime} \\arcsin x+\\dfrac{y}{\\sqrt{1-x^2}}=1$, \r\n\r\n得 $(y \\arcsin x)^{\\prime}=1$, 解得 $y \\arcsin x=x+C$,\r\n\r\n因为曲线经过点 $\\left(\\dfrac{1}{2}, 0\\right)$, 所以 $C=-\\dfrac{1}{2}$,\r\n\r\n故所求曲线为 $y \\arcsin x=x-\\dfrac{1}{2}$.\r\n\r\n方法二\r\n\r\n$y^{\\prime} \\arcsin x+\\dfrac{y}{\\sqrt{1-x^2}}=1$ \r\n\r\n化为 $\\displaystyle y^{\\prime}+\\frac{1}{\\sqrt{1-x^2} \\arcsin x} y=\\frac{1}{\\arcsin x}$,\r\n\r\n解得 $\\displaystyle y=\\left(\\int \\frac{1}{\\arcsin x} \\mathrm{e}^{\\int \\frac{\\mathrm{d}}{\\sqrt{1-x^2} \\arcsin x}} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int \\frac{1}{\\sqrt{1-x^2} \\arcsin x} \\mathrm{d} x}\\\\\r\n=(x+C) \\cdot \\frac{1}{\\arcsin x}$,\r\n\r\n因为曲线经过点 $\\left(\\dfrac{1}{2}, 0\\right)$, \r\n\r\n所以 $\\mathrm{C}=-\\dfrac{1}{2}$,\r\n\r\n故所求曲线为 $y=\\dfrac{x-\\frac{1}{2}}{\\arcsin x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "左边 y'arcsinx + y/√(1-x²) 恰是乘积导数 (y·arcsinx)'，看出即秒解",
+        "过点 (1/2,0) 得 C=-1/2，不是 0"
+      ],
+      "key_point": "(y arcsinx)'=1 ⟹ y arcsinx=x+C，过 (1/2,0) 定 C=-1/2。"
+    },
+    {
+      "id": 1567,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设方程组 $\\left(\\begin{array}{lll}a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a\\end{array}\\right)\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{c}1 \\\\ 1 \\\\ -2\\end{array}\\right)$ 有无穷多解, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-2$",
+      "analysis": "由题意得 $\\left|\\begin{array}{lll}a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a\\end{array}\\right|=(a+2)(a-1)^2=0$, \r\n\r\n解得 $a=-2$, 或 $a=1$,\r\n\r\n当 $a=1$ 时, $\\overline{\\boldsymbol{A}}\\\\\r\n=\\left(\\begin{array}{ccc:c}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & -2\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}1 & 1 & 1 & 1 \\\\ 0 & 0 & 0 & -3 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, 所以方程组无解;\r\n\r\n当 $a=-2$ 时, $\\overline{\\boldsymbol{A}}\\\\\r\n=\\left(\\begin{array}{ccc:c}-2 & 1 & 1 & 1 \\\\ 1 & -2 & 1 & 1 \\\\ 1 & 1 & -2 & -2\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}1 & -2 & 1 & 1 \\\\ 0 & 1 & -1 & -1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$, 所以 $a=-2$ 时方程组有无数个解",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=0 只给候选 a=-2,1，还需回代验秩：a=1 时 r(A)≠r(Ā) 无解要排除",
+        "无穷多解要求 r(A)=r(Ā)<n，不能只凭 |A|=0 就下结论"
+      ],
+      "key_point": "|A|=(a+2)(a-1)²=0；a=1 无解，a=-2 时 r=2<3 有无穷多解。"
+    },
+    {
+      "id": 1568,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}1, & |x| \\leqslant 1 \\\\ 0, & |x|>1\\end{array}\\right.$ 则 $f\\{f[f(x)]\\}=(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$\\begin{cases}1, & |x| \\leqslant 1 \\\\ 0, & |x|>1\\end{cases}$",
+        "D": "$\\begin{cases}0, & |x| \\leqslant 1 \\\\ 1, & |x|>1\\end{cases}$"
+      },
+      "answer": "B",
+      "analysis": "$f[f(x)]= \\begin{cases}1, & |f(x)| \\leqslant 1 \\\\ 0, & |f(x)|>1\\end{cases}$\r\n\r\n而 $|f(x)| \\leqslant 1(-\\infty<x<+\\infty)$, 故 $f[f(x)]=1$, \r\n\r\n从而 $f\\{f[f(x)]\\}=1$, 应选(B)",
+      "wrong_options": {
+        "A": "误以为最终为0，弄反了 |f|≤1 对应的取值是1不是0",
+        "C": "以为复合后仍是原分段函数，没意识到内层已恒满足 |·|≤1",
+        "D": "把两个分支的取值取反"
+      },
+      "pitfalls": [
+        "f 的值域只有 {0,1}，绝对值恒 ≤1，所以每次复合都落在第一分支取1",
+        "逐层从里往外代，别跳步凭直觉"
+      ],
+      "key_point": "|f(x)|≤1 恒成立故 f[f(x)]=1，再 f(1)=1，选B。"
+    },
+    {
+      "id": 1569,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设当 $x \\rightarrow 0$ 时, $(1-\\cos x) \\ln \\left(1+x^2\\right)$ 是比 $x \\sin x^n$ 高阶的无穷小, 而 $x \\sin x^n$ 是比 $\\left(\\mathrm{e}^{x^2}-1\\right)$ 高阶的无穷小, 则正整数 $n$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "$4$"
+      },
+      "answer": "B",
+      "analysis": "$(1-\\cos x) \\ln \\left(1+x^2\\right) \\sim \\dfrac{1}{2} x^4, \\\\\r\nx \\sin x^n \\sim x^{n+1}, \\quad \\mathrm{e}^{x^2}-1 \\sim x^2$,\r\n\r\n由题意得 $2<n+1<4$, 解得 $n=2$, 应选 (B)",
+      "wrong_options": {
+        "A": "n=1 时 n+1=2 不严格大于 x² 阶，边界不满足",
+        "C": "n=3 时 n+1=4 不严格小于 x⁴ 阶",
+        "D": "n=4 更超出上界"
+      },
+      "pitfalls": [
+        "'高阶'对应严格不等号：2<n+1<4，取等不算高阶",
+        "三个式子都要展到主项定阶，别错判幂次"
+      ],
+      "key_point": "阶数 x⁴>x^{n+1}>x²⟹2<n+1<4⟹n=2，选B。"
+    },
+    {
+      "id": 1570,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=(x-1)^2(x-3)^2$ 的拐点个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "C",
+      "analysis": "$y^{\\prime \\prime}=\\mathrm{C}_2^0 \\cdot 2(x-3)^2+\\mathrm{C}_2^1 \\cdot 2(x-1) \\cdot 2(x-3)+\\mathrm{C}_2^2 \\cdot 2(x-1)^2$,\r\n\r\n令 $y^{\\prime \\prime}=4\\left(3 x^2-12 x+11\\right)=0$, \r\n\r\n得 $x_1=\\dfrac{6-\\sqrt{3}}{3}, x_2=\\dfrac{6+\\sqrt{3}}{3}$,\r\n\r\n当 $x<x_1$ 时 $y^{\\prime \\prime}>0$, \r\n\r\n当 $x_1<x<x_2$ 时 $y^{\\prime \\prime}<0$, \r\n\r\n当 $x>x_2$ 时 $y^{\\prime \\prime}>0$, \r\n\r\n故曲线有两个拐点, 应选 (C)",
+      "wrong_options": {
+        "A": "误判 y'' 恒不变号得0个",
+        "B": "只找到一个变号点",
+        "D": "把 y''=0 的根数误当拐点又多算一个"
+      },
+      "pitfalls": [
+        "y''=4(3x²-12x+11) 判别式>0 有两个实根，两根处均变号，故2个拐点",
+        "拐点要验证 y'' 确实变号，仅 y''=0 不够"
+      ],
+      "key_point": "y''=4(3x²-12x+11)=0 两根且两侧变号，2个拐点，选C。"
+    },
+    {
+      "id": 1571,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 在区间 $(1-\\delta, 1+\\delta)$ 内具有二阶导数, $f^{\\prime}(x)$ 严格单调减少, 且 $f(1)=$ $f^{\\prime}(1)=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "在 $(1-\\delta, 1)$ 和 $(1,1+\\delta)$ 内均有 $f(x)<x$",
+        "B": "在 $(1-\\delta, 1)$ 和 $(1,1+\\delta)$ 内均有 $f(x)>x$",
+        "C": "在 $(1-\\delta, 1)$ 有 $f(x)<x$, 在 $(1,1+\\delta)$ 内均有 $f(x)>x$",
+        "D": "在 $(1-\\delta, 1)$ 有 $f(x)>x$, 在 $(1,1+\\delta)$ 内均有 $f(x)<x$"
+      },
+      "answer": "A",
+      "analysis": "由拉格朗日中值定理得\r\n\r\n$f(x)-f(1)=f^{\\prime}(\\xi)(x-1)$ 其中$\\xi$ 介于$1$ 与 $x$ 之间,\r\n\r\n当 $x \\in(1-\\delta, 1)$ 时 $x<\\xi<1$, \r\n\r\n再由 $f^{\\prime}(x)$ 单调递减得 $f^{\\prime}(\\xi)>f^{\\prime}(1)=1$,\r\n\r\n于是 $f^{\\prime}(\\xi)(x-1)<x-1$, \r\n\r\n即 $f(x)-1<x-1$, 或 $f(x)<x$;\r\n\r\n当 $x \\in(1,1+\\delta)$ 时 $1<\\xi<x$, \r\n\r\n再由 $f^{\\prime}(x)$ 单调递减得 $1=f^{\\prime}(1)>f^{\\prime}(\\xi)$,\r\n\r\n于是 $f^{\\prime}(\\xi)(x-1)<x-1$, \r\n\r\n即 $f(x)-1<x-1$, 或 $f(x)<x$, 应选 (A)",
+      "wrong_options": {
+        "B": "两区间符号都判反，得 f(x)>x",
+        "C": "左区间对、右区间判反",
+        "D": "左右两区间都判反"
+      },
+      "pitfalls": [
+        "左区间 x<ξ<1 时 f'(ξ)>1，(x-1)<0 使 f'(ξ)(x-1)<x-1；右区间 f'(ξ)<1，(x-1)>0 同样得 <x-1",
+        "关键是 f'(ξ)(x-1) 与 x-1 的比较随 x-1 正负要各判一次"
+      ],
+      "key_point": "拉格朗日+f'严格递减，两区间均得 f(x)<x，选A。"
+    },
+    {
+      "id": 1572,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\left(2 x^2+1\\right) \\sqrt{x^2+1}}$",
+      "options": {},
+      "answer": "$\\arctan \\dfrac{x}{\\sqrt{x^2+1}}+C$",
+      "analysis": "$\\displaystyle\r\n\\int \\frac{\\mathrm{d} x}{\\left(2 x^2+1\\right) \\sqrt{x^2+1}} \\\\\r\n\\stackrel{x=\\tan t}{=} \\int \\frac{\\sec ^2 t}{\\left(2 \\tan ^2 t+1\\right) \\sec t} \\mathrm{d} t\\\\\r\n=\\int \\frac{\\cos t}{2 \\sin ^2 t+\\cos ^2 t} \\\\\r\n=\\int \\frac{\\mathrm{d}(\\sin t)}{1+\\sin ^2 t}\\\\\r\n=\\arctan (\\sin t)+C \\\\\r\n=\\arctan \\frac{x}{\\sqrt{x^2+1}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母 2tan²t+1 要化 2sin²t+cos²t=1+sin²t，别算错",
+        "回代 sint=x/√(x²+1)，不要漏根号"
+      ],
+      "key_point": "x=tant 化 ∫cost/(1+sin²t)dt=arctan(sint)=arctan(x/√(x²+1))+C。"
+    },
+    {
+      "id": 1573,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{t \\rightarrow x}\\left(\\frac{\\sin t}{\\sin x}\\right)^{\\frac{x}{\\sin t-\\sin x}}$, 记此极限为 $f(x)$, 求函数 $f(x)$ 的间断点, 并指出其类型",
+      "options": {},
+      "answer": "$x=0$ 为 $f(x)$ 的可去间断点；$x=k \\pi(k \\in \\mathbf{Z}$ 且 $k \\neq 0)$ 为第二类间断点",
+      "analysis": "$\\displaystyle f(x)=\\lim _{t \\rightarrow x}\\left(\\frac{\\sin t}{\\sin x}\\right)^{\\frac{x}{\\sin t-\\sin x}}\\\\\r\n=\\lim _{t \\rightarrow x}\\left[\\left(1+\\frac{\\sin t-\\sin x}{\\sin x}\\right)^{\\frac{\\sin x}{\\sin t-\\sin x}}\\right]^{\\frac{x}{\\sin x}}\\\\\r\n=\\mathrm{e}^{\\frac{x}{\\sin x}},\\\\ f(x)$ 的间断点为 $x=k \\pi(k \\in \\mathbf{Z})$,\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=\\mathrm{e}$ \r\n\r\n得 $x=0$ 为 $f(x)$ 的可去间断点；\r\n\r\n由 $f(\\pi-0)=+\\infty, f(\\pi+0)=0$ 得 $x=\\pi$ 为第二类间断点,\r\n\r\n同理 $x=k \\pi(k \\in \\mathbf{Z}$ 且 $k \\neq 0)$ 为第二类间断点.",
+      "wrong_options": {},
+      "pitfalls": [
+        "1^∞ 型要凑 e 的极限，指数化为 x/sinx",
+        "x=0 处 x/sinx→1 故极限 e 存在为可去；x=kπ(k≠0) 处指数趋∞为第二类，两类别混"
+      ],
+      "key_point": "f(x)=e^{x/sinx}，x=0 可去、x=kπ(k≠0) 第二类。"
+    },
+    {
+      "id": 1574,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\rho=\\rho(x)$ 是抛物线 $y=\\sqrt{x}$ 上任一点 $M(x, y)(x \\geqslant 1)$ 处的曲率半径, $s=s(x)$ 是该 抛物线上介于点 $A(1,1)$ 与 $M$ 之间的弧长, 计算 $\\displaystyle 3 \\rho \\frac{\\mathrm{d}^2 \\rho}{\\mathrm{d} s^2}-\\left(\\frac{\\mathrm{d} \\rho}{\\mathrm{d} s}\\right)^2$ 的值.\r\n(在直角坐标系下曲率公式为 $\\displaystyle k=\\frac{\\left|y^{\\prime \\prime}\\right|}{\\left(1+y^{\\prime 2}\\right)^{\\frac{3}{2}}}$ )",
+      "options": {},
+      "answer": "$9$",
+      "analysis": "$\\displaystyle y^{\\prime}=\\frac{1}{2 \\sqrt{x}}, y^{\\prime \\prime}=-\\frac{1}{4 x \\sqrt{x}},\\\\\r\n\\rho(x)=\\frac{\\left(1+y^{\\prime 2}\\right)^{\\frac{3}{2}}}{\\left|y^{\\prime \\prime}\\right|}=\\frac{\\left(1+\\frac{1}{4 x}\\right)^{\\frac{3}{2}}}{\\frac{1}{4 x \\sqrt{x}}}=\\frac{(4 x+1)^{\\frac{3}{2}}}{2}$,\r\n\r\n又因为 $\\displaystyle s(x)=\\int_1^x \\sqrt{1+\\frac{1}{4 t}} \\mathrm{d} t$\r\n\r\n$\\displaystyle \\frac{\\mathrm{d} \\rho}{\\mathrm{d} s}=\\frac{\\mathrm{d} \\rho / \\mathrm{d} x}{\\mathrm{d} s / \\mathrm{d} x}=\\frac{\\frac{1}{2} \\cdot \\frac{3}{2} \\cdot 4(4 x+1)^{\\frac{1}{2}}}{\\frac{\\sqrt{4 x+1}}{2 \\sqrt{x}}}=6 \\sqrt{x}, \\\\\r\n\\frac{\\mathrm{d}^2 \\rho}{\\mathrm{d} s^2}=\\frac{\\mathrm{d}(6 \\sqrt{x}) / \\mathrm{d} x}{\\mathrm{d} s / \\mathrm{d} x}=\\frac{\\frac{6}{2 \\sqrt{x}}}{\\frac{\\sqrt{4 x+1}}{2 \\sqrt{x}}}=\\frac{6}{\\sqrt{4 x+1}}, \\\\\r\n3 \\rho \\frac{\\mathrm{d}^2 \\rho}{\\mathrm{d}^2}-\\left(\\frac{\\mathrm{d} \\rho}{\\mathrm{d} s}\\right)^2\\\\\r\n=3 \\cdot \\frac{(4 x+1)^{\\frac{3}{2}}}{2} \\cdot \\frac{6}{\\sqrt{4 x+1}}-36 x=9$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dρ/ds 要除以 ds/dx=√(1+y'²)，别直接对x求导当成对s求导",
+        "d²ρ/ds²=d(dρ/ds)/dx ÷ (ds/dx)，分母始终是 ds/dx"
+      ],
+      "key_point": "ρ=(4x+1)^{3/2}/2，dρ/ds=6√x，d²ρ/ds²=6/√(4x+1)，代入得 9。"
+    },
+    {
+      "id": 1575,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0,+\\infty)$ 上可导, $f(0)=0$, 且其反函数为 $g(x)$, 若 $\\displaystyle \\int_0^{f(x)} g(t) \\mathrm{d} t=x^2 \\mathrm{e}^x$, 求 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=(x+1) \\mathrm{e}^x-1$",
+      "analysis": "$\\displaystyle \\int_0^{f(x)} g(t) \\mathrm{d} t=x^2 \\mathrm{e}^x$ 两边求导, \r\n\r\n得 $g[f(x)] f^{\\prime}(x)=\\left(x^2+2 x\\right) \\mathrm{e}^x$, \r\n\r\n即 $f^{\\prime}(x)=(x+2) \\mathrm{e}^x$,\r\n\r\n积分得 $f(x)=(x+1) \\mathrm{e}^x+C$,\r\n\r\n由 $f(0)=0$ 得 $C=-1$, \r\n\r\n故 $f(x)=(x+1) \\mathrm{e}^x-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "g[f(x)]=x 是反函数核心关系，代入后 f'(x)=(x+2)eˣ",
+        "f(0)=0 定出 C=-1，别漏常数"
+      ],
+      "key_point": "两边求导 g(f)f'=(x²+2x)eˣ，g(f)=x 得 f'=(x+2)eˣ，f=(x+1)eˣ-1。"
+    },
+    {
+      "id": 1576,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 满足 $f^{\\prime}(x)=g(x), \\\\\r\ng^{\\prime}(x)=2 \\mathrm{e}^x-f(x)$,\r\n且 $f(0)=0, g(0)=2$, 求 $\\displaystyle \\int_0^{\\pi}\\left[\\frac{g(x)}{1+x}-\\frac{f(x)}{(1+x)^2}\\right] \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{\\mathrm{e}^\\pi+1}{\\pi+1}$",
+      "analysis": "由 $g^{\\prime \\prime}(x)=2 \\mathrm{e}^x-f^{\\prime}(x)$ 得 $g^{\\prime \\prime}(x)+g(x)=2 \\mathrm{e}^x$, \r\n\r\n解得 $g(x)=C_1 \\cos x+C_2 \\sin x+\\mathrm{e}^x$.\r\n\r\n由 $g(0)=2$ 得 $C_1=1$ ；\r\n\r\n由 $g^{\\prime}(0)=2-f(0)=2$ 得 $C_2=1$,\r\n\r\n从而 $g(x)=\\cos x+\\sin x+\\mathrm{e}^x$, \r\n\r\n于是 $f(x)=\\sin x-\\cos x+\\mathrm{e}^x$,\r\n\r\n故 $\\displaystyle\r\n\\int_0^\\pi\\left[\\frac{g(x)}{1+x}-\\frac{f(x)}{(1+x)^2}\\right] \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\frac{g(x)}{1+x} \\mathrm{d} x+\\int_0^n f(x) \\mathrm{d}\\left(\\frac{1}{1+x}\\right)\\\\\r\n=\\int_0^\\pi \\frac{g(x)}{1+x} \\mathrm{d} x+\\left.\\frac{f(x)}{1+x}\\right|_0 ^\\pi-\\int_0^x \\frac{g(x)}{1+x} \\mathrm{d} x \\\\\r\n=\\frac{f(\\pi)}{1+\\pi}=\\frac{\\mathrm{e}^\\pi+1}{\\pi+1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积式 g/(1+x)-f/(1+x)² 恰是 (f/(1+x))' 的形式，分部会自动抵消积分项",
+        "只需端点值 f(π)/(1+π)，f(0)=0 端点为0"
+      ],
+      "key_point": "g''+g=2eˣ 解得 f=sinx-cosx+eˣ，积分=f(π)/(1+π)=(e^π+1)/(π+1)。"
+    },
+    {
+      "id": 1577,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $L$ 是一条平面曲线, 其上任意一点 $P(x, y)(x>0)$ 到坐标原点的距离恒等于该点处的切线在 $y$ 轴上的截距, 且 $L$ 经过点 $\\left(\\dfrac{1}{2}, 0\\right)$\r\n\r\n(1) 试求曲线 $L$ 的方程;\r\n\r\n(2) 求 $L$ 位于第一象限部分的一条切线, 使该切线与 $L$ 以及两坐标轴所围图形的面积最小",
+      "options": {},
+      "answer": "(1) $y=\\dfrac{1}{4}-x^2$ (2) $y=-\\dfrac{\\sqrt{3}}{3} x+\\dfrac{1}{3}$",
+      "analysis": "(1) $|O P|=\\sqrt{x^2+y^2}$, \r\n\r\n切线方程为 $Y-y=y^{\\prime}(X-x)$,\r\n\r\n令 $X=0$, 则切线在 $y$ 轴上的截距为 $Y=y-x y^{\\prime}$,\r\n\r\n由题意得 $y-x y^{\\prime}=\\sqrt{x^2+y^2}$, \r\n\r\n整理得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{y}{x}-\\sqrt{1+\\left(\\frac{y}{x}\\right)^2}$, \r\n令 $u=\\dfrac{y}{x}$, 则 $\\displaystyle u+x \\frac{\\mathrm{d} u}{\\mathrm{d} x}=u-\\sqrt{1+u^2}$, \r\n\r\n变量分离得 $\\displaystyle \\frac{\\mathrm{d} u}{\\sqrt{1+u^2}}=-\\frac{\\mathrm{d} x}{x}$,\r\n\r\n积分得 $\\ln \\left(u+\\sqrt{u^2+1}\\right)=\\ln C-\\ln x$, \r\n\r\n即 $\\displaystyle u+\\sqrt{u^2+1}=\\frac{C}{x}$,\r\n\r\n再由 $\\displaystyle -u+\\sqrt{u^2+1}=\\frac{x}{C}$ 得 $\\displaystyle u=\\frac{1}{2}\\left(\\frac{C}{x}-\\frac{x}{C}\\right)$, \r\n\r\n或 $y=\\dfrac{1}{2}\\left(C-\\dfrac{x^2}{C}\\right)$, \r\n\r\n因为曲线经过点 $\\left(\\dfrac{1}{2}, 0\\right)$, \r\n\r\n所以 $C=\\dfrac{1}{2}$, \r\n\r\n故所求曲线为 $y=\\dfrac{1}{4}-x^2$\r\n\r\n(2) 曲线 $y=\\dfrac{1}{4}-x^2$ 在第一象限与两坐标轴所围成的面积为\r\n\r\n$\\displaystyle \\int_0^{\\frac{1}{2}}\\left(\\frac{1}{4}-x^2\\right) \\mathrm{d} x=\\frac{1}{12}$\r\n\r\n设切点为 $\\displaystyle P\\left(a, \\frac{1}{4}-a^2\\right)$, 切线为 $\\displaystyle y-\\left(\\frac{1}{4}-a^2\\right)=-2 a(x-a)$,\r\n\r\n令 $y=0$ 得 $\\displaystyle x=\\frac{1}{8 a}+\\frac{a}{2}$; \r\n\r\n令 $x=0$ 得 $\\displaystyle y=\\frac{1}{4}+a^2$,\r\n\r\n切线与 $L$ 及两个坐标轴围成的位于第一象限的面积为\r\n\r\n$\\displaystyle S=\\frac{\\left(\\frac{1}{4}+a^2\\right)^2}{4 a}-\\frac{1}{12}$\r\n\r\n令 $\\displaystyle S^{\\prime}=\\frac{a \\cdot 4 a\\left(\\frac{1}{4}+a^2\\right)-\\left(\\frac{1}{4}+a^2\\right)^2}{4 a^2}\\\\\r\n=\\frac{\\left(\\frac{1}{4}+a^2\\right)}{4 a^2} \\cdot\\left(3 a^2-\\frac{1}{4}\\right)=0$\r\n\r\n得 $a=\\dfrac{1}{2 \\sqrt{3}}$,\r\n\r\n所求的切线方程为 $y-\\left(\\dfrac{1}{4}-\\dfrac{1}{12}\\right)=-\\dfrac{\\sqrt{3}}{3}\\left(x-\\dfrac{1}{2 \\sqrt{3}}\\right)$,\r\n\r\n整理得 $y=-\\dfrac{\\sqrt{3}}{3} x+\\dfrac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线在 y 轴截距 y-xy'，等于 √(x²+y²) 列出齐次方程，别把截距写成 y",
+        "(2)面积=切线三角形 - 固定曲边面积 1/12，对切点 a 求导求最小"
+      ],
+      "key_point": "齐次方程解得 y=1/4-x²；面积函数极小在 a=1/(2√3)，切线 y=-x/√3+1/3。"
+    },
+    {
+      "id": 1578,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "一个半球体状的雪堆, 其体积融化的速率与半球面面积 $S$ 成正比, 比例常数 $k>0$. 假设在融化过程中雪堆始终保持半球体状, 已知半径 $r_0$ 的雪堆在开始融化的 3 小时内, 融化 了其体积的 $\\displaystyle \\frac{7}{8}$, 问雪堆全部融化需要多少小时?",
+      "options": {},
+      "answer": "$6$",
+      "analysis": "设 $t$ 时刻雪堆的半径为 $r(t), r(0)=r_0$,\r\n\r\n$V=\\dfrac{2}{3} \\pi r^3, S=2 \\pi r^2, \\dfrac{\\mathrm{d} V}{\\mathrm{d} t}=2 \\pi r^2 \\cdot \\dfrac{\\mathrm{d} r}{\\mathrm{d} t}$,\r\n\r\n由题意得 $\\dfrac{\\mathrm{d} V}{\\mathrm{d} t}=-k S$, \r\n\r\n整理得 $\\dfrac{\\mathrm{d} r}{\\mathrm{d} t}=-k$, \r\n\r\n解得 $r(t)=-k t+C_0$,\r\n\r\n由 $r(0)=r_0$ 得 $C=r_0, r(t)=-k t+r_0$,\r\n\r\n再由 $r(3)=\\dfrac{r_0}{2}$ 得 $k=\\dfrac{r_0}{6}$, \r\n\r\n故 $r(t)=-\\dfrac{r_0}{6} t+r_0$,\r\n\r\n令 $r(t)=0$ 得 $t=6$, 故雪堆全部融化需要 $6$ 小时",
+      "wrong_options": {},
+      "pitfalls": [
+        "dV/dt=2πr²·dr/dt 与 S=2πr² 约掉后得 dr/dt=-k，半径线性减少",
+        "3小时融 7/8 体积对应半径变为 r₀/2（体积∝r³），别按体积线性算"
+      ],
+      "key_point": "dr/dt=-k 得 r=r₀-kt，r(3)=r₀/2 定 k=r₀/6，r=0 时 t=6。"
+    },
+    {
+      "id": 1579,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在区间 $[-a, a](a>0)$ 上具有二阶连续导数, $f(0)=0$\r\n\r\n(1) 写出 $f(x)$ 的带拉格朗日余项的一阶麦克劳林公式;\r\n\r\n(2) 证明: 在 $[-a, a]$ 上至少存在一点 $\\eta$, 使 $\\displaystyle a^3 f^{\\prime \\prime}(\\eta)=3 \\int_{-a}^a f(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) $f(x)$ 的带拉格朗日余项的一阶麦克劳林公式为\r\n\r\n$f(x)  =f(0)+f^{\\prime}(0) x+\\dfrac{f^{\\prime \\prime}(\\xi)}{2 !} x^2 \\\\\r\n=f^{\\prime}(0) x+\\dfrac{f^{\\prime \\prime}(\\xi)}{2 !} x^2$, 其中 $\\xi$ 介于 $0$ 与 $x$ 之间\r\n\r\n\r\n(2) $f(x)=f^{\\prime}(0) x+\\dfrac{f^{\\prime \\prime}(\\xi)}{2 !} x^2$ \r\n\r\n两边在 $[-a, a]$ 上积分得\r\n\r\n$\\displaystyle \\int_{-a}^a f(x) \\mathrm{d} x=\\frac{1}{2} \\int_{-\\alpha}^a f^{\\prime \\prime}(\\xi) x^2 \\mathrm{d} x$,\r\n\r\n\r\n因为 $f^{\\prime \\prime}(x)$ 在 $[-a, a]$ 上连续, \r\n\r\n所以 $f^{\\prime \\prime}(x)$ 在 $[-a, a]$ 上取到最小值 $m$ 和最大值 $M$, \r\n\r\n由 $\\displaystyle \\frac{1}{2} m x^2 \\leqslant \\frac{1}{2} f^{\\prime \\prime}(\\xi) x^2 \\leqslant \\frac{1}{2} M x^2$ \r\n\r\n得 $\\displaystyle \\frac{m}{3} a^3 \\leqslant \\frac{1}{2} \\int_{-a}^a f^{\\prime \\prime}(\\xi) x^2 \\mathrm{d} x \\leqslant \\frac{M}{3} a^3$,\r\n\r\n即 $\\displaystyle \\frac{m}{3} a^3 \\leqslant \\int_{-a}^a f(x) \\mathrm{d} x \\leqslant \\frac{M}{3} a^3$, \r\n\r\n或 $\\displaystyle m \\leqslant \\frac{3}{a^3} \\int_{-a}^a f(x) \\mathrm{d} x \\leqslant M$,\r\n\r\n由介值定理, 存在 $\\eta \\in[-a, a]$, 使得 $\\displaystyle f^{\\prime \\prime}(\\eta)=\\frac{3}{a^3} \\int_{-a}^{a} f(x) \\mathrm{d} x$,\r\n\r\n故 $\\displaystyle a^3 f^{\\prime \\prime}(\\eta)=3 \\int_{-a}^a f(x) \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f'(0)x 在对称区间 [-a,a] 积分为0，只剩 f''(ξ)x²/2 项",
+        "f''(ξ) 随 x 变化不能提出积分，须用 m≤f''≤M 夹逼再介值定理"
+      ],
+      "key_point": "麦克劳林展开积分后 ∫f=½∫f''(ξ)x²dx，用最值+介值得 a³f''(η)=3∫f。"
+    },
+    {
+      "id": 1580,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 1 & 1 & 1\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{lll}0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0\\end{array}\\right)$,\r\n且矩阵 $\\boldsymbol{X}$ 满足 $\\boldsymbol{A} \\boldsymbol{X} \\boldsymbol{A}+\\boldsymbol{B} \\boldsymbol{X} \\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{X} \\boldsymbol{B}+\\boldsymbol{B} \\boldsymbol{X} \\boldsymbol{A}+\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 是 3 阶单位矩阵, 求 $\\boldsymbol{X}$",
+      "options": {},
+      "answer": "$\\boldsymbol{X}=\\left(\\begin{array}{ccc}\r\n1 & 2 & 5 \\\\\r\n0 & 1 & 2 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A} \\boldsymbol{X} \\boldsymbol{A}+\\boldsymbol{B} \\boldsymbol{X} \\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{X} \\boldsymbol{B}+\\boldsymbol{B} \\boldsymbol{X} \\boldsymbol{A}+\\boldsymbol{E}$ \r\n\r\n得 $(\\boldsymbol{A}-\\boldsymbol{B}) \\boldsymbol{X}(\\boldsymbol{A}-\\boldsymbol{B})=\\boldsymbol{E}$, \r\n\r\n解得 $\\boldsymbol{X}=\\left[(\\boldsymbol{A}-\\boldsymbol{B})^2\\right]^{-1}$,\r\n\r\n而 $\\boldsymbol{A}-\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & -1 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n$\r\n(\\boldsymbol{A}-\\boldsymbol{B})^2\\\\\r\n=\\left(\\begin{array}{cccc}\r\n1 & -1 & -1 \\\\\r\n0 & 1 & -1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\left(\\begin{array}{ccc}\r\n1 & -1 & -1 \\\\\r\n0 & 1 & -1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{ccc}\r\n1 & -2 & -1 \\\\\r\n0 & 1 & -2 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n由 $\\left(\\begin{array}{cccccc}\r\n1 & -2 & -1 & 1 & 0 & 0 \\\\\r\n0 & 1 & -2 & 0 & 1 & 0 \\\\\r\n0 & 0 & 1 & 0 & 0 & 1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{cccccc}\r\n1 & 0 & 0 & 1 & 2 & 5 \\\\\r\n0 & 1 & 0 & 0 & 1 & 2 \\\\\r\n0 & 0 & 1 & 0 & 0 & 1\r\n\\end{array}\\right)$ \r\n\r\n得 $\\boldsymbol{X}=\\left(\\begin{array}{ccc}\r\n1 & 2 & 5 \\\\\r\n0 & 1 & 2 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "AXA+BXB-AXB-BXA=(A-B)X(A-B)，配方时注意左右两个因子都是 (A-B)",
+        "X=[(A-B)²]⁻¹，要先算平方再求逆，不是分别求逆"
+      ],
+      "key_point": "(A-B)X(A-B)=E 得 X=[(A-B)²]⁻¹，求逆得上三角阵。"
+    },
+    {
+      "id": 1581,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 为线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的一个基础解系, 若\r\n\r\n$\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1+t \\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2+t \\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_3=\\boldsymbol{\\alpha}_3+t \\boldsymbol{\\alpha}_4, \\boldsymbol{\\beta}_4=\\boldsymbol{\\alpha}_4+t \\boldsymbol{\\alpha}_1$,\r\n\r\n讨论实数 $t$ 满足什么关系式时, $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4$ 也是 $\\boldsymbol{A} \\boldsymbol{X}=\\mathbf{0}$ 的一个基础解系",
+      "options": {},
+      "answer": "$t \\neq \\pm 1$",
+      "analysis": "$\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4$ 为 $\\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系的充分必要条件是 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4$ 线性无关, \r\n\r\n而 $\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4\\right)\\left(\\begin{array}{llll}1 & 0 & 0 & t \\\\ t & 1 & 0 & 0 \\\\ 0 & t & 1 & 0 \\\\ 0 & 0 & t & 1\\end{array}\\right)$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_1$ 线性无关,\r\n\r\n所以 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4$ 线性无关的充分必要条件是\r\n\r\n$\\left|\\begin{array}{cccc}\r\n1 & 0 & 0 & t \\\\\r\nt & 1 & 0 & 0 \\\\\r\n0 & t & 1 & 0 \\\\\r\n0 & 0 & t & 1\r\n\\end{array}\\right|=1-t^4 \\neq 0$,\r\n\r\n故 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_3, \\boldsymbol{\\beta}_4$ 为 $\\boldsymbol{Ax}=\\mathbf{0}$ 的基础解系的充分必要条件是 $t \\neq \\pm 1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "β 已是解且个数也够，只需再验线性无关⟺过渡矩阵行列式≠0",
+        "循环行列式 |过渡矩阵|=1-t⁴，故 t≠±1（t=±1 都退化）"
+      ],
+      "key_point": "过渡矩阵行列式 1-t⁴≠0 ⟹ t≠±1 时 β 仍为基础解系。"
+    }
+  ]
+}

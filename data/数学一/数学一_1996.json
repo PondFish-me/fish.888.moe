@@ -1,0 +1,448 @@
+{
+  "paper": "数学一",
+  "year": 1996,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1079,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{x+2 a}{x-a}\\right)^{x}=8$, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\ln 2$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{x+2 a}{x-a}\\right)^x=\\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{3 a}{x-a}\\right)^{\\frac{x-a}{3 a}}\\right]^{x \\cdot \\frac{3 a}{x-a}}=\\mathrm{e}^{3 a}=8$, 得 $3 a=3 \\ln 2$, 即得 $a=\\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数是 x 不是 x−a，须把幂凑成第二重要极限标准形",
+        "e^{3a}=8 要取对数解 3a=3ln2，勿把 8 直接当 a"
+      ],
+      "key_point": "1^∞ 型极限 e^{3a}=8 ⇒ a=ln2。"
+    },
+    {
+      "id": 1080,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设一平面经过原点及点 $(6,-3,2)$, 且与平面 $4 x-y+2 z=8$ 垂直, 则此平面方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 x+2 y-3 z=0$",
+      "analysis": "设所求的平面方程为 $\\pi: A x+B y+C z+D=0$,\r\n\r\n因为该平面经过原点, 所以 $D=0$,\r\n\r\n又因为该平面经过点 $(6,-3,2)$, 所以 $6 A-3 B+2 C=0$,\r\n\r\n又因为该平面与平面 $4 x-y+2 z=8$ 垂直, 则 $4 A-B+2 C=0$,\r\n\r\n解得 $\\displaystyle B=A, C=-\\frac{3}{2} A$, \r\n\r\n故所求平面为 $\\displaystyle \\pi: A x+A y-\\frac{3}{2} A z=0$, \r\n\r\n即 $\\pi: 2 x+2 y-3 z=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "「与平面垂直」指两平面法向量正交(点积0)，不是平行",
+        "过原点必有 D=0，别漏"
+      ],
+      "key_point": "过原点、法向量与 (4,−1,2) 正交且过 (6,−3,2)，得平面 2x+2y−3z=0。"
+    },
+    {
+      "id": 1081,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}-2 y^{\\prime}+2 y=\\mathrm{e}^{x}$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\mathrm{e}^x\\left(C_1 \\cos x+C_2 \\sin x\\right)+\\mathrm{e}^x\\left(C_1, C_2\\right.$ 为任意常数 $)$",
+      "analysis": "特征方程为 $\\lambda^2-2 \\lambda+2=0$, \r\n\r\n特征根为 $\\lambda_{1,2}=1 \\pm \\mathrm{i}$, \r\n\r\n$y^{\\prime \\prime}-2 y^{\\prime}+2 y=0$ 的通解为 \r\n\r\n$y=\\mathrm{e}^x\\left(C_1 \\cos x+C_2 \\sin x\\right)$; \r\n\r\n显然 $y=\\mathrm{e}^x$ 为方程 $y^{\\prime \\prime}-2 y^{\\prime}+2 y=\\mathrm{e}^x$ 的一个特解,\r\n\r\n故 $y^{\\prime \\prime}-2 y^{\\prime}+2 y=\\mathrm{e}^x$ 的通解为 \r\n\r\n$y=\\mathrm{e}^x\\left(C_1 \\cos x+C_2 \\sin x\\right)+\\mathrm{e}^x\\left(C_1, C_2\\right.$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^x 不是特征根(根为1±i)，非共振可直接设 y*=Ae^x",
+        "共轭虚根 1±i 对应齐次解 e^x(C1cosx+C2sinx)"
+      ],
+      "key_point": "特征根 1±i 加非共振特解 e^x，通解 y=e^x(C1cosx+C2sinx)+e^x。"
+    },
+    {
+      "id": 1082,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $u=\\ln \\left(x+\\sqrt{y^{2}+z^{2}}\\right)$ 在点 $A(1,0,1)$ 处沿点 $A$ 指向点 $B(3,-2,2)$ 方向的方向导数为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle \\frac{\\partial u}{\\partial x}=\\frac{1}{x+\\sqrt{y^2+z^2}}, \\\\\r\n\\frac{\\partial u}{\\partial y}=\\frac{1}{x+\\sqrt{y^2+z^2}} \\cdot \\frac{y}{\\sqrt{y^2+z^2}}, \\\\\r\n\\frac{\\partial u}{\\partial z}=\\frac{1}{x+\\sqrt{y^2+z^2}} \\cdot \\frac{z}{\\sqrt{y^2+z^2}}, \\\\\r\n\\left.\\frac{\\partial u}{\\partial x}\\right|_{(1,0,1)}=\\frac{1}{2},\\left.\\frac{\\partial u}{\\partial y}\\right|_{(1,0,1)}=0,\\left.\\frac{\\partial u}{\\partial z}\\right|_{(1,0,1)}=\\frac{1}{2},\\\\\r\n \\overrightarrow{A B}=\\{2,-2,1\\}, \\\\\r\n\\cos \\alpha=\\frac{2}{3}, \\quad \\cos \\beta=-\\frac{2}{3}, \\quad \\cos \\gamma=\\frac{1}{3}$,\r\n\r\n则所求的方向导数为 $\\displaystyle \\left.\\frac{\\partial u}{\\partial x}\\right|_{(1,0,1)} \\cos \\alpha+\\left.\\frac{\\partial u}{\\partial y}\\right|_{(1,0,1)} \\cos \\beta+\\left.\\frac{\\partial u}{\\partial z}\\right|_{(1,0,1)} \\cos \\gamma=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "方向导数要用单位方向 AB/|AB| 的方向余弦，勿用未单位化向量",
+        "√(y²+z²) 在 A(1,0,1) 处=1，偏导代点别算错"
+      ],
+      "key_point": "梯度 (1/2,0,1/2) 点乘单位方向 (2,−2,1)/3 = 1/2。"
+    },
+    {
+      "id": 1083,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $4 \\times 3$ 矩阵, 且 $\\boldsymbol{A}$ 的秩 $r(\\boldsymbol{A})=2$, 而 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & 0 & 2 \\\\ 0 & 2 & 0 \\\\ -1 & 0 & 3\\end{array}\\right)$, 则 $r(\\boldsymbol{A} \\boldsymbol{B})=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "2",
+      "analysis": "因为 $|\\boldsymbol{B}|=\\left|\\begin{array}{ccc}1 & 0 & 2 \\\\ 0 & 2 & 0 \\\\ -1 & 0 & 3\\end{array}\\right|=10 \\neq 0$, \r\n\r\n所以矩阵 $\\boldsymbol{B}$ 可逆, \r\n\r\n由矩阵秩的性质得 $r(\\boldsymbol{A} \\boldsymbol{B})=r(\\boldsymbol{A})=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(AB)=r(A) 成立前提是 B 可逆，须先验 |B|≠0",
+        "A 为 4×3、r(A)=2，右乘可逆 B 秩不变仍为 2"
+      ],
+      "key_point": "B 可逆故 r(AB)=r(A)=2。"
+    },
+    {
+      "id": 1084,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle \\frac{(x+a y) \\mathrm{d} x+y \\mathrm{d} y}{(x+y)^{2}}$ 为某函数的全微分, 则 $a$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$-1$",
+        "B": "$0$",
+        "C": "$1$",
+        "D": "$2$"
+      },
+      "answer": "D",
+      "analysis": "$P(x\\displaystyle , y)=\\frac{x+a y}{(x+y)^2}, \\quad Q(x, y)=\\frac{y}{(x+y)^2},\\\\\r\n \\frac{\\partial P}{\\partial y}=\\frac{a(x+y)^2-2(x+y)(x+a y)}{(x+y)^4}=\\frac{a(x+y)-2(x+a y)}{(x+y)^3}, \\\\\r\n\\frac{\\partial Q}{\\partial x}=\\frac{-2 y}{(x+y)^3}$, \r\n\r\n由 $\\dfrac{\\partial Q}{\\partial x}=\\dfrac{\\partial P}{\\partial y}$ \r\n\r\n得 $a(x+y)-2(x+a y)=-2 y$, 得 $a=2$, 应选 (D)",
+      "wrong_options": {
+        "A": "求偏导时把 (x+y)² 的链式导数漏项，误把 ∂P/∂y=∂Q/∂x 解成 a=−1。",
+        "B": "只令分子 x+ay 与 y 的偏导相等、忽略分母，错得 a=0。",
+        "C": "计算 ∂P/∂y 时漏掉商法则中 −2(x+y)(x+ay) 项，误得 a=1。"
+      },
+      "pitfalls": [
+        "判据是 ∂P/∂y=∂Q/∂x，不能只令分子相等",
+        "商法则求偏导时 (x+y)² 的链式导数别漏"
+      ],
+      "key_point": "全微分条件 ∂P/∂y=∂Q/∂x 解得 a=2。"
+    },
+    {
+      "id": 1085,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 有二阶连续导数, 且 $\\displaystyle f^{\\prime}(0)=0, \\lim _{x \\rightarrow 0} \\frac{f^{\\prime \\prime}(x)}{|x|}=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f(0)$ 是 $f(x)$ 的极大值",
+        "B": "$f(0)$ 是 $f(x)$ 的极小值",
+        "C": "$(0, f(0))$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$f(0)$ 不是 $f(x)$ 的极值, $(0, f(0))$ 也不是曲线 $y=f(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f^{\\prime \\prime}(x)}{|x|}=1>0$, \r\n\r\n所以由极限保号性, 存在 $\\delta>0$, 当 $0<|x|<\\delta$ 时, $\\displaystyle \\frac{f^{\\prime \\prime}(x)}{|x|}>0$, \r\n\r\n即 $f^{\\prime \\prime}(x)>0$, 从而 $f^{\\prime}(x)$ 在 $(-\\delta, \\delta)$ 内单调递增.\r\n\r\n再由 $f^{\\prime}(0)=0$ 得 $\\left\\{\\begin{array}{l}f^{\\prime}(x)<0, x \\in(-\\delta, 0), \\\\ \r\nf^{\\prime}(x)>0, x \\in(0, \\delta)\\end{array}\\right.$ \r\n\r\n得 $f(0)$ 为 $f(x)$ 的极小值, 应选 (B)",
+      "wrong_options": {
+        "A": "把 f'' 的符号取反(误当 f''<0)，判成极大值。",
+        "C": "只看到 f''(0)=0 就判拐点，忽略 f'' 在 0 两侧同为正、不变号，拐点须二阶导变号。",
+        "D": "误以为 f'(0)=0 且 f''(0)=0 无法判定，忽略 f' 在两侧变号给出极小值。"
+      },
+      "pitfalls": [
+        "f''(0)=0 不能直接用二阶导判别法，须靠 f' 变号",
+        "极限保号性只在去心邻域给出 f''(x)>0"
+      ],
+      "key_point": "保号性⇒f''>0 于去心邻域⇒f' 增、配 f'(0)=0，f(0) 为极小值。"
+    },
+    {
+      "id": 1086,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $a_{n}>0(n=1,2, \\cdots)$, 且 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 收敛, 常数 $\\displaystyle \\lambda \\in\\left(0, \\frac{\\pi}{2}\\right)$, 则级数 $\\displaystyle \\sum_{n=1} ^{\\infty}(-1)^{n}\\left(n \\tan \\frac{\\lambda}{n}\\right) a_{2 n} (\\quad)$",
+      "options": {
+        "A": "绝对收敛",
+        "B": "条件收敛",
+        "C": "发散",
+        "D": "收敛性与 $\\lambda$ 有关"
+      },
+      "answer": "A",
+      "analysis": "因为正项级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 收敛, 所以 $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n}$ 收敛,\r\n\r\n由 $\\displaystyle \\left|(-1)^n\\left(n \\tan \\frac{\\lambda}{n}\\right) a_{2 n}\\right| \\sim \\lambda a_{2 n}$ \r\n\r\n得级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|(-1)^n\\left(n \\tan \\frac{\\lambda}{n}\\right) a_{2 n}\\right|$ 收敛,\r\n\r\n故 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\left(n \\tan \\frac{\\lambda}{n}\\right) a_{2 n}$ 绝对收敛, 应选 (A)",
+      "wrong_options": {
+        "B": "只看到 (−1)^n 就套莱布尼茨判条件收敛，忽略取绝对值后 ~λa_{2n} 仍收敛(实为绝对收敛)。",
+        "C": "误以为 n·tan(λ/n)→∞ 使通项不趋 0 而发散，实际该因子→λ 有界。",
+        "D": "误以为 λ 改变收敛性，实际 λ∈(0,π/2) 只是有界因子，不影响收敛。"
+      },
+      "pitfalls": [
+        "n·tan(λ/n)→λ 有界，别误判通项不趋 0 而发散",
+        "取绝对值后与 λa_{2n} 同阶收敛，是绝对收敛不是条件收敛"
+      ],
+      "key_point": "通项绝对值 ~λa_{2n} 收敛，故级数绝对收敛。"
+    },
+    {
+      "id": 1087,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 有连续导数, $\\displaystyle f(0)=0, f^{\\prime}(0) \\neq 0, F(x)=\\int_{0}^{x}\\left(x^{2}-t^{2}\\right) f(t) \\mathrm{d} t$, 且当 $x \\rightarrow 0$ 时, $F^{\\prime}(x)$ 与 $x^{k}$ 是同阶无穷小, 则 $k$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "$4$"
+      },
+      "answer": "C",
+      "analysis": "$\\displaystyle F(x)=\\int_0^x\\left(x^2-t^2\\right) f(t) \\mathrm{d} t\\\\\r\n=x^2 \\int_0^x f(t) \\mathrm{d} t-\\int_0^x t^2 f(t) \\mathrm{d} t, \\\\\r\nF^{\\prime}(x)=2 x \\int_0^x f(t) \\mathrm{d} t$,\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{F^{\\prime}(x)}{x^3}=2 \\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x^2}\\\\=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}=f^{\\prime}(0) \\neq 0$ 得 $k=3$",
+      "wrong_options": {
+        "A": "求导得 2x∫f 后误把 ∫₀^x f 当常数量级，得 F'~x，判 k=1。",
+        "B": "误保留了本应相消的 x²f(x) 项，把 F' 当作 ~x²，判 k=2。",
+        "D": "估计 ∫₀^x f 的阶时多积一次误当 ~x³，判 k=4。"
+      },
+      "pitfalls": [
+        "F'(x) 中 x²f(x)−x²f(x) 相消，剩 2x∫₀^x f，别保留错项",
+        "∫₀^x f 与 x² 同阶(f(0)=0,f'(0)≠0)，故 F'~x³"
+      ],
+      "key_point": "F'(x)=2x∫₀^x f~f'(0)x³，与 x³ 同阶，k=3。"
+    },
+    {
+      "id": 1088,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "4 阶行列式 $\\left|\\begin{array}{cccc}a_{1} & 0 & 0 & b_{1} \\\\ 0 & a_{2} & b_{2} & 0 \\\\ 0 & b_{3} & a_{3} & 0 \\\\ b_{4} & 0 & 0 & a_{4}\\end{array}\\right|$ 的值等于 $(\\quad)$",
+      "options": {
+        "A": "$a_{1} a_{2} a_{3} a_{4}-b_{1} b_{2} b_{3} b_{4}$",
+        "B": "$a_{1} a_{2} a_{3} a_{4}+b_{1} b_{2} b_{3} b_{4}$",
+        "C": "$\\left(a_{1} a_{2}-b_{1} b_{2}\\right)\\left(a_{3} a_{4}-b_{3} b_{4}\\right)$",
+        "D": "$\\left(a_{2} a_{3}-b_{2} b_{3}\\right)\\left(a_{1} a_{4}-b_{1} b_{4}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "将行列式按第一行展开, 得\r\n\r\n$\r\n\\left|\\begin{array}{cccc}\r\na_1 & 0 & 0 & b_1 \\\\\r\n0 & a_2 & b_2 & 0 \\\\\r\n0 & b_3 & a_3 & 0 \\\\\r\nb_4 & 0 & 0 & a_4\r\n\\end{array}\\right| \\\\\r\n=a_1 A_{11}+b_1 A_{14}\\\\\r\n=a_1 M_{11}-b_1 M_{14} \\\\\r\n=a_1\\left|\\begin{array}{ccc}\r\na_2 & b_2 & 0 \\\\\r\nb_3 & a_3 & 0 \\\\\r\n0 & 0 & a_4\r\n\\end{array}\\right|-b_1\\left|\\begin{array}{ccc}\r\n0 & a_2 & b_2 \\\\\r\n0 & b_3 & a_3 \\\\\r\nb_4 & 0 & 0\r\n\\end{array}\\right| \\\\\r\n=a_1 a_4\\left(a_2 a_3-b_2 b_3\\right)-b_1 b_4\\left(a_2 a_3-b_2 b_3\\right) \\\\\r\n=\\left(a_1 a_4-b_1 b_4\\right)\\left(a_2 a_3-b_2 b_3\\right)$,\r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "误把此行列式当成主、副对角线之积相减 a1a2a3a4−b1b2b3b4，机械套 2×2 交叉相减。",
+        "B": "同上误取加号 a1a2a3a4+b1b2b3b4，忽略须按行降阶展开。",
+        "C": "配对错误把 (a1,b1) 与 (a2,b2) 配一组，得 (a1a2−b1b2)(a3a4−b3b4)，实际耦合的是 1-4 行与 2-3 行。"
+      },
+      "pitfalls": [
+        "不是主、副对角线直接相减，须按行展开看行列耦合",
+        "耦合的是第1、4行与第2、3行，配对别错"
+      ],
+      "key_point": "按行展开得 (a1a4−b1b4)(a2a3−b2b3)，选 D。"
+    },
+    {
+      "id": 1089,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求心形线 $r=a(1+\\cos \\theta)$ 的全长,其中 $a>0$ 是常数",
+      "options": {},
+      "answer": "$8 a$",
+      "analysis": "弧长\r\n\r\n$\\displaystyle \r\nl =2 \\int_0^\\pi \\sqrt{r^2(\\theta)+r^{\\prime 2}(\\theta)} \\mathrm{d} \\theta\\\\\r\n=2 \\int_0^\\pi \\sqrt{a^2(1+\\cos \\theta)^2+a^2 \\sin ^2 \\theta} \\mathrm{d} \\theta \\\\\r\n=2 \\sqrt{2} a \\int_0^\\pi \\sqrt{1+\\cos \\theta} \\mathrm{d} \\theta\\\\\r\n=4 a \\int_0^\\pi \\cos \\frac{\\theta}{2} \\mathrm{d} \\theta \\\\\r\n=8 a \\int_0^\\pi \\cos \\frac{\\theta}{2} \\mathrm{d}\\left(\\frac{\\theta}{2}\\right)\\\\\r\n=8 a \\int_0^{\\frac{\\pi}{2}} \\cos t \\mathrm{d} t=8 a$",
+      "wrong_options": {},
+      "pitfalls": [
+        "√(1+cosθ)=√2|cos(θ/2)|，在 [0,π] 上 cos(θ/2)≥0 可去绝对值",
+        "全长利用对称性=2×∫₀^π，勿只积一半"
+      ],
+      "key_point": "心形线全长 =2∫₀^π√(r²+r'²)dθ=8a。"
+    },
+    {
+      "id": 1090,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $x_{1}=10, x_{n+1}=\\sqrt{6+x_{n}}(n=1,2, \\cdots)$, 试证数列 $\\left\\{x_{n}\\right\\}$ 极限存在, 并求此极限",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "令 $y=f(x)=\\sqrt{6+x}$,\r\n\r\n因为 $f^{\\prime}(x)=\\dfrac{1}{2 \\sqrt{6+x}}>0$, 所以 $\\left\\{x_n\\right\\}$ 单调.\r\n\r\n由 $x_1=10>x_2=4$ 得数列 $\\left\\{x_n\\right\\}$ 单调递减,\r\n\r\n再由 $x_n>0$ 得数列 $\\left\\{x_n\\right\\}$ 单调递减且有下界,\r\n\r\n故数列 $\\left\\{x_n\\right\\}$ 收敛.\r\n\r\n令 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n=A$, \r\n\r\n由 $x_{n+1}=\\sqrt{6+x_n}$ 得 $A=\\sqrt{6+A}$, 解得 $A=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "首项 x1=10 > x2=4，数列单调递减(不是递增)",
+        "极限方程 A=√(6+A) 须舍去负根，取 A=3"
+      ],
+      "key_point": "{x_n} 单减有下界收敛，令极限 A=√(6+A) 得 A=3。"
+    },
+    {
+      "id": 1091,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分 $\\displaystyle \\iint\\limits_{S}(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y$, 其中 $S$ 为有向曲面 $z=x^{2}+y^{2}(0 \\leqslant z \\leqslant 1)$, 其法向量与 $z$ 轴正向的夹角为锐角",
+      "options": {},
+      "answer": "$-\\dfrac{\\pi}{2}$",
+      "analysis": "令 $S_1: z=1\\left(x^2+y^2 \\leqslant 1\\right)$, 取下侧, 则\r\n\r\n$\\displaystyle \\iint\\limits_S(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\oiint\\limits_{S+S_1}(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y\\\\\r\n-\\iint\\limits_{S_1}(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n由高斯公式得\r\n\r\n$\\displaystyle \\oiint\\limits_{S+S_1}(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-3 \\iiint\\limits_{\\Omega} \\mathrm{d} v\\\\\r\n=-3 \\int_0^1 \\mathrm{d} z \\iint\\limits_{x^2+y^2 \\leqslant z} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-3 \\pi \\int_0^1 z \\mathrm{d} z=-\\frac{3 \\pi}{2} ; \\\\\r\n\\iint\\limits_{S_1}(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-\\iint\\limits_{x^2+y^2 \\leqslant 1} \\mathrm{d} x \\mathrm{d} y=-\\pi$,\r\n\r\n故 $\\displaystyle \\iint\\limits_S(2 x+z) \\mathrm{d} y \\mathrm{d} z+z \\mathrm{d} x \\mathrm{d} y=-\\frac{\\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "补面 S1: z=1 取下侧才能与 S 拼成闭曲面",
+        "S1 上 dydz 分量为 0，只剩 z dxdy=−π；补面积分须扣回"
+      ],
+      "key_point": "补顶盖用高斯公式：−3∭dv=−3π/2，扣补面 −π，原积分=−π/2。"
+    },
+    {
+      "id": 1092,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设变换 $\\left\\{\\begin{array}{l}u=x-2 y, \\\\ v=x+a y\\end{array}\\right.$ 可把方程 $\\displaystyle 6 \\frac{\\partial^{2} z}{\\partial x^{2}}+\\frac{\\partial^{2} z}{\\partial x \\partial y}-\\frac{\\partial^{2} z}{\\partial y^{2}}=0$ 化简为 $\\displaystyle \\frac{\\partial^{2} z}{\\partial u \\partial v}=0$, 求常数 $a$, 其中 $z=z(x, y)$ 有二阶连续的偏导数",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}\\\\\r\n=\\frac{\\partial z}{\\partial u} \\cdot \\frac{\\partial u}{\\partial x}+\\frac{\\partial z}{\\partial v} \\cdot \\frac{\\partial v}{\\partial x}\\\\\r\n=\\frac{\\partial z}{\\partial u}+\\frac{\\partial z}{\\partial v}\\\\\r\n \\frac{\\partial z}{\\partial y}\\\\\r\n=\\frac{\\partial z}{\\partial u} \\cdot \\frac{\\partial u}{\\partial y}+\\frac{\\partial z}{\\partial v} \\cdot \\frac{\\partial v}{\\partial y}\\\\\r\n=-2 \\frac{\\partial z}{\\partial u}+a \\frac{\\partial z}{\\partial v},\\\\\r\n\\frac{\\partial^2 z}{\\partial x^2}\\\\\r\n=\\frac{\\partial^2 z}{\\partial u^2} \\cdot \\frac{\\partial u}{\\partial x}+\\frac{\\partial^2 z}{\\partial u \\partial v} \\cdot \\frac{\\partial v}{\\partial x}+\\frac{\\partial^2 z}{\\partial v \\partial u} \\cdot \\frac{\\partial u}{\\partial x}+\\frac{\\partial^2 z}{\\partial v^2} \\cdot \\frac{\\partial v}{\\partial x}\\\\\r\n=\\frac{\\partial^2 z}{\\partial u^2}+2 \\frac{\\partial^2 z}{\\partial v \\partial u}+\\frac{\\partial^2 z}{\\partial v^2} \\\\\r\n\\frac{\\partial^2 z}{\\partial x \\partial y}\\\\\r\n=-2 \\frac{\\partial^2 z}{\\partial u^2}+a \\frac{\\partial^2 z}{\\partial u \\partial v}-2 \\frac{\\partial^2 z}{\\partial v \\partial u}+a \\frac{\\partial^2 z}{\\partial v^2}\\\\\r\n=-2 \\frac{\\partial^2 z}{\\partial u^2}+(a-2) \\frac{\\partial^2 z}{\\partial v \\partial u}+a \\frac{\\partial^2 z}{\\partial v^2} \\\\\r\n\\frac{\\partial^2 z}{\\partial y^2}\\\\\r\n =-2\\left(\\frac{\\partial^2 z}{\\partial u^2} \\cdot \\frac{\\partial u}{\\partial y}+\\frac{\\partial^2 z}{\\partial u \\partial v} \\cdot \\frac{\\partial v}{\\partial y}\\right)+a\\left(\\frac{\\partial^2 z}{\\partial v \\partial u} \\cdot \\frac{\\partial u}{\\partial y}+\\frac{\\partial^2 z}{\\partial v^2} \\cdot \\frac{\\partial v}{\\partial y}\\right) \\\\\r\n=-2\\left(-2 \\frac{\\partial^2 z}{\\partial u^2}+a \\frac{\\partial^2 z}{\\partial u \\partial v}\\right)+a\\left(-2 \\frac{\\partial^2 z}{\\partial v \\partial u}+a \\frac{\\partial^2 z}{\\partial v^2}\\right) \\\\\r\n=4 \\frac{\\partial^2 z}{\\partial u^2}-4 a \\frac{\\partial^2 z}{\\partial u \\partial v}+a^2 \\frac{\\partial^2 z}{\\partial v^2}$\r\n\r\n代入整理得\r\n\r\n$(5 a+10) \\frac{\\partial^2 z}{\\partial y \\partial u}+\\left(-a^2+a+6\\right) \\frac{\\partial^2 z}{\\partial y^2}=0$,\r\n\r\n于是 $\\left\\{\\begin{array}{l}\r\n5 a+10 \\neq 0 \\\\\r\n-a^2+a+6=0\r\n\\end{array}\\right.$ 解得 $a=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "混合偏导 z_xy 用链式要完整展开，勿漏交叉项",
+        "令化简后 z_uu、z_vv 的系数同时为 0，解得 a=3(舍去 a=−2)"
+      ],
+      "key_point": "使方程化为 z_uv=0 的常数 a=3。"
+    },
+    {
+      "id": 1093,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求级数 $\\displaystyle \\sum_{n=2}^{\\infty} \\frac{1}{\\left(n^{2}-1\\right) 2^{n}}$ 的和",
+      "options": {},
+      "answer": "$\\dfrac{5}{8}-\\dfrac{3}{4} \\ln 2$",
+      "analysis": "令 $S(x)=\\displaystyle S(x)=\\frac{1}{2}\\left(\\sum_{n=2}^{\\infty} \\frac{x^n}{n-1}-\\sum_{n=2}^{\\infty} \\frac{x^n}{n+1}\\right)$, $S(0)=0$\r\n\r\n当 $x \\neq 0$ 时,\r\n\r\n$\\displaystyle \r\nS(x)  \\\\\r\n=\\frac{x}{2} \\sum_{n=2}^{\\infty} \\frac{x^{n-1}}{n-1}-\\frac{1}{2 x} \\sum_{n=2}^{\\infty} \\frac{x^{n+1}}{n+1}\\\\\r\n=\\frac{x}{2} \\sum_{n=1}^{\\infty} \\frac{x^n}{n}-\\frac{1}{2 x} \\sum_{n=3}^{\\infty} \\frac{x^n}{n} \\\\\r\n=-\\frac{x}{2} \\ln (1-x)-\\frac{1}{2 x}\\left(\\sum_{n=1}^{\\infty} \\frac{x^n}{n}-x-\\frac{x^2}{2}\\right)\\\\\r\n=\\left(\\frac{1}{2 x}-\\frac{x}{2}\\right) \\ln (1-x)+\\frac{1}{2}+\\frac{x}{4}$\r\n\r\n故 $\\displaystyle \\sum_{n=2}^{\\infty} \\frac{1}{\\left(n^2-1\\right) 2^n}=S\\left(\\frac{1}{2}\\right)=\\frac{5}{8}-\\frac{3}{4} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "裂项后 x=0 处 S(0)=0 需单独定义",
+        "用 Σx^n/n=−ln(1−x) 时下标错位须补出 x、x²/2 项"
+      ],
+      "key_point": "裂项构造幂级数求和，代 x=1/2 得级数和 5/8−(3/4)ln2。"
+    },
+    {
+      "id": 1094,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设对任意的 $x>0$, 曲线 $y=f(x)$ 上点 $(x, f(x))$ 处的切线在 $y$ 轴上的截距等于 $\\displaystyle \\frac{1}{x} \\int_{0}^{x} f(t) \\mathrm{d} t$, 求 $f(x)$ 的一般表达式",
+      "options": {},
+      "answer": "$f(x)=C_1 \\ln x+C_2 \\quad\\left(C_1, C_2\\right.$ 为任意常数).",
+      "analysis": "曲线 $y=f(x)$ 在点 $(x, f(x))$ 的切线为\r\n\r\n$Y-f(x)=f^{\\prime}(x)(X-x)$,\r\n\r\n令 $X=0$ 得 $Y=f(x)-x f^{\\prime}(x)$,\r\n\r\n由题意得 $\\displaystyle f(x)-x f^{\\prime}(x)=\\frac{1}{x} \\int_0^x f(t) \\mathrm{d} t$, \r\n\r\n整理得 $\\displaystyle x f(x)-x^2 f^{\\prime}(x)=\\int_0^x f(t) \\mathrm{d} t$,\r\n\r\n两边求导得 $f^{\\prime}(x)+x f^{\\prime \\prime}(x)=0$, \r\n\r\n即 $\\left[x f^{\\prime}(x)\\right]^{\\prime}=0$,\r\n\r\n解得 $x f^{\\prime}(x)=C_1$,\r\n\r\n故 $f(x)=C_1 \\ln x+C_2 \\quad\\left(C_1, C_2\\right.$ 为任意常数).",
+      "wrong_options": {},
+      "pitfalls": [
+        "纵截距是切线令 X=0 得 f(x)−xf'(x)，不是 f'(x)",
+        "两边求导后得 (xf')'=0，是可降阶方程不是一阶线性"
+      ],
+      "key_point": "由切线纵截距建方程、求导化 (xf')'=0，解得 f(x)=C1lnx+C2。"
+    },
+    {
+      "id": 1095,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $[0,1]$ 上具有二阶导数, 且满足条件: $|f(x)| \\leqslant a,\\left|f^{\\prime \\prime}(x)\\right| \\leqslant b$, 其中 $a, b$ 都 是非负常数, $c$ 为 $(0,1)$ 内任意一点\r\n\r\n(1) 写出 $f(x)$ 在点 $x=c$ 处带拉格朗日余项的一阶泰勒公式;\r\n\r\n(2) 证明 : $\\displaystyle \\left|f^{\\prime}(c)\\right| \\leqslant 2 a+\\frac{b}{2}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "（1） 由泰勒公式得\r\n\r\n$ f(0)=f(c)+f^{\\prime}(c)(0-c)+\\dfrac{f^{\\prime \\prime}\\left(\\xi_1\\right)}{2 !}(0-c)^2,  0<\\xi_1<c, \\\\\r\n f(1)=f(c)+f^{\\prime}(c)(1-c)+\\dfrac{f^{\\prime \\prime}\\left(\\xi_2\\right)}{2 !}(1-c)^2, c<\\xi_2<1$\r\n\r\n两式相减得\r\n\r\n$f^{\\prime}(c)=f(1)-f(0)+\\dfrac{c^2}{2} f^{\\prime \\prime}\\left(\\xi_1\\right)-\\dfrac{(1-c)^2}{2} f^{\\prime \\prime}\\left(\\xi_2\\right)$\r\n\r\n(2) $\\left|f^{\\prime}(c)\\right|  \\leqslant \\\\\r\n|f(1)|+|f(0)|+\\dfrac{c^2}{2}\\left|f^{\\prime \\prime}\\left(\\xi_1\\right)\\right|+\\dfrac{(1-c)^2}{2}\\left|f^{\\prime \\prime}\\left(\\xi_2\\right)\\right| \\\\\r\n\\leqslant 2 a+\\dfrac{b}{2}\\left[c^2+(1-c)^2\\right],$\r\n\r\n由 $c^2 \\leqslant c,(1-c)^2 \\leqslant 1-c$ \r\n\r\n得 $c^2+(1-c)^2 \\leqslant 1$, \r\n\r\n故 $\\left|f^{\\prime}(c)\\right| \\leqslant 2 a+\\dfrac{b}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "泰勒展开中心是 c，须在 x=0 和 x=1 各写一式再相减",
+        "放缩关键 c²+(1−c)²≤1(由 c²≤c、(1−c)²≤1−c)"
+      ],
+      "key_point": "在 c 展一阶泰勒、两式相减+放缩得 |f'(c)|≤2a+b/2。"
+    },
+    {
+      "id": 1096,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\boldsymbol{E}-\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}}$, 其中 $\\boldsymbol{E}$ 是 $n$ 阶单位矩阵, $\\boldsymbol{\\xi}$ 是 $n$ 维非零列向量, $\\boldsymbol{\\xi}{ }^{\\mathrm{T}}$ 是 $\\boldsymbol{\\xi}$ 的转置, 证明:\r\n\r\n(1) $\\boldsymbol{A}^{2}=\\boldsymbol{A}$ 的充分必要条件是 $\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=1$;\r\n\r\n(2) 当 $\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=1$ 时, $\\boldsymbol{A}$ 是不可逆矩阵",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 令 $\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=k$,\r\n\r\n$\\boldsymbol{A}^2=\\left(\\boldsymbol{E}-\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}}\\right)\\left(\\boldsymbol{E}-\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}}\\right)=\\boldsymbol{E}+(k-2) \\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}}$,\r\n\r\n则 $\\boldsymbol{A}^2=\\boldsymbol{A}$ 的充分必要条件是 $k=1$, \r\n\r\n即 $\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=1$.\r\n\r\n(2) 方法一 当 $\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=1$ 时, \r\n\r\n由 $\\boldsymbol{A}^2=\\boldsymbol{A}$ 得 $\\boldsymbol{A}(\\boldsymbol{E}-\\boldsymbol{A})=\\boldsymbol{O}$, \r\n\r\n从而 $r(\\boldsymbol{A})+r(\\boldsymbol{E}-\\boldsymbol{A}) \\leqslant n$; \r\n\r\n再由 $r(\\boldsymbol{A})+r(\\boldsymbol{E}-\\boldsymbol{A}) \\geqslant r(\\boldsymbol{E})=n$ \r\n\r\n得 $r(\\boldsymbol{A})+r(\\boldsymbol{E}-\\boldsymbol{A})=n$,\r\n\r\n因为 $\\boldsymbol{\\xi}$ 为非零向量, \r\n\r\n所以 $\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}} \\neq \\boldsymbol{O}$, \r\n\r\n从而 $\\boldsymbol{E}-\\boldsymbol{A}=\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}} \\neq \\boldsymbol{O}$, \r\n\r\n即 $r(\\boldsymbol{E}-\\boldsymbol{A}) \\geqslant 1$,\r\n\r\n故 $r(\\boldsymbol{A})<n$, 即 $\\boldsymbol{A}$ 是不可逆矩阵.\r\n\r\n方法二 令 $\\boldsymbol{B}=\\boldsymbol{\\xi} \\boldsymbol{\\xi}^{\\mathrm{T}}$,\r\n\r\n矩阵 $\\boldsymbol{B}$ 的特征值为 $\\lambda_1=\\boldsymbol{\\xi}^{\\mathrm{T}} \\boldsymbol{\\xi}=1, \\lambda_2=\\cdots=\\lambda_n=0$,\r\n\r\n矩阵 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=\\cdots=\\lambda_n=1$, \r\n\r\n则 $|\\boldsymbol{A}|=|\\boldsymbol{E}-\\boldsymbol{B}|=0$, 故 $r(\\boldsymbol{A})<n$, \r\n\r\n即 $\\boldsymbol{A}$ 不可逆",
+      "wrong_options": {},
+      "pitfalls": [
+        "A²=E+(k−2)ξξ^T，因 ξξ^T≠O，A²=A ⟺ k=1(即 ξ^Tξ=1)",
+        "ξ^Tξ=1 时由 A²=A 得 A(E−A)=O，秩推 r(A)<n 故不可逆"
+      ],
+      "key_point": "A²=A ⟺ ξ^Tξ=1；此时 r(A)<n 故 A 不可逆。"
+    },
+    {
+      "id": 1097,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=5 x_{1}^{2}+5 x_{2}^{2}+c x_{3}^{2}-2 x_{1} x_{2}+6 x_{1} x_{3}-6 x_{2} x_{3}$ 的秩为 $2$ \r\n\r\n(1) 求参数 $c$ 的值及此二次型对应矩阵的特征值;\r\n\r\n(2)指出方程 $f\\left(x_{1}, x_{2}, x_{3}\\right)=1$ 表示何种二次曲面",
+      "options": {},
+      "answer": "(1) $c=3, \\lambda_1=0, \\lambda_2=4, \\lambda_3=9$\r\n\r\n(2) 椭圆柱面",
+      "analysis": "(1) 令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}5 & -1 & 3 \\\\ -1 & 5 & -3 \\\\ 3 & -3 & c\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$, \r\n\r\n则 $f\\left(x_1, x_2, x_3\\right)=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{Ax}$, \r\n\r\n因为二次型的秩为 $2$ , 所以 $|\\boldsymbol{A}|=0$,\r\n\r\n由 $|\\boldsymbol{A}|=\\left|\\begin{array}{ccc}5 & -1 & 3 \\\\ -1 & 5 & -3 \\\\ 3 & -3 & c\\end{array}\\right|=24 c-72=0$, 得 $c=3$\r\n\r\n容易验证, 此时 $r(\\boldsymbol{A})=2\\\\  \\boldsymbol{A}$ 的特征多项式为\r\n\r\n$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\r\n\\lambda-5 & 1 & -3 \\\\\r\n1 & \\lambda-5 & 3 \\\\\r\n-3 & 3 & \\lambda-3\r\n\\end{array}\\right|\\\\\r\n=\\lambda(\\lambda-4)(\\lambda-9)$\r\n\r\n故所求特征值为 $\\lambda_1=0, \\lambda_2=4, \\lambda_3=9$\r\n\r\n(2) 二次型 $f$ 的标准形为\r\n\r\n$f=4 y_2^2+9 y_3^2$\r\n\r\n由此可知 $f\\left(x_1, x_2, x_3\\right)=1$ 所表示的曲面是椭圆柱面",
+      "wrong_options": {},
+      "pitfalls": [
+        "秩为 2 给出 |A|=0 解 c，别漏验此时确为秩 2",
+        "f=1 有一个 0 特征值、另两个(4,9)同正，故为椭圆柱面不是椭球面"
+      ],
+      "key_point": "c=3，特征值 0,4,9，f=1 表示椭圆柱面。"
+    },
+    {
+      "id": 1098,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设工厂 $A$ 和工厂 $B$ 的产品的次品率分别为 $1 \\%$ 和 $2 \\%$, 现从由 $A$ 厂和 $B$ 厂的产品分别占 $60 \\%$ 和 $40 \\%$ 的一批产品中随机抽取一件, 发现是次品, 则该次品属于 $A$ 厂生产的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{7}$",
+      "analysis": "设 $A_1=\\{$ 抽取的为 $A$ 厂产品 $\\}, A_2=\\{$ 抽取的为 $B$ 厂产品 $\\}, B=\\{$ 抽取的为次品 $\\}$,\r\n\r\n$\\displaystyle P\\left(A_1\\right)=0.6, P\\left(A_2\\right)=0.4, \\\\ P\\left(B \\mid A_1\\right)=0.01, P\\left(B \\mid A_2\\right)=0.02, \\\\\r\nP\\left(A_1 \\mid B\\right) =\\frac{P\\left(A_1 B\\right)}{P(B)}=\\frac{P\\left(A_1\\right) P\\left(B \\mid A_1\\right)}{P\\left(A_1\\right) P\\left(B \\mid A_1\\right)+P\\left(A_2\\right) P\\left(B \\mid A_2\\right)} \\\\\r\n=\\frac{0.6 \\times 0.01}{0.6 \\times 0.01+0.4 \\times 0.02}=\\frac{3}{7}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求的是后验 P(A厂|次品)，分母是全概率次品率不是 P(A厂)",
+        "两厂占比 0.6/0.4 须与各自次品率 0.01/0.02 相乘"
+      ],
+      "key_point": "贝叶斯后验 P(A厂|次品)=0.006/0.014=3/7。"
+    },
+    {
+      "id": 1099,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 21,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\xi, \\eta$ 是两个相互独立且均服从正态分布 $\\displaystyle N\\left(0,\\left(\\frac{1}{\\sqrt{2}}\\right)^{2}\\right)$ 的随机变量, 则随机变量 $|\\xi-\\eta|$ 的数学期望 $E(|\\xi-\\eta|)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{\\sqrt{2 \\pi}}$",
+      "analysis": "令 $U=\\xi-\\eta$,\r\n因为 $\\xi, \\eta$ 相互独立且都服从正态分布 $\\displaystyle N\\left(0,\\left(\\frac{1}{\\sqrt{2}}\\right)^2\\right)$, 所以 $U \\sim N(0,1)$,\r\n\r\n于是 $\\displaystyle E(|\\xi-\\eta|)=E(|U|)\\\\\r\n=\\int_{-\\infty}^{+\\infty}|u| \\cdot \\frac{1}{\\sqrt{2 \\pi}} \\mathrm{e}^{-\\frac{u^2}{2}} \\mathrm{d} u=\\frac{2}{\\sqrt{2 \\pi}} \\int_0^{+\\infty} u \\mathrm{e}^{-\\frac{u^2}{2}} \\mathrm{d} u\\\\\r\n=\\frac{2}{\\sqrt{2 \\pi}} \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{u^2}{2}} \\mathrm{d}\\left(\\frac{u^2}{2}\\right)=\\frac{2}{\\sqrt{2 \\pi}} \\Gamma(1)=\\frac{2}{\\sqrt{2 \\pi}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "ξ,η 方差各为 1/2，U=ξ−η 方差=1(相加)，勿算成 1/2",
+        "E|U| 是半正态期望 √(2/π)=2/√(2π)，别与 EU=0 混"
+      ],
+      "key_point": "U=ξ−η~N(0,1)，E|ξ−η|=√(2/π)=2/√(2π)。"
+    },
+    {
+      "id": 1100,
+      "paper": "数学一",
+      "year": 1996,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\xi, \\eta$ 是相互独立且都服从同一分布的两个随机变量, 且 $\\xi$ 的分布律为 $\\displaystyle P\\{\\xi=i\\}=\\frac{1}{3}$ $(i=1,2,3)$, 又设 $X=\\max \\{\\xi, \\eta\\}, Y=\\min \\{\\xi, \\eta\\}$\r\n\r\n(1) 写出二维随机变量 $(X, Y)$ 的分布律:\r\n\r\n$$\r\n\\begin{array}{c|c|c|c}\r\n\\hline\r\nX \\diagdown Y & 1 & 2 & 3\\\\\r\n\\hline 1 \\\\\r\n\\hline 2 \\\\\r\n\\hline 3 & & & \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) 求随机变量 $X$ 的数学期望 $E(X)$",
+      "options": {},
+      "answer": "$\\dfrac{22}{9}$",
+      "analysis": "(1) $\\displaystyle P\\{X=1, Y=1\\}=P\\{\\xi=1, \\eta=1\\}\\\\=P\\{\\xi=1\\} P\\{\\eta=1\\}=\\frac{1}{9},\\\\\r\nP\\{X=1, Y=2\\}=0, P\\{X=1, Y=3\\}=0 ; \\\\\r\n P\\{X=2, Y=1\\}\\\\=P\\{\\xi=1, \\eta=2\\}+P\\{\\xi=2, \\eta=1\\}=\\frac{2}{9}, \\\\\r\n P\\{X=2, Y=2\\}\\\\=P\\{\\xi=2, \\eta=2\\}=P\\{\\xi=2\\} P\\{\\eta=2\\}=\\frac{1}{9}, \\\\\r\n P\\{X=2, Y=3\\}=0 ; \\\\\r\n P\\{X=3, Y=1\\}\\\\=P\\{\\xi=3, \\eta=1\\}+P\\{\\xi=1, \\eta=3\\}=\\frac{2}{9}, \\\\\r\n P\\{X=3, Y=2\\}\\\\=P\\{\\xi=3, \\eta=2\\}+P\\{\\xi=2, \\eta=3\\}=\\frac{2}{9}, \\\\\r\n P\\{X=3, Y=3\\}=\\frac{1}{9}$,\r\n\r\n故 $(X, Y)$ 的联合分布律为\r\n\r\n$$\r\n\\begin{array}{c|c|c|c}\r\n\\hline\r\nX \\diagdown Y & 1 & 2 & 3\\\\\r\n\\hline 1 & \\frac{1}{9} & 0 & 0 \\\\\r\n\\hline 2 & \\frac{2}{9} & \\frac{1}{9} & 0\\\\\r\n\\hline 3 & \\frac{2}{9} & \\frac{2}{9} & \\frac{1}{9} \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) 随机变量 $X$ 的边缘分布律为\r\n\r\n$X \\sim\\left(\\begin{array}{ccc}\r\n1 & 2 & 3 \\\\\r\n\\dfrac{1}{9} & \\dfrac{3}{9} & \\dfrac{5}{9}\r\n\\end{array}\\right)$,\r\n\r\n故 $E(X)=\\dfrac{1}{9}+\\dfrac{6}{9}+\\dfrac{15}{9}=\\dfrac{22}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X=max、Y=min 取不同值时对应两个有序样本点(如 X=2,Y=1 含 (1,2)和(2,1))，概率 2/9",
+        "对角 X=Y 只对应一个样本点，概率 1/9"
+      ],
+      "key_point": "枚举得联合分布律，X 边缘 P(X=1,2,3)=1/9,3/9,5/9，E(X)=22/9。"
+    }
+  ]
+}

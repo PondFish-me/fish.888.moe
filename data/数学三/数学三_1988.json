@@ -1,0 +1,398 @@
+{
+  "paper": "数学三",
+  "year": 1988,
+  "count": 23,
+  "questions": [
+    {
+      "id": 1673,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f(x)=\\int_0^x \\mathrm{e}^{-\\frac{1}{2} t^2} \\mathrm{d} t,-\\infty<x<+\\infty$, 则\r\n\r\n(1) $f^{\\prime}(x)=$\r\n\r\n(2) $f(x)$ 的单调性是 $\\rule{0.5cm}{0.2mm}$\r\n\r\n(3) $f(x)$ 的奇偶性是 $\\rule{0.5cm}{0.2mm}$\r\n\r\n(4) $f(x)$ 图形的拐点是 $\\rule{0.5cm}{0.2mm}$\r\n\r\n(5) $f(x)$ 的凹、凸区间是 $\\rule{0.5cm}{0.2mm}$\r\n\r\n(6) $f(x)$ 的水平渐近线是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "(1) $\\mathrm{e}^{-\\frac{x^2}{2}}$\r\n\r\n(2) 单调增函数\r\n\r\n(3) 奇函数\r\n\r\n(4) $(0,0)$\r\n\r\n(5) $(-\\infty, 0)$ 上凹, $(0,+\\infty)$ 上凸\r\n\r\n(6) $y=-\\sqrt{\\dfrac{\\pi}{2}}, y=\\sqrt{\\dfrac{\\pi}{2}}$",
+      "analysis": "(1) $f^{\\prime}(x)=\\mathrm{e}^{-\\frac{x^2}{2}}$\r\n\r\n(2) 因为 $f^{\\prime}(x)=\\mathrm{e}^{-\\frac{x^2}{2}}>0$, 所以 $f(x)$ 在 $(-\\infty,+\\infty)$ 内为单调增函数\r\n\r\n(3) 由 $\\displaystyle f(-x)=\\int_0^{-x} \\mathrm{e}^{-\\frac{1}{2} t^2} \\mathrm{d} t \\stackrel{t=-u}{=} \\int_0^x \\mathrm{e}^{-\\frac{1}{2} u^2}(-\\mathrm{d} u)=-\\int_0^x \\mathrm{e}^{-\\frac{1}{2} t^2} \\mathrm{d} t=-f(x)$ 得 $f(x)$ 为奇函数\r\n\r\n(4) 由 $f^{\\prime \\prime}(x)=-x \\mathrm{e}^{-\\frac{x^2}{2}}=0$ 得 $x=0$,\r\n当 $x<0$ 时 $f^{\\prime \\prime}(x)>0$; 当 $x>0$ 时 $f^{\\prime \\prime}(x)<0$, 故其图形的拐点为 $(0,0)$\r\n\r\n(5) 当 $x \\in(-\\infty, 0)$ 时 $f^{\\prime \\prime}(x)>0$, 则 $(-\\infty, 0)$ 为曲线 $y=f(x)$ 的凹区间;",
+      "wrong_options": {},
+      "pitfalls": [
+        "水平渐近线由 ∫₀^{±∞}e^{-t²/2}dt=±√(π/2)（高斯积分）给出两条 y=±√(π/2)，别只写一条或漏算积分值"
+      ],
+      "key_point": "f'=e^{-x²/2}>0 单调增；f 为奇函数；f''=-xe^{-x²/2} 定拐点 (0,0) 及凹凸；x→±∞ 时 f→±√(π/2) 为两条水平渐近线。"
+    },
+    {
+      "id": 1674,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\left|\\begin{array}{llll}1 & 1 & 1 & 0 \\\\ 1 & 1 & 0 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 0 & 1 & 1 & 1\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-3$",
+      "analysis": "$\\left|\\begin{array}{llll}\r\n1 & 1 & 1 & 0 \\\\\r\n1 & 1 & 0 & 1 \\\\\r\n1 & 0 & 1 & 1 \\\\\r\n0 & 1 & 1 & 1\r\n\\end{array}\\right|\\\\\r\n=3\\left|\\begin{array}{llll}\r\n1 & 1 & 1 & 1 \\\\\r\n1 & 1 & 0 & 1 \\\\\r\n1 & 0 & 1 & 1 \\\\\r\n0 & 1 & 1 & 1\r\n\\end{array}\\right|\\\\\r\n=3 \\left|\\begin{array}{cccc}\r\n1 & 1 & 1 & 1 \\\\\r\n0 & 0 & -1 & 0 \\\\\r\n0 & -1 & 0 & 0 \\\\\r\n-1 & 0 & 0 & 0\r\n\\end{array}\\right|\\\\\r\n= 3\\cdot(-1)^{\\frac{4(4-1)}{2}}\\cdot (-1)^3 \\cdot 1=-3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "每行三个 1，直接展开繁琐；用 r2-r1、r3-r1 制造零后按列展开更稳，符号要跟对"
+      ],
+      "key_point": "行变换降阶计算得行列式值 -3。"
+    },
+    {
+      "id": 1675,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{llll}0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}^{-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{llll}0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0\\end{array}\\right)$",
+      "analysis": "令 $\\boldsymbol{B}=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right), \\boldsymbol{B}^{-1}=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{A}=\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{B} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{A}^{-1}=\\left(\\begin{array}{cc}\\boldsymbol{O} & \\boldsymbol{B}^{-1} \\\\ \\boldsymbol{B}^{-1} & \\boldsymbol{O}\\end{array}\\right)=\\left(\\begin{array}{llll}0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "该副对角置换阵满足 A²=E，逆就是它自己；无需做行变换求逆"
+      ],
+      "key_point": "A 是对合置换矩阵，A²=E，故 A^{-1}=A。"
+    },
+    {
+      "id": 1676,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $P(A)=0.4, P(A \\cup B)=0.7$, 那么\r\n\r\n(1) 若 $A$ 与 $B$ 互不相容, 则 $P(B)=\\rule{0.5cm}{0.2mm}$\r\n\r\n(2) 若 $A$ 与 $B$ 相互独立, 则 $P(B)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1) 0.3;（2) 0.5$",
+      "analysis": "(1) 若 $A$ 与 $B$ 互不相容, \r\n\r\n由 $P(A \\cup B)=P(A)+P(B)$ \r\n\r\n得 $P(B)=0.3$\r\n\r\n(2) 若 $A$ 与 $B$ 相互独立, \r\n\r\n由 $0.7=P(A \\cup B)=P(A)+P(B)-P(A) P(B)=0.4+0.6 P(B)$ \r\n\r\n得 $P(B)=0.5$",
+      "wrong_options": {},
+      "pitfalls": [
+        "独立时 P(AB)=P(A)P(B) 不为 0，加法公式要减去交的概率，得 0.7=0.4+0.6P(B)"
+      ],
+      "key_point": "互斥：P(B)=0.7-0.4=0.3；独立：0.7=0.4+0.6P(B) ⇒ P(B)=0.5。"
+    },
+    {
+      "id": 1677,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 5,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "若极限 $\\displaystyle \\lim _{x \\rightarrow x_0} f(x)$ 与 $\\displaystyle \\lim _{x \\rightarrow x_0} f(x) g(x)$ 都存在, 则极限 $\\displaystyle \\lim _{x \\rightarrow x_0} g(x)$ 必存在",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "如: $f(x)=x, g(x)=\\sin \\dfrac{1}{x}$, \r\n\r\n显然 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=0, \\lim _{x \\rightarrow 0} f(x) g(x)=0$, \r\n\r\n但 $\\displaystyle \\lim _{x \\rightarrow 0} g(x)$ 不存在",
+      "wrong_options": {},
+      "pitfalls": [
+        "除法法则要求分母（此处 f）极限非零；f→0 时不能由 fg、f 反推 g 的极限"
+      ],
+      "key_point": "取 f=x、g=sin(1/x)，f 与 fg 极限均为 0，但 g 极限不存在，命题错误。"
+    },
+    {
+      "id": 1678,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 6,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "若 $x_0$ 是函数 $f(x)$ 的极值点, 则必有 $f^{\\prime}\\left(x_0\\right)=0$",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "设 $f(x)=|x|$, \r\n\r\n显然 $x=0$ 为 $f(x)$ 的极小值点,\r\n\r\n但 $f(x)$ 在 $x=0$ 不可导",
+      "wrong_options": {},
+      "pitfalls": [
+        "费马定理结论 f'(x0)=0 以\"在 x0 可导\"为前提；不可导的极值点（如 |x| 的尖点）不满足"
+      ],
+      "key_point": "f=|x| 在 x=0 取极小值但不可导，故\"极值点必有 f'=0\"错误。"
+    },
+    {
+      "id": 1679,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 7,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "等式 $\\displaystyle \\int_0^a f(x) \\mathrm{d} x=-\\int_0^a f(a-x) \\mathrm{d} x$ 对任何实数 $a$ 都成立",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "由 $\\displaystyle \\int_0^a f(a-x) \\mathrm{d} x \\stackrel{a-x=t}{=} \\int_a^0 f(t)(-\\mathrm{d} t)=\\int_0^a f(t) \\mathrm{d} t=\\int_0^a f(x) \\mathrm{d} x$ \r\n\r\n得 $\\displaystyle \\int_0^a f(x) \\mathrm{d} x \\neq-\\int_0^a f(a-x) \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元后正确关系是 ∫₀ᵃf(x)dx=∫₀ᵃf(a-x)dx（正号），题中带负号故错"
+      ],
+      "key_point": "令 a-x=t 得 ∫₀ᵃf(a-x)dx=∫₀ᵃf(x)dx，与题中\"=-\"矛盾，命题错误。"
+    },
+    {
+      "id": 1680,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 8,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 和 $\\boldsymbol{B}$ 都是 $n$ 阶非零矩阵,且 $\\boldsymbol{A B}=\\boldsymbol{O}$, 则 $\\boldsymbol{A}$ 的秩必小于 $n$",
+      "options": {},
+      "answer": "$\\checkmark$",
+      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{O}$ 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant n$,\r\n\r\n因为 $\\boldsymbol{B}$ 为非零矩阵, 所以 $r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n故 $r(\\boldsymbol{A})<n$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键用 Sylvester 不等式 r(A)+r(B)≤n；B 非零保证 r(B)≥1，于是 r(A)<n"
+      ],
+      "key_point": "AB=O ⇒ r(A)+r(B)≤n，B 非零 ⇒ r(B)≥1，故 r(A)<n，命题正确。"
+    },
+    {
+      "id": 1681,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 9,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "若事件 $A, B, C$ 满足等式 $A \\cup B=A \\cup C$, 则 $A=B$",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "令 $A=\\{1,2\\}, B=\\{1,3\\}, C=\\{1,2,3\\}$, \r\n\r\n显然 $A \\cup B=A \\cup C$, 但 $A \\neq B$",
+      "wrong_options": {},
+      "pitfalls": [
+        "并集相等无消去律；A∪B=A∪C 既推不出 A=B 也推不出 B=C"
+      ],
+      "key_point": "取 A={1,2},B={1,3},C={1,2,3}，A∪B=A∪C 但 A≠B，命题错误。"
+    },
+    {
+      "id": 1682,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 10,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{x^x-1}{x \\ln x}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 1} x^x=1$,\r\n\r\n所以 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{x^x-1}{x \\ln x}=\\lim _{x \\rightarrow 1} \\frac{x^x-1}{\\ln x^x} \\stackrel{x^x=t}{=} \\lim _{t \\rightarrow 1} \\frac{t-1}{\\ln t}=\\lim _{t \\rightarrow 1} \\frac{t-1}{\\ln [1+(t-1)]}=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x^x-1=e^{x ln x}-1~x ln x（因 x ln x→0），恰与分母相约；直接洛必达对 x^x 求导也可但更繁"
+      ],
+      "key_point": "x^x-1~x ln x，故极限 =lim (x ln x)/(x ln x)=1。"
+    },
+    {
+      "id": 1683,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $u+\\mathrm{e}^u=x y$, 求 $\\dfrac{\\partial^2 u}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\dfrac{1+2 \\mathrm{e}^u-u \\mathrm{e}^u}{\\left(1+\\mathrm{e}^u\\right)^3}$",
+      "analysis": "$u+\\mathrm{e}^u=x y$ 两边分别对 $x, y$ 求偏导得\r\n\r\n$\\displaystyle \\left(1+\\mathrm{e}^u\\right) \\frac{\\partial u}{\\partial x}=y, \\quad\\left(1+\\mathrm{e}^u\\right) \\frac{\\partial u}{\\partial y}=x$,\r\n\r\n解得 $\\displaystyle \\frac{\\partial u}{\\partial x}=\\frac{y}{1+\\mathrm{e}^u}, \\quad \\frac{\\partial u}{\\partial y}=\\frac{x}{1+\\mathrm{e}^u}$;\r\n\r\n由 $\\dfrac{\\partial u}{\\partial x}=\\dfrac{y}{1+\\mathrm{e}^u}$ 得\r\n\r\n$\\displaystyle \\frac{\\partial^2 u}{\\partial x \\partial y}\\\\\r\n=\\frac{1+\\mathrm{e}^u-y \\mathrm{e}^u \\frac{\\partial u}{\\partial y}}{\\left(1+\\mathrm{e}^u\\right)^2}=\\frac{1+\\mathrm{e}^u-\\frac{x y \\mathrm{e}^u}{1+\\mathrm{e}^u}}{\\left(1+\\mathrm{e}^u\\right)^2} \\\\\r\n=\\frac{\\left(1+\\mathrm{e}^u\\right)^2-x y \\mathrm{e}^u}{\\left(1+\\mathrm{e}^u\\right)^3}=\\frac{\\left(1+\\mathrm{e}^u\\right)^2-\\left(u+\\mathrm{e}^u\\right) \\mathrm{e}^u}{\\left(1+\\mathrm{e}^u\\right)^3} \\\\\r\n=\\frac{1+2 \\mathrm{e}^u-u \\mathrm{e}^u}{\\left(1+\\mathrm{e}^u\\right)^3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 u_x=y/(1+e^u) 关于 y 求导时，u 还是 x,y 的函数，需再乘 u_y=x/(1+e^u)；最后用 xy=u+e^u 把 xy 消掉"
+      ],
+      "key_point": "u_x=y/(1+e^u)，对 y 求导并用 xy=u+e^u 回代，得 (1+2e^u-u e^u)/(1+e^u)³。"
+    },
+    {
+      "id": 1684,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求定积分 $\\displaystyle \\int_0^3 \\frac{\\mathrm{d} x}{\\sqrt{x}(1+x)}$",
+      "options": {},
+      "answer": "$\\dfrac{2 \\pi}{3}$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}}(x-0)^{\\frac{1}{2}} \\cdot \\frac{1}{\\sqrt{x}(1+x)}=1$ 且 $\\alpha=\\dfrac{1}{2}<1$ \r\n\r\n得 $\\displaystyle \\int_0^3 \\frac{\\mathrm{d} x}{\\sqrt{x}(1+x)}$ 收敛,\r\n\r\n于是 $\\displaystyle \\int_0^3 \\frac{\\mathrm{d} x}{\\sqrt{x}(1+x)}=2 \\int_0^3 \\frac{\\mathrm{d}(\\sqrt{x})}{1+(\\sqrt{x})^2}=\\left.2 \\arctan \\sqrt{x}\\right|_0 ^3=\\frac{2 \\pi}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=0 是瑕点，属瑕积分（不是无穷限），应先说明收敛（瑕点阶 1/2<1）再计算"
+      ],
+      "key_point": "凑 d√x 得 2arctan√x|₀³=2arctan√3=2π/3。"
+    },
+    {
+      "id": 1685,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求二重积分 $\\displaystyle \\int_0^{\\frac{\\pi}{6}} \\mathrm{d} y \\int_y^{\\frac{\\pi}{6}} \\frac{\\cos x}{x} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "改变积分次序得\r\n\r\n$\\displaystyle \\int_0^{\\frac{\\pi}{6}} \\mathrm{d} y \\int_y^{\\frac{\\pi}{6}} \\frac{\\cos x}{x} \\mathrm{d} x=\\int_0^{\\frac{\\pi}{6}} \\mathrm{d} x \\int_0^x \\frac{\\cos x}{x} \\mathrm{d} y=\\int_0^{\\frac{\\pi}{6}} \\cos x \\mathrm{d} x=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "cos x/x 无初等原函数，必须交换次序先对 y 积产生因子 x 消掉分母；区域为三角形 0≤y≤x≤π/6"
+      ],
+      "key_point": "交换次序得 ∫₀^{π/6}cos x dx=sin(π/6)=1/2。"
+    },
+    {
+      "id": 1686,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "讨论级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(n+1) \\text { ! }}{n^{n+1}}$ 的收敛性",
+      "options": {},
+      "answer": "收敛",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{a_{n+1}}{a_n}=\\lim _{n \\rightarrow \\infty} \\frac{(n+2) !}{(n+1)^{n+2}} \\cdot \\frac{n^{n+1}}{(n+1) !}=\\lim _{n \\rightarrow \\infty} \\frac{n+2}{n+1} \\cdot \\frac{n^{n+1}}{(n+1)^{n+1}}=\\lim _{n \\rightarrow \\infty}\\left[\\left(1-\\frac{1}{n+1}\\right)^{-(n+1)}\\right]^{-1}=\\frac{1}{\\mathrm{e}}<1,\r\n$\r\n\r\n得级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(n+1) !}{n^{n+1}}$ 收敛",
+      "wrong_options": {},
+      "pitfalls": [
+        "比值中 n^{n+1}/(n+1)^{n+1}=(n/(n+1))^{n+1}→1/e，是收敛的决定因素"
+      ],
+      "key_point": "比值极限 lim a_{n+1}/a_n=1/e<1，级数收敛。"
+    },
+    {
+      "id": 1687,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n^2$ 和 $\\displaystyle \\sum_{n=1}^{\\infty} b_n^2$ 都收敛, 试证明级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n b_n$ 绝对收敛",
+      "options": {},
+      "answer": "略",
+      "analysis": "$\\displaystyle 0 \\leqslant\\left|a_n b_n\\right| \\leqslant \\frac{1}{2}\\left(a_n^2+b_n^2\\right)$,\r\n\r\n由级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n^2$ 和 $\\displaystyle \\sum_{n=1}^{\\infty} b_n^2$ 都收敛得 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{2}\\left(a_n^2+b_n^2\\right)$ 收敛,\r\n\r\n由正项级数的比较审敛法得级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|a_n b_n\\right|$ 收敛, 即级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n b_n$ 绝对收敛",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键放缩 |a_n b_n|≤(a_n²+b_n²)/2；证\"绝对收敛\"要对 Σ|a_n b_n| 用比较判别法，而非对原级数"
+      ],
+      "key_point": "由 |a_n b_n|≤(a_n²+b_n²)/2 及两平方级数收敛，比较判别法得 Σ|a_n b_n| 收敛，故绝对收敛。"
+    },
+    {
+      "id": 1688,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知某商品的需求量 $D$ 和供给量 $S$ 都是价格 $p$ 的函数: $D=D(p)=\\dfrac{a}{p^2}, \\quad S=S(p)=b p$,\r\n\r\n其中 $a>0, b>0$ 为常数; 价格 $p$ 是时间 $t$ 的函数且满足方程$\r\n\\dfrac{\\mathrm{d} p}{\\mathrm{d} t}=k[D(p)-\\mathrm{S}(p)], ( k$ 为正的常数)\r\n\r\n假设当 $t=0$ 时价格为 $1$ , 试求:\r\n\r\n(1) 需求量等于供给量时的均衡价格 $p_e$\r\n\r\n(2) 价格函数 $p(t)$\r\n\r\n(3) 极限 $\\displaystyle \\lim _{t \\rightarrow+\\infty} p(t)$",
+      "options": {},
+      "answer": "(1) $p_{\\mathrm{c}}=\\sqrt[3]{\\dfrac{a}{b}}$\r\n\r\n(2) $\\displaystyle p(t)=\\left[p_{\\mathrm{e}}^3+\\left(1-p_{\\mathrm{e}}^3\\right) \\mathrm{e}^{-3 k b t}\\right]^{\\frac{1}{3}}$\r\n\r\n(3) $p_{\\mathrm{e}}$",
+      "analysis": "(1) 由 $D(p)=S(p)$ 得 $\\displaystyle \\frac{a}{p^2}=b p$,\r\n解得需求量与供给量平衡时的价格为 $p_{\\mathrm{e}}=\\sqrt[3]{\\dfrac{a}{b}}$\r\n\r\n(2) 由 $\\displaystyle \\frac{\\mathrm{d} p}{\\mathrm{d} t}=k\\left(\\frac{a}{p^2}-b p\\right)$ 得 $\\displaystyle \\frac{\\mathrm{d} p}{\\mathrm{d} t}=\\frac{k b}{p^2}\\left(p_{\\mathrm{e}}^3-p^3\\right)$,\r\n\r\n变量分离得 $\\displaystyle \\frac{p^2 \\mathrm{d} p}{p^3-p_{\\mathrm{e}}^3}=-k b \\mathrm{d} t$, \r\n\r\n积分得 $\\ln \\left(p^3-p_{\\mathrm{e}}^3\\right)=-3 k b t+\\ln C$, \r\n\r\n即 $p^3=p_{\\mathrm{e}}^3+C \\mathrm{e}^{-3 k b t}$,\r\n\r\n由 $p(0)=1$ 得 $C=1-p_{\\mathrm{e}}^3$,\r\n\r\n故 $\\displaystyle p(t)=\\left[p_{\\mathrm{e}}^3+\\left(1-p_{\\mathrm{e}}^3\\right) \\mathrm{e}^{-3 k b t}\\right]^{\\frac{1}{3}}$\r\n\r\n(3) $\\displaystyle \\lim _{t \\rightarrow+\\infty} p(t)=\\lim _{t \\rightarrow+\\infty}\\left[p_{\\mathrm{e}}^3+\\left(1-p_{\\mathrm{e}}^3\\right) \\mathrm{e}^{-3 k b t}\\right]^{\\frac{1}{3}}=p_{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分离变量后凑 d(p³) 更快；t→∞ 时 e^{-3kbt}→0，价格趋于均衡价 p_e"
+      ],
+      "key_point": "均衡价 p_e=(a/b)^{1/3}；解得 p(t)=[p_e³+(1-p_e³)e^{-3kbt}]^{1/3}；t→∞ 时 p→p_e。"
+    },
+    {
+      "id": 1689,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "过曲线 $y=x^2(x \\geqslant 0)$ 上某点 $A$ 处作一切线, 使之与曲线以及 $x$ 轴所围图形的面积为 $\\dfrac{1}{12}$, 试求:\r\n\r\n(1) 切点 $A$ 的坐标\r\n\r\n(2) 过切点 $A$ 的切线方程\r\n\r\n(3) 由上述所围平面图形绕 $x$ 轴旋转一周所成旋转体的体积",
+      "options": {},
+      "answer": "(1) $A(1,1)$\r\n\r\n(2) $y=2 x-1$\r\n\r\n(3) $\\dfrac{\\pi}{30}$",
+      "analysis": "(1) 设切点坐标为 $\\left(a, a^2\\right)$, \r\n\r\n切线方程为 $y-a^2=2 a(x-a)$, 即 $y=2 a x-a^2$,\r\n\r\n令 $2 a x-a^2=0$, \r\n\r\n得切线与 $x$ 轴交点为 $\\left(\\dfrac{a}{2}, 0\\right)$,\r\n\r\n由题意得 $\\displaystyle \\int_0^a x^2 \\mathrm{d} x-\\frac{1}{2} \\cdot\\left(a-\\frac{a}{2}\\right) \\cdot a^2=\\frac{1}{12}$,\r\n\r\n解得 $a=1$, 故切点坐标为 $A(1,1)$\r\n\r\n(2) 过点 $A(1,1)$ 的切线方程为 $y=2 x-1$\r\n\r\n(3) 所求的旋转体的体积为\r\n\r\n$\\displaystyle  V =\\pi \\int_0^1\\left(x^2\\right)^2 \\mathrm{d} x-\\pi \\int_{\\frac{1}{2}}^1(2 x-1)^2 \\mathrm{d} x \\\\\r\n=\\frac{\\pi}{5}-\\pi \\int_{\\frac{1}{2}}^1\\left(4 x^2-4 x+1\\right) \\mathrm{d} x \\\\\r\n=\\frac{\\pi}{5}-\\frac{\\pi}{6}=\\frac{\\pi}{30}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋转体体积须用曲线段体积减去切线段（从 x=1/2 到 1）体积；切线交 x 轴于 (a/2,0)，别漏切线下方的锥体部分"
+      ],
+      "key_point": "面积方程解得 a=1，切点 A(1,1)、切线 y=2x-1；体积 V=π/5-π/6=π/30。"
+    },
+    {
+      "id": 1690,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知线性方程组 $\\left\\{\\begin{array}{l}\r\nx_1+x_2+2 x_3+3 x_4=1 \\\\ \r\nx_1+3 x_2+6 x_3+x_4=3 \\\\ \r\n3 x_1-x_2-k_1 x_3+15 x_4=3 \\\\ \r\nx_1-5 x_2-10 x_3+12 x_4=k_2\r\n\\end{array}\\right.$\r\n\r\n问 $k_1$ 和 $k_2$ 各取何值时, 方程组无解? \r\n\r\n有唯一解? 有无穷多组解? \r\n\r\n在方程组有无穷多组解的情况下, 试求出一般解",
+      "options": {},
+      "answer": "- 当 $k_1 \\neq 2, k_2$ 任意时, 方程组有唯一解;\r\n- 当 $k_1=2, k_2 \\neq 1$ 时, 方程组无解;\r\n- 当 $k_1=2, k_2=1$ 时, 方程组无穷多解;\r\n\r\n通解为 $\\boldsymbol{X}=k\\left(\\begin{array}{c}0 \\\\ -2 \\\\ 1 \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}-8 \\\\ 3 \\\\ 0 \\\\ 2\\end{array}\\right), k$ 为任意常数",
+      "analysis": "$\\bar{\\boldsymbol{A}} =\\left(\\begin{array}{cccc:c}\r\n1 & 1 & 2 & 3 & 1 \\\\\r\n1 & 3 & 6 & 1 & 3 \\\\\r\n3 & -1 & -k_1 & 15 & 3 \\\\\r\n1 & -5 & -10 & 12 & k_2\r\n\\end{array}\\right) \\\\\r\n\\rightarrow \\left(\\begin{array}{cccc:c}\r\n1 & 1 & 2 & 3 & 1 \\\\\r\n0 & 2 & 4 & -2 & 2 \\\\\r\n0 & -4 & -k_1-6 & 6 & 0 \\\\\r\n0 & -6 & -12 & 9 & k_2-1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow  \\left(\\begin{array}{cccc:c}\r\n1 & 1 & 2 & 3 & 1 \\\\\r\n0 & 1 & 2 & -1 & 1 \\\\\r\n0 & 0 & -k_1+2 & 2 & 4 \\\\\r\n0 & 0 & 0 & 3 & k_2+5\r\n\\end{array}\\right)$\r\n\r\n- 当 $k_1 \\neq 2, k_2$ 为任意常数时,方程组有唯一解;\r\n\r\n- 当 $k_1=2$ 时, $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{cccc:c}1 & 1 & 2 & 3 & 1 \\\\ 0 & 1 & 2 & -1 & 1 \\\\ 0 & 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 0 & k_2-1\\end{array}\\right)$,\r\n\r\n- 当 $k_1=2, k_2 \\neq 1$ 时, 因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, 所以方程组无解;\r\n\r\n- 当 $k_1=2, k_2=1$ 时, 方程组有无数组解, 由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{llll:c}1 & 0 & 0 & 0 & -8 \\\\ 0 & 1 & 2 & 0 & 3 \\\\ 0 & 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right)$\r\n\r\n得方程组的一般解为 $\\boldsymbol{X}=k\\left(\\begin{array}{c}0 \\\\ -2 \\\\ 1 \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}-8 \\\\ 3 \\\\ 0 \\\\ 2\\end{array}\\right)(k $ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "阶梯化后主元列 (2-k1) 与最后一行 (k2-1) 分别控制唯一解与相容性；两个参数要联合讨论，别只看一个"
+      ],
+      "key_point": "由阶梯形：k1≠2 唯一解；k1=2 且 k2≠1 无解；k1=2,k2=1 无穷多解，通解含一个自由参数。"
+    },
+    {
+      "id": 1691,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s(s \\geqslant 2)$ 线性无关, 设 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\cdots, \\boldsymbol{\\beta}_s=\\boldsymbol{\\alpha}_s+\\boldsymbol{\\alpha}_1$, 讨论向量组 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 的线性相关性",
+      "options": {},
+      "answer": "若 $s$ 为奇数, 则向量组 $\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\beta}_s$ 线性无关;\r\n\r\n若 $s$ 为偶数, 则向量组 $\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\beta}_s$ 线性相关",
+      "analysis": "令 $k_1 \\boldsymbol{\\beta}_1+k_2 \\boldsymbol{\\beta}_2+\\cdots+k_{,} \\boldsymbol{\\beta}_s=\\mathbf{0}$,\r\n\r\n整理得 $\\left(k_1+k_s\\right) \\boldsymbol{\\alpha}_1+\\left(k_1+k_2\\right) \\boldsymbol{\\alpha}_2+\\cdots+\\left(k_{s-1}+k_s\\right) \\boldsymbol{\\alpha},=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$ 线性无关, \r\n\r\n所以有 $\\left\\{\\begin{array}{l}\r\nk_1+k_s=0 \\\\\r\nk_1+k_2=0 \\\\\r\n\\vdots \\\\\r\nk_{s-1}+k_s=0\r\n\\end{array}\\right.$\r\n\r\n该方程组的系数行列式 $D=\\left|\\begin{array}{ccccc}1 & 0 & \\cdots & 0 & 1 \\\\ 1 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & \\cdots & 1 & 1\\end{array}\\right|=1+(-1)^{s+1}$,\r\n\r\n- 当 $s$ 为奇数时, 因为 $D=2 \\neq 0$, 所以上述方程组只有零解, 故 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}$ 线性无关;\r\n\r\n- 当 $s$ 为偶数时, 因为 $D=0$, 所以上述方程组有非零解, 故 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 线性相关",
+      "wrong_options": {},
+      "pitfalls": [
+        "系数行列式 D=1+(-1)^{s+1}：s 奇 D=2≠0 只有零解（无关），s 偶 D=0 有非零解（相关）"
+      ],
+      "key_point": "系数行列式 1+(-1)^{s+1}，s 奇 ⇒ 无关，s 偶 ⇒ 相关。"
+    },
+    {
+      "id": 1692,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 3 阶方阵, $\\boldsymbol{A}^*$ 是 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{A}$ 的行列式 $|\\boldsymbol{A}|=\\dfrac{1}{2}$, 求行列式 $\\left|(3 \\boldsymbol{A})^{-1}-2 \\boldsymbol{A}^*\\right|$",
+      "options": {},
+      "answer": "$-\\dfrac{16}{27}$",
+      "analysis": "由 $\\displaystyle |\\boldsymbol{A}|=\\frac{1}{2}$ 得 $\\left|\\boldsymbol{A}^{-1}\\right|=2$,\r\n\r\n再由 $\\displaystyle (3 \\boldsymbol{A})^{-1}-2 \\boldsymbol{A}^{*}=\\frac{1}{3} \\boldsymbol{A}^{-1}-2|\\boldsymbol{A}| \\boldsymbol{A}^{-1}=-\\frac{2}{3} \\boldsymbol{A}^{-1}$\r\n\r\n得 $\\displaystyle \\left|(3 \\boldsymbol{A})^{-1}-2 \\boldsymbol{A}^{*} \\right|=\\left|-\\frac{2}{3} \\boldsymbol{A}^{-1}\\right|=\\left(-\\frac{2}{3}\\right)^3\\left|\\boldsymbol{A}^{-1}\\right|=-\\frac{16}{27}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A*=|A|A^{-1}=(1/2)A^{-1}；合并得 -(2/3)A^{-1}，取 3 阶行列式要乘 (-2/3)³ 而非一次方"
+      ],
+      "key_point": "化为 -(2/3)A^{-1}，行列式 =(-2/3)³·|A^{-1}|=(-8/27)·2=-16/27。"
+    },
+    {
+      "id": 1693,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "玻璃杯成箱出售, 每箱 $20$ 只, 假设各箱含 $0,1,2$ 只次品的概率分别为 $0.8,0.1,0.1$, 一顾客欲购买一箱玻璃杯, 在购买时, 售货员随意取一箱, 而顾客开箱随机查看 4 只, 若无次品,  则买下该箱玻璃杯, 否则不买. 试求:\r\n\r\n(1) 顾客买下该箱的概率 $\\alpha$\r\n\r\n(2) 在顾客买下的一箱中, 确实没有次品的概率 $\\beta$",
+      "options": {},
+      "answer": "$(1) \\alpha=0.94 (2) \\beta=0.85$",
+      "analysis": "设 $A_i=\\{$ 箱中恰有 $i$ 件残次品 $\\}(i=0,1,2)$,\r\n\r\n$P\\left(A_0\\right)=0.8, P\\left(A_1\\right)=0.1, P\\left(A_2\\right)=0.1$,\r\n\r\n令 $B=\\{$ 顾客买下所查看的箱 $\\}$,\r\n\r\n$\\displaystyle P\\left(B \\mid A_0\\right)=1 \\\\\r\nP\\left(B \\mid A_1\\right)=\\frac{C_{19}^4}{C_{20}^4}=\\frac{4}{5} \\\\\r\nP\\left(B \\mid A_2\\right)=\\frac{C_{18}^4}{C_{20}^4}=\\frac{12}{19}$\r\n\r\n(1) $\\displaystyle \\alpha=P(B)=\\sum_{i=0}^2 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)=0.94$\r\n\r\n(2) $\\displaystyle \\beta=P\\left(A_0 \\mid B\\right)=\\frac{P\\left(A_0\\right) P\\left(B \\mid A_0\\right)}{P(B)} \\approx 0.85$",
+      "wrong_options": {},
+      "pitfalls": [
+        "各 P(B|A_i) 是超几何 C(20-i,4)/C(20,4)（4 只全为正品）；β 用贝叶斯而非直接除"
+      ],
+      "key_point": "α=Σ P(A_i)P(B|A_i)≈0.94；β=P(A0)P(B|A0)/α≈0.85。"
+    },
+    {
+      "id": 1694,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某保险公司多年统计资料表明,在索赔户中被盗索赔户占 $20 \\%$, 以 $X$ 表示在随机抽查的 $100$ 个索赔户中因被盗向保险公司索赔的户数\r\n\r\n(1) 写出 $X$ 的概率分布\r\n\r\n(2) 利用棣莫弗一拉普拉斯定理, 求出被盗索赔户不少于 $14$ 户且不多于 $30$ 户的概率的近似值",
+      "options": {},
+      "answer": "$(1) P\\{X=k\\}=\\mathrm{C}_{100}^k(0.2)^k(0.8)^{100-k} \\text {, 其中 } k=0,1,2, \\cdots, 100$\r\n\r\n$(2) 0.927$",
+      "analysis": "(1) 随机变量 $X$ 服从重数为 $100, p=0.2$ 的二项分布, 其分布律为\r\n\r\n$P\\{X=k\\}=\\mathrm{C}_{100}^k(0.2)^k(0.8)^{100-k} \\text {, 其中 } k=0,1,2, \\cdots, 100$\r\n\r\n(2) 由 $X \\sim B(100,0.2)$ 得 $E(X)=n p=20, D(X)=n p(1-p)=16$,\r\n\r\n由拉普拉斯定理得 $X$ 近似服从正态分布 $N(20,16)$, \r\n\r\n或 $\\dfrac{X-20}{4}$ 近似服从标准正态分布 $N(0,1)$, \r\n\r\n于是$P\\{14 \\leqslant X \\leqslant 30\\} \\\\\r\n=P\\left\\{\\frac{14-20}{4} \\leqslant \\dfrac{X-20}{4} \\leqslant \\dfrac{30-20}{4}\\right\\} \\\\\r\n=P\\left\\{-1.5 \\leqslant \\dfrac{X-20}{4} \\leqslant 2.5\\right\\} \\approx \\Phi(2.5)-\\Phi(-1.5) \\\\\r\n=\\Phi(2.5)-[1-\\Phi(1.5)]=0.927$",
+      "wrong_options": {},
+      "pitfalls": [
+        "近似 N(20,16)，σ=4；标准化得 Φ(2.5)-Φ(-1.5)=Φ(2.5)+Φ(1.5)-1≈0.927"
+      ],
+      "key_point": "X~B(100,0.2)，正态近似 N(20,16)，P{14≤X≤30}≈Φ(2.5)-Φ(-1.5)=0.927。"
+    },
+    {
+      "id": 1695,
+      "paper": "数学三",
+      "year": 1988,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设随机变量 $X$ 在区间 $(1,2)$ 上服从均匀分布, 试求随机变量 $Y=\\mathrm{e}^{2 X}$ 的概率密度 $f(y)$",
+      "options": {},
+      "answer": "$f(y)= \\begin{cases}\\dfrac{1}{2 y}, & \\mathrm{e}^2<y<\\mathrm{e}^4\\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "随机变量 $X$ 的概率密度为 $f(x)= \\begin{cases}1, & 1<x<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n随机变量 $Y$ 的分布函数为 $F(y)=P\\{Y \\leqslant y\\}=P\\left\\{\\mathrm{e}^{2 X} \\leqslant y\\right\\}$,\r\n\r\n- 当 $y<\\mathrm{e}^2$ 时, $F(y)=0$;\r\n- 当 $y \\geqslant \\mathrm{e}^4$ 时, $F(y)=1$;\r\n- 当 $\\mathrm{e}^2 \\leqslant y<\\mathrm{e}^4$ 时, $\\displaystyle F(y)=P\\left\\{X \\leqslant \\frac{1}{2} \\ln y\\right\\}=\\int_1^{\\frac{1}{2} \\ln y} \\mathrm{d} x=\\frac{1}{2} \\ln y-1$,\r\n\r\n即 $F(y)= \\begin{cases}0, & y<\\mathrm{e}^2 \\\\ \\dfrac{1}{2} \\ln y-1, & \\mathrm{e}^2 \\leqslant y<\\mathrm{e}^4 \\\\ 1, & y \\geqslant \\mathrm{e}^4\\end{cases}$\r\n\r\n故随机变量 $Y=\\mathrm{e}^{2 X}$ 的概率密度为\r\n\r\n$f(y)= \\begin{cases}\\dfrac{1}{2 y}, & \\mathrm{e}^2<y<\\mathrm{e}^4\\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y 的取值区间是 (e²,e⁴)，对应 X∈(1,2)；密度 f_X=1，故 f_Y=1·|d((1/2)ln y)/dy|=1/(2y)"
+      ],
+      "key_point": "Y=e^{2X} 单调，x=(1/2)ln y，f_Y(y)=1·1/(2y)=1/(2y) 于 (e²,e⁴)。"
+    }
+  ]
+}

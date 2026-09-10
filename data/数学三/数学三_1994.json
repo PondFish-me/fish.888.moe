@@ -1,0 +1,410 @@
+{
+  "paper": "数学三",
+  "year": 1994,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1130,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设常数 $\\lambda>0$, 且级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}^{2}$ 收敛, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n} \\frac{\\left|a_{n}\\right|}{\\sqrt{n^{2}+\\lambda}}(\\quad)$",
+      "options": {
+        "A": "发散",
+        "B": "条件收敛",
+        "C": "绝对收敛",
+        "D": "收敛性与 $\\lambda$ 有关"
+      },
+      "answer": "C",
+      "analysis": "$\\displaystyle \\left|(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}\\right| \\leqslant \\frac{1}{2}\\left(a_n^2+\\frac{1}{n^2+\\lambda}\\right)$,\r\n\r\n因为 $\\displaystyle \\sum_{n=1}^{\\infty} a_n^2$ 及 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2+\\lambda}$ 都收敛, \r\n\r\n由正项级数的比较审敛法得 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}\\right|$ 收敛,\r\n\r\n即 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}$ 绝对收敛, 应选 (C)",
+      "wrong_options": {
+        "A": "只看 (−1)ⁿ 就套莱布尼茨误判发散，未对绝对值级数做比较审敛。",
+        "B": "误判仅条件收敛，忽略绝对值级数经放缩即被收敛正项级数控制而收敛。",
+        "D": "误以为 λ 影响敛散，其实 λ>0 时 1/(n²+λ) 恒收敛，收敛性与 λ 无关。"
+      },
+      "pitfalls": [
+        "a_n 未知符号，不能直接用莱布尼茨，须从绝对收敛入手",
+        "关键放缩 |a_n·(…)|≤½(a_n²+1/(n²+λ))，两个正项级数都收敛",
+        "λ>0 保证 1/(n²+λ) 与 1/n² 同阶收敛，答案与 λ 无关"
+      ],
+      "key_point": "均值不等式放缩后绝对值级数被收敛正项级数控制，故原级数绝对收敛，选 C。"
+    },
+    {
+      "id": 1444,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\mathrm{e}^{\\frac{1}{x^2}} \\arctan \\dfrac{x^2+x+1}{(x-1)(x+2)}$ 的渐近线有 $(\\quad)$",
+      "options": {
+        "A": "$1$ 条",
+        "B": "$2$ 条",
+        "C": "$3$ 条",
+        "D": "$4$ 条"
+      },
+      "answer": "B",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow \\infty} y=\\frac{\\pi}{4}$, 得 $y=\\dfrac{\\pi}{4}$ 为曲线的水平渐近线;\r\n\r\n因为 $f(1-0)=-\\dfrac{\\pi \\mathrm{e}}{2}, f(1+0)=\\dfrac{\\pi \\mathrm{e}}{2}$, \r\n\r\n所以 $x=1$ 不是铅直渐近线;\r\n\r\n因为 $f(-2-0)=\\dfrac{\\pi \\mathrm{e}^{\\frac{1}{4}}}{2}, f(-2+0)=-\\dfrac{\\pi \\mathrm{e}^{\\frac{1}{4}}}{2}$, \r\n\r\n所以 $x=-2$ 不是铅直渐近线;\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=-\\infty$, 所以 $x=0$ 为铅直渐近线, \r\n\r\n故曲线有两条渐近线, 应选 (B)",
+      "wrong_options": {
+        "A": "漏掉 x=0 处的铅直渐近线，只数到 1 条",
+        "C": "把 x=1 或 x=-2 处的有限跳跃误当铅直渐近线",
+        "D": "把 x=1、x=-2 都误判为铅直渐近线，多数 2 条"
+      },
+      "pitfalls": [
+        "$x=1,x=-2$ 处 arctan 有限跳跃，左右极限有限，不是铅直渐近线",
+        "$x\\to0$ 时 $\\mathrm{e}^{1/x^2}\\to+\\infty$ 给铅直渐近线 $x=0$；$x\\to\\infty$ 给水平渐近线 $y=\\dfrac{\\pi}{4}$，共 2 条"
+      ],
+      "key_point": "水平渐近线 $y=\\dfrac{\\pi}{4}$ 与铅直渐近线 $x=0$，共 2 条，选 B。"
+    },
+    {
+      "id": 1801,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{-2}^2 \\frac{x+|x|}{2+x^2} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\ln 3$",
+      "analysis": "$\\displaystyle \r\n\\int_{-2}^2 \\frac{x+|x|}{2+x^2} \\mathrm{d} x\\\\\r\n=\\int_{-2}^2 \\frac{|x|}{2+x^2} \\mathrm{d} x\\\\\r\n=2 \\int_0^2 \\frac{x}{2+x^2} \\mathrm{d} x\\\\\r\n=\\int_0^2 \\frac{\\mathrm{d}\\left(2+x^2\\right)}{2+x^2}\\\\\r\n=\\left.\\ln \\left(2+x^2\\right)\\right|_0 ^2\\\\\r\n=\\ln 6-\\ln 2=\\ln 3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x/(2+x²) 是奇函数积分为 0，只剩 |x|/(2+x²) 的偶部",
+        "偶部化 2∫₀²，凑 d(2+x²) 得 ln6-ln2=ln3"
+      ],
+      "key_point": "奇部消去，2∫₀²x/(2+x²)dx=ln(2+x²)|₀²=ln3。"
+    },
+    {
+      "id": 1802,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知 $f^{\\prime}\\left(x_0\\right)=-1$, 则 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x}{f\\left(x_0-2 x\\right)-f\\left(x_0-x\\right)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x}{f\\left(x_0-2 x\\right)-f\\left(x_0-x\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{1}{-2 \\cdot \\frac{f\\left(x_0-2 x\\right)-f\\left(x_0\\right)}{-2 x}+\\frac{f\\left(x_0-x\\right)-f\\left(x_0\\right)}{-x}}\\\\\r\n=\\frac{1}{-2 f^{\\prime}\\left(x_0\\right)+f^{\\prime}\\left(x_0\\right)}=-\\frac{1}{f^{\\prime}\\left(x_0\\right)}=1 $",
+      "wrong_options": {},
+      "pitfalls": [
+        "f(x₀-2x)-f(x₀-x) 拆成 [f(x₀-2x)-f(x₀)]-[f(x₀-x)-f(x₀)]，系数 -2 与 -1",
+        "分母趋 -2f′+f′=-f′(x₀)=1"
+      ],
+      "key_point": "极限 =-1/f′(x₀)=-1/(-1)=1。"
+    },
+    {
+      "id": 1803,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设方程 $\\mathrm{e}^{x y}+y^2=\\cos x$ 确定 $y$ 为 $x$ 的函数, 则 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{\\sin x+y \\mathrm{e}^{x y}}{x \\mathrm{e}^{x y}+2 y}$",
+      "analysis": "$\\mathrm{e}^{x y}+y^2=\\cos x$ 两边对 $x$ 求导得\r\n\r\n$\\mathrm{e}^{x y} \\cdot\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+2 y \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\sin x$,\r\n\r\n解得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=-\\frac{\\sin x+y \\mathrm{e}^{x y}}{x \\mathrm{e}^{x y}+2 y}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{xy} 对 x 求导 =e^{xy}(y+xy′)，内层用乘积法则",
+        "右端 cosx 求导为 -sinx，移项后进分子"
+      ],
+      "key_point": "e^{xy}(y+xy′)+2yy′=-sinx，解得 y′=-(sinx+ye^{xy})/(xe^{xy}+2y)。"
+    },
+    {
+      "id": 1804,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccccc}0 & a_1 & 0 & \\cdots & 0 \\\\ 0 & 0 & a_2 & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & a_{n-1} \\\\ a_n & 0 & 0 & \\cdots & 0\\end{array}\\right)$, 其中 $a_i \\neq 0, i=1,2, \\cdots, n$, 则 $\\boldsymbol{A}^{-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccccc}0 & 0 & \\cdots & 0 & a_n^{-1} \\\\ a_1^{-1} & 0 & \\cdots & 0 & 0 \\\\ 0 & a_2^{-1} & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & \\cdots & a_{n-1}^{-1} & 0\\end{array}\\right)$",
+      "analysis": "令 $\\boldsymbol{B}=\\left(a_n\\right), \\boldsymbol{C}=\\left(\\begin{array}{cccc}a_1 & 0 & \\cdots & 0 \\\\ 0 & a_2 & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & a_{n-1}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{A}=\\left(\\begin{array}{ll}\\mathbf{0} & \\boldsymbol{C} \\\\ \\boldsymbol{B} & \\boldsymbol 0\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{A}^{-1}=\\left(\\begin{array}{cc}\\mathbf{0} & \\boldsymbol{B}^{-1} \\\\ \\boldsymbol{C}^{-1} & \\mathbf{0}\\end{array}\\right)=\\left(\\begin{array}{ccccc}0 & 0 & \\cdots & 0 & a_n^{-1} \\\\ a_1^{-1} & 0 & \\cdots & 0 & 0 \\\\ 0 & a_2^{-1} & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & \\cdots & a_{n-1}^{-1} & 0\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 把 e_j 映到 a_{j-1}e_{j-1}、e₁映到 aₙeₙ，故 A⁻¹ 是‘错位取倒数’的循环结构",
+        "分块反对角矩阵 [[0,C],[B,0]]⁻¹=[[0,B⁻¹],[C⁻¹,0]]，两块位置互换"
+      ],
+      "key_point": "A⁻¹ 各非零元为对应 aᵢ 的倒数，排成循环错位矩阵。"
+    },
+    {
+      "id": 1805,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}2 x, & 0<x<1\\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n以 $Y$ 表示对 $X$ 的三次独立重复观察中事件 $\\displaystyle \\left\\{X \\leqslant \\frac{1}{2}\\right\\}$ 出现的次数, 则 $P\\{Y=2\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{9}{64}$",
+      "analysis": "$\\displaystyle P\\left\\{X \\leqslant \\frac{1}{2}\\right\\}=P\\left\\{0 \\leqslant X \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} 2 x \\mathrm{d} x=\\frac{1}{4}$,\r\n\r\n显然 $\\displaystyle Y \\sim B\\left(3, \\frac{1}{4}\\right)$, \r\n\r\n故 $\\displaystyle P\\{Y=2\\}=\\mathrm{C}_3^2 \\cdot\\left(\\frac{1}{4}\\right)^2 \\cdot \\frac{3}{4}=\\frac{9}{64}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "p=∫₀^{1/2}2x dx=1/4，别把上限当 1",
+        "Y~B(3,1/4)，P{Y=2}=C₃²(1/4)²(3/4)=9/64"
+      ],
+      "key_point": "p=1/4，P{Y=2}=3·(1/16)(3/4)=9/64。"
+    },
+    {
+      "id": 1806,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $m \\times n$ 矩阵, $\\boldsymbol{C}$ 是 $n$ 阶可逆矩阵, 矩阵 $\\boldsymbol{A}$ 的秩为 $r$, 矩阵 $\\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{C}$ 的秩为 $r_1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$r>r_1$",
+        "B": "$r<r_1$",
+        "C": "$r=r_1$",
+        "D": "$r$ 与 $r_1$ 的关系由 $\\boldsymbol{C}$ 而定"
+      },
+      "answer": "C",
+      "analysis": "$r(\\boldsymbol{B})=r(\\boldsymbol{A C}) \\leqslant r(\\boldsymbol{A})$,\r\n\r\n因为 $\\boldsymbol{C}$ 可逆, \r\n\r\n所以 $\\boldsymbol{A}=\\boldsymbol{B} \\boldsymbol{C}^{-1}$, \r\n\r\n从而 $r(\\boldsymbol{A})=r\\left(\\boldsymbol{B} \\boldsymbol{C}^{-1}\\right) \\leqslant r(\\boldsymbol{B})$, \r\n\r\n即 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, 应选 $(\\mathrm{C})$",
+      "wrong_options": {
+        "A": "r>r₁——以为乘矩阵必降秩，忽略 C 可逆",
+        "B": "r<r₁——乘法不可能升秩",
+        "D": "‘由 C 而定’——只要 C 可逆，秩恒不变"
+      },
+      "pitfalls": [
+        "右乘（或左乘）可逆矩阵秩不变，是需要记住的定值结论"
+      ],
+      "key_point": "C 可逆⇒r(AC)=r(A)，选 C。"
+    },
+    {
+      "id": 1807,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $0<P(A)<1,0<P(B)<1, P(A \\mid B)+P(\\bar{A} \\mid \\bar{B})=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "事件 $A$ 和 $B$ 互不相容",
+        "B": "事件 $A$ 和 $B$ 互相对立",
+        "C": "事件 $A$ 和 $B$ 互不独立",
+        "D": "事件 $A$ 和 $B$ 互相独立"
+      },
+      "answer": "D",
+      "analysis": "方法一 由 $P(A \\mid B)+P(\\bar{A} \\mid \\bar{B})=1$ 得\r\n\r\n$\\dfrac{P(A B)}{P(B)}+\\dfrac{P(\\bar{A} \\bar{B})}{P(\\bar{B})}=1$,\r\n\r\n即\r\n\r\n$\\dfrac{P(A B)}{P(B)}+\\dfrac{1-P(A)-P(B)+P(A B)}{1-P(B)}=1$,\r\n\r\n整理得 $P(A B)=P(A) P(B)$, \r\n\r\n即 $A, B$ 互相独立, 应选 (D)\r\n\r\n方法二 由 $P(A \\mid B)+P(\\bar{A} \\mid \\bar{B})=1$ 得\r\n\r\n$\\displaystyle P(A \\mid B)=1-P(\\bar{A} \\mid \\bar{B})=P(A \\mid \\bar{B})$,\r\n\r\n即事件 $B$ 发生情况下事件 $A$ 发生的概率与\r\n\r\n事件 $B$ 不发生情况下事件 $A$ 发生的概率相等, \r\n\r\n则 $A, B$ 互相独立, 应选 (D)",
+      "wrong_options": {
+        "A": "互不相容——独立与不相容是两回事",
+        "B": "互相对立——比独立强得多，推不出",
+        "C": "互不独立——恰恰相反，条件等价于独立"
+      },
+      "pitfalls": [
+        "条件式等价于 P(A|B)=P(A|B̄)，即 B 是否发生不影响 A，故独立"
+      ],
+      "key_point": "化简得 P(AB)=P(A)P(B)，A、B 独立，选 D。"
+    },
+    {
+      "id": 1808,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, \\cdots, X_n$ 是来自正态总体 $X \\sim N\\left(\\mu, \\sigma^2\\right)$ 的简单随机样本, $\\bar{X}$ 是样本均值, 记\r\n\r\n$$\r\n\\begin{aligned}\r\n& S_1^2=\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2, \\\\\r\n& S_2^2=\\frac{1}{n} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2, \\\\\r\n& S_3^2=\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\mu\\right)^2, \\\\\r\n& S_4^2=\\frac{1}{n} \\sum_{i=1}^n\\left(X_i-\\mu\\right)^2,\r\n\\end{aligned}\r\n$$\r\n\r\n则服从自由度为 $n-1$ 的 $t$ 分布的随机变量是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle t=\\frac{\\bar{X}-\\mu}{\\frac{S_1}{\\sqrt{n-1}}}$",
+        "B": "$\\displaystyle t=\\frac{\\bar{X}-\\mu}{\\frac{S_2}{\\sqrt{n-1}}}$",
+        "C": "$\\displaystyle t=\\frac{\\bar{X}-\\mu}{\\frac{S_3}{\\sqrt{n}}}$",
+        "D": "$\\displaystyle t=\\frac{\\bar{X}-\\mu}{\\frac{S_4}{\\sqrt{n}}}$"
+      },
+      "answer": "B",
+      "analysis": "由 $\\displaystyle \\bar{X} \\sim N\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$ 得 $\\displaystyle \\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)$,\r\n\r\n由 $\\displaystyle \\frac{n S_2^2}{\\sigma^2} \\sim \\chi^2(n-1)$ 且与 $\\displaystyle \\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}$ 独立得 $\\displaystyle \\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}} / \\sqrt{\\frac{n S_2^2}{\\frac{\\sigma^2}{n-1}}} \\sim t(n-1)$,\r\n\r\n即 $\\displaystyle \\frac{\\bar{X}-\\mu}{\\frac{S_2}{\\sqrt{n-1}}} \\sim t(n-1)$, 应选 $(\\mathrm{B})$",
+      "wrong_options": {
+        "A": "用 S₁/√(n-1) 作分母（标准应为 S₁/√n），量纲配不上 t(n-1)",
+        "C": "S₃ 含 μ，(X̄-μ) 与 Σ(Xᵢ-μ)² 不独立且自由度为 n",
+        "D": "S₄ 含 μ，(X̄-μ)/(S₄/√n) 不构成标准 t(n-1)"
+      },
+      "pitfalls": [
+        "nS₂²/σ²~χ²(n-1) 且与 X̄ 独立；S₂/√(n-1)=√(Σ(Xᵢ-X̄)²/(n(n-1)))=S₁/√n，故 B 就是标准 t"
+      ],
+      "key_point": "B 中 (X̄-μ)/(S₂/√(n-1)) 即标准 t(n-1)。"
+    },
+    {
+      "id": 1809,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D(x+y) \\mathrm{d} x \\mathrm{d} y$, 其中 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant x+y+1\\right\\}$",
+      "options": {},
+      "answer": "$\\dfrac{3 \\pi}{2}$",
+      "analysis": "区域 $D$ 可化为 $\\displaystyle D=\\left\\{(x, y) \\mid\\left(x-\\frac{1}{2}\\right)^2+\\left(y-\\frac{1}{2}\\right)^2 \\leqslant \\frac{3}{2}\\right\\}$, \r\n\r\n令 $\\left\\{\\begin{aligned}\r\nx=\\frac{1}{2}+r \\cos \\theta \\\\\r\ny=\\frac{1}{2}+r \\sin \\theta\r\n\\end{aligned}\\right.\r\n\\left(0 \\leqslant \\theta \\leqslant 2 \\pi, 0 \\leqslant r \\leqslant \\sqrt{\\frac{3}{2}}\\right)$\r\n\r\n则 $\\displaystyle\r\n\\iint\\limits_D(x+y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\sqrt{\\frac{3}{2}}} r[1+r(\\sin \\theta+\\cos \\theta)] \\mathrm{d} r \\\\\r\n=\\int_0^{2 \\pi}\\left[\\frac{3}{4}+\\frac{\\sqrt{6}}{4}(\\sin \\theta+\\cos \\theta)\\right] \\mathrm{d} \\theta=\\frac{3 \\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "D 是圆心 (1/2,1/2)、半径 √(3/2) 的圆盘",
+        "x+y=1+r(cosθ+sinθ)，r(cosθ+sinθ) 绕圆一周积分为 0，只留 1×面积=3π/2"
+      ],
+      "key_point": "∬(x+y)=1·(π·3/2)=3π/2。"
+    },
+    {
+      "id": 1810,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 满足条件 $\\left\\{\\begin{array}{l}y^{\\prime \\prime}+4 y^{\\prime}+4 y=0 \\\\ y(0)=2, y^{\\prime}(0)=-4\\end{array}\\right.$ 求广义积分 $\\displaystyle \\int_0^{+\\infty} y(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "特征方程为 $\\lambda^2+4 \\lambda+4=0$, \r\n\r\n特征值为 $\\lambda_1=\\lambda_2=-2$,\r\n\r\n则 $y^{\\prime \\prime}+4 y^{\\prime}+4 y=0$ 的通解为 \r\n\r\n$y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-2 x}$,\r\n\r\n由 $y(0)=2, y^{\\prime}(0)=-4$ 得 $\\left\\{\\begin{array}{l}C_1=2 \\\\ C_2=0\\end{array}\\right.$ \r\n\r\n即 $y=2 \\mathrm{e}^{-2 x}$,\r\n\r\n故 $\\displaystyle \\int_0^{+\\infty} y(x) \\mathrm{d} x=\\int_0^{+\\infty} 2 \\mathrm{e}^{-2 x} \\mathrm{d} x=-\\left.\\mathrm{e}^{-2 x}\\right|_0 ^{+\\infty}=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "重根 λ=-2 通解 (C₁+C₂x)e^{-2x}，由 y′(0)=-4 与 y(0)=2 得 C₂=0",
+        "∫₀^{+∞}2e^{-2x}dx=1，指数反常积分收敛"
+      ],
+      "key_point": "y=2e^{-2x}，∫₀^∞y=1。"
+    },
+    {
+      "id": 1811,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle f(x, y)=x^2 \\arctan \\frac{y}{x}-y^2 \\arctan \\frac{x}{y}$, 求 $\\displaystyle \\frac{\\partial^2 f}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\dfrac{x^2-y^2}{x^2+y^2}$",
+      "analysis": "$\\displaystyle\r\n\\frac{\\partial f}{\\partial x}\\\\\r\n=2 x \\arctan \\frac{y}{x}-y \\cdot \\frac{1}{1+\\left(\\frac{y}{x}\\right)^2}-y \\cdot \\frac{1}{1+\\left(\\frac{x}{y}\\right)^2}\\\\\r\n=2 x \\arctan \\frac{y}{x}-y\\\\\r\n\\frac{\\partial^2 f}{\\partial x \\partial y}\\\\\r\n=\\frac{2}{1+\\left(\\frac{y}{x}\\right)^2}-1=\\frac{2 x^2}{x^2+y^2}-1=\\frac{x^2-y^2}{x^2+y^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 ∂f/∂x 时两个 arctan 项的导数合并成 -y(x²+y²)/(x²+y²)=-y，大幅化简",
+        "再对 y 求导 ∂/∂y[2x·arctan(y/x)-y]=2x²/(x²+y²)-1"
+      ],
+      "key_point": "∂f/∂x=2x·arctan(y/x)-y，∂²f/∂x∂y=(x²-y²)/(x²+y²)。"
+    },
+    {
+      "id": 1812,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 可导, 且 $\\displaystyle f(0)=0, F(x)=\\int_0^x t^{n-1} f\\left(x^n-t^n\\right) \\mathrm{d} t$, 求 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{F(x)}{x^{2 n}}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2 n} f^{\\prime}(0)$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{F(x)}{x^{2 n}}\\\\\r\n=\\frac{1}{n} \\lim _{x \\rightarrow 0} \\frac{\\int_0^{x^n} f(u) \\mathrm{d} u}{x^{2 n}}\\\\\r\n=\\frac{1}{n} \\lim _{x \\rightarrow 0} \\frac{n x^{n-1} \\cdot f\\left(x^n\\right)}{2 n x^{2 n-1}}\\\\\r\n=\\frac{1}{2 n} \\lim _{x \\rightarrow 0} \\frac{f\\left(x^n\\right)-f(0)}{x^n}=\\frac{1}{2 n} f^{\\prime}(0)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元 u=xⁿ-tⁿ，du=-ntⁿ⁻¹dt，恰与被积 tⁿ⁻¹ 配平，F=(1/n)∫₀^{xⁿ}f",
+        "洛必达后剩 f(xⁿ)/xⁿ→f′(0)（用 f(0)=0）"
+      ],
+      "key_point": "F=(1/n)∫₀^{xⁿ}f，极限=(1/(2n))f′(0)。"
+    },
+    {
+      "id": 1813,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线 $y=a \\sqrt{x}(a>0)$ 与曲线 $y=\\ln \\sqrt{x}$ 在点 $\\left(x_0, y_0\\right)$ 处有公共切线, 求:\r\n\r\n(1) 常数 $a$ 及切点 $\\left(x_0, y_0\\right)$;\r\n\r\n(2) 两曲线与 $x$ 轴围成的平面图形绕 $x$ 轴旋转所得旋转体的体积 $V_x$",
+      "options": {},
+      "answer": "(1) $(x_0, y_0)=(\\mathrm{e}^2, 1)$\r\n(2) $\\dfrac{\\pi}{2}$",
+      "analysis": "(1) 由题意得 $\\left\\{\\begin{array}{l}a \\sqrt{x_0}=\\ln \\sqrt{x_0} \\\\ \\dfrac{a}{2 \\sqrt{x_0}}=\\dfrac{1}{2 x_0}\\end{array}\\right.$ \r\n\r\n解得 $a=\\dfrac{1}{\\mathrm{e}}$, 则 $(x_0, y_0)=(\\mathrm{e}^2, 1)$\r\n\r\n(2) 所求的旋转体的体积为\r\n\r\n$\\displaystyle V_x =\\pi \\int_0^{\\mathrm{e}^2}\\left(\\frac{\\sqrt{x}}{\\mathrm{e}}\\right)^2 \\mathrm{d} x-\\pi \\int_1^{\\mathrm{e}^2}(\\ln \\sqrt{x})^2 \\mathrm{d} x \\\\\r\n=\\left.\\frac{\\pi}{2 \\mathrm{e}^2} x^2\\right|_0 ^{\\mathrm{e}^2}-\\frac{\\pi}{4} \\int_1^{e^2} {\\mathrm{e}^2}\\ln ^2 x \\mathrm{d} x \\\\\r\n=\\frac{\\pi}{2} \\mathrm{e}^2-\\frac{\\pi}{4}\\left[\\left.x \\ln ^2 x\\right|_1 ^{\\mathrm{e}^2}-2 \\int_1^{\\mathrm{e}^2} \\ln x \\mathrm{d} x\\right]=\\frac{\\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "斜率相等给 a/(2√x₀)=1/(2x₀)⇒a=1/√x₀，配合值相等解出 x₀=e²",
+        "体积作差：π∫₀^{e²}(√x/e)²dx 减去 π∫₁^{e²}(ln√x)²dx，下限不同（后者从 1 起）"
+      ],
+      "key_point": "a=1/e、切点 (e²,1)；两旋转体作差得 V_x=π/2。"
+    },
+    {
+      "id": 1814,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设 $f(x)$ 在 $[a,+\\infty)$ 上连续, $f^{\\prime \\prime}(x)$ 在 $(a,+\\infty)$ 内存在且大于零, 记\r\n\r\n$F(x)=\\dfrac{f(x)-f(a)}{x-a}(x>a)$,\r\n\r\n证明: $F(x)$ 在 $(a,+\\infty)$ 内单调增加",
+      "options": {},
+      "answer": "略",
+      "analysis": "$\\displaystyle F^{\\prime}(x)=\\frac{f^{\\prime}(x)(x-a)-[f(x)-f(a)]}{(x-a)^2}$,\r\n\r\n令 $h(x)=f^{\\prime}(x)(x-a)-[f(x)-f(a)], \\quad h(a)=0$,\r\n\r\n当 $x>a$ 时, $h^{\\prime}(x)=f^{\\prime \\prime}(x)(x-a)>0$,\r\n\r\n由 $\\left\\{\\begin{array}{l}h(a)=0 \\\\ h^{\\prime}(x)>0(x>a)\\end{array}\\right.$ 得 $h(x)>0(x>a)$,\r\n\r\n从而当 $x>a$ 时, $F^{\\prime}(x)>0$, \r\n\r\n故 $F(x)$ 在 $(a,+\\infty)$ 内单调增加",
+      "wrong_options": {},
+      "pitfalls": [
+        "F′ 的分子 h(x)=f′(x)(x-a)-[f(x)-f(a)]，h(a)=0",
+        "h′(x)=f″(x)(x-a)>0（x>a）⇒h>0⇒F′>0"
+      ],
+      "key_point": "h(a)=0 且 h′>0 得 h>0，故 F′>0，F 单调增。"
+    },
+    {
+      "id": 1815,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设线性方程组\r\n\r\n$$\r\n\\left\\{\\begin{array}{l}\r\nx_1+a_1 x_2+a_1^2 x_3=a_1^3 \\\\\r\nx_1+a_2 x_2+a_2^2 x_3=a_2^3 \\\\\r\nx_1+a_3 x_2+a_3^2 x_3=a_3^3 \\\\\r\nx_1+a_4 x_2+a_4^2 x_3=a_4^3\r\n\\end{array}\\right.\r\n$$\r\n\r\n(1) 证明: 若 $a_1, a_2, a_3, a_4$ 两两不等, 此线性方程组无解;\r\n\r\n(2) 设 $a_1=a_3=k, a_2=a_4=-k(k \\neq 0)$, 且已知 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2$ 是该方程组的两个解, 其中\r\n\r\n$$\r\n\\boldsymbol{\\beta}_1=\\left(\\begin{array}{c}-1 \\\\1 \\\\1\\end{array}\\right), \r\n\\boldsymbol{\\beta}_2=\\left(\\begin{array}{c}1 \\\\1 \\\\-1\\end{array}\\right)\r\n$$\r\n\r\n写出此方程组的通解",
+      "options": {},
+      "answer": "(2) $\\boldsymbol{x}=c\\left(\\begin{array}{c}1 \\\\ 0 \\\\ -1\\end{array}\\right)+\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 1\\end{array}\\right)$,",
+      "analysis": "$\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{lll:l}\r\n1 & a_1 & a_1^2 & a_1^3 \\\\\r\n1 & a_2 & a_2^2 & a_2^3 \\\\\r\n1 & a_3 & a_3^2 & a_3^3 \\\\\r\n1 & a_4 & a_4^2 & a_4^3\r\n\\end{array}\\right)$,\r\n\r\n因为 $a_1, a_2, a_3, a_4$ 两两不等,\r\n\r\n所以 $|\\bar{\\boldsymbol{A}}|=\\prod\\limits_{1 \\leq j<i \\leqslant 4}\\left(a_i-a_j\\right) \\neq 0$, \r\n\r\n从而 $r(\\overline{\\boldsymbol{A}})=4$,\r\n因为 $r(\\boldsymbol{A}) \\leqslant 3$, \r\n\r\n所以 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, 故方程组无解\r\n\r\n(2) 由 $a_1=a_3=k, a_2=a_4=-k(k \\neq 0)$\r\n\r\n得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$,\r\n\r\n原方程组的导出组的基础解系为 $\\boldsymbol{\\xi}=\\boldsymbol{\\beta}_2-\\boldsymbol{\\beta}_1=(2,0,-2)^{\\mathrm{T}}$,\r\n\r\n故方程组的通解为 $\\boldsymbol{x}=c\\left(\\begin{array}{c}1 \\\\ 0 \\\\ -1\\end{array}\\right)+\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 1\\end{array}\\right)$, \r\n\r\n其中 $c$ 为任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 增广是范德蒙型，两两不等则 |Ā|≠0，r(Ā)=4 而 r(A)≤3",
+        "(2) ξ=β₂-β₁=(2,0,-2)ᵀ 是导出组解，取方向 (1,0,-1)ᵀ；秩为 2 故解空间一维"
+      ],
+      "key_point": "(1) r(A)≤3<4=r(Ā) 无解；(2) 通解 β₁+c(1,0,-1)ᵀ。"
+    },
+    {
+      "id": 1816,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{lll}0 & 0 & 1 \\\\ x & 1 & y \\\\ 1 & 0 & 0\\end{array}\\right)$ 有三个线性无关的特征向量, 求 $x, y$ 应满足的条件",
+      "options": {},
+      "answer": "$x+y=0$",
+      "analysis": "$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\\lambda & 0 & -1 \\\\ -x & \\lambda-1 & -y \\\\ -1 & 0 & \\lambda\\end{array}\\right|\\\\\r\n=(\\lambda+1)(\\lambda-1)^2=0$\r\n\r\n得 $\\lambda_1=-1, \\lambda_2=\\lambda_3=1$,\r\n\r\n因为 $\\boldsymbol{A}$ 有三个线性无关的特征向量,\r\n\r\n所以 $\\boldsymbol{A}$ 可以相似对角化,于是 $r(\\boldsymbol{E}-\\boldsymbol{A})=1$,\r\n\r\n由 $\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & -1 \\\\ -x & 0 & -y \\\\ -1 & 0 & 1\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}1 & 0 & -1 \\\\ 0 & 0 & -x-y \\\\ 0 & 0 & 0\\end{array}\\right)$\r\n\r\n得 $x+y=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "特征值 -1,1,1；二重根 λ=1 需几何重数 2，即 r(E-A)=1",
+        "E-A 行化简出 (0,0,-x-y) 行，要为零行须 x+y=0"
+      ],
+      "key_point": "λ=1 二重要 r(E-A)=1⇒x+y=0。"
+    },
+    {
+      "id": 1817,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设随机变量 $X_1, X_2, X_3, X_4$ 相互独立, 且同分布于\r\n\r\n$$\r\nP\\left\\{X_i=0\\right\\}=0.6, \\quad P\\left\\{X_i=1\\right\\}=0.4(i=1,2,3,4),\r\n$$\r\n\r\n求行列式 $X=\\left|\\begin{array}{ll}X_1 & X_2 \\\\ X_3 & X_4\\end{array}\\right|$ 的概率分布",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ 0.1344 & 0.7312 & 0.1344\\end{array}\\right)$",
+      "analysis": "$X=\\left|\\begin{array}{ll}X_1 & X_2 \\\\ X_3 & X_4\\end{array}\\right|=X_1 X_4-X_2 X_3$,\r\n\r\n令 $Y_1=X_1 X_4,  Y_2=X_2 X_3$,\r\n\r\n$P\\left\\{Y_1=1\\right\\}=P\\left\\{X_1=1, X_4=1\\right\\}=0.16, \\\\\\\r\nP\\left\\{Y_1=0\\right\\}=0.84$,\r\n\r\n即 $Y_1 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.84 & 0.16\\end{array}\\right)$,\r\n\r\n同理 $Y_2 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.84 & 0.16\\end{array}\\right)$, \r\n\r\n且 $Y_1, Y_2$ 相互独立,\r\n\r\n显然 $X=Y_1-Y_2$ 的可能取值为 $-1,0,1$,\r\n\r\n$P\\{X=-1\\}=P\\left\\{Y_1=0\\right\\} P\\left\\{Y_2=1\\right\\}\\\\=0.84 \\times 0.16=0.1344,\\\\\r\nP\\{X=1\\}=P\\left\\{Y_1=1\\right\\} P\\left\\{Y_2=0\\right\\}\\\\=0.84 \\times 0.16=0.1344,\\\\\r\nP\\{X=0\\}=1-P\\{X=-1\\}-P\\{X=1\\}\\\\=0.7312$,\r\n\r\n故 $X$ 的概率分布为 $X \\sim\\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ 0.1344 & 0.7312 & 0.1344\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y₁=X₁X₄、Y₂=X₂X₃ 各取 1 的概率 0.4×0.4=0.16",
+        "X=±1 各为 0.84×0.16=0.1344，X=0 取补 0.7312"
+      ],
+      "key_point": "X=Y₁-Y₂，分布 (-1,0,1)↦(0.1344,0.7312,0.1344)。"
+    },
+    {
+      "id": 1818,
+      "paper": "数学三",
+      "year": 1994,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设由自动线加工的某种零件的内径 $X$ (毫米) 服从正态分布 $N(\\mu, 1)$, 内径小于 10 或大于 12 的为不合格品, 其余为合格品. 销售每件合格品获利, 销售每件不合格品亏损, 已知销售利润 $T$ (单位: 元) 与销售零件的内径 $X$ 有如下关系:\r\n\r\n$$\r\nT= \\begin{cases}-1, & X<10 \\\\ 20 & 10 \\leqslant X \\leqslant 12 \\\\ -5, & X>12\\end{cases}\r\n$$\r\n\r\n问: 平均内径 $\\mu$ 取何值时, 销售一个零件的平均利润最大?",
+      "options": {},
+      "answer": "$10.9$",
+      "analysis": "由 $X \\sim N(\\mu, 1)$ 得 $X-\\mu \\sim N(0,1)$, 则\r\n\r\n$\\displaystyle E(T) \\\\\r\n=-P\\{X<10\\}+20 P\\{10 \\leqslant X \\leqslant 12\\}\\\\-5 P\\{X>12\\} \\\\\r\n=-\\Phi(10-\\mu)+20[\\Phi(12-\\mu)-\\Phi(10-\\mu)]\\\\-5[1-\\Phi(12-\\mu)] \\\\\r\n=25 \\Phi(12-\\mu)-21 \\Phi(10-\\mu)-5$\r\n\r\n令 $\\displaystyle \\frac{\\mathrm{d} E(T)}{\\mathrm{d} \\mu}=-25 \\varphi(12-\\mu)+21 \\varphi(10-\\mu)\\\\\r\n=\\frac{1}{\\sqrt{2 \\pi}}\\left[21 \\mathrm{e}^{-\\frac{(10-\\mu)^2}{2}}-25 \\mathrm{e}^{-\\frac{(12-\\mu)^2}{2}}\\right]=0$\r\n\r\n得 $\\mu \\approx 11-\\dfrac{1}{2} \\ln \\dfrac{25}{21} \\approx 10.9$,\r\n\r\n故当平均内径 $\\mu \\approx 10.9$ 时, 销售一个零件的平均利润最大",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(T)=25Φ(12-μ)-21Φ(10-μ)-5，求导得 -25φ(12-μ)+21φ(10-μ)",
+        "令零化为 21e^{-(10-μ)²/2}=25e^{-(12-μ)²/2}，取对数解 μ"
+      ],
+      "key_point": "E(T) 求导令零得 μ≈10.9。"
+    }
+  ]
+}

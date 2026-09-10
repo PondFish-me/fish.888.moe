@@ -1,0 +1,430 @@
+{
+  "paper": "数学一",
+  "year": 2000,
+  "count": 21,
+  "questions": [
+    {
+      "id": 991,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{0}^{1} \\sqrt{2 x-x^{2}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\int_0^1 \\sqrt{2 x-x^2} \\mathrm{d} x \\\\\r\n=\\int_0^1 \\sqrt{1-(x-1)^2} \\mathrm{d}(x-1)\\\\\r\n=\\int_{-1}^0 \\sqrt{1-x^2} \\mathrm{d} x \\\\\r\n=\\int_0^1 \\sqrt{1-x^2} \\mathrm{d} x\\\\\r\n \\stackrel{x=\\sin t}{=} \\int_0^{\\frac{\\pi}{2}} \\cos ^2 t \\mathrm{d} \\\\\r\n=\\frac{1}{2} \\times \\frac{\\pi}{2}=\\frac{\\pi}{4}$\r\n\r\n方法二 根据定积分的几何应用, \r\n\r\n$\\displaystyle \\int_0^1 \\sqrt{2 x-x^2} \\mathrm{d} x$ 即以曲线 $y=\\sqrt{2 x-x^2}(0 \\leqslant x \\leqslant 1)$ 为曲边的曲边梯形的面积\r\n\r\n显然 $\\displaystyle \\int_0^1 \\sqrt{2 x-x^2} \\mathrm{d} x=\\frac{\\pi}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "√(2x-x²) 要先配方成 √(1-(x-1)²) 才能看出是圆，硬凑三角换元易出错",
+        "几何上是半径1的四分之一圆（x:0→1），面积是 π/4 不是 π/2"
+      ],
+      "key_point": "2x-x²=1-(x-1)²，积分即半径1圆的四分之一面积，等于 π/4。"
+    },
+    {
+      "id": 992,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲面 $x^{2}+2 y^{2}+3 z^{2}=21$ 在点 $(1,-2,2)$ 处的法线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{x-1}{1}=\\frac{y+2}{-4}=\\frac{z-2}{6}$",
+      "analysis": "$\\displaystyle \\boldsymbol{n}=\\left.\\left\\{F_x^{\\prime}, F_y^{\\prime}, F_z^{\\prime}\\right\\}\\right|_{(1,-2,2)}\\\\\r\n=\\left.\\{2 x, 4 y, 6 z\\}\\right|_{(1,-2,2)}=\\{2,-8,12\\}$, \r\n\r\n则曲面在点 $(1,-2,2)$ 处的法线方程为 \r\n\r\n$\\dfrac{x-1}{1}=\\dfrac{y+2}{-4}=\\dfrac{z-2}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "法向量 {2,-8,12} 可约分为 {1,-4,6}，分母符号要与该方向一致（y 处是 -4）",
+        "对称式分子是 x-x₀ 形式，代点 (1,-2,2) 别把 y+2 写成 y-2"
+      ],
+      "key_point": "n=∇F|_P={2,-8,12}∝{1,-4,6}，法线 (x-1)/1=(y+2)/(-4)=(z-2)/6。"
+    },
+    {
+      "id": 993,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $\\displaystyle x y^{\\prime \\prime}+3 y^{\\prime}=0$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{C_1}{x^2}+C_2\\left(C_1, C_2\\right.$ 为任意常数 $)$",
+      "analysis": "方法一 由 $x y^{\\prime \\prime}+3 y^{\\prime}=0$, \r\n\r\n得 $y^{\\prime \\prime}+\\dfrac{3}{x} y^{\\prime}=0$.\r\n\r\n解得 $\\displaystyle y^{\\prime}=C_0 \\mathrm{e}^{-\\int \\frac{3}{x} \\mathrm{d} x}=\\frac{C_0}{x^3}$, \r\n\r\n积分得原方程的通解为 $y=\\dfrac{C_1}{x^2}+C_2\\left(C_1, C_2\\right.$ 为任意常数)\r\n\r\n方法二 由 $x y^{\\prime \\prime}+3 y^{\\prime}=0$, \r\n\r\n得 $x^3 y^{\\prime \\prime}+3 x^2 y^{\\prime}=0$ 或 $\\left(x^3 y^{\\prime}\\right)^{\\prime}=0$.\r\n\r\n于是 $x^3 y^{\\prime}=C_0$, 解得 $y^{\\prime}=\\dfrac{C_0}{x^3}$, \r\n\r\n积分得原方程通解为 $y=\\dfrac{C_1}{x^2}+C_2$ ( $C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "方程不显含 y，令 p=y' 降阶：xp'+3p=0 解得 p=C/x³",
+        "二阶方程通解须含两个独立常数 C₁、C₂，再积分一次不能漏 C₂"
+      ],
+      "key_point": "令 p=y' 得 p=C₀/x³，积分得 y=C₁/x²+C₂。"
+    },
+    {
+      "id": 994,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知方程组 $\\left(\\begin{array}{ccc}1 & 2 & 1 \\\\ 2 & 3 & a+2 \\\\ 1 & a & -2\\end{array}\\right)\\left(\\begin{array}{l}x_{1} \\\\ x_{2} \\\\ x_{3}\\end{array}\\right)=\\left(\\begin{array}{l}1 \\\\ 3 \\\\ 0\\end{array}\\right)$ 无解, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "因为原方程组无解, 所以 $r(\\boldsymbol{A})<r(\\overline{\\boldsymbol{A}})$, 而 $r(\\overline{\\boldsymbol{A}}) \\leqslant 3$, \r\n\r\n所以 $r(\\boldsymbol{A})<3$. 于是 $|\\boldsymbol{A}|=0$, 解得 $a=-1$ 或 $a=3$.\r\n\r\n当 $a=3$ 时, 由 \r\n\r\n$\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}1 & 2 & 1 & 1 \\\\ 2 & 3 & 5 & 3 \\\\ 1 & 3 & -2 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}1 & 2 & 1 & 1 \\\\ 0 & -1 & 3 & 1 \\\\ 0 & 1 & -3 & -1\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}1 & 2 & 1 & 1 \\\\ 0 & -1 & 3 & 1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n原方程组有无数个解, 所以 $a \\neq 3$, 故 $a=-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=0 只是无解的必要条件，解出 a=-1 或 a=3 后必须逐个验证",
+        "a=3 时 r(A)=r(Ā)=2 有无穷多解（并非无解），须排除，最终只有 a=-1"
+      ],
+      "key_point": "无解要求 |A|=0 得 a=-1 或 3；a=3 时秩相等有解，故 a=-1。"
+    },
+    {
+      "id": 995,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设两个相互独立的事件 $A$ 和 $B$ 都不发生的概率为 $\\displaystyle \\frac{1}{9}, A$ 发生 $B$ 不发生的概率与 $B$ 发生 $A$ 不发生的概率相等,则 $P(A)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "$P(A \\bar{B})=P(A)-P(A B), \\\\\r\nP(\\bar{A} B)=P(B)-P(A B)$,\r\n\r\n由 $P(A \\bar{B})=P(\\bar{A} B)$, 得 $P(A)=P(B)$.\r\n\r\n由 $\\displaystyle P(\\bar{A} \\bar{B})=P(\\overline{A+B})=1-P(A+B)=\\frac{1}{9}$, \r\n\r\n得 $P(A+B)=\\dfrac{8}{9}$.\r\n\r\n又 $P(A+B)=P(A)+P(B)-P(A B)=2 P(A)-P^2(A)$,\r\n\r\n得 $\\displaystyle P^2(A)-2 P(A)+\\frac{8}{9}=0$, 解得 $P(A)=\\dfrac{2}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A、B 独立时 P(ĀB̄)=P(Ā)P(B̄)=(1-P(A))(1-P(B))，别当作互斥处理",
+        "P(AB̄)=P(ĀB) 给出的是 P(A)=P(B)，不是 A=B；解 (1-P)²=1/9 取 P=2/3（舍 4/3）"
+      ],
+      "key_point": "P(A)=P(B) 且 (1-P(A))²=1/9 ⇒ P(A)=2/3。"
+    },
+    {
+      "id": 996,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x), g(x)$ 是恒大于零的可导函数, 且 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, 则当 $a<x<b$ 时, 有 $(\\quad)$",
+      "options": {
+        "A": "$f(x) g(b)>f(b) g(x)$",
+        "B": "$f(x) g(a)>f(a) g(x)$",
+        "C": "$f(x) g(x)>f(b) g(b)$",
+        "D": "$f(x) g(x)>f(a) g(a)$"
+      },
+      "answer": "A",
+      "analysis": "由 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, \r\n\r\n得 $\\displaystyle \\left[\\frac{f(x)}{g(x)}\\right]^{\\prime}=\\frac{f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)}{g^2(x)}<0$, \r\n\r\n即 $\\displaystyle \\frac{f(x)}{g(x)}$ 为减函数, \r\n\r\n当 $a<x<b$ 时, 有 $\\displaystyle \\frac{f(a)}{g(a)}>\\frac{f(x)}{g(x)}>\\frac{f(b)}{g(b)}$. \r\n\r\n于是 $f(x) g(b)>f(b) g(x)$, 应选 (A).",
+      "wrong_options": {
+        "B": "把不等式方向弄反：f/g 递减给出 f(a)/g(a)>f(x)/g(x)，交叉相乘应得 f(x)g(a)<f(a)g(x)，B 恰好反了。",
+        "C": "误以为乘积 f(x)g(x) 单调，条件只保证商 f/g 单调，乘积的单调性无法判定。",
+        "D": "同 C 误判乘积 fg 单调，且不等号方向也选错。"
+      },
+      "pitfalls": [
+        "关键是构造商 f/g（分子恰为所给导数式），不是构造乘积 fg",
+        "f/g 递减 ⇒ a<x<b 时 f(a)/g(a)>f(x)/g(x)>f(b)/g(b)，交叉相乘时 g>0 不变号"
+      ],
+      "key_point": "(f/g)'<0 ⇒ f/g 递减，f(x)/g(x)>f(b)/g(b) ⇒ f(x)g(b)>f(b)g(x)。"
+    },
+    {
+      "id": 997,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $S: x^{2}+y^{2}+z^{2}=a^{2}(z \\geqslant 0), S_{1}$ 为 $S$ 在第一卦限中的部分, 则有 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\iint\\limits_{S} x \\mathrm{d} S=4 \\iint\\limits_{S_{1}} x \\mathrm{d} S$",
+        "B": "$\\displaystyle \\iint\\limits_{S} y \\mathrm{d} S=4 \\iint\\limits_{S_{1}} x \\mathrm{d} S$",
+        "C": "$\\displaystyle \\iint\\limits_{S} z \\mathrm{d} S=4 \\iint\\limits_{S_{1}} x \\mathrm{d} S$",
+        "D": "$\\displaystyle \\iint\\limits_{S} x y z \\mathrm{d} S=4 \\iint\\limits_{S_{1}} x y z \\mathrm{d} S$"
+      },
+      "answer": "C",
+      "analysis": "由对面积的曲面积分的对称性质, 得\r\n\r\n$\\displaystyle \\iint\\limits_S x \\mathrm{d} S=\\iint\\limits_S y \\mathrm{d} S=0, \\iint\\limits_S z \\mathrm{d} S=4 \\iint_{S_1} z \\mathrm{d} S$,\r\n\r\n又因为 $\\displaystyle \\iint\\limits_{S_1} x \\mathrm{d} S=\\iint\\limits_{S_1} y \\mathrm{d} S=\\iint\\limits_{S_1} z \\mathrm{d} S$,\r\n\r\n所以 $\\displaystyle \\iint\\limits_S z \\mathrm{d} S=4 \\iint\\limits_{S_1} x \\mathrm{d} S$, 应选 (C)",
+      "wrong_options": {
+        "A": "∬_S x dS=0（x 关于 yOz 面反对称，上半球对称），左边为零而右边 4∬_{S1}x>0，不等。",
+        "B": "同理 ∬_S y dS=0，左零右非零。",
+        "D": "xyz 在整个上半球面上关于 x（或 y）反对称，∬_S xyz dS=0，而右边非零。"
+      },
+      "pitfalls": [
+        "dS 是第一类曲面积分，对称性靠被积函数奇偶性，不像第二类还要考虑侧的符号",
+        "S 上 ∬x=∬y=0（反对称），只有 ∬z≠0；再借 S1 上 x、y、z 积分相等把 z 换成 x"
+      ],
+      "key_point": "∬_S z dS=4∬_{S1}z dS，且 S1 上 ∬x=∬y=∬z，故 ∬_S z dS=4∬_{S1}x dS。"
+    },
+    {
+      "id": 998,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设级数 $\\displaystyle \\sum_{n=1}^{\\infty} u_{n}$ 收敛, 则必收敛的级数为 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n} \\frac{u_{n}}{n}$",
+        "B": "$\\displaystyle \\sum_{n=1}^{\\infty} u_{n}^{2}$",
+        "C": "$\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_{2 n-1}-u_{2 n}\\right)$",
+        "D": "$\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_{n}+u_{n+1}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "方法一 令 $S_n=u_1+u_2+\\cdots+u_n$, 因为 $\\displaystyle \\sum_{n=1} u_n$ 收敛, \r\n\r\n所以 $\\displaystyle \\lim _{n \\rightarrow \\infty} u_n=0$ 且 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n$ 存在,\r\n\r\n设 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n=S$, 令 $S_n^{\\prime}=\\left(u_1+u_2\\right)+\\left(u_2+u_3\\right)+\\cdots+\\left(u_n+u_{n+1}\\right)=2 S_n-u_1+u_{n+1}$\r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n^{\\prime}=2 S-u_1$, \r\n\r\n所以级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_n+u_{n+1}\\right)$ 收敛, 应选 (D).\r\n\r\n方法二 取 $\\displaystyle u_n=\\frac{(-1)^n}{\\ln (n+1)}$, \r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\ln (n+1)}$ 收敛, \r\n\r\n而 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n \\ln (n+1)}$ 发散, (A) 不对;\r\n\r\n取 $\\displaystyle u_n=\\frac{(-1)^n}{\\sqrt{n}}$, \r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2=\\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散, (B) 不对;\r\n\r\n取 $\\displaystyle u_n=\\frac{(-1)^{n-1}}{n}$, \r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_{2 n-1}-u_{2 n}\\right)=\\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散, (C) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "条件收敛级数乘 1/n 并加 (-1)^n 未必收敛，取 u_n=(-1)^n/ln(n+1) 时 A 项对应 ∑1/(n ln(n+1)) 发散。",
+        "B": "∑u_n 收敛推不出 ∑u_n² 收敛，取 u_n=(-1)^n/√n，则 u_n²=1/n 发散。",
+        "C": "隔项配对 (u_{2n-1}-u_{2n}) 改变了配对方式，非相邻加括号不保收敛，可举反例。"
+      },
+      "pitfalls": [
+        "只知 ∑u_n 收敛（未必绝对收敛），A、B 靠条件收敛反例即可否定",
+        "D 项部分和 S'_n=2S_n-u_1+u_{n+1}，因 S_n→S、u_n→0 故收敛；靠相邻项配对不改变整体和"
+      ],
+      "key_point": "∑(u_n+u_{n+1}) 部分和 =2S_n-u_1+u_{n+1}→2S-u_1，收敛（选 D）。"
+    },
+    {
+      "id": 999,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 维列向量组 $\\boldsymbol{\\alpha}_{1}, \\cdots, \\boldsymbol{\\alpha}_{m}(m<n)$ 线性无关, 则 $n$ 维列向量组 $\\boldsymbol{\\beta}_{1}, \\cdots, \\boldsymbol{\\beta}_{m}$ 线性无关的充分必要条件为 $(\\quad)$",
+      "options": {
+        "A": "向量组 $\\boldsymbol{\\alpha}_{1}, \\cdots, \\boldsymbol{\\alpha}_{m}$ 可由向量组 $\\boldsymbol{\\beta}_{1}, \\cdots, \\boldsymbol{\\beta}_{m}$ 线性表示",
+        "B": "向量组 $\\boldsymbol{\\beta}_{1}, \\cdots, \\boldsymbol{\\beta}_{m}$ 可由向量组 $\\boldsymbol{\\alpha}_{1}, \\cdots, \\boldsymbol{\\alpha}_{m}$ 线性表示",
+        "C": "向量组 $\\boldsymbol{\\alpha}_{1}, \\cdots, \\boldsymbol{\\alpha}_{m}$ 与向量组 $\\boldsymbol{\\beta}_{1}, \\cdots, \\boldsymbol{\\beta}_{m}$ 等价",
+        "D": "矩阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1}, \\cdots, \\boldsymbol{\\alpha}_{m}\\right)$ 与矩阵 $\\boldsymbol{B}=\\left(\\boldsymbol{\\beta}_{1}, \\cdots, \\boldsymbol{\\beta}_{m}\\right)$ 等价"
+      },
+      "answer": "D",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m\\right), \\boldsymbol{B}=\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m\\right)$.\r\n\r\n由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 线性无关, 得 $r(\\boldsymbol{A})=m$.\r\n\r\n若 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$ 线性无关, 则 $r(\\boldsymbol{B})=m$, \r\n\r\n因为 $r(\\boldsymbol{A})=r(\\boldsymbol{B})=m$, 所以矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 等价;\r\n\r\n反之, 若矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 等价, 则 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, \r\n\r\n因为 $r(\\boldsymbol{A})=m$, 所以 $r(\\boldsymbol{B})=m$, \r\n\r\n又因为矩阵的秩与矩阵列向量组的秩相等, \r\n\r\n所以 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$ 的秩为 $m$, \r\n\r\n即 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$ 线性无关, 应选 (D)",
+      "wrong_options": {
+        "A": "\"α 可由 β 表示\"既不充分也不必要：既推不出 β 无关，β 无关也未必能反过来表示出 α。",
+        "B": "\"β 可由 α 表示\"是 β 无关的必要非充分条件，表示得出不代表 β 保持无关。",
+        "C": "\"等价\"要求两组互相表示，比\"矩阵等价（仅同秩）\"强，把充要条件收得过窄。"
+      },
+      "pitfalls": [
+        "A、B 型\"可表示\"只给出秩的单向不等式，不是充要",
+        "矩阵等价的本质是同型且秩相等；r(A)=m 已知，B 无关 ⟺ r(B)=m ⟺ A,B 等价"
+      ],
+      "key_point": "β 无关 ⟺ r(B)=m=r(A) ⟺ 矩阵 A 与 B 等价（选 D）。"
+    },
+    {
+      "id": 1000,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 服从二维正态分布, 则随机变量 $\\xi=X+Y$ 与 $\\eta=X-Y$ 不相关的充分必要条件为 $(\\quad)$",
+      "options": {
+        "A": "$E(X)=E(Y)$",
+        "B": "$E\\left(X^{2}\\right)-[E(X)]^{2}=E\\left(Y^{2}\\right)-[E(Y)]^{2}$",
+        "C": "$E\\left(X^{2}\\right)=E\\left(Y^{2}\\right)$",
+        "D": "$E\\left(X^{2}\\right)+[E(X)]^{2}=E\\left(Y^{2}\\right)+[E(Y)]^{2}$"
+      },
+      "answer": "B",
+      "analysis": "$\\xi, \\eta$ 不相关的充分必要条件是 $\\operatorname{Cov}(\\xi, \\eta)=0$.\r\n\r\n而 $\\operatorname{Cov}(\\xi, \\eta)\\\\\r\n=\\operatorname{Cov}(X+Y, X-Y)\\\\\r\n=\\operatorname{Cov}(X, X)-\\operatorname{Cov}(Y, Y)\\\\\r\n=D(X)-D(Y)$,\r\n\r\n又 $D(X)=E\\left(X^2\\right)-[E(X)]^2, \\\\\r\nD(Y)=E\\left(Y^2\\right)-[E(Y)]^2$,\r\n\r\n所以 $\\xi, \\eta$ 不相关的充分必要条件是 $D(X)=D(Y)$,\r\n\r\n即 $E\\left(X^2\\right)-[E(X)]^2=E\\left(Y^2\\right)-[E(Y)]^2$, 应选 (B)",
+      "wrong_options": {
+        "A": "E(X)=E(Y) 是期望相等，与方差相等（D(X)=D(Y)）无关，不构成 Cov(ξ,η)=0 的条件。",
+        "C": "E(X²)=E(Y²) 混入了期望平方，只有当 EX=EY 时才等价于方差相等，一般不成立。",
+        "D": "E(X²)+[E(X)]² 不是方差表达式（方差是 E(X²)-[E(X)]²），中间符号取错。"
+      },
+      "pitfalls": [
+        "ξ、η 不相关只需 Cov=0，无需独立；二维正态下不相关才等价于独立",
+        "Cov(X+Y,X-Y)=D(X)-D(Y)，条件是 D(X)=D(Y) 即 E(X²)-[E(X)]²=E(Y²)-[E(Y)]²，方差公式中间是减号"
+      ],
+      "key_point": "Cov(ξ,η)=D(X)-D(Y)=0 ⟺ E(X²)-[E(X)]²=E(Y²)-[E(Y)]²（选 B）。"
+    },
+    {
+      "id": 1001,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}+\\frac{\\sin x}{|x|}\\right)$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}}\\left(\\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}+\\frac{\\sin x}{|x|}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}+\\lim _{x \\rightarrow 0^{+}} \\frac{\\sin x}{x}=0+1=1,\\\\\r\n\\lim _{x \\rightarrow 0^{-}}\\left(\\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}+\\frac{\\sin x}{|x|}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}-\\lim _{x \\rightarrow 0^{-}} \\frac{\\sin x}{x}=2-1=1$,\r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{2+\\mathrm{e}^{\\frac{1}{x}}}{1+\\mathrm{e}^{\\frac{4}{x}}}+\\frac{\\sin x}{|x|}\\right)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x→0⁺：e^{4/x}→∞ 分式部分 →0，sinx/|x|→+1，和为 1；x→0⁻：分式部分 →2，sinx/|x|→-1，和为 1",
+        "两个陷阱都要抓：e^{1/x} 左右趋向相反，|x| 使 sinx/|x| 左右差一符号；两侧都为 1 才有极限"
+      ],
+      "key_point": "左右极限均为 1（右侧 0+1、左侧 2-1），故极限为 1。"
+    },
+    {
+      "id": 1002,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $z=f\\left(x y, \\dfrac{x}{y}\\right)+g\\left(\\dfrac{y}{x}\\right)$, 其中 $f$ 具有二阶连续偏导数, $g$ 具有二阶连续导数, 求 $\\dfrac{\\partial^{2} z}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$f_1^{\\prime}-\\dfrac{1}{y^2} f_2^{\\prime}+x y f_{11}^{\\prime \\prime}-\\dfrac{x}{y^3} f_{22}^{\\prime \\prime}-\\dfrac{1}{x^2} g^{\\prime}-\\dfrac{y}{x^3} g^{\\prime \\prime}$",
+      "analysis": "由复合函数求偏导法则, 得\r\n\r\n$\\dfrac{\\partial z}{\\partial x}=y f_1^{\\prime}+\\dfrac{1}{y} f_2^{\\prime}-\\frac{y}{x^2} g^{\\prime} \\\\\r\n\\dfrac{\\partial^2 z}{\\partial x \\partial y}  =f_1^{\\prime}+y\\left(x f_{11}^{\\prime \\prime}-\\dfrac{x}{y^2} f_{12}^{\\prime \\prime}\\right)-\\dfrac{1}{y^2} f_2^{\\prime}+\\dfrac{1}{y}\\left(x f_{21}^{\\prime \\prime}-\\dfrac{x}{y^2} f_{22}^{\\prime \\prime}\\right)-\\dfrac{1}{x^2} g^{\\prime}-\\dfrac{y}{x^3} g^{\\prime \\prime} \\\\\r\n =f_1^{\\prime}-\\dfrac{1}{y^2} f_2^{\\prime}+x y f_{11}^{\\prime \\prime}-\\dfrac{x}{y^3} f_{22}^{\\prime \\prime}-\\dfrac{1}{x^2} g^{\\prime}-\\dfrac{y}{x^3} g^{\\prime \\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 ∂z/∂x 后对 y 再求导时，f₁'、f₂' 本身是 (xy, x/y) 的函数，须再对 y 链式（产生 f₁₁''、f₁₂'' 等）",
+        "混合偏导 f₁₂''=f₂₁'' 可合并，最终 x y f₁₁''、-x/y³ f₂₂'' 系数别算错；g 只是一元函数导数 g'、g''"
+      ],
+      "key_point": "先 ∂z/∂x=yf₁'+f₂'/y-yg'/x²，再对 y 链式得含 f₁'、f₂'、f₁₁''、f₂₂''、g'、g'' 的结果。"
+    },
+    {
+      "id": 1003,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲线积分 $\\displaystyle I=\\oint_{L} \\frac{x \\mathrm{d} y-y \\mathrm{d} x}{4 x^{2}+y^{2}}$, 其中 $L$ 是以点 $(1,0)$ 为中心, $R$ 为半径的圆周 $(R>1)$, 取逆时针方向",
+      "options": {},
+      "answer": "$\\pi$",
+      "analysis": "令 $\\displaystyle P(x, y)=\\frac{-y}{4 x^2+y^2}, \\quad Q(x, y)=\\frac{x}{4 x^2+y^2}$,\r\n\r\n$\\dfrac{\\partial Q}{\\partial x}=\\dfrac{\\partial P}{\\partial y}=\\dfrac{y^2-4 x^2}{\\left(4 x^2+y^2\\right)^2} \\quad((x, y) \\neq(0,0))$\r\n\r\n作 $L_0: 4 x^2+y^2=r^2\\left(r>0\\right.$ 且 $L_0$ 位于 $L$ 内, 取逆时针方向), \r\n\r\n设 $L_0^{-}$与 $L$ 围成的区域为 $D_1, L_0$ 围成的区域为 $D_2$, 由格林公式得\r\n\r\n$\\displaystyle\r\n\\oint_{L+L_0^{-}} \\frac{x \\mathrm{d} y-y \\mathrm{d} x}{4 x^2+y^2} \\\\\r\n=\\iint\\limits_{D_1}\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) \\mathrm{d} x \\mathrm{d} y=0, \\\\\r\n\\oint_L \\frac{x \\mathrm{d} y-y \\mathrm{d} x}{4 x^2+y^2}\\\\\r\n=\\oint_{L_0} \\frac{x \\mathrm{d} y-y \\mathrm{d} x}{4 x^2+y^2}\\\\\r\n=\\frac{1}{r^2} \\oint_{L_0} x \\mathrm{d} y-y \\mathrm{d} x \\\\\r\n=\\frac{1}{r^2} \\iint\\limits_{D_2} 2 \\mathrm{d} \\sigma\\\\\r\n=\\frac{2}{r^2} \\iint\\limits_{D_2} \\mathrm{d} \\sigma\\\\\r\n=\\frac{2}{r^2} \\cdot \\pi \\cdot r \\cdot \\frac{r}{2}=\\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "原点 (0,0) 在 L 内部（R>1 使圆含原点），P、Q 在原点无定义，不能直接对 L 内区域用格林公式",
+        "须挖去原点：取小椭圆 4x²+y²=r²（与分母匹配）而非小圆，结果 ∮=2π/√(4·1)=π"
+      ],
+      "key_point": "挖去原点用格林公式，环流值 ∮=2π/√(4×1)=π。"
+    },
+    {
+      "id": 1004,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设对于半空间 $x>0$ 内任意的光滑有向封闭曲面 $S$,都有\r\n\r\n$\\displaystyle \\oiint_{S} x f(x) \\mathrm{d} y \\mathrm{d} z-x y f(x) \\mathrm{d} z \\mathrm{d} x-\\mathrm{e}^{2 x} z \\mathrm{d} x \\mathrm{d} y=0$\r\n\r\n其中函数 $f(x)$ 在 $(0,+\\infty)$ 内具有连续的一阶导数, 且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=1$. 求 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=\\dfrac{\\mathrm{e}^x\\left(\\mathrm{e}^x-1\\right)}{x}$",
+      "analysis": "$P=x f(x), Q=-x y f(x), R=-\\mathrm{e}^{2 x} z$,\r\n\r\n由高斯公式得 \r\n\r\n$\\displaystyle \\oiint_S x f(x) \\mathrm{d} y \\mathrm{d} z-x y f(x) \\mathrm{d} z \\mathrm{d} x-\\mathrm{e}^{2 x} z \\mathrm{d} x \\mathrm{d} y\\\\\r\n= \\pm \\iiint_{\\Omega}\\left(\\frac{\\partial P}{\\partial x}+\\frac{\\partial Q}{\\partial y}+\\frac{\\partial R}{\\partial z}\\right) \\mathrm{d} v \\\\\r\n= \\pm \\iiint_{\\Omega}\\left[f(x)+x f^{\\prime}(x)-x f(x)-\\mathrm{e}^{2 x}\\right] \\mathrm{d} v\\\\\r\n=0$\r\n\r\n其中 $\\Omega$ 为 $\\mathrm{S}$ 围成的有界闭区域. \r\n\r\n由曲面 $S$ 的任意性, \r\n\r\n得 $f(x)+x f^{\\prime}(x)-x f(x)-\\mathrm{e}^{2 x}=0$,\r\n\r\n整理得 $\\displaystyle f^{\\prime}(x)+\\left(\\frac{1}{x}-1\\right) f(x)=\\frac{\\mathrm{e}^{2 x}}{x}$,\r\n\r\n解得 $\\displaystyle f(x)=\\left[\\int \\frac{\\mathrm{e}^{2 x}}{x} \\mathrm{e}^{\\int\\left(\\frac{1}{x}-1\\right) \\mathrm{d} x} \\mathrm{d} x+C\\right] \\mathrm{e}^{-\\int\\left(\\frac{1}{x}-1\\right) \\mathrm{d} x}\\\\\r\n=\\frac{\\mathrm{e}^x\\left(\\mathrm{e}^x+C\\right)}{x}$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=1$, 所以 $C=-1$, \r\n\r\n于是 $f(x)=\\dfrac{\\mathrm{e}^x\\left(\\mathrm{e}^x-1\\right)}{x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对任意闭曲面积分为零 ⇒ 被积散度 f+xf'-xf-e^{2x}≡0（由 S 任意性），不能只在某点为零",
+        "整理成 f'+(1/x-1)f=e^{2x}/x，积分因子 xe^{-x}；由 lim_{x→0⁺}f=1 定常数 C=-1（否则 f 在 0 处发散）"
+      ],
+      "key_point": "散度恒零得 f'+(1/x-1)f=e^{2x}/x，解得 f=(e^{2x}-e^x)/x=e^x(e^x-1)/x。"
+    },
+    {
+      "id": 1005,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^{n}+(-2)^{n}} \\frac{x^{n}}{n}$ 的收敛区间, 并讨论该区间端点处的收敛性",
+      "options": {},
+      "answer": "$(-3,3)$, 当 $x=3$ 时, 级数发散; 当 $x=-3$ 时, 级数收敛",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\lim _{n \\rightarrow \\infty} \\frac{n}{n+1} \\cdot \\frac{3^n+(-2)^n}{3^{n+1}+(-2)^{n+1}}=\\frac{1}{3}$ \r\n\r\n得 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{x^n}{n}$ 的收敛半径为 $R=3$, \r\n\r\n幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{x^n}{n}$ 的收敛区间为 $(-3,3)$.\r\n\r\n当 $x=3$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{3^n}{n}=\\sum_{n=1}^{\\infty} \\frac{3^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}$,\r\n\r\n因为 $\\displaystyle \\frac{3^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}>\\frac{1}{2 n}>0$ 且 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{2 n}$ 发散, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{3^n}{n}$ 发散,\r\n\r\n即 $x=3$ 时, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{x^n}{n}$ 发散;\r\n\r\n当 $x=-3$ 时,\r\n\r\n$\\displaystyle \r\n\\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{(-3)^n}{n} \\\\\r\n=\\sum_{n=1}^{\\infty} \\frac{3^n}{3^n+(-2)^n} \\cdot \\frac{(-1)^n}{n} \\\\\r\n=\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n}-\\sum_{n=1}^{\\infty} \\frac{2^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}$,\r\n\r\n对正项级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{2^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}$,\r\n\r\n由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left\\{\\left[\\frac{2^{n+1}}{3^{n+1}+(-2)^{n+1}} \\cdot \\frac{1}{n+1}\\right] /\\left[\\frac{2^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}\\right]\\right\\}=\\frac{2}{3}<1$ \r\n\r\n得级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{2^n}{3^n+(-2)^n} \\cdot \\frac{1}{n}$ 收敛, \r\n\r\n再由 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n}$ 收敛得 $x=-3$ 时, \r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{3^n+(-2)^n} \\cdot \\frac{x^n}{n}$ 收敛.",
+      "wrong_options": {},
+      "pitfalls": [
+        "系数含 3ⁿ+(-2)ⁿ，n→∞ 时 (-2)ⁿ 相对 3ⁿ 可忽略，比值极限 1/3 ⇒ R=3",
+        "两端点敛散不同：x=3 时通项 ~1/n 发散；x=-3 时呈交错 ~(-1)ⁿ/n 条件收敛，收敛域为 [-3,3)"
+      ],
+      "key_point": "R=3，收敛区间 (-3,3)；x=3 发散、x=-3 收敛。"
+    },
+    {
+      "id": 1006,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有一半径为 $R$ 的球体, $P_{0}$ 是此球的表面上的一个定点, 球体上任一点的密度与该点到 $P_{0}$ 距离的平方成正比 (比例常数 $k>0$ ), 求球体的重心位置",
+      "options": {},
+      "answer": "$\\left(0,0,-\\dfrac{R}{4}\\right)$",
+      "analysis": "设球体为 $\\Omega: x^2+y^2+z^2 \\leqslant R^2$, \r\n\r\n点 $P_0(0,0, R)$ 为球面 $\\Sigma$ 上一点, \r\n\r\n且设 $\\Omega$ 的重心坐标为 $(\\bar{x}, \\bar{y}, \\bar{z})$, 由对称性得 $\\bar{x}=0, \\bar{y}=0$.\r\n\r\n$\\bar{z}=\\frac{\\displaystyle \\iiint\\limits_{\\Omega} z \\cdot k\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v}{\\displaystyle \\iiint\\limits_{\\Omega} k\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v}\\\\\r\n=\\frac{\\displaystyle \\iiint\\limits_{\\Omega} z\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v}{\\displaystyle \\iiint\\limits_{\\Omega}\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v}$\r\n\r\n由奇偶性得\r\n\r\n$\\displaystyle \r\n\\iiint\\limits_{\\Omega}\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v\\\\\r\n=\\iiint\\limits_{\\Omega}\\left(x^2+y^2+z^2\\right) \\mathrm{d} v+\\iiint\\limits_{\\Omega} R^2 \\mathrm{d} v\\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^\\pi \\mathrm{d} \\varphi \\int_0^R r^4 \\sin \\varphi \\mathrm{d} r+\\frac{4 \\pi R^5}{3} \\\\\r\n=2 \\pi \\int_0^\\pi \\sin \\varphi \\mathrm{d} \\varphi \\int_0^R r^4 \\mathrm{d} r+\\frac{4 \\pi R^5}{3}=\\frac{32 \\pi R^5}{15},\\\\\r\n\\iiint\\limits_{\\Omega} z\\left[x^2+y^2+(z-R)^2\\right] \\mathrm{d} v\\\\\r\n=-2 R \\iiint\\limits_{\\Omega} z^2 \\mathrm{d} v\\\\\r\n=-\\frac{2 R}{3} \\iiint\\limits_{\\Omega}\\left(x^2+y^2+z^2\\right) \\mathrm{d} v\\\\\r\n=-\\frac{8 \\pi R^6}{15}$,\r\n\r\n于是 $\\displaystyle \\bar{z}=-\\frac{R}{4}$, 故 $\\Omega$ 的重心坐标为 $\\left(0,0,-\\dfrac{R}{4}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "密度与到定点 P₀(0,0,R) 距离平方成正比，为 k[x²+y²+(z-R)²]，别当作到球心距离",
+        "展开 (z-R)²=z²-2Rz+R²，∭z·(奇偶)、∭(偶) 用对称性简化；结果 z̄=-R/4（在球心下方、朝远离 P₀ 一侧）"
+      ],
+      "key_point": "由对称性 x̄=ȳ=0，密度 k[x²+y²+(z-R)²] 代入积分比得 z̄=-R/4。"
+    },
+    {
+      "id": 1007,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
+        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
+      ],
+      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
+    },
+    {
+      "id": 1008,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 的伴随矩阵 $\\boldsymbol{A}^{*}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 1 & 0 \\\\ 0 & -3 & 0 & 8\\end{array}\\right)$, 且 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^{-1}=\\boldsymbol{B} \\boldsymbol{A}^{-1}+3 \\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 4 阶单位矩阵, 求矩阵 $\\boldsymbol{B}$",
+      "options": {},
+      "answer": "$\\boldsymbol{B}=\\left(\\begin{array}{cccc}6 & 0 & 0 & 0 \\\\ 0 & 6 & 0 & 0 \\\\ 6 & 0 & 6 & 0 \\\\ 0 & 3 & 0 & -1\\end{array}\\right)$",
+      "analysis": "$\\left|\\boldsymbol{A}^*\\right|=8$, 由 $\\left|\\boldsymbol{A}^*\\right|=|\\boldsymbol{A}|^3$, \r\n\r\n得 $|\\boldsymbol{A}|=2$.\r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^{-1}=\\boldsymbol{B} \\boldsymbol{A}^{-1}+3 \\boldsymbol{E}$, \r\n\r\n得 $\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{B}+3 \\boldsymbol{A}$, \r\n\r\n解得 $(\\boldsymbol{A}-\\boldsymbol{E}) \\boldsymbol{B}=3 \\boldsymbol{A}$.\r\n\r\n于是 $\\boldsymbol{B}=3(\\boldsymbol{A}-\\boldsymbol{E})^{-1} \\boldsymbol{A}\\\\=3\\left[\\boldsymbol{A}^{-1}(\\boldsymbol{A}-\\boldsymbol{E})\\right]^{-1}=6\\left(2 \\boldsymbol{E}-2 \\boldsymbol{A}^{-1}\\right)^{-1}\\\\\r\n=6\\left(2 \\boldsymbol{E}-\\boldsymbol{A}^*\\right)^{-1}$,\r\n\r\n因为 $2 \\boldsymbol{E}-\\boldsymbol{A}^*=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ -1 & 0 & 1 & 0 \\\\ 0 & 3 & 0 & -6\\end{array}\\right)$, \r\n\r\n所以 $\\left(2 \\boldsymbol{E}-\\boldsymbol{A}^*\\right)^{-1}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 1 & 0 & 1 & 0 \\\\ 0 & \\frac{1}{2} & 0 & -\\frac{1}{6}\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{B}=\\left(\\begin{array}{cccc}6 & 0 & 0 & 0 \\\\ 0 & 6 & 0 & 0 \\\\ 6 & 0 & 6 & 0 \\\\ 0 & 3 & 0 & -1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "4 阶时 |A*|=|A|³，|A*|=8 ⇒ |A|=2（不是 8 也不是 8³）",
+        "把 ABA⁻¹=BA⁻¹+3E 右乘 A 得 AB=B+3A，整理 (A-E)B=3A，再用 A⁻¹=A*/2 把 B 表成 6(2E-A*)⁻¹ 求逆"
+      ],
+      "key_point": "|A|=2，(A-E)B=3A ⇒ B=6(2E-A*)⁻¹，代入求得 B。"
+    },
+    {
+      "id": 1009,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某试验性生产线每年一月份进行熟练工与非熟练工的人数统计, 然后将 $\\dfrac{1}{6}$ 熟练工支援其他生产部门, 其缺额由招收新的非熟练工补齐. 新、老非熟练工经过培训及实践至年终考核有 $\\dfrac{2}{5}$ 成为熟练工. 设第 $n$ 年一月份统计的熟练工和非熟练工所占百分比分别为 $x_{n}$ 和 $y_{n}$, 记成向量 $\\left(\\begin{array}{l}x_{n} \\\\ y_{n}\\end{array}\\right)$\r\n\r\n(1) 求 $\\left(\\begin{array}{l}x_{n+1} \\\\ y_{n+1}\\end{array}\\right)$ 与 $\\left(\\begin{array}{l}x_{n} \\\\ y_{n}\\end{array}\\right)$ 的关系式并写成矩阵形式: $\\left(\\begin{array}{l}x_{n+1} \\\\ y_{n+1}\\end{array}\\right)=\\boldsymbol{A}\\left(\\begin{array}{l}x_{n} \\\\ y_{n}\\end{array}\\right)$;\r\n\r\n(2) 验证 $\\boldsymbol{\\eta}_{1}=\\left(\\begin{array}{l}4 \\\\ 1\\end{array}\\right), \\boldsymbol{\\eta}_{2}=\\left(\\begin{array}{c}-1 \\\\ 1\\end{array}\\right)$ 是 $\\boldsymbol{A}$ 的两个线性无关的特征向量, 并求出相应的特征值; \r\n\r\n(3) 当 $\\displaystyle \\left(\\begin{array}{l}x_{1} \\\\ y_{1}\\end{array}\\right)=\\left(\\begin{array}{c}\\frac{1}{2} \\\\ \\frac{1}{2}\\end{array}\\right)$ 时, 求 $\\left(\\begin{array}{l}x_{n+1} \\\\ y_{n+1}\\end{array}\\right)$",
+      "options": {},
+      "answer": "(1) $\\boldsymbol{A}=\\left(\\begin{array}{cc}\r\n\\frac{9}{10} & \\frac{2}{5} \\\\\r\n\\frac{1}{10} & \\frac{3}{5}\r\n\\end{array}\\right)$,\r\n\r\n(3) $\\dfrac{1}{10}\\left(\\begin{array}{l}\r\n8-\\frac{3}{2^n} \\\\\r\n2+\\frac{3}{2^n}\r\n\\end{array}\\right)$",
+      "analysis": "(1) 由题意得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nx_{n+1}=\\dfrac{5}{6} x_n+\\dfrac{2}{5}\\left(\\dfrac{1}{6} x_n+y_n\\right) \\\\\r\ny_{n+1}=\\dfrac{3}{5}\\left(\\dfrac{1}{6} x_n+y_n\\right)\r\n\\end{array}\\right.$\r\n\r\n整理得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nx_{n+1}=\\dfrac{9}{10} x_n+\\dfrac{2}{5} y_n \\\\\r\ny_{n+1}=\\dfrac{1}{10} x_n+\\dfrac{3}{5} y_n\r\n\\end{array}\\right.$\r\n\r\n令 $\\boldsymbol{A}=\\left(\\begin{array}{cc}\r\n\\frac{9}{10} & \\frac{2}{5} \\\\\r\n\\frac{1}{10} & \\frac{3}{5}\r\n\\end{array}\\right)$,\r\n\r\n$\\left(\\begin{array}{l}\r\nx_{n+1} \\\\\r\ny_{n+1}\r\n\\end{array}\\right)=\\boldsymbol{A}\\left(\\begin{array}{l}\r\nx_n \\\\\r\ny_n\r\n\\end{array}\\right)$\r\n\r\n(2) 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\eta}_1, \\boldsymbol{\\eta}_2\\right)=\\left(\\begin{array}{cc}4 & -1 \\\\ 1 & 1\\end{array}\\right)$, \r\n\r\n因为 $\\boldsymbol{\\eta}_1, \\boldsymbol{\\eta}_2$ 不成比例, 所以 $\\boldsymbol{\\eta}_1, \\boldsymbol{\\eta}_2$ 线性无关. \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\eta}_1=\\boldsymbol{\\eta}_1$, \r\n\r\n得 $\\boldsymbol{\\eta}_1$ 为 $\\boldsymbol{A}$ 的属于特征值 $\\lambda_1=1$ 的特征向量;\r\n\r\n由 $\\displaystyle \\boldsymbol{A} \\boldsymbol{\\eta}_2=\\frac{1}{2} \\boldsymbol{\\eta}_2$, \r\n\r\n得 $\\boldsymbol{\\eta}_2$ 为 $\\boldsymbol{A}$ 的属于特征值 $\\displaystyle \\lambda_2=\\frac{1}{2}$ 的特征向量.\r\n\r\n(3) $\\left(\\begin{array}{l}x_{n+1} \\\\ y_{n+1}\\end{array}\\right)=\\boldsymbol{A}\\left(\\begin{array}{l}x_n \\\\ y_n\\end{array}\\right)\\\\\r\n=\\boldsymbol{A}^2\\left(\\begin{array}{l}x_{n-1} \\\\ y_{n-1}\\end{array}\\right)=\\cdots=\\boldsymbol{A}^n\\left(\\begin{array}{l}x_1 \\\\ y_1\\end{array}\\right)$,\r\n\r\n由 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ll}1 & 0 \\\\ 0 & \\frac{1}{2}\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{A}=\\boldsymbol{P}\\left(\\begin{array}{ll}1 & 0 \\\\ 0 & \\frac{1}{2}\\end{array}\\right) \\boldsymbol{P}^{-1}$, \r\n\r\n于是 $\\boldsymbol{A}^n=\\boldsymbol{P}\\left(\\begin{array}{ll}1 & 0 \\\\ 0 & \\frac{1}{2^n}\\end{array}\\right) \\boldsymbol{P}^{-1}$,\r\n\r\n而 $\\boldsymbol{P}^{-1}=\\dfrac{1}{5}\\left(\\begin{array}{cc}1 & 1 \\\\ -1 & 4\\end{array}\\right)$, \r\n\r\n因此 $\\boldsymbol{A}^n=\\boldsymbol{P}\\left(\\begin{array}{ll}1 & 0 \\\\ 0 & \\frac{1}{2^n}\\end{array}\\right) \\boldsymbol{P}^{-1}\\\\\r\n=\\dfrac{1}{5}\\left(\\begin{array}{cc}4+\\frac{1}{2^n} & 4-\\frac{1}{2^{n-2}} \\\\ 1-\\frac{1}{2^n} & 1+\\frac{1}{2^{n-2}}\\end{array}\\right)$,\r\n\r\n故 $\\left(\\begin{array}{l}\r\nx_{n+1} \\\\\r\ny_{n+1}\r\n\\end{array}\\right)=\\boldsymbol{A}^n \\cdot \\dfrac{1}{2}\\left(\\begin{array}{l}\r\n1 \\\\\r\n1\r\n\\end{array}\\right)=\\dfrac{1}{10}\\left(\\begin{array}{l}\r\n8-\\frac{3}{2^n} \\\\\r\n2+\\frac{3}{2^n}\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "建模：熟练工留 5/6，非熟练工（含补入的新工）有 2/5 转熟练，x_{n+1}=9/10 x_n+2/5 y_n；系数别搞反",
+        "Aη₁=η₁ 得 λ=1、Aη₂=½η₂ 得 λ=½；迭代 (x_{n+1},y_{n+1})=A^n(x₁,y₁)，用 1 和 (1/2)^n 组合，注意题目问的是 n+1 项"
+      ],
+      "key_point": "A=[[9/10,2/5],[1/10,3/5]]，特征值 1、1/2；对角化迭代得含 (1/2)ⁿ 的通项。"
+    },
+    {
+      "id": 1010,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某流水生产线上每个产品不合格的概率为 $p(0<p<1)$, 各产品合格与否相互独立, 当出现一个不合格产品时即停机检修. 设开机后第一次停机时已生产了的产品个数为 $X$. 求 $X$ 的数学期望 $E(X)$ 和方差 $D(X)$",
+      "options": {},
+      "answer": "$E(X)=\\frac{1}{p}, D(X)=\\dfrac{1-p}{p^2}$",
+      "analysis": "随机变量 $X$ 的分布律为\r\n\r\n$P\\{X=k\\}=p(1-p)^{k-1}(k=1,2, \\cdots)$,\r\n\r\n则 $\\displaystyle E(X)=\\sum_{k=1}^{\\infty} k P\\{X=k\\}=p \\sum_{k=1}^{\\infty} k(1-p)^{k-1}$,\r\n\r\n令 $\\displaystyle S(x)=\\sum_{k=1}^{\\infty} k x^{k-1}(|x|<1)$, \r\n\r\n则 $\\displaystyle S(x)=\\left(\\sum_{k=1}^{\\infty} x^k\\right)^{\\prime}=\\left(\\frac{x}{1-x}\\right)^{\\prime}=\\frac{1}{(1-x)^2}$,\r\n\r\n于是 $\\displaystyle E(X)=p S(1-p)=\\frac{1}{p} ;\\\\\r\n E\\left(X^2\\right)=\\sum_{k=1}^{\\infty} k^2 P\\{X=k\\}=p \\sum_{k=1}^{\\infty} k^2(1-p)^{k-1}$,\r\n\r\n令 $\\displaystyle S_1(x)=\\sum_{k=1}^{\\infty} k^2 x^{k-1}$,\r\n\r\n则 $\\displaystyle S_1(x)=\\sum_{k=1}^{\\infty} k(k-1) x^{k-1}+\\sum_{k=1}^{\\infty} k x^{k-1}\\\\\r\n=x \\sum_{k=2}^{\\infty} k(k-1) x^{k-2}+\\frac{1}{(1-x)^2}\\\\\r\n=x\\left(\\sum_{k=2}^{\\infty} x^k\\right)^{\\prime \\prime}+\\frac{1}{(1-x)^2} \\\\\r\n=x\\left(\\frac{x^2}{1-x}\\right)^{\\prime \\prime}+\\frac{1}{(1-x)^2}=\\frac{1+x}{(1-x)^3}$\r\n\r\n则 $E\\left(X^2\\right)=p S_1(1-p)=\\dfrac{2-p}{p^2}$, \r\n\r\n于是 $D(X)=E\\left(X^2\\right)-[E(X)]^2=\\dfrac{1-p}{p^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X 是首次不合格时已生产总个数，含那个不合格品，取值 k=1,2,…，分布律 p(1-p)^{k-1}（几何分布）",
+        "记住几何分布 E(X)=1/p、D(X)=(1-p)/p²；若临场推导须用 ∑k x^{k-1}、∑k²x^{k-1} 逐项求导，别算错"
+      ],
+      "key_point": "X~几何分布 p(1-p)^{k-1}，E(X)=1/p、D(X)=(1-p)/p²。"
+    },
+    {
+      "id": 1011,
+      "paper": "数学一",
+      "year": 2000,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某种元件的使用寿命 $X$ 的概率密度为\r\n\r\n$$\r\nf(x ; \\theta)= \\begin{cases}2 \\mathrm{e}^{-2(x-\\theta)}, & x>\\theta \\\\ 0, & x \\leqslant \\theta\\end{cases}\r\n$$\r\n\r\n其中 $\\theta>0$ 为未知参数, 又设 $x_{1}, x_{2}, \\cdots, x_{n}$ 是 $X$ 的一组样本观测值, 求参数 $\\theta$ 的最大似然估计值",
+      "options": {},
+      "answer": "$\\displaystyle \\hat{\\theta}=\\min _{1 \\leqslant i \\leqslant n}\\left\\{x_i\\right\\}$",
+      "analysis": "似然函数为\r\n\r\n$\\displaystyle L(\\theta)=f\\left(x_1 ; \\theta\\right) f\\left(x_2 ; \\theta\\right) \\cdots f\\left(x_n ; \\theta\\right)\\\\\r\n=2^n \\mathrm{e}^{-2 \\sum\\limits_{i=1}^n x_i+2 n \\theta}\\left(x_i>\\theta, i=1,2, \\cdots, n\\right), \\\\\r\n\\ln L(\\theta)=n \\ln 2-2 \\sum\\limits_{i=1}^n x_i+2 n \\theta$,\r\n\r\n因为 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} \\theta} \\ln L(\\theta)=2 n>0$, \r\n\r\n所以 $\\ln L(\\theta)$ 关于 $\\theta$ 为增函数, \r\n\r\n于是 $\\theta$ 的最大似然估计值为 $\\displaystyle \\hat{\\theta}=\\min _{1 \\leqslant i \\leqslant n}\\left\\{x_i\\right\\}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "lnL 对 θ 求导得 2n>0 恒正，不能令导数为零解 θ；这是单调递增，最大值在 θ 允许的最大处取得",
+        "约束 x_i>θ 对所有 i 成立要求 θ≤min{x_i}，故 lnL 增函数在 θ=min{x_i} 处最大，估计值即样本最小值"
+      ],
+      "key_point": "lnL 关于 θ 单增，受约束 θ≤min{x_i}，故 θ̂=min{x_i}。"
+    }
+  ]
+}

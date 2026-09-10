@@ -1,0 +1,460 @@
+{
+  "paper": "数学三",
+  "year": 1987,
+  "count": 24,
+  "questions": [
+    {
+      "id": 1648,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 1,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\mathrm{e}^{\\frac{1}{x}}=\\infty$",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0^{-}} \\mathrm{e}^{\\frac{1}{x}}=0, \\lim _{x \\rightarrow 0^{+}} \\mathrm{e}^{\\frac{1}{x}}=+\\infty$, 所以 $\\displaystyle \\lim _{x \\rightarrow 0} \\mathrm{e}^{\\frac{1}{x}}$ 不存在但不是无穷大",
+      "wrong_options": {},
+      "pitfalls": [
+        "把\"极限不存在\"与\"极限为无穷大\"混为一谈；左极限 0、右极限 +∞ 已说明既不存在也不是无穷大"
+      ],
+      "key_point": "lim_{x→0^-}e^{1/x}=0，lim_{x→0^+}e^{1/x}=+∞，左右极限不同，故 x→0 时既非收敛也非无穷大，命题错误。"
+    },
+    {
+      "id": 1649,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 2,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{-\\pi}^\\pi x^4 \\sin x \\mathrm{d} x=0$",
+      "options": {},
+      "answer": "$\\checkmark$",
+      "analysis": "因为 $x^4 \\sin x$ 为 $[-\\pi, \\pi]$ 上的奇函数, 所以 $\\displaystyle \\int_{-\\pi}^\\pi x^4 \\sin x \\mathrm{d} x=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x^4 为偶、sin x 为奇，乘积为奇，别把 x^4 的偶性误传给整体"
+      ],
+      "key_point": "x^4 sin x 在 [-π,π] 上为奇函数，积分为 0，命题正确。"
+    },
+    {
+      "id": 1650,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 3,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "若级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} b_n$ 均发散, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_n+b_n\\right)$ 必发散",
+      "options": {},
+      "answer": "$\\times$",
+      "analysis": "取 $\\displaystyle a_n=\\frac{1}{n^2}+\\frac{1}{n}, b_n=\\frac{1}{n^2}-\\frac{1}{n}$, 显然级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} b_n$ 都发散, 但 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_n+b_n\\right)$ 收敛",
+      "wrong_options": {},
+      "pitfalls": [
+        "只有\"收敛±收敛=收敛\"\"收敛+发散=发散\"成立；发散+发散结果不定"
+      ],
+      "key_point": "取 a_n=1/n²+1/n、b_n=1/n²-1/n 均发散，但和为 2/n² 收敛，命题错误。"
+    },
+    {
+      "id": 1651,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 4,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "设 $D$ 是矩阵 $\\boldsymbol{A}$ 的 $r$ 阶非零子式, 且含 $D$ 的一切 $r+1$ 阶子式均为 $0$, 则矩阵 $\\boldsymbol{A}$ 的一切 $r+1$ 阶子式均为 $0$",
+      "options": {},
+      "answer": "$\\checkmark$",
+      "analysis": "设 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\cdots, \\boldsymbol{\\alpha}_r, \\boldsymbol{\\alpha}_{r+1}, \\cdots, \\boldsymbol{\\alpha}_n\\right)$,\r\n\r\n矩阵 $\\boldsymbol{A}$ 的 $r$ 阶子式 $\\boldsymbol{D}$ 位于前 $r$ 列中,\r\n\r\n则 $\\boldsymbol{\\alpha}_1, \\cdots, \\boldsymbol{\\alpha}_r$ 线性无关,\r\n\r\n又因含 $\\boldsymbol{D}$ 的一切 $r+1$ 阶子式都等于 $0$,\r\n\r\n故 $\\boldsymbol{\\alpha}_{r+1}, \\cdots, \\boldsymbol{\\alpha}_n$ 都可由 $\\boldsymbol{\\alpha}_1, \\cdots, \\boldsymbol{\\alpha}_r$ 线性表示,\r\n\r\n所以 $r(\\boldsymbol{A})=r\\left(\\boldsymbol{\\alpha}_1, \\cdots, \\boldsymbol{\\alpha}_r\\right)=r$,\r\n\r\n而任意 $k+1$ 阶子式全为零 $\\Leftrightarrow r(\\boldsymbol{A})=k$\r\n\r\n故 $\\boldsymbol{A}$ 的一切 $r+1$ 阶子式全为 $0$. 所以该命题正确",
+      "wrong_options": {},
+      "pitfalls": [
+        "\"含 D 的 r+1 阶子式全为 0\"能推出 r(A)=r，进而一切（不仅含 D 的）r+1 阶子式为 0，这一步是关键"
+      ],
+      "key_point": "含某 r 阶非零子式的所有 r+1 阶子式为 0 ⇒ r(A)=r ⇒ A 的一切 r+1 阶子式为 0，命题正确。"
+    },
+    {
+      "id": 1652,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 5,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "连续型随机变量取任何给定实数值的概率均为零",
+      "options": {},
+      "answer": "$\\checkmark$",
+      "analysis": "因为连续型随机变量的分布函数都是连续函数, 所以对于任意实数 $c$, 有 $F(c)=F\\left(c^{-}\\right)$,\r\n\r\n故 $P(X=c)=F(c)-F\\left(c^{-}\\right)=0$,\r\n\r\n所以命题是正确的",
+      "wrong_options": {},
+      "pitfalls": [
+        "概率为 0 不等于不可能事件；连续型取任一定值概率均为 0"
+      ],
+      "key_point": "连续型分布函数连续，P(X=c)=F(c)-F(c^-)=0，命题正确。"
+    },
+    {
+      "id": 1653,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列函数在其定义域内连续的是 $(\\quad)$",
+      "options": {
+        "A": "$f(x)=\\ln x+\\sin x$",
+        "B": "$f(x)= \\begin{cases}\\sin x, & x \\leqslant 0, \\\\ \\cos x, & x>0\\end{cases}$",
+        "C": "$f(x)= \\begin{cases}x+1, & x<0, \\\\ 0, & x=0, \\\\ x-1, & x>0\\end{cases}$",
+        "D": "$f(x)= \\begin{cases}\\dfrac{1}{\\sqrt{|x|}}, & x \\neq 0, \\\\ 0, & x=0\\end{cases}$"
+      },
+      "answer": "A",
+      "analysis": "对 $f(x)= \\begin{cases}\\sin x, & x \\leqslant 0, \\\\ \\cos x, & x>0,\\end{cases}$\r\n\r\n因为 $f(0-0)=0 \\neq f(0+0)=1$, 所以 $f(x)$ 在 $x=0$ 处不连续;\r\n\r\n对 $f(x)= \\begin{cases}x+1, & x<0, \\\\ 0, & x=0, \\\\ x-1, & x>0,\\end{cases}$\r\n\r\n因为 $f(0-0)=1 \\neq f(0+0)=-1$, 所以 $f(x)$ 在 $x=0$ 处不连续;\r\n\r\n对 $f(x)= \\begin{cases}\\dfrac{1}{\\sqrt{|x|}}, & x \\neq 0, \\\\ 0, & x=0,\\end{cases}$\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=\\infty \\neq f(0)=0$, \r\n\r\n所以 $f(x)$ 在 $x=0$ 处不连续, 应选( A)",
+      "wrong_options": {
+        "B": "分段函数在 x=0 处 f(0^-)=sin0=0≠f(0^+)=cos0=1，为跳跃间断点",
+        "C": "x=0 处 f(0^-)=1≠f(0^+)=-1，跳跃间断",
+        "D": "x=0 处 lim f(x)=∞≠f(0)=0，无穷间断"
+      },
+      "pitfalls": [
+        "A 的定义域是 x>0，在其定义域内 ln x+sin x 处处连续；不要因为它在 x≤0 无定义就误判为不连续"
+      ],
+      "key_point": "A 为初等函数在其定义域 (0,+∞) 上连续；B、C、D 均在 x=0 间断，选 A。"
+    },
+    {
+      "id": 1654,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若 $f(x)$ 在 $(a, b)$ 内可导且 $a<x_1<x_2<b$, 则至少存在一点 $\\xi$,使得 $(\\quad)$",
+      "options": {
+        "A": "$f(b)-f(a)=f^{\\prime}(\\xi)(b-a)(a<\\xi<b)$",
+        "B": "$f(b)-f\\left(x_1\\right)=f^{\\prime}(\\xi)\\left(b-x_1\\right)\\left(x_1<\\xi<b\\right)$",
+        "C": "$f\\left(x_2\\right)-f\\left(x_1\\right)=f^{\\prime}(\\xi)\\left(x_2-x_1\\right)\\left(x_1<\\xi<x_2\\right)$",
+        "D": "$f\\left(x_2\\right)-f(a)=f^{\\prime}(\\xi)\\left(x_2-a\\right)\\left(a<\\xi<x_2\\right)$"
+      },
+      "answer": "C",
+      "analysis": "因为 $f(x)$ 在 $\\left[x_1, x_2\\right]$ 上连续, 在 $\\left(x_1, x_2\\right)$ 内可导, 所以由拉格朗日中值定理, 应选(C)",
+      "wrong_options": {
+        "A": "涉及端点 a、b，但 f 只在开区间 (a,b) 内可导，端点处连续性未知，不能保证",
+        "B": "区间 [x1,b] 含端点 b，b 处条件未知",
+        "D": "区间 [a,x2] 含端点 a，a 处条件未知"
+      },
+      "pitfalls": [
+        "题目只给\"(a,b) 内可导\"，凡区间含端点 a 或 b 的选项都无法套用中值定理；只有内点区间 [x1,x2] 稳妥"
+      ],
+      "key_point": "[x1,x2] 完全落在开区间 (a,b) 内，f 在其上连续可导，由拉格朗日中值定理选 C。"
+    },
+    {
+      "id": 1655,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列广义积分收敛的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_e^{+\\infty} \\frac{\\ln x}{x} \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_{\\mathrm{e}}^{+\\infty} \\frac{1}{x \\ln x} \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_{\\mathrm{e}}^{+\\infty} \\frac{1}{x(\\ln x)^2} \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_{\\mathrm{e}}^{+\\infty} \\frac{1}{x \\sqrt{\\ln x}} \\mathrm{d} x$"
+      },
+      "answer": "C",
+      "analysis": "因为 \r\n$$\r\n\\begin{aligned}\r\n& \\int_e^{+\\infty} \\frac{\\ln x}{x} \\mathrm{d} x=\\left.\\frac{1}{2} \\ln ^2 x\\right|_e ^{+\\infty}=+\\infty \\\\\r\n& \\int_e^{+\\infty} \\frac{1}{x \\ln x} \\mathrm{d} x=\\left.\\ln (\\ln x)\\right|_{\\mathrm{e}} ^{+\\infty}=+\\infty \\\\\r\n& \\int_e^{+\\infty} \\frac{1}{x(\\ln x)^2} \\mathrm{d} x=-\\left.\\frac{1}{\\ln x}\\right|_{\\mathrm{e}} ^{+\\infty}=1 \\\\\r\n& \\int_e^{+\\infty} \\frac{1}{x \\sqrt{\\ln x}} \\mathrm{d} x=\\left.2 \\sqrt{\\ln x}\\right|_{\\mathrm{e}} ^{+\\infty}=+\\infty \\\\\r\n\\end{aligned}\r\n$$\r\n所以应选 (C)",
+      "wrong_options": {
+        "A": "令 u=ln x 得 ∫u du 发散",
+        "B": "化为 ∫du/u（p=1）发散",
+        "D": "化为 ∫du/√u（p=1/2<1）发散"
+      },
+      "pitfalls": [
+        "以 u=ln x 换元后统一化成 ∫_1^{+∞} du/u^p，唯 C 的 p=2>1 收敛"
+      ],
+      "key_point": "令 u=ln x，只有 ∫du/u² 收敛（值为 1），选 C。"
+    },
+    {
+      "id": 1657,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶方阵 $\\boldsymbol{A}$ 的秩 $r(\\boldsymbol{A})=r<n$, 则在 $\\boldsymbol{A}$ 的 $n$ 个行向量中 $(\\quad)$",
+      "options": {
+        "A": "必有 $r$ 个行向量线性无关",
+        "B": "任意 $r$ 个行向量均线性无关",
+        "C": "任意 $r$ 个行向量均可构成极大线性无关组",
+        "D": "任意一个行向量均可由其他 $r$ 个行向量线性表示"
+      },
+      "answer": "A",
+      "analysis": "因为 $r(\\boldsymbol{A})=r<n$, \r\n\r\n所以 $\\boldsymbol{A}$ 的行向量组的秩为 $r$, \r\n\r\n即 $\\boldsymbol{A}$ 的行向量组中必有 $r$ 个行向量线性无关, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "\"任意 r 个\"过强，可能取到线性相关的 r 个",
+        "C": "同理任意 r 个未必构成极大无关组",
+        "D": "错在 r<n 时并非任一行向量都能由其他 r 个表示"
+      },
+      "pitfalls": [
+        "区分\"必有 r 个无关\"（存在性，正确）与\"任意 r 个无关\"（过强，错误）"
+      ],
+      "key_point": "秩为 r 的行向量组一定存在 r 个线性无关向量，但不保证任意 r 个都无关，选 A。"
+    },
+    {
+      "id": 1658,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 是两个事件且 $P(A B)=0$, 则 $(\\quad)$",
+      "options": {
+        "A": "$A$ 与 $B$ 互斥",
+        "B": "$A B$ 是不可能事件",
+        "C": "$A B$ 未必是不可能事件",
+        "D": "$P(A)=0$ 或 $P(B)=0$"
+      },
+      "answer": "C",
+      "analysis": "若 $A B$ 为不可能事件, 则 $P(A B)=0$; 反之, 若 $P(A B)=0$, 则 $A B$ 末必为不可能事件, 应选 $(C)$",
+      "wrong_options": {
+        "A": "P(AB)=0 不等于 AB=∅，故不能断定互斥",
+        "B": "同理不能断定 AB 是不可能事件",
+        "D": "P(AB)=0 推不出 P(A)=0 或 P(B)=0（如连续型场合）"
+      },
+      "pitfalls": [
+        "不可能事件 ⇒ 概率 0，但概率 0 ⇏ 不可能事件（连续型随机变量常见）"
+      ],
+      "key_point": "P(AB)=0 只是概率为零，AB 未必是不可能事件，选 C。"
+    },
+    {
+      "id": 1659,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(1+x \\mathrm{e}^x\\right)^{\\frac{1}{x}}$",
+      "options": {},
+      "answer": "$\\mathrm{e}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left(1+x \\mathrm{e}^x\\right)^{\\frac{1}{x}}=\\lim _{x \\rightarrow 0}\\left[\\left(1+x \\mathrm{e}^x\\right)^{\\frac{1}{x \\mathrm{e}^x}}\\right]^{e^x}=\\mathrm{e}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数上 (1/x)·ln(1+xe^x)~(1/x)·xe^x=e^x→1，别漏掉 e^x→1 这一步而误算指数"
+      ],
+      "key_point": "凑成 [(1+xe^x)^{1/(xe^x)}]^{e^x}，内层→e，指数 e^x→1，极限为 e。"
+    },
+    {
+      "id": 1660,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle y=\\ln \\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}$, 求 $y^{\\prime}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{x \\sqrt{1+x^2}}$",
+      "analysis": "由 $\\displaystyle y=\\ln \\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}=\\ln \\left(\\sqrt{1+x^2}-1\\right)-\\ln \\left(\\sqrt{1+x^2}+1\\right)$,\r\n\r\n得$\\displaystyle y^{\\prime}=\\frac{1}{\\sqrt{1+x^2}-1} \\cdot \\frac{x}{\\sqrt{1+x^2}}-\\frac{1}{\\sqrt{1+x^2}+1} \\cdot \\frac{x}{\\sqrt{1+x^2}}=\\frac{2}{x \\sqrt{1+x^2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "拆项后两项分母之差 1/(u-1)-1/(u+1)=2/(u²-1)=2/x²，配合 u'=x/u 化简，直接硬求导易出错"
+      ],
+      "key_point": "拆成对数差再求导，得 y'=2/(x√(1+x²))。"
+    },
+    {
+      "id": 1661,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle z=\\arctan \\frac{x+y}{x-y}$, 求 $\\mathrm{d} z$",
+      "options": {},
+      "answer": "$-\\dfrac{y}{x^2+y^2} \\mathrm{d} x+\\dfrac{x}{x^2+y^2} \\mathrm{d} y$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=\\frac{1}{1+\\left(\\frac{x+y}{x-y}\\right)^2} \\cdot \\frac{(x-y)-(x+y)}{(x-y)^2}=-\\frac{y}{x^2+y^2}$,\r\n\r\n$\\dfrac{\\partial z}{\\partial y}=\\dfrac{1}{1+\\left(\\frac{x+y}{x-y}\\right)^2} \\cdot \\dfrac{(x-y)+(x+y)}{(x-y)^2}=\\dfrac{x}{x^2+y^2}$,\r\n\r\n故 $\\displaystyle \\mathrm{d} z=-\\frac{y}{x^2+y^2} \\mathrm{d} x+\\frac{x}{x^2+y^2} \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1+((x+y)/(x-y))² 通分得 2(x²+y²)/(x-y)²，与内层导数的 (x-y)² 相约，勿忘约分"
+      ],
+      "key_point": "z_x=-y/(x²+y²)、z_y=x/(x²+y²)，得 dz=-y/(x²+y²)dx+x/(x²+y²)dy。"
+    },
+    {
+      "id": 1662,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\mathrm{e}^{\\sqrt{2 x-1}} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$=(\\sqrt{2 x-1}-1) \\mathrm{e}^{\\sqrt{2 x-1}}+C$",
+      "analysis": "令 $\\sqrt{2 x-1}=t$, 即 $x=\\frac{1}{2}\\left(1+t^2\\right)$, 则\r\n\r\n$\\displaystyle \\int \\mathrm{e}^{\\sqrt{2 x-1}} \\mathrm{d} x=\\int t \\mathrm{e}^t \\mathrm{d} t=(t-1) \\mathrm{e}^t+C=(\\sqrt{2 x-1}-1) \\mathrm{e}^{\\sqrt{2 x-1}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元后 dx=t dt，被积化为 t e^t dt；回代要把 t 换回 √(2x-1)"
+      ],
+      "key_point": "令 t=√(2x-1)，∫t e^t dt=(t-1)e^t+C，回代得 (√(2x-1)-1)e^{√(2x-1)}+C。"
+    },
+    {
+      "id": 1663,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle y=\\sin x, 0 \\leqslant x \\leqslant \\frac{\\pi}{2}$, 问:\r\n\r\n(1) $t$ 取何值时, 图中阴影部分的面积 $S_1$ 与 $S_2$ 之和 $S=S_1+S_2$ 最小?\r\n\r\n(2) $t$ 取何值时, 面积 $S=S_1+S_2$ 最大?\n\n![阴影部分 S1 与 S2](/uploads/books/3a1ac2da904e650b73f23b182ccfee503459024a81035eadde9b0634e3624a89.png)",
+      "options": {},
+      "answer": "(1)当 $\\displaystyle t=\\frac{\\pi}{4}$ 时, 两部分面积之和最小; \r\n\r\n(2) 当 $t=0$ 时, 两部分面积之和最大",
+      "analysis": "$$\r\n\\begin{aligned}\r\n& S_1=\\int_0^t(\\sin t-\\sin x) \\mathrm{d} x=t \\sin t+\\cos t-1,\\\\\r\n& S_2=\\int_t^{\\frac{\\pi}{2}}(\\sin x-\\sin t) \\mathrm{d} x=\\cos t-\\left(\\frac{\\pi}{2}-t\\right) \\sin t, \\\\\r\n& S=S_1+S_2=\\left(2 t-\\frac{\\pi}{2}\\right) \\sin t+2 \\cos t-1,\r\n\\end{aligned}\r\n$$\r\n\r\n令 $\\displaystyle S^{\\prime}=\\left(2 t-\\frac{\\pi}{2}\\right) \\cos t=0$, \r\n\r\n得 $\\displaystyle t=\\frac{\\pi}{4}$ 或 $\\displaystyle t=\\frac{\\pi}{2}$,\r\n\r\n由 $\\displaystyle S(0)=1, S\\left(\\frac{\\pi}{4}\\right)=\\sqrt{2}-1, S\\left(\\frac{\\pi}{2}\\right)=\\frac{\\pi}{2}-1$, \r\n\r\n(1)当 $\\displaystyle t=\\frac{\\pi}{4}$ 时, 两部分面积之和最小; \r\n\r\n(2) 当 $t=0$ 时, 两部分面积之和最大",
+      "wrong_options": {},
+      "pitfalls": [
+        "S'=(2t-π/2)cos t=0 给 t=π/4 与 t=π/2，最大值出现在端点 t=0 而非驻点，必须比较端点 S(0)、S(π/2)"
+      ],
+      "key_point": "S(t)=(2t-π/2)sin t+2cos t-1，比较 S(0)=1、S(π/4)=√2-1、S(π/2)=π/2-1，最小在 t=π/4，最大在 t=0。"
+    },
+    {
+      "id": 1664,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $\\displaystyle f(x)=\\frac{1}{x^2-3 x+2}$ 展开成 $x$ 的幂级数, 并指出其收敛区间",
+      "options": {},
+      "answer": "$\\displaystyle f(x)=\\sum_{n=0}^{\\infty}\\left(1-\\frac{1}{2^{n+1}}\\right) x^n$, 收敛区间为 $(-1,1)$",
+      "analysis": "$\\displaystyle f(x)=\\frac{1}{x^2-3 x+2}=\\frac{1}{(x-2)(x-1)}=\\frac{1}{1-x}-\\frac{1}{2-x}$,\r\n\r\n而 $\\displaystyle \\frac{1}{1-x}=\\sum_{n=0}^{\\infty} x^n,-1<x<1$,\r\n\r\n$\\displaystyle \\frac{1}{2-x}=\\frac{1}{2} \\cdot \\frac{1}{1-\\frac{x}{2}}=\\frac{1}{2} \\sum_{n=0}^{\\infty}\\left(\\frac{x}{2}\\right)^n=\\sum_{n=0}^{\\infty} \\frac{x^n}{2^{n+1}},-2<x<2$,\r\n\r\n则 $\\displaystyle f(x)=\\sum_{n=0}^{\\infty}\\left(1-\\frac{1}{2^{n+1}}\\right) x^n$, 收敛区间为 $(-1,1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1/(2-x) 要先提 1/2 化成 1/(1-x/2) 再展开，收敛半径 2；与 1/(1-x) 的半径 1 取交得 (-1,1)"
+      ],
+      "key_point": "拆成 1/(1-x)-1/(2-x)，展开合并系数 1-1/2^{n+1}，收敛区间取交为 (-1,1)。"
+    },
+    {
+      "id": 1665,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D$ 是由曲线 $y=x^3$ 与直线 $y=x$ 在第一象限内围成的封闭区域, 求 $\\displaystyle \\iint_D \\mathrm{e}^{x^2} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{\\mathrm{e}}{2}-1$",
+      "analysis": "$$\r\n\\begin{aligned}\r\n& \\iint_D \\mathrm{e}^{x^2} \\mathrm{d} x \\mathrm{d} y=\\int_0^1 \\mathrm{e}^{x^2} \\mathrm{d} x \\int_{x^3}^x \\mathrm{d} y\\\\\r\n& =\\int_0^1\\left(x-x^3\\right) \\mathrm{e}^{x^2} \\mathrm{d} x\\\\\r\n& =\\frac{1}{2} \\int_0^1\\left(1-x^2\\right) \\mathrm{e}^{x^2} \\mathrm{d}\\left(x^2\\right)=\\frac{1}{2} \\int_0^1(1-x) \\mathrm{e}^x \\mathrm{d} x \\\\\r\n& =\\left.\\frac{1}{2} \\mathrm{e}^x\\right|_0 ^1-\\left.\\frac{1}{2}(x-1) \\mathrm{e}^x\\right|_0 ^1=\\frac{\\mathrm{e}}{2}-1\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{x²} 无初等原函数，必须先对 y 积分产生因子 (x-x³) 才能凑 d(x²) 消掉；次序反了做不出来"
+      ],
+      "key_point": "先对 y 积得 ∫₀¹(x-x³)e^{x²}dx，令 u=x² 化为 (1/2)∫₀¹(1-u)e^u du=e/2-1。"
+    },
+    {
+      "id": 1666,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知某商品的需求量 $x$ 对价格 $p$ 的弹性为 $\\eta=-3 p^3$, 而市场对该商品的最大需求量为 $1$ (万件), 求需求函数",
+      "options": {},
+      "answer": "$x=\\mathrm{e}^{-p^3}$",
+      "analysis": "需求对价格的弹性为\r\n$\\eta=\\dfrac{\\mathrm{d} x / \\mathrm{d} p}{x / p}$,\r\n\r\n由题意得 $\\dfrac{\\mathrm{d} x / \\mathrm{d} p}{x / p}=-3 p^3$, \r\n\r\n整理得 $\\displaystyle \\frac{\\mathrm{d} x}{\\mathrm{d} p}+3 p^2 x=0$,\r\n\r\n解得 $x=C \\mathrm{e}^{-\\int 3 p^2 \\mathrm{d} \\rho}=\\mathrm{Ce}^{-p^3}$,\r\n\r\n因为市场对商品的最大需求量为 $1$ , \r\n\r\n所以 $C=1$, 故需求函数为 $x=\\mathrm{e}^{-p^3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "\"最大需求量为 1\"对应 p→0 时 x=1，用它定 C=1；弹性 η=(p/x)·dx/dp，勿把 p、x 位置写反"
+      ],
+      "key_point": "由 η=(p/x)dx/dp=-3p³ 得 dx/x=-3p²dp，解得 x=Ce^{-p³}，p=0 时 x=1 ⇒ x=e^{-p³}。"
+    },
+    {
+      "id": 1667,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "解线性方程组 $\\left\\{\\begin{array}{l}2 x_1-x_2+4 x_3-3 x_4=-4 \\\\ x_1+x_3-x_4=-3 \\\\ 3 x_1+x_2+x_3=1 \\\\ 7 x_1+7 x_3-3 x_4=3 \\end{array}\\right.$",
+      "options": {},
+      "answer": "$\\boldsymbol{X}=k\\left(\\begin{array}{c}\r\n-1 \\\\\r\n2 \\\\\r\n1 \\\\\r\n0\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n3 \\\\\r\n-8 \\\\\r\n0 \\\\\r\n6\r\n\\end{array}\\right)$  ( $k$  为任意常数)",
+      "analysis": "由 $\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{cccc:c}2 & -1 & 4 & -3 & -4 \\\\ 1 & 0 & 1 & -1 & -3 \\\\ 3 & 1 & 1 & 0 & 1 \\\\ 7 & 0 & 7 & -3 & 3\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc:c}1 & 0 & 1 & 0 & 3 \\\\ 0 & 1 & -2 & 0 & -8 \\\\ 0 & 0 & 0 & 1 & 6 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得原方程组的通解为\r\n\r\n$\\boldsymbol{X}=k\\left(\\begin{array}{c}\r\n-1 \\\\\r\n2 \\\\\r\n1 \\\\\r\n0\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n3 \\\\\r\n-8 \\\\\r\n0 \\\\\r\n6\r\n\\end{array}\\right)$  ( $k$  为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "四个方程秩为 3，只有一个自由变量 x3；导出组基础解系与特解要分开写清"
+      ],
+      "key_point": "化简后 x1+x3=3、x2-2x3=-8、x4=6，取 x3 自由，通解 X=(3,-8,0,6)^T+k(-1,2,1,0)^T。"
+    },
+    {
+      "id": 1668,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 和 $\\boldsymbol{B}$ 满足 $\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{A}+2 \\boldsymbol{B}$, 求矩阵 $\\boldsymbol{B}$, 其中 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & 2 & 3 \\\\ 1 & 1 & 0 \\\\ -1 & 2 & 3\\end{array}\\right)$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}\r\n3 & -8 & -6 \\\\\r\n2 & -9 & -6 \\\\\r\n-2 & 12 & 9\r\n\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{A}+2 \\boldsymbol{B}$ \r\n\r\n得 $(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=\\boldsymbol{A}$, \r\n\r\n解得 $\\boldsymbol{B}=(\\boldsymbol{A}-2 \\boldsymbol{E})^{-1} \\boldsymbol{A}$,\r\n\r\n由 \r\n$$\r\n\\begin{aligned}\r\n&\\left(\\begin{array}{ccc:ccc}\r\n2 & 2 & 3 & 1 & 0 & 0 \\\\\r\n1 & -1 & 0 & 0 & 1 & 0 \\\\\r\n-1 & 2 & 1 & 0 & 0 & 1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow &\\left(\\begin{array}{ccc:ccc}\r\n1 & -1 & 0 & 0 & 1 & 0 \\\\\r\n0 & 4 & 3 & 1 & -2 & 0 \\\\\r\n0 & 1 & 1 & 0 & 1 & 1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow &\\left(\\begin{array}{ccc:ccc}\r\n1 & 0 & 0 & 1 & -4 & -3 \\\\\r\n0 & 1 & 0 & 1 & -5 & -3 \\\\\r\n0 & 0 & 1 & -1 & 6 & 4\r\n\\end{array}\\right)\r\n\\end{aligned}\r\n$$\r\n\r\n\r\n得 $(\\boldsymbol{A}-2 \\boldsymbol{E})^{-1}=\\left(\\begin{array}{ccc}\r\n1 & -4 & -3 \\\\\r\n1 & -5 & -3 \\\\\r\n-1 & 6 & 4\r\n\\end{array}\\right)$\r\n\r\n故 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}\r\n1 & -4 & -3 \\\\\r\n1 & -5 & -3 \\\\\r\n-1 & 6 & 4\r\n\\end{array}\\right)\\left(\\begin{array}{ccc}\r\n4 & 2 & 3 \\\\\r\n1 & 1 & 0 \\\\\r\n-1 & 2 & 3\r\n\\end{array}\\right)=\\left(\\begin{array}{ccc}\r\n3 & -8 & -6 \\\\\r\n2 & -9 & -6 \\\\\r\n-2 & 12 & 9\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "移项要把含 B 的项提到左边：AB-2B=A ⇒ (A-2E)B=A，注意是左乘 (A-2E)^{-1}，顺序不能颠倒"
+      ],
+      "key_point": "(A-2E)B=A ⇒ B=(A-2E)^{-1}A，算得所给 3×3 矩阵。"
+    },
+    {
+      "id": 1669,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求矩阵 $\\left(\\begin{array}{ccc}-3 & -1 & 2 \\\\ 0 & -1 & 4 \\\\ -1 & 0 & 1\\end{array}\\right)$ 的实特征值与对应的特征向量",
+      "options": {},
+      "answer": "$\\lambda_1=1, \\boldsymbol{\\alpha}_1=(0,2,1)^{\\mathrm{T}}$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-3 & -1 & 2 \\\\ 0 & -1 & 4 \\\\ -1 & 0 & 1\\end{array}\\right)$, \r\n\r\n由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\\lambda+3 & 1 & -2 \\\\ 0 & \\lambda+1 & -4 \\\\ 1 & 0 & \\lambda-1\\end{array}\\right|=(\\lambda-1)\\left(\\lambda^2+4 \\lambda+5\\right)=0$ \r\n\r\n得矩阵 $\\boldsymbol{A}$ 的实特征值为 $\\lambda_1=1$,\r\n\r\n由 $\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & 1 & -2 \\\\ 0 & 2 & -4 \\\\ 1 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\lambda_1=1$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1=(0,2,1)^{\\mathrm{T}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "题目只要\"实特征值\"，λ²+4λ+5=0 判别式为负无实根应舍去，只保留 λ=1"
+      ],
+      "key_point": "|λE-A|=(λ-1)(λ²+4λ+5)，实特征值仅 λ=1，对应特征向量 (0,2,1)^T。"
+    },
+    {
+      "id": 1670,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率分布为 $P\\{X=1\\}=0.2, P\\{X=2\\}=0.3, P\\{X=3\\}=0.5$, 写出其分布函数 $F(x)$",
+      "options": {},
+      "answer": "$F(x)= \\begin{cases}0, & x<1 \\\\ 0.2, & 1 \\leqslant x<2 \\\\ 0.5, & 2 \\leqslant x<3 \\\\ 1, & x \\geqslant 3 \\end{cases}$",
+      "analysis": "$F(x)=P\\{X \\leqslant x\\}$,\r\n\r\n- 当 $x<1$ 时, $F(x)=0$;\r\n\r\n- 当 $1 \\leqslant x<2$ 时, $F(x)=P\\{X=1\\}=0.2$;\r\n\r\n- 当 $2 \\leqslant x<3$ 时, $F(x)=P\\{X=1\\}+P\\{X=2\\}=0.5$;\r\n\r\n- 当 $x \\geqslant 3$ 时, $F(x)=1$,\r\n\r\n故 $F(x)= \\begin{cases}0, & x<1 \\\\ 0.2, & 1 \\leqslant x<2 \\\\ 0.5, & 2 \\leqslant x<3 \\\\ 1, & x \\geqslant 3 \\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分段区间取\"左闭右开\"体现右连续；2≤x<3 段是 0.2+0.3=0.5，别漏累加"
+      ],
+      "key_point": "F(x) 在跳点 1、2、3 累加概率，得阶梯函数 0/0.2/0.5/1。"
+    },
+    {
+      "id": 1671,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知随机变量 $X$ 的概率密度为 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{x}{a^2} \\mathrm{e}^{-\\frac{x^2}{2 a^2}}, & x>0, \\\\ 0, & x \\leqslant 0,\\end{array}\\right.$ 求随机变量 $\\displaystyle Y=\\frac{1}{X}$ 的数学期望 $E(Y)$",
+      "options": {},
+      "answer": "$\\dfrac{\\sqrt{\\pi}}{\\sqrt{2} a}$",
+      "analysis": "$$\r\n\\begin{aligned}\r\n&E(Y)=E\\left(\\frac{1}{X}\\right)\\\\\r\n=&\\int_0^{+\\infty} \\frac{1}{x} \\cdot \\frac{x}{a^2} \\mathrm{e}^{-\\frac{x^2}{2 a^2}} \\mathrm{d} x\\\\\r\n=&\\frac{1}{a^2} \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{x^2}{2 a^2}} \\mathrm{d} x\\\\\r\n\\stackrel{\\frac{x^2}{2 a^2}=t}{=}& \\frac{1}{a^2} \\int_0^{+\\infty} \\mathrm{e}^{-t} \\cdot \\sqrt{2} a \\cdot \\frac{1}{2 \\sqrt{t}} \\mathrm{d} t\\\\\r\n=&\\frac{1}{\\sqrt{2} a} \\int_0^{+\\infty} t^{-\\frac{1}{2}} \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=&\\frac{1}{\\sqrt{2} a} \\Gamma\\left(\\frac{1}{2}\\right)=\\frac{\\sqrt{\\pi}}{\\sqrt{2} a}\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1/x 与密度的 x/a² 相约后剩 ∫₀^∞ e^{-x²/2a²}dx=a√(π/2)，别把积分下限当 -∞（此处 x>0）"
+      ],
+      "key_point": "E(1/X)=(1/a²)∫₀^∞ e^{-x²/2a²}dx=(1/a²)·a√(π/2)=√π/(√2 a)。"
+    },
+    {
+      "id": 1672,
+      "paper": "数学三",
+      "year": 1987,
+      "index": 24,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设两箱内装有同种零件:第一箱装 $50$ 件, 其中有 $10$ 件一等品; 第二箱装 $3$0 件, 其中有 $18$ 件一等品, 现从两箱中任取一箱, 再从此箱中先后不放回地取两个零件, 求:\r\n\r\n(1) 先取出的零件是一等品的概率 $p$;\r\n\r\n(2) 在先取出的零件是一等品的条件下, 后取出的零件仍是一等品的条件概率 $q$",
+      "options": {},
+      "answer": "(1) $\\dfrac{2}{5}$, (2) $\\dfrac{690}{1421}$",
+      "analysis": "令 $A_1=\\{$ 取的为第一箱 $\\}, A_2=\\{$ 取的为第二箱 $\\displaystyle \\}, P\\left(A_1\\right)=P\\left(A_2\\right)=\\frac{1}{2}$,\r\n\r\n$B_1=\\{$ 第一次取出的零件是一等品 $\\}, B_2=\\{$ 第二次取出的零件是一等品 $\\}$,\r\n\r\n$\\displaystyle P\\left(B_1 \\mid A_1\\right)=\\frac{10}{50}=\\frac{1}{5}, \\quad P\\left(B_1 \\mid A_2\\right)=\\frac{18}{30}=\\frac{3}{5}$\r\n\r\n(1) $\\displaystyle p=P\\left(B_1\\right)=P\\left(A_1\\right) P\\left(B_1 \\mid A_1\\right)+P\\left(A_2\\right) P\\left(B_1 \\mid A_2\\right)=\\frac{1}{2}\\left(\\frac{1}{5}+\\frac{3}{5}\\right)=\\frac{2}{5}$\r\n\r\n(2) \r\n$\\displaystyle q=P\\left(B_2 \\mid B_1\\right)=\\frac{P\\left(B_1 B_2\\right)}{P\\left(B_1\\right)}$,\r\n\r\n由\r\n$P\\left(B_1 B_2\\right)=\\dfrac{1}{2}\\left(\\dfrac{10}{50} \\times \\dfrac{9}{49}+\\dfrac{18}{30} \\times \\dfrac{17}{29}\\right)=\\dfrac{276}{29 \\times 49}$\r\n\r\n得 $q=P\\left(B_2 \\mid B_1\\right)=\\dfrac{P\\left(B_1 B_2\\right)}{P\\left(B_1\\right)}=\\dfrac{690}{1421}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "P(B1B2) 要在同一箱内不放回连续算（如第一箱 10/50×9/49），再对两箱加权，不能把两次取样当独立"
+      ],
+      "key_point": "全概率得 p=1/2(1/5+3/5)=2/5；P(B1B2)=276/1421，q=P(B1B2)/p=690/1421。"
+    }
+  ]
+}

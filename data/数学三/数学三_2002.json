@@ -1,0 +1,412 @@
+{
+  "paper": "数学三",
+  "year": 2002,
+  "count": 20,
+  "questions": [
+    {
+      "id": 965,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "(1) 验证函数 $\\displaystyle y(x)=1+\\frac{x^{3}}{3 !}+\\frac{x^{6}}{6 !}+\\frac{x^{9}}{9 !}+\\cdots+\\frac{x^{3 n}}{(3 n) !}+\\cdots(-\\infty<x<+\\infty)$ 满足微分方程 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^{x}$\r\n\r\n(2) 利用 (1) 的结果求幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数",
+      "options": {},
+      "answer": "(2) $\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
+      "analysis": "因为级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的收敛半径为 $R=+\\infty$, \r\n\r\n所以其收敛域为 $(-\\infty,+\\infty)$\r\n\r\n(1) 由 \r\n\r\n$\\displaystyle y^{\\prime}(x) =\\frac{x^2}{2 !}+\\frac{x^5}{5 !}+\\frac{x^8}{8 !}+\\cdots+\\frac{x^{3 n-1}}{(3 n-1) !}+\\cdots, \\\\\r\ny^{\\prime \\prime}(x) =x+\\frac{x^4}{4 !}+\\frac{x^7}{7 !}+\\cdots+\\frac{x^{3 n-2}}{(3 n-2) !}+\\cdots, \\\\\r\ny^{\\prime \\prime \\prime}(x) =1+\\frac{x^3}{3 !}+\\frac{x^6}{6 !}+\\cdots+\\frac{x^{3 n-3}}{(3 n-3) !}+\\cdots$,\r\n\r\n得 $\\displaystyle y^{\\prime \\prime}+y^{\\prime}+y\\\\\r\n=1+x+\\frac{x^2}{2 !}+\\frac{x^3}{3 !}+\\frac{x^4}{4 !}+\\cdots+\\frac{x^n}{n !}+\\cdots\\\\\r\n=\\mathrm{e}^x$\r\n\r\n(2) 令 $\\displaystyle y(x)=\\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$, \r\n\r\n由 (1) 得 $y(x)$ 满足 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的特征方程为 $\\lambda^2+\\lambda+1=0$, \r\n\r\n特征根为 $\\displaystyle \\lambda_{1,2}=-\\frac{1}{2} \\pm \\frac{\\sqrt{3}}{2} \\mathrm{i}$,\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的通解为 $\\displaystyle y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\frac{\\sqrt{3}}{2} x+C_2 \\sin \\frac{\\sqrt{3}}{2} x\\right)$.\r\n\r\n又 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 有特解 $y=\\dfrac{1}{3} \\mathrm{e}^x$, \r\n\r\n故 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 的通解为\r\n\r\n$y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\dfrac{\\sqrt{3}}{2} x+C_2 \\sin \\dfrac{\\sqrt{3}}{2} x\\right)+\\dfrac{1}{3} \\mathrm{e}^x$\r\n\r\n由 $y(0)=1, y^{\\prime}(0)=0$ 得 $\\displaystyle C_1=\\frac{2}{3}, C_2=0$, \r\n\r\n故 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数为\r\n\r\n$y(x)=\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "逐项求导后 y''+y'+y 恰好错位对齐成 eˣ 的全展开，这一步是把级数转成 ODE 的桥梁",
+        "特征根 (-1±√3 i)/2 给出 e^{-x/2}cos(√3 x/2) 项；初值 y(0)=1、y'(0)=0（由级数首项与缺一次项）定死两常数"
+      ],
+      "key_point": "级数满足 y''+y'+y=eˣ，解得 y=⅔e^{-x/2}cos(√3 x/2)+⅓eˣ。"
+    },
+    {
+      "id": 1962,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设常数 $\\displaystyle a \\neq \\frac{1}{2}$, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\ln \\left[\\frac{n-2 n a+1}{n(1-2 a)}\\right]^n=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{1-2 a}$",
+      "analysis": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\ln \\left[\\frac{n-2 n a+1}{n(1-2 a)}\\right]^n \\\\\r\n=\\ln \\lim _{n \\rightarrow \\infty}\\left\\{\\left[1+\\frac{1}{n(1-2 a)}\\right]^{n(1-2 a)}\\right\\}^{\\frac{1}{1-2 a}} \\\\\r\n=\\ln \\mathrm{e}^{\\frac{1}{1-2 a}}=\\frac{1}{1-2 a}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子 n-2na+1=n(1-2a)+1，比值恰为 1+1/(n(1-2a))，指数配成 n(1-2a) 才用 e 型极限",
+        "外层 ln 与极限可交换，最终 ln e^{1/(1-2a)} 抵消得 1/(1-2a)"
+      ],
+      "key_point": "括号→1+1/(n(1-2a))，n 次幂极限为 e^{1/(1-2a)}，取对数得 1/(1-2a)。"
+    },
+    {
+      "id": 1963,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "交换积分次序: $\\displaystyle \\int_0^{\\frac{1}{4}} \\mathrm{d} y \\int_y^{\\sqrt{y}} f(x, y) \\mathrm{d} x+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} y \\int_y^{\\frac{1}{2}} f(x, y) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\int_0^{\\frac{1}{2}} \\mathrm{d} x \\int_{x^2}^x f(x, y) \\mathrm{d} y$",
+      "analysis": "改变积分次序得\r\n\r\n$\\displaystyle \\int_0^{\\frac{1}{4}} \\mathrm{d} y \\int_y^{\\sqrt{y}} f(x, y) \\mathrm{d} x+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} y \\int_y^{\\frac{1}{2}} f(x, y) \\mathrm{d} x\\\\\r\n=\\int_0^{\\frac{1}{2}} \\mathrm{d} x \\int_{x^2}^x f(x, y) \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两段原积分拼成一个区域 x²≤y≤x（0≤x≤1/2），边界 x=y 与 x=√y 换成 y=x 与 y=x²",
+        "交换后 x 从 0 到 1/2，内层 y 从 x² 到 x，勿把上下限写反"
+      ],
+      "key_point": "区域即 x²≤y≤x, 0≤x≤1/2，交换次序得单重累次积分。"
+    },
+    {
+      "id": 1964,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 3 阶矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{rrr}1 & 2 & -2 \\\\ 2 & 1 & 2 \\\\ 3 & 0 & 4\\end{array}\\right), 3$ 维列向量 $\\boldsymbol{\\alpha}=(a, 1,1)^{\\mathrm{T}}$. 已知 $\\boldsymbol{A} \\boldsymbol{\\alpha}$ 与 $\\boldsymbol{\\alpha}$ 线性相关, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "因为 $\\boldsymbol{A \\alpha}$ 与 $\\alpha$ 线性相关,\r\n\r\n所以 $\\boldsymbol{A \\alpha}$ 与 $\\boldsymbol{\\alpha}$ 成比例,\r\n\r\n设 $\\boldsymbol{A} \\boldsymbol{\\alpha}=\\lambda \\boldsymbol{\\alpha}$, \r\n\r\n\r\n\r\n即 $\\left(\\begin{array}{ccc}\r\n1 & 2 & -2 \\\\\r\n2 & 1 & 2 \\\\\r\n3 & 0 & 4\r\n\\end{array}\\right)\r\n\\left(\\begin{array}{l}\r\na \\\\1 \\\\1\r\n\\end{array}\\right)\r\n=\\lambda\\left(\\begin{array}{l}\r\na \\\\1 \\\\1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\left\\{\\begin{array}{l}\r\na=\\lambda a \\\\\r\n2 a+3=\\lambda\\end{array}\\right.$\r\n\r\n解得  $a=-1$,",
+      "wrong_options": {},
+      "pitfalls": [
+        "Aα=(a,2a+3,3a+4)^T，与 α=(a,1,1)^T 成比例需第 2、3 分量相等 2a+3=3a+4 亦成立，最终 a=-1",
+        "a=0 时 Aα=(0,3,4)^T 与 (0,1,1)^T 不成比例，应舍去"
+      ],
+      "key_point": "Aα∥α 逐分量比例 ⇒ a=-1。"
+    },
+    {
+      "id": 1965,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 的联合概率分布为\r\n\r\n$$\r\n\\begin{array}{c|ccc}\r\n\\hline\r\nX \\diagdown Y & -1 & 0 & 1\\\\\r\n\\hline 0 & 0.07 & 0.18 & 0.15 \\\\\r\n\\hline 1 & 0.08 & 0.32 & 0.20 \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n则 $X^2$ 和 $Y^2$ 的协方差 $\\operatorname{Cov}\\left(X^2, Y^2\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-0.02$",
+      "analysis": "由 $X^2 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.4 & 0.6\\end{array}\\right), \\\\\r\nY^2 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.5 & 0.5\\end{array}\\right), \\\\\r\nX^2 Y^2 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.72 & 0.28\\end{array}\\right)$,\r\n\r\n得 $E\\left(X^2\\right)=0.6, E\\left(Y^2\\right)=0.5, E\\left(X^2 Y^2\\right)=0.28$,\r\n\r\n于是 $\\operatorname{Cov}\\left(X^2, Y^2\\right)\\\\\r\n=E\\left(X^2 Y^2\\right)-E\\left(X^2\\right) E\\left(Y^2\\right)\\\\\r\n=-0.02$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X²、Y² 只取 0/1，X²=1 概率 0.6、Y²=1 概率 0.5；X²Y²=1 只在 X=1 且 Y=±1 时，概率 0.28",
+        "Cov(X²,Y²)=E(X²Y²)-E(X²)E(Y²)，非直接由 X,Y 的相关系数"
+      ],
+      "key_point": "E(X²Y²)=0.28，减 0.6×0.5 得 Cov=-0.02。"
+    },
+    {
+      "id": 1966,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)=\\left\\{\\begin{array}{ll}\\mathrm{e}^{-(x-\\theta)}, & x \\geqslant \\theta \\\\ 0, & x<\\theta\\end{array}\\right.$ 而 $X_1, X_2, \\cdots, X_n$ 是来自总体 $X$ 的简单随机样本, 则未知参数 $\\theta$ 的矩估计量为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\bar{X}-1$",
+      "analysis": "$\\displaystyle E(X)=\\int_{-\\infty}^{+\\infty} x f(x) \\mathrm{d} x\\\\\r\n=\\int_\\theta^{+\\infty} x \\mathrm{e}^{-(x-\\theta)} \\mathrm{d} x \\\\\r\n\\stackrel{x-\\theta=t}{=} \\int_0^{+\\infty}(\\theta+t) \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=\\theta \\int_0^{+\\infty} \\mathrm{e}^{-t} \\mathrm{d} t+\\int_0^{+\\infty} t \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=\\theta \\Gamma(1)+\\Gamma(2)=\\theta+1$\r\n\r\n令 $\\theta+1=\\bar{X}$, 得 $\\theta$ 的矩估计量为 $\\hat{\\theta}=\\bar{X}-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "该密度是平移指数分布，E(X)=θ+1（换元 x-θ=t 后 ∫te^{-t}dt=1），别漏掉平移量 θ",
+        "矩估计用样本均值 X̄ 替期望，θ̂=X̄-1"
+      ],
+      "key_point": "E(X)=θ+1，令等于 X̄ 得 θ̂=X̄-1。"
+    },
+    {
+      "id": 1967,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在闭区间 $[a, b]$ 上有定义, 在开区间 $(a, b)$ 内可导, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $f(a) f(b)<0$ 时, 存在 $\\xi \\in(a, b)$ 使 $f(\\xi)=0$",
+        "B": "对任何 $\\xi \\in(a, b)$, 有 $\\displaystyle \\lim _{x \\rightarrow \\xi}[f(x)-f(\\xi)]=0$",
+        "C": "当 $f(a)=f(b)$ 时, 存在 $\\xi \\in(a, b)$, 使 $f^{\\prime}(\\xi)=0$",
+        "D": "存在 $\\xi \\in(a, b)$, 使 $f(b)-f(a)=f^{\\prime}(\\xi)(b-a)$"
+      },
+      "answer": "B",
+      "analysis": "由 $f(x)$ 在 $(a, b)$ 内可导得 $f(x)$ 在 $(a, b)$ 内连续, \r\n\r\n若 $\\xi \\in(a, b)$, 则 $f(x)$ 在 $\\xi$ 处连续, \r\n\r\n即 $\\displaystyle \\lim _{x \\rightarrow \\xi} f(x)=f(\\xi)$, \r\n\r\n或 $\\displaystyle \\lim _{x \\rightarrow \\xi}[f(x)-f(\\xi)]=0$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "介值/零点定理要求闭区间连续，题设只给开区间可导，端点行为未知，f(ξ)=0 不保证",
+        "C": "罗尔定理要求 [a,b] 连续，缺此前提不能断言 f'(ξ)=0",
+        "D": "拉格朗日中值定理同样要求闭区间连续，缺失前提结论不成立"
+      },
+      "pitfalls": [
+        "本题刻意去掉“闭区间连续”，使罗尔、拉格朗日、介值三大定理全部失效",
+        "B 只依赖内点可导必连续这一必然结论，故正确"
+      ],
+      "key_point": "缺闭区间连续假设，A/C/D 定理均不适用，只有 B（内点连续）恒成立。"
+    },
+    {
+      "id": 1968,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n x^n$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} b_n x^n$ 的收敛半径分别为 $\\displaystyle \\frac{\\sqrt{5}}{3}$ 与 $\\displaystyle \\frac{1}{3}$, 则幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{a_n^2}{b_n^2} x^n$ 的收敛半径为 $(\\quad)$",
+      "options": {
+        "A": "$5$",
+        "B": "$\\dfrac{\\sqrt{5}}{3}$",
+        "C": "$\\dfrac{1}{3}$",
+        "D": "$\\dfrac{1}{5}$"
+      },
+      "answer": "A",
+      "analysis": "按真题答案的常规解法，默认可用比值法处理系数。由已知收敛半径，取 $\\rho_a=\\dfrac{3}{\\sqrt{5}},\\ \\rho_b=3$，则\n\n$\\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}^2/b_{n+1}^2}{a_n^2/b_n^2}\\right|=\\left(\\frac{3}{\\sqrt5}\\right)^2\\left(\\frac{1}{3}\\right)^2=\\frac15.$\n\n因而幂级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\frac{a_n^2}{b_n^2}x^n$的收敛半径为 $R=5$，应选 (A)。\n\n注意：严格地说，仅知两个幂级数的收敛半径，并不能保证相邻系数比值极限存在。因此本题在严格数学口径下存在命题争议；线上答案沿用真题标准答案 (A)。",
+      "wrong_options": {
+        "B": "误把结果取成第一个级数半径 √5/3，未对系数做平方与相除运算",
+        "C": "误取第二个级数半径 1/3",
+        "D": "把根值极限 1/5 直接当成半径，漏掉“半径是其倒数”这一步"
+      },
+      "pitfalls": [
+        "a_n²/b_n² 的根值极限 =(3/√5)²/3²=(9/5)/9=1/5，收敛半径是它的倒数 R=5",
+        "严格说仅由收敛半径不保证比值极限存在，本题按真题标准答案取 A"
+      ],
+      "key_point": "系数根值极限 1/5，收敛半径 R=5，选 A。"
+    },
+    {
+      "id": 1969,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $m \\times n$ 矩阵, $\\boldsymbol{B}$ 是 $n \\times m$ 矩阵, 则线性方程组 $\\boldsymbol{(A B)x}=\\mathbf{0}(\\quad)$",
+      "options": {
+        "A": "当 $n>m$ 时仅有零解",
+        "B": "当 $n>m$ 时必有非零解",
+        "C": "当 $m>n$ 时仅有零解",
+        "D": "当 $m>n$ 时必有非零解"
+      },
+      "answer": "D",
+      "analysis": "$\\boldsymbol{A B}$ 为 $m$ 阶矩阵, \r\n\r\n当 $m>n$ 时,\r\n\r\n因为 $r(\\boldsymbol{A}) \\leqslant \\min \\{m, n\\}=n, \\\\ r(\\boldsymbol{B}) \\leqslant \\min \\{m, n\\}=n$,\r\n\r\n又因为$r(\\boldsymbol{A} \\boldsymbol{B}) \\leqslant \\min \\{r(\\boldsymbol{A}), r(\\boldsymbol{B})\\} \\leqslant n<m$,\r\n\r\n所以方程组 $\\boldsymbol{(A B)x}=\\mathbf{0}$ 有非零解, 应选 (D)",
+      "wrong_options": {
+        "A": "n>m 时 AB 为 m 阶方阵但秩仍可能满，未必仅零解，判断反了",
+        "B": "n>m 时 r(AB) 可达 m（满秩），不一定有非零解",
+        "C": "m>n 时 r(AB)≤n<m 恰恰不满秩，必有非零解，与“仅零解”相反"
+      },
+      "pitfalls": [
+        "关键在 m>n：AB 是 m 阶方阵而秩被 n 卡住，r(AB)≤n<m ⇒ 必有非零解",
+        "n>m 时无法保证结论，因秩上界 min{m,n}=m 可满秩"
+      ],
+      "key_point": "m>n ⇒ r(AB)≤n<m ⇒ (AB)x=0 有非零解，选 D。"
+    },
+    {
+      "id": 1970,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $n$ 阶实对称矩阵, $\\boldsymbol{P}$ 是 $n$ 阶可逆矩阵. 已知 $n$ 维列向量 $\\boldsymbol{\\alpha}$ 是 $\\boldsymbol{A}$ 的属于特征值 $\\lambda$ 的特征向量, 则矩阵 $\\left(\\boldsymbol{P}^{-1} \\boldsymbol{A P}\\right)^{\\mathrm{T}}$ 属于特征值 $\\lambda$ 的特征向量是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{P}^{-1} \\boldsymbol{\\alpha}$",
+        "B": "$\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{\\alpha}$",
+        "C": "$\\boldsymbol{P \\alpha}$",
+        "D": "$\\left(\\boldsymbol{P}^{-1}\\right)^{\\mathrm{T}} \\boldsymbol{\\alpha}$"
+      },
+      "answer": "B",
+      "analysis": "由特征值与特征向量的定义, 得 $\\boldsymbol{A \\alpha}=\\lambda \\boldsymbol{\\alpha}$.\r\n\r\n由 $\\left(\\boldsymbol{P}^{-1} \\boldsymbol{A P}\\right)^{\\mathrm{T}} \\cdot \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{\\alpha}\\\\\r\n=\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A}^{\\mathrm{T}}\\left(\\boldsymbol{P}^{-1}\\right)^{\\mathrm{T}} \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{\\alpha}\\\\\r\n=\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{\\alpha}=\\lambda \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{\\alpha}$,\r\n\r\n得 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{\\alpha}$ 是矩阵 $\\left(\\boldsymbol{P}^{-1} \\boldsymbol{A P}\\right)^{\\mathrm{T}}$ 的属于特征值 $\\lambda$ 的特征向量, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "P^{-1}α 对应的是 P^{-1}AP 本身（非转置）的特征向量，方向选错",
+        "C": "Pα 未使用对称性化简所得的正确组合，验证不成立",
+        "D": "(P^{-1})^Tα 是把转置作用位置弄反的结果"
+      },
+      "pitfalls": [
+        "A 对称使 (P^{-1}AP)^T=P^TA(P^{-1})^T=P^TA(P^T)^{-1}，据此代验 P^Tα 才闭合",
+        "转置矩阵与原矩阵特征值相同，但特征向量随相似变换改变"
+      ],
+      "key_point": "(P^{-1}AP)^T 的属于 λ 的特征向量是 P^Tα，选 B。"
+    },
+    {
+      "id": 1972,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 都服从标准正态分布, 则 $(\\quad)$",
+      "options": {
+        "A": "$X+Y$ 服从正态分布",
+        "B": "$X^2+Y^2$ 服从 $\\chi^2$ 分布",
+        "C": "$X^2$ 和 $Y^2$ 都服从 $\\chi^2$ 分布",
+        "D": "$\\dfrac{X^2}{Y^2}$ 服从 $F$ 分布"
+      },
+      "answer": "C",
+      "analysis": "方法一 由 $X \\sim N(0,1), Y \\sim N(0,1)$, 得 $X^2 \\sim \\chi^2(1), Y^2 \\sim \\chi^2(1)$, 应选 (C)\r\n\r\n方法二 因为 $X, Y$ 虽然为正态变量, 但不一定独立, 所以 (A), (B), (D) 都不对, 应选 (C)",
+      "wrong_options": {
+        "A": "X+Y 服从正态需 X、Y 联合正态（或独立），题设仅边缘正态不够",
+        "B": "X²+Y²~χ²(2) 需 X、Y 独立，题设未给",
+        "D": "X²/Y²~F(1,1) 亦要求独立，缺独立性不成立"
+      },
+      "pitfalls": [
+        "边缘都是标准正态推不出联合正态或独立，A、B、D 都缺独立性这一前提",
+        "C 只用单个变量的平方分布，与独立性无关，恒成立"
+      ],
+      "key_point": "无独立性时只有 X²、Y² 各自为 χ²(1) 必成立，选 C。"
+    },
+    {
+      "id": 1973,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\int_0^x\\left[\\int_0^{u^2} \\arctan (1+t) \\mathrm{d} t\\right] \\mathrm{d} u}{x(1-\\cos x)}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{6}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\int_0^x\\left[\\int_0^{u^2} \\arctan (1+t) \\mathrm{d} t\\right] \\mathrm{d} u}{x(1-\\cos x)}\\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{\\int_0^x\\left[\\int_0^{u^2} \\arctan (1+t) \\mathrm{d} t\\right] \\mathrm{d} u}{x^3} \\\\\r\n= 2 \\lim _{x \\rightarrow 0} \\frac{\\int_0^{x^2} \\arctan (1+t) \\mathrm{d} t}{3 x^2}\\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{2 x \\arctan \\left(1+x^2\\right)}{6 x} \\\\\r\n= \\frac{2}{3} \\lim _{x \\rightarrow 0} \\arctan \\left(1+x^2\\right)=\\frac{\\pi}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用 1-cos x~x²/2 把分母化为 x³/2，再逐次洛必达；外层变限积分求导后仍是变限积分，需再求导一次",
+        "最后 arctan(1+x²)→arctan1=π/4，配上系数得 π/6"
+      ],
+      "key_point": "分母~x³/2，两次洛必达后 (2/3)arctan1=π/6。"
+    },
+    {
+      "id": 1974,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $u=f(x, y, z)$ 有连续偏导数, 且 $z=z(x, y)$ 由方程 $x \\mathrm{e}^x-y \\mathrm{e}^y=z \\mathrm{e}^z$ 所确定, 求 $\\mathrm{d} u$",
+      "options": {},
+      "answer": "$\\left(f_1^{\\prime}+\\dfrac{x+1}{z+1} \\mathrm{e}^{x-z} f_3^{\\prime}\\right) \\mathrm{d} x+\\left(f_2^{\\prime}-\\dfrac{y+1}{z+1} \\mathrm{e}^{y-z} f_3^{\\prime}\\right) \\mathrm{d} y$",
+      "analysis": "方法一 \r\n\r\n$x \\mathrm{e}^x-y \\mathrm{e}^y=z \\mathrm{e}^z$ 两边对 $x$ 求偏导, \r\n\r\n得 $\\displaystyle (x+1) \\mathrm{e}^x=(z+1) \\mathrm{e}^z \\frac{\\partial z}{\\partial x}$,\r\n\r\n解得 $\\displaystyle \\frac{\\partial z}{\\partial x}=\\frac{x+1}{z+1} \\mathrm{e}^{x-z}$;\r\n\r\n$x \\mathrm{e}^x-y \\mathrm{e}^y=z \\mathrm{e}^z$ 两边对 $y$ 求偏导, \r\n\r\n得 $\\displaystyle -(y+1) \\mathrm{e}^y=(z+1) \\mathrm{e}^z \\frac{\\partial z}{\\partial y}$,\r\n\r\n解得 $\\displaystyle \\frac{\\partial z}{\\partial y}=-\\frac{y+1}{z+1} \\mathrm{e}^{y-z}$,\r\n\r\n于是\r\n\r\n$\\displaystyle \\mathrm{d} z=\\frac{x+1}{z+1} \\mathrm{e}^{x-z} \\mathrm{d} x-\\frac{y+1}{z+1} \\mathrm{e}^{y-z} \\mathrm{d} y\\\\\r\n\\mathrm{d} u=f_1^{\\prime} \\mathrm{d} x+f_2^{\\prime} \\mathrm{d} y+f_3^{\\prime} \\mathrm{d} z \\\\\r\n=\\left(f_1^{\\prime}+\\frac{x+1}{z+1} \\mathrm{e}^{x-z} f_3^{\\prime}\\right) \\mathrm{d} x+\\left(f_2^{\\prime}-\\frac{y+1}{z+1} \\mathrm{e}^{y-z} f_3^{\\prime}\\right) \\mathrm{d} y$\r\n\r\n方法二 $x \\mathrm{e}^x-y \\mathrm{e}^y=z \\mathrm{e}^z$ 两边求微分,\r\n\r\n得 $\\mathrm{d}\\left(x \\mathrm{e}^x\\right)-\\mathrm{d}\\left(y \\mathrm{e}^y\\right)=\\mathrm{d}\\left(z \\mathrm{e}^z\\right)$,\r\n\r\n即 $(x+1) \\mathrm{e}^x \\mathrm{d} x-(y+1) \\mathrm{e}^y \\mathrm{d} y=(z+1) \\mathrm{e}^z \\mathrm{d} z$,\r\n\r\n解得 $\\mathrm{d} z=\\dfrac{x+1}{z+1} \\mathrm{e}^{x-z} \\mathrm{d} x-\\dfrac{y+1}{z+1} \\mathrm{e}^{y-z} \\mathrm{d} y$,\r\n\r\n于是\r\n\r\n$\\mathrm{d} u =f_1^{\\prime} \\mathrm{d} x+f_2^{\\prime} \\mathrm{d} y+f_3^{\\prime} \\mathrm{d} z \\\\\r\n=\\left(f_1^{\\prime}+\\dfrac{x+1}{z+1} \\mathrm{e}^{x-z} f_3^{\\prime}\\right) \\mathrm{d} x+\\left(f_2^{\\prime}-\\dfrac{y+1}{z+1} \\mathrm{e}^{y-z} f_3^{\\prime}\\right) \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(xe^x)'=(x+1)e^x，求导时别丢掉乘积项；由此 z_x=(x+1)/(z+1)·e^{x-z}",
+        "z 是 x、y 二元隐函数，du 里 dz 要用 z_x dx+z_y dy 展开，最终只留 dx、dy"
+      ],
+      "key_point": "z_x、z_y 隐式求出后代入 du=f_1'dx+f_2'dy+f_3'dz 得结果。"
+    },
+    {
+      "id": 1975,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f\\left(\\sin ^2 x\\right)=\\frac{x}{\\sin x}$, 求 $\\displaystyle \\int \\frac{\\sqrt{x}}{\\sqrt{1-x}} f(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-2 \\sqrt{1-x} \\arcsin \\sqrt{x}+2 \\sqrt{x}+C$",
+      "analysis": "由 $f\\left(\\sin ^2 x\\right)=\\dfrac{x}{\\sin x}$, \r\n\r\n得 $f(x)=\\dfrac{\\arcsin \\sqrt{x}}{\\sqrt{x}}$,\r\n\r\n于是 $\\displaystyle \\int \\frac{\\sqrt{x}}{\\sqrt{1-x}} f(x) \\mathrm{d} x \\\\\r\n=\\int \\frac{\\sqrt{x}}{\\sqrt{1-x}} \\cdot \\frac{\\arcsin \\sqrt{x}}{\\sqrt{x}} \\mathrm{d} x\\\\\r\n=-2 \\int \\frac{\\arcsin \\sqrt{x}}{2 \\sqrt{1-x}} \\mathrm{d}(1-x) \\\\\r\n=-2 \\int \\arcsin \\sqrt{x} \\mathrm{d} \\sqrt{1-x}\\\\\r\n=-2 \\sqrt{1-x} \\arcsin \\sqrt{x}+2 \\int \\frac{1}{2 \\sqrt{x}} \\mathrm{d} x \\\\\r\n=-2 \\sqrt{1-x} \\arcsin \\sqrt{x}+2 \\sqrt{x}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先反求 f(x)=arcsin√x/√x（令 t=sin²x），代入后 √x 约去，得 ∫arcsin√x/√(1-x)dx",
+        "把 1/√(1-x) 凑成 d√(1-x) 再分部，注意 arcsin√x 求导得 1/(2√x·√(1-x))"
+      ],
+      "key_point": "f(x)=arcsin√x/√x，分部积分得 -2√(1-x)arcsin√x+2√x+C。"
+    },
+    {
+      "id": 1976,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D_1$ 是由抛物线 $y=2 x^2$ 和直线 $x=a, x=2$ 及 $y=0$ 所围成的平面区域; $D_2$ 是由抛物线 $y=2 x^2$ 和直线 $y=0, x=a$ 所围成的平面区域, 其中 $0<a<2$\r\n\r\n(1) 试求 $D_1$ 绕 $x$ 轴旋转而成的旋转体体积 $V_1 ;\\\\ D_2$ 绕 $y$ 轴旋转而成的旋转体体积 $V_2$;\r\n\r\n(2) 问当 $a$ 为何值时, $V_1+V_2$ 取得最大值? 试求此最大值",
+      "options": {},
+      "answer": "(1) $V_1(a)=\\dfrac{4 \\pi}{5}\\left(32-a^5\\right),\\\\ V_2(a)=\\pi a^4$\r\n\r\n(2) 当 $a=1$ 时, $V(a)$ 最大, 且最大值为 $\\dfrac{129 \\pi}{5}$",
+      "analysis": "(1) $\\displaystyle V_1(a)=\\pi \\int_a^2\\left(2 x^2\\right)^2 \\mathrm{d} x=\\frac{4 \\pi}{5}\\left(32-a^5\\right),\\\\\r\nV_2(a)=2 a^2 \\cdot \\pi a^2-\\pi \\int_0^{2 a^2} \\frac{y}{2} \\mathrm{d} y=\\pi a^4$\r\n\r\n(2) $\\displaystyle V(a)=V_1(a)+V_2(a)=\\frac{4 \\pi}{5}\\left(32-a^5\\right)+\\pi a^4$,\r\n\r\n由 $V^{\\prime}(a)=4 \\pi a^3(1-a)=0$ 得 $a=1$,\r\n\r\n当 $a \\in(0,1)$ 时, $V^{\\prime}(a)>0$; 当 $a \\in(1,2)$ 时, $V^{\\prime}(a)<0$,\r\n\r\n故当 $a=1$ 时, $V(a)$ 最大, 且最大值为 $\\dfrac{129 \\pi}{5}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "V_1 绕 x 轴用圆盘法，被积为 (2x²)²；V_2 绕 y 轴宜用柱壳 2πx·2x² 或“大圆柱减内部”，结果 πa^4",
+        "V'(a)=4πa³(1-a)，a=1 为极大，端点不取"
+      ],
+      "key_point": "V=(4π/5)(32-a^5)+πa^4，a=1 取最大 129π/5。"
+    },
+    {
+      "id": 1977,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 在 $[a, b]$ 上连续, 且 $g(x)>0$. 利用闭区间上连续函数性质, 证明: 存 在一点 $\\xi \\in[a, b]$, 使 $\\displaystyle \\int_a^b f(x) g(x) \\mathrm{d} x=f(\\xi) \\int_a^b g(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "因为 $f(x)$ 在 $[a, b]$ 上连续, \r\n\r\n所以 $f(x)$ 在 $[a, b]$ 上取到最小值 $m$ 和最大值 $M$,\r\n\r\n因为 $g(x)>0$, 所以 $m g(x) \\leqslant f(x) g(x) \\leqslant M g(x)$, 积分得\r\n\r\n$\\displaystyle m \\int_a^b g(x) \\mathrm{d} x \\leqslant \\int_a^b f(x) g(x) \\mathrm{d} x \\leqslant M \\int_a^b g(x) \\mathrm{d} x$,\r\n\r\n因为 $\\displaystyle \\int_a^b g(x) \\mathrm{d} x>0$, \r\n\r\n所以 $m \\leqslant \\dfrac{\\int_a^b f(x) g(x) \\mathrm{d} x}{\\int_a^b g(x) \\mathrm{d} x} \\leqslant M$,\r\n\r\n由介值定理, 存在 $\\xi \\in[a, b]$, \r\n\r\n使得 $f(\\xi)=\\dfrac{\\int_a^b f(x) g(x) \\mathrm{d} x}{\\int_a^b g(x) \\mathrm{d} x}$,\r\n\r\n即$\\displaystyle \\int_a^b f(x) g(x) \\mathrm{d} x=f(\\xi) \\int_a^b g(x) \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键用 g(x)>0 保号，把 m·g≤f·g≤M·g 积分后除以 ∫g>0，才得 f(ξ) 的介值形式",
+        "ξ 由介值定理存在，需 f 在闭区间连续取到 m、M"
+      ],
+      "key_point": "带权 g>0 夹逼 + 介值定理，得 ∫fg=f(ξ)∫g。"
+    },
+    {
+      "id": 1978,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设齐次方程组\r\n\r\n$\\left\\{\\begin{array}{l}\r\na x_1+b x_2+b x_3+\\cdots+b x_n=0 \\\\\r\nb x_1+a x_2+b x_3+\\cdots+b x_n=0 \\\\\r\n\\cdots \\cdots \\\\\r\nb x_1+b x_2+b x_3+\\cdots+a x_n=0\r\n\\end{array}\\right.$\r\n\r\n其中 $a \\neq 0, b \\neq 0, n \\geqslant 2$. 试讨论 $a, b$ 为何值时, 方程组仅有零解、有无穷多组解? 在有无 穷多组解时, 求出全部解, 并用基础解系表示全部解",
+      "options": {},
+      "answer": "当 $a \\neq(1-n) b$ 且 $a \\neq b$ 时, 方程组只有零解;\r\n\r\n当 $a=b$ 时,  $\\boldsymbol{x}=\\\\ \r\nC_1\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\cdots+C_{n-1}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 1\\end{array}\\right)\\left(C_1, C_2, \\cdots, C_{n-1}\\right.$ 为任意常数);\r\n\r\n当 $a=(1-n) b$ 时, $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 1 \\\\ \\vdots \\\\ 1\\end{array}\\right) ( C$ 为任意常数)",
+      "analysis": "$|\\boldsymbol{A}|=\\left|\\begin{array}{cccc}\r\na & b & \\cdots & b \\\\\r\nb & a & \\cdots & b \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\nb & b & \\cdots & a\r\n\\end{array}\\right|\\\\\r\n=[a+(n-1) b]\\left|\r\n\\begin{array}{cccc}\r\n1 & 1 & \\cdots & 1 \\\\\r\nb & a & \\cdots & b \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\nb & b & \\cdots & a\r\n\\end{array}\\right|\\\\\r\n=[a+(n-1) b](a-b)^{n-1}$\r\n\r\n当 $a \\neq(1-n) b$ 且 $a \\neq b$ 时, 方程组只有零解;\r\n\r\n当 $a=b$ 时, 由 $\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{cccc}1 & 1 & \\cdots & 1 \\\\ 0 & 0 & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & 0\\end{array}\\right)$, \r\n\r\n得方程组的通解为 $\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\cdots+C_{n-1}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 1\\end{array}\\right) \\\\ \r\n\\left(C_1, C_2, \\cdots, C_{n-1}\\right.$ 为任意常数),\r\n\r\n当 $a=(1-n) b$ 时, $\\boldsymbol{A}\\\\ \r\n\\rightarrow\\left(\\begin{array}{cccc}1-n & 1 & \\cdots & 1 \\\\ 1 & 1-n & \\cdots & 1 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 1 & 1 & \\cdots & 1-n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccccc}1 & 0 & \\cdots & 0 & -1 \\\\ 0 & 1 & \\cdots & 0 & -1 \\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & \\cdots & 1 & -1 \\\\ 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$,\r\n\r\n因为 $r(\\boldsymbol{A})=n-1$ 且 $\\boldsymbol{A}\\left(\\begin{array}{c}1 \\\\ 1 \\\\ \\vdots \\\\ 1\\end{array}\\right)=\\mathbf{0}$,\r\n\r\n所以原方程组的通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 1 \\\\ \\vdots \\\\ 1\\end{array}\\right) ( C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "仅零解条件是 |A|≠0，即 a+(n-1)b≠0 且 a≠b——两者需同时成立（源答案此处写作“或”系逻辑笔误，应为“且”）",
+        "a=b 时秩为 1，基础解系 n-1 个；a=(1-n)b 时秩为 n-1，基础解系仅 (1,…,1)^T 一个"
+      ],
+      "key_point": "|A|=[a+(n-1)b](a-b)^{n-1}，据两因子是否为零分三情形讨论解的结构。"
+    },
+    {
+      "id": 1979,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "$\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, 且满足条件 $\\boldsymbol{A}^2+2 \\boldsymbol{A}=\\boldsymbol{O}$, 已知 $\\boldsymbol{A}$ 的秩 $r(\\boldsymbol{A})=2$\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的全部特征值;\r\n\r\n(2) 当 $k$ 为何值时, 矩阵 $\\boldsymbol{A}+k \\boldsymbol{E}$ 为正定矩阵, 其中 $\\boldsymbol{E}$ 为 3 阶单位矩阵",
+      "options": {},
+      "answer": "(1) $\\lambda_1=0, \\lambda_2=\\lambda_3=-2$ \r\n\r\n(2) $k>2$",
+      "analysis": "(1) 令 $\\boldsymbol{Ax}=\\lambda \\boldsymbol{X}$, \r\n\r\n由 $\\boldsymbol{A}^2+2 \\boldsymbol{A}=\\boldsymbol{O}$, \r\n\r\n得 $\\left(\\boldsymbol{A}^2+2 \\boldsymbol{A}\\right) \\boldsymbol{x}=\\mathbf{0}$, 即 $\\left(\\lambda^2+2 \\lambda\\right) \\boldsymbol{x}=\\mathbf{0}$.\r\n\r\n因为 $\\boldsymbol{x} \\neq \\mathbf{0}$, 所以 $\\lambda^2+2 \\lambda=0$, \r\n\r\n于是 $\\lambda=0$ 或 $\\lambda=-2$.\r\n\r\n因为 $\\boldsymbol{A}$ 可对角化且 $r(\\boldsymbol{A})=2$, \r\n\r\n所以 $\\boldsymbol{A}$ 的非零特征值个数为 $2$,\r\n\r\n于是 $\\lambda_1=0, \\lambda_2=\\lambda_3=-2$\r\n\r\n(2) $\\boldsymbol{A}+k \\boldsymbol{E}$ 的特征值为 $k, k-2, k-2$, \r\n\r\n而 $\\boldsymbol{A}+k \\boldsymbol{E}$ 为正定矩阵的充分必要条件是 $\\boldsymbol{A}+k \\boldsymbol{E}$ 的特征值都是正数, \r\n\r\n故当 $k>2$ 时 $\\boldsymbol{A}+k \\boldsymbol{E}$ 为正定矩阵",
+      "wrong_options": {},
+      "pitfalls": [
+        "λ²+2λ=0 只给候选值 {0,-2}，须用实对称可对角化且 r(A)=2 断定 0 是单根、-2 是二重根",
+        "A+kE 特征值为 k、k-2、k-2，正定 ⇔ 三者皆正 ⇔ k>2（取严格不等号）"
+      ],
+      "key_point": "特征值 0,-2,-2；A+kE 正定当且仅当 k>2。"
+    },
+    {
+      "id": 1980,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设随机变量 $U$ 在区间 $[-2,2]$ 上服从均匀分布, 随机变量\r\n\r\n$$\r\nX=\\left\\{\\begin{array}{ll}\r\n-1, & U \\leqslant-1 \\\\\r\n1, & U>-1\r\n\\end{array} \\quad Y= \\begin{cases}-1, & U \\leqslant 1 \\\\\r\n1, & U>1 \\end{cases}\\right.\r\n$$\r\n\r\n试求: (1) $X$ 和 $Y$ 的联合概率分布;\r\n\r\n(2) $D(X+Y)$",
+      "options": {},
+      "answer": "(1) $$\r\n\\begin{array}{c|cc}\r\n\\hline X\\diagdown Y & -1 & 1 \\\\\r\n\\hline-1 & \\dfrac{1}{4} & 0 \\\\\r\n1 & \\dfrac{1}{2} & \\dfrac{1}{4} \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) $2$",
+      "analysis": "$U$ 的密度函数为 $f(u)= \\begin{cases}\\dfrac{1}{4}, & -2<u<2 \\\\ 0, & \\text { 其他}\\end{cases}$\r\n\r\n(1) $\\displaystyle P\\{X=-1, Y=-1\\}=P\\{U \\leqslant-1, U \\leqslant 1\\}\\\\\r\n=P\\{U \\leqslant-1\\}=\\int_{-2}^{-1} f(u) \\mathrm{d} u=\\frac{1}{4}, \\\\\r\nP\\{X=-1, Y=1\\}=P\\{U \\leqslant-1, U>1\\}=0, \\\\\r\nP\\{X=1, Y=-1\\}=P\\{U>-1, U \\leqslant 1\\}\\\\\r\n=P\\{-1<U \\leqslant 1\\}=\\int_{-1}^1 f(u) \\mathrm{d} u=\\frac{1}{2}, \\\\\r\nP\\{X=1, Y=1\\}=P\\{U>-1, U>1\\}\\\\\r\n=P\\{U>1\\}=\\int_1^2 f(u) \\mathrm{d} u=\\frac{1}{4}$,\r\n\r\n于是 $(X, Y)$ 的联合分布律为\r\n\r\n$$\r\n\\begin{array}{c|cc}\r\n\\hline X\\diagdown Y & -1 & 1 \\\\\r\n\\hline-1 & \\dfrac{1}{4} & 0 \\\\\r\n1 & \\dfrac{1}{2} & \\dfrac{1}{4} \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) 令 $Z=X+Y$, 则 $Z$ 的可能取值为 $\\displaystyle  -2,0,2,\\\\\r\nP\\{Z=-2\\}=P\\{X=-1, Y=-1\\}=\\frac{1}{4},\\\\\r\nP\\{Z=0\\}=P\\{X=-1, Y=1\\}\\\\+P\\{X=1, Y=-1\\}=\\frac{1}{2},\\\\\r\nP\\{Z=2\\}=P\\{X=1, Y=1\\}=\\dfrac{1}{4}$,\r\n\r\n$Z$ 的分布律为 $Z \\sim\\left(\\begin{array}{ccc}-2 & 0 & 2 \\\\ \\frac{1}{4} & \\frac{1}{2} & \\frac{1}{4}\\end{array}\\right),\\\\\r\nE(Z)=0, \\quad E\\left(Z^2\\right)=4 \\times \\dfrac{1}{4}+4 \\times \\dfrac{1}{4}=2$,\r\n\r\n于是 $D(X+Y)=D(Z)=E\\left(Z^2\\right)-[E(Z)]^2=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "U≤-1 ⇒ U≤1，故 X=-1 蕴含 Y=-1，因此 P(X=-1,Y=1)=0、P(X=1,Y=-1)=1/2（源答案表格把这两格 0 与 1/2 写反，且表头“X∖X”应为“X∖Y”；解析推导才是正解）",
+        "Z=X+Y 分布 (-2,0,2) 概率 (1/4,1/2,1/4)，E(Z)=0，D(Z)=E(Z²)=2"
+      ],
+      "key_point": "联合分布 P(X=1,Y=-1)=1/2、P(X=-1,Y=1)=0；D(X+Y)=2。"
+    },
+    {
+      "id": 1981,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设一设备开机后无故障工作的时间 $X$ 服从指数分布, 平均无故障工作的时间 $E(X)$ 为 5 小时. 设备定时开机, 出现故障时自动关机, 而在无故障的情况下工作 $2$ 小时便关机. 试求该设备每次开机无故障工作的时间 $Y$ 的分布函数 $F(y)$",
+      "options": {},
+      "answer": "$F(y)= \\begin{cases}0, & y<0 \\\\ 1-\\mathrm{e}^{-\\frac{y}{5}}, & 0 \\leqslant y<2 \\\\ 1, & y \\geqslant 2 \\end{cases}$",
+      "analysis": "设 $X \\sim E(\\lambda)$, \r\n\r\n因为 $\\displaystyle E(X)=\\frac{1}{\\lambda}=5$, 所以 $\\displaystyle X \\sim E\\left(\\frac{1}{5}\\right)$,\r\n\r\n分布函数为 $F_X(x)=\\left\\{\\begin{array}{ll}0, & x<0 \\\\ 1-\\mathrm{e}^{-\\frac{x}{5}}, & x \\geqslant 0\\end{array}\\right.$ \r\n\r\n由题意得 $Y=\\min \\{X, 2\\}$,\r\n\r\n$F(y) =P\\{Y \\leqslant y\\}\\\\\r\n=P\\{\\min (X, 2) \\leqslant y\\}\\\\\r\n=1-P\\{\\min (X, 2)>y\\} \\\\\r\n=1-P\\{X>y, 2>y\\}\\\\\r\n=1-P\\{X>y\\} P\\{2>y\\}$\r\n\r\n- 当 $y \\geqslant 2$ 时, 因为 $P\\{2>y\\}=0$, 所以 $F(y)=1$;\r\n\r\n- 当 $0 \\leq y<2$ 时, $\\displaystyle F(y)  =P\\{Y \\leq y\\}=P\\{\\min (X, 2) \\leq y\\}=P\\{X \\leq y\\} \\\\ \r\n=\\int_{-\\infty}^y f_X(x)  \\mathrm{d} x\\\\\r\n=\\int_0^y \\frac{1}{5} \\mathrm e^{-\\frac{1}{5} x} d x\\\\\r\n=1-\\mathrm e^{-\\frac{1}{5} y}$\r\n\r\n- 当 $y<0$ 时, $F(y)=P\\{X \\leqslant y\\}=0$.\r\n\r\n综上,\r\n$F(y)=\r\n\\begin{cases}0, & y<0 \\\\ 1-\\mathrm{e}^{-\\frac{y}{5}}, & 0 \\leqslant y<2 \\\\ 1, & y \\geqslant 2 \\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(X)=5 ⇒ λ=1/5；工作时间被 2 小时截断，Y=min{X,2} 是混合型，在 y=2 处 F 跳到 1",
+        "0≤y<2 段 F(y)=P{X≤y}=1-e^{-y/5}，y≥2 段恒为 1"
+      ],
+      "key_point": "Y=min{X,2}，分布函数在 [0,2) 为 1-e^{-y/5}，y≥2 处为 1。"
+    }
+  ]
+}

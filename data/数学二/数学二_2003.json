@@ -1,0 +1,457 @@
+{
+  "paper": "数学二",
+  "year": 2003,
+  "count": 22,
+  "questions": [
+    {
+      "id": 934,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](/uploads/books/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
+      "options": {
+        "A": "一个极小值点和两个极大值点",
+        "B": "两个极小值点和一个极大值点",
+        "C": "两个极小值点和两个极大值点",
+        "D": "三个极小值点和一个极大值点"
+      },
+      "answer": "C",
+      "analysis": "设 $f^{\\prime}(x)$ 与 $x$ 轴交点的横坐标从左到右分别为 $a, b, c$, \r\n\r\n显然 $f(x)$ 有三个驻点 $x=a$, $x=b, x=c$ 及一个不可导点 $x=0$,\r\n\r\n当 $x<a$ 时, $f^{\\prime}(x)>0$, 当 $x \\in(a, b)$ 时, $f^{\\prime}(x)<0$, 则 $x=a$ 为 $f(x)$ 的极大值点; \r\n\r\n当 $x \\in(b, 0)$ 时, $f^{\\prime}(x)>0$, 则 $x=b$ 为 $f(x)$ 的极小值点;\r\n\r\n当 $x \\in(0, c)$ 时, $f^{\\prime}(x)<0$, 则 $x=0$ 为 $f(x)$ 的极大值点;\r\n\r\n当 $x>c$ 时, $f^{\\prime}(x)>0$, 则 $x=c$ 为 $f(x)$ 的极小值点,\r\n\r\n故 $f(x)$ 有两个极大值点和两个极小值点, 应选 (C)",
+      "wrong_options": {
+        "A": "只数了三个驻点 a,b,c 忽略了 x=0 这个不可导点也是极值点，且把 a 处极大误当极小，导致极大少数一个。",
+        "B": "认定不可导点 x=0 不是极值点而丢弃，少数了 x=0 处的极大值，得两小一大。",
+        "D": "把某个 f' 不变号的点臆造成极小值点，多凑出一个极小值。"
+      },
+      "pitfalls": [
+        "x=0 是 f 的不可导点但 f' 在此变号（+→-），仍是极大值点，不能因不可导就排除",
+        "极值由 f' 的符号变号决定，不是数 f'=0 的个数；共 a,b,0,c 四个点全要判"
+      ],
+      "key_point": "a(极大)、b(极小)、0(极大)、c(极小)，共两个极大两个极小，选 C。"
+    },
+    {
+      "id": 935,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\},\\left\\{c_{n}\\right\\}$ 均为非负数列, 且 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}=0, \\lim _{n \\rightarrow \\infty} b_{n}=1, \\lim _{n \\rightarrow \\infty} c_{n}=\\infty$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$a_{n}<b_{n}$ 对任意 $n$ 成立",
+        "B": "$b_{n}<c_{n}$ 对任意 $n$ 成立",
+        "C": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n} c_{n}$ 不存在",
+        "D": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_{n} c_{n}$ 不存在"
+      },
+      "answer": "D",
+      "analysis": "方法一 取 $\\displaystyle a_n=\\frac{3}{n}, b_n=1, c_n=\\frac{n}{3}$, \r\n\r\n显然 (A), (B), (C) 不成立, 应选 (D). \r\n\r\n方法二 取 $\\displaystyle \\varepsilon=\\frac{1}{2}$, \r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n=1$, 所以存在 $N>0$, \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n-1\\right|<\\frac{1}{2}$, \r\n\r\n从而有 $b_n>\\dfrac{1}{2}$. \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n c_n\\right|>\\frac{1}{2}\\left|c_n\\right|$, \r\n\r\n由 $\\displaystyle \\lim _{n \\rightarrow \\infty} c_n=\\infty$ \r\n\r\n得 $\\lim\\limits  _{n \\rightarrow \\infty}\\left|b_n c_n\\right|=+\\infty$, \r\n\r\n故 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n c_n=\\infty$, 应选(D)",
+      "wrong_options": {
+        "A": "把极限值的大小关系误当成对每一项都成立的逐项不等式，忽略极限只保证 N 之后的性质。",
+        "B": "同样把 b_n<c_n 当成对任意 n 的逐项不等式，实际前有限项可能不满足。",
+        "C": "a_n→0、c_n→∞ 是 0·∞ 未定型，误判其极限必不存在；其实可为任意值（可存在）。"
+      },
+      "pitfalls": [
+        "极限的大小关系只对 N 之后的项成立，不能断言\"对任意 n\"，A、B 因此错",
+        "0·∞（a_n c_n）是未定型可存在可不存在，不能断言必不存在；而 1·∞（b_n c_n）必为∞"
+      ],
+      "key_point": "b_n→1>0、c_n→∞ ⇒ lim b_n c_n=∞ 不存在（有限），选 D。"
+    },
+    {
+      "id": 937,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量组 (I): $ \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{r}$ 可由向量组 (II): $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\cdots, \\boldsymbol{\\beta}_s$ 线性表示, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $r<s$ 时, 向量组 (II) 必线性相关",
+        "B": "当 $r>s$ 时, 向量组 (II) 必线性相关",
+        "C": "当 $r<s$ 时, 向量组 (I) 必线性相关",
+        "D": "当 $r>s$ 时, 向量组 (I) 必线性相关"
+      },
+      "answer": "D",
+      "analysis": "方法一 因为向量组 I 可由向量组 II 线性表示, \r\n\r\n所以 $r(I) \\leqslant r( II )$, 显然 $r( II ) \\leqslant s$, \r\n\r\n于是 $r(I) \\leqslant s$.\r\n\r\n当 $r>s$ 时, 因为 $r(\\mathrm{I}) \\leqslant s<r$, \r\n\r\n即向量组 (I) 的秩小于向量组 I 所含的向量个数, \r\n\r\n所以向量组 (I) 线性相关, 应选 (D).\r\n\r\n方法二 取 I : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 2\\end{array}\\right)$, II : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\beta}_2=\\left(\\begin{array}{l}0 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 (I) 可由向量组 (II) 线性表示且 $r<s$, \r\n\r\n但向量组 II 线性无关, (A), (C) 不对;\r\n\r\n取 (I) : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}2 \\\\ 2\\end{array}\\right)$, (II) : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 I 可由向量组 II 线性表示且 $r>s$, \r\n\r\n但向量组 II 线性无关 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "把结论安到被表示组 II 上且方向弄反，r<s 推不出 II 相关（II 可无关）。",
+        "B": "结论对象错挂到 II，r>s 时相关的是能被表示的组 I 而非 II。",
+        "C": "方向错，r<s 时 I 反而可能无关（如 I 只含一个非零向量），推不出 I 相关。"
+      },
+      "pitfalls": [
+        "谁相关看谁：结论落在被表示组 I 上，别错挂到 II 上",
+        "r>s 才使 r(I)≤s<r 得 I 相关；r<s 时无此结论"
+      ],
+      "key_point": "r(I)≤r(II)≤s，当 r>s 时 r(I)<r ⇒ I 线性相关，选 D。"
+    },
+    {
+      "id": 944,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 在 $(-\\infty,+\\infty)$ 内具有二阶导数, 且 $y^{\\prime} \\neq 0, x=x(y)$ 是 $y=y(x)$ 的反函数\r\n\r\n(1) 试将 $x=x(y)$ 所满足的微分方程 $\\dfrac{\\mathrm{d}^{2} x}{\\mathrm{d} y^{2}}+(y+\\sin x)\\left(\\dfrac{\\mathrm{d} x}{\\mathrm{d} y}\\right)^{3}=0$ 变换为 $y=y(x)$ 满足的微分方程;\r\n\r\n(2) 求变换后的微分方程满足初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 的解",
+      "options": {},
+      "answer": "(1) $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "analysis": "(1)$\\displaystyle \\frac{\\mathrm{d} x}{\\mathrm{d} y}=\\frac{1}{\\frac{\\mathrm{d} y}{\\mathrm{d} x}}=\\frac{1}{y^{\\prime}(x)}, \\\\\r\n\\frac{\\mathrm{d}^2 x}{\\mathrm{d} y^2}\r\n=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} x}{\\mathrm{d} y}\\right)}{\\mathrm{d} y}=\\frac{\\mathrm{d}\\left[\\frac{1}{y^{\\prime}(x)}\\right] / \\mathrm{d} x}{\\mathrm{d} y / \\mathrm{d} x}\r\n=\\frac{\\left[\\frac{1}{y^{\\prime}(x)}\\right]^{\\prime}}{y^{\\prime}(x)}\\\\\r\n=-\\frac{y^{\\prime \\prime}(x)}{y^{\\prime 3}(x)}\r\n=-\\frac{\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}}{\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^3}$,\r\n\r\n\r\n代入原方程整理得 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的特征方程为 $\\lambda^2-1=0$, \r\n\r\n特征值为 $\\lambda_1=-1, \\lambda_2=1,\\\\\r\n\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的通解为 $\\displaystyle y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n设 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$ 的特解为 \r\n\r\n$y_0(x)=a \\cos x+b \\sin x$, \r\n\r\n代入原方程得 $a=0, b=-\\dfrac{1}{2}$,\r\n\r\n原方程的通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x-\\dfrac{1}{2} \\sin x$,\r\n\r\n由初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 得 $C_1=-1, C_2=1$, \r\n\r\n故 $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "d²x/dy²=-y''/(y')³（对 y 求导要再除 dy/dx），符号与幂次别错",
+        "非齐次项 sinx 与齐次解 e^{±x} 不重根，特解设 Acosx+Bsinx；代初值 y(0)=0、y'(0)=3/2 定 C₁,C₂"
+      ],
+      "key_point": "变换得 y''-y=sinx，通解 C₁eˣ+C₂e^{-x}-½sinx，配初值得 y=eˣ-e^{-x}-½sinx。"
+    },
+    {
+      "id": 947,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 22,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知平面上三条不同直线的方程分别为\r\n\r\n$l_{1}: a x+2 b y+3 c=0, \\\\\r\n l_{2}: b x+2 c y+3 a=0, \\\\\r\nl_{3}: c x+2 a y+3 b=0$\r\n\r\n试证: 这三条直线交于一点的充分必要条件为 $a+b+c=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "必要性: 令 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{lll}a & 2 b & -3 c \\\\ b & 2 c & -3 a \\\\ c & 2 a & -3 b\\end{array}\\right)$, \r\n\r\n由三条不同直线交于一点, 得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$,\r\n\r\n从而 $|\\overline{\\boldsymbol{A}}|\\\\\r\n=3(a+b+c)\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]=0$,\r\n\r\n而 $(a-b)^2+(b-c)^2+(c-a)^2 \\neq 0$, \r\n\r\n(若等于 $0$, 则 $a=b=c$, 矛盾)\r\n\r\n故 $a+b+c=0$\r\n\r\n充分性: 设 $a+b+c=0$, 则 $r(\\overline{\\boldsymbol{A}})<3$,\r\n\r\n又 $\\left|\\begin{array}{ll}\r\na & 2 b \\\\\r\nb & 2 c\r\n\\end{array}\\right|\\\\\r\n=2\\left(a c-b^2\\right)\\\\\r\n=-2\\left[a(a+b)+b^2\\right]\\\\\r\n=-\\left[a^2+b^2+(a+b)^2\\right] \\neq 0$,  \r\n\r\n(若等于 $0$, 则 $a=b=c=0$, 矛盾)\r\n\r\n则 $r(\\boldsymbol{A})=2$ , 从而 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}\r\na x+2 b y=-3 c \\\\\r\nb x+2 c y=-3 a \\\\\r\nc x+2 a y=-3 b\r\n\\end{array}\\right.$ 有唯一解\r\n\r\n故三条直线交于一点",
+      "wrong_options": {},
+      "pitfalls": [
+        "三线共点是三方程有唯一公共解，需 r(系数)=r(增广)=2（不是=3 也不是<2），别只写行列式为零",
+        "|Ā|=-3(a+b+c)[(a-b)²+(b-c)²+(c-a)²]，因三线不同故平方和≠0，才能由 |Ā|=0 推 a+b+c=0"
+      ],
+      "key_point": "三线共点 ⇔ r(A)=r(Ā)=2；由 |Ā|=-3(a+b+c)Σ(·)²=0 及 Σ(·)²≠0 得 a+b+c=0。"
+    },
+    {
+      "id": 1599,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若 $x \\rightarrow 0$ 时, $\\displaystyle \\left(1-a x^2\\right)^{\\frac{1}{4}}-1$ 与 $x \\sin x$ 是等价无穷小, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-4$",
+      "analysis": "由 $\\left(1-a x^2\\right)^{\\dfrac{1}{4}}-1 \\sim-\\dfrac{a}{4} x^2, x \\sin x \\sim x^2$,\r\n\r\n得 $-\\dfrac{a}{4}=1$, 故 $a=-4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1+u)^{1/4}-1~u/4，这里 u=-ax²，故 ~-a/4·x²，负号别丢",
+        "等价无穷小要求系数相等：-a/4=1 得 a=-4"
+      ],
+      "key_point": "-a/4·x²~x² ⟹ -a/4=1 ⟹ a=-4。"
+    },
+    {
+      "id": 1600,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 由方程 $x y+2 \\ln x=y^4$ 所确定, 则曲线 $y=f(x)$ 在点 $(1,1)$ 处的切线方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x$",
+      "analysis": "$x y+2 \\ln x=y^4$ 两边对 $x$ 求导数, \r\n\r\n得 $\\displaystyle y+x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+\\frac{2}{x}=4 y^3 \\frac{\\mathrm{d} y}{\\mathrm{d} x}$, \r\n\r\n于是 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=1}=1$, \r\n\r\n故曲线 $y=f(x)$ 在点 $(1,1)$ 处的切线方程为 $y-1=x-1$, 即 $y=x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "2lnx 求导为 2/x，y⁴ 求导为 4y³y'，别漏链式因子",
+        "代 (1,1) 解 y'=1，切线 y-1=x-1 即 y=x"
+      ],
+      "key_point": "隐函数求导代 (1,1) 得 y'=1，切线 y=x。"
+    },
+    {
+      "id": 1601,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$y=2^x$ 的麦克劳林公式中 $x^n$ 项的系数是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\ln ^n 2}{n !}$ 或 $\\dfrac{(\\ln 2)^n}{n !}$",
+      "analysis": "方法一 由 $y=2^x$, 得 $y^{(n)}(x)=2^x \\ln ^n 2, y^{(n)}(0)=\\ln ^n 2$,\r\n\r\n则 $y=2^x$ 的麦克劳林公式中 $x^n$ 的系数为 $\\dfrac{y^{(n)}(0)}{n !}=\\dfrac{\\ln ^n 2}{n !}$.\r\n\r\n方法二 $y=2^x$ 的麦克劳林公式为$y=2^x=\\mathrm{e}^{x \\ln 2}\\\\\r\n=1+x \\ln 2+\\dfrac{(x \\ln 2)^2}{2 !}+\\cdots+\\dfrac{(x \\ln 2)^n}{n !}+o\\left(x^n\\right)$,\r\n\r\n则 $y=2^x$ 的麦克劳林公式中 $x^n$ 的系数为 $\\dfrac{(\\ln 2)^n}{n !}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "2^x=e^{xln2}，展开后 xⁿ 系数含 (ln2)ⁿ，别漏 ln2 的 n 次幂",
+        "麦克劳林系数是 y^{(n)}(0)/n!，分母 n! 不能丢"
+      ],
+      "key_point": "2^x=e^{xln2}，xⁿ 系数=(ln2)ⁿ/n!。"
+    },
+    {
+      "id": 1602,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设曲线的极坐标方程为 $\\rho=\\mathrm{e}^{a \\theta}(a>0)$, 则该曲线上相应于 $\\theta$ 从 $0$ 变到 $2 \\pi$ 的一段弧与极轴所围成的图形的面积为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\mathrm{e}^{4 \\pi a}-1}{4 a}$",
+      "analysis": "根据在极坐标形式下曲线所围成面积的定积分公式得\r\n\r\n$\\displaystyle A=\\frac{1}{2} \\int_0^{2 \\pi} \\rho^2(\\theta) \\mathrm{d} \\theta\\\\\r\n=\\frac{1}{2} \\int_0^{2 \\pi} \\mathrm{e}^{2 a \\theta} \\mathrm{d} \\theta\\\\\r\n=\\left.\\frac{\\mathrm{e}^{2 a \\theta}}{4 a}\\right|_0 ^{2 \\pi}\\\\\r\n=\\frac{\\mathrm{e}^{4 \\pi a}-1}{4 a}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "极坐标面积公式带系数 1/2，被积是 ρ²=e^{2aθ}",
+        "积分限 θ:0→2π，结果 (e^{4πa}-1)/(4a)"
+      ],
+      "key_point": "A=(1/2)∫₀^{2π}e^{2aθ}dθ=(e^{4πa}-1)/(4a)。"
+    },
+    {
+      "id": 1603,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}$ 为 $3$ 维列向量, $\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 是 $\\boldsymbol{\\alpha}$ 的转置. 若 $\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}=\\left(\\begin{array}{ccc}1 & -1 & 1 \\\\ -1 & 1 & -1 \\\\ 1 & -1 & 1\\end{array}\\right)$, 则 $\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\alpha}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "方法一\r\n由 $\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}\\\\\r\n=\\left(\\begin{array}{ccc}1 & -1 & 1 \\\\ -1 & 1 & -1 \\\\ 1 & -1 & 1\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 1\\end{array}\\right)(1,-1,1)$ \r\n\r\n得 $\\boldsymbol{\\alpha}=\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ -1\\end{array}\\right)$, \r\n\r\n于是 $\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\alpha}=\\|\\boldsymbol{\\alpha}\\|^2=3$\r\n\r\n方法二 设 $\\boldsymbol{A}=\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}$, \r\n\r\n则 $\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\alpha}=\\operatorname{tr} \\boldsymbol{A}=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "ααᵀ 是3阶矩阵，αᵀα 是标量，二者不同；αᵀα=tr(ααᵀ)",
+        "迹=对角元之和 1+1+1=3"
+      ],
+      "key_point": "αᵀα=tr(ααᵀ)=3。"
+    },
+    {
+      "id": 1604,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $3$ 阶方阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 满足 $\\boldsymbol{A}^2 \\boldsymbol{B}-\\boldsymbol{A}-\\boldsymbol{B}=\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 $3$ 阶单位矩阵, 若 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ -2 & 0 & 1\\end{array}\\right)$, 则 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "由 $\\boldsymbol{A}^2 \\boldsymbol{B}-\\boldsymbol{A}-\\boldsymbol{B}=\\boldsymbol{E}$, \r\n\r\n得 $\\left(\\boldsymbol{A}^2-\\boldsymbol{E}\\right) \\boldsymbol{B}=\\boldsymbol{A}+\\boldsymbol{E},\\\\\r\n\\boldsymbol{A}+\\boldsymbol{E}=\\left(\\begin{array}{ccc}2 & 0 & 1 \\\\ 0 & 3 & 0 \\\\ -2 & 0 & 2\\end{array}\\right)$, \r\n\r\n因为 $|\\boldsymbol{A}+\\boldsymbol{E}|=18 \\neq 0$, 所以 $\\boldsymbol{A}+\\boldsymbol{E}$ 可逆,\r\n\r\n于是 $(\\boldsymbol{A}+\\boldsymbol{E})^{-1}\\left(\\boldsymbol{A}^2-\\boldsymbol{E}\\right) \\boldsymbol{B}=\\boldsymbol{E}$,\r\n\r\n再由 $|\\boldsymbol{A}-\\boldsymbol{E}|=\\left|\\begin{array}{ccc}0 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ -2 & 0 & 0\\end{array}\\right|=2$, \r\n\r\n得 $|\\boldsymbol{B}|=\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A²-E=(A+E)(A-E)，行列式 |A²-E|=|A+E||A-E|，约去 |A+E|",
+        "|B|=|A+E|/(|A+E||A-E|)=1/|A-E|=1/2，别直接算 B"
+      ],
+      "key_point": "(A²-E)B=A+E 取行列式得 |B|=1/|A-E|=1/2。"
+    },
+    {
+      "id": 1605,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle a_n=\\frac{3}{2} \\int_0^{\\frac{n}{n+1}} x^{n-1} \\sqrt{1+x^n} \\mathrm{d} x$, 则极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$(1+\\mathrm{e})^{\\frac{3}{2}}+1$",
+        "B": "$\\left(1+\\mathrm{e}^{-1}\\right)^{\\frac{3}{2}}-1$",
+        "C": "$\\left(1+\\mathrm{e}^{-1}\\right)^{\\frac{3}{2}}+1$",
+        "D": "$(1+\\mathrm{e})^{\\frac{3}{2}}-1$"
+      },
+      "answer": "B",
+      "analysis": "由 $\\displaystyle a_n=\\frac{3}{2 n} \\int_0^{\\frac{n}{n+1}}\\left(1+x^n\\right)^{\\frac{1}{2}} \\mathrm{d}\\left(1+x^n\\right)\\\\\r\n=\\left.\\frac{1}{n}\\left(1+x^n\\right)^{\\frac{3}{2}}\\right|_0 ^{\\frac{n}{n+1}}\\\\\r\n=\\frac{1}{n}\\left\\{\\left[1+\\left(\\frac{n}{n+1}\\right)^n\\right]^{\\frac{3}{2}}-1\\right\\}$,\r\n\r\n得 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left\\{\\left[1+\\left(\\frac{n}{n+1}\\right)^n\\right]^{\\frac{3}{2}}-1\\right\\}\\\\\r\n=\\left(1+\\mathrm{e}^{-1}\\right)^{\\frac{3}{2}}-1$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "把 (n/(n+1))ⁿ 极限当成 e 而非 e^{-1}，且尾项符号错",
+        "C": "极限当 e^{-1} 但尾项 +1 符号错",
+        "D": "把极限当 e 得 (1+e)^{3/2}"
+      },
+      "pitfalls": [
+        "积分凑 (1+xⁿ)^{1/2}d(1+xⁿ) 得 a_n=(1/n){[1+(n/(n+1))ⁿ]^{3/2}-1}",
+        "(n/(n+1))ⁿ=(1+1/n)^{-n}→e^{-1}，不是 e"
+      ],
+      "key_point": "na_n→[1+e^{-1}]^{3/2}-1，选B。"
+    },
+    {
+      "id": 1606,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $y=\\dfrac{x}{\\ln x}$ 是微分方程 $\\displaystyle y^{\\prime}=\\frac{y}{x}+\\varphi\\left(\\frac{x}{y}\\right)$ 的解, 则 $\\displaystyle \\varphi\\left(\\frac{x}{y}\\right)$ 的表达式为 $(\\quad)$",
+      "options": {
+        "A": "$-\\dfrac{y^2}{x^2}$",
+        "B": "$\\dfrac{y^2}{x^2}$",
+        "C": "$-\\dfrac{x^2}{y^2}$",
+        "D": "$\\dfrac{x^2}{y^2}$"
+      },
+      "answer": "A",
+      "analysis": "方法一 由 $ y=\\dfrac{x}{\\ln x}$, \r\n\r\n得 $ y^{\\prime}=\\dfrac{\\ln x-1}{\\ln ^2 x}=\\dfrac{1}{\\ln x}-\\dfrac{1}{\\ln ^2 x}=\\dfrac{y}{x}-\\left(\\dfrac{y}{x}\\right)^2$,\r\n\r\n将 $ y^{\\prime}=\\dfrac{y}{x}-\\left(\\dfrac{y}{x}\\right)^2$ 代入方程 $ y^{\\prime}=\\dfrac{y}{x}+\\varphi\\left(\\dfrac{x}{y}\\right)$, \r\n\r\n得 $ \\dfrac{y}{x}-\\left(\\dfrac{y}{x}\\right)^2=\\dfrac{y}{x}+\\varphi\\left(\\dfrac{x}{y}\\right)$,\r\n\r\n解得 $ \\varphi\\left(\\dfrac{x}{y}\\right)=-\\left(\\dfrac{y}{x}\\right)^2$, 应选 (A)\r\n\r\n方法二 \r\n\r\n将 $ y=\\dfrac{x}{\\ln x}$ 代入方程 $ y^{\\prime}=\\dfrac{y}{x}+\\varphi\\left(\\dfrac{x}{y}\\right)$, \r\n\r\n得 $\\dfrac{\\ln x-1}{\\ln ^2 x}=\\dfrac{1}{\\ln x}+\\varphi(\\ln x)$,\r\n\r\n解得 $ \\varphi(\\ln x)=-\\dfrac{1}{\\ln ^2 x}$, \r\n\r\n于是 $ \\varphi(t)=-\\dfrac{1}{t^2}$, \r\n\r\n故 $ \\varphi\\left(\\dfrac{x}{y}\\right)=-\\dfrac{y^2}{x^2}$, 应选 (A)",
+      "wrong_options": {
+        "B": "符号错，漏掉负号",
+        "C": "把 (y/x)² 倒过来写成 (x/y)²，得 -x²/y²",
+        "D": "既倒置又漏负号"
+      },
+      "pitfalls": [
+        "y'=(lnx-1)/ln²x=y/x-(y/x)²，代入方程后 φ(x/y)=-(y/x)²=-y²/x²",
+        "注意 φ 的自变量是 x/y，但结果用 y/x 表示，别把幂次写反"
+      ],
+      "key_point": "y'=y/x-(y/x)² 代入得 φ(x/y)=-y²/x²，选A。"
+    },
+    {
+      "id": 1607,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I_1=\\int_0^{\\frac{\\pi}{4}} \\frac{\\tan x}{x} \\mathrm{d} x, I_2=\\int_0^{\\frac{\\pi}{4}} \\frac{x}{\\tan x} \\mathrm{d} x$, 则 $(\\quad)$",
+      "options": {
+        "A": "$I_1>I_2>1$",
+        "B": "$1>I_1>I_2$",
+        "C": "$I_2>I_1>1$",
+        "D": "$1>I_2>I_1$"
+      },
+      "answer": "B",
+      "analysis": "当 $ 0<x<\\dfrac{\\pi}{2}$ 时, $\\sin x<x<\\tan x$, \r\n\r\n则 $ \\dfrac{\\tan x}{x}>1, \\dfrac{x}{\\tan x}<1$, \r\n\r\n于是 $I_2<I_1$; \r\n\r\n令 $ f(x)=\\tan x-\\dfrac{4}{\\pi} x,\\\\ f(0)=0, f\\left(\\dfrac{\\pi}{4}\\right)=0$,\r\n\r\n因为 $f^{\\prime \\prime}(x)=2 \\sec ^2 x \\tan x>0\\left(0<x<\\dfrac{\\pi}{4}\\right)$, \r\n\r\n所以 $f(x)$ 在 $\\left(0, \\dfrac{\\pi}{4}\\right)$ 内为凹函数, \r\n\r\n于是 $ f(x)<0\\left(0<x<\\dfrac{\\pi}{4}\\right)$, \r\n\r\n即当 $ 0<x<\\dfrac{\\pi}{4}$ 时, $ \\dfrac{\\tan x}{x}<\\dfrac{4}{\\pi}$, \r\n\r\n故 $I_1<1$, 应选 (B)",
+      "wrong_options": {
+        "A": "顺序判反，误以为 I₁>I₂>1",
+        "C": "把 I₂,I₁ 与1的大小全判反",
+        "D": "得到 <1 对但把 I₁,I₂ 顺序判反"
+      },
+      "pitfalls": [
+        "I₂<I₁ 由被积 x/tanx<1<tanx/x 得到（0<x<π/2 时 sinx<x<tanx）",
+        "I₁<1 需证 tanx<4x/π：构造凹函数 f=tanx-4x/π，端点为0且 f''>0 故 f<0"
+      ],
+      "key_point": "I₂<I₁ 且 I₁<1，故 1>I₁>I₂，选B。"
+    },
+    {
+      "id": 1608,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)= \\begin{cases}\\dfrac{\\ln \\left(1+a x^3\\right)}{x-\\arcsin x}, & x<0 \\\\ 6, & x=0 \\\\ \\dfrac{\\mathrm{e}^{a x}+x^2-a x-1}{x \\sin \\frac{x}{4}}, & x>0\\end{cases}$\r\n\r\n问 $a$ 为何值时, $f(x)$ 在 $x=0$ 处连续;\r\n\r\n$a$ 为何值时, $x=0$ 是 $f(x)$ 的可去间断点?",
+      "options": {},
+      "answer": "当 $a=-1$ 时, $f(x)$ 在 $x=0$ 处连续; 当 $a=-2$ 时, $x=0$ 为 $f(x)$ 的可去间断点",
+      "analysis": "$\\displaystyle f(0-0)=\\lim _{x \\rightarrow 0^{-}} \\frac{\\ln \\left(1+a x^3\\right)}{x-\\arcsin x}\\\\\r\n=a \\lim _{x \\rightarrow 0^{-}} \\frac{x^3}{x-\\arcsin x}\\\\\r\n\\stackrel{x=\\sin t}{=} a \\lim _{t \\rightarrow 0^{-}} \\frac{\\sin ^3 t}{\\sin t-t}\\\\\r\n=a \\lim _{t \\rightarrow 0^{-}} \\frac{t^3}{\\sin t-t}\\\\\r\n=3 a \\lim _{t \\rightarrow 0^{-}} \\frac{t^2}{\\cos t-1}=-6 a;\\\\\r\nf(0)=6;\\\\\r\nf(0+0) =\\lim _{x \\rightarrow 0^{+}} \\frac{\\mathrm{e}^{a x}+x^2-a x-1}{x \\sin \\frac{x}{4}}\\\\\r\n=4 \\lim _{x \\rightarrow 0^{+}} \\frac{\\mathrm{e}^{a x}+x^2-a x-1}{x^2} \\\\\r\n=2 \\lim _{x \\rightarrow 0^{+}} \\frac{a \\mathrm{e}^{a x}-a+2 x}{x}=2\\left(a^2+2\\right)$,\r\n\r\n由 $f(0-0)=f(0+0)$, 得 $a=-1$ 或 $a=-2$.\r\n\r\n当 $a=-1$ 时, 因为 $f(0-0)=f(0)=f(0+0)$, \r\n\r\n所以当 $a=-1$ 时, $f(x)$ 在 $x=0$ 处连续;\r\n\r\n当 $a=-2$ 时, 因为 $f(0-0)=f(0+0) \\neq f(0)$, \r\n\r\n所以 $x=0$ 为 $f(x)$ 的可去间断点.",
+      "wrong_options": {},
+      "pitfalls": [
+        "左右极限 -6a 与 2(a²+2) 相等解出 a=-1 或 -2，两个候选都要讨论",
+        "a=-1 时左右极限=6=f(0) 连续；a=-2 时左右极限都=12≠f(0)=6，为可去间断点"
+      ],
+      "key_point": "左右极限相等解 a=-1或-2；a=-1 时极限=6=f(0) 连续，a=-2 时极限=12≠6 可去。"
+    },
+    {
+      "id": 1609,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由参数方程 $\\displaystyle \\left\\{\\begin{array}{l}x=1+2 t^2 \\\\\r\n\\displaystyle y=\\int_1^{1+2 \\ln t} \\frac{\\mathrm{e}^u}{u} \\mathrm{d} u\\end{array}(t>1)\\right.$ \r\n\r\n所确定, 求 $\\left.\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{x=9}$",
+      "options": {},
+      "answer": "$-\\dfrac{\\mathrm{e}}{16(1+2 \\ln 2)^2}$",
+      "analysis": "将 $x=9$ 代入 $x=1+2 t^2$, 得 $t=-2$ (舍去), $t=2$,\r\n\r\n由参数方程求导法则得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}\\\\\r\n=\\frac{\\frac{2}{t} \\cdot \\frac{\\mathrm{e} t^2}{1+2 \\ln t}}{4 t}\\\\\r\n=\\frac{\\mathrm{e}}{2} \\cdot \\frac{1}{1+2 \\ln t},\\\\\r\n\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)}{\\mathrm{d} x}\\\\\r\n=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right) / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}\\\\\r\n=\\frac{-\\frac{\\mathrm{e}}{2} \\cdot \\frac{1}{(1+2 \\ln t)^2} \\cdot \\frac{2}{t}}{4 t}\\\\\r\n=-\\frac{\\mathrm{e}}{4} \\cdot \\frac{1}{(1+2 \\ln t)^2 t^2}$,\r\n\r\n于是 $\\displaystyle \\left.\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{x=9}=\\left.\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{t=2}=-\\frac{\\mathrm{e}}{16(1+2 \\ln 2)^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "y 对 t 求导用变限积分：dy/dt=e^{1+2lnt}/(1+2lnt)·(2/t)",
+        "二阶导 d²y/dx²=[d(dy/dx)/dt]/(dx/dt)，分母仍是 dx/dt=4t，x=9 对应 t=2"
+      ],
+      "key_point": "参数求导两次，代 t=2 得 -e/(16(1+2ln2)²)。"
+    },
+    {
+      "id": 1610,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算不定积分 $\\displaystyle \\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\left(1+x^2\\right)^{\\frac{3}{2}}} \\mathrm{d} x $",
+      "options": {},
+      "answer": "$\\dfrac{(x-1) \\mathrm{e}^{\\arctan x}}{2 \\sqrt{1+x^2}}+C$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\left(1+x^2\\right)^{\\frac{3}{2}}} \\mathrm{d} x \\\\\r\n\\stackrel{x=\\tan t}{=} \\int \\frac{\\mathrm{e}^t \\tan t}{\\sec ^3 t} \\cdot \\sec ^2 t \\mathrm{d} t \\\\\r\n=\\int \\mathrm{e}^t \\sin t \\mathrm{d} t\\\\\r\n=\\int \\sin t \\mathrm{d}\\left(\\mathrm{e}^t\\right) \\\\\r\n=\\mathrm{e}^t \\sin t-\\int \\mathrm{e}^t \\cos t \\mathrm{d} t\\\\\r\n=\\mathrm{e}^t \\sin t-\\int \\cos t \\mathrm{d}\\left(\\mathrm{e}^t\\right) \\\\\r\n=\\mathrm{e}^t \\sin t-\\mathrm{e}^t \\cos t-\\int \\mathrm{e}^t \\sin t \\mathrm{d} t$,\r\n\r\n于是 $\\displaystyle \\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\left(1+x^2\\right)^{\\frac{3}{2}}} \\mathrm{d} x\\\\\r\n=\\int \\sin t \\mathrm{d}\\left(\\mathrm{e}^t\\right)\\\\\r\n=\\frac{\\mathrm{e}^t}{2}(\\sin t-\\cos t)+C=\\frac{(x-1) \\mathrm{e}^{\\arctan x}}{2 \\sqrt{1+x^2}}+C$\r\n\r\n方法二\r\n\r\n$\\displaystyle\r\nI =\\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\left(1+x^2\\right)^{\\frac{3}{2}}} \\mathrm{d} x\\\\\r\n=\\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\sqrt{1+x^2}} \\mathrm{d}(\\arctan x)\\\\\r\n=\\int \\frac{x}{\\sqrt{1+x^2}} \\mathrm{d}\\left(\\mathrm{e}^{\\arctan x}\\right) \\\\\r\n=\\frac{x}{\\sqrt{1+x^2}} \\mathrm{e}^{\\arctan x}-\\int \\mathrm{e}^{\\arctan x} \\frac{\\mathrm{d} x}{\\left(1+x^2\\right)^{\\frac{3}{2}}}\\\\\r\n=\\frac{x}{\\sqrt{1+x^2}} \\mathrm{e}^{\\arctan x}-\\int \\mathrm{e}^{\\arctan x} \\frac{\\mathrm{d}(\\arctan x)}{\\sqrt{1+x^2}} \\\\\r\n=\\frac{x}{\\sqrt{1+x^2}} \\mathrm{e}^{\\arctan x}-\\int \\frac{\\mathrm{d}\\left(\\mathrm{e}^{\\arctan x}\\right)}{\\sqrt{1+x^2}}\\\\\r\n=\\frac{x}{\\sqrt{1+x^2}} \\mathrm{e}^{\\arctan x}-\\frac{\\mathrm{e}^{\\arctan x}}{\\sqrt{1+x^2}}-I$,\r\n\r\n故 $\\displaystyle I=\\int \\frac{x \\mathrm{e}^{\\arctan x}}{\\left(1+x^2\\right)^{\\frac{3}{2}}} \\mathrm{d} x=\\frac{(x-1) \\mathrm{e}^{\\arctan x}}{2 \\sqrt{1+x^2}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "∫eᵗsint dt 两次分部后回到原积分，移项解出=eᵗ(sint-cost)/2",
+        "回代 sint=x/√(1+x²)、cost=1/√(1+x²) 合并成 (x-1)/(2√(1+x²))"
+      ],
+      "key_point": "x=tant 化 ∫eᵗsint dt，循环解得 (x-1)e^{arctanx}/(2√(1+x²))+C。"
+    },
+    {
+      "id": 1611,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "讨论曲线 $y=4 \\ln x+k$ 与 $y=4 x+\\ln ^4 x$ 的交点个数",
+      "options": {},
+      "answer": "当 $k<4$ 时, 无交点; 当 $k=4$ 时, 一个交点; 当 $k>4$ 时, 两个交点",
+      "analysis": "设 $f(x)=\\ln ^4 x-4 \\ln x+4 x-k(x>0)$,\r\n\r\n令 $\\displaystyle f^{\\prime}(x)=\\frac{4\\left(\\ln ^3 x-1+x\\right)}{x}=0$, 得 $x=1$,\r\n\r\n当 $x \\in(0,1)$ 时, $f^{\\prime}(x)<0$; \r\n\r\n当 $x>1$ 时, $f^{\\prime}(x)>0$, \r\n\r\n则 $x=1$ 为 $f(x)$ 的最小值点, 最小值为 $f(1)=4-k$,\r\n\r\n- 当 $f(1)=4-k>0$, 即 $k<4$ 时, 因为 $f(1)>0$, 所以 $f(x)$ 没有零点, 即方程 $f(x)=0$ 没有解, 两曲线无交点;\r\n\r\n- 当 $f(1)=4-k=0$, 即 $k=4$ 时, $f(x)$ 只有一个零点 $x=1$, 即方程 $f(x)=0$ 有唯一解 $x=1$, 两曲线有一个交点;\r\n\r\n- 当 $f(1)=4-k<0$, 即 $k>4$ 时, 因为 $\\displaystyle\\lim _{x \\rightarrow 0^{+}} f(x)=+\\infty, \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, 所以 $f(x)$ 恰有两个零点, 分别位于 $(0,1)$ 及 $(1,+\\infty)$ 之间, 故方程 $f(x)=0$ 有且仅有两个根, 分别位于 $(0,1)$ 及 $(1,+\\infty)$ 之间.",
+      "wrong_options": {},
+      "pitfalls": [
+        "最小值点 x=1 处 f(1)=4-k，交点数由最小值符号定",
+        "k>4 时 f(1)<0 且两端趋 +∞，恰两个零点分居 (0,1) 与 (1,∞)"
+      ],
+      "key_point": "作差 f 最小值 f(1)=4-k，k<4 无、k=4 一、k>4 两交点。"
+    },
+    {
+      "id": 1612,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设位于第一象限的曲线 $y=f(x)$ 过点 $\\displaystyle \\left(\\frac{\\sqrt{2}}{2}, \\frac{1}{2}\\right)$, 其上任一点 $P(x, y)$ 处的法线与 $y$ 轴的交点为 $Q$, 且线段 $P Q$ 被 $x$ 轴平分\r\n\r\n(1) 求曲线 $y=f(x)$ 的方程;\r\n\r\n(2) 已知曲线 $y=\\sin x$ 在 $[0, \\pi]$ 上的弧长为 $l$, 试用 $l$ 表示曲线 $y=f(x)$ 的弧长 $s$",
+      "options": {},
+      "answer": "(1) $x^2+2 y^2=1$\r\n\r\n(2) $\\dfrac{l}{2 \\sqrt{2}}$",
+      "analysis": "(1) 曲线 $y=f(x)$ 在点 $P(x, y)$ 处的法线方程为 \r\n\r\n$Y-y=-\\dfrac{1}{y^{\\prime}}(X-x)$,\r\n\r\n由 $X=0$ 得 $Y=y+\\dfrac{x}{y^{\\prime}}$,\r\n\r\n于是法线与 $y$ 轴的交点坐标为 $Q\\left(0, y+\\dfrac{x}{y^{\\prime}}\\right)$,\r\n\r\n由题设得 $y+y+\\dfrac{x}{y^{\\prime}}=0$, \r\n\r\n即 $x \\mathrm{d} x+2 y \\mathrm{d} y=0$, \r\n\r\n或 $\\mathrm{d}\\left(\\dfrac{x^2}{2}+y^2\\right)=0$, \r\n\r\n解得 $y^2+\\dfrac{x^2}{2}=C$,\r\n\r\n再由曲线过点 $\\left(\\dfrac{\\sqrt{2}}{2}, \\dfrac{1}{2}\\right)$ 得 $C=\\dfrac{1}{2}$, \r\n\r\n故所求的曲线方程为 $x^2+2 y^2=1$\r\n\r\n(2) 曲线 $y=\\sin x$ 在 $[0, \\pi]$ 上的弧长为 $\\displaystyle l\\\\\r\n=\\int_0^\\pi \\sqrt{1+\\cos ^2 x} \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\sqrt{1+\\cos ^2 x} \\mathrm{d} x$,\r\n\r\n曲线 $y=f(x)$ 的参数方程为 \r\n\r\n$\\left\\{\\begin{array}{l}x=\\cos t \\\\ y=\\dfrac{\\sqrt{2}}{2} \\sin t\\end{array} \\right. \\quad\\left(0 \\leqslant t \\leqslant \\dfrac{\\pi}{2}\\right),\\\\\r\n\\mathrm{d} s=\\sqrt{\\left(\\dfrac{\\mathrm{d} x}{\\mathrm{d} t}\\right)^2+\\left(\\dfrac{\\mathrm{d} y}{\\mathrm{d} t}\\right)^2} \\mathrm{d} t\\\\\r\n=\\sqrt{\\sin ^2 t+\\dfrac{1}{2} \\cos ^2 t} \\mathrm{d} t\\\\\r\n=\\dfrac{1}{\\sqrt{2}} \\sqrt{1+\\sin ^2 t} \\mathrm{d} t$,\r\n\r\n则曲线 $y=f(x)$ 的长度为 $\\displaystyle s\\\\\r\n=\\frac{1}{\\sqrt{2}} \\int_0^{\\frac{\\pi}{2}} \\sqrt{1+\\sin ^2 t} \\mathrm{d} t\\\\\r\n=\\frac{1}{\\sqrt{2}} \\int_0^{\\frac{\\pi}{2}} \\sqrt{1+\\cos ^2 t} \\mathrm{d} t\\\\\r\n=\\frac{l}{2 \\sqrt{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "PQ 被 x 轴平分意味着 Q 纵坐标=-y（中点纵坐标0），据此列方程 2y+x/y'=0",
+        "(2)弧长积分 ∫√(1+sin²t)dt 与 l=2∫√(1+cos²x)dx 通过 sin↔cos 对称相等"
+      ],
+      "key_point": "解得 x²+2y²=1；弧长 s=l/(2√2)。"
+    },
+    {
+      "id": 1613,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "有一平底容器, 其内侧壁是由曲线 $x=\\varphi(y)(y \\geqslant 0)$ 绕 $y$ 轴旋转而成的旋转曲面 (如图所示), 容器的底面圆的半径为 $2 \\mathrm{m}$, 根据设计要求, 当以 $3 \\mathrm{m}^3 / \\mathrm{min}$ 的速率向容器内注入液体时, 液面的面积将以 $\\pi \\mathrm{m}^2 / \\mathrm{min}$ 的速率均匀扩大(假设注入液体前, 容器内无液体)\r\n\r\n(1) 根据 $t$ 时刻液面的面积, 写出 $t$ 与 $\\varphi(y)$ 之间的关系式;\r\n\r\n(2) 求曲线 $x=\\varphi(y)$ 的方程\r\n\r\n(注: $\\mathrm{m}$ 表示长度单位米, $\\min$ 表示时间单位分)\n\n![平底容器示意图](/uploads/books/a4c6d3880014ba2e893e49ef502af9efd7164eac32d0633451b4f4fc700b52ee.jpg)",
+      "options": {},
+      "answer": "(1) $t=\\varphi^2(y)-4$\r\n\r\n(2) $x=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$",
+      "analysis": "(1) 设 $t$ 时刻液面高度为 $y$, \r\n\r\n由题意得液面面积为 \r\n\r\n$\\pi \\varphi^2(y)=\\pi t+4 \\pi$, \r\n\r\n即 $t=\\varphi^2(y)-4$\r\n\r\n(2) 当液面高度为 $y$ 时,液体的体积为 \r\n\r\n$\\displaystyle \\pi \\int_0^y \\varphi^2(y) \\mathrm{d} y=3 t$, \r\n\r\n即 $\\displaystyle \\pi \\int_0^y \\varphi^2(x) \\mathrm{d} x=3 \\varphi^2(y)-12$\r\n\r\n两边对 $y$ 求导得 $\\pi \\varphi^2(y)=6 \\varphi(y) \\varphi^{\\prime}(y)$, \r\n\r\n即 $\\varphi(y)-\\dfrac{6}{\\pi} \\varphi^{\\prime}(y)=0$, \r\n\r\n解得 $\\varphi(y)=C \\mathrm{e}^{\\frac{\\pi}{6} y}$, \r\n\r\n由 $\\varphi(0)=2$ 得 $C=2$, \r\n\r\n故曲线方程为 $\\varphi(y)=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$ 或 $x=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1)液面面积 πφ²(y) 随 t 线性增长（初始 4π），得 t=φ²-4",
+        "(2)体积等式含变限积分，对 y 求导消积分号得 πφ²=6φφ'，由底面半径2定 C=2"
+      ],
+      "key_point": "t=φ²-4；体积等式求导解得 φ=2e^{πy/6}。"
+    },
+    {
+      "id": 1614,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在闭区间 $[a, b]$ 上连续, 在开区间 $(a, b)$ 内可导, 且 $f^{\\prime}(x)>0$. 若极限 $\\displaystyle \\lim _{x \\rightarrow a^{+}} \\frac{f(2 x-a)}{x-a}$ 存在, 证明:\r\n\r\n(1) 在 $(a, b)$ 内 $f(x)>0$;\r\n\r\n(2) 在 $(a, b)$ 内存在点 $\\xi$, 使 $\\displaystyle \\frac{b^2-a^2}{\\int_a^b f(x) \\mathrm{d} x}=\\frac{2 \\xi}{f(\\xi)}$;\r\n\r\n(3) 在 $(a, b)$ 内存在与 (2) 中 $\\xi$ 相异的点 $\\eta$, 使 $\\displaystyle f^{\\prime}(\\eta)\\left(b^2-a^2\\right)=\\frac{2 \\xi}{\\xi-a} \\int_a^b f(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 由 $\\displaystyle \\lim _{x \\rightarrow a^{+}} \\frac{f(2 x-a)}{x-a}$ 存在, 得 $f(a)=0$.\r\n\r\n由 $\\left\\{\\begin{array}{l}f(a)=0\\\\ f^{\\prime}(x)>0(a<x<b),\\end{array}\\right.$ \r\n\r\n得 $f(x)>0(a<x<b)$\r\n\r\n(2) 令 $\\displaystyle \\varphi(x)=x^2, \\\\\r\nF(x)=\\int_a^x f(t) \\mathrm{d} t, \\\\\r\nF^{\\prime}(x)=f(x) \\neq 0(a<x<b)$,\r\n\r\n由柯西中值定理, 存在 $\\xi \\in(a, b)$, \r\n\r\n使得 $\\displaystyle \\frac{\\varphi(b)-\\varphi(a)}{F(b)-F(a)}=\\frac{\\varphi^{\\prime}(\\xi)}{F^{\\prime}(\\xi)}$, \r\n\r\n即 $\\displaystyle \\frac{b^2-a^2}{\\int_a^b f(x) \\mathrm{d} x}=\\frac{2 \\xi}{f(\\xi)}$\r\n\r\n(3) 由拉格朗日中值定理得 $f(\\xi)=f(\\xi)-f(a)=f^{\\prime}(\\eta)(\\xi-a)$, 其中 $\\eta \\in(a, \\xi)$, \r\n\r\n于是 $\\displaystyle \\frac{b^2-a^2}{\\int_a^b f(x) \\mathrm{d} x}=\\frac{2 \\xi}{f^{\\prime}(\\eta)(\\xi-a)}$ \r\n\r\n或 $\\displaystyle \\left(b^2-a^2\\right) f^{\\prime}(\\eta)=\\frac{2 \\xi}{\\xi-a} \\int_a^b f(x) \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1)极限 f(2x-a)/(x-a) 存在且分母→0，必有分子 f(a)=0",
+        "(2)构造 φ(x)=x²、F(x)=∫ₐˣf 用柯西中值定理，别用拉格朗日；(3)η 要与 ξ 相异：对 f(ξ)=f(ξ)-f(a) 在 (a,ξ) 上用拉格朗日"
+      ],
+      "key_point": "极限存在得 f(a)=0；柯西中值定理证(2)，再拉格朗日证(3)。"
+    },
+    {
+      "id": 1615,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "若矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}2 & 2 & 0 \\\\ 8 & 2 & a \\\\ 0 & 0 & 6\\end{array}\\right)$ 相似于对角矩阵 $\\boldsymbol{\\Lambda}$, 试确定常数 $a$ 的值, 并求可逆矩阵 $\\boldsymbol{P}$ 使 $\\boldsymbol{P}^{-1} \\boldsymbol{A} \\boldsymbol{P}=\\boldsymbol{\\Lambda}$",
+      "options": {},
+      "answer": "$a=0; \\boldsymbol{P}=\\left(\\begin{array}{ccc}-1 & 1 & 0 \\\\ 2 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+      "analysis": "由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-2 & -2 & 0 \\\\ -8 & \\lambda-2 & -a \\\\ 0 & 0 & \\lambda-6\\end{array}\\right|\\\\\r\n=(\\lambda+2)(\\lambda-6)^2=0$, \r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=-2, \\lambda_2=\\lambda_3=6$,\r\n\r\n因为 $\\boldsymbol{A}$ 可相似对角化, 所以 $r(6 \\boldsymbol{E}-\\boldsymbol{A})=1$,\r\n\r\n而 $6 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & -2 & 0 \\\\ -8 & 4 & -a \\\\ 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}2 & -1 & 0 \\\\ 0 & 0 & a \\\\ 0 & 0 & 0\\end{array}\\right)$, 故 $a=0$.\r\n\r\n当 $\\lambda=-2$ 时, 由 $2 \\boldsymbol{E}+\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & 2 & 0 \\\\ 8 & 4 & 0 \\\\ 0 & 0 & 8\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & \\frac{1}{2} & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\lambda=-2$ 对应的特征向量为 $\\boldsymbol{\\xi}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ 0\\end{array}\\right)$;\r\n\r\n当 $\\lambda=6$ 时, 由 $6 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & -2 & 0 \\\\ -8 & 4 & 0 \\\\ 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & -\\frac{1}{2} & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\lambda_2=\\lambda_3=6$ 对应的线性无关的特征向量为 \r\n\r\n$\\boldsymbol{\\xi}_2=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 0\\end{array}\\right), \\boldsymbol{\\xi}_3=\\left(\\begin{array}{l}0 \\\\ 0 \\\\ 1\\end{array}\\right)$.\r\n\r\n令 $\\boldsymbol{P}=\\left(\\begin{array}{ccc}-1 & 1 & 0 \\\\ 2 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 则 $\\boldsymbol{P}$ 可逆, \r\n\r\n且 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}-2 & 0 & 0 \\\\ 0 & 6 & 0 \\\\ 0 & 0 & 6\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二重根 λ=6 要求几何重数2，即 r(6E-A)=1，据此解出 a=0",
+        "P 的列是特征向量，顺序要与对角阵特征值一一对应"
+      ],
+      "key_point": "可对角化⟹r(6E-A)=1⟹a=0；求特征向量得 P。"
+    }
+  ]
+}

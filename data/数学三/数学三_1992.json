@@ -1,0 +1,448 @@
+{
+  "paper": "数学三",
+  "year": 1992,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1761,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设商品的需求函数为 $Q=100-5 P$, 其中 $Q, P$ 分别表示需求量和价格, 如果商品需求弹性的绝对值大于 $1$ , 则商品价格的取值范围是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(10,20]$",
+      "analysis": "由 $Q=100-5 P \\geqslant 0$ 得 $P \\leqslant 20$,\r\n\r\n需求对价格的弹性为 $\\dfrac{\\mathrm{d} Q / \\mathrm{d} P}{Q / P}=-\\dfrac{5 P}{100-5 P}$,\r\n\r\n由 $\\displaystyle \\left|\\frac{\\mathrm{d} Q / \\mathrm{d} P}{Q / P}\\right|=\\frac{5 P}{100-5 P}>1$ 得 $P>10$, \r\n\r\n故价格范围为 $10<P \\leqslant 20$",
+      "wrong_options": {},
+      "pitfalls": [
+        "弹性要取绝对值：|E|=5P/(100−5P)>1 ⇒ P>10，别漏绝对值把不等式方向搞反",
+        "上界来自 Q=100−5P≥0 ⇒ P≤20，端点 20 处 Q=0 仍算入，故右闭"
+      ],
+      "key_point": "|E|=5P/(100−5P)>1 ⇒ P>10，结合 P≤20 得 (10,20]。"
+    },
+    {
+      "id": 1762,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(x-2)^{2 n}}{n 4^n}$ 的收敛域为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(0,4)$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\frac{1}{4}$,\r\n\r\n得收敛半径为 $R=2$,\r\n\r\n当 $x-2= \\pm 2$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{( \\pm 2)^{2 n}}{n 4^n}=\\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散, \r\n\r\n故级数的收敛域为 $(0,4)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "缺偶次项级数不能直接套 aₙ₊₁/aₙ，按 (x−2)² 处理：收敛半径对 (x−2) 是 2",
+        "端点 x−2=±2 时级数化为 Σ1/n（调和级数）发散，故两端都不取，收敛域开区间"
+      ],
+      "key_point": "|x−2|<2 且端点 Σ1/n 发散 ⇒ 收敛域 (0,4)。"
+    },
+    {
+      "id": 1763,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "交换积分次序 $\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\sqrt{y}}^{\\sqrt{2-y^2}} f(x, y) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\int_0^1 \\mathrm{d} x \\int_0^{x^2} f(x, y) \\mathrm{d} y+\\int_1^{\\sqrt{2}} \\mathrm{d} x \\int_0^{\\sqrt{2-x^2}} f(x, y) \\mathrm{d} y$",
+      "analysis": "积分区域 \r\n\r\n$D=\\left\\{(x, y) \\mid \\sqrt{y} \\leqslant x \\leqslant \\sqrt{2-y^2}, 0 \\leqslant y \\leqslant 1\\right\\}$,\r\n\r\n将区域向 $x$ 轴投影, \r\n令 $D_1=\\left\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant x^2\\right\\}, \\\\\r\nD_2=\\left\\{(x, y) \\mid 1 \\leqslant x \\leqslant \\sqrt{2}, 0 \\leqslant y \\leqslant \\sqrt{2-x^2}\\right\\}$,\r\n\r\n则\r\n$\\int_0^1 \\mathrm{d} y \\int_{\\sqrt{y}}^{\\sqrt{2-y^2}} f(x, y) \\mathrm{d} x\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^{x^2} f(x, y) \\mathrm{d} y+\\int_1^{\\sqrt{2}} \\mathrm{d} x \\int_0^{\\sqrt{2-x^2}} f(x, y) \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两条边界 x=√y（即 y=x²）与 x=√(2−y²)（即圆 x²+y²=2）在 (1,1) 相交，投影到 x 轴须以 x=1 分段",
+        "0≤x≤1 段 y 上限是 x²（抛物线），1≤x≤√2 段 y 上限是 √(2−x²)（圆），别混"
+      ],
+      "key_point": "以 x=1 分段：[0,1] 顶为 x²、[1,√2] 顶为 √(2−x²)。"
+    },
+    {
+      "id": 1764,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $m$ 阶方阵, $\\boldsymbol{B}$ 为 $n$ 阶方阵, 且 $|\\boldsymbol{A}|=a,|\\boldsymbol{B}|=b, \\boldsymbol{C}=\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$, 则 $|\\boldsymbol{C}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(-1)^{m n} a b$",
+      "analysis": "$|\\boldsymbol{C}|=\r\n\\left|\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right|\\\\\r\n=(-1)^{m n}\\left|\\begin{array}{ll}\\boldsymbol{B} & \\boldsymbol{O} \\\\ \\boldsymbol{O} & \\boldsymbol{A}\\end{array}\\right|\\\\\r\n=(-1)^{m n}|\\boldsymbol{A}| \\cdot|\\boldsymbol{B}|=(-1)^{m n} a b$",
+      "wrong_options": {},
+      "pitfalls": [
+        "符号是 (−1)^{mn}（A 为 m 阶、B 为 n 阶），不是 (−1)^{m+n}，来自 m 行与 n 行互换共 mn 次",
+        "别漏 |A|=a、|B|=b 的乘积；反对角块换到主对角后行列式才化为 ab"
+      ],
+      "key_point": "|C|=(−1)^{mn}|A||B|=(−1)^{mn}ab。"
+    },
+    {
+      "id": 1765,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "将 C, C, E, E, I, N,S 等七个字母随机排成一行, 则刚好排成英文单词 SCIENCE 的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{1260}$",
+      "analysis": "设题中的事件为 $A$, 样本点总数为 $n=7 !$, \r\n\r\n有利于 $A$ 的样本点为 $2 ! \\cdot 2 !=4$, \r\n\r\n所求的概率为 $P(A)=\\frac{4}{7 !}=\\frac{1}{1260}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "把 7 个字母视为可区分做 7! 总数时，目标单词的有利排列数是 2!·2!=4（两 C、两 E 内部互换仍是同词）",
+        "P=4/5040=1/1260，别把总数写成 7!/(2!2!) 又不改有利数"
+      ],
+      "key_point": "P=2!·2!/7!=4/5040=1/1260。"
+    },
+    {
+      "id": 1766,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle F(x)=\\frac{x^2}{x-a} \\int_a^x f(t) \\mathrm{d} t$, 其中 $f(x)$ 为连续函数, 则 $\\displaystyle \\lim _{x \\rightarrow a} F(x)$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$a^2$",
+        "B": "$a^2 f(a)$",
+        "C": "$0$",
+        "D": "不存在"
+      },
+      "answer": "B",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow a} F(x)\\\\\r\n=\\lim _{x \\rightarrow a} \\frac{x^2}{x-a} \\int_a^x f(t) \\mathrm{d} t\\\\\r\n=a^2 \\lim _{x \\rightarrow a} \\frac{\\int_a^x f(t) \\mathrm{d} t}{x-a}\\\\\r\n=a^2 \\lim _{x \\rightarrow a} f(x)=a^2 f(a)$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "漏乘变限积分部分的极限 f(a)，只留下 x²→a²",
+        "C": "误以为 ∫ₐˣf/(x−a) 极限为 0（其实是导数 f(a)），把整体当 0",
+        "D": "f 连续保证极限存在，'不存在'判断错误"
+      },
+      "pitfalls": [
+        "x² 部分连续可直接代入 a²，难点是 ∫ₐˣf(t)dt/(x−a) 为 0/0，其极限是 F'(a)=f(a)",
+        "f 只设连续，用变限积分求导（或中值定理）而非要求 f 可导"
+      ],
+      "key_point": "lim F=a²·lim∫ₐˣf/(x−a)=a²f(a)，选 B。"
+    },
+    {
+      "id": 1767,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时,下列四个无穷小量中, 哪一个是比其他三个更高阶的无穷小量 $(\\quad)$",
+      "options": {
+        "A": "$x^2$",
+        "B": "$1-\\cos x$",
+        "C": "$\\sqrt{1-x^2}-1$",
+        "D": "$x-\\tan x$"
+      },
+      "answer": "D",
+      "analysis": "当 $x \\rightarrow 0$ 时, $\\displaystyle 1-\\cos x \\sim \\frac{1}{2} x^2, \\sqrt{1-x^2}-1 \\sim-\\frac{1}{2} x^2$, \r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x-\\tan x}{x^3}=\\lim _{x \\rightarrow 0} \\frac{1-\\sec ^2 x}{3 x^2}=-\\frac{1}{3}$,\r\n\r\n得 $\\displaystyle x-\\tan x \\sim-\\frac{1}{3} x^3$, \r\n\r\n故 $x-\\tan x$ 是比其余三个更高阶的无穷小量, 应选 (D)",
+      "wrong_options": {
+        "A": "x² 是二阶无穷小，与 B、C 同阶，不是最高阶",
+        "B": "1−cos x~x²/2 为二阶，同 A、C",
+        "C": "√(1−x²)−1~−x²/2 为二阶，同 A、B"
+      },
+      "pitfalls": [
+        "A/B/C 都是二阶无穷小，唯 D 的 x−tan x~−x³/3 是三阶，阶越高越'高阶'",
+        "x−tan x 不能用 tan x~x 硬消（会得 0），须展开到 x³ 项：tan x~x+x³/3"
+      ],
+      "key_point": "x−tan x~−x³/3 为三阶，比其余二阶更高阶，选 D。"
+    },
+    {
+      "id": 1768,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $m \\times n$ 矩阵, 齐次线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 仅有零解的充分条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 的列向量组线性无关",
+        "B": "$\\boldsymbol{A}$ 的列向量组线性相关",
+        "C": "$\\boldsymbol{A}$ 的行向量组线性无关",
+        "D": "$\\boldsymbol{A}$ 的行向量组线性相关"
+      },
+      "answer": "A",
+      "analysis": "$\\boldsymbol{A X}=\\mathbf{0}$ 只有零解的充分必要条件是 $r(\\boldsymbol{A})=n$,\r\n\r\n因为矩阵的秩、矩阵的行向量组的秩、矩阵的列向量组的秩相等,\r\n\r\n所以矩阵 $\\boldsymbol{A}$ 的列向量组的秩为 $n$, 故 $\\boldsymbol{A}$ 的 列向量组线性无关, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "列向量相关 ⇒ r(A)<n ⇒ 有非零解，恰恰相反",
+        "C": "行向量无关只给 r(A)=m，未必等于 n（列数），推不出仅零解",
+        "D": "行向量相关与是否仅零解无必然关系"
+      },
+      "pitfalls": [
+        "仅零解看'列'不看'行'：r(A)=n（未知数个数=列数），即列向量无关",
+        "m×n 阵行无关给 r=m，与列数 n 无关，别混行秩列秩的作用对象"
+      ],
+      "key_point": "仅零解 ⇔ 列向量无关（r(A)=n），选 A。"
+    },
+    {
+      "id": 1769,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设当事件 $A$ 与 $B$ 同时发生时, 事件 $C$ 必发生, 则 $(\\quad)$",
+      "options": {
+        "A": "$P(C) \\leqslant P(A)+P(B)-1$",
+        "B": "$P(C) \\geqslant P(A)+P(B)-1$",
+        "C": "$P(C)=P(A B)$",
+        "D": "$P(C)=P(A \\cup B)$"
+      },
+      "answer": "B",
+      "analysis": "由题意得 $A B \\subset C, P(A B) \\leqslant P(C),\\\\\r\nP(A+B)=P(A)+P(B)-P(A B) \\geqslant \\\\\r\nP(A)+P(B)-P(C)$,\r\n\r\n再由 $P(A+B) \\leqslant 1$,\r\n\r\n得 $P(A)+P(B)-P(C) \\leqslant 1$, \r\n\r\n即 $P(C) \\geqslant P(A)+P(B)-1$, 应选 (B)",
+      "wrong_options": {
+        "A": "不等号方向反了：由 AB⊂C 得 P(C)≥P(AB)≥P(A)+P(B)−1，是 ≥ 不是 ≤",
+        "C": "只有 AB⊂C（含于），P(C)≥P(AB)，不一定相等",
+        "D": "C 与 A∪B 无包含关系，P(C)=P(A∪B) 无依据"
+      },
+      "pitfalls": [
+        "AB⊂C 只给 P(C)≥P(AB)（单向），不是相等",
+        "P(AB)≥P(A)+P(B)−1 来自 P(A∪B)≤1，这是邦费罗尼下界"
+      ],
+      "key_point": "AB⊂C ⇒ P(C)≥P(AB)≥P(A)+P(B)−1，选 B。"
+    },
+    {
+      "id": 1770,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 个随机变量 $X_1, X_2, \\cdots, X_n$ 独立同分布, $\\displaystyle D\\left(X_1\\right)=\\sigma^2, \\bar{X}=\\frac{1}{n} \\sum_{i=1}^n X_i,\\\\\r\nS^2=\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2$, 则 $(\\quad)$",
+      "options": {
+        "A": "$S$ 是 $\\sigma$ 的无偏估计量",
+        "B": "$S$ 是 $\\sigma$ 的最大似然估计量",
+        "C": "$S$ 是 $\\sigma$ 的一致估计量",
+        "D": "$S$ 与 $\\bar{X}$ 相互独立"
+      },
+      "answer": "C",
+      "analysis": "$E\\left(S^2\\right)=\\sigma^2$, \r\n\r\n若 $E(S)=\\sigma$, 则 $D(S)=E\\left(S^2\\right)-[E(S)]^2=0$, 矛盾, \r\n\r\n即 $E(S) \\neq \\sigma$, 不选 (A); \r\n\r\n因为总体 $X$ 的分布未知, \r\n\r\n所以 (B), (D) 不一定正确,应选 (C)",
+      "wrong_options": {
+        "A": "若 E(S)=σ 则 D(S)=E(S²)−[E(S)]²=σ²−σ²=0 矛盾，故 S 有偏，非无偏估计",
+        "B": "总体分布未知，无法确定 S 是最大似然估计量",
+        "D": "S 与 X̄ 独立只在正态总体下成立，此处分布未知不保证"
+      },
+      "pitfalls": [
+        "E(S²)=σ² 不等于 E(S)=σ：由 D(S)>0 推出 E(S)<σ，S 对 σ 有偏（易错判无偏）",
+        "本题一致（相合）性属'估计量评选标准'，现行数三考纲仅列点估计/矩估计/最大似然，此点已超纲，映射到最接近的'估计量和估计值'"
+      ],
+      "key_point": "E(S)≠σ 故非无偏；分布未知排除 B、D；S 是 σ 的一致估计量，选 C。"
+    },
+    {
+      "id": 1771,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{\\ln \\cos (x-1)}{1-\\sin \\frac{\\pi}{2} x}, & x \\neq 1 \\\\ 1, & x=1\\end{array}\\right.$ 问函数 $f(x)$ 在 $x=1$ 处是否连续? 若不连续, 修改函数 $f(x)$ 在 $x=1$ 处的定义使其连续",
+      "options": {},
+      "answer": "不连续, $f(1)=-\\dfrac{4}{\\pi^2}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 1} f(x)=\\lim _{x \\rightarrow 1} \\frac{\\ln \\cos (x-1)}{1-\\sin \\frac{\\pi}{2} x}\\\\\r\n=\\lim _{x \\rightarrow 1} \\frac{\\ln \\cos (x-1)}{1-\\sin \\left[\\frac{\\pi}{2}+\\frac{\\pi}{2}(x-1)\\right]}\\\\\r\n\\stackrel{x-1=t}{=} \\lim _{t \\rightarrow 0} \\frac{\\ln \\cos t}{1-\\cos \\frac{\\pi}{2} t}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{\\ln [1+(\\cos t-1)]}{1-\\cos \\frac{\\pi}{2} t}\\\\\r\n=-\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{1-\\cos \\frac{\\pi}{2} t} \\\\\r\n=-\\lim _{t \\rightarrow 0} \\frac{\\frac{1}{2} t^2}{\\frac{1}{2}\\left(\\frac{\\pi}{2} t\\right)^2}=-\\frac{4}{\\pi^2}$\r\n\r\n因为 $\\lim\\limits _{x \\rightarrow 1} f(x) \\neq f(1)$, 所以 $f(x)$ 在 $x=1$ 不连续,\r\n\r\n令 $f(1)=-\\dfrac{4}{\\pi^2}$, 则 $f(x)$ 在 $x=1$ 处连续",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母 1−sin(πx/2) 要用诱导公式化为 1−cos(πt/2)（t=x−1）才能等价代换",
+        "ln cos t=ln(1+(cos t−1))~cos t−1~−t²/2，分子分母同为二阶，极限 −4/π²，与给定 f(1)=1 不符故不连续"
+      ],
+      "key_point": "极限=−4/π²≠1，重定义 f(1)=−4/π² 即连续。"
+    },
+    {
+      "id": 1772,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle I=\\int \\frac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-\\dfrac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x}-x+\\dfrac{1}{2} \\ln \\left(1+\\mathrm{e}^{2 x}\\right)+C$",
+      "analysis": "$\\displaystyle \r\nI=\\int \\frac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x} \\mathrm{d} x\\\\\r\n=-\\int \\operatorname{arccot} \\mathrm{e}^x \\mathrm{d}\\left(\\mathrm{e}^{-x}\\right)\\\\\r\n=-\\frac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x}-\\int \\mathrm{e}^{-x} \\cdot \\frac{\\mathrm{e}^x}{1+\\mathrm{e}^{2 x}} \\mathrm{d} x \\\\\r\n=-\\frac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x}-\\int\\left(1-\\frac{\\mathrm{e}^{2 x}}{1+\\mathrm{e}^{2 x}}\\right) \\mathrm{d} x \\\\\r\n=-\\frac{\\operatorname{arccot} \\mathrm{e}^x}{\\mathrm{e}^x}-x+\\frac{1}{2} \\ln \\left(1+\\mathrm{e}^{2 x}\\right)+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部时取 v=−e^{−x}，d(arccot e^x)=−e^x/(1+e^{2x})dx，两个负号相乘要理清",
+        "余项 ∫1/(1+e^{2x})dx=∫(1−e^{2x}/(1+e^{2x}))dx=x−(1/2)ln(1+e^{2x})，别直接乱套"
+      ],
+      "key_point": "分部+拆项得 −arccot(eˣ)/eˣ−x+½ln(1+e^{2x})+C。"
+    },
+    {
+      "id": 1773,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle z=\\sin (x y)+\\varphi\\left(x, \\frac{x}{y}\\right)$, 其中 $\\varphi$ 二阶连续可偏导, 求 $\\displaystyle \\frac{\\partial^2 z}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\cos (x y)-x y \\sin (x y)-\\dfrac{x}{y^2} \\varphi_{12}^{\\prime \\prime}-\\dfrac{1}{y^2} \\varphi^{\\prime}{ }_2-\\dfrac{x}{y^3} \\varphi_{22}^{\\prime \\prime}$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=y \\cos (x y)+\\varphi^{\\prime}{ }_1+\\frac{1}{y} \\dot{\\varphi}_2^{\\prime},\\\\\r\n\\dfrac{\\partial^2 z}{\\partial x \\partial y}=\\cos (x y)-x y \\sin (x y)-\\dfrac{x}{y^2} \\varphi_{12}^{\\prime \\prime}-\\dfrac{1}{y^2} \\varphi^{\\prime}{ }_2-\\dfrac{x}{y^3} \\varphi_{22}^{\\prime \\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "φ₁'、φ₂' 求完 x 偏导后对 y 求导时，内层 x/y 对 y 的导数是 −x/y²，这个因子最易漏",
+        "第二项 (1/y)φ₂' 对 y 求导要用乘积法则：既有 −1/y²·φ₂' 又有 (1/y)·φ₂₂'·(−x/y²)，两块都要"
+      ],
+      "key_point": "∂²z/∂x∂y=cos(xy)−xy sin(xy)−(x/y²)φ₁₂''−(1/y²)φ₂'−(x/y³)φ₂₂''。"
+    },
+    {
+      "id": 1774,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求连续函数 $f(x)$, 使它满足 $\\displaystyle f(x)+2 \\int_0^x f(t) \\mathrm{d} t=x^2$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2} \\mathrm{e}^{-2 x}+x-\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle f(x)+2 \\int_0^x f(t) \\mathrm{d} t=x^2$ 两边对 $x$ 求导得\r\n\r\n$f^{\\prime}(x)+2 f(x)=2 x$, 解得 \r\n\r\n$\\displaystyle f(x)=\\left(\\int 2 x \\cdot \\mathrm{e}^{\\int 2 \\mathrm{d} x} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int 2 \\mathrm{d} x}\\\\\r\n=C \\mathrm{e}^{-2 x}+\\frac{1}{2}(2 x-1)$,\r\n\r\n由 $f(0)=0$ 得 $\\displaystyle C=\\frac{1}{2}$, \r\n\r\n故 $\\displaystyle f(x)=\\frac{1}{2} \\mathrm{e}^{-2 x}+x-\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求导后须补初值：原方程令 x=0 得 f(0)=0，这是定常数 C 的唯一依据，别丢",
+        "通解 f=Ce^{−2x}+x−1/2，由 f(0)=0 得 C=1/2"
+      ],
+      "key_point": "求导得 f'+2f=2x，f(0)=0 ⇒ f=½e^{−2x}+x−½。"
+    },
+    {
+      "id": 1775,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 15,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: 当 $x \\geqslant 1$ 时, $\\displaystyle \\arctan x-\\frac{1}{2} \\arccos \\frac{2 x}{1+x^2}=\\frac{\\pi}{4}$",
+      "options": {},
+      "answer": "证明题（详见解析）",
+      "analysis": "令 $\\displaystyle f(x)=\\arctan x-\\frac{1}{2} \\arccos \\frac{2 x}{1+x^2}\\\\\r\nf^{\\prime}(x) =\\frac{1}{1+x^2}+\\frac{1}{2 \\sqrt{1-\\frac{4 x^2}{\\left(1+x^2\\right)^2}}} \\cdot \\frac{2\\left(1+x^2\\right)-4 x^2}{\\left(1+x^2\\right)^2} \\\\\r\n=\\frac{1}{1+x^2}+\\frac{1+x^2}{\\sqrt{\\left(x^2-1\\right)^2}} \\cdot \\frac{1-x^2}{\\left(1+x^2\\right)^2}$,\r\n\r\n因为当 $x>1$ 时, $f^{\\prime}(x)=0$, 所以当 $x \\geqslant 1$ 时, $f(x) \\equiv C_0$,\r\n\r\n取 $x=1$ 得 $\\displaystyle C_0=\\frac{\\pi}{4}$, \r\n\r\n故当 $x \\geqslant 1$ 时, $\\displaystyle \\arctan x-\\frac{1}{2} \\arccos \\frac{2 x}{1+x^2}=\\frac{\\pi}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 arccos(2x/(1+x²)) 的导数时含 √((x²−1)²)=|x²−1|，x>1 时取 x²−1，符号处理是关键",
+        "证得 f'(x)=0（x>1）后 f 恒为常数，代 x=1 得常数 π/4，别忘取特值定值"
+      ],
+      "key_point": "f'≡0（x>1）⇒ f 恒为常数，取 x=1 得 π/4。"
+    },
+    {
+      "id": 1776,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设曲线为 $y=\\mathrm{e}^{-x}(x \\geqslant 0)$\r\n\r\n(1) 将曲线 $y=\\mathrm{e}^{-x}, x$ 轴, $y$ 轴和直线 $x=\\xi(\\xi>0)$ 所围成的平面图形绕 $x$ 轴旋转一周, 求 所得的旋转体的体积 $V(\\xi)$, 并求满足 $\\displaystyle V(a)=\\frac{1}{2} \\lim _{\\xi \\rightarrow+\\infty} V(\\xi)$ 的常数 $a$;\r\n\r\n(2) 在曲线 $y=\\mathrm{e}^{-x}$ 上找一点, 使过该点的切线与两坐标轴所夹平面图形的面积最大, 并求出最大面积",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{2} \\ln 2$; (2) $S(1)=\\dfrac{2}{\\mathrm{e}}$",
+      "analysis": "(1) $\\displaystyle V(\\xi)=\\pi \\int_0^{\\xi}\\left(\\mathrm{e}^{-x}\\right)^2 \\mathrm{d} x=\\frac{\\pi}{2}\\left(1-\\mathrm{e}^{-2 \\xi}\\right),\\\\\r\n\\lim _{\\xi \\rightarrow+\\infty} V(\\xi)=\\frac{\\pi}{2},\\\\\r\n\\frac{1}{2} \\lim _{\\xi \\rightarrow+\\infty} V(\\xi)=V(a)=\\frac{\\pi}{2}\\left(1-\\mathrm{e}^{-2 a}\\right)$, \r\n\r\n即 $\\displaystyle \\frac{\\pi}{2}\\left(1-\\mathrm{e}^{-2 a}\\right)=\\frac{\\pi}{4}$ 得 $\\displaystyle a=\\frac{1}{2} \\ln 2$\r\n\r\n(2) 设切点为 $\\left(a, \\mathrm{e}^{-a}\\right)$,\r\n\r\n曲线在该点的切线方程为 $y-\\mathrm{e}^{-a}=-\\mathrm{e}^{-a}(x-a)$,\r\n\r\n令 $x=0$ 得 $y=\\mathrm{e}^{-a}(a+1)$; \r\n\r\n令 $y=0$ 得 $x=a+1$,\r\n\r\n则 $\\displaystyle S(a)=\\frac{1}{2}(a+1)^2 \\mathrm{e}^{-a}$\r\n\r\n由 $\\displaystyle S^{\\prime}(a)=\\frac{1}{2}\\left(1-a^2\\right) \\mathrm{e}^{-a}=0$ 得 $a=1$,\r\n\r\n又当 $0<a<1$ 时, $S^{\\prime}(a)>0$;\r\n\r\n当 $a>1$ 时, $S^{\\prime}(a)<0$,\r\n\r\n故当 $a=1$ 时所围成的面积最大, 最大面积为 $S(1)=\\dfrac{2}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) V(+∞)=π/2 是反常积分极限，V(a)=π/4 解出 e^{−2a}=1/2 ⇒ a=½ln2",
+        "(2) 切线 y−e^{−a}=−e^{−a}(x−a)，两截距 x=a+1、y=(a+1)e^{−a}，S(a)=½(a+1)²e^{−a}，S'(a)=½(1−a²)e^{−a}=0 取 a=1"
+      ],
+      "key_point": "(1) a=½ln2；(2) S(a)=½(a+1)²e^{−a} 在 a=1 取最大 2/e。"
+    },
+    {
+      "id": 1777,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, 其中 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-2 & 0 & 0 \\\\ 2 & x & 2 \\\\ 3 & 1 & 1\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & y\\end{array}\\right)$\r\n\r\n(1) 求 $x, y$ 的值;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$, 使得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
+      "options": {},
+      "answer": "(1) $x=0, y=-2$, (2) $\\left(\\begin{array}{ccc}0 & 0 & -1 \\\\ -2 & 1 & 0 \\\\ 1 & 1 & 1\\end{array}\\right)$",
+      "analysis": "(1) 因为 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, \r\n\r\n所以 $\\boldsymbol{A}, \\boldsymbol{B}$ 的特征值相同, \r\n\r\n显然 $\\lambda_1=-1, \\lambda_2=2$ 为特征值,\r\n\r\n由 $|-\\boldsymbol{E}-\\boldsymbol{A}|=-|\\boldsymbol{E}+\\boldsymbol{A}|=-\\left|\\begin{array}{ccc}-1 & 0 & 0 \\\\ 2 & x+1 & 2 \\\\ 3 & 1 & 2\\end{array}\\right|=2(x+1)-2=0$ \r\n\r\n得 $x=0$,\r\n\r\n由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=|\\lambda \\boldsymbol{E}-\\boldsymbol{B}|$,\r\n\r\n得 $-2(x-2)=-2 y$, 解得 $y=-2$\r\n\r\n(2) 显然 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=-1, \\lambda_2=2, \\lambda_3=-2$.\r\n\r\n由 $\\boldsymbol{E}+\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得 $\\lambda_1=-1$,\r\n\r\n对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}0 \\\\ -2 \\\\ 1\\end{array}\\right)$;\r\n\r\n由 $2 \\boldsymbol{E}-\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得 $\\lambda_2=2$,\r\n\r\n对应的线性无关的特征向量 $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)$;\r\n\r\n由 $2 \\boldsymbol{E}+\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得 $\\lambda_3=-2$,\r\n\r\n对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right)$;\r\n\r\n令 $\\boldsymbol{P}=\\left(\\begin{array}{ccc}0 & 0 & -1 \\\\ -2 & 1 & 0 \\\\ 1 & 1 & 1\\end{array}\\right)$, 则 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 第一行 (−2,0,0) 使 −2 必为 A 的特征值，故对应 B 中 y=−2；再由 tr A=tr B（x−1=1+y）定 x=0",
+        "P 的列须与 B 对角元顺序 (−1,2,−2) 一一对应：列依次取 λ=−1,2,−2 的特征向量 (0,−2,1)ᵀ,(0,1,1)ᵀ,(−1,0,1)ᵀ"
+      ],
+      "key_point": "x=0,y=−2；P=[[0,0,−1],[−2,1,0],[1,1,1]]。注：源 answer 字段 x=1 有误，验算与解析均为 x=0。"
+    },
+    {
+      "id": 1778,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 3 阶矩阵 $\\boldsymbol{B} \\neq \\boldsymbol{O}$, 且 $\\boldsymbol{B}$ 的每一个列向量都是以下方程组的解:\r\n\r\n$$\r\n\\left\\{\\begin{array}{l}\r\nx_1+2 x_2-2 x_3=0 \\\\\r\n2 x_1-x_2+\\lambda x_3=0 \\\\\r\n3 x_1+x_2-x_3=0\r\n\\end{array}\\right.\r\n$$\r\n\r\n(1) 求 $\\lambda$ 的值;\r\n(2) 证明: $|\\boldsymbol{B}|=0$",
+      "options": {},
+      "answer": "(1) $1$ (2) 略",
+      "analysis": "（1）令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 2 & -2 \\\\ 2 & -1 & \\lambda \\\\ 3 & 1 & -1\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$,\r\n\r\n因为 $\\boldsymbol{B}$ 的列为方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的解, \r\n\r\n所以 $\\boldsymbol{A B}=\\boldsymbol{O}$,\r\n由 $\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{O}$ 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$, \r\n\r\n再由 $r(\\boldsymbol{B}) \\geqslant 1$ 得 $r(\\boldsymbol{A}) \\leqslant 2<3$, \r\n\r\n于是 $|\\boldsymbol{A}|=0$,\r\n\r\n解得 $\\lambda=1$\r\n\r\n(2) 因为 $r(\\boldsymbol{A}) \\geqslant 2$, \r\n\r\n所以由 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$ 得 $r(\\boldsymbol{B}) \\leqslant 1<3$, \r\n\r\n故 $|\\boldsymbol{B}|=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "'B 每列都是解'翻译成 AB=O，才能用 Sylvester 秩不等式 r(A)+r(B)≤3",
+        "(1) 由 B≠O 得 r(B)≥1 ⇒ r(A)≤2 ⇒ |A|=0 解 λ=1；(2) 再证 r(A)≥2（有二阶非零子式）⇒ r(B)≤1<3 ⇒ |B|=0"
+      ],
+      "key_point": "AB=O ⇒ r(A)+r(B)≤3：λ=1，且 r(B)≤1 故 |B|=0。"
+    },
+    {
+      "id": 1779,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 分别为 $m, n$ 阶正定矩阵, 试判定分块矩阵 $\\boldsymbol{C}=\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{O} \\\\ \\boldsymbol{O} & \\boldsymbol{B}\\end{array}\\right)$ 是否是正定矩阵",
+      "options": {},
+      "answer": "是",
+      "analysis": "由 $\\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{A}, \\boldsymbol{B}^{\\mathrm{T}}=\\boldsymbol{B}$ 得 $\\boldsymbol{C}^{\\mathrm{T}}=\\boldsymbol{C}$,\r\n\r\n设 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1, \\lambda_2, \\cdots, \\lambda_m, \\\\\r\n\\boldsymbol{B}$ 的特征值为 $\\mu_1, \\mu_2, \\cdots, \\mu_n$,\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为正定矩阵, \r\n\r\n所以 $\\lambda_1>0, \\lambda_2>0, \\cdots, \\lambda_m>0, \\mu_1>0, \\mu_2>0, \\cdots, \\mu_n>0$,\r\n\r\n又因为 $|\\lambda \\boldsymbol{E}-\\boldsymbol{C}|=|\\lambda \\boldsymbol{E}-\\boldsymbol{A}| \\cdot|\\lambda \\boldsymbol{E}-\\boldsymbol{B}|$,\r\n\r\n所以 $C$ 的特征值为 $\\lambda_1>0, \\lambda_2>0, \\cdots, \\lambda_m>0, \\mu_1>0, \\mu_2>0, \\cdots, \\mu_n>0$,\r\n\r\n故 $C$ 为正定矩阵",
+      "wrong_options": {},
+      "pitfalls": [
+        "也可用定义：任取非零 (x,y)ᵀ，xᵀAx+yᵀBy>0（A、B 正定，x、y 不同时为零），更直接",
+        "分块对角的特征值是 A、B 特征值的并，全为正即正定；勿忘先说明 C 对称"
+      ],
+      "key_point": "C 对称且特征值=A、B 特征值全正 ⇒ C 正定。"
+    },
+    {
+      "id": 1780,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设测量的随机误差 $X \\sim N\\left(0,10^2\\right)$, 试求 $100$ 次独立重复测量中, 至少有三次测量误差的绝对值大于 $19.6$ 的概率 $\\alpha$, 并利用泊松分布求出 $\\alpha$ 的近似值 (要求小数点后取两位有效数字)\r\n\r\n注: $\\Phi(1.96)=0.975$, 另附表\r\n\r\n$$\r\n\\begin{array}{|c|c|}\r\n\\hline\r\n\\lambda & \\mathrm{e}^{-\\lambda} \\\\\r\n\\hline\r\n1 & 0.368 \\\\\r\n2 & 0.135 \\\\\r\n3 & 0.050 \\\\\r\n4 & 0.018 \\\\\r\n5 & 0.007 \\\\\r\n6 & 0.002 \\\\\r\n7 & 0.001 \\\\\r\n\\vdots & \\vdots \\\\\r\n\\hline\r\n\\end{array}\r\n$$",
+      "options": {},
+      "answer": "$\\alpha\\approx0.87$",
+      "analysis": "设事件 $A=\\{$ 测量误差绝对值大于 $19.6\\}$,\r\n\r\n由 $X \\sim N\\left(0,10^2\\right)$ 得 $\\displaystyle \\frac{X}{10} \\sim N(0,1)$,\r\n\r\n$\\displaystyle \r\np =P(A)=P\\{|X|>19.6\\}\\\\\r\n=1-P\\left\\{-1.96<\\frac{X}{10}<1.96\\right\\} \\\\\r\n=1-[\\Phi(1.96)-\\Phi(-1.96)]=2-2 \\Phi(1.96)=0.05$\r\n\r\n设 $Y$ 表示 100 次试验中 $A$ 出现的次数,则 $Y \\sim B(100,0.05)$,\r\n\r\n令 $\\lambda=n p=5$, 则 $Y$ 近似服从参数为 $5$ 的泊松分布,\r\n\r\n\r\n故 $\\displaystyle P\\{Y \\geqslant 3\\}\\\\\r\n=1-P\\{Y<3\\}=1-P\\{Y=0\\}-P\\{Y=1\\}-P\\{Y=2\\}\\\\\r\n\\approx 1-\\frac{5^0}{0 !} \\mathrm{e}^{-5}-\\frac{5^1}{1 !} \\mathrm{e}^{-5}-\\frac{5^2}{2 !} \\mathrm{e}^{-5}=0.87$",
+      "wrong_options": {},
+      "pitfalls": [
+        "单次概率 p=P{|X|>19.6}=2−2Φ(1.96)=2−2·0.975=0.05，别把 19.6=1.96σ 的标准化算错",
+        "λ=np=100·0.05=5，P{Y≥3}=1−e^{−5}(1+5+25/2)=1−18.5·0.007≈0.87"
+      ],
+      "key_point": "p=0.05，λ=5，α=1−e^{−5}(1+5+12.5)≈0.87。"
+    },
+    {
+      "id": 1781,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "一台设备由三大部件构成, 在设备运转中各部件需要调整的概率相应为 $0.10,0.20$ 和 $0.30$. 假设各部件的状态相互独立, 以 $X$ 表示同时需要调整的部件数, 试求 $X$ 的概率分布, 数学 期望 $E(X)$ 和方差 $D(X)$",
+      "options": {},
+      "answer": "$0.6, 0.46$",
+      "analysis": "令 $X_i=\\left\\{\\begin{array}{ll}1, & \\text { 第 } i \\text { 台设备需要调整 } \\\\ 0, & \\text { 第 } i \\text { 台设备不需要调整 }\\end{array}\\right.$, $(i=1,2,3)$,\r\n\r\n则 $X_1 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.9 & 0.1\\end{array}\\right), X_2 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.8 & 0.2\\end{array}\\right), X_3 \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ 0.7 & 0.3\\end{array}\\right)$,\r\n\r\n且 $X_1, X_2, X_3$ 相互独立, \r\n\r\n$X=X_1+X_2+X_3, X$ 的可能取值为 $0,1,2,3$,\r\n\r\n$P\\{X=0\\}=P\\left\\{X_1=0, X_2=0, X_3=0\\right\\}\\\\\r\n=P\\left\\{X_1=0\\right\\} P\\left\\{X_2=0\\right\\} P\\left\\{X_3=0\\right\\}=0.504\\\\\r\nP\\{X=1\\}=P\\left\\{X_1=1, X_2=0, X_3=0\\right\\}\\\\\r\n+P\\left\\{X_1=0, X_2=1, X_3=0\\right\\} \\\\\r\n+P\\left\\{X_1=0, X_2=0, X_3=1\\right\\} \\\\\r\n=P\\left\\{X_1=1\\right\\} P\\left\\{X_2=0\\right\\} P\\left\\{X_3=0\\right\\}\\\\\r\n+P\\left\\{X_1=0\\right\\} P\\left\\{X_2=1\\right\\} P\\left\\{X_3=0\\right\\} \\\\\r\n+P\\left\\{X_1=0\\right\\} P\\left\\{X_2=0\\right\\} P\\left\\{X_3=1\\right\\}=0.398 \\\\\r\nP\\{X=3\\}=P\\left\\{X_1=1, X_2=1, X_3=1\\right\\}\\\\\r\n=P\\left\\{X_1=1\\right\\} P\\left\\{X_2=1\\right\\} P\\left\\{X_3=1\\right\\}\\\\\r\n=0.006\\\\\r\nP\\{X=2\\}=1-P\\{X=0\\}-P\\{X=1\\}\\\\\r\n-P\\{X=3\\}=0.092$\r\n\r\n即 $X \\sim\\left(\\begin{array}{cccc}\r\n0 & 1 & 2 & 3 \\\\\r\n0.504 & 0.398 & 0.092 & 0.006\r\n\\end{array}\\right)$\r\n\r\n故\r\n$E(X)-0 \\times 0.504+1 \\times 0.398+2 \\times 0.092+3 \\times 0.006=0.6,\\\\\r\nD(X)=E\\left(X^2\\right)-(E X)^2=0.46$",
+      "wrong_options": {},
+      "pitfalls": [
+        "各 pᵢ 不同，非二项分布，不能套 np、npq；期望仍可用可加性 E(X)=0.1+0.2+0.3=0.6",
+        "独立故方差可加：D(X)=0.1·0.9+0.2·0.8+0.3·0.7=0.46，勿用 npq"
+      ],
+      "key_point": "E(X)=Σpᵢ=0.6，D(X)=Σpᵢqᵢ=0.46。"
+    },
+    {
+      "id": 1782,
+      "paper": "数学三",
+      "year": 1992,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$$\r\nf(x, y)=\r\n\\begin{cases}\\mathrm{e}^{-y}, & 0<x<y \\\\ 0, & \\text { 其他 }\r\n\\end{cases}\r\n$$\r\n\r\n(1) 求 $X$ 的概率密度 $f_X(x)$;\r\n\r\n(2) 求概率 $P\\{X+Y \\leqslant 1\\}$",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}0, & x \\leqslant 0 \\\\ \\mathrm{e}^{-x}, & x>0 \\end{cases}$\r\n(2) $1+\\mathrm{e}^{-1}-2 \\mathrm{e}^{-\\frac{1}{2}}$",
+      "analysis": "(1) $\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$.\r\n\r\n当 $x \\leqslant 0$ 时, $f_X(x)=0$;\r\n\r\n当 $x>0$ 时, $\\displaystyle f_X(x)=\\int_x^{+\\infty} \\mathrm{e}^{-y} \\mathrm{d} y=-\\left.\\mathrm{e}^{-y}\\right|_x ^{+\\infty}=\\mathrm{e}^{-x}$\r\n\r\n故 $f_X(x)= \\begin{cases}0, & x \\leqslant 0 \\\\ \\mathrm{e}^{-x}, & x>0 \\end{cases}$\r\n\r\n(2) $\\displaystyle P\\{X+Y \\leqslant 1\\}=\\iint\\limits_{x+y \\leqslant 1} f(x, y) \\mathrm{d} x \\mathrm{d} y\\\\ =\\int_0^{\\frac{1}{2}} \\mathrm{d} x \\int_x^{1-x} \\mathrm{e}^{-y} \\mathrm{d} y=\\int_0^{\\frac{1}{2}}\\left(\\mathrm{e}^{-x}-\\mathrm{e}^{x-1}\\right) \\mathrm{d} x\\\\\r\n=-\\left.\\mathrm{e}^{-x}\\right|_0 ^{\\frac{1}{2}}-\\left.\\mathrm{e}^{x-1}\\right|_0 ^{\\frac{1}{2}}=1+\\mathrm{e}^{-1}-2 \\mathrm{e}^{-\\frac{1}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 积分下限是 y=x（因 0<x<y），f_X(x)=∫ₓ^∞e^{−y}dy=e^{−x}，别把下限取成 0",
+        "(2) 交区域为 0<x<1/2、x<y<1−x，积分 ∫₀^{1/2}(e^{−x}−e^{x−1})dx=1+e^{−1}−2e^{−1/2}"
+      ],
+      "key_point": "f_X(x)=e^{−x}(x>0)；P{X+Y≤1}=1+e^{−1}−2e^{−1/2}。"
+    }
+  ]
+}

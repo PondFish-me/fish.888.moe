@@ -1,0 +1,430 @@
+{
+  "paper": "数学二",
+  "year": 1997,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1062,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设在区间 $[a, b]$ 上函数 $f(x)>0, f^{\\prime}(x)<0, f^{\\prime \\prime}(x)>0$\r\n令 $\\displaystyle S_{1}=\\int_{a}^{b} f(x) \\mathrm{d} x, S_{2}=f(b)(b-a), S_{3}=\\frac{1}{2}[f(a)+f(b)](b-a)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$S_{1}<S_{2}<S_{3}$",
+        "B": "$S_{2}<S_{1}<S_{3}$",
+        "C": "$S_{3}<S_{1}<S_{2}$",
+        "D": "$S_{2}<S_{3}<S_{1}$"
+      },
+      "answer": "B",
+      "analysis": "由 $f^{\\prime}(x)<0$ 得 $f(x)$ 为单调减函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x>\\int_a^b f(b) \\mathrm{d} x=f(b)(b-a)=S_2$;\r\n\r\n再由 $f^{\\prime \\prime}(x)>0$ 得 $f(x)$ 为凹函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x<\\frac{1}{2}[f(a)+f(b)](b-a)=S_3$, \r\n\r\n即 $S_2<S_1<S_3$, 应选 (B)",
+      "wrong_options": {
+        "A": "S1<S2 方向错：f 单调减使 f(x)≥f(b)，曲边梯形 S1 应大于矩形 S2。",
+        "C": "把三者顺序整体倒置，混淆矩形/梯形与曲边梯形的大小关系。",
+        "D": "凹凸方向判反：f''>0（凹）时曲线在弦(梯形)下方，应 S1<S3 而非 S3<S1。"
+      },
+      "pitfalls": [
+        "f'<0 给出 S1>S2（用 f(x)>f(b) 逐点比较后积分），别只凭直觉",
+        "f''>0 是下凸(凹)，曲线在弦(梯形)下方 ⇒ S1<S3；凹凸判反会选反"
+      ],
+      "key_point": "f 减 ⇒ S2<S1；f 凹 ⇒ S1<S3，故 S2<S1<S3，选 B。"
+    },
+    {
+      "id": 1063,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle F(x)=\\int_{x}^{x+2 \\pi} \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t$, 则 $F(x) (\\quad)$",
+      "options": {
+        "A": "为正常数",
+        "B": "为负常数",
+        "C": "恒为零",
+        "D": "不为常数"
+      },
+      "answer": "A",
+      "analysis": "被积函数是以 $2\\pi$ 为周期得周期函数, \r\n\r\n积分区间正好是一个周期, \r\n\r\n由周期函数定积分的平移性质得\r\n\r\n$\\displaystyle\r\nF(x) =\\int_{-\\pi}^\\pi \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t\\\\\r\n=\\int_0^\\pi\\left[\\mathrm{e}^{\\sin t} \\sin t+\\mathrm{e}^{\\sin (-t)} \\sin (-t)\\right] \\mathrm{d} t \\\\\r\n=\\int_0^\\pi\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\mathrm{d} t$,\r\n\r\n当 $t \\in[0, \\pi]$ 时, $\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\geqslant 0$, \r\n\r\n则 $F(x)>0$, 故 $F(x)$ 为正常数, 应选 (A)",
+      "wrong_options": {
+        "B": "判成负常数——把 (e^{sint}-e^{-sint})sint 在 [0,π] 的符号看反（该量恒≥0）。",
+        "C": "误以为被积函数在一周期上为奇函数、积分为0，忽略 e^{sint} 破坏了对称性。",
+        "D": "没看出积分区间恰一个周期使 F'(x)=0（与起点 x 无关），误判 F 随 x 变化。"
+      },
+      "pitfalls": [
+        "区间长恰为周期 2π ⇒ F'(x)=e^{sin(x+2π)}sin(x+2π)-e^{sinx}sinx=0 ⇒ F 为常数",
+        "平移到 [-π,π] 配对得 (e^{sint}-e^{-sint})sint≥0，故常数为正，不是零也不是负"
+      ],
+      "key_point": "一个周期上积分与起点无关 ⇒ F'≡0 为常数；配对后被积≥0 ⇒ 正常数，选 A。"
+    },
+    {
+      "id": 1496,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知函数 $\\displaystyle f(x)=\\left\\{\\begin{array}{ll}(\\cos x)^{x^{-2}}, & x \\neq 0 \\\\ a, & x=0\\end{array}\\right.$ 在 $x=0$ 处连续, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$e^{-\\dfrac{1}{2}}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} f(x)=\\lim _{x \\rightarrow 0}\\left\\{[1+(\\cos x-1)]^{\\frac{1}{x-1}}\\right\\}^{\\frac{\\cos x-1}{x^2}}=\\mathrm{e}^{-\\frac{1}{2}},\\\\ f(0)=a$, \r\n\r\n因为 $f(x)$ 在 $x=0$ 处连续, 所以 $\\displaystyle a=\\mathrm{e}^{-\\frac{1}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(cos x)^{1/x²} 是 1^∞ 型，ln 后用 cos x−1~−x²/2 得指数 −1/2",
+        "结果是 a=e^{−1/2}（注意负号，源数据 answer 字段漏写负号）"
+      ],
+      "key_point": "lim (cos x)^{1/x²}=e^{−1/2}，故 a=e^{−1/2}。"
+    },
+    {
+      "id": 1497,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle y=\\ln \\sqrt{\\frac{1-x}{1+x^2}}$, 则 $\\left.y^{\\prime \\prime}\\right|_{x=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{3}{2}$",
+      "analysis": "$\\displaystyle y=\\frac{1}{2}\\left[\\ln (1-x)-\\ln \\left(1+x^2\\right)\\right]$,\r\n\r\n$\\displaystyle y^{\\prime}=\\frac{1}{2}\\left(\\frac{1}{x-1}-\\frac{2 x}{1+x^2}\\right), \\\\\r\ny^{\\prime \\prime}=\\frac{1}{2}\\left[-\\frac{1}{(x-1)^2}-\\frac{2\\left(1-x^2\\right)}{\\left(1+x^2\\right)^2}\\right]$,\r\n\r\n\r\n则 $\\displaystyle \\left.y^{\\prime \\prime}\\right|_{x=0}=-\\frac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先 y=½[ln(1−x)−ln(1+x²)] 化简，避免直接对根式复合求导",
+        "两项二阶导在 x=0 处分别为 −1/2 与 −1，合计 −3/2"
+      ],
+      "key_point": "拆对数后逐项求导，y″(0)=−3/2。"
+    },
+    {
+      "id": 1498,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sqrt{x(4-x)}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\arcsin \\dfrac{\\sqrt{x}}{2}+C$ 或 $\\arcsin \\dfrac{x-2}{2}+C$",
+      "analysis": "方法一 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sqrt{x(4-x)}}\\\\\r\n=2 \\int \\frac{\\mathrm{d}(\\sqrt{x})}{\\sqrt{2^2-(\\sqrt{x})^2}}=2 \\arcsin \\frac{\\sqrt{x}}{2}+C$\r\n\r\n方法二 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sqrt{x(4-x)}}\\\\\r\n=\\int \\frac{\\mathrm{d}(x-2)}{\\sqrt{2^2-(x-2)^2}}=\\arcsin \\frac{x-2}{2}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x(4−x)=4−(x−2)²，配方后成标准 arcsin 型",
+        "两种凑法答案形式不同（相差常数），都对"
+      ],
+      "key_point": "配方 4−(x−2)² 得 arcsin((x−2)/2)+C（或凑 √x）。"
+    },
+    {
+      "id": 1499,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知向量组 $\\boldsymbol{\\alpha}_1=(1,2,-1,1), \\boldsymbol{\\alpha}_2=(2,0, t, 0), \\boldsymbol{\\alpha}_3=(0,-4,5,-2)$ 的秩为 $2$ , 则 $t=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "由 $\\left(\\begin{array}{ccc}1 & 2 & 0 \\\\ 2 & 0 & -4 \\\\ -1 & t & 5 \\\\ 1 & 0 & -2\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & 2 & 0 \\\\ 0 & -4 & -4 \\\\ 0 & t+2 & 5 \\\\ 0 & -2 & -2\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & 2 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & t+2 & 5 \\\\ 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得 $t=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "秩为 2（<3）要求行阶梯第三非零行被消为零行",
+        "化简后由该行系数为 0 解出 t=3"
+      ],
+      "key_point": "行阶梯出现零行的条件给 t=3。"
+    },
+    {
+      "id": 1500,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设当 $x \\rightarrow 0$ 时, $\\mathrm{e}^{\\tan x}-\\mathrm{e}^x$ 与 $x^n$ 是同阶无穷小, 则 $n$ 为 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "$4$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^{\\tan x}-\\mathrm{e}^x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\mathrm{e}^x \\cdot \\frac{\\mathrm{e}^{\\tan x-x}-1}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\tan x-x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sec ^2 x-1}{3 x^2}=\\frac{1}{3}$,\r\n\r\n得 $\\mathrm{e}^{\\tan x}-\\mathrm{e}^x \\sim \\dfrac{1}{3} x^3$, 故 $n=3$, 应选 (C)",
+      "wrong_options": {
+        "A": "误当一阶：漏了 e^{tanx−x}−1~tanx−x 且 tanx−x 是三阶而非一阶",
+        "B": "误取二阶：忽略 tanx−x 的最低次是 x³",
+        "D": "误取四阶：把 tanx−x~x³/3 的阶数记高了一次"
+      },
+      "pitfalls": [
+        "e^{tanx}−e^x=e^x(e^{tanx−x}−1)~tanx−x",
+        "tanx−x~x³/3 是三阶无穷小，故 n=3"
+      ],
+      "key_point": "tan x−x~x³/3，同阶无穷小的 n=3。"
+    },
+    {
+      "id": 1501,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $y=f(x)$ 对一切 $x$ 满足 $x f^{\\prime \\prime}(x)+3 x\\left[f^{\\prime}(x)\\right]^2=1-\\mathrm{e}^{-x}$, 若 $f^{\\prime}\\left(x_0\\right)=0\\left(x_0 \\neq 0\\right)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f\\left(x_0\\right)$ 是 $f(x)$ 的极大值",
+        "B": "$f\\left(x_0\\right)$ 是 $f(x)$ 的极小值",
+        "C": "$\\left(x_0, f\\left(x_0\\right)\\right)$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$f\\left(x_0\\right)$ 不是 $f(x)$ 的极值, $\\left(x_0, f\\left(x_0\\right)\\right)$ 不是曲线 $y=f(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "将 $x_0$ 代入 $x f^{\\prime \\prime}(x)+3 x\\left[f^{\\prime}(x)\\right]^2=1-\\mathrm{e}^{-x}$, \r\n\r\n得 $f^{\\prime \\prime}(x_0)=\\dfrac{1-\\mathrm{e}^{-x_0}}{x_0}$.\r\n\r\n当 $x_0<0$ 时, 由 $\\mathrm{e}^{-x_0}>1$, \r\n\r\n得 $f^{\\prime \\prime}\\left(x_0\\right)>0$; \r\n\r\n当 $x_0>0$ 时, 由 $\\mathrm{e}^{-x_0}<1$, \r\n\r\n得 $f^{\\prime \\prime}\\left(x_0\\right)>0$, \r\n\r\n故 $x=x_0$ 为 $f(x)$ 的极小值点, 应选 (B)",
+      "wrong_options": {
+        "A": "误判极大值：把 f″(x₀) 的符号看反",
+        "C": "误判拐点：拐点需 f″=0，而此处 f″(x₀)>0",
+        "D": "误判非极值：f″(x₀)>0 明确给出极小值"
+      },
+      "pitfalls": [
+        "f′(x₀)=0 代入得 f″(x₀)=(1−e^{−x₀})/x₀",
+        "无论 x₀>0 还是 x₀<0，(1−e^{−x₀})/x₀>0 恒成立，故必为极小值"
+      ],
+      "key_point": "f″(x₀)=(1−e^{−x₀})/x₀>0，f(x₀) 为极小值。"
+    },
+    {
+      "id": 1502,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $g(x)=\\left\\{\\begin{array}{ll}2-x, & x \\leqslant 0 \\\\ x+2, & x>0\\end{array}\\right.\\\\\r\nf(x)=\\left\\{\\begin{array}{ll}x^2, & x<0 \\\\ -x, & x \\geqslant 0\\end{array}\\right.$ 则 $g[f(x)]=(\\quad)$",
+      "options": {
+        "A": "$\\left\\{\\begin{array}{l}2+x^2, &x<0 \\\\ 2-x, &x \\geqslant 0\\end{array}\\right.$",
+        "B": "$\\left\\{\\begin{array}{l}2-x^2, &x<0 \\\\ 2+x, &x \\geqslant 0\\end{array}\\right.$",
+        "C": "$\\left\\{\\begin{array}{l}2-x^2, &x<0 \\\\ 2-x, &x \\geqslant 0\\end{array}\\right.$",
+        "D": "$\\left\\{\\begin{array}{l}2+x^2, &x<0 \\\\ 2+x, &x \\geqslant 0\\end{array}\\right.$"
+      },
+      "answer": "D",
+      "analysis": "$g[f(x)]=\\left\\{\\begin{array}{l}2-f(x), f(x) \\leqslant 0 \\\\ f(x)+2, f(x)>0 \\end{array}\\right.\\\\f(x) \\leqslant 0$ \r\n等价于 $x \\geqslant 0$ 且 $f(x)=-x;\\\\\r\nf(x)>0$ 等价于 $x<0$ 且 $f(x)=x^2$,\r\n\r\n故 $g[f(x)]=\\left\\{\\begin{array}{ll}2+x, & x \\geqslant 0 \\\\ x^2+2, & x<0\\end{array}\\right.$ 应选(D)",
+      "wrong_options": {
+        "A": "x≥0 段误取 2−x（把 f=−x≤0 代 g 时符号算错，应 2−(−x)=2+x）",
+        "B": "x<0 段误取 2−x²（f=x²>0 应代 g 的 t+2 分支得 x²+2）",
+        "C": "两段都取错，符号处理均有误"
+      },
+      "pitfalls": [
+        "x<0 时 f=x²>0 走 g 的 x+2 分支得 x²+2；x≥0 时 f=−x≤0 走 g 的 2−x 分支得 2+x",
+        "关键看 f(x) 落在 g 的哪一段，不是看 x 的符号"
+      ],
+      "key_point": "g[f(x)]=x²+2 (x<0)、2+x (x≥0)。"
+    },
+    {
+      "id": 1503,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow-\\infty} \\frac{\\sqrt{4 x^2+x-1}+x+1}{\\sqrt{x^2+\\sin x}}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow-\\infty} \\frac{\\sqrt{4 x^2+x-1}+x+1}{\\sqrt{x^2+\\sin x}}\\\\\r\n=\\lim _{x \\rightarrow-\\infty} \\frac{x}{\\sqrt{x^2+\\sin x}} \\cdot \\frac{\\sqrt{4 x^2+x-1}+x+1}{x} \\\\\r\n=\\lim _{x \\rightarrow-\\infty} \\frac{1}{-\\sqrt{1+\\frac{1}{x^2} \\sin x}} \\cdot \\lim _{x \\rightarrow \\infty} \\frac{-\\sqrt{4+\\frac{1}{x}-\\frac{1}{x^2}}+1+\\frac{1}{x}}{1}=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x→−∞ 时 √(4x²+…)=−2x√(4+…)、√(x²+…)=−x√(1+…)，根号外提 −x",
+        "把 √x²=x（漏负号）会得错误符号，结果应为 1"
+      ],
+      "key_point": "x→−∞ 提 −x，分子分母同除，极限 1。"
+    },
+    {
+      "id": 1504,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由 $\\left\\{\\begin{array}{l}x=\\arctan t \\\\ 2 y-t y^2+\\mathrm{e}^{t}=5\\end{array}\\right.$ 所确定, 求 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\left(\\mathrm{e}^t-y^2\\right)\\left(1+t^2\\right)}{2(t y-1)}$",
+      "analysis": "$\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\dfrac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}, \\dfrac{\\mathrm{d} x}{\\mathrm{d} t}=\\dfrac{1}{1+t^2},\\\\ 2 y-t y^2+\\mathrm{e}^t=5$ 两边对 $t$ 求导, 得 \r\n\r\n$2 \\dfrac{\\mathrm{d} y}{\\mathrm{d} t}-y^2-2 t y \\dfrac{\\mathrm{d} y}{\\mathrm{d} t}+\\mathrm{e}^t=0$,\r\n\r\n解得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} t}=\\frac{\\mathrm{e}^t-y^2}{2(t y-1)}$,\r\n\r\n故 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\left(\\mathrm{e}^t-y^2\\right)\\left(1+t^2\\right)}{2(t y-1)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "2y−ty²+e^t=5 中 y=y(t)，对 t 求导时 ty² 用乘积法则",
+        "dx/dt=1/(1+t²)，最终乘 (1+t²)"
+      ],
+      "key_point": "dy/dt=(e^t−y²)/[2(ty−1)]，乘 (1+t²) 得 dy/dx。"
+    },
+    {
+      "id": 1505,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int \\mathrm{e}^{2 x}(\\tan x+1)^2 \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\mathrm{e}^{2 x} \\tan x+C$",
+      "analysis": "$\\displaystyle \\int \\mathrm{e}^{2 x}(\\tan x+1)^2 \\mathrm{d} x=\\int \\mathrm{e}^{2 x}\\left(\\sec ^2 x+2 \\tan x\\right) \\mathrm{d} x\\\\\r\n=\\int \\mathrm{e}^{2 x} \\mathrm{d}(\\tan x)+2 \\int \\mathrm{e}^{2 x} \\tan x \\mathrm{d} x=\\mathrm{e}^{2 x} \\tan x+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(tan x+1)²=sec²x+2tan x（用 tan²+1=sec²）",
+        "e^{2x}sec²x=d(e^{2x}tan x)−2e^{2x}tan x，恰好与 2e^{2x}tan x 抵消凑成全导数"
+      ],
+      "key_point": "被积恰为 (e^{2x}tan x)′，积分 e^{2x}tan x+C。"
+    },
+    {
+      "id": 1506,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\left(3 x^2+2 x y-y^2\\right) \\mathrm{d} x+\\left(x^2-2 x y\\right) \\mathrm{d} y=0$ 的通解",
+      "options": {},
+      "answer": "$x^3+x^2 y-x y^2=C (C$ 为任意常数)",
+      "analysis": "方法一\r\n令 $P=3 x^2+2 x y-y^2, Q=x^2-2 x y$,\r\n\r\n因为 $\\displaystyle \\frac{\\partial Q}{\\partial x}=\\frac{\\partial P}{\\partial y}=2 x-2 y$, \r\n\r\n所以原方程为全微分方程.\r\n\r\n令 $\\displaystyle\r\nu(x, y) \\\\\r\n=\\int_{(0,0)}^{(x+y)}\\left(3 x^2+2 x y-y^2\\right) \\mathrm{d} x+\\left(x^2-2 x y\\right) \\mathrm{d} y \\\\\r\n=\\int_0^x 3 x^2 \\mathrm{d} x+\\int_0^y\\left(x^2-2 x y\\right) \\mathrm{d} y=x^3+x^2 y-x y^2$,\r\n\r\n故原方程的通解为 $x^3+x^2 y-x y^2=C (C$ 为任意常数)\r\n\r\n方法二\r\n\r\n原方程化为 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{3 x^2+2 x y-y^2}{2 x y-x^2}$, \r\n\r\n或 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{3+2\\left(\\frac{y}{x}\\right)-\\left(\\frac{y}{x}\\right)^2}{2\\left(\\frac{y}{x}\\right)-1}$,\r\n\r\n令 $\\displaystyle u=\\frac{y}{x}$, \r\n\r\n则 $\\displaystyle u+x \\frac{\\mathrm{d} u}{\\mathrm{d} x}=\\frac{3+2 u-u^2}{2 u-1}$, \r\n\r\n整理得 $\\displaystyle \\frac{2 u-1}{u^2-u-1} \\mathrm{d} u+\\frac{3 \\mathrm{d} x}{x}=0$,\r\n\r\n积分得 $\\ln \\left(u^2-u-1\\right)+\\ln x^1=\\ln C$, \r\n\r\n即 $x y^2-x^2 y-x^3=C ( C$ 为任意常数 )",
+      "wrong_options": {},
+      "pitfalls": [
+        "∂P/∂y=∂Q/∂x=2x−2y，是全微分方程（数二可按齐次方程 u=y/x 处理）",
+        "凑原函数 u(x,y)=x³+x²y−xy²，通解为其等于常数"
+      ],
+      "key_point": "隐式通解 x³+x²y−xy²=C。"
+    },
+    {
+      "id": 1507,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $y_1=x \\mathrm{e}^x+\\mathrm{e}^{2 x}, y_2=x \\mathrm{e}^x+\\mathrm{e}^{-x}, y_3=x \\mathrm{e}^x+\\mathrm{e}^{2 x}-\\mathrm{e}^{-x}$ 是某二阶线性非齐次微分方程的三个解, 求此微分方程",
+      "options": {},
+      "answer": "$y^{\\prime \\prime}-y^{\\prime}-2 y=(1-2 x) \\mathrm{e}^x$",
+      "analysis": "设所求的微分方程为 $y^{\\prime \\prime}+a y^{\\prime}+b y=f(x)$,\r\n\r\n$y_1-y_3=\\mathrm{e}^{-x}, y_1-y_2=\\mathrm{e}^{2 x}-\\mathrm{e}^{-x}$ \r\n\r\n都是二阶常系数齐次线性微分方程的解,\r\n\r\n显然 $\\mathrm{e}^{2 x}$ 也是二阶常系数齐次线性微分方程的解, \r\n\r\n从而 $\\lambda_1=-1, \\lambda_2=2$, \r\n\r\n于是 $a=-1, b=-2$, 即 $y^{\\prime \\prime}-y^{\\prime}-2 y=f(x)$, \r\n\r\n又 $x \\mathrm{e}^x$ 为该方程的特解, \r\n\r\n代入得 $f(x)=(1-2 x) \\mathrm{e}^x$, \r\n\r\n故所求的微分方程为 $y^{\\prime \\prime}-y^{\\prime}-2 y=(1-2 x) \\mathrm{e}^x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "y₁−y₃=e^{−x}、y₁−y₂=e^{2x}−e^{−x} 是齐次解，得特征根 −1、2",
+        "公共项 xe^x 是特解，代入 y″−y′−2y 定右端 (1−2x)e^x"
+      ],
+      "key_point": "特征根 −1,2 得齐次部分，代特解定右端。"
+    },
+    {
+      "id": 1508,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{rrr}1 & 1 & -1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & -1\\end{array}\\right)$, 且 $\\boldsymbol{A}^2-\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 是 $3$ 阶単位矩阵, 求矩阵 $\\boldsymbol{B}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{lll}0 & 2 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A}^2-\\boldsymbol{A B}=\\boldsymbol{E}$, \r\n\r\n得 $\\boldsymbol{B}=\\left(\\boldsymbol{A}^2-\\boldsymbol{E}\\right) \\boldsymbol{A}^{-1}=\\boldsymbol{A}-\\boldsymbol{A}^{-1}$,\r\n\r\n而 $\\left(\\begin{array}{ccc:ccc}1 & 1 & -1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 & 1 & 0 \\\\ 0 & 0 & -1 & 0 & 0 & 1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc:ccc}1 & 0 & 0 & 1 & -1 & -2 \\\\ 0 & 1 & 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & 0 & 0 & -1\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{A}^{-1}=\\left(\\begin{array}{ccc}1 & -1 & -2 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & -1\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{B}=\\left(\\begin{array}{lll}0 & 2 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "B=(A²−E)A⁻¹=A−A⁻¹，别硬展开 A²",
+        "(A|E) 行变换求 A⁻¹，再作差 A−A⁻¹"
+      ],
+      "key_point": "B=A−A⁻¹，结果为上三角外全零、仅 (1,2)=2,(1,3)=1。"
+    },
+    {
+      "id": 1509,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "$\\lambda$ 取何值时, 方程组 $\\left\\{\\begin{array}{l}2 x_1+\\lambda x_2-x_3=1 \\\\ \\lambda x_1-x_2+x_3=2 \\\\ 4 x_1+5 x_2-5 x_3=-1\\end{array}\\right.$ 无解、有唯一解或有无穷多个解? 并在有无穷多个解时写出方程组的通解",
+      "options": {},
+      "answer": "当 $\\lambda \\neq 1$ 且 $\\displaystyle \\lambda \\neq-\\frac{4}{5}$ 时,方程组有唯一解;\r\n\r\n当 $\\lambda=1$ 时, 方程组有无穷多个解, 通解为 $\\boldsymbol{x}=k\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0\\end{array}\\right)$ ( $k$ 为任意常数);\r\n\r\n当 $\\displaystyle \\lambda=-\\frac{4}{5}$ 时, 方程组无解",
+      "analysis": "$|\\boldsymbol{A}|=\\left|\\begin{array}{ccc}2 & \\lambda & -1 \\\\ \\lambda & -1 & 1 \\\\ 4 & 5 & -5\\end{array}\\right|=(\\lambda-1)(5 \\lambda+4)$\r\n\r\n当 $\\lambda \\neq 1$ 且 $\\displaystyle \\lambda \\neq-\\frac{4}{5}$ 时,方程组有唯一解;\r\n\r\n当 $\\lambda=1$ 时, $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}2 & 1 & -1 & 1 \\\\ 1 & -1 & 1 & 2 \\\\ 4 & 5 & -5 & -1\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}1 & 0 & 0 & 1 \\\\ 0 & 1 & -1 & -1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$, 所以此时方程组有无穷多个解,\r\n\r\n且通解为 $\\boldsymbol{x}=k\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0\\end{array}\\right)$ ( $k$ 为任意常数);\r\n\r\n当 $\\displaystyle \\lambda=-\\frac{4}{5}$ 时, 因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, 所以此时方程组无解",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=(λ−1)(5λ+4)，两个零点分别对应无穷解与无解两种退化",
+        "λ=1 时 r(A)=r(Ā)=2<3 无穷多解；λ=−4/5 时 r(A)≠r(Ā) 无解"
+      ],
+      "key_point": "|A|=(λ−1)(5λ+4)：λ=1 无穷解、λ=−4/5 无解、其余唯一解。"
+    },
+    {
+      "id": 1510,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设曲线 $L$ 的极坐标方程为 $r=r(\\theta), M(r, \\theta)$ 为 $L$ 上任一点, $M_0(2,0)$ 为 $L$ 上一定点. 若极径 $O M_0, O M$ 与曲线 $L$ 所围成的曲边扇形面积值等于 $L$ 上 $M_0 、 M$ 两点间弧长的一半, 求曲线 $L$ 的方程",
+      "options": {},
+      "answer": "$x \\mp \\sqrt{3} y=2$",
+      "analysis": "由题设有面积等于弧长\r\n\r\n$\\displaystyle \\frac{1}{2} \\int_0^\\theta r^2(\\theta) \\mathrm{d} \\theta=\\frac{1}{2} \\int_0^\\theta \\sqrt{r^2(\\theta)+r^{\\prime 2}(\\theta)} \\mathrm{d} \\theta$,\r\n\r\n两边对 $\\theta$ 求导, 得 $r^2=\\sqrt{r^2+r^{\\prime 2}}$,\r\n\r\n即 $\\displaystyle r^{\\prime}= \\pm r \\sqrt{r^2-1}, \\frac{\\mathrm{d} r}{r \\sqrt{r^2-1}}= \\pm \\mathrm{d} \\theta$,\r\n\r\n两边积分得 $-\\arcsin \\dfrac{1}{r}+C= \\pm \\theta$,\r\n\r\n代入条件 $r(0)=2$, 得 $\\displaystyle C=\\frac{\\pi}{6}$.\r\n\r\n故所求曲线 $L$ 的方程为 $\\displaystyle r=\\frac{1}{\\sin \\left(\\frac{\\pi}{6} \\mp \\theta\\right)}$,\r\n\r\n也即 $x \\mp \\sqrt{3} y=2$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "½∫r²dθ=½∫√(r²+r′²)dθ 两边对 θ 求导得 r²=√(r²+r′²)",
+        "分离变量 dr/(r√(r²−1))=±dθ，由 r(0)=2 定常数"
+      ],
+      "key_point": "求导去积分号得 ODE，解得直线 x∓√3 y=2。"
+    },
+    {
+      "id": 1511,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在闭区间 $[0,1]$ 上连续, 在开区间 $(0,1)$ 内大于零, 并满足 $x f^{\\prime}(x)=f(x)+\\dfrac{3 a}{2} x^2$ ($a$ 为常数). 又曲线 $y=f(x)$ 与 $x=1, y=0$ 所围的图形 $S$ 的面积为 $2$ , 求函数 $y=f(x)$, 并问 $a$ 为 何值时, 图形 $S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小",
+      "options": {},
+      "answer": "$5$",
+      "analysis": "由 $\\displaystyle x f^{\\prime}(x)=f(x)+\\frac{3 a}{2} x^2$, \r\n\r\n得 $\\displaystyle f^{\\prime}(x)-\\frac{1}{x} f(x)=\\frac{3 a}{2} x$, \r\n\r\n解得 $\\displaystyle\r\nf(x)\\\\=\\left(\\int \\frac{3 a}{2} x \\mathrm{e}^{\\int-\\frac{1}{x} \\mathrm{d} x} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int-\\frac{1}{x} \\mathrm{d} x}\\\\=C x+\\frac{3 a}{2} x^2$\r\n\r\n再由 $\\displaystyle \\int_0^1\\left(C x+\\frac{3 a}{2} x^2\\right) \\mathrm{d} x=2$, 得 $C=4-a$, \r\n\r\n故 $\\displaystyle f(x)=(4-a) x+\\frac{3 a}{2} x^2$,\r\n\r\n又 $\\displaystyle V(a)=\\pi \\int_0^t\\left[(4-a) x+\\frac{3 a}{2} x^2\\right]^2 \\mathrm{d} x\\\\=\\pi\\left[\\frac{(4-a)^2}{3}+\\frac{3 a(4-a)}{4}+\\frac{9 a^2}{20}\\right]$,\r\n\r\n由 $\\displaystyle V^{\\prime}(a)=\\pi\\left(\\frac{a}{15}+\\frac{1}{3}\\right)=0$ 得 $a=-5$,\r\n\r\n因为 $\\displaystyle V^{\\prime \\prime}(a)=\\frac{\\pi}{15}>0$, \r\n\r\n所以当 $a=-5$ 时, 旋转体的体积最小",
+      "wrong_options": {},
+      "pitfalls": [
+        "方程化 f′−f/x=3a/2·x，解得 f=Cx+(3a/2)x²，由面积=2 定 C=4−a",
+        "V(a) 是 a 的二次函数，V′(a)=0 得 a=−5，V″>0 确为最小"
+      ],
+      "key_point": "f=(4−a)x+(3a/2)x²，V(a) 极小于 a=−5。"
+    },
+    {
+      "id": 1512,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, $\\displaystyle \\varphi(x)=\\int_0^1 f(x t) \\mathrm{d} t$, 且 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=A$ (A 为常数), 求 $\\varphi^{\\prime}(x)$, 并讨论 $\\varphi^{\\prime}(x)$ 在 $x=0$ 处的连续性.",
+      "options": {},
+      "answer": "$\\varphi'(x)=\\dfrac{xf(x)-\\int_0^x f(t)\\,dt}{x^2}\\ (x\\neq0),\\ \\varphi'(0)=\\dfrac{A}{2}$；$\\varphi'(x)$ 在 $x=0$ 处连续",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=A$, 得 $f(0)=0, f^{\\prime}(0)=A$.\r\n当 $x=0$ 时, $\\varphi(0)=0$;\r\n当 $x \\neq 0$ 时, $\\displaystyle \\varphi(x)=\\frac{1}{x} \\int_0^1 f(x t) \\mathrm{d}(x t)=\\frac{\\int_0^x f(t) \\mathrm{d} t}{x}$,\r\n即 $\\varphi(x)= \\begin{cases}0, & x=0, \\\\ \\dfrac{\\int_0^\\pi f(t) \\mathrm{d} t}{x}, & x \\neq 0 .\\end{cases}$\r\n当 $x \\neq 0$ 时, $\\displaystyle \\varphi^{\\prime}(x)=\\frac{x f(x)-\\int_0^x f(t) \\mathrm{d} t}{x^2}$;\r\n当 $x=0$ 时, 由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\varphi(x)-\\varphi(0)}{x}=\\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x^2}=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=\\frac{A}{2}$, 得 $\\displaystyle \\varphi^{\\prime}(0)=\\frac{A}{2}$,\r\n即 $\\varphi^{\\prime}(x)= \\begin{cases}\\dfrac{A}{2}, & x=0, \\\\ \\dfrac{x f(x)-\\int_0^x f(t) \\mathrm{d} t}{x^2}, & x \\neq 0 .\\end{cases}$\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\varphi^{\\prime}(x)=\\lim _{x \\rightarrow 0} \\frac{f(x)}{x}-\\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x^2}=A-\\frac{A}{2}=\\frac{A}{2}=\\varphi^{\\prime}(0)$,\r\n所以 $\\varphi^{\\prime}(x)$ 在 $x=0$ 处连续.",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 u=xt 化 φ(x)=(1/x)∫₀^x f(t)dt，x=0 处 φ(0)=0 需单独定义",
+        "φ′(0) 不能代公式，用定义得 A/2；再验 lim_{x→0}φ′(x)=A/2 才连续"
+      ],
+      "key_point": "φ′(x)=[xf(x)−∫₀^x f]/x²，φ′(0)=A/2，且在 0 处连续。"
+    },
+    {
+      "id": 1513,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "就 $k$ 的不同取值情况, 确定方程 $\\displaystyle x-\\frac{\\pi}{2} \\sin x=k$ 在 $\\displaystyle \\left(0, \\frac{\\pi}{2}\\right)$ 内根的个数, 并证明你的结论",
+      "options": {},
+      "answer": "当 $k<y_0$ 或 $k \\geqslant 0$ 时, 原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内没有根;\r\n\r\n当 $k=y_0$ 时, 原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内有唯一根 $x_0$;\r\n\r\n当 $k \\in\\left(y_0, 0\\right)$ 时, 原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内恰好有两个不同的根",
+      "analysis": "设 $f(x)=x-\\dfrac{\\pi}{2} \\sin x$, \r\n\r\n则 $f(x)$ 在 $\\displaystyle \\left[0, \\frac{\\pi}{2}\\right]$ 上连续.\r\n\r\n令 $f^{\\prime}(x)=1-\\dfrac{\\pi}{2} \\cos x=0$, \r\n\r\n得 $f(x)$ 在 $\\displaystyle \\left(0, \\frac{\\pi}{2}\\right)$ 内的唯一驻点 $\\displaystyle x_0=\\arccos \\frac{2}{\\pi}$.\r\n\r\n由于当 $x \\in\\left(0, x_0\\right)$ 时, $f^{\\prime}(x)<0$, \r\n\r\n当 $x \\in\\left(x_0, \\dfrac{\\pi}{2}\\right)$ 时, $f^{\\prime}(x)>0$,\r\n\r\n所以 $f(x)$ 在 $\\left[0, x_0\\right]$ 上单调减少, \r\n\r\n在 $\\left[x_0, \\dfrac{\\pi}{2}\\right]$ 上单调增加.\r\n\r\n因此 $x_0$ 是 $f(x)$ 在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内的唯一最小值点, \r\n\r\n最小值为 $y_0=f\\left(x_0\\right)=x_0-\\dfrac{\\pi}{2} \\sin x_0$.\r\n\r\n又因 $f(0)=f\\left(\\dfrac{\\pi}{2}\\right)=0$, \r\n\r\n故在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内 $f(x)$ 的取值范围为 $\\left[y_0, 0\\right)$.\r\n\r\n故当 $k<y_0$ 或 $k \\geqslant 0$ 时, \r\n\r\n原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内没有根;\r\n\r\n当 $k=y_0$ 时, 原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内有唯一根 $x_0$;\r\n\r\n当 $k \\in\\left(y_0, 0\\right)$ 时, 原方程在 $\\left(0, x_0\\right)$ 和 $\\left(x_0, \\dfrac{\\pi}{2}\\right)$ 内各恰有一根,\r\n\r\n即原方程在 $\\left(0, \\dfrac{\\pi}{2}\\right)$ 内恰好有两个不同的根",
+      "wrong_options": {},
+      "pitfalls": [
+        "唯一驻点 x₀=arccos(2/π) 是最小值点，最小值 y₀=f(x₀)<0",
+        "端点 f(0)=f(π/2)=0，值域 [y₀,0)，据此按 k 分三种情形数根"
+      ],
+      "key_point": "值域 [y₀,0)：k=y₀ 一根、y₀<k<0 两根、其余无根。"
+    },
+    {
+      "id": 2044,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}=$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{8}$",
+      "analysis": "对于 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$,\r\n\r\n由于 $\\displaystyle\\lim _{x \\rightarrow+\\infty} x^2 \\cdot \\frac{1}{x^2+4 x+8}=1$,\r\n\r\n故反常积分 $\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 与 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 同敛散, \r\n\r\n且因 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 收敛可知:\r\n\r\n$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 收敛\r\n\r\n$\\displaystyle \r\n \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8} \\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{(x+2)^2+4}\\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d}(x+2)}{(x+2)^2+4} \\\\\r\n=\\left.\\frac{1}{2} \\arctan \\frac{x+2}{2}\\right|_0 ^{+\\infty} \\\\\r\n=\\frac{1}{2}\\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right) \\\\\r\n=\\frac{\\pi}{8}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x²+4x+8=(x+2)²+4，积分得 (1/2)arctan((x+2)/2)",
+        "上限 x→+∞ 时 arctan→π/2，下限代 x=0 得 arctan1=π/4，差乘 1/2 得 π/8"
+      ],
+      "key_point": "配方后 (1/2)[π/2−π/4]=π/8。"
+    }
+  ]
+}

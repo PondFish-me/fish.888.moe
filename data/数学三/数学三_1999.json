@@ -1,0 +1,412 @@
+{
+  "paper": "数学三",
+  "year": 1999,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1017,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是连续函数, $F(x)$ 是 $f(x)$ 的原函数, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $f(x)$ 是奇函数时, $F(x)$ 必是偶函数",
+        "B": "当 $f(x)$ 是偶函数时, $F(x)$ 必是奇函数",
+        "C": "当 $f(x)$ 是周期函数时, $F(x)$ 必是周期函数",
+        "D": "当 $f(x)$ 是单调增函数时, $F(x)$ 必是单调增函数"
+      },
+      "answer": "A",
+      "analysis": "若 $f(x)$ 是奇函数, $\\displaystyle F(x)=\\int_a^x f(t) \\mathrm{d} t$,\r\n\r\n则 $\\displaystyle\r\nF(-x) =\\int_a^{-x} f(t) \\mathrm{d} t\\\\\r\n \\stackrel{t=-u}{=} \\int_{-a}^x f(-u)(-\\mathrm{d} u)\\\\\r\n=\\int_{-a}^x f(u) \\mathrm{d} u \\\\\r\n=\\int_{-a}^a f(u) \\mathrm{d} u+\\int_a^x f(u) \\mathrm{d} u\\\\\r\n=\\int_a^x f(u) \\mathrm{d} u=F(x)$,\r\n\r\n即 $F(x)$ 为偶函数, 应选 (A)",
+      "wrong_options": {
+        "B": "误以为偶函数的原函数必奇——只有 ∫₀ˣf 那一支为奇，加任意常数即破坏奇性（原函数不唯一）。",
+        "C": "误以为周期函数原函数必周期——被积周期函数若均值不为零，原函数含线性项而非周期。",
+        "D": "混淆 f 单增与 F 单增——F 单增取决于 f 的正负号（F'=f≥0），与 f 是否单增无关。"
+      },
+      "pitfalls": [
+        "\"必是\"须对全体原函数成立；奇函数原函数皆偶（偶+常数仍偶），偶函数仅特定原函数才奇",
+        "F'=f 决定 F 的单调性，f 单增并不给出 f≥0"
+      ],
+      "key_point": "奇函数的任一原函数都是偶函数（选 A）；B/C/D 均有反例。"
+    },
+    {
+      "id": 1029,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}a & -1 & c \\\\ 5 & b & 3 \\\\ 1-c & 0 & -a\\end{array}\\right)$, 其行列式 $|\\boldsymbol{A}|=-1$, 又 $\\boldsymbol{A}$ 的伴随矩阵 $\\boldsymbol{A} ^*$ 有一个特征值 $\\lambda_{0}$, 属于 $\\lambda_{0}$ 的一个特征向量为 $\\boldsymbol{\\alpha}=(-1,-1,1)^{\\mathrm{T}}$, 求 $a, b, c$ 及 $\\lambda_{0}$ 的值",
+      "options": {},
+      "answer": "$a=2, b=-3, c=2, \\lambda_0=1$",
+      "analysis": "由 $\\left(\\begin{array}{ccc}a & -1 & c \\\\ 5 & b & 3 \\\\ 1-c & 0 & -a\\end{array}\\right)\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)=\\mu\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)$ \r\n\r\n得 $\\left\\{\\begin{array}{l}-a+1+c=-\\mu, \\\\ -b-2=-\\mu, \\\\ c-1-a=\\mu,\\end{array}\\right.$\r\n\r\n解得 $a=c, \\mu=-1, b=-3$;\r\n\r\n再由 $|\\boldsymbol{A}|=\\left|\\begin{array}{ccc}a & -1 & a \\\\ 5 & -3 & 3 \\\\ 1-a & 0 & -a\\end{array}\\right|=-1$ 得 $a=2, c=2$,\r\n\r\n$\\lambda_0=\\frac{|\\boldsymbol{A}|}{\\mu}=1$, 故 $a=2, b=-3, c=2, \\lambda_0=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A*α=λ₀α 应先转成 Aα=(|A|/λ₀)α=μα，α 也是 A 的特征向量",
+        "由 Aα=μα 三分量方程解出 a=c、μ=-1、b=-3，再用 |A|=-1 定 a=c=2，λ₀=|A|/μ=1"
+      ],
+      "key_point": "借 A*=|A|A⁻¹ 转成 Aα=μα 求解，得 a=2,b=-3,c=2,λ₀=1。"
+    },
+    {
+      "id": 1905,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 有一个原函数 $\\displaystyle \\frac{\\sin x}{x}$, 则 $\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi x f^{\\prime}(x) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{4}{\\pi}-1$",
+      "analysis": "由 $\\displaystyle f(x)=\\left(\\frac{\\sin x}{x}\\right)^{\\prime}=\\frac{x \\cos x-\\sin x}{x^2}$,\r\n得\r\n\r\n$\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi x f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=\\left.x f(x)\\right|_{\\frac{\\pi}{2}} ^\\pi-\\int_{\\frac{\\pi}{2}}^\\pi f(x) \\mathrm{d} x \\\\\r\n=\\left.\\frac{x \\cos x-\\sin x}{x}\\right|_{\\frac{\\pi}{2}} ^\\pi-\\left.\\frac{\\sin x}{x}\\right|_{\\frac{\\pi}{2}} ^\\pi=\\frac{4}{\\pi}-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f 是 sinx/x 的导数，f(x)=(x cosx-sinx)/x²",
+        "分部 ∫xf'dx=[xf]-∫f dx，∫f dx 就等于原函数 sinx/x"
+      ],
+      "key_point": "∫xf'dx=[xf]-[sinx/x]|_{π/2}^{π}=4/π-1。"
+    },
+    {
+      "id": 1906,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{2}\\right)^{n-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty} n x^{n-1}(-1<x<1)$, 由逐项可导性得\r\n\r\n$\\displaystyle S(x)=\\sum_{n=1}^{\\infty}\\left(x^n\\right)^{\\prime}\\\\\r\n=\\left(\\sum_{n=1}^{\\infty} x^n\\right)^{\\prime}\\\\\r\n=\\left(\\frac{x}{1-x}\\right)^{\\prime}=\\frac{1}{(1-x)^2}$\r\n\r\n于是 $\\displaystyle \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{2}\\right)^{n-1}=S\\left(\\frac{1}{2}\\right)=4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Σnx^{n-1} 是 Σx^n=x/(1-x) 逐项求导，和函数 1/(1-x)²",
+        "代 x=1/2 得 1/(1/2)²=4"
+      ],
+      "key_point": "和函数 1/(1-x)²，代 x=1/2 得 4。"
+    },
+    {
+      "id": 1907,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$, 而 $n \\geqslant 2$ 为正整数, 则 $\\boldsymbol{A}^n-2 \\boldsymbol{A}^{n-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\boldsymbol{O}$",
+      "analysis": "由 $\\boldsymbol{A}^2\\\\\r\n=\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{lll}2 & 0 & 2 \\\\ 0 & 4 & 0 \\\\ 2 & 0 & 2\\end{array}\\right)=2 \\boldsymbol{A}$,\r\n\r\n得 $\\boldsymbol{A}^{n}=2^{n-1} \\boldsymbol{A}, \\\\\r\n\\boldsymbol{A}^{n-1}=2^{n-2} \\boldsymbol{A}$, \r\n\r\n故 $\\boldsymbol{A}^{n}-2 \\boldsymbol{A}^{n-1}=\\boldsymbol{O}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先算出 A²=2A 这个关键关系",
+        "A^n=2^{n-1}A，A^{n-1}=2^{n-2}A，故 A^n-2A^{n-1}=2^{n-1}A-2^{n-1}A=O"
+      ],
+      "key_point": "A²=2A 归纳 A^n=2^{n-1}A，A^n-2A^{n-1}=O。"
+    },
+    {
+      "id": 1908,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "在天平上重复称量一重为 $a$ 的物品, 假设各次称量结果相互独立且同服从正态分布 $N\\left(a, 0.2^2\\right)$. 若以 $\\bar{X_n}$ 表示 $n$ 次称量结果的算术平均值, 则为使 $P\\left\\{\\left|\\bar{X_n}-a\\right|<0.1\\right\\} \\geqslant 0.95, n$ 的最小值应不小于自然数 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$16$",
+      "analysis": "因为 $\\bar{X_n} \\sim N\\left(a, \\dfrac{0.04}{n}\\right)$, \r\n\r\n所以 $\\dfrac{\\bar{X_n}-a}{\\frac{0.2}{\\sqrt{n}}} \\sim N(0,1)$.\r\n\r\n由 $P\\left\\{\\left|\\bar{X_n}-a\\right|<0.1\\right\\}\\\\\r\n=P\\left\\{\\left|\\dfrac{\\bar{X_n}-a}{\\frac{0.2}{\\sqrt{n}}}\\right|<\\dfrac{\\sqrt{n}}{2}\\right\\}\\\\\r\n=\\Phi\\left(\\dfrac{\\sqrt{n}}{2}\\right)-\\Phi\\left(-\\dfrac{\\sqrt{n}}{2}\\right)\\\\\r\n=2 \\Phi\\left(\\dfrac{\\sqrt{n}}{2}\\right)-1 \\geqslant 0.95$\r\n\r\n得 $\\Phi\\left(\\dfrac{\\sqrt{n}}{2}\\right) \\geqslant 0.975$, \r\n\r\n而 $\\Phi(1.96)=0.975$,\r\n\r\n所以 $\\dfrac{\\sqrt{n}}{2} \\geqslant 1.96$, 于是 $n=16$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X̄_n 方差是 0.2²/n=0.04/n，标准差 0.2/√n",
+        "2Φ(√n/2)-1≥0.95⇒Φ≥0.975⇒√n/2≥1.96⇒n≥15.37，取 n=16"
+      ],
+      "key_point": "√n/2≥1.96 得 n≥15.37，最小自然数 n=16。"
+    },
+    {
+      "id": 1909,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X_{i j}(i, j=1,2, \\cdots, n ; n \\geqslant 2)$ 独立同分布, $E\\left(X_{i j}\\right)=2$, 则行列式 $Y=\\left|\\begin{array}{cccc}X_{11} & X_{12} & \\cdots & X_{1 n} \\\\ X_{21} & X_{22} & \\cdots & X_{2 n} \\\\ \\vdots & \\vdots & & \\vdots \\\\ X_{n 1} & X_{n 2} & \\cdots & X_{n n}\\end{array}\\right|$ 的数学期望 $E(Y)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "由行列式的定义, 得\r\n\r\n$\\displaystyle Y=\\sum_{j_1 j_2 \\cdots j_n}(-1)^{\\tau\\left(j_1 j_2 \\cdots j_n\\right)} X_{1 j_1} X_{2 j_2} \\cdots X_{n j_n}$,\r\n\r\n\r\n因为 $X_{i j}(i, j=1,2, \\cdots, n)$ 相互独立,\r\n\r\n所以 $\\displaystyle E(Y) =\\sum_{j_1 j_2 \\cdots j_n}(-1)^{r\\left(j_1 j_2 \\cdots j_n\\right)} E\\left(X_{1 j_1}\\right) E\\left(X_{2 j_2}\\right) \\cdots E\\left(X_{n j_n}\\right) \\\\\r\n=\\left|\\begin{array}{cccc}\r\nE\\left(X_{11}\\right) & E\\left(X_{12}\\right) & \\cdots & E\\left(X_{1 n}\\right) \\\\\r\nE\\left(X_{21}\\right) & E\\left(X_{22}\\right) & \\cdots & E\\left(X_{2 n}\\right) \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\nE\\left(X_{n 1}\\right) & E\\left(X_{n 2}\\right) & \\cdots & E\\left(X_{n n}\\right)\r\n\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{cccc}\r\n2 & 2 & \\cdots & 2 \\\\\r\n2 & 2 & \\cdots & 2 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n2 & 2 & \\cdots & 2\r\n\\end{array}\\right|=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "独立性让 E(乘积)=乘积 E，E(Y) 变成元素全为 E(X_{ij})=2 的行列式",
+        "各行相同（全 2）的行列式恒为 0"
+      ],
+      "key_point": "E(Y) 化为元素全为 2 的行列式，因各行相同故为 0。"
+    },
+    {
+      "id": 1910,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x, y)$ 连续, 且 $\\displaystyle f(x, y)=x y+\\iint\\limits_D f(u, v) \\mathrm{d} u \\mathrm{d} v$, 其中 $D$ 是由 $y=0, y=x^2, x=1$ 所围区域, 则 $f(x, y)$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$x y$",
+        "B": "$2 x y$",
+        "C": "$x y+\\dfrac{1}{8}$",
+        "D": "$x y+1$"
+      },
+      "answer": "C",
+      "analysis": "令 $\\displaystyle \\iint\\limits_D f(u, v) \\mathrm{d} u \\mathrm{d} v=A$, 则 $f(x, y)=x y+A$, \r\n\r\n两边在区域 $D$ 上积分得\r\n\r\n$\\displaystyle\r\n\\iint\\limits_D f(x, y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_D(x y+A) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^{x^2}(x y+A) \\mathrm{d} y \\\\\r\n=\\int_0^1\\left(\\frac{x^5}{2}+A x^2\\right) \\mathrm{d} x=\\frac{1}{12}+\\frac{A}{3}$,\r\n\r\n即 $A=\\dfrac{1}{12}+\\dfrac{A}{3}$, \r\n\r\n于是 $A=\\dfrac{1}{8}$, \r\n\r\n故 $f(x, y)=x y+\\dfrac{1}{8}$, 应选 (C)",
+      "wrong_options": {
+        "A": "忽略了常数项 A，误以为 A=0",
+        "B": "把 f 误当 2xy，系数处理错",
+        "D": "A 解成 1，积分方程算错"
+      },
+      "pitfalls": [
+        "D 是 y=0,y=x²,x=1 围成，∫₀¹dx∫₀^{x²}dy",
+        "建方程 A=1/12+A/3 解得 A=1/8，f=xy+1/8"
+      ],
+      "key_point": "A=∫∫_D(xy+A)=1/12+A/3⇒A=1/8，f=xy+1/8，选 C。"
+    },
+    {
+      "id": 1911,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量 $\\boldsymbol{\\beta}$ 可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 线性表示, 但不能由向量组 (I): $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_{m-1}$ 线性表示, 记向量组 (II) : $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_{m-1}, \\boldsymbol{\\beta}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_m$ 不能由 (I) 线性表示, 也不能由 (II) 线性表示",
+        "B": "$\\boldsymbol{\\alpha}_m$ 不能由 (I) 线性表示, 但可由 (II) 线性表示",
+        "C": "$\\boldsymbol{\\alpha}_m$ 可由 (I) 线性表示, 也可由 (II) 线性表示",
+        "D": "$\\boldsymbol{\\alpha}_m$ 可由 (I) 线性表示, 但不可由 (II) 线性表示"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\boldsymbol{\\beta}$ 可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 线性表示,\r\n\r\n所以存在常数 $k_1, k_2, \\cdots, k_m$,\r\n\r\n使得 $\\boldsymbol{\\beta}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_m \\boldsymbol{\\alpha}_m$,\r\n\r\n又因为 $\\boldsymbol{\\beta}$ 不可由 (I): $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_{m-1}$ 线性表示,\r\n\r\n所以 $k_m \\neq 0$, 于是\r\n\r\n$$\r\n\\boldsymbol{\\alpha}_m=-\\frac{k_1}{k_m} \\boldsymbol{\\alpha}_1-\\frac{k_2}{k_m} \\boldsymbol{\\alpha}_2-\\cdots-\\frac{k_{m-1}}{k_m} \\boldsymbol{\\alpha}_{m-1}+\\frac{1}{k_m} \\boldsymbol{\\beta},\r\n$$\r\n\r\n即 $\\boldsymbol{\\alpha}_m$ 可由 (II) 线性表示;\r\n\r\n若 $\\boldsymbol{\\alpha}_m$ 可由 (I) 线性表示, 则一定有 $\\boldsymbol{\\beta}$ 可由 (I) 线性表示, 矛盾, \r\n\r\n故 $\\boldsymbol{\\alpha}_m$ 可由 (II) 线性表示, 但不能由(I) 线性表示, 应选 (B)",
+      "wrong_options": {
+        "A": "α_m 其实可由 (II) 表示（k_m≠0 可反解），并非都不可",
+        "C": "若 α_m 可由 (I) 表示则 β 也可由 (I) 表示，矛盾",
+        "D": "α_m 可由 (II) 表示，D 说不可由 (II) 错"
+      },
+      "pitfalls": [
+        "β 含 α_m 且 k_m≠0（否则 β 可由前 m-1 个表示），故 α_m 可由 β 与前 m-1 个反解",
+        "若 α_m 可由 (I) 表示会推出 β 可由 (I) 表示，与已知矛盾"
+      ],
+      "key_point": "k_m≠0 使 α_m 可由 (II) 表示，但不可由 (I) 表示，选 B。"
+    },
+    {
+      "id": 1912,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为 $n$ 阶矩阵, 且 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda \\boldsymbol{E}-\\boldsymbol{A}=\\lambda \\boldsymbol{E}-\\boldsymbol{B}$",
+        "B": "$\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 有相同的特征值和特征向量",
+        "C": "$\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 都相似于一个对角矩阵",
+        "D": "对任意常数 $t, t \\boldsymbol{E}-\\boldsymbol{A}$ 与 $t \\boldsymbol{E}-\\boldsymbol{B}$ 相似"
+      },
+      "answer": "D",
+      "analysis": "方法 1: $\\boldsymbol A$ 相似于 $\\boldsymbol B$, 根据矩阵相似的定义, \r\n\r\n则存在可逆阵 $\\boldsymbol P$, 使得 $\\boldsymbol P^{-1} \\boldsymbol {A P}=\\boldsymbol B$, \r\n\r\n则 $\\boldsymbol P^{-1}(t \\boldsymbol E-\\boldsymbol A) \\boldsymbol P=\\boldsymbol P^{-1} t E P-\\boldsymbol P^{-1} \\boldsymbol {A P}=t \\boldsymbol E-\\boldsymbol B$\r\n\r\n根据矩阵相似的定义, 则 $t \\boldsymbol E-\\boldsymbol A$ 相似于 $t \\boldsymbol E-\\boldsymbol B$, 应选(D)\r\n\r\n方法 2: 排除法\r\n\r\n(A) 不成立. 若 $\\lambda \\boldsymbol E-\\boldsymbol A=\\lambda \\boldsymbol E-\\boldsymbol B$, 则 $\\boldsymbol A=\\boldsymbol B$, 而已知只是相似.\r\n\r\n(B) 不成立. $\\boldsymbol A$ 与 $\\boldsymbol B$ 相似, 根据矩阵相似的定义, \r\n\r\n即存在可逆阵, 使得 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\boldsymbol B$,\r\n\r\n从而有 $|\\lambda \\boldsymbol E-\\boldsymbol B|\\\\\r\n=\\left|\\lambda \\boldsymbol E-\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P\\right|\\\\\r\n=\\left|\\lambda \\boldsymbol P^{-1} \\boldsymbol P-\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P\\right|\\left(\\boldsymbol P^{-1} \\boldsymbol P=\\boldsymbol E\\right)\\\\\r\n=\\left|\\boldsymbol P^{-1}(\\lambda \\boldsymbol E) \\boldsymbol P-\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P\\right|\\\\\r\n=\\left|\\boldsymbol P^{-1}(\\lambda \\boldsymbol E-\\boldsymbol A) P\\right|\\\\\r\n=\\left|\\boldsymbol P^{-1}\\right||\\lambda \\boldsymbol E-\\boldsymbol A||\\boldsymbol P| =|\\lambda \\boldsymbol E-\\boldsymbol A|$\r\n\r\n从而, $\\boldsymbol A, \\boldsymbol B$ 有相同特征多项式, 故有相同的特征值.\r\n\r\n若 $\\boldsymbol {A \\xi}=\\lambda \\boldsymbol \\xi$, 在 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\boldsymbol B$ 的两边同时左乘 $\\boldsymbol P$, \r\n\r\n右乘 $\\boldsymbol P^{-1}$, 得 $\\boldsymbol P \\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P \\boldsymbol P^{-1}=\\boldsymbol P \\boldsymbol B \\boldsymbol P^{-1}=\\boldsymbol A$, \r\n\r\n故 $\\boldsymbol P \\boldsymbol B \\boldsymbol P^{-1} \\boldsymbol \\xi=\\boldsymbol {A \\xi}=\\lambda \\boldsymbol \\xi$,\r\n\r\n在上式两边左乘 $\\boldsymbol P^{-1}$, \r\n\r\n得 $\\boldsymbol B\\left(\\boldsymbol P^{-1} \\boldsymbol \\xi\\right)=\\lambda\\left(\\boldsymbol P^{-1} \\boldsymbol \\xi\\right)$,\r\n\r\n根据特征值和特征向量的定义, \r\n\r\n$\\boldsymbol B$ 的属于特征值 $\\lambda$ 的特征向量是 $\\boldsymbol P^{-1} \\boldsymbol \\xi$, \r\n\r\n而 $\\boldsymbol A$ 的属于特征值 $\\lambda$ 的特征向量 $\\boldsymbol \\xi$, 它们并不相同.\r\n\r\n(C)不成立. $\\boldsymbol A, \\boldsymbol B$ 相似时, 也可能它们本身都不相似于对角阵. \r\n\r\n例如 $\\boldsymbol A=\\left(\\begin{array}{ll}0 & 1 \\\\ 0 & 0\\end{array}\\right)$, $\\boldsymbol B=\\left(\\begin{array}{ll}0 & 0 \\\\ 1 & 0\\end{array}\\right)$, \r\n\r\n因存在可逆阵 $\\boldsymbol P=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right)$, \r\n\r\n使得 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right)\\left(\\begin{array}{ll}0 & 1 \\\\ 0 & 0\\end{array}\\right)\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right)=\\left(\\begin{array}{ll}0 & 0 \\\\ 1 & 0\\end{array}\\right)$,\r\n\r\n则根据矩阵相似的定义, 知 $\\boldsymbol A \\sim \\boldsymbol B$, \r\n\r\n但 $\\boldsymbol A, \\boldsymbol B$ 都不相似于对角阵.\r\n\r\n若 $\\boldsymbol A$ 能相似于对角阵, 即 $\\boldsymbol A$ 可相似对角化. \r\n\r\n先求特征值, 特征多项式为 $|\\lambda \\boldsymbol E-\\boldsymbol A|=\\left|\\begin{array}{cc}\r\n\\lambda & -1 \\\\\r\n0 & \\lambda\r\n\\end{array}\\right|=\\lambda^2$\r\n\r\n令 $|\\lambda \\boldsymbol E-\\boldsymbol A|=0$ 得 $\\boldsymbol A$ 的两个特征值 $0$. \r\n\r\n若 $\\boldsymbol A$ 相似于对角阵, 则存在可逆矩阵 $\\boldsymbol P$, \r\n\r\n使得 $\r\n\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\left(\\begin{array}{ll}\r\n0 & \\\\\r\n& 0\r\n\\end{array}\\right)$,\r\n\r\n上式两端同时左乘 $\\boldsymbol P$, 右乘 $\\boldsymbol P^{-1}$, \r\n\r\n得 $\\boldsymbol P \\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P \\boldsymbol P^{-1}=\\boldsymbol A\\\\\r\n=\\boldsymbol P\\left(\\begin{array}{ll}0 & \\\\ & 0\\end{array}\\right) \\boldsymbol P^{-1}=\\left(\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right)$, \r\n\r\n与$\\boldsymbol A=\\left(\\begin{array}{ll}0 & 1 \\\\ 0 & 0\\end{array}\\right)$ 矛盾, 故 $\\boldsymbol A$ 不可相似对角化.\r\n\r\n若 $\\boldsymbol B$ 能相似于对角阵, 即 $\\boldsymbol B$ 可相似对角化. 先求特征值, \r\n\r\n特征多项式为\r\n$|\\lambda \\boldsymbol E-\\boldsymbol B|=\\left|\\begin{array}{cc}\r\n\\lambda & 0 \\\\\r\n-1 & \\lambda\r\n\\end{array}\\right|=\\lambda^2$,\r\n\r\n令 $|\\lambda \\boldsymbol E-\\boldsymbol B|=0$ 得 $\\boldsymbol B$ 的两个特征值 $0$ \r\n\r\n若 $\\boldsymbol B$ 相似于对角阵, 则存在可逆矩阵 $\\boldsymbol P$, \r\n\r\n使得 $\\boldsymbol P^{-1} \\boldsymbol B \\boldsymbol P=\\left(\\begin{array}{ll}\r\n0 & \\\\\r\n& 0\r\n\\end{array}\\right)$,\r\n\r\n上式两端同时左乘 $\\boldsymbol P$, 右乘 $\\boldsymbol P^{-1}$, \r\n\r\n得 $\\boldsymbol P \\boldsymbol P^{-1} \\boldsymbol B \\boldsymbol P \\boldsymbol P^{-1}=\\boldsymbol B=\\boldsymbol P\\left(\\begin{array}{ll}0 & \\\\ & 0\\end{array}\\right) P^{-1}=\\left(\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right)$, \r\n\r\n与 $\\boldsymbol B=\\left(\\begin{array}{ll}0 & 0 \\\\ 1 & 0\\end{array}\\right)$ 矛盾, 故 $\\boldsymbol B$ 不可相似对角化.",
+      "wrong_options": {
+        "A": "λE-A=λE-B 需 A=B，相似不等于相等",
+        "B": "相似只保证特征值相同，特征向量一般不同（差一个 P）",
+        "C": "相似的两矩阵可以都不可对角化（如两个幂零 Jordan 块）"
+      },
+      "pitfalls": [
+        "用同一可逆 P 有 P⁻¹(tE-A)P=tE-B，对任意 t 成立",
+        "相似保特征值不保特征向量；也不保证各自可对角化"
+      ],
+      "key_point": "P⁻¹(tE-A)P=tE-B 恒成立，选 D。"
+    },
+    {
+      "id": 1913,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X_i \\sim \\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ \\frac{1}{4} & \\frac{1}{2} & \\frac{1}{4}\\end{array}\\right)(i=1,2)$, 且满足 $P\\left\\{X_1 X_2=0\\right\\}=1$, 则 $P\\left\\{X_1=X_2\\right\\}$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$\\dfrac{1}{4}$",
+        "C": "$\\dfrac{1}{2}$",
+        "D": "$1$"
+      },
+      "answer": "A",
+      "analysis": "$\\begin{array}{c|ccc|c}\r\n\\hline\r\nX_2 \\diagdown X_1 & -1 & 0 & 1 & P_{i \\cdot} \\\\\r\n\\hline -1 & 0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4} \\\\\r\n\\hline 0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4} & \\dfrac{1}{2}\\\\\r\n\\hline 1 & 0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4}\\\\\r\n\\hline P_{\\cdot j} & \\dfrac{1}{4} &\\dfrac{1}{2} & \\dfrac{1}{4}  & 1\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n由 $P\\left\\{X_1 X_2=0\\right\\}=1$, \r\n\r\n得 $P\\left\\{X_1 X_2 \\neq 0\\right\\}=0$,\r\n\r\n于是 $P\\left\\{X_1=-1, X_2=-1\\right\\}=0, \\\\\r\nP\\left\\{X_1=-1, X_2=1\\right\\}=0,\\\\\r\nP\\left\\{X_1=1, X_2=-1\\right\\}=0, \\\\\r\nP\\left\\{X_1=1, X_2=1\\right\\}=0$\r\n\r\n再由联合分布与边缘分布的关系, 得\r\n\r\n$\\displaystyle P\\left\\{X_1=0, X_2=-1\\right\\}=\\frac{1}{4}, \\\\\r\nP\\left\\{X_1=0, X_2=1\\right\\}=\\frac{1}{4},\\\\\r\nP\\left\\{X_1=-1, X_2=0\\right\\}=\\frac{1}{4}, \\\\\r\nP\\left\\{X_1=1, X_2=0\\right\\}=\\frac{1}{4}, \\\\\r\nP\\left\\{X_1=0, X_2=0\\right\\}=0$,\r\n\r\n因此 $P\\left\\{X_1=X_2\\right\\}=P\\left\\{X_1=-1, X_2=-1\\right\\}\\\\\r\n+P\\left\\{X_1=0, X_2=0\\right\\}+P\\left\\{X_1=1, X_2=1\\right\\}=0$,\r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "对角项 P{X₁=X₂} 全为 0，非 1/4",
+        "C": "误算非对角为对角，实则对角概率为 0",
+        "D": "P{X₁=X₂}=0 而非 1"
+      },
+      "pitfalls": [
+        "X₁X₂=0 几乎必然⇒(±1,±1) 四个联合概率全为 0",
+        "由边缘倒推，对角三点 (-1,-1)(0,0)(1,1) 概率均 0，故 P{X₁=X₂}=0"
+      ],
+      "key_point": "约束使 (0,0) 及 (±1,±1) 概率均为 0，P{X₁=X₂}=0，选 A。"
+    },
+    {
+      "id": 1914,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "曲线 $\\displaystyle y=\\frac{1}{\\sqrt{x}}$ 的切线与 $x$ 轴和 $y$ 轴围成一个图形. 记切点的横坐标为 $a$. 试求切线方程和这个图形的面积. 当切点沿曲线趋于无穷远时, 该面积的变化趋势如何?",
+      "options": {},
+      "answer": "当切点沿 $x$ 轴正方向趋于无穷远时, $\\lim\\limits_{a \\to +\\infty} S_{\\triangle A O B}=+\\infty$,\r\n\r\n当切点沿 $y$ 轴正方向趋于无穷远时, $\\lim\\limits_{a \\to 0^+} S_{\\triangle A O B}=0$",
+      "analysis": "设切点为 $M_0\\left(a, \\dfrac{1}{\\sqrt{a}}\\right)$, \r\n\r\n由 $\\left.y^{\\prime}\\right|_{x=a}=-\\dfrac{1}{2 a \\sqrt{a}}$,\r\n\r\n得切线方程为 $y-\\dfrac{1}{\\sqrt{a}}=-\\dfrac{1}{2 a \\sqrt{a}}(x-a)$\r\n\r\n或 $y=-\\dfrac{x}{2 a \\sqrt{a}}+\\dfrac{3}{2 \\sqrt{a}}$,\r\n\r\n切线与 $x, y$ 轴的交点分别为 $A(3 a, 0), B\\left(0, \\dfrac{3}{2 \\sqrt{a}}\\right)$,\r\n\r\n于是围成的三角形面积为 \r\n\r\n$S_{\\triangle A O B}=\\dfrac{1}{2} \\times 3 a \\times \\dfrac{3}{2 \\sqrt{a}}=\\dfrac{9 \\sqrt{a}}{4}$,\r\n\r\n当切点沿 $x$ 轴正方向趋于无穷远时, $\\lim\\limits_{a \\to +\\infty} S_{\\triangle A O B}=+\\infty$,\r\n\r\n当切点沿 $y$ 轴正方向趋于无穷远时, $\\lim\\limits_{a \\to 0^+} S_{\\triangle A O B}=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "y'|_{x=a}=-1/(2a√a)，切线在 x 轴截距 3a、y 轴截距 3/(2√a)",
+        "面积 S=9√a/4，随 a→+∞ 趋于无穷、a→0⁺ 趋于 0"
+      ],
+      "key_point": "S=9√a/4，切点沿 x 轴远去 S→∞，沿 y 轴远去 S→0。"
+    },
+    {
+      "id": 1915,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y$, 其中 $D$ 是由直线 $x=-2, y=0, y=2$ 以及曲线 $x=-\\sqrt{2 y-y^2}$ 所围成的平面区域",
+      "options": {},
+      "answer": "$4-\\dfrac{\\pi}{2}$",
+      "analysis": "方法一 令 $D_1=\\left\\{(x, y) \\mid-\\sqrt{2 y-y^2} \\leqslant x \\leqslant 0\\right\\},\\\\\r\nD_2=\\{(x, y) \\mid-2 \\leqslant x \\leqslant 0,0 \\leqslant y \\leqslant 2\\}$,\r\n\r\n则 $\\displaystyle \\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y =\\iint\\limits_{D_2} y \\mathrm{d} x \\mathrm{d} y-\\iint_{D_1} y \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n而 $\\displaystyle \\iint\\limits_{D_2} y \\mathrm{d} x \\mathrm{d} y =\\int_{-2}^0 \\mathrm{d} x \\int_0^2 y \\mathrm{d} y=2 \\int_0^2 y \\mathrm{d} y=4$,\r\n\r\n$\\displaystyle \\iint\\limits_{D_1} y \\mathrm{d} x \\mathrm{d} y =\\int_{\\frac{\\pi}{2}}^\\pi \\mathrm{d} \\theta \\int_0^{2 \\sin \\theta} r^2 \\sin \\theta \\mathrm{d} r\\\\\r\n=\\frac{8}{3} \\int_{\\frac{\\pi}{2}}^\\pi \\sin ^4 \\theta \\mathrm{d} \\theta=\\frac{8}{3} \\int_0^{\\frac{\\pi}{2}} \\sin ^4 \\theta \\mathrm{d} \\theta \\\\\r\n=\\frac{8}{3} \\times \\frac{3}{4} \\times \\frac{1}{2} \\times \\frac{\\pi}{2}=\\frac{\\pi}{2}$\r\n\r\n于是 $\\displaystyle \\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y=4-\\frac{\\pi}{2}$\r\n\r\n\r\n方法二\r\n\r\n$\\displaystyle \r\n\\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^2 y \\mathrm{d} y \\int_{-2}^{-\\sqrt{2 y-y^2}} \\mathrm{d} x\\\\\r\n=\\int_0^2 y\\left(2-\\sqrt{2 y-y^2}\\right) \\mathrm{d} y\\\\\r\n=4-\\int_0^2 y \\sqrt{1-(y-1)^2} \\mathrm{d}(y-1) \\\\\r\n=4-\\int_0^2(y-1) \\sqrt{1-(y-1)^2} \\mathrm{d}(y-1)-\\int_0^2 \\sqrt{1-(y-1)^2} \\mathrm{d}(y-1) \\\\\r\n=4-\\int_{-1}^1 t \\sqrt{1-t^2} \\mathrm{d} t-\\int_{-1}^1 \\sqrt{1-t^2} \\mathrm{d} t \\\\\r\n=4-\\int_{-1}^1 \\sqrt{1-t^2} \\mathrm{d} t=4-2 \\int_0^1 \\sqrt{1-t^2} \\mathrm{d} t \\\\\r\n=4-2 \\cdot \\frac{\\pi}{4}=4-\\frac{\\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=-√(2y-y²) 是左半圆 (x+0)²…即 x²+(y-1)²=1 的左半",
+        "用矩形减去半圆部分，半圆部分极坐标积分得 π/2，结果 4-π/2"
+      ],
+      "key_point": "矩形积分 4 减去半圆部分 π/2，得 4-π/2。"
+    },
+    {
+      "id": 1916,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设生产某种产品必须投入两种要素, $x_1$ 和 $x_2$ 分别为两要素的投入量, $Q$ 为产出量, 若生产函数为 $Q=2 x_1^\\alpha x_2^\\beta$, 其中 $\\alpha, \\beta$ 为正常数, 且 $\\alpha+\\beta=1$. 假设两种要素的价格分别为 $p_1$ 和 $p_2$, 试问: 当产出量为 $12$ 时, 两要素各投入多少可以使得投入总费用最小?",
+      "options": {},
+      "answer": "$x_1=6\\left(\\dfrac{p_2 \\alpha}{p_1 \\beta}\\right)^\\beta, x_2=6\\left(\\dfrac{p_1 \\beta}{p_2 \\alpha}\\right)^\\alpha$",
+      "analysis": "总费用为 $C=p_1 x_1+p_2 x_2$, 约束条件为 $2 x_1^a x_2^\\beta=12$,\r\n\r\n拉格朗日函数为 \r\n\r\n$F\\left(x_1, x_2, \\lambda\\right)=p_1 x_1+p_2 x_2+\\lambda\\left(2 x_1^\\alpha x_2^\\beta-12\\right)$,\r\n\r\n分别求导得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nF_{x_1}=p_1+2 \\lambda \\alpha x_1^{\\alpha-1} x_2^\\beta=0, \\\\\r\nF_{x_2}=p_2+2 \\lambda \\beta x_1^\\alpha x_2^{\\beta-1}=0, \\\\\r\nx_1^a x_2^\\beta-6=0,\r\n\\end{array}\\right.$\r\n\r\n第 $1,2$ 两个方程先移项再两边相除, \r\n\r\n得 $\\displaystyle x_2=\\frac{p_1 \\beta}{p_2 \\alpha} x_1$, 代入第 3 个方程, 得\r\n\r\n$x_1=6\\left(\\dfrac{p_2 \\alpha}{p_1 \\beta}\\right)^\\beta, x_2=6\\left(\\dfrac{p_1 \\beta}{p_2 \\alpha}\\right)^\\alpha $\r\n\r\n由问题的实际意义, 当 $x_1=6\\left(\\dfrac{p_2 \\alpha}{p_1 \\beta}\\right)^\\beta, x_2=6\\left(\\dfrac{p_1 \\beta}{p_2 \\alpha}\\right)^\\alpha$ 时, 投入的总费用最少",
+      "wrong_options": {},
+      "pitfalls": [
+        "约束 2x₁^α x₂^β=12 即 x₁^α x₂^β=6",
+        "一二方程相除得 x₂=(p₁β)/(p₂α)·x₁，代回约束用 α+β=1 化简"
+      ],
+      "key_point": "拉格朗日相除得要素比，代入约束得 x₁、x₂ 表达式。"
+    },
+    {
+      "id": 1917,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有微分方程 $y^{\\prime}-2 y=\\varphi(x)$, 其中 $\\varphi(x)=\\left\\{\\begin{array}{ll}2, & x<1 \\\\ 0, & x>1\\end{array}\\right.$ 试求在 $(-\\infty,+\\infty)$ 内的连续函数 $y=y(x)$, 使之在 $(-\\infty, 1)$ 和 $(1,+\\infty)$ 内都满足所给方程, 且满足条件 $y(0)=0$",
+      "options": {},
+      "answer": "$y= \\begin{cases}\r\n\\mathrm{e}^{2 x}-1, & x<1 \\\\\r\n\\left(1-\\mathrm{e}^{-2}\\right) \\mathrm{e}^{2 x}, & x \\geqslant 1\r\n\\end{cases}$",
+      "analysis": "当 $x<1$ 时, 由 $y^{\\prime}-2 y=2$,\r\n\r\n得 $\\displaystyle y=\\left(2 \\int \\mathrm{e}^{\\int-2 \\mathrm{d} x} \\mathrm{d} x+C_1\\right) \\mathrm{e}^{-\\int-2 \\mathrm{d} x}=C_1 \\mathrm{e}^{2 x}-1$\r\n\r\n由 $y(0)=0$, 得 $C_1=1$, 于是当 $x<1$ 时, $y=\\mathrm{e}^{2 x}-1$;\r\n\r\n当 $x>1$ 时, 由 $y^{\\prime}-2 y=0$,\r\n\r\n得 $y=C_2 \\mathrm{e}^{-\\int-2 \\mathrm{d} x}=C_2 \\mathrm{e}^{2 x}$\r\n\r\n因为 $y=y(x)$ 在 $(-\\infty,+\\infty)$ 内连续, \r\n\r\n所以 $\\mathrm{e}^2-1=C_2 \\mathrm{e}^2$, \r\n\r\n于是 $C_2=1-\\mathrm{e}^{-2}$,\r\n\r\n故 $y= \\begin{cases}\r\n\\mathrm{e}^{2 x}-1, & x<1 \\\\\r\n\\left(1-\\mathrm{e}^{-2}\\right) \\mathrm{e}^{2 x}, & x \\geqslant 1\r\n\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x<1 段 y'-2y=2 用 y(0)=0 定 C₁=1；x>1 段 y'-2y=0",
+        "在 x=1 处用连续性 e²-1=C₂e² 定 C₂=1-e⁻²"
+      ],
+      "key_point": "两段分别求解，x=1 连续拼接，得分段解。"
+    },
+    {
+      "id": 1918,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, 且 $\\displaystyle \\int_0^x t f(2 x-t) \\mathrm{d} t=\\frac{1}{2} \\arctan x^2$. 已知 $f(1)=1$, 求 $\\displaystyle \\int_1^2 f(x) \\mathrm{d} x$ 的值",
+      "options": {},
+      "answer": "$\\dfrac{3}{4}$",
+      "analysis": "由 $\\displaystyle \\int_0^x t f(2 x-t) \\mathrm{d} t\\\\\r\n \\stackrel{2 x-t=u}{=} \\int_{2 x}^x(2 x-u) f(u)(-\\mathrm{d} u)\\\\\r\n=\\int_x^{2 x}(2 x-u) f(u) \\mathrm{d} u$,\r\n\r\n得 $\\displaystyle 2 x \\int_x^{2 x} f(u) \\mathrm{d} u-\\int_x^{2 x} u f(u) \\mathrm{d} u=\\frac{1}{2} \\arctan x^2$,\r\n\r\n两边对 $x$ 求导数, 得\r\n\r\n$\\displaystyle 2 \\int_x^{2 x} f(u) \\mathrm{d} u+2 x[2 f(2 x)-f(x)]-4 x f(2 x)+x f(x)=\\frac{x}{1+x^4}$,\r\n\r\n整理得 $\\displaystyle 2 \\int_x^{2 x} f(u) \\mathrm{d} u-x f(x)=\\frac{x}{1+x^4}$.\r\n\r\n取 $x=1$, 得 $\\displaystyle 2 \\int_1^2 f(u) \\mathrm{d} u-f(1)=\\frac{1}{2}$, \r\n\r\n解得 $\\displaystyle \\int_1^2 f(x) \\mathrm{d} x=\\frac{3}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先换元 u=2x-t 把被积变成含 f(u)，出现 2x∫f-∫uf 结构",
+        "两边对 x 求导后整理，取 x=1 用 f(1)=1 解 ∫₁²f=3/4"
+      ],
+      "key_point": "换元求导得 2∫₁²f-f(1)=1/2，解得 ∫₁²f=3/4。"
+    },
+    {
+      "id": 1919,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且 $\\displaystyle f(0)=f(1)=0, f\\left(\\frac{1}{2}\\right)=1$. 试证:\r\n\r\n(1) 存在 $\\displaystyle \\eta \\in\\left(\\frac{1}{2}, 1\\right)$, 使 $f(\\eta)=\\eta$;\r\n\r\n(2) 对任意实数 $\\lambda$, 必存在 $\\xi \\in(0, \\eta)$, 使得 $f^{\\prime}(\\xi)-\\lambda[f(\\xi)-\\xi]=1$",
+      "options": {},
+      "answer": "证明题（详见解析）",
+      "analysis": "(1) 令 $\\varphi(x)=f(x)-x,\\\\\r\n \\varphi(0)=0, \\varphi\\left(\\dfrac{1}{2}\\right)=\\dfrac{1}{2}, \\varphi(1)=-1$.\r\n\r\n因为 $\\varphi\\left(\\dfrac{1}{2}\\right) \\varphi(1)<0$, \r\n\r\n所以存在 $\\eta \\in\\left(\\dfrac{1}{2}, 1\\right)$, 使得 $\\varphi(\\eta)=0$, 即 $f(\\eta)=\\eta$;\r\n\r\n(2) 令 $h(x)=\\mathrm{e}^{-\\lambda x}[f(x)-x]$,\r\n\r\n因为 $h(0)=h(\\eta)=0$, 所以由罗尔定理,\r\n\r\n存在 $\\xi \\in(0, \\eta)$, 使得 $h^{\\prime}(\\xi)=0$.\r\n\r\n而 $h^{\\prime}(x)=\\mathrm{e}^{-\\lambda x}\\left\\{\\left[f^{\\prime}(x)-1\\right]-\\lambda[f(x)-x]\\right\\}$ \r\n\r\n且 $\\mathrm{e}^{-\\lambda x} \\neq 0$,\r\n\r\n所以 $f^{\\prime}(\\xi)-\\lambda[f(\\xi)-\\xi]=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "φ(1/2)=1/2>0、φ(1)=-1<0，零点定理给 η∈(1/2,1)",
+        "第(2)问辅助函数 h=e^{-λx}(f-x)，h(0)=h(η)=0 用罗尔定理"
+      ],
+      "key_point": "φ=f-x 变号得 η；h=e^{-λx}(f-x) 罗尔定理得 ξ。"
+    },
+    {
+      "id": 1922,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设二维随机变量 $(X, Y)$ 在矩形 $G=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant 1\\}$ 上服从均匀分布. 记\r\n\r\n$$\r\nU=\\left\\{\\begin{array}{ll}\r\n0, & X \\leqslant Y \\\\\r\n1, & X>Y\r\n\\end{array} \\quad V= \\begin{cases}0, & X \\leqslant 2 Y \\\\\r\n1, & X>2 Y \\end{cases}\\right.\r\n$$\r\n\r\n(1) 求 $U$ 和 $V$ 的联合分布;\r\n\r\n(2) 求 $U$ 和 $V$ 的相关系数 $\\rho$",
+      "options": {},
+      "answer": "(1) $$\r\n\\begin{array}{c|cc}\r\n\\hline\r\nU \\diagdown V & 0 & 1 \\\\\r\n\\hline 0 & \\dfrac{1}{4} & 0 \\\\\r\n\\hline 1 & \\dfrac{1}{4} & \\dfrac{1}{2} \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) $\\dfrac{1}{\\sqrt{3}}$",
+      "analysis": "因为 $(X, Y)$ 在区域 $G$ 上服从均匀分布, 所以其联合密度函数为\r\n\r\n$f(x, y)= \\begin{cases}\\dfrac{1}{2}, & (x, y) \\in G \\\\ 0, & (x, y) \\notin G\\end{cases}$\r\n\r\n(1) $(U, V)$ 的可能取值为 $(0,0),(0,1),(1,0),(1,1)$.\r\n\r\n$\\displaystyle P\\{U=0, V=0\\}\\\\\r\n=P\\{X \\leqslant Y, X \\leqslant 2 Y\\}=P\\{X \\leqslant Y\\}\\\\\r\n=\\iint\\limits_{x \\leqslant y} f(x, y) \\mathrm{d} x \\mathrm{d} y=\\frac{1}{4} \\\\\r\nP\\{U=0, V=1\\}=P\\{X \\leqslant Y, X>2 Y\\}=0  \\\\\r\nP\\{U=1, V=0\\}=P\\{X>Y, X \\leqslant 2 Y\\}\\\\\r\n=P\\{Y<X \\leqslant 2 Y\\}=\\iint\\limits_{y<x \\leqslant 2 y} f(x, y) \\mathrm{d} x \\mathrm{d} y\r\n=\\frac{1}{4} \\\\\r\nP\\{U=1, V=1\\}=1-\\frac{1}{4}-\\frac{1}{4}=\\frac{1}{2}$\r\n\r\n$$\r\n\\begin{array}{c|cc}\r\n\\hline\r\nU \\diagdown V & 0 & 1 \\\\\r\n\\hline 0 & \\dfrac{1}{4} & 0 \\\\\r\n\\hline 1 & \\dfrac{1}{4} & \\dfrac{1}{2} \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n(2) $\\displaystyle U \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ \\frac{1}{4} & \\frac{3}{4}\\end{array}\\right), \\\\\r\nV \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ \r\n\\frac{1}{2} & \\frac{1}{2}\\end{array}\\right), \\\\\r\nU V \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ \r\n\\frac{1}{2} & \\frac{1}{2}\\end{array}\\right),\\\\\r\nE(U)=\\frac{3}{4}, \\quad E(V)=\\frac{1}{2}, E(U V)=\\frac{1}{2},\\\\\r\nD(U)=E\\left(U^2\\right)-[E(U)]^2=\\frac{3}{16}, \\\\\r\nD(V)=E\\left(V^2\\right)-[E(V)]^2=\\frac{1}{4},\\\\\r\n\\operatorname{Cov}(U, V)=E(U V)-E(U) E(V)=\\frac{1}{8}$,\r\n\r\n故 $U, V$ 的相关系数 $\\rho=\\dfrac{\\operatorname{Cov}(U, V)}{\\sqrt{D(U)} \\cdot \\sqrt{D(V)}}=\\dfrac{1}{\\sqrt{3}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X≤Y 时必有 X≤2Y，故 P{U=0,V=1}=0",
+        "D(U)=3/16、D(V)=1/4、Cov=1/8，ρ=(1/8)/√(3/16·1/4)=1/√3"
+      ],
+      "key_point": "联合分布经几何概率求得，ρ=Cov/√(D(U)D(V))=1/√3。"
+    },
+    {
+      "id": 1923,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, \\cdots, X_9$ 是来自正态总体 $X$ 的简单随机样本, $\\displaystyle Y_1=\\dfrac{1}{6}\\left(X_1+\\cdots+X_6\\right),\\\\\r\nY_2=\\dfrac{1}{3}\\left(X_7+X_8+X_9\\right),\\\\\r\nS^2=\\dfrac{1}{2} \\sum_{i=7}^9\\left(X_i-Y_2\\right)^2, \\\\\r\nZ=\\dfrac{\\sqrt{2}\\left(Y_1-Y_2\\right)}{S}$, 证明: 统计量 $Z$ 服从自由度为 $2$ 的 $t$ 分布",
+      "options": {},
+      "answer": "略",
+      "analysis": "设总体 $X \\sim N\\left(\\mu, \\sigma^2\\right)$, \r\n\r\n则 $Y_1 \\sim N\\left(\\mu, \\dfrac{\\sigma^2}{6}\\right), Y_2 \\sim N\\left(\\mu, \\dfrac{\\sigma^2}{3}\\right)$.\r\n\r\n因为 $Y_1, Y_2$ 相互独立, 所以 $\\displaystyle Y_1-Y_2 \\sim N\\left(0, \\frac{\\sigma^2}{2}\\right)$,\r\n\r\n于是 $\\dfrac{Y_1-Y_2}{\\frac{\\sigma}{\\sqrt{2}}}\r\n=\\dfrac{\\sqrt{2}\\left(Y_1-Y_2\\right)}{\\sigma}\r\n\\sim N(0,1) \\\\\r\n\\dfrac{2 S^2}{\\sigma^2} \\sim \\chi^2(2)$\r\n\r\n因为 $S^2$ 与 $Y_1, Y_2$ 都独立, 所以 $S^2$ 与 $Y_1-Y_2$ 独立,\r\n\r\n于是 $\\dfrac{\\frac{\\sqrt{2}\\left(Y_1-Y_2\\right)}{\\sigma}}{\\sqrt{\\frac{2 S^2}{\\sigma^2} / 2}} \\sim t(2)$, \r\n\r\n即 $\\dfrac{\\sqrt{2}\\left(Y_1-Y_2\\right)}{S} \\sim t(2)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y₁-Y₂~N(0,σ²/2)，标准化后 √2(Y₁-Y₂)/σ~N(0,1)",
+        "2S²/σ²~χ²(2)，且 S² 与 Y₁-Y₂ 独立，比值凑成 t(2)"
+      ],
+      "key_point": "标准正态除以 √(χ²(2)/2) 得 √2(Y₁-Y₂)/S~t(2)。"
+    },
+    {
+      "id": 90403,
+      "paper": "数学三",
+      "year": 1999,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $m\\times n$ 实矩阵, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵, 已知矩阵 $\\boldsymbol{B}=\\lambda\\boldsymbol{E}+\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{A}$, 试证: 当 $\\lambda>0$ 时, 矩阵 $\\boldsymbol{B}$ 为正定矩阵.",
+      "options": {},
+      "answer": "略（见解析）",
+      "analysis": "$\\boldsymbol{B}^{\\mathrm{T}}=\\lambda\\boldsymbol{E}^{\\mathrm{T}}+(\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{A})^{\\mathrm{T}}=\\lambda\\boldsymbol{E}+\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{A}=\\boldsymbol{B}$, 故 $\\boldsymbol{B}$ 为实对称矩阵.\r\n对任意非零向量 $\\boldsymbol{x}\\in\\mathbf{R}^n$, $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{B}\\boldsymbol{x}=\\lambda\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{x}+\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x}=\\lambda\\|\\boldsymbol{x}\\|^2+\\|\\boldsymbol{A}\\boldsymbol{x}\\|^2$.\r\n因 $\\lambda>0$ 且 $\\boldsymbol{x}\\ne\\boldsymbol{0}$, 有 $\\lambda\\|\\boldsymbol{x}\\|^2>0$, 又 $\\|\\boldsymbol{A}\\boldsymbol{x}\\|^2\\ge0$, 故 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{B}\\boldsymbol{x}>0$. 所以 $\\boldsymbol{B}$ 正定.",
+      "wrong_options": {},
+      "pitfalls": [
+        "B^T=λE+(A^TA)^T=B 先证实对称",
+        "x^TBx=λx^Tx+‖Ax‖²，λ>0 且 x≠0 时严格大于 0"
+      ],
+      "key_point": "x^TBx=λ‖x‖²+‖Ax‖²>0（λ>0），故 B 正定。"
+    }
+  ]
+}

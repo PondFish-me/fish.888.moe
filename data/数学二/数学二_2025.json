@@ -1,0 +1,511 @@
+{
+  "paper": "数学二",
+  "year": 2025,
+  "count": 22,
+  "questions": [
+    {
+      "id": 2426,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle f(x)=\\int_0^x \\mathrm{e}^{t^2} \\sin t \\mathrm{d} t, g(x)=\\int_0^x \\mathrm{e}^{t^2} \\mathrm{d} t \\cdot \\sin ^2 x$ ，则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点．",
+        "B": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点．",
+        "C": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查变限积分求导、极值的充分条件与拐点判定。对 $f(x)$，用变限积分求导得 $f'(x)$，再判断 $x=0$ 是否极值点、是否拐点；对 $g(x)$，因其是“变限积分 $\\times\\sin^2x$”的乘积，最快的办法是用等价无穷小定出其在 $0$ 附近的主项（首项幂次），由主项的奇偶/次数直接判断极值与拐点：偶次主项 $\\Rightarrow$ 极值点，奇次（且 $\\ge3$）主项 $\\Rightarrow$ 拐点。\n\n【解答】\n\n**对 $f(x)=\\displaystyle\\int_0^x e^{t^2}\\sin t\\,dt$：**\n\n求导 $f'(x)=e^{x^2}\\sin x$，$f'(0)=0$。当 $t\\to0$，$e^{t^2}\\sin t\\sim t$，故\n$$f(x)=\\int_0^x e^{t^2}\\sin t\\,dt\\sim \\int_0^x t\\,dt=\\frac{x^2}{2}>0\\quad(x\\ne0\\,\\text{附近}),$$\n即 $f(x)$ 在 $x=0$ 处取**极小值**，$x=0$ **是 $f$ 的极值点**。\n\n再看拐点：$f''(x)=e^{x^2}(2x\\sin x+\\cos x)$，$f''(0)=1\\ne0$，二阶导在 $0$ 处不变号，故 $(0,0)$ **不是** $y=f(x)$ 的拐点。于是含“$(0,0)$ 是 $f$ 的拐点”的 C、D 被排除。\n\n**对 $g(x)=\\displaystyle\\Big(\\int_0^x e^{t^2}dt\\Big)\\sin^2x$：**\n\n当 $x\\to0$：$\\displaystyle\\int_0^x e^{t^2}dt\\sim x$，$\\sin^2x\\sim x^2$，故\n$$g(x)\\sim x\\cdot x^2=x^3.$$\n主项为奇次 $x^3$：$g(x)$ 在 $0$ 两侧异号，故 $x=0$ **不是 $g$ 的极值点**（排除 A）；而 $g''(x)$ 的主项 $\\sim 6x$ 在 $0$ 处变号，故 $(0,0)$ **是 $y=g(x)$ 的拐点**。\n\n综合：$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是 $y=g(x)$ 的拐点，故选 **B**。",
+      "wrong_options": {
+        "A": "$g(x)\\sim x^3$ 在 $0$ 两侧异号，$x=0$ 不是 $g$ 的极值点，故 A 错。",
+        "C": "$f''(0)=1\\ne0$，二阶导不变号，$(0,0)$ 不是 $y=f(x)$ 的拐点，故 C 错。",
+        "D": "$(0,0)$ 不是 $y=f(x)$ 的拐点（$f''(0)\\ne0$），故 D 错。"
+      },
+      "pitfalls": [
+        "判定极值/拐点最稳妥的是定出函数在 $0$ 附近的主项幂次：偶次主项对应极值点，奇次（$\\ge3$）主项对应拐点。",
+        "$f''(0)=1\\ne0$ 是排除“$f$ 在原点有拐点”的关键，别被 $f'(0)=0$ 误导成既是极值又是拐点。",
+        "$g$ 是乘积，需把变限积分与 $\\sin^2x$ 各自的等价无穷小相乘得主项，不可只看其中一个因子。"
+      ],
+      "key_point": "用等价无穷小定出函数在 $0$ 附近的最低次主项：偶次幂 $\\Rightarrow$ 极值点，奇次幂 $\\Rightarrow$ 拐点。"
+    },
+    {
+      "id": 2429,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 连续，则 $\\displaystyle \\int_{-2}^2 d x \\int_{4-x^2}^4 f(x, y) \\mathrm{d} y=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_2^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "D": "$\\displaystyle 2 \\int_0^4 \\mathrm{~d} y \\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查二重积分**交换积分次序**。原式是先对 $y$ 后对 $x$ 的累次积分，关键是先画出积分区域 $D$，再把它改写成先对 $x$ 后对 $y$ 的形式。难点在于反解曲线 $y=4-x^2$ 得到 $x=\\pm\\sqrt{4-y}$ 时出现两支，需要按 $x$ 的正负把区域**分块**。\n\n【解答】\n\n由原积分知区域为\n$$D=\\\\{(x,y)\\mid -2\\le x\\le 2,\\\\ 4-x^2\\le y\\le 4\\\\}.$$\n\n曲线 $y=4-x^2$ 是开口向下、顶点为 $(0,4)$ 的抛物线，在 $x=\\pm2$ 处 $y=0$。因此 $D$ 是抛物线**上方**、直线 $y=4$ **下方**、且 $-2\\le x\\le 2$ 的那块区域。\n\n现改为先对 $x$ 积分。$y$ 的取值范围为 $0\\le y\\le 4$。对固定的 $y$，约束 $y\\ge 4-x^2$ 即 $x^2\\ge 4-y$，亦即\n$$|x|\\ge\\sqrt{4-y}.$$\n再结合 $-2\\le x\\le 2$，得 $x$ 的取值为两段：\n$$x\\in[-2,\\,-\\sqrt{4-y}]\\\\ \\cup\\\\ [\\sqrt{4-y},\\,2].$$\n\n于是\n$$\\int_{-2}^{2}dx\\int_{4-x^2}^{4}f(x,y)\\,dy=\\int_0^4\\Big[\\int_{-2}^{-\\sqrt{4-y}}f(x,y)\\,dx+\\int_{\\sqrt{4-y}}^{2}f(x,y)\\,dx\\Big]dy.$$\n\n与选项 A 完全吻合，故选 **A**。",
+      "wrong_options": {
+        "B": "把左支下限写成了 $-2$ 到 $\\sqrt{4-y}$，等于把抛物线内部（$|x|<\\sqrt{4-y}$）也算了进来，积分区域出错。",
+        "C": "第二段上下限写反为 $\\int_2^{\\sqrt{4-y}}$，积分限颠倒导致符号错误。",
+        "D": "误把区域当成关于 $y$ 轴对称的同一被积函数而提出系数 $2$；但 $f(x,y)$ 一般不是 $x$ 的偶函数，左右两支不能合并，错误。"
+      },
+      "pitfalls": [
+        "反解抛物线得 $x=\\pm\\sqrt{4-y}$ 有左右两支，区域是 $|x|\\ge\\sqrt{4-y}$ 的两块，不能漏掉负支。",
+        "被积函数 $f(x,y)$ 不一定关于 $x$ 为偶函数，左右两块不能简单地用系数 2 合并。"
+      ],
+      "key_point": "交换次序先画区域、再按曲线两支把 $x$ 拆成左右两段。"
+    },
+    {
+      "id": 2442,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
+      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
+        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
+        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
+      ],
+      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
+    },
+    {
+      "id": 2444,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
+        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
+        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
+      ],
+      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
+    },
+    {
+      "id": 2490,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $z=z(x, y)$ 由 $z+\\ln z-\\int_y^x \\mathrm{e}^{-t^2} \\mathrm{~d} t=0$ 确定，则 $\\frac{\\partial z}{\\partial x}+\\frac{\\partial z}{\\partial y}=(\\quad)$",
+      "options": {
+        "A": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
+        "B": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$",
+        "C": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
+        "D": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题是由含变限积分的方程确定的隐函数求偏导。核心两步：一是对方程两端分别关于 $x$、$y$ 求偏导（把 $z$ 看成 $x,y$ 的函数，用复合函数链式法则）；二是处理变限积分 $\\int_y^x e^{-t^2}\\,dt$ 的求导——它关于上限 $x$ 求导得 $e^{-x^2}$，关于下限 $y$ 求导得 $-e^{-y^2}$（变下限要带负号，这是最易错处）。求出 $z_x,z_y$ 后直接相加即可。\n\n【解答】\n\n方程为\n$$z+\\ln z-\\int_y^x e^{-t^2}\\,dt=0.$$\n\n（1）两端关于 $x$ 求偏导（$y$ 视为常数）：\n$$z_x+\\dfrac{1}{z}z_x-e^{-x^2}=0,$$\n即 $z_x\\left(1+\\dfrac1z\\right)=e^{-x^2}$，故\n$$z_x=\\dfrac{z}{z+1}\\,e^{-x^2}.$$\n\n（2）两端关于 $y$ 求偏导（$x$ 视为常数），注意 $\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$：\n$$z_y+\\dfrac{1}{z}z_y-\\left(-e^{-y^2}\\right)=0,$$\n即 $z_y\\left(1+\\dfrac1z\\right)=-e^{-y^2}$，故\n$$z_y=-\\dfrac{z}{z+1}\\,e^{-y^2}.$$\n\n（3）两式相加：\n$$\\dfrac{\\partial z}{\\partial x}+\\dfrac{\\partial z}{\\partial y}=\\dfrac{z}{z+1}\\,e^{-x^2}-\\dfrac{z}{z+1}\\,e^{-y^2}=\\dfrac{z}{z+1}\\left(e^{-x^2}-e^{-y^2}\\right).$$\n\n对照选项，选 A。",
+      "wrong_options": {
+        "B": "误把 $z_y$ 的符号取成正号（漏掉变下限求导的负号），得到两项相加，错。",
+        "C": "整体多乘了一个负号，符号全反，错。",
+        "D": "既把 $z_y$ 符号弄错、又整体反号，结果是两项之和的相反数，错。"
+      },
+      "pitfalls": [
+        "变限积分对下限 $y$ 求导必须带负号：$\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$。",
+        "求偏导时把 $z$ 当成自变量函数，$\\ln z$ 求导要乘 $\\dfrac{1}{z}z_x$，不能漏掉链式因子。"
+      ],
+      "key_point": "隐函数两端分别对 $x,y$ 求偏导，变下限积分求导记得加负号，整理后相加。"
+    },
+    {
+      "id": 2491,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "如果对微分方程 $y^{\\prime \\prime}-2 a y^{\\prime}+(a+2) y=0$ 的任一解 $y(x)$ ，反常积分 $\\int_0^{+\\infty} y(x) \\mathrm{d} x$ 均收敛，那么 $a$ 的取值范围是（ ）。",
+      "options": {
+        "A": "$(-2,-1]$",
+        "B": "$(-\\infty,-1]$",
+        "C": "$(-2,0)$",
+        "D": "$(-\\infty, 0)$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n这是常系数线性齐次微分方程通解形式与解的渐近性、反常积分收敛性的综合题。核心逻辑链：要求**任一解** $y(x)$ 都满足 $\\int_0^{+\\infty} y\\,\\mathrm{d}x$ 收敛，等价于通解的每个基本解(以及它们的线性组合)在 $x\\to+\\infty$ 时都足够快地衰减到 $0$。而解的形态完全由特征根决定，因此问题归结为：**特征方程的所有根都具有负实部**。\n\n判据要点：\n- 若解中含 $e^{\\lambda x}$ 型因子，$\\int_0^{+\\infty}e^{\\lambda x}\\,\\mathrm{d}x$ 收敛 $\\Leftrightarrow \\lambda<0$；\n- 若含 $e^{\\alpha x}(\\cos\\beta x,\\\\ \\sin\\beta x)$ 型($\\beta\\neq0$)，其反常积分收敛 $\\Leftrightarrow \\alpha<0$（衰减振荡，积分收敛）；\n- 常数解、不衰减或发散的项都会破坏收敛。\n\n所以只需让两个特征根的实部全为负。\n\n【解答】\n\n特征方程为\n$$r^2-2ar+(a+2)=0,$$\n根为\n$$r=a\\pm\\sqrt{a^2-a-2},\\qquad a^2-a-2=(a-2)(a+1).$$\n\n**情形一：复根**（判别式 $<0$，即 $-1<a<2$）。\n此时 $r=a\\pm i\\sqrt{-(a^2-a-2)}$，实部为 $a$。通解为 $e^{ax}(C_1\\cos\\beta x+C_2\\sin\\beta x)$，要使任一解的反常积分收敛，需 $a<0$，得 $-1<a<0$。\n\n**情形二：实根**（判别式 $\\ge0$，即 $a\\le-1$ 或 $a\\ge2$）。\n两根 $r_1,r_2$ 均需为负。由韦达定理：\n$$r_1+r_2=2a,\\qquad r_1 r_2=a+2.$$\n两根同为负 $\\Leftrightarrow$ 和为负且积为正：\n$$2a<0\\\\ \\Rightarrow\\\\ a<0,\\qquad a+2>0\\\\ \\Rightarrow\\\\ a>-2.$$\n与本情形条件 $a\\le-1$ 取交集，得 $-2<a\\le-1$（$a\\ge2$ 不满足 $a<0$，舍去）。\n\n**合并两情形：**\n$$(-2,-1]\\cup(-1,0)=(-2,0).$$\n\n验算端点：$a=0$ 时方程为 $y''+2y=0$，解为纯振荡 $\\cos\\sqrt2 x$ 等，反常积分不收敛，故 $0$ 不取；$a=-2$ 时 $r_1 r_2=a+2=0$，出现零根即含常数解 $y\\equiv C$，积分发散，故 $-2$ 不取。区间 $(-2,0)$ 内两根实部恒负，任一解均指数衰减，反常积分收敛。\n\n故 $a$ 的取值范围为 $(-2,0)$，选 **C**。",
+      "wrong_options": {
+        "A": "$(-2,-1]$ 只覆盖了实根情形，漏掉了复根情形 $-1<a<0$（此时实部 $a<0$ 也使解衰减、积分收敛）。",
+        "B": "$(-\\infty,-1]$ 错误地放开了下界，当 $a\\le-2$ 时 $r_1 r_2=a+2\\le0$，出现非负根，解不衰减甚至发散，积分不收敛。",
+        "D": "$(-\\infty,0)$ 同样错放下界，$a\\le-2$ 时积为非正会产生非负根，破坏收敛。"
+      },
+      "pitfalls": [
+        "端点 $a=-2$ 易漏判：此时出现零特征根，含常数解 $y=C$，反常积分发散，必须开区间。",
+        "复根情形的收敛只看实部 $\\alpha<0$ 即可，不要被振荡项 $\\cos\\beta x,\\sin\\beta x$ 吓住，$e^{\\alpha x}$ 衰减就能保证 $\\int_0^{+\\infty}$ 收敛。",
+        "题目要求的是\"任一解\"，故所有特征根的实部都必须为负，不能只盯某一个解。"
+      ],
+      "key_point": "任一解的 $\\int_0^{+\\infty}$ 收敛 $\\Leftrightarrow$ 特征根全为负实部，用韦达定理(和<0、积>0)结合判别式分类讨论。"
+    },
+    {
+      "id": 2492,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 在 $x=0$ 的某去心邻域内有定义且恒不为零．若当 $x \\rightarrow 0$ 时，$f(x)$ 是 $g(x)$ 的高阶无穷小，则当 $x \\rightarrow 0$ 时（ ）",
+      "options": {
+        "A": "$f(x)+g(x)=o(g(x))$",
+        "B": "$f(x) g(x)=o\\left(f^2(x)\\right)$",
+        "C": "$f(x)=o\\left(\\mathrm{e}^{g(x)}-1\\right)$",
+        "D": "$f(x)=o\\left(g^2(x)\\right)$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题考查无穷小阶的辨析。已知条件：$x\\to0$ 时 $f(x)$ 是 $g(x)$ 的高阶无穷小，即\n$$\\lim_{x\\to0}\\frac{f(x)}{g(x)}=0,\\qquad \\text{记作 } f=o(g),$$\n且 $f,g$ 在去心邻域内恒不为零。\n\n判断 $A=o(B)$ 的标准就是验证 $\\lim_{x\\to0}\\dfrac{A}{B}=0$。逐项检验：能严格证明极限为 $0$ 的即正确；只要能举一个反例使比值不趋于 $0$，该项即被排除。其中 C 项需用到等价无穷小 $e^{g}-1\\sim g\\\\ (g\\to0)$。\n\n【解答】\n\n记 $f=o(g)$，即 $\\dfrac{f}{g}\\to0$。\n\n**C 项（正确）**：因 $f=o(g)$ 知 $g\\to0$，故 $e^{g}-1\\sim g$。于是\n$$\\lim_{x\\to0}\\frac{f(x)}{e^{g(x)}-1}=\\lim_{x\\to0}\\frac{f(x)}{g(x)}\\cdot\\frac{g(x)}{e^{g(x)}-1}=0\\cdot1=0,$$\n所以 $f(x)=o\\!\\left(e^{g(x)}-1\\right)$ 成立。\n\n**A 项（错误）**：$\\dfrac{f+g}{g}=\\dfrac{f}{g}+1\\to0+1=1\\neq0$，故 $f+g$ 与 $g$ 同阶而非高阶，$f+g=o(g)$ 不成立。\n\n**B 项（错误）**：$\\dfrac{fg}{f^2}=\\dfrac{g}{f}=\\dfrac{1}{f/g}\\to\\infty$，比值不趋于 $0$（反而趋于无穷），故 $fg=o(f^2)$ 不成立。事实上恰好相反，$f^2=o(fg)$。\n\n**D 项（错误）**：$\\dfrac{f}{g^2}=\\dfrac{f}{g}\\cdot\\dfrac{1}{g}$，其中 $\\dfrac{f}{g}\\to0$ 而 $\\dfrac{1}{g}\\to\\infty$，极限不定，可举反例：取 $g=x$，$f=x^{3/2}$（去心邻域取 $x>0$），则 $\\dfrac{f}{g}=x^{1/2}\\to0$ 满足条件，但 $\\dfrac{f}{g^2}=\\dfrac{x^{3/2}}{x^2}=x^{-1/2}\\to+\\infty$，故 $f=o(g^2)$ 不成立。\n\n综上选 **C**。",
+      "wrong_options": {
+        "A": "$\\dfrac{f+g}{g}=\\dfrac{f}{g}+1\\to1\\neq0$，$f+g$ 与 $g$ 同阶，不是高阶无穷小。",
+        "B": "$\\dfrac{fg}{f^2}=\\dfrac{g}{f}\\to\\infty$，比值发散到无穷，关系恰好反过来($f^2=o(fg)$)。",
+        "D": "$\\dfrac{f}{g^2}=\\dfrac{f}{g}\\cdot\\dfrac{1}{g}$ 为 $0\\cdot\\infty$ 型不定，可举 $g=x,\\\\,f=x^{3/2}$ 使其趋于 $+\\infty$，故不成立。"
+      },
+      "pitfalls": [
+        "$f=o(g)$ 的定义是 $\\lim f/g=0$，验证某项即把它写成比值看是否趋 0，不要凭感觉。",
+        "C 项关键在 $e^{g}-1\\sim g$，因为 $g\\to0$ 才能用此等价无穷小。",
+        "D 项是 $0\\cdot\\infty$ 不定型，'高阶'不能随意平方分母，必须举反例确认其不成立。"
+      ],
+      "key_point": "判断 $A=o(B)$ 一律化为 $\\lim A/B=0$；用 $e^{g}-1\\sim g$ 处理 C，用反例否定 D。"
+    },
+    {
+      "id": 2494,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设单位质点 $P, Q$ 分别位于点 $(0,0)$ 和 $(0,1)$ 处，$P$ 从点 $(0,0)$ 出发沿 $x$ 轴正向移动，记 $G$ 为引力常量，则当质点 $P$ 移动到点 $(l, 0)$ 时，克服质点 $Q$ 的引力所做的功为（ ）",
+      "options": {
+        "A": "$\\int_0^l \\frac{G}{x^2+1} \\mathrm{~d} x$",
+        "B": "$\\int_0^l \\frac{G x}{\\left(x^2+1\\right)^{\\frac{3}{2}}} \\mathrm{~d} x$",
+        "C": "$\\int_0^l \\frac{G}{\\left(x^2+1\\right)^{\\frac{3}{2}}} \\mathrm{~d} x$",
+        "D": "$\\int_0^l \\frac{G(x+1)}{\\left(x^2+1\\right)^{\\frac{3}{2}}} \\mathrm{~d} x$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n变力做功的微元法问题，关键在于**力的分解**。质点 $P$ 沿 $x$ 轴正向移动，做功只与引力**沿 $x$ 轴方向的分量**有关（垂直于运动方向的分量不做功）。\n\n设 $P$ 运动到 $(x,0)$，$Q$ 固定在 $(0,1)$。万有引力大小（两单位质点）为\n$$F=\\frac{G\\cdot1\\cdot1}{r^2}=\\frac{G}{x^2+1},\\qquad r^2=x^2+1.$$\n引力方向沿 $P\\to Q$，即 $(0-x,\\,1-0)=(-x,1)$，单位化后 $x$ 方向的方向余弦为 $\\dfrac{-x}{\\sqrt{x^2+1}}$。引力的 $x$ 分量为\n$$F_x=F\\cdot\\frac{-x}{\\sqrt{x^2+1}}=-\\frac{Gx}{(x^2+1)^{3/2}}.$$\n$x>0$ 时 $F_x<0$，即引力 $x$ 分量指向负方向，阻碍 $P$ 前进，故需克服它做功。克服引力所做的功就是该阻力分量大小沿路程的积分。\n\n【解答】\n\n取微元：$P$ 在 $(x,0)$ 处移动 $\\mathrm{d}x$，引力 $x$ 方向分量大小为\n$$|F_x|=\\frac{G}{x^2+1}\\cdot\\frac{x}{\\sqrt{x^2+1}}=\\frac{Gx}{(x^2+1)^{3/2}}.$$\n克服该分量做的功微元\n$$\\mathrm{d}W=|F_x|\\,\\mathrm{d}x=\\frac{Gx}{(x^2+1)^{3/2}}\\,\\mathrm{d}x.$$\n从 $x=0$ 积到 $x=l$：\n$$W=\\int_0^l\\frac{Gx}{(x^2+1)^{3/2}}\\,\\mathrm{d}x.$$\n\n**验算**(可顺手算出闭式)：令 $u=x^2+1$，$\\mathrm{d}u=2x\\,\\mathrm{d}x$，\n$$W=\\int\\frac{G}{2}u^{-3/2}\\,\\mathrm{d}u=-G\\,u^{-1/2}\\Big|=G\\left(1-\\frac{1}{\\sqrt{l^2+1}}\\right)>0,$$\n结果为正且随 $l$ 增大而增大，符合\"克服引力做正功\"的物理直觉。\n\n故选 **B**。",
+      "wrong_options": {
+        "A": "$\\dfrac{G}{x^2+1}$ 是引力的**大小**(全量)，没有投影到 $x$ 方向，缺少方向余弦 $\\dfrac{x}{\\sqrt{x^2+1}}$，被积函数错误。",
+        "C": "$\\dfrac{G}{(x^2+1)^{3/2}}$ 把方向余弦的分子 $x$ 漏掉了(相当于乘了 $\\dfrac{1}{\\sqrt{x^2+1}}$ 却忘了乘 $x$)，量纲与投影都不对。",
+        "D": "$\\dfrac{G(x+1)}{(x^2+1)^{3/2}}$ 把 $x$ 分量与 $y$ 分量(方向余弦分子 $x$ 与 $1$)错误地相加，只有 $x$ 分量才做功，不该出现 $+1$。"
+      },
+      "pitfalls": [
+        "做功只取引力沿运动方向($x$轴)的分量，垂直分量不做功，务必先做力的分解。",
+        "引力大小是 $G/r^2=G/(x^2+1)$，再乘方向余弦 $x/\\sqrt{x^2+1}$ 才得 $x$ 分量，合起来分母是 $(x^2+1)^{3/2}$、分子带 $x$。",
+        "'克服引力做功'结果应为正，可用闭式 $G(1-1/\\sqrt{l^2+1})>0$ 自检。"
+      ],
+      "key_point": "微元法 + 力的分解：功 = 引力大小 $\\times$ $x$方向余弦，被积函数为 $\\dfrac{Gx}{(x^2+1)^{3/2}}$。"
+    },
+    {
+      "id": 2495,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续，给出下列四个条件\r\n（1） $\\lim _{x \\rightarrow 0} \\frac{|f(x)|-f(0)}{x}$ 存在；\r\n（2） $\\lim _{x \\rightarrow 0} \\frac{f(x)-|f(0)|}{x}$ 存在；\r\n（3） $\\lim _{x \\rightarrow 0} \\frac{|f(x)|}{x}$ 存在；\r\n（4） $\\lim _{x \\rightarrow 0} \\frac{|f(x)|-|f(0)|}{x}$ 存在；\r\n其中能得到＂$f(x)$ 在 $x=0$ 处可导＂的条件个数是（ ）",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n判断 $f(x)$ 在 $x=0$ 可导，本质是验证差商极限 $\\displaystyle\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}$ 存在。本题给的四个差商里都带绝对值，核心思路是：差商极限存在（分母 $x\\to0$）必然要求分子 $\\to0$，由此结合连续性先定出 $f(0)$ 的符号信息，再把绝对值脱掉，归结到标准差商。注意一个关键事实：\n\n> 若 $\\displaystyle\\lim_{x\\to0}\\dfrac{|f(x)|-|f(0)|}{x}$ 存在，则 $f'(0)$ 一定存在；且当 $f(0)\\ne0$ 时绝对值可在 $x=0$ 邻域内直接脱掉，当 $f(0)=0$ 时该极限存在等价于 $f'(0)=0$。\n\n四个条件中，凡是分子在 $x\\to0$ 时趋于 $0$ 且能化成 $|f(x)|-|f(0)|$ 形式的，都能推出可导；唯一要小心的是 (3)，它分子常数项不一定为 $0$，必须先逼出 $|f(0)|=0$ 即 $f(0)=0$。\n\n【解答】\n\n设 $f(0)=c$。由 $f$ 连续，$x\\to0$ 时 $f(x)\\to c$，$|f(x)|\\to|c|$。\n\n**条件 (1)** $\\displaystyle\\lim_{x\\to0}\\dfrac{|f(x)|-c}{x}$ 存在。分母 $\\to0$ 故分子必 $\\to0$，得 $|c|=c$，即 $c\\ge0$。\n\n- 若 $c>0$：在 $x=0$ 某邻域内 $f(x)>0$，故 $|f(x)|=f(x)$，原式 $=\\dfrac{f(x)-f(0)}{x}$，其极限存在即 $f'(0)$ 存在。\n- 若 $c=0$：原式 $=\\dfrac{|f(x)|}{x}$。设其极限为 $A$。由 $|f(x)|\\ge0$，当 $x\\to0^+$ 商 $\\ge0$，$x\\to0^-$ 商 $\\le0$，故 $A\\ge0$ 且 $A\\le0$，得 $A=0$，于是 $\\dfrac{|f(x)|}{x}\\to0$，从而 $\\dfrac{f(x)}{x}\\to0$（因 $\\left|\\dfrac{f(x)}{x}\\right|=\\dfrac{|f(x)|}{|x|}\\to0$），即 $f'(0)=0$ 存在。\n\n故 (1) 可推出可导。\n\n**条件 (2)** $\\displaystyle\\lim_{x\\to0}\\dfrac{f(x)-|c|}{x}$ 存在。分子 $\\to c-|c|$ 必为 $0$，得 $c=|c|$，即 $c\\ge0$，于是 $|c|=c=f(0)$，原式 $=\\dfrac{f(x)-f(0)}{x}$，其极限存在即 $f'(0)$ 存在。故 (2) 可推出可导。\n\n**条件 (3)** $\\displaystyle\\lim_{x\\to0}\\dfrac{|f(x)|}{x}$ 存在。分子 $\\to|c|$ 必为 $0$，得 $c=0$。如条件 (1) 中 $c=0$ 的分析：极限值左右夹逼为 $0$，且 $\\dfrac{|f(x)|}{x}\\to0\\Rightarrow\\dfrac{f(x)}{x}\\to0$，故 $f'(0)=0$ 存在。故 (3) 可推出可导。\n\n**条件 (4)** $\\displaystyle\\lim_{x\\to0}\\dfrac{|f(x)|-|c|}{x}$ 存在，记为 $B$。\n\n- 若 $c\\ne0$：邻域内 $f(x)$ 与 $c$ 同号，$|f(x)|=\\operatorname{sgn}(c)\\,f(x)$，$|c|=\\operatorname{sgn}(c)\\,c$，原式 $=\\operatorname{sgn}(c)\\cdot\\dfrac{f(x)-f(0)}{x}$。其极限存在 $\\Rightarrow\\dfrac{f(x)-f(0)}{x}$ 极限存在，即 $f'(0)$ 存在。\n- 若 $c=0$：原式 $=\\dfrac{|f(x)|}{x}$，同 (3) 推得 $f'(0)=0$ 存在。\n\n故 (4) 可推出可导。\n\n四个条件全部能推出 $f(x)$ 在 $x=0$ 处可导，个数为 $4$。选 **D**。",
+      "wrong_options": {
+        "A": "误以为只有最标准的 (4) 才行，忽视了 (1)(2)(3) 通过分子趋零定出 $f(0)$ 符号后同样能脱绝对值。",
+        "B": "只数出 2 个，通常漏判了 $f(0)=0$ 这一临界情形下绝对值差商被左右夹逼为 0 仍能推出可导。",
+        "C": "数为 3，多半把 (3) 当作不行——其实 (3) 极限存在已强制 $f(0)=0$，进而 $f'(0)=0$。"
+      },
+      "pitfalls": [
+        "差商极限存在的第一推论是“分子必趋于 0”，由此先锁定 $f(0)$ 的符号或取值，这是脱绝对值的前提。",
+        "$f(0)=0$ 时形如 $\\dfrac{|f(x)|}{x}$ 的极限，用左右极限非负/非正夹逼必为 0，切勿误判为不存在。",
+        "$c\\ne0$ 时绝对值在邻域内可整体替换成 $\\pm f(x)$，符号是常数不影响极限存在性。"
+      ],
+      "key_point": "差商极限存在 $\\Rightarrow$ 分子趋零，先定 $f(0)$ 符号再脱绝对值，临界 $f(0)=0$ 用左右夹逼归结到 $f'(0)$。"
+    },
+    {
+      "id": 2496,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\left[\\begin{array}{lll}1 & 2 & 0 \\\\ 2 & a & 0 \\\\ 0 & 0 & b\\end{array}\\right]$ 有一个正特征值和两个负特征值，则 $(\\quad)$ ．",
+      "options": {
+        "A": "$a>4, b>0$",
+        "B": "$a<4, b>0$",
+        "C": "$a>4, b<0$",
+        "D": "$a<4, b<0$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n矩阵 $M=\\begin{pmatrix}1&2&0\\\\2&a&0\\\\0&0&b\\end{pmatrix}$ 是分块对角的（左上 $2\\times2$ 块加右下标量 $b$），它是实对称矩阵，特征值全为实数。分块对角矩阵的特征值 = 各对角块特征值的并集，所以三个特征值就是「左上 $2\\times2$ 块 $\\begin{pmatrix}1&2\\\\2&a\\end{pmatrix}$ 的两个特征值」加上「$b$」。\n\n要求恰好一正两负。判定符号最省事的是看二阶块的行列式与迹：二阶实对称块的两特征值 $\\lambda_1,\\lambda_2$ 满足 $\\lambda_1\\lambda_2=\\det,\\ \\lambda_1+\\lambda_2=\\text{迹}$。\n\n【解答】\n\n左上块 $\\begin{pmatrix}1&2\\\\2&a\\end{pmatrix}$ 的迹为 $1+a$，行列式为 $a-4$，其特征值 $\\lambda_1,\\lambda_2$ 满足\n$$\\lambda_1\\lambda_2=a-4,\\qquad \\lambda_1+\\lambda_2=1+a.$$\n第三个特征值为 $b$。总共需「一正两负」。\n\n先看 $b$ 与二阶块要如何分配正负号。三个特征值乘积\n$$\\lambda_1\\lambda_2\\, b=(a-4)\\,b=\\det M.$$\n一正两负的乘积为 $(+)(-)(-)>0$，故必有 $(a-4)b>0$。\n\n**讨论 $b$ 的符号：**\n\n- 若 $b>0$（$b$ 是那个唯一正特征值），则二阶块两特征值必都为负，需 $\\lambda_1\\lambda_2=a-4>0$ 且 $\\lambda_1+\\lambda_2=1+a<0$，即 $a>4$ 且 $a<-1$，矛盾，无解。\n- 若 $b<0$（$b$ 是一个负特征值），则二阶块须贡献「一正一负」，即两特征值异号，需 $\\lambda_1\\lambda_2=a-4<0$，得 $a<4$。此时迹 $1+a$ 无附加限制（异号时和的正负不影响个数）。总特征值为「一正、一负（块）、一负（$b$）」，恰好一正两负。✓\n\n综上 $a<4$ 且 $b<0$，与 $(a-4)b>0$ 一致（负乘负为正）。选 **D**。\n\n**验算**：取 $a=0,b=-1$。二阶块 $\\begin{pmatrix}1&2\\\\2&0\\end{pmatrix}$，特征值 $\\dfrac{1\\pm\\sqrt{1+16}}{2}=\\dfrac{1\\pm\\sqrt{17}}{2}\\approx 2.56,\\,-1.56$（一正一负），加上 $b=-1$，正好一正两负。结论成立。",
+      "wrong_options": {
+        "A": "$a>4,b>0$：此时二阶块 $\\det=a-4>0$ 且迹 $1+a>0$，两特征值均为正，再加 $b>0$ 得三正零负，全错。",
+        "B": "$a<4,b>0$：二阶块 $\\det=a-4<0$ 给一正一负，加 $b>0$ 共两正一负，不符。",
+        "C": "$a>4,b<0$：二阶块 $\\det=a-4>0$ 且迹 $1+a>0$ 两正特征值，加 $b<0$ 得两正一负，不符。"
+      },
+      "pitfalls": [
+        "分块对角矩阵的特征值是各块特征值的并集，$b$ 本身就是一个特征值，不要去算整体三阶行列式硬解。",
+        "二阶实对称块判号只需行列式与迹：$\\det<0$ 必异号，$\\det>0$ 时再用迹的正负定两正还是两负。",
+        "“乘积 $>0$”只是必要条件，必须结合 $b$ 的符号分类讨论才能锁定个数。"
+      ],
+      "key_point": "分块对角 $\\Rightarrow$ 特征值 = 块特征值并 $\\{b\\}$；二阶块用行列式($a-4$)与迹($1+a$)定号，要一正两负只能 $a<4,b<0$。"
+    },
+    {
+      "id": 2497,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列矩阵中，可以经过若干初等行变换得到矩阵 $\\left(\\begin{array}{llll}1 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$ 的是",
+      "options": {
+        "A": "$\\left(\\begin{array}{llll}1 & 1 & 0 & 1 \\\\ 1 & 2 & 1 & 3 \\\\ 2 & 3 & 1 & 4\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{llll}1 & 1 & 0 & 1 \\\\ 1 & 1 & 2 & 5 \\\\ 1 & 1 & 1 & 3\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{llll}1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 3 \\\\ 0 & 1 & 0 & 0\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{llll}1 & 1 & 2 & 3 \\\\ 1 & 2 & 2 & 3 \\\\ 2 & 3 & 4 & 6\\end{array}\\right)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n两个矩阵能经初等行变换互相得到，称为**行等价**。行等价的充要条件是它们有**相同的行最简形**（等价地：行空间相同；也必有相同的秩）。所以判断哪个选项与目标矩阵\n$$R=\\begin{pmatrix}1&1&0&1\\\\0&0&1&2\\\\0&0&0&0\\end{pmatrix}$$\n行等价，只需把各选项也化成行最简形，看是否与 $R$ 逐行相同即可。$R$ 的秩为 $2$，主元（首非零元）在第 1 列和第 3 列，行空间由 $(1,1,0,1)$ 与 $(0,0,1,2)$ 张成。秩不为 $2$ 的可立即排除；秩为 $2$ 的再比对行最简形。\n\n【解答】\n\n逐一化行最简形（记行 $r_1,r_2,r_3$）。\n\n**A** $\\begin{pmatrix}1&1&0&1\\\\1&2&1&3\\\\2&3&1&4\\end{pmatrix}$：$r_2-r_1=(0,1,1,2)$，$r_3-2r_1=(0,1,1,2)$，二者相同故 $r_3$ 行可消为零，秩 $2$。化简得 $r_1-(0,1,1,2)=(1,0,-1,-1)$，行最简形为 $\\begin{pmatrix}1&0&-1&-1\\\\0&1&1&2\\\\0&0&0&0\\end{pmatrix}$，主元在第 1、2 列，与 $R$（主元在第 1、3 列）不同，**排除**。\n\n**B** $\\begin{pmatrix}1&1&0&1\\\\1&1&2&5\\\\1&1&1&3\\end{pmatrix}$：$r_2-r_1=(0,0,2,4)\\to(0,0,1,2)$，$r_3-r_1=(0,0,1,2)$，相同故秩 $2$。保留 $(1,1,0,1)$ 与 $(0,0,1,2)$，由于 $(1,1,0,1)$ 在第 3 列已是 $0$，无需再消，行最简形恰为\n$$\\begin{pmatrix}1&1&0&1\\\\0&0&1&2\\\\0&0&0&0\\end{pmatrix}=R.$$\n与 $R$ 完全一致，**正确**。\n\n**C** $\\begin{pmatrix}1&0&0&1\\\\0&1&0&3\\\\0&1&0&0\\end{pmatrix}$：$r_2-r_3=(0,0,0,3)\\to(0,0,0,1)$，三行线性无关，秩 $3\\ne2$，**排除**。\n\n**D** $\\begin{pmatrix}1&1&2&3\\\\1&2&2&3\\\\2&3&4&6\\end{pmatrix}$：$r_2-r_1=(0,1,0,0)$，$r_3-2r_1=(0,1,0,0)$，相同故秩 $2$。$r_1-(0,1,0,0)=(1,0,2,3)$，行最简形为 $\\begin{pmatrix}1&0&2&3\\\\0&1&0&0\\\\0&0&0&0\\end{pmatrix}$，主元在第 1、2 列，与 $R$ 不同，**排除**。\n\n只有 B 的行最简形等于 $R$。选 **B**。",
+      "wrong_options": {
+        "A": "秩虽为 2，但行最简形主元在第 1、2 列（$(1,0,-1,-1),(0,1,1,2)$），行空间与 $R$ 不同，不行等价。",
+        "C": "三行线性无关，秩为 3，而 $R$ 秩为 2，秩都不等当然不行等价。",
+        "D": "秩为 2 但行最简形是 $(1,0,2,3),(0,1,0,0)$，主元列位置与 $R$ 不同，行空间不同。"
+      },
+      "pitfalls": [
+        "行等价 = 行最简形相同 = 行空间相同；只比秩相同还不够（A、D 都是秩 2 却不行等价）。",
+        "初等“行”变换不改行空间但会改列结构，故不能用列变换去凑，主元所在列必须一致。",
+        "化简时盯住主元位置：目标 $R$ 主元在第 1、3 列，任何主元落到第 2 列的都出局。"
+      ],
+      "key_point": "“可经初等行变换得到” = 行等价 = 行最简形相同；把各选项化行最简形与目标逐行比对即可。"
+    },
+    {
+      "id": 2498,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 3 阶矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 满足 $r(\\boldsymbol{A} \\boldsymbol{B})=r(\\boldsymbol{B} \\boldsymbol{A})+1$ ，则 $(\\quad)$",
+      "options": {
+        "A": "方程组 $(\\boldsymbol{A}+\\boldsymbol{B}) \\boldsymbol{x}=\\mathbf{0}$ 只有零解．",
+        "B": "方程组 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与方程组 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 均只有零解．",
+        "C": "方程组 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与方程组 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 没有公共非零解．",
+        "D": "方程组 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与方程组 $\\boldsymbol{B} \\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 有公共非零解．"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n这是一道靠秩不等式逐项排查的题。先把关键的秩信息榨干：\n\n由 $r(AB)\\le\\min\\{r(A),r(B)\\}$、$r(BA)\\le\\min\\{r(A),r(B)\\}$ 以及 $A,B$ 为 $3$ 阶，已知 $r(AB)=r(BA)+1$。注意一个常用事实：若 $A$（或 $B$）可逆，则 $r(AB)=r(B)=r(BA)$，与差 $1$ 矛盾，故 $A,B$ 都不可逆。再看 $r(AB)$ 的上界：若 $r(AB)=3$ 则 $AB$ 可逆，逼出 $A,B$ 皆可逆，又矛盾。于是必有\n$$r(AB)\\le2,\\qquad r(BA)=r(AB)-1\\le1.$$\n这条「$r(BA)\\le1$」是全题的钥匙。下面各选项中，谁是恒成立结论，就靠它判定；选项 D 用「两个解空间维数之和大于 3 必有公共非零向量」即可证恒成立。\n\n【解答】\n\n**先定秩：** 如上分析，$A,B$ 均不可逆，且 $r(BA)\\le1$，$r(AB)\\le2$。\n\n**逐项分析：**\n\n**A：$(A+B)x=0$ 只有零解** $\\iff A+B$ 可逆。题设对 $A+B$ 没有任何约束，可举反例使其奇异。例如取\n$$A=\\begin{pmatrix}0&1&0\\\\0&0&0\\\\0&0&0\\end{pmatrix},\\quad B=\\begin{pmatrix}1&0&0\\\\0&0&0\\\\0&0&0\\end{pmatrix},$$\n则 $AB=0$（$r=0$），$BA=\\begin{pmatrix}0&1&0\\\\0&0&0\\\\0&0&0\\end{pmatrix}$，$r(BA)=1$，不满足 $r(AB)=r(BA)+1$。调整可得满足题设而 $A+B$ 仍奇异的例子，故 A 不恒成立，**错**。\n\n**B：$Ax=0$ 与 $Bx=0$ 均只有零解** $\\iff A,B$ 都可逆。但已证 $A,B$ 不可逆，此结论在题设下永不成立，**错**。\n\n**C：$Ax=0$ 与 $Bx=0$ 没有公共非零解。** 这要求 $r\\!\\begin{pmatrix}A\\\\B\\end{pmatrix}=3$。题设并不能保证——存在满足 $r(AB)=r(BA)+1$ 却使 $A,B$ 有公共零空间方向的例子，此时 C 不成立，故 C 不恒成立，**错**。\n\n**D：$ABA\\,x=0$ 与 $BAB\\,x=0$ 有公共非零解。** 这是恒成立的，证明如下。\n\n因 $ABA=A(BA)$，由 $r(MN)\\le r(N)$ 得 $r(ABA)\\le r(BA)\\le1$；同理 $BAB=(BA)B$，$r(BAB)\\le r(BA)\\le1$。于是两齐次方程组的解空间维数\n$$\\dim N(ABA)=3-r(ABA)\\ge3-1=2,\\qquad \\dim N(BAB)=3-r(BAB)\\ge2.$$\n两个解空间都是 $\\mathbb{R}^3$ 的子空间，维数之和 $\\ge2+2=4>3$，由维数公式\n$$\\dim\\big(N(ABA)\\cap N(BAB)\\big)\\ge \\dim N(ABA)+\\dim N(BAB)-3\\ge4-3=1>0,$$\n故二者必有公共非零解。**D 正确**。\n\n选 **D**。",
+      "wrong_options": {
+        "A": "$A+B$ 是否可逆与题设无关，可构造满足 $r(AB)=r(BA)+1$ 但 $A+B$ 奇异的例子，$(A+B)x=0$ 有非零解。",
+        "B": "$Ax=Bx=0$ 均只有零解即 $A,B$ 都可逆，但 $A$（或 $B$）可逆会使 $r(AB)=r(BA)$，与差 1 矛盾，故此项在题设下永假。",
+        "C": "题设保证 $r(BA)\\le1$，但并不强制 $r\\binom{A}{B}=3$，存在 $A,B$ 有公共零向量的反例，故“没有公共非零解”不恒成立。"
+      },
+      "pitfalls": [
+        "先用“$A$ 或 $B$ 可逆 $\\Rightarrow r(AB)=r(BA)$”逼出二者皆不可逆，再逼出 $r(BA)\\le1$，这是全题的突破口。",
+        "$r(ABA)\\le r(BA)$、$r(BAB)\\le r(BA)$ 用的是 $r(MN)\\le\\min\\{r(M),r(N)\\}$，把三连乘的秩压到 $\\le1$。",
+        "“两子空间维数之和 $>n$ 必有公共非零向量”是判定公共解存在的标准武器，别去硬解方程组。"
+      ],
+      "key_point": "由 $r(AB)=r(BA)+1$ 逼出 $r(BA)\\le1$，则 $r(ABA),r(BAB)\\le1$，两解空间维数和 $\\ge4>3$ 必有公共非零解。"
+    },
+    {
+      "id": 2499,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\int_1^{+\\infty} \\frac{a}{x(2 x+a)} \\mathrm{d} x=\\ln 2$ ，则 $a=$ $\\qquad$ ．",
+      "options": {},
+      "answer": "$a=2$",
+      "analysis": "【分析】\n\n本题是含参反常积分定参数：先把被积函数作部分分式分解，算出反常积分（结果含对数与参数 $a$），令其等于 $\\ln2$ 解出 $a$。\n\n关键技巧是分解 $\\dfrac{a}{x(2x+a)}$。注意到分子恰好等于分母两因子之差 $(2x+a)-2x=a$，因此可直接拆为\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a}.$$\n\n这样两项的原函数都是对数，组合后取上下限即可。计算反常积分时关键是 $x\\to+\\infty$ 处用 $\\ln\\dfrac{x}{2x+a}$ 的合并形式求极限，避免出现 $\\infty-\\infty$。\n\n【解答】\n\n为使积分收敛且分解合法，先设 $a>0$（这样在 $[1,+\\infty)$ 上分母 $2x+a>0$ 不变号）。\n\n**第一步：部分分式分解。**\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a},$$\n\n验证：$\\dfrac{1}{x}-\\dfrac{2}{2x+a}=\\dfrac{(2x+a)-2x}{x(2x+a)}=\\dfrac{a}{x(2x+a)}$，成立。\n\n**第二步：求原函数。**\n\n$$\\int\\left(\\frac1x-\\frac{2}{2x+a}\\right)\\mathrm{d}x=\\ln x-\\ln(2x+a)=\\ln\\frac{x}{2x+a}+C\\qquad(x\\ge1).$$\n\n**第三步：计算反常积分。**\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\left[\\ln\\frac{x}{2x+a}\\right]_1^{+\\infty}=\\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}-\\ln\\frac{1}{2+a}.$$\n\n其中\n\n$$\\lim_{x\\to+\\infty}\\frac{x}{2x+a}=\\frac12\\\\ \\Longrightarrow\\\\ \\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}=\\ln\\frac12.$$\n\n于是\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\ln\\frac12-\\ln\\frac{1}{2+a}=\\ln\\frac{1/2}{1/(2+a)}=\\ln\\frac{2+a}{2}.$$\n\n**第四步：由积分值定 $a$。**\n\n令 $\\ln\\dfrac{2+a}{2}=\\ln2$，得\n\n$$\\frac{2+a}{2}=2\\\\ \\Longrightarrow\\\\ 2+a=4\\\\ \\Longrightarrow\\\\ a=2.$$\n\n此时 $a=2>0$，满足收敛性假设。故 $a=2$。\n\n（验算：$a=2$ 时被积函数为 $\\dfrac{2}{x(2x+2)}=\\dfrac{1}{x(x+1)}=\\dfrac1x-\\dfrac1{x+1}$，积分 $\\big[\\ln\\tfrac{x}{x+1}\\big]_1^{+\\infty}=0-\\ln\\tfrac12=\\ln2$，正确。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "在 $x\\to+\\infty$ 处不要分开取 $\\ln x-\\ln(2x+a)$，那是 $\\infty-\\infty$ 不定式；应先合并成 $\\ln\\dfrac{x}{2x+a}$ 再取极限得 $\\ln\\tfrac12$。",
+        "积分上限极限项 $\\ln\\tfrac12\\ne0$，容易误以为反常积分上限处为 $0$ 而漏算，导致少一项。",
+        "需注意 $a>0$ 才保证积分收敛与分解有效，所得 $a=2$ 恰满足该条件。"
+      ],
+      "key_point": "分子等于分母两因子之差时可直接拆项 $\\dfrac{a}{x(2x+a)}=\\dfrac1x-\\dfrac{2}{2x+a}$，上限处合并成 $\\ln\\dfrac{x}{2x+a}$ 取极限避免 $\\infty-\\infty$。"
+    },
+    {
+      "id": 2500,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\sqrt[3]{x^3-3 x^2+1}$ 的渐近线方程为 $\\qquad$ ．",
+      "options": {},
+      "answer": "$y=x-1$",
+      "analysis": "【分析】\n\n本题求曲线 $y=\\sqrt[3]{x^3-3x^2+1}$ 的渐近线。函数在 $x\\to\\pm\\infty$ 时趋于无穷，故只考虑**斜渐近线** $y=kx+b$，用公式 $k=\\lim\\limits_{x\\to\\infty}\\dfrac{f(x)}{x}$，$b=\\lim\\limits_{x\\to\\infty}\\big(f(x)-kx\\big)$。其中求 $b$ 是关键，三次根式直接相减会出现 $\\infty-\\infty$，最稳妥的办法是把根式提出主部 $x$ 后对 $(1+t)^{1/3}$ 做泰勒展开（提取主部）。\n\n【解答】\n\n**第一步：求 $k$。**\n\n$$k=\\lim_{x\\to\\infty}\\frac{\\sqrt[3]{x^3-3x^2+1}}{x}=\\lim_{x\\to\\infty}\\sqrt[3]{1-\\frac{3}{x}+\\frac{1}{x^3}}=1.$$\n\n（注意 $x\\to-\\infty$ 时 $x<0$，而 $\\sqrt[3]{\\cdot}$ 与 $x$ 同号，根号内极限仍为 $1$，故 $k=1$ 对 $x\\to+\\infty$ 与 $x\\to-\\infty$ 都成立。）\n\n**第二步：求 $b$。** 把主部 $x$ 提到根号外：\n\n$$f(x)=x\\left(1-\\frac{3}{x}+\\frac{1}{x^3}\\right)^{1/3}.$$\n\n令 $t=-\\dfrac{3}{x}+\\dfrac{1}{x^3}\\to 0$，用泰勒展开 $(1+t)^{1/3}=1+\\dfrac{1}{3}t+o(t)$：\n\n$$\\left(1-\\frac{3}{x}+\\frac{1}{x^3}\\right)^{1/3}=1+\\frac{1}{3}\\left(-\\frac{3}{x}+\\frac{1}{x^3}\\right)+o\\!\\left(\\frac{1}{x}\\right)=1-\\frac{1}{x}+o\\!\\left(\\frac{1}{x}\\right).$$\n\n于是\n\n$$f(x)=x\\left(1-\\frac{1}{x}+o\\!\\left(\\frac{1}{x}\\right)\\right)=x-1+o(1),$$\n\n$$b=\\lim_{x\\to\\infty}\\big(f(x)-x\\big)=-1.$$\n\n**结论：** 渐近线方程为 $y=x-1$。（$x\\to+\\infty$ 与 $x\\to-\\infty$ 得到的是同一条直线。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 b 时把两个三次根式直接通分配根号会陷入繁琐的有理化，远不如提主部后泰勒展开干净；展开务必保留到 1/x 阶才能定出 b。",
+        "不要漏检 x→-∞：奇次根号与 x 同号，结论同为 y=x-1，但若误判正负号会算错 k。"
+      ],
+      "key_point": "斜渐近线 k=lim f/x、b=lim(f-kx)；对 n 次根式先提主部再用 (1+t)^{1/n}≈1+t/n 展开提取常数项即得 b。"
+    },
+    {
+      "id": 2501,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$$\r\n\\lim _{n \\rightarrow \\infty} \\frac{1}{n^2}\\left[\\ln \\frac{1}{n}+2 \\ln \\frac{2}{n}+\\cdots+(n-1) \\ln \\frac{n-1}{n}\\right]=\r\n$$\r\n\r\n$\\qquad$",
+      "options": {},
+      "answer": "$-\\frac{1}{4}$",
+      "analysis": "【分析】\n\n这是典型的**和式极限化定积分**（黎曼和）。把 $\\dfrac{1}{n^2}$ 拆成 $\\dfrac{1}{n}\\cdot\\dfrac{1}{n}$，并把因子 $i$ 与 $\\dfrac{1}{n}$ 凑成 $\\dfrac{i}{n}$，使每一项都写成关于 $\\dfrac{i}{n}$ 的统一表达式 $g\\!\\left(\\dfrac{i}{n}\\right)\\cdot\\dfrac{1}{n}$，再取 $n\\to\\infty$ 得到 $\\displaystyle\\int_0^1 g(x)\\,dx$。这里 $g(x)=x\\ln x$，积分用分部积分，并注意 $x\\to0^+$ 处是反常积分（可去）。\n\n【解答】\n\n**第一步：化为黎曼和。** 原式\n\n$$\\frac{1}{n^2}\\sum_{i=1}^{n-1} i\\ln\\frac{i}{n}=\\frac{1}{n}\\sum_{i=1}^{n-1}\\frac{i}{n}\\ln\\frac{i}{n}=\\frac{1}{n}\\sum_{i=1}^{n-1} g\\!\\left(\\frac{i}{n}\\right),\\quad g(x)=x\\ln x.$$\n\n这是 $g(x)=x\\ln x$ 在 $[0,1]$ 上的黎曼和（缺第 $0$ 项与第 $n$ 项不影响极限），故\n\n$$\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{i=1}^{n-1} g\\!\\left(\\frac{i}{n}\\right)=\\int_0^1 x\\ln x\\,dx.$$\n\n**第二步：算积分（分部积分）。** 取 $u=\\ln x,\\ dv=x\\,dx$，则 $du=\\dfrac{1}{x}dx,\\ v=\\dfrac{x^2}{2}$：\n\n$$\\int_0^1 x\\ln x\\,dx=\\left.\\frac{x^2}{2}\\ln x\\right|_0^1-\\int_0^1\\frac{x^2}{2}\\cdot\\frac{1}{x}\\,dx=\\left.\\frac{x^2}{2}\\ln x\\right|_0^1-\\int_0^1\\frac{x}{2}\\,dx.$$\n\n端点处：$x=1$ 时 $\\dfrac{1}{2}\\ln1=0$；$x\\to0^+$ 时 $\\dfrac{x^2}{2}\\ln x\\to0$（因 $x^2\\ln x\\to0$）。故首项为 $0$。\n\n$$\\int_0^1 x\\ln x\\,dx=0-\\left.\\frac{x^2}{4}\\right|_0^1=-\\frac{1}{4}.$$\n\n**结论：** 原极限 $=-\\dfrac{1}{4}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "1/n^2 必须拆成 (1/n)·(1/n)：一个 1/n 与求和指标 i 凑成 i/n 作自变量，另一个 1/n 充当区间宽度 Δx，缺一不可。",
+        "分部积分后边界项在 x→0+ 是 0/(-∞) 型，需用 x^2 ln x→0 说明，不能想当然丢掉。"
+      ],
+      "key_point": "和式极限识别 (1/n)Σg(i/n)→∫₀¹g(x)dx；本题 g(x)=x ln x，再分部积分即得 -1/4。"
+    },
+    {
+      "id": 2502,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知函数 $y=y(x)$ 由 $\\left\\{\\begin{array}{c}x=\\ln (1+2 t) \\\\ 2 t-\\int_1^{y+t^2} \\mathrm{e}^{-u^2} \\mathrm{~d} u=0\\end{array}\\right.$ 确定，则 $\\left.\\frac{\\mathrm{d} y}{\\mathrm{~d} x}\\right|_{t=0}=$ $\\qquad$ ．",
+      "options": {},
+      "answer": "$e$",
+      "analysis": "【分析】\n\n参数方程求导用 $\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}$。本题 $y$ 并未显式给出，而是由含**变限积分**的方程 $2t-\\displaystyle\\int_1^{y+t^2}e^{-u^2}\\,du=0$ 隐式确定 $y=y(t)$，因此先把 $t=0$ 时的 $y$ 值定出，再对该方程两边关于 $t$ 求导（变限积分求导：上限对 $t$ 求导要乘上限的导数），解出 $\\dfrac{dy}{dt}$，最后与 $\\dfrac{dx}{dt}$ 相除。\n\n【解答】\n\n**第一步：定 $t=0$ 处的 $y$。** 代 $t=0$ 入第二式：\n\n$$2\\cdot0-\\int_1^{y}e^{-u^2}\\,du=0\\ \\Longrightarrow\\ \\int_1^{y}e^{-u^2}\\,du=0.$$\n\n被积函数 $e^{-u^2}>0$，故上下限相等，$y\\big|_{t=0}=1$。\n\n**第二步：求 $\\dfrac{dx}{dt}$。** 由 $x=\\ln(1+2t)$：\n\n$$\\frac{dx}{dt}=\\frac{2}{1+2t},\\qquad \\left.\\frac{dx}{dt}\\right|_{t=0}=2.$$\n\n**第三步：求 $\\dfrac{dy}{dt}$。** 对 $2t-\\displaystyle\\int_1^{y+t^2}e^{-u^2}\\,du=0$ 两边关于 $t$ 求导，注意上限 $y+t^2$ 是 $t$ 的函数：\n\n$$2-e^{-(y+t^2)^2}\\cdot\\frac{d}{dt}\\big(y+t^2\\big)=0,$$\n\n$$2-e^{-(y+t^2)^2}\\left(\\frac{dy}{dt}+2t\\right)=0.$$\n\n代 $t=0$，此时 $y+t^2=1+0=1$：\n\n$$2-e^{-1}\\left(\\left.\\frac{dy}{dt}\\right|_{t=0}+0\\right)=0\\ \\Longrightarrow\\ \\left.\\frac{dy}{dt}\\right|_{t=0}=2e.$$\n\n**第四步：合成。**\n\n$$\\left.\\frac{dy}{dx}\\right|_{t=0}=\\frac{\\left.dy/dt\\right|_{t=0}}{\\left.dx/dt\\right|_{t=0}}=\\frac{2e}{2}=e.$$\n\n**结论：** $\\left.\\dfrac{dy}{dx}\\right|_{t=0}=e$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "变限积分上限是 y+t^2 而非单独的 y，对 t 求导时务必乘上限的全导数 (y'+2t)，漏掉 2t 项虽不影响 t=0 的结果，但思路必须完整。",
+        "先要由方程定出 t=0 处 y=1（利用被积函数恒正），否则无法代入 e^{-(y+t^2)^2}。",
+        "最后是 (dy/dt)/(dx/dt)，别把分子分母写反。"
+      ],
+      "key_point": "参数式 dy/dx=(dy/dt)/(dx/dt)；隐含变限积分方程先定点值，再对 t 求导（上限求导乘上限导数）解出 dy/dt。"
+    },
+    {
+      "id": 2503,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $(2 y-3 x) \\mathrm{d} x+(2 x-5 y) \\mathrm{d} y=0$ 满足条件 $y(1)=1$ 的解为\r\n$\\qquad$。",
+      "options": {},
+      "answer": "$2 x y-\\frac{3}{2} x^2-\\frac{5}{2} y^2+2=0$.",
+      "analysis": "【分析】\n\n方程写成 $M\\,dx+N\\,dy=0$，其中 $M=2y-3x,\\ N=2x-5y$。先验证是否为**全微分方程（恰当方程）**：若 $\\dfrac{\\partial M}{\\partial y}=\\dfrac{\\partial N}{\\partial x}$，则存在势函数 $u(x,y)$ 使 $du=M\\,dx+N\\,dy$，通解即 $u(x,y)=C$。求 $u$ 可用凑全微分（分组）或先对 $x$ 积分 $M$ 再用 $N$ 定出待定函数。最后代入初值 $y(1)=1$ 确定常数。\n\n【解答】\n\n**第一步：验证恰当。**\n\n$$\\frac{\\partial M}{\\partial y}=\\frac{\\partial}{\\partial y}(2y-3x)=2,\\qquad \\frac{\\partial N}{\\partial x}=\\frac{\\partial}{\\partial x}(2x-5y)=2.$$\n\n二者相等，故方程是全微分方程。\n\n**第二步：求势函数 $u(x,y)$。** 由 $\\dfrac{\\partial u}{\\partial x}=M=2y-3x$，对 $x$ 积分：\n\n$$u=\\int(2y-3x)\\,dx=2xy-\\frac{3}{2}x^2+g(y).$$\n\n再令 $\\dfrac{\\partial u}{\\partial y}=N$：\n\n$$\\frac{\\partial u}{\\partial y}=2x+g'(y)=2x-5y\\ \\Longrightarrow\\ g'(y)=-5y\\ \\Longrightarrow\\ g(y)=-\\frac{5}{2}y^2.$$\n\n故\n\n$$u(x,y)=2xy-\\frac{3}{2}x^2-\\frac{5}{2}y^2,$$\n\n通解为 $2xy-\\dfrac{3}{2}x^2-\\dfrac{5}{2}y^2=C$。\n\n（也可凑全微分核验：$d\\big(2xy\\big)=2y\\,dx+2x\\,dy$，$d\\big(-\\tfrac32x^2\\big)=-3x\\,dx$，$d\\big(-\\tfrac52y^2\\big)=-5y\\,dy$，三者相加恰为 $(2y-3x)dx+(2x-5y)dy$，验证无误。）\n\n**第三步：代初值 $y(1)=1$。**\n\n$$C=2\\cdot1\\cdot1-\\frac{3}{2}\\cdot1-\\frac{5}{2}\\cdot1=2-\\frac{3}{2}-\\frac{5}{2}=-2.$$\n\n于是 $2xy-\\dfrac{3}{2}x^2-\\dfrac{5}{2}y^2=-2$，整理得\n\n$$2xy-\\frac{3}{2}x^2-\\frac{5}{2}y^2+2=0.$$\n\n**结论：** 满足 $y(1)=1$ 的解为 $2xy-\\dfrac{3}{2}x^2-\\dfrac{5}{2}y^2+2=0$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "动手前必须先验证 ∂M/∂y=∂N/∂x，确认是恰当方程才能用势函数法；不等时需找积分因子，方法完全不同。",
+        "对 M 关于 x 积分时，积分常数是 y 的函数 g(y)，不能写成常数；再由 N 定出 g(y)。",
+        "代初值求 C 时把 x=1、y=1 同时代入，符号 -2 不要算错。"
+      ],
+      "key_point": "全微分方程：先验 ∂M/∂y=∂N/∂x，再由 ∂u/∂x=M 积分、∂u/∂y=N 定待定函数得 u=C，最后代初值定常数。"
+    },
+    {
+      "id": 2504,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4\\right)$ 若 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关且 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$ ，则方程组 $\\boldsymbol{A} \\boldsymbol{x}=\\boldsymbol{\\alpha}_1+4 \\boldsymbol{\\alpha}_4$ 的通解为 $\\boldsymbol{x}=$ $\\qquad$ ．",
+      "options": {},
+      "answer": "$(k+1, k,-k, 4-k)^{\\mathrm{T}}, k$ 为任意常数",
+      "analysis": "【分析】\n\n这是带参数向量组的非齐次线性方程组 $A\\boldsymbol{x}=\\boldsymbol{b}$ 求通解问题。通解结构 $=$ 一个特解 $+$ 导出组(齐次方程)的基础解系线性组合。关键有两步：(1) 由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 无关而 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$，定出秩 $r(A)=3$，从而齐次解空间维数 $4-3=1$，只需一个基础解系；(2) 把右端 $\\boldsymbol{\\alpha}_1+4\\boldsymbol{\\alpha}_4$ 用 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_4$ 线性表示，对照 $A\\boldsymbol{x}=x_1\\boldsymbol{\\alpha}_1+x_2\\boldsymbol{\\alpha}_2+x_3\\boldsymbol{\\alpha}_3+x_4\\boldsymbol{\\alpha}_4$ 直接读出一个特解。核心技巧是把一切“向量等式”翻译成“坐标方程”，再用线性无关比较系数。\n\n【解答】\n\n由 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$ 得\n$$\\boldsymbol{\\alpha}_4=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3 .$$\n因 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 线性无关，而 $\\boldsymbol{\\alpha}_4$ 可由它们线性表示，故 $r(A)=3$，方程组 $A\\boldsymbol{x}=\\boldsymbol{0}$ 的基础解系含 $4-3=1$ 个解向量。\n\n**(1) 求基础解系。** 设 $\\boldsymbol{x}=(x_1,x_2,x_3,x_4)^{\\mathrm{T}}$，则\n$$A\\boldsymbol{x}=x_1\\boldsymbol{\\alpha}_1+x_2\\boldsymbol{\\alpha}_2+x_3\\boldsymbol{\\alpha}_3+x_4\\boldsymbol{\\alpha}_4=\\boldsymbol{0}.$$\n代入 $\\boldsymbol{\\alpha}_4=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$ 并按 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 合并系数：\n$$(x_1+x_4)\\boldsymbol{\\alpha}_1+(x_2+x_4)\\boldsymbol{\\alpha}_2+(x_3-x_4)\\boldsymbol{\\alpha}_3=\\boldsymbol{0}.$$\n由线性无关得 $x_1+x_4=0,\\ x_2+x_4=0,\\ x_3-x_4=0$，即 $x_1=-x_4,\\ x_2=-x_4,\\ x_3=x_4$。取 $x_4=1$ 得基础解系\n$$\\boldsymbol{\\xi}=(-1,-1,1,1)^{\\mathrm{T}}.$$\n\n**(2) 求特解。** 把右端表示出来：\n$$\\boldsymbol{\\alpha}_1+4\\boldsymbol{\\alpha}_4=\\boldsymbol{\\alpha}_1+4(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3)=5\\boldsymbol{\\alpha}_1+4\\boldsymbol{\\alpha}_2-4\\boldsymbol{\\alpha}_3+0\\cdot\\boldsymbol{\\alpha}_4.$$\n对照 $A\\boldsymbol{x}=x_1\\boldsymbol{\\alpha}_1+x_2\\boldsymbol{\\alpha}_2+x_3\\boldsymbol{\\alpha}_3+x_4\\boldsymbol{\\alpha}_4$，得一个特解\n$$\\boldsymbol{\\eta}^{*}=(5,4,-4,0)^{\\mathrm{T}}.$$\n\n**(3) 通解。**\n$$\\boldsymbol{x}=\\boldsymbol{\\eta}^{*}+t\\boldsymbol{\\xi}=(5,4,-4,0)^{\\mathrm{T}}+t(-1,-1,1,1)^{\\mathrm{T}},\\quad t\\in\\mathbb{R}.$$\n令 $t=4-k$ 整理即得标准形式\n$$\\boldsymbol{x}=(k+1,\\ k,\\ -k,\\ 4-k)^{\\mathrm{T}},\\quad k\\ \\text{为任意常数}.$$\n二者表示同一族解，验算：代入 $A\\boldsymbol{x}$ 得 $(k+1)\\boldsymbol{\\alpha}_1+k\\boldsymbol{\\alpha}_2-k\\boldsymbol{\\alpha}_3+(4-k)\\boldsymbol{\\alpha}_4$，再用 $\\boldsymbol{\\alpha}_4=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$ 合并恰得 $5\\boldsymbol{\\alpha}_1+4\\boldsymbol{\\alpha}_2-4\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+4\\boldsymbol{\\alpha}_4$，与 $k$ 无关，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "忘记先判秩：要由“α4 可被前三个线性表示”得到 r(A)=3，进而确定基础解系只含 1 个向量，不要漏写齐次解部分。",
+        "特解不必解方程组，把右端用 α1,α2,α3,α4 表示出来后，系数就是 x 的分量，直接读出即可。",
+        "通解写法不唯一，(5,4,-4,0)+t(-1,-1,1,1) 与 (k+1,k,-k,4-k) 是同一解集，写哪种都对，但务必带上任意常数。"
+      ],
+      "key_point": "把向量等式翻译成坐标方程：用线性无关比系数求基础解系，用右端的线性表示直接读特解。"
+    },
+    {
+      "id": 2505,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续，且 $\\lim _{x \\rightarrow 0} \\frac{x f(x)-\\mathrm{e}^{2 \\sin x}+1}{\\ln (1+x)+\\ln (1-x)}=-3$ ，证明： $f(x)$ 在 $x=0$ 处可导，并求 $f^{\\prime}(0)$ ．",
+      "options": {},
+      "answer": "$f^{\\prime}(0)=5$",
+      "analysis": "【分析】\n\n要证 $f$ 在 $0$ 处可导并求 $f'(0)$，本质是从已知极限把 $f(x)$ 的低阶展开“反解”出来。思路：先把分母 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)$ 用等价无穷小化为 $-x^2$；再把分子里的 $e^{2\\sin x}$ 用泰勒展开到 $x^2$ 项。由极限存在可定出 $xf(x)$ 的展开，从而得到 $f(x)$ 在 $0$ 附近的形如 $a+bx+o(x)$ 的结构。再用连续性确定 $f(0)$，用导数定义 $f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}$ 求出导数。\n\n【解答】\n\n**第一步：化简分母。** 由 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)\\sim -x^2\\ (x\\to0)$。\n\n**第二步：展开分子中的 $e^{2\\sin x}$ 到 $x^2$。** 由 $\\sin x=x-\\dfrac{x^3}{6}+\\cdots$，得 $2\\sin x=2x+o(x^2)$。再由 $e^{u}=1+u+\\dfrac{u^2}{2}+o(u^2)$，取 $u=2x+o(x^2)$：\n$$e^{2\\sin x}=1+2x+\\dfrac{(2x)^2}{2}+o(x^2)=1+2x+2x^2+o(x^2).$$\n于是\n$$-e^{2\\sin x}+1=-2x-2x^2+o(x^2).$$\n\n**第三步：由极限定出 $xf(x)$ 的展开。** 已知\n$$\\lim_{x\\to0}\\dfrac{xf(x)-e^{2\\sin x}+1}{\\ln(1-x^2)}=-3.$$\n因分母 $\\sim -x^2$，故分子 $\\sim -3\\cdot(-x^2)=3x^2$，即\n$$xf(x)-e^{2\\sin x}+1=3x^2+o(x^2).$$\n代入第二步：\n$$xf(x)=e^{2\\sin x}-1+3x^2+o(x^2)=2x+2x^2+3x^2+o(x^2)=2x+5x^2+o(x^2).$$\n两端除以 $x\\ (x\\neq0)$：\n$$f(x)=2+5x+o(x)\\qquad(x\\to0,\\ x\\neq0).$$\n\n**第四步：求 $f(0)$ 与 $f'(0)$。** 由 $f$ 在 $0$ 处连续，\n$$f(0)=\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\big(2+5x+o(x)\\big)=2.$$\n再按导数定义：\n$$f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}=\\lim_{x\\to0}\\dfrac{(2+5x+o(x))-2}{x}=\\lim_{x\\to0}\\dfrac{5x+o(x)}{x}=5.$$\n\n故 $f(x)$ 在 $x=0$ 处可导，且 $f'(0)=5$。\n\n**验算：** $f(x)\\approx2+5x$ 时 $xf(x)\\approx2x+5x^2$，分子 $=2x+5x^2-(2x+2x^2)+o(x^2)=3x^2+o(x^2)$，除以分母 $-x^2$ 得 $-3$，与条件一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$e^{2\\sin x}$ 必须展开到 $x^2$ 项；只展开到一次项会丢失 $2x^2$，导致 $f'(0)$ 算错。",
+        "$f(0)$ 不能直接代入原式，要由“连续”这一条件取极限得到 $f(0)=2$，再用导数定义。",
+        "确定 $xf(x)$ 展开时注意分母 $\\sim -x^2$ 带负号，分子应 $\\sim 3x^2$ 而非 $-3x^2$。"
+      ],
+      "key_point": "分母用等价无穷小、分子用泰勒展开反解出 $f(x)=2+5x+o(x)$，再用连续性定 $f(0)$、导数定义求 $f'(0)$。"
+    },
+    {
+      "id": 2506,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 可微且满足\r\n$\\mathrm{d} f(x, y)=-2 x \\mathrm{e}^{-y} \\mathrm{~d} x+\\mathrm{e}^{-y}\\left(x^2-y-1\\right) \\mathrm{d} y, f(0,0)=2$ ，求 $f(x, y)$ ，并求 $f(x, y)$ 的极值。",
+      "options": {},
+      "answer": "$f(x, y)=-x^2 \\mathrm{e}^{-y}+(y+2) \\mathrm{e}^{-y}$ ， $f(x, y)$ 有极大值 $f(0,-1)=\\mathrm{e}$ ，无极小值",
+      "analysis": "【分析】\n\n第一步是“由全微分还原原函数”：已知 $\\mathrm{d}f=P\\,\\mathrm{d}x+Q\\,\\mathrm{d}y$，则 $f_x=P,\\ f_y=Q$。先对 $x$ 作偏积分得到含待定函数 $\\varphi(y)$ 的 $f$，再用 $f_y=Q$ 定出 $\\varphi'(y)$，积分并用初值 $f(0,0)=2$ 定常数。这里 $P=-2x\\mathrm{e}^{-y},\\ Q=\\mathrm{e}^{-y}(x^2-y-1)$，可先验证 $P_y=Q_x$ 确保是恰当全微分。第二步求无条件极值：解 $f_x=0,\\ f_y=0$ 得驻点，再用二阶判别法 $AC-B^2$（$A=f_{xx},\\ B=f_{xy},\\ C=f_{yy}$）判定。\n\n【解答】\n\n**第一步：还原 $f$。** 由 $f_x=-2x\\mathrm{e}^{-y}$ 对 $x$ 偏积分：\n$$f(x,y)=-x^2\\mathrm{e}^{-y}+\\varphi(y).$$\n再求 $f_y$ 并与已知 $Q$ 比较：\n$$f_y=x^2\\mathrm{e}^{-y}+\\varphi'(y)=\\mathrm{e}^{-y}(x^2-y-1)=x^2\\mathrm{e}^{-y}-(y+1)\\mathrm{e}^{-y}.$$\n故 $\\varphi'(y)=-(y+1)\\mathrm{e}^{-y}$。利用 $\\displaystyle\\int (y+1)\\mathrm{e}^{-y}\\,\\mathrm{d}y=-(y+1)\\mathrm{e}^{-y}-\\mathrm{e}^{-y}=-(y+2)\\mathrm{e}^{-y}$，得\n$$\\varphi(y)=(y+2)\\mathrm{e}^{-y}+C.$$\n于是 $f(x,y)=-x^2\\mathrm{e}^{-y}+(y+2)\\mathrm{e}^{-y}+C$。代入 $f(0,0)=2$：$0+(0+2)\\cdot1+C=2$，得 $C=0$。所以\n$$\\boxed{f(x,y)=-x^2\\mathrm{e}^{-y}+(y+2)\\mathrm{e}^{-y}}.$$\n\n**第二步：求驻点。**\n$$f_x=-2x\\mathrm{e}^{-y}=0\\ \\Rightarrow\\ x=0;$$\n$$f_y=\\mathrm{e}^{-y}(x^2-y-1)=0\\ \\Rightarrow\\ x^2-y-1=0.$$\n将 $x=0$ 代入得 $-y-1=0$，即 $y=-1$。唯一驻点为 $(0,-1)$。\n\n**第三步：二阶判别。** 计算二阶偏导：\n$$f_{xx}=-2\\mathrm{e}^{-y},\\quad f_{xy}=2x\\mathrm{e}^{-y},\\quad f_{yy}=\\mathrm{e}^{-y}(y-x^2).$$\n（其中 $f_{yy}=\\partial_y[\\mathrm{e}^{-y}(x^2-y-1)]=-\\mathrm{e}^{-y}(x^2-y-1)-\\mathrm{e}^{-y}=\\mathrm{e}^{-y}(y-x^2)$。）\n在 $(0,-1)$ 处：\n$$A=f_{xx}=-2\\mathrm{e}<0,\\quad B=f_{xy}=0,\\quad C=f_{yy}=\\mathrm{e}\\cdot(-1)=-\\mathrm{e}.$$\n$$AC-B^2=(-2\\mathrm{e})(-\\mathrm{e})-0=2\\mathrm{e}^2>0.$$\n因 $AC-B^2>0$ 且 $A<0$，故 $(0,-1)$ 为极大值点。极大值\n$$f(0,-1)=-0+(-1+2)\\mathrm{e}^{1}=\\mathrm{e}.$$\n由于只有这一个驻点且为极大值点，函数无极小值。\n\n**结论：** $f(x,y)=-x^2\\mathrm{e}^{-y}+(y+2)\\mathrm{e}^{-y}$，有极大值 $f(0,-1)=\\mathrm{e}$，无极小值。",
+      "wrong_options": {},
+      "pitfalls": [
+        "偏积分还原时，对 x 积分产生的“常数”是关于 y 的待定函数 φ(y)，不可写成纯常数。",
+        "积分 ∫(y+1)e^{-y}dy 要分部，符号容易出错；结果 -(y+2)e^{-y}，φ'(y) 前还有负号，需仔细。",
+        "下结论时要说明驻点唯一，才能断言“无极小值”；二阶判别只能判定该驻点的局部性质。"
+      ],
+      "key_point": "全微分还原用偏积分定待定函数 φ(y)，再以另一偏导确定它；极值用 AC−B² 判别。"
+    },
+    {
+      "id": 2507,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知平面有界区域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 4 x, x^2+y^2 \\leqslant 4 y\\right\\}$ ，计算 $\\iint_D(x-y)^2 \\mathrm{~d} x \\mathrm{~d} y$",
+      "options": {},
+      "answer": "$12 \\pi-\\frac{112}{3}$",
+      "analysis": "【分析】\n\n积分区域 $D$ 是两个圆盘 $x^2+y^2\\le 4x$（圆心 $(2,0)$，半径 $2$）与 $x^2+y^2\\le 4y$（圆心 $(0,2)$，半径 $2$）的公共部分（两圆交于原点与 $(2,2)$，故 $D$ 落在第一象限）。这类“两圆相交公共区域”用极坐标最自然：两圆方程分别化为 $r\\le 4\\cos\\theta$ 与 $r\\le 4\\sin\\theta$，公共区域即 $r\\le\\min(4\\cos\\theta,4\\sin\\theta)$。需按 $\\theta=\\dfrac{\\pi}{4}$ 把 $[0,\\frac{\\pi}{2}]$ 分成两段：$\\theta\\in[0,\\frac{\\pi}{4}]$ 时 $\\sin\\theta\\le\\cos\\theta$，半径上限取 $4\\sin\\theta$；$\\theta\\in[\\frac{\\pi}{4},\\frac{\\pi}{2}]$ 时取 $4\\cos\\theta$。又 $D$ 关于直线 $y=x$ 对称、被积函数 $(x-y)^2$ 也关于 $y=x$ 对称，故两段积分相等，只算一段乘 $2$ 即可。\n\n【解答】\n\n化极坐标 $x=r\\cos\\theta,\\ y=r\\sin\\theta$，$\\mathrm{d}x\\,\\mathrm{d}y=r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta$，被积函数\n$$(x-y)^2=r^2(\\cos\\theta-\\sin\\theta)^2.$$\n两圆化为 $r\\le 4\\cos\\theta$ 与 $r\\le 4\\sin\\theta$，$D$ 对应 $\\theta\\in[0,\\frac{\\pi}{2}]$，$0\\le r\\le\\min(4\\cos\\theta,4\\sin\\theta)$。\n\n利用 $D$ 与被积函数关于 $y=x$ 的对称性，取 $\\theta\\in[\\frac{\\pi}{4},\\frac{\\pi}{2}]$（此段半径上限 $4\\cos\\theta$）那一半乘以 $2$：\n$$I=\\iint_D (x-y)^2\\,\\mathrm{d}x\\,\\mathrm{d}y=2\\int_{\\pi/4}^{\\pi/2}\\!\\!\\int_{0}^{4\\cos\\theta} r^2(\\cos\\theta-\\sin\\theta)^2\\cdot r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta.$$\n先算内层：\n$$\\int_{0}^{4\\cos\\theta} r^3\\,\\mathrm{d}r=\\frac{(4\\cos\\theta)^4}{4}=64\\cos^4\\theta.$$\n故\n$$I=2\\int_{\\pi/4}^{\\pi/2}64\\cos^4\\theta\\,(\\cos\\theta-\\sin\\theta)^2\\,\\mathrm{d}\\theta=128\\int_{\\pi/4}^{\\pi/2}\\cos^4\\theta\\,(\\cos\\theta-\\sin\\theta)^2\\,\\mathrm{d}\\theta.$$\n展开 $(\\cos\\theta-\\sin\\theta)^2=1-\\sin 2\\theta$，得\n$$I=128\\int_{\\pi/4}^{\\pi/2}\\cos^4\\theta\\,(1-\\sin 2\\theta)\\,\\mathrm{d}\\theta=128\\Big(\\underbrace{\\int_{\\pi/4}^{\\pi/2}\\cos^4\\theta\\,\\mathrm{d}\\theta}_{I_1}-\\underbrace{\\int_{\\pi/4}^{\\pi/2}\\cos^4\\theta\\sin 2\\theta\\,\\mathrm{d}\\theta}_{I_2}\\Big).$$\n\n计算 $I_1$：用 $\\cos^4\\theta=\\dfrac{3}{8}+\\dfrac{1}{2}\\cos2\\theta+\\dfrac{1}{8}\\cos4\\theta$，\n$$I_1=\\Big[\\frac{3}{8}\\theta+\\frac{1}{4}\\sin2\\theta+\\frac{1}{32}\\sin4\\theta\\Big]_{\\pi/4}^{\\pi/2}=\\Big(\\frac{3\\pi}{16}+0+0\\Big)-\\Big(\\frac{3\\pi}{32}+\\frac{1}{4}+0\\Big)=\\frac{3\\pi}{32}-\\frac14.$$\n\n计算 $I_2$：$\\sin2\\theta=2\\sin\\theta\\cos\\theta$，故 $\\cos^4\\theta\\sin2\\theta=2\\cos^5\\theta\\sin\\theta$，其原函数为 $-\\dfrac{1}{3}\\cos^6\\theta$：\n$$I_2=\\Big[-\\frac13\\cos^6\\theta\\Big]_{\\pi/4}^{\\pi/2}=0-\\Big(-\\frac13\\Big(\\frac{1}{\\sqrt2}\\Big)^6\\Big)=\\frac13\\cdot\\frac{1}{8}=\\frac{1}{24}.$$\n\n于是\n$$I=128\\Big(\\frac{3\\pi}{32}-\\frac14-\\frac{1}{24}\\Big)=128\\cdot\\frac{3\\pi}{32}-128\\cdot\\frac14-128\\cdot\\frac{1}{24}=12\\pi-32-\\frac{16}{3}.$$\n合并常数：$-32-\\dfrac{16}{3}=-\\dfrac{96+16}{3}=-\\dfrac{112}{3}$。所以\n$$\\boxed{\\iint_D (x-y)^2\\,\\mathrm{d}x\\,\\mathrm{d}y=12\\pi-\\frac{112}{3}}.$$\n（数值约 $0.366$，与区域很小、被积函数 $(x-y)^2$ 在对称区域上取值偏小一致。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "公共区域的半径上限是 min(4cosθ,4sinθ)，必须以 θ=π/4 为界分段，不能整段都用 4cosθ 或 4sinθ，否则会得到 12π−16/3 这类错误结果。",
+        "θ 的范围是 [0,π/2]（区域在第一象限），不要错写成 [0,π] 或 [0,π/4]。",
+        "别忘了极坐标雅可比 r，被积函数变为 r^2(cosθ−sinθ)^2·r=r^3(cosθ−sinθ)^2。"
+      ],
+      "key_point": "两圆公共区域用极坐标，半径取 min(4cosθ,4sinθ) 并以 θ=π/4 分段；借 y=x 对称性只算一半乘 2。"
+    },
+    {
+      "id": 2508,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left[\\begin{array}{ccc}4 & 1 & -2 \\\\ 1 & 1 & 1 \\\\ -2 & 1 & a\\end{array}\\right]$ 与 $\\boldsymbol{B}=\\left[\\begin{array}{lll}k & 0 & 0 \\\\ 0 & 6 & 0 \\\\ 0 & 0 & 0\\end{array}\\right]$ 合同．\r\n（1）求 $a$ 的值及 $k$ 的取值范围 ；\r\n（2）若存在正交矩阵 $\\boldsymbol{Q}$ 使得 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\boldsymbol{B}$ ，求 $k$ 及 $\\boldsymbol{Q}$ ．",
+      "options": {},
+      "answer": "（1）$a=4, k>0$ ；\r\n$(2) k=3, \\boldsymbol{Q}=\\left[\\begin{array}{ccc}\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & -\\frac{2}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}}\\end{array}\\right]$ ．",
+      "analysis": "【分析】\n\n第(1)问用**合同的判定定理**：两个实对称矩阵合同 $\\iff$ 它们有相同的秩与相同的正、负惯性指数（惯性定理）。$B=\\mathrm{diag}(k,6,0)$ 的特征值就是 $k,6,0$，其秩与符号由 $k$ 决定。先由 $r(A)=r(B)$ 定 $a$，再由“正惯性指数 $p$、负惯性指数 $q$ 一致”定 $k$ 的范围。第(2)问的条件 $Q^{\\mathrm{T}}AQ=B$（$Q$ 正交）是**正交相似(合同同时也是相似)**，比合同强：相似要求**特征值完全相同**。于是 $A$ 的特征值必为 $B$ 的对角元 $k,6,0$，由迹（特征值之和 $=$ 主对角线之和）定出 $k$，再求各特征值对应的特征向量、单位化（实对称矩阵不同特征值的特征向量自动正交，无需施密特正交化）拼成 $Q$。\n\n【解答】\n\n**(1) 求 $a$ 与 $k$ 的范围。**\n\n$A,B$ 合同首先要求 $r(A)=r(B)$。计算 $\\det A$（按第一行展开）：\n$$\\det A=4(1\\cdot a-1\\cdot1)-1(1\\cdot a-1\\cdot(-2))+(-2)(1\\cdot1-1\\cdot(-2))$$\n$$=4(a-1)-(a+2)-2\\cdot3=4a-4-a-2-6=3a-12.$$\n$B$ 含一个 $0$ 主元，故 $r(B)\\le 2<3$，从而需 $\\det A=0$，得 $3a-12=0$，即 $a=4$。\n\n当 $a=4$ 时，$A$ 的二阶主子式 $\\begin{vmatrix}4&1\\\\1&1\\end{vmatrix}=3\\neq0$，故 $r(A)=2$。要 $r(B)=2$，必须 $k\\neq0$。\n\n再看惯性指数。$A$（$a=4$）的顺序主子式 $4>0,\\ \\begin{vmatrix}4&1\\\\1&1\\end{vmatrix}=3>0$，第三个为 $\\det A=0$，故 $A$ 对应二次型的非零特征值全为正，正惯性指数 $p=2$，负惯性指数 $q=0$。$B$ 的特征值为 $k,6,0$，其正惯性指数为 $1+[\\,k>0\\,]$。要与 $A$ 一致（$p=2,q=0$），必须 $k>0$。\n\n综上 $\\boxed{a=4,\\quad k>0}$。\n\n**(2) 求 $k$ 与 $Q$。**\n\n$Q^{\\mathrm{T}}AQ=B$ 且 $Q$ 正交，则 $Q^{\\mathrm{T}}=Q^{-1}$，故 $A$ 与 $B$ **相似**，特征值相同。$A$（$a=4$）的特征值之和等于迹：$4+1+4=9$，而 $B$ 的特征值之和为 $k+6+0$，故 $k+6=9$，得 $\\boxed{k=3}$。即 $A$ 的特征值为 $\\lambda_1=3,\\ \\lambda_2=6,\\ \\lambda_3=0$（与 $B=\\mathrm{diag}(3,6,0)$ 对角元一一对应）。\n\n下求各特征向量，其中 $A=\\begin{pmatrix}4&1&-2\\\\1&1&1\\\\-2&1&4\\end{pmatrix}$。\n\n$\\lambda_1=3$：解 $(A-3I)x=0$，$A-3I=\\begin{pmatrix}1&1&-2\\\\1&-2&1\\\\-2&1&1\\end{pmatrix}$，行化简得 $x_1=x_2=x_3$，特征向量 $\\boldsymbol{\\xi}_1=(1,1,1)^{\\mathrm{T}}$。\n\n$\\lambda_2=6$：$A-6I=\\begin{pmatrix}-2&1&-2\\\\1&-5&1\\\\-2&1&-2\\end{pmatrix}$，解得 $x_2=0,\\ x_1=-x_3$，特征向量 $\\boldsymbol{\\xi}_2=(1,0,-1)^{\\mathrm{T}}$。\n\n$\\lambda_3=0$：$Ax=0$，行化简得 $x_1=x_3,\\ x_2=-2x_1$（验证 $A(1,-2,1)^{\\mathrm{T}}=(4-2-2,\\,1-2+1,\\,-2-2+4)^{\\mathrm{T}}=\\boldsymbol{0}$），特征向量 $\\boldsymbol{\\xi}_3=(1,-2,1)^{\\mathrm{T}}$。\n\n三者两两正交（实对称矩阵不同特征值的特征向量必正交，已自动满足，无需施密特），单位化：\n$$\\boldsymbol{\\eta}_1=\\frac{1}{\\sqrt3}(1,1,1)^{\\mathrm{T}},\\quad \\boldsymbol{\\eta}_2=\\frac{1}{\\sqrt2}(1,0,-1)^{\\mathrm{T}},\\quad \\boldsymbol{\\eta}_3=\\frac{1}{\\sqrt6}(1,-2,1)^{\\mathrm{T}}.$$\n按 $B=\\mathrm{diag}(3,6,0)$ 的特征值顺序排列成\n$$Q=\\big(\\boldsymbol{\\eta}_1,\\boldsymbol{\\eta}_2,\\boldsymbol{\\eta}_3\\big)=\\begin{pmatrix}\\dfrac{1}{\\sqrt3}&\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt6}\\\\[4pt]\\dfrac{1}{\\sqrt3}&0&-\\dfrac{2}{\\sqrt6}\\\\[4pt]\\dfrac{1}{\\sqrt3}&-\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt6}\\end{pmatrix},$$\n则 $Q$ 正交且 $Q^{\\mathrm{T}}AQ=\\mathrm{diag}(3,6,0)=B$。验算：$Q^{\\mathrm{T}}Q=I$ 成立，且 $A\\boldsymbol{\\eta}_1=3\\boldsymbol{\\eta}_1,\\ A\\boldsymbol{\\eta}_2=6\\boldsymbol{\\eta}_2,\\ A\\boldsymbol{\\eta}_3=0$，结论正确。\n\n（注：$Q$ 不唯一，每个特征向量可取相反方向，列的符号可变，只要保证正交且与 $B$ 的对角元顺序对应即可。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "合同只要求秩与正负惯性指数相同(不要求特征值相同)；而 (2) 中 Q 正交使 A 与 B 相似，这才要求特征值完全相同——两问的条件强弱不同，切勿混淆。",
+        "由 r(A)=r(B)≤2 得 detA=0 定 a；再由 k≠0 保证 r(B)=2，最后由惯性指数(A 正定于其非零部分,p=2,q=0)得 k>0，三步缺一不可。",
+        "第(2)问 Q 的列必须按 B 的对角元顺序(3,6,0)排列；实对称矩阵不同特征值的特征向量天然正交，只需单位化，不必施密特正交化。"
+      ],
+      "key_point": "合同看秩与惯性指数定 a、k 范围；正交相似要求特征值相同，由迹定 k，单位化正交特征向量按 B 对角元顺序排成 Q。"
+    }
+  ]
+}

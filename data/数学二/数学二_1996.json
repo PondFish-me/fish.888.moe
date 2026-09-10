@@ -1,0 +1,430 @@
+{
+  "paper": "数学二",
+  "year": 1996,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1475,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle y=\\left(x+\\mathrm{e}^{-\\frac{x}{2}}\\right)^{\\frac{2}{3}}$, 则 $\\left.y^{\\prime}\\right|_{x=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3}$",
+      "analysis": "$\\displaystyle y^{\\prime}=\\frac{2}{3}\\left(x+\\mathrm{e}^{-\\frac{1}{2}}\\right)^{-\\frac{1}{3}} \\cdot\\left(1-\\frac{1}{2} \\mathrm{e}^{-\\frac{1}{2}}\\right)$, \r\n\r\n得 $\\displaystyle \\left.y^{\\prime}\\right|_{x=0}=\\frac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "外层 2/3 次幂求导降为 −1/3 次，别把指数算错",
+        "内层 x+e^{−x/2} 的导数含 −(1/2)e^{−x/2}，代 x=0 化简得 1/3"
+      ],
+      "key_point": "链式求导后代 x=0，得 y′=1/3。"
+    },
+    {
+      "id": 1476,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{-1}^1\\left(x+\\sqrt{1-x^2}\\right)^2 \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "$\\displaystyle \\int_{-1}^1\\left(x+\\sqrt{1-x^2}\\right)^2 \\mathrm{d} x=\\int_{-1}^1\\left(x^2+2 x \\sqrt{1-x^2}+1-x^2\\right) \\mathrm{d} x=\\int_{-1}^1 \\mathrm{d} x=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(x+√(1−x²))²=x²+2x√(1−x²)+(1−x²)，x² 与 −x² 抵消只剩 1 和奇函数项",
+        "2x√(1−x²) 是奇函数，在 [−1,1] 上积分为 0，最终 ∫1 dx=2"
+      ],
+      "key_point": "展开后奇项归零、平方项相消，只剩 ∫_{−1}^1 1 dx=2。"
+    },
+    {
+      "id": 1477,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}+2 y^{\\prime}+5 y=0$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\mathrm{e}^{-x}\\left(C_1 \\cos 2 x+C_2 \\sin 2 x\\right) \\quad\\left(C_1, C_2\\right.$ 为任意常数)",
+      "analysis": "特征方程为 $\\lambda^2+2 \\lambda+5=0$, 特征根为 $\\lambda_{1,2}=-1 \\pm 2 \\mathrm{i}$,\r\n\r\n则原方程的通解为 \r\n\r\n$y=\\mathrm{e}^{-x}\\left(C_1 \\cos 2 x+C_2 \\sin 2 x\\right) \\quad\\left(C_1, C_2\\right.$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "λ=−1±2i：实部 −1 进指数因子 e^{−x}，虚部 2 进三角函数",
+        "别把 e^{−x} 漏掉或把 2x 写成 x"
+      ],
+      "key_point": "复根 −1±2i 对应通解 e^{−x}(C₁cos2x+C₂sin2x)。"
+    },
+    {
+      "id": 1478,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow \\infty} x\\left\\{\\sin \\left[\\ln \\left(1+\\frac{3}{x}\\right)\\right]-\\sin \\left[\\ln \\left(1+\\frac{1}{x}\\right)\\right]\\right\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "令 $f(t)=\\sin t, f^{\\prime}(t)=\\cos t$, 由拉格朗日中值定理得\r\n\r\n$\\displaystyle \r\n\\sin \\left[\\ln \\left(1+\\frac{3}{x}\\right)\\right]-\\sin \\left[\\ln \\left(1+\\frac{1}{x}\\right)\\right]\\\\\r\n=\\cos \\xi \\cdot\\left[\\ln \\left(1+\\frac{3}{x}\\right)-\\ln \\left(1+\\frac{1}{x}\\right)\\right]$\r\n\r\n其中 $\\xi$ 介于 $\\displaystyle \\ln \\left(1+\\frac{1}{x}\\right)$ 与 $\\ln \\left(1+\\dfrac{3}{x}\\right)$ 之间,\r\n\r\n则$\\displaystyle \\lim _{x \\rightarrow \\infty} x\\left\\{\\sin \\left[\\ln \\left(1+\\frac{3}{x}\\right)\\right]-\\sin \\left[\\ln \\left(1+\\frac{1}{x}\\right)\\right]\\right\\}\\\\\r\n=\\lim _{x \\rightarrow \\infty} \\cos \\xi \\cdot \\lim _{x \\rightarrow \\infty} \\frac{\\ln \\left(1+\\frac{3}{x}\\right)-\\ln \\left(1+\\frac{1}{x}\\right)}{\\frac{1}{x}}\\\\\r\n\\stackrel{\\frac{1}{x}=t}{=} \\lim _{t \\rightarrow 0} \\frac{\\ln (1+3 t)-\\ln (1+t)}{t} \\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{3 t-t}{t}=2$\r\n\r\n本题也可使用倒带换和等价无穷小得方法",
+      "wrong_options": {},
+      "pitfalls": [
+        "sin[ln(1+3/x)]−sin[ln(1+1/x)] 差式，可用拉氏中值定理提出 cosξ→1",
+        "令 t=1/x，[ln(1+3t)−ln(1+t)]/t→(3t−t)/t=2"
+      ],
+      "key_point": "ln、sin 逐层等价（或拉氏中值），极限为 2。"
+    },
+    {
+      "id": 1479,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "由曲线 $\\displaystyle y=x+\\frac{1}{x}, x=2$ 及 $y=2$ 所围成图形的面积 $S=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\ln 2-\\dfrac{1}{2}$",
+      "analysis": "由 $x+\\dfrac{1}{x}=2$ 得 $x=1$, 则所围成图形的面积为\r\n\r\n$\\displaystyle S=\\int_1^2\\left(x+\\frac{1}{x}-2\\right) \\mathrm{d} x=\\frac{3}{2}+\\ln 2-2=\\ln 2-\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x+1/x=2 得交点 x=1，积分区间 [1,2]",
+        "S=∫₁²(x+1/x−2)dx，注意减去下边界 y=2"
+      ],
+      "key_point": "S=∫₁²(x+1/x−2)dx=ln2−1/2。"
+    },
+    {
+      "id": 1480,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设当 $x \\rightarrow 0$ 时, $\\mathrm{e}^x-\\left(a x^2+b x+1\\right)$ 是比 $x^2$ 高阶的无穷小, 则 $(\\quad)$",
+      "options": {
+        "A": "$a=\\dfrac{1}{2}, b=1$",
+        "B": "$a=1, b=1$",
+        "C": "$a=-\\dfrac{1}{2}, b=-1$",
+        "D": "$a=-1, b=1$"
+      },
+      "answer": "A",
+      "analysis": "方法一\r\n由 $\\displaystyle \\mathrm{e}^x=1+x+\\frac{x^2}{2}+o\\left(x^2\\right)$, 得\r\n\r\n$\\mathrm{e}^x-\\left(a x^2+b x+1\\right)=(1-b) x+\\left(\\dfrac{1}{2}-a\\right) x^2+o\\left(x^2\\right)$,\r\n\r\n于是 $\\displaystyle 1-b=0, \\frac{1}{2}-a=0$, 故 $\\displaystyle a=\\frac{1}{2}, b=1$, 应选(A).\r\n\r\n方法二\r\n\r\n由 $\\displaystyle 0=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x-\\left(a x^2+b x+1\\right)}{x^2}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x-2 a x-b}{2 x}$ 得 $b=1$;\r\n\r\n再由 $\\displaystyle 0=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x-2 a x-1}{2 x}=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x-2 a}{2}$ \r\n\r\n得 $\\displaystyle a=\\frac{1}{2}$, 应选( $\\mathrm{A}$ )",
+      "wrong_options": {
+        "B": "a=1 把 x² 的系数算错，应为 1/2（来自 e^x 的 x²/2 项）",
+        "C": "a、b 符号全取反，与展开系数矛盾",
+        "D": "a=−1 二次项系数错，且 b 也需重新对比"
+      },
+      "pitfalls": [
+        "e^x=1+x+x²/2+o(x²)，要求一次项与二次项系数都被抵消",
+        "1−b=0 得 b=1，1/2−a=0 得 a=1/2"
+      ],
+      "key_point": "对比 e^x 展开系数得 a=1/2, b=1。"
+    },
+    {
+      "id": 1481,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(-\\delta, \\delta)$ 内有定义, 若当 $x \\in(-\\delta, \\delta)$ 时, 恒有 $|f(x)| \\leqslant x^2$, 则 $x=0$ 必为 $f(x)$ 的 $(\\quad)$",
+      "options": {
+        "A": "间断点",
+        "B": "连续而不可导的点",
+        "C": "可导的点, 且 $f^{\\prime}(0)=0$",
+        "D": "可导的点, 且 $f^{\\prime}(0) \\neq 0$"
+      },
+      "answer": "C",
+      "analysis": "显然 $f(0)=0$, 由 $0 \\leqslant|f(x)| \\leqslant x^2$ 得 $\\lim\\limits _{x \\rightarrow 0} f(x)=0$, \r\n\r\n即 $f(x)$ 在 $x=0$ 处连续,\r\n\r\n又由 $\\displaystyle 0 \\leqslant\\left|\\frac{f(x)}{x}\\right| \\leqslant|x|$, \r\n\r\n根据夹逼定理得 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=0$, \r\n\r\n即 $f^{\\prime}(0)=0$, 应选 (C)",
+      "wrong_options": {
+        "A": "误判间断：由 |f|≤x² 夹逼得 lim f=0=f(0)，实为连续",
+        "B": "误判连续不可导：由 |f/x|≤|x|→0 得 f′(0)=0，实为可导",
+        "D": "可导点没错但 f′(0)=0 而非 ≠0"
+      },
+      "pitfalls": [
+        "|f(x)|≤x² 先给 f(0)=0（取 x=0）与连续性",
+        "|f(x)/x|≤|x|→0 由夹逼得 f′(0)=0"
+      ],
+      "key_point": "x=0 是可导点且 f′(0)=0。"
+    },
+    {
+      "id": 1482,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 处处可导, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty$, 必有 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f^{\\prime}(x)=-\\infty$",
+        "B": "当 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f^{\\prime}(x)=-\\infty$, 必有 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty$",
+        "C": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=+\\infty$",
+        "D": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=+\\infty$, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$"
+      },
+      "answer": "D",
+      "analysis": "方法一\r\n\r\n取 $f(x)=x$, 显然 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty, \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, 但 $f^{\\prime}(x)=1$, 排除 (A), (C);\r\n\r\n取 $f(x)=x^2, f^{\\prime}(x)=2 x$, 显然 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f^{\\prime}(x)=-\\infty$, \r\n\r\n但 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f(x)=+\\infty$, 排除 (B), 应选 (D).\r\n\r\n方法二\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow+ \\infty} f^{\\prime}(x)=+\\infty$, \r\n\r\n所以存在 $X_0>0$, 当 $x>X_0$ 时, $f^{\\prime}(x)>1$,\r\n\r\n当 $x>X_0$ 时, $f(x)-f\\left(X_0\\right)=f^{\\prime}(c)\\left(x-X_0\\right)$, \r\n\r\n其中 $X_0<c<x$,\r\n\r\n显然 $f(x)>f\\left(X_0\\right)+\\left(x-X_0\\right)$, 两边取极限得 \r\n\r\n$\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, 应选 (D)",
+      "wrong_options": {
+        "A": "取 f=x：f→−∞ 但 f′=1 有界，反例排除",
+        "B": "取 f=x²：limf′可为−∞而 f→+∞，f 与 f′ 无此蕴含，反例排除",
+        "C": "取 f=x：f→+∞ 但 f′=1，反例排除"
+      },
+      "pitfalls": [
+        "f 的极限行为不能反推 f′ 的极限（A、C），f′ 的极限也不总反推 f（B）",
+        "D 成立：f′→+∞ 时存在 X₀ 使 f′>1，拉氏得 f(x)>f(X₀)+(x−X₀)→+∞"
+      ],
+      "key_point": "f′→+∞ ⇒ f→+∞（拉氏中值证），其余可举反例。"
+    },
+    {
+      "id": 1483,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "在区间 $(-\\infty,+\\infty)$ 内, 方程 $\\displaystyle |x|^{\\frac{1}{4}}+|x|^{\\frac{1}{2}}-\\cos x=0 (\\quad)$",
+      "options": {
+        "A": "无实根",
+        "B": "有且仅有一个实根",
+        "C": "有且仅有两个实根",
+        "D": "有无穷多个实根"
+      },
+      "answer": "C",
+      "analysis": "令 $\\displaystyle f(x)=|x|^{\\frac{1}{4}}+|x|^{\\frac{1}{2}}-\\cos x$, 显然 $f(x)$ 为偶函数,\r\n\r\n只研究 $f(x)$ 在 $(0,+\\infty)$ 内的零点个数. \r\n\r\n因为当 $x \\geqslant 1$ 时, $f(x)>0$,\r\n\r\n所以只研究 $f(x)$ 在 $(0,1)$ 内零点的个数.\r\n\r\n因为 $f(0)=-1<0, f(1)=2-\\cos 1>0$,\r\n\r\n所以 $f(x)$ 在 $(0,1)$ 内至少有一个零点.\r\n\r\n又因为 $\\displaystyle f^{\\prime}(x)=\\frac{1}{4 \\sqrt[4]{x^3}}+\\frac{1}{2 \\sqrt{x}}+\\sin x>0(0<x<1)$,\r\n\r\n所以 $f(x)$ 在 $(0,1)$ 内单调递增,\r\n\r\n从而 $f(x)$ 在 $(0,1)$ 内只有唯一的零点,\r\n\r\n故方程 $\\displaystyle |x|^{\\frac{1}{4}}+|x|^{\\frac{1}{2}}-\\cos x=0$ 在 $(-\\infty,+\\infty)$ 内有且仅有两个根, 应选 (C)",
+      "wrong_options": {
+        "A": "漏看 f(0)=−1<0、f(1)=2−cos1>0，实有根",
+        "B": "忽略偶函数对称性，正负半轴各一根共两根",
+        "D": "误以为 cos x 振荡带来无穷多根，其实 x≥1 时 f>0 恒无根"
+      },
+      "pitfalls": [
+        "f 偶函数只需研究 (0,+∞)；x≥1 时 f(x)>0，只可能在 (0,1) 内有根",
+        "(0,1) 内 f′>0 单调增，仅一根，加对称共两根"
+      ],
+      "key_point": "偶函数+单调性，方程恰有两个实根。"
+    },
+    {
+      "id": 1484,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x), g(x)$ 在区间 $[a, b]$ 上连续, 且 $g(x)<f(x)<m$ ( $m$ 为常数), 由曲线 $y=g(x)$,\r\n$y=f(x), x=a$ 及 $x=b$ 所围平面图形绕直线 $y=m$ 旋转而成的旋转体的体积为 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_s^k \\pi[2 m-f(x)+g(x)][f(x)-g(x)] \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_a^b \\pi[2 m-f(x)-g(x)][f(x)-g(x)] \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_a^b \\pi[m-f(x)+g(x)][f(x)-g(x)] \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_a^b \\pi[m-f(x)-g(x)][f(x)-g(x)] \\mathrm{d} x$"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\mathrm{d} V=\\pi\\left\\{[m-g(x)]^2-[m-f(x)]^2\\right\\} \\mathrm{d} x$, \r\n\r\n所以旋转体的体积为 $\\displaystyle \r\nV \\\\=\\pi \\int_a^b\\left\\{[m-g(x)]^2-[m-f(x)]^2\\right\\} \\mathrm{d} x \\\\\r\n=\\int_a^b \\pi[2 m-f(x)-g(x)][f(x)-g(x)] \\mathrm{d} x$\r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "被积写成 2m−f+g，符号错（应 2m−f−g）且积分限记号有误",
+        "C": "系数写成 m 而非 2m，漏了平方差展开的因子",
+        "D": "m−f−g 系数错，正确为 2m−f−g"
+      },
+      "pitfalls": [
+        "到旋转轴距离是 m−g（外）与 m−f（内），因 g<f<m",
+        "(m−g)²−(m−f)²=(2m−f−g)(f−g)，别漏平方差"
+      ],
+      "key_point": "V=∫π(2m−f−g)(f−g)dx。"
+    },
+    {
+      "id": 1485,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int_0^{\\ln 2} \\sqrt{1-\\mathrm{e}^{-2 x}} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-\\frac{\\sqrt{3}}{2}+\\ln (2+\\sqrt{3})$",
+      "analysis": "令 $t=\\sqrt{1-\\mathrm{e}^{-2 x}}$, 则 $\\displaystyle x=-\\frac{1}{2} \\ln \\left(1-t^2\\right),\\\\\r\n\\int_0^{\\ln 2} \\sqrt{1-\\mathrm{e}^{-2 x}} \\mathrm{d} x \\\\\r\n=\\int_0^{\\frac{\\sqrt{3}}{2}} \\frac{t^2}{1-t^2} \\mathrm{d} t\\\\\r\n=\\int_0^{\\frac{\\sqrt{\\pi}}{2}}\\left(-1+\\frac{1}{1-t^2}\\right) \\mathrm{d} t \\\\\r\n=-\\frac{\\sqrt{3}}{2}-\\left.\\frac{1}{2} \\ln \\frac{1-t}{1+t}\\right|_0 ^{\\frac{\\sqrt{3}}{2}}\\\\\r\n=-\\frac{\\sqrt{3}}{2}+\\ln (2+\\sqrt{3})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 t=√(1−e^{−2x}) 后 x=−½ln(1−t²)，dx 要相应换算",
+        "t²/(1−t²)=−1+1/(1−t²)，积分限换成 0 到 √3/2"
+      ],
+      "key_point": "根式换元化有理积分，值 −√3/2+ln(2+√3)。"
+    },
+    {
+      "id": 1486,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\mathrm{d} x}{1+\\sin x}$",
+      "options": {},
+      "answer": "$\\tan x-\\frac{1}{\\cos x}+C$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\int \\frac{\\mathrm{d} x}{1+\\sin x}\\\\\r\n=\\int \\frac{1-\\sin x}{1-\\sin ^2 x} \\mathrm{d} x\\\\\r\n=\\int\\left(\\sec ^2 x-\\frac{\\sin x}{\\operatorname{mss}^2 x}\\right) \\mathrm{d} x\\\\\r\n=\\tan x-\\frac{1}{\\cos x}+C$\r\n\r\n方法二\r\n\r\n$\\displaystyle \r\n\\int \\frac{\\mathrm{d} x}{1+\\sin x}\\\\\r\n =\\int \\frac{\\mathrm{d} x}{1+\\cos \\left(x-\\frac{\\pi}{2}\\right)}\\\\\r\n=\\int \\frac{\\mathrm{d} x}{2 \\cos ^2\\left(\\frac{x}{2}-\\frac{\\pi}{4}\\right)} \\\\\r\n=\\int \\sec ^2\\left(\\frac{x}{2}-\\frac{\\pi}{4}\\right) \\mathrm{d}\\left(\\frac{x}{2}-\\frac{\\pi}{4}\\right)\\\\\r\n=\\tan \\left(\\frac{x}{2}-\\frac{\\pi}{4}\\right)+C$\r\n\r\n方法三\r\n\r\n$\\displaystyle \r\n\\int \\frac{\\mathrm{d} x}{1+\\sin x} \\\\\r\n=\\int \\frac{1}{\\left(\\sin \\frac{x}{2}+\\cos \\frac{x}{2}\\right)^2} \\mathrm{d} x\\\\\r\n=\\int \\frac{\\sec ^2 \\frac{x}{2}}{\\left(\\tan \\frac{x}{2}+1\\right)^2} \\mathrm{d} x \\\\\r\n=2 \\int \\frac{\\mathrm{d}\\left(\\tan \\frac{x}{2}+1\\right)}{\\left(\\tan \\frac{x}{2}+1\\right)^2}\\\\\r\n=-\\frac{2}{\\tan \\frac{x}{2}+1}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "乘 (1−sin x)/(1−sin x) 得 (1−sin x)/cos²x=sec²x−sinx/cos²x",
+        "不同方法答案形式不同（如 tan(x/2−π/4)+C），彼此相差常数"
+      ],
+      "key_point": "有理化后积分为 tan x−1/cos x+C。"
+    },
+    {
+      "id": 1487,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}\\displaystyle x=\\int_0^t f\\left(u^2\\right) \\mathrm{d} u \\\\ y=\\left[f\\left(t^2\\right)\\right]^2\\end{array}\\right.$ 其中 $f(u)$ 具有二阶导数, 且 $f(u) \\neq 0$, 求 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}$",
+      "options": {},
+      "answer": "$\\dfrac{4 f^{\\prime}\\left(t^2\\right)+8 t^2 f^{\\prime \\prime}\\left(t^2\\right)}{f\\left(t^2\\right)}$",
+      "analysis": "$\\displaystyle\r\n\\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}\r\n=\\frac{4 t f\\left(t^2\\right) f^{\\prime}\\left(t^2\\right)}{f\\left(t^2\\right)}\r\n=4 t f^{\\prime}\\left(t^2\\right), \\\\\r\n\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\r\n=\\frac{\\mathrm{d}\\left[4 t f^{\\prime}\\left(t^2\\right)\\right] / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}\r\n=\\frac{4 f^{\\prime}\\left(t^2\\right)+8 t^2 f^{\\prime \\prime}\\left(t^2\\right)}{f\\left(t^2\\right)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dx/dt=f(t²)（变限积分求导），dy/dt=4t f(t²)f′(t²)，约去得 dy/dx=4t f′(t²)",
+        "二阶导必须再除以 dx/dt=f(t²)，不能直接对 x 求"
+      ],
+      "key_point": "dy/dx=4t f′(t²)，再对 t 求导除以 f(t²) 得结果。"
+    },
+    {
+      "id": 1488,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x)=\\frac{1-x}{1+x}$ 在点 $x=0$ 处带拉格朗日型余项的 $n$ 阶泰勒展开式",
+      "options": {},
+      "answer": "$1-2 x+2 x^2-\\cdots+(-1)^n 2 x^n+\\dfrac{(-1)^{n+1} 2}{(1+\\theta x)^{n+2}} x^{n+1} \\\\(0<\\theta<1) $",
+      "analysis": "$$\r\nf(x)  =\\frac{1-x}{1+x}=-1+2 \\cdot \\frac{1}{1+x}\\\\\r\n=-1+2\\left[1-x+x^2-\\cdots+(-1)^n x^n+\\frac{(-1)^{n+1} x^{n+1}}{(1+\\theta x)^{n+2}}\\right] \\\\\r\n=1-2 x+2 x^2-\\cdots+(-1)^n 2 x^n+\\frac{(-1)^{n+1} 2}{(1+\\theta x)^{n+2}} x^{n+1} \\\\(0<\\theta<1) \r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1−x)/(1+x)=−1+2/(1+x)，先分解再展开更简单",
+        "1/(1+x) 的 n 阶泰勒余项分母是 (1+θx)^{n+2}，别把幂次写错"
+      ],
+      "key_point": "分解后套 1/(1+x) 展开，系数逐项乘 2。"
+    },
+    {
+      "id": 1489,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}+y^{\\prime}=x^2$ 的通解",
+      "options": {},
+      "answer": "$y=C_1+C_2 \\mathrm{e}^{-x}+\\dfrac{x^3}{3}-x^2+2 x \\quad\\left(C_1, C_2\\right.$ 为任意常数)",
+      "analysis": "$y^{\\prime \\prime}+y^{\\prime}=x^2$ 的特征方程为 $\\lambda^2+\\lambda=0$, \r\n\r\n解得 $\\lambda_1=0, \\lambda_2=-1$.\r\n\r\n则 $y^{\\prime \\prime}+y^{\\prime}=0$ 的通解为 $y=C_1+C_2 \\mathrm{e}^{-x}$;\r\n\r\n设 $y^{\\prime \\prime}+y^{\\prime}=x^2$ 的特解为 $y_0(x)=a x^3+b x^2+c x$, \r\n\r\n代入得 $\\displaystyle a=\\frac{1}{3}, b=-1, c=2$,\r\n\r\n故原方程的通解为 \r\n\r\n$y=C_1+C_2 \\mathrm{e}^{-x}+\\dfrac{x^3}{3}-x^2+2 x \\quad\\left(C_1, C_2\\right.$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "λ²+λ=0 得 λ=0,−1，齐次解 C₁+C₂e^{−x}",
+        "λ=0 是特征根，特解要设 x(ax²+bx+c) 升一次，否则待定系数无解"
+      ],
+      "key_point": "特解设 ax³+bx²+cx（升次），通解含 x³/3−x²+2x。"
+    },
+    {
+      "id": 1490,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有一正椭圆柱体, 其底面的长、短轴分别为 $2 a 、 2 b$, 用过此柱体底面的短轴且与底面成 $\\alpha$ 角 $\\left(0<\\alpha<\\dfrac{\\pi}{2}\\right)$ 的平面截此柱体, 得一楔形体 (如图所示), 求此楔形体的体积 $V$\n\n![楔形体示意图](/uploads/books/03b068c385c1dc20bf39e8f8f7c443dc21c66e979bd97d0813ed7a9916c7ab60.jpg)",
+      "options": {},
+      "answer": "$\\dfrac{2 a^2 b}{3} \\tan \\alpha$",
+      "analysis": "取 $[y, y+\\mathrm{d} y] \\subset[-b, b]$,\r\n\r\n由 $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$ \r\n\r\n得 $x=\\dfrac{a}{b} \\sqrt{b^2-y^2}, h=x \\tan\\alpha$,\r\n\r\n截面面积 $\\displaystyle A(y)=\\frac{1}{2}xh\\\\=\\frac{1}{2} \\cdot\\left(\\frac{a}{b} \\sqrt{b^2-y^2}\\right)^2 \\cdot \\tan \\alpha\\\\=\\frac{a^2}{2 b^2} \\tan \\alpha \\cdot\\left(b^2-y^2\\right)$,\r\n\r\n则所求的体积为 $\\displaystyle V=\\int_{-b}^b A(y) \\mathrm{d} y\\\\=\\frac{a^2}{b^2} \\tan \\alpha \\cdot \\int_{-b}^b\\left(b^2-y^2\\right) \\mathrm{d} y\\\\=\\frac{2 a^2 b}{3} \\tan \\alpha$",
+      "wrong_options": {},
+      "pitfalls": [
+        "在 y 处椭圆给 x=(a/b)√(b²−y²)，斜面高 h=x tanα",
+        "截面直角三角形面积 (1/2)x·h=(a²/2b²)tanα(b²−y²)，沿 [−b,b] 积分"
+      ],
+      "key_point": "截面三角形面积沿短轴积分得 (2a²b/3)tanα。"
+    },
+    {
+      "id": 1491,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算不定积分 $\\displaystyle \\int \\frac{\\arctan x}{x^2\\left(1+x^2\\right)} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-\\dfrac{\\arctan x}{x}+\\dfrac{1}{2} \\ln \\dfrac{x^2}{1+x^2}-\\dfrac{1}{2}(\\arctan x)^2+C $",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \r\n\\int \\frac{\\arctan x}{x^2\\left(1+x^2\\right)} \\mathrm{d} x \\\\\r\n=\\int \\frac{\\arctan x}{x^2} \\mathrm{d} x-\\int \\frac{\\arctan x}{1+x^2} \\mathrm{d} x \\\\\r\n=-\\int \\arctan x \\mathrm{d}\\left(\\frac{1}{x}\\right)-\\int \\arctan x \\mathrm{d}(\\arctan x) \\\\\r\n=-\\frac{\\arctan x}{x}+\\int \\frac{1}{x\\left(1+x^2\\right)} \\mathrm{d} x-\\frac{1}{2}(\\arctan x)^2 \\\\\r\n=-\\frac{\\arctan x}{x}+\\frac{1}{2} \\int \\frac{\\mathrm{d}\\left(x^2\\right)}{x^2\\left(1+x^2\\right)}-\\frac{1}{2}(\\arctan x)^2 \\\\\r\n=-\\frac{\\arctan x}{x}+\\frac{1}{2} \\ln \\frac{x^2}{1+x^2}-\\frac{1}{2}(\\arctan x)^2+C $\r\n\r\n方法二\r\n\r\n$\\displaystyle \r\n\\int \\frac{\\arctan x}{x^2\\left(1+x^2\\right)} \\mathrm{d} x \\\\\r\n\\stackrel{x=\\tan t}{=} \\int \\frac{t}{\\tan ^2 t \\cdot \\sec ^2 t} \\cdot \\sec ^2 t \\mathrm{d} t\\\\\r\n=\\int t \\cot ^2 t \\mathrm{d} t \\\\\r\n=\\int t\\left(\\csc ^2 t-1\\right) \\mathrm{d} t\\\\\r\n=-\\int t \\mathrm{d}(\\cot t)-\\frac{1}{2} t^2 \\\\\r\n=-t \\cot t+\\int \\cot t \\mathrm{d} t-\\frac{1}{2} t^2\\\\\r\n=-t \\cot t+\\ln |\\sin t|-\\frac{1}{2} t^2+C \\\\\r\n=-\\frac{\\arctan x}{x}+\\ln \\left|\\frac{x}{\\sqrt{x^2+1}}\\right|-\\frac{1}{2} \\arctan ^2 x+C $",
+      "wrong_options": {},
+      "pitfalls": [
+        "1/(x²(1+x²))=1/x²−1/(1+x²)，把积分拆成两块",
+        "∫arctanx d(1/x) 与 ∫arctanx d(arctanx) 各用分部，后者得 (1/2)(arctanx)²"
+      ],
+      "key_point": "拆项+分部，含 −arctanx/x、½ln[x²/(1+x²)]、−½arctan²x。"
+    },
+    {
+      "id": 1492,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)= \\begin{cases}1-2 x^2, & x<-1, \\\\ x^3, & -1 \\leqslant x \\leqslant 2 \\\\ 12 x-16, & x>2 .\r\n\\end{cases}$\r\n\r\n(1) 写出 $f(x)$ 的反函数 $g(x)$ 的表达式;\r\n\r\n(2) $g(x)$ 是否有间断点、不可导点? 若有, 指出这些点",
+      "options": {},
+      "answer": "(1) $g(x)= \\begin{cases}-\\sqrt{\\dfrac{1-x}{2}}, & x<-1 \\\\ \\sqrt[3]{x}, & -1 \\leqslant x \\leqslant 8 \\\\ \\dfrac{x+16}{12}, & x>8 \\end{cases}$\r\n\r\n(2) $x=-1, x=0$ 为 $g(x)$ 的不可导点",
+      "analysis": "(1) 当 $x<-1$ 时, $y<-1$, 由 $y=1-2 x^2$, 得 $\\displaystyle x=-\\sqrt{\\frac{1-y}{2}}$;\r\n\r\n当 $-1 \\leqslant x \\leqslant 2$ 时, $-1 \\leqslant y \\leqslant 8$, 由 $y=x^3$, 得 $x=\\sqrt[3]{y}$;\r\n\r\n当 $x>2$ 时, $y>8$, 由 $y=12 x-16$, 得 $\\displaystyle x=\\frac{y+16}{12}$,\r\n\r\n故反函数为 $g(x)= \\begin{cases}-\\sqrt{\\dfrac{1-x}{2}}, & x<-1 \\\\ \\sqrt[3]{x}, & -1 \\leqslant x \\leqslant 8 \\\\ \\dfrac{x+16}{12}, & x>8 \\end{cases}$\r\n\r\n(2) 因为 $g(-1-0)=g(-1)=g(-1+0)=-1, \\\\ g(8-0)=g(8)=g(8+0)=2$,\r\n\r\n所以 $g(x)$ 没有间断点.\r\n\r\n$\\displaystyle g_{-}^{\\prime}(-1)=\\lim _{x \\rightarrow 1^{-}} \\frac{g(x)-g(-1)}{x+1}\\\\\r\n=\\lim _{x \\rightarrow-1^{-}} \\frac{-\\sqrt{\\frac{1-x}{2}}+1}{x+1}\\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow-1^{-}} \\frac{1}{1+\\sqrt{\\frac{1-x}{2}}}=\\frac{1}{4},\\\\\r\ng_{+}^{\\prime}(-1)=\\lim _{x \\rightarrow 1^{+}} \\frac{g(x)-g(-1)}{x+1}\\\\\r\n=\\lim _{x \\rightarrow 1^{+}} \\frac{\\sqrt[3]{x}+1}{x+1}\\\\\r\n=\\lim _{x \\rightarrow-1^{+}} \\frac{1}{\\sqrt[3]{x^2}-\\sqrt[3]{x}+1}=\\frac{1}{3}$.\r\n\r\n由 $g_{-}^{\\prime}(-1) \\neq g_{+}^{\\prime}(-1)$, 得 $x=-1$ 是 $g(x)$ 的不可导点;\r\n\r\n显然 $x=0$ 为 $g(x)$ 的不可导点;\r\n\r\n$\\displaystyle g_{-}^{\\prime}(8)=\\lim _{x \\rightarrow 8^{-}} \\frac{g(x)-g(8)}{x-8}\\\\\r\n=\\lim _{x \\rightarrow 5^{-}} \\frac{\\sqrt[3]{x}-2}{x-8}\\\\\r\n=\\lim _{x \\rightarrow 8^{-}} \\frac{1}{\\sqrt[3]{x^2}+2 \\sqrt[3]{x}+4}=\\frac{1}{12},\\\\\r\ng_{+}^{\\prime}(8)=\\lim _{x \\rightarrow 8^{+}} \\frac{g(x)-g(8)}{x-8}\\\\\r\n=\\lim _{x \\rightarrow 8^{+}} \\frac{\\frac{x+16}{12}-2}{x-8}=\\frac{1}{12}$.\r\n\r\n由 $g_{-}^{\\prime}(8)=g_{+}^{\\prime}(8)$ 得 $g(x)$ 在 $x=8$ 处可导.\r\n\r\n综上 $x=-1, x=0$ 为 $g(x)$ 的不可导点",
+      "wrong_options": {},
+      "pitfalls": [
+        "反函数分段的定义域断点要按原函数值域换算（如 x=2 对应 y=8）",
+        "x=−1 处左右导数 1/4≠1/3 不可导，x=0 处 ∛x 尖点不可导，x=8 处左右导数均 1/12 可导"
+      ],
+      "key_point": "g(x) 连续，不可导点仅 x=−1 与 x=0。"
+    },
+    {
+      "id": 1493,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由方程 $2 y^3-2 y^2+2 x y-x^2=1$ 所确定, 试求 $y=y(x)$ 的驻点, 并判断它是否为极值点",
+      "options": {},
+      "answer": "驻点 $x=1$，为极小值点，极小值 $y=1$",
+      "analysis": "$2 y^3-2 y^2+2 x y-x^2=1$ 两边对 $x$ 求导,\r\n\r\n得 $6 y^2 y^{\\prime}-4 y y^{\\prime}+2 y+2 x y^{\\prime}-2 x=0$,\r\n\r\n取 $y^{\\prime}=0$, 得 $y=x$, 代入原方程, 得 $x=1$.\r\n\r\n$6 y^2 y^{\\prime}-4 y y^{\\prime}+2 y+2 x y^{\\prime}-2 x=0$ 两边再对 $x$ 求导, \r\n\r\n得 $\\displaystyle\r\n12 y y^{\\prime 2}+6 y^2 y^{\\prime \\prime}-4 y^{\\prime 2}-4 y y^{\\prime \\prime}+2 y^{\\prime}+2 y^{\\prime}+2 x y^{\\prime \\prime}-2=0$,\r\n\r\n将 $x=1, y=1, y^{\\prime}=0$ 代入, 得 $\\displaystyle y^{\\prime \\prime}(1)=\\frac{1}{2}>0$,\r\n\r\n故 $x=1$ 为极小值点, 极小值为 $y=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 y′=0 得 y=x，代原方程解出驻点 (1,1)",
+        "再次求导代 x=1,y=1,y′=0 得 y″(1)=1/2>0，判为极小值"
+      ],
+      "key_point": "驻点 x=1，y″(1)=1/2>0，极小值 y=1。"
+    },
+    {
+      "id": 1494,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[a, b]$ 上具有二阶导数, 且 $f(a)=f(b)=0, f^{\\prime}(a) f^{\\prime}(b)>0$.\r\n证明: 存在 $\\xi \\in(a, b)$ 和 $\\eta \\in(a, b)$ 使得 $f(\\xi)=0$ 及 $f^{\\prime \\prime}(\\eta)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "不妨设 $f^{\\prime}(a)>0, f^{\\prime}(b)>0$,\r\n\r\n因为 $\\displaystyle f^{\\prime}(a)=\\lim _{x \\rightarrow a^{+}} \\frac{f(x)}{x-a}>0$,\r\n\r\n所以存在 $\\delta>0$,\r\n\r\n当 $x \\in(a, a+\\delta)$ 时 $\\displaystyle \\frac{f(x)}{x-a}>0$, 即 $f(x)>0$,\r\n\r\n取 $c_1 \\in(a, a+\\delta)$, 则有 $f\\left(c_1\\right)>0$;\r\n\r\n因为 $\\displaystyle f^{\\prime}(b)=\\lim _{x \\rightarrow b^{-}} \\frac{f(x)}{x-b}>0$,\r\n\r\n所以存在 $\\delta>0$, 当 $x \\in(b-\\delta, b)$ 时 $\\displaystyle \\frac{f(x)}{x-b}>0$, 即 $f(x)<0$,\r\n\r\n取 $c_2 \\in(b-\\delta, b)$, 则有 $f\\left(c_2\\right)<0$.\r\n\r\n因为 $f\\left(c_1\\right) f\\left(c_2\\right)<0$, 所以由零点定理可知,\r\n\r\n存在 $\\xi \\in\\left(c_1, c_2\\right) \\subset(a, b)$, 使得 $f(\\xi)=0$.\r\n\r\n因为 $f(a)=f(\\xi)=f(b)=0$, 所以由罗尔定理可知,\r\n\r\n存在 $\\eta_1 \\in(a, \\xi), \\eta_2 \\in(\\xi, b)$, \r\n\r\n使得 $f^{\\prime}\\left(\\eta_1\\right)=f^{\\prime}\\left(\\eta_2\\right)=0$,\r\n\r\n再由罗尔定理可知, 存在 $\\eta \\in\\left(\\eta_1, \\eta_2\\right) \\subset(a, b)$, \r\n\r\n使得 $f^{\\prime \\prime}(\\eta)=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "设 f′(a)>0,f′(b)>0，由导数定义得 a 右侧 f>0、b 左侧 f<0，零点定理给内部 ξ",
+        "f(a)=f(ξ)=f(b)=0 两次罗尔得 η₁,η₂ 使 f′=0，再罗尔得 f″(η)=0"
+      ],
+      "key_point": "导数定义定符号+零点定理得 ξ，两级罗尔得 f″(η)=0。"
+    },
+    {
+      "id": 1495,
+      "paper": "数学二",
+      "year": 1996,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 为连续函数\r\n\r\n(1) 求初值问题 $\\left\\{\\begin{array}{l}y^{\\prime}+a y=f(x) \\\\ \\left.y\\right|_{x=0}=0\\end{array}\\right.$ 的解 $y(x)$, 其中 $a$ 是正常数;\r\n\r\n(2) 若 $|f(x)| \\leqslant k$ ( $k$ 为常数), 证明: 当 $x \\geqslant 0$ 时, 有 $\\displaystyle |y(x)| \\leqslant \\frac{k}{a}\\left(1-\\mathrm{e}^{-a x}\\right)$",
+      "options": {},
+      "answer": "(1) $\\displaystyle y(x)=\\mathrm{e}^{-ax} \\cdot \\int_0^x f(t) \\mathrm{e}^{at} \\mathrm{d} t$",
+      "analysis": "(1) 由 $y^{\\prime}+a y=f(x)$ 得\r\n\r\n$\\displaystyle\r\ny=\\left[\\int_0^x f(t) \\mathrm{e}^{\\int a \\mathrm{d} t} \\mathrm{d} t+C\\right] \\mathrm{e}^{-\\int a \\mathrm{d} t}\\\\\r\n=C \\mathrm{e}^{-a x}+\\mathrm{e}^{-a x} \\cdot \\int_0^a f(t) \\mathrm{e}^{a t} \\mathrm{d} t$,\r\n\r\n再由 $y(0)=0$ 得 $C=0$, 故 $\\displaystyle y(x)=\\mathrm{e}^{-ax} \\cdot \\int_0^x f(t) \\mathrm{e}^{at} \\mathrm{d} t$\r\n\r\n(2) 若 $|f(x)| \\leqslant k$, 则当 $x \\geqslant 0$ 时,\r\n\r\n$\\displaystyle \r\n|y(x)| \\leqslant \\mathrm{e}^{-a x} \\cdot \\int_0^x|f(t)| \\mathrm{e}^{a t} \\mathrm{d} t \\\\\r\n\\leqslant\\left.\\mathrm{e}^{-a x} \\cdot \\frac{k}{a} \\mathrm{e}^{a t}\\right|_0 ^x\\\\\r\n=\\frac{k}{a}\\left(1-\\mathrm{e}^{-a x}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分因子 e^{ax}，由 y(0)=0 定常数 C=0",
+        "放缩 |y|≤e^{−ax}∫₀^x|f|e^{at}dt≤(k/a)(1−e^{−ax})，用 |f|≤k"
+      ],
+      "key_point": "积分因子求 y，再用 |f|≤k 放缩得界。"
+    }
+  ]
+}

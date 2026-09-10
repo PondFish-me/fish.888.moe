@@ -1,0 +1,448 @@
+{
+  "paper": "数学一",
+  "year": 1988,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1258,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 1,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(x-3)^{n}}{n \\cdot 3^{n}}$ 的收敛域",
+      "options": {},
+      "answer": "$[0,6)$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\lim _{n \\rightarrow \\infty} \\frac{1}{(n+1) \\cdot 3^{n+1}} / \\frac{1}{n \\cdot 3^n}=\\frac{1}{3}$, \r\n\r\n得收敛半径 $R=3$, \r\n\r\n当 $x-3=-3$, 即 $x=0$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n}$ 收敛; \r\n\r\n当 $x-3=3$, 即 $x=6$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散, \r\n\r\n故级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(x-3)^n}{n \\cdot 3^n}$ 的收敛域为 $[0,6)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求出 R=3 只是开区间 (0,6)，端点 x=0、x=6 必须回代判敛",
+        "x=0 得交错级数 ∑(-1)ⁿ/n 收敛、x=6 得调和级数发散，故左闭右开"
+      ],
+      "key_point": "R=3，中心 3，左端条件收敛右端发散，收敛域 [0,6)。"
+    },
+    {
+      "id": 1259,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 2,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)=\\mathrm{e}^{x^{2}}, f[\\varphi(x)]=1-x$, 且 $\\varphi(x) \\geqslant 0$, 求 $\\varphi(x)$, 并写出其定义域",
+      "options": {},
+      "answer": "$(-\\infty, 0]$",
+      "analysis": "由 $\\mathrm{e}^{\\varphi^2(x)}=1-x$, \r\n\r\n得 $\\varphi(x)=\\sqrt{\\ln (1-x)}$, \r\n\r\n由 $1-x \\geqslant 1$ 得, \r\n\r\n$\\varphi(x)$ 的定义域为 $(-\\infty, 0]$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{φ²}=1-x 只给 φ²，需借 φ(x)≥0 这一条件取正根开方",
+        "定义域由 ln(1-x)≥0 即 1-x≥1 得 x≤0，不是仅 1-x>0"
+      ],
+      "key_point": "φ(x)=√(ln(1-x))，由 ln 内需≥1 得定义域 (-∞,0]。"
+    },
+    {
+      "id": 1260,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 3,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $S$ 为曲面 $x^{2}+y^{2}+z^{2}=1$ 的外侧, 计算曲面积分 $\\displaystyle I=\\oiint\\limits_{S} x^{3} \\mathrm{d} y \\mathrm{d} z+y^{3} \\mathrm{d} z \\mathrm{d} x+z^{3} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{12 \\pi}{5}$",
+      "analysis": "由高斯公式得\r\n$$\r\n\\begin{aligned}\r\nI & =\\oiint\\limits_S x^3 \\mathrm{d} y \\mathrm{d} z+y^3 \\mathrm{d} z \\mathrm{d} x+z^3 \\mathrm{d} x \\mathrm{d} y\\\\\r\n&=3 \\iiint\\limits_{\\Omega}\\left(x^2+y^2+z^2\\right) \\mathrm{d} v \\\\\r\n& =3 \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^\\pi \\mathrm{d} \\varphi \\int_0^1 r^4 \\sin \\varphi \\mathrm{d} r \\\\\r\n&=\\frac{6 \\pi}{5} \\int_0^\\pi \\sin \\varphi \\mathrm{d} \\varphi=\\frac{12 \\pi}{5}\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "散度 3(x²+y²+z²) 在球内用球坐标 r⁴sinφ 才好积，别硬展开",
+        "外侧对应高斯公式正号，方向搞反会差符号"
+      ],
+      "key_point": "高斯公式 I=3∭(x²+y²+z²)dv=12π/5。"
+    },
+    {
+      "id": 1261,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f(t)=\\lim _{x \\rightarrow \\infty} t\\left(1+\\frac{1}{x}\\right)^{2 t x}$, 则 $f^{\\prime}(t)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1+2 t) \\mathrm{e}^{2 t}$",
+      "analysis": "$\\displaystyle f(t)=\\lim _{x \\rightarrow \\infty} t\\left(1+\\frac{1}{x}\\right)^{2 t x}=t \\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{1}{x}\\right)^x\\right]^{2 t}=t \\mathrm{e}^{2 t}$, \r\n\r\n则 $f^{\\prime}(t)=\\mathrm{e}^{2 t}+2 t \\mathrm{e}^{2 t}=(1+2 t) \\mathrm{e}^{2 t}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "极限对 x 求、结果是 t 的函数，t 当常数提到极限外",
+        "指数 2tx 拆成 [(1+1/x)ˣ]^{2t}→e^{2t}，别把 2t 丢了"
+      ],
+      "key_point": "f(t)=te^{2t}，f'(t)=(1+2t)e^{2t}。"
+    },
+    {
+      "id": 1262,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是周期为 $2$ 的周期函数，它在区间 $(-1,1]$ 上的表达式为 $f(x)=\\left\\{\\begin{array}{ll}2, & -1 \\leqslant x \\leqslant 0, \\\\ x^{3}, & 0<x<1,\\end{array}\\right.$ 则 $f(x)$ 的傅里叶级数在 $x=1$ 处收敛于 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{2}$",
+      "analysis": "$f(x)$ 的傅里叶级数在 $x=1$ 处收敛于\r\n\r\n$\\dfrac{f(1-0)+f(1+0)}{2}=\\dfrac{f(1-0)+f(-1+0)}{2}=\\dfrac{1+2}{2}=\\dfrac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=1 是分段/周期边界，级数收敛于 [f(1-0)+f(1+0)]/2 而非 f(1)",
+        "f(1+0) 要靠周期 2 平移成 f(-1+0)=2，不是直接代 x³"
+      ],
+      "key_point": "收敛于 [f(1-0)+f(-1+0)]/2=(1+2)/2=3/2。"
+    },
+    {
+      "id": 1263,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是连续函数, 且 $\\displaystyle \\int_{0}^{x^{3}-1} f(t) \\mathrm{d} t=x$, 则 $f(7)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{12}$",
+      "analysis": "$\\displaystyle \\int_0^{x^3-1} f(t) \\mathrm{d} t=x$ 两边对 $x$ 求导得 $3 x^2 f\\left(x^3-1\\right)=1$,\r\n\r\n取 $x=2$ 得 $\\displaystyle f(7)=\\frac{1}{12}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对上限 x³-1 求导须乘 (x³-1)'=3x²，漏乘会算错",
+        "要 f(7) 须令 x³-1=7 即 x=2 回代，别直接代 x=7"
+      ],
+      "key_point": "3x²f(x³-1)=1，取 x=2 得 f(7)=1/12。"
+    },
+    {
+      "id": 1264,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 7,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $4$ 阶矩阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}, \\boldsymbol{\\gamma}_{2}, \\boldsymbol{\\gamma}_{3}, \\boldsymbol{\\gamma}_{4}\\right), \\boldsymbol{B}=\\left(\\boldsymbol{\\beta}, \\boldsymbol{\\gamma}_{2}, \\boldsymbol{\\gamma}_{3}, \\boldsymbol{\\gamma}_{4}\\right)$, 其中 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}, \\boldsymbol{\\gamma}_{2}, \\boldsymbol{\\gamma}_{3}, \\boldsymbol{\\gamma}_{4}$ 都是 $4$ 维列向量, 且 $|\\boldsymbol{A}|=4,|\\boldsymbol{B}|=1$, 则 $|\\boldsymbol{A}+\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$40$",
+      "analysis": "由 $\\boldsymbol{A}+\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}, 2 \\boldsymbol{\\gamma}_2, 2 \\boldsymbol{\\gamma}_3, 2 \\boldsymbol{\\gamma}_4\\right)$ 得\r\n\r\n$|\\boldsymbol{A}+\\boldsymbol{B}| =\\left|\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}, 2 \\boldsymbol{\\gamma}_2, 2 \\boldsymbol{\\gamma}_3, 2 \\boldsymbol{\\gamma}_4\\right|=8\\left|\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}, \\boldsymbol{\\gamma}_2, \\boldsymbol{\\gamma}_3, \\boldsymbol{\\gamma}_4\\right|\r\n=8\\left(\\left|\\boldsymbol{\\alpha}, \\boldsymbol{\\gamma}_2, \\boldsymbol{\\gamma}_3, \\boldsymbol{\\gamma}_4\\right|+\\left|\\boldsymbol{\\beta}, \\boldsymbol{\\gamma}_2, \\boldsymbol{\\gamma}_3, \\boldsymbol{\\gamma}_4\\right|\\right)=8(|\\boldsymbol{A}|+|\\boldsymbol{B}|)=40$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三列各翻倍提出的是 2³=8 而非 2 或 6",
+        "|A+B|≠|A|+|B|，只有其余列相同才可按首列拆分"
+      ],
+      "key_point": "|A+B|=8(|A|+|B|)=8×5=40。"
+    },
+    {
+      "id": 1265,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若函数 $y=f(x)$ 可导, 且 $\\displaystyle f^{\\prime}\\left(x_{0}\\right)=\\frac{1}{2}$, 则当 $\\Delta x \\rightarrow 0$ 时, 函数 $f(x)$ 在 $x=x_{0}$ 处的微分 $\\mathrm{d} y$ 是 $(\\quad)$",
+      "options": {
+        "A": "与 $\\Delta x$ 等价的无穷小",
+        "B": "与 $\\Delta x$ 同阶的无穷小",
+        "C": "比 $\\Delta x$ 低阶的无穷小",
+        "D": "比 $\\Delta x$ 高阶的无穷小"
+      },
+      "answer": "B",
+      "analysis": "因为 $f(x)$ 在 $x=x_0$ 处可导, 所以 $f(x)$ 在 $x=x_0$ 处可微, \r\n\r\n于是 $\\displaystyle \\mathrm{d} y=f^{\\prime}\\left(x_0\\right) \\Delta x=\\frac{1}{2} \\Delta x$, \r\n\r\n故函数在 $x=x_0$ 处的微分 $\\mathrm{d} y$ 是与 $\\Delta x$ 同阶而非等价的无穷小, 应选 (B)",
+      "wrong_options": {
+        "A": "误把可微就当等价，忽略 dy/Δx=1/2≠1，等价要求比值极限恰为 1",
+        "C": "把同阶错当低阶：低阶意味 dy/Δx→∞，与常数 1/2 矛盾",
+        "D": "把同阶错当高阶：高阶意味 dy/Δx→0，而此处比值恒为 1/2"
+      },
+      "pitfalls": [
+        "同阶与等价的界线是比值极限是否等于 1，1/2 只同阶不等价",
+        "dy=f'(x0)Δx 是线性主部，与 Δx 恒成比例"
+      ],
+      "key_point": "dy=½Δx，dy/Δx=½∈(0,∞)，与 Δx 同阶非等价，选 B。"
+    },
+    {
+      "id": 1266,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $y=f(x)$ 是微分方程 $y^{\\prime \\prime}-2 y^{\\prime}+4 y=0$ 的一个解, 若 $f\\left(x_{0}\\right)>0$ 且 $f^{\\prime}\\left(x_{0}\\right)=0$, 则函数 $f(x)$ 在 $x=x_{0}$ 处 $(\\quad)$",
+      "options": {
+        "A": "取得极大值",
+        "B": "取得极小值",
+        "C": "某邻域内单调增加",
+        "D": "某邻域内单调减少"
+      },
+      "answer": "A",
+      "analysis": "将 $x=x_0$ 代入 $y^{\\prime \\prime}-2 y^{\\prime}+4 y=0$, \r\n\r\n得 $f^{\\prime \\prime}\\left(x_0\\right)-2 f^{\\prime}\\left(x_0\\right)+4 f\\left(x_0\\right)=0$,\r\n\r\n\r\n从而 $f^{\\prime \\prime}\\left(x_0\\right)=-4 f\\left(x_0\\right)<0$, \r\n\r\n由极值判别法得 $x=x_0$ 为 $f(x)$ 的极大值点, 应选 (A)",
+      "wrong_options": {
+        "B": "把 f''(x0)=-4f(x0) 的符号看反，误认为 f''>0 得极小值",
+        "C": "忽视 f'(x0)=0 是驻点，误判该点单调增加",
+        "D": "同 C 且方向再反，误判单调减少"
+      },
+      "pitfalls": [
+        "无需解出方程，直接代 x0 得 f''(x0)=2f'(x0)-4f(x0)=-4f(x0)",
+        "f(x0)>0 保证 f''(x0)<0，第二判别法给极大值"
+      ],
+      "key_point": "f''(x0)=-4f(x0)<0 且 f'(x0)=0，取极大值，选 A。"
+    },
+    {
+      "id": 1267,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设空间区域 $\\Omega_{1}: x^{2}+y^{2}+z^{2} \\leqslant R^{2}(z \\geqslant 0) ; \\Omega_{2}: x^{2}+y^{2}+z^{2} \\leqslant R^{2}(x \\geqslant 0, y \\geqslant 0, z \\geqslant 0)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\iiint\\limits_{\\Omega_{1}} x \\mathrm{d} v=4 \\iiint\\limits_{\\Omega_{2}} x \\mathrm{d} v$",
+        "B": "$\\displaystyle \\iiint\\limits_{\\Omega_{1}} y \\mathrm{d} v=4 \\iiint\\limits_{\\Omega_{2}} y \\mathrm{d} v$",
+        "C": "$\\displaystyle \\iiint\\limits_{\\Omega_{1}} z \\mathrm{d} v=4 \\iiint\\limits_{\\Omega_{2}} z \\mathrm{d} v$",
+        "D": "$\\displaystyle \\iiint\\limits_{\\Omega_{1}} x y z \\mathrm{d} v=4 \\iiint\\limits_{\\Omega_{2}} x y z \\mathrm{d} v$"
+      },
+      "answer": "C",
+      "analysis": "由奇偶性得 $\\displaystyle \\iiint\\limits_{\\Omega_1} x \\mathrm{d} v=\\iiint\\limits_{\\Omega_1} y \\mathrm{d} v=0$, $\\displaystyle \\iiint\\limits_{\\Omega_1} x y z \\mathrm{d} v=0$, $\\displaystyle \\iiint\\limits_{\\Omega_1} z \\mathrm{d} v=4 \\iiint\\limits_{\\Omega_2} z \\mathrm{d} v$, 显然选 (C)",
+      "wrong_options": {
+        "A": "x 关于 yOz 面为奇，Ω₁ 上积分为 0，等式左边为 0 不成 4 倍",
+        "B": "y 关于 zOx 面为奇，Ω₁ 上积分为 0，同样不成立",
+        "D": "xyz 关于 x 为奇，Ω₁ 上积分为 0，右边非零，不成立"
+      },
+      "pitfalls": [
+        "Ω₁ 关于 yOz、zOx 面对称，x、y、xyz 为奇的积分全为 0",
+        "只有 z（关于两侧面皆偶）在四个卦限等值，才有 Ω₁=4Ω₂"
+      ],
+      "key_point": "唯 z 项两侧对称成 4 倍，∭_{Ω₁}z dv=4∭_{Ω₂}z dv，选 C。"
+    },
+    {
+      "id": 1268,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_{n}(x-1)^{n}$ 在 $x=-1$ 处收敛, 则该级数在 $x=2$ 处 $(\\quad)$",
+      "options": {
+        "A": "条件收敛",
+        "B": "绝对收敛",
+        "C": "发散",
+        "D": "收敛性不确定"
+      },
+      "answer": "B",
+      "analysis": "因为级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_n(x-1)^n$ 在 $x=-1$ 处收敛, \r\n\r\n所以其收敛半径 $R \\geqslant|-1-1|=2$. 当 $x=2$ 时, \r\n\r\n因为 $|2-1|=1<R$, 所以该级数在 $x=2$ 处绝对收敛, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "条件收敛只可能出现在收敛区间端点，x=2 是内点，不会条件收敛",
+        "C": "误判 R<1，其实 x=-1 收敛已给 R≥2，x=2 在半径内不发散",
+        "D": "内点收敛性由阿贝尔定理确定为绝对收敛，并非不确定"
+      },
+      "pitfalls": [
+        "中心是 1：x=-1 距中心 2 收敛 ⇒ R≥2",
+        "x=2 距中心 1<R，是收敛区间内部点，绝对收敛而非条件收敛"
+      ],
+      "key_point": "R≥2，|2-1|=1<R，x=2 处绝对收敛，选 B。"
+    },
+    {
+      "id": 1269,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$n$ 维向量组 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}(3 \\leqslant s \\leqslant n)$ 线性无关的充分必要条件是 $(\\quad)$",
+      "options": {
+        "A": "有一组不全为零的数 $k_{1}, k_{2}, \\cdots, k_{s}$, 使得 $k_{1} \\boldsymbol{\\alpha}_{1}+k_{2} \\boldsymbol{\\alpha}_{2}+\\cdots+k_{s} \\boldsymbol{\\alpha}_{s} \\neq \\mathbf{0}$",
+        "B": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 中任意两个向量都线性无关",
+        "C": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 中存在一个向量, 它不可由其余向量线性表示",
+        "D": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 中任意一个向量都不可由其余向量线性表示"
+      },
+      "answer": "D",
+      "analysis": "方法一\r\n若 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$, 线性相关, 则存在不全为零的数 $k_1, k_2, \\cdots, k_s$,\r\n\r\n使得 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_s \\boldsymbol{\\alpha}_s=\\mathbf{0}$,\r\n\r\n不妨设 $k_1 \\neq 0$, 则 $\\displaystyle \\boldsymbol{\\alpha}_1=-\\frac{k_2}{k_1} \\boldsymbol{\\alpha}_2-\\cdots-\\frac{k_s}{k_1} \\boldsymbol{\\alpha}_s$, \r\n\r\n即至少有一个向量可由其余向量线性表示,\r\n\r\n\r\n故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$, \r\n\r\n线性无关的充分必要条件是 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$, 中任意一个向量都不可由其余向量线性表示,\r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "存在一组数使组合非零对任何非零向量组都成立，不是无关的充要条件",
+        "B": "两两无关推不出整体无关，如三向量两两不共线仍可共面相关",
+        "C": "仅“存在一个”不能被表示是必要非充分，须“任意一个”都不能被表示"
+      },
+      "pitfalls": [
+        "A 项对相关组也成立，区分不出无关",
+        "B 两两无关是弱条件；C 须“任意”而非“存在”，量词是关键"
+      ],
+      "key_point": "无关 ⇔ 任意一个向量都不可由其余线性表示，选 D。"
+    },
+    {
+      "id": 1270,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle u=y f\\left(\\frac{x}{y}\\right)+x g\\left(\\frac{y}{x}\\right)$, 其中 $f, g$ 具有二阶连续导数, 求 $\\displaystyle x \\frac{\\partial^{2} u}{\\partial x^{2}}+y \\frac{\\partial^{2} u}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "$\\displaystyle \\frac{\\partial u}{\\partial x}=f^{\\prime}\\left(\\frac{x}{y}\\right)+g\\left(\\frac{y}{x}\\right)-\\frac{y}{x} g^{\\prime}\\left(\\frac{y}{x}\\right)$,\r\n\r\n$\\displaystyle \\frac{\\partial^2 u}{\\partial x^2}=\\frac{1}{y} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)-\\frac{y}{x^2} g^{\\prime}\\left(\\frac{y}{x}\\right)+\\frac{y}{x^2} g^{\\prime}\\left(\\frac{y}{x}\\right)+\\frac{y^2}{x^3} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)=\\frac{1}{y} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)+\\frac{y^2}{x^3} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)$,\r\n\r\n$\\displaystyle \\frac{\\partial^2 u}{\\partial x \\partial y}=-\\frac{x}{y^2} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)+\\frac{1}{x} g^{\\prime}\\left(\\frac{y}{x}\\right)-\\frac{1}{x} g^{\\prime}\\left(\\frac{y}{x}\\right)-\\frac{y}{x^2} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)=-\\frac{x}{y^2} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)-\\frac{y}{x^2} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)$,\r\n\r\n则 $\\displaystyle x \\frac{\\partial^2 u}{\\partial x^2}+y \\frac{\\partial^2 u}{\\partial x \\partial y}=\\frac{x}{y} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)+\\frac{y^2}{x^2} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)-\\frac{x}{y} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)-\\frac{y^2}{x^2} g^{\\prime \\prime}\\left(\\frac{y}{x}\\right)=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "硬求二阶偏导易漏项，识别一次齐次用欧拉关系更稳",
+        "对 f(x/y)、g(y/x) 求偏导内层导数勿丢 1/y、-y/x² 等因子"
+      ],
+      "key_point": "u 一次齐次，欧拉式对 x 求导得 xu_xx+yu_xy=0。"
+    },
+    {
+      "id": 1271,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 满足微分方程 $y^{\\prime \\prime}-3 y^{\\prime}+2 y=2 \\mathrm{e}^{x}$, 且其图形在点 $(0,1)$ 处的切线与曲线 $y=x^{2}-x+1$ 在该点的切线重合, 求函数 $y=y(x)$",
+      "options": {},
+      "answer": "$y=(1-2 x) \\mathrm{e}^x$",
+      "analysis": "特征方程为 $\\lambda^2-3 \\lambda+2=0$, 特征根为 $\\lambda_1=1, \\lambda_2=2$,\r\n\r\n$y^{\\prime \\prime}-3 y^{\\prime}+2 y=0$ 的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}$;\r\n\r\n设原方程的特解为 $y_0(x)=a x \\mathrm{e}^x$, 代入得 $a=-2$,\r\n\r\n故原方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}-2 x \\mathrm{e}^x$\r\n\r\n ($C_1, C_2$ 为任意常数).\r\n\r\n因为曲线 $y=y(x)$ 经过点 $(0,1)$, 所以 $C_1+C_2=1$;\r\n\r\n$y=y(x)$ 在 $x=0$ 处切线的斜率为 $k=\\left.(2 x-1)\\right|_{x=0}=-1$,\r\n\r\n又由 $y^{\\prime}=C_1 \\mathrm{e}^x+2 C_2 \\mathrm{e}^{2 x}-2(x+1) \\mathrm{e}^x$, \r\n\r\n得 $C_1+2 C_2-2=-1$, 即 $C_1+2 C_2=1$,\r\n\r\n从而 $C_1=1, C_2=0$, 故所求函数为 $y=(1-2 x) \\mathrm{e}^x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1 是特征根，e^x 型特解须设 axe^x 而非 ae^x（共振要乘 x）",
+        "两初值来自切线：过 (0,1) 给 y(0)=1，斜率 -1 给 y'(0)=-1"
+      ],
+      "key_point": "通解 y=C₁eˣ+C₂e²ˣ-2xeˣ，由 y(0)=1、y'(0)=-1 得 y=(1-2x)eˣ。"
+    },
+    {
+      "id": 1272,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设位于点 $(0,1)$ 的质点 $A$ 对质点 $M$ 的引力大小为 $\\displaystyle \\frac{k}{r^{2}}(k>0$ 为常数, $r$ 为质点 $A$ 与质点 $M$ 之间的距离), 质点 $M$ 沿曲线 $y=\\sqrt{2 x-x^{2}}$ 从点 $B(2,0)$ 运动到点 $O(0,0)$, 求此运动过程中质点 $A$ 对质点 $M$ 的引力所做的功",
+      "options": {},
+      "answer": "$k\\left(1-\\dfrac{1}{\\sqrt{5}}\\right)$",
+      "analysis": "设 $M(x, y)$, 则 $\\overrightarrow{M A}=\\{-x, 1-y\\}$,\r\n\r\n$\\overrightarrow{M A}^0=\\boldsymbol{F}^0=\\dfrac{1}{\\sqrt{x^2+(1-y)^2}}\\{-x, 1-y\\}$,\r\n\r\n则 $\\displaystyle \\boldsymbol{F}(x, y)=|\\boldsymbol{F}| \\cdot \\boldsymbol{F}^0=\\frac{k}{\\left[x^2+(1-y)^2\\right]^{\\frac{3}{2}}}\\{-x, 1-y\\}$,\r\n\r\n设 $M$ 沿 $y=\\sqrt{2 x-x^2}$ 从点 $B(2,0)$ 到点 $O(0,0)$ 的有向曲线段为 $L$,\r\n\r\n则 $\\displaystyle W=k \\int_L \\frac{-x \\mathrm{d} x+(1-y) \\mathrm{d} y}{\\left[x^2+(1-y)^2\\right]^{\\frac{3}{2}}}$,\r\n\r\n令 $\\displaystyle P(x, y)=-\\frac{x}{\\left[x^2+(1-y)^2\\right]^{\\frac{3}{2}}}$, \r\n\r\n$\\displaystyle Q(x, y)=\\frac{1-y}{\\left[x^2+(1-y)^2\\right]^{\\frac{3}{2}}}$,\r\n\r\n因为 $\\displaystyle \\frac{\\partial Q}{\\partial x}=\\frac{\\partial P}{\\partial y}$, 所以曲线积分与路径无关,\r\n\r\n故 $\\displaystyle W=k \\int_{\\overline{B O}} \\frac{-x \\mathrm{d} x+(1-y) \\mathrm{d} y}{\\left[x^2+(1-y)^2\\right]^{\\frac{3}{2}}}=k \\int_2^0 \\frac{-x \\mathrm{d} x}{\\left(x^2+1\\right)^{\\frac{3}{2}}}=k\\left(1-\\frac{1}{\\sqrt{5}}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先把引力写成单位向量乘大小 k/r²，方向指向 A(0,1)",
+        "验证路径无关后可弃曲线走势函数，功=k(1/r_O−1/r_B)，r_B=√5、r_O=1"
+      ],
+      "key_point": "场保守，W=k(1/r_O−1/r_B)=k(1−1/√5)。"
+    },
+    {
+      "id": 1273,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A P}=\\boldsymbol{P B}$, 其中 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & -1\\end{array}\\right), \\boldsymbol{P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ 2 & 1 & 1\\end{array}\\right)$, 求 $\\boldsymbol{A}$ 及 $\\boldsymbol{A}^{5}$",
+      "options": {},
+      "answer": "$\\boldsymbol{A}=\\boldsymbol{P} \\boldsymbol{B} \\boldsymbol{P}^{-1}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & 0 & 0 \\\\ 6 & -1 & -1\\end{array}\\right)=\\boldsymbol{A}^5$;",
+      "analysis": "$\\boldsymbol{P}^{-1}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ -4 & 1 & 1\\end{array}\\right)$, \r\n\r\n$\\boldsymbol{A}=\\boldsymbol{P} \\boldsymbol{B} \\boldsymbol{P}^{-1}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & 0 & 0 \\\\ 6 & -1 & -1\\end{array}\\right)$; \r\n\r\n$\\boldsymbol{A}^5=\\boldsymbol{P} \\boldsymbol{B}^5 \\boldsymbol{P}^{-1}=\\boldsymbol{P B} \\boldsymbol{P}^{-1}=\\boldsymbol{A}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "B=diag(1,0,-1) 的 5 次幂仍为自身（1⁵=1,0,(-1)⁵=-1），故 A⁵=A 无需硬乘",
+        "P⁻¹ 要算对，A=PBP⁻¹ 顺序不能颠倒"
+      ],
+      "key_point": "A=PBP⁻¹=[[1,0,0],[2,0,0],[6,-1,-1]]，B⁵=B ⇒ A⁵=A。"
+    },
+    {
+      "id": 1274,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 1 & x\\end{array}\\right)$ 与 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & 0 & 0 \\\\ 0 & y & 0 \\\\ 0 & 0 & -1\\end{array}\\right)$ 相似\r\n\r\n(1) 求 $x, y$\r\n\r\n(2) 求一个满足 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$ 的可逆矩阵 $\\boldsymbol{P}$",
+      "options": {},
+      "answer": "(1) $x=0, y=1$\r\n(2) $\\boldsymbol{P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 1 & 1\\end{array}\\right)$",
+      "analysis": "(1) 因为矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, \r\n\r\n所以 $\\operatorname{tr} \\boldsymbol{A}=\\operatorname{tr} \\boldsymbol{B}$, \r\n\r\n即 $x+2=y+1$, 或 $x=y-1$; \r\n\r\n再由矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似得 $|\\boldsymbol{A}|=|\\boldsymbol{B}|$, \r\n\r\n即 $-2=-2 y$, 解得 $y=1$, 故 $x=0, y=1$\r\n\r\n(2) 显然矩阵 $\\boldsymbol{A}$ 及 $\\boldsymbol{B}$ 的特征值为 $\\lambda_1=2, \\lambda_2=1, \\lambda_3=-1$\r\n\r\n由 $2 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & 0 & 0 \\\\ 0 & 2 & -1 \\\\ 0 & -1 & 2\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得矩阵 $\\boldsymbol{A}$ 的相应于 $\\lambda_1=2$ 的特征向量为 $\\boldsymbol{\\alpha}_1=(1,0,0)^{\\mathrm{T}}$;\r\n\r\n由 $\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & -1 & 1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得矩阵 $\\boldsymbol{A}$ 的相应于 $\\lambda_2=1$ 的特征向量为 $\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathrm{T}}$;\r\n\r\n由 $-\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}-3 & 0 & 0 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得矩阵 $\\boldsymbol{A}$ 的相应于 $\\lambda_3=-1$ 的特征向量为 $\\boldsymbol{\\alpha}_3=(0,-1,1)^{\\mathrm{T}}$,\r\n\r\n令 $\\boldsymbol{P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 1 & 1\\end{array}\\right)$, 则 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "迹相等给 x+2=y+1、行列式相等给 -2=-2y，联立才能定 x=0,y=1",
+        "P 由 A 的特征向量组成（因 B 已是对角阵），特征值对应顺序要与 B 一致"
+      ],
+      "key_point": "由迹、行列式相等得 x=0,y=1；A 特征向量组成 P 使 P⁻¹AP=B。"
+    },
+    {
+      "id": 1275,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[a, b]$ 上连续, 且在 $(a, b)$ 内有 $f^{\\prime}(x)>0$. 证明: \r\n\r\n在 $(a, b)$ 内存在唯一 的 $\\xi$, 使曲线 $y=f(x)$ 与两直线 $y=f(\\xi), x=a$ 所围成的平面图形的面积 $S_{1}$ 是曲线 $y=f(x)$ 与两直线 $y=f(\\xi), x=b$ 所围成平面图形面积 $S_{2}$ 的 $3$ 倍",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle S_1(x)=\\int_a^x[f(x)-f(t)] \\mathrm{d} t, \\quad S_2(x)=\\int_x^b[f(t)-f(x)] \\mathrm{d} t$,\r\n\r\n再令 $\\displaystyle \\varphi(x)=S_1(x)-3 S_2(x)=\\int_a^x[f(x)-f(t)] \\mathrm{d} t-3 \\int_x^b[f(t)-f(x)] \\mathrm{d} t$,\r\n\r\n则 $\\displaystyle \\varphi(x)=(x-a) f(x)-\\int_a^x f(t) \\mathrm{d} t+3 \\int_b^x f(t) \\mathrm{d} t-3(x-b) f(x)$,\r\n\r\n因为 $\\varphi^{\\prime}(x)=(x-a) f^{\\prime}(x)-3(x-b) f^{\\prime}(x)=f^{\\prime}(x)[(x-a)+3(b-x)]>0 \\quad(a<x<b)$,\r\n\r\n所以 $f^{\\prime}(x)>0$, 所以 $f(x)$ 在 $[a, b]$ 上严格递增,\r\n\r\n从而 $\\displaystyle \\varphi(a)=-3 \\int_a^b[f(t)-f(a)] \\mathrm{d} t<0$, \r\n\r\n$\\displaystyle  \\varphi(b)=\\int_a^b[f(b)-f(t)] \\mathrm{d} t>0$,\r\n\r\n即存在 $\\xi \\in(a, b)$, 使得 $\\varphi(\\xi)=0$, 即 $S_1(\\xi)=3 S_2(\\xi)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "S₁、S₂ 要写成含 f(x)-f(t) 的积分，求导时含变限积分与被积上限双重贡献",
+        "存在性靠零点定理（φ(a)<0,φ(b)>0），唯一性必须补 φ'>0 的单调论证"
+      ],
+      "key_point": "φ=S₁-3S₂ 严格单调且端点异号，故存在唯一 ξ 使 S₁=3S₂。"
+    },
+    {
+      "id": 1276,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 19,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设三次独立重复试验中, 事件 $A$ 出现的概率相等, 若已知 $A$ 至少出现一次的概率为 $\\dfrac{19}{27}$, 则事件 $A$ 在一次试验中出现的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3}$",
+      "analysis": "令 $P(A)=p$, 设三次试验中 $A$ 出现的次数为 $X$, \r\n\r\n则 $X \\sim B(3, p)$, 由 $\\displaystyle P\\{X \\geqslant 1\\}=\\frac{19}{27}$, \r\n\r\n得 $\\displaystyle P\\{X=0\\}=\\mathrm{C}_3^0 p^0(1-p)^3=(1-p)^3=\\frac{8}{27}$, \r\n\r\n解得 $p=\\dfrac{1}{3}$, 故事件 $A$ 在一次试验中出现的概率为 $\\displaystyle \\frac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "“至少一次”走对立事件，P(X≥1)=1-(1-p)³",
+        "由 (1-p)³=8/27 得 1-p=2/3，勿把 8/27 直接当 p"
+      ],
+      "key_point": "(1-p)³=8/27 ⇒ p=1/3。"
+    },
+    {
+      "id": 1277,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "在区间 $(0,1)$ 中随机地取两个数,则事件“两数之和小于 $\\dfrac{6}{5}$\" 的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{17}{25}$",
+      "analysis": "设 $(0,1)$ 中任取的两个数为 $X, Y$, 令 $D=\\{(x, y) \\mid 0<x<1,0<y<1\\}$, 则 $(X, Y)$ 在 $D$ 上服从均匀分布, 即 $(X, Y)$ 的联合概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & (x, y) \\in D\\\\\r\n 0, & (x, y) \\notin D\\end{cases}$\r\n\r\n$\\displaystyle P\\left\\{X+Y<\\frac{6}{5}\\right\\} =\\iint\\limits_{x+y \\leqslant \\frac{6}{5}} f(x, y) \\mathrm{d} x \\mathrm{d} y=1-\\iint\\limits_{x+y>\\frac{6}{5}} f(x, y) \\mathrm{d} x \\mathrm{d} y=1-\\frac{1}{2} \\times\\left(\\frac{4}{5}\\right)^2=\\frac{17}{25}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "直线 x+y=6/5 截正方形右上角，补集是直角边 4/5 的三角形",
+        "面积=1-½(4/5)²，别把 6/5 当截距边长"
+      ],
+      "key_point": "P=1-½(4/5)²=17/25。"
+    },
+    {
+      "id": 1278,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 21,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从均值为 $10$ , 均方差为 $0.02$ 的正态分布, 已知 $\\displaystyle \\Phi(x)=\\frac{1}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{x} \\mathrm{e}^{-\\frac{u^{2}}{2}} \\mathrm{d} u, \\Phi(2.5)=0.9938$, 则 $X$ 落在区间 $(9.95,10.05)$ 内的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0.9876$",
+      "analysis": "由 $X \\sim N\\left(10,0.02^2\\right)$ 得 $\\displaystyle \\frac{X-10}{0.02} \\sim N(0,1)$,\r\n则 $\\displaystyle P\\{9.95<X<10.05\\}=P\\left\\{-2.5<\\frac{X-10}{0.02}<2.5\\right\\}=\\Phi(2.5)-\\Phi(-2.5)=2 \\Phi(2.5)-1=0.9876$",
+      "wrong_options": {},
+      "pitfalls": [
+        "均方差 0.02 是标准差 σ，(9.95-10)/0.02=-2.5 恰对称",
+        "对称区间概率是 2Φ(2.5)-1，别只取 Φ(2.5)"
+      ],
+      "key_point": "标准化得 (-2.5,2.5)，概率 2Φ(2.5)-1=0.9876。"
+    },
+    {
+      "id": 1279,
+      "paper": "数学一",
+      "year": 1988,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度函数为 $\\displaystyle f_{X}(x)=\\frac{1}{\\pi\\left(1+x^{2}\\right)}$, 求随机变量 $Y=1-\\sqrt[3]{X}$ 的概率密度函数 $f_{Y}(y)$",
+      "options": {},
+      "answer": "$\\displaystyle f_Y(y)=\\frac{3(1-y)^2}{\\pi\\left[1+(1-y)^6\\right]}$",
+      "analysis": "$\\displaystyle F_Y(y)=P\\{Y \\leqslant y\\}=P\\{1-\\sqrt[3]{X} \\leqslant y\\}=P\\left\\{X \\geqslant(1-y)^3\\right\\}=1-P\\left\\{X \\leqslant(1-y)^3\\right\\}=1-\\int_{-\\infty}^{(1-y)^3} \\frac{1}{\\pi\\left(1+x^2\\right)} \\mathrm{d} x$,\r\n\r\n则 $\\displaystyle f_Y(y)=\\frac{3(1-y)^2}{\\pi\\left[1+(1-y)^6\\right]}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y=1-∛X 反解 X=(1-y)³，事件 {Y≤y}={X≥(1-y)³} 含不等号翻向",
+        "求导两处链式：3(1-y)² 与代入 f_X 后分母 (1-y)⁶，负号相消得正密度"
+      ],
+      "key_point": "F_Y(y)=1-F_X((1-y)³)，求导得 f_Y(y)=3(1-y)²/{π[1+(1-y)⁶]}。"
+    }
+  ]
+}

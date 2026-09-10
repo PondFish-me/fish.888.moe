@@ -1,0 +1,493 @@
+{
+  "paper": "数学二",
+  "year": 2006,
+  "count": 23,
+  "questions": [
+    {
+      "id": 836,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $\\displaystyle y^{\\prime}=\\frac{y(1-x)}{x}$ 的通解是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=C x \\mathrm{e}^{-x}$ ( $C$ 为任意常数)",
+      "analysis": "方法一 由 $\\displaystyle y^{\\prime}=\\frac{y(1-x)}{x}$, \r\n\r\n得 $\\displaystyle y^{\\prime}-\\left(\\frac{1}{x}-1\\right) y=0$,\r\n\r\n通解为 $\\displaystyle y=C \\mathrm{e}^{-\\int-\\left(\\frac{1}{x}-1\\right) \\mathrm{d} x}\\\\\r\n=C x \\mathrm{e}^{-x}$ ( $C$ 为任意常数)\r\n\r\n方法二 $y^{\\prime}=\\dfrac{y(1-x)}{x}$ \r\n\r\n化为 $\\dfrac{y^{\\prime}}{y}=\\dfrac{1}{x}-1$, \r\n\r\n即 $(\\ln y)^{\\prime}=\\dfrac{1}{x}-1$, 从而 $\\ln y=\\ln x+\\ln \\mathrm{e}^{-x}+\\ln C$, \r\n\r\n故原方程的通解为 $y=C x \\mathrm{e}^{-x} (C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分 ∫(1/x-1)dx=ln x-x，指数还原后得因子 x·e^{-x}，别把 ln x 项丢掉",
+        "通解必须带任意常数 C，缺 C 不得分"
+      ],
+      "key_point": "分离变量积分得 y=Cxe^{-x}"
+    },
+    {
+      "id": 839,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{cc}2 & 1 \\\\ -1 & 2\\end{array}\\right), \\boldsymbol{E}$ 为 $2$ 阶单位矩阵, 矩阵 $\\boldsymbol{B}$ 满足 $\\boldsymbol{B} \\boldsymbol{A}=\\boldsymbol{B}+2 \\boldsymbol{E}$, 则 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "由 $\\boldsymbol{B} \\boldsymbol{A}=\\boldsymbol{B}+2 \\boldsymbol{E}$, \r\n\r\n得 $\\boldsymbol{B}(\\boldsymbol{A}-\\boldsymbol{E})=2 \\boldsymbol{E}$, 两边取行列式, \r\n\r\n得 $|\\boldsymbol{B}| \\cdot|\\boldsymbol{A}-\\boldsymbol{E}|=4$, \r\n\r\n因为 $\\boldsymbol{A}-\\boldsymbol{E}=\\left(\\begin{array}{cc}1 & 1 \\\\ -1 & 1\\end{array}\\right)$, \r\n\r\n所以 $|\\boldsymbol{A}-\\boldsymbol{E}|=2$, 于是 $|\\boldsymbol{B}|=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|2E| 对 2 阶矩阵是 2²=4，不是 2（数乘要按阶数提幂）",
+        "先提取公因式凑成 B(A-E) 再取行列式，别急着求逆"
+      ],
+      "key_point": "|B||A-E|=4，|A-E|=2，故 |B|=2"
+    },
+    {
+      "id": 841,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 具有二阶导数, 且 $f^{\\prime}(x)>0, f^{\\prime \\prime}(x)>0, \\Delta x$ 为自变量 $x$ 在点 $x_{0}$ 处的增量, $\\Delta y$ 与 $\\mathrm{d} y$ 分别为 $f(x)$ 在点 $x_{0}$ 处对应的增量与微分, 若 $\\Delta x>0$, 则 $(\\quad)$",
+      "options": {
+        "A": "$0<\\mathrm{d} y<\\Delta y$",
+        "B": "$0<\\Delta y<\\mathrm{d} y$",
+        "C": "$\\Delta y<\\mathrm{d} y<0$",
+        "D": "$\\mathrm{d} y<\\Delta y<0$"
+      },
+      "answer": "A",
+      "analysis": "方法一\r\n$\\mathrm{d} y=f^{\\prime}(x) \\Delta x, \\quad \\Delta y=f(x+\\Delta x)-f(x)=f^{\\prime}(\\xi) \\Delta x(x<\\xi<x+\\Delta x)$,\r\n\r\n因为 $f^{\\prime \\prime}(x)>0$, 所以 $f^{\\prime}(x)$ 单调增加, 于是 $0<f^{\\prime}(x)<f^{\\prime}(\\xi)$.\r\n再由 $\\Delta x>0$, 得 $0<f^{\\prime}(x) \\Delta x<f^{\\prime}(\\xi) \\Delta x$, 即 $0<\\mathrm{d} y<\\Delta y$, 应选 (A).\r\n方法二 由泰勒公式得\r\n$\\displaystyle f(x)=f\\left(x_0\\right)+f^{\\prime}\\left(x_0\\right)\\left(x-x_0\\right)+\\frac{f^{\\prime \\prime}(\\xi)}{2 !}\\left(x-x_0\\right)^2$, 其中 $\\xi$ 介于 $x_0$ 与 $x$ 之间,\r\n因为 $f^{\\prime \\prime}(x)>0$, 所以 $f(x)-f\\left(x_0\\right) \\geqslant f^{\\prime}\\left(x_0\\right)\\left(x-x_0\\right)$, 等号成立当且仅当 $x=x_0$,\r\n故 $\\Delta y \\geqslant \\mathrm{d} y$.\r\n因为 $f^{\\prime}\\left(x_0\\right)>0, \\Delta x=x-x_0>0$, 所以 $\\mathrm{d} y=f^{\\prime}\\left(x_0\\right)\\left(x-x_0\\right)>0$, 于是 $\\Delta y>\\mathrm{d} y>0$, 应选 (A).\r\n\r\n方法三 $\\Delta y=f\\left(x_0+\\Delta x\\right)-f\\left(x_0\\right)=f^{\\prime}(\\xi) \\Delta x\\left(x_0<\\xi<x_0+\\Delta x\\right)$,\r\n则 $\\Delta y-\\mathrm{d} y=\\left[f^{\\prime}(\\xi)-f^{\\prime}\\left(x_0\\right)\\right] \\Delta x$\r\n$$\r\n=f^{\\prime \\prime}(\\eta)\\left(\\xi-x_0\\right) \\Delta x\\left(x_0<\\eta<\\xi\\right),\r\n$$\r\n由 $f^{\\prime \\prime}(x)>0$ 得 $\\Delta y-\\mathrm{d} y>0$, 即 $\\Delta y>\\mathrm{d} y$, 又 $\\mathrm{d} y>0$, 故 $\\Delta y>\\mathrm{d} y>0$, 应选 (A).\r\n方法四 因为 $f^{\\prime}(x)>0, f^{\\prime \\prime}(x)>0$, 所以 $y=f(x)$ 为单调 增加的凹函数, 如图所示,\r\n因为 $\\Delta x>0$, 所以 $\\mathrm{d} y=|B C|>0, \\Delta y=|B D|>|B C|$, 应选(A).\n\n![Δy 与 dy 的几何意义](/uploads/books/992f24600bcab2fd2f7e7e9f55df9864e0bc34486ca67fae1fd131dbc80e254e.jpg)",
+      "wrong_options": {
+        "B": "误把 f''>0 当成 f' 单调减（凹函数），从而得 Δy<dy",
+        "C": "把条件 f'>0 记反成 f'<0，认为两个增量都为负，方向也反",
+        "D": "同样误判 f'<0 使增量为负，但保留了 f' 单调增的大小关系"
+      },
+      "pitfalls": [
+        "Δy 与 dy 都为正（f'>0 且 Δx>0），先定正负再比大小",
+        "f''>0 ⇒ f' 单调增 ⇒ f'(ξ)>f'(x₀) ⇒ Δy>dy"
+      ],
+      "key_point": "0<dy<Δy（凸函数割线增量大于切线微分）"
+    },
+    {
+      "id": 842,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x, y)$ 为连续函数, 则 $\\displaystyle \\int_{0}^{\\frac{\\pi}{4}} \\mathrm{d} \\theta \\int_{0}^{1} f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d} r$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{0}^{\\frac{\\sqrt{2}}{2}} \\mathrm{d} x \\int_{x}^{\\sqrt{1-x^{2}}} f(x, y) \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_{0}^{\\frac{\\sqrt{2}}{2}} \\mathrm{d} x \\int_{0}^{\\sqrt{1-x^{2}}} f(x, y) \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_{0}^{\\frac{\\sqrt{2}}{2}} \\mathrm{d} y \\int_{y}^{\\sqrt{1-y^{2}}} f(x, y) \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_{0}^{\\frac{\\sqrt{2}}{2}} \\mathrm{d} y \\int_{0}^{\\sqrt{1-y^{2}}} f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "C",
+      "analysis": "将 $\\displaystyle D=\\left\\{(r, \\theta) \\mid 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{4}, 0 \\leqslant r \\leqslant 1\\right\\}$ \r\n\r\n转化为 $Y$ 型区域为\r\n\r\n$D=\\left\\{(x, y) \\mid y \\leqslant x \\leqslant \\sqrt{1-y^2}, 0 \\leqslant y \\leqslant \\frac{\\sqrt{2}}{2}\\right\\}$,\r\n\r\n则 $\\displaystyle \\int_0^{\\frac{\\pi}{4}} \\mathrm{d} \\theta \\int_0^1 f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d} r\\\\\r\n=\\int_0^{\\frac{\\sqrt{2}}{2}} \\mathrm{d} y \\int_y^{\\sqrt{1-y^2}} f(x, y) \\mathrm{d} x$, 应选 (C)",
+      "wrong_options": {
+        "A": "把扇形位置弄反当成 y≥x（θ 从 π/4 到 π/2），又用 X 型积分",
+        "B": "漏掉下界 y≤x，把区域当成整个四分之一圆的 X 型",
+        "D": "漏掉内界 x≥y，把区域当成 x 从 0 起的整条横带"
+      },
+      "pitfalls": [
+        "θ≤π/4 对应 y/x≤1 即 y≤x，扇形在直线 y=x 下方",
+        "Y 型时 x 从直线 x=y 到圆弧 √(1-y²)，y 从 0 到 √2/2"
+      ],
+      "key_point": "区域为 y≤x 的单位扇形，Y 型积分即选 C"
+    },
+    {
+      "id": 844,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x, y)$ 与 $\\varphi(x, y)$ 均为可微函数, 且 $\\varphi_{y}^{\\prime}(x, y) \\neq 0$. 已知 $\\left(x_{0}, y_{0}\\right)$ 是 $f(x, y)$ 在约束条件 $\\varphi(x, y)=0$ 下的一个极值点, 下列选项正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $f_{x}^{\\prime}\\left(x_{0}, y_{0}\\right)=0$, 则 $f_{y}^{\\prime}\\left(x_{0}, y_{0}\\right)=0$",
+        "B": "若 $f_{x}^{\\prime}\\left(x_{0}, y_{0}\\right)=0$, 则 $f_{y}^{\\prime}\\left(x_{0}, y_{0}\\right) \\neq 0$",
+        "C": "若 $f_{x}^{\\prime}\\left(x_{0}, y_{0}\\right) \\neq 0$, 则 $f_{y}^{\\prime}\\left(x_{0}, y_{0}\\right)=0$",
+        "D": "若 $f_{x}^{\\prime}\\left(x_{0}, y_{0}\\right) \\neq 0$, 则 $f_{y}^{\\prime}\\left(x_{0}, y_{0}\\right) \\neq 0$"
+      },
+      "answer": "D",
+      "analysis": "方法一 因为 $\\varphi_y^{\\prime}(x, y) \\neq 0$ 且 $\\varphi\\left(x_0, y_0\\right)=0$, \r\n\r\n所以 $\\varphi(x, y)=0$ 确定 $y$ 为 $x$ 的函数, \r\n\r\n设为 $y=y(x)$, 代入 $z=f(x, y)$ 中, \r\n\r\n得 $z=f[x, y(x)]$,\r\n\r\n因为 $\\left(x_0, y_0\\right)$ 为极值点, 所以 \r\n\r\n$\\displaystyle \\left.\\frac{\\mathrm{d} z}{\\mathrm{d} x}\\right|_{x=x_0}=f_x^{\\prime}\\left(x_0, y_0\\right)+f_y^{\\prime}\\left(x_0, y_0\\right) \\cdot y^{\\prime}\\left(x_0\\right)=0$, \r\n\r\n若 $f_x^{\\prime}\\left(x_0, y_0\\right) \\neq 0$, 则 $f_y^{\\prime}\\left(x_0, y_0\\right) \\neq 0$, 应选 (D).\r\n\r\n方法二 令 $F(x, y, \\lambda)=f(x, y)+\\lambda \\varphi(x, y)$, \r\n\r\n因为 $\\left(x_0, y_0\\right)$ 是 $f(x, y)$ 在约束条件 $\\varphi(x, y)=0$ 下的极值点, 所以 \r\n\r\n$\\left\\{\\begin{array}{l}F_x^{\\prime}\\left(x_0, y_0\\right)=f_x^{\\prime}\\left(x_0, y_0\\right)+\\lambda \\varphi_x^{\\prime}\\left(x_0, y_0\\right)=0 \\\\ F_y^{\\prime}\\left(x_0, y_0\\right)=f_y^{\\prime}\\left(x_0, y_0\\right)+\\lambda \\varphi_y^{\\prime}\\left(x_0, y_0\\right)=0 \\end{array}\\right.$\r\n\r\n若 $f_x^{\\prime}\\left(x_0, y_0\\right) \\neq 0$, \r\n\r\n则由 $f_x^{\\prime}\\left(x_0, y_0\\right)+\\lambda \\varphi_x^{\\prime}\\left(x_0, y_0\\right)=0$ 得 $\\lambda \\neq 0$,\r\n\r\n因为 $\\varphi_y^{\\prime}\\left(x_0, y_0\\right) \\neq 0$, 所以 $f_y^{\\prime}\\left(x_0, y_0\\right) \\neq 0$, 应选 (D)",
+      "wrong_options": {
+        "A": "忽略 y' 可能为零的情形，误断 f'_x=0 必有 f'_y=0",
+        "B": "前提同 A，却把结论方向取反",
+        "C": "把关系式误读为 f'_x 与 f'_y 此消彼长，得出 f'_x≠0 时 f'_y=0"
+      },
+      "pitfalls": [
+        "φ'_y≠0 保证 φ=0 能确定 y=y(x)，代入化为一元极值问题",
+        "f'_x+f'_y y'=0 中 y'≠0（因 φ'_y≠0），故 f'_x≠0 ⇒ f'_y≠0"
+      ],
+      "key_point": "f'_x≠0 ⇒ f'_y≠0（选 D）"
+    },
+    {
+      "id": 845,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 均为 $n$ 维列向量, $\\boldsymbol{A}$ 是 $m \\times n$ 矩阵,下列选项正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_s$ 线性相关, 则 $\\boldsymbol{A} \\boldsymbol{\\alpha}_{1}, \\boldsymbol{A} \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_{s}$ 线性相关",
+        "B": "若 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 线性相关, 则 $\\boldsymbol{A} \\boldsymbol{\\alpha}_{1}, \\boldsymbol{A} \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_{s}$ 线性无关",
+        "C": "若 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 线性无关, 则 $\\boldsymbol{A} \\boldsymbol{\\alpha}_{1}, \\boldsymbol{A} \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_{s}$ 线性相关",
+        "D": "若 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 线性无关, 则 $\\boldsymbol{A} \\boldsymbol{\\alpha}_{1}, \\boldsymbol{A} \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_{s}$ 线性无关"
+      },
+      "answer": "A",
+      "analysis": "方法一 令 $\\boldsymbol Q=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s\\right),\\\\ \r\n\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1,\r\n\\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_s\\right)=\\boldsymbol{AQ}$,\r\n\r\n则 $r\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_s\\right)=r(\\boldsymbol{A} \\boldsymbol{Q}) \\leqslant r(\\boldsymbol{Q})$,\r\n\r\n若 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s$ 线性相关, \r\n则 $r(\\boldsymbol{Q})<s$, \r\n\r\n于是 $r\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_s\\right) \\leqslant r(\\boldsymbol{Q})<s$,\r\n\r\n即 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{A \\alpha}$, 线性相关, 应选 (A)\r\n\r\n方法二 若 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$ 线性相关, \r\n\r\n则存在不全为零的常数 $k_1, k_2, \\cdots, k_s$, \r\n\r\n使得 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_s \\boldsymbol{\\alpha}_s=\\mathbf{0}$,\r\n\r\n等式两边左乘 $\\boldsymbol{A}$ 得\r\n\r\n$k_1 \\boldsymbol{A} \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A} \\boldsymbol{\\alpha}_2+\\cdots+k_s \\boldsymbol{A} \\boldsymbol{\\alpha}_s=\\mathbf{0}$,\r\n\r\n由线性相关的定义得 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{A} \\boldsymbol{\\alpha}_s$ 线性相关, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "结论方向取反，相关不可能推出无关",
+        "C": "误以为矩阵 A 必然降维，把无关组也压成相关",
+        "D": "误以为线性变换恒保持线性无关，忽略 A 可能有非零核"
+      },
+      "pitfalls": [
+        "相关的非零组合经左乘 A 仍成立，是单向蕴含",
+        "无关组经 A 未必仍无关（A 奇异时可退化），故 C、D 错"
+      ],
+      "key_point": "r(Aα₁,…,Aαₛ)≤r(α₁,…,αₛ)，相关⇒Aα 相关（选 A）"
+    },
+    {
+      "id": 846,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, 将 $\\boldsymbol{A}$ 的第 $2$ 行加到第 $1$ 行得 $\\boldsymbol{B}$, 再将 $\\boldsymbol{B}$ 的第 $1$ 列的 $-1$ 倍加到第 $2$ 列得 $\\boldsymbol{C}$, 记 $\\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{C}=\\boldsymbol{P}^{-1} \\boldsymbol{A} \\boldsymbol{P}$",
+        "B": "$\\boldsymbol{C}=\\boldsymbol{P A} \\boldsymbol{P}^{-1}$",
+        "C": "$\\boldsymbol{C}=\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{P}$",
+        "D": "$\\boldsymbol{C}=\\mathbf{P A} \\boldsymbol{P}^{\\mathrm{T}}$"
+      },
+      "answer": "B",
+      "analysis": "由矩阵的初等变换与初等矩阵的定义, \r\n\r\n得$\\boldsymbol{B}=\\left(\\begin{array}{lll}\r\n1 & 1 & 0 \\\\\r\n0 & 1 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right) \\boldsymbol{A}=\\boldsymbol{P A}, \\\\ \\boldsymbol{C}=\\boldsymbol{B}\\left(\\begin{array}{ccc}\r\n1 & -1 & 0 \\\\\r\n0 & 1 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)=\\boldsymbol{B} \\boldsymbol{P}^{-1}$,\r\n\r\n于是 $\\boldsymbol{C}=\\boldsymbol{P A} \\boldsymbol{P}^{-1}$, 应选 (B)",
+      "wrong_options": {
+        "A": "把行变换错当成左乘 P⁻¹（左右与逆一起搞反）",
+        "C": "把列变换对应的 P⁻¹ 误当成 Pᵀ（此处 P 非正交，Pᵀ≠P⁻¹）",
+        "D": "行、列两处都用 Pᵀ 代替 P⁻¹，转置与逆混淆"
+      },
+      "pitfalls": [
+        "第 2 行加到第 1 行=左乘 P；第 1 列的 -1 倍加到第 2 列=右乘 P⁻¹",
+        "P 不是正交阵，Pᵀ≠P⁻¹，切勿用转置代替逆"
+      ],
+      "key_point": "C=PAP⁻¹（选 B）"
+    },
+    {
+      "id": 849,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设区域 $D=\\left\\{(x, y) \\mid x^{2}+y^{2} \\leqslant 1, x \\geqslant 0\\right\\}$, 计算二重积分 $\\displaystyle I=\\iint\\limits_{D} \\frac{1+x y}{1+x^{2}+y^{2}} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{2} \\ln 2$",
+      "analysis": "$\\displaystyle I=\\iint\\limits_D \\frac{1+x y}{1+x^2+y^2} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_D \\frac{1}{1+x^2+y^2} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^1 \\frac{r \\mathrm{d} r}{1+r^2} \\\\\r\n=\\pi \\int_0^1 \\frac{r \\mathrm{d} r}{1+r^2}\\\\\r\n=\\left.\\frac{\\pi}{2} \\ln \\left(1+r^2\\right)\\right|_0 ^1=\\frac{\\pi}{2} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "区域是右半单位圆盘（x≥0），关于 x 轴对称，xy 项对 y 为奇函数积分为 0",
+        "极坐标 θ 从 -π/2 到 π/2，∫₀¹ r/(1+r²)dr=½ln2"
+      ],
+      "key_point": "对称性去掉 xy 项，余下极坐标积分得 (π/2)ln2"
+    },
+    {
+      "id": 850,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设数列 $\\left\\{x_{n}\\right\\}$ 满足 $0<x_{1}<\\pi, x_{n+1}=\\sin x_{n}(n=1,2, \\cdots)$.\r\n\r\n(1) 证明 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n}$ 存在, 并求该极限;\r\n\r\n(2) 计算 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{x_{n+1}}{x_{n}}\\right)^{\\frac{1}{x_{n}^{2}}}$",
+      "options": {},
+      "answer": "(2) $\\mathrm{e}^{-\\frac{1}{6}}$",
+      "analysis": "由 $0<x_1<\\pi$, 得 $\\displaystyle x_2=\\sin x_1 \\in(0,1] \\subset\\left(0, \\frac{\\pi}{2}\\right)$, \r\n\r\n于是 $x_n \\in(0,1)(n=2,3, \\cdots)$, 故数列 $\\left\\{x_n\\right\\}$ 有界,\r\n\r\n又当 $x \\geqslant 0$ 时, $\\sin x \\leqslant x$, \r\n\r\n所以 $x_{n+1}=\\sin x_n \\leqslant x_n$, \r\n\r\n即数列 $\\left\\{x_n\\right\\}$ 单调递减, \r\n\r\n由极限存在准则, $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n$ 存在,\r\n\r\n令 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n=A$, 对 $x_{n+1}=\\sin x_n$ \r\n\r\n两边求极限得 $A=\\sin A$, 则 $A=0$, \r\n\r\n即 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n=0$\r\n\r\n(2) $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{x_{n+1}}{x_n}\\right)^{\\frac{1}{x_n^2}}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(\\frac{\\sin x_n}{x_n}\\right)^{\\frac{1}{x_n^2}}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(1+\\frac{\\sin x_n-x_n}{x_n}\\right)^{\\frac{1}{x_n^2}}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left[\\left(1+\\frac{\\sin x_n-x_n}{x_n}\\right)^{\\frac{x_n}{\\sin x_n-x_n}}\\right]^{\\frac{\\sin x_n-x_n}{x_n^3}}\\\\\r\n=\\mathrm{e}^{\\lim\\limits _{n \\rightarrow \\infty} \\frac{\\sin x_n-x_n}{x_n^3}}$,\r\n\r\n由 $\\displaystyle \\lim _{t \\rightarrow 0} \\frac{\\sin t-t}{t^3}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{\\cos t-1}{3 t^2}=-\\frac{1}{6}$, \r\n\r\n得 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{\\sin x_n-x_n}{x_n^3}=-\\frac{1}{6}$, \r\n\r\n故 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{x_{n+1}}{x_n}\\right)^{\\frac{1}{x_n^2}}=\\mathrm{e}^{-\\frac{1}{6}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A=sinA 在实数上只有 A=0，但须先证有界+单调再取极限，不能直接令方程",
+        "(2) 指数 1/xₙ²→∞，底数 sinxₙ/xₙ→1 为 1^∞ 型，须展开到 x² 阶：ln(sinx/x)~-x²/6"
+      ],
+      "key_point": "极限 0；第二问 (sinx/x)^{1/x²}→e^{-1/6}"
+    },
+    {
+      "id": 852,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u)$ 在 $(0,+\\infty)$ 内具有二阶导数, 且 $z=f\\left(\\sqrt{x^{2}+y^{2}}\\right)$ 满足等式 $\\dfrac{\\partial^{2} z}{\\partial x^{2}}+\\dfrac{\\partial^{2} z}{\\partial y^{2}}=0$.\r\n\r\n(1) 验证 $f^{\\prime \\prime}(u)+\\dfrac{f^{\\prime}(u)}{u}=0$;\r\n\r\n(2) 若 $f(1)=0, f^{\\prime}(1)=1$, 求函数 $f(u)$ 的表达式",
+      "options": {},
+      "answer": "(2) $f(u)=\\ln u$",
+      "analysis": "(1) 令 $u=\\sqrt{x^2+y^2}$, 则 $\\dfrac{\\partial z}{\\partial x}=\\dfrac{x}{u} f^{\\prime}(u),\\\\\r\n\\dfrac{\\partial^2 z}{\\partial x^2}\\\\\r\n=\\dfrac{u-\\frac{x^2}{u}}{u^2} f^{\\prime}(u)+\\dfrac{x^2}{u^2} f^{\\prime \\prime}(u)\\\\\r\n=\\dfrac{y^2}{u^3} f^{\\prime}(u)+\\dfrac{x^2}{u^2} f^{\\prime \\prime}(u)$,\r\n\r\n由对称性得 $\\dfrac{\\partial^2 z}{\\partial y^2}=\\dfrac{x^2}{u^3} f^{\\prime}(u)+\\dfrac{y^2}{u^2} f^{\\prime \\prime}(u)$\r\n\r\n将 $\\dfrac{\\partial^2 z}{\\partial x^2}, \\dfrac{\\partial^2 z}{\\partial y^2}$ 代入 $\\dfrac{\\partial^2 z}{\\partial x^2}+\\dfrac{\\partial^2 z}{\\partial y^2}=0$, \r\n\r\n得 $f^{\\prime \\prime}(u)+\\dfrac{f^{\\prime}(u)}{u}=0$\r\n\r\n(2) 方法一 由 $f^{\\prime \\prime}(u)+\\dfrac{f^{\\prime}(u)}{u}=0$ \r\n\r\n即 $f^{\\prime \\prime}(u)+\\dfrac{1}{u} f^{\\prime}(u)=0$, \r\n\r\n得 $\\displaystyle f^{\\prime}(u)=C_1 \\mathrm{e}^{-\\int \\frac{1}{u} \\mathrm{d} u}=\\frac{C_1}{u}$,\r\n\r\n由 $f^{\\prime}(1)=1$ 得 $C_1=1$, 即 $f^{\\prime}(u)=\\dfrac{1}{u}$, \r\n\r\n于是 $f(u)=\\ln u+C_2$, \r\n\r\n再由 $f(1)=0$ 得 $C_2=0$, \r\n\r\n故 $f(u)=\\ln u$\r\n\r\n方法二 由 $f^{\\prime \\prime}(u)+\\dfrac{f^{\\prime}(u)}{u}=0$, \r\n\r\n得 $u f^{\\prime \\prime}(u)+f^{\\prime}(u)=0$, \r\n\r\n即 $\\dfrac{\\mathrm{d}}{\\mathrm{d} u}\\left[u f^{\\prime}(u)\\right]=0$, \r\n\r\n解得 $u f^{\\prime}(u)=C_1$, 由 $f^{\\prime}(1)=1$ 得 $C_1=1$,\r\n\r\n由 $\\displaystyle f^{\\prime}(u)=\\frac{1}{u}$ 得 $f(u)=\\ln u+C_2$, \r\n\r\n由 $f(1)=0$ 得 $C_2=0$, 故 $f(u)=\\ln u$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 ∂²z/∂x² 时 x/u 对 x 用商法则，别漏 u 对 x 的依赖（∂u/∂x=x/u）",
+        "f''+f'/u=0 令 p=f' 得 p'/p=-1/u，积分 p=C/u；再积分并用 f(1)=0、f'(1)=1 定常数"
+      ],
+      "key_point": "化出 f''+f'/u=0，解得 f(u)=ln u"
+    },
+    {
+      "id": 854,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知非齐次线性方程组 $\\left\\{\\begin{array}{l}x_{1}+x_{2}+x_{3}+x_{4}=-1 \\\\ 4 x_{1}+3 x_{2}+5 x_{3}-x_{4}=-1  \\\\ a x_{1}+x_{2}+3 x_{3}+b x_{4}=1\\end{array}\\right.$, 有 $3$ 个线性无关的解\r\n\r\n(1) 证明: 方程组系数矩阵 $\\boldsymbol{A}$ 的秩 $r(\\boldsymbol{A})=2$;\r\n\r\n(2) 求 $a, b$ 的值及方程组的通解",
+      "options": {},
+      "answer": "(2) $a=2, b=-3$, 原方程的通解为 $\\boldsymbol{x}=C_1\\left(\\begin{array}{c}-2 \\\\ 1 \\\\ 1 \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}4 \\\\ -5 \\\\ 0 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}2 \\\\ -3 \\\\ 0 \\\\ 0\\end{array}\\right) (C_1, C_2$ 为任意常数)",
+      "analysis": "(1) 令 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & 1 & 1 & 1 \\\\ 4 & 3 & 5 & -1 \\\\ a & 1 & 3 & b\\end{array}\\right),\\\\\r\n\\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n原方程组可表示为 $\\boldsymbol{Ax} =\\boldsymbol{b}$. \r\n\r\n因为 $\\boldsymbol{A}$ 至少有两行不成比例,\r\n\r\n所以 $r(\\boldsymbol{A}) \\geqslant 2$,\r\n\r\n设 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{A x}=\\boldsymbol{b}$ 的三个线性无关解, \r\n\r\n则 $\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{Ax} =\\mathbf{0}$ 的两个解,\r\n\r\n令 $k_1\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)+k_2\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_3\\right)=\\mathbf{0}$, \r\n\r\n则 $\\left(k_1+k_2\\right) \\boldsymbol{\\alpha}_1-k_1 \\boldsymbol{\\alpha}_2-k_2 \\boldsymbol{\\alpha}_3=\\mathbf{0}$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关, \r\n\r\n所以 $k_1=k_2=0$, 从而 $\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_3$ 线性无关, \r\n\r\n即 $\\boldsymbol{Ax} =\\mathbf{0}$ 至少有两个线性无关解, \r\n\r\n于是 $4-r(\\boldsymbol{A}) \\geqslant 2$ 或 $r(\\boldsymbol{A}) \\leqslant 2$, \r\n\r\n故 $r(\\boldsymbol{A})=2$\r\n\r\n(2) $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{cccc:c}\r\n1 & 1 & 1 & 1 & -1 \\\\\r\n4 & 3 & 5 & -1 & -1 \\\\\r\na & 1 & 3 & b & 1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{cccc:c}\r\n1 & 1 & 1 & 1 & -1 \\\\\r\n0 & -1 & 1 & -5 & 3 \\\\\r\n0 & 1-a & 3-a & b-a & 1+a\r\n\\end{array}\\right)$,\r\n\r\n因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n所以 $\\displaystyle \\frac{-1}{1-a}=\\frac{1}{3-a}=\\frac{-5}{b-a}=\\frac{3}{1+a}$, \r\n\r\n解得 $a=2, b=-3$,\r\n\r\n由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{cccc:c}1 & 1 & 1 & 1 & -1 \\\\ 0 & -1 & 1 & -5 & 3 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc:c}1 & 1 & 1 & 1 & -1 \\\\ 0 & 1 & -1 & 5 & -3 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc:c}1 & 0 & 2 & -4 & 2 \\\\ 0 & 1 & -1 & 5 & -3 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得原方程的通解为 $\\boldsymbol{x}=C_1\\left(\\begin{array}{c}-2 \\\\ 1 \\\\ 1 \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}4 \\\\ -5 \\\\ 0 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}2 \\\\ -3 \\\\ 0 \\\\ 0\\end{array}\\right) (C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "3 个无关解两两相减得 2 个无关齐次解 ⇒ 4-r(A)≥2；前两行不成比例 r(A)≥2 ⇒ r(A)=2",
+        "r(A)=2 要求第 3 行为前两行线性组合，据此定 a=2、b=-3"
+      ],
+      "key_point": "r(A)=2；a=2,b=-3，通解含 2 个自由参数"
+    },
+    {
+      "id": 855,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 3 阶实对称矩阵 $\\boldsymbol{A}$ 的各行元素之和均为 $3$, 向量$\\boldsymbol{\\alpha}_{1}=(-1,2,-1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,-1,1)^{\\mathrm{T}}$ 是线性方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\mathbf{0}$ 的两个解.\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的特征值与特征向量;\r\n\r\n(2) 求正交矩阵 $\\boldsymbol Q$ 和对角矩阵 $\\boldsymbol{\\Lambda}$, 使得 $\\displaystyle Q^{\\mathrm{T}} \\boldsymbol{AQ}=\\boldsymbol{\\Lambda}$\r\n\r\n(3) (数三) 求 $\\boldsymbol{A}$ 及 $(\\boldsymbol{A} - \\dfrac{3}{2} \\boldsymbol{E})^6$",
+      "options": {},
+      "answer": "(1) $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$\r\n\r\n(3) $\\dfrac{729}{64}\\boldsymbol{E}$",
+      "analysis": "(1) 根据特征值与特征向量的定义, \r\n\r\n由 $\\boldsymbol{A}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)=3\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ \r\n\r\n得 $\\lambda_3=3$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n$\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ 为其对应的特征向量,\r\n\r\n因为 $\\boldsymbol{A x}=\\mathbf{0}$ 有非零解, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right)$, $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}0 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n于是 $\\lambda_1=\\lambda_2=0$, 其对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$,\r\n\r\n故 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) 令 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2-\\dfrac{\\left(\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_1\\right)}{\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1\\right)} \\boldsymbol{\\beta}_1=\\frac{1}{2}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_3=\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n单位化得 $\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{6}}\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{2}}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\boldsymbol{\\gamma}_3=\\dfrac{1}{\\sqrt{3}}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n令 $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol Q^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 3\\end{array}\\right)$\r\n\r\n(3) $\\boldsymbol{A}=\\boldsymbol{Q}\\left(\\begin{array}{lll}\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 3\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}=\\left(\\begin{array}{lll}\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1\r\n\\end{array}\\right)\\\\\r\n\\left(\\boldsymbol{A}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\\\\r\n=\\left[\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\right]^6\\\\\r\n=\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\boldsymbol{Q}^{\\mathrm{T}} \\\\\r\n=\\boldsymbol{Q}\\left(\\begin{array}{ccc}\r\n\\left(\\frac{3}{2}\\right)^6 & 0 & 0 \\\\\r\n0 & \\left(\\frac{3}{2}\\right)^6 & 0 \\\\\r\n0 & 0 & \\left(\\frac{3}{2}\\right)^6\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\\\\r\n=\\left(\\dfrac{3}{2}\\right)^6 \\boldsymbol{E}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "各行元素之和为 3 等价于 A(1,1,1)ᵀ=3(1,1,1)ᵀ，直接读出 λ=3 及其特征向量",
+        "实对称阵不同特征值向量自动正交，但 λ=0 的二重特征向量 α₁,α₂ 须施密特正交化后再单位化"
+      ],
+      "key_point": "特征值 0,0,3；Q 由正交化的特征向量拼成，Λ=diag(0,0,3)"
+    },
+    {
+      "id": 858,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\displaystyle y=\\frac{x+4 \\sin x}{5 x-2 \\cos x}$ 的水平渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{1}{5}$",
+      "analysis": "由 $\\lim\\limits _{x \\rightarrow \\infty} y=\\dfrac{1}{5}$, 得 $y=\\dfrac{x+4 \\sin x}{5 x-2 \\cos x}$ 的水平渐近线为 $y=\\dfrac{1}{5}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x→∞ 时 4sinx、2cosx 有界，除以 x 后→0，别被三角项迷惑",
+        "水平渐近线取 x→∞ 的极限值 1/5，是分子分母 x 的系数之比"
+      ],
+      "key_point": "lim_{x→∞}(x+4sinx)/(5x−2cosx)=1/5，水平渐近线 y=1/5。"
+    },
+    {
+      "id": 859,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{ll}\r\n\\dfrac{1}{x^3} \\int_0^x \\sin t^2 \\mathrm{d} t, & x \\neq 0\\\\\r\na, & x=0\r\n\\end{array}\\right.$ 在 $x=0$ 处连续, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} f(x)=\\lim _{x \\rightarrow 0} \\frac{\\int_0^x \\sin t^2 \\mathrm{d} t}{x^3}=\\lim _{x \\rightarrow 0} \\frac{\\sin x^2}{3 x^2}=\\frac{1}{3}$, \r\n\r\n因为 $f(0)=a, f(x)$ 在 $x=0$ 处连续, 所以 $a=\\dfrac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "连续要求 a 等于 x→0 的极限，不是随便取值",
+        "洛必达对分子 ∫₀ˣsint²dt 求导得 sinx²，再用 sinx²~x²，与分母 3x² 约得 1/3"
+      ],
+      "key_point": "lim_{x→0}(∫₀ˣsint²dt)/x³=lim sinx²/(3x²)=1/3，故 a=1/3。"
+    },
+    {
+      "id": 860,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "反常积分 $\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{d} x}{\\left(1+x^2\\right)^2}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "方法一 $\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{d} x}{\\left(1+x^2\\right)^2}\\\\\r\n=\\frac{1}{2} \\int_0^{+\\infty} \\frac{\\mathrm{d}\\left(1+x^2\\right)}{\\left(1+x^2\\right)^2}\\\\\r\n=-\\left.\\frac{1}{2\\left(1+x^2\\right)}\\right|_0 ^{+\\infty}=\\frac{1}{2}$\r\n\r\n方法二 $\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{d} x}{\\left(1+x^2\\right)^2} \\\\\r\n\\stackrel{x=\\tan t}{=} \\int_0^{\\frac{\\pi}{2}} \\frac{\\tan t \\cdot \\sec ^2 t}{\\sec ^4 t} \\mathrm{d} t\\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\sin t \\cos t \\mathrm{d} t \\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\sin t \\mathrm{d}(\\sin t)\\\\\r\n=\\left.\\frac{1}{2} \\sin ^2 t\\right|_0 ^{\\frac{\\pi}{2}}=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "凑微分 xdx=½d(1+x²)，系数 1/2 别漏",
+        "原函数 −1/[2(1+x²)] 在 x→+∞ 时→0、x=0 时为 −1/2，作差得 1/2"
+      ],
+      "key_point": "∫₀^{+∞}xdx/(1+x²)²=−1/[2(1+x²)]|₀^{+∞}=1/2。"
+    },
+    {
+      "id": 861,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由方程 $y=1-x \\mathrm{e}^y$ 确定, 则 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\mathrm{e}$",
+      "analysis": "方法一 将 $x=0$ 代入 $y=1-x \\mathrm{e}^y$ \r\n\r\n得 $y=1$, $y=1-x \\mathrm{e}^y$ \r\n\r\n两边对 $x$ 求导得 \r\n\r\n$\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\mathrm{e}^y-x \\mathrm{e}^y \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}$, \r\n\r\n将 $x=0, y=1$ 代入得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{1=0}=-\\mathrm{e}$\r\n\r\n方法二 将 $x=0$ 代入 $y=1-x \\mathrm{e}^y$ 得 $y=1$, \r\n\r\n两边求微分得 \r\n\r\n$\\mathrm{d} y=-\\left(\\mathrm{e}^y \\mathrm{d} x+x \\mathrm{e}^y \\mathrm{d} y\\right)$, \r\n\r\n将 $x=0, y=1$ 代入得 $\\mathrm{d} y=-\\mathrm{ed} x$, \r\n\r\n故 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=-\\mathrm{e}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "xe^y 对 x 求导用乘积法则：e^y+xe^y·y'，两项别漏",
+        "先代 x=0 得 y=1，再代入求导式解 y'，比先解一般表达式省事"
+      ],
+      "key_point": "求导得 y'=−e^y−xe^y·y'，代 x=0,y=1 得 y'=−e。"
+    },
+    {
+      "id": 862,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是奇函数, 除 $x=0$ 外处处连续, $x=0$ 是其第一类间断点, 则 $\\displaystyle \\int_0^x f(t) \\mathrm{d} t$ 是 $(\\quad)$",
+      "options": {
+        "A": "连续的奇函数",
+        "B": "连续的偶函数",
+        "C": "在 $x=0$ 间断的奇函数",
+        "D": "在 $x=0$ 间断的偶函数"
+      },
+      "answer": "B",
+      "analysis": "因为 $x=0$ 为 $f(x)$ 的第一类间断点,\r\n\r\n所以 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t$ 为连续函数.\r\n\r\n又因为 $\\displaystyle F(-x)=\\int_0^{-x} f(t) \\mathrm{d} t \\stackrel{t=-u}{=} \\int_0^x f(-u)(-\\mathrm{d} u)=\\int_0^x f(u) \\mathrm{d} u=F(x)$,\r\n\r\n所以 $\\int_0^x f(t) \\mathrm{d} t$ 为偶函数, 应选 $(\\mathrm{B})$",
+      "wrong_options": {
+        "A": "连续判对但奇偶判反——奇函数（从0起积）的变限积分是偶函数不是奇函数",
+        "C": "误以为被积有第一类间断点会使变限积分间断，且奇偶也判错",
+        "D": "偶函数判对，但误以为第一类间断点导致 F 间断（变限积分恒连续）"
+      },
+      "pitfalls": [
+        "被积函数即使有第一类（跳跃）间断点，其变限积分 F(x)=∫₀ˣf 仍处处连续",
+        "奇函数从 0 起的变限积分为偶函数：换元 t=−u 得 F(−x)=∫₀^{−x}f=∫₀ˣf(u)du=F(x)"
+      ],
+      "key_point": "第一类间断使 F 连续，f 奇使 F 偶，故 F 为连续的偶函数，选B。"
+    },
+    {
+      "id": 863,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $g(x)$ 可微, $h(x)=\\mathrm{e}^{1+g(x)}, h^{\\prime}(1)=1, g^{\\prime}(1)=2$, 则 $g(1)$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$\\ln 3-1$",
+        "B": "$-\\ln 3-1$",
+        "C": "$-\\ln 2-1$",
+        "D": "$\\ln 2-1$"
+      },
+      "answer": "C",
+      "analysis": "由 $h^{\\prime}(x)=\\mathrm{e}^{1+g(x)} \\cdot g^{\\prime}(x)$, \r\n\r\n得 $h^{\\prime}(1)=\\mathrm{e}^{1+g(1)} \\cdot g^{\\prime}(1)$,\r\n\r\n解得 $g(1)=-\\ln 2-1$, 应选 (C)",
+      "wrong_options": {
+        "A": "求导漏乘内层 g'(1) 或运算出错，得到错误值 ln3−1",
+        "B": "同类漏乘因子且符号处理错，得 −ln3−1",
+        "D": "把 e^{1+g(1)}=h'(1)/g'(1)=1/2 倒写成 g'(1)/h'(1)=2，解得 ln2−1"
+      },
+      "pitfalls": [
+        "链式法则 h'=e^{1+g}·g'，内层导数 g'(1)=2 不能漏乘",
+        "由 e^{1+g(1)}=h'(1)/g'(1)=1/2，取对数 1+g(1)=−ln2，故 g(1)=−ln2−1"
+      ],
+      "key_point": "h'(1)=e^{1+g(1)}g'(1)=1，e^{1+g(1)}=1/2，g(1)=−ln2−1，选C。"
+    },
+    {
+      "id": 864,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{-2 x}+x \\mathrm{e}^x$ 满足的一个微分方程是 $(\\quad)$",
+      "options": {
+        "A": "$y^{\\prime \\prime}-y^{\\prime}-2 y=3 x \\mathrm{e}^x$",
+        "B": "$y^{\\prime \\prime}-y^{\\prime}-2 y=3 \\mathrm{e}^x$",
+        "C": "$y^{\\prime \\prime}+y^{\\prime}-2 y=3 x \\mathrm{e}^x$",
+        "D": "$y^{\\prime \\prime}+y^{\\prime}-2 y=3 \\mathrm{e}^x$"
+      },
+      "answer": "D",
+      "analysis": "对应的二阶常系数齐次线性微分方程的特征根为 $\\lambda_1=1, \\lambda_2=-2$, \r\n\r\n对应的特征方 程为 $(\\lambda-1)(\\lambda+2)=0$, 即 $\\lambda^2+\\lambda-2=0$,\r\n\r\n对应的齐次线性微分方程为 $y^{\\prime \\prime}+y^{\\prime}-2 y=0$,\r\n\r\n设所求的微分方程为 $y^{\\prime \\prime}+y^{\\prime}-2 y-f(x)$, \r\n\r\n因为 $x \\mathrm{e}^x$ 为该方程的特解, \r\n\r\n代入得 $f(x)-3 \\mathrm{e}^x$, \r\n\r\n故所求的微分方程为 $y^{\\prime \\prime}+y^{\\prime}-2 y=3 \\mathrm{e}^x$, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "齐次部分特征方程符号弄反（成 λ²−λ−2，根 −1、2），且右端误写 3xeˣ",
+        "B": "齐次部分特征方程符号反（根 −1、2 而非 1、−2）",
+        "C": "齐次部分对，但右端误算为 3xeˣ——没注意 λ=1 是单根共振，代入后 x 项抵消只剩常数"
+      },
+      "pitfalls": [
+        "由根 1、−2 得特征方程 (λ−1)(λ+2)=λ²+λ−2，对应 y''+y'−2y，符号别写成 λ²−λ−2",
+        "xeˣ 中 λ=1 是特征单根发生共振，代入 y''+y'−2y 后含 x 的项抵消，右端为 3eˣ 不是 3xeˣ"
+      ],
+      "key_point": "特征根 1、−2 给 y''+y'−2y=0，xeˣ 共振代入得右端 3eˣ，选D。"
+    },
+    {
+      "id": 865,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "试确定常数 $A, B, C$ 的值, 使得\r\n$\\mathrm{e}^x\\left(1+B x+C x^2\\right)=1+A x+o\\left(x^3\\right)$,\r\n其中 $o\\left(x^3\\right)$ 是当 $x \\rightarrow 0$ 时比 $x^3$ 高阶的无穷小",
+      "options": {},
+      "answer": "$A=\\dfrac{1}{3},\\ B=-\\dfrac{2}{3},\\ C=\\dfrac{1}{6}$",
+      "analysis": "方法一 由 $\\mathrm{e}^x\\left(1+B x+C x^2\\right)=1+A x+o\\left(x^3\\right)$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x\\left(1+B x+C x^2\\right)-1-A x}{x^3}=0$,\r\n\r\n由洛必达法则得 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x\\left(1+B x+C x^2\\right)+\\mathrm{e}^x(B+2 C x)-A}{3 x^2}=0$, \r\n\r\n于是 $1+B-A=0$; \r\n\r\n再由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x\\left(1+B x+C x^2\\right)+2 \\mathrm{e}^x(B+2 C x)+2 C \\mathrm{e}^x}{6 x}=0$, \r\n\r\n于是 $1+2 B+2 C=0$; \r\n\r\n再由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^x\\left(1+B x+C x^2\\right)+3 \\mathrm{e}^x(B+2 C x)+6 C \\mathrm{e}^x}{6}=0$, \r\n\r\n于是 $1+3 B+6 C=0$, \r\n\r\n解得 $A=\\dfrac{1}{3}, B=-\\dfrac{2}{3}, C=\\dfrac{1}{6}$,\r\n\r\n方法二 由 $\\displaystyle \\mathrm{e}^x=1+x+\\frac{x^2}{2 !}+\\frac{x^3}{3 !}+o\\left(x^3\\right)$, 得\r\n\r\n$\\mathrm{e}^x\\left(1+B x+C x^2\\right)=1+(B+1) x\\\\\r\n+\\left(B+C+\\dfrac{1}{2}\\right) x^2+\\left(\\dfrac{B}{2}+C+\\dfrac{1}{6}\\right) x^3+o\\left(x^3\\right)$,\r\n\r\n则 $\\left\\{\\begin{array}{l}B+1=A \\\\ \r\nB+C+\\dfrac{1}{2}=0 \\\\ \r\n\\dfrac{B}{2}+C+\\dfrac{1}{6}=0\\end{array}\\right.$ \r\n\r\n解得 $A=\\dfrac{1}{3}, B=-\\dfrac{2}{3}, C=\\dfrac{1}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "右端 1+Ax 无 x²、x³ 项，故左端 x² 系数、x³ 系数都必须为 0，这给出定 B、C 的两个方程",
+        "eˣ 要展到 x³（含 1/6 项）才够阶，展不够会漏掉定 C 的方程"
+      ],
+      "key_point": "eˣ 展到 x³ 与 (1+Bx+Cx²) 相乘比较系数：B+1=A、B+C+½=0、B/2+C+1/6=0，解得 A=1/3,B=−2/3,C=1/6。"
+    },
+    {
+      "id": 866,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-\\dfrac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}-\\ln \\left(\\mathrm{e}^{-x}+\\sqrt{\\mathrm{e}^{-2 x}-1}\\right)+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x} \\mathrm{d} x\\\\\r\n=-\\int \\arcsin \\mathrm{e}^x \\mathrm{d}\\left(\\mathrm{e}^{-x}\\right)\\\\\r\n=-\\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}+\\int \\mathrm{e}^{-x} \\cdot \\frac{\\mathrm{e}^x \\mathrm{d} x}{\\sqrt{1-\\mathrm{e}^{2 x}}} \\\\\r\n= -\\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}+\\int \\frac{\\mathrm{d} x}{\\sqrt{1-\\mathrm{e}^{2 x}}}\\\\\r\n=-\\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}+\\int \\frac{\\mathrm{e}^{-x} \\mathrm{d} x}{\\sqrt{\\mathrm{e}^{-2 x}-1}} \\\\\r\n= -\\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}-\\int \\frac{\\mathrm{d}\\left(\\mathrm{e}^{-x}\\right)}{\\sqrt{\\left(\\mathrm{e}^{-x}\\right)^2-1}}\\\\\r\n=-\\frac{\\arcsin \\mathrm{e}^x}{\\mathrm{e}^x}-\\ln \\left(\\mathrm{e}^{-x}+\\sqrt{\\mathrm{e}^{-2 x}-1}\\right)+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部时取 u=arcsin(eˣ)、dv=e^{−x}dx，v=−e^{−x}，边界项与积分项符号别错",
+        "余项 ∫dx/√(1−e^{2x}) 要提出 e^{−x} 化为 ∫e^{−x}dx/√(e^{−2x}−1)=−∫d(e^{−x})/√((e^{−x})²−1)，得 −ln(e^{−x}+√(e^{−2x}−1))"
+      ],
+      "key_point": "凑 d(e^{−x}) 分部后余项化对数型，结果 −arcsin(eˣ)/eˣ−ln(e^{−x}+√(e^{−2x}−1))+C。"
+    },
+    {
+      "id": 867,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线 $L$ 的方程为 $\\left\\{\\begin{array}{l}x=t^2+1 \\\\ y=4 t-t^2\\end{array}(t \\geqslant 0)\\right.$\r\n\r\n(1) 讨论 $L$ 的凹凸性;\r\n\r\n(2) 过点 $(-1,0)$ 引 $L$ 的切线, 求切点 $\\left(x_0, y_0\\right)$, 并写出切线的方程;\r\n\r\n(3) 求此切线与 $L$ (对应于 $x \\leqslant x_0$ 的部分) 及 $x$ 轴所围成的平面图形的面积",
+      "options": {},
+      "answer": "(1) 曲线 $L$ 是上凸的 (2) 切线方程为 $y=x+1$ (3) $S=\\dfrac{7}{3}$",
+      "analysis": "(1) 方法一 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{2-t}{t}$,\r\n\r\n因为 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)}{\\mathrm{d} x}=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right) / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{\\left(\\frac{2-t}{t}\\right)^{\\prime}}{2 t}=-\\frac{1}{t^3}<0(t>0)$, \r\n\r\n所以曲线 $L$ 是上凸的\r\n\r\n方法二 由 $x=t^2+1$, 得 $t=\\sqrt{x-1}(x \\geqslant 1)$, \r\n\r\n代入得 $\\displaystyle y=4(x-1)^{\\frac{1}{2}}-x+1$, $y^{\\prime}=2(x-1)^{-\\frac{1}{2}}-1$, \r\n\r\n由 $y^{\\prime \\prime}=-(x-1)^{-\\frac{3}{2}}<0(x>1)$ 得曲线 $L$ 是上凸的\r\n\r\n(2) 方法一 设切点 $\\left(x_0, y_0\\right)$ 对应参数 $t=t_0$, 即 $\\left(x_0, y_0\\right)=\\left(t_0^2+1,4 t_0-t_0^2\\right)$\r\n\r\n$\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=t_0}=\\frac{2-t_0}{t_0}$, \r\n\r\n由 $\\displaystyle \\frac{2-t_0}{t_0}=\\frac{4 t_0-t_0^2}{t_0^2+2}$,\r\n\r\n得 $t_0=-2$ (舍去), $t_0=1$,\r\n\r\n故切点为 $\\left(x_0, y_0\\right)=(2,3)$\r\n\r\n过点 $(-1,0)$ 的曲线 $L$ 的切线方程为 $y-3=x-2$, \r\n\r\n即切线方程为 $y=x+1$,\r\n\r\n方法二 过点 $(-1,0)$ 的曲线 $L$ 的切线方程为 $\\displaystyle y-y_0=\\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=x_0} \\cdot\\left(x-x_0\\right)$\r\n\r\n由 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=x_0}=\\frac{2}{\\sqrt{x_0-1}}-1$, \r\n\r\n得切线方程为 $\\displaystyle y-y_0=\\left(\\frac{2}{\\sqrt{x_0-1}}-1\\right)\\left(x-x_0\\right)$. \r\n\r\n因为点 $(-1,0)$ 在切线上, \r\n\r\n所以 $\\displaystyle y_0=\\left(\\frac{2}{\\sqrt{x_0-1}}-1\\right)\\left(x_0+1\\right)$, \r\n\r\n不妨设切点 $\\left(x_0, y_0\\right)$ 对应参数 $t=t_0$.\r\n\r\n由 $y_0=4 t_0-t_0^2$, 得 $\\displaystyle 4 t_0-t_0^2=\\left(\\frac{2}{t_0}-1\\right)\\left(t_0^2+2\\right)$, \r\n\r\n得 $t_0=-2$ (舍去), $t_0=1$, 于是 $x_0=2, y_0=3$, 切线方程为 $y=x+1$.\r\n\r\n(3) 切线与 $x$ 轴的交点坐标为 $A(-1,0)$,\r\n\r\n令 $4 t-t^2=0$, 得 $t=0$ 或 $t=4$, 当 $t=4$ 时, $x=17>2$, 故取 $t=0$.\r\n\r\n曲线与 $x$ 轴交点为 $B(1,0)$, 所求面积为 $\\displaystyle S\\\\\r\n=\\frac{1}{2} \\times 3 \\times 3-\\int_1^2 y \\mathrm{d} x\\\\\r\n=\\frac{9}{2}-\\int_0^1\\left(4 t-t^2\\right) \\cdot 2 t \\mathrm{d} t\\\\\r\n=\\frac{7}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "参数方程二阶导 d²y/dx²=[d(dy/dx)/dt]/(dx/dt)，分母仍是 dx/dt（不是平方），本题得 −1/t³<0 上凸",
+        "(3)面积用三角形面积减去曲线下面积，∫ydx 换成参数 ∫(4t−t²)·2t dt，注意 t 的积分限（切点 t₀=1 对应 x≤x₀ 部分从 t=0 到 1）"
+      ],
+      "key_point": "d²y/dx²=−1/t³<0 上凸；切点 (2,3) 切线 y=x+1；所围面积 S=9/2−∫₀¹(4t−t²)2tdt=7/3。"
+    },
+    {
+      "id": 875,
+      "paper": "数学二",
+      "year": 2006,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: 当 $0<a<b<\\pi$ 时, $b \\sin b+2 \\cos b+\\pi b>a \\sin a+2 \\cos a+\\pi a$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $f(x)=x \\sin x+2 \\cos x+\\pi x-a \\sin a-2 \\cos a-\\pi a, f(a)=0$,\r\n\r\n$f^{\\prime}(x)=x \\cos x-\\sin x+\\pi$,\r\n\r\n因为 $f^{\\prime \\prime}(x)=\\cos x-x \\sin x-\\cos x=-x \\sin x<0(0<x<\\pi)$,\r\n\r\n所以 $f^{\\prime}(x)$ 单调减少, \r\n\r\n又因为 $f^{\\prime}(\\pi)=0$, 所以 $f^{\\prime}(x)>0(0<x<\\pi)$, \r\n\r\n故 $f(x)$ 在 $[0, \\pi]$ 上单调增加, \r\n\r\n因为 $b>a$ 且 $f(a)=0$, 所以 $f(b)>0$, \r\n\r\n即 $b \\sin b+2 \\cos b+\\pi b>a \\sin a+2 \\cos a+\\pi a$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f'(x)=xcosx−sinx+π 的正负不显然，要再求 f''(x)=−xsinx<0（0<x<π）说明 f' 单调减",
+        "结合 f'(π)=0 得 f'(x)>0（0<x<π），故 f 单调增；由 f(a)=0、b>a 推 f(b)>0 即所证"
+      ],
+      "key_point": "构造 f 后由 f''<0 得 f' 减、f'(π)=0 得 f'>0，f 单调增，f(b)>f(a)=0。"
+    }
+  ]
+}

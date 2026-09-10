@@ -1,0 +1,409 @@
+{
+  "paper": "数学三",
+  "year": 1989,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1696,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=x+\\sin ^2 x$ 在点 $\\displaystyle \\left(\\frac{\\pi}{2}, 1+\\frac{\\pi}{2}\\right)$ 处的切线方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x+1$",
+      "analysis": "$\\displaystyle y^{\\prime}=1+\\sin 2 x, y^{\\prime}\\left(\\frac{\\pi}{2}\\right)=1$,\r\n\r\n所求的切线方程为 $\\displaystyle y-1-\\frac{\\pi}{2}=x-\\frac{\\pi}{2}$, 即 $y=x+1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(sin²x)'=2sinx cosx=sin2x；在 x=π/2 处 sin2x=sinπ=0，斜率为 1"
+      ],
+      "key_point": "y'=1+sin2x，y'(π/2)=1，切线 y-(1+π/2)=x-π/2，即 y=x+1。"
+    },
+    {
+      "id": 1697,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^n}{\\sqrt{n+1}}$ 的收敛域为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$[-1,1)$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\lim _{n \\rightarrow \\infty} \\frac{\\sqrt{n+1}}{\\sqrt{n+2}}=1$ 得收敛半径为 $R=1$\r\n\r\n- 当 $x=-1$ 时, 级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{\\sqrt{n+1}}$ 收敛; \r\n\r\n- 当 $x=1$ 时, 级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{1}{\\sqrt{n+1}}$ 发散,故收敛域为 $[-1,1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "端点必须单独讨论：x=1 时 Σ1/√(n+1) 发散（p=1/2≤1），x=-1 时交错收敛，故收敛域左闭右开"
+      ],
+      "key_point": "R=1；x=-1 收敛、x=1 发散，收敛域为 [-1,1)。"
+    },
+    {
+      "id": 1698,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若齐次线性方程组 $\\left\\{\\begin{array}{l}\\lambda x_1+x_2+x_3=0 \\\\ x_1+\\lambda x_2+x_3=0 \\\\ x_1+x_2+x_3=0\\end{array}\\right.$, 只有零解, 则 $\\lambda$ 应满足的条件是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\lambda \\neq 1$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{lll}\\lambda & 1 & 1 \\\\ 1 & \\lambda & 1 \\\\ 1 & 1 & 1\\end{array}\\right)\\\\\r\n|\\boldsymbol{A}|=\\left|\\begin{array}{lll}\\lambda & 1 & 1 \\\\ 1 & \\lambda & 1 \\\\ 1 & 1 & 1\\end{array}\\right|=(\\lambda-1)^2$,\r\n\r\n因为齐次线性方程组只有零解, \r\n\r\n所以 $r(\\boldsymbol{A})=3$, 即 $|\\boldsymbol{A}| \\neq 0$, 故 $\\lambda \\neq 1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=(λ-1)² 是完全平方，只有 λ=1 一个使其为零的值；只有零解要求 |A|≠0"
+      ],
+      "key_point": "|A|=(λ-1)²，只有零解需 |A|≠0，故 λ≠1。"
+    },
+    {
+      "id": 1699,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的分布函数为 $F(x)= \\begin{cases}0, & x<0 \\\\ A \\sin x, & 0 \\leqslant x \\leqslant \\dfrac{\\pi}{2}\\\\ 1, & x>\\dfrac{\\pi}{2}\\end{cases}$, \r\n\r\n则 $A=,\\quad P\\left\\{|X|<\\dfrac{\\pi}{6}\\right\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1; \\quad \\dfrac{1}{2}$",
+      "analysis": "由 $\\displaystyle F\\left(\\frac{\\pi}{2}-0\\right)=F\\left(\\frac{\\pi}{2}\\right)=F\\left(\\frac{\\pi}{2}+0\\right)$ 得 $A=1$,\r\n\r\n$\\displaystyle P\\left\\{|X|<\\frac{\\pi}{6}\\right\\}=P\\left\\{-\\frac{\\pi}{6}<X<\\frac{\\pi}{6}\\right\\}=P\\left\\{0<X \\leqslant \\frac{\\pi}{6}\\right\\}=F\\left(\\frac{\\pi}{6}\\right)-F(0)=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 F(π/2)=1 得 A sin(π/2)=A=1；P{|X|<π/6}=F(π/6)-F(-π/6)=sin(π/6)-0=1/2，负半轴 F=0"
+      ],
+      "key_point": "A=1；P{|X|<π/6}=F(π/6)=sin(π/6)=1/2。"
+    },
+    {
+      "id": 1700,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的数学期望 $E(X)=\\mu$, 方差 $D(X)=\\sigma^2$, 则由切比雪夫不等式, 有 $P\\{|X-\\mu| \\geqslant 3 \\sigma\\} \\leqslant\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{9}$",
+      "analysis": "$\\displaystyle P\\{|X-\\mu| \\geqslant 3 \\sigma\\} \\leqslant \\frac{D(X)}{(3 \\sigma)^2}=\\frac{1}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "ε=3σ 代入得 σ²/(3σ)²=1/9，别把 3σ 平方漏掉系数 9"
+      ],
+      "key_point": "P{|X-μ|≥3σ}≤σ²/(9σ²)=1/9。"
+    },
+    {
+      "id": 1701,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=2^x+3^x-2$, 则当 $x \\rightarrow 0$ 时, $(\\quad)$",
+      "options": {
+        "A": "$f(x)$ 是 $x$ 的等价无穷小",
+        "B": "$f(x)$ 与 $x$ 是同阶但非等价的无穷小",
+        "C": "$f(x)$ 是比 $x$ 高阶的无穷小",
+        "D": "$f(x)$ 是比 $x$ 低阶的无穷小"
+      },
+      "answer": "B",
+      "analysis": "方法一 因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{2^x+3^x-2}{x}=\\lim _{x \\rightarrow 0}\\left(2^x \\ln 2+3^x \\ln 3\\right)=\\ln 6$, \r\n\r\n所以 $f(x)$ 是 $x$ 的同阶但非等价的无穷小, 应选 (B)\r\n\r\n\r\n方法二 由 $2^x+3^x-2=\\left(\\mathrm{e}^{x \\ln 2}-1\\right)+\\left(\\mathrm{e}^{x \\ln 3}-1\\right) \\sim x \\ln 2+x \\ln 3=x \\ln 6$ \r\n\r\n得 $f(x)$ 与 $x$ 为同阶而非等价的无穷小, 应选(B)",
+      "wrong_options": {
+        "A": "误认极限为 1；实际 lim f/x=ln6≠1，非等价",
+        "C": "高阶要求 lim f/x=0，但极限为 ln6≠0",
+        "D": "低阶要求极限为 ∞，此处极限有限"
+      },
+      "pitfalls": [
+        "2^x-1~x ln2、3^x-1~x ln3，合起来 f~x ln6，比值 ln6 有限非零非 1 ⇒ 同阶但非等价"
+      ],
+      "key_point": "lim(2^x+3^x-2)/x=ln6，有限非零且≠1，故 f 与 x 同阶非等价，选 B。"
+    },
+    {
+      "id": 1702,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "在下列等式中, 正确的结果是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int f^{\\prime}(x) \\mathrm{d} x=f(x)$",
+        "B": "$\\displaystyle \\int \\mathrm{d} f(x)=f(x)$",
+        "C": "$\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int f(x) \\mathrm{d} x=f(x)$",
+        "D": "$\\displaystyle \\mathrm{d} \\int f(x) \\mathrm{d} x=f(x)$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\displaystyle \\int f(x) \\mathrm{d} x=F(x)+C$\r\n\r\n得 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int f(x) \\mathrm{d} x=[F(x)+C]^{\\prime}=f(x)$,\r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "∫f'(x)dx=f(x)+C，漏了任意常数 C",
+        "B": "∫df(x)=f(x)+C，同样漏 C",
+        "D": "d∫f(x)dx=f(x)dx，结果应带 dx，不是 f(x)"
+      },
+      "pitfalls": [
+        "不定积分结果必含 +C（A、B 因漏 C 而错）；微分记号 d 作用后带 dx（D 因漏 dx 而错）"
+      ],
+      "key_point": "只有 d/dx∫f(x)dx=f(x) 精确成立，选 C。"
+    },
+    {
+      "id": 1703,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $n$ 阶方阵且 $|\\boldsymbol{A}|=0$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 中必有两行 (列) 的元素对应成比例",
+        "B": "$\\boldsymbol{A}$ 中任意一行 (列) 向量是其余各行 (列) 向量的线性组合",
+        "C": "$\\boldsymbol{A}$ 中必有一行 (列) 向量是其余各行 (列) 向量的线性组合",
+        "D": "$\\boldsymbol{A}$ 中至少有一行(列) 的元素全是 0"
+      },
+      "answer": "C",
+      "analysis": "由 $|\\boldsymbol{A}|=0$ 得 $r(\\boldsymbol{A})<n$,\r\n\r\n因为矩阵的秩与矩阵行向量组的秩及矩阵列向量组的秩相等, \r\n\r\n所以矩阵的行向量组与列向量组都线性相关, \r\n\r\n即 $\\boldsymbol{A}$ 中必有一行(列) 可由其余行(列) 线性表示, 应选 (C)",
+      "wrong_options": {
+        "A": "两行成比例是充分非必要，|A|=0 未必有成比例的两行",
+        "B": "\"任意一行\"过强，未必每行都能被其余表示",
+        "D": "|A|=0 不必有全零行"
+      },
+      "pitfalls": [
+        "线性相关只保证\"存在\"某一行（列）可被其余表示（C），不是\"任意一行\"（B），也不必成比例（A）或有零行（D）"
+      ],
+      "key_point": "|A|=0 ⇒ 向量组线性相关 ⇒ 必有一行（列）可由其余线性表示，选 C。"
+    },
+    {
+      "id": 1704,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 和 $\\boldsymbol{B}$ 均是 $n \\times n$ 矩阵, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$|\\boldsymbol{A}+\\boldsymbol{B}|=|\\boldsymbol{A}|+|\\boldsymbol{B}|$",
+        "B": "$\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{B} \\boldsymbol{A}$",
+        "C": "$|\\boldsymbol{A B}|=|\\boldsymbol{B} \\boldsymbol{A}|$",
+        "D": "$(\\boldsymbol{A}+\\boldsymbol{B})^{-1}=\\boldsymbol{A}^{-1}+\\boldsymbol{B}^{-1}$"
+      },
+      "answer": "C",
+      "analysis": "由拉普拉斯法则得\r\n\r\n$|\\boldsymbol{A B}|=|\\boldsymbol{A}| \\cdot|\\boldsymbol{B}|,|\\boldsymbol{B A}|=|\\boldsymbol{B}| \\cdot|\\boldsymbol{A}|$, \r\n\r\n故 $|\\boldsymbol{A B}|=|\\boldsymbol{B A}|$, 应选 (C)",
+      "wrong_options": {
+        "A": "|A+B|≠|A|+|B|，行列式对加法不可加",
+        "B": "矩阵乘法一般不交换 AB≠BA",
+        "D": "(A+B)^{-1}≠A^{-1}+B^{-1}，逆对加法无此性质"
+      },
+      "pitfalls": [
+        "|AB|=|A||B|=|B||A|=|BA| 恒成立；A、B、D 都是常见错记的\"分配律\""
+      ],
+      "key_point": "|AB|=|BA| 恒成立，选 C。"
+    },
+    {
+      "id": 1705,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "以 $A$ 表示事件\"甲种产品畅销, 乙种产品滞销\", 则其对立事件 $\\bar{A}$ 为 $(\\quad)$",
+      "options": {
+        "A": "\"甲种产品滞销, 乙种产品畅销\"",
+        "B": "\"甲、乙两种产品均畅销\"",
+        "C": "\"甲种产品滞销\"",
+        "D": "\"甲种产品滞销或乙种产品畅销\""
+      },
+      "answer": "D",
+      "analysis": "设 $B=\\{$ 甲种产品畅销 $\\}, C=\\{$ 乙种产品滞销 $\\}$, 则 $A=B C$,\r\n\r\n因为 $\\bar{A}=\\bar{B}+\\bar{C}$, \r\n\r\n所以 $\\bar{A}$ 表示甲种产品滞销或乙种产品畅销, 应选(D)",
+      "wrong_options": {
+        "A": "把\"且\"的对立误当成两条件同时反向的\"且\"",
+        "B": "与原事件无对立关系",
+        "C": "只否定了甲，漏了乙的部分（对立应是\"或\"）"
+      },
+      "pitfalls": [
+        "A=甲畅销且乙滞销=BC，Ā=B̄∪C̄（德摩根），是\"甲滞销 或 乙畅销\"，用\"或\"不是\"且\""
+      ],
+      "key_point": "A=BC 的对立 Ā=B̄∪C̄=\"甲滞销或乙畅销\"，选 D。"
+    },
+    {
+      "id": 1706,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\sin \\frac{1}{x}+\\cos \\frac{1}{x}\\right)^x$",
+      "options": {},
+      "answer": "$\\mathrm{e}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\sin \\frac{1}{x}+\\cos \\frac{1}{x}\\right)^x=\\\\\r\n\\lim _{x \\rightarrow \\infty}\\left\\{\\left[1+\\left(\\sin \\frac{1}{x}+\\cos \\frac{1}{x}-1\\right)\\right]^{\\frac{1}{\\sin \\frac{1}{x}+\\cos \\frac{1}{x}-1}}\\right\\}^{x\\left(\\sin \\frac{1}{x}+\\cos \\frac{1}{x}-1\\right)} \\\\\r\n=\\mathrm{e}^{\\lim\\limits_{x \\rightarrow \\infty} \\frac{\\sin \\frac{1}{x}+\\cos \\frac{1}{x}-1}{\\frac{1}{x}}} \\stackrel{t=\\frac{1}{x}}{=} \\mathrm{e}^{\\lim\\limits _{t \\rightarrow 0}\\left(\\frac{\\sin t}{t}+\\frac{\\cos t-1}{t}\\right)}=\\mathrm{e}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数极限 lim(sin(1/x)+cos(1/x)-1)/(1/x)=lim(sin t/t+(cos t-1)/t)=1+0=1，cos t-1 为高阶被 t 除后趋 0"
+      ],
+      "key_point": "取对数换元后指数极限为 1，原极限 =e。"
+    },
+    {
+      "id": 1707,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $z=f(u, v), u=x+y, v=x y$, 且 $f(u, v)$ 的二阶偏导数都连续, 求 $\\displaystyle \\frac{\\partial^2 z}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{\\partial z}{\\partial x}=f_1^{\\prime}+y f_2^{\\prime},\\\\ \\frac{\\partial^2 z}{\\partial x \\partial y}=f_2^{\\prime}+f_{11}^{\\prime \\prime}+(x+y) f_{12}^{\\prime \\prime}+x y f_{22}^{\\prime \\prime}$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=f_1^{\\prime}+y f_2^{\\prime}$,\r\n\r\n$\\displaystyle \\frac{\\partial^2 z}{\\partial x \\partial y}=f_{11}^{\\prime \\prime}+x f_{12}^{\\prime \\prime}+f_2^{\\prime}+y\\left(f_{21}^{\\prime \\prime}+x f_{22}^{\\prime \\prime}\\right)=f_2^{\\prime}+f_{11}^{\\prime \\prime}+(x+y) f_{12}^{\\prime \\prime}+x y f_{22}^{\\prime \\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 z_x=f₁'+y f₂' 关于 y 求导时，f₁'、f₂' 都要再链式（u_y=1,v_y=x），并出现 y f₂' 的乘积项贡献 f₂'"
+      ],
+      "key_point": "z_x=f₁'+y f₂'，再对 y 求导合并得 f₂'+f₁₁''+(x+y)f₁₂''+xy f₂₂''。"
+    },
+    {
+      "id": 1708,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}+5 y^{\\prime}+6 y=2 \\mathrm{e}^{-x}$ 的通解",
+      "options": {},
+      "answer": "$y=C_1 \\mathrm{e}^{-2 x}+C_2 \\mathrm{e}^{-3 x}+\\mathrm{e}^{-x}$, \r\n\r\n其中 $C_1, C_2$ 为任意常数",
+      "analysis": "方程 $y^{\\prime \\prime}+5 y^{\\prime}+6 y=2 \\mathrm{e}^{-x}$ 的特征方程为 \r\n\r\n$\\lambda^2+5 \\lambda+6=0$,\r\n\r\n解得 $\\lambda_1=-2, \\lambda_2=-3$, 则 $y^{\\prime \\prime}+5 y^{\\prime}+6 y=0$ 的通解为 \r\n\r\n$y=C_1 \\mathrm{e}^{-2 x}+C_2 \\mathrm{e}^{-3 x}$\r\n\r\n令原方程的特解为 $y_0(x)=a \\mathrm{e}^{-x}$, 代入得 $a=1$,\r\n\r\n故原方程的通解为 $y=C_1 \\mathrm{e}^{-2 x}+C_2 \\mathrm{e}^{-3 x}+\\mathrm{e}^{-x}$, \r\n\r\n其中 $C_1, C_2$ 为任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "-1 不是特征根（根为 -2,-3），特解直接设 a e^{-x} 无需乘 x；代入得 (1-5+6)a=2a=2 ⇒ a=1"
+      ],
+      "key_point": "齐次通解 C₁e^{-2x}+C₂e^{-3x}，特解 e^{-x}，合成通解。"
+    },
+    {
+      "id": 1709,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某厂家打算生产一批商品投放市场, 已知该商品的需求函数为 $P=P(x)=10 \\mathrm{e}^{-\\frac{x}{2}}$\r\n\r\n且最大需求量为 $6$ , 其中 $x$ 表示需求量, $P$ 表示价格\r\n\r\n(1) 求该商品的收益函数和边际收益函数;\r\n\r\n(2) 求使收益最大时的产量、最大收益和相应的价格;\r\n\r\n(3) 画出收益函数的图形",
+      "options": {},
+      "answer": "(1) $R^{\\prime}(x)=5(2-x) \\mathrm{e}^{-\\frac{x}{2}}$;\r\n\r\n(2) 当 $x=2$ 时, 收益最大, 最大收益为 $\\displaystyle R(2)=\\frac{20}{\\mathrm{e}}$\r\n\r\n(3) 见解析",
+      "analysis": "(1) 收益函数为 $R(x)=x P=10 x \\mathrm{e}^{-\\frac{x}{2}}$, \r\n\r\n其中 $0 \\leqslant x \\leqslant 6$,\r\n\r\n边际收益函数为 $R^{\\prime}(x)=5(2-x) \\mathrm{e}^{-\\frac{x}{2}}$\r\n\r\n(2) 由 $R^{\\prime}(x)=5(2-x) \\mathrm{e}^{-\\frac{x}{2}}=0$ 得 $x=2$,\r\n\r\n$R^{\\prime \\prime}(x)=\\dfrac{5}{2}(x-4) \\mathrm{e}^{-\\frac{x}{2}}$,\r\n\r\n因为 $\\displaystyle R^{\\prime \\prime}(2)=-\\frac{5}{\\mathrm{e}}<0$, \r\n\r\n所以当 $x=2$ 时, 收益最大, 最大收益为 $\\displaystyle R(2)=\\frac{20}{\\mathrm{e}}$, \r\n\r\n相应的价格为 $\\dfrac{10}{\\mathrm{e}}$.\r\n\r\n(3) $R(x)$ 的特征如下:\r\n\r\n$$\r\n\\begin{array}{|c|c|c|c|c|c|}\r\n\\hline x & R^{\\prime}(x) & R^{\\prime \\prime}(x) & R(x)\\\\\r\n\\hline {[0,2)} & + & - & \\text{增、凸}\\\\\r\n\\hline 2 & 0 & -  & \\text{极大值} \\frac{20}{\\mathrm{e}}\\\\\r\n\\hline (2,4) & - & - & \\text{减、凸}\\\\\r\n\\hline 4 & 0 & 0 & \\text{拐点} \\left(4, \\frac{40}{\\mathrm{e}^2}\\right)\\\\\r\n\\hline  (4,6) & - & + & \\text{减、凹}\\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n根据表格绘制图形如图所示\n\n![收益函数 R(x) 的图形](/uploads/books/5aca451adc9f6fe5ed6b6596fe381dbf844c1f9d8c60108fb639d199a0342ad0.jpg)",
+      "wrong_options": {},
+      "pitfalls": [
+        "定义域 0≤x≤6（最大需求量 6）；R''(x)=(5/2)(x-4)e^{-x/2}，R''(2)<0 确认为极大。（注：解析描点表中拐点纵坐标 R(4) 应为 40/e² 而非 40/e）"
+      ],
+      "key_point": "R=10xe^{-x/2}，R'=5(2-x)e^{-x/2}，x=2 时最大收益 20/e，对应价格 10/e。"
+    },
+    {
+      "id": 1710,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}x, & 0 \\leqslant x \\leqslant 1, \\\\ 2-x, & 1<x \\leqslant 2,\\end{array}\\right.$ 计算下列各题\r\n\r\n(1) $\\displaystyle S_0=\\int_0^2 f(x) \\mathrm{e}^{-x} \\mathrm{d} x$;\r\n\r\n(2) $\\displaystyle S_1=\\int_2^4 f(x-2) \\mathrm{e}^{-x} \\mathrm{d} x$;\r\n\r\n(3) $\\displaystyle S_n=\\int_{2 n}^{2 n+2} f(x-2 n) \\mathrm{e}^{-x} \\mathrm{d} x(n=2,3, \\cdots)$;\r\n\r\n(4) $\\displaystyle S=\\sum_{n=0}^{\\infty} S_n$",
+      "options": {},
+      "answer": "$S_0=\\dfrac{1}{\\mathrm{e}^2}-\\dfrac{2}{\\mathrm{e}}+1;\\ S_n=\\mathrm{e}^{-2n}S_0;\\ S=\\dfrac{\\mathrm{e}-1}{\\mathrm{e}+1}$",
+      "analysis": "(1)\r\n\r\n$\\displaystyle S_0  =\\int_0^1 x \\mathrm{e}^{-x} \\mathrm{d} x+\\int_1^2(2-x) \\mathrm{e}^{-x} \\mathrm{d} x \\\\\r\n=-\\left.x \\mathrm{e}^{-x}\\right|_0 ^1-\\left.\\mathrm{e}^{-x}\\right|_0 ^1+\\int_1^2(x-2) \\mathrm{d}\\left(\\mathrm{e}^{-x}\\right)\\\\\r\n=\\frac{1}{\\mathrm{e}^2}-\\frac{2}{\\mathrm{e}}+1$\r\n\r\n(2)\r\n\r\n$\\displaystyle S_1  =\\int_2^4 f(x-2) \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\mathrm{e}^{-2} \\int_2^4 f(x-2) \\mathrm{e}^{-(x-2)} \\mathrm{d}(x-2) \\\\\r\n=\\mathrm{e}^{-2} \\int_0^2 f(x) \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\mathrm{e}^{-2}\\left(\\frac{1}{\\mathrm{e}^2}-\\frac{2}{\\mathrm{e}}+1\\right)$\r\n\r\n(3)\r\n\r\n$\\displaystyle S_n =\\mathrm{e}^{-2 n} \\int_{2 n}^{2 n+2} f(x-2 n) \\mathrm{e}^{-(x-2 n)} \\mathrm{d}(x-2 n) \\\\\r\n=\\mathrm{e}^{-2 n} \\int_0^2 f(x) \\mathrm{e}^{-x} \\mathrm{d} x=\\mathrm{e}^{-2 n}\\left(\\frac{1}{\\mathrm{e}^2}-\\frac{2}{\\mathrm{e}}+1\\right)$\r\n\r\n(4)\r\n\r\n$\\displaystyle S  =\\sum_{n=0}^{\\infty} S_n=\\left(\\frac{1}{\\mathrm{e}^2}-\\frac{2}{\\mathrm{e}}+1\\right) \\sum_{n=0}^{\\infty} \\mathrm{e}^{-2 n} \\\\\r\n=\\left(\\frac{1}{\\mathrm{e}^2}-\\frac{2}{\\mathrm{e}}+1\\right) \\cdot \\frac{1}{1-\\mathrm{e}^{-2}}=\\frac{\\mathrm{e}-1}{\\mathrm{e}+1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Sₙ 换元 x-2n=u 后提出 e^{-2n} 因子，化为同一个 S₀；S₀=(1-1/e)²，级数和 S₀/(1-e^{-2})=(e-1)/(e+1)"
+      ],
+      "key_point": "S₀=1/e²-2/e+1，Sₙ=e^{-2n}S₀，S=S₀/(1-e^{-2})=(e-1)/(e+1)。"
+    },
+    {
+      "id": 1711,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设函数 $f(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内可导, 且 $f^{\\prime}(x) \\leqslant 0$, 记\r\n\r\n$\\displaystyle F(x)=\\frac{1}{x-a} \\int_a^x f(t) \\mathrm{d} t$,\r\n\r\n证明: 在 $(a, b)$ 内, $F^{\\prime}(x) \\leqslant 0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "$\\displaystyle F^{\\prime}(x)=\\frac{(x-a) f(x)-\\int_a^x f(t) \\mathrm{d} t}{(x-a)^2}$,\r\n\r\n由积分中值定理得\r\n\r\n$\\displaystyle \\int_a^x f(t) \\mathrm{d} t=(x-a) f(c) \\text {, 其中 } a \\leqslant c \\leqslant x$,\r\n\r\n\r\n由拉格朗日中值定理得\r\n\r\n$\\displaystyle (x-a) f(x)-\\int_a^x f(t) \\mathrm{d} t=(x-a)[f(x)-f(c)]=(x-a)(x-c) f^{\\prime}(\\xi)$, \r\n\r\n其中 $c<\\xi<x$.\r\n\r\n因为 $f^{\\prime}(x) \\leqslant 0$, 所以当 $x \\in(a, b)$ 时, \r\n\r\n$\\displaystyle F^{\\prime}(x)=\\frac{(x-a)(x-c) f^{\\prime}(\\xi)}{(x-a)^2} \\leqslant 0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子 (x-a)f(x)-∫ₐˣf 用积分中值 ∫=（x-a)f(c) 化简，再用拉格朗日得 (x-a)(x-c)f'(ξ)，各因子非负而 f'≤0 定号"
+      ],
+      "key_point": "F'的分子经两次中值定理化为 (x-a)(x-c)f'(ξ)，因 f'≤0 得 F'(x)≤0。"
+    },
+    {
+      "id": 1712,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{X}=\\boldsymbol{A} \\boldsymbol{X}+\\boldsymbol{B}$, 其中 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ -1 & 1 & 1 \\\\ -1 & 0 & -1\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{cc}1 & -1 \\\\ 2 & 0 \\\\ 5 & -3\\end{array}\\right)$, 求矩阵 $\\boldsymbol{X}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{cc}3 & -1 \\\\ 2 & 0 \\\\ 1 & -1\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{X}=\\boldsymbol{A} \\boldsymbol{X}+\\boldsymbol{B}$\r\n\r\n得 $(\\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{X}=\\boldsymbol{B}$,\r\n\r\n解得 $\\boldsymbol{X}=(\\boldsymbol{E}-\\boldsymbol{A})^{-1} \\boldsymbol{B}$,\r\n\r\n由\r\n\r\n$$\r\n\\begin{aligned}\r\n&\\left(\\begin{array}{ccc:ccc}\r\n1 & -1 & 0 & 1 & 0 & 0 \\\\\r\n1 & 0 & -1 & 0 & 1 & 0 \\\\\r\n1 & 0 & 2 & 0 & 0 & 1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow & \\left(\\begin{array}{ccc:cccc}\r\n1 & -1 & 0 & 1 & 0 & 0 \\\\\r\n0 & 1 & -1 & -1 & 1 & 0 \\\\\r\n0 & 0 & 3 & 0 & -1 & 1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow & \\left(\\begin{array}{ccc:ccc}\r\n1 & 0 & 0 & 0 & \\frac{2}{3} & \\frac{1}{3} \\\\\r\n0 & 1 & 0 & -1 & \\frac{2}{3} & \\frac{1}{3} \\\\\r\n0 & 0 & 1 & 0 & -\\frac{1}{3} & \\frac{1}{3}\r\n\\end{array}\\right)\r\n\\end{aligned}\r\n$$\r\n\r\n得 $(\\boldsymbol{E}-\\boldsymbol{A})^{-1}=\\dfrac{1}{3}\\left(\\begin{array}{ccc}0 & 2 & 1 \\\\ -3 & 2 & 1 \\\\ 0 & -1 & 1\\end{array}\\right)$,\r\n\r\n\r\n故 $\\boldsymbol{X}=\\dfrac{1}{3}\\left(\\begin{array}{ccc}0 & 2 & 1 \\\\ -3 & 2 & 1 \\\\ 0 & -1 & 1\\end{array}\\right)\\left(\\begin{array}{cc}1 & -1 \\\\ 2 & 0 \\\\ 5 & -3\\end{array}\\right)=\\left(\\begin{array}{cc}3 & -1 \\\\ 2 & 0 \\\\ 1 & -1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "移项得 (E-A)X=B，左乘 (E-A)^{-1}；X 是 3×2 矩阵，(E-A)^{-1} 与 B 乘法顺序不能反"
+      ],
+      "key_point": "(E-A)X=B ⇒ X=(E-A)^{-1}B，算得 3×2 矩阵 [[3,-1],[2,0],[1,-1]]。"
+    },
+    {
+      "id": 1713,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right), \\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 3 \\\\ t\\end{array}\\right)$. 问:\r\n\r\n(1) 当 $t$ 取何值时, 向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关?\r\n\r\n(2) 当 $t$ 取何值时, 向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关?\r\n\r\n(3) 当向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关时, 将 $\\boldsymbol{\\alpha}_3$ 表示为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 的线性组合",
+      "options": {},
+      "answer": "(1) $t \\neq 5$;\r\n\r\n(2) $t=5$;\r\n\r\n(3) $\\boldsymbol{\\alpha}_3=-\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2$",
+      "analysis": "令 $\\boldsymbol A=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$,\r\n\r\n(1) 向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关 $\\Leftrightarrow$ 方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 只有零解 $\\Leftrightarrow |\\boldsymbol{A}| \\neq 0$,\r\n\r\n又 $|\\boldsymbol{A}|=\\left|\\begin{array}{lll}\r\n1 & 1 & 1 \\\\\r\n1 & 2 & 3 \\\\\r\n1 & 3 & t\r\n\\end{array}\\right|=t-5$,\r\n\r\n故当 $t \\neq 5$ 时, \r\n\r\n向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关.\r\n\r\n(2) 向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关$\\Leftrightarrow$ 方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 有非零解 $\\Leftrightarrow |\\boldsymbol{A}|=0$,\r\n\r\n故向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关的充分必要条件是 $t=5$\r\n\r\n(3) 令 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_3$,\r\n\r\n由 $\\left(\\begin{array}{ll:l}1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & 5\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cc:c}1 & 0 & -1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得\r\n\r\n方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_3$ 的解为 $x_1=-1, x_2=2$, \r\n\r\n故 $\\boldsymbol{\\alpha}_3=-\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=t-5（不是平方形式），仅 t=5 使其为零；表示系数由 x₁α₁+x₂α₂=α₃ 解出 x₁=-1,x₂=2"
+      ],
+      "key_point": "|A|=t-5：t≠5 无关、t=5 相关；t=5 时 α₃=-α₁+2α₂。"
+    },
+    {
+      "id": 1714,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-1 & 2 & 2 \\\\ 2 & -1 & -2 \\\\ 2 & -2 & -1\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的特征值;\r\n\r\n(2) 利用 (1) 小题的结果, 求矩阵 $\\boldsymbol{E}+\\boldsymbol{A}^{-1}$ 的特征值",
+      "options": {},
+      "answer": "(1)  $\\lambda_1=-5, \\lambda_2=\\lambda_3=1$;\r\n\r\n(2) $\\displaystyle \\mu_1=1-\\frac{1}{5}=\\frac{4}{5}, \\mu_2=\\mu_3=2$",
+      "analysis": "(1) 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\r\n\\left| \\begin{array}{ccc}\r\n\\lambda+1 & -2 & -2\\\\\r\n-2 & \\lambda+1 & 2 \\\\\r\n-2 & 2 & \\lambda+1\r\n\\end{array}\\right|\\\\\r\n=(\\lambda+5)(\\lambda-1)^2=0$\r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=-5, \\lambda_2=\\lambda_3=1$\r\n\r\n(2) $\\boldsymbol{A}^{-1}$ 的特征值为 $\\displaystyle \\lambda_1=-\\frac{1}{5}, \\lambda_2=\\lambda_3=1$,\r\n\r\n则 $\\boldsymbol{E}+\\boldsymbol{A}^{-1}$ 的特征值为 $\\displaystyle \\mu_1=1-\\frac{1}{5}=\\frac{4}{5}, \\mu_2=\\mu_3=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A^{-1} 特征值为 1/λ；E+A^{-1} 特征值为 1+1/λ，对 λ=-5 得 1-1/5=4/5，对 λ=1 得 2"
+      ],
+      "key_point": "A 特征值 -5,1,1 ⇒ E+A^{-1} 特征值 1+1/λ 为 4/5,2,2。"
+    },
+    {
+      "id": 1715,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知随机变量 $X$ 和 $Y$ 的联合密度函数为\r\n\r\n$f(x, y)= \\begin{cases}\\mathrm{e}^{-(x+y)}, & x>0, y>0 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n试求: (1) $P\\{X<Y\\}$;\r\n\r\n(2) $E(X Y)$",
+      "options": {},
+      "answer": "(1) $\\frac{1}{2}$;\r\n\r\n(2) $1$",
+      "analysis": "(1)\r\n\r\n$\\displaystyle \r\nP\\{X<Y\\}=\\iint\\limits_{x<y} f(x, y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{+\\infty} \\mathrm{e}^{-y} \\mathrm{d} y \\int_0^y \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\int_0^{+\\infty} \\mathrm{e}^{-y}\\left(1-\\mathrm{e}^{-y}\\right) \\mathrm{d} y\\\\\r\n=\\int_0^{+\\infty} \\mathrm{e}^{-y} \\mathrm{d} y-\\frac{1}{2} \\int_0^{+\\infty} \\mathrm{e}^{-2 y} \\mathrm{d}(2 y)\\\\\r\n=\\Gamma(1)-\\frac{1}{2} \\Gamma(1)=\\frac{1}{2}$\r\n\r\n(2) $\\displaystyle E(X Y)=\\int_{-\\infty}^{+\\infty} \\mathrm{d} x \\int_{-\\infty}^{+\\infty} x y f(x, y) \\mathrm{d} y=\\int_0^{+\\infty} x \\mathrm{e}^{-x} \\mathrm{d} x \\int_0^{+\\infty} y \\mathrm{e}^{-y} \\mathrm{d} y=\\Gamma^2(2)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f=e^{-(x+y)} 表明 X、Y 独立同参数 1 的指数分布；P(X<Y) 由对称 =1/2，E(XY)=E(X)E(Y)=1·1"
+      ],
+      "key_point": "X、Y 独立指数分布，P(X<Y)=1/2，E(XY)=E(X)E(Y)=1。"
+    },
+    {
+      "id": 1716,
+      "paper": "数学三",
+      "year": 1989,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 在 $[2,5]$ 上服从均匀分布, 现在对 $X$ 进行三次独立观测, 试求至少有两次观测值大于 $3$ 的概率",
+      "options": {},
+      "answer": "$\\dfrac{20}{27}$",
+      "analysis": "$X$ 的概率密度为 $f(x)= \\begin{cases}\\dfrac{1}{3}, & 2<x<5 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n设 $Y$ 表示三次观测中出现 $X>3$ 的次数, 则 $Y \\sim B(3, p)$,\r\n\r\n由 $\\displaystyle p=P\\{X>3\\}=\\int_3^5 f(x) \\mathrm{d} x=\\frac{2}{3}$ \r\n\r\n得 $\\displaystyle Y \\sim B\\left(3, \\frac{2}{3}\\right)$,\r\n\r\n故 $\\displaystyle P\\{Y \\geqslant 2\\}=P\\{Y=2\\}+P\\{Y=3\\}=\\mathrm{C}_3^2\\left(\\frac{2}{3}\\right)^2\\left(\\frac{1}{3}\\right)+\\mathrm{C}_3^3\\left(\\frac{2}{3}\\right)^3=\\frac{20}{27}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "p=P(X>3)=(5-3)/(5-2)=2/3；\"至少两次\"= P(Y=2)+P(Y=3)，别漏 Y=3 项"
+      ],
+      "key_point": "p=2/3，Y~B(3,2/3)，P(Y≥2)=C₃²(2/3)²(1/3)+(2/3)³=20/27。"
+    }
+  ]
+}

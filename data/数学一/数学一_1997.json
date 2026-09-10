@@ -1,0 +1,448 @@
+{
+  "paper": "数学一",
+  "year": 1997,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1056,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x\\rightarrow 0} \\frac{3 \\sin x+x^{2} \\cos \\frac{1}{x}}{(1+\\cos x) \\ln (1+x)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{2}$",
+      "analysis": "$\\displaystyle \r\n\\lim _{x \\rightarrow 0} \\frac{3 \\sin x+x^2 \\cos \\frac{1}{x}}{(1+\\cos x) \\ln (1+x)} \\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{3 \\sin x+x^2 \\cos \\frac{1}{x}}{\\ln (1+x)}\\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{3 \\sin x+x^2 \\cos \\frac{1}{x}}{x} \\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0}\\left(3 \\frac{\\sin x}{x}+x \\cos \\frac{1}{x}\\right)=\\frac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x²cos(1/x) 不能用等价替换，要看作有界量×无穷小整体→0，别因 cos(1/x) 无极限就判整个极限不存在",
+        "分母 (1+cosx)ln(1+x) 应先把 1+cosx→2 提出再用 ln(1+x)~x，不能一上来对整个分母乱替换"
+      ],
+      "key_point": "有界量 x·cos(1/x) 乘无穷小趋于0；分离 1+cosx→2、ln(1+x)~x、sinx/x→1 得 3/2。"
+    },
+    {
+      "id": 1057,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设幕级数 $\\sum a_{n} x^{n}$ 的收敛半径为 $3$ , 则幂级数 $\\displaystyle \\sum_{n=1} n a_{n}(x-1)^{n+1}$ 的收敛区间为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(-2,4)$",
+      "analysis": "因为幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} n a_n(x-1)^{n+1}$ 的收敛半径与 $\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径相同, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty} n a_n(x-1)^{n+1}$ 的收敛半径为 $R=3$, \r\n\r\n故所求收敛区间为 $-3<x-1<3$, 即 $(-2,4)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "乘 n（等价于逐项求导）不改变收敛半径，别去重新推 R",
+        "收敛区间指开区间，中心在 x=1 不是 0，解 -3<x-1<3 得 (-2,4)"
+      ],
+      "key_point": "乘 n 不改变收敛半径 R=3，中心平移到 1 得收敛区间 (-2,4)。"
+    },
+    {
+      "id": 1058,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "对数螺线 $\\rho=\\mathrm{e}^{\\theta}$ 在点 $\\displaystyle (\\rho, \\theta)=\\left(\\mathrm{e}^{\\frac{\\pi}{2}}, \\frac{\\pi}{2}\\right)$ 处的切线的直角坐标方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=-x+\\mathrm{e}^{\\frac{\\pi}{2}}$",
+      "analysis": "对数螺线的参数方程为 $\\left\\{\\begin{array}{l}x=\\mathrm{e}^\\theta \\cos \\theta \\\\ y=\\mathrm{e}^\\theta \\sin \\theta\\end{array}\\right.$\r\n\r\n当 $\\displaystyle \\theta=\\frac{\\pi}{2}$ 时, $(x, y)=\\left(0, \\mathrm{e}^{\\frac{\\pi}{2}}\\right)$,\r\n\r\n又 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} \\theta}{\\mathrm{d} x / \\mathrm{d} \\theta}=\\frac{\\cos \\theta+\\sin \\theta}{\\cos \\theta-\\sin \\theta},\\left.\\\\\r\n\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{\\theta=\\frac{\\pi}{2}}=-1$,\r\n\r\n故所求切线的直角坐标方程为 $y=-x+\\mathrm{e}^{\\frac{\\pi}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "θ=π/2 处切点直角坐标是 (0,e^{π/2})，不能停在极坐标 (ρ,θ)",
+        "斜率 dy/dx=(cosθ+sinθ)/(cosθ-sinθ)，代 π/2 得 -1，注意分母不为零"
+      ],
+      "key_point": "化参数方程求 dy/dx|_{θ=π/2}=-1，切线 y=-x+e^{π/2}。"
+    },
+    {
+      "id": 1059,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 2 & -2 \\\\ 4 & t & 3 \\\\ 3 & -1 & 1\\end{array}\\right), \\boldsymbol{B}$ 为 $3$ 阶非零矩阵, 且 $\\boldsymbol{A B}=\\boldsymbol{O}$, 则 $t=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-3$",
+      "analysis": "方法一 因为 $\\boldsymbol{B} \\neq \\boldsymbol{O}$ 且 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 有非零解, 于是 $|\\boldsymbol{A}|=0$, \r\n\r\n而由 $|\\boldsymbol{A}|=\\left|\\begin{array}{ccc}1 & 2 & -2 \\\\ 4 & t & 3 \\\\ 3 & -1 & 1\\end{array}\\right|=7 t+21=0$, 得 $t=-3$. \r\n\r\n方法二 由 $\\boldsymbol{A B}=\\boldsymbol{O}$ \r\n\r\n得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$, 再由 $\\boldsymbol{B} \\neq \\boldsymbol{O}$ 得 $r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n于是 $r(\\boldsymbol{A}) \\leqslant 2<3$, 故 $|\\boldsymbol{A}|=0$, 解得 $t=-3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 AB=O、B≠O 得的是 |A|=0（B 的非零列是 Ax=0 的非零解），不是 |B|=0",
+        "行列式 |A|=7t+21，令为 0 得 t=-3，别在按行展开时算错符号"
+      ],
+      "key_point": "B≠O 使 Ax=0 有非零解 ⇒ |A|=7t+21=0 ⇒ t=-3。"
+    },
+    {
+      "id": 1060,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "袋中有 $50$ 个乒乓球, 其中 $20$ 个是黄球, $30$ 个是白球. 今有两人依次随机地从袋中各取一球, 取后不放回, 则第二个人取得黄球的概率是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{5}$",
+      "analysis": "令 $A_1=\\{$ 第一个人取黄球 $\\}, A_2=\\{$ 第一个人取白球 $\\}, B=\\{$ 第二个人取黄球 $\\}$,\r\n\r\n$\\displaystyle P\\left(A_1\\right)=\\frac{2}{5}, \\quad P\\left(A_2\\right)=\\frac{3}{5}, \\\\\r\nP\\left(B \\mid A_1\\right)=\\frac{19}{49}, P\\left(B \\mid A_2\\right)=\\frac{20}{49}$,\r\n\r\n则 $\\displaystyle P(B)=P\\left(A_1\\right) P\\left(B \\mid A_1\\right)+P\\left(A_2\\right) P\\left(B \\mid A_2\\right)\\\\\r\n=\\frac{2}{5} \\times \\frac{19}{49}+\\frac{3}{5} \\times \\frac{20}{49}=\\frac{2}{5}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "取后不放回，但第二人取黄的边缘概率仍是 20/50=2/5（抽签公平），别以为不放回会改变它",
+        "用全概率要对第一人取黄/白两种情形加权，条件概率分母为 49"
+      ],
+      "key_point": "全概率 P(B)=2/5·19/49+3/5·20/49=2/5；抽签公平边缘概率不变。"
+    },
+    {
+      "id": 1061,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二元函数 $f(x, y)=\\left\\{\\begin{array}{ll}\\dfrac{x y}{x^{2}+y^{2}}, & (x, y) \\neq(0,0) \\\\ 0, & (x, y)=(0,0)\\end{array}\\right.$ 在点 $(0,0)$ 处 $(\\quad)$",
+      "options": {
+        "A": "连续, 偏导数存在",
+        "B": "连续, 偏导数不存在",
+        "C": "不连续, 偏导数存在",
+        "D": "不连续, 偏导数不存在"
+      },
+      "answer": "C",
+      "analysis": "因为 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y=x}} f(x, y)=\\frac{1}{2} \\neq \\lim _{\\substack{x \\rightarrow 0 \\\\ y=-x}} f(x, y)=-\\frac{1}{2}$, \r\n\r\n所以 $f(x, y)$ 在 $(0,0)$ 处不连续;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x-0}=\\lim _{x \\rightarrow 0} \\frac{0}{x}=0$ 得 $f_x^{\\prime}(0,0)=0$, \r\n\r\n同理 $f_y^{\\prime}(0,0)=0$, 即 $f(x, y)$ 在 $(0,0)$ 处可偏导, 应选 (C)",
+      "wrong_options": {
+        "A": "误判连续——只沿坐标轴或单一路径试探极限（得0），没试 y=±x 发现极限不存在。",
+        "B": "既错判连续，又漏用定义算偏导（沿轴 f≡0，偏导实为0且存在）。",
+        "D": "正确看出不连续，却误以为不连续必导致偏导不存在——偏导只由沿轴增量决定，与二重极限无关。"
+      },
+      "pitfalls": [
+        "连续与偏导存在互不蕴含：此题在原点不连续但两个偏导都存在",
+        "判偏导必须回到定义，沿 x 轴 f(x,0)≡0 故 f_x(0,0)=0，不能因原点不连续就说偏导不存在"
+      ],
+      "key_point": "沿 y=±x 极限不等⇒不连续；沿轴 f≡0⇒偏导存在为0，选 C。"
+    },
+    {
+      "id": 1062,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设在区间 $[a, b]$ 上函数 $f(x)>0, f^{\\prime}(x)<0, f^{\\prime \\prime}(x)>0$\r\n令 $\\displaystyle S_{1}=\\int_{a}^{b} f(x) \\mathrm{d} x, S_{2}=f(b)(b-a), S_{3}=\\frac{1}{2}[f(a)+f(b)](b-a)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$S_{1}<S_{2}<S_{3}$",
+        "B": "$S_{2}<S_{1}<S_{3}$",
+        "C": "$S_{3}<S_{1}<S_{2}$",
+        "D": "$S_{2}<S_{3}<S_{1}$"
+      },
+      "answer": "B",
+      "analysis": "由 $f^{\\prime}(x)<0$ 得 $f(x)$ 为单调减函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x>\\int_a^b f(b) \\mathrm{d} x=f(b)(b-a)=S_2$;\r\n\r\n再由 $f^{\\prime \\prime}(x)>0$ 得 $f(x)$ 为凹函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x<\\frac{1}{2}[f(a)+f(b)](b-a)=S_3$, \r\n\r\n即 $S_2<S_1<S_3$, 应选 (B)",
+      "wrong_options": {
+        "A": "S1<S2 方向错：f 单调减使 f(x)≥f(b)，曲边梯形 S1 应大于矩形 S2。",
+        "C": "把三者顺序整体倒置，混淆矩形/梯形与曲边梯形的大小关系。",
+        "D": "凹凸方向判反：f''>0（凹）时曲线在弦(梯形)下方，应 S1<S3 而非 S3<S1。"
+      },
+      "pitfalls": [
+        "f'<0 给出 S1>S2（用 f(x)>f(b) 逐点比较后积分），别只凭直觉",
+        "f''>0 是下凸(凹)，曲线在弦(梯形)下方 ⇒ S1<S3；凹凸判反会选反"
+      ],
+      "key_point": "f 减 ⇒ S2<S1；f 凹 ⇒ S1<S3，故 S2<S1<S3，选 B。"
+    },
+    {
+      "id": 1063,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle F(x)=\\int_{x}^{x+2 \\pi} \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t$, 则 $F(x) (\\quad)$",
+      "options": {
+        "A": "为正常数",
+        "B": "为负常数",
+        "C": "恒为零",
+        "D": "不为常数"
+      },
+      "answer": "A",
+      "analysis": "被积函数是以 $2\\pi$ 为周期得周期函数, \r\n\r\n积分区间正好是一个周期, \r\n\r\n由周期函数定积分的平移性质得\r\n\r\n$\\displaystyle\r\nF(x) =\\int_{-\\pi}^\\pi \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t\\\\\r\n=\\int_0^\\pi\\left[\\mathrm{e}^{\\sin t} \\sin t+\\mathrm{e}^{\\sin (-t)} \\sin (-t)\\right] \\mathrm{d} t \\\\\r\n=\\int_0^\\pi\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\mathrm{d} t$,\r\n\r\n当 $t \\in[0, \\pi]$ 时, $\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\geqslant 0$, \r\n\r\n则 $F(x)>0$, 故 $F(x)$ 为正常数, 应选 (A)",
+      "wrong_options": {
+        "B": "判成负常数——把 (e^{sint}-e^{-sint})sint 在 [0,π] 的符号看反（该量恒≥0）。",
+        "C": "误以为被积函数在一周期上为奇函数、积分为0，忽略 e^{sint} 破坏了对称性。",
+        "D": "没看出积分区间恰一个周期使 F'(x)=0（与起点 x 无关），误判 F 随 x 变化。"
+      },
+      "pitfalls": [
+        "区间长恰为周期 2π ⇒ F'(x)=e^{sin(x+2π)}sin(x+2π)-e^{sinx}sinx=0 ⇒ F 为常数",
+        "平移到 [-π,π] 配对得 (e^{sint}-e^{-sint})sint≥0，故常数为正，不是零也不是负"
+      ],
+      "key_point": "一个周期上积分与起点无关 ⇒ F'≡0 为常数；配对后被积≥0 ⇒ 正常数，选 A。"
+    },
+    {
+      "id": 1065,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}=\\left(\\begin{array}{l}a_{1} \\\\ a_{2} \\\\ a_{3}\\end{array}\\right), \\boldsymbol{\\alpha}_{2}=\\left(\\begin{array}{l}b_{1} \\\\ b_{2} \\\\ b_{3}\\end{array}\\right), \\boldsymbol{\\alpha}_{3}=\\left(\\begin{array}{l}c_{1} \\\\ c_{2} \\\\ c_{3}\\end{array}\\right)$, 则三条直线 $a_{1} x+b_{1} y+c_{1}=0, a_{2} x+b_{2} y+c_{2}=0$, $a_{3} x+b_{3} y+c_{3}=0$ (其中 $a_{i}^{2}+b_{i}^{2} \\neq 0, i=1,2,3$ ) 相交于一点的充要条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性相关",
+        "B": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性无关",
+        "C": "秩 $r\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)=$ 秩 $r\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}\\right)$",
+        "D": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性相关, $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$ 线性无关"
+      },
+      "answer": "D",
+      "analysis": "三条直线交于一点的充分必要条件是方程组 \r\n\r\n$\\left\\{\\begin{array}{l}a_1 x+b_1 y=-c_1 \\\\ a_2 x+b_2 y=-c_2  \\\\ a_3 x+b_3 y=-c_3\\end{array}\\right.$,有唯一解, \r\n\r\n即 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n其中 $\\boldsymbol{A}=\\left(\\begin{array}{ll}a_1 & b_1 \\\\ a_2 & b_2 \\\\ a_3 & b_3\\end{array}\\right), \\\\\r\n\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{lll}a_1 & b_1 & -c_1 \\\\ a_2 & b_2 & -c_2 \\\\ a_3 & b_3 & -c_3\\end{array}\\right)$, \r\n\r\n故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关, 而 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, 应选 (D)",
+      "wrong_options": {
+        "A": "只说 α1,α2,α3 相关是必要非充分——相关允许三线平行或重合（秩=1）而无唯一公共点。",
+        "B": "α1,α2,α3 无关 ⇒ r(Ā)=3>r(A)=2，方程组无解、三线无公共点，恰恰相反。",
+        "C": "r(α1,α2,α3)=r(α1,α2) 只保证有解，未排除秩=1（三线共点退化/平行）情形，不足以'交于唯一一点'。"
+      },
+      "pitfalls": [
+        "'交于一点'要唯一交点，须 r(A)=r(Ā)=2：即整体相关但 α1,α2 无关（秩恰2）",
+        "仅'相关'或仅'秩相等'都不够——要卡到秩恰为2，D 才是充要条件"
+      ],
+      "key_point": "唯一交点 ⇔ r(A)=r(Ā)=2 ⇔ α1,α2,α3 相关且 α1,α2 无关，选 D。"
+    },
+    {
+      "id": 1066,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设两个相互独立的随机变量 $X$ 和 $Y$ 的方差分别为 $4$ 和 $2$, 则随机变量 $3 X-2 Y$ 的方差为 $(\\quad)$",
+      "options": {
+        "A": "$8$",
+        "B": "$16$",
+        "C": "$28$",
+        "D": "$44$"
+      },
+      "answer": "D",
+      "analysis": "已知 $D(X)=4, D(Y)=2$,\r\n\r\n因为 $X, Y$ 相互独立, \r\n\r\n所以 $D(3 X-2 Y)=9 D(X)+4 D(Y)=36+8=44$, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "8=3·4-2·2：系数未平方且误用减法，把 D 当成线性算子。",
+        "B": "16=3·4+2·2：加法对但系数忘记平方（D(aX)=a²DX）。",
+        "C": "28=9·4-4·2：系数平方正确，却把 -2Y 的方差贡献取成减号（方差恒非负、系数平方后为正）。"
+      },
+      "pitfalls": [
+        "D(aX+bY)=a²DX+b²DY，系数一定平方，-2 的平方是 +4",
+        "独立才能丢掉 2ab·Cov 项；系数为负不改变方差贡献的正号"
+      ],
+      "key_point": "独立 ⇒ D(3X-2Y)=9·4+4·2=44，选 D。"
+    },
+    {
+      "id": 1067,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle I=\\iiint\\limits_{\\Omega}\\left(x^{2}+y^{2}\\right) \\mathrm{d} v$, 其中 $\\Omega$ 为平面曲线 $\\left\\{\\begin{array}{l}y^{2}=2 z \\\\ x=0\\end{array}\\right.$ 绕 $z$ 轴旋转一周形成的曲面与平面 $z=8$ 所围成的区域",
+      "options": {},
+      "answer": "$\\dfrac{1024 \\pi}{3}$",
+      "analysis": "平面曲线 $\\left\\{\\begin{array}{l}y^2=2 z \\\\ x=0\\end{array}\\right.$ 绕 $z$ 轴旋转一周形成的曲面为 \r\n$\\Sigma: x^2+y^2=2 z$, 则 $\\Omega=\\left\\{(x, y, z) \\mid(x, y) \\in D_z, 0 \\leqslant z \\leqslant 8\\right\\}$, \r\n\r\n其中 $D_z=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 2 z\\right\\}$, 于是\r\n\r\n$\\displaystyle \r\nI =\\iiint\\limits_{\\Omega}\\left(x^2+y^2\\right) \\mathrm{d} v\\\\\r\n=\\int_0^8 \\mathrm{d} z \\iint\\limits_{D_z}\\left(x^2+y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=2 \\pi \\int_0^8 \\mathrm{d} z \\int_0^{\\sqrt{2 z}} r^3 \\mathrm{d} r \\\\\r\n=2 \\pi \\int_0^8 z^2 \\mathrm{d} z=\\frac{1024 \\pi}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "曲线 y²=2z 绕 z 轴转，旋转曲面是 x²+y²=2z（把 y² 换成 x²+y²），别当成 y²=2z 的柱面",
+        "用先一后二/柱坐标：∫₀⁸dz∬_{x²+y²≤2z}(x²+y²)dxdy，内层极坐标 2π∫₀^{√(2z)}r³dr"
+      ],
+      "key_point": "旋转面 x²+y²=2z，柱坐标算得 ∭(x²+y²)dv=1024π/3。"
+    },
+    {
+      "id": 1068,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲线积分 $\\displaystyle \\oint_{C}(z-y) \\mathrm{d} x+(x-z) \\mathrm{d} y+(x-y) \\mathrm{d} z$, 其中 $C$ 是曲线 $\\left\\{\\begin{array}{l}x^{2}+y^{2}=1 \\\\ x-y+z=2 \\end{array}\\right.$ 从 $z$ 轴正向往 $z$ 轴负向看 $C$ 的方向为顺时针",
+      "options": {},
+      "answer": "$-2 \\pi$",
+      "analysis": "令 $C:\\left\\{\\begin{array}{l}x=\\cos t \\\\ y=\\sin t \\\\ z=2-\\cos t+\\sin t\\end{array}\\right.$ \r\n\r\n(起点 $t=2 \\pi$, 终点 $\\left.t=0\\right)$, 则\r\n\r\n$\\displaystyle \\int_C(z-y) \\mathrm{d} x+(x-z) \\mathrm{d} y+(x-y) \\mathrm{d} z$\r\n\r\n$\\displaystyle  =\\int_{2 \\pi}^0(2-\\cos t)(-\\sin t) \\mathrm{d} t+(2 \\cos t-2-\\sin t) \\cos t \\mathrm{d} t\\\\+(\\cos t-\\sin t)(\\sin t+\\cos t) \\mathrm{d} t \\\\\r\n=\\int_{2 \\pi}^0\\left(3 \\cos ^2 t-\\sin ^2 t-2 \\sin t-2 \\cos t\\right) \\mathrm{d} t \\\\\r\n=-3 \\int_0^{2 \\pi} \\cos ^2 t \\mathrm{d} t+\\int_0^{2 \\pi} \\sin ^2 t \\mathrm{d} t\\\\\r\n=-12 \\int_0^{\\frac{\\pi}{2}} \\cos ^2 t \\mathrm{d} t+4 \\int_0^{\\frac{\\pi}{2}} \\sin ^2 t \\mathrm{d} t \\\\\r\n=-8 \\times \\frac{1}{2} \\times \\frac{\\pi}{2}=-2 \\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "从 z 轴正向往负向看为顺时针 ⇒ 参数 t 从 2π 到 0（或结果取负），定向弄反会得 +2π",
+        "用 Stokes 需取平面 x-y+z=2 的单位法向量并与曲线定向按右手法则一致，符号别搞反"
+      ],
+      "key_point": "参数化后积分 =-2π，顺时针定向决定符号。"
+    },
+    {
+      "id": 1069,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "在某一入群中推广新技术是通过其中已掌握新技术的人进行的. 设该人群的人数为 $N$, 在 $t=0$ 时刻已掌握新技术人数为 $x_{0}$, 在任意时刻 $t$ 已掌握新技术的人数为 $x(t)$ (将 $x(t)$ 视为连续可微变量), 其变化率同已掌握新技术人数和末掌握新技术入数之积成正比, 比例常数为 $k>0$, 求 $x(t)$",
+      "options": {},
+      "answer": "$\\dfrac{N x_0 \\mathrm{e}^{k N t}}{N-x_0+x_0 \\mathrm{e}^{k N t}}$",
+      "analysis": "由题意得$\\left\\{\\begin{array}{l}\r\n\\dfrac{\\mathrm{d} x}{\\mathrm{d} t}=k x(N-x)\\\\\r\nx(0)=x_0\r\n\\end{array}\\right.$\r\n\r\n由 $\\dfrac{\\mathrm{d} x}{x(N-x)}=k \\mathrm{d} t$ \r\n\r\n得 $\\dfrac{1}{N} \\ln \\dfrac{x}{N-x}=k t+C$,\r\n\r\n由 $x(0)=x_0$ 得 $\\displaystyle C=\\frac{1}{N} \\ln \\dfrac{x_0}{N-x_0}$, \r\n\r\n故 $x(t)=\\dfrac{N x_0 \\mathrm{e}^{k N t}}{N-x_0+x_0 \\mathrm{e}^{k N t}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "未掌握人数是 N-x，方程为 dx/dt=kx(N-x)，别漏掉 (N-x) 这个因子",
+        "分离后用部分分式 1/[x(N-x)]=(1/N)(1/x+1/(N-x))，积分得 (1/N)ln[x/(N-x)]，别积错"
+      ],
+      "key_point": "logistic 方程 dx/dt=kx(N-x) 分离变量，代 x(0)=x0 得 x(t)=Nx0e^{kNt}/(N-x0+x0e^{kNt})。"
+    },
+    {
+      "id": 1070,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设直线 $L:\\left\\{\\begin{array}{l}x+y+b=0 \\\\ x+a y-z-3=0\\end{array}\\right.$ 在平面 $\\pi$ 上, 且平面 $\\pi$ 与曲面 $z=x^{2}+y^{2}$ 相切于点 $(1,-2,5)$, 求 $a, b$ 的值",
+      "options": {},
+      "answer": "$a=-5, b=-2$",
+      "analysis": "曲面 $z=x^2+y^2$ 在点 $(1,-2,5)$ 的法向量为\r\n\r\n$\\boldsymbol{n}=\\left.\\{2 x, 2 y,-1\\}\\right|_{(1,-2,5)}=\\{2,-4,-1\\}$,\r\n\r\n即平面 $\\pi$ 的法向量为 $\\boldsymbol{n}=\\{2,-4,-1\\}$, \r\n\r\n则平面 $\\pi$ 的方程为 \r\n\r\n$\\pi: 2(x-1)-4(y+2)-(z-5)=0$, \r\n\r\n即 $\\pi: 2 x-4 y-z-5=0$.\r\n\r\n直线 $L$ 的方向向量为 $s=\\{1,1,0\\} \\times\\{1, a,-1\\}\\\\=\\{-1,1, a-1\\}$,\r\n\r\n因为 $L$ 在平面 $\\pi$ 上,所以 $\\boldsymbol{n} \\cdot \\boldsymbol{s}=0$, 解得 $a=-5$.\r\n\r\n由 $\\left\\{\\begin{array}{l}x+y+b=0 \\\\ x-5 y-z-3=0\\end{array}\\right.$ 得 $\\left\\{\\begin{array}{l}y=-x-b \\\\ z=6 x+5 b-3\\end{array}\\right.$ \r\n\r\n代入平面 $\\pi$ 得 $b=-2$, 即 $a=-5, b=-2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切平面法向量取自 z-x²-y²=0 的梯度 (2x,2y,-1)|_{(1,-2,5)}=(2,-4,-1)，符号别错",
+        "'L 在 π 上'含两条件：方向 s⊥n 定 a，再由直线上一点满足 π 方程定 b，缺一不可"
+      ],
+      "key_point": "切平面 2x-4y-z-5=0，由 n·s=0 得 a=-5，代点得 b=-2。"
+    },
+    {
+      "id": 1071,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u)$ 具有二阶连续导数, 而 $z=f\\left(\\mathrm{e}^{x} \\sin y\\right)$ 满足方程 $\\displaystyle \\frac{\\partial^{2} z}{\\partial x^{2}}+\\frac{\\partial^{2} z}{\\partial y^{2}}=\\mathrm{e}^{2 x} z$, 求 $f(u)$",
+      "options": {},
+      "answer": "$f(u)=C_1 \\mathrm{e}^{-u}+C_2 \\mathrm{e}^u (C_1, C_2$ 为任意常数)",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=f^{\\prime}\\left(\\mathrm{e}^x \\sin y\\right) \\mathrm{e}^x \\sin y, \\frac{\\partial z}{\\partial y}=f^{\\prime}\\left(\\mathrm{e}^x \\sin y\\right) \\mathrm{e}^x \\cos y,\\\\\r\n\\frac{\\partial^2 z}{\\partial x^2}=f^{\\prime \\prime}\\left(\\mathrm{e}^x \\sin y\\right)\\left(\\mathrm{e}^x \\sin y\\right)^2+f^{\\prime}\\left(\\mathrm{e}^x \\sin y\\right) \\mathrm{e}^x \\sin y,\\\\\r\n\\frac{\\partial^2 z}{\\partial y^2}=f^{\\prime \\prime}\\left(\\mathrm{e}^x \\sin y\\right)\\left(\\mathrm{e}^x \\cos y\\right)^2-f^{\\prime}\\left(\\mathrm{e}^x \\sin y\\right) \\mathrm{e}^x \\sin y, \\\\\r\n\\frac{\\partial^2 z}{\\partial x^2}+\\frac{\\partial^2 z}{\\partial y^2}=f^{\\prime \\prime}\\left(\\mathrm{e}^x \\sin y\\right) \\mathrm{e}^{2 x}$,\r\n\r\n令 $\\mathrm{e}^x \\sin y=u$, 由 $\\dfrac{\\partial^2 z}{\\partial x^2}+\\dfrac{\\partial^2 z}{\\partial y^2}=\\mathrm{e}^{2 x} z$ \r\n\r\n得 $f^{\\prime \\prime}(u)-f(u)=0$,\r\n\r\n$f^{\\prime \\prime}(u)-f(u)=0$ 的通解为 $f(u)=C_1 \\mathrm{e}^{-u}+C_2 \\mathrm{e}^u\\\\ (C_1, C_2$ 为任意常数).",
+      "wrong_options": {},
+      "pitfalls": [
+        "z_xx+z_yy 中含 f' 的两项恰好相消，只剩 f''·(e^x)²(sin²y+cos²y)=e^{2x}f''，别漏掉一阶项相消的核对",
+        "方程约去 e^{2x} 得 f''=f，特征根 ±1，通解 C1e^u+C2e^{-u}，别丢两个任意常数"
+      ],
+      "key_point": "代入化简得 f''(u)=f(u)，故 f(u)=C1e^u+C2e^{-u}。"
+    },
+    {
+      "id": 1072,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, $\\displaystyle \\varphi(x)=\\int_{0}^{1} f(x t) \\mathrm{d} t$, 且 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=A$ ( $A$ 为常数), 求 $\\varphi^{\\prime}(x)$, 并讨论 $\\varphi^{\\prime}(x)$ 在 $x=0$ 处的连续性",
+      "options": {},
+      "answer": "连续",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=A$ 得 $f(0)=0, f^{\\prime}(0)=A$,\r\n\r\n当 $x=0$ 时, $\\varphi(0)=0$;\r\n\r\n当 $x \\neq 0$ 时, $\\displaystyle \\varphi(x)=\\frac{1}{x} \\int_0^1 f(x t) \\mathrm{d}(x t)=\\frac{\\int_0^x f(u) \\mathrm{d} u}{x}$,\r\n\r\n即 $\\varphi(x)= \\begin{cases}0, & x=0 \\\\ \\dfrac{\\int_0^x f(u) \\mathrm{d} u}{x}, & x \\neq 0\\end{cases}$\r\n\r\n当 $x \\neq 0$ 时, $\\varphi^{\\prime}(x)=\\dfrac{x f(x)-\\int_0^x f(u) \\mathrm{d} u}{x^2}$;\r\n\r\n当 $x=0$ 时, 由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\varphi(x)-\\varphi(0)}{x}\\\\=\\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(u) \\mathrm{d} u}{x^2}=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=\\frac{A}{2}$,\r\n\r\n得 $\\varphi^{\\prime}(0)=\\dfrac{A}{2}$,\r\n\r\n于是 $\\varphi^{\\prime}(x)= \\begin{cases}\\dfrac{A}{2}, & x=0 \\\\ \\dfrac{x f(x)-\\int_0^x f(u) \\mathrm{d} u}{x^2}, & x \\neq 0 \\end{cases}$\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\varphi^{\\prime}(x)=\\lim _{x \\rightarrow 0}\\left[\\frac{f(x)}{x}-\\frac{\\int_0^x f(u) \\mathrm{d} u}{x^2}\\right]=\\frac{A}{2}=\\varphi^{\\prime}(0)$, \r\n\r\n所以 $\\varphi^{\\prime}(x)$ 在 $x=0$ 处连续",
+      "wrong_options": {},
+      "pitfalls": [
+        "必须先换元 u=xt 把被积中的 x 移出积分号，才能用变限积分求导；直接对含 x 的被积函数求导会出错",
+        "x=0 处 φ'(0) 要用定义（=lim∫₀ˣf/x²=A/2），再验 lim_{x→0}φ'(x)=A/2 相等才判连续"
+      ],
+      "key_point": "换元后 φ(x)=∫₀ˣf/x，φ'(0)=A/2 且 lim_{x→0}φ'(x)=A/2，故 φ' 在 0 处连续。"
+    },
+    {
+      "id": 1073,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle a_{1}=2, a_{n+1}=\\frac{1}{2}\\left(a_{n}+\\frac{1}{a_{n}}\\right), n=1,2, \\cdots$. 证明：\r\n\r\n(1) $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}$ 存在;\r\n\r\n(2) 级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{a_{n}}{a_{n+1}}-1\\right)$ 收敛",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 由 $\\displaystyle a_{n+1}=\\frac{1}{2}\\left(a_n+\\frac{1}{a_n}\\right) \\geqslant 1$, \r\n\r\n得数列 $\\left\\{a_n\\right\\}$ 有下界;\r\n\r\n由 $\\displaystyle a_{n+1}-a_n=\\frac{1}{2}\\left(a_n+\\frac{1}{a_n}\\right)-a_n=\\frac{1-a_n^2}{2 a_n} \\leqslant 0$, \r\n\r\n得数列 $\\left\\{a_n\\right\\}$ 单调递减, \r\n\r\n由极限存在定理得 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_n$ 存在.\r\n\r\n(2) 因为数列 $\\left\\{a_n\\right\\}$ 单调递减, 所以 $\\displaystyle \\frac{a_n}{a_{n+1}}-1 \\geqslant 0$, \r\n\r\n即 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{a_n}{a_{n+1}}-1\\right)$ 为正项级数,\r\n\r\n而 $\\displaystyle 0 \\leqslant \\frac{a_n}{a_{n+1}}-1=\\frac{a_n-a_{n+1}}{a_{n+1}} \\leqslant a_n-a_{n+1}$,\r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_n-a_{n+1}\\right)$ 展开得 \r\n\r\n$S_n=\\left(a_1-a_2\\right)+\\left(a_2-a_3\\right)+\\cdots+\\left(a_n-a_{n+1}\\right)=2-a_{n+1}$, \r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n=2-\\lim _{n \\rightarrow \\infty} a_{n+1}$ 存在, \r\n\r\n所以级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_n-a_{n+1}\\right)$ 收敛,\r\n\r\n由比较审敛法得级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{a_n}{a_{n+1}}-1\\right)$ 收敛",
+      "wrong_options": {},
+      "pitfalls": [
+        "下界1 来自 a_{n+1}=½(a_n+1/a_n)≥1（均值不等式），别只证单调、漏证有界",
+        "(2) 关键放缩 0≤a_n/a_{n+1}-1=(a_n-a_{n+1})/a_{n+1}≤a_n-a_{n+1}（因 a_{n+1}≥1），再用裂项 Σ(a_n-a_{n+1}) 部分和有界比较"
+      ],
+      "key_point": "单调减且有下界1 ⇒ 极限存在；正项级数放缩到裂项 Σ(a_n-a_{n+1}) 收敛。"
+    },
+    {
+      "id": 1074,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{B}$ 是秩为 $2$ 的 $5 \\times 4$ 矩阵, $\\boldsymbol{\\alpha}_{1}=(1,1,2,3)^{\\mathrm{T}},\\\\ \\boldsymbol{\\alpha}_{2}=(-1,1,4,-1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(5,-1,-8,9)^{\\mathrm{T}}$ 是齐次线性方程组 $\\boldsymbol{Bx}=\\mathbf{0}$ 的解向量, 求 $\\boldsymbol{B x}=\\mathbf{0}$ 的解空间的一个标准正交基",
+      "options": {},
+      "answer": "$\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{15}}\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\2 \\\\3\r\n\\end{array}\\right), \\quad \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{39}}\\left(\\begin{array}{c}\r\n-2 \\\\1 \\\\5 \\\\-3\\end{array}\\right)$",
+      "analysis": "因为 $r(\\boldsymbol{B})=2<4$, \r\n\r\n所以 $\\boldsymbol{Bx}=\\mathbf{0}$ 的基础解系含两个线性无关的特征向量, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为基础解系,\r\n\r\n令 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\2 \\\\3\\end{array}\\right), \\quad \r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2-\\dfrac{\\left(\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_1\\right)}{\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1\\right)} \\boldsymbol{\\beta}_1\\\\=\\left(\\begin{array}{c}\r\n-1 \\\\1 \\\\4 \\\\-1\r\n\\end{array}\\right)-\\dfrac{1}{3}\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\2 \\\\3\r\n\\end{array}\\right)=\\dfrac{2}{3}\\left(\\begin{array}{c}\r\n2 \\\\1 \\\\5 \\\\-3\r\n\\end{array}\\right)$,\r\n\r\n则 $\\boldsymbol{Bx}=\\mathbf{0}$ 的解空间的一个标准正交基为 \r\n\r\n$\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{15}}\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\2 \\\\3\r\n\\end{array}\\right), \\quad \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{39}}\\left(\\begin{array}{c}\r\n-2 \\\\1 \\\\5 \\\\-3\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "解空间维数=n-r=4-2=2，只需 2 个解；α3=(5,-1,-8,9) 是 α1,α2 的线性组合，应舍去",
+        "施密特正交化后必须单位化才是'标准(规范)正交基'，别漏除模长 √15、√39"
+      ],
+      "key_point": "基础解系取 α1,α2，Gram-Schmidt 正交化并单位化得 γ1,γ2。"
+    },
+    {
+      "id": 1075,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{\\xi}=\\left(\\begin{array}{c}1 \\\\ 1 \\\\ -1\\end{array}\\right)$ 是矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}2 & -1 & 2 \\\\ 5 & a & 3 \\\\ -1 & b & -2\\end{array}\\right)$ 的一个特征向量.\r\n\r\n(1) 试确定参数 $a, b$ 及特征向量 $\\boldsymbol{\\xi}$ 所对应的特征值;\r\n\r\n(2) 问 $\\boldsymbol{A}$ 能否相似于对角矩阵? 说明理由",
+      "options": {},
+      "answer": "$a=-3,\\ b=0,\\ \\lambda=-1$；$\\boldsymbol{A}$ 不能相似于对角矩阵",
+      "analysis": "(1) 由 $\\left(\\begin{array}{ccc}2 & -1 & 2 \\\\ 5 & a & 3 \\\\ -1 & b & -2\\end{array}\\right)\\left(\\begin{array}{c}1 \\\\ 1 \\\\ -1\\end{array}\\right)=\\lambda\\left(\\begin{array}{c}1 \\\\ 1 \\\\ -1\\end{array}\\right)$ \r\n\r\n得 $\\left\\{\\begin{array}{l}-1=\r\n\\lambda \\\\ \r\na+2=\\lambda \\\\ \r\nb+1=-\\lambda\\end{array}\\right.$ \r\n\r\n解得 $a=-3, b=0$, 特征向量 $\\boldsymbol{\\xi}$ 对应的特征值为 $\\lambda=-1$.\r\n\r\n(2) $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\r\n\\lambda-2 & 1 & -2 \\\\\r\n-5 & \\lambda+3 & -3 \\\\\r\n1 & 0 & \\lambda+2\r\n\\end{array}\\right|\\\\=(\\lambda+1)^3=0$,\r\n\r\n得 $\\lambda_1=\\lambda_2=\\lambda_3=-1, \\\\\r\n-\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n-3 & 1 & -2 \\\\\r\n-5 & 2 & -3 \\\\\r\n1 & 0 & 1\r\n\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}\r\n1 & 0 & 1 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$\r\n\r\n因为 $r(-\\boldsymbol{E}-\\boldsymbol{A})=2$, \r\n\r\n所以 $\\boldsymbol{A}$ 不可相似对角化.",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 Aξ=λξ 要用三个分量同时解出 a,b 和 λ，别只用一两个分量下结论",
+        "λ=-1 是三重根，需算 r(-E-A)=2 ⇒ 只有 3-2=1 个无关特征向量<3，故不可对角化；不能只凭有重根就判断"
+      ],
+      "key_point": "a=-3,b=0,λ=-1；λ=-1 三重但几何重数仅1，A 不可相似对角化。"
+    },
+    {
+      "id": 1076,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $n$ 阶可逆方阵,将 $\\boldsymbol{A}$ 的第 $i$ 行和第 $j$ 行对换后得到的矩阵记为 $\\boldsymbol{B}$\r\n\r\n(1) 证明 $\\boldsymbol{B}$ 可逆;\r\n\r\n(2) 求 $\\boldsymbol{A B}{ }^{-1}$",
+      "options": {},
+      "answer": "(1) 略 (2) $\\boldsymbol{E}(i, j)$",
+      "analysis": "(1) 显然 $\\boldsymbol{B}=\\boldsymbol{E}(i, j) \\boldsymbol{A}$ 且 $|\\boldsymbol{E}(i, j)|=-1$.\r\n\r\n因为 $\\boldsymbol{A}$ 可逆, 所以 $|\\boldsymbol{A}| \\neq 0$,\r\n\r\n于是 $|\\boldsymbol{B}|=-|\\boldsymbol{A}| \\neq 0$, 故 $\\boldsymbol{B}$ 可逆.\r\n\r\n(2) $\\boldsymbol{A B}^{-1}=\\boldsymbol{A} \\boldsymbol{A}^{-1} \\boldsymbol{E}(i, j)^{-1}=\\boldsymbol{E}(i, j)^{-1}=\\boldsymbol{E}(i, j)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "交换 i,j 行相当于左乘 E(i,j)，即 B=E(i,j)A，别写成右乘",
+        "对换矩阵是自身的逆 E(i,j)^{-1}=E(i,j)，故 AB^{-1}=A·A^{-1}E(i,j)^{-1}=E(i,j)"
+      ],
+      "key_point": "B=E(i,j)A，|B|=-|A|≠0 可逆；AB^{-1}=E(i,j)^{-1}=E(i,j)。"
+    },
+    {
+      "id": 1077,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "从学校乘汽车到火车站的途中有三个交通岗, 假设在各个交通岗遇到红灯的事件是相互独立的, 并且概率都是 $\\dfrac{2}{5}$, 设 $X$ 表示途中遇到红灯的次数, 求随机变量 $X$ 的分布律、分布函数和数学期望",
+      "options": {},
+      "answer": "$X$ 的分布律为 $: X \\sim\\left(\\begin{array}{cccc}0 & 1 & 2 & 3 \\\\ \\frac{27}{125} & \\frac{54}{125} & \\frac{36}{125} & \\frac{8}{125}\\end{array}\\right)$\r\n\r\n$X$ 的分布函数为 $\\displaystyle F(x)= \\begin{cases}\r\n\\dfrac{27}{125}, & 0 \\leqslant x<1 \\\\\r\n\\dfrac{81}{125}, & 1 \\leqslant x<2 \\\\\r\n\\dfrac{117}{125}, & 2 \\leqslant x<3 \\\\\r\n1, & x \\geqslant 3 \\end{cases} $\r\n\r\n$X$ 的数学期望为 $E(X)=n p=\\dfrac{6}{5}$",
+      "analysis": "显然 $\\displaystyle X \\sim B\\left(3, \\frac{2}{5}\\right)$, \r\n\r\n即 $\\displaystyle P\\{X=k\\}=\\mathrm{C}_3^k\\left(\\frac{2}{5}\\right)^k\\left(\\frac{3}{5}\\right)^{3-k}, k=0,1,2,3$; \r\n\r\n$X$ 的分布律为 $: X \\sim\\left(\\begin{array}{cccc}0 & 1 & 2 & 3 \\\\ \\frac{27}{125} & \\frac{54}{125} & \\frac{36}{125} & \\frac{8}{125}\\end{array}\\right)$\r\n\r\n- 当 $x<0$ 时, $F(x)=P\\{X \\leqslant x\\}=0$;\r\n- 当 $0 \\leqslant x<1$ 时, $\\displaystyle F(x)=P\\{X \\leqslant x\\}=P\\{X=0\\}=\\frac{27}{125}$;\r\n- 当 $1 \\leqslant x<2$ 时, $\\displaystyle F(x)=P\\{X \\leqslant x\\}=P\\{X=0\\}+P\\{X=1\\}=\\frac{81}{125}$;\r\n- 当 $2 \\leqslant x<3$ 时, $\\displaystyle F(x)=P\\{X \\leqslant x\\}=P\\{X=0\\}+P\\{X=1\\}+P\\{X=2\\}=\\frac{117}{125}$;\r\n\r\n当 $x \\geqslant 3$ 时, $F(x)=1$,\r\n\r\n即 $\\displaystyle F(x)= \\begin{cases}\r\n\\dfrac{27}{125}, & 0 \\leqslant x<1 \\\\\r\n\\dfrac{81}{125}, & 1 \\leqslant x<2 \\\\\r\n\\dfrac{117}{125}, & 2 \\leqslant x<3 \\\\\r\n1, & x \\geqslant 3 \\end{cases} \\\\\r\nE(X)=n p=\\dfrac{6}{5}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三岗独立同概率 ⇒ X~B(3,2/5)，别当成超几何或逐个乘概率",
+        "分布函数是右连续阶梯函数，取值为累加概率 27/125,81/125,117/125,1，别把区间端点开闭搞反"
+      ],
+      "key_point": "X~B(3,2/5)：分布律由 C_3^k(2/5)^k(3/5)^{3-k}，分布函数为阶梯型，E(X)=np=6/5。"
+    },
+    {
+      "id": 1078,
+      "paper": "数学一",
+      "year": 1997,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}(\\theta+1) x^{\\theta}, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n其中 $\\theta>-1$ 是未知参数, $X_{1}, X_{2}, \\cdots, X_{n}$ 是来自总体 $X$ 的一个容量为 $n$ 的简单随机样本, 分别用矩估计法和最大似然估计法求 $\\theta$ 的估计量",
+      "options": {},
+      "answer": "$\\theta$ 的矩估计量为 $\\displaystyle \\hat{\\theta}=\\frac{2 \\bar{X}-1}{1-\\bar{X}}$;\r\n\r\n$\\theta$ 的最大似然估计量为 $\\hat{\\theta}=-1-\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln X_i}$",
+      "analysis": "$\\displaystyle E(X)=\\int_0^1 x f(x) \\mathrm{d} x=(\\theta+1) \\int_0^1 x^{\\theta+1} \\mathrm{d} x=\\frac{\\theta+1}{\\theta+2}$,\r\n\r\n由 $E(X)=\\bar{X}$, 即 $\\displaystyle \\frac{\\theta+1}{\\theta+2}=\\bar{X}$, \r\n\r\n解得 $\\theta$ 的矩估计量为 $\\displaystyle \\hat{\\theta}=\\frac{2 \\bar{X}-1}{1-\\bar{X}}$;\r\n\r\n似然函数为 $L(\\theta)=f\\left(x_1 ; \\theta\\right) f\\left(x_2 ; \\theta\\right) \\cdots f\\left(x_n ; \\theta\\right)\\\\\r\n=(\\theta+1)^n\\left(x_1 x_2 \\cdots x_n\\right)^\\theta$, \r\n\r\n其中 $\\displaystyle 0<x_i<1, i=1,2, \\cdots, n,\\\\\r\n\\ln L(\\theta)=n \\ln (\\theta+1)+\\theta \\sum_{i=1}^n \\ln x_i$\r\n\r\n由 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} \\theta} \\ln L(\\theta)=\\frac{n}{\\theta+1}+\\sum_{i=1}^n \\ln x_i=0$, \r\n\r\n得 $\\theta=-1-\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln x_i}$,\r\n\r\n故 $\\theta$ 的最大似然估计量为 $\\hat{\\theta}=-1-\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln X_i}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(X)=∫₀¹x(θ+1)x^θdx=(θ+1)/(θ+2)，令=X̄ 反解 θ，积分上下限只在 (0,1)，别积错",
+        "似然 L=(θ+1)^n(∏x_i)^θ，lnL 对 θ 求导得 n/(θ+1)+Σln x_i=0；因 Σln X_i<0 才保证 θ̂>-1"
+      ],
+      "key_point": "矩估计 θ̂=(2X̄-1)/(1-X̄)；MLE θ̂=-1-n/Σln X_i。"
+    }
+  ]
+}

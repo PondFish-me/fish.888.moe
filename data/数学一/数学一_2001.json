@@ -1,0 +1,412 @@
+{
+  "paper": "数学一",
+  "year": 2001,
+  "count": 20,
+  "questions": [
+    {
+      "id": 971,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $y=\\mathrm{e}^{x}\\left(C_{1} \\sin x+C_{2} \\cos x\\right)\\left(C_{1}, C_{2}\\right.$ 为任意常数) 为某二阶常系数齐次线性微分方程的通解, 则该方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y^{\\prime \\prime}-2 y^{\\prime}+2 y=0$",
+      "analysis": "由通解形式得二阶常系数齐次线性微分方程的特征值为 \r\n\r\n$\\lambda_{1,2}=1 \\pm \\mathrm{i}$, \r\n\r\n特征方程为 $(\\lambda-1-i)(\\lambda-1+i)=0$,\r\n\r\n即 $\\lambda^2-2 \\lambda+2=0$,\r\n\r\n故微分方程为 $y^{\\prime \\prime}-2 y^{\\prime}+2 y=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^x·(sin/cos) 型对应共轭复根 α±βi=1±i，别把 sin/cos 当实根去凑 λ²-1",
+        "特征方程 (λ-1)²+1=λ²-2λ+2，一次项系数是 -2 不是 +2"
+      ],
+      "key_point": "共轭复根 1±i ⇒ 特征方程 λ²-2λ+2=0 ⇒ y''-2y'+2y=0。"
+    },
+    {
+      "id": 972,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $r=\\sqrt{x^{2}+y^{2}+z^{2}}$, 则 $\\left.\\operatorname{div}(\\operatorname{\\mathbf {grad}} r)\\right|_{(1,-2,2)}=$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "$\\displaystyle \\operatorname{\\mathbf {grad}} r=\\left\\{\\frac{\\partial r}{\\partial x}, \\frac{\\partial r}{\\partial y}, \\frac{\\partial r}{\\partial z}\\right\\}=\\left\\{\\frac{x}{r}, \\frac{y}{r}, \\frac{z}{r}\\right\\},\\\\\r\n\\operatorname{div}(\\operatorname{\\mathbf {grad}} r)=\\frac{r-\\frac{x^2}{r}}{r^2}+\\frac{r-\\frac{y^2}{r}}{r^2}+\\frac{r-\\frac{z^2}{r}}{r^2}=\\frac{2}{r}$,\r\n\r\n于是 $\\left.\\operatorname{div}(\\operatorname{\\mathbf {grad}} r)\\right|_{(1,-2,2)}=\\dfrac{2}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "∂(x/r)/∂x 要用商的求导，r 也含 x，别把 r 当常数",
+        "先求出 div(grad r)=2/r 再代点，别在中途代点导致 r 变常数"
+      ],
+      "key_point": "div(grad r)=2/r，在 (1,-2,2) 处 r=3，值为 2/3。"
+    },
+    {
+      "id": 973,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "交换二次积分的积分次序: $\\displaystyle \\int_{-1}^{0} \\mathrm{d} y \\int_{2}^{1-y} f(x, y) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle -\\int_1^2 \\mathrm{d} x \\int_{1-x}^0 f(x, y) \\mathrm{d} y$",
+      "analysis": "$\\displaystyle \\int_{-1}^0 \\mathrm{d} y \\int_2^{1-y} f(x, y) \\mathrm{d} x=-\\int_{-1}^0 \\mathrm{d} y \\int_{1-y}^2 f(x, y) \\mathrm{d} x$,\r\n\r\n将 $D=\\{(x, y) \\mid 1-y \\leqslant x \\leqslant 2,-1 \\leqslant y \\leqslant 0\\}$ 表 示成 $X$ 型区域为\r\n\r\n$D=\\{(x, y) \\mid 1 \\leqslant x \\leqslant 2,1-x \\leqslant y \\leqslant 0\\}$,\r\n\r\n\r\n故 $\\displaystyle \\int_{-1}^0 \\mathrm{d} y \\int_2^{1-y} f(x, y) \\mathrm{d} x$ 改变积分次序为\r\n\r\n\r\n$\\displaystyle \\int_{-1}^0 \\mathrm{d} y \\int_2^{1-y} f(x, y) \\mathrm{d} x=-\\int_1^2 \\mathrm{d} x \\int_{1-x}^0 f(x, y) \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "内层积分上限 1-y 小于下限 2，须先提负号 ∫₂^{1-y}=-∫_{1-y}^2 再交换，漏负号整体符号错",
+        "区域 D:1-y≤x≤2,-1≤y≤0 换 X 型时下边界是 y=1-x（即 x=1-y）不是 y=0"
+      ],
+      "key_point": "还原区域并提负号后交换次序得 -∫₁²dx∫_{1-x}^0 f dy。"
+    },
+    {
+      "id": 974,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 满足 $\\boldsymbol{A}^{2}+\\boldsymbol{A}-4 \\boldsymbol{E}=\\boldsymbol{O}$, 其中 $\\boldsymbol{E}$ 为单位矩阵, 则 $(\\boldsymbol{A}-\\boldsymbol{E})^{-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}(\\boldsymbol{A}+2 \\boldsymbol{E})$",
+      "analysis": "由 $\\boldsymbol{A}^2+\\boldsymbol{A}-4 \\boldsymbol{E}=\\boldsymbol{O}$, \r\n\r\n得 $(\\boldsymbol{A}-\\boldsymbol{E})(\\boldsymbol{A}+2 \\boldsymbol{E})=2 \\boldsymbol{E}$,\r\n\r\n于是 $\\displaystyle (\\boldsymbol{A}-\\boldsymbol{E}) \\cdot \\frac{1}{2}(\\boldsymbol{A}+2 \\boldsymbol{E})=\\boldsymbol{E}$, \r\n\r\n由逆矩阵的定义得 $\\displaystyle (\\boldsymbol{A}-\\boldsymbol{E})^{-1}=\\frac{1}{2}(\\boldsymbol{A}+2 \\boldsymbol{E})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(A-E)(A+2E)=A²+A-2E=4E-2E=2E，别把常数项配成 -4E 或漏掉 1/2 系数",
+        "结论要写成矩阵表达式，不能只写标量"
+      ],
+      "key_point": "(A-E)(A+2E)=2E ⇒ (A-E)^{-1}=½(A+2E)。"
+    },
+    {
+      "id": 975,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的方差为 $2$ , 则根据切比雪夫不等式有估计 $P\\{|X-E(X)| \\geqslant 2\\} \\leqslant \\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "由切比雪夫不等式得\r\n\r\n$P\\{|X-E(X)| \\geqslant 2\\} \\leqslant \\dfrac{D(X)}{2^2}=\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母是 ε² 不是 ε，ε=2 时除以 4 得 1/2，别只除以 2"
+      ],
+      "key_point": "P{|X-EX|≥2}≤D(X)/2²=2/4=1/2。"
+    },
+    {
+      "id": 976,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](/figures/976.jpg)",
+      "options": {
+        "A": "![](/figures/976-a.jpg)",
+        "B": "![](/figures/976-b.jpg)",
+        "C": "![](/figures/976-c.jpg)",
+        "D": "![](/figures/976-d.jpg)"
+      },
+      "answer": "D",
+      "analysis": "当 $x<0$ 时, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (A), (C) 不对; \r\n\r\n在 $x=0$ 的右邻域内, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "x<0 时 f 单调增本应 f'≥0，A 图此处取负值，把递增段的切线斜率符号读反。",
+        "B": "x=0 右邻域 f 单调增 f'≥0，B 图此处为负，漏判右侧单调性对应的导数符号。",
+        "C": "同 A，x<0 段 f 递增却给出 f'<0，仍是把递增误当导数为负。"
+      },
+      "pitfalls": [
+        "判据是导数符号对应原函数单调性，不是图形形状相似",
+        "x<0 与 x=0 右侧两段都要 f'≥0，任一段符号不符即排除"
+      ],
+      "key_point": "f 递增处 f'≥0、递减处 f'≤0，逐段核对符号，仅 D 全部相符。"
+    },
+    {
+      "id": 977,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 在点 $(0,0)$ 附近有定义, 且 $f_{x}^{\\prime}(0,0)=3, f_{y}^{\\prime}(0,0)=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\left.\\mathrm{d} z\\right|_{(0,0)}=3 \\mathrm{d} x+\\mathrm{d} y$",
+        "B": "曲面 $z=f(x, y)$ 在点 $(0,0, f(0,0))$ 的法向量为 $(3,1,1)$",
+        "C": "曲线 $\\left\\{\\begin{array}{l}z=f(x, y) \\\\ y=0\\end{array}\\right.$ 在点 $(0,0, f(0,0))$ 的切向量为 $(1,0,3)$",
+        "D": "曲线 $\\left\\{\\begin{array}{l}z=f(x, y) \\\\ y=0\\end{array}\\right.$ 在点 $(0,0, f(0,0))$ 的切向量为 $(3,0,1)$"
+      },
+      "answer": "C",
+      "analysis": "因为函数可偏导不一定可微, 所以 (A) 不对;\r\n\r\n$z=f(x, y)  \\Rightarrow F(x, y, z)=f(x, y)-z$\r\n\r\n得出 : $\\left\\{\\begin{array}{l}F_x^{\\prime}=f_x^{\\prime} \\\\ F_y^{\\prime}=f_y^{\\prime} \\\\ F_z^{\\prime}=-1\\end{array}\\right.$\r\n\r\n代入点 $(0,0, f(0,0))$, 得到 $f(x, y)$ 在点 $(0,0, f(0,0))$ 处的法向量 $\\boldsymbol{n}=\\left\\{f_x^{\\prime}(0,0), f_y^{\\prime}(0,0),-1\\right\\}=\\{3,1,-1\\}$\r\n\r\n(B) 选项的 $\\{3,1,1\\}$ 与 $\\boldsymbol{n}$ 不共线, 不能是法向量.所以 (B) 错误\r\n\r\n对曲线 $\\left\\{\\begin{array}{l}z=f(x, y) \\\\ y=0\\end{array}\\right.$ 取 $x$ 为参数, \r\n\r\n得到 : $\\left\\{\\begin{array}{l}x=x \\\\ y=0 \\\\ z=f(x, 0)\\end{array}\\right.$\r\n\r\n进而得出 : $\\left\\{\\begin{array}{l}x_x^{\\prime}=1 \\\\ y_x^{\\prime}=0 \\\\ z_x^{\\prime}=f_x^{\\prime}(x, 0)\\end{array}\\right.$\r\n\r\n代入点 $(0,0, f(0,0))$, 得到此处的切向量为$\\boldsymbol{\\tau}=\\left\\{1,0, f_x^{\\prime}(0,0)\\right\\}=\\{1,0,3\\}$\r\n\r\n(D) 选项与 (C) 选项说的是同一个事情, (C) 正确, 排除 (D)",
+      "wrong_options": {
+        "A": "只知两个偏导数不能断定可微，故不能直接写出全微分 dz=3dx+dy（可偏导≠可微）。",
+        "B": "曲面法向量应为 {f_x,f_y,-1}={3,1,-1}，(3,1,1) 与之不共线，末位符号取错。",
+        "D": "y=0 截线以 x 为参数，切向量为 (1,0,f_x')=(1,0,3)，D 把分量摆成 (3,0,1) 顺序错。"
+      },
+      "pitfalls": [
+        "偏导存在推不出可微，A 是最常见陷阱",
+        "法向量末位是 -1 不是 +1；截线切向量第一分量是 1（x 为参数）"
+      ],
+      "key_point": "曲面法向量 {3,1,-1}、y=0 截线切向量 (1,0,3)，故仅 C 正确。"
+    },
+    {
+      "id": 978,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(0)=0$, 则 $f(x)$ 在点 $x=0$ 可导的充要条件为 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h^{2}} f(1-\\cos h)$ 存在",
+        "B": "$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h} f\\left(1-\\mathrm{e}^{h}\\right)$ 存在",
+        "C": "$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h^{2}} f(h-\\sin h)$ 存在",
+        "D": "$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h}[f(2 h)-f(h)]$ 存在"
+      },
+      "answer": "B",
+      "analysis": "因为当 $h \\rightarrow 0$ 时, $1-\\cos h \\rightarrow 0^{+}$,\r\n\r\n所以 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(1-\\cos h)}{h^2}\\\\\r\n=\\lim _{h \\rightarrow 0} \\frac{f(1-\\cos h)-f(0)}{1-\\cos h} \\cdot \\frac{1-\\cos h}{h^2}\\\\\r\n=\\frac{1}{2} f_{+}^{\\prime}(0)$,\r\n\r\n即 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(1-\\cos h)}{h^2}$ 存在只能使右导数存在, 故 (A) 不对;\r\n\r\n$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h} f\\left(1-\\mathrm{e}^h\\right) \\\\ \r\n= \\lim _{h \\rightarrow 0}\\left[\\frac{f\\left(1-\\mathrm{e}^h\\right)-f(0)}{1-\\mathrm{e}^h} \\cdot \\frac{1-\\mathrm{e}^h}{h}\\right] \\\\ \r\n= \\lim _{h \\rightarrow 0} \\frac{f\\left(1-\\mathrm{e}^h\\right)-f(0)}{1-\\mathrm{e}^h} \\cdot \\lim _{h \\rightarrow 0} \\frac{1-\\mathrm{e}^h}{h} \\\\ \r\n=-\\lim _{h \\rightarrow 0} \\frac{f\\left(1-\\mathrm{e}^h\\right)-f(0)}{1-\\mathrm{e}^h} \\\\  \r\n=-\\lim _{\\left(1-\\mathrm{e}^h\\right) \\rightarrow 0} \\frac{f\\left(1-\\mathrm{e}^h\\right)-f(0)}{1-\\mathrm{e}^h} \\\\ \r\n=-\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}=-f^{\\prime}(0)$ \r\n\r\n故 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{1}{h} f\\left(1-\\mathrm{e}^h\\right)$ 存在 } $\\Leftrightarrow f^{\\prime}(0)$ 存在, (B) 项正确\r\n\r\n$\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(h-\\sin h)}{h^2}\\\\\r\n=\\lim _{h \\rightarrow 0} \\frac{f(h-\\sin h)-f(0)}{h-\\sin h} \\cdot \\frac{h-\\sin h}{h^2}$,\r\n\r\n因为 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{h-\\sin h}{h^2}=0$, \r\n\r\n所以 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(h-\\sin h)}{h^2}$ 存在不一定使 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(h-\\sin h)-f(0)}{h-\\sin h}$ 存在, \r\n\r\n即 $f(x)$ 在 $x=0$ 处不一定可导, (C) 不对;\r\n\r\n取 $f(x)=\\left\\{\\begin{array}{ll}x, & x \\neq 0\\\\ 2, & x=0\\end{array}\\right.$ \r\n\r\n显然 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f(2 h)-f(h)}{h}=1$, \r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=0 \\neq f(0)$, \r\n\r\n所以 $f(x)$ 在 $x=0$ 处不连续, 故在 $x=0$ 处不可导, (D) 不对, 应选 (B).",
+      "wrong_options": {
+        "A": "1-cosh→0⁺ 只从右侧趋 0，极限存在仅保证右导数存在，不足以推双侧可导。",
+        "C": "h-sinh~h³/6，除以 h² 后内层比值→0，无论 f'(0) 是否存在该极限都为 0，条件不充分。",
+        "D": "[f(2h)-f(h)]/h 存在只是差商的线性组合有极限，推不出 f'(0) 存在。"
+      },
+      "pitfalls": [
+        "A 的 1-cosh→0⁺ 是单侧、C 的 h-sinh 是三阶导致比值退化，都不能保证可导",
+        "B 的 1-e^h→0 双侧且与 h 同阶，极限存在 ⟺ f'(0) 存在，这是唯一充要条件"
+      ],
+      "key_point": "唯 B：1-e^h 双侧一阶趋 0，极限存在等价于 f'(0) 存在。"
+    },
+    {
+      "id": 979,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{llll}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1\\end{array}\\right),\\\\\r\n \\boldsymbol{B}=\\left(\\begin{array}{llll}4 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}(\\quad)$",
+      "options": {
+        "A": "合同且相似",
+        "B": "合同但不相似",
+        "C": "不合同但相似",
+        "D": "不合同且不相似"
+      },
+      "answer": "A",
+      "analysis": "令 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=0$, \r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=4, \\lambda_2=\\lambda_3=\\lambda_4=0$.\r\n\r\n显然 $\\boldsymbol{B}$ 与 $\\boldsymbol{A}$ 特征值相同, \r\n\r\n且 $\\boldsymbol{A}, \\boldsymbol{B}$ 都是实对称矩阵, \r\n\r\n故 $\\boldsymbol{A}, \\boldsymbol{B}$ 相似且合同, 应选 (A)",
+      "wrong_options": {
+        "B": "A、B 均实对称且特征值相同，必同时相似与合同，不存在\"合同但不相似\"。",
+        "C": "实对称同特征值必相似，同时正负惯性指数相同也必合同，不会\"不合同但相似\"。",
+        "D": "二者特征值都是 4,0,0,0，正惯性指数都为 1，既相似又合同，非\"都不\"。"
+      },
+      "pitfalls": [
+        "A 的特征值为 4,0,0,0（秩 1 全 1 阵），与 B 一致 ⇒ 相似",
+        "两者都是实对称，正惯性指数同为 1 ⇒ 合同；相似的实对称阵必合同"
+      ],
+      "key_point": "A、B 实对称且特征值同为 4,0,0,0，故既相似又合同，选 A。"
+    },
+    {
+      "id": 980,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "将一枚硬币重复掷 $n$ 次, 以 $X$ 和 $Y$ 分别表示正面向上和反面向上的次数, 则 $X$ 和 $Y$ 的相关系数等于 $(\\quad)$",
+      "options": {
+        "A": "$-1$",
+        "B": "$0$",
+        "C": "$\\dfrac{1}{2}$",
+        "D": "$1$"
+      },
+      "answer": "A",
+      "analysis": "因为 $P\\{Y=-X+n\\}=1$ 且 $-1<0$, \r\n\r\n所以 $\\rho_{X Y}=-1$, 应选 (A)",
+      "wrong_options": {
+        "B": "0 表示不相关，但 X+Y=n 是严格线性关系，属完全相关，不是 0。",
+        "C": "1/2 非满相关值；线性关系下 |ρ|=1，且此处为负相关。",
+        "D": "+1 是正相关，但 Y 随 X 增大而减小，应取 -1，符号反。"
+      },
+      "pitfalls": [
+        "X+Y=n 恒成立，Y=-X+n 斜率为负 ⇒ ρ=-1，不是正相关的 +1",
+        "完全线性依赖 |ρ|=1，别误判为不相关 0"
+      ],
+      "key_point": "Y=-X+n 完全负线性相关，ρ_{XY}=-1，选 A。"
+    },
+    {
+      "id": 981,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\arctan \\mathrm{e}^{x}}{\\mathrm{e}^{2 x}} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{2\\mathrm{e}^{2x}}\\arctan \\mathrm{e}^{x}-\\dfrac{1}{2\\mathrm{e}^{x}}-\\dfrac{1}{2}\\arctan \\mathrm{e}^{x}+C$",
+      "analysis": "方法一 令 $\\mathrm{e}^x=t$, 则\r\n\r\n$\\displaystyle\r\n\\int \\frac{\\arctan \\mathrm{e}^x}{\\mathrm{e}^{2 x}} \\mathrm{d} x \\\\\r\n=\\int \\frac{\\arctan t}{t^3} \\mathrm{d} t\\\\\r\n=-\\frac{1}{2} \\int \\arctan t \\mathrm{d}\\left(t^{-2}\\right) \\\\\r\n=-\\frac{1}{2 t^2} \\arctan t+\\frac{1}{2} \\int \\frac{t^{-2}}{1+t^2} \\mathrm{d} t\\\\\r\n=-\\frac{1}{2 t^2} \\arctan t+\\frac{1}{2} \\int \\frac{1}{t^2\\left(1+t^2\\right)} \\mathrm{d} t \\\\\r\n=-\\frac{1}{2 t^2} \\arctan t+\\frac{1}{2} \\int\\left(\\frac{1}{t^2}-\\frac{1}{1+t^2}\\right) \\mathrm{d} t \\\\\r\n=-\\frac{1}{2 t^2} \\arctan t-\\frac{1}{2 t}-\\frac{1}{2} \\arctan t+C \\\\\r\n=-\\frac{1}{2 \\mathrm{e}^{2 x}} \\arctan \\mathrm{e}^x-\\frac{1}{2 \\mathrm{e}^x}-\\frac{1}{2} \\arctan \\mathrm{e}^x+C$\r\n\r\n方法二\r\n\r\n$\\displaystyle\r\n\\int \\frac{\\arctan \\mathrm{e}^x}{\\mathrm{e}^{2 x}} \\mathrm{d} x \\\\\r\n=-\\frac{1}{2} \\int \\arctan \\mathrm{e}^x \\mathrm{d}\\left(\\mathrm{e}^{-2 x}\\right)\\\\\r\n=-\\frac{\\arctan \\mathrm{e}^x}{2 \\mathrm{e}^{2 x}}+\\frac{1}{2} \\int \\frac{\\mathrm{e}^{-2 x}}{1+\\mathrm{e}^{2 x}} \\cdot \\mathrm{e}^x \\mathrm{d} x \\\\\r\n=-\\frac{\\arctan \\mathrm{e}^x}{2 \\mathrm{e}^{2 x}}+\\frac{1}{2} \\int \\frac{\\mathrm{d}\\left(\\mathrm{e}^x\\right)}{\\mathrm{e}^{2 x}\\left(1+\\mathrm{e}^{2 x}\\right)}\\\\\r\n=-\\frac{\\arctan \\mathrm{e}^x}{2 \\mathrm{e}^{2 x}}+\\frac{1}{2} \\int\\left(\\frac{1}{\\mathrm{e}^{2 x}}-\\frac{1}{1+\\mathrm{e}^{2 x}}\\right) \\mathrm{d}\\left(\\mathrm{e}^x\\right) \\\\\r\n=-\\frac{\\arctan \\mathrm{e}^x}{2 \\mathrm{e}^{2 x}}-\\frac{1}{2 \\mathrm{e}^x}-\\frac{1}{2} \\arctan \\mathrm{e}^x+C $",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元后 dx=dt/t，∫arctan(e^x)/e^{2x}dx=∫arctan t/t³ dt，分母是 t³ 别写成 t²",
+        "1/(t²(1+t²))=1/t²-1/(1+t²) 拆项，积分给出 -1/t-arctan t，末项符号勿丢",
+        "回代要把三处 t 全换回 e^x，别漏 +C"
+      ],
+      "key_point": "换元 e^x=t 后分部+拆项，得 -arctan(e^x)/(2e^{2x})-1/(2e^x)-½arctan(e^x)+C（已验证求导还原）。"
+    },
+    {
+      "id": 982,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $z=f(x, y)$ 在点 $(1,1)$ 处可微, 且 $\\displaystyle f(1,1)=1,\\left.\\frac{\\partial f}{\\partial x}\\right|_{(1,1)}=2,\\left.\\frac{\\partial f}{\\partial y}\\right|_{(1,1)}=3$, $\\varphi(x)=f[x, f(x, x)]$, 求 $\\displaystyle \\left.\\frac{\\mathrm{d}}{\\mathrm{d} x} \\varphi^{3}(x)\\right|_{x=1}$",
+      "options": {},
+      "answer": "$51$",
+      "analysis": "$\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\varphi^3(x)=3 \\varphi^2(x) \\varphi^{\\prime}(x)$,\r\n\r\n而 $\\displaystyle \\varphi^{\\prime}(x)=f_1^{\\prime}(x, f(x, x))\\\\\r\n+f_2^{\\prime}(x, f(x, x)) \\cdot\\left[f_1^{\\prime}(x, x)+f_2^{\\prime}(x, x)\\right], \\\\\r\n\\varphi(1)=f(1, f(1,1))=f(1,1)=1$,\r\n\r\n由 $\\displaystyle f_1^{\\prime}(1,1)=\\left.\\frac{\\partial f}{\\partial x}\\right|_{(1,1)}=2, f_2^{\\prime}(1,1)=\\left.\\frac{\\partial f}{\\partial y}\\right|_{(1,1)}=3$,\r\n\r\n得 $\\varphi^{\\prime}(1)=f_1^{\\prime}(1, f(1,1))\\\\\r\n+f_2^{\\prime}(1, f(1,1)) \\cdot\\left[f_1^{\\prime}(1,1)+f_2^{\\prime}(1,1)\\right]\\\\\r\n=f_1^{\\prime}(1,1)+f_2^{\\prime}(1,1) \\cdot\\left[f_1^{\\prime}(1,1)+f_2^{\\prime}(1,1)\\right]\\\\\r\n=2+3(2+3)=17$,\r\n\r\n故 $\\displaystyle \\left.\\frac{\\mathrm{d}}{\\mathrm{d} x} \\varphi^3(x)\\right|_{x=1}=51$",
+      "wrong_options": {},
+      "pitfalls": [
+        "φ'=f₁'+f₂'·(f₁'+f₂')，内层 f(x,x) 对 x 求导要把两个位置的偏导都算上 f₁'(x,x)+f₂'(x,x)",
+        "外层 d/dx φ³=3φ²φ'，别漏乘 φ(1)²=1；最终 3·1·17=51 不是 17"
+      ],
+      "key_point": "φ'(1)=2+3(2+3)=17，d/dx φ³|₁=3·1²·17=51。"
+    },
+    {
+      "id": 983,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1+x^2}{x} \\arctan x, & x \\neq 0 \\\\ 1, & x=0\\end{array}\\right.$ 试将 $f(x)$ 展开成 $x$ 的幂级数, 并求级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{1-4 n^2}$的和",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}-\\dfrac{1}{2}$",
+      "analysis": "由 $\\displaystyle (\\arctan x)^{\\prime}=\\frac{1}{1+x^2}=\\sum_{n=0}(-1)^n x^{2 n}(-1<x<1)$,\r\n\r\n所以 $\\displaystyle \\arctan x=\\arctan 0+\\int_0^x \\frac{1}{1+x^2} \\mathrm{d} x=\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2 n+1} x^{2 n+1}(-1 \\leqslant x \\leqslant 1)$,\r\n\r\n于是 $\\displaystyle f(x)=\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2 n+1} x^{2 n}+\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2 n+1} x^{2 n+2} \\\\\r\n=1+\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{2 n+1} x^{2 n}+\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2 n-1} x^{2 n} \\\\\r\n=1+2 \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{1-4 n^2} x^{2 n}(-1 \\leqslant x \\leqslant 1)$,\r\n\r\n故 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{1-4 n^2}=\\frac{1}{2}[f(1)-1]=\\frac{\\pi}{4}-\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "arctan x 展开收敛域 [-1,1] 含端点，代 x=1 合法",
+        "f(x)=1+2Σ(-1)ⁿ/(1-4n²)x^{2n}，故 Σ=½(f(1)-1)，f(1)=2·arctan1=π/2，别漏系数 2 与 -1"
+      ],
+      "key_point": "f(1)=π/2，Σ(-1)ⁿ/(1-4n²)=½(f(1)-1)=π/4-1/2。"
+    },
+    {
+      "id": 984,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle I=\\oint_{L}\\left(y^{2}-z^{2}\\right) \\mathrm{d} x+\\left(2 z^{2}-x^{2}\\right) \\mathrm{d} y+\\left(3 x^{2}-y^{2}\\right) \\mathrm{d} z$, 其中 $L$ 是平面 $x+y+z=2$ 与柱面 $|x|+|y|=1$ 的交线, 从 $z$ 轴正向看去, $L$ 为逆时针方向",
+      "options": {},
+      "answer": "$-24$",
+      "analysis": "设截面为 $\\Sigma$, 取上侧, \r\n\r\n$\\Sigma$ 的方向向量为 $\\boldsymbol{n}=\\{1,1,1\\}$, \r\n\r\n方向余弦为 $\\displaystyle \\cos \\alpha=\\frac{1}{\\sqrt{3}}, \\cos \\beta=\\frac{1}{\\sqrt{3}}, \\cos \\gamma=\\frac{1}{\\sqrt{3}}$, \r\n\r\n由斯托克斯公式得\r\n\r\n$\\displaystyle\r\nI =\\frac{1}{\\sqrt{3}} \\iint\\limits_{\\Sigma}\\left|\\begin{array}{ccc}\r\n1 & 1 & 1 \\\\\r\n\\dfrac{\\partial}{\\partial x} & \\dfrac{\\partial}{\\partial y} & \\dfrac{\\partial}{\\partial z} \\\\\r\ny^2-z^2 & 2 z^2-x^2 & 3 x^2-y^2\r\n\\end{array}\\right| \\mathrm{d} S\\\\\r\n=-\\frac{2}{\\sqrt{3}} \\iint\\limits_{\\Sigma}(4 x+2 y+3 z) \\mathrm{d} S \\\\\r\n=-\\frac{2}{\\sqrt{3}} \\iint\\limits_{\\Sigma}(x-y+6) \\mathrm{d} S\\\\\r\n=-\\frac{12}{\\sqrt{3}} \\iint\\limits_{\\Sigma} \\mathrm{d} S\\\\\r\n=-\\frac{12}{\\sqrt{3}} \\iint\\limits_D \\sqrt{3} \\mathrm{d} \\sigma\\\\\r\n=-24$",
+      "wrong_options": {},
+      "pitfalls": [
+        "取截面 Σ 上侧，法向量 (1,1,1)/√3 要与 L 逆时针方向按右手法则匹配",
+        "旋度在平面上可用 x+y+z=2 化简被积函数（4x+2y+3z=x-y+6），投影区域是 |x|+|y|≤1 面积为 2"
+      ],
+      "key_point": "斯托克斯化为 -12/√3·∬_Σ dS=-12/√3·√3·2=-24。"
+    },
+    {
+      "id": 985,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 15,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $y=f(x)$ 在 $(-1,1)$ 内具有二阶连续导数且 $f^{\\prime \\prime}(x) \\neq 0$, 试证:\r\n\r\n(1) 对于 $(-1,1)$ 内的任一 $x \\neq 0$, 存在唯一的 $\\theta(x) \\in(0,1)$, 使 $f(x)=f(0)+$ $x f^{\\prime}[\\theta(x) x]$ 成立;\r\n\r\n(2) $\\displaystyle \\lim _{x \\rightarrow 0} \\theta(x)=\\frac{1}{2}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 由微分中值定理得 $f(x)-f(0)=f^{\\prime}[0+\\theta(x) x] x$,\r\n\r\n即 $f(x)=f(0)+f^{\\prime}[\\theta(x) x] x$, 其中 $\\theta(x) \\in(0,1)$.\r\n\r\n不妨设 $f(x)=f(0)+f^{\\prime}\\left[\\theta_1(x) x\\right] x, \\quad f(x)=f(0)+f^{\\prime}\\left[\\theta_2(x) x\\right] x$,\r\n\r\n两式相减得 $f^{\\prime}\\left[\\theta_1(x) x\\right] x=f^{\\prime}\\left[\\theta_2(x) x\\right] x$,\r\n\r\n注意到 $x \\neq 0$, 则有 $f^{\\prime}\\left[\\theta_1(x) x\\right]=f^{\\prime}\\left[\\theta_2(x) x\\right]$.\r\n\r\n因为 $f^{\\prime \\prime}(x)$ 连续且 $f^{\\prime \\prime}(x) \\neq 0$, \r\n\r\n所以 $f^{\\prime \\prime}(x)>0$ 或 $f^{\\prime \\prime}(x)<0$, \r\n\r\n即 $f^{\\prime}(x)$ 单调增加或单调减少, \r\n\r\n于是 $\\theta_1(x)=\\theta_2(x)$, \r\n\r\n即存在唯一的 $\\theta(x) \\in(0,1)$, 使得\r\n\r\n$f(x)=f(0)+f^{\\prime}[\\theta(x) x] x$\r\n\r\n(2) 由泰勒公式得\r\n\r\n$\\displaystyle f(x)=f(0)+f^{\\prime}(0) x+\\frac{f^{\\prime \\prime}(\\xi)}{2 !} x^2$ , \r\n\r\n其中 $\\xi$ 介于 $0$ 与 $x$ 之间,\r\n\r\n$\\displaystyle f(0)+f^{\\prime}(0) x+\\frac{f^{\\prime \\prime}(\\xi)}{2 !} x^2=f(0)+f^{\\prime}[\\theta(x) x] x $ \r\n\r\n或 $\\displaystyle \\theta(x) \\frac{f^{\\prime}[\\theta(x) x]-f^{\\prime}(0)}{\\theta(x) x}=\\frac{f^{\\prime \\prime}(\\xi)}{2 !}$\r\n\r\n由 $f^{\\prime \\prime}(x)$ 连续及 $f^{\\prime \\prime}(x) \\neq 0$, \r\n\r\n两边取极限得 $\\displaystyle f^{\\prime \\prime}(0) \\lim _{x \\rightarrow 0} \\theta(x)=\\frac{f^{\\prime \\prime}(0)}{2 !}$, \r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0} \\theta(x)=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 唯一性关键：f''连续且≠0 ⇒ f''恒正或恒负 ⇒ f'严格单调 ⇒ θ(x)x 唯一",
+        "(2) 求 lim θ 需把 f(x)-f(0) 用带二阶余项的泰勒式与 xf'[θx] 对比，f''约去后取极限得 1/2"
+      ],
+      "key_point": "f'严格单调保证 θ(x) 唯一；泰勒对比得 lim_{x→0}θ(x)=1/2。"
+    },
+    {
+      "id": 986,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有一高度为 $h(t) (t$ 为时间) 的雪堆在融化过程中, 其侧面满足方程 $z=h(t)-\\dfrac{2\\left(x^{2}+y^{2}\\right)}{h(t)}$ (设长度单位为厘米, 时间单位为小时), 已知体积减少的速率与侧面积成正比 (比例系数为 $0.9$), 问高度为 $130$ (厘米) 的雪堆全部融化需多少小时?",
+      "options": {},
+      "answer": "$100$",
+      "analysis": "$t$ 时刻雪堆的体积为\r\n\r\n$\\displaystyle V(t)  =\\int_0^{h(t)} \\mathrm{d} z \\iint\\limits_{x^2+y^2 \\leqslant \\frac{h^2(t)-h(t) z}{2}} \\mathrm{d} x \\mathrm{d} y=\\frac{\\pi}{2} \\int_0^{h(t)}\\left[h^2(t)-h(t) z\\right] \\mathrm{d} z=\\frac{\\pi h^3(t)}{4}$\r\n\r\n侧面积为\r\n\r\n$\\displaystyle S(t) =\\iint\\limits_{x^2+y^2 \\leqslant \\frac{h^2(t)}{2}} \\sqrt{1+\\left(\\frac{\\partial z}{\\partial x}\\right)^2+\\left(\\frac{\\partial z}{\\partial y}\\right)^2} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{x^2+y^2 \\leqslant \\frac{h^2(t)}{2}} \\sqrt{1+\\frac{16\\left(x^2+y^2\\right)}{h^2(t)}} \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\frac{h(t)}{\\sqrt{2}}} r \\sqrt{1+\\frac{16 r^2}{h^2(t)}} \\mathrm{d} r=\\frac{13 \\pi h^2(t)}{12}$,\r\n\r\n由题意得 $\\dfrac{\\mathrm{d} V(t)}{\\mathrm{d} t}=-0.9 S(t)$, \r\n\r\n整理得 $h^{\\prime}(t)=-\\dfrac{13}{10}$, \r\n\r\n解得 $h(t)=-\\dfrac{13}{10} t+C$, 由 $h(0)=130$ 得 $C=130$, \r\n\r\n于是 $h(t)=-\\dfrac{13}{10} t+130$, 令 $h(t)=0$ 得 $t=100$ (小时), \r\n\r\n即高度为 $130$ 厘米的雪堆经过 $100$ 小时可以全部融化",
+      "wrong_options": {},
+      "pitfalls": [
+        "侧面积用曲面面积公式 ∬√(1+z_x²+z_y²)，极坐标积出 S=13πh²/12，系数 13/12 别算错",
+        "dV/dt=(3πh²/4)h'=-0.9S 化简得 h'=-1.3（常数），故 h 从 130 线性降到 0 用 130/1.3=100 小时"
+      ],
+      "key_point": "V=πh³/4、S=13πh²/12，代入 dV/dt=-0.9S 得 h'=-1.3，全融化需 130/1.3=100 小时。"
+    },
+    {
+      "id": 987,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{s}$ 为线性方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的一个基础解系, \r\n$\\boldsymbol{\\beta}_{1}=t_{1} \\boldsymbol{\\alpha}_{1}+t_{2} \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\beta}_{2}=t_{1} \\boldsymbol{\\alpha}_{2}+t_{2} \\boldsymbol{\\alpha}_{3}, \\cdots, \\boldsymbol{\\beta}_{s}=t_{1} \\boldsymbol{\\alpha}_{s}+t_{2} \\boldsymbol{\\alpha}_{1}$, \r\n其中 $t_{1}, t_{2}$ 为实常数. 试问 $t_{1}, t_{2}$ 满足什么关系时, $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\cdots, \\boldsymbol{\\beta}_{s}$ 也为 $\\boldsymbol{A x}=\\mathbf{0}$ 的一个基础解系",
+      "options": {},
+      "answer": "$t_1^s+(-1)^{s+1} t_2^s \\neq 0$",
+      "analysis": "因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s$ 为 $\\boldsymbol{A x}=\\mathbf{0}$ 的基础解系, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s$ 线性无关.\r\n\r\n由齐次线性方程组解的结构性质得 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 仍为方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的解,\r\n\r\n则 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 为方程组 $\\boldsymbol{Ax}=\\mathbf{0}$ 的基础解系的充分必要条件是 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 线性无关,\r\n\r\n而 $\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_s\\right)\\left(\\begin{array}{ccccc}t_1 & 0 & 0 & \\cdots & t_2 \\\\ t_2 & t_1 & 0 & \\cdots & 0 \\\\ 0 & t_2 & t_1 & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & t_1\\end{array}\\right)$,\r\n\r\n则 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 线性无关的充分必要条件是 $\\left|\\begin{array}{ccccc}t_1 & 0 & 0 & \\cdots & t_2 \\\\ t_2 & t_1 & 0 & \\cdots & 0 \\\\ 0 & t_2 & t_1 & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & t_1\\end{array}\\right|=t_1^s+(-1)^{s+1} t_2^s \\neq 0$, \r\n\r\n当 $t_1^s+(-1)^{s+1} t_2^s \\neq 0$ 时, 即\r\n\r\n- 当 $s$ 为偶数时, $t_1 \\neq \\pm t_2$; \r\n\r\n- 当 $s$ 为奇数时, $t_1 \\neq-t_2$, 向量组 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_s$ 为方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系.",
+      "wrong_options": {},
+      "pitfalls": [
+        "β 显然仍是 Ax=0 的解且个数相同，关键只需 β 线性无关（等价于过渡矩阵可逆）",
+        "循环型系数行列式 |C|=t₁^s+(-1)^{s+1}t₂^s，注意 s 奇偶号，条件是它≠0"
+      ],
+      "key_point": "β 为基础解系 ⟺ 过渡矩阵行列式 t₁^s+(-1)^{s+1}t₂^s≠0。"
+    },
+    {
+      "id": 988,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 3 阶矩阵 $\\boldsymbol{A}$ 与 3 维向量 $\\boldsymbol{x}$, 使得向量组 $\\boldsymbol{x}, \\boldsymbol{A} \\boldsymbol{x}, \\boldsymbol{A}^{2} \\boldsymbol{x}$ 线性无关, 且满足\r\n\r\n$\\boldsymbol{A}^{3} \\boldsymbol{x}=3 \\boldsymbol{A} \\boldsymbol{x}-2 \\boldsymbol{A}^{2} \\boldsymbol{x}$\r\n\r\n(1) 记 $\\boldsymbol{P}=\\left(\\boldsymbol{x}, \\boldsymbol{A} \\boldsymbol{x}, \\boldsymbol{A}^{2} \\boldsymbol{x}\\right)$, 求 3 阶矩阵 $\\boldsymbol{B}$, 使 $\\boldsymbol{A}=\\boldsymbol{P B} \\boldsymbol{P}^{-1}$;\r\n\r\n(2) 计算行列式 $|\\boldsymbol{A}+\\boldsymbol{E}|$",
+      "options": {},
+      "answer": "(1) $\\left(\\begin{array}{ccc}0 & 0 & 0 \\\\ 1 & 0 & 3 \\\\ 0 & 1 & -2\\end{array}\\right)$\r\n\r\n(2) $-4$",
+      "analysis": "(1) 由 $\\boldsymbol{A P}=\\left(\\boldsymbol{A} \\boldsymbol{x}, \\boldsymbol{A}^2 \\boldsymbol{x}, \\boldsymbol{A}^3 \\boldsymbol{x}\\right)\\\\\r\n=\\left(\\boldsymbol{A} \\boldsymbol{x}, \\boldsymbol{A}^2 \\boldsymbol{x}, 3 \\boldsymbol{A} \\boldsymbol{x}-2 \\boldsymbol{A}^2 \\boldsymbol{x}\\right)\\\\\r\n=\\boldsymbol{P}\\left(\\begin{array}{ccc}0 & 0 & 0 \\\\ 1 & 0 & 3 \\\\ 0 & 1 & -2\\end{array}\\right)=\\boldsymbol{P} \\boldsymbol{B}$, \r\n\r\n得 $\\boldsymbol{A}=\\boldsymbol{P} \\boldsymbol{B} \\boldsymbol{P}^{-1}$, \r\n\r\n其中 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}0 & 0 & 0 \\\\ 1 & 0 & 3 \\\\ 0 & 1 & -2\\end{array}\\right)$. \r\n\r\n(2) 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{B}|=\\left|\\begin{array}{ccc}\\lambda & 0 & 0 \\\\ -1 & \\lambda & -3 \\\\ 0 & -1 & \\lambda+2\\end{array}\\right|\\\\\r\n=(\\lambda+3) \\lambda(\\lambda-1)=0$, \r\n\r\n得 $\\boldsymbol{B}$ 的特征值为 $\\lambda_1=-3, \\lambda_2=0, \\lambda_3=1$. \r\n\r\n因为 $\\boldsymbol{A} \\sim \\boldsymbol{B}$, \r\n\r\n所以 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=-3, \\lambda_2=0, \\lambda_3=1$, \r\n\r\n于是 $\\boldsymbol{A}+\\boldsymbol{E}$ 的特征值为 $\\mu_1=-2$, $\\mu_2=1, \\mu_3=2$, \r\n\r\n故 $|\\boldsymbol{A}+\\boldsymbol{E}|=-4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "B 的第三列来自 A³x=3Ax-2A²x，即在基 (x,Ax,A²x) 下坐标 (0,3,-2)ᵀ，别摆错列",
+        "|A+E|=|P(B+E)P⁻¹|=|B+E|，用相似不变量避免直接求 A；|B+E|=-4"
+      ],
+      "key_point": "A=PBP⁻¹ 中 B 由递推关系读出，|A+E|=|B+E|=-4（已验证）。"
+    },
+    {
+      "id": 989,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某班车起点站上客人数 $X$ 服从参数为 $\\lambda(\\lambda>0)$ 的泊松分布, 每位乘客在中途下车的概率为 $p(0<p<1)$, 且中途下车与否相互独立. 以 $Y$ 表示在中途下车的人数, 求:\r\n\r\n(1) 在发车时有 $n$ 个乘客的条件下, 中途有 $m$ 人下车的概率;\r\n\r\n(2) 二维随机变量 $(X, Y)$ 的概率分布",
+      "options": {},
+      "answer": "(1) $P\\{Y=m \\mid X=n\\}=\\mathrm{C}_n^m p^m(1-p)^{n-m}\\\\\r\n(0 \\leqslant m \\leqslant n, n=0,1,2, \\cdots)$\r\n\r\n(2) $\\mathrm{C}_n^m p^m(1-p)^{n-m} \\cdot \\dfrac{\\lambda^n}{n !} \\mathrm{e}^{-\\lambda}\\\\\r\n(0 \\leqslant m \\leqslant n, n=0,1,2, \\cdots)$",
+      "analysis": "(I) $X$ 的分布律为 $P\\{X=k\\}=\\dfrac{\\lambda^k}{k !} \\mathrm{e}^{-\\lambda}(k=0,1,2, \\cdots)\\\\\r\nY \\sim B(X, p),\\\\\r\nP\\{Y=m \\mid X=n\\}=\\mathrm{C}_n^m p^m(1-p)^{n-m}\\\\\r\n(0 \\leqslant m \\leqslant n, n=0,1,2, \\cdots)$\r\n\r\n(2) $P\\{X=n, Y=m\\} \\\\\r\n=P\\{X=n\\} P\\{Y=m \\mid X=n\\}\\\\\r\n=\\mathrm{C}_n^m p^m(1-p)^{n-m} \\cdot \\dfrac{\\lambda^n}{n !} \\mathrm{e}^{-\\lambda}\\\\\r\n(0 \\leqslant m \\leqslant n, n=0,1,2, \\cdots)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "条件分布是二项 B(n,p)：给定 n 名乘客各自独立以概率 p 下车",
+        "联合分布 P{X=n,Y=m}=P{X=n}·P{Y=m|X=n}，须写清取值范围 0≤m≤n"
+      ],
+      "key_point": "条件 Y|X=n~B(n,p)，联合分布 P{X=n,Y=m}=C_n^m p^m(1-p)^{n-m}·λⁿe^{-λ}/n!。"
+    },
+    {
+      "id": 990,
+      "paper": "数学一",
+      "year": 2001,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 服从正态分布 $N\\left(\\mu, \\sigma^{2}\\right)(\\sigma>0)$, 从该总体中抽取简单随机样本 $X_{1}, X_{2}, \\cdots$, $X_{2 n}(n \\geqslant 2)$, 其样本均值为 $\\displaystyle \\bar{X}=\\frac{1}{2 n} \\sum_{i=1}^{2 n} X_{i}$, 求统计量 $\\displaystyle Y=\\sum_{i=1}^{n}\\left(X_{i}+X_{n+i}-2 \\bar{X}\\right)^{2}$ 的数学期望 $E(Y)$",
+      "options": {},
+      "answer": "$2(n-1) \\sigma^2$",
+      "analysis": "令 $Y_i=X_i+X_{n+i}(1 \\leqslant i \\leqslant n)$, \r\n\r\n因为 $X_1, X_2, \\cdots, X_{2 n}$ 相互独立且服从正态分布, \r\n\r\n所以 $Y_i \\sim N\\left(2 \\mu, 2 \\sigma^2\\right)(1 \\leqslant i \\leqslant n)$.\r\n\r\n不妨设 $Y_1, Y_2, \\cdots, Y_n$ 为来自总体 $N\\left(2 \\mu, 2 \\sigma^2\\right)$ 的简单随机样本, $\\displaystyle \\bar{Y}=\\frac{1}{n} \\sum_{i=1}^n Y_i=2 \\bar{X}$,\r\n\r\n于是统计量 $\\displaystyle Y=\\sum_{i=1}^n\\left(X_i+X_{n+i}-2 \\bar{X}\\right)^2\\\\\r\n=\\sum_{i=1}^n\\left(Y_i-\\bar{Y}\\right)^2$,\r\n\r\n由 $\\dfrac{\\displaystyle \\sum_{i=1}^n\\left(Y_i-\\bar{Y}\\right)^2}{2 \\sigma^2} \\sim \\chi^2(n-1)$, \r\n\r\n得 $E(\\dfrac{\\displaystyle \\sum_{i=1}^n\\left(Y_i-\\bar{Y}\\right)^2}{2 \\sigma^2})=n-1$, \r\n\r\n故 $E(Y)=2(n-1) \\sigma^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y_i=X_i+X_{n+i}~N(2μ,2σ²)，方差是 2σ² 不是 σ²；且 Ȳ=(1/n)ΣY_i=2X̄",
+        "Σ(Y_i-Ȳ)²/(2σ²)~χ²(n-1)，期望为 n-1，故 E(Y)=(n-1)·2σ²，别丢因子 2"
+      ],
+      "key_point": "配对得 Y_i~N(2μ,2σ²)，E(Y)=(n-1)·DY_i=2(n-1)σ²。"
+    }
+  ]
+}

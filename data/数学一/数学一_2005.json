@@ -1,0 +1,493 @@
+{
+  "paper": "数学一",
+  "year": 2005,
+  "count": 23,
+  "questions": [
+    {
+      "id": 880,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\dfrac{x^{2}}{2 x+1}$ 的斜渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{1}{2} x-\\dfrac{1}{4}$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow \\infty} \\frac{y}{x}=\\lim _{x \\rightarrow \\infty} \\frac{x^2}{x(2 x+1)}=\\frac{1}{2},\\\\\r\n\\lim _{x \\rightarrow \\infty}\\left(y-\\frac{1}{2} x\\right)\\\\\r\n=\\lim _{x \\rightarrow \\infty}\\left(\\frac{x^2}{2 x+1}-\\frac{x}{2}\\right)\\\\\r\n=\\lim _{x \\rightarrow \\infty} \\frac{-x}{2(2 x+1)}=-\\frac{1}{4}$,\r\n\r\n得曲线 $y=\\dfrac{x^2}{2 x+1}$ 的斜渐近线方程为 $y=\\dfrac{1}{2} x-\\dfrac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "只算出斜率 k=1/2 就止步，漏掉截距 b",
+        "b=lim(y-x/2) 要先通分再取无穷远主部，结果 -1/4 别丢"
+      ],
+      "key_point": "斜渐近线 k=lim y/x=1/2，b=lim(y-x/2)=-1/4，故 y=x/2-1/4。"
+    },
+    {
+      "id": 881,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $x y^{\\prime}+2 y=x \\ln x$ 满足 $y(1)=-\\dfrac{1}{9}$ 的解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{x \\ln x}{3}-\\dfrac{x}{9}$",
+      "analysis": "方法一 将 $x y^{\\prime}+2 y=x \\ln x$ 化为 $\\displaystyle y^{\\prime}+\\frac{2}{x} y=\\ln x$, \r\n\r\n解得 $\\displaystyle y=\\left[\\int \\ln x \\cdot \\mathrm{e}^{\\int \\frac{2}{x} \\mathrm{d} x} \\mathrm{d} x+C\\right] \\mathrm{e}^{-\\int \\frac{2}{x} \\mathrm{d} x}\\\\\r\n=\\frac{1}{x^2}\\left(\\int x^2 \\ln x \\mathrm{d} x+C\\right)\\\\\r\n=\\frac{1}{x^2}\\left(\\frac{x^3}{3} \\ln x-\\frac{1}{9} x^3+C\\right)$,\r\n\r\n由 $y(1)=-\\dfrac{1}{9}$, 得 $C=0$, 故 $y=\\dfrac{x \\ln x}{3}-\\dfrac{x}{9}$,\r\n\r\n方法二 由 $x y^{\\prime}+2 y=x \\ln x$, \r\n\r\n得 $x^2 y^{\\prime}+2 x y=x^2 \\ln x$, \r\n\r\n即 $\\left(x^2 y\\right)^{\\prime}=x^2 \\ln x$, \r\n\r\n解得 $\\displaystyle x^2 y=\\int x^2 \\ln x \\mathrm{d} x+C\\\\\r\n=\\dfrac{x^3}{3} \\ln x-\\frac{1}{9} x^3+C$,\r\n\r\n于是 $y=\\dfrac{1}{x^2}\\left(\\dfrac{x^3}{3} \\ln x-\\dfrac{1}{9} x^3+C\\right)$, \r\n\r\n由 $y(1)=-\\dfrac{1}{9}$ 得 $C=0$, \r\n\r\n故 $y=\\dfrac{x \\ln x}{3}-\\dfrac{x}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先化标准形 y'+(2/x)y=lnx，系数要除以 x 别照抄",
+        "解出含 C 的通解后必须代 y(1)=-1/9 定 C=0，漏代不得分"
+      ],
+      "key_point": "(x²y)'=x²lnx ⇒ y=xlnx/3-x/9，代初值得 C=0。"
+    },
+    {
+      "id": 882,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle u(x, y, z)=1+\\frac{x^{2}}{6}+\\frac{y^{2}}{12}+\\frac{z^{2}}{18}$, 单位向量 $\\displaystyle \\boldsymbol{n}=\\frac{1}{\\sqrt{3}}(1,1,1)$, 则 $\\displaystyle \\left.\\frac{\\partial u}{\\partial \\boldsymbol{n}}\\right|_{(1,2,3)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\sqrt{3}}{3}$",
+      "analysis": "$\\displaystyle \\frac{\\partial u}{\\partial x}=\\frac{x}{3}, \\quad \\frac{\\partial u}{\\partial y}=\\frac{y}{6}, \\quad \\frac{\\partial u}{\\partial z}=\\frac{z}{9}$,\r\n\r\n由 $\\displaystyle \\left.\\frac{\\partial u}{\\partial x}\\right|_{(1,2,3)}=\\frac{1}{3},\\left.\\frac{\\partial u}{\\partial y}\\right|_{(1,2,3)}=\\frac{1}{3},\\left.\\quad \\frac{\\partial u}{\\partial z}\\right|_{(1,2,3)}=\\frac{1}{3}$, \r\n\r\n得 $\\displaystyle \\left.\\frac{\\partial \\mathrm{u}}{\\partial \\boldsymbol{n}}\\right|_{(1,2,3)}=\\frac{1}{3} \\times \\frac{1}{\\sqrt{3}}+\\frac{1}{3} \\times \\frac{1}{\\sqrt{3}}+\\frac{1}{3} \\times \\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "n 已是单位向量，无需再作单位化",
+        "三个偏导代 (1,2,3) 后恰都等于 1/3，注意分母 3、6、9"
+      ],
+      "key_point": "∇u|_(1,2,3)=(1/3,1/3,1/3)，与 n 点乘得 √3/3。"
+    },
+    {
+      "id": 883,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\Omega$ 是由锥面 $z=\\sqrt{x^{2}+y^{2}}$ 与半球面 $z=\\sqrt{R^{2}-x^{2}-y^{2}}$ 围成的空间区域, $\\Sigma$ 是 $\\Omega$ 的整个边界的外侧, 则 $\\displaystyle \\iint\\limits_{\\Sigma} x \\mathrm{d} y \\mathrm{d} z+y \\mathrm{d} z \\mathrm{d} x+z \\mathrm{d} x \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(2-\\sqrt{2}) \\pi R^3$",
+      "analysis": "方法一 由 $\\left\\{\\begin{array}{l}z=\\sqrt{x^2+y^2} \\\\ z=\\sqrt{R^2-x^2-y^2}\\end{array}\\right.$ \r\n\r\n得 $x^2+y^2=\\dfrac{R^2}{2}$. 令 $\\displaystyle D: x^2+y^2 \\leqslant \\frac{R^2}{2}$, \r\n\r\n由高斯公式得 $\\displaystyle \\iint\\limits_{\\Sigma} x \\mathrm{d} y \\mathrm{d} z+y \\mathrm{d} z \\mathrm{d} x+z \\mathrm{d} x \\mathrm{d} y\\\\\r\n=3 \\iiint\\limits_{\\Omega} \\mathrm{d} v\\\\\r\n=3 \\iint\\limits_D \\mathrm{d} x \\mathrm{d} y \\int_{\\sqrt{x^2+y^2}}^{\\sqrt{R^2-x^2-y^2}} \\mathrm{d} z\\\\\r\n=3 \\iint\\limits_D\\left(\\sqrt{R^2-x^2-y^2}-\\sqrt{x^2+y^2}\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=3 \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\frac{R}{\\sqrt{2}}} r\\left(\\sqrt{R^2-r^2}-r\\right) \\mathrm{d} r\\\\\r\n=6 \\pi \\int_0^{\\frac{R}{\\sqrt{2}}} r \\sqrt{R^2-r^2} \\mathrm{d} r-\\frac{\\pi R^3}{\\sqrt{2}} \\\\\r\n=-3 \\pi \\int_0^{\\frac{R}{\\sqrt{2}}} \\sqrt{R^2-r^2} \\mathrm{d}\\left(R^2-r^2\\right)-\\frac{\\pi R^3}{\\sqrt{2}}\\\\\r\n=(2-\\sqrt{2}) \\pi R^3$\r\n\r\n方法二 由高斯公式得\r\n\r\n$\\displaystyle \\iint\\limits_{\\Sigma} x \\mathrm{d} y \\mathrm{d} z+y \\mathrm{d} z \\mathrm{d} x+z \\mathrm{d} x \\mathrm{d} y \\\\\r\n=3 \\iiint\\limits_{\\Omega} \\mathrm{d} v\\\\\r\n=3 \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\frac{\\pi}{4}} \\mathrm{d} \\varphi \\int_0^R r^2 \\sin \\varphi \\mathrm{d} r\\\\\r\n=6 \\pi \\int_0^{\\frac{\\pi}{4}} \\sin \\varphi \\mathrm{d} \\varphi \\int_0^R r^2 \\mathrm{d} r \\\\\r\n=2 \\pi R^3\\left(1-\\frac{\\sqrt{2}}{2}\\right)=(2-\\sqrt{2}) \\pi R^3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "锥面与半球交线投影 r=R/√2 是 z 积分上下界的分界",
+        "散度 div=1+1+1=3 为常数，别漏乘这个 3"
+      ],
+      "key_point": "由高斯公式=3×两曲面所夹体积=(2-√2)πR³。"
+    },
+    {
+      "id": 884,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 均为 3 维列向量, 记矩阵\r\n\r\n$\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right),\\\\\r\n\\boldsymbol{B}=(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}, \\\\\r\n\\boldsymbol{\\alpha}_{1}+2 \\boldsymbol{\\alpha}_{2}+4 \\boldsymbol{\\alpha}_{3},\\\\\r\n\\boldsymbol{\\alpha}_{1}+3 \\boldsymbol{\\alpha}_{2}+9 \\boldsymbol{\\alpha}_{3})$\r\n\r\n如果 $|\\boldsymbol{A}|=1$, 那么 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "方法一 因为 \r\n$\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+4 \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_1+3 \\boldsymbol{\\alpha}_2+9 \\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\boldsymbol{A}\\left(\\begin{array}{lll}\r\n1 & 1 & 1 \\\\\r\n1 & 2 & 3 \\\\\r\n1 & 4 & 9\r\n\\end{array}\\right)$,\r\n\r\n所以 $|\\boldsymbol{B}|\\\\\r\n=|\\boldsymbol{A}| \\cdot\\left|\\begin{array}{lll}1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 4 & 9\\end{array}\\right|\\\\\r\n=(3-1)(3-2)(2-1)=2$\r\n\r\n方法二\r\n\r\n$|\\boldsymbol{B}| =\\left|\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+4 \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_1+3 \\boldsymbol{\\alpha}_2+9 \\boldsymbol{\\alpha}_3\\right| \\\\\r\n=\\left|\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2+3 \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2+5 \\boldsymbol{\\alpha}_3\\right| \\\\\r\n=\\left|\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2+3 \\boldsymbol{\\alpha}_3, 2 \\boldsymbol{\\alpha}_3\\right|\\\\\r\n=2\\left|\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2+3 \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3\\right| \\\\\r\n=2\\left|\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right|=2\\left|\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right|=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "系数矩阵 M 的每一列对应一个 B 的列的组合系数，别转置错",
+        "|M| 为范德蒙德 (2-1)(3-1)(3-2)=2，行列次序别弄反"
+      ],
+      "key_point": "|B|=|A|·|M(范德蒙德)|=1×2=2。"
+    },
+    {
+      "id": 885,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "从数 $1,2,3,4$ 中任取一个数, 记为 $X$, 再从 $1, \\cdots, X$ 中任取一个数, 记为 $Y$, 则 $P\\{Y=2\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{13}{48}$",
+      "analysis": "式得 $\\displaystyle P\\{Y=2\\}=P(B)\\\\\r\n=\\sum_{i=1}^4 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)\\\\\r\n=\\frac{1}{4}\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right)\\\\\r\n=\\frac{13}{48}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X=1 时取不到 Y=2，该项为 0，不能算进去",
+        "每个 X=i 的概率都是 1/4，条件概率才是 1/i"
+      ],
+      "key_point": "P(Y=2)=1/4·(1/2+1/3+1/4)=13/48。"
+    },
+    {
+      "id": 886,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x)=\\lim _{n \\rightarrow \\infty} \\sqrt[n]{1+|x|^{3 n}}$, 则 $f(x)$ 在 $(-\\infty,+\\infty)$ 内 $(\\quad)$",
+      "options": {
+        "A": "处处可导",
+        "B": "恰有一个不可导点",
+        "C": "恰有两个不可导点",
+        "D": "至少有三个不可导点"
+      },
+      "answer": "C",
+      "analysis": "当 $|x| \\leqslant 1$ 时, $1 \\leqslant \\sqrt[n]{1+|x|^{3 n}} \\leqslant \\sqrt[n]{2}$, \r\n\r\n由夹逼定理得 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\sqrt[n]{1+|x|^{3 n}}=1$; \r\n\r\n当 $|x|>1$ 时, $|x|^3=\\sqrt[n]{|x|^{3 n}} \\leqslant \\sqrt[n]{1+|x|^{3 n}}\\\\\r\n\\leqslant \\sqrt[n]{|x|^{3 n}+|x|^{3 n}}=\\sqrt[n]{2}|x|^3$, \r\n\r\n由夹逼定理得 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\sqrt[n]{1+|x|^{3 n}}=|x|^3$, \r\n\r\n即 $f(x)= \\begin{cases}1, & |x| \\leqslant 1 \\\\ |x|^3, & |x|>1 \\end{cases}$\r\n\r\n$\\displaystyle f_{-}^{\\prime}(-1)=\\lim _{x \\rightarrow-1^{-}} \\frac{f(x)-f(-1)}{x+1}\\\\\r\n=\\lim _{x \\rightarrow-1^{-}} \\frac{-x^3-1}{x+1}=-3, \\\\\r\nf_{+}^{\\prime}(-1)=\\lim _{x \\rightarrow-1^{+}} \\frac{f(x)-f(-1)}{x+1}\\\\\r\n=\\lim _{x \\rightarrow-1^{+}} \\frac{1-1}{x+1}=0$,\r\n\r\n因为 $f_{-}^{\\prime}(-1) \\neq f_{+}^{\\prime}(-1)$, 所以 $f(x)$ 在 $x=-1$ 处不可导;\r\n\r\n$\\displaystyle f_{-}^{\\prime}(1)=\\lim _{x \\rightarrow 1^{-}} \\frac{f(x)-f(1)}{x-1}=\\lim _{x \\rightarrow 1^{-}} \\frac{1-1}{x-1}=0, \\\\\r\nf_{+}^{\\prime}(1)=\\lim _{x \\rightarrow 1^{+}} \\frac{f(x)-f(1)}{x-1}=\\lim _{x \\rightarrow-1^{+}} \\frac{x^3-1}{x-1}=3$,\r\n\r\n因为 $f_{-}^{\\prime}(1) \\neq f_{+}^{\\prime}(1)$, 所以 $f(x)$ 在 $x=1$ 处不可导,\r\n\r\n即 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 但有两个不可导点, 应选 (C)",
+      "wrong_options": {
+        "A": "误以为极限函数处处光滑，忽略 |x|=1 处左右导数（0 与 ±3）不相等。",
+        "B": "只在正半轴查到 x=1 一个不可导点，漏掉对称的 x=-1。",
+        "D": "误把 x=0 也算作不可导点（该处 f≡1 光滑可导），凑成三个以上。"
+      },
+      "pitfalls": [
+        "x=±1 处左右导数 0 与 ±3 不等，恰是两个不可导点",
+        "x=0 落在 |x|≤1 段内 f≡1，光滑可导，不是不可导点"
+      ],
+      "key_point": "f 为分段函数，仅在 x=±1 处不可导，共 2 个。"
+    },
+    {
+      "id": 887,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $F(x)$ 是连续函数 $f(x)$ 的一个原函数, \" $M \\Leftrightarrow N$ \" 表示 \" $M$ 的充分必要条件是 $N$ \", 则必有 $(\\quad)$",
+      "options": {
+        "A": "$F(x)$ 是偶函数 $\\Leftrightarrow f(x)$ 是奇函数",
+        "B": "$F(x)$ 是奇函数 $\\Leftrightarrow f(x)$ 是偶函数",
+        "C": "$F(x)$ 是周期函数 $\\Leftrightarrow f(x)$ 是周期函数",
+        "D": "$F(x)$ 是单调函数 $\\Leftrightarrow f(x)$ 是单调函数"
+      },
+      "answer": "A",
+      "analysis": "方法一 $f(x)=3 x^2$ 为偶函数, \r\n\r\n但 $F(x)=x^3+C$ 不一定是奇函数, (B) 不对; \r\n\r\n$f(x)=\\cos x-1$ 为周期函数, \r\n\r\n$F(x)=\\sin x-x+C$ 不是周期函数, (C) 不对; \r\n\r\n$f(x)=2 x$ 为单调增函数, \r\n\r\n$F(x)=x^2+C$ 不是单调函数, (D) 不对, 应选 (A)\r\n\r\n方法二 设 $f(-x)=-f(x)$, 令 $\\displaystyle F(x)=\\int_a^x f(t) \\mathrm{d} t$,\r\n\r\n则 $\\displaystyle F(-x) =\\int_a^{-x} f(t) \\mathrm{d} t\\\\\r\n \\stackrel{t=-u}{=} \\int_{-a}^x f(-u)(-\\mathrm{d} u)\\\\\r\n=\\int_{-a}^x f(u) \\mathrm{d} u \\\\\r\n=\\int_{-a}^a f(u) \\mathrm{d} u+\\int_a^x f(u) \\mathrm{d} u\\\\\r\n=\\int_a^x f(u) \\mathrm{d} u=F(x)$,\r\n\r\n于是 $F(x)$ 为偶函数;\r\n\r\n反之, 设 $F(-x)=F(x)$, \r\n\r\n两边求导得 $-F^{\\prime}(-x)=F^{\\prime}(x)$, 或 $f(-x)=-f(x)$, \r\n\r\n即 $f(x)$ 为奇函数, 应选 (A)",
+      "wrong_options": {
+        "B": "把对应关系记反：f 偶推不出 F 奇（反例 f=3x² 偶而 F=x³+C 不一定奇）。",
+        "C": "误以为原函数保持周期性（反例 f=cosx-1 周期，F=sinx-x 非周期）。",
+        "D": "误以为 f 单调则 F 单调（反例 f=2x 单调，F=x²+C 非单调）。"
+      },
+      "pitfalls": [
+        "奇偶是充要关系，须正反两个方向都验证",
+        "周期、单调性都不能由 f 传到 F，只有奇偶经积分翻转成立"
+      ],
+      "key_point": "f 奇 ⟺ 其原函数 F 偶（选 A）；周期/单调均不传递。"
+    },
+    {
+      "id": 888,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle u(x, y)=\\varphi(x+y)+\\varphi(x-y)+\\int_{x-y}^{x+y} \\psi(t) \\mathrm{d} t$, 其中函数 $\\varphi$ 具有二阶导数, $\\psi$ 具有一阶导数, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{\\partial^{2} u}{\\partial x^{2}}=-\\dfrac{\\partial^{2} u}{\\partial y^{2}}$",
+        "B": "$\\dfrac{\\partial^{2} u}{\\partial x^{2}}=\\dfrac{\\partial^{2} u}{\\partial y^{2}}$",
+        "C": "$\\dfrac{\\partial^{2} u}{\\partial x \\partial y}=\\dfrac{\\partial^{2} u}{\\partial y^{2}}$",
+        "D": "$\\dfrac{\\partial^{2} u}{\\partial x \\partial y}=\\dfrac{\\partial^{2} u}{\\partial x^{2}}$"
+      },
+      "answer": "B",
+      "analysis": "$\\displaystyle \r\n\\frac{\\partial u}{\\partial x}=\\varphi^{\\prime}(x+y)+\\varphi^{\\prime}(x-y)+\\psi(x+y)-\\psi(x-y),\\\\\r\n\\frac{\\partial u}{\\partial y}=\\varphi^{\\prime}(x+y)-\\varphi^{\\prime}(x-y)+\\psi(x+y)+\\psi(x-y),\\\\\r\n\\frac{\\partial^2 u}{\\partial x^2}=\\varphi^{\\prime \\prime}(x+y)+\\varphi^{\\prime \\prime}(x-y)+\\psi^{\\prime}(x+y)-\\psi^{\\prime}(x-y),\\\\\r\n\\frac{\\partial^2 u}{\\partial y^2}=\\varphi^{\\prime \\prime}(x+y)+\\varphi^{\\prime \\prime}(x-y)+\\psi^{\\prime}(x+y)-\\psi^{\\prime}(x-y)$,\r\n\r\n显然 $\\dfrac{\\partial^2 u}{\\partial x^2}=\\dfrac{\\partial^2 u}{\\partial y^2}$, 应选 (B)",
+      "wrong_options": {
+        "A": "对 y 求二阶导时漏掉负负得正的符号，误得 u_xx=-u_yy。",
+        "C": "把纯二阶偏导 u_yy 与混合偏导 u_xy 混淆。",
+        "D": "把混合偏导 u_xy 与纯二阶偏导 u_xx 混淆。"
+      },
+      "pitfalls": [
+        "对 x-y 项求 y 偏导带负号，二阶再乘一次负号变正",
+        "变限积分项偏导为 ψ(x+y)、ψ(x-y)，y 侧同样注意符号"
+      ],
+      "key_point": "u_xx=u_yy=φ''(x+y)+φ''(x-y)+ψ'(x+y)-ψ'(x-y)（选 B）。"
+    },
+    {
+      "id": 889,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有三元方程 $x y-z \\ln y+\\mathrm{e}^{x z}=1$, 根据隐函数存在定理,存在点 $(0,1,1)$ 的一个邻域, 在此邻域内该方程 $(\\quad)$",
+      "options": {
+        "A": "只能确定一个具有连续偏导数的隐函数 $z=z(x, y)$",
+        "B": "可确定两个具有连续偏导数的隐函数 $y=y(x, z)$ 和 $z=z(x, y)$",
+        "C": "可确定两个具有连续偏导数的隐函数 $x=x(y, z)$ 和 $z=z(x, y)$",
+        "D": "可确定两个具有连续偏导数的隐函数 $x=x(y, z)$ 和 $y=y(x, z)$"
+      },
+      "answer": "D",
+      "analysis": "令 $F(x, y, z)=x y-z \\ln y+\\mathrm{e}^{x z}-1,\\\\\r\nF_x^{\\prime}(x, y, z)=y+z \\mathrm{e}^{x z}, \\\\\r\nF_y^{\\prime}(x, y, z)=x-\\dfrac{z}{y}, \\\\\r\nF_z^{\\prime}(x, y, z)=-\\ln y+x \\mathrm{e}^{x z}$,\r\n\r\n因为 $F_x^{\\prime}(0,1,1)=2 \\neq 0,\\\\\r\nF_y^{\\prime}(0,1,1)=-1 \\neq 0,\\\\\r\nF_z^{\\prime}(0,1,1)=0$, \r\n\r\n所以 $x y-z \\ln y+\\mathrm{e}^{x z}=1$ 在点 $(0,1,1)$ 确定两个具有连续偏导数的函数 $x=x(y, z)$ 及 $y=y(x, z)$, 应选 (D)",
+      "wrong_options": {
+        "A": "误判能确定 z=z(x,y)，但 F_z(0,1,1)=0 恰恰不满足解出 z 的条件。",
+        "B": "含 z=z(x,y)，同样忽略了 F_z=0 的限制。",
+        "C": "含 z=z(x,y)，错误同上。"
+      },
+      "pitfalls": [
+        "F_z(0,1,1)=0，故不能确定 z=z(x,y)",
+        "F_x=2≠0、F_y=-1≠0，可确定 x=x(y,z) 与 y=y(x,z)"
+      ],
+      "key_point": "仅 F_z=0，能解出 x、y 但不能解出 z（选 D）。"
+    },
+    {
+      "id": 890,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\lambda_{1}, \\lambda_{2}$ 是矩阵 $\\boldsymbol{A}$ 的两个不同的特征值, 对应的特征向量分别为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$, 则 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)$ 线性无关的充分必要条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda_{1} \\neq 0$",
+        "B": "$\\lambda_{2} \\neq 0$",
+        "C": "$\\lambda_{1}=0$",
+        "D": "$\\lambda_{2}=0$"
+      },
+      "answer": "B",
+      "analysis": "方法一 因为矩阵的不同特征值对应的特征向量线性无关, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关. \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\lambda_1 \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2\\\\\r\n\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right)\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right),\\\\\r\n\\boldsymbol{\\alpha}_1, \r\n\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是\r\n\r\n矩阵 $\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right)$ 可逆, \r\n\r\n即 $\\left|\\begin{array}{cc}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)\r\n\r\n方法二 令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\lambda_1 \\boldsymbol{\\alpha}_1+\\right.$ $\\left.\\lambda_2 \\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n整理得 $\\left(k_1+\\lambda_1 k_2\\right) \\boldsymbol{\\alpha}_1+\\lambda_2 k_2 \\boldsymbol{\\alpha}_2=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0,\\end{array}\\right.$ \r\n\r\n于是 $\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是 \r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$ 当且仅当 $k_1=k_2=0$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0\\end{array}\\right.$ \r\n\r\n只有零解, 于是 $\\left|\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)",
+      "wrong_options": {
+        "A": "误以为决定无关性的是 λ₁，实际 α₁ 前的系数不影响与 α₁ 的相关性。",
+        "C": "把充要条件方向取反（写成 λ₁=0）。",
+        "D": "λ₂=0 时 A(α₁+α₂)=λ₁α₁ 与 α₁ 共线反而相关，结论正好取反。"
+      },
+      "pitfalls": [
+        "不同特征值的 α₁,α₂ 必线性无关，这是化简前提",
+        "决定无关性的关键行列式为 λ₂，与 λ₁ 无关"
+      ],
+      "key_point": "整体无关 ⟺ 系数阵行列式 λ₂≠0（选 B）。"
+    },
+    {
+      "id": 891,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n(n \\geqslant 2)$ 阶可逆矩阵, 交换 $\\boldsymbol{A}$ 的第 1 行与第 2 行得矩阵 $\\boldsymbol{B}, \\boldsymbol{A}^{*}, \\boldsymbol{B}{ }^{*}$ 分别为 $\\boldsymbol{A}, \\boldsymbol{B}$ 的伴随矩阵, 则 $(\\quad)$",
+      "options": {
+        "A": "交换 $\\boldsymbol{A}^{*}$ 的第 $1$ 列与第 $2$ 列得 $\\boldsymbol{B}{ }^{*}$",
+        "B": "交换 $\\boldsymbol{A}^{*}$ 的第 $1$ 行与第 $2$ 行得 $\\boldsymbol{B}^{*}$",
+        "C": "交换 $\\boldsymbol{A}^{*}$ 的第 $1$ 列与第 $2$ 列得 $-\\boldsymbol{B}^{*}$",
+        "D": "交换 $\\boldsymbol{A}^{*}$ 的第 $1$ 行与第 $2$ 行得 $-\\boldsymbol{B}^{*}$"
+      },
+      "answer": "C",
+      "analysis": "令 $\\boldsymbol{E}_{12}=\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, \r\n\r\n由题意得 $\\boldsymbol{B}=\\boldsymbol{E}_{12} \\boldsymbol{A}$,\r\n\r\n由 $|\\boldsymbol{B}|=\\left|\\boldsymbol{E}_{12}\\right| \\cdot|\\boldsymbol{A}|=-|\\boldsymbol{A}|, \\\\\r\n\\boldsymbol{B}^{-1}=\\boldsymbol{A}^{-1} \\boldsymbol{E}_{12}^{-1}=\\boldsymbol{A}^{-1} \\boldsymbol{E}_{12}$,\r\n\r\n得 $\\boldsymbol{B}^*=|\\boldsymbol{B}| \\boldsymbol{B}^{-1}=-|\\boldsymbol{A}| \\cdot \\boldsymbol{A}^{-1} \\boldsymbol{E}_{12}=-\\boldsymbol{A}^* \\boldsymbol{E}_{12}$ \r\n\r\n即 $-\\boldsymbol{B}^*=\\boldsymbol{A}^* \\boldsymbol{E}_{12}$, 应选 (C)",
+      "wrong_options": {
+        "A": "漏掉行交换导致 |B|=-|A| 带来的负号。",
+        "B": "既误把列当成行，又漏掉负号。",
+        "D": "把作用在列上的右乘 E₁₂ 误当成行变换。"
+      },
+      "pitfalls": [
+        "行交换使 |B|=-|A|，负号来源正在于此",
+        "B*=-A*E₁₂，右乘 E₁₂ 作用在列上，故是交换列而非行"
+      ],
+      "key_point": "交换 A* 的第 1、2 列得 -B*（选 C）。"
+    },
+    {
+      "id": 892,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率分布为\r\n\r\n$$\r\n\\begin{array}{c|cc}\r\n\\hline X \\diagdown Y & 0 & 1 \\\\\r\n\\hline 0 & 0.4 & a \\\\\r\n\\hline 1 & b & 0.1 \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n已知随机事件 $\\{X=0\\}$ 与 $\\{X+Y=1\\}$ 相互独立, 则 $(\\quad)$",
+      "options": {
+        "A": "$a=0.2, b=0.3$",
+        "B": "$a=0.4, b=0.1$",
+        "C": "$a=0.3, b=0.2$",
+        "D": "$a=0.1, b=0.4$"
+      },
+      "answer": "B",
+      "analysis": "$\\displaystyle P\\{X=0\\}=0.4+a, \\\\\r\nP\\{X+Y=1\\}\\\\\r\n=P\\{X=0, Y=1\\}+P\\{X=1, Y=0\\}=a+b, \\\\\r\nP\\{X=0, X+Y=1\\}=P\\{X=0, Y=1\\}=a$,\r\n\r\n因为 $\\{X=0\\}$ 与 $\\{X+Y=1\\}$ 相互独立, \r\n\r\n所以 $(a+b)(0.4+a)=a$, 又因为 $a+b=0.5$, \r\n\r\n所以 $a=0.4, b=0.1$, 应选 (B)",
+      "wrong_options": {
+        "A": "只满足 a+b=0.5，未用独立性验证。",
+        "C": "同样仅满足和为 0.5，未代独立方程。",
+        "D": "同上，随意凑数未验证独立性。"
+      },
+      "pitfalls": [
+        "先由归一化 0.4+a+b+0.1=1 得 a+b=0.5",
+        "独立方程 (a+b)(0.4+a)=a 才能唯一定出 a=0.4"
+      ],
+      "key_point": "由独立性与归一化联立解得 a=0.4,b=0.1（选 B）。"
+    },
+    {
+      "id": 893,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}(n \\geqslant 2)$ 为来自总体 $N(0,1)$ 的简单随机样本, $\\bar{X}$ 为样本均值, $S^{2}$ 为样本方差, 则 $(\\quad)$",
+      "options": {
+        "A": "$n \\bar{X} \\sim N(0,1)$",
+        "B": "$n S^{2} \\sim \\chi^{2}(n)$",
+        "C": "$\\displaystyle \\frac{(n-1) \\bar{X}}{S} \\sim t(n-1)$",
+        "D": "$\\dfrac{(n-1) X_{1}^{2}}{\\displaystyle \\sum_{i=2}^{n} X_{i}^{2}} \\sim F(1, n-1)$"
+      },
+      "answer": "D",
+      "analysis": "由 $X_1 \\sim N(0,1)$, 得 $X_1^2 \\sim \\chi^2(1)$,\r\n\r\n由 $X_i \\sim N(0,1)(i=2,3, \\cdots, n)$, \r\n\r\n得 $\\displaystyle \\sum_{i=2}^n X_i^2 \\sim \\chi^2(n-1)$ 且 $X_1^2$ 与 $\\displaystyle \\sum_{i=2}^n X_i^2$ 独立,\r\n\r\n由 $F$ 分布的定义得 $\\dfrac{X_1^2 / 1}{\\displaystyle \\sum_{i=2}^n X_i^2 /(n-1)} \\sim F(1, n-1)$, \r\n\r\n即 $\\dfrac{(n-1) X_1^2}{\\displaystyle \\sum_{i=2}^n X_i^2} \\sim F(1, n-1)$, 应选(D)",
+      "wrong_options": {
+        "A": "系数错：应 √n·X̄~N(0,1)，nX̄~N(0,n) 不是标准正态。",
+        "B": "应 (n-1)S²~χ²(n-1)，自由度与系数都写错。",
+        "C": "构造 t 统计量系数应为 √n，写成 (n-1) 错误。"
+      },
+      "pitfalls": [
+        "F 分布是分子分母各除以自己的自由度之比",
+        "χ² 的两部分须相互独立才能拼 F，此处 X₁² 与 Σᵢ₌₂ⁿ 独立"
+      ],
+      "key_point": "(n-1)X₁²/Σᵢ₌₂ⁿXᵢ²~F(1,n-1)（选 D）。"
+    },
+    {
+      "id": 894,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D=\\left\\{(x, y) \\mid x^{2}+y^{2} \\leqslant \\sqrt{2}, x \\geqslant 0, y \\geqslant 0\\right\\},\\\\\r\n\\left[1+x^{2}+y^{2}\\right]$ 表示不超过 $1+x^{2}+y^{2}$ 的最大整数, 计算二重积分 $\\displaystyle \\iint\\limits_{D} x y\\left[1+x^{2}+y^{2}\\right] \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{3}{8}$",
+      "analysis": "如图所示, \n\n![积分区域 D1 与 D2](/uploads/books/497d726a546e21dac44a7d4cf9c173ed9b6e068989ed6ee27af8624249dd9112.jpg)\r\n\r\n令 $\\displaystyle D_1=\\left\\{(x, y) \\mid x^2+y^2<1, x \\geqslant 0, y \\geqslant 0\\right\\},\\\\\r\nD_2=\\left\\{(x, y) \\mid 1 \\leqslant x^2+y^2 \\leqslant \\sqrt{2}, x \\geqslant 0, y \\geqslant 0\\right\\}, \\\\\r\n\\iint\\limits_D x y\\left[1+x^2+y^2\\right] \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{d} x \\mathrm{d} y+2 \\iint\\limits_{D_2} x y \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^1 r^3 \\sin \\theta \\cos \\theta \\mathrm{d} r+2 \\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_1^{\\sqrt[4]{2}} r^3 \\sin \\theta \\cos \\theta \\mathrm{d} r \\\\\r\n=\\frac{1}{4} \\int_0^{\\frac{\\pi}{2}} \\sin \\theta \\cos \\theta \\mathrm{d} \\theta+\\frac{1}{2} \\int_0^{\\frac{\\pi}{2}} \\sin \\theta \\cos \\theta \\mathrm{d} \\theta \\\\\r\n=\\frac{3}{4} \\int_0^{\\frac{\\pi}{2}} \\sin \\theta \\mathrm{d}(\\sin \\theta)=\\frac{3}{8}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "floor 在 r²=1 处从 1 跳到 2，是分区的关键",
+        "外区半径上限为 (√2)^{1/2}=2^{1/4}，不是 √2"
+      ],
+      "key_point": "分块积分：1/8 + 2×1/8 = 3/8。"
+    },
+    {
+      "id": 895,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1+\\frac{1}{n(2 n-1)}\\right] x^{2 n}$ 的收敛区间与和函数 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=\\dfrac{x^2}{1+x^2}+2 x \\arctan x-\\ln \\left(1+x^2\\right)\\\\\r\nx \\in (-1,1)$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=1$, 得级数的收敛半径为 $R=1$, \r\n\r\n收敛区间为 $(-1,1)$\r\n\r\n令 $\\displaystyle f(x)=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1+\\frac{1}{n(2 n-1)}\\right] x^{2 n}$,\r\n\r\n则 $\\displaystyle f(x)=\\sum_{n=1}^{\\infty}(-1)^{n-1} x^{2 n}+\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{n(2 n-1)}\\\\\r\n=-\\sum_{n=1}^{\\infty}\\left(-x^2\\right)^n+2 \\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n(2 n-1)} \\\\\r\n=\\frac{x^2}{1+x^2}+2 \\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n(2 n-1)}$,\r\n\r\n\r\n令 $\\displaystyle S_1(x) =\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n(2 n-1)}, \\quad S_1(0)=0, \\\\\r\nS_1^{\\prime}(x) =\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n-1}}{2 n-1}, \\quad S_1^{\\prime}(0)=0, \\\\\r\nS_1^{\\prime \\prime}(x) \\\\\r\n=\\sum_{n=1}^{\\infty}(-1)^{n-1} x^{2 n-2}\\\\\r\n=\\sum_{n=1}^{\\infty}\\left(-x^2\\right)^{n-1}=\\frac{1}{1+x^2}$,\r\n\r\n方法一  $\\displaystyle S_1^{\\prime}(x)=S_1^{\\prime}(x)-S_1^{\\prime}(0)\\\\\r\n=\\int_0^x \\frac{1}{1+x^2} \\mathrm{d} x=\\arctan x,\\\\\r\nS_1(x) =S_1(x)-S_1(0)=\\int_0^x \\arctan x \\mathrm{d} x\\\\\r\n=x \\arctan x-\\int_0^x \\frac{x}{1+x^2} \\mathrm{d} x \\\\\r\n=x \\arctan x-\\frac{1}{2} \\ln \\left(1+x^2\\right)$,\r\n\r\n故 $f(x)=\\dfrac{x^2}{1+x^2}+2 x \\arctan x-\\ln \\left(1+x^2\\right)$\r\n\r\n方法二 \r\n$\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} x^{2 n}=\\frac{x^2}{1+x^2} \\\\\r\n\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n(2 n-1)}\\\\\r\n=\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n-1}-\\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n}}{2 n} \\\\\r\n\\stackrel{\\Delta}{=} S_1(x) - S_2(x)\\\\\r\nS_1(x)=x \\sum_{n=1}^{\\infty}(-1)^{n-1} \\frac{x^{2 n-1}}{2 n-1}\\\\\r\n=x \\sum_{n=1}^{\\infty} \\int_0^x(-1)^{n-1} x^{2 n-2} \\mathrm{d} x \\\\\r\n=x \\int_0^x\\left[\\sum_{n=1}^{\\infty}\\left(-x^2\\right)^{n-1}\\right] \\mathrm{d} x\\\\\r\n=x \\int_0^x \\frac{1}{1+x^2} \\mathrm{d} x=x \\arctan x, \\\\\r\nS_2(x)=\\sum_{n=1}^{\\infty} \\int_0^x(-1)^{n-1} x^{2 n-1} \\mathrm{d} x\\\\\r\n=\\int_0^x\\left[\\sum_{n=1}^{\\infty}(-1)^{n-1} x^{2 n-1}\\right] \\mathrm{d} x \\\\\r\n=\\int_0^x x\\left[\\sum_{n=1}^{\\infty}(-1)^{n-1} x^{2 n-2}\\right] \\mathrm{d} x\\\\\r\n=\\int_0^x \\frac{x}{1+x^2} \\mathrm{d} x=\\frac{1}{2} \\ln \\left(1+x^2\\right)$,\r\n\r\n故 $f(x)=\\dfrac{x^2}{1+x^2}+2 x \\arctan x-\\ln \\left(1+x^2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "收敛半径 R=1，题目只问收敛区间 (-1,1) 即可",
+        "1/[n(2n-1)]=2[1/(2n-1)-1/(2n)]，逐项积分要用 S₁(0)=0 定常数"
+      ],
+      "key_point": "f(x)=x²/(1+x²)+2x·arctanx-ln(1+x²)，x∈(-1,1)。"
+    },
+    {
+      "id": 896,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "如图所示, 曲线 $C$ 的方程为 $y=f(x)$, 点 $(3,2)$ 是它的一个拐点, 直线 $l_{1}$ 与 $l_{2}$ 分别是曲线 $C$ 在点 $(0,0)$ 与 $(3,2)$ 处的切线, 其交点为 $(2,4)$. 设函数 $f(x)$ 具有三阶连续导数, 计算定积分 $\\displaystyle \\int_{0}^{3}\\left(x^{2}+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x$\n\n![曲线 C 与两条切线 l1、l2](/uploads/books/ef6946383f64e55c6821e7d95d0a743aa20df0441881b8cb378cee621f66cbad.jpg)",
+      "options": {},
+      "answer": "$20$",
+      "analysis": "由图得 $f(0)=0, f(3)=2, f^{\\prime}(0)=2, f^{\\prime}(3)=-2, f^{\\prime \\prime}(3)=0$, \r\n\r\n由分部积分得 $\\displaystyle \\int_0^3\\left(x^2+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x\\\\\r\n=\\int_0^3\\left(x^2+x\\right) \\mathrm{d} f^{\\prime \\prime}(x) \\\\\r\n=\\left.\\left(x^2+x\\right) f^{\\prime \\prime}(x)\\right|_0 ^3-\\int_0^3(2 x+1) f^{\\prime \\prime}(x) \\mathrm{d} x \\\\\r\n=-\\int_0^3(2 x+1) \\mathrm{d} f^{\\prime}(x)\\\\\r\n=-\\left.(2 x+1) f^{\\prime}(x)\\right|_0 ^3+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x \\\\\r\n=-7 f^{\\prime}(3)+f^{\\prime}(0)+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=16+\\left.2 f(x)\\right|_0 ^3=20$",
+      "wrong_options": {},
+      "pitfalls": [
+        "拐点 (3,2) 给出 f''(3)=0，是首次分部消项的关键",
+        "两切线斜率：l₁ 过 (0,0)(2,4) 得 f'(0)=2，l₂ 过 (3,2)(2,4) 得 f'(3)=-2"
+      ],
+      "key_point": "两次分部积分并代入几何条件，原积分=20。"
+    },
+    {
+      "id": 897,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且 $f(0)=0, f(1)=1$. 证明 :\r\n\r\n(1) 存在 $\\xi \\in(0,1)$, 使得 $f(\\xi)=1-\\xi$;\r\n\r\n(2) 存在两个不同的点 $\\eta, \\zeta \\in(0,1)$, 使得 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 令 $\\varphi(x)=f(x)-1+x, \\varphi(0)=-1, \\varphi(1)=1$\r\n\r\n因为 $\\varphi(0) \\varphi(1)<0$, 所以由零点定理, \r\n\r\n存在 $\\xi \\in(0,1)$, 使得 $\\varphi(\\xi)=0$, 即 $f(\\xi)=1-\\xi$.\r\n\r\n(2) 由拉格朗日中值定理, 存在 $\\eta \\in(0, \\xi), \\zeta \\in(\\xi, 1)$, 使得\r\n\r\n$f^{\\prime}(\\eta)=\\dfrac{f(\\xi)-f(0)}{\\xi}=\\dfrac{1-\\xi}{\\xi}, \\\\\r\nf^{\\prime}(\\zeta)=\\dfrac{f(1)-f(\\xi)}{1-\\xi}=\\dfrac{\\xi}{1-\\xi}$,\r\n\r\n故 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) φ(0)=-1、φ(1)=1 异号，才能用零点定理",
+        "(2) 必须分成两个子区间取不同的 η、ζ，乘积 (1-ξ)/ξ·ξ/(1-ξ) 才约为 1"
+      ],
+      "key_point": "零点定理得 f(ξ)=1-ξ；分区间拉氏中值定理得 f'(η)f'(ζ)=1。"
+    },
+    {
+      "id": 898,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $\\varphi(y)$ 具有连续导数, 在围绕原点的任意分段光滑简单闭曲线 $L$ 上, 曲线积分 $\\displaystyle \\oint_{L} \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^{2}+y^{4}}$ 的值恒为同一常数\r\n\r\n(1) 证明: 对右半平面 $x>0$ 内的任意分段光滑简单闭曲线 $C$, 有 $\\displaystyle \\oint_{C} \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^{2}+y^{4}}=0$;\r\n\r\n(2) 求函数 $\\varphi(y)$ 的表达式",
+      "options": {},
+      "answer": "(2) $\\varphi(y)=-y^2$",
+      "analysis": "(1) $\\displaystyle P(x, y)=\\frac{\\varphi(y)}{2 x^2+y^4}, \\quad Q(x, y)=\\frac{2 x y}{2 x^2+y^4}$,\r\n\r\n$\\dfrac{\\partial Q}{\\partial x}=\\dfrac{2 y\\left(2 x^2+y^4\\right)-8 x^2 y}{\\left(2 x^2+y^4\\right)^2}, \\\\\r\n\\dfrac{\\partial P}{\\partial y}=\\dfrac{\\left(2 x^2+y^4\\right) \\varphi^{\\prime}(y)-4 y^3 \\varphi(y)}{\\left(2 x^2+y^4\\right)^2}$,\r\n\r\n设 $C$ 是任意一条右半平面 $x>0$ 内正向闭曲线, \r\n\r\n如图所示, 在 $C$ 上 取两点 $A, B$ 将 $C$ 分为 $L_1, L_2$, \n\n![闭曲线 C 与 L1、L2、L3](/uploads/books/bbd565f78e707a8517d8379a46c5735948f1382fef0f6f9b3b3e13687bb022d8.jpg)\r\n\r\n再取从点 $A$ 至点 $B$ 的有向曲线 $L_3$, \r\n\r\n使得 $L_1^{-}+L_3$ 与 $L_2+L_3$ 都是绕原点的正向闭曲线, \r\n\r\n由已知条件得 $\\displaystyle \\oint_{L_1^{-}+L_3} \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^2+y^4}=A,\\\\\r\n\\oint_{L_2+L_3} \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^2+y^4}=A$, \r\n\r\n两式相减得\r\n\r\n$\\displaystyle \\oint_C \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^2+y^4}=0$\r\n\r\n(2) 因为对任意右半平面的闭曲线 $C$ 都有 $\\displaystyle \\oint_C \\frac{\\varphi(y) \\mathrm{d} x+2 x y \\mathrm{d} y}{2 x^2+y^4}=0$, \r\n\r\n所以曲线积分与路径无关, 于是 $\\displaystyle \\frac{\\partial Q}{\\partial x}=\\frac{\\partial P}{\\partial y}$, \r\n\r\n即 $2 y^5-4 x^2 y=2 x^2 \\varphi^{\\prime}(y)+\\varphi^{\\prime}(y) y^4-4 y^3 \\varphi(y)$,\r\n\r\n比较 $x$ 相同次数的系数得 $\\left\\{\\begin{array}{l}\\varphi^{\\prime}(y)=-2 y \\\\ \\varphi^{\\prime}(y) y-4 \\varphi(y)=2 y^2\\end{array}\\right.$\r\n\r\n由 $\\varphi^{\\prime}(y)=-2 y$, \r\n\r\n得 $\\varphi(y)=-y^2+C$, \r\n\r\n代入 $y \\varphi^{\\prime}(y)-4 \\varphi(y)=2 y^2$ 中, 得 $C=0$, \r\n\r\n故 $\\varphi(y)=-y^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 用两条绕原点的正向闭曲线相减，凑出右半平面任意闭曲线积分为 0",
+        "(2) 令 ∂P/∂y=∂Q/∂x 后比较分子系数，才能解出 φ=-y²"
+      ],
+      "key_point": "由 ∂P/∂y=∂Q/∂x 在 x>0 内恒成立，解得 φ(y)=-y²。"
+    },
+    {
+      "id": 899,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=(1-a) x_{1}^{2}+(1-a) x_{2}^{2}+2 x_{3}^{2}+2(1+a) x_{1} x_{2}$ 的秩为 $2$\r\n\r\n(1) 求 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Qy}$,把 $f\\left(x_{1}, x_{2}, x_{3}\\right)$ 化成标准形;\r\n\r\n(3) 求方程 $f\\left(x_{1}, x_{2}, x_{3}\\right)=0$ 的解",
+      "options": {},
+      "answer": "(1) $a=0$\r\n(2) $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$\r\n(3) $C\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0\\end{array}\\right) (C$ 为任意常数)",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1-a & 1+a & 0 \\\\ 1+a & 1-a & 0 \\\\ 0 & 0 & 2\\end{array}\\right), \\boldsymbol{X}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$, \r\n\r\n则二次型可表示为 $f=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{Ax} $. \r\n\r\n(1) 因为 $r(\\boldsymbol{A})=2$, 所以 $|\\boldsymbol{A}|=0$, 于是 $a=0$\r\n\r\n(2) $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 1 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, \r\n\r\n由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-1 & -1 & 0 \\\\ -1 & \\lambda-1 & 0 \\\\ 0 & 0 & \\lambda-2\\end{array}\\right|\\\\\r\n=\\lambda(\\lambda-2)^2=0$, \r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=\\lambda_3=2$,\r\n\r\n当 $\\lambda_1=0$ 时, \r\n\r\n由 $(0 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{\\xi}_1=(-1,1,0)^{\\mathrm{T}}$; \r\n\r\n当 $\\lambda_2=\\lambda_3=2$ 时, 由 $(2 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{X}=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{\\xi}_2=(1,1,0)^{\\mathrm{T}}, \\boldsymbol{\\xi}_3=(0,0,1)^{\\mathrm{T}}$,\r\n\r\n单位化得 $\\boldsymbol{\\gamma}_1=\\frac{1}{\\sqrt{2}}\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0\\end{array}\\right),  \\boldsymbol{\\gamma}_2=\\frac{1}{\\sqrt{2}}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 0\\end{array}\\right),  \\boldsymbol{\\gamma}_3=\\left(\\begin{array}{l}0 \\\\ 0 \\\\ 1\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol{Q}=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0 \\\\ \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$,\r\n\r\n于是 $f\\left(x_1, x_2, x_3\\right)=\\boldsymbol{X}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{X} \\stackrel{\\boldsymbol{X}=\\boldsymbol{Q Y}}{=} 2 y_2^2+2 y_3^2$.\r\n\r\n(3) 由 $f\\left(x_1, x_2, x_3\\right)\\\\\r\n=x_1^2+x_2^2+2 x_3^2+2 x_1 x_2\\\\\r\n=\\left(x_1+x_2\\right)^2+2 x_3^2=0$, \r\n\r\n得 $\\left(\\begin{array}{l}x_1+x_2=0, \\\\ x_3=0,\\end{array}\\right.$ \r\n\r\n则 $f\\left(x_1, x_2, x_3\\right)=0$ 的解为 $C\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0\\end{array}\\right) (C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "秩为 2 即 |A|=0 且不为零阵，据此定出 a=0",
+        "标准形 2y₂²+2y₃²=0 ⟹ y₂=y₃=0，f=0 的解是 λ=0 的特征向量 (-1,1,0) 的倍数"
+      ],
+      "key_point": "a=0，标准形 f=2y₂²+2y₃²，f=0 的解为 x=C(-1,1,0)ᵀ。"
+    },
+    {
+      "id": 900,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $3$ 阶矩阵 $\\boldsymbol{A}$ 的第一行是 $(a, b, c), a, b, c$ 不全为零, 矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & k\\end{array}\\right)$ ( $k$ 为常数), 且 $\\boldsymbol{A B}=\\boldsymbol O$, 求线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解",
+      "options": {},
+      "answer": "$k\\neq9$ 时 $r(A)=1$，通解 $x=C_1(1,2,3)^{\\mathrm T}+C_2(3,6,k)^{\\mathrm T}$；$k=9$ 时若 $r(A)=2$ 则 $x=C(1,2,3)^{\\mathrm T}$，若 $r(A)=1$ 则解为 $ax_1+bx_2+cx_3=0$ 的全部解（$C,C_1,C_2$ 为任意常数）",
+      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$,\r\n\r\n因为 $\\boldsymbol{A}$ 为非零矩阵, 所以 $r(\\boldsymbol{A}) \\geqslant 1$,\r\n\r\n当 $k \\neq 9$ 时, 由 $r(\\boldsymbol{B})=2$ 得 $r(\\boldsymbol{A})=1$,\r\n\r\n因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为\r\n$\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right)+C_2\\left(\\begin{array}{l}3 \\\\ 6 \\\\ k\\end{array}\\right)(C_1, C_2$ 为任意常数),\r\n\r\n当 $k=9$ 时, $r(\\boldsymbol{B})=1$, 则 $1 \\leqslant r(\\boldsymbol{A}) \\leqslant 2$.\r\n\r\n当 $r(\\boldsymbol{A})=2$ 时, 因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为 $\\boldsymbol{Ax}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right) (C$ 为任意常数)\r\n\r\n当 $r(\\boldsymbol{A})=1$ 时, 不妨设 $a \\neq 0$, \r\n\r\n由 $\\boldsymbol{A}\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}a & b & c \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll}1 & \\frac{b}{a} & \\frac{c}{a} \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C_1\\left(\\begin{array}{c}-\\frac{b}{a} \\\\ 1 \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}-\\frac{c}{a} \\\\ 0 \\\\ 1\\end{array}\\right) (C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "k≠9 时 r(B)=2，由 r(A)+r(B)≤3 及 A 非零得 r(A)=1，解空间维数 2",
+        "k=9 时 r(B)=1，r(A) 可能为 1 或 2，必须分别讨论给通解"
+      ],
+      "key_point": "k≠9：x=C₁(1,2,3)ᵀ+C₂(3,6,k)ᵀ；k=9 时按 r(A)=1 或 2 分类讨论。"
+    },
+    {
+      "id": 901,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & 0<x<1,0<y<2 x \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n求: (1) $(X, Y)$ 的边缘概率密度 $f_{X}(x), f_{Y}(y)$;\r\n\r\n(2) $Z=2 X-Y$ 的概率密度 $f_{Z}(z)$\r\n\r\n(3) (数三) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}$",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n$f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{1}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) (数三) $\\dfrac{3}{4}$",
+      "analysis": "(1) $\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时, $f_X(x)=0$; \r\n\r\n当 $0<x<1$ 时, $\\displaystyle f_X(x)=\\int_0^{2 x} \\mathrm{d} y=2 x$,\r\n\r\n则 $X$ 的边缘密度为 $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n$\\displaystyle f_Y(y)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} x$,\r\n\r\n当 $y \\leqslant 0$ 或 $y \\geqslant 2$ 时, $f_Y(y)=0$; \r\n\r\n当 $0<y<2$ 时, $\\displaystyle f_Y(y)=\\int_{\\frac{y}{2}}^1 \\mathrm{d} x=1-\\frac{y}{2}$,\r\n\r\n则 $Y$ 的边缘密度为 $f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F_Z(z)=P\\{Z \\leqslant z\\}\\\\\r\n=P\\{2 X-Y \\leqslant z\\}\\\\\r\n=\\iint\\limits_{2 x-y \\leqslant z} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n当 $z<0$ 时, $F_Z(z)=0$;\r\n\r\n当 $0 \\leqslant z<2$ 时 (如图所示),\n\n![区域 2X-Y 不超过 z](/uploads/books/8e9ef298fb201896f93e99a533e4d871d32906dcf5a9530ca4f617e85d7c55d2.jpg)\r\n\r\n$\\displaystyle F_Z(z)=1-\\int_{\\frac{z}{2}}^1 \\mathrm{d} x \\int_0^{2 x-z} \\mathrm{d} y\\\\\r\n=1-\\int_{\\frac{z}{2}}^1(2 x-z) \\mathrm{d} x=z-\\frac{z^2}{4} ;$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$,\r\n\r\n即 $\\displaystyle F_Z(z)= \\begin{cases}0, & z<0 \\\\\r\nz-\\dfrac{z^2}{4}, & 0 \\leqslant z<2\\\\ 1, & z \\geqslant 2\\end{cases}$\r\n\r\n于是 $Z$ 的密度函数为 $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{z}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\frac{P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}}{P\\left\\{X \\leqslant \\frac{1}{2}\\right\\}}$,\r\n\r\n而 $\\displaystyle P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\int_0^{\\frac{1}{4}} \\mathrm{d} x \\int_0^{2 x} \\mathrm{d} y+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} x \\int_0^{\\frac{1}{2}} \\mathrm{d} y=\\frac{3}{16},\\\\\r\nP\\left\\{X \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} f_X(x) \\mathrm{d} x=\\frac{1}{4}$,\r\n\r\n于是 $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}=\\frac{3}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f_X 对 y 积分限 0→2x 得 2x；f_Y 对 x 积分限 y/2→1 得 1-y/2",
+        "Z=2X-Y 的密度不是常数：F_Z(z)=z-z²/4，求导得 f_Z=1-z/2"
+      ],
+      "key_point": "f_X=2x(0<x<1)、f_Y=1-y/2(0<y<2)、f_Z=1-z/2(0<z<2)；注：官方答案键 f_Z 处为 OCR 残缺（显示 1-1/2），经 F_Z(z)=∫₀¹min(2x,z)dx=z-z²/4 求导核实应为 1-z/2。"
+    },
+    {
+      "id": 902,
+      "paper": "数学一",
+      "year": 2005,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}(n>2)$ 为来自总体 $N(0,1)$ 的简单随机样本, $\\bar{X}$ 为样本均值, 记 $Y_{i}=X_{i}-\\bar{X}, i=1,2, \\cdots, n$.\r\n\r\n求: (1) $Y_{i}$ 的方差 $D\\left(Y_{i}\\right), i=1,2, \\cdots, n$;\r\n\r\n(2) $Y_{1}$ 与 $Y_{n}$ 的协方差 $\\operatorname{Cov}\\left(Y_{1}, Y_{n}\\right)$",
+      "options": {},
+      "answer": "(1) $\\dfrac{n-1}{n}$\r\n(2) $-\\dfrac{1}{n}$",
+      "analysis": "(1) 方法一 $\\displaystyle Y_1=X_1-\\bar{X}=X_1-\\frac{1}{n} \\sum_{i=1}^n X_i\\\\\r\n=\\left(1-\\frac{1}{n}\\right) X_1-\\frac{1}{n} X_2-\\cdots-\\frac{1}{n} X_n$, \r\n\r\n因为 $X_i \\sim N(0,1)(1 \\leqslant i \\leqslant n)$ \r\n\r\n且 $X_1, X_2, \\cdots, X_n$ 相互独立, \r\n\r\n所以 $Y_1$ 服从正态分布. \r\n\r\n又因为 $\\displaystyle E\\left(Y_1\\right)=0, D\\left(Y_1\\right)=\\left(1-\\frac{1}{n}\\right)^2 \\\\\r\nD\\left(X_1\\right)+\\frac{1}{n^2} D\\left(X_2\\right)+\\cdots+\\frac{1}{n^2} D\\left(X_n\\right)=\\frac{n-1}{n}$, \r\n\r\n所以 $\\displaystyle Y_1 \\sim N\\left(0, \\frac{n-1}{n}\\right)$, \r\n\r\n同理 $\\displaystyle Y_i \\sim N\\left(0, \\frac{n-1}{n}\\right)(1 \\leqslant i \\leqslant n)$, \r\n\r\n于是 $\\displaystyle D\\left(Y_i\\right)=\\frac{n-1}{n}(1 \\leqslant i \\leqslant n)$.\r\n\r\n方法二 因为 $X_i \\sim N(0,1)$, \r\n\r\n所以 $E\\left(X_i\\right)=0,D\\left(X_i\\right)=1(i=1,2, \\cdots, n)$,\r\n\r\n$\\displaystyle E(\\bar{X})=\\frac{1}{n} \\sum_{i=1}^n E\\left(X_i\\right)=0, \\\\\r\nD(\\bar{X})=\\frac{1}{n^2} \\sum_{i=1}^n D\\left(X_i\\right)=\\frac{1}{n}, \\\\\r\nE\\left(\\bar{X}^2\\right)=D(\\bar{X})+(E \\bar{X})^2=\\frac{1}{n}  \\\\\r\nE\\left(Y_i\\right)=E\\left(X_i-\\bar{X}\\right)=E\\left(X_i\\right)-E(\\bar{X})=0,\\\\\r\nD\\left(Y_i\\right)=E\\left(Y_i^2\\right)  -\\left(E Y_i\\right)^2\\\\\r\n=E\\left(Y_i^2\\right)\\\\\r\n=E\\left(X_i^2-2 X_i \\bar{X}+\\bar{X}^2\\right) \\\\\r\n=E\\left(X_i^2\\right)  -\\frac{2}{n} E\\left[X_i\\left(X_1+\\cdots+X_n\\right)\\right]+E\\left(\\bar{X}^2\\right) \\\\\r\n=1-\\frac{2}{n} E  \\left(X_i^2\\right)+\\frac{1}{n}=1-\\frac{1}{n}$\r\n\r\n(2) $\\operatorname{Cov}\\left(Y_1, Y_n\\right) \\\\\r\n=\\operatorname{Cov}\\left(X_1-\\bar{X}, X_n-\\bar{X}\\right) \\\\\r\n=\\operatorname{Cov}\\left(X_1, X_n\\right)-\\operatorname{Cov}\\left(X_1, \\bar{X}\\right)-\\operatorname{Cov}\\left(X_n, \\bar{X}\\right)+\\operatorname{Cov}(\\bar{X}, \\bar{X}) \\\\\r\n=-\\dfrac{1}{n} \\operatorname{Cov}\\left(X_1, X_1+X_2+\\cdots+X_n\\right)-\\dfrac{1}{n} \\operatorname{Cov}\\left(X_n, X_1+X_2+\\cdots+X_n\\right)+D(\\bar{X}) \\\\\r\n=-\\dfrac{1}{n} \\operatorname{Cov}\\left(X_1, X_1\\right)-\\dfrac{1}{n} \\operatorname{Cov}\\left(X_n, X_n\\right)+\\dfrac{1}{n}\\\\\r\n=\\dfrac{1}{n}-\\dfrac{2}{n}=-\\dfrac{1}{n}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "D(Y₁)=(1-1/n)²·1+(n-1)·(1/n²)=(n-1)/n，交叉的独立项别漏",
+        "Cov(Y₁,Yₙ) 展开后各 X 独立，只剩 -1/n，符号为负"
+      ],
+      "key_point": "D(Y_i)=(n-1)/n，Cov(Y₁,Yₙ)=-1/n。"
+    }
+  ]
+}

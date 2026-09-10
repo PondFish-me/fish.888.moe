@@ -1,0 +1,506 @@
+{
+  "paper": "数学一",
+  "year": 2012,
+  "count": 23,
+  "questions": [
+    {
+      "id": 544,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\dfrac{x^{2}+x}{x^{2}-1}$ 渐近线的条数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "C",
+      "analysis": "【分析】渐近线分三类查：铅直渐近线看分母为零且函数趋于无穷的点；水平/斜渐近线看 $x\\to\\pm\\infty$ 的行为。关键陷阱是先把分式约分，若分子分母有公因子，对应的点是\"可去间断点（空心点）\"，不产生铅直渐近线。\n\n【解答】$y=\\dfrac{x^2+x}{x^2-1}=\\dfrac{x(x+1)}{(x-1)(x+1)}$。\n\n分子分母有公因子 $(x+1)$，约分后（$x\\ne-1$）：\n$$y=\\frac{x}{x-1}.$$\n\n**铅直渐近线：** 在 $x=-1$ 处虽然原分母为零，但约分后函数有极限 $\\dfrac{-1}{-2}=\\dfrac12$，是可去间断点，**不是**渐近线。在 $x=1$ 处，$y=\\dfrac{x}{x-1}\\to\\infty$，故 $x=1$ 是铅直渐近线（$1$ 条）。\n\n**水平渐近线：** $\\displaystyle\\lim_{x\\to\\pm\\infty}\\frac{x}{x-1}=1$，故 $y=1$ 是水平渐近线（$1$ 条）。既有水平渐近线，则无斜渐近线。\n\n合计 $1+1=2$ 条，选 **C**。\n\n（验证：约分后 $\\dfrac{x}{x-1}$ 标准型，铅直 $x=1$、水平 $y=1$，正好 $2$ 条。）",
+      "wrong_options": {
+        "A": "$0$ 条错得离谱，函数显然在 $x=1$ 处发散、$x\\to\\infty$ 时趋于 $1$。",
+        "B": "$1$ 条：只数了铅直或只数了水平，漏掉另一类。",
+        "D": "$3$ 条：误把 $x=-1$ 也当成铅直渐近线，实际 $x=-1$ 是可去间断点（约分消去），不是渐近线。"
+      },
+      "pitfalls": [
+        "先约分！分子分母公因子 $(x+1)$ 对应的 $x=-1$ 是可去间断点（空心），不产生铅直渐近线",
+        "铅直渐近线需\"分母为零且函数趋于无穷\"，可去点不满足",
+        "有水平渐近线时同方向不再有斜渐近线，别重复计数"
+      ],
+      "key_point": "渐近线先约分排除可去点；铅直看真极点、水平/斜看 $x\\to\\infty$。本题净得铅直 $x=1$、水平 $y=1$ 共 $2$ 条。"
+    },
+    {
+      "id": 545,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left(\\mathrm{e}^{x}-1\\right)\\left(\\mathrm{e}^{2 x}-2\\right) \\cdots\\left(\\mathrm{e}^{n x}-n\\right)$, 其中 $n$ 为正整数, 则 $f^{\\prime}(0)=(\\quad)$",
+      "options": {
+        "A": "$(-1)^{n-1}(n-1) !$",
+        "B": "$(-1)^{n}(n-1) !$",
+        "C": "$(-1)^{n-1} n$ !",
+        "D": "$(-1)^{n} n !$"
+      },
+      "answer": "A",
+      "analysis": "【分析】$f(x)$ 是 $n$ 个因子的乘积,第一个因子 $(\\mathrm{e}^x-1)$ 在 $x=0$ 处为 $0$。求 $f'(0)$ 用乘积求导法则:在 $x=0$ 处,凡是\"没被求导\"的因子里只要含 $(\\mathrm{e}^x-1)$ 就为 $0$,使整项消失。因此只有\"求导第一个因子、其余取值\"这一项存活。\n\n【解答】记 $f(x)=g_1(x)g_2(x)\\cdots g_n(x)$,其中 $g_k(x)=\\mathrm{e}^{kx}-k$。\n注意 $g_1(0)=\\mathrm{e}^0-1=0$,而对 $k\\ge 2$,$g_k(0)=1-k\\ne 0$。\n\n乘积求导 $f'=\\sum_{j=1}^n g_j'\\prod_{i\\ne j}g_i$。在 $x=0$ 代入:当 $j\\ge 2$ 时,连乘 $\\prod_{i\\ne j}g_i(0)$ 仍含因子 $g_1(0)=0$,该项为 $0$。故只剩 $j=1$ 项:\n$$f'(0)=g_1'(0)\\prod_{i=2}^n g_i(0).$$\n而 $g_1'(x)=\\mathrm{e}^x$,$g_1'(0)=1$;$\\prod_{i=2}^n g_i(0)=\\prod_{k=2}^n(1-k)$。\n计算该连乘:\n$$\\prod_{k=2}^n(1-k)=(-1)(-2)(-3)\\cdots(-(n-1))=(-1)^{n-1}\\,(n-1)!.$$\n故 $f'(0)=1\\cdot(-1)^{n-1}(n-1)!=(-1)^{n-1}(n-1)!$,选 A。\n\n验算 $n=2$:$f(x)=(\\mathrm{e}^x-1)(\\mathrm{e}^{2x}-2)$,$f'(x)=\\mathrm{e}^x(\\mathrm{e}^{2x}-2)+(\\mathrm{e}^x-1)2\\mathrm{e}^{2x}$,$f'(0)=1\\cdot(1-2)+0=-1$。公式 $(-1)^{1}(1)!=-1$ ✓。",
+      "wrong_options": {
+        "B": "符号写成 $(-1)^n$。连乘 $(1-2)\\cdots(1-n)$ 共 $n-1$ 个负因子,符号是 $(-1)^{n-1}$。",
+        "C": "把阶乘写成 $n!$ 且符号 $(-1)^{n-1}$。存活的连乘只到 $(1-n)$,即 $(n-1)!$ 而非 $n!$。",
+        "D": "阶乘 $n!$ 与符号 $(-1)^n$ 双错。正确为 $(-1)^{n-1}(n-1)!$。"
+      },
+      "pitfalls": [
+        "只有\"求导那个恰好在 $0$ 处为零的因子、其余取值\"的项不为零,其它项都因含 $g_1(0)=0$ 而消失。",
+        "连乘 $\\prod_{k=2}^n(1-k)$ 有 $n-1$ 项,负号个数 $n-1$,且阶乘是 $(n-1)!$,这两处最易错。"
+      ],
+      "key_point": "多因子乘积在某因子零点处求导,只剩\"导该零因子×其余代值\"一项;细数符号与阶乘项数。"
+    },
+    {
+      "id": 546,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 在点 $(0,0)$ 处连续, 那么下列命题正确的是 $(\\quad)$",
+      "options": {
+        "A": "若极限 $\\lim\\limits _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\dfrac{f(x, y)}{|x|+|y|}$ 存在, 则函数 $f(x, y)$ 在点 $(0,0)$ 处可微",
+        "B": "若极限 $\\lim\\limits _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\dfrac{f(x, y)}{x^{2}+y^{2}}$ 存在, 则函数 $f(x, y)$ 在点 $(0,0)$ 处可微",
+        "C": "若函数 $f(x, y)$ 在点 $(0,0)$ 处可微, 则极限 $\\lim\\limits _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\dfrac{f(x, y)}{|x|+|y|}$ 存在",
+        "D": "若函数 $f(x, y)$ 在点 $(0,0)$ 处可微, 则极限 $\\lim\\limits _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\dfrac{f(x, y)}{x^{2}+y^{2}}$ 存在"
+      },
+      "answer": "B",
+      "analysis": "【分析】可微的定义：$f(x,y)-f(0,0)=A x+B y+o(\\rho)$，$\\rho=\\sqrt{x^2+y^2}$。判断各命题要点：分母 $|x|+|y|$ 与 $\\rho$ 同阶（都是一阶），分母 $x^2+y^2=\\rho^2$ 是二阶（更高阶）。极限存在意味着分子至少与分母同阶或更高阶趋于 $0$，由此推可微性。先用连续性 $f(0,0)$ 的值定出常数项。\n\n【解答】因 $f$ 在 $(0,0)$ 连续，下面四个极限的分母都趋于 $0$，要极限存在必先有分子 $f(x,y)\\to0$，即 $f(0,0)=0$。\n\n**逐项分析（B 正确）：** 设 $\\displaystyle\\lim_{(x,y)\\to(0,0)}\\frac{f(x,y)}{x^2+y^2}=L$（存在有限）。则\n$$f(x,y)=L(x^2+y^2)+o(x^2+y^2)=o(\\rho)\\quad(\\rho\\to0),$$\n因为 $x^2+y^2=\\rho^2=\\rho\\cdot\\rho=o(\\rho)$。又 $f(0,0)=0$，故\n$$f(x,y)-f(0,0)=0\\cdot x+0\\cdot y+o(\\rho),$$\n符合可微定义（且 $f_x(0,0)=f_y(0,0)=0$）。故 B 正确。\n\n**A 错：** 分母 $|x|+|y|$ 与 $\\rho$ 同阶（一阶）。$\\dfrac{f}{|x|+|y|}$ 存在只说明 $f=O(\\rho)$，是一阶量，不能保证 $f-f(0,0)=Ax+By+o(\\rho)$。反例 $f(x,y)=|x|+|y|$：在 $(0,0)$ 连续，$\\dfrac{f}{|x|+|y|}\\equiv1$ 极限存在，但 $|x|+|y|$ 在原点不可微。故 A 不成立。\n\n**C 错：** 可微推不出 $\\dfrac{f}{|x|+|y|}$ 极限存在。反例 $f(x,y)=x$，在 $(0,0)$ 可微，但 $\\dfrac{x}{|x|+|y|}$ 沿不同方向趋向不同值（沿 $y=0,x>0$ 为 $1$，沿 $x=0$ 为 $0$），极限不存在。故 C 不成立。\n\n**D 错：** 可微更推不出 $\\dfrac{f}{x^2+y^2}$ 极限存在。仍取 $f=x$：$\\dfrac{x}{x^2+y^2}$ 在原点无界（沿 $y=0$ 为 $\\dfrac1x\\to\\infty$），极限不存在。故 D 不成立。\n\n综上选 B。",
+      "wrong_options": {
+        "A": "分母 |x|+|y| 与 ρ 同阶，极限存在只给出 f=O(ρ) 的一阶估计，不足以保证可微；反例 f=|x|+|y| 在原点连续但不可微。",
+        "C": "可微只保证 f−f(0,0)=Ax+By+o(ρ)，不保证 f/(|x|+|y|) 有极限；反例 f=x 沿不同方向极限不同。",
+        "D": "可微同样不保证 f/(x²+y²) 有极限；反例 f=x，该比值在原点无界。"
+      },
+      "pitfalls": [
+        "关键在阶数：|x|+|y| 是一阶（≍ρ），x²+y²=ρ² 是二阶；分母越高阶，极限存在对分子的约束越强",
+        "B 中 f/(ρ²) 存在 ⇒ f=O(ρ²)=o(ρ) ⇒ 偏导为 0 且可微，逻辑链要写清",
+        "证伪 A、C、D 各用一个简洁反例（|x|+|y| 或 f=x）最有说服力"
+      ],
+      "key_point": "可微 ⇔ f−f(0,0)=Ax+By+o(ρ)；分母 x²+y²=ρ²（二阶）使极限存在足以推出可微，故选 B。"
+    },
+    {
+      "id": 547,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I_{k}=\\int_{0}^{k \\pi} \\mathrm{e}^{x^{2}} \\sin x \\mathrm{d} x(k=1,2,3)$, 则有 $(\\quad)$",
+      "options": {
+        "A": "$I_{1}<I_{2}<I_{3}$",
+        "B": "$I_{3}<I_{2}<I_{1}$",
+        "C": "$I_{2}<I_{3}<I_{1}$",
+        "D": "$I_{2}<I_{1}<I_{3}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】$I_k=\\int_0^{k\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，被积函数 $\\mathrm e^{x^2}\\sin x$ 在 $\\sin x$ 的每个半周期上符号交替，且 $\\mathrm e^{x^2}$ 单调暴增。按 $[\\,m\\pi,(m+1)\\pi\\,]$ 把积分拆成逐段增量 $J_m=\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，分析每段的符号与大小即可比较 $I_1,I_2,I_3$。\n\n【解答】记 $J_m=\\displaystyle\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，则 $I_1=J_0$，$I_2=J_0+J_1$，$I_3=J_0+J_1+J_2$。\n\n在 $[0,\\pi]$ 上 $\\sin x\\ge0$，故 $J_0>0$，即 $I_1>0$。\n\n在 $[\\pi,2\\pi]$ 上 $\\sin x\\le0$，故 $J_1<0$，于是 $I_2=I_1+J_1<I_1$。\n\n比较 $J_1$ 与 $J_0$ 的大小：作代换 $x=t+\\pi$，$J_1=\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin(t+\\pi)\\,\\mathrm dt=-\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt$。因 $(t+\\pi)^2>t^2$，故 $\\mathrm e^{(t+\\pi)^2}>\\mathrm e^{t^2}$，从而 $|J_1|=\\int_0^\\pi\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt>\\int_0^\\pi\\mathrm e^{t^2}\\sin t\\,\\mathrm dt=J_0$。所以 $I_2=J_0+J_1<0$，即 $I_2<0<I_1$。\n\n在 $[2\\pi,3\\pi]$ 上 $\\sin x\\ge0$，$J_2>0$；同理 $J_2$ 的被积函数 $\\mathrm e^{x^2}$ 比 $[\\pi,2\\pi]$ 段更大，$|J_2|>|J_1|$，故 $I_3=I_2+J_2$，且 $J_2>|J_1|$ 使 $I_3=J_0+J_1+J_2>J_0=I_1>0$。\n\n综上 $I_2<0<I_1<I_3$，即\n$$I_2<I_1<I_3.$$\n选 D。（数值验证：$I_1\\approx5.7\\times10^2>0$，$I_2\\approx-9.1\\times10^{14}<0$，$I_3\\approx1.1\\times10^{36}>0$，符合 $I_2<I_1<I_3$。）",
+      "wrong_options": {
+        "A": "I₁<I₂<I₃ 错：[π,2π] 段 sin x≤0 且 e^{x²} 更大，使 I₂ 比 I₁ 还小且为负，故 I₂<I₁，不是 I₁<I₂。",
+        "B": "I₃<I₂<I₁ 完全反序：实际 I₃ 最大（[2π,3π] 正段增量巨大）、I₂ 最小（负），顺序恰好相反。",
+        "C": "I₂<I₃<I₁ 错在 I₃ 与 I₁：[2π,3π] 正增量 J₂ 因 e^{x²} 暴增远超 |J₁|，使 I₃>I₁，而非 I₃<I₁。"
+      },
+      "pitfalls": [
+        "按 [mπ,(m+1)π] 分段，奇数段(sin≤0)为负、偶数段为正；增量 |Jₘ| 因 e^{x²} 随 m 暴增",
+        "关键比较 |J₁|>J₀ ⟹ I₂<0；J₂>|J₁| ⟹ I₃>I₁，故最终 I₂<I₁<I₃",
+        "不要被 e^{x²} 不可初等积分吓住，本题只需符号与逐段大小比较，无需求出值"
+      ],
+      "key_point": "积分含正负交替的 sin x 时按半周期分段比较增量符号与量级；e^{x²} 暴增使后段主导。"
+    },
+    {
+      "id": 548,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}=\\left(\\begin{array}{l}0 \\\\ 0 \\\\ c_{1}\\end{array}\\right), \\boldsymbol{\\alpha}_{2}=\\left(\\begin{array}{l}0 \\\\ 1 \\\\ c_{2}\\end{array}\\right), \\boldsymbol{\\alpha}_{3}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ c_{3}\\end{array}\\right), \\boldsymbol{\\alpha}_{4}=\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ c_{4}\\end{array}\\right)$, 其中 $c_{1}, c_{2}, c_{3}, c_{4}$ 为任意常数, 则下列向量组线性相关的为 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$",
+        "B": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{4}$",
+        "C": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$",
+        "D": "$\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】四个向量都是三维列向量，$c_1,c_2,c_3,c_4$ 任意。三个向量线性相关 $\\iff$ 以它们为列的 $3\\times3$ 行列式为 $0$。题目要选“无论 $c_i$ 取何值都线性相关”的那一组，即对应行列式恒为 $0$（与 $c_i$ 无关）。观察 $\\boldsymbol\\alpha_3=(1,-1,c_3)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_4=(-1,1,c_4)^{\\mathrm T}$ 的前两个分量互为相反数，这是突破口。\n\n【解答】逐组计算行列式（按列排）。\n选项 C，$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$：\n$$\\begin{vmatrix}0&1&-1\\\\0&-1&1\\\\c_1&c_3&c_4\\end{vmatrix}.$$\n按第一列展开（只有第三行 $c_1$ 非零项有效）：\n$$=c_1\\cdot(-1)^{3+1}\\begin{vmatrix}1&-1\\\\-1&1\\end{vmatrix}=c_1\\big(1\\cdot1-(-1)(-1)\\big)=c_1(1-1)=0.$$\n行列式恒为 $0$（与 $c_1,c_3,c_4$ 无关），故 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ **恒线性相关**。本质原因：$\\boldsymbol\\alpha_3$ 与 $\\boldsymbol\\alpha_4$ 的前两个分量对应成相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4=(0,0,c_3+c_4)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_1=(0,0,c_1)^{\\mathrm T}$ 都落在 $e_3$ 方向，三者必线性相关。\n其余各组行列式含 $c_i$、一般不为零，未必相关。故选 C。",
+      "wrong_options": {
+        "A": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3$ 行列式 $=\\begin{vmatrix}0&0&1\\\\0&1&-1\\\\c_1&c_2&c_3\\end{vmatrix}=1\\cdot(0\\cdot c_2-1\\cdot c_1)\\cdot(\\pm)= -c_1$（按规则计算得 $\\pm c_1$），一般 $c_1\\neq0$ 时线性无关，不是恒相关。",
+        "B": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4$ 同理行列式正比于 $c_1$，$c_1\\neq0$ 时无关，不恒相关。",
+        "D": "$\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 行列式 $=\\begin{vmatrix}0&1&-1\\\\1&-1&1\\\\c_2&c_3&c_4\\end{vmatrix}$，展开后含 $c_i$ 的项一般非零，不恒相关。"
+      },
+      "pitfalls": [
+        "要选的是“无论常数取何值都相关”，即行列式恒为 $0$（与 $c_i$ 无关），而非某些取值下相关。",
+        "题眼：$\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 前两分量互为相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4$ 与 $\\boldsymbol\\alpha_1$ 共线于 $e_3$ 方向。",
+        "三个三维向量相关 $\\iff$ 行列式为 $0$，按含 $c_1$ 那一列展开最省。"
+      ],
+      "key_point": "选行列式恒为 $0$（与 $c_i$ 无关）的组：$\\alpha_3+\\alpha_4$ 与 $\\alpha_1$ 同在 $e_3$ 方向，故 $\\alpha_1,\\alpha_3,\\alpha_4$ 恒相关。"
+    },
+    {
+      "id": 549,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, $\\boldsymbol{P}$ 为 $3$ 阶可逆矩阵, 且 $\\boldsymbol{P}^{-1} \\boldsymbol{A} \\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, 若 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, $\\boldsymbol Q=\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, 则 $\\boldsymbol{Q}^{-1} \\boldsymbol{AQ} =(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】$Q$ 的列由 $P$ 的列线性组合而来，可写成 $Q=PC$，其中 $C$ 是把列变换记下来的可逆矩阵。则 $Q^{-1}AQ=C^{-1}(P^{-1}AP)C=C^{-1}\\Lambda C$，其中 $\\Lambda=\\mathrm{diag}(1,1,2)$。由于前两个特征值相等（都是 1），$C$ 只在前两列做组合，结果仍是 $\\Lambda$。\n\n【解答】由 $Q=(\\alpha_1+\\alpha_2,\\ \\alpha_2,\\ \\alpha_3)$ 与 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$，有 $Q=PC$，\n$$C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix},\\qquad C^{-1}=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}.$$\n（验证：$PC$ 第 1 列 $=\\alpha_1+\\alpha_2$，第 2 列 $=\\alpha_2$，第 3 列 $=\\alpha_3$，正确。）\n于是\n$$Q^{-1}AQ=C^{-1}P^{-1}APC=C^{-1}\\Lambda C,\\quad \\Lambda=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}.$$\n先算 $\\Lambda C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}$，再左乘 $C^{-1}$：\n$$C^{-1}\\Lambda C=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}=\\Lambda.$$\n故 $Q^{-1}AQ=\\mathrm{diag}(1,1,2)$，选 **B**。\n\n（本质：$\\alpha_1,\\alpha_2$ 同属特征值 1 的特征子空间，其任意线性组合 $\\alpha_1+\\alpha_2$ 仍是属于 1 的特征向量，$\\alpha_2,\\alpha_3$ 不变，故对角矩阵不变。）",
+      "wrong_options": {
+        "A": "把第 2、3 个对角元当成被交换/改动，得到 diag(1,2,1)。但 α₃ 仍对应 2、新第 2 列仍对应 1，对角阵不应变成这样。",
+        "C": "diag(2,1,2) 错误地认为第 1 列对应特征值 2；实际 α₁+α₂ 属于特征值 1。",
+        "D": "diag(2,2,1) 把特征值整体搞错；列组合只发生在特征值同为 1 的前两列之间，2 始终对应 α₃。"
+      },
+      "pitfalls": [
+        "列组合写成 Q=PC，则 Q⁻¹AQ=C⁻¹ΛC，不是简单地搬动对角元。",
+        "关键在 α₁、α₂ 同属特征值 1，其线性组合仍是该特征值的特征向量，故对角阵不变。"
+      ],
+      "key_point": "相似变换列重组：Q=PC ⇒ Q⁻¹AQ=C⁻¹ΛC；同特征值子空间内组合不改变 Λ。"
+    },
+    {
+      "id": 550,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且分别服从参数为 $1$ 与参数为 $4$ 的指数分布, 则 $P\\{X<Y\\}=(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{5}$",
+        "B": "$\\dfrac{1}{3}$",
+        "C": "$\\dfrac{2}{3}$",
+        "D": "$\\dfrac{4}{5}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】两个独立指数分布比较大小的概率。可用二重积分，也可记结论：$X\\sim\\text{Exp}(\\lambda_1),Y\\sim\\text{Exp}(\\lambda_2)$ 独立时 $P\\{X<Y\\}=\\dfrac{\\lambda_1}{\\lambda_1+\\lambda_2}$。\n\n【解答】$X\\sim\\text{Exp}(1)$，密度 $f_X(x)=e^{-x}\\ (x>0)$；$Y\\sim\\text{Exp}(4)$，密度 $f_Y(y)=4e^{-4y}\\ (y>0)$，相互独立。\n$$P\\{X<Y\\}=\\int_0^{\\infty}f_X(x)P\\{Y>x\\}\\,dx=\\int_0^{\\infty}e^{-x}\\cdot e^{-4x}\\,dx=\\int_0^{\\infty}e^{-5x}\\,dx=\\dfrac15.$$\n（其中 $P\\{Y>x\\}=e^{-4x}$。）即 $P\\{X<Y\\}=\\dfrac{\\lambda_X}{\\lambda_X+\\lambda_Y}=\\dfrac{1}{1+4}=\\dfrac15$，对应选项 A。",
+      "wrong_options": {
+        "B": "$\\frac13$：可能误用 λ 之比为 1:2 之类的错配，或参数记反。",
+        "C": "$\\frac23$：算成了 P{X>Y}=λ_Y/(λ_X+λ_Y)=4/5 的余……实为把对象搞反并取错。",
+        "D": "$\\frac45$：这是 P{X>Y}=λ_Y/(λ_X+λ_Y)=4/5，把 X<Y 与 X>Y 弄反了。"
+      },
+      "pitfalls": [
+        "结论 P{X<Y}=λ_X/(λ_X+λ_Y)，分子是‘较小者’X 的参数，别和 P{X>Y} 弄反",
+        "指数分布参数 λ 即密度 λe^{-λy}，P{Y>x}=e^{-λy x}=e^{-4x}"
+      ],
+      "key_point": "独立指数：P{X<Y}=λ_X/(λ_X+λ_Y)；本题 1/(1+4)=1/5。"
+    },
+    {
+      "id": 551,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "将长度为 $1 \\mathrm{m}$ 的木棒随机地截成两段, 则两段长度的相关系数为 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$\\dfrac{1}{2}$",
+        "C": "$-\\dfrac{1}{2}$",
+        "D": "$-1$"
+      },
+      "answer": "D",
+      "analysis": "【分析】设两段长度为 $X$ 与 $Y$，则 $X+Y=1$（木棒总长固定），即 $Y=1-X$ 是 $X$ 的严格线性减函数。两随机变量之间存在完全的线性（负相关）关系时，相关系数取边界值。\n\n【解答】记两段长度 $X,Y$，恒有 $X+Y=1$，故 $Y=1-X=-X+1$。这是斜率为 $-1$ 的线性关系。对线性关系 $Y=aX+b$，相关系数 $\\rho_{XY}=\\operatorname{sgn}(a)$：\n$$\\rho_{XY}=\\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)}\\sqrt{D(Y)}}=\\frac{\\operatorname{Cov}(X,-X+1)}{\\sqrt{D(X)}\\sqrt{D(-X)}}=\\frac{-D(X)}{\\sqrt{D(X)}\\sqrt{D(X)}}=-1.$$\n（因 $\\operatorname{Cov}(X,-X+1)=-D(X)$，$D(Y)=D(-X)=D(X)$。）故选 **D**。",
+      "wrong_options": {
+        "A": "$1$ 是完全正相关，对应 $Y$ 随 $X$ 同向线性增长，与 $Y=1-X$ 的反向关系相反。",
+        "B": "$\\dfrac12$ 表示部分正相关，本题是确定性线性关系，相关系数必取边界 $\\pm1$。",
+        "C": "$-\\dfrac12$ 表示部分负相关，同样不符合“两段长度之和恒为 $1$”这一确定线性约束。"
+      },
+      "pitfalls": [
+        "关键在 $X+Y=1$ 这条确定性约束，使 $Y$ 是 $X$ 的线性函数，相关系数必为 $\\pm1$。",
+        "斜率为负（$Y=-X+1$）故取 $-1$，不要被截断点分布等细节带偏。"
+      ],
+      "key_point": "存在确定线性关系 $Y=aX+b$ 时 $\\rho=\\operatorname{sgn}(a)$；本题 $a=-1$ 故 $\\rho=-1$。"
+    },
+    {
+      "id": 552,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若函数 $f(x)$ 满足方程 $f^{\\prime \\prime}(x)+f^{\\prime}(x)-2 f(x)=0$ 及 $f^{\\prime \\prime}(x)+f(x)=2 \\mathrm{e}^{x}$, 则 $f(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^x$",
+      "analysis": "【分析】$f$ 同时满足两个方程，可两式相减消去 $f''$，得到一阶关系，再结合原方程定出 $f$。最快的办法是观察：两方程作差得到 $f'$ 与 $f$ 的简单关系，求出 $f$ 后回代验证两式都满足。\n\n【解答】两方程：\n$$f''+f'-2f=0,\\qquad f''+f=2\\mathrm{e}^x.$$\n两式相减（前式减后式）消去 $f''$：\n$$\\bigl(f''+f'-2f\\bigr)-\\bigl(f''+f\\bigr)=0-2\\mathrm{e}^x\\ \\Longrightarrow\\ f'-3f=-2\\mathrm{e}^x.\\qquad(\\ast)$$\n这是一阶线性方程，积分因子 $\\mathrm{e}^{-3x}$：\n$$\\bigl(f\\mathrm{e}^{-3x}\\bigr)'=-2\\mathrm{e}^{x}\\mathrm{e}^{-3x}=-2\\mathrm{e}^{-2x}\\ \\Longrightarrow\\ f\\mathrm{e}^{-3x}=\\mathrm{e}^{-2x}+C,$$\n即 $f(x)=\\mathrm{e}^{x}+C\\mathrm{e}^{3x}$。\n\n将 $f=\\mathrm{e}^x+C\\mathrm{e}^{3x}$ 代回第二个方程 $f''+f=2\\mathrm{e}^x$ 定 $C$：$f''=\\mathrm{e}^x+9C\\mathrm{e}^{3x}$，故\n$$f''+f=2\\mathrm{e}^x+10C\\mathrm{e}^{3x}=2\\mathrm{e}^x\\ \\Longrightarrow\\ C=0.$$\n故 $f(x)=\\mathrm{e}^x$。\n\n验算：$f=\\mathrm{e}^x$ 时 $f'=f''=\\mathrm{e}^x$。第一式 $\\mathrm{e}^x+\\mathrm{e}^x-2\\mathrm{e}^x=0$ ✓；第二式 $\\mathrm{e}^x+\\mathrm{e}^x=2\\mathrm{e}^x$ ✓。故 $f(x)=\\mathrm{e}^x$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "两方程相减消去 $f''$ 得一阶关系 $(\\ast)$，是本题的题眼；不要分别解两个二阶方程再求交。",
+        "解出含任意常数后必须回代某个原方程定常数 $C$，本题 $C=0$。"
+      ],
+      "key_point": "一个函数满足两个微分方程时，相减消去最高阶导得到低阶关系，求解后回代定常数。"
+    },
+    {
+      "id": 553,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{0}^{2} x \\sqrt{2 x-x^{2}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{2}$",
+      "analysis": "【分析】被积函数 $\\sqrt{2x-x^2}=\\sqrt{1-(x-1)^2}$，根号下是\"$1$ 减完全平方\"，几何上对应半圆，提示作平移代换 $x-1=t$（或三角代换 $x-1=\\sin\\theta$）。换元后区间对称，奇函数项积分为零，剩下的恰是半圆面积。\n\n【解答】注意 $2x-x^2=1-(x-1)^2$。令 $t=x-1$，则 $x=t+1$，$\\mathrm dx=\\mathrm dt$，$x:0\\to2$ 对应 $t:-1\\to1$：\n$$\\int_0^2 x\\sqrt{2x-x^2}\\,\\mathrm dx=\\int_{-1}^{1}(t+1)\\sqrt{1-t^2}\\,\\mathrm dt=\\int_{-1}^{1}t\\sqrt{1-t^2}\\,\\mathrm dt+\\int_{-1}^{1}\\sqrt{1-t^2}\\,\\mathrm dt.$$\n第一项 $t\\sqrt{1-t^2}$ 是奇函数，在对称区间 $[-1,1]$ 上积分为 $0$。\n第二项 $\\displaystyle\\int_{-1}^{1}\\sqrt{1-t^2}\\,\\mathrm dt$ 是半径为 $1$ 的上半圆面积，等于 $\\dfrac{\\pi\\cdot1^2}{2}=\\dfrac{\\pi}{2}$。\n故\n$$\\int_0^2 x\\sqrt{2x-x^2}\\,\\mathrm dx=0+\\frac{\\pi}{2}=\\frac{\\pi}{2}.$$\n\n（验证：被积函数在 $[0,2]$ 非负，积分应为正，$\\dfrac\\pi2>0$ 合理。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "先配方 $2x-x^2=1-(x-1)^2$，平移后区间对称是简化的关键",
+        "拆出的奇函数项 $t\\sqrt{1-t^2}$ 在对称区间积分为 $0$，不必硬算",
+        "$\\int_{-1}^1\\sqrt{1-t^2}\\,\\mathrm dt$ 用半圆面积直接得 $\\dfrac\\pi2$，比三角代换更快"
+      ],
+      "key_point": "根号下\"$1$ 减完全平方\"作平移代换化对称区间，奇偶性消项 + 半圆面积几何意义直接出结果。"
+    },
+    {
+      "id": 554,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\left.\\operatorname{\\mathbf{grad}}\\left(x y+\\dfrac{z}{y}\\right)\\right|_{(2,1,1)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\boldsymbol i+\\boldsymbol j+\\boldsymbol k$",
+      "analysis": "【分析】梯度就是各偏导数构成的向量 $\\operatorname{grad}u=\\left(\\dfrac{\\partial u}{\\partial x},\\dfrac{\\partial u}{\\partial y},\\dfrac{\\partial u}{\\partial z}\\right)$。逐个求偏导,再代入点 $(2,1,1)$ 即可。\n\n【解答】设 $u=xy+\\dfrac{z}{y}$。则\n$$\\dfrac{\\partial u}{\\partial x}=y,\\qquad \\dfrac{\\partial u}{\\partial y}=x-\\dfrac{z}{y^2},\\qquad \\dfrac{\\partial u}{\\partial z}=\\dfrac{1}{y}.$$\n在点 $(2,1,1)$ 处:\n$$\\dfrac{\\partial u}{\\partial x}=1,\\qquad \\dfrac{\\partial u}{\\partial y}=2-\\dfrac{1}{1^2}=1,\\qquad \\dfrac{\\partial u}{\\partial z}=\\dfrac{1}{1}=1.$$\n故\n$$\\left.\\operatorname{grad}\\left(xy+\\dfrac{z}{y}\\right)\\right|_{(2,1,1)}=\\boldsymbol{i}+\\boldsymbol{j}+\\boldsymbol{k}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 $\\dfrac{z}{y}$ 求 $\\partial/\\partial y$ 时把它看成 $z\\cdot y^{-1}$,得 $-\\dfrac{z}{y^2}$,符号别丢。",
+        "梯度结果是向量,要写成 $\\boldsymbol i+\\boldsymbol j+\\boldsymbol k$ 形式,不是数值。"
+      ],
+      "key_point": "梯度=偏导数向量,逐分量求导后代点。"
+    },
+    {
+      "id": 555,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\Sigma=\\{(x, y, z) \\mid x+y+z=1, x \\geqslant 0, y \\geqslant 0, z \\geqslant 0\\}$, 则 $\\displaystyle \\iint\\limits_{\\Sigma} y^{2} \\mathrm{d} S=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\sqrt{3}}{12}$",
+      "analysis": "【分析】$\\Sigma$ 是平面 $x+y+z=1$ 在第一卦限的三角形片。第一类曲面积分投影到 $xOy$ 面：由 $z=1-x-y$ 得 $\\mathrm{d}S=\\sqrt{1+z_x^2+z_y^2}\\,\\mathrm{d}x\\mathrm{d}y=\\sqrt{3}\\,\\mathrm{d}x\\mathrm{d}y$，投影区域 $D_{xy}:x\\geq 0,y\\geq 0,x+y\\leq 1$。被积 $y^2$ 与 $z$ 无关，化为二重积分。\n\n【解答】平面 $z=1-x-y$，$z_x=-1,z_y=-1$，故\n$$\\mathrm{d}S=\\sqrt{1+(-1)^2+(-1)^2}\\,\\mathrm{d}x\\mathrm{d}y=\\sqrt3\\,\\mathrm{d}x\\mathrm{d}y.$$\n投影区域 $D:\\{x\\geq0,y\\geq0,x+y\\leq1\\}$。于是\n$$\\iint_\\Sigma y^2\\,\\mathrm{d}S=\\sqrt3\\iint_D y^2\\,\\mathrm{d}x\\mathrm{d}y=\\sqrt3\\int_0^1\\!\\!\\int_0^{1-y} y^2\\,\\mathrm{d}x\\,\\mathrm{d}y.$$\n先对 $x$：$\\displaystyle\\int_0^{1-y}y^2\\,\\mathrm{d}x=y^2(1-y)$。再对 $y$：\n$$\\int_0^1 y^2(1-y)\\,\\mathrm{d}y=\\int_0^1(y^2-y^3)\\,\\mathrm{d}y=\\frac{1}{3}-\\frac{1}{4}=\\frac{1}{12}.$$\n故\n$$\\iint_\\Sigma y^2\\,\\mathrm{d}S=\\sqrt3\\cdot\\frac{1}{12}=\\frac{\\sqrt3}{12}.$$\n（验算：由对称性 $\\iint y^2\\mathrm{d}S=\\iint x^2\\mathrm{d}S=\\iint z^2\\mathrm{d}S$，三者之和 $=\\iint(x^2+y^2+z^2)\\mathrm{d}S$，与单项 $\\frac{\\sqrt3}{12}$ 相容。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一类曲面积分要乘面积微元系数 dS=√3 dxdy，漏掉 √3 会少这个因子",
+        "投影区域是三角形 x+y≤1（x,y≥0），不是单位正方形",
+        "被积函数仅含 y，积分后是 1/12，再乘 √3 得 √3/12"
+      ],
+      "key_point": "平面片第一类曲面积分：z=1−x−y 给 dS=√3 dxdy，投影到三角形上算二重积分。"
+    },
+    {
+      "id": 556,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}$ 为 $3$ 维单位列向量, $\\boldsymbol{E}$ 为 $3$ 阶单位矩阵, 则矩阵 $\\boldsymbol{E}-\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}$ 的秩为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "【分析】$\\alpha$ 是单位列向量即 $\\alpha^{\\mathrm T}\\alpha=1$。$\\alpha\\alpha^{\\mathrm T}$ 是秩 $1$ 的对称矩阵，其特征值容易求出，进而 $E-\\alpha\\alpha^{\\mathrm T}$ 的特征值与秩都可定。这类\"$E-\\alpha\\alpha^{\\mathrm T}$\"的题，用特征值法最快。\n\n【解答】记 $B=\\alpha\\alpha^{\\mathrm T}$，$\\alpha$ 为 $3$ 维单位列向量。\n\n（1）$B$ 是 $3\\times3$ 对称矩阵且 $\\operatorname{rank}B=1$（一个非零列向量的外积），故 $B$ 有特征值 $0$（二重）。又 $B\\alpha=\\alpha(\\alpha^{\\mathrm T}\\alpha)=\\alpha\\cdot1=\\alpha$，故 $1$ 是 $B$ 的特征值（对应 $\\alpha$）。所以 $B$ 的特征值为 $1,0,0$。\n\n（2）$E-B$ 的特征值为 $1-1,\\ 1-0,\\ 1-0$，即 $0,1,1$。非零特征值有两个，且 $E-B$ 对称（可对角化），故\n$$\\operatorname{rank}(E-\\alpha\\alpha^{\\mathrm T})=2.$$\n（也可直接看：$(E-B)\\alpha=\\alpha-\\alpha=0$，故 $\\alpha$ 在零空间，秩 $\\le2$；而其特征值 $1$ 为二重，秩 $\\ge2$，故恰为 $2$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "单位向量条件 α^T α=1 是题眼，决定 αα^T 的非零特征值恰为 1（否则为 |α|²）",
+        "αα^T 是秩 1 矩阵，特征值 1,0,0；E 减去后变 0,1,1，秩为非零特征值个数 2",
+        "对称矩阵可对角化，秩=非零特征值个数；不要去硬算行列式或初等变换"
+      ],
+      "key_point": "αα^T 秩 1、特征值 |α|²(=1) 与 0；E-αα^T 特征值 0,1,1，秩=2。"
+    },
+    {
+      "id": 557,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $A, B, C$ 是随机事件, $A, C$ 互不相容, $\\displaystyle P(A B)=\\frac{1}{2}, P(C)=\\frac{1}{3}$, 则 $P(A B \\mid \\bar{C})=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{4}$",
+      "analysis": "【分析】求条件概率 $P(AB\\mid\\bar C)=\\dfrac{P(AB\\bar C)}{P(\\bar C)}$。关键用上 $A,C$ 互不相容：$AC=\\varnothing$，从而 $ABC\\subseteq AC=\\varnothing$，于是 $AB\\bar C=AB$。这样分子直接变成 $P(AB)$。\n\n【解答】由 $A,C$ 互不相容知 $AC=\\varnothing$，故 $ABC=\\varnothing$，从而\n$$AB=AB(C\\cup\\bar C)=ABC\\cup AB\\bar C=AB\\bar C,$$\n即 $P(AB\\bar C)=P(AB)=\\dfrac12$。又 $P(\\bar C)=1-P(C)=1-\\dfrac13=\\dfrac23$。所以\n$$P(AB\\mid\\bar C)=\\frac{P(AB\\bar C)}{P(\\bar C)}=\\frac{\\tfrac12}{\\tfrac23}=\\frac12\\cdot\\frac32=\\frac34.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "互不相容 $A,C$ 推出 $AC=\\varnothing$，故 $ABC=\\varnothing$，分子 $P(AB\\bar C)=P(AB)$，这是题眼。",
+        "条件概率分母是 $P(\\bar C)=2/3$，不要误用 $P(C)$。",
+        "不要去推 $A,B$ 的独立性等无关信息，本题不需要。"
+      ],
+      "key_point": "$A,C$ 互斥 $\\Rightarrow ABC=\\varnothing\\Rightarrow P(AB\\bar C)=P(AB)$，直接除以 $P(\\bar C)$。"
+    },
+    {
+      "id": 558,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 15,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: $\\displaystyle  x \\ln \\frac{1+x}{1-x}+\\cos x \\geqslant 1+\\frac{x^{2}}{2}(-1<x<1)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】不等式左边含 $x\\ln\\dfrac{1+x}{1-x}$ 与 $\\cos x$ 两个性质迥异的部分，硬求导会很乱。注意到这两块各有现成的标准放缩：$\\cos x\\geq 1-\\dfrac{x^2}{2}$（恒成立），而 $x\\ln\\dfrac{1+x}{1-x}$ 利用 $\\ln\\dfrac{1+x}{1-x}$ 的幂级数恰好可放到 $2x^2$。两块拼起来即得。\n\n【解答】先看第一项。当 $-1<x<1$ 时，由 $\\ln(1+x)$ 的展开式作差得\n$$\\ln\\frac{1+x}{1-x}=\\ln(1+x)-\\ln(1-x)=2\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right).$$\n于是\n$$x\\ln\\frac{1+x}{1-x}=2x\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right)=2x^2+\\frac{2x^4}{3}+\\frac{2x^6}{5}+\\cdots.$$\n该级数每一项均非负（$x^{2k}\\geq 0$），故\n$$x\\ln\\frac{1+x}{1-x}\\geq 2x^2,\\quad -1<x<1.$$\n再看第二项。由 $\\cos x$ 的标准放缩（可由 $g(x)=\\cos x-1+\\dfrac{x^2}{2}$ 求导验证：$g'(x)=x-\\sin x\\geq 0\\,(x\\geq0)$，$g(0)=0$，结合偶性得 $g(x)\\geq0$）有\n$$\\cos x\\geq 1-\\frac{x^2}{2},\\quad x\\in\\mathbb{R}.$$\n两式相加：\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 2x^2+\\left(1-\\frac{x^2}{2}\\right)=1+\\frac{3x^2}{2}\\geq 1+\\frac{x^2}{2}.$$\n最后一步因 $\\dfrac{3x^2}{2}\\geq\\dfrac{x^2}{2}$。故对一切 $-1<x<1$，\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^2}{2},$$\n等号当且仅当 $x=0$ 时成立。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x\\ln\\dfrac{1+x}{1-x}$ 是偶函数且恒非负，不要被对数里出现负号吓住——$x$ 与 $\\ln$ 同号，乘积非负。",
+        "$\\cos x\\geq 1-\\dfrac{x^2}{2}$ 是对全体实数成立的标准结论，可直接引用或现场两次求导证明。"
+      ],
+      "key_point": "证明含混合函数的不等式时，把左边拆成可独立放缩的几块，各用现成的级数/标准不等式放缩后相加。"
+    },
+    {
+      "id": 559,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x, y)=x \\mathrm{e}^{-\\frac{x^{2}+y^{2}}{2}}$ 的极值",
+      "options": {},
+      "answer": "$(1,0)$ 为 $f(x, y)$ 的极大值点, \r\n极大值为 $f(1,0)=\\mathrm{e}^{-\\frac{1}{2}}$; \r\n\r\n$(-1,0)$ 为 $f(x, y)$ 的极小值点, \r\n极小值为 $f(-1,0)=-\\mathrm{e}^{-\\frac{1}{2}}$",
+      "analysis": "【分析】无条件极值，标准三步：求一阶偏导找驻点，求二阶偏导算 $AC-B^2$ 判别。注意指数因子 $\\mathrm{e}^{-(x^2+y^2)/2}$ 恒正，求导时把它提出来分析符号更省力。\n\n【解答】记 $g=\\mathrm{e}^{-(x^2+y^2)/2}>0$。\n$$f_x=g(1-x^2),\\qquad f_y=-xy\\,g.$$\n令 $f_x=f_y=0$：由 $f_x=0$ 得 $x^2=1$，$x=\\pm1$；由 $f_y=0$ 且 $x\\neq0$ 得 $y=0$。驻点为 $(1,0)$ 与 $(-1,0)$。\n\n二阶偏导：\n$$f_{xx}=g(x^3-3x),\\quad f_{xy}=-y(1-x^2)g,\\quad f_{yy}=x(y^2-1)g.$$\n在 $(1,0)$：$A=f_{xx}=\\mathrm{e}^{-1/2}(1-3)=-2\\mathrm{e}^{-1/2}$，$B=f_{xy}=0$，$C=f_{yy}=\\mathrm{e}^{-1/2}(0-1)=-\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A<0$，为极大值点，\n$$f(1,0)=1\\cdot\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}.$$\n在 $(-1,0)$：$A=\\mathrm{e}^{-1/2}((-1)+3)=2\\mathrm{e}^{-1/2}$，$B=0$，$C=(-1)(0-1)\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A>0$，为极小值点，\n$$f(-1,0)=-1\\cdot\\mathrm{e}^{-1/2}=-\\mathrm{e}^{-1/2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f_y=-xyg=0 时 x=±1≠0，故只能 y=0，不要误增 x=0 的驻点。",
+        "判别用 AC-B² 而非 B²-AC；A<0 取极大、A>0 取极小，符号别记反。",
+        "极值是 f 的取值（带指数），不要只写出驻点坐标。"
+      ],
+      "key_point": "二元无条件极值：解 f_x=f_y=0 得驻点，再用 Hessian AC-B² 判型。"
+    },
+    {
+      "id": 560,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{4 n^{2}+4 n+3}{2 n+1} x^{2 n}$ 的收敛域及和函数",
+      "options": {},
+      "answer": "收敛域 $(-1,1)$；$S(x)=\\dfrac{1+x^2}{(1-x^2)^2}+\\dfrac{1}{x}\\ln\\dfrac{1+x}{1-x}\\ (0<|x|<1),\\ S(0)=3$",
+      "analysis": "【分析】系数里 $4n^2+4n+3$ 与分母 $2n+1$ 有整除关系：$4n^2+4n+3=(2n+1)^2+2$，于是\n$$\\dfrac{4n^2+4n+3}{2n+1}=(2n+1)+\\dfrac{2}{2n+1}.$$\n级数拆成两个已知和函数：$\\sum(2n+1)x^{2n}$（对 $\\frac{x}{1-x^2}$ 求导得到）与 $\\sum\\frac{x^{2n}}{2n+1}$（与 $\\frac12\\ln\\frac{1+x}{1-x}$ 相关）。先定收敛域，再分别求和。\n\n【解答】\n先求收敛域。这是缺项幂级数（含 $x^{2n}$），令 $u=x^2$，一般项系数 $\\to$ 比值趋于 1，收敛半径 $R=1$，即 $|x|<1$。在 $x=\\pm1$ 处通项 $\\dfrac{4n^2+4n+3}{2n+1}\\to\\infty$ 不趋于 0，发散。故**收敛域为 $(-1,1)$**。\n\n拆项后 $S(x)=S_1(x)+2S_2(x)$，其中 $S_1=\\sum_{n=0}^\\infty(2n+1)x^{2n}$，$S_2=\\sum_{n=0}^\\infty\\dfrac{x^{2n}}{2n+1}$。\n\n求 $S_1$：由 $\\displaystyle\\sum_{n=0}^\\infty x^{2n+1}=\\dfrac{x}{1-x^2}$，两边逐项求导，\n$$S_1(x)=\\sum_{n=0}^\\infty(2n+1)x^{2n}=\\left(\\dfrac{x}{1-x^2}\\right)'=\\dfrac{(1-x^2)+x\\cdot2x}{(1-x^2)^2}=\\dfrac{1+x^2}{(1-x^2)^2}.$$\n\n求 $S_2$（先设 $x\\ne0$）：考虑 $\\displaystyle xS_2=\\sum_{n=0}^\\infty\\dfrac{x^{2n+1}}{2n+1}$，逐项求导得 $\\displaystyle\\sum_{n=0}^\\infty x^{2n}=\\dfrac{1}{1-x^2}$，积分（在 $x=0$ 处取值 0）：\n$$xS_2=\\int_0^x\\dfrac{\\mathrm{d}t}{1-t^2}=\\dfrac12\\ln\\dfrac{1+x}{1-x},\\quad S_2(x)=\\dfrac{1}{2x}\\ln\\dfrac{1+x}{1-x}.$$\n\n于是对 $0<|x|<1$，\n$$S(x)=\\dfrac{1+x^2}{(1-x^2)^2}+2\\cdot\\dfrac{1}{2x}\\ln\\dfrac{1+x}{1-x}=\\dfrac{1+x^2}{(1-x^2)^2}+\\dfrac{1}{x}\\ln\\dfrac{1+x}{1-x}.$$\n当 $x=0$，由原级数仅 $n=0$ 项 $\\dfrac{3}{1}=3$，故 $S(0)=3$（与 $S_1(0)=1,\\ 2S_2(0)=2$ 之和一致）。",
+      "wrong_options": {},
+      "pitfalls": [
+        "缺项幂级数求收敛半径要按 $x^{2n}$（令 $u=x^2$）处理，端点 $x=\\pm1$ 通项不趋于 0 故发散，收敛域是开区间",
+        "$S_2$ 在 $x=0$ 处的表达式 $\\frac{1}{2x}\\ln\\frac{1+x}{1-x}$ 是可去间断，需单独补 $S(0)=3$"
+      ],
+      "key_point": "系数对分母作多项式除法拆项，化为 $\\sum(2n+1)x^{2n}$（求导型）与 $\\sum\\frac{x^{2n}}{2n+1}$（积分型）两个标准和函数。"
+    },
+    {
+      "id": 561,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线 $L:\\left\\{\\begin{array}{l}x=f(t), \\\\ y=\\cos t\\end{array}\\left(0 \\leqslant t<\\dfrac{\\pi}{2}\\right)\\right.$, 其中函数 $f(t)$ 具有连续导数, 且 $f(0)=0$, $f^{\\prime}(t)>0\\left(0<t<\\dfrac{\\pi}{2}\\right)$, 若曲线 $L$ 的切线与 $x$ 轴的交点到切点的距离恒为 $1$ , 求函数 $f(t)$ 的表达式, 并求以曲线 $L$ 及 $x$ 轴和 $y$ 轴为边界的区域的面积",
+      "options": {},
+      "answer": "f(t)=\\ln(\\sec t+\\tan t)-\\sin t，面积为 \\dfrac{\\pi}{4}",
+      "analysis": "【分析】参数曲线的切线斜率 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{f'(t)}=\\dfrac{-\\sin t}{f'(t)}$。“切线与 $x$ 轴交点到切点距离恒为 $1$”给出一个关于 $f'(t)$ 的方程：切点 $(f(t),\\cos t)$ 到 $x$ 轴交点的距离用纵坐标与斜率表示，令其为 $1$ 解出 $f'(t)$，再积分定 $f$（用 $f(0)=0$）。面积用 $\\int y\\,\\mathrm{d}x=\\int \\cos t\\,f'(t)\\,\\mathrm{d}t$。\n\n【解答】切点 $P=(f(t),\\cos t)$，切线斜率 $k=\\dfrac{-\\sin t}{f'(t)}$。切线与 $x$ 轴交点 $Q$ 的横坐标满足 $0-\\cos t=k(x_Q-f(t))$，故水平间距 $|x_Q-f(t)|=\\dfrac{\\cos t}{|k|}$，竖直间距为 $\\cos t$。由 $|PQ|=1$：\n$$\\cos^2 t\\Big(1+\\frac{1}{k^2}\\Big)=1\\ \\Rightarrow\\ 1+\\frac{1}{k^2}=\\frac{1}{\\cos^2 t}=\\sec^2 t\\ \\Rightarrow\\ \\frac{1}{k^2}=\\tan^2 t.$$\n而 $\\dfrac{1}{k^2}=\\dfrac{f'(t)^2}{\\sin^2 t}$，于是 $\\dfrac{f'(t)^2}{\\sin^2 t}=\\dfrac{\\sin^2 t}{\\cos^2 t}$，即 $f'(t)^2=\\dfrac{\\sin^4 t}{\\cos^2 t}$。由 $f'(t)>0$、$0<t<\\tfrac{\\pi}{2}$ 取正根\n$$f'(t)=\\frac{\\sin^2 t}{\\cos t}=\\frac{1-\\cos^2 t}{\\cos t}=\\sec t-\\cos t.$$\n积分得 $f(t)=\\ln|\\sec t+\\tan t|-\\sin t+C$。由 $f(0)=\\ln 1-0+C=0$ 得 $C=0$，故\n$$\\boxed{f(t)=\\ln(\\sec t+\\tan t)-\\sin t}.$$\n面积：当 $t$ 由 $0\\to\\tfrac{\\pi}{2}$ 时 $y=\\cos t$ 由 $1\\to 0$、$x=f(t)$ 单调增，所求区域面积\n$$S=\\int y\\,\\mathrm{d}x=\\int_0^{\\pi/2}\\cos t\\,f'(t)\\,\\mathrm{d}t=\\int_0^{\\pi/2}\\cos t(\\sec t-\\cos t)\\,\\mathrm{d}t=\\int_0^{\\pi/2}(1-\\cos^2 t)\\,\\mathrm{d}t=\\int_0^{\\pi/2}\\sin^2 t\\,\\mathrm{d}t=\\frac{\\pi}{4}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切点到 x 轴交点的距离要同时含水平与竖直分量，由 $\\cos^2 t(1+1/k^2)=1$ 列方程",
+        "开方取 f'(t)>0 的正根，符号取反会得错误表达式",
+        "面积用 $\\int y\\,dx=\\int \\cos t\\,f'(t)dt$，化简后是 $\\int_0^{\\pi/2}\\sin^2 t\\,dt$"
+      ],
+      "key_point": "参数曲线切线几何条件列出 f' 的微分关系；面积统一用 $\\int y\\,dx$ 转参数积分"
+    },
+    {
+      "id": 562,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $L$ 是第一象限中从点 $(0,0)$ 沿圆周 $x^{2}+y^{2}=2 x$ 到点 $(2,0)$, 再沿圆周 $x^{2}+y^{2}=4$ 到 点 $(0,2)$ 的曲线段, 计算曲线积分 $\\displaystyle I=\\int_{L} 3 x^{2} y \\mathrm{d} x+\\left(x^{3}+x-2 y\\right) \\mathrm{d} y$\n\n![积分路径 L](/figures/562.svg)",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{2}-4$",
+      "analysis": "【分析】$P=3x^2y,\\ Q=x^3+x-2y$，注意 $\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}=3x^2+1-3x^2=1$，是常数，提示用格林公式。$L$ 不是闭曲线，故补一段从 $(0,2)$ 沿 $y$ 轴回到 $(0,0)$ 的线段 $L_1$ 使其封闭，再在补段上单独积分扣除。\n\n【解答】$L$ 从 $(0,0)$ 沿小圆 $x^2+y^2=2x$ 到 $(2,0)$，再沿大圆 $x^2+y^2=4$ 到 $(0,2)$。补线段 $L_1:(0,2)\\to(0,0)$（沿 $y$ 轴），则 $L+L_1$ 为一条正向（逆时针）闭曲线，所围区域 $D$ 位于第一象限、大圆 $x^2+y^2=4$ 之内、小圆 $x^2+y^2=2x$ 之外。\n\n由格林公式：\n\n$$\\oint_{L+L_1}P\\,\\mathrm{d}x+Q\\,\\mathrm{d}y=\\iint_D\\left(\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}\\right)\\mathrm{d}\\sigma=\\iint_D 1\\,\\mathrm{d}\\sigma=\\text{面积}(D).$$\n\n面积 $(D)=$ 大圆在第一象限的四分之一圆盘面积 $-$ 小圆上半圆盘面积 $=\\dfrac{1}{4}\\pi\\cdot2^2-\\dfrac{1}{2}\\pi\\cdot1^2=\\pi-\\dfrac{\\pi}{2}=\\dfrac{\\pi}{2}.$\n\n再算补段 $L_1$ 上的积分：在 $L_1$ 上 $x=0,\\ \\mathrm{d}x=0$，$Q=x^3+x-2y=-2y$，$y$ 由 $2$ 到 $0$：\n\n$$\\int_{L_1}P\\,\\mathrm{d}x+Q\\,\\mathrm{d}y=\\int_2^0(-2y)\\,\\mathrm{d}y=\\big[-y^2\\big]_2^0=0-(-4)=4.$$\n\n于是\n\n$$I=\\oint_{L+L_1}-\\int_{L_1}=\\dfrac{\\pi}{2}-4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$L$ 开口，必须补一段（沿 $y$ 轴最省事）封闭后用格林公式，最后扣除补段积分。",
+        "判别补段后封闭曲线的方向：本题 $(0,0)\\to(2,0)\\to(0,2)\\to(0,0)$ 恰为正向（逆时针），格林公式右端取正号。"
+      ],
+      "key_point": "$Q_x-P_y$ 为常数时优先格林公式；开曲线补段封闭，面积法直接出结果。"
+    },
+    {
+      "id": 563,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & a & 0 & 0 \\\\ 0 & 1 & a & 0 \\\\ 0 & 0 & 1 & a \\\\ a & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0 \\\\ 0\\end{array}\\right)$\r\n\r\n(1) 计算行列式 $|\\boldsymbol{A}|$;\r\n\r\n(2) 当实数 $a$ 为何值时, 方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有无穷多解, 并求其通解",
+      "options": {},
+      "answer": "(1) $1-a^4$\r\n\r\n(2) 当 $a=-1$ 时, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n0 \\\\-1 \\\\0 \\\\0\r\n\\end{array}\\right)  ( C$为任意常数 )\r\n\r\n当 $a=1$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 无解",
+      "analysis": "【分析】(1) 这是\"循环型\"系数矩阵（对角线为 $1$，次对角线及左下角为 $a$），按第一列展开即可。(2) 方程组有无穷多解需 $|A|=0$，即 $a^4=1$，实数解 $a=\\pm1$；再对每个值用初等行变换判定相容性并求通解。\n\n【解答】(1) 按第一列展开（第一列只有 $a_{11}=1$ 与 $a_{41}=a$ 非零）：\n$$|A|=1\\cdot\\begin{vmatrix}1&a&0\\\\0&1&a\\\\0&0&1\\end{vmatrix}+(-1)^{4+1}a\\begin{vmatrix}a&0&0\\\\1&a&0\\\\0&1&a\\end{vmatrix}=1\\cdot1-a\\cdot a^3=\\boxed{1-a^4}.$$\n\n(2) 无穷多解要求 $|A|=1-a^4=0$，即 $a=1$ 或 $a=-1$。\n\n当 $a=-1$ 时，对增广矩阵 $(A\\mid\\beta)$ 作行变换：\n$$\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\-1&0&0&1&0\\end{array}\\right)\\xrightarrow{R_4+R_1}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&-1&0&1&1\\end{array}\\right)$$\n$$\\xrightarrow{R_4+R_2}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&-1&1&0\\end{array}\\right)\\xrightarrow{R_4+R_3}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&0&0&0\\end{array}\\right).$$\n$r(A)=r(A\\mid\\beta)=3<4$，有无穷多解。取 $x_4$ 为自由变量，回代：$x_3=x_4$，$x_2=x_3-1=x_4-1$，$x_1=x_2+1=x_4$。令 $x_4=C$（亦即取齐次解方向）：\n$$x=C\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}+\\begin{pmatrix}0\\\\-1\\\\0\\\\0\\end{pmatrix}\\quad(C\\ \\text{为任意常数}).$$\n\n当 $a=1$ 时，$(A\\mid\\beta)$ 的第 1、3 行相加得 $x_1+x_2+x_3+x_4=1$，第 2、4 行相加得 $x_1+x_2+x_3+x_4=-1$，矛盾，故 $r(A)=3<r(A\\mid\\beta)=4$，**方程组无解**。\n\n验算：$a=-1$ 时取 $C=0$，$x=(0,-1,0,0)^T$，$Ax$：第一行 $1\\cdot0+(-1)(-1)=1$，第二行 $1\\cdot(-1)=-1$，第三、四行均 $0$，即得 $\\beta=(1,-1,0,0)^T$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|A|=0$ 给出 $a^4=1$，在实数范围内只有 $a=\\pm1$，别漏掉 $a=1$ 这一支（该支无解）。",
+        "$a=1$ 与 $a=-1$ 都使行列式为零，但相容性不同：必须逐一判定 $r(A)$ 与 $r(A\\mid\\beta)$ 是否相等。"
+      ],
+      "key_point": "循环矩阵按首列展开得 1-a^4；行列式为零的每个 a 都要单独验相容性，不能想当然都有解。"
+    },
+    {
+      "id": 564,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & 0 & a \\\\ 0 & a & -1\\end{array}\\right)$, 二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{x}$ 的秩为 $2$ ,\r\n\r\n(1) 求实数 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f$ 化为标准形",
+      "options": {},
+      "answer": "(1) $a=-1$\r\n\r\n(2) $\\boldsymbol Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ -\\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}}\\end{array}\\right)$, 在正交变换 $\\boldsymbol{x}= \\boldsymbol{Qy}$ 下, 二次型 $f$ 的标准形为 $f=2 y_2^2+6 y_3^2$",
+      "analysis": "【分析】二次型矩阵是 $A^{\\mathrm T}A$，其秩等于 $A$ 的秩。由 $r(A^{\\mathrm T}A)=r(A)=2$ 且 $A$ 为 $4\\times3$ 列向量数 3，知三列线性相关，由此定 $a$。第（2）问对实对称阵 $A^{\\mathrm T}A$ 求特征值、单位正交特征向量，拼成正交矩阵 $Q$。\n\n【解答】**(1)** 记 $A$ 三列 $\\alpha_1=(1,0,-1,0)^{\\mathrm T},\\ \\alpha_2=(0,1,0,a)^{\\mathrm T},\\ \\alpha_3=(1,1,a,-1)^{\\mathrm T}$。由 $r(A^{\\mathrm T}A)=r(A)=2<3$，三列相关。$\\alpha_1,\\alpha_2$ 线性无关，故 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$。比较前两个分量得 $k_1=1,k_2=1$，于是 $\\alpha_1+\\alpha_2=(1,1,-1,a)^{\\mathrm T}$。与 $\\alpha_3=(1,1,a,-1)^{\\mathrm T}$ 比较第 3、4 分量：$-1=a$ 且 $a=-1$，故 $a=-1$。\n\n**(2)** 取 $a=-1$，$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\-1&0&-1\\\\0&-1&-1\\end{pmatrix}$，则\n$$B=A^{\\mathrm T}A=\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}.$$\n特征多项式 $|B-\\lambda E|=-\\lambda^3+8\\lambda^2-12\\lambda=-\\lambda(\\lambda-2)(\\lambda-6)$（迹 $=8$，二阶主子式之和 $=12$，行列式 $=0$），故特征值 $\\lambda_1=0,\\lambda_2=2,\\lambda_3=6$。\n求单位特征向量：\n$\\lambda=0$：$(B)x=0\\Rightarrow x_1=-x_3,x_2=-x_3$，取 $\\xi_1=\\dfrac{1}{\\sqrt3}(-1,-1,1)^{\\mathrm T}$；\n$\\lambda=2$：$(B-2E)x=0\\Rightarrow x_3=0,\\ x_1+x_2=0$，取 $\\xi_2=\\dfrac{1}{\\sqrt2}(1,-1,0)^{\\mathrm T}$；\n$\\lambda=6$：$(B-6E)x=0\\Rightarrow x_1=x_2,\\ x_3=2x_1$，取 $\\xi_3=\\dfrac{1}{\\sqrt6}(1,1,2)^{\\mathrm T}$。\n三个特征值互异，特征向量自动正交。令\n$$Q=\\begin{pmatrix}-\\frac{1}{\\sqrt3}&\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]-\\frac{1}{\\sqrt3}&-\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]\\frac{1}{\\sqrt3}&0&\\frac{2}{\\sqrt6}\\end{pmatrix},$$\n则正交变换 $x=Qy$ 把二次型化为标准形\n$$f=0\\cdot y_1^2+2y_2^2+6y_3^2=2y_2^2+6y_3^2.$$\n\n**验算**：迹 $0+2+6=8=2+2+4$，零特征值与 $r(B)=2$ 相符；$B\\xi_3=6\\xi_3$ 即 $\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}(1,1,2)^{\\mathrm T}=(6,6,12)^{\\mathrm T}=6(1,1,2)^{\\mathrm T}$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(A^TA)=r(A) 是定理，秩为 2 说明 A 三列相关，由此定 a 最快；不必先算出 A^TA 再求秩。",
+        "特征值互异时特征向量天然正交，只需单位化；若有重根需正交化。",
+        "标准形系数即特征值，零特征值对应项消失，写成 2y_2^2+6y_3^2。"
+      ],
+      "key_point": "二次型矩阵 A^TA 的秩=r(A)，由列相关定参数；正交变换化标准形=求 A^TA 特征值与单位正交特征向量。"
+    },
+    {
+      "id": 565,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维离散型随机变量 $X, Y$ 的概率分布为\r\n\r\n$\\begin{array}{|c|c|c|c|c|}\r\n\\hline\r\nX \\diagdown Y  & 0 & 1 & 2 \\\\\r\n\\hline\r\n0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4}  \\\\\r\n\\hline\r\n1 & 0 & \\dfrac{1}{3} & 0 \\\\\r\n\\hline\r\n2 & \\dfrac{1}{12} & 0 & \\dfrac{1}{12}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(1) 求 $P\\{X=2 Y\\}$;\r\n\r\n(2) 求 $\\operatorname{Cov}(X-Y, Y)$",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{4}$\r\n\r\n(2) $-\\dfrac{2}{3}$",
+      "analysis": "【分析】(1) 事件 $\\{X=2Y\\}$ 把满足 $x=2y$ 的格点 $(x,y)$ 挑出来求概率之和。(2) 用协方差性质 $\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-\\mathrm{Cov}(Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)$，再由联合分布算 $E(XY),E(X),E(Y),E(Y^2)$ 即可。\n\n【解答】(1) 满足 $x=2y$ 的格点：$(x,y)=(0,0)$ 和 $(2,1)$。\n$$P\\{X=2Y\\}=P(0,0)+P(2,1)=\\frac14+0=\\frac14.$$\n（注：$(2,1)$ 处概率为 $0$。）\n\n(2) 先求边缘与各期望。由联合分布：\n$E(X)$：$X$ 取 $0$ 概率 $\\tfrac14+0+\\tfrac14=\\tfrac12$，取 $1$ 概率 $\\tfrac13$，取 $2$ 概率 $\\tfrac1{12}+0+\\tfrac1{12}=\\tfrac16$。\n$$E(X)=0\\cdot\\tfrac12+1\\cdot\\tfrac13+2\\cdot\\tfrac16=\\tfrac13+\\tfrac13=\\tfrac23.$$\n由对称性 $Y$ 的边缘与 $X$ 相同（列和：$Y=0$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$，$Y=1$ 概率 $\\tfrac13$，$Y=2$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$）：\n$$E(Y)=0\\cdot\\tfrac13+1\\cdot\\tfrac13+2\\cdot\\tfrac13=1.$$\n$$E(Y^2)=0+1\\cdot\\tfrac13+4\\cdot\\tfrac13=\\tfrac53,\\quad D(Y)=\\tfrac53-1^2=\\tfrac23.$$\n求 $E(XY)$，只有 $xy\\neq0$ 的格点贡献：$(1,1)$ 贡献 $1\\cdot\\tfrac13$，$(2,2)$ 贡献 $4\\cdot\\tfrac1{12}=\\tfrac13$，其余含 $0$。\n$$E(XY)=\\tfrac13+\\tfrac13=\\tfrac23.$$\n$$\\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=\\tfrac23-\\tfrac23\\cdot1=0.$$\n所以\n$$\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)=0-\\tfrac23=-\\frac23.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "P{X=2Y} 要把所有满足 x=2y 的格点都数到，包括 (0,0)；(2,1) 概率恰为 0",
+        "Cov(X-Y,Y)=Cov(X,Y)-Cov(Y,Y)，第二项是 D(Y) 不能漏",
+        "E(XY) 只需累加 xy≠0 的格点，含 0 的项不贡献"
+      ],
+      "key_point": "联合分布求 Cov：拆 Cov(X-Y,Y)=Cov(X,Y)-D(Y)，分别用 E(XY)、边缘期望、E(Y²) 代入。"
+    },
+    {
+      "id": 566,
+      "paper": "数学一",
+      "year": 2012,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且分别服从正态分布 $N\\left(\\mu, \\sigma^{2}\\right)$ 与 $N\\left(\\mu, 2 \\sigma^{2}\\right)$, 其中 $\\sigma$ 是末 知参数且 $\\sigma>0$. 设 $Z=X-Y$.\r\n\r\n(1) 求 $Z$ 的概率密度 $f\\left(z ; \\sigma^{2}\\right)$;\r\n\r\n(2) 设 $Z_{1}, Z_{2}, \\cdots, Z_{n}$ 为来自总体 $Z$ 的简单随机样本, 求 $\\sigma^{2}$ 的最大似然估计量 $\\hat{\\sigma}^{2}$; \r\n\r\n(3) 证明: $\\hat{\\sigma}^{2}$ 为 $\\sigma^{2}$ 的无偏估计量",
+      "options": {},
+      "answer": "(1) f_Z(z;\\sigma^2)=\\dfrac{1}{\\sqrt{6\\pi}\\,\\sigma}e^{-\\frac{z^2}{6\\sigma^2}}(-\\infty<z<+\\infty)；(2) \\hat\\sigma^2=\\dfrac{1}{3n}\\sum_{i=1}^n Z_i^2；(3) 为无偏估计",
+      "analysis": "【分析】独立正态的线性组合仍为正态，只需算出 $Z=X-Y$ 的均值与方差即得其分布与密度。最大似然估计以 $\\sigma^2$ 为参数写出似然函数取对数求导。无偏性用 $E(Z_i^2)=DZ_i$（因 $EZ_i=0$）直接核验期望。\n\n【解答】\n\n（1）$X,Y$ 独立正态，$Z=X-Y$ 仍服从正态。\n$$E(Z)=\\mu-\\mu=0,\\qquad D(Z)=D(X)+D(Y)=\\sigma^2+2\\sigma^2=3\\sigma^2.$$\n故 $Z\\sim N(0,3\\sigma^2)$，概率密度\n$$f_Z(z;\\sigma^2)=\\dfrac{1}{\\sqrt{2\\pi\\cdot 3\\sigma^2}}\\,e^{-\\frac{z^2}{2\\cdot 3\\sigma^2}}=\\dfrac{1}{\\sqrt{6\\pi}\\,\\sigma}\\,e^{-\\frac{z^2}{6\\sigma^2}},\\quad -\\infty<z<+\\infty.$$\n\n（2）记参数 $\\theta=\\sigma^2$。样本 $Z_1,\\cdots,Z_n$ 的似然函数\n$$L(\\theta)=\\prod_{i=1}^n \\dfrac{1}{\\sqrt{6\\pi\\theta}}\\,e^{-\\frac{Z_i^2}{6\\theta}}=(6\\pi\\theta)^{-n/2}\\exp\\!\\left(-\\dfrac{1}{6\\theta}\\sum_{i=1}^n Z_i^2\\right).$$\n取对数：\n$$\\ln L=-\\dfrac{n}{2}\\ln(6\\pi)-\\dfrac{n}{2}\\ln\\theta-\\dfrac{1}{6\\theta}\\sum_{i=1}^n Z_i^2.$$\n令 $\\dfrac{d\\ln L}{d\\theta}=-\\dfrac{n}{2\\theta}+\\dfrac{1}{6\\theta^2}\\sum_{i=1}^n Z_i^2=0$，解得\n$$\\hat\\theta=\\dfrac{1}{3n}\\sum_{i=1}^n Z_i^2,\\qquad\\text{即}\\quad \\hat\\sigma^2=\\dfrac{1}{3n}\\sum_{i=1}^n Z_i^2.$$\n（二阶导在该点为负，确为极大。）\n\n（3）因 $E(Z_i)=0$，故 $E(Z_i^2)=D(Z_i)=3\\sigma^2$。于是\n$$E(\\hat\\sigma^2)=\\dfrac{1}{3n}\\sum_{i=1}^n E(Z_i^2)=\\dfrac{1}{3n}\\cdot n\\cdot 3\\sigma^2=\\sigma^2.$$\n所以 $\\hat\\sigma^2$ 是 $\\sigma^2$ 的无偏估计量。",
+      "wrong_options": {},
+      "pitfalls": [
+        "方差相减时方差仍相加：$D(X-Y)=D(X)+D(Y)=3\\sigma^2$，不要写成 $\\sigma^2-2\\sigma^2$",
+        "求 MLE 应以 $\\sigma^2$（而非 $\\sigma$）为参数求导，否则系数 $\\dfrac{1}{3n}$ 易算错",
+        "无偏性核验用 $E(Z_i^2)=D(Z_i)+[E(Z_i)]^2=3\\sigma^2$"
+      ],
+      "key_point": "独立正态线性组合仍正态（均值/方差直接组合）；MLE 以方差为参数取对数求导；无偏性用二阶矩 $E(Z^2)=DZ$ 验证。"
+    }
+  ]
+}

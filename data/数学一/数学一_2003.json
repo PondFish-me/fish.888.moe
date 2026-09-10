@@ -1,0 +1,457 @@
+{
+  "paper": "数学一",
+  "year": 2003,
+  "count": 22,
+  "questions": [
+    {
+      "id": 928,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0}(\\cos x)^{\\frac{1}{\\ln \\left(1+x^{2}\\right)}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\mathrm{e}^{-\\frac{1}{2}}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0}(\\cos x)^{\\frac{1}{\\ln \\left(1+x^2\\right)}} \\\\\r\n=\\lim _{x \\rightarrow 0}\\left\\{[1+(\\cos x-1)]^{\\frac{1}{\\cos x-1}}\\right\\}^{\\frac{\\cos x-1}{\\ln \\left(1+x^2\\right)}} \\\\\r\n=\\mathrm{e}^{\\lim _{x \\rightarrow 0} \\frac{\\cos x-1}{x^2}}=\\mathrm{e}^{-\\frac{1}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1^∞ 型不能对底数直接取极限得 1，必须提到指数上用 e^{lim} 处理",
+        "指数 (cosx-1)/ln(1+x²) 的极限是 -1/2 而非 -1，cosx-1~-x²/2 的系数别丢"
+      ],
+      "key_point": "极限 =e^{lim (cosx-1)/ln(1+x²)}=e^{-1/2}。"
+    },
+    {
+      "id": 929,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲面 $z=x^{2}+y^{2}$ 与平面 $2 x+4 y-z=0$ 平行的切平面的方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 x+4 y-z-5=0$",
+      "analysis": "令 $F(x, y, z)=x^2+y^2-z$,\r\n\r\n设切点坐标为 $\\left(x_0, y_0, z_0\\right)$, \r\n\r\n则切平面的法向量为 $\\boldsymbol{n}=\\left.\\left\\{{F^{\\prime}}_x, F_y^{\\prime}, \\\\\r\nF_z^{\\prime}\\right\\}\\right|_{\\left(x_0, y_0, z_0\\right)}=\\left\\{2 x_0, 2 y_0,-1\\right\\}$, \r\n\r\n因为切平面与平面 $2 x+4 y-z=0$ 平行,\r\n\r\n所以 $\\displaystyle \\frac{2 x_0}{2}=\\frac{2 y_0}{4}=\\frac{-1}{-1}$, \r\n\r\n解得 $x_0=1, y_0=2$, 从而 $z_0=x_0^2+y_0^2=5$,\r\n\r\n所求的平面为 $2(x-1)+4(y-2)-(z-5)=0$, \r\n\r\n即 $2 x+4 y-z-5=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切平面法向量第三分量是 -1（F=x²+y²-z 的 F_z=-1），比例式别写反符号",
+        "定出切点后 z₀=x₀²+y₀²=5 要回代，切点坐标别只求 x₀,y₀"
+      ],
+      "key_point": "由 {2x₀,2y₀,-1}∥{2,4,-1} 得切点 (1,2,5)，切平面 2x+4y-z-5=0。"
+    },
+    {
+      "id": 930,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle x^{2}=\\sum_{n=0}^{\\infty} a_{n} \\cos n x(-\\pi \\leqslant x \\leqslant \\pi)$, 则 $a_{2}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$\\displaystyle \r\na_2 =\\frac{2}{\\pi} \\int_0^\\pi x^2 \\cos 2 x \\mathrm{d} x=\\frac{1}{\\pi} \\int_0^\\pi x^2 \\mathrm{d}(\\sin 2 x) \\\\\r\n=\\left.\\frac{1}{\\pi} x^2 \\sin 2 x\\right|_0 ^\\pi-\\frac{2}{\\pi} \\int_0^\\pi x \\sin 2 x \\mathrm{d} x \\\\\r\n=\\frac{1}{\\pi} \\int_0^\\pi x \\mathrm{d}(\\cos 2 x)\\\\\r\n=\\left.\\frac{x}{\\pi} \\cos 2 x\\right|_0 ^\\pi-\\frac{1}{\\pi} \\int_0^\\pi \\cos 2 x \\mathrm{d} x\\\\\r\n=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x² 为偶函数只有余弦项，a_n=(2/π)∫₀^π x²cos nx dx（区间取 0 到 π 乘 2/π）",
+        "两次分部积分，别在边界项求值时漏掉 sin2π=sin0=0 导致算错"
+      ],
+      "key_point": "a₂=(2/π)∫₀^π x²cos2x dx=1。"
+    },
+    {
+      "id": 931,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "从 $\\mathbf{R}^{2}$ 的基 $\\boldsymbol{\\alpha}_{1}=\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\alpha}_{2}=\\left(\\begin{array}{c}1 \\\\ -1\\end{array}\\right)$ 到基 $\\boldsymbol{\\beta}_{1}=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\beta}_{2}=\\left(\\begin{array}{l}1 \\\\ 2\\end{array}\\right)$ 的过渡矩阵为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{cc}2 & 3 \\\\ -1 & -2\\end{array}\\right)$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right), \\quad \\boldsymbol{B}=\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2\\right)$,\r\n\r\n设从基 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 到基 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2$ 的过渡矩阵为 $\\boldsymbol{Q}$, \r\n\r\n则 $\\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{Q}$, \r\n\r\n于是 $\\boldsymbol{Q}=\\boldsymbol{A}^{-1} \\boldsymbol{B}=\\left(\\begin{array}{cc}2 & 3 \\\\ -1 & -2\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "过渡矩阵方向：从 α 基到 β 基的过渡矩阵 Q 满足 B=AQ，写成 Q=A⁻¹B，别把 A、B 位置弄反",
+        "A⁻¹ 是旧基矩阵的逆，别误用新基矩阵求逆"
+      ],
+      "key_point": "Q=A⁻¹B=((1,1),(0,-1))⁻¹((1,1),(1,2))=((2,3),(-1,-2))。"
+    },
+    {
+      "id": 932,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为 $f(x, y)= \\begin{cases}6 x, & 0 \\leqslant x \\leqslant y \\leqslant 1 \\\\ 0, & \\text { 其他 }\\end{cases}$, 则 $P\\{X+Y \\leqslant 1\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{4}$",
+      "analysis": "$\\displaystyle\r\nP\\{X+Y \\leqslant 1\\} \\\\\r\n=\\iint\\limits_{x+y \\leqslant 1} f(x, y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{\\frac{1}{2}} \\mathrm{d} x \\int_x^{1-x} 6 x \\mathrm{d} y \\\\\r\n=\\int_0^{\\frac{1}{2}} 6 x(1-2 x) \\mathrm{d} x=\\frac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "密度支撑是 0≤x≤y≤1（三角形），积分区域要与 x+y≤1 求交，x 只能到 1/2",
+        "内层 y 从 x 积到 1-x（下限是 y≥x 不是 0），别把支撑的 y≥x 条件丢掉"
+      ],
+      "key_point": "P=∫₀^{1/2}dx∫_x^{1-x}6x dy=1/4。"
+    },
+    {
+      "id": 933,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知一批零件的长度 $X$ (单位: $\\mathrm{cm})$ 服从正态分布 $N(\\mu, 1)$, 从中随机地抽取 $16$ 个零件, 得到长度的平均值为 $40(\\mathrm{cm})$, 则 $\\mu$ 的置信度为 $0.95$ 的置信区间是 $\\rule{0.5cm}{0.2mm}$\r\n\r\n（注: 标准正态分布函数值 $\\Phi(1.96)=0.975, \\Phi(1.645)=0.95$",
+      "options": {},
+      "answer": "$(39.51,40.49)$",
+      "analysis": "$\\alpha=0.05, u_{0.025}=1.96$, \r\n\r\n统计量 $\\dfrac{\\bar{X}-\\mu}{\\frac{1}{\\sqrt{16}}}=4(\\bar{X}-\\mu) \\sim N(0,1)$, \r\n\r\n由 $P\\{-1.96<4(\\bar{X}-\\mu)<1.96\\}=0.95$ \r\n\r\n得 $\\mu$ 的置信度为 $0.95$ 的置信区间为 \r\n\r\n$\\left(\\bar{x}-\\dfrac{1.96}{4}, \\bar{x}+\\dfrac{1.96}{4}\\right)=(39.51,40.49)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "置信度 0.95 对应 α=0.05，用 u_{0.025}=1.96（双侧），别错用 1.645",
+        "σ/√n=1/√16=1/4，误差限 1.96/4=0.49，n 开根别漏"
+      ],
+      "key_point": "区间 =(x̄±1.96·1/4)=(39.51,40.49)。"
+    },
+    {
+      "id": 934,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](/uploads/books/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
+      "options": {
+        "A": "一个极小值点和两个极大值点",
+        "B": "两个极小值点和一个极大值点",
+        "C": "两个极小值点和两个极大值点",
+        "D": "三个极小值点和一个极大值点"
+      },
+      "answer": "C",
+      "analysis": "设 $f^{\\prime}(x)$ 与 $x$ 轴交点的横坐标从左到右分别为 $a, b, c$, \r\n\r\n显然 $f(x)$ 有三个驻点 $x=a$, $x=b, x=c$ 及一个不可导点 $x=0$,\r\n\r\n当 $x<a$ 时, $f^{\\prime}(x)>0$, 当 $x \\in(a, b)$ 时, $f^{\\prime}(x)<0$, 则 $x=a$ 为 $f(x)$ 的极大值点; \r\n\r\n当 $x \\in(b, 0)$ 时, $f^{\\prime}(x)>0$, 则 $x=b$ 为 $f(x)$ 的极小值点;\r\n\r\n当 $x \\in(0, c)$ 时, $f^{\\prime}(x)<0$, 则 $x=0$ 为 $f(x)$ 的极大值点;\r\n\r\n当 $x>c$ 时, $f^{\\prime}(x)>0$, 则 $x=c$ 为 $f(x)$ 的极小值点,\r\n\r\n故 $f(x)$ 有两个极大值点和两个极小值点, 应选 (C)",
+      "wrong_options": {
+        "A": "只数了三个驻点 a,b,c 忽略了 x=0 这个不可导点也是极值点，且把 a 处极大误当极小，导致极大少数一个。",
+        "B": "认定不可导点 x=0 不是极值点而丢弃，少数了 x=0 处的极大值，得两小一大。",
+        "D": "把某个 f' 不变号的点臆造成极小值点，多凑出一个极小值。"
+      },
+      "pitfalls": [
+        "x=0 是 f 的不可导点但 f' 在此变号（+→-），仍是极大值点，不能因不可导就排除",
+        "极值由 f' 的符号变号决定，不是数 f'=0 的个数；共 a,b,0,c 四个点全要判"
+      ],
+      "key_point": "a(极大)、b(极小)、0(极大)、c(极小)，共两个极大两个极小，选 C。"
+    },
+    {
+      "id": 935,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\},\\left\\{c_{n}\\right\\}$ 均为非负数列, 且 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}=0, \\lim _{n \\rightarrow \\infty} b_{n}=1, \\lim _{n \\rightarrow \\infty} c_{n}=\\infty$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$a_{n}<b_{n}$ 对任意 $n$ 成立",
+        "B": "$b_{n}<c_{n}$ 对任意 $n$ 成立",
+        "C": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n} c_{n}$ 不存在",
+        "D": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_{n} c_{n}$ 不存在"
+      },
+      "answer": "D",
+      "analysis": "方法一 取 $\\displaystyle a_n=\\frac{3}{n}, b_n=1, c_n=\\frac{n}{3}$, \r\n\r\n显然 (A), (B), (C) 不成立, 应选 (D). \r\n\r\n方法二 取 $\\displaystyle \\varepsilon=\\frac{1}{2}$, \r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n=1$, 所以存在 $N>0$, \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n-1\\right|<\\frac{1}{2}$, \r\n\r\n从而有 $b_n>\\dfrac{1}{2}$. \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n c_n\\right|>\\frac{1}{2}\\left|c_n\\right|$, \r\n\r\n由 $\\displaystyle \\lim _{n \\rightarrow \\infty} c_n=\\infty$ \r\n\r\n得 $\\lim\\limits  _{n \\rightarrow \\infty}\\left|b_n c_n\\right|=+\\infty$, \r\n\r\n故 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n c_n=\\infty$, 应选(D)",
+      "wrong_options": {
+        "A": "把极限值的大小关系误当成对每一项都成立的逐项不等式，忽略极限只保证 N 之后的性质。",
+        "B": "同样把 b_n<c_n 当成对任意 n 的逐项不等式，实际前有限项可能不满足。",
+        "C": "a_n→0、c_n→∞ 是 0·∞ 未定型，误判其极限必不存在；其实可为任意值（可存在）。"
+      },
+      "pitfalls": [
+        "极限的大小关系只对 N 之后的项成立，不能断言\"对任意 n\"，A、B 因此错",
+        "0·∞（a_n c_n）是未定型可存在可不存在，不能断言必不存在；而 1·∞（b_n c_n）必为∞"
+      ],
+      "key_point": "b_n→1>0、c_n→∞ ⇒ lim b_n c_n=∞ 不存在（有限），选 D。"
+    },
+    {
+      "id": 936,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x, y)$ 在点 $(0,0)$ 的某个邻域内连续, 且 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\frac{f(x, y)-x y}{\\left(x^{2}+y^{2}\\right)^{2}}=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "点 $(0,0)$ 不是 $f(x, y)$ 的极值点",
+        "B": "点 $(0,0)$ 是 $f(x, y)$ 的极大值点",
+        "C": "点 $(0,0)$ 是 $f(x, y)$ 的极小值点",
+        "D": "根据所给条件无法判断点 $(0,0)$ 是否为 $f(x, y)$ 的极值点"
+      },
+      "answer": "A",
+      "analysis": "由 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\frac{f(x, y)-x y}{\\left(x^2+y^2\\right)^2}=1$ 及 $f(x, y)$ 的连续性, 得 $f(0,0)=0$.\r\n\r\n再由 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} \\frac{f(x, y)-x y}{\\left(x^2+y^2\\right)^2}=1$, \r\n\r\n得 $f(x, y)-x y=\\left(x^2+y^2\\right)^2+o\\left[\\left(x^2+y^2\\right)^2\\right]$\r\n\r\n或 $f(x, y)=x y+\\left(x^2+y^2\\right)^2+o\\left[\\left(x^2+y^2\\right)^2\\right]$.\r\n\r\n当 $y=x$ 时, $f(x, x)=x^2+4 x^4+o\\left(x^4\\right)\\\\\r\n=x^2+o\\left(x^2\\right)>0$;\r\n\r\n当 $y=-x$ 时, $f(x,-x)=-x^2+4 x^4+o\\left(x^4\\right)\\\\\r\n=-x^2+o\\left(x^2\\right)<0$, \r\n\r\n则 $(0,0)$ 不是函数 $f(x, y)$ 的极值点, 应选 (A)",
+      "wrong_options": {
+        "B": "只看到展开式中 (x²+y²)² 恒正就误判为极小值，忽略了主部 xy 的交叉项才是定号关键。",
+        "C": "同 B 但把定号方向搞反，误判为极大值。",
+        "D": "认为信息不足无法判断，实际沿 y=x（>0）与 y=-x（<0）已得异号，足以判非极值。"
+      },
+      "pitfalls": [
+        "由极限=1 且连续先得 f(0,0)=0，这是判极值的基准，别漏",
+        "主部是 xy（可正可负），(x²+y²)² 是更高阶，别被高阶正项误导成极小"
+      ],
+      "key_point": "f(x,x)~x²>0、f(x,-x)~-x²<0，(0,0) 非极值点，选 A。"
+    },
+    {
+      "id": 937,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量组 (I): $ \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{r}$ 可由向量组 (II): $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\cdots, \\boldsymbol{\\beta}_s$ 线性表示, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $r<s$ 时, 向量组 (II) 必线性相关",
+        "B": "当 $r>s$ 时, 向量组 (II) 必线性相关",
+        "C": "当 $r<s$ 时, 向量组 (I) 必线性相关",
+        "D": "当 $r>s$ 时, 向量组 (I) 必线性相关"
+      },
+      "answer": "D",
+      "analysis": "方法一 因为向量组 I 可由向量组 II 线性表示, \r\n\r\n所以 $r(I) \\leqslant r( II )$, 显然 $r( II ) \\leqslant s$, \r\n\r\n于是 $r(I) \\leqslant s$.\r\n\r\n当 $r>s$ 时, 因为 $r(\\mathrm{I}) \\leqslant s<r$, \r\n\r\n即向量组 (I) 的秩小于向量组 I 所含的向量个数, \r\n\r\n所以向量组 (I) 线性相关, 应选 (D).\r\n\r\n方法二 取 I : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 2\\end{array}\\right)$, II : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\beta}_2=\\left(\\begin{array}{l}0 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 (I) 可由向量组 (II) 线性表示且 $r<s$, \r\n\r\n但向量组 II 线性无关, (A), (C) 不对;\r\n\r\n取 (I) : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}2 \\\\ 2\\end{array}\\right)$, (II) : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 I 可由向量组 II 线性表示且 $r>s$, \r\n\r\n但向量组 II 线性无关 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "把结论安到被表示组 II 上且方向弄反，r<s 推不出 II 相关（II 可无关）。",
+        "B": "结论对象错挂到 II，r>s 时相关的是能被表示的组 I 而非 II。",
+        "C": "方向错，r<s 时 I 反而可能无关（如 I 只含一个非零向量），推不出 I 相关。"
+      },
+      "pitfalls": [
+        "谁相关看谁：结论落在被表示组 I 上，别错挂到 II 上",
+        "r>s 才使 r(I)≤s<r 得 I 相关；r<s 时无此结论"
+      ],
+      "key_point": "r(I)≤r(II)≤s，当 r>s 时 r(I)<r ⇒ I 线性相关，选 D。"
+    },
+    {
+      "id": 938,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有齐次线性方程组 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 和 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$, 其中 $\\boldsymbol{A}, \\boldsymbol{B}$ 均为 $m \\times n$ 矩阵, 现有 4 个命题:\r\n\r\n(1) 若 $\\boldsymbol{A x}=\\mathbf{0}$ 的解均是 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 的解, 则 $r(\\boldsymbol{A}) \\geqslant r(\\boldsymbol{B})$;\r\n\r\n(2) 若 $r(\\boldsymbol{A}) \\geqslant r(\\boldsymbol{B})$, 则 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 的解均是 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 的解;\r\n\r\n(3) 若 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 同解,则 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$;\r\n\r\n(4) 若 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, 则 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 同解.\r\n以上命题中正确的是 $(\\quad)$",
+      "options": {
+        "A": "(1) (2)",
+        "B": "(1) (3)",
+        "C": "(2) (4)",
+        "D": "(3) (4)"
+      },
+      "answer": "B",
+      "analysis": "方法一 若 $\\boldsymbol{A x}=\\mathbf{0}$ 的解为 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 的解,\r\n\r\n则 $\\boldsymbol{A x}=\\mathbf{0}$ 的基础解系所含的线性无关的解向量的个数不超过 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 的基础解系所含的线性无关的解向量个数, \r\n\r\n即 $n-r(\\boldsymbol{A}) \\leqslant$ $n-r(\\boldsymbol{B})$, \r\n\r\n从而 $r(\\boldsymbol{A}) \\geqslant r(\\boldsymbol{B})$;\r\n\r\n若 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 同解, \r\n\r\n则 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, 反之不对, 故应选 (B).\r\n\r\n方法二 取 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 1 & -2 \\\\ 1 & 0 & -1\\end{array}\\right), \\\\\r\n\\boldsymbol{B}=\\left(\\begin{array}{lll}1 & 1 & 1\\end{array}\\right),\\\\\r\nr(\\boldsymbol{A})=2 \\geqslant r(\\boldsymbol{B})=1$,\r\n\r\n但 $\\boldsymbol{x}=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ 为 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 的解, \r\n\r\n不是 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 的解, 第 (2) 个命题不对;\r\n\r\n取 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 1 & -1\\end{array}\\right), \\\\\r\n\\boldsymbol{B}=\\left(\\begin{array}{lll}1 & -1 & -1\\end{array}\\right), \\quad r(\\boldsymbol{A})=r(\\boldsymbol{B})$,\r\n\r\n但 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 与 $\\boldsymbol{B} \\boldsymbol{x}=\\mathbf{0}$ 不同解, 第 (4) 个命题不对, 应选 (B)",
+      "wrong_options": {
+        "A": "含命题(2)：由 r(A)≥r(B) 推 A 的解都是 B 的解是错的，秩的不等不决定解集的包含。",
+        "C": "含命题(2)(4)均错：(4) 秩相等推不出同解（解空间维数同但方向可不同）。",
+        "D": "含命题(4)：r(A)=r(B) 推不出同解，反例秩同而基础解系不同。"
+      },
+      "pitfalls": [
+        "解集包含 ⇒ 秩有序（1对）、同解 ⇒ 秩相等（3对）；反过来秩关系都推不出解集关系（2、4错）",
+        "秩相等只保证解空间维数相同，不保证是同一个解空间"
+      ],
+      "key_point": "命题(1)(3)正确、(2)(4)错误，选 B。"
+    },
+    {
+      "id": 939,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $\\displaystyle X \\sim t(n)(n>1), Y=\\frac{1}{X^{2}}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$Y \\sim \\chi^{2}(n)$",
+        "B": "$Y \\sim \\chi^{2}(n-1)$",
+        "C": "$Y \\sim F(n, 1)$",
+        "D": "$Y \\sim F(1, n)$"
+      },
+      "answer": "C",
+      "analysis": "因为 $X \\sim t(n)$, \r\n\r\n所以存在 $U \\sim N(0,1), V \\sim \\chi^2(n)$ 且 $U, V$ 独立, \r\n\r\n使得 $X=\\dfrac{U}{\\sqrt{V / n}}$, \r\n\r\n于是 $Y=\\dfrac{1}{X^2}=\\dfrac{V / n}{U^2 / 1}$,\r\n\r\n注意到 $U^2 \\sim \\chi^2(1)$ 且与 $V$ 独立, \r\n\r\n故 $Y \\sim F(n, 1)$, 应选 (C)",
+      "wrong_options": {
+        "A": "把 1/X² 误当仍服从 χ²，混淆了 t 与 χ² 的关系。",
+        "B": "臆造自由度 n-1，无来源。",
+        "D": "把 F 分布的分子分母自由度顺序颠倒；Y=(V/n)/(U²/1) 分子自由度为 n、分母为 1，应是 F(n,1) 而非 F(1,n)。"
+      },
+      "pitfalls": [
+        "t(n)=U/√(V/n)，U²~χ²(1)，别把 U² 的自由度当成别的值",
+        "F 分布自由度有序：Y=(χ²(n)/n)/(χ²(1)/1) 是 F(n,1)，第一自由度 n 在分子"
+      ],
+      "key_point": "Y=1/X²=(V/n)/(U²/1)~F(n,1)，选 C。"
+    },
+    {
+      "id": 940,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "过坐标原点作曲线 $y=\\ln x$ 的切线, 该切线与曲线 $y=\\ln x$ 及 $x$ 轴围成平面图形 $D$\r\n\r\n(1) 求 $D$ 的面积 $A$;\r\n\r\n(2) 求 $D$ 绕直线 $x=\\mathrm{e}$ 旋转一周所得旋转体的体积 $V$",
+      "options": {},
+      "answer": "(1) $\\dfrac{\\mathrm{e}}{2}-1$\r\n\r\n(2) $\\dfrac{\\pi}{6}\\left(5 \\mathrm{e}^2-12 \\mathrm{e}+3\\right)$",
+      "analysis": "(1) 方法一 设切点坐标为 $(a, \\ln a)$, \r\n\r\n由导数的几何意义得 $\\displaystyle \\frac{\\ln a}{a}=\\frac{1}{a}$, \r\n\r\n解得 $a=\\mathrm{e}$, 即切点坐标为 $(\\mathrm{e}, 1)$, \r\n\r\n故切线为 $\\displaystyle y=\\frac{x}{\\mathrm{e}}$.\r\n\r\n方法二 设切点坐标为 $(a, \\ln a)$, 所求的切线为\r\n\r\n$y=\\dfrac{x}{a}+\\ln a-1$,\r\n\r\n因为切线经过原点, 所以 $\\ln a-1=0$, 即 $a=\\mathrm{e}$, \r\n\r\n故所求的切线为 $\\displaystyle y=\\frac{x}{\\mathrm{e}}$,\r\n\r\n所以 $\\displaystyle A=\\frac{1}{2} \\times \\mathrm{e} \\times 1-\\int_1^{\\mathrm{e}} \\ln x \\mathrm{d} x=\\frac{\\mathrm{e}}{2}-1$\r\n\r\n(2) 切线 $\\displaystyle y=\\frac{x}{\\mathrm{e}}, x=\\mathrm{e}$ 及 $x$ 轴围成的三角形区域绕 $x=\\mathrm{e}$ 旋转而成的圆锥体的体积为\r\n\r\n$V_1=\\dfrac{1}{3} \\times \\pi \\mathrm{e}^2 \\times 1=\\dfrac{\\pi \\mathrm{e}^2}{3}$\r\n\r\n曲线 $y=\\ln x, x=\\mathrm{e}$ 及 $x$ 轴围成的区域绕 $x=\\mathrm{e}$ 旋转而成的体积为 $V_2$,\r\n\r\n取 $\\displaystyle [x, x+\\mathrm{d} x] \\subset[1, \\mathrm{e}], \\\\\r\n\\mathrm{d} V_2 =2 \\pi(\\mathrm{e}-x) \\times \\ln x \\times \\mathrm{d} x, \\\\\r\nV_2 =2 \\pi \\int_1^{\\mathrm{e}}(\\mathrm{e}-x) \\ln x \\mathrm{d} x\\\\\r\n=2 \\pi \\mathrm{e} \\int_1^{\\mathrm{e}} \\ln x \\mathrm{d} x-2 \\pi \\int_1^{\\mathrm{e}} x \\ln x \\mathrm{d} x\\\\\r\n=\\frac{\\pi}{2}\\left(4 \\mathrm{e}-\\mathrm{e}^2-1\\right)$,\r\n\r\n于是 $\\displaystyle V=V_1-V_2=\\frac{\\pi}{6}\\left(5 \\mathrm{e}^2-12 \\mathrm{e}+3\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线过原点定切点：由 lna/a=1/a 得 a=e，切点 (e,1)、切线 y=x/e，别把切点当 (1,0)",
+        "绕 x=e（竖直线）旋转，旋转半径是 e-x，不能套绕 x 轴公式；用圆锥体积减曲边旋转体"
+      ],
+      "key_point": "切线 y=x/e，A=e/2-1；绕 x=e 旋转得 V=π(5e²-12e+3)/6。"
+    },
+    {
+      "id": 941,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $f(x)\\displaystyle =\\arctan \\frac{1-2 x}{1+2 x}$ 展开成 $x$ 的幂级数, 并求级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{(-1)^{n}}{2 n+1}$ 的和",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}$",
+      "analysis": "$\\displaystyle f^{\\prime}(x)=\\frac{-2}{1+4 x^2}\\\\\r\n=-2 \\sum_{n=0}^{\\infty}(-1)^n\\left(4 x^2\\right)^n\\\\\r\n=\\sum_{n=0}^{\\infty}(-1)^{n+1} 2^{2 n+1} x^{2 n}\\left(-\\frac{1}{2}<x<\\frac{1}{2}\\right)$,\r\n\r\n由 $f(0)=\\dfrac{\\pi}{4}$, \r\n\r\n得 $\\displaystyle f(x)=f(0)+\\int_0^x f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=\\frac{\\pi}{4}+\\sum_{n=0}^{\\infty} \\frac{(-1)^{n+1} 2^{2 n+1}}{2 n+1} x^{2 n+1}\\\\\r\n\\left(-\\frac{1}{2}<x<\\frac{1}{2}\\right)$,\r\n\r\n当 $\\displaystyle x=\\frac{1}{2}$ 时, \r\n\r\n$\\displaystyle f\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{4}+\\sum_{n=0}^{\\infty} \\frac{(-1)^{n+1}}{2 n+1}\\\\\r\n=\\frac{\\pi}{4}-\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2 n+1}$, \r\n\r\n又 $f\\left(\\dfrac{1}{2}\\right)=0$,\r\n\r\n所以 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2 n+1}=\\frac{\\pi}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分后必须加常数 f(0)=arctan1=π/4，漏掉常数项则整条级数错",
+        "求和时用 x=1/2 端点：f(1/2)=arctan0=0，联立解出 Σ(-1)ⁿ/(2n+1)=π/4，端点收敛性需 Leibniz 判"
+      ],
+      "key_point": "f'=-2/(1+4x²) 展开逐项积分＋f(0)=π/4；代 x=1/2 得 Σ(-1)ⁿ/(2n+1)=π/4。"
+    },
+    {
+      "id": 942,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 15,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知平面区域 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant \\pi, 0 \\leqslant y \\leqslant \\pi\\}, L$ 为 $D$ 的正向边界. 试证:\r\n\r\n(1) $\\displaystyle \\oint_{L} x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x\\\\\r\n=\\oint_{L} x \\mathrm{e}^{-\\sin y} \\mathrm{d} y-y \\mathrm{e}^{\\sin x} \\mathrm{d} x$;\r\n\r\n(2) $\\displaystyle \\oint_{L} x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x \\geqslant 2 \\pi^{2}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 方法一 由格林公式, 得\r\n\r\n$\\displaystyle \\oint_L x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x\\\\\r\n=\\iint\\limits_D\\left(\\mathrm{e}^{\\sin y}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} \\sigma, \\\\\r\n\\oint_L x \\mathrm{e}^{-\\sin y} \\mathrm{d} y-y \\mathrm{e}^{\\sin x} \\mathrm{d} x\\\\\r\n=\\iint\\limits_D\\left(\\mathrm{e}^{-\\sin y}+\\mathrm{e}^{\\sin x}\\right) \\mathrm{d} \\sigma$,\r\n\r\n因为区域 $D$ 关于 $y=x$ 对称, 所以 \r\n\r\n$\\displaystyle \\iint_D\\left(\\mathrm{e}^{\\sin y}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} \\sigma\\\\\r\n=\\iint_D\\left(\\mathrm{e}^{\\sin x}+\\mathrm{e}^{-\\sin y}\\right) \\mathrm{d} \\sigma$, \r\n\r\n于是 $\\displaystyle \\oint_L x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x\\\\\r\n=\\oint_L x \\mathrm{e}^{-\\sin y} \\mathrm{d} y-y \\mathrm{e}^{\\sin x} \\mathrm{d} x$\r\n\r\n方法二 令 $L_1: y=0$ (起点 $x=0$, 终点 $x=\\pi$),\r\n\r\n$L_2: x=\\pi$ (起点 $y=0$, 终点 $y=\\pi$),\r\n\r\n$L_3: y=\\pi$ (起点 $x=\\pi$, 终点 $x=0$),\r\n\r\n$L_4: x=0$ (起点 $y=\\pi$, 终点 $y=0$),\r\n\r\n左边 $\\displaystyle =\\int_{L_1+L_2+L_3+L_4} x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x \\\\\r\n= \\int_0^\\pi \\pi \\mathrm{e}^{\\sin y} \\mathrm{d} y-\\int_\\pi^0 \\pi \\mathrm{e}^{-\\sin x} \\mathrm{d} x\\\\\r\n=\\pi \\int_0^\\pi\\left(\\mathrm{e}^{\\sin x}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} x$\r\n\r\n右边 $\\displaystyle =\\int_{L_1+L_2+L_3+L_4} x \\mathrm{e}^{-\\sin y} \\mathrm{d} y-y \\mathrm{e}^{\\sin x} \\mathrm{d} x \\\\\r\n= \\int_0^\\pi \\pi \\mathrm{e}^{-\\sin y} \\mathrm{d} y-\\int_\\pi^0 \\pi \\mathrm{e}^{\\sin x} \\mathrm{d} x\\\\\r\n=\\pi \\int_0^\\pi\\left(\\mathrm{e}^{\\sin x}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} x$\r\n\r\n则 $\\displaystyle \\oint_L x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x=\\oint_L x \\mathrm{e}^{-\\sin y} \\mathrm{d} y-y \\mathrm{e}^{\\sin x} \\mathrm{d} x$\r\n\r\n(2) $\\displaystyle \\oint_L x \\mathrm{e}^{\\sin y} \\mathrm{d} y-y \\mathrm{e}^{-\\sin x} \\mathrm{d} x=\\frac{1}{2}\\left[\\iint\\limits_D\\left(\\mathrm{e}^{\\sin y}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} \\sigma+\\iint\\limits_D\\left(\\mathrm{e}^{-\\sin y}+\\mathrm{e}^{\\sin x}\\right) \\mathrm{d} \\sigma\\right] \\\\\r\n=\\frac{1}{2} \\iint\\limits_D\\left(\\mathrm{e}^{\\sin y}+\\mathrm{e}^{-\\sin y}+\\mathrm{e}^{\\sin x}+\\mathrm{e}^{-\\sin x}\\right) \\mathrm{d} \\sigma \\\\\r\n \\geqslant \\frac{1}{2} \\iint\\limits_D(2+2) \\mathrm{d} \\sigma=2 \\pi^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "L 是正向边界（闭曲线），可直接用格林公式；两式的差别只在被积函数 sin 前的符号，化重积分后靠 D 关于 y=x 对称抵消",
+        "(2) 关键是 e^{siny}+e^{-sinx}≥2√(e^{siny-sinx})… 更简是用 e^u+e^{-u}≥2，∬2dσ=2π² 得下界"
+      ],
+      "key_point": "格林公式＋区域关于 y=x 对称证(1)；e^t+e^{-t}≥2 且 |D|=π² 证(2) 的下界 2π²。"
+    },
+    {
+      "id": 943,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某建筑工程打地基时, 需用汽锤将桩打进土层. 汽锤每次击打, 都将克服土层对桩的阻力而做功. 设土层对桩的阻力的大小与桩被打进地下的深度成正比 (比例系数为 $k, k>0$ ), 汽锤第一次击打将桩打进地下 $a \\mathrm{m}$. 根据设计方案, 要求汽锤每次击打桩时所做的功与前一次击打时所做的功之比为常数 $r(0<r<1)$. 问:\r\n\r\n(1) 汽锤击打桩 3 次后, 可将桩打进地下多深?\r\n\r\n(2)若击打次数不限,汽锤至多能将桩打进地下多深?\r\n\r\n(注: $m$ 表示长度单位米)",
+      "options": {},
+      "answer": "(1) $\\sqrt{1+r+r^2} a$ 米\r\n\r\n(2) $\\dfrac{a}{\\sqrt{1-r}}$ 米",
+      "analysis": "( I ) 设 $n$ 次击打桩打进地下深度为 $x_n$, \r\n\r\n汽锤第 $n$ 次击打所做的功为 $W_n$, 则\r\n\r\n$\\displaystyle\r\nW_1=\\int_0^{x_1} k x \\mathrm{d} x=\\int_0^a k x \\mathrm{d} x=\\frac{k}{2} a^2, \\\\\r\nW_2=\\int_{x_1}^{x_2} k x \\mathrm{d} x=\\frac{k}{2}\\left(x_2^2-a^2\\right), \\\\\r\nW_3=\\int_{x_2}^{x_3} k x \\mathrm{d} x=\\frac{k}{2}\\left(x_3^2-x_2^2\\right)$,\r\n\r\n由 $W_2=r W_1$ 得 $x_2^2-a^2=r a^2$, \r\n\r\n解得 $x_2^2=(1+r) a^2$.\r\n\r\n由 $W_3=r W_2=r^2 W_1$, \r\n\r\n得 $x_3^2-(1+r) a^2=r^2 a^2$, \r\n\r\n于是 $x_3=\\sqrt{1+r+r^2} a$, \r\n\r\n即汽锤经过 3 次击打后桩的深度为 $\\sqrt{1+r+r^2} a$ 米\r\n\r\n(2) 由归纳法, 设 $\\displaystyle x_n=\\sqrt{1+r+\\cdots+r^{n-1}} a,\\\\\r\nW_{n+1}=\\int_{x_n}^{x_{n+1}} k x \\mathrm{d} x\\\\\r\n=\\frac{k}{2}\\left(x_{n+1}^2-x_n^2\\right)\\\\\r\n=\\frac{k}{2}\\left[x_{n+1}^2-\\left(1+r+\\cdots+r^{n-1}\\right) a^2\\right]$,\r\n\r\n由 $W_{n+1}=r^n W_1$ \r\n\r\n得 $\\dfrac{k}{2}\\left[x_{n+1}^2-\\left(1+r+\\cdots+r^{n-1}\\right) a^2\\right]\\\\\r\n=\\dfrac{k}{2} r^n a^2$,\r\n\r\n解得 $x_{n+1}=\\sqrt{1+r+\\cdots+r^n} a\\\\\r\n=\\sqrt{\\dfrac{1-r^{n+1}}{1-r}} a$, \r\n\r\n于是 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n+1}=\\frac{a}{\\sqrt{1-r}}$, 即若不限击打次数, \r\n\r\n汽锤最多可以将桩打进地下 $\\dfrac{a}{\\sqrt{1-r}}$ 米",
+      "wrong_options": {},
+      "pitfalls": [
+        "做功是变力积分 W=∫kx dx 得 (k/2)(x_n²-x_{n-1}²)，别当常力乘距离",
+        "极限深度取 n→∞：x_n²=a²(1+r+…+r^{n-1})→a²/(1-r)，故最深 a/√(1-r) 而非 a/(1-r)（别忘开方）"
+      ],
+      "key_point": "x_n²=(1+r+…+r^{n-1})a²；3 次得 √(1+r+r²)a，极限深度 a/√(1-r)。"
+    },
+    {
+      "id": 944,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 在 $(-\\infty,+\\infty)$ 内具有二阶导数, 且 $y^{\\prime} \\neq 0, x=x(y)$ 是 $y=y(x)$ 的反函数\r\n\r\n(1) 试将 $x=x(y)$ 所满足的微分方程 $\\dfrac{\\mathrm{d}^{2} x}{\\mathrm{d} y^{2}}+(y+\\sin x)\\left(\\dfrac{\\mathrm{d} x}{\\mathrm{d} y}\\right)^{3}=0$ 变换为 $y=y(x)$ 满足的微分方程;\r\n\r\n(2) 求变换后的微分方程满足初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 的解",
+      "options": {},
+      "answer": "(1) $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "analysis": "(1)$\\displaystyle \\frac{\\mathrm{d} x}{\\mathrm{d} y}=\\frac{1}{\\frac{\\mathrm{d} y}{\\mathrm{d} x}}=\\frac{1}{y^{\\prime}(x)}, \\\\\r\n\\frac{\\mathrm{d}^2 x}{\\mathrm{d} y^2}\r\n=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} x}{\\mathrm{d} y}\\right)}{\\mathrm{d} y}=\\frac{\\mathrm{d}\\left[\\frac{1}{y^{\\prime}(x)}\\right] / \\mathrm{d} x}{\\mathrm{d} y / \\mathrm{d} x}\r\n=\\frac{\\left[\\frac{1}{y^{\\prime}(x)}\\right]^{\\prime}}{y^{\\prime}(x)}\\\\\r\n=-\\frac{y^{\\prime \\prime}(x)}{y^{\\prime 3}(x)}\r\n=-\\frac{\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}}{\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^3}$,\r\n\r\n\r\n代入原方程整理得 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的特征方程为 $\\lambda^2-1=0$, \r\n\r\n特征值为 $\\lambda_1=-1, \\lambda_2=1,\\\\\r\n\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的通解为 $\\displaystyle y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n设 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$ 的特解为 \r\n\r\n$y_0(x)=a \\cos x+b \\sin x$, \r\n\r\n代入原方程得 $a=0, b=-\\dfrac{1}{2}$,\r\n\r\n原方程的通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x-\\dfrac{1}{2} \\sin x$,\r\n\r\n由初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 得 $C_1=-1, C_2=1$, \r\n\r\n故 $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "d²x/dy²=-y''/(y')³（对 y 求导要再除 dy/dx），符号与幂次别错",
+        "非齐次项 sinx 与齐次解 e^{±x} 不重根，特解设 Acosx+Bsinx；代初值 y(0)=0、y'(0)=3/2 定 C₁,C₂"
+      ],
+      "key_point": "变换得 y''-y=sinx，通解 C₁eˣ+C₂e^{-x}-½sinx，配初值得 y=eˣ-e^{-x}-½sinx。"
+    },
+    {
+      "id": 945,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续且恒大于零,\r\n\r\n$F(t)=\\displaystyle \\frac{ \\iiint\\limits_{\\Omega(t)} f\\left(x^{2}+y^{2}+z^{2}\\right) \\mathrm{d} v}{\\iint\\limits_{D(t)} f\\left(x^{2}+y^{2}\\right) \\mathrm{d} \\sigma}, \\\\\r\nG(t)=\\frac{ \\iint\\limits_{D(t)} f\\left(x^{2}+y^{2}\\right) \\mathrm{d} \\sigma}{\\int_{-t}^{t} f\\left(x^{2}\\right) \\mathrm{d} x}$,\r\n\r\n其中 $\\Omega(t)=\\left\\{(x, y, z) \\mid x^{2}+y^{2}+z^{2} \\leqslant t^{2}\\right\\},\\\\\r\nD(t)=\\left\\{(x, y) \\mid x^{2}+y^{2} \\leqslant t^{2}\\right\\}$\r\n\r\n(1) 讨论 $F(t)$ 在区间 $(0,+\\infty)$ 内的单调性\r\n\r\n(2) 证明: 当 $t>0$ 时, $F(t)>\\dfrac{2}{\\pi} G(t)$",
+      "options": {},
+      "answer": "(1) 单调递增\r\n\r\n(2) 略",
+      "analysis": "(1)\r\n\r\n$\\displaystyle \\iiint\\limits_{\\Omega(t)} f\\left(x^2+y^2+z^2\\right) \\mathrm{d} v\\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^\\pi \\mathrm{d} \\varphi \\int_0^t r^2 \\sin \\varphi f\\left(r^2\\right) \\mathrm{d} r\\\\\r\n=4 \\pi \\int_0^t r^2 f\\left(r^2\\right) \\mathrm{d} r, \\\\ \r\n\\iint\\limits_{D(t)} f\\left(x^2+y^2\\right) \\mathrm{d} \\sigma\\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^t r f\\left(r^2\\right) \\mathrm{d} r\\\\\r\n=2 \\pi \\int_0^t r f\\left(r^2\\right) \\mathrm{d} r, \\\\\r\n\\int_{-t}^t f\\left(x^2\\right) \\mathrm{d} x=2 \\int_0^t f\\left(x^2\\right) \\mathrm{d} x$,\r\n\r\n则 $\\displaystyle F(t)=2 \\frac{\\int_0^t r^2 f\\left(r^2\\right) \\mathrm{d} r}{\\int_0^t r f\\left(r^2\\right) \\mathrm{d} r},\\\\\r\nF^{\\prime}(t) =2 t f\\left(t^2\\right) \\frac{t \\int_0^t r f\\left(r^2\\right) \\mathrm{d} r-\\int_0^t r^2 f\\left(r^2\\right) \\mathrm{d} r}{\\left(\\int_0^t r f\\left(r^2\\right) \\mathrm{d} r\\right)^2}$,\r\n\r\n令 $\\displaystyle \\varphi(t)  =t \\int_0^t r f\\left(r^2\\right) \\mathrm{d} r-\\int_0^t r^2 f\\left(r^2\\right) \\mathrm{d} r,\\\\\r\n \\varphi(0)=0, \\\\\r\n\\varphi^{\\prime}(t) =\\int_0^t r f\\left(r^2\\right) \\mathrm{d} r>0(t>0)$,\r\n\r\n由 $\\left\\{\\begin{array}{l}\\varphi(0)=0 \\\\ \\varphi^{\\prime}(t)>0(t>0)\\end{array}\\right.$ \r\n\r\n得 $\\varphi(t)>0(t>0)$, 于是 $F^{\\prime}(t)>0(t>0)$, \r\n\r\n故 $F(t)$ 在 $(0,+\\infty)$ 内单调增加\r\n\r\n(2) $G(t)=\\dfrac{\\pi \\int_0^t r f\\left(r^2\\right) \\mathrm{d} r}{\\int_0^t f\\left(r^2\\right) \\mathrm{d} r}$,\r\n\r\n当 $t>0$ 时, $\\displaystyle F(t)-\\frac{2}{\\pi} G(t)>0$ 等价于 \r\n$\\displaystyle h(t) =\\\\\r\n\\int_0^t f\\left(r^2\\right) \\mathrm{d} r \\int_0^t r^2 f\\left(r^2\\right) \\mathrm{d} r-\\left[\\int_0^t r f\\left(r^2\\right) \\mathrm{d} r\\right]^2>0,\\\\\r\nh(0)=0,\\\\\r\nh^{\\prime}(t)=f\\left(t^2\\right) \\int_0^t f\\left(r^2\\right)(t-r)^2 \\mathrm{d} r$, \r\n\r\n当 $t>0$ 时, $h^{\\prime}(t)>0$,\r\n\r\n由 $\\left\\{\\begin{array}{l}h(0)=0 \\\\ h^{\\prime}(t)>0(t>0)\\end{array}\\right.$ \r\n\r\n得 $h(t)>0(t>0)$, \r\n\r\n于是 $F(t)>\\dfrac{2}{\\pi} G(t)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三重积分球坐标含 r²sinφ、二重积分极坐标含 r，别丢雅可比因子导致 F(t) 表达式错",
+        "F'(t) 是变限积分商的导数，判号要整理成分子（含 f>0）恒正；(2) 用 F、G 的积分表达配合 f>0 作差证不等式"
+      ],
+      "key_point": "F(t)=2∫₀ᵗr²f/∫₀ᵗrf，F'(t)>0 单调增；作差结合 f>0 证 F(t)>2G(t)/π。"
+    },
+    {
+      "id": 946,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}3 & 2 & 2 \\\\ 2 & 3 & 2 \\\\ 2 & 2 & 3\\end{array}\\right), \\\\\r\n\\boldsymbol{P}=\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 0 & 1\\end{array}\\right), \\boldsymbol{B}=\\boldsymbol{P}^{-1} \\boldsymbol{A}^{*} \\boldsymbol{P}$, 求 $\\boldsymbol{B}+2 \\boldsymbol{E}$ 的特征值与特征向量, 其中 $\\boldsymbol{A}^{*}$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{E}$ 为 3 阶单位矩阵",
+      "options": {},
+      "answer": "对应于特征值 $9$ 的全部特征向量为 \r\n\r\n$k_1 \\boldsymbol P^{-1} \\boldsymbol \\alpha_1+k_2 \\boldsymbol P^{-1} \\boldsymbol \\alpha_2\\\\\r\n=k_1\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0\\end{array}\\right)+k_2\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n其中 $k_1, k_2$ 是不全为零的任意常数;\r\n\r\n对应于特征值 $3$ 的全部特征向量为\r\n$k_3 \\boldsymbol P^{-1} \\boldsymbol \\alpha_3=k_3\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)$, \r\n\r\n其中 $k_3$ 是不为零的任意常数",
+      "analysis": "设 $\\boldsymbol A$ 的特征值为 $\\lambda$, 对应的特征向量为 $\\boldsymbol \\alpha$, 即 $\\boldsymbol A \\boldsymbol \\alpha=\\lambda \\boldsymbol \\alpha$,\r\n\r\n由于 $|\\boldsymbol A|=7 \\neq 0$, 所以 $\\lambda \\neq 0$, 由$\\boldsymbol A^* \\boldsymbol \\alpha=\\dfrac{|\\boldsymbol A|}{\\lambda} \\boldsymbol \\alpha$\r\n\r\n得 $\\boldsymbol B\\left(\\boldsymbol P^{-1} \\boldsymbol \\alpha\\right)\\\\\r\n=\\boldsymbol P^{-1} \\boldsymbol A^* \\boldsymbol P\\left(\\boldsymbol P^{-1} \\boldsymbol \\alpha\\right)\\\\\r\n=\\dfrac{|\\boldsymbol A|}{\\lambda}\\left(\\boldsymbol P^{-1} \\boldsymbol \\alpha\\right),\\\\\r\n(\\boldsymbol B+2  \\boldsymbol E) \\boldsymbol P^{-1} \\boldsymbol \\alpha=\\left(\\dfrac{|\\boldsymbol A|}{\\lambda}+2\\right) \\boldsymbol P^{-1} \\boldsymbol \\alpha$\r\n\r\n因此, $\\dfrac{|\\boldsymbol A|}{\\lambda}+2$ 为 $\\boldsymbol B+2 \\boldsymbol E$ 的特征值, \r\n\r\n对应的特征向量为 $\\boldsymbol P^{-1} \\boldsymbol \\alpha$,\r\n\r\n由于 $|\\lambda  \\boldsymbol E-\\boldsymbol A|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-3 & -2 & -2 \\\\ -2 & \\lambda-3 & -2 \\\\ -2 & -2 & \\lambda-3\\end{array}\\right|\\\\\r\n=(\\lambda-1)^2(\\lambda-7)$, \r\n\r\n故 $\\boldsymbol A$ 的特征值为 $\\lambda_1=\\lambda_2=1, \\lambda_3=7$\r\n\r\n当 $\\lambda_1=\\lambda_2=1$ 时, 对应的线性无关特征向量可取为 \r\n\r\n$\\boldsymbol \\alpha_1=\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 0\\end{array}\\right), \\quad \\boldsymbol \\alpha_2=\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right)$.\r\n\r\n当 $\\lambda_3=7$ 时, 对应的一个特征向量为 $\\boldsymbol \\alpha_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$.\r\n\r\n由 $\\boldsymbol P^{-1}=\\left(\\begin{array}{ccc}0 & 1 & -1 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 得 $\\boldsymbol P^{-1} \\boldsymbol \\alpha_1=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0\\end{array}\\right), \\\\\r\n\\boldsymbol P^{-1} \\boldsymbol \\alpha_2=\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right), \\boldsymbol P^{-1} \\boldsymbol \\alpha_3=\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n因此, $\\boldsymbol B+2  \\boldsymbol E$ 的三个特征值分别为 $9,9,3$,\r\n\r\n对应于特征值 $9$ 的全部特征向量为 \r\n\r\n$k_1 \\boldsymbol P^{-1} \\boldsymbol \\alpha_1+k_2 \\boldsymbol P^{-1} \\boldsymbol \\alpha_2\\\\\r\n=k_1\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0\\end{array}\\right)+k_2\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n其中 $k_1, k_2$ 是不全为零的任意常数;\r\n\r\n对应于特征值 $3$ 的全部特征向量为\r\n$k_3 \\boldsymbol P^{-1} \\boldsymbol \\alpha_3=k_3\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)$, \r\n\r\n其中 $k_3$ 是不为零的任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 的特征值 7（一重）、1（二重），A* 的特征值是 |A|/λ=7/7=1、7/1=7，别直接把 A 的特征值当 A* 的",
+        "B=P⁻¹A*P 与 A* 相似，特征值相同但特征向量要变为 P⁻¹α（不是 α），最后 +2E 特征值各加 2"
+      ],
+      "key_point": "|A|=7，A* 特征值 1,7,7 ⇒ B+2E 特征值 3,9,9，特征向量由 P⁻¹α 给出。"
+    },
+    {
+      "id": 947,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知平面上三条不同直线的方程分别为\r\n\r\n$l_{1}: a x+2 b y+3 c=0, \\\\\r\n l_{2}: b x+2 c y+3 a=0, \\\\\r\nl_{3}: c x+2 a y+3 b=0$\r\n\r\n试证: 这三条直线交于一点的充分必要条件为 $a+b+c=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "必要性: 令 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{lll}a & 2 b & -3 c \\\\ b & 2 c & -3 a \\\\ c & 2 a & -3 b\\end{array}\\right)$, \r\n\r\n由三条不同直线交于一点, 得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$,\r\n\r\n从而 $|\\overline{\\boldsymbol{A}}|\\\\\r\n=3(a+b+c)\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]=0$,\r\n\r\n而 $(a-b)^2+(b-c)^2+(c-a)^2 \\neq 0$, \r\n\r\n(若等于 $0$, 则 $a=b=c$, 矛盾)\r\n\r\n故 $a+b+c=0$\r\n\r\n充分性: 设 $a+b+c=0$, 则 $r(\\overline{\\boldsymbol{A}})<3$,\r\n\r\n又 $\\left|\\begin{array}{ll}\r\na & 2 b \\\\\r\nb & 2 c\r\n\\end{array}\\right|\\\\\r\n=2\\left(a c-b^2\\right)\\\\\r\n=-2\\left[a(a+b)+b^2\\right]\\\\\r\n=-\\left[a^2+b^2+(a+b)^2\\right] \\neq 0$,  \r\n\r\n(若等于 $0$, 则 $a=b=c=0$, 矛盾)\r\n\r\n则 $r(\\boldsymbol{A})=2$ , 从而 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}\r\na x+2 b y=-3 c \\\\\r\nb x+2 c y=-3 a \\\\\r\nc x+2 a y=-3 b\r\n\\end{array}\\right.$ 有唯一解\r\n\r\n故三条直线交于一点",
+      "wrong_options": {},
+      "pitfalls": [
+        "三线共点是三方程有唯一公共解，需 r(系数)=r(增广)=2（不是=3 也不是<2），别只写行列式为零",
+        "|Ā|=-3(a+b+c)[(a-b)²+(b-c)²+(c-a)²]，因三线不同故平方和≠0，才能由 |Ā|=0 推 a+b+c=0"
+      ],
+      "key_point": "三线共点 ⇔ r(A)=r(Ā)=2；由 |Ā|=-3(a+b+c)Σ(·)²=0 及 Σ(·)²≠0 得 a+b+c=0。"
+    },
+    {
+      "id": 948,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知甲、乙两箱中装有同种产品, 其中甲箱中装有 $3$ 件合格品和 $3$ 件次品, 乙箱中仅装有 $3$ 件合格品. 从甲箱中任取 $3$ 件产品放入乙箱后, 求:\r\n\r\n(1) 乙箱中次品件数 $X$ 的数学期望;\r\n\r\n(2) 从乙箱中任取一件产品是次品的概率",
+      "options": {},
+      "answer": "(1) $\\dfrac{3}{2}$\r\n\r\n(2) $\\dfrac{1}{4}$",
+      "analysis": "(1) 方法一 $X$ 的可能取值为 $0,1,2,3$,\r\n\r\n$\\displaystyle P\\{X=0\\}=\\frac{\\mathrm{C}_3^3}{\\mathrm{C}_6^3}=\\frac{1}{20}, \\\\\r\nP\\{X=1\\}=\\frac{\\mathrm{C}_3^2 \\mathrm{C}_3^1}{\\mathrm{C}_6^3}=\\frac{9}{20}, \\\\\r\nP\\{X=2\\}=\\frac{\\mathrm{C}_3^1 \\mathrm{C}_3^2}{\\mathrm{C}_6^3}=\\frac{9}{20}, \\\\\r\nP\\{X=3\\}=\\frac{\\mathrm{C}_3^3}{\\mathrm{C}_6^3}=\\frac{1}{20}$,\r\n\r\n$X$ 独立同分布, 分布律为 $X \\sim\\left(\\begin{array}{cccc}0 & 1 & 2 & 3 \\\\ \\dfrac{1}{20} & \\dfrac{9}{20} & \\dfrac{9}{20} & \\dfrac{1}{20}\\end{array}\\right)$, \r\n\r\n于是 $E(X)=\\dfrac{3}{2}$\r\n\r\n方法二 令 $X_i=\\\\ \r\n\\left\\{\\begin{array}{ll}1, & \\text { 从甲箱中所取的第 } i \\text { 件产品为次品 } \\\\ 0, & \\text { 从甲箱中所取的第 } i \\text { 件产品为合格品 }\\end{array}\\right.\\\\\r\n(i=1,2,3)$, \r\n\r\n$X_i$ 的分布律为 $\\displaystyle X_i \\sim\\left(\\begin{array}{ll}0 & 1 \\\\ \\dfrac{1}{2} & \\dfrac{1}{2}\\end{array}\\right) (i=1,2,3)$,\r\n\r\n设乙箱中的次品个数为 $X$, 则 $X=X_1+X_2+X_3$,\r\n\r\n故 $E(X)=E\\left(X_1\\right)+E\\left(X_2\\right)+E\\left(X_3\\right)=\\dfrac{3}{2}$\r\n\r\n(2) 令 $A_i=\\{X=i\\}(i=0,1,2,3),\\\\\r\nB=\\{$ 从乙箱中取一件产品为次品 $\\}$,\r\n\r\n$P\\left(B \\mid A_0\\right)=0,\\\\\r\n P\\left(B \\mid A_1\\right)=\\dfrac{1}{6},\\\\\r\nP\\left(B \\mid A_2\\right)=\\dfrac{2}{6},\\\\\r\nP\\left(B \\mid A_3\\right)=\\dfrac{3}{6}$, \r\n\r\n由全概率公式得\r\n\r\n$\\displaystyle P(B)=\\sum_{i=0}^3 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)=\\frac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X 是超几何分布 P{X=k}=C₃ᵏC₃^{3-k}/C₆³，别当二项分布（不放回）",
+        "(2) 乙箱共 6 件、次品数为 X，用全概率 P(次品)=Σ P{X=k}·k/6=E(X)/6=1/4，别忘乙箱原有 3 件合格品"
+      ],
+      "key_point": "E(X)=3/2；乙箱取次品概率 =E(X)/6=1/4。"
+    },
+    {
+      "id": 949,
+      "paper": "数学一",
+      "year": 2003,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度函数为\r\n\r\n$f(x)= \\begin{cases}2 \\mathrm{e}^{-2(x-\\theta)}, & x>\\theta \\\\ 0, & x \\leqslant \\theta\\end{cases}$\r\n\r\n其中 $\\theta>0$ 是未知参数. 从总体 $X$ 中抽取简单随机样本 $X_{1}, X_{2}, \\cdots, X_{n}$,\r\n\r\n记 $\\hat{\\theta}=\\min \\left\\{X_{1}, X_{2}, \\cdots, X_{n}\\right\\}$\r\n\r\n(1) 求总体 $X$ 的分布函数 $F(x)$;\r\n\r\n(2) 求统计量 $\\hat{\\theta}$ 的分布函数 $F_{\\hat{\\theta}}(x)$;\r\n\r\n(3) 如果用 $\\hat{\\theta}$ 作为 $\\theta$ 的估计量, 讨论它是否具有无偏性",
+      "options": {},
+      "answer": "(1) $F(x)= \\begin{cases}0, & x<\\theta \\\\ 1-\\mathrm{e}^{-2(x-\\theta)}, & x \\geqslant \\theta \\end{cases}$\r\n\r\n(2) $\\begin{cases}0, & x<\\theta \\\\ 1-\\mathrm{e}^{-2 n(x-\\theta)}, & x \\geqslant \\theta\\end{cases}$;\r\n\r\n(3) 不是",
+      "analysis": "(1) 总体 $X$ 的分布函数为 \r\n\r\n$\\displaystyle F(x)=P\\{X \\leqslant x\\}=\\int_{-\\infty}^x f(x) \\mathrm{d} x$,\r\n\r\n当 $x<\\theta$ 时, $F(x)=0$;\r\n\r\n当 $x \\geqslant \\theta$ 时, $\\displaystyle F(x)=\\int_\\theta^x 2 \\mathrm{e}^{-2(x-\\theta)} \\mathrm{d} x\\\\\r\n=-\\left.\\mathrm{e}^{-2(x-\\theta)}\\right|_\\theta ^x\\\\\r\n=1-\\mathrm{e}^{-2(x-\\theta)}$,\r\n\r\n于是 $F(x)= \\begin{cases}0, & x<\\theta \\\\ 1-\\mathrm{e}^{-2(x-\\theta)}, & x \\geqslant \\theta \\end{cases}$\r\n\r\n(2) $F_{\\hat{\\theta}}(x) =P\\{\\hat{\\theta} \\leqslant x\\}\\\\\r\n=P\\left\\{\\min \\left\\{X_1, X_2, \\cdots, X_n\\right\\} \\leqslant x\\right\\} \\\\\r\n=1-P\\left\\{\\min \\left\\{X_1, X_2, \\cdots, X_n\\right\\}>x\\right\\} \\\\\r\n=1-P\\left\\{X_1>x, X_2>x, \\cdots, X_n>x\\right\\} \\\\\r\n=1-P\\left\\{X_1>x\\right\\} P\\left\\{X_2>x\\right\\} \\cdots P\\left\\{X_n>x\\right\\} \\\\\r\n=1-\\left[1-P\\left\\{X_1 \\leqslant x\\right\\}\\right]\\left[1-P\\left\\{X_2 \\leqslant x\\right\\}\\right]\\\\\r\n\\cdots\\left[1-P\\left\\{X_n \\leqslant x\\right\\}\\right] \\\\\r\n=1-[1-F(x)]^n\\\\\r\n= \\begin{cases}0, & x<\\theta \\\\ 1-\\mathrm{e}^{-2 n(x-\\theta)}, & x \\geqslant \\theta\\end{cases}$\r\n\r\n(3) $\\hat{\\theta}$ 的密度函数为 \r\n\r\n$f_{\\hat{\\theta}}(x)= \\begin{cases}0, & x \\leqslant \\theta \\\\ 2 n \\mathrm{e}^{-2 n(x-\\theta)}, & x>\\theta\\end{cases}$\r\n\r\n因为 $\\displaystyle E(\\hat{\\theta})\\\\\r\n=\\int_\\theta^{+\\infty} x f_{\\hat{\\theta}}(x) \\mathrm{d} x\\\\\r\n=\\int_\\theta^{+\\infty} x \\mathrm{e}^{-2 n(x-\\theta)} \\mathrm{d}[2 n(x-\\theta)]\\\\\r\n\\stackrel{2 n(x-\\theta)=t}{=} \\int_0^{+\\infty}\\left(\\theta+\\frac{t}{2 n}\\right) \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=\\theta \\int_0^{+\\infty} \\mathrm{e}^{-t} \\mathrm{d} t+\\frac{1}{2 n} \\int_0^{+\\infty} t \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=\\theta+\\frac{1}{2 n}$,\r\n\r\n所以 $\\hat{\\theta}$ 不是 $\\theta$ 的无偏估计量",
+      "wrong_options": {},
+      "pitfalls": [
+        "分段积分注意下限从 θ 起（x<θ 时密度为 0，F=0），别从 -∞ 硬积",
+        "最小值 θ̂=min 用 1-[1-F]ⁿ（不是 [F]ⁿ，那是最大值）；(3) θ̂ 仍服从平移指数分布，E(θ̂)=θ+1/(2n)>θ 故有偏"
+      ],
+      "key_point": "θ̂=min 服从参数 2n 的平移指数分布，E(θ̂)=θ+1/(2n)≠θ，非无偏估计。"
+    }
+  ]
+}

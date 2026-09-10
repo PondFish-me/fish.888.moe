@@ -1,0 +1,412 @@
+{
+  "paper": "数学二",
+  "year": 1993,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1145,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $\\displaystyle F(x)=\\int_{1}^{x}\\left(2-\\frac{1}{\\sqrt{t}}\\right) \\mathrm{d} t(x>0)$ 的单调减区间为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(0, \\dfrac{1}{4}\\right)$",
+      "analysis": "由 $\\displaystyle F^{\\prime}(x)=2-\\frac{1}{\\sqrt{x}}=0$ 得 $x=\\dfrac{1}{4}$, \r\n\r\n当 $0<x<\\dfrac{1}{4}$ 时 $F^{\\prime}(x)<0$, 故 $F(x)$ 的单调减区间为 $\\left(0, \\dfrac{1}{4}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "定义域是 x>0，减区间左端点为 0 而非 -∞",
+        "F'(x)=2-1/√x，减区间对应 F'<0，即 0<x<1/4，端点开"
+      ],
+      "key_point": "F'(x)=2-1/√x，由 F'<0 得单调减区间 (0,1/4)。"
+    },
+    {
+      "id": 1417,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}} x \\ln x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}} x \\ln x=\\lim _{x \\rightarrow 0^{+}} \\frac{\\ln x}{\\frac{1}{x}}=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{x}}{-\\frac{1}{x^2}}=\\lim _{x \\rightarrow 0^{+}}(-x)=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$0\\cdot\\infty$ 需先化为 $\\dfrac{\\ln x}{1/x}$ 的 $\\dfrac{\\infty}{\\infty}$ 型再洛必达",
+        "洛必达后化简为 $-x\\to0$，勿把 $1/x$ 放到分子导致越算越复杂"
+      ],
+      "key_point": "$\\lim_{x\\to0^+}\\dfrac{\\ln x}{1/x}=\\lim_{x\\to0^+}(-x)=0$。"
+    },
+    {
+      "id": 1418,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $y=y(x)$ 由方程 $\\sin \\left(x^2+y^2\\right)+\\mathrm{e}^x-x y^2=0$ 所确定,则 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2 x \\cos \\left(x^2+y^2\\right)+\\mathrm{e}^x-y^2}{2 x y-2 y \\cos \\left(x^2+y^2\\right)}$",
+      "analysis": "$\\sin \\left(x^2+y^2\\right)+\\mathrm{e}^x-x y^2=0$ 两边对 $x$ 求导得\r\n\r\n$\\cos \\left(x^2+y^2\\right)\\left(2 x+2 y \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+\\mathrm{e}^x-y^2 -2 x y \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=0$,\r\n\r\n解得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x} =\\dfrac{2 x \\cos \\left(x^2+y^2\\right)+\\mathrm{e}^x-y^2}{2 x y-2 y \\cos \\left(x^2+y^2\\right)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\sin(x^2+y^2)$ 求导要链式带出 $\\cos(x^2+y^2)\\cdot(2x+2yy')$",
+        "$xy^2$ 对 x 求导用乘积法则得 $y^2+2xyy'$"
+      ],
+      "key_point": "整理含 $y'$ 项解出 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$。"
+    },
+    {
+      "id": 1419,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int \\frac{\\tan x}{\\sqrt{\\cos x}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{\\sqrt{\\cos x}}+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\tan x}{\\sqrt{\\cos x}} \\mathrm{d} x=-\\int \\cos ^{-\\frac{3}{2}} x \\mathrm{d}(\\cos x)=\\frac{2}{\\sqrt{\\cos x}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\dfrac{\\tan x}{\\sqrt{\\cos x}}\\mathrm{d}x=-\\cos^{-3/2}x\\,\\mathrm{d}(\\cos x)$",
+        "积分 $-\\int u^{-3/2}\\mathrm{d}u=2u^{-1/2}$，回代得 $\\dfrac{2}{\\sqrt{\\cos x}}$"
+      ],
+      "key_point": "$\\int\\dfrac{\\tan x}{\\sqrt{\\cos x}}\\mathrm{d}x=\\dfrac{2}{\\sqrt{\\cos x}}+C$。"
+    },
+    {
+      "id": 1420,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知曲线 $y=f(x)$ 过点 $\\left(0,-\\dfrac{1}{2}\\right)$, 且其上任一点 $(x, y)$ 处切线的斜率为 $x \\ln \\left(1+x^2\\right)$, 则 $f(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}\\left(1+x^2\\right)\\left[\\ln \\left(1+x^2\\right)-1\\right]$",
+      "analysis": "由题意得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=x \\ln \\left(1+x^2\\right)$, 积分得\r\n\r\n$\\displaystyle y =\\int x \\ln \\left(1+x^2\\right) \\mathrm{d} x\\\\\r\n=\\frac{1}{2} \\int \\ln \\left(1+x^2\\right) \\mathrm{d}\\left(x^2\\right) \\\\\r\n=\\frac{1}{2} x^2 \\ln \\left(1+x^2\\right)-\\int \\frac{x^3}{1+x^2} \\mathrm{d} x\\\\\r\n=\\frac{1}{2} x^2 \\ln \\left(1+x^2\\right)-\\int\\left(x-\\frac{x}{1+x^2}\\right) \\mathrm{d} x \\\\\r\n=\\frac{1}{2} x^2 \\ln \\left(1+x^2\\right)-\\frac{1}{2} x^2+\\frac{1}{2} \\ln \\left(1+x^2\\right)+C$,\r\n\r\n因为曲线经过点 $\\left(0,-\\dfrac{1}{2}\\right)$, 所以 $C=-\\dfrac{1}{2}$, \r\n\r\n故 $y=\\dfrac{1}{2}\\left(x^2+1\\right)\\left[\\ln \\left(1+x^2\\right)-1\\right]$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\int x\\ln(1+x^2)\\mathrm{d}x$ 先凑 $\\tfrac12\\mathrm{d}(x^2)$ 再分部",
+        "由过点 $\\left(0,-\\tfrac12\\right)$ 定出 $C=-\\tfrac12$，注意合并整理"
+      ],
+      "key_point": "积分并定常数后 $f(x)=\\dfrac12(1+x^2)[\\ln(1+x^2)-1]$。"
+    },
+    {
+      "id": 1421,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "(1) 当 $x \\rightarrow 0$ 时, 变量 $\\dfrac{1}{x^2} \\sin \\dfrac{1}{x}$ 是 $(\\quad)$",
+      "options": {
+        "A": "无穷小",
+        "B": "无穷大",
+        "C": "有界的, 但不是无穷小",
+        "D": "无界的, 但不是无穷大"
+      },
+      "answer": "D",
+      "analysis": "取 $\\displaystyle x_n=\\frac{1}{2 n \\pi},\\\\\r\n\\lim _{n \\rightarrow \\infty} \\frac{1}{x_n^2} \\sin \\frac{1}{x_n}=\\lim _{n \\rightarrow \\infty}(2 n \\pi)^2 \\sin 2 n \\pi=0$,\r\n\r\n取 $\\displaystyle y_n=\\frac{1}{2 n \\pi+\\frac{\\pi}{2}},\\\\\r\n\\lim _{n \\rightarrow \\infty} \\frac{1}{y_n^2} \\sin \\frac{1}{y_n}=\\lim _{n \\rightarrow \\infty}\\left(2 n \\pi+\\frac{\\pi}{2}\\right)^2 \\sin \\left(2 n \\pi+\\frac{\\pi}{2}\\right)=\\infty$,\r\n\r\n则当 $x \\rightarrow 0$ 时, 变量 $\\dfrac{1}{x^2} \\sin \\dfrac{1}{x}$ 无界但不是无穷大, 应选 (D)",
+      "wrong_options": {
+        "A": "取到使值→∞ 的子列，不可能是无穷小",
+        "B": "存在使值→0 的子列，不满足无穷大定义",
+        "C": "存在使值→∞ 的子列，故无界，非有界"
+      },
+      "pitfalls": [
+        "取 $x_n=\\dfrac{1}{2n\\pi}$ 使值→0，取 $y_n=\\dfrac{1}{2n\\pi+\\pi/2}$ 使值→∞",
+        "无穷大要求‘全部’趋于∞，只要有子列不趋∞即非无穷大；同时值可任意大即无界"
+      ],
+      "key_point": "两子列一个→0、一个→∞，故无界但非无穷大，选 D。"
+    },
+    {
+      "id": 1422,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{\\left|x^2-1\\right|}{x-1}, & x \\neq 1\\\\ 2, & x=1\\end{array}\\right.$ 则在点 $x=1$ 处函数 $f(x)(\\quad)$",
+      "options": {
+        "A": "不连续",
+        "B": "连续, 但不可导",
+        "C": "可导, 但导数不连续",
+        "D": "可导, 且导数连续"
+      },
+      "answer": "A",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 1^{-}} f(x)=\\lim _{x \\rightarrow 1^{-}} \\frac{1-x^2}{x-1}=-2,\\\\\r\n \\lim _{x \\rightarrow 1^{+}} f(x)=\\lim _{x \\rightarrow 1^{+}} \\frac{x^2-1}{x-1}=2$,\r\n\r\n因为 $f(1-0) \\neq f(1+0)$, 所以 $f(x)$ 在 $x=1$ 处不连续, 应选( A)",
+      "wrong_options": {
+        "B": "误以为连续再谈不可导，实则不连续",
+        "C": "误以为可导，忽略了连续是可导的必要前提",
+        "D": "误以为可导且导数连续，前提就不成立"
+      },
+      "pitfalls": [
+        "$\\left|x^2-1\\right|$ 在 $x=1$ 两侧符号不同：左极限 $-2$、右极限 $2$",
+        "左右极限不等即不连续，连续都不满足自然不可导（排 B/C/D）"
+      ],
+      "key_point": "$f(1^-)=-2\\ne f(1^+)=2$，不连续，选 A。"
+    },
+    {
+      "id": 1423,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)=\\left\\{\\begin{array}{ll}x^2, & 0 \\leqslant x<1 \\\\ 1, & 1 \\leqslant x \\leqslant 2\\end{array}\\right.$ 设 $\\displaystyle F(x)=\\int_1^x f(t) \\mathrm{d} t(0 \\leqslant x \\leqslant 2)$, 则 $F(x)$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\begin{cases}\\dfrac{1}{3} x^3, & 0 \\leqslant x<1 \\\\ x, & 1 \\leqslant x \\leqslant 2\\end{cases}$",
+        "B": "$\\begin{cases}\\dfrac{1}{3} x^3-\\dfrac{1}{3}, & 0 \\leqslant x<1 \\\\ x, & 1 \\leqslant x \\leqslant 2\\end{cases}$",
+        "C": "$\\begin{cases}\\dfrac{1}{3} x^3, & 0 \\leqslant x<1 \\\\ x-1, & 1 \\leqslant x \\leqslant 2\\end{cases}$",
+        "D": "$\\begin{cases}\\dfrac{1}{3} x^3-\\dfrac{1}{3}, & 0 \\leqslant x<1 \\\\ x-1, & 1 \\leqslant x \\leqslant 2\\end{cases}$"
+      },
+      "answer": "D",
+      "analysis": "当 $0 \\leqslant x<1$ 时, $\\displaystyle F(x)=\\int_1^x t^2 \\mathrm{d} t=\\frac{1}{3} x^3-\\frac{1}{3}$;\r\n\r\n当 $1 \\leqslant x \\leqslant 2$ 时, $\\displaystyle F(x)=\\int_1^x 1 \\mathrm{d} t=x-1$,\r\n\r\n则 $F(x)=\\left\\{\\begin{array}{ll}\\dfrac{1}{3} x^3-\\dfrac{1}{3}, & 0 \\leqslant x<1 \\\\ x-1, & 1 \\leqslant x \\leqslant 2 \\end{array}\\right.$ \r\n\r\n应选 $(\\mathrm{D})$",
+      "wrong_options": {
+        "A": "第一段漏掉下限贡献的常数 $-\\dfrac13$，第二段又错写成 x",
+        "B": "第二段错写成 x 而非 x-1",
+        "C": "第一段漏掉常数 $-\\dfrac13$"
+      },
+      "pitfalls": [
+        "下限是 1：$0\\le x<1$ 段 $\\int_1^x t^2\\mathrm{d}t=\\dfrac{x^3}{3}-\\dfrac13$，别漏常数",
+        "$1\\le x\\le2$ 段 $\\int_1^x 1\\,\\mathrm{d}t=x-1$"
+      ],
+      "key_point": "$F(x)=\\begin{cases}\\tfrac13x^3-\\tfrac13,&0\\le x<1\\\\x-1,&1\\le x\\le2\\end{cases}$，选 D。"
+    },
+    {
+      "id": 1424,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设常数 $k>0$, 函数 $f(x)=\\ln x-\\dfrac{x}{\\mathrm{e}}+k$ 在 $(0,+\\infty)$ 内的零点个数为 $(\\quad)$",
+      "options": {
+        "A": "$3$",
+        "B": "$2$",
+        "C": "$1$",
+        "D": "$0$"
+      },
+      "answer": "B",
+      "analysis": "由 $f^{\\prime}(x)=\\dfrac{1}{x}-\\dfrac{1}{\\mathrm{e}}=0$ 得 $x=\\mathrm{e}, f^{\\prime \\prime}(x)=-\\dfrac{1}{x^2}$, \r\n\r\n因为 $f^{\\prime \\prime}(\\mathrm{e})=-\\dfrac{1}{\\mathrm{e}^2}<0$, \r\n\r\n所以 $x=\\mathrm{e}$ 为最大值点, 最大值为 $M=f(\\mathrm{e})=k>0$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=-\\infty, \\lim _{x \\rightarrow+\\infty} f(x)=-\\infty$, \r\n\r\n所以函数 $f(x)$ 在 $(0,+\\infty)$ 只有两个零点, 应选(B)",
+      "wrong_options": {
+        "A": "高估零点个数为 3，函数在两侧各只穿越一次",
+        "C": "低估为 1，忽略两端都趋 $-\\infty$ 而峰值为正",
+        "D": "误判无零点，忽略最大值 $f(\\mathrm{e})=k>0$"
+      },
+      "pitfalls": [
+        "$x=\\mathrm{e}$ 为唯一极大值点，最大值 $f(\\mathrm{e})=k>0$",
+        "$x\\to0^+$ 与 $x\\to+\\infty$ 时 $f\\to-\\infty$，峰正两端负故恰两零点"
+      ],
+      "key_point": "最大值 $k>0$、两端趋 $-\\infty$，恰有 2 个零点，选 B。"
+    },
+    {
+      "id": 1425,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若 $f(x)=-f(-x)$, 在 $(0,+\\infty)$ 内 $f^{\\prime}(x)>0, f^{\\prime \\prime}(x)>0$, 则 $f(x)$ 在 $(-\\infty, 0)$ 内 $(\\quad)$",
+      "options": {
+        "A": "$f^{\\prime}(x)<0, f^{\\prime \\prime}(x)<0$",
+        "B": "$f^{\\prime}(x)<0, f^{\\prime \\prime}(x)>0$",
+        "C": "$f^{\\prime}(x)>0, f^{\\prime \\prime}(x)<0$",
+        "D": "$f^{\\prime}(x)>0, f^{\\prime \\prime}(x)>0$"
+      },
+      "answer": "C",
+      "analysis": "因为 $f(x)$ 为奇函数, 所以 $f^{\\prime}(x)$ 为偶函数, $f^{\\prime \\prime}(x)$ 为奇函数, \r\n\r\n故 $f(x)$ 在 $(-\\infty, 0)$ 内有 $f^{\\prime}(x)>0, f^{\\prime \\prime}(x)<0$, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "把 f' 也当奇函数，误得 f'<0",
+        "B": "f'' 奇偶性判错，误得 f''>0",
+        "D": "完全照搬正区间符号，未考虑奇偶翻转"
+      },
+      "pitfalls": [
+        "$f$ 奇 $\\Rightarrow f'$ 偶（负区间 $f'>0$ 不变号），$f''$ 奇（负区间 $f''<0$ 变号）",
+        "注意只有 $f''$ 变号、$f'$ 不变号"
+      ],
+      "key_point": "负区间 $f'(x)>0,f''(x)<0$，选 C。"
+    },
+    {
+      "id": 1426,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $y=\\sin \\left[f\\left(x^2\\right)\\right]$, 其中 $f$ 具有二阶导数, 求 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}$",
+      "options": {},
+      "answer": "$2 \\cos \\left[f\\left(x^2\\right)\\right] f^{\\prime}\\left(x^2\\right)-4 x^2 \\sin \\left[f\\left(x^2\\right)\\right] f^{\\prime 2}\\left(x^2\\right)+4 x^2 \\cos \\left[f\\left(x^2\\right)\\right] f^{\\prime \\prime}\\left(x^2\\right)$",
+      "analysis": "$\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=2 x \\cos \\left[f\\left(x^2\\right)\\right] f^{\\prime}\\left(x^2\\right),\\\\ \\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=2 \\cos \\left[f\\left(x^2\\right)\\right] f^{\\prime}\\left(x^2\\right)-4 x^2 \\sin \\left[f\\left(x^2\\right)\\right] f^{\\prime 2}\\left(x^2\\right)+4 x^2 \\cos \\left[f\\left(x^2\\right)\\right] f^{\\prime \\prime}\\left(x^2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "一阶导 $2x\\cos[f(x^2)]f'(x^2)$ 是三因子乘积，二阶导要对每个因子求导",
+        "内层 $f(x^2)$ 求导再带 $(x^2)'=2x$，别漏链式因子"
+      ],
+      "key_point": "对 $y'=2x\\cos[f(x^2)]f'(x^2)$ 用乘积法则求导得三项之和。"
+    },
+    {
+      "id": 1427,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow-\\infty} x\\left(\\sqrt{x^2+100}+x\\right)$",
+      "options": {},
+      "answer": "$-50$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow-\\infty} x\\left(\\sqrt{x^2+100}+x\\right)=\\lim _{x \\rightarrow-\\infty} \\frac{100 x}{\\sqrt{x^2+100}-x}=\\lim _{x \\rightarrow-\\infty} \\frac{100}{-\\sqrt{1+\\frac{100}{x^2}}-1}=-50$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x\\to-\\infty$ 时 $\\sqrt{x^2+100}=|x|\\sqrt{1+100/x^2}=-x\\sqrt{\\cdots}$，符号是关键",
+        "有理化后 $\\dfrac{100x}{\\sqrt{x^2+100}-x}$，分母提 $-x$ 化简"
+      ],
+      "key_point": "极限为 $-50$。"
+    },
+    {
+      "id": 1428,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int_0^{\\frac{\\pi}{4}} \\frac{x}{1+\\cos 2 x} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{8}-\\dfrac{1}{4} \\ln 2$",
+      "analysis": "$\\displaystyle \\int_0^{\\frac{\\pi}{4}} \\frac{x}{1+\\cos 2 x} \\mathrm{d} x\\\\\r\n=\\int_0^{\\frac{\\pi}{4}} \\frac{x}{2 \\cos ^2 x} \\mathrm{d} x\\\\\r\n=\\frac{1}{2} \\int_0^{\\frac{\\pi}{4}} x \\mathrm{d}(\\tan x)\\\\\r\n=\\left.\\frac{1}{2} x \\tan x\\right|_0 ^{\\frac{\\pi}{4}}-\\frac{1}{2} \\int_0^{\\frac{\\pi}{4}} \\tan x \\mathrm{d} x \\\\\r\n=\\frac{\\pi}{8}+\\left.\\frac{1}{2} \\ln \\cos x\\right|_0 ^{\\frac{\\pi}{4}}=\\frac{\\pi}{8}-\\frac{1}{4} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$1+\\cos2x=2\\cos^2x$，$\\dfrac{1}{2\\cos^2x}\\mathrm{d}x=\\dfrac12\\mathrm{d}(\\tan x)$ 便于分部",
+        "$\\int\\tan x\\,\\mathrm{d}x=-\\ln|\\cos x|$，代限得 $-\\dfrac14\\ln2$"
+      ],
+      "key_point": "$\\dfrac12 x\\tan x\\big|_0^{\\pi/4}-\\dfrac12\\int\\tan x=\\dfrac{\\pi}{8}-\\dfrac14\\ln2$。"
+    },
+    {
+      "id": 1429,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int_0^{+\\infty} \\frac{x}{(1+x)^3} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle \\int_0^{+\\infty} \\frac{x}{(1+x)^3} \\mathrm{d} x\\\\\r\n=\\int_0^{+\\infty} \\frac{(x+1)-1}{(1+x)^3} \\mathrm{d} x\\\\\r\n=\\int_0^{+\\infty} \\frac{1}{(x+1)^2} \\mathrm{d} x-\\int_0^{+\\infty} \\frac{1}{(x+1)^3} \\mathrm{d} x\\\\\r\n=-\\left.\\frac{1}{x+1}\\right|_0 ^{+\\infty}+\\left.\\frac{1}{2(x+1)^2}\\right|_0 ^{+\\infty}=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\dfrac{x}{(1+x)^3}=\\dfrac{1}{(1+x)^2}-\\dfrac{1}{(1+x)^3}$ 拆项后各自可积",
+        "上限极限各项趋 0，只剩下限贡献"
+      ],
+      "key_point": "$\\int_0^{+\\infty}\\dfrac{x}{(1+x)^3}\\mathrm{d}x=\\dfrac12$。"
+    },
+    {
+      "id": 1430,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\left(x^2-1\\right) \\mathrm{d} y+(2 x y-\\cos x) \\mathrm{d} x=0$ 满足初始条件 $y(0)=1$ 的特解",
+      "options": {},
+      "answer": "$y=\\dfrac{\\sin x-1}{x^2-1}$",
+      "analysis": "将 $\\left(x^2-1\\right) \\mathrm{d} y+(2 x y-\\cos x) \\mathrm{d} x=0$ 化为\r\n\r\n$2 x y \\mathrm{d} x+x^2 \\mathrm{d} y-\\cos x \\mathrm{d} x-\\mathrm{d} y=0$, \r\n\r\n即 $\\mathrm{d}\\left(x^2 y-\\sin x-y\\right)=0$,\r\n\r\n解得原方程的通解为 $x^2 y-\\sin x-y=C$,\r\n\r\n由 $y(0)=1$ 得 $C=-1$, 故特解为 $y=\\dfrac{\\sin x-1}{x^2-1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "观察 $2xy\\mathrm{d}x+x^2\\mathrm{d}y=\\mathrm{d}(x^2y)$，整式凑成全微分",
+        "由 $y(0)=1$ 定 $C=-1$，解出 y 时注意分母 $x^2-1$"
+      ],
+      "key_point": "$x^2y-\\sin x-y=-1\\Rightarrow y=\\dfrac{\\sin x-1}{x^2-1}$。"
+    },
+    {
+      "id": 1431,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二阶常系数线性微分方程 $y^{\\prime \\prime}+\\alpha y^{\\prime}+\\beta y=\\gamma \\mathrm{e}^x$ 的一个特解为 $y=\\mathrm{e}^{2 x}+(1+x) \\mathrm{e}^x$, 求常数 $\\alpha, \\beta, \\gamma$, 并求该方程的通解.",
+      "options": {},
+      "answer": "$y=C_1 \\mathrm{e}^{2 x}+C_2 \\mathrm{e}^x+x \\mathrm{e}^x$ ( $C_1, C_2$ 为任意常数)",
+      "analysis": "显然 $\\lambda_1=2, \\lambda_2=1, \\alpha=-3, \\beta=2$,\r\n\r\n$y^{\\prime \\prime}-3 y^{\\prime}+2 y=\\gamma \\mathrm{e}^x$ 的特解为 \r\n\r\n$y_0(x)=x \\mathrm{e}^x$, 代入得 $\\gamma=-1$,\r\n\r\n则微分方程为 $y^{\\prime \\prime}-3 y^{\\prime}+2 y=-\\mathrm{e}^x$,\r\n\r\n该方程的通解为 $y=C_1 \\mathrm{e}^{2 x}+C_2 \\mathrm{e}^x+x \\mathrm{e}^x$ ( $C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "特解中 $\\mathrm{e}^{2x},\\mathrm{e}^x$ 是齐次解 $\\Rightarrow$ 特征根 2,1，得 $\\alpha=-3,\\beta=2$",
+        "$x\\mathrm{e}^x$ 是共振非齐次特解，代入定 $\\gamma=-1$"
+      ],
+      "key_point": "$\\alpha=-3,\\beta=2,\\gamma=-1$，通解 $y=C_1\\mathrm{e}^{2x}+C_2\\mathrm{e}^x+x\\mathrm{e}^x$。"
+    },
+    {
+      "id": 1432,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设平面图形 $A$ 由 $x^2+y^2 \\leqslant 2 x$ 与 $y \\geqslant x$ 所围成, 求图形 $A$ 绕直线 $x=2$ 旋转一周所得旋转体的体积",
+      "options": {},
+      "answer": "$\\dfrac{\\pi^2}{2}-\\dfrac{2}{3} \\pi$",
+      "analysis": "取 $[x, x+\\mathrm{d} x] \\subset[0,1]$,\r\n\r\n$\\mathrm{d} V=2 \\pi(2-x) \\cdot\\left(y_2-y_1\\right) \\mathrm{d} x\\\\\r\n=2 \\pi(2-x)\\left(\\sqrt{2 x-x^2}-x\\right) \\mathrm{d} x$,\r\n\r\n\r\n所求的体积为\r\n\r\n$\\displaystyle\r\nV =2 \\pi \\int_0^1(2-x)\\left(\\sqrt{2 x-x^2}-x\\right) \\mathrm{d} x\\\\\r\n=2 \\pi \\int_0^1(2-x) \\sqrt{2 x-x^2} \\mathrm{d} x-\\frac{4}{3} \\pi \\\\\r\n=2 \\pi \\int_0^1[1-(x-1)] \\sqrt{1-(x-1)^2} \\mathrm{d}(x-1)-\\frac{4}{3} \\pi \\\\\r\n=2 \\pi \\int_{-1}^0(1-x) \\sqrt{1-x^2} \\mathrm{d} x-\\frac{4}{3} \\pi \\\\\r\n\\stackrel{t=-x}{=}2 \\pi \\int_0^1(1+t) \\sqrt{1-t^2} \\mathrm{d} t-\\frac{4}{3} \\pi \\\\\r\n\\stackrel{t=\\sin u}{=}2 \\pi \\int_0^{\\frac{\\pi}{2}}(1+\\sin u)\\left(1-\\sin ^2 u\\right) \\mathrm{d} u-\\frac{4}{3} \\pi\\\\\r\n=2 \\pi \\int_0^{\\frac{\\pi}{2}}\\left(1+\\sin u-\\sin ^2 u-\\sin ^3 u\\right) \\mathrm{d} u-\\frac{4}{3} \\pi\\\\\r\n=\\frac{\\pi^2}{2}-\\frac{2}{3} \\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "绕 $x=2$ 用柱壳，壳半径为 $2-x$，不是 x",
+        "区域由 $x^2+y^2\\le2x$ 与 $y\\ge x$ 界定，积分限 $x\\in[0,1]$，含 $\\sqrt{2x-x^2}$ 需配方三角换元"
+      ],
+      "key_point": "$V=2\\pi\\int_0^1(2-x)(\\sqrt{2x-x^2}-x)\\mathrm{d}x=\\dfrac{\\pi^2}{2}-\\dfrac23\\pi$。"
+    },
+    {
+      "id": 1433,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "作半径为 $r$ 的球的外切正圆锥, 问此圆锥的高 $h$ 为何值时, 其体积 $V$ 最小, 并求出该最小值",
+      "options": {},
+      "answer": "当 $h=4 r$ 时, $V$ 取最小值, 最小值为 $\\dfrac{8 \\pi r^3}{3}$",
+      "analysis": "设圆锥底面圆的半径为 $R$, 如图所示.\n\n![圆锥与内切球的轴截面](/uploads/books/527b2a5931f9d20003a8ceea31069d25d40f8b8bc0a232c915805ae61252f1fb.jpg)\r\n\r\n$\\displaystyle A C=h, \\quad O C=O D=r, \\quad B C=R$\r\n\r\n因 $\\dfrac{B C}{A C}=\\dfrac{O D}{A D}$, \r\n\r\n故 $\\dfrac{R}{h}=\\dfrac{r}{\\sqrt{(h-r)^2-r^2}}$,\r\n\r\n从而 $R=\\dfrac{r h}{\\sqrt{h^2-2 h r}}$\r\n\r\n于是圆锥的体积为 \r\n\r\n$\\displaystyle V(h)=\\frac{\\pi}{3} R^2 h=\\frac{\\pi r^2}{3} \\frac{h^2}{h-2 r}(2 r<h<+\\infty)$\r\n\r\n令 $V^{\\prime}(h)=\\dfrac{\\pi r^2}{3} \\dfrac{h^2-4 r h}{(h-2 r)^2}=0$, \r\n\r\n得 $h=4 r, h=0$ (舍去)\r\n\r\n由于圆锥的最小体积一定存在,\r\n\r\n且 $h=4 r$ 是 $V(h)$ 在 $(2 r,+\\infty)$ 内的唯一驻点,\r\n\r\n所以当 $h=4 r$ 时, $V$ 取最小值, 最小值为\r\n\r\n$\\displaystyle V(4 r)=\\frac{\\pi r^2}{3} \\frac{(4 r)^2}{4 r-2 r}=\\frac{8 \\pi r^3}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "用相似三角形导出 $R=\\dfrac{rh}{\\sqrt{h^2-2hr}}$，定义域 $h>2r$",
+        "驻点 $h=4r$ 唯一且最小体积必存在，故为最小值点"
+      ],
+      "key_point": "$V(h)=\\dfrac{\\pi r^2}{3}\\cdot\\dfrac{h^2}{h-2r}$，$h=4r$ 时最小 $\\dfrac{8\\pi r^3}{3}$。"
+    },
+    {
+      "id": 1434,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $x>0$, 常数 $a>\\mathrm{e}$. 证明: $(a+x)^a<a^{a+x}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "$(a+x)^a<a^{a+x} \\Longleftrightarrow (a+x) \\ln a-a \\ln (a+x)>0$\r\n\r\n令 $f(x)=(a+x) \\ln a-a \\ln (a+x)$, 且 $f(0)=0$,\r\n\r\n因为 $f^{\\prime}(x)=\\ln a-\\dfrac{a}{a+x}>0(x>0)$, \r\n\r\n所以 $f(x)$ 在 $(0,+\\infty)$ 内单调递增,\r\n\r\n从而当 $x>0$ 时, $f(x)>f(0)=0$, 即 $(a+x)^a<a^{a+x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "取对数化为 $(a+x)\\ln a-a\\ln(a+x)>0$，$f(0)=0$",
+        "$f'(x)=\\ln a-\\dfrac{a}{a+x}$，需用 $a>\\mathrm{e}$ 保证 $\\ln a>1\\ge\\dfrac{a}{a+x}$ 故 $f'>0$"
+      ],
+      "key_point": "$f(x)$ 在 $(0,+\\infty)$ 单增且 $f(0)=0$，故 $f(x)>0$，得证。"
+    },
+    {
+      "id": 1435,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f^{\\prime}(x)$ 在 $[0, a]$ 上连续, 且 $f(0)=0$, 证明:\r\n\r\n$\\displaystyle \\left|\\int_0^a f(x) \\mathrm{d} x\\right| \\leqslant \\dfrac{M a^2}{2}$,\r\n\r\n其中 $M=\\max\\limits_{0 \\leqslant x \\leqslant a} \\left|f^{\\prime}(x)\\right|$",
+      "options": {},
+      "answer": "略",
+      "analysis": "由拉格朗日中值定理得\r\n\r\n$f(x)=f(x)-f(0)=f^{\\prime}(\\xi) x$, 其中 $0<\\xi<x$,\r\n\r\n\r\n则 $\\displaystyle \\left|\\int_0^a f(x) \\mathrm{d} x\\right|\\\\\r\n \\leqslant \\int_0^a|f(x)| \\mathrm{d} x\\\\\r\n=\\int_0^a\\left|f^{\\prime}(\\xi)\\right| x \\mathrm{d} x\\\\\r\n\\leqslant M \\int_0^a x \\mathrm{d} x=\\dfrac{M a^2}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 $f(0)=0$ 及拉格朗日中值 $f(x)=f'(\\xi)x$，$|f(x)|\\le M x$",
+        "积分放缩 $\\left|\\int_0^a f\\right|\\le\\int_0^a|f|\\le M\\int_0^a x\\,\\mathrm{d}x=\\dfrac{Ma^2}{2}$"
+      ],
+      "key_point": "拉格朗日中值 $|f(x)|\\le Mx$，积分得 $\\left|\\int_0^a f\\right|\\le\\dfrac{Ma^2}{2}$。"
+    }
+  ]
+}

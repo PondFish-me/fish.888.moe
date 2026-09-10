@@ -1,0 +1,493 @@
+{
+  "paper": "数学三",
+  "year": 2004,
+  "count": 23,
+  "questions": [
+    {
+      "id": 910,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $\\lambda$ 的指数分布, 则 $P\\{X>\\sqrt{D(X)}\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "由 $X \\sim E(\\lambda)$, 得 $D(X)=\\dfrac{1}{\\lambda^2}$, \r\n\r\n且其分布函数为 $F(x)= \\begin{cases}0, & x<0 \\\\ 1-\\mathrm{e}^{-\\lambda x}, & x \\geqslant 0\\end{cases}$ \r\n\r\n于是 $\\displaystyle P\\{X>\\sqrt{D(X)}\\}\\\\\r\n=P\\left\\{X>\\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-P\\left\\{X \\leqslant \\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-F\\left(\\frac{1}{\\lambda}\\right)\\\\\r\n=\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数分布方差是 1/λ²（不是 1/λ），故 √D(X)=1/λ",
+        "P{X>1/λ}=e^{-λ·(1/λ)}=e^{-1}，结果与 λ 无关"
+      ],
+      "key_point": "√D(X)=1/λ，代尾概率 P{X>1/λ}=e^{-1}=1/e。"
+    },
+    {
+      "id": 917,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从正态分布 $N(0,1)$, 对给定的 $\\alpha(0<\\alpha<1)$, 数 $u_{\\alpha}$ 满足 $P\\left\\{X>u_{\\alpha}\\right\\}=\\alpha$. 若 $P\\{|X|<x\\}=\\alpha$, 则 $x$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$u_{\\frac{a}{2}}$",
+        "B": "$u_{1-\\frac{a}{2}}$",
+        "C": "$u_{\\frac{1-\\alpha}{2}}$",
+        "D": "$u_{1-\\alpha}$"
+      },
+      "answer": "C",
+      "analysis": "由 $P\\{|X|<x\\}=1-P\\{|X| \\geqslant x\\}=1-2 P\\{X \\geqslant x\\}=\\alpha$, \r\n\r\n得 $\\displaystyle P\\{X \\geqslant x\\}=\\frac{1-\\alpha}{2}$.,\r\n\r\n再由 $P\\left\\{X>u_a\\right\\}=\\alpha$, \r\n\r\n得 $x=u_{\\frac{1-a}{2}}$, 应选 (C)",
+      "wrong_options": {
+        "A": "u_{α/2}——由 P{X>x}=(1-α)/2 应取下标 (1-α)/2，误把 α 与 1-α 弄反。",
+        "B": "u_{1-α/2}——下标取错，混淆上侧与下侧分位数。",
+        "D": "u_{1-α}——漏掉双侧对称的因子 1/2。"
+      },
+      "pitfalls": [
+        "P{|X|<x}=1-2P{X≥x}=α ⇒ P{X≥x}=(1-α)/2",
+        "u_α 的定义是 P{X>u_α}=α，故 x=u_{(1-α)/2}；易误写 α/2 或漏 1/2"
+      ],
+      "key_point": "由对称性 P{X≥x}=(1-α)/2，故 x=u_{(1-α)/2}（选 C）。"
+    },
+    {
+      "id": 926,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为随机事件, 且 $\\displaystyle P(A)=\\frac{1}{4}, P(B \\mid A)=\\frac{1}{3},\\\\ P(A \\mid B)=\\frac{1}{2}$, 令\r\n\r\n$X=\\left\\{\\begin{array}{ll}\r\n1, & A \\text { 发生 } \\\\\r\n0, & A \\text { 不发生 }\r\n\\end{array} \\quad Y= \\begin{cases}1, & B \\text { 发生 } \\\\\r\n0, & B \\text { 不发生 }\\end{cases}\\right.$\r\n\r\n求: (1) 二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$\r\n\r\n(3) $Z=X^2+Y^2$ 的概率分布(数三)",
+      "options": {},
+      "answer": "(1) $\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $\\dfrac{\\sqrt{15}}{15}$\r\n\r\n(3) (数三) $Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "analysis": "由 $\\displaystyle P(B \\mid A)=\\frac{P(A B)}{P(A)}$, \r\n\r\n得 $\\displaystyle P(A B)=P(A) P(B \\mid A)=\\frac{1}{12}$,\r\n\r\n又由 $\\displaystyle P(A \\mid B)=\\frac{P(A B)}{P(B)}$, \r\n\r\n得 $\\displaystyle P(B)=\\frac{P(A B)}{P(A \\mid B)}=\\frac{1}{6}$\r\n\r\n(1) $(X, Y)$ 的可能取值为 $(0,0),(0,1),(1,0),(1,1)$,\r\n\r\n$P\\{X=0, Y=0\\}=P(\\bar{A} \\bar{B})\\\\\r\n=P(\\overline{A+B})=1-P(A+B) \\\\\r\n=1-P(A)-P(B)+P(A B)=\\dfrac{2}{3};\\\\\r\nP\\{X=0, Y=1\\}=P(\\bar{A} B)\\\\\r\n=P(B)-P(A B)=\\dfrac{1}{12} ; \\\\\r\nP\\{X=1, Y=0\\}=P(A \\bar{B})\\\\\r\n=P(A)-P(A B)=\\dfrac{1}{6} ; \\\\\r\nP\\{X=1, Y=1\\}=P(A B)=\\dfrac{1}{12}\\\\\r\n\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $X \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{3}{4} & \\frac{1}{4}\r\n\\end{array}\\right), \\\\\r\nY \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{5}{6} & \\frac{1}{6}\r\n\\end{array}\\right), \\\\\r\nX Y \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{11}{12} & \\frac{1}{12}\r\n\\end{array}\\right), \\\\\r\nE(X)=\\dfrac{1}{4}, E\\left(X^2\\right)=\\dfrac{1}{4},\\\\\r\nD(X)=E\\left(X^2\\right)-[E(X)]^2=\\dfrac{3}{16}, \\\\\r\nE(Y)=\\dfrac{1}{6}, E\\left(Y^2\\right)=\\dfrac{1}{6},\\\\\r\nD(Y)=E\\left(Y^2\\right)-[E(Y)]^2=\\dfrac{5}{36}$,\r\n\r\n由 $E(X Y)=\\dfrac{1}{12}$ 得 $\\operatorname{Cov}(X, Y)\\\\\r\n=E(X Y)-E(X) E(Y)\\\\\r\n=\\dfrac{1}{12}-\\dfrac{1}{24}=\\dfrac{1}{24}$\r\n\r\n则 $\\rho_{X Y}=\\frac{\\operatorname{Cov}(X, Y)}{\\sqrt{D(X)} \\cdot \\sqrt{D(Y)}}=\\dfrac{\\frac{1}{24}}{\\frac{\\sqrt{3}}{4} \\times \\frac{\\sqrt{5}}{6}}=\\dfrac{\\sqrt{15}}{15}$\r\n\r\n\r\n(3)(数三)\r\n\r\n$Z=X^2+Y^2$ 的可能取值为 $0,1,2$,\r\n\r\n$ P\\{Z=0\\}=P\\{X=0, Y=0\\}=\\dfrac{2}{3},\r\nP\\{Z=1\\}\\\\\r\n=P\\{X=0, Y=1\\}+P\\{X=1, Y=0\\}=\\dfrac{1}{4},\r\nP\\{Z=2\\}=P\\{X=1, Y=1\\}=\\dfrac{1}{12}$,\r\n\r\n故 $Z$ 的分布律为 $ Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由 P(AB)=P(A)P(B|A)=1/12、再由 P(B)=P(AB)/P(A|B)=1/6，才能填联合分布表",
+        "算 ρ 用 Cov=E(XY)-E(X)E(Y)=P(1,1)-P(A)P(B)=1/24，D(X)、D(Y) 为 0-1 分布 p(1-p)；第(3)问 Z=X²+Y² 是数三专属，数一不作答"
+      ],
+      "key_point": "条件概率定 P(AB)=1/12、P(B)=1/6，列联合分布得 ρ_{XY}=√15/15。"
+    },
+    {
+      "id": 1621,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=|x(1-x)|$, 则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 是 $f(x)$ 的极值点, 但 $(0,0)$ 不是 $y=f(x)$ 的拐点",
+        "B": "$x=0$ 不是 $f(x)$ 的极值点, 但 $(0,0)$ 是 $y=f(x)$ 的拐点",
+        "C": "$x=0$ 是 $f(x)$ 的极值点, 且 $(0,0)$ 是 $y=f(x)$ 的拐点",
+        "D": "$x=0$ 不是 $f(x)$ 的极值点, $(0,0)$ 也不是 $y=f(x)$ 的拐点"
+      },
+      "answer": "C",
+      "analysis": "方法一 由\r\n\r\n$f(x)= \\begin{cases}x^2-x, & x \\leqslant 0 \\\\ \r\nx-x^2, & 0<x<1 \\\\ \r\nx^2-x, & x \\geqslant 1\\end{cases}$\r\n\r\n得 $f^{\\prime}(x)=\\begin{cases}2 x-1, & x<0 \\\\ 1-2 x, & 0<x<1 \\\\ 2 x-1, & x>1\\end{cases} \\\\\r\nf^{\\prime \\prime}(x)= \\begin{cases}2, & x<0 \\\\ -2, & 0<x<1 \\\\ 2, & x>1 \\end{cases}$\r\n\r\n当 $x<0$ 时, $f^{\\prime}(x)=2 x-1<0$; \r\n\r\n当 $0<x<\\frac{1}{2}$ 时, $f^{\\prime}(x)=1-2 x>0$,\r\n\r\n则 $x=0$ 为 $f(x)$ 的极小值点;\r\n\r\n又当 $x<0$ 时, $f^{\\prime \\prime}(x)=2>0$; \r\n\r\n当 $0<x<1$ 时, $f^{\\prime \\prime}(x)=-2<0$, \r\n\r\n则 $(0,0)$ 为曲线 $y=f(x)$ 的拐点, 应选 (C).\r\n\r\n方法二 函数 $y=x(1-x)$ 是经过点 $(0,0)$ 和 $(1,0)$ 的开口向下的抛物线,\r\n\r\n画出 $y=|x(1-x)|$ 的图像, \r\n\r\n显然 $x=0$ 为 $y=|x(1-x)|$ 的极小值点, \r\n\r\n$(0,0)$ 为曲线 $y=|x(1-x)|$ 的 拐点, 应选 (C)",
+      "wrong_options": {
+        "A": "只承认极值点否认拐点，漏看 f'' 在0两侧由2变-2变号",
+        "B": "只承认拐点否认极值点",
+        "D": "极值点与拐点都否认"
+      },
+      "pitfalls": [
+        "x=0 处 f' 从负(2x-1)变正(1-2x)⟹极小值点；f'' 从2变-2⟹拐点，二者兼有",
+        "带绝对值函数在 x=0 处不可导，但仍可由左右单调性与凹凸判定极值和拐点"
+      ],
+      "key_point": "x=0 处 f' 变号为极小值点、f'' 变号为拐点，选C。"
+    },
+    {
+      "id": 2004,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\sin x}{\\mathrm{e}^x-a}(\\cos x-b)=5$, 则 $a=\\rule{0.5cm}{0.2mm}, b=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1,-4$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\sin x}{\\mathrm{e}^x-a}(\\cos x-b)=5$, \r\n\r\n得 $\\lim _{x \\rightarrow 0}\\left(\\mathrm{e}^x-a\\right)=0$, 于是 $a=1$;\r\n\r\n再由 $\\displaystyle 5\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x}{\\mathrm{e}^x-1}(\\cos x-b)\\\\\r\n=\\lim _{x \\rightarrow 0}(\\cos x-b)=1-b$, \r\n\r\n得 $b=-4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子 sin x→0，极限为有限非零 5，逼得分母也趋 0，故 e^0-a=0 ⇒ a=1",
+        "定 a 后 sin x/(e^x-1)→1，剩 (cos x-b)→1-b=5 ⇒ b=-4"
+      ],
+      "key_point": "先由分母趋零定 a=1，再由 1-b=5 定 b=-4。"
+    },
+    {
+      "id": 2005,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $f(u, v)$ 由关系式 $f[x g(y), y]=x+g(y)$ 确定, 其中函数 $g(y)$ 可微, 且 $g(y) \\neq 0$, 则 $\\displaystyle \\frac{\\partial^2 f}{\\partial u \\partial v}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{g^{\\prime}(v)}{g^2(v)}$",
+      "analysis": "令 $u=x g(y), v=y$, 则 $\\displaystyle x=\\frac{u}{g(v)}, y=v$,\r\n\r\n于是 $\\displaystyle f(u, v)=\\frac{u}{g(v)}+g(v)$.\r\n\r\n由 $\\dfrac{\\partial f}{\\partial u}=\\dfrac{1}{g(v)}$, \r\n\r\n得 $\\dfrac{\\partial^2 f}{\\partial u \\partial v}=-\\dfrac{g^{\\prime}(v)}{g^2(v)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键是把 f 的自变量换回 u,v：由 u=xg(y)、v=y 解出 x=u/g(v)，得 f(u,v)=u/g(v)+g(v)",
+        "∂f/∂u=1/g(v) 只含 v，对 v 求导得 -g'(v)/g²(v)"
+      ],
+      "key_point": "f(u,v)=u/g(v)+g(v)，f_{uv}=-g'(v)/g²(v)。"
+    },
+    {
+      "id": 2006,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{l}x \\mathrm{e}^{x^2},& -\\dfrac{1}{2} \\leqslant x<\\dfrac{1}{2} \\\\ -1, &x \\geqslant \\dfrac{1}{2}\\end{array}\\right.$,\r\n\r\n 则 $\\displaystyle \\int_{\\frac{1}{2}}^2 f(x-1) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle \\int_{\\frac{1}{2}}^2 f(x-1) \\mathrm{d} x\\\\\r\n=\\int_{\\frac{1}{2}}^2 f(x-1) \\mathrm{d}(x-1)\\\\\r\n=\\int_{-\\frac{1}{2}}^1 f(x) \\mathrm{d} x\\\\\r\n=\\int_{-\\frac{1}{2}}^{\\frac{1}{2}} x \\mathrm{e}^{x^2} \\mathrm{d} x+\\int_{\\frac{1}{2}}^1(-1) \\mathrm{d} x\\\\\r\n=\\int_{\\frac{1}{2}}^1(-1) \\mathrm{d} x=-\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元后积分限变为 [-1/2,1]，恰跨越分段点 1/2；xe^{x²} 在 [-1/2,1/2] 是奇函数积分为 0",
+        "只余 [1/2,1] 上 -1 的积分 = -1/2，别把奇函数项算成非零"
+      ],
+      "key_point": "平移后奇函数段为 0，只剩 ∫_{1/2}^1(-1)=-1/2。"
+    },
+    {
+      "id": 2007,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "二次型 $f\\left(x_1, x_2, x_3\\right)=\\left(x_1+x_2\\right)^2+\\left(x_2-x_3\\right)^2+\\left(x_3+x_1\\right)^2$ 的秩为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "2",
+      "analysis": "$\\displaystyle f\\left(x_1, x_2, x_3\\right)\\\\\r\n=\\left(x_1+x_2\\right)^2+\\left(x_2-x_3\\right)^2+\\left(x_3+x_1\\right)^2\\\\\r\n=2 x_1^2+2 x_2^2+2 x_3^2+2 x_1 x_2+2 x_1 x_3-2 x_2 x_3$\r\n\r\n则二次型 $f\\left(x_1, x_2, x_3\\right)$ 的矩阵为 \r\n\r\n$\\boldsymbol{A}=\\left(\\begin{array}{ccc}2 & 1 & 1 \\\\ 1 & 2 & -1 \\\\ 1 & -1 & 2\\end{array}\\right),\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}1 & 2 & -1 \\\\ 0 & -3 & 3 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $r(\\boldsymbol{A})=2$, 即二次型 $f\\left(x_1, x_2, x_3\\right)$ 的秩为 $2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三个平方和展开后交叉项系数要对半分配到对称矩阵，得 A 的行列式为 0，秩为 2 非 3",
+        "二次型的秩即其矩阵的秩，不是变量个数"
+      ],
+      "key_point": "二次型矩阵行变换后秩为 2。"
+    },
+    {
+      "id": 2008,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设总体 $X \\sim N\\left(\\mu_1, \\sigma^2\\right), Y \\sim N\\left(\\mu_2, \\sigma^2\\right), X_1, X_2, \\cdots, X_{n_1}$ 和 $Y_1, Y_2, \\cdots, Y_{n_2}$ 分别是来自总体 $X$ 和 $Y$ 的简单随机样本, 则 $E\\left[\\dfrac{\\sum\\limits_{i=1}^{n_1}\\left(X_i-\\bar{X}\\right)^2+\\sum\\limits_{j=1}^{n_2}\\left(Y_j-\\bar{Y}\\right)^2}{n_1+n_2-2}\\right]=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\sigma^2$",
+      "analysis": "$\\dfrac{\\sum\\limits_{i=1}^{n_1}\\left(X_i-\\bar{X}\\right)^2}{\\sigma^2} \\sim \\chi^2\\left(n_1-1\\right), \\\\\r\n\\dfrac{\\sum\\limits_{j=1}^{n_2}\\left(Y_j-\\bar{Y}\\right)^2}{\\sigma^2} \\sim \\chi^2\\left(n_2-1\\right)$,\r\n\r\n由 $E\\left[\\dfrac{\\sum\\limits_{i=1}^{n_1}\\left(X_i-\\bar{X}\\right)^2}{\\sigma^2}\\right]=n_1-1, \\\\\r\nE\\left[\\dfrac{\\sum\\limits_{j=1}^{n_2}\\left(Y_j-\\bar{Y}\\right)^2}{\\sigma^2}\\right]=n_2-1$,\r\n\r\n得 $E\\left[\\sum\\limits_{i=1}^{n_1}\\left(X_i-\\bar{X}\\right)^2\\right]=\\left(n_1-1\\right) \\sigma^2, \\\\\r\nE\\left[\\sum\\limits_{j=1}^{n_2}\\left(Y_j-\\bar{Y}\\right)^2\\right]=\\left(n_2-1\\right) \\sigma^2$,\r\n\r\n于是 $\\displaystyle E\\left[\\frac{\\sum_{i=1}^{n_1}\\left(X_i-\\bar{X}\\right)^2+\\sum_{j=1}^{n_2}\\left(Y_j-\\bar{Y}\\right)^2}{n_1+n_2-2}\\right]\\\\\r\n=\\frac{\\left(n_1-1\\right) \\sigma^2+\\left(n_2-1\\right) \\sigma^2}{n_1+n_2-2}=\\sigma^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Σ(X_i-X̄)²/σ²~χ²(n₁-1) 期望是 n₁-1（自由度减 1，因用了样本均值），故 E[Σ(X_i-X̄)²]=(n₁-1)σ²",
+        "分母 n₁+n₂-2 恰抵消两自由度之和，合并方差是 σ² 的无偏估计"
+      ],
+      "key_point": "合并样本方差无偏，期望为 σ²。"
+    },
+    {
+      "id": 2009,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\dfrac{|x| \\sin (x-2)}{x(x-1)(x-2)^2}$ 在下列哪个区间内有界 $(\\quad)$",
+      "options": {
+        "A": "$(-1,0)$",
+        "B": "$(0,1)$",
+        "C": "$(1,2)$",
+        "D": "$(2,3)$"
+      },
+      "answer": "A",
+      "analysis": "方法一 $|f(x)|=\\left|\\dfrac{\\sin (x-2)}{(x-1)(x-2)^2}\\right|$,\r\n\r\n当 $x \\in(-1,0)$ 时, $\\displaystyle |f(x)|\\\\\r\n=\\left|\\frac{\\sin (x-2)}{(x-1)(x-2)^2}\\right|\\\\\r\n \\leqslant \\frac{1}{\\left|(x-1)(x-2)^2\\right|}<\\frac{1}{2}$, 应选 (A)\r\n\r\n方法二 对于 $x \\in(-1,0)$\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow-1^{+}} f(x) \\\\\r\n=\\lim _{x \\rightarrow-1^{+}} \\frac{-x \\sin (x-2)}{x(x-1)(x-2)^2}\\\\\r\n=-\\frac{\\sin (-3)}{-2 \\cdot(-3)^2}=-\\frac{\\sin 3}{18};\r\n\\lim _{x \\rightarrow 0^{-}} f(x)\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{-x \\sin (x-2)}{x(x-1)(x-2)^2}\\\\\r\n=-\\frac{\\sin (-2)}{-1 \\cdot(-2)^2}=-\\frac{\\sin 2}{4}$\r\n\r\n\r\n故 $f(x)$ 在区间 $(-1,0)$ 内有界.\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 1} f(x)=\\lim _{x \\rightarrow 1} \\frac{x \\sin (x-2)}{x(x-1)(x-2)^2}=\\infty \\\\\r\n\\lim _{x \\rightarrow 2} f(x)=\\lim _{x \\rightarrow 2} \\frac{x \\sin (x-2)}{x(x-1)(x-2)^2} = \\infty$\r\n\r\n可见 $f(x)$ 在 $(0,1) 、(1,2) 、(2,3)$ 均无界, 故选 (A)",
+      "wrong_options": {
+        "B": "(0,1) 内 x→1⁻ 时分母 (x-1)→0 使 f→∞，无界",
+        "C": "(1,2) 内 x→1⁺、x→2⁻ 均使分母因子趋零，无界",
+        "D": "(2,3) 内 x→2⁺ 时 (x-2)²→0 且 sin(x-2)~(x-2)，仍有 1/(x-2) 型发散，无界"
+      },
+      "pitfalls": [
+        "sin(x-2) 在 x=2 只抵消 (x-2)² 中一个因子，仍留 1/(x-2) 发散，故 (2,3) 无界",
+        "(-1,0) 内 x=0,1,2 皆不在区间内，且端点极限有限，唯一有界"
+      ],
+      "key_point": "只有 (-1,0) 无奇点且端点极限有限，故有界，选 A。"
+    },
+    {
+      "id": 2010,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $(-\\infty,+\\infty)$ 内有定义, 且 $\\displaystyle \\lim _{x \\rightarrow \\infty} f(x)=a, g(x)=\\left\\{\\begin{array}{ll}f\\left(\\dfrac{1}{x}\\right), & x \\neq 0 \\\\ 0, & x=0\\end{array}\\right.$ 则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 必是 $g(x)$ 的第一类间断点",
+        "B": "$x=0$ 必是 $g(x)$ 的第二类间断点",
+        "C": "$x=0$ 必是 $g(x)$ 的连续点",
+        "D": "$g(x)$ 在点 $x=0$ 处的连续性与 $a$ 的取值有关"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} g(x)=\\lim _{x \\rightarrow 0} f\\left(\\frac{1}{x}\\right)=\\lim _{t \\rightarrow \\infty} f(t)=a, \\quad g(0)=0$,\r\n\r\n当 $a=0$ 时, $g(x)$ 在 $x=0$ 处连续;\r\n\r\n当 $a \\neq 0$ 时, $x=0$ 为 $g(x)$ 的可去间断点,\r\n\r\n即 $g(x)$ 在 $x=0$ 处连续与否与 $a$ 的取值有关, 应选 (D)",
+      "wrong_options": {
+        "A": "极限 lim g=a 存在，若 a≠0 是可去间断（第一类），但 a=0 时连续，故不“必是”第一类间断",
+        "B": "极限存在有限，绝不会是第二类间断",
+        "C": "只有 a=0 才连续，a≠0 时不连续，不“必”连续"
+      },
+      "pitfalls": [
+        "g 在 0 处极限恒为 a（来自 f 在无穷远的极限），但 g(0)=0 固定；两者是否相等取决于 a",
+        "a=0 连续，a≠0 可去间断，故连续性“与 a 有关”"
+      ],
+      "key_point": "lim g=a 而 g(0)=0，连续与否取决于 a，选 D。"
+    },
+    {
+      "id": 2011,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f^{\\prime}(x)$ 在 $[a, b]$ 上连续, 且 $f^{\\prime}(a)>0, f^{\\prime}(b)<0$, 则下列结论中错误的是 $(\\quad)$",
+      "options": {
+        "A": "至少存在一点 $x_0 \\in(a, b)$, 使 $f\\left(x_0\\right)>f(a)$",
+        "B": "至少存在一点 $x_0 \\in(a, b)$, 使 $f\\left(x_0\\right)>f(b)$",
+        "C": "至少存在一点 $x_0 \\in(a, b)$, 使 $f^{\\prime}\\left(x_0\\right)=0$",
+        "D": "至少存在一点 $x_0 \\in(a, b)$, 使 $f\\left(x_0\\right)=0$"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle f^{\\prime}(a)=\\lim _{x \\rightarrow a} \\frac{f(x)-f(a)}{x-a}>0$, \r\n\r\n由极限保号性, 存在 $\\delta_1>0$, 当 $x \\in\\left(a, a+\\delta_1\\right)$ 时, \r\n\r\n$\\dfrac{f(x)-f(a)}{x-a}>0$, 从而 $f(x)>f(a)$, \r\n\r\n于是存在 $x_0 \\in(a, b)$, 使得 $f\\left(x_0\\right)>f(a)$; \r\n\r\n$\\displaystyle f^{\\prime}(b)=\\lim _{x \\rightarrow b} \\frac{f(x)-f(b)}{x-b}<0$, 由极限保号性, \r\n\r\n存在 $\\delta_2>0$, 当 $x \\in\\left(b-\\delta_2, b\\right)$ 时, \r\n\r\n$\\displaystyle \\frac{f(x)-f(b)}{x-b}<0$, 从而 $f(x)>f(b)$, \r\n\r\n于是存在 $x_0 \\in(a, b)$, 使得 $f\\left(x_0\\right)>f(b)$, \r\n\r\n则 (A), (B) 正确;\r\n\r\n因为 $f^{\\prime}(x)$ 连续且 $f^{\\prime}(a) f^{\\prime}(b)<0$, 所以由零点定理, \r\n\r\n存在 $x_0 \\in(a, b)$, 使得 $f^{\\prime}\\left(x_0\\right)=0$, \r\n\r\n则 (C) 正确, 应选 (D)",
+      "wrong_options": {
+        "A": "f'(a)>0 由保号性使 a 右侧 f(x)>f(a)，A 正确",
+        "B": "f'(b)<0 使 b 左侧 f(x)>f(b)，B 正确",
+        "C": "f' 连续且 f'(a)f'(b)<0，零点定理给出 f'(x₀)=0，C 正确"
+      },
+      "pitfalls": [
+        "D 断言 f(x₀)=0 毫无根据：题设未给 f 的值信息，f 可整体为正",
+        "零点定理用在 f'（连续）上得 f'(x₀)=0，而非用在 f 上"
+      ],
+      "key_point": "A、B、C 均由保号性/零点定理成立，f(x₀)=0 无依据，选 D。"
+    },
+    {
+      "id": 2012,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 等价, 则必有 $(\\quad)$",
+      "options": {
+        "A": "当 $|\\boldsymbol{A}|=a(a \\neq 0)$ 时, $|\\boldsymbol{B}|=a$",
+        "B": "当 $|\\boldsymbol{A}|=a(a \\neq 0)$ 时, $|\\boldsymbol{B}|=-a$",
+        "C": "当 $|\\boldsymbol{A}| \\neq 0$ 时, $|\\boldsymbol{B}|=0$",
+        "D": "当 $|\\boldsymbol{A}|=0$ 时, $|\\boldsymbol{B}|=0$"
+      },
+      "answer": "D",
+      "analysis": "方法一 因为矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 等价, \r\n\r\n所以根据矩阵等价的定义, 存在可逆矩阵 $\\boldsymbol{P}, \\boldsymbol{Q}$, \r\n\r\n使得 $\\boldsymbol{P A Q}=\\boldsymbol B$,\r\n\r\n于是当 $|\\boldsymbol{A}|=0$ 时, $|\\boldsymbol{B}|=0$, 应选 (D)\r\n\r\n方法二 矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 等价的充分必要条件为 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, \r\n\r\n所以当 $|\\boldsymbol{A}|=0$ 时, $r(\\boldsymbol{A})<n$, 于是 $r(\\boldsymbol{B})<n$, \r\n\r\n故 $|\\boldsymbol{B}|=0$, 应选 (D)",
+      "wrong_options": {
+        "A": "等价只保秩不保行列式具体值，|A|=a 推不出 |B|=a",
+        "B": "同理 |B| 也不必等于 -a，等价不控制行列式符号或大小",
+        "C": "|A|≠0 时 r(A)=n ⇒ r(B)=n ⇒ |B|≠0，不会为 0"
+      },
+      "pitfalls": [
+        "等价（PAQ=B）只保证秩相等，不保留行列式值，故 A、B 错",
+        "只有“是否为零”这一秩信息可传递：|A|=0 ⇔ |B|=0"
+      ],
+      "key_point": "等价保秩：|A|=0 ⇒ |B|=0，选 D。"
+    },
+    {
+      "id": 2013,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶矩阵 $\\boldsymbol{A}$ 的伴随矩阵 $\\boldsymbol{A}^* \\neq \\boldsymbol{O}$, 若 $\\boldsymbol{\\xi}_1, \\boldsymbol{\\xi}_2, \\boldsymbol{\\xi}_3, \\boldsymbol{\\xi}_4$ 是非齐次线性方程组 $\\boldsymbol{A x}=\\boldsymbol{b}$ 的互不相等的解, 则对应的齐次线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的基础解系 $(\\quad)$",
+      "options": {
+        "A": "不存在",
+        "B": "仅含一个非零解向量",
+        "C": "含有两个线性无关的解向量",
+        "D": "含有三个线性无关的解向量"
+      },
+      "answer": "B",
+      "analysis": "由非齐次线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{b}$ 有解但不唯一,\r\n\r\n得 $r(\\boldsymbol{A})<n$, 于是 $r\\left(\\boldsymbol{A}^*\\right)=0$ 或 $r\\left(\\boldsymbol{A}^*\\right)=1$, \r\n\r\n因为 $\\boldsymbol{A}^* \\neq \\boldsymbol{O}$, 所以 $r\\left(\\boldsymbol{A}^*\\right)=1$, \r\n\r\n于是 $r(\\boldsymbol{A})=n-1$,\r\n\r\n故齐次线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的基础解系含一个线性无关的解向量,\r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "r(A)=n-1<n，齐次方程有非零解，基础解系存在，A 错",
+        "C": "基础解系维数 n-r(A)=1，不是 2",
+        "D": "同理不是 3"
+      },
+      "pitfalls": [
+        "两条件夹逼：多解 ⇒ r(A)≤n-1；A*≠O ⇒ r(A)≥n-1，故恰 r(A)=n-1",
+        "基础解系向量个数 = n-r(A)=1"
+      ],
+      "key_point": "r(A)=n-1，基础解系含 1 个非零解向量，选 B。"
+    },
+    {
+      "id": 2014,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right)$",
+      "options": {},
+      "answer": "$\\dfrac{4}{3}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right) \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^2 \\sin ^2 x}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^4} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x+\\sin x \\cos x}{x} \\cdot \\frac{x-\\sin x \\cos x}{x^3} \\\\\r\n=\\lim _{x \\rightarrow 0}\\left(1+\\frac{\\sin x}{x} \\cos x\\right) \\cdot \\frac{x-\\sin x \\cos x}{x^3} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{2 x-2 \\sin x \\cos x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{2 x-\\sin 2 x}{x^3}\\\\\r\n=8 \\lim _{x \\rightarrow 0} \\frac{2 x-\\sin 2 x}{(2 x)^3} \\\\\r\n\\stackrel{2 x=t}{=} 8 \\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}\\\\\r\n=\\frac{8}{3} \\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{t^2}=\\frac{4}{3}$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^2 \\sin ^2 x}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^4} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x+\\sin x \\cos x}{x} \\cdot \\frac{x-\\sin x \\cos x}{x^3} \\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{x-\\sin x \\cos x}{x^3}\\\\\r\n=2 \\lim _{x \\rightarrow 0} \\frac{1-\\cos 2 x}{3 x^2} \\\\\r\n=\\frac{2}{3} \\lim _{x \\rightarrow 0} \\frac{1-\\cos 2 x}{x^2}=\\frac{4}{3}$\r\n\r\n方法三\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^2 \\sin ^2 x} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^4}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\frac{1}{4} \\sin ^2 2 x}{x^4} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{2 x-\\sin 2 x \\cos 2 x}{4 x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{4 x-\\sin 4 x}{8 x^3} \\\\\r\n=8 \\lim _{x \\rightarrow 0} \\frac{4 x-\\sin 4 x}{(4 x)^3}\\\\\r\n \\stackrel{4 x=t}{=} 8 \\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3} \\\\\r\n=8 \\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{4}{3}$\r\n\r\n方法四\r\n\r\n$\\displaystyle\r\n\\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^2 \\sin ^2 x} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\sin ^2 x \\cos ^2 x}{x^4}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\frac{1}{4} \\sin ^2 2 x}{x^4} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2-\\frac{1-\\cos 4 x}{8}}{x^4}\\\\\r\n=\\frac{1}{8} \\lim _{x \\rightarrow 0} \\frac{8 x^2-1+\\cos 4 x}{x^4}$\r\n\r\n由 $\\displaystyle \\cos x=1-\\frac{x^2}{2 !}+\\frac{x^4}{4 !}+o\\left(x^4\\right)$ \r\n\r\n得 $\\displaystyle \\cos 4 x=1-8 x^2+\\frac{32}{3} x^4+o\\left(x^4\\right)$,\r\n\r\n于是 $\\displaystyle 8 x^2-1+\\cos 4 x \\sim \\frac{32}{3} x^4$, \r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1}{\\sin ^2 x}-\\frac{\\cos ^2 x}{x^2}\\right)=\\frac{4}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母 x²sin²x~x⁴；分子 x²-sin²x cos²x 用 sin x cos x=½sin2x 化为含 2x-sin2x 的三阶量",
+        "核心极限 (t-sin t)/t³→1/6，配系数后得 4/3"
+      ],
+      "key_point": "化简到 (2x-sin2x)/x³ 型，极限为 4/3。"
+    },
+    {
+      "id": 2015,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\iint\\limits_D\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} \\sigma$, 其中 $D$ 是由圆 $x^2+y^2=4$ 和 $(x+1)^2+y^2=1$ 所围成的平面区域",
+      "options": {},
+      "answer": "$\\dfrac{16}{3} \\pi-\\dfrac{32}{9}$",
+      "analysis": "方法一 令 $D_1: x^2+y^2 \\leqslant 4, D_2:(x+1)^2+y^2 \\leqslant 1$, 则\r\n\r\n$\\displaystyle \\iint\\limits_D\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\iint\\limits_{D_1}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y -\\iint_{D_2}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y \\stackrel{\\Delta}{=} I_1 - I_2 \\\\\r\nI_1=\\iint\\limits_{D_1} \\sqrt{x^2+y^2} \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^2 r^2 \\mathrm{d} r=\\frac{16 \\pi}{3} \\\\\r\nI_2=\\iint_{D_2} \\sqrt{x^2+y^2} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_{\\frac{\\pi}{2}}^{\\frac{3 \\pi}{2}} \\mathrm{d} \\theta \\int_0^{-2 \\cos \\theta} r^2 \\mathrm{d} r \\\\\r\n=-\\frac{8}{3} \\int_{\\frac{\\pi}{2}}^{\\frac{3 \\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta\\\\\r\n=\\frac{8}{3} \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta\\\\\r\n=\\frac{16}{3} \\int_0^{\\frac{\\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta=\\frac{32}{9}$\r\n\r\n于是 $\\displaystyle \\iint\\limits_D\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\frac{16 \\pi}{3}-\\frac{32}{9}$,\r\n\r\n方法二 令 $D_1=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 4, x \\geqslant 0\\right\\}$,\r\n\r\n$D_2=\\left\\{(x, y) \\mid-2 x \\leqslant x^2+y^2 \\leqslant 4, x \\leqslant 0\\right\\}$, 而\r\n\r\n$\\displaystyle \\iint\\limits_{D_1}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^2(r+r \\sin \\theta) r \\mathrm{d} r\\\\\r\n=\\frac{8}{3} \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1+\\sin \\theta) \\mathrm{d} \\theta=\\frac{8}{3} \\pi \\\\\r\n\\iint\\limits_{D_2}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_2} \\sqrt{x^2+y^2} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_{\\frac{\\pi}{2}}^{\\frac{3 \\pi}{2}} \\mathrm{d} \\theta \\int_{-2 \\cos \\theta}^2 r^2 \\mathrm{d} r \\\\\r\n=\\frac{8}{3} \\int_{\\frac{\\pi}{2}}^{\\frac{3 \\pi}{2}}\\left(1+\\cos ^3 \\theta\\right) \\mathrm{d} \\theta \\\\\r\n\\stackrel{\\theta-\\pi=t}{=} \\frac{8}{3} \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(1-\\cos ^3 t\\right) \\mathrm{d} t \\\\\r\n=\\frac{16}{3} \\int_0^{\\frac{\\pi}{2}}\\left(1-\\cos ^3 t\\right) \\mathrm{d} t\\\\\r\n=\\frac{16}{3}\\left(\\frac{\\pi}{2}-\\frac{2}{3}\\right)=\\frac{8}{3} \\pi-\\frac{32}{9}$\r\n\r\n所以\r\n\r\n$\\displaystyle \\iint\\limits_D\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n+\\iint\\limits_{D_2}\\left(\\sqrt{x^2+y^2}+y\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\frac{16}{3} \\pi-\\frac{32}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "D 关于 x 轴对称，∬y dσ=0，只需算 ∬√(x²+y²)",
+        "小圆 (x+1)²+y²=1 在极坐标下是 r=-2cosθ（θ∈[π/2,3π/2]），用大圆积分减去它"
+      ],
+      "key_point": "y 项对称为 0，模长积分大圆减小圆得 16π/3-32/9。"
+    },
+    {
+      "id": 2016,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $f(x), g(x)$ 在 $[a, b]$ 上连续, 且满足 $\\displaystyle \\int_a^x f(t) \\mathrm{d} t \\geqslant \\int_a^x g(t) \\mathrm{d} t, x \\in[a, b), \\int_a^b f(t) \\mathrm{d} t=\\int_a^b g(t) \\mathrm{d} t$, 证明: \r\n\r\n$\\displaystyle \\int_a^b x f(x) \\mathrm{d} x \\leqslant \\int_a^b x g(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "由 $\\displaystyle \\int_a^x f(t) \\mathrm{d} t \\geqslant \\int_a^x g(t) \\mathrm{d} t$, \r\n\r\n得 $\\displaystyle \\int_a^x[f(t)-g(t)] \\mathrm{d} t \\geqslant 0$,\r\n\r\n从而 $\\displaystyle \\int_a^b \\mathrm{d} x \\int_a^x[f(t)-g(t)] \\mathrm{d} t \\geqslant 0$,\r\n\r\n而$\\displaystyle \\int_a^b \\mathrm{d} x \\int_a^x[f(t)-g(t)] \\mathrm{d} t\\\\\r\n=\\int_a^b \\mathrm{d} t \\int_t^b[f(t)-g(t)] \\mathrm{d} x\\\\\r\n=\\int_a^b(b-t)[f(t)-g(t)] \\mathrm{d} t\\\\\r\n=b\\left[\\int_a^b f(t) \\mathrm{d} t-\\int_a^b g(t) \\mathrm{d} t\\right]-\\left[\\int_a^b t f(t) \\mathrm{d} t-\\int_a^b t g(t) \\mathrm{d} t\\right] \\\\\r\n=-\\left[\\int_a^b t f(t) \\mathrm{d} t-\\int_a^b t g(t) \\mathrm{d} t\\right] \\geqslant 0$\r\n\r\n故 $\\displaystyle \\int_a^b t f(t) \\mathrm{d} t \\leqslant \\int_a^b t g(t) \\mathrm{d} t$, \r\n\r\n即 $\\displaystyle \\int_a^b x f(x) \\mathrm{d} x \\leqslant \\int_a^b x g(x) \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键把 ∫_a^b[∫_a^x(f-g)dt]dx 交换次序为 ∫_a^b(b-t)(f-g)dt，非负性得 -[∫xf-∫xg]≥0",
+        "利用 ∫_a^b(f-g)=0 消去含 b 的项，才凑出待证不等式"
+      ],
+      "key_point": "交换积分次序 + 端点等积消项，得 ∫xf≤∫xg。"
+    },
+    {
+      "id": 2017,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某商品的需求函数 $Q=100-5 P$, 其中价格 $P \\in(0,20), Q$ 为需求量\r\n\r\n(1) 求需求量对价格的弹性函数 $E_d\\left(E_d>0\\right)$;\r\n\r\n(2) 推导 $\\dfrac{\\mathrm{d} R}{\\mathrm{d} P}=Q\\left(1-E_d\\right)$ (其中 $R$ 为收益), 并用弹性 $E_d$ 说明价格在何范围内变化时, 降低价格反而收益增加",
+      "options": {},
+      "answer": "(1) $\\dfrac{P}{20-P}$;\r\n(2) $10<P<20$",
+      "analysis": "(1) $ E_d=-\\dfrac{P}{Q} \\cdot \\dfrac{\\mathrm{d} Q}{\\mathrm{d} P}=-(-5) \\times \\dfrac{P}{100-5 P}=\\dfrac{P}{20-P}$\r\n\r\n(2) $ R=P Q, \\dfrac{\\mathrm{d} R}{\\mathrm{d} P}=Q+P \\dfrac{\\mathrm{d} Q}{\\mathrm{d} P}=Q-5 P$,\r\n\r\n又 $Q\\left(1-E_d\\right)=Q-5 P$, \r\n\r\n所以 $ \\dfrac{\\mathrm{d} R}{\\mathrm{d} P}=Q\\left(1-E_d\\right)$,\r\n\r\n若价格降低收益增加, 则 $ \\dfrac{\\mathrm{d} R}{\\mathrm{d} P}<0$, 故 $1-E_d<0$, \r\n\r\n即 $ 1-\\dfrac{P}{20-P}<0$, 解得 $P>10$,\r\n\r\n注意到 $0<P<20$, 故当 $10<P<20$ 时, \r\n\r\n价格降低反而使收益增加",
+      "wrong_options": {},
+      "pitfalls": [
+        "弹性定义带负号取正：E_d=-（P/Q)·dQ/dP=5P/(100-5P)=P/(20-P)",
+        "降价（dP<0）增收益 ⇔ dR/dP<0 ⇔ 1-E_d<0 ⇔ E_d>1 ⇔ P>10，再受 P<20 约束"
+      ],
+      "key_point": "E_d=P/(20-P)，弹性大于 1（10<P<20）时降价增收益。"
+    },
+    {
+      "id": 2018,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设级数 $\\displaystyle \\frac{x^4}{2 \\times 4}+\\frac{x^6}{2 \\times 4 \\times 6}+\\frac{x^8}{2 \\times 4 \\times 6 \\times 8}+\\cdots(-\\infty<x<+\\infty)$ 的和函数为 $S(x)$, 求: \r\n\r\n(1) $S(x)$ 所满足的一阶微分方程;\r\n\r\n(2) $S(x)$ 的表达式",
+      "options": {},
+      "answer": "(1) $S^{\\prime}(x)-x S(x)=\\dfrac{x^3}{2}$\r\n(2) $S(x)=\\mathrm{e}^{\\frac{x^2}{2}}-\\dfrac{x^2}{2}-1$",
+      "analysis": "(1) 令 $\\displaystyle S(x)=\\frac{x^4}{2 \\times 4}+\\frac{x^6}{2 \\times 4 \\times 6}+\\frac{x^8}{2 \\times 4 \\times 6 \\times 8}+\\cdots$,\r\n\r\n则 $\\displaystyle S^{\\prime}(x)=\\frac{x^3}{2}+\\frac{x^5}{2 \\times 4}+\\frac{x^7}{2 \\times 4 \\times 6}+\\cdots=\\frac{x^3}{2}+x S(x)$,\r\n\r\n故 $S(x)$ 满足的微分方程为 $S^{\\prime}(x)-x S(x)=\\dfrac{x^3}{2}$\r\n\r\n(2) 由 $S^{\\prime}(x)-x S(x)=\\dfrac{x^3}{2}$, 得\r\n\r\n$\\displaystyle S(x)=\\left(\\int \\frac{x^3}{2} \\mathrm{e}^{\\int-x \\mathrm{d} x} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int-x \\mathrm{d} x}\\\\\r\n=\\left(\\int \\frac{x^3}{2} \\mathrm{e}^{-\\frac{x^2}{2}} \\mathrm{d} x+C\\right) \\mathrm{e}^{\\frac{x^2}{2}}\\\\\r\n=C \\mathrm{e}^{\\frac{x^2}{2}}-\\frac{x^2}{2}-1$,\r\n\r\n由 $S(0)=0$, 得 $C=1$, 故 $S(x)=\\mathrm{e}^{\\frac{x^2}{2}}-\\dfrac{x^2}{2}-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "逐项求导后 S'=x³/2+xS（错位相乘识别出 xS），凑成一阶线性方程",
+        "S(0)=0（级数从 x⁴ 起）定出 C=1"
+      ],
+      "key_point": "S'-xS=x³/2，S(0)=0 ⇒ S=e^{x²/2}-x²/2-1。"
+    },
+    {
+      "id": 2019,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_1=(1,2,0)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_2=(1, a+2,-3 a)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_3=(-1,-b-2, a+2 b)^{\\mathrm{T}}, \\boldsymbol{\\beta}=(1,3,-3)^{\\mathrm{T}}$, 试讨论 $a, b$ 为何值时\r\n\r\n(1) $\\boldsymbol{\\beta}$ 不能由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示;\r\n\r\n(2) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 唯一地线性表示, 并求表达式;\r\n\r\n(3) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 但表达式不唯一, 并求表达式",
+      "options": {},
+      "answer": "(1) $a=0, b$ 为任意常数\r\n\r\n(2) $a \\neq 0$ 且 $a \\neq b$; $\\displaystyle \\boldsymbol{\\beta}=\\left(1-\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_1+\\frac{1}{a} \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3$\r\n\r\n(3) $a \\neq 0$ 且 $a=b$; $\\displaystyle \\boldsymbol{\\beta}=\\left(1-\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_1+\\left(C+\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_2+C \\boldsymbol{\\alpha}_3(C$ 为任意常数)",
+      "analysis": "$\\boldsymbol{\\beta}$ 可否由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示等价于非齐次线性方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+$ $x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 是否有解\r\n\r\n$\\overline{\\boldsymbol{A}}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\beta}\\right) \\\\\r\n=\\left(\\begin{array}{ccc:c}\r\n1 & 1 & -1 & 1 \\\\\r\n2 & a+2 & -b-2 & 3 \\\\\r\n0 & -3 a & a+2 b & -3\r\n\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & -1 & 1 \\\\\r\n0 & a & -b & 1 \\\\\r\n0 & -3 a & a+2 b & -3\r\n\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & -1 & 1 \\\\\r\n0 & a & -b & 1 \\\\\r\n0 & 0 & a-b & 0\r\n\\end{array}\\right)$\r\n\r\n(1) 当 $a=0, b$ 为任意常数时, 因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, 所以 $\\boldsymbol{\\beta}$ 不可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示;\r\n\r\n(2) 当 $a \\neq 0$ 且 $a \\neq b$ 时, $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 唯一线性表示,\r\n\r\n由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}1 & 0 & 0 & 1-\\frac{1}{a} \\\\ 0 & 1 & 0 & \\frac{1}{a} \\\\ 0 & 0 & 1 & 0\\end{array}\\right)$, \r\n\r\n得 $\\displaystyle \\boldsymbol{\\beta}=\\left(1-\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_1+\\frac{1}{a} \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3$\r\n\r\n(3) 当 $a \\neq 0$ 且 $a=b$ 时,\r\n\r\n由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}1 & 1 & -1 & 1 \\\\ 0 & 1 & -1 & \\frac{1}{a} \\\\ 0 & 0 & 0 & 0\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}1 & 0 & 0 & 1-\\frac{1}{a} \\\\ 0 & 1 & -1 & \\frac{1}{a} \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 的通解为 $\\boldsymbol{x}=\\\\\r\nC\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}1-\\frac{1}{a} \\\\ \\frac{1}{a} \\\\ 0\\end{array}\\right)=\\left(\\begin{array}{c}1-\\frac{1}{a} \\\\ C+\\frac{1}{a} \\\\ C\\end{array}\\right)$ ( $C$ 为任意常数),\r\n\r\n故 $\\displaystyle \\boldsymbol{\\beta}=\\left(1-\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_1+\\left(C+\\frac{1}{a}\\right) \\boldsymbol{\\alpha}_2+C \\boldsymbol{\\alpha}_3(C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "末行 (a-b) 与倒数第二行 a 是分类枢纽：a=0 使第二行出现 0=1 型矛盾（不可表示）",
+        "a≠0 且 a=b 时末行全零、秩降，表示不唯一，通解含自由参数 C"
+      ],
+      "key_point": "行化简后按 a、a-b 是否为零分三情形讨论线性表示。"
+    },
+    {
+      "id": 2020,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & b & \\cdots & b \\\\ b & 1 & \\cdots & b \\\\ \\vdots & \\vdots & & \\vdots \\\\ b & b & \\cdots & 1\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的特征值和特征向量;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$, 使 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$ 为对角矩阵",
+      "options": {},
+      "answer": "详见解析",
+      "analysis": "(1) 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{cccc}\r\n\\lambda-1 & -b & \\cdots & -b \\\\\r\n-b & \\lambda-1 & \\cdots & -b \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n-b & -b & \\cdots & \\lambda-1\r\n\\end{array}\\right| \\\\\r\n=[\\lambda-1-(n-1) b](\\lambda-1+b)^{n-1}=0$\r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 \r\n\r\n$\\lambda_1=1+(n-1) b,\\\\\r\n\\lambda_2=\\lambda_3=\\cdots=\\lambda_n=1-b$\r\n\r\n情形一: $b \\neq 0$\r\n\r\n当 $\\lambda_1=1+(n-1) b$ 时,\r\n\r\n因为 $\\boldsymbol{A}$ 为实对称矩阵,\r\n\r\n所以 $\\lambda_1=1+(n-1) b$ 只有一个线性无关的特征向量, \r\n\r\n注意到 $[1+(n-1) b] \\boldsymbol{E}-\\boldsymbol{A}\\\\\r\n=\\left(\\begin{array}{cccc}(n-1) b & -b & \\cdots & -b \\\\ -b & (n-1) b & \\cdots & -b \\\\ \\vdots & \\vdots & & \\vdots \\\\ -b & -b & \\cdots & (n-1) b\\end{array}\\right)$ 的每行元素之和为零, \r\n\r\n于是 $\\lambda_1=1+(n-1) b$ 对应的特征向量为 $\\xi_1=(1,1, \\cdots, 1)^{\\mathrm{T}}$. \r\n\r\n当 $\\lambda_2=\\lambda_3=\\cdots=\\lambda_n=1-b$ 时,\r\n\r\n$(1-b) \\boldsymbol{E}-\\boldsymbol{A}\\\\\r\n=\\left(\\begin{array}{cccc}\r\n-b & -b & \\cdots & -b \\\\\r\n-b & -b & \\cdots & -b \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n-b & -b & \\cdots & -b\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{cccc}\r\n1 & 1 & \\cdots & 1 \\\\\r\n0 & 0 & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & \\cdots & 0\r\n\\end{array}\\right)$,\r\n\r\n则 $\\lambda=1-b$ 对应的线性无关的特征向量为\r\n\r\n$\\boldsymbol{\\xi}_2=(-1,1,0, \\cdots, 0)^{\\mathrm{T}},\\\\\r\n \\boldsymbol{\\xi}_3=(-1,0,1,0, \\cdots, 0)^{\\mathrm{T}}, \\cdots,\\\\\r\n \\boldsymbol{\\xi}_n=(-1,0, \\cdots, 0,1)^{\\mathrm{T}}$\r\n\r\n情形二: $b=0$\r\n此时 $\\lambda_1=\\lambda_2=\\cdots=\\lambda_n=1$, \r\n\r\n任意非零向量皆为矩阵 $\\boldsymbol{A}$ 的特征向量\r\n\r\n(2) 当 $b \\neq 0$ 时, 取 $\\boldsymbol{P}=\\left(\\boldsymbol{\\xi}_1, \\boldsymbol{\\xi}_2, \\cdots, \\boldsymbol{\\xi}_n\\right)$, 则\r\n\r\n$\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{cccc}\r\n(n-1) b+1 & 0 & \\cdots & 0 \\\\\r\n0 & 1-b & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & \\cdots & 1-b\r\n\\end{array}\\right)$\r\n\r\n当 $b=0$ 时, 对于任意可逆矩阵 $\\boldsymbol{P}$, \r\n\r\n有 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{E}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A=(1-b)E+bJ，J 特征值 n（一次）与 0（n-1 次），平移得 A 的特征值；1-b 是 n-1 重根",
+        "b=0 时 A=E，任意非零向量都是特征向量，任意可逆 P 皆使 P⁻¹AP=E"
+      ],
+      "key_point": "cI+dJ 型：特征值 1+(n-1)b 与 1-b(重)，b≠0 取特征向量组成 P。"
+    },
+    {
+      "id": 2022,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的分布函数为:\r\n\r\n$$\r\nF(x ; \\alpha, \\beta)= \\begin{cases}1-\\left(\\frac{\\alpha}{x}\\right)^\\beta, & x>\\alpha\\\\ 0, & x \\leqslant \\alpha \\end{cases}\r\n$$\r\n\r\n其中参数 $\\alpha>0, \\beta>1$. 设 $X_1, X_2, \\cdots, X_n$ 为来自于总体 $X$ 的简单随机样本\r\n\r\n(1) 若参数 $\\alpha=1$, 求未知参数 $\\beta$ 的矩估计量;\r\n\r\n(2) 若参数 $\\alpha=1$, 求未知参数 $\\beta$ 的最大似然估计量;\r\n\r\n(3) 若参数 $\\beta=2$, 求未知参数 $\\alpha$ 的最大似然估计量",
+      "options": {},
+      "answer": "(1) $\\beta$ 的矩估计量为 $\\hat{\\beta}=\\dfrac{\\bar{X}}{\\bar{X}-1}$;\r\n\r\n(2) $\\beta$ 的最大似然估计量为 $\\hat{\\beta}=\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln X_i}$;\r\n\r\n(3) $\\hat{\\alpha}=\\min\\limits _{1 \\leqslant i \\leqslant n}\\left\\{X_i\\right\\}$",
+      "analysis": "(1) 当 $\\alpha=1$ 时, 随机变量 $X$ 的密度函数为\r\n\r\n$\\displaystyle\r\nf(x ; \\beta)= \\begin{cases}\\beta x^{-\\beta-1}, & x>1 \\\\\r\n0, & x \\leqslant 1\\end{cases} \\\\\r\nE(X)=\\int_1^{+\\infty} x f(x, \\beta) \\mathrm{d} x=\\beta \\int_1^{+\\infty} x^{-\\beta} \\mathrm{d} x=\\frac{\\beta}{\\beta-1}$,\r\n\r\n令 $E(X)=\\bar{X}$, 则 $\\beta$ 的矩估计量为 $\\hat{\\beta}=\\dfrac{\\bar{X}}{\\bar{X}-1}$\r\n\r\n(2) 当 $\\alpha=1$ 时, 似然函数为\r\n\r\n$\\displaystyle L\\left(x_1, x_2, \\cdots, x_n ; \\beta\\right)\\\\\r\n=f\\left(x_1 ; \\beta\\right) f\\left(x_2 ; \\beta\\right) \\cdots f\\left(x_n ; \\beta\\right)\\\\\r\n=\\beta^n\\left(x_1 x_2 \\cdots x_n\\right)^{-\\beta-1}$\r\n\r\n其中 $x_i>1(i=1,2, \\cdots, n)$,\r\n\r\n取对数得 $\\displaystyle \\ln L=n \\ln \\beta-(\\beta+1) \\sum_{i=1}^n \\ln x_i$,\r\n\r\n由 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} \\beta} \\ln L=\\frac{n}{\\beta}-\\sum_{i=1}^n \\ln x_i=0$, \r\n\r\n得 $\\beta$ 的最大似然估计值为 $\\hat{\\beta}=\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln x_i}$,\r\n\r\n$\\beta$ 的最大似然估计量为 $\\hat{\\beta}=\\dfrac{n}{\\sum\\limits_{i=1}^n \\ln X_i}$\r\n\r\n(3) 当 $\\beta=2$ 时, $X$ 的密度函数为\r\n\r\n$f(x ; \\alpha)= \\begin{cases}2 \\alpha^2 x^{-3}, & x>\\alpha \\\\ 0, & x \\leqslant \\alpha\\end{cases}$\r\n\r\n似然函数为\r\n\r\n$L\\left(x_1, x_2, \\cdots, x_n ; \\alpha\\right)=f\\left(x_1 ; \\alpha\\right) f\\left(x_2 ; \\alpha\\right) \\cdots f\\left(x_n ; \\alpha\\right)\\\\\r\n=2^n \\alpha^{2 n}\\left(x_1 x_2 \\cdots x_n\\right)^{-3}$,\r\n\r\n其中 $x_i>\\alpha(i=1,2, \\cdots, n)$\r\n\r\n取对数得 $\\displaystyle \\ln L=n \\ln 2+2 n \\ln \\alpha-3 \\sum_{i=1}^n \\ln x_i$,\r\n\r\n因为 $\\dfrac{\\mathrm{d}}{\\mathrm{d} \\alpha} \\ln L=\\dfrac{2 n}{\\alpha}>0$, \r\n\r\n即 $L$ 为 $\\alpha$ 的增函数, \r\n\r\n所以 $\\alpha$ 的最大似然估计值为 $\\hat{\\alpha}=\\min\\limits _{1 \\leqslant i \\leqslant n}\\left\\{x_i\\right\\}$, \r\n\r\n最大似然估计量为 $\\hat{\\alpha}=\\min\\limits _{1 \\leqslant i \\leqslant n}\\left\\{X_i\\right\\}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "第(3)问似然 lnL 对 α 求导为 2n/α>0 恒正，不能令导数为零；须由“L 关于 α 递增且约束 x_i>α”取 α̂=min X_i",
+        "矩估计与 MLE 对 β 结果不同（X̄/(X̄-1) 与 n/Σln X_i），勿混"
+      ],
+      "key_point": "β 的矩估计 X̄/(X̄-1)、MLE n/Σln X_i；α 的 MLE 为 min X_i（似然单调取边界）。"
+    },
+    {
+      "id": 90401,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有以下命题:\r\n① 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_{2n-1}+u_{2n})$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛;\r\n② 若 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_{n+100}$ 收敛;\r\n③ 若 $\\displaystyle\\lim_{n\\rightarrow\\infty}\\frac{u_{n+1}}{u_n}>1$, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 发散;\r\n④ 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_n+v_n)$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n,\\ \\sum_{n=1}^{\\infty}v_n$ 都收敛.\r\n则以上命题中正确的是 $(\\quad)$",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
+      },
+      "answer": "B",
+      "analysis": "② 去掉或添加有限项不改变级数敛散性, 故 $\\sum u_n$ 收敛 $\\Rightarrow \\sum u_{n+100}$ 收敛, 正确.\r\n③ 由 $\\lim\\frac{u_{n+1}}{u_n}>1$ 知一般项 $u_n$ 不趋于 $0$, 故 $\\sum u_n$ 发散, 正确.\r\n① 取 $u_n=(-1)^n$: $\\sum(u_{2n-1}+u_{2n})=\\sum 0$ 收敛, 但 $\\sum u_n$ 发散, ① 错.\r\n④ 取 $u_n=\\frac1n,\\ v_n=-\\frac1n$: $\\sum(u_n+v_n)=0$ 收敛, 但 $\\sum u_n$ 发散, ④ 错.\r\n故正确的是 ②③, 应选 (B).",
+      "wrong_options": {
+        "A": "含①：括号内两两配对收敛推不出原级数收敛（u_n=(-1)^n 反例），A 错",
+        "C": "含④：Σ(u_n+v_n) 收敛推不出各自收敛（1/n 与 -1/n 反例），C 错",
+        "D": "①④均可举反例证伪，D 错"
+      },
+      "pitfalls": [
+        "①的陷阱：相邻两项配对后收敛，但拆开的原级数（如 Σ(-1)^n）可发散",
+        "④的陷阱：和级数收敛不能拆分，1/n 与 -1/n 之和为 0 收敛但各自发散"
+      ],
+      "key_point": "只有②③成立（有限项不变敛散、通项不趋零则发散），选 B。"
+    }
+  ]
+}

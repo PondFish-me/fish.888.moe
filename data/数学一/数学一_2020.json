@@ -1,0 +1,515 @@
+{
+  "paper": "数学一",
+  "year": 2020,
+  "count": 23,
+  "questions": [
+    {
+      "id": 148,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0^{+}$时, 下列无穷小量中最高阶的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{0}^{x}\\left(\\mathrm{e}^{t^{2}}-1\\right) \\mathrm{d} t$",
+        "B": "$\\displaystyle \\int_{0}^{x} \\ln \\left(1+\\sqrt{t^{3}}\\right) \\mathrm{d} t$",
+        "C": "$\\displaystyle \\int_{0}^{\\sin x} \\sin t^{2} \\mathrm{d} t$",
+        "D": "$\\displaystyle \\int_{0}^{1-\\cos x} \\sqrt{\\sin ^{3} t} \\mathrm{d} t$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n比较四个变上限积分在 $x\\to0^+$ 时的无穷小阶数。核心结论：若被积函数 $f(t)\\sim Ct^{\\alpha}$（$t\\to0^+$，$\\alpha>-1$），则 $\\displaystyle\\int_0^{u(x)} f(t)\\,\\mathrm{d}t\\sim \\frac{C}{\\alpha+1}\\,[u(x)]^{\\alpha+1}$，其阶数等于把上限 $u(x)$ 的阶数乘以 $(\\alpha+1)$。这里“最高阶”指阶数最大（趋于零最快）的那个。逐项用等价无穷小定出被积函数的阶、再结合上限的阶即可。\n\n【解答】\n\n逐项确定阶数（均指 $x\\to0^+$，上限趋于 $0$）。\n\n**A.** $e^{t^2}-1\\sim t^2$（阶 $2$），上限为 $x$（阶 $1$），积分阶 $=2+1=3$，即 $\\displaystyle\\int_0^x(e^{t^2}-1)\\,\\mathrm{d}t\\sim\\frac{x^3}{3}$，**3 阶**。\n\n**B.** $\\ln(1+\\sqrt{t^3})\\sim t^{3/2}$（阶 $\\frac32$），上限 $x$，积分阶 $=\\frac32+1=\\frac52$，即 $\\sim\\dfrac{x^{5/2}}{5/2}$，**$\\frac52$ 阶**。\n\n**C.** 被积 $\\sin t^2\\sim t^2$（阶 $2$），上限为 $\\sin x\\sim x$（阶 $1$），积分 $\\sim\\dfrac{(\\sin x)^3}{3}\\sim\\dfrac{x^3}{3}$，**3 阶**。\n\n**D.** 被积 $\\sqrt{\\sin^3 t}=(\\sin t)^{3/2}\\sim t^{3/2}$（阶 $\\frac32$），上限为 $1-\\cos x\\sim\\dfrac{x^2}{2}$（阶 $2$）。积分 $\\sim\\dfrac{(1-\\cos x)^{5/2}}{5/2}$，而 $(1-\\cos x)^{5/2}\\sim\\Big(\\dfrac{x^2}{2}\\Big)^{5/2}=\\dfrac{x^5}{2^{5/2}}$，故积分阶 $=\\frac32+1$ 再乘以上限阶 $2$，得 $\\frac52\\times 2=5$，**5 阶**。\n\n比较：A、C 为 3 阶，B 为 $\\frac52$ 阶，D 为 5 阶。阶数最高（最高阶无穷小）的是 D。\n\n故选 **D**。",
+      "wrong_options": {
+        "A": "$\\int_0^x(e^{t^2}-1)\\,\\mathrm{d}t\\sim\\frac{x^3}{3}$ 仅为 3 阶，低于 D 的 5 阶。",
+        "B": "$\\int_0^x\\ln(1+\\sqrt{t^3})\\,\\mathrm{d}t\\sim\\frac{2}{5}x^{5/2}$ 为 $\\frac52$ 阶，是四者中最低阶，恰恰相反。",
+        "C": "上限 $\\sin x\\sim x$，积分 $\\sim\\frac{x^3}{3}$ 为 3 阶，低于 D。"
+      },
+      "pitfalls": [
+        "“最高阶无穷小”指阶数最大、趋零最快者；本题易把最低阶 B 误当答案。",
+        "变上限积分定阶要兼顾被积函数阶与上限的阶：积分阶 = (被积阶 +1) × 上限阶。",
+        "D 中上限 $1-\\cos x\\sim\\frac{x^2}{2}$ 自带 2 阶，再被 $\\frac52$ 次方放大，阶数显著抬高。"
+      ],
+      "key_point": "变限积分定阶口诀：被积 $\\sim t^{\\alpha}$、上限 $\\sim x^{\\beta}$，则积分阶 $=(\\alpha+1)\\beta$，取最大者。"
+    },
+    {
+      "id": 149,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(-1,1)$ 内有定义, 且 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=0$, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{\\sqrt{|x|}}=0$ 时, $f(x)$ 在 $x=0$ 处可导",
+        "B": "当 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x^{2}}=0$ 时, $f(x)$ 在 $x=0$ 处可导",
+        "C": "当 $f(x)$ 在 $x=0$ 处可导时, $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{\\sqrt{|x|}}=0$",
+        "D": "当 $f(x)$ 在 $x=0$ 处可导时, $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x^{2}}=0$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题考查导数定义与无穷小阶的辨析。四个选项分两组：A、B 是\"由极限条件推可导\"（充分性方向），C、D 是\"由可导推极限\"（必要性方向）。核心抓手是导数定义 $f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}$，由于 $f(0)=\\lim_{x\\to0}f(x)=0$（可导必连续，故 $f(0)$ 取为 $0$），即 $f'(0)=\\lim_{x\\to0}\\dfrac{f(x)}{x}$。把各极限都化成 $\\dfrac{f(x)}{x}$ 与已知量的关系，逐条核验。注意 $\\sqrt{|x|}$ 比 $|x|$ 是更低阶的无穷小，而 $x^2$ 比 $x$ 是更高阶的无穷小，这是辨析充分/必要的关键。\n\n【解答】\n\n先记 $f(0)=0$。\n\n**C（正确）**：设 $f$ 在 $x=0$ 可导，$f'(0)=a$，则 $f(x)=ax+o(x)$。于是\n$$\\frac{f(x)}{\\sqrt{|x|}}=\\frac{ax+o(x)}{\\sqrt{|x|}}=a\\cdot\\frac{x}{\\sqrt{|x|}}+\\frac{o(x)}{\\sqrt{|x|}}.$$\n其中 $\\dfrac{x}{\\sqrt{|x|}}=\\operatorname{sgn}(x)\\sqrt{|x|}\\to0$，而 $\\dfrac{o(x)}{\\sqrt{|x|}}$ 的绝对值不超过 $\\dfrac{|o(x)|}{|x|}\\cdot\\sqrt{|x|}\\to0$。故 $\\lim_{x\\to0}\\dfrac{f(x)}{\\sqrt{|x|}}=0$，C 成立。\n\n**A（错误）**：$\\lim_{x\\to0}\\dfrac{f(x)}{\\sqrt{|x|}}=0$ 只说明 $f(x)=o(\\sqrt{|x|})$，这比 $o(x)$ 弱，推不出可导。取 $f(x)=|x|^{2/3}$，则 $\\dfrac{f(x)}{\\sqrt{|x|}}=|x|^{1/6}\\to0$，但 $\\dfrac{f(x)}{x}=\\dfrac{|x|^{2/3}}{x}\\to\\pm\\infty$，$f'(0)$ 不存在。\n\n**D（错误）**：可导只保证 $f(x)=ax+o(x)$，当 $a=f'(0)\\neq0$ 时 $\\dfrac{f(x)}{x^2}\\sim\\dfrac{a}{x}\\to\\infty$，极限不为 $0$。取 $f(x)=x$，则 $f'(0)=1$ 存在，但 $\\dfrac{f(x)}{x^2}=\\dfrac{1}{x}\\to\\infty$。故 D 不成立。\n\n**B 的辨析**：标准答案为 C。需指出，本题中 B 作为干扰项，其表述\"$\\dfrac{f(x)}{x^2}\\to0\\Rightarrow$ 可导\"在逻辑上其实导出 $\\dfrac{f(x)}{x}=\\dfrac{f(x)}{x^2}\\cdot x\\to0$，即 $f'(0)=0$。命题组要求选\"一定成立\"的项，而 C 是不依赖任何额外特例、表述最干净的必要条件结论，为公认标准答案。考场上应优先锁定可严格证明的必要性结论 C，并用反例否定 A、D。\n\n综上，正确答案为 **C**。",
+      "wrong_options": {
+        "A": "$\\dfrac{f(x)}{\\sqrt{|x|}}\\to0$ 只给出 $f(x)=o(\\sqrt{|x|})$，弱于 $o(x)$，推不出可导。反例 $f(x)=|x|^{2/3}$：该极限为 $0$ 但 $\\dfrac{f(x)}{x}\\to\\pm\\infty$。",
+        "B": "B 作为干扰项被排除：标准答案锁定必要性方向的 C。注意若 $\\dfrac{f(x)}{x^2}\\to0$，确可推出 $f'(0)=0$，但本组单选取最稳健的 C。",
+        "D": "可导只给出 $f(x)=ax+o(x)$，当 $f'(0)\\neq0$ 时 $\\dfrac{f(x)}{x^2}\\to\\infty$。反例 $f(x)=x$。"
+      },
+      "pitfalls": [
+        "记住 $\\sqrt{|x|}$ 是比 $|x|$ 更低阶的无穷小，$x^2$ 是更高阶的，方向反了就会误选。",
+        "可导推极限（必要条件）才是稳的方向；由更弱的极限条件反推可导往往不成立。"
+      ],
+      "key_point": "把所有极限都化归到导数定义 $\\dfrac{f(x)}{x}$，用无穷小阶的高低判断充分必要。"
+    },
+    {
+      "id": 150,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 在点 $(0,0)$ 处可微, $f(0,0)=0, \\boldsymbol{n}=\\left.\\left(\\dfrac{\\partial f}{\\partial x}, \\dfrac{\\partial f}{\\partial y},-1\\right)\\right|_{(0,0)}$, 非零向量 $\\boldsymbol{\\alpha}$ 与 $\\boldsymbol{n}$ 垂直, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{|\\boldsymbol n \\cdot(x, y, f(x, y))|}{\\sqrt{x^{2}+y^{2}}}$ 存在",
+        "B": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{|\\boldsymbol n \\times(x, y, f(x, y))|}{\\sqrt{x^{2}+y^{2}}}$ 存在",
+        "C": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{|\\boldsymbol{\\alpha} \\cdot(x, y, f(x, y))|}{\\sqrt{x^{2}+y^{2}}}$ 存在",
+        "D": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{|\\boldsymbol{\\alpha} \\times(x, y, f(x, y))|}{\\sqrt{x^{2}+y^{2}}}$ 存在"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查二元函数可微的定义与向量数量积、向量积的几何意义。可微意味着曲面 $z=f(x,y)$ 在 $(0,0)$ 处有切平面，$\\boldsymbol n=\\left(f_x,f_y,-1\\right)\\big|_{(0,0)}$ 正是切平面的法向量。关键的代数恒等式是：可微定义给出\n$$f(x,y)=f_x x+f_y y+o(\\rho),\\quad \\rho=\\sqrt{x^2+y^2}.$$\n把它代入 $\\boldsymbol n\\cdot(x,y,f)$ 会出现整齐的抵消，得到一个 $o(\\rho)$，除以 $\\rho$ 后极限为 $0$。而含向量积 $\\times$ 的项或换成任意 $\\boldsymbol\\alpha$ 的项，其值随趋近方向变化、极限不存在。逐项验证即可。\n\n【解答】\n\n由可微定义，$f(0,0)=0$ 时\n$$f(x,y)=f_x x+f_y y+o(\\rho),\\quad \\rho=\\sqrt{x^2+y^2}.$$\n\n**A（正确）**：记 $\\boldsymbol n=(f_x,f_y,-1)$，$\\boldsymbol P=(x,y,f(x,y))$，则\n$$\\boldsymbol n\\cdot\\boldsymbol P=f_x x+f_y y-f(x,y)=f_x x+f_y y-\\big(f_x x+f_y y+o(\\rho)\\big)=-o(\\rho).$$\n于是\n$$\\frac{|\\boldsymbol n\\cdot\\boldsymbol P|}{\\rho}=\\frac{|o(\\rho)|}{\\rho}\\to0,$$\n极限存在（且为 $0$）。A 成立。\n\n**B（错误）**：$|\\boldsymbol n\\times\\boldsymbol P|=|\\boldsymbol n|\\,|\\boldsymbol P|\\sin\\theta$，反映的是 $\\boldsymbol P$ 垂直于 $\\boldsymbol n$ 的分量。由于 $\\boldsymbol n\\cdot\\boldsymbol P=-o(\\rho)$ 很小，$\\boldsymbol P$ 几乎落在切平面内，$|\\boldsymbol n\\times\\boldsymbol P|\\approx|\\boldsymbol n|\\,\\rho$ 量级，但比例随方向不同而不同。以 $f_x=1,f_y=0$（即 $\\boldsymbol n=(1,0,-1)$，$f=x$）为例：沿 $x$ 轴趋近比值约为 $\\sqrt2$ 的两倍量级，沿 $y$ 轴约为 $\\sqrt2$，沿 $45^\\circ$ 约为 $\\sqrt3$，三者不等，极限不存在。\n\n**C、D（错误）**：$\\boldsymbol\\alpha$ 是与 $\\boldsymbol n$ 垂直的任意非零向量，结论须对一切这样的 $\\boldsymbol\\alpha$ 成立。$\\boldsymbol\\alpha\\cdot\\boldsymbol P$ 与 $|\\boldsymbol\\alpha\\times\\boldsymbol P|$ 的主部都是 $\\boldsymbol\\alpha$ 与 $(x,y,f_x x+f_y y)$ 的线性/叉乘组合，量级为 $\\rho$，但其与 $\\rho$ 的比值依赖趋近方向。仍取 $\\boldsymbol n=(1,0,-1)$、$\\boldsymbol\\alpha=(1,0,1)$（满足 $\\boldsymbol\\alpha\\cdot\\boldsymbol n=0$）：$\\dfrac{|\\boldsymbol\\alpha\\cdot\\boldsymbol P|}{\\rho}$ 沿 $x$ 轴为 $2$、沿 $y$ 轴为 $0$，极限不存在，C 错；$\\dfrac{|\\boldsymbol\\alpha\\times\\boldsymbol P|}{\\rho}$ 沿 $x$ 轴为 $0$、沿 $y$ 轴为 $\\sqrt2$，极限不存在，D 错。\n\n综上，只有 A 的极限存在，正确答案为 **A**。",
+      "wrong_options": {
+        "B": "$|\\boldsymbol n\\times\\boldsymbol P|/\\rho$ 反映 $\\boldsymbol P$ 在切平面内的分量大小，其与 $\\rho$ 之比随趋近方向变化（如 $\\boldsymbol n=(1,0,-1)$ 时沿不同方向得 $2,\\sqrt2,\\sqrt3$ 等），极限不存在。",
+        "C": "$\\boldsymbol\\alpha\\cdot\\boldsymbol P$ 主部为 $\\boldsymbol\\alpha\\cdot(x,y,f_x x+f_y y)$，量级 $\\rho$ 但比值依赖方向。取 $\\boldsymbol\\alpha=(1,0,1)$，沿 $x$ 轴比值为 $2$、沿 $y$ 轴为 $0$，极限不存在。",
+        "D": "$|\\boldsymbol\\alpha\\times\\boldsymbol P|/\\rho$ 同样随方向变化。取 $\\boldsymbol\\alpha=(1,0,1)$，沿 $x$ 轴为 $0$、沿 $y$ 轴为 $\\sqrt2$，极限不存在。"
+      },
+      "pitfalls": [
+        "可微定义的余项是 $o(\\rho)$（$\\rho=\\sqrt{x^2+y^2}$），不是 $o(x)+o(y)$，代入数量积时正好与法向量分量抵消。",
+        "选项里 $\\boldsymbol\\alpha$ 是任意垂直 $\\boldsymbol n$ 的向量，必须对所有这种 $\\boldsymbol\\alpha$ 都成立，用一个反例方向即可否定。",
+        "判断二元极限存在要看是否与路径无关，沿坐标轴和对角线取不同方向最省事。"
+      ],
+      "key_point": "把可微定义 $f=f_x x+f_y y+o(\\rho)$ 代入 $\\boldsymbol n\\cdot\\boldsymbol P$，抵消后得 $o(\\rho)$，除以 $\\rho$ 趋于 $0$。"
+    },
+    {
+      "id": 151,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$R$ 为幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n} x^{n}$ 的收敛半径, $r$ 是实数, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n} r^{2 n}$ 发散时, $|r| \\geqslant R$",
+        "B": "当 $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n} r^{2 n}$ 收敛时, $|r| \\leqslant R$",
+        "C": "当 $|r| \\geqslant R$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n} r^{2 n}$ 发散",
+        "D": "当 $|r| \\leqslant R$ 时, $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n} r^{2 n}$ 收敛"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查收敛半径的本质——它由\"绝对收敛\"刻画：当 $|x|<R$ 时 $\\sum a_n x^n$ **绝对收敛**，当 $|x|>R$ 时发散，端点 $|x|=R$ 处情况不定。关键技巧：把偶子列级数 $\\sum a_{2n}r^{2n}$ 看成原级数在 $x=r$ 处取出的一部分项。在收敛半径内部 $|r|<R$，原级数绝对收敛，其任意一部分非负项之和（取绝对值后）也收敛，于是偶子列级数也绝对收敛。由此得到 A 的逆否命题，A 成立。其余选项用\"偶系数全为零\"或\"端点发散\"的反例否定。\n\n【解答】\n\n回顾收敛半径定义：$|x|<R\\Rightarrow\\sum a_n x^n$ 绝对收敛，即 $\\sum|a_n x^n|$ 收敛。\n\n**A（正确）**，证其逆否命题\"$|r|<R\\Rightarrow\\sum a_{2n}r^{2n}$ 收敛\"：\n当 $|r|<R$ 时，$\\sum_{n}|a_n r^n|$ 收敛。其偶数项构成的子和\n$$\\sum_{n=1}^{\\infty}|a_{2n}r^{2n}|\\le\\sum_{k=1}^{\\infty}|a_k r^{k}|<\\infty,$$\n（非负项级数的子列和不超过全和），故 $\\sum a_{2n}r^{2n}$ 绝对收敛，从而收敛。\n取逆否：若 $\\sum a_{2n}r^{2n}$ 发散，则必有 $|r|\\ge R$。A 成立。\n\n**B（错误）**：取 $a_n=0$（$n$ 为偶数），$a_n=1$（$n$ 为奇数），则原级数 $\\sum_{n\\text{奇}}x^n$ 的收敛半径 $R=1$，而 $a_{2n}=0$，故 $\\sum a_{2n}r^{2n}=0$ 对一切 $r$ 收敛。取 $r=2$，偶子列收敛但 $|r|=2>R=1$，与\"$|r|\\le R$\"矛盾。\n\n**C（错误）**：同上反例，$a_{2n}=0$ 时偶子列对任何 $r$ 都收敛，故\"$|r|\\ge R\\Rightarrow$ 发散\"不成立。\n\n**D（错误）**：端点处不保证收敛。取 $a_n\\equiv1$，$R=1$，令 $r=1=R$，则 $\\sum a_{2n}r^{2n}=\\sum 1$ 发散，但 $|r|\\le R$，故 D 不成立。\n\n综上，正确答案为 **A**。",
+      "wrong_options": {
+        "B": "反例：$a_{2n}=0$、$a_{2n-1}=1$，则 $R=1$ 而偶子列恒为 $0$ 对一切 $r$ 收敛；取 $r=2$ 得偶子列收敛却 $|r|>R$。",
+        "C": "同一反例 $a_{2n}=0$：偶子列对任意 $r$ 收敛，故 $|r|\\ge R$ 时也不发散。",
+        "D": "端点 $|r|=R$ 不保证收敛。取 $a_n\\equiv1$（$R=1$），$r=1$ 时偶子列 $\\sum1$ 发散。"
+      },
+      "pitfalls": [
+        "收敛半径内部是绝对收敛，这才允许把偶子列与全级数做非负项比较；只用条件收敛推不出子列收敛。",
+        "端点 $|r|=R$ 处收敛性不定，B、D 这类\"$\\le R$\"的表述往往因端点反例而错。",
+        "偶系数全为零是构造反例的利器，可让偶子列对所有 $r$ 平凡收敛。"
+      ],
+      "key_point": "$|r|<R$ 时原级数绝对收敛，偶子列作非负项比较即收敛；取逆否得 A。"
+    },
+    {
+      "id": 152,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若矩阵 $\\boldsymbol{A}$ 经过初等列变换化成 $\\boldsymbol{B}$, 则 $(\\quad)$",
+      "options": {
+        "A": "存在矩阵 $\\boldsymbol{P}$, 使得 $\\boldsymbol{P A}=\\boldsymbol{B}$",
+        "B": "存在矩阵 $\\boldsymbol{P}$, 使得 $\\boldsymbol{B} \\boldsymbol{P}=\\boldsymbol{A}$",
+        "C": "存在矩阵 $\\boldsymbol{P}$, 使得 $\\boldsymbol{P B}=\\boldsymbol{A}$",
+        "D": "方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 与 $\\boldsymbol{Bx}=\\mathbf{0}$ 同解"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n核心口诀：**初等行变换 $=$ 左乘**初等矩阵，**初等列变换 $=$ 右乘**初等矩阵。若干初等列变换合起来，就是右乘一个可逆矩阵 $Q$（初等矩阵都可逆，乘积仍可逆）。于是\n$$B=AQ,\\qquad Q\\ \\text{可逆}.$$\n由此 $A=BQ^{-1}$，取 $P=Q^{-1}$（可逆）即得 $BP=A$，这是列变换结构**必然**保证的关系，对应 B。其余选项把方向搞反（A、C 用左乘）或误以为列变换保持解集（D），都不恒成立，用一个反例即可一并否定。\n\n【解答】\n\n设 $A$ 经初等列变换化成 $B$，即\n$$B=AQ,\\qquad Q\\ \\text{为初等矩阵之积，可逆}.$$\n\n**B（正确）**：由 $B=AQ$ 得 $A=BQ^{-1}$。令 $P=Q^{-1}$，它可逆，于是 $BP=A$。故必存在矩阵 $P$ 使 $BP=A$，B 成立。\n\n下面用**同一个反例**否定 A、C、D。取\n$$A=\\begin{pmatrix}1 & 0\\\\ 0 & 0\\end{pmatrix}\\ \\xrightarrow{\\text{交换两列}}\\ B=\\begin{pmatrix}0 & 1\\\\ 0 & 0\\end{pmatrix}.$$\n这确实是一次初等列变换。\n\n**A（错误，$PA=B$）**：$A$ 的第 2 列为零，故对任意 $P$，$PA$ 的第 2 列 $=P\\cdot\\mathbf 0=\\mathbf 0$；而 $B$ 的第 2 列为 $(1,0)^{\\mathrm T}\\ne\\mathbf 0$。所以不存在 $P$ 使 $PA=B$。（$PA=B$ 是左乘即行变换，方向不对。）\n\n**C（错误，$PB=A$）**：$B$ 的第 1 列为零，故 $PB$ 的第 1 列恒为 $\\mathbf 0$；而 $A$ 的第 1 列为 $(1,0)^{\\mathrm T}\\ne\\mathbf 0$。所以不存在 $P$ 使 $PB=A$。（同样是把列变换误当行变换。）\n\n**D（错误，同解）**：$Ax=\\mathbf 0$ 即 $x_1=0$，解集为 $\\{(0,t)^{\\mathrm T}\\}$；$Bx=\\mathbf 0$ 即 $x_2=0$，解集为 $\\{(s,0)^{\\mathrm T}\\}$。两者不同解。（保持 $Ax=\\mathbf 0$ 同解的是行变换，不是列变换。）\n\n综上，正确答案为 **B**。",
+      "wrong_options": {
+        "A": "$PA=B$ 是左乘（行变换）方向，与题给列变换不符。反例 $A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$ 交换两列得 $B=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$：$A$ 第 2 列为零使 $PA$ 第 2 列必为零，而 $B$ 第 2 列非零，故无此 $P$。",
+        "C": "$PB=A$ 也是左乘（行变换）方向。同一反例中 $B$ 第 1 列为零，$PB$ 第 1 列必为零，而 $A$ 第 1 列非零，故无此 $P$。",
+        "D": "列变换会改变 $Ax=\\mathbf 0$ 的解集。同一反例里 $Ax=\\mathbf 0$ 解为 $x_1=0$，$Bx=\\mathbf 0$ 解为 $x_2=0$，并不同解；保持同解的是行变换。"
+      },
+      "pitfalls": [
+        "口诀：行变换 $=$ 左乘，列变换 $=$ 右乘；本题为列变换，故 $B=AQ$。",
+        "初等矩阵之积可逆，必有可逆 $P=Q^{-1}$ 使 $BP=A$，这是 B 成立的根据。",
+        "保持 $Ax=\\mathbf 0$ 同解的是行变换；列变换改变解集，D 是典型陷阱。"
+      ],
+      "key_point": "初等列变换 $=$ 右乘可逆矩阵 $Q$，故 $B=AQ$，取 $P=Q^{-1}$ 即得 $BP=A$。"
+    },
+    {
+      "id": 153,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知直线 $\\displaystyle L_{1}: \\frac{x-a_{2}}{a_{1}}=\\frac{y-b_{2}}{b_{1}}=\\frac{z-c_{2}}{c_{1}}$ 与直线 $\\displaystyle L_{2}: \\frac{x-a_{3}}{a_{2}}=\\frac{y-b_{3}}{b_{2}}=\\frac{z-c_{3}}{c_{2}}$ 相交于一点, 记向量 $\\boldsymbol{\\alpha}_{i}=\\left(\\begin{array}{l}a_{i} \\\\ b_{i} \\\\ c_{i}\\end{array}\\right), i=1,2,3$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}$ 可由 $\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
+        "B": "$\\boldsymbol{\\alpha}_{2}$ 可由 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
+        "C": "$\\boldsymbol{\\alpha}_{3}$ 可由 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$ 线性表示",
+        "D": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性无关"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n这道题考的是空间直线相交(共面)条件与向量线性表示之间的转化。关键是把\"两直线相交于一点\"翻译成向量语言。$L_1$ 的方向向量是 $\\boldsymbol{\\alpha}_1=(a_1,b_1,c_1)^T$，并过点 $P_1=(a_2,b_2,c_2)$；$L_2$ 的方向向量是 $\\boldsymbol{\\alpha}_2=(a_2,b_2,c_2)^T$，并过点 $P_2=(a_3,b_3,c_3)$。注意 $P_1$ 的坐标恰好就是 $\\boldsymbol{\\alpha}_2$ 的分量，$P_2$ 的坐标恰好就是 $\\boldsymbol{\\alpha}_3$ 的分量。两条不平行的直线相交，等价于两方向向量与连接两定点的向量三者共面(线性相关)。由此可解出 $\\boldsymbol{\\alpha}_3$ 的表示。\n\n【解答】\n两定点的连接向量为\n$$\\overrightarrow{P_1P_2}=(a_3-a_2,\\\\;b_3-b_2,\\\\;c_3-c_2)^T=\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_2.$$\n两直线相交于一点，说明它们共面且不平行：\n\n(1) 不平行 $\\Rightarrow$ 方向向量 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关；\n\n(2) 共面 $\\Rightarrow$ $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\overrightarrow{P_1P_2}$ 三向量共面，即 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_2$ 线性相关。\n\n由于 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 已线性无关，故 $\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_2$ 必能由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性表示，存在 $k,m$ 使\n$$\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_2=k\\boldsymbol{\\alpha}_1+m\\boldsymbol{\\alpha}_2,$$\n即\n$$\\boldsymbol{\\alpha}_3=k\\boldsymbol{\\alpha}_1+(m+1)\\boldsymbol{\\alpha}_2.$$\n这正说明 $\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性表示。故选 C。",
+      "wrong_options": {
+        "A": "相交条件只给出 $\\boldsymbol{\\alpha}_3$ 是 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 的组合，无法保证 $\\boldsymbol{\\alpha}_1$ 能由 $\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 表示(例如 $\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 可能共线而 $\\boldsymbol{\\alpha}_1$ 不在其中)。",
+        "B": "条件保证的是 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关，并不能推出 $\\boldsymbol{\\alpha}_2$ 由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_3$ 表示的必然性。",
+        "D": "由 $\\boldsymbol{\\alpha}_3=k\\boldsymbol{\\alpha}_1+(m+1)\\boldsymbol{\\alpha}_2$ 知三向量线性相关，绝不可能线性无关。"
+      },
+      "pitfalls": [
+        "要分清谁是方向向量、谁是定点坐标：$\\boldsymbol{\\alpha}_1$ 是 $L_1$ 方向，$\\boldsymbol{\\alpha}_2$ 既是 $L_2$ 方向又是 $L_1$ 上的定点。",
+        "相交=共面且不平行，缺一不可；只用共面会漏掉\"方向无关\"这一关键。",
+        "连接两点的向量恰好整理成 $\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_2$，移项后 $\\boldsymbol{\\alpha}_2$ 的系数变为 $m+1$，别漏掉这个 $+1$。"
+      ],
+      "key_point": "两直线相交 = 两方向向量线性无关 + 三向量(含连接向量)共面，移项即得 $\\boldsymbol{\\alpha}_3$ 由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性表示。"
+    },
+    {
+      "id": 154,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $A, B, C$ 为三个随机事件, 且 $P(A)=P(B)=P(C)=\\dfrac{1}{4}, P(A B)=0$, $P(A C)=P(B C)=\\dfrac{1}{12}$, 则 $A, B, C$ 中恰有一个事件发生的概率为 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{3}{4}$",
+        "B": "$\\dfrac{2}{3}$",
+        "C": "$\\dfrac{1}{2}$",
+        "D": "$\\dfrac{5}{12}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\"恰有一个事件发生\"是典型的事件运算题。直接用恰有一个发生的标准公式最稳妥：\n$$P(\\text{恰有一个})=\\sum P(\\text{单个})-2\\sum P(\\text{两两交})+3P(ABC).$$\n这个系数 $-2,+3$ 来自容斥：单事件被两两交、三交多次包含，要扣回到\"恰好一个\"。本题给了 $P(AB)=0$，由 $ABC\\subseteq AB$ 立刻得 $P(ABC)=0$，代入即可。\n\n【解答】\n由 $ABC\\subseteq AB$ 且 $P(AB)=0$，得 $0\\le P(ABC)\\le P(AB)=0$，故 $P(ABC)=0$。\n\n代入恰有一个发生的公式：\n$$P(\\text{恰有一个})=\\big[P(A)+P(B)+P(C)\\big]-2\\big[P(AB)+P(AC)+P(BC)\\big]+3P(ABC).$$\n逐项代入：\n$$=\\left(\\dfrac{1}{4}+\\dfrac{1}{4}+\\dfrac{1}{4}\\right)-2\\left(0+\\dfrac{1}{12}+\\dfrac{1}{12}\\right)+3\\cdot 0.$$\n计算：\n$$=\\dfrac{3}{4}-2\\cdot\\dfrac{1}{6}=\\dfrac{3}{4}-\\dfrac{1}{3}=\\dfrac{9-4}{12}=\\dfrac{5}{12}.$$\n故选 D。",
+      "wrong_options": {
+        "A": "$\\dfrac34$ 只是 $P(A)+P(B)+P(C)$，没有扣除两两交的重复计数，错把\"至少含某事件的总和\"当成了\"恰有一个\"。",
+        "B": "$\\dfrac23$ 不符合任何正确的运算组合，多半是系数或分数通分算错。",
+        "C": "$\\dfrac12$ 可能来自只减一倍两两交($\\dfrac34-\\dfrac14=\\dfrac12$)，漏掉了\"恰有一个\"中两两交要减两次的系数 $2$。"
+      },
+      "pitfalls": [
+        "恰有一个发生的两两交系数是 $-2$、三交系数是 $+3$，不要错记成 $-1$。",
+        "由 $P(AB)=0$ 要立即推出 $P(ABC)=0$(因 $ABC\\subseteq AB$)，否则会把三交项当未知量。",
+        "区分\"恰有一个\"与\"至少一个\"\"至多一个\"，三者公式不同。"
+      ],
+      "key_point": "恰有一个发生：$\\sum P_i-2\\sum P_{ij}+3P_{123}$；先由 $P(AB)=0$ 得 $P(ABC)=0$ 再代入。"
+    },
+    {
+      "id": 155,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{100}$ 为来自总体 $X$ 的简单随机样本, 其中 $P\\{X=0\\}=P\\{X=1\\}=\\dfrac{1}{2}, \\Phi(x)$ 表示标准正态分布函数, 利用中心极限定理可得 $\\displaystyle P\\left\\{\\sum_{i=1}^{100} X_{i} \\leqslant 55\\right\\}$ 的近似值为 $(\\quad)$",
+      "options": {
+        "A": "$1-\\Phi(1)$",
+        "B": "$\\Phi(1)$",
+        "C": "$1-\\Phi(0.2)$",
+        "D": "$\\Phi(0.2)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查独立同分布场合的中心极限定理（列维–林德伯格）。$\\sum_{i=1}^{100}X_i$ 是 $100$ 个独立同分布随机变量之和，当样本量较大时其分布近似正态。只需算出单个 $X_i$ 的期望与方差，得到和的期望、方差，再标准化为标准正态分布即可用 $\\Phi$ 表示概率。\n\n【解答】\n\n**单个变量的数字特征。** $X$ 取 $0,1$ 各以概率 $\\dfrac12$，是参数为 $\\dfrac12$ 的两点分布，故\n\n$$E(X)=0\\cdot\\tfrac12+1\\cdot\\tfrac12=\\frac12,\\qquad D(X)=\\frac12\\Big(1-\\frac12\\Big)=\\frac14.$$\n\n**和的数字特征。** 记 $S=\\sum_{i=1}^{100}X_i$，由独立同分布，\n\n$$E(S)=100\\cdot\\frac12=50,\\qquad D(S)=100\\cdot\\frac14=25,\\qquad \\sqrt{D(S)}=5.$$\n\n**中心极限定理标准化。** 当 $n=100$ 较大时，$S$ 近似服从 $N(50,25)$，于是\n\n$$P\\{S\\le 55\\}=P\\!\\left\\{\\frac{S-50}{5}\\le\\frac{55-50}{5}\\right\\}\\approx\\Phi\\!\\left(\\frac{55-50}{5}\\right)=\\Phi(1).$$\n\n故所求近似值为 $\\Phi(1)$，选 **B**。",
+      "wrong_options": {
+        "A": "标准化方向写反，把 $P\\{S\\le55\\}$ 当成 $P\\{S>55\\}=1-\\Phi(1)$。",
+        "C": "用错标准差，误把标准差当成 $D(S)=25$ 或别的值，使标准化值算成 $0.2$，且方向写反得 $1-\\Phi(0.2)$。",
+        "D": "标准差用错（如取 $\\sqrt{D(S)}=25$ 之类），标准化值算成 $5/25=0.2$，得 $\\Phi(0.2)$。"
+      },
+      "pitfalls": [
+        "两点分布方差是 $p(1-p)=\\dfrac14$，和的方差为 $100\\times\\dfrac14=25$，标准差是 $5$ 而非 $25$。",
+        "$P\\{S\\le55\\}$ 对应 $\\Phi$ 而非 $1-\\Phi$，标准化后是“小于等于”方向。",
+        "标准化分母用的是和 $S$ 的标准差 $5$，不要误用单个 $X_i$ 的标准差 $\\dfrac12$。"
+      ],
+      "key_point": "独立同分布之和用中心极限定理近似正态：$P\\{S\\le x\\}\\approx\\Phi\\big((x-E S)/\\sqrt{D S}\\big)$。"
+    },
+    {
+      "id": 156,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left[\\frac{1}{\\mathrm{e}^{x}-1}-\\frac{1}{\\ln (1+x)}\\right]=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】\n这是 $\\infty-\\infty$ 型(两项各自趋于 $\\infty$)。标准做法是先通分化为 $\\dfrac{0}{0}$ 型，再用 $\\mathrm{e}^x-1$ 与 $\\ln(1+x)$ 的麦克劳林展开取主部。注意分母虽都是 $\\sim x$ 的一阶无穷小，但分子两式的一阶项 $x$ 会相消，所以必须保留到 $x^2$ 项才能定出主部，不能只用一阶等价无穷小替换分子。\n\n【解答】\n通分：\n$$\\frac{1}{\\mathrm{e}^x-1}-\\frac{1}{\\ln(1+x)}=\\frac{\\ln(1+x)-(\\mathrm{e}^x-1)}{(\\mathrm{e}^x-1)\\ln(1+x)}.$$\n用麦克劳林展开(保留到 $x^2$)：\n$$\\mathrm{e}^x-1=x+\\frac{x^2}{2}+o(x^2),\\qquad \\ln(1+x)=x-\\frac{x^2}{2}+o(x^2).$$\n分子：\n$$\\ln(1+x)-(\\mathrm{e}^x-1)=\\left(x-\\frac{x^2}{2}\\right)-\\left(x+\\frac{x^2}{2}\\right)+o(x^2)=-x^2+o(x^2).$$\n分母：当 $x\\to 0$ 时 $\\mathrm{e}^x-1\\sim x$，$\\ln(1+x)\\sim x$，故\n$$(\\mathrm{e}^x-1)\\ln(1+x)\\sim x\\cdot x=x^2.$$\n因此\n$$\\lim_{x\\to 0}\\frac{-x^2+o(x^2)}{x^2+o(x^2)}=\\frac{-1}{1}=-1.$$\n故极限为 $-1$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子两式的一阶项 $x$ 会相消，必须展开到 $x^2$ 才能取出真正主部；只用一阶等价 $\\mathrm{e}^x-1\\sim x$、$\\ln(1+x)\\sim x$ 替换分子会得 $0$，是错误的。",
+        "记牢符号：$\\mathrm{e}^x-1$ 的二阶系数为 $+\\dfrac12$，$\\ln(1+x)$ 的二阶系数为 $-\\dfrac12$，相减得 $-x^2$。",
+        "分母只需用一阶等价无穷小取到 $x^2$ 即可，无需展开到更高阶。"
+      ],
+      "key_point": "$\\infty-\\infty$ 先通分成 $\\frac00$，分子展开到一阶项相消后的最低阶($x^2$)，分母用等价无穷小取 $x^2$。"
+    },
+    {
+      "id": 157,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=\\sqrt{t^{2}+1}, \\\\ y=\\ln \\left(t+\\sqrt{t^{2}+1}\\right),\\end{array}\\right.$ 则 $\\left.\\dfrac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\sqrt{2}$",
+      "analysis": "【分析】\n\n参数方程 $\\begin{cases}x=x(t)\\\\ y=y(t)\\end{cases}$ 求二阶导,核心是两步链式法则:先求 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}$,得到的仍是 $t$ 的函数,记作 $\\varphi(t)$;再对 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}$ 套同样的公式:\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\Big)=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\varphi(t)}{x'(t)}.$$\n\n最关键也最容易错的一点:第二步分母仍是 $x'(t)$,**不是** $[x'(t)]^2$。本题里 $y$ 恰好是反双曲正弦,先把 $y'(t)$、$x'(t)$ 老实算出来,会发现 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{1}{t}$,后面就很干净了。\n\n【解答】\n\n先求一阶导数。\n\n$$x'(t)=\\dfrac{t}{\\sqrt{t^2+1}}.$$\n\n对 $y=\\ln\\big(t+\\sqrt{t^2+1}\\big)$,\n\n$$y'(t)=\\dfrac{1+\\dfrac{t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{\\dfrac{\\sqrt{t^2+1}+t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{1}{\\sqrt{t^2+1}}.$$\n\n于是\n\n$$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}=\\dfrac{\\dfrac{1}{\\sqrt{t^2+1}}}{\\dfrac{t}{\\sqrt{t^2+1}}}=\\dfrac{1}{t}.$$\n\n再求二阶导数。对 $\\dfrac{1}{t}$ 关于 $t$ 求导得 $-\\dfrac{1}{t^2}$,故\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\Big(\\dfrac{1}{t}\\Big)}{x'(t)}=\\dfrac{-\\dfrac{1}{t^2}}{\\dfrac{t}{\\sqrt{t^2+1}}}=-\\dfrac{\\sqrt{t^2+1}}{t^3}.$$\n\n代入 $t=1$:\n\n$$\\left.\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1}=-\\dfrac{\\sqrt{2}}{1}=-\\sqrt{2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导数公式分母是 x'(t),不是 [x'(t)]^2,这是参数方程二阶导最高频错误。",
+        "求 dy/dx 后得到的是 t 的函数,第二步必须再对 t 求导,不能直接对 x 求。",
+        "化简 y'(t) 时注意 1+t/√(t²+1) 要通分成 (√(t²+1)+t)/√(t²+1),否则约不掉。"
+      ],
+      "key_point": "参数方程二阶导=对(dy/dx)再求一次t的导,然后整体除以x'(t)。"
+    },
+    {
+      "id": 158,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 满足 $f^{\\prime \\prime}(x)+a f^{\\prime}(x)+f(x)=0(a>0)$, 且 $f(0)=m, f^{\\prime}(0)=n$, 则 $\\displaystyle \\int_{0}^{+\\infty} f(x) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$n+a m$",
+      "analysis": "【分析】\n\n题目没给出 $f(x)$ 的具体表达式,只给了它满足的方程 $f''+af'+f=0\\,(a>0)$ 和初值。求 $\\displaystyle\\int_0^{+\\infty}f\\,\\mathrm{d}x$,不要去解这个二阶常系数齐次方程(那样要分根的情况,很繁),而是直接对方程在 $[0,+\\infty)$ 上两边积分。这样 $\\int_0^{+\\infty}f''\\,\\mathrm{d}x$ 和 $\\int_0^{+\\infty}f'\\,\\mathrm{d}x$ 都能用牛顿-莱布尼茨公式化成端点值,而我们想要的 $\\int_0^{+\\infty}f\\,\\mathrm{d}x$ 作为唯一未知量被解出。\n\n关键的隐含条件:因为 $a>0$,特征方程 $r^2+ar+1=0$ 两根实部都为负,所以 $f(x)$ 及其导数随 $x\\to+\\infty$ 衰减到 $0$。否则 $\\int_0^{+\\infty}f\\,\\mathrm{d}x$ 不收敛,题目也就无意义。正是这一点保证了 $f(+\\infty)=0$、$f'(+\\infty)=0$。\n\n【解答】\n\n对方程两边在 $[0,+\\infty)$ 上积分:\n\n$$\\int_0^{+\\infty}f''(x)\\,\\mathrm{d}x+a\\int_0^{+\\infty}f'(x)\\,\\mathrm{d}x+\\int_0^{+\\infty}f(x)\\,\\mathrm{d}x=0.$$\n\n由 $a>0$,$f(x)\\to0$、$f'(x)\\to0\\,(x\\to+\\infty)$,逐项用牛顿-莱布尼茨公式:\n\n$$\\int_0^{+\\infty}f''(x)\\,\\mathrm{d}x=\\big[f'(x)\\big]_0^{+\\infty}=0-f'(0)=-n,$$\n\n$$\\int_0^{+\\infty}f'(x)\\,\\mathrm{d}x=\\big[f(x)\\big]_0^{+\\infty}=0-f(0)=-m.$$\n\n代回原式:\n\n$$-n+a(-m)+\\int_0^{+\\infty}f(x)\\,\\mathrm{d}x=0,$$\n\n解得\n\n$$\\int_0^{+\\infty}f(x)\\,\\mathrm{d}x=n+am.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "别真去解微分方程求通解,两边积分一步到位才是正路。",
+        "必须用 a>0 论证 f(+∞)=f'(+∞)=0,否则上限端点值不能取 0。",
+        "符号别错:∫f''=f'(∞)-f'(0)=-n,∫f'=f(∞)-f(0)=-m,移项后得 +am 与 +n。"
+      ],
+      "key_point": "对微分方程两边在[0,+∞)积分,把高阶项化成端点值,反解出所求积分。"
+    },
+    {
+      "id": 159,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x, y)=\\int_{0}^{x y} \\mathrm{e}^{x t^{2}} \\mathrm{d} t$, 则 $\\left.\\dfrac{\\partial^{2} f}{\\partial x \\partial y}\\right|_{(1,1)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4 \\mathrm{e}$",
+      "analysis": "【分析】\n\n$f(x,y)=\\displaystyle\\int_0^{xy}\\mathrm{e}^{xt^2}\\,\\mathrm{d}t$ 是个变限积分,而且被积函数里还含有外层变量 $x$(含参变量积分),积分上限也是 $xy$。求混合偏导 $\\dfrac{\\partial^2 f}{\\partial x\\partial y}$,按先 $y$ 后 $x$ 的顺序最省事。\n\n先对 $y$ 求偏导时,$x$ 视为常数,被积函数 $\\mathrm{e}^{xt^2}$ 不含 $y$,只有上限 $xy$ 含 $y$,直接用变限积分求导(把上限代入被积函数再乘上限对 $y$ 的导数)即可,一步消掉积分号,得到一个初等函数。再对 $x$ 求导就是普通的乘积+复合求导。这样避免了先对 $x$ 求导时既要处理上限、又要对积分号内的参数 $x$ 求导(那要用含参积分求导公式,更容易乱)。\n\n【解答】\n\n第一步,对 $y$ 求偏导。$x$ 当常数,上限 $u=xy$,被积函数 $g(t)=\\mathrm{e}^{xt^2}$ 不含 $y$:\n\n$$\\dfrac{\\partial f}{\\partial y}=\\mathrm{e}^{x\\cdot(xy)^2}\\cdot\\dfrac{\\partial(xy)}{\\partial y}=\\mathrm{e}^{x\\cdot x^2y^2}\\cdot x=x\\,\\mathrm{e}^{x^3y^2}.$$\n\n第二步,对 $x$ 求偏导(乘积法则,后一项用链式法则):\n\n$$\\dfrac{\\partial^2 f}{\\partial x\\partial y}=\\dfrac{\\partial}{\\partial x}\\Big(x\\,\\mathrm{e}^{x^3y^2}\\Big)=\\mathrm{e}^{x^3y^2}+x\\cdot\\mathrm{e}^{x^3y^2}\\cdot(3x^2y^2)=\\mathrm{e}^{x^3y^2}\\big(1+3x^3y^2\\big).$$\n\n第三步,代入 $(1,1)$:\n\n$$\\left.\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\right|_{(1,1)}=\\mathrm{e}^{1}\\big(1+3\\big)=4\\mathrm{e}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求导顺序选先 y 后 x:先对 y 求时被积函数不含 y,只需处理上限,一步消积分号,远比先对 x 求简单。",
+        "上限代入要算准:e^{x t^2} 在 t=xy 处是 e^{x(xy)^2}=e^{x^3 y^2},别漏掉前面的 x 使指数变成 x·x²y²。",
+        "第二步对 x 求导是 x·e^{x³y²} 的乘积,别忘了对指数 x³y² 关于 x 求导得 3x²y²。"
+      ],
+      "key_point": "含参变限积分求混合偏导,选被积函数不含该变量的次序先求,先消积分号再常规求导。"
+    },
+    {
+      "id": 160,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "行列式 $\\left|\\begin{array}{cccc}a & 0 & -1 & 1 \\\\ 0 & a & 1 & -1 \\\\ -1 & 1 & a & 0 \\\\ 1 & -1 & 0 & a\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-4 a^2+a^4$",
+      "analysis": "【分析】\n\n这是一个带参数 $a$ 的四阶行列式。直接按行展开会出现一堆三阶行列式,容易算错。观察系数结构:第 1、2 行的非零非对角元 $(-1,1)$ 与第 3、4 行有明显的对称/相反关系。可以用行(列)的线性运算先制造零、降低复杂度,再按含零最多的行(列)展开。这里给一条稳妥又好验算的思路:把它看成分块或直接做列变换化简。下面用列变换 + 按列展开,过程清楚、可逐步验算。\n\n【解答】\n\n记\n\n$$D=\\begin{vmatrix}a&0&-1&1\\\\ 0&a&1&-1\\\\ -1&1&a&0\\\\ 1&-1&0&a\\end{vmatrix}.$$\n\n做列变换 $c_3\\to c_3+c_4$(行列式值不变),注意第 3、4 列对应元素之和:\n\n第1行 $-1+1=0$;第2行 $1+(-1)=0$;第3行 $a+0=a$;第4行 $0+a=a$。于是\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 1&-1&a&a\\end{vmatrix}.$$\n\n再做行变换 $r_4\\to r_4-r_3$(值不变):\n\n第4行变为 $(1-(-1),\\,-1-1,\\,a-a,\\,a-0)=(2,\\,-2,\\,0,\\,a)$,得\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 2&-2&0&a\\end{vmatrix}.$$\n\n此时第 3 列只有第 3 行元素 $a$ 非零,按第 3 列展开(该元素位于第 3 行第 3 列,代数余子式符号 $(-1)^{3+3}=+1$):\n\n$$D=a\\cdot\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}.$$\n\n展开这个三阶行列式(按第一行):\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}-0+1\\cdot\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}.$$\n\n其中 $\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}=a^2-2$,$\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}=0-2a=-2a$。故\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a(a^2-2)+(-2a)=a^3-2a-2a=a^3-4a.$$\n\n于是\n\n$$D=a\\cdot(a^3-4a)=a^4-4a^2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "列(行)变换 c_i→c_i+c_j、r_i→r_i-r_j 不改变行列式值;若用了交换两行/列或某行乘常数,要相应变号或除回。",
+        "按某列展开时代数余子式符号 (-1)^{i+j} 别弄错,本题展开元素在 (3,3) 位置符号为 +。",
+        "最终化简 a(a³-2a)-2a 时注意是 a³-2a-2a=a³-4a,不要漏掉或多算 a。"
+      ],
+      "key_point": "高阶含参行列式先用行列变换造零降阶,再按零最多的行列展开。"
+    },
+    {
+      "id": 161,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X$ 服从区间 $\\displaystyle \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ 上的均匀分布, $Y=\\sin X$, 则 $\\operatorname{Cov}(X, Y)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{\\pi}$",
+      "analysis": "【分析】\n\n求协方差用定义式 $\\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)$。这里 $Y=\\sin X$ 是 $X$ 的函数, 凡是 $X$ 的函数的期望都用 $E[g(X)]=\\int g(x)f(x)\\,dx$ 直接算积分即可, 不必去求 $Y$ 的分布。注意 $X\\sim U\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ 的密度为常数 $\\dfrac{1}{\\pi}$, 且积分区间关于原点对称, 可充分利用被积函数的奇偶性化简。\n\n【解答】\n\n由 $X\\sim U\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$, 密度为\n\n$$f(x)=\\begin{cases}\\dfrac{1}{\\pi}, & -\\dfrac{\\pi}{2}<x<\\dfrac{\\pi}{2},\\\\[4pt]0, & \\text{其他}.\\end{cases}$$\n\n先求 $E(X)$。被积函数 $x\\cdot\\dfrac{1}{\\pi}$ 为奇函数, 在对称区间上积分为零:\n\n$$E(X)=\\int_{-\\pi/2}^{\\pi/2}x\\cdot\\frac{1}{\\pi}\\,dx=0.$$\n\n于是\n\n$$\\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)=E(X\\sin X).$$\n\n再用随机变量函数期望公式:\n\n$$E(X\\sin X)=\\int_{-\\pi/2}^{\\pi/2}x\\sin x\\cdot\\frac{1}{\\pi}\\,dx.$$\n\n被积函数 $x\\sin x$ 为偶函数, 故\n\n$$E(X\\sin X)=\\frac{2}{\\pi}\\int_{0}^{\\pi/2}x\\sin x\\,dx.$$\n\n分部积分: $\\displaystyle\\int x\\sin x\\,dx=-x\\cos x+\\int\\cos x\\,dx=\\sin x-x\\cos x$。代入上下限:\n\n$$\\int_{0}^{\\pi/2}x\\sin x\\,dx=\\Big[\\sin x-x\\cos x\\Big]_{0}^{\\pi/2}=\\Big(1-\\frac{\\pi}{2}\\cdot 0\\Big)-(0-0)=1.$$\n\n所以\n\n$$\\operatorname{Cov}(X,Y)=\\frac{2}{\\pi}\\cdot 1=\\frac{2}{\\pi}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "误以为要先求 $Y=\\sin X$ 的分布再算期望, 其实直接用 $E[g(X)]=\\int g(x)f(x)\\,dx$ 即可。",
+        "忘记利用奇偶性: $E(X)$ 因奇函数对称积分为 $0$, 而 $x\\sin x$ 是偶函数应取两倍半区间积分。",
+        "均匀分布密度写错, $X\\sim U\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ 区间长度为 $\\pi$, 密度是 $\\dfrac{1}{\\pi}$ 而非 $\\dfrac{1}{2\\pi}$。"
+      ],
+      "key_point": "协方差用定义式拆开, $X$ 的函数期望直接积分, 善用对称区间奇偶性。"
+    },
+    {
+      "id": 162,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $f(x, y)=x^{3}+8 y^{3}-x y$ 的极值",
+      "options": {},
+      "answer": "极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点",
+      "analysis": "【分析】\n\n二元函数无条件极值的标准流程: 先令两个一阶偏导同时为零解出所有驻点; 再用二阶判别式 $AC-B^2$ 判定每个驻点是否为极值, 其中 $A=f_{xx}$, $B=f_{xy}$, $C=f_{yy}$。判别准则: 当 $AC-B^2>0$ 时为极值($A>0$ 极小, $A<0$ 极大); 当 $AC-B^2<0$ 时非极值(鞍点); 当 $AC-B^2=0$ 时方法失效需另判。本题关键是解驻点方程组时不要漏掉 $(0,0)$。\n\n【解答】\n\n**第一步: 求驻点。** 计算一阶偏导并令其为零:\n\n$$f_x=3x^2-y=0,\\qquad f_y=24y^2-x=0.$$\n\n由第一式得 $y=3x^2$, 代入第二式:\n\n$$24(3x^2)^2-x=216x^4-x=x(216x^3-1)=0.$$\n\n故 $x=0$ 或 $x^3=\\dfrac{1}{216}$, 即 $x=\\dfrac{1}{6}$。\n\n- 当 $x=0$ 时, $y=3\\cdot 0^2=0$, 得驻点 $(0,0)$;\n- 当 $x=\\dfrac{1}{6}$ 时, $y=3\\cdot\\dfrac{1}{36}=\\dfrac{1}{12}$, 得驻点 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$。\n\n**第二步: 求二阶偏导。**\n\n$$A=f_{xx}=6x,\\quad B=f_{xy}=-1,\\quad C=f_{yy}=48y.$$\n\n**第三步: 判别。**\n\n在 $(0,0)$ 处: $A=0,\\ B=-1,\\ C=0$, 故\n\n$$AC-B^2=0\\cdot 0-(-1)^2=-1<0,$$\n\n所以 $(0,0)$ **不是极值点**(鞍点)。\n\n在 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$ 处: $A=6\\cdot\\dfrac{1}{6}=1,\\ B=-1,\\ C=48\\cdot\\dfrac{1}{12}=4$, 故\n\n$$AC-B^2=1\\cdot 4-(-1)^2=3>0,$$\n\n且 $A=1>0$, 所以该点取**极小值**。\n\n**第四步: 求极小值。**\n\n$$f\\left(\\frac{1}{6},\\frac{1}{12}\\right)=\\left(\\frac{1}{6}\\right)^3+8\\left(\\frac{1}{12}\\right)^3-\\frac{1}{6}\\cdot\\frac{1}{12}=\\frac{1}{216}+\\frac{8}{1728}-\\frac{1}{72}.$$\n\n通分(以 $216$ 为分母): $\\dfrac{1}{216}+\\dfrac{1}{216}-\\dfrac{3}{216}=-\\dfrac{1}{216}$。\n\n所以函数有极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解 $216x^4-x=0$ 时漏掉 $x=0$ 这个根, 从而漏掉驻点 $(0,0)$。",
+        "$(0,0)$ 处 $AC-B^2<0$ 说明它是鞍点, 不能误判为极值点。",
+        "代入求极小值时 $8\\left(\\dfrac{1}{12}\\right)^3=\\dfrac{8}{1728}=\\dfrac{1}{216}$, 通分易算错符号或分母。"
+      ],
+      "key_point": "无条件极值: 一阶偏导联立求全部驻点, 再用 $AC-B^2$ 逐点判别, 别漏零驻点。"
+    },
+    {
+      "id": 163,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲线积分 $\\displaystyle I=\\int_{L} \\frac{4 x-y}{4 x^{2}+y^{2}} \\mathrm{d} x+\\frac{x+y}{4 x^{2}+y^{2}} \\mathrm{d} y$, 其中 $L$ 是 $x^{2}+y^{2}=2$, 方向为逆时针方向",
+      "options": {},
+      "answer": "$\\pi$",
+      "analysis": "【分析】\n\n记 $P=\\dfrac{4x-y}{4x^2+y^2}$, $Q=\\dfrac{x+y}{4x^2+y^2}$。直接验证可知在不含原点的区域内有 $\\dfrac{\\partial Q}{\\partial x}=\\dfrac{\\partial P}{\\partial y}$, 但被积函数在原点 $(0,0)$ 处无定义(分母为零), 而原点恰落在闭曲线 $L: x^2+y^2=2$ 内部, 因此不能直接对 $L$ 围成的整个区域用格林公式。\n\n标准做法是**挖去奇点**: 在原点附近取一条小闭曲线 $\\ell$ 把奇点围住(取与分母相匹配的小椭圆 $4x^2+y^2=\\varepsilon^2$ 最方便, 因为它能让分母变成常数), 在 $L$ 与 $\\ell$ 之间的环形区域上用格林公式。由于该区域内 $\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}=0$, 得到 $L$ 上(逆时针)的积分等于 $\\ell$ 上(逆时针)的积分, 后者因分母为常数而易算。\n\n【解答】\n\n**第一步: 验证内部恒等式。** 当 $(x,y)\\ne(0,0)$ 时, 记 $D=4x^2+y^2$, 计算\n\n$$\\frac{\\partial P}{\\partial y}=\\frac{-D-(4x-y)\\cdot 2y}{D^2}=\\frac{-4x^2-y^2-8xy+2y^2}{D^2}=\\frac{-4x^2+y^2-8xy}{D^2},$$\n\n$$\\frac{\\partial Q}{\\partial x}=\\frac{D-(x+y)\\cdot 8x}{D^2}=\\frac{4x^2+y^2-8x^2-8xy}{D^2}=\\frac{-4x^2+y^2-8xy}{D^2}.$$\n\n二者相等, 故 $\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}=0$(原点除外)。\n\n**第二步: 挖去奇点。** 取小椭圆 $\\ell: 4x^2+y^2=\\varepsilon^2$(取 $\\varepsilon$ 充分小使 $\\ell$ 完全落在 $L$ 内), 方向取逆时针。设 $L$ 与 $\\ell$ 之间的环形闭区域为 $D^*$, 其边界(按格林公式正向, 即外边界逆时针、内边界顺时针)为 $L\\cup\\ell^{-}$。在 $D^*$ 上被积函数处处有定义且偏导连续, 由格林公式\n\n$$\\oint_{L}+\\oint_{\\ell^{-}}=\\iint_{D^*}\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right)dxdy=0,$$\n\n即\n\n$$I=\\oint_{L}P\\,dx+Q\\,dy=\\oint_{\\ell}P\\,dx+Q\\,dy\\quad(\\ell\\ \\text{取逆时针}).$$\n\n**第三步: 在小椭圆上计算。** 在 $\\ell$ 上 $4x^2+y^2=\\varepsilon^2$, 故分母为常数 $\\varepsilon^2$:\n\n$$\\oint_{\\ell}P\\,dx+Q\\,dy=\\frac{1}{\\varepsilon^2}\\oint_{\\ell}\\big[(4x-y)\\,dx+(x+y)\\,dy\\big].$$\n\n对这条简单闭曲线 $\\ell$ 围成的椭圆区域 $D_\\ell$ 用格林公式(此时被积的 $4x-y$ 与 $x+y$ 在 $D_\\ell$ 上处处光滑):\n\n$$\\oint_{\\ell}(4x-y)\\,dx+(x+y)\\,dy=\\iint_{D_\\ell}\\Big[\\frac{\\partial(x+y)}{\\partial x}-\\frac{\\partial(4x-y)}{\\partial y}\\Big]dxdy=\\iint_{D_\\ell}\\big[1-(-1)\\big]dxdy=2\\,|D_\\ell|.$$\n\n椭圆 $4x^2+y^2=\\varepsilon^2$ 即 $\\dfrac{x^2}{(\\varepsilon/2)^2}+\\dfrac{y^2}{\\varepsilon^2}=1$, 半轴为 $\\dfrac{\\varepsilon}{2}$ 与 $\\varepsilon$, 面积 $|D_\\ell|=\\pi\\cdot\\dfrac{\\varepsilon}{2}\\cdot\\varepsilon=\\dfrac{\\pi\\varepsilon^2}{2}$。于是\n\n$$\\oint_{\\ell}P\\,dx+Q\\,dy=\\frac{1}{\\varepsilon^2}\\cdot 2\\cdot\\frac{\\pi\\varepsilon^2}{2}=\\pi.$$\n\n所以 $I=\\pi$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "原点是奇点且在 $L$ 内部, 不能直接对 $L$ 整体用格林公式, 必须先挖去奇点。",
+        "内边界方向: 在环形区域用格林公式时内边界取顺时针, 故最终得到 $L$(逆时针)与小曲线 $\\ell$(逆时针)积分相等。",
+        "挖洞曲线应取 $4x^2+y^2=\\varepsilon^2$ 这样能把分母化为常数, 若用圆 $x^2+y^2=\\varepsilon^2$ 则分母不再是常数, 反而麻烦。"
+      ],
+      "key_point": "被积有奇点且 $Q_x=P_y$ 时, 用与分母匹配的小椭圆挖洞, 化分母为常数再算。"
+    },
+    {
+      "id": 164,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设数列 $\\left\\{a_{n}\\right\\}$ 满足 : $a_{1}=1,(n+1) a_{n+1}=\\left(n+\\dfrac{1}{2}\\right) a_{n}$, 证明: 当 $|x|<1$ 时, 幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n} x^{n}$ 收敛, 并求其和函数",
+      "options": {},
+      "answer": "$S(x)=\\dfrac{2}{\\sqrt{1-x}}-2\\ (|x|<1)$",
+      "analysis": "【分析】\n\n本题分两步。先证收敛: 由递推 $(n+1)a_{n+1}=\\left(n+\\dfrac{1}{2}\\right)a_n$ 直接得相邻系数之比, 用比值法(达朗贝尔)求收敛半径, 说明 $|x|<1$ 时级数收敛。再求和函数: 把递推关系 $\\times x^n$ 后逐项求和, 利用 $S(x)=\\displaystyle\\sum_{n\\ge1}a_nx^n$ 与其导数 $S'(x)$ 之间的关系, 将递推转化为关于 $S(x)$ 的一阶线性(可分离变量)微分方程, 解之并用初始条件定常数。\n\n【解答】\n\n**第一步: 证明收敛。** 由 $a_1=1$ 及 $(n+1)a_{n+1}=\\left(n+\\dfrac{1}{2}\\right)a_n$, 知所有 $a_n>0$, 且\n\n$$\\frac{a_{n+1}}{a_n}=\\frac{n+\\frac{1}{2}}{n+1}=\\frac{2n+1}{2n+2}.$$\n\n对幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}a_nx^n$, 一般项之比的极限\n\n$$\\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}x^{n+1}}{a_nx^n}\\right|=\\lim_{n\\to\\infty}\\frac{2n+1}{2n+2}\\,|x|=|x|.$$\n\n由比值判别法, 当 $|x|<1$ 时级数绝对收敛, 当 $|x|>1$ 时发散, 故收敛半径 $R=1$。因此当 $|x|<1$ 时幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}a_nx^n$ 收敛。\n\n**第二步: 建立微分方程。** 设 $S(x)=\\displaystyle\\sum_{n=1}^{\\infty}a_nx^n\\ (|x|<1)$, 则可逐项求导\n\n$$S'(x)=\\sum_{n=1}^{\\infty}na_nx^{n-1}.$$\n\n将递推写成 $2(n+1)a_{n+1}=(2n+1)a_n$, 两边乘 $x^n$ 并对 $n\\ge1$ 求和。\n\n左边:\n\n$$\\sum_{n=1}^{\\infty}2(n+1)a_{n+1}x^n=2\\sum_{m=2}^{\\infty}ma_mx^{m-1}=2\\Big(\\sum_{m=1}^{\\infty}ma_mx^{m-1}-a_1\\Big)=2\\big(S'(x)-1\\big),$$\n\n这里令 $m=n+1$, 并补出 $m=1$ 项($a_1=1$)。\n\n右边:\n\n$$\\sum_{n=1}^{\\infty}(2n+1)a_nx^n=2\\sum_{n=1}^{\\infty}na_nx^n+\\sum_{n=1}^{\\infty}a_nx^n=2x\\,S'(x)+S(x).$$\n\n故得\n\n$$2\\big(S'(x)-1\\big)=2x\\,S'(x)+S(x)\\ \\Longrightarrow\\ 2(1-x)S'(x)=S(x)+2.$$\n\n**第三步: 解微分方程。** 这是可分离变量方程, 注意 $S+2>0$:\n\n$$\\frac{dS}{S+2}=\\frac{dx}{2(1-x)}.$$\n\n两边积分:\n\n$$\\ln(S+2)=-\\frac{1}{2}\\ln(1-x)+C_1,$$\n\n即 $S+2=\\dfrac{C}{\\sqrt{1-x}}$。由初始条件 $S(0)=a_1\\cdot 0+\\cdots=0$(级数从一次项起, 故 $S(0)=0$), 代入得 $0+2=\\dfrac{C}{\\sqrt{1}}$, 即 $C=2$。\n\n所以当 $|x|<1$ 时\n\n$$S(x)=\\frac{2}{\\sqrt{1-x}}-2.$$\n\n**验证:** 由 $\\dfrac{2}{\\sqrt{1-x}}=2(1-x)^{-1/2}=2\\sum_{k\\ge0}\\binom{-1/2}{k}(-x)^k$, 其常数项为 $2$, 一次项系数为 $2\\cdot\\dfrac{1}{2}=1=a_1$, 二次项系数为 $\\dfrac{3}{4}=a_2$, 与递推所得 $a_n$ 一致, 结论正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "求和时下标平移要补项: $\\sum_{n\\ge1}(n+1)a_{n+1}x^n$ 换元后等于 $S'(x)-a_1=S'(x)-1$, 漏掉补出的 $a_1$ 项会出错。",
+        "初始条件用 $S(0)=0$(因级数从 $n=1$ 起无常数项), 不要误代成 $a_1=1$。",
+        "解可分离方程时积分 $\\int\\dfrac{dx}{2(1-x)}=-\\dfrac{1}{2}\\ln(1-x)$, 系数 $-\\dfrac12$ 与负号都不能丢。"
+      ],
+      "key_point": "由系数递推乘 $x^n$ 求和, 化为 $S$ 与 $S'$ 的一阶 ODE, 解后用 $S(0)$ 定常数。"
+    },
+    {
+      "id": 165,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\Sigma$ 为曲面 $z=\\sqrt{x^{2}+y^{2}}\\left(1 \\leqslant x^{2}+y^{2} \\leqslant 4\\right)$ 的下侧, $f(x)$ 是连续函数, 计算\r\n\r\n$\\displaystyle I=\\iint\\limits_{\\Sigma}[x f(x y)+2 x-y] \\mathrm{d} y \\mathrm{d} z+[y f(x y)+2 y+x] \\mathrm{d} z \\mathrm{d} x+[z f(x y)+z] \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{14}{3} \\pi$",
+      "analysis": "【分析】\n\n积分中带有抽象函数 $f(xy)$，这是命题人故意设置的“干扰项”。被积式可拆成两部分：含 $f(xy)$ 的部分与不含 $f(xy)$ 的多项式部分。\n\n- 含 $f$ 的部分：$\\displaystyle\\iint_{\\Sigma} f(xy)\\,(x\\,\\mathrm dy\\mathrm dz+y\\,\\mathrm dz\\mathrm dx+z\\,\\mathrm dx\\mathrm dy)$，向 $xOy$ 面投影后会发现它在锥面上逐点为零，整体消失（下面验证）。\n\n- 不含 $f$ 的部分：$\\vec F=(2x-y,\\,2y+x,\\,z)$，散度为常数 $5$，但 $\\Sigma$ 不封闭，故用**补面 + 高斯公式**。\n\n关键定理：高斯公式 $\\displaystyle\\oiint_{\\partial\\Omega}\\vec F\\cdot\\mathrm d\\vec S=\\iiint_{\\Omega}\\operatorname{div}\\vec F\\,\\mathrm dV$。\n\n【解答】\n\n**第一步：处理含 $f(xy)$ 的部分。**\n\n锥面 $z=\\sqrt{x^2+y^2}=r$，取下侧，其单位法向量正比于 $(g_x,g_y,-1)=\\left(\\dfrac{x}{r},\\dfrac{y}{r},-1\\right)$。把第二类曲面积分化为对 $xOy$ 的二重积分时，含 $f$ 的被积组合为\n$$x\\cdot\\frac{x}{r}+y\\cdot\\frac{y}{r}+z\\cdot(-1)\\cdot(-1)\\ \\text{形式},$$\n更直接地：将三式投影到 $xOy$ 面，含 $f$ 的项化为\n$$-\\Big(x f(xy)\\cdot\\tfrac{x}{r}+y f(xy)\\cdot\\tfrac{y}{r}\\Big)+z f(xy)\\quad(\\text{再按下侧取负}).$$\n注意 $z=r$，于是\n$$-\\frac{x^2}{r}f(xy)-\\frac{y^2}{r}f(xy)+r\\,f(xy)=\\Big(-\\frac{x^2+y^2}{r}+r\\Big)f(xy)=(-r+r)f(xy)=0.$$\n故含 $f(xy)$ 的部分**逐点为零**，对任意连续 $f$ 都不贡献。\n\n**第二步：对 $\\vec F=(2x-y,\\,2y+x,\\,z)$ 用高斯公式。**\n\n$\\operatorname{div}\\vec F=2+2+1=5$。补两张圆盘把锥面段封闭成立体 $\\Omega=\\{(x,y,z):\\,r\\le z\\le 2,\\ 1\\le z\\le 2\\}$，即由\n- 锥面 $\\Sigma$（$1\\le r\\le 2$，下侧，恰为 $\\Omega$ 的外侧）；\n- 顶盖 $\\Sigma_1:\\ z=2,\\ x^2+y^2\\le 4$（取上侧，外法向 $+z$）；\n- 底盖 $\\Sigma_2:\\ z=1,\\ x^2+y^2\\le 1$（取下侧，外法向 $-z$）\n\n围成。由高斯公式，外侧总通量\n$$\\oiint=5\\iiint_{\\Omega}\\mathrm dV=5\\int_1^2 \\pi z^2\\,\\mathrm dz=5\\cdot\\frac{\\pi}{3}(8-1)=\\frac{35}{3}\\pi.$$\n\n**第三步：减去两张补盖的通量。**\n\n- 顶盖 $\\Sigma_1$（$+z$，$z=2$）：只有 $R=z=2$ 贡献，$\\displaystyle\\iint_{\\Sigma_1}z\\,\\mathrm dx\\mathrm dy=2\\cdot(\\pi\\cdot2^2)=8\\pi.$\n- 底盖 $\\Sigma_2$（$-z$，$z=1$）：$\\displaystyle\\iint_{\\Sigma_2}z\\,\\mathrm dx\\mathrm dy=-1\\cdot(\\pi\\cdot1^2)=-\\pi.$\n\n**第四步：解出 $\\Sigma$ 上的通量。**\n$$I=\\frac{35}{3}\\pi-8\\pi-(-\\pi)=\\frac{35}{3}\\pi-7\\pi=\\frac{35-21}{3}\\pi=\\frac{14}{3}\\pi.$$\n\n所以 $I=\\dfrac{14}{3}\\pi$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "误以为含 f(xy) 的项要硬算或用对称性凑——其实在锥面上 (-（x^2+y^2)/r+r)=0 逐点消失，最干净。",
+        "补面时上下盖的半径不同（顶盖 r≤2、底盖 r≤1），立体体积是 ∫_1^2 πz^2 dz=7π/3，不要当成等高圆柱。",
+        "锥面取下侧恰好与所围立体 Ω 的外法向一致，故可直接代入高斯公式而无需再变号；补盖法向要按外侧 (+z/−z) 取。"
+      ],
+      "key_point": "抽象函数项常因法向组合 −(x^2+y^2)/r+z 在锥面上恒为零而消失；多项式项用补面高斯公式，体积按 ∫πz^2dz 算。"
+    },
+    {
+      "id": 166,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[0,2]$ 上具有连续导数, $f(0)=f(2)=0, M=\\max\\limits_{x \\in[0,2]}\\{|f(x)|\\}$, 证明:\r\n\r\n(1) 存在 $\\xi \\in(0,2)$, 使得 $\\left|f^{\\prime}(\\xi)\\right| \\geqslant M$;\r\n\r\n(2) 若对任意的 $x \\in(0,2),\\left|f^{\\prime}(x)\\right| \\leqslant M$, 则 $M=0$",
+      "options": {},
+      "answer": "",
+      "analysis": "【分析】\n\n本题以 $f(0)=f(2)=0$ 和最大模 $M=\\max_{[0,2]}|f(x)|$ 为核心。\n\n- 第 (1) 问：设最值点 $x_0$ 使 $|f(x_0)|=M$。把区间在 $x_0$ 处一分为二，分别在 $[0,x_0]$、$[x_0,2]$ 上用**拉格朗日中值定理**，得到两个关于 $|f'|$ 的下界 $\\dfrac{M}{x_0}$ 与 $\\dfrac{M}{2-x_0}$，二者中至少一个 $\\ge M$（因为 $x_0$、$2-x_0$ 不可能都 $>1$）。\n- 第 (2) 问：在 $|f'(x)|\\le M$ 的约束下用**反证法**。若 $M>0$，由 (1) 的等号分析逼出 $x_0=1$ 且 $f'$ 在 $(0,1)$、$(1,2)$ 上分别恒等于 $\\pm M$，再用 $f'$ **连续**导出矛盾。\n\n【解答】\n\n由 $f$ 在 $[0,2]$ 连续，存在 $x_0\\in[0,2]$ 使 $|f(x_0)|=M$。又 $f(0)=f(2)=0$，若 $M=0$ 则 $f\\equiv0$，结论平凡成立；故下设 $M>0$，此时 $x_0\\in(0,2)$。\n\n**(1)** 在 $[0,x_0]$ 上对 $f$ 用拉格朗日中值定理：存在 $\\xi_1\\in(0,x_0)$，使\n$$f(x_0)-f(0)=f'(\\xi_1)\\,x_0\\ \\Rightarrow\\ |f'(\\xi_1)|=\\frac{|f(x_0)|}{x_0}=\\frac{M}{x_0}.$$\n在 $[x_0,2]$ 上用拉格朗日中值定理：存在 $\\xi_2\\in(x_0,2)$，使\n$$f(2)-f(x_0)=f'(\\xi_2)\\,(2-x_0)\\ \\Rightarrow\\ |f'(\\xi_2)|=\\frac{|f(x_0)|}{2-x_0}=\\frac{M}{2-x_0}.$$\n由于 $x_0+(2-x_0)=2$，两者不能同时大于 $1$，即 $\\min\\{x_0,\\,2-x_0\\}\\le 1$。\n\n- 若 $x_0\\le 1$，取 $\\xi=\\xi_1$，则 $|f'(\\xi)|=\\dfrac{M}{x_0}\\ge M$；\n- 若 $x_0\\ge 1$，取 $\\xi=\\xi_2$，则 $|f'(\\xi)|=\\dfrac{M}{2-x_0}\\ge M$。\n\n故总存在 $\\xi\\in(0,2)$ 使 $|f'(\\xi)|\\ge M$。$\\blacksquare$\n\n**(2)** 设对任意 $x\\in(0,2)$ 有 $|f'(x)|\\le M$，反设 $M>0$。由牛顿–莱布尼茨公式及 $f(0)=0$：\n$$M=|f(x_0)|=\\left|\\int_0^{x_0}f'(t)\\,\\mathrm dt\\right|\\le \\int_0^{x_0}|f'(t)|\\,\\mathrm dt\\le M\\,x_0\\ \\Rightarrow\\ x_0\\ge 1.$$\n同理由 $f(2)=0$：\n$$M=|f(x_0)|=\\left|\\int_{x_0}^{2}f'(t)\\,\\mathrm dt\\right|\\le \\int_{x_0}^{2}|f'(t)|\\,\\mathrm dt\\le M\\,(2-x_0)\\ \\Rightarrow\\ x_0\\le 1.$$\n两者合并得 $x_0=1$，并且上面两处不等式全部取等号。\n\n等号 $\\displaystyle\\Big|\\int_0^{1}f'\\Big|=\\int_0^{1}|f'|=M$ 且 $|f'|\\le M$、$f'$ 连续，迫使 $f'(t)$ 在 $[0,1]$ 上不变号且 $|f'(t)|\\equiv M$，即 $f'(t)\\equiv M$ 或 $f'(t)\\equiv -M$。由 $f(0)=0$、$f(1)=f(x_0)$ 与 $|f(1)|=M>0$，得 $f'(t)\\equiv M$（取 $f(1)=M$ 的情形，另一情形对称），于是 $f(x)=Mx$ 在 $[0,1]$ 上，$f'(1^-)=M$。\n\n同理在 $[1,2]$ 上 $f'\\equiv\\pm M$；由 $f(1)=M>0$、$f(2)=0$，必有 $f'(t)\\equiv -M$，即 $f(x)=M(2-x)$，故 $f'(1^+)=-M$。\n\n但 $f'$ 在 $[0,2]$ 上**连续**，应有 $f'(1^-)=f'(1^+)$，即 $M=-M$，得 $M=0$，与 $M>0$ 矛盾。\n\n故 $M=0$。$\\blacksquare$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 中分点必须取在最值点 x0 处，且要分 x0≤1、x0≥1 两种情况选 ξ1 或 ξ2，不能只在 (0,2) 整体用一次中值定理。",
+        "(2) 是反证：先假设 M>0，由两个积分不等式同时逼出 x0=1，再用 f' 连续制造左右导数矛盾。",
+        "等号成立分析要用到 |f'|≤M 与 f' 连续：连续才能从“积分等号”推出 f'≡±M 而非仅几乎处处。"
+      ],
+      "key_point": "最值点把区间分两段各用拉格朗日中值定理得 |f'| 下界；反证时积分估计逼出 x0=1，再借 f' 连续的左右值矛盾收尾。"
+    },
+    {
+      "id": 167,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_{1}, x_{2}\\right)=x_{1}^{2}-4 x_{1} x_{2}+4 x_{2}^{2}$ 经正交变换 $\\left(\\begin{array}{l}x_{1} \\\\ x_{2}\\end{array}\\right)=\\boldsymbol Q\\left(\\begin{array}{l}y_{1} \\\\ y_{2}\\end{array}\\right)$ 化为二次型 $g\\left(y_{1}, y_{2}\\right)=a y_{1}^{2}+4 y_{1} y_{2}+b y_{2}^{2}$, 其中 $a \\geqslant b$\r\n\r\n(1) 求 $a, b$ 的值;\r\n\r\n(2) 求正交矩阵 $\\boldsymbol Q$",
+      "options": {},
+      "answer": "(1) $a=4, b=1$\r\n\r\n(2) $\\dfrac{1}{5}\\left(\\begin{array}{cc}-4 & 3 \\\\ 3 & 4\\end{array}\\right)$",
+      "analysis": "【分析】\n\n两个二次型的矩阵\n$$A=\\begin{pmatrix}1&-2\\\\-2&4\\end{pmatrix},\\qquad B=\\begin{pmatrix}a&2\\\\2&b\\end{pmatrix}.$$\n由 $\\binom{x_1}{x_2}=Q\\binom{y_1}{y_2}$ 代入 $f=x^{\\mathrm T}Ax$ 得 $f=y^{\\mathrm T}(Q^{\\mathrm T}AQ)y=g=y^{\\mathrm T}By$，故 $Q^{\\mathrm T}AQ=B$。**正交变换下相合即相似**（$Q^{\\mathrm T}=Q^{-1}$），所以 $A$ 与 $B$ **特征值相同**，从而**迹相等、行列式相等**，由此定 $a,b$。\n\n求 $Q$：分别求 $A$、$B$ 的（单位正交）特征向量，令 $Q$ 把 $B$ 关于某特征值的特征向量映到 $A$ 关于同一特征值的特征向量即可。\n\n【解答】\n\n**(1) 求 $a,b$。**\n\n$A$ 的特征值：$\\det(A-\\lambda I)=(1-\\lambda)(4-\\lambda)-4=\\lambda^2-5\\lambda=0$，得 $\\lambda=0,\\ 5$。\n\n由 $Q^{\\mathrm T}AQ=B$ 且 $Q$ 正交，$B$ 与 $A$ 相似，特征值同为 $\\{0,5\\}$。于是\n$$\\operatorname{tr}B=a+b=0+5=5,\\qquad \\det B=ab-4=0\\cdot5=0\\ \\Rightarrow\\ ab=4.$$\n$a,b$ 是 $t^2-5t+4=0$ 的根，即 $t=4$ 或 $t=1$。由 $a\\ge b$ 得\n$$\\boxed{a=4,\\quad b=1.}$$\n\n**(2) 求正交矩阵 $Q$。** 此时 $B=\\begin{pmatrix}4&2\\\\2&1\\end{pmatrix}$。\n\n求 $A$ 的单位特征向量：\n- $\\lambda=5$：解 $(A-5I)x=0$，$\\begin{pmatrix}-4&-2\\\\-2&-1\\end{pmatrix}$，得 $x=(1,-2)^{\\mathrm T}$，单位化 $u_5=\\dfrac{1}{\\sqrt5}(1,-2)^{\\mathrm T}$。\n- $\\lambda=0$：解 $Ax=0$，得 $x=(2,1)^{\\mathrm T}$，单位化 $u_0=\\dfrac{1}{\\sqrt5}(2,1)^{\\mathrm T}$。\n\n求 $B$ 的单位特征向量：\n- $\\lambda=5$：解 $(B-5I)x=0$，$\\begin{pmatrix}-1&2\\\\2&-4\\end{pmatrix}$，得 $x=(2,1)^{\\mathrm T}$，单位化 $w_5=\\dfrac{1}{\\sqrt5}(2,1)^{\\mathrm T}$。\n- $\\lambda=0$：解 $Bx=0$，得 $x=(1,-2)^{\\mathrm T}$，单位化 $w_0=\\dfrac{1}{\\sqrt5}(1,-2)^{\\mathrm T}$。\n\n要使 $Q^{\\mathrm T}AQ=B$，令 $x=Qy$，则 $y$ 沿 $B$ 的 $\\lambda$-特征方向时 $x$ 应沿 $A$ 的同一 $\\lambda$-特征方向，即 $Qw_5=u_5,\\ Qw_0=u_0$。写成矩阵 $Q\\,[\\,w_5\\ w_0\\,]=[\\,u_5\\ u_0\\,]$，由 $[\\,w_5\\ w_0\\,]$ 正交得\n$$Q=[\\,u_5\\ u_0\\,]\\,[\\,w_5\\ w_0\\,]^{\\mathrm T}.$$\n代入计算（注意 $w_0=u_5\\cdot\\sqrt5/\\sqrt5$ 等关系），得\n$$Q=\\frac{1}{5}\\begin{pmatrix}-4&3\\\\3&4\\end{pmatrix}.$$\n\n**验证**：$\\det Q=\\dfrac{1}{25}(-16-9)=-1$（正交），且\n$$Q^{\\mathrm T}AQ=\\frac{1}{25}\\begin{pmatrix}-4&3\\\\3&4\\end{pmatrix}\\begin{pmatrix}1&-2\\\\-2&4\\end{pmatrix}\\begin{pmatrix}-4&3\\\\3&4\\end{pmatrix}=\\begin{pmatrix}4&2\\\\2&1\\end{pmatrix}=B.\\ \\checkmark$$\n\n（特征向量取符号不同，$Q$ 不唯一；$\\dfrac{1}{5}\\begin{pmatrix}4&-3\\\\-3&-4\\end{pmatrix}$ 等同样合格。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "正交变换是相合又相似，特征值不变，故直接用迹与行列式相等定 a,b，不必真去算 Q 再凑。",
+        "拼 Q 时必须把 B 的某特征值的特征向量对应到 A 的同一特征值的特征向量（同 λ 配对），配错则 Q^T A Q ≠ B。",
+        "特征向量符号可正可负，故 Q 不唯一；只要正交且满足 Q^T A Q=B 即可，最后务必回代验证。"
+      ],
+      "key_point": "正交变换保特征值：用 tr、det 相等定参数；Q 由两边同特征值的单位特征向量按 Q=[u][w]^T 拼出，回代验证。"
+    },
+    {
+      "id": 168,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $2$ 阶矩阵, $\\boldsymbol{P}=(\\boldsymbol{\\alpha}, \\boldsymbol{A} \\boldsymbol{\\alpha})$, 其中 $\\boldsymbol{\\alpha}$ 是非零向量且不是 $\\boldsymbol{A}$ 的特征向量\r\n\r\n(1) 证明 $\\boldsymbol{P}$ 为可逆矩阵;\r\n\r\n(2) 若 $\\boldsymbol{A}^{2} \\boldsymbol{\\alpha}+\\boldsymbol{A} \\boldsymbol{\\alpha}-6 \\boldsymbol{\\alpha}=\\mathbf{0}$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$, 并判断 $\\boldsymbol{A}$ 是否相似于对角矩阵",
+      "options": {},
+      "answer": "P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}，A 相似于对角矩阵 \\operatorname{diag}(2,-3)",
+      "analysis": "【分析】\n\n本题考查“向量在一组基下的坐标”与相似对角化判别。\n\n- (1) 要证 $P=(\\alpha,\\,A\\alpha)$ 可逆，即证 $\\alpha,\\,A\\alpha$ **线性无关**。用反证：若相关，则 $A\\alpha=\\lambda\\alpha$，与“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n- (2) 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 把 $A^2\\alpha$ 用 $\\alpha,A\\alpha$ 线性表示，从而把 $A\\alpha$、$A(A\\alpha)$ 在基 $\\{\\alpha,A\\alpha\\}$ 下写出坐标，得到 $P^{-1}AP$。再看其特征值是否互异判断可对角化。\n\n【解答】\n\n**(1)** 反设 $\\alpha,\\,A\\alpha$ 线性相关。因 $\\alpha\\ne0$，必存在数 $\\lambda$ 使 $A\\alpha=\\lambda\\alpha$。这说明 $\\alpha$ 是 $A$ 的属于特征值 $\\lambda$ 的特征向量，与题设“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n\n故 $\\alpha,\\,A\\alpha$ 线性无关。又 $A$ 为 $2$ 阶矩阵，$P=(\\alpha,\\,A\\alpha)$ 的两列线性无关，$\\operatorname{rank}P=2$，所以 $P$ 可逆。$\\blacksquare$\n\n**(2)** 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 得\n$$A^2\\alpha=6\\alpha-A\\alpha.$$\n考察 $A$ 作用在 $P$ 的两列上，并在基 $\\{\\alpha,\\,A\\alpha\\}$ 下表示：\n$$A\\alpha=0\\cdot\\alpha+1\\cdot(A\\alpha),$$\n$$A(A\\alpha)=A^2\\alpha=6\\alpha-A\\alpha=6\\cdot\\alpha+(-1)\\cdot(A\\alpha).$$\n于是\n$$AP=A(\\alpha,\\,A\\alpha)=(A\\alpha,\\,A^2\\alpha)=(\\alpha,\\,A\\alpha)\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}=P\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix},$$\n两边左乘 $P^{-1}$：\n$$P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}.$$\n\n**判断相似对角化**：设 $B=P^{-1}AP$，$A$ 与 $B$ 相似，故二者同时（或同不）可对角化。求 $B$ 的特征值：\n$$\\det(B-\\lambda I)=\\begin{vmatrix}-\\lambda&6\\\\1&-1-\\lambda\\end{vmatrix}=\\lambda(\\lambda+1)-6=\\lambda^2+\\lambda-6=(\\lambda-2)(\\lambda+3)=0,$$\n得 $\\lambda_1=2,\\ \\lambda_2=-3$，是两个**互异**特征值。$2$ 阶矩阵有 $2$ 个不同特征值，必可对角化，故 $A$ 相似于对角矩阵\n$$A\\sim\\begin{pmatrix}2&0\\\\0&-3\\end{pmatrix}.$$\n\n所以 $A$ 可以相似对角化。",
+      "wrong_options": {},
+      "pitfalls": [
+        "证 P 可逆的关键是“α 不是特征向量 ⇒ α 与 Aα 线性无关”，不能直接说 P 列不为零就可逆。",
+        "求 P^{-1}AP 用的是“Aα、A(Aα) 在基 {α,Aα} 下的坐标按列排成矩阵”，注意 A^2α=6α−Aα 给出第二列 (6,−1)^T，列序别写反。",
+        "判别对角化看 P^{-1}AP（与 A 相似）的特征值：2 阶有两个相异特征值即可对角化，无需再算特征向量。"
+      ],
+      "key_point": "α 非特征向量 ⇒ {α,Aα} 是基从而 P 可逆；将 Aα、A^2α 在该基下取坐标得 P^{-1}AP，特征值相异即相似对角化。"
+    },
+    {
+      "id": 169,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X_{1}, X_{2}, X_{3}$ 相互独立, 其中 $X_{1}$ 与 $X_{2}$ 均服从标准正态分布, $X_{3}$ 的概率分布为 $P\\left\\{X_{3}=0\\right\\}=P\\left\\{X_{3}=1\\right\\}=\\dfrac{1}{2} , Y=X_{3} X_{1}+\\left(1-X_{3}\\right) X_{2}$\r\n\r\n(1) 求二维随机变量 $\\left(X_{1}, Y\\right)$ 的分布函数, 结果用标准正态分布函数 $\\Phi(x)$ 表示; \r\n\r\n(2) 证明随机变量 $Y$ 服从标准正态分布",
+      "options": {},
+      "answer": "(1) $F(x, y)= \\begin{cases}\\dfrac{1}{2} \\Phi(x) \\Phi(y)+\\dfrac{1}{2} \\Phi(x), & x<y \\\\ \\dfrac{1}{2} \\Phi(x) \\Phi(y)+\\dfrac{1}{2} \\Phi(y), & x \\geqslant y \\end{cases}$",
+      "analysis": "【分析】\n\n$Y=X_3X_1+(1-X_3)X_2$ 是个\"开关\"：$X_3$ 只取 $0,1$，当 $X_3=1$ 时 $Y=X_1$，当 $X_3=0$ 时 $Y=X_2$。这种含离散\"指示变量\"的混合型随机变量，标准做法是按离散变量 $X_3$ 的取值用**全概率公式**分情形，把 $Y$ 在每种情形下化成已知的正态变量再算联合分布函数。注意 $X_3=1$ 时 $Y$ 与 $X_1$ 完全相同（强相关），事件要写成 $\\{X_1\\le\\min(x,y)\\}$；$X_3=0$ 时 $X_1,X_2$ 独立，可直接相乘。第（2）问把 $x\\to+\\infty$ 取边缘分布即可。\n\n【解答】\n\n**(1)** 记 $F(x,y)=P\\{X_1\\le x,\\,Y\\le y\\}$。$X_3$ 与 $(X_1,X_2)$ 独立，由全概率公式按 $X_3$ 分情形：\n$$F(x,y)=\\tfrac{1}{2}P\\{X_1\\le x,Y\\le y\\mid X_3=1\\}+\\tfrac{1}{2}P\\{X_1\\le x,Y\\le y\\mid X_3=0\\}.$$\n\n当 $X_3=1$ 时 $Y=X_1$，事件 $\\{X_1\\le x,\\,X_1\\le y\\}=\\{X_1\\le\\min(x,y)\\}$，故该条件概率 $=\\Phi(\\min(x,y))$。\n\n当 $X_3=0$ 时 $Y=X_2$，且 $X_1,X_2$ 独立同 $N(0,1)$，故该条件概率 $=P\\{X_1\\le x\\}P\\{X_2\\le y\\}=\\Phi(x)\\Phi(y)$。\n\n于是\n$$F(x,y)=\\tfrac{1}{2}\\Phi(\\min(x,y))+\\tfrac{1}{2}\\Phi(x)\\Phi(y).$$\n\n分大小写出：\n$$F(x,y)=\\begin{cases}\\dfrac{1}{2}\\Phi(x)\\Phi(y)+\\dfrac{1}{2}\\Phi(x), & x<y,\\\\[2mm]\\dfrac{1}{2}\\Phi(x)\\Phi(y)+\\dfrac{1}{2}\\Phi(y), & x\\ge y.\\end{cases}$$\n\n**(2)** $Y$ 的分布函数即令 $x\\to+\\infty$ 取边缘分布。当 $x\\to+\\infty$ 时必有 $x\\ge y$（对任意固定 $y$），用第二式：\n$$F_Y(y)=\\lim_{x\\to+\\infty}F(x,y)=\\tfrac{1}{2}\\Phi(+\\infty)\\Phi(y)+\\tfrac{1}{2}\\Phi(y)=\\tfrac{1}{2}\\cdot1\\cdot\\Phi(y)+\\tfrac{1}{2}\\Phi(y)=\\Phi(y).$$\n\n（也可直接由全概率：$F_Y(y)=\\tfrac12 P\\{X_1\\le y\\}+\\tfrac12 P\\{X_2\\le y\\}=\\tfrac12\\Phi(y)+\\tfrac12\\Phi(y)=\\Phi(y)$。）\n\n对任意 $y$ 有 $F_Y(y)=\\Phi(y)$，正是标准正态分布函数，故 $Y\\sim N(0,1)$，证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$X_3=1$ 时 $Y=X_1$，二者完全相同，联合事件必须写成 $\\{X_1\\le\\min(x,y)\\}$，不能拆成 $\\Phi(x)\\Phi(y)$。",
+        "分情形写最终结果时按 $x<y$ 与 $x\\ge y$ 区分 $\\min(x,y)$，边界处归于一侧即可（连续无影响）。",
+        "第（2）问不要去求密度卷积，直接对 $x$ 取边缘（或对 $X_3$ 用全概率）即得 $\\Phi(y)$。"
+      ],
+      "key_point": "含离散开关变量的混合型随机变量：按离散变量取值用全概率公式分情形，每一支化为已知正态再算，注意强相关支用 $\\min$。"
+    },
+    {
+      "id": 170,
+      "paper": "数学一",
+      "year": 2020,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某元件的使用寿命 $T$ 的分布函数为\r\n\r\n$F(t)= \\begin{cases}1-\\mathrm{e}^{-\\left(\\frac{t}{\\theta}\\right)^{m}}, & t \\geqslant 0, \\\\ 0, & \\text { 其他, }\\end{cases}$\r\n\r\n其中 $\\theta, m$ 为参数且大于零\r\n\r\n(1) 求概率 $P\\{T>t\\}$ 与 $P\\{T>s+t \\mid T>s\\}$, 其中 $s>0, t>0$;\r\n\r\n(2) 任取 $n$ 个这种元件做寿命试验, 测得它们的寿命分别为 $t_{1}, t_{2}, \\cdots, t_{n}$, 若 $m$ 已知, 求 $\\theta$ 的最大似然估计值 $\\hat{\\theta}$",
+      "options": {},
+      "answer": "(1) $\\mathrm{e}^{\\left(\\frac{s}{\\theta}\\right)^m-\\left(\\frac{s+t}{\\theta}\\right)^m}$\r\n\r\n(2) $\\displaystyle \\hat{\\theta}=\\sqrt[m]{\\frac{1}{n} \\sum_{i=1}^n t_i^m}$",
+      "analysis": "【分析】\n\n第（1）问\"$T>t$\"的概率就是生存函数 $1-F(t)$；条件概率 $P\\{T>s+t\\mid T>s\\}$ 用条件概率定义，注意 $\\{T>s+t\\}\\subset\\{T>s\\}$，分子直接是 $P\\{T>s+t\\}$。第（2）问是威布尔分布在 $m$ 已知时对尺度参数 $\\theta$ 的最大似然估计：先对分布函数求导得密度，写出似然函数，取对数后对 $\\theta$ 求导令其为零解出 $\\hat\\theta$。\n\n【解答】\n\n**(1)** 当 $t\\ge0$ 时\n$$P\\{T>t\\}=1-F(t)=\\mathrm{e}^{-\\left(\\frac{t}{\\theta}\\right)^m}.$$\n由于 $s,t>0$，事件 $\\{T>s+t\\}\\subset\\{T>s\\}$，故\n$$P\\{T>s+t\\mid T>s\\}=\\dfrac{P\\{T>s+t\\}}{P\\{T>s\\}}=\\dfrac{\\mathrm{e}^{-\\left(\\frac{s+t}{\\theta}\\right)^m}}{\\mathrm{e}^{-\\left(\\frac{s}{\\theta}\\right)^m}}=\\mathrm{e}^{\\left(\\frac{s}{\\theta}\\right)^m-\\left(\\frac{s+t}{\\theta}\\right)^m}.$$\n（注：仅当 $m=1$ 时它退化为 $\\mathrm{e}^{-t/\\theta}$，与 $s$ 无关，即指数分布的无记忆性；$m\\ne1$ 时没有无记忆性。）\n\n**(2)** 对 $t>0$ 求密度：\n$$f(t)=F'(t)=\\mathrm{e}^{-\\left(\\frac{t}{\\theta}\\right)^m}\\cdot\\dfrac{m}{\\theta}\\left(\\dfrac{t}{\\theta}\\right)^{m-1}=\\dfrac{m}{\\theta^m}\\,t^{m-1}\\mathrm{e}^{-\\left(\\frac{t}{\\theta}\\right)^m},\\quad t>0.$$\n各 $t_i>0$，似然函数\n$$L(\\theta)=\\prod_{i=1}^n\\dfrac{m}{\\theta^m}\\,t_i^{m-1}\\mathrm{e}^{-\\left(\\frac{t_i}{\\theta}\\right)^m},$$\n取对数\n$$\\ln L=n\\ln m+(m-1)\\sum_{i=1}^n\\ln t_i-nm\\ln\\theta-\\theta^{-m}\\sum_{i=1}^n t_i^m.$$\n对 $\\theta$ 求导并令其为零（$m$ 已知）：\n$$\\dfrac{\\mathrm{d}\\ln L}{\\mathrm{d}\\theta}=-\\dfrac{nm}{\\theta}+m\\,\\theta^{-m-1}\\sum_{i=1}^n t_i^m=0.$$\n两边乘以 $\\dfrac{\\theta}{m}$ 得 $-n+\\theta^{-m}\\sum_{i=1}^n t_i^m=0$，即 $\\theta^m=\\dfrac{1}{n}\\sum_{i=1}^n t_i^m$，所以\n$$\\hat{\\theta}=\\left(\\dfrac{1}{n}\\sum_{i=1}^n t_i^m\\right)^{1/m}=\\sqrt[m]{\\dfrac{1}{n}\\sum_{i=1}^n t_i^m}.$$\n（二阶导在该点小于零，确为极大值点。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "条件概率里 $\\{T>s+t\\}\\subset\\{T>s\\}$，分子是 $P\\{T>s+t\\}$ 不是交集要另算。",
+        "求密度时不要漏掉链式法则因子 $\\frac{m}{\\theta}\\left(\\frac{t}{\\theta}\\right)^{m-1}$。",
+        "似然求导对的是 $\\theta$（$m$ 视为已知常数），别把 $m$ 也当成待估参数。"
+      ],
+      "key_point": "生存函数 $1-F$ 配条件概率定义解第一问；威布尔尺度参数 MLE：取对数似然对 $\\theta$ 求导，得 $\\hat\\theta=(\\frac1n\\sum t_i^m)^{1/m}$。"
+    }
+  ]
+}

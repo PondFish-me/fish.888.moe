@@ -1,0 +1,513 @@
+{
+  "paper": "数学一",
+  "year": 2026,
+  "count": 22,
+  "questions": [
+    {
+      "id": 90101,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $z = z(x, y)$ 由方程 $x - az = e^{y + az}$ ( $a$ 是非0常数)确定, 则( )",
+      "options": {
+        "A": "$\\frac{\\partial z}{\\partial x} - \\frac{\\partial z}{\\partial y} = \\frac{1}{a}$",
+        "B": "$\\frac{\\partial z}{\\partial x} + \\frac{\\partial z}{\\partial y} = \\frac{1}{a}$",
+        "C": "$\\frac{\\partial z}{\\partial x} - \\frac{\\partial z}{\\partial y} = -\\frac{1}{a}$",
+        "D": "$\\frac{\\partial z}{\\partial x} + \\frac{\\partial z}{\\partial y} = -\\frac{1}{a}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】隐函数方程 $x-az=e^{y+az}$ 同时含 $x,y$ 与 $z$，直接解出 $z$ 不现实。对 $x$、$y$ 分别求偏导（视 $z$ 为 $x,y$ 的函数），把 $\\dfrac{\\partial z}{\\partial x}$、$\\dfrac{\\partial z}{\\partial y}$ 解出来再做组合即可。关键观察：右端 $e^{y+az}$ 的指数里 $y$ 与 $az$ 是“同进同退”的，所以两个偏导只在含 $e^{y+az}$ 的项上有差别，作差恰好抵消，得到与 $z$ 无关的常数。\n\n【解答】记 $w=e^{y+az}$。\n\n对 $x$ 求偏导：$1-a\\dfrac{\\partial z}{\\partial x}=w\\cdot a\\dfrac{\\partial z}{\\partial x}$，即 $1=a(1+w)\\dfrac{\\partial z}{\\partial x}$，故\n$$\\frac{\\partial z}{\\partial x}=\\frac{1}{a(1+w)}.$$\n\n对 $y$ 求偏导：$-a\\dfrac{\\partial z}{\\partial y}=w\\left(1+a\\dfrac{\\partial z}{\\partial y}\\right)$，即 $-a(1+w)\\dfrac{\\partial z}{\\partial y}=w$，故\n$$\\frac{\\partial z}{\\partial y}=\\frac{-w}{a(1+w)}.$$\n\n作差：\n$$\\frac{\\partial z}{\\partial x}-\\frac{\\partial z}{\\partial y}=\\frac{1}{a(1+w)}+\\frac{w}{a(1+w)}=\\frac{1+w}{a(1+w)}=\\frac{1}{a}.$$\n\n恰为选项 A。（作和则得 $\\dfrac{1-w}{a(1+w)}$，并非常数。）",
+      "wrong_options": {
+        "B": "把“作差”误成“作和”。两偏导相加得 $\\dfrac{1-w}{a(1+w)}$（$w=e^{y+az}$），含 $z$，不是常数 $\\dfrac1a$。",
+        "C": "符号出错：作差结果恒为 $+\\dfrac1a$，不会出现负号。多半是对 $y$ 求导时把 $-a\\dfrac{\\partial z}{\\partial y}$ 的负号处理反了。",
+        "D": "兼犯 B、C 两种错误（既加错又带错符号），结果与正解相反。"
+      },
+      "pitfalls": [
+        "对 $y$ 求导时 $e^{y+az}$ 的指数对 $y$ 求导含 $1+a\\dfrac{\\partial z}{\\partial y}$ 这一项，那个“1”常被漏掉。",
+        "解出偏导后要保留公因子 $\\dfrac{1}{a(1+w)}$，组合时分母相同直接合并，不要急于代回 $z$。"
+      ],
+      "key_point": "隐函数求偏导后看“组合”——本题两偏导分母同为 $a(1+e^{y+az})$，作差分子凑成 $1+e^{y+az}$ 约去，得常数 $1/a$。"
+    },
+    {
+      "id": 90102,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "幂级数 $\\sum_{n=1}^{\\infty}\\left(\\frac{3+(-1)^{n}}{4}\\right)^{n}x^{2n}$ 的收敛域是（）",
+      "options": {
+        "A": "$[-2, 2]$",
+        "B": "$[-1, 1]$",
+        "C": "$(-2,2)$",
+        "D": "$(-1,1)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】系数 $\\left(\\dfrac{3+(-1)^n}{4}\\right)^n$ 随 $n$ 奇偶在 $\\left(\\dfrac12\\right)^n$ 与 $1^n$ 之间跳变，柯西-阿达玛求收敛半径要用 $\\limsup$。先令 $t=x^2$ 化成普通幂级数 $\\sum a_n t^n$，求出 $t$ 的收敛半径，再回到 $x$，最后单独判定端点。\n\n【解答】令 $t=x^2\\ge0$，级数化为 $\\displaystyle\\sum_{n=1}^{\\infty}a_n t^n$，其中 $a_n=\\left(\\dfrac{3+(-1)^n}{4}\\right)^n$：当 $n$ 偶时 $a_n=1^n=1$，当 $n$ 奇时 $a_n=\\left(\\dfrac12\\right)^n$。\n\n由柯西-阿达玛公式，\n$$\\frac{1}{R_t}=\\limsup_{n\\to\\infty}\\sqrt[n]{a_n}.$$\n偶项 $\\sqrt[n]{1}=1$，奇项 $\\sqrt[n]{(1/2)^n}=\\dfrac12$，故 $\\limsup=1$，$R_t=1$，即 $|t|<1$ 时收敛、$|t|>1$ 时发散。\n\n回到 $x$：$|t|=x^2<1\\iff|x|<1$，故 $|x|<1$ 收敛、$|x|>1$ 发散，收敛半径为 $1$。\n\n端点 $x=\\pm1$（此时 $t=x^2=1$）：通项为 $a_n\\cdot1^n=a_n$。偶数项 $a_n=1\\not\\to0$，通项不趋于 $0$，级数发散。\n\n故收敛域为 $(-1,1)$，即选项 D。",
+      "wrong_options": {
+        "A": "误把 $x^2$ 的收敛半径当作 $x$ 的收敛范围（或把系数极限算成 $1/4$ 得 $R=2$）。正确半径是 $R=1$，不是 $2$。",
+        "B": "半径 $R=1$ 正确，但端点判断错了：$x=\\pm1$ 时偶数项通项恒为 $1$ 不趋于 $0$，级数发散，端点不能闭。",
+        "C": "把收敛半径误算成 $2$（区间 $(-2,2)$）。系数 $\\sqrt[n]{a_n}$ 的上极限是 $1$ 而非 $1/2$，半径应为 $1$。"
+      },
+      "pitfalls": [
+        "系数奇偶跳变时必须用 $\\limsup\\sqrt[n]{a_n}$，取上极限（=1），不能用比值法（极限不存在）。",
+        "缺项幂级数先换元 $t=x^2$ 求 $R_t$，再开方回到 $x$；端点要单独代入判敛散。"
+      ],
+      "key_point": "系数振荡用柯西-阿达玛取上极限定半径；端点处只要某子列通项不趋于 0 即发散。"
+    },
+    {
+      "id": 90103,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[-1, 1]$ 上有定义, 则（）",
+      "options": {
+        "A": "当 $f(x)$ 在 $(-1,0)$ 单调递减,在 $(0,1)$ 单调递增时, $f(0)$ 是极小值",
+        "B": "当 $f(0)$ 是极小值时， $f(x)$ 在 $(-1,0)$ 单调递减，在 $(0,1)$ 单调递增",
+        "C": "当 $f(x)$ 的图形在 $[-1, 1]$ 是凹的时， $\\frac{f(x) - f(1)}{x - 1}$ 在 $[-1, 1)$ 单调递增",
+        "D": "$\\frac{f(x) - f(1)}{x - 1}$ 在 $[-1, 1)$ 单调递增时， $f(x)$ 的图形在 $[-1, 1]$ 是凹的"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题考查极值定义、单调性以及凹凸性与差商单调性之间的**充要关系辨析**。关键在于区分\"看似充分\"与\"真正充分\"：极值是关于函数值在某点附近的比较，单调性是开区间上的性质，两者并不互相蕴含；而凹凸性等价于差商关于**任一固定基点**都单调，仅对单一基点的差商单调并不足以推出凹凸。逐项用定义与反例排除即可。这里\"凹的\"按考研通用约定指**下凸**（$\\cup$ 形，二阶导非负），其图形上任意两点连线在曲线上方。\n\n【解答】\n\n**选项 A（错）**：$f$ 在 $(-1,0)$ 递减、在 $(0,1)$ 递增，并不能保证 $f(0)$ 是极小值，因为 $f(0)$ 的取值可以单独很大。取\n$$f(x)=|x|\\ (x\\neq 0),\\quad f(0)=1.$$\n则 $f$ 在 $(-1,0)$ 递减、在 $(0,1)$ 递增，但 $f(0)=1$ 比近旁的值都大，不是极小值。故 A 错。\n\n**选项 B（错）**：$f(0)$ 是极小值只要求在 $0$ 的某邻域内 $f(0)\\le f(x)$，并不要求两侧严格单调。取\n$$f(x)=x^{2}\\left(2+\\sin\\dfrac{1}{x}\\right)\\ (x\\neq 0),\\quad f(0)=0,$$\n则 $f(x)\\ge x^{2}>0=f(0)$（$x\\neq 0$），$f(0)$ 是极小值，但 $f$ 在 $0$ 的任意单侧邻域内都反复振荡、并非单调。故 B 错。\n\n**选项 C（对）**：设 $f$ 在 $[-1,1]$ 上为凹的（下凸）。记差商\n$$g(x)=\\dfrac{f(x)-f(1)}{x-1},\\quad x\\in[-1,1),$$\n它是动点 $(x,f(x))$ 与定点 $(1,f(1))$ 连线的斜率。由凸函数的**三弦定理**：对 $a<b<c$ 有\n$$\\dfrac{f(b)-f(a)}{b-a}\\le \\dfrac{f(c)-f(a)}{c-a}\\le \\dfrac{f(c)-f(b)}{c-b}.$$\n取固定的最大基点 $c=1$，对任意 $-1\\le x_1<x_2<1$，令 $a=x_1,\\ b=x_2,\\ c=1$，由上式最右两项之间的关系得\n$$\\dfrac{f(1)-f(x_1)}{1-x_1}\\le \\dfrac{f(1)-f(x_2)}{1-x_2},$$\n两边分子分母同乘 $-1$（不改变比值）即 $g(x_1)\\le g(x_2)$。故 $g(x)$ 在 $[-1,1)$ 上单调递增。C 正确。\n\n**选项 D（错）**：这是 C 的逆命题。差商**仅对单一基点 $x_0=1$** 单调递增，弱于凹凸性（凹凸性要求对一切基点的差商都单调）。可构造反例：在 $[-1,1)$ 上让连向点 $1$ 的割线斜率递增，但函数本身在内部带有一段上凸（不是处处下凸）的弧，仍可使所有指向 $1$ 的弦斜率保持递增，而 $f$ 整体并非凹的。故由 $g$ 单调递增推不出 $f$ 凹，D 错。\n\n综上，选 **C**。",
+      "wrong_options": {
+        "A": "单调性约束的是开区间内的比较, 端点 $f(0)$ 的值可单独取大, 如 $f(x)=|x|\\,(x\\neq0),\\,f(0)=1$, 此时不是极小值。",
+        "B": "极值只要求邻域内 $f(0)\\le f(x)$, 不要求两侧单调, 振荡型函数 $x^2(2+\\sin\\frac1x)$ 即为反例。",
+        "D": "差商仅对单一基点 $x=1$ 单调递增弱于凹凸性, 后者需对一切基点差商都单调, 故推不出 $f$ 凹。"
+      },
+      "pitfalls": [
+        "\"凹的\"按考研约定是下凸($\\cup$形), 别按口语\"凹陷\"理解反了。",
+        "凹凸性 $\\Leftrightarrow$ 差商对任意固定基点单调, 仅一个基点单调只是必要不充分, 故 C 真而 D 假。",
+        "单调性与极值不互相蕴含: 单调推不出极值(端点值可异常), 极值也推不出单调(可振荡)。"
+      ],
+      "key_point": "用反例排除 A、B、D, 用凸函数三弦定理(差商对固定基点单调)确认 C, 并辨明充要方向。"
+    },
+    {
+      "id": 90104,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知有界区域 $\\Omega$ 由曲面 $z = \\sqrt{4 - x^2 - y^2}$ 与 $z = \\sqrt{x^2 + y^2}$ 围成，函数 $f(u)$ 连续，则 $\\iiint_{\\Omega} f(x^2 + y^2 + z^2) dx dy dz = (\\quad)$",
+      "options": {
+        "A": "$\\int_0^{2\\pi}d\\theta \\int_0^2 dr\\int_r^{\\sqrt{4 - r^2}}f(r^2 +z^2)rdz$",
+        "B": "$\\int_0^{2\\pi}d\\theta \\int_0^{\\sqrt{2}}dr\\int_0^{\\sqrt{4 - r^2}}f(r^2 +z^2)rdz$",
+        "C": "$\\int_0^{2\\pi}d\\theta \\int_0^{\\frac{\\pi}{4}}d\\varphi \\int_0^2 f(r^2)r^2\\sin \\varphi dr$",
+        "D": "$\\int_0^{2\\pi}d\\theta \\int_0^{\\frac{\\pi}{2}}d\\varphi \\int_0^2 f(r^2)r^2\\sin \\varphi dr$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题是上半球面与圆锥面所围立体的三重积分换元。被积函数为 $f(x^2+y^2+z^2)=f(\\rho^2)$，是到原点距离的函数，故**球面坐标**最自然。关键是确定区域 $\\Omega$ 的边界与各坐标范围：先求球面与锥面的交线确定张角，再写出 $\\rho,\\varphi,\\theta$ 的上下限；也可对照柱面坐标核验各选项的限是否正确。\n\n【解答】\n\n上边界 $z=\\sqrt{4-x^2-y^2}$ 是半径 $\\rho=2$ 的上半球面；下边界 $z=\\sqrt{x^2+y^2}$ 是半顶角 $45^\\circ$ 的圆锥面。\n\n**求交线**：令 $\\sqrt{4-r^2}=r$（其中 $r^2=x^2+y^2$），得 $4-r^2=r^2$，即 $r^2=2,\\ r=\\sqrt2$，对应 $z=\\sqrt2$。立体是\"锥面之上、球面之下\"的冰激凌锥形区域。\n\n**球面坐标**：$x=\\rho\\sin\\varphi\\cos\\theta,\\ y=\\rho\\sin\\varphi\\sin\\theta,\\ z=\\rho\\cos\\varphi$，体积元 $\\mathrm{d}V=\\rho^2\\sin\\varphi\\,\\mathrm{d}\\rho\\,\\mathrm{d}\\varphi\\,\\mathrm{d}\\theta$。\n\n- 锥面 $z=r$ 即 $\\rho\\cos\\varphi=\\rho\\sin\\varphi$，得 $\\varphi=\\dfrac{\\pi}{4}$。区域在锥内（含 $z$ 轴正向），故 $0\\le\\varphi\\le\\dfrac{\\pi}{4}$。\n- 球面 $\\rho=2$，从原点出发 $0\\le\\rho\\le 2$。\n- $0\\le\\theta\\le 2\\pi$。\n\n又 $x^2+y^2+z^2=\\rho^2$，于是\n$$\\iiint_{\\Omega} f(x^2+y^2+z^2)\\,\\mathrm{d}V=\\int_0^{2\\pi}\\mathrm{d}\\theta\\int_0^{\\pi/4}\\mathrm{d}\\varphi\\int_0^{2} f(\\rho^2)\\,\\rho^2\\sin\\varphi\\,\\mathrm{d}\\rho.$$\n这与选项 **C** 完全一致（其中记号 $r$ 即球坐标 $\\rho$）。\n\n**核验柱面坐标**：正确写法应为 $\\displaystyle\\int_0^{2\\pi}\\mathrm{d}\\theta\\int_0^{\\sqrt2}\\mathrm{d}r\\int_r^{\\sqrt{4-r^2}} f(r^2+z^2)\\,r\\,\\mathrm{d}z$（$r$ 到 $\\sqrt2$ 为止，$z$ 从锥面 $r$ 到球面 $\\sqrt{4-r^2}$）。选项 A 把 $r$ 上限写成 $2$（错），选项 B 把 $z$ 下限写成 $0$ 且 $r$ 上限 $\\sqrt2$ 但漏掉锥面下界（错）。选项 D 把 $\\varphi$ 取到 $\\dfrac{\\pi}{2}$（变成整个上半球，错）。\n\n综上，选 **C**。",
+      "wrong_options": {
+        "A": "柱面坐标下 $r$ 应到交线 $r=\\sqrt2$ 为止, 而非 $2$; 半径取到 $2$ 会把锥面外的球冠也算进去。",
+        "B": "柱面坐标下 $z$ 应从锥面 $z=r$ 起、到球面 $z=\\sqrt{4-r^2}$ 止, 此项下限写成 $0$, 把锥面以下部分错误计入。",
+        "D": "$\\varphi$ 上限应为锥面对应的 $\\frac{\\pi}{4}$; 取到 $\\frac{\\pi}{2}$ 就成了整个上半球, 多算了锥面外的区域。"
+      },
+      "pitfalls": [
+        "先解 $\\sqrt{4-r^2}=r$ 得交线 $r=\\sqrt2$, 这是确定柱面 $r$ 上限与球面张角 $\\varphi=\\frac{\\pi}{4}$ 的关键。",
+        "锥面 $z=\\sqrt{x^2+y^2}$ 半顶角 $45^\\circ$, 对应球坐标 $\\varphi=\\frac{\\pi}{4}$, 别误取 $\\frac{\\pi}{2}$。",
+        "球坐标体积元是 $\\rho^2\\sin\\varphi$, 不要漏掉 $\\sin\\varphi$ 或写成 $\\rho\\sin\\varphi$。"
+      ],
+      "key_point": "被积函数依赖 $x^2+y^2+z^2$ 时优先球坐标; 先求交线定张角 $\\varphi=\\frac{\\pi}{4}$、$\\rho\\in[0,2]$。"
+    },
+    {
+      "id": 90105,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "单位矩阵经过若干次互换两行得到的矩阵成为置换矩阵, 设 A 为 n 阶置换矩阵, $A^{*}$ 为 A 的伴随矩阵, 则( )",
+      "options": {
+        "A": "$A^{*}$ 为置换矩阵",
+        "B": "$A^{-1}$ 为置换矩阵",
+        "C": "$A^{-1} = A^{*}$",
+        "D": "$A^{-1} = -A^{*}$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查置换矩阵的逆、伴随与行列式之间的关系。核心事实有两条：(1) 置换矩阵是**正交矩阵**，故 $A^{-1}=A^{T}$，而置换矩阵的转置仍是置换矩阵；(2) 伴随与逆的关系 $A^{*}=|A|\\,A^{-1}$，其中置换矩阵的行列式 $|A|=\\pm 1$（由互换行的次数奇偶决定）。抓住 $|A|$ 可能为 $-1$ 这一点，就能排除把 $A^{*}$ 当作恒等于 $A^{-1}$ 或恒为置换矩阵的选项。\n\n【解答】\n\n设 $A$ 为 $n$ 阶置换矩阵，则其每行每列恰有一个 $1$、其余为 $0$，且各列是标准基向量的一个排列，故 $A$ 的列向量两两正交且为单位向量，即 $A$ 为**正交矩阵**：\n$$A^{T}A=E\\ \\Longrightarrow\\ A^{-1}=A^{T}.$$\n\n**选项 B（对）**：$A^{-1}=A^{T}$。把置换矩阵转置，每行每列仍恰有一个 $1$、其余为 $0$，因此 $A^{T}$ 仍是置换矩阵。故 $A^{-1}$ 是置换矩阵，恒成立。B 正确。\n\n**逐项排除**：由 $A^{*}=|A|\\,A^{-1}$，而 $|A|=\\pm 1$。\n\n- **A（错）**：当 $|A|=-1$ 时 $A^{*}=-A^{-1}$，其非零元为 $-1$，不是只含 $0,1$ 的置换矩阵。例如二阶互换矩阵\n$$A=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\quad |A|=-1,\\quad A^{-1}=A,\\quad A^{*}=-A^{-1}=\\begin{pmatrix}0&-1\\\\-1&0\\end{pmatrix},$$\n显然不是置换矩阵。故 A 错。\n- **C（错）**：$A^{-1}=A^{*}$ 仅当 $|A|=1$ 成立；上例 $|A|=-1$ 时 $A^{*}=-A^{-1}\\neq A^{-1}$。C 错。\n- **D（错）**：$A^{-1}=-A^{*}$ 仅当 $|A|=-1$ 成立；当 $|A|=1$（如 $A=E$）时 $A^{*}=A^{-1}$，则 $-A^{*}=-A^{-1}\\neq A^{-1}$。D 错。\n\n只有 B 对一切置换矩阵恒成立，选 **B**。",
+      "wrong_options": {
+        "A": "$A^{*}=|A|A^{-1}$, 当 $|A|=-1$ 时 $A^{*}=-A^{-1}$ 的非零元为 $-1$, 不是只含 $0,1$ 的置换矩阵。",
+        "C": "$A^{-1}=A^{*}$ 仅在 $|A|=1$ 时成立; 当置换由奇数次互换得到 $|A|=-1$ 时不成立。",
+        "D": "$A^{-1}=-A^{*}$ 仅在 $|A|=-1$ 时成立; 当 $|A|=1$(如单位阵)时不成立, 不是恒等式。"
+      },
+      "pitfalls": [
+        "置换矩阵的行列式按互换行的次数为 $\\pm1$, 不要默认 $|A|=1$。",
+        "伴随用公式 $A^{*}=|A|A^{-1}$, 符号取决于 $|A|$, 故 C、D 都只是\"有时成立\"而非恒等。",
+        "置换矩阵正交, $A^{-1}=A^{T}$ 仍是置换矩阵, 这是与 $\\pm1$ 符号无关的稳健结论。"
+      ],
+      "key_point": "置换矩阵正交故 $A^{-1}=A^{T}$ 必为置换矩阵; 而 $A^{*}=|A|A^{-1}$ 带 $\\pm1$ 符号, 排除 A/C/D。"
+    },
+    {
+      "id": 90106,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 A, B 为 n 阶矩阵, $\\beta$ 是 n 维列向量, 若 A 的列向量组可由 B 的列向量组表示, 则 ( )",
+      "options": {
+        "A": "当 $Ax = \\beta$ 有解时， $Bx = \\beta$ 有解",
+        "B": "当 $A^{T}x = \\beta$ 有解时， $B^{T}x = \\beta$ 有解",
+        "C": "当 $Bx = \\beta$ 有解时， $Ax = \\beta$ 有解",
+        "D": "当 $B^{T}x = \\beta$ 有解时， $A^{T}x = \\beta$ 有解"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题把\"列向量组的线性表示\"转化为\"列空间的包含关系\"与\"方程组有解\"。核心等价链：\n$$A\\text{ 的列可由 }B\\text{ 的列表示}\\iff \\exists C,\\ A=BC\\iff \\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B);$$\n$$Ax=\\beta\\text{ 有解}\\iff \\beta\\in\\mathrm{Col}(A).$$\n抓住列空间包含的**方向**（$A$ 的列空间被装在 $B$ 的列空间里），即可判断 $\\beta$ 落入哪个列空间，从而判定可解性的传递方向。转置会破坏这种包含关系，故含转置的选项不成立。\n\n【解答】\n\n由条件，$A$ 的每个列向量都可由 $B$ 的列向量线性表示，故存在矩阵 $C$ 使\n$$A=BC,\\qquad \\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B).$$\n\n**选项 A（对）**：设 $Ax=\\beta$ 有解 $x_0$，即 $\\beta=Ax_0\\in\\mathrm{Col}(A)$。由 $\\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B)$ 知 $\\beta\\in\\mathrm{Col}(B)$，即 $Bx=\\beta$ 有解。更直接地，$\\beta=Ax_0=B(Cx_0)$，取 $x=Cx_0$ 即为 $Bx=\\beta$ 的解。故 A 成立。\n\n**选项 C（错）**：方向相反。$Bx=\\beta$ 有解只说明 $\\beta\\in\\mathrm{Col}(B)$，但 $\\mathrm{Col}(B)$ 更大，$\\beta$ 未必落在 $\\mathrm{Col}(A)$ 内。反例：\n$$A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix},\\quad B=\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix},\\quad \\beta=\\begin{pmatrix}0\\\\1\\end{pmatrix}.$$\n$A$ 的列可由 $B$ 的列表示（$B=E$）。$Bx=\\beta$ 有解，但 $Ax=\\beta$ 要求第二分量 $0=1$，无解。故 C 错。\n\n**选项 B、D（错）**：涉及转置。由 $A=BC$ 得 $A^{T}=C^{T}B^{T}$，这说明 $A^{T}$ 的列是 $C^{T}$（而非 $B^{T}$）列的组合，得不到 $\\mathrm{Col}(A^{T})$ 与 $\\mathrm{Col}(B^{T})$ 的包含关系，转置后行空间与列空间的关系完全改变。沿用上面的反例 $A,B$：取 $\\beta=\\begin{pmatrix}0\\\\1\\end{pmatrix}$，\n- 对 B：$A^{T}=A$，$A^{T}x=\\beta$ 无解（第二分量 $0=1$），前提\"$A^{T}x=\\beta$ 有解\"不满足时命题空真；改取 $\\beta=\\begin{pmatrix}1\\\\0\\end{pmatrix}$ 仍只能验证个例，不能保证一般成立。给出否定一般性的反例：令\n$$A=\\begin{pmatrix}1&1\\\\0&0\\end{pmatrix},\\quad B=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}.$$\n$A$ 的两列都是 $\\begin{pmatrix}1\\\\0\\end{pmatrix}$ 的倍数，可由 $B$ 的第一列表示。取 $\\beta=\\begin{pmatrix}1\\\\1\\end{pmatrix}$：$A^{T}=\\begin{pmatrix}1&0\\\\1&0\\end{pmatrix}$，$A^{T}x=\\beta$ 有解（$x=(1,*)^T$ 给出 $(1,1)^T$）；而 $B^{T}=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$，$B^{T}x=\\beta$ 需第二分量 $0=1$，无解。这同时否定 B 与 D（D 是 B 的反向，更不成立）。故 B、D 均错。\n\n综上，选 **A**。",
+      "wrong_options": {
+        "B": "由 $A=BC$ 得 $A^{T}=C^{T}B^{T}$, 转置后 $A^{T}$ 的列由 $C^{T}$ 而非 $B^{T}$ 组合, $\\mathrm{Col}(A^T)$ 与 $\\mathrm{Col}(B^T)$ 无包含关系; 反例见解答。",
+        "C": "方向相反。$\\beta\\in\\mathrm{Col}(B)$ 推不出 $\\beta\\in\\mathrm{Col}(A)$, 因为 $\\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B)$ 更小; 取 $A=\\mathrm{diag}(1,0),B=E,\\beta=(0,1)^T$ 即反例。",
+        "D": "同 B, 转置破坏列空间包含, 且方向与可由 B 表示的条件相反; 解答中的反例同时否定 D。"
+      },
+      "pitfalls": [
+        "\"$A$ 的列可由 $B$ 的列表示\"$\\iff\\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B)$, 方向是 $A$ 装进 $B$, 别记反。",
+        "由此 $Ax=\\beta$ 有解 $\\Rightarrow Bx=\\beta$ 有解(可解性向 $B$ 传递), 反向不成立。",
+        "转置会破坏列空间包含关系($A=BC\\Rightarrow A^T=C^TB^T$), 含 $A^T,B^T$ 的选项一般不成立。"
+      ],
+      "key_point": "把线性表示译成 $\\mathrm{Col}(A)\\subseteq\\mathrm{Col}(B)$, 则 $Ax=\\beta$ 有解必有 $Bx=\\beta$ 有解; 转置项不成立。"
+    },
+    {
+      "id": 90107,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设二次型 $f(x_{1}, x_{2}, x_{3}) = a(x_{1}^{2} + x_{2}^{2} + x_{3}^{2}) + 4x_{1}x_{2} + 4x_{1}x_{3} + 4x_{2}x_{3}$ . 若方程 $f(x_{1}, x_{2}, x_{3}) = -1$ 表示的曲面为圆柱面，则（）",
+      "options": {
+        "A": "a = -4，且 $f(x_{1}, x_{2}, x_{3})$ 的规范型为 $-y_{1}^{2} - y_{2}^{2} - y_{3}^{2}$",
+        "B": "a = -4，且 $f(x_{1}, x_{2}, x_{3})$ 在正交变换下的标准型为 $-6y_{1}^{2} - 6y_{2}^{2}$",
+        "C": "a=2，且 $f(x_{1},x_{2},x_{3})$ 的规范型为 $-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$",
+        "D": "a = 2，且 $f(x_{1}, x_{2}, x_{3})$ 在正交变换下的标准型为 $-6y_{1}^{2} - 6y_{2}^{2}$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题给出二次型 $f$，要求方程 $f=-1$ 所表示的二次曲面为**圆柱面**，反推参数 $a$ 并判断标准形/规范形。核心思路是：先写出二次型矩阵 $A$，利用其特殊结构（主对角元同为 $a$、非对角元同为 $2$）一眼看出特征值；再分析“圆柱面”对标准形系数的要求——化为标准形后必须恰有**两个相等的非零系数**和**一个为零的系数**，且与右端常数配合后能写成 $\\dfrac{y_1^2+y_2^2}{r^2}=1$ 的形式。由此卡出 $a$。\n\n【解答】\n\n二次型矩阵\n$$A=\\begin{pmatrix} a & 2 & 2 \\\\ 2 & a & 2 \\\\ 2 & 2 & a \\end{pmatrix}.$$\n\n该矩阵每行元素之和均为 $a+4$，故 $(1,1,1)^{T}$ 是特征向量，对应特征值 $\\lambda_1=a+4$。又因 $A=(a-2)E+2\\,\\mathbf{1}\\mathbf{1}^{T}$（其中 $\\mathbf{1}=(1,1,1)^{T}$），凡满足 $x_1+x_2+x_3=0$ 的向量都有 $A x=(a-2)x$，故 $\\lambda_2=\\lambda_3=a-2$（二重）。\n\n经正交变换 $f$ 化为标准形\n$$f=(a+4)y_1^2+(a-2)y_2^2+(a-2)y_3^2.$$\n\n要使 $f=-1$ 表示**圆柱面**，标准形须恰有两个相等的非零系数、一个为零系数，且非零系数与右端 $-1$ 同号（才能写成圆柱面 $y_1^2+y_2^2=\\text{常数}>0$）。\n\n- 若 $a-2=0$，即 $a=2$：特征值为 $6,0,0$，标准形 $6y_1^2$。$6y_1^2=-1$ 无实解，不是曲面，更非圆柱面，排除。\n- 若 $a+4=0$，即 $a=-4$：特征值为 $0,-6,-6$，标准形\n$$f=-6y_2^2-6y_3^2.$$\n方程化为 $-6y_2^2-6y_3^2=-1$，即 $6y_2^2+6y_3^2=1$，是以 $y_1$ 轴为轴的**圆柱面**。成立。\n\n故 $a=-4$，正交变换下标准形为 $-6y_1^2-6y_2^2$（两个 $-6$、一个 $0$），即选项 **B**。\n\n附：此时 $f$ 的秩为 $2$、负惯性指数为 $2$，规范形为 $-y_1^2-y_2^2$（不含第三项），故凡写成 $-y_1^2-y_2^2-y_3^2$（秩 $3$）的选项均错。",
+      "wrong_options": {
+        "A": "规范形写成 $-y_1^2-y_2^2-y_3^2$ 是秩 3，而 $a=-4$ 时 $f$ 秩为 2，规范形应为 $-y_1^2-y_2^2$，故错。",
+        "C": "$a=2$ 时特征值为 $6,0,0$，$f=-1$ 化为 $6y_1^2=-1$ 无实解，不是圆柱面；且规范形为 $y_1^2$（秩 1），与所写不符。",
+        "D": "$a=2$ 时只有一个非零特征值，标准形为 $6y_1^2$，并非 $-6y_1^2-6y_2^2$，且不表示圆柱面，故错。"
+      },
+      "pitfalls": [
+        "“圆柱面”要求标准形恰有两个相等非零系数、一个零系数，且非零系数须与右端常数同号，否则无实图形；不能只看“有一个零特征值”就下结论。",
+        "标准形（正交变换，保留特征值）与规范形（系数化为 $\\pm1,0$）是两套系数，要分清；本题秩为 2，规范形只有两项。",
+        "利用行和与“和为零的向量”可秒求此类全对称矩阵的特征值，不必硬解特征多项式。"
+      ],
+      "key_point": "全对称矩阵特征值为 $a+4$（单）与 $a-2$（二重）；圆柱面要求标准形两等号非零系数加一个零系数且与右端同号，卡出 $a=-4$。"
+    },
+    {
+      "id": 90108,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X \\sim N(1,2)$ ，令 $f(t) = E[(X + t)^2]$ ，则 $f(t)$ 的最小值点和最小值分别为（）",
+      "options": {
+        "A": "1,2",
+        "B": "1,4",
+        "C": "-1,2",
+        "D": "-1,4"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n$f(t)=E[(X+t)^2]$ 是关于 $t$ 的二次函数。关键是用恒等式 $E(Y^2)=D(Y)+[E(Y)]^2$ 把期望展开：取 $Y=X+t$，则 $D(X+t)=D(X)$、$E(X+t)=E(X)+t$，于是 $f(t)=D(X)+[E(X)+t]^2$。这是开口向上的抛物线，配方即得最小值点与最小值。注意 $N(1,2)$ 中第二个参数按考研约定是**方差** $\\sigma^2=2$。\n\n【解答】\n\n由 $X\\sim N(1,2)$ 知 $E(X)=1$，$D(X)=2$。\n\n$$f(t)=E[(X+t)^2]=D(X+t)+[E(X+t)]^2=D(X)+[E(X)+t]^2=2+(1+t)^2.$$\n\n这是关于 $t$ 的开口向上抛物线，当 $1+t=0$，即 $t=-1$ 时取最小值，最小值为\n$$f(-1)=2+0=2.$$\n\n故最小值点为 $-1$，最小值为 $2$，选 **C**。",
+      "wrong_options": {
+        "A": "$t=1$ 是把最小值点取成了 $E(X)$，方向反了；二次函数 $2+(1+t)^2$ 的顶点在 $t=-1$。",
+        "B": "最小值点取错为 $1$，且最小值 $4$ 是把 $t=1$ 代入所得，均不对。",
+        "D": "最小值点 $-1$ 正确，但最小值应为 $D(X)=2$，写成 $4$ 是误把 $E(X^2)=D(X)+[E(X)]^2=3$ 等量算错或多加了一项。"
+      },
+      "pitfalls": [
+        "$N(1,2)$ 的第二个参数是方差 $\\sigma^2=2$，不要误当成标准差去平方。",
+        "$f(t)$ 在 $t=-E(X)=-1$ 取最小，符号易写反。",
+        "最小值就是 $D(X)$，因为配方后常数项恰为方差。"
+      ],
+      "key_point": "$E[(X+t)^2]=D(X)+[E(X)+t]^2$，顶点在 $t=-E(X)$，最小值等于 $D(X)$。"
+    },
+    {
+      "id": 90109,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设连续型随机变量 $X$ 的分布函数为 $F(x)$ ，随机变量 $Y$ 的分布函数为 $F(ay + b)$ ， $X$ 的数学期望为 $\\mu$ ，方差为 $\\sigma^2 (\\sigma > 0)$ ，若 $Y$ 的数学期望和方差分别为 0 和 1，则（）",
+      "options": {
+        "A": "$a = \\sigma, b = \\mu$",
+        "B": "$a = \\sigma$ , $b = -\\mu$",
+        "C": "$a = \\frac{1}{\\sigma}, b = \\mu$",
+        "D": "$a = \\frac{1}{\\sigma}, b = -\\mu$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n已知 $Y$ 的分布函数为 $F(ay+b)$，其中 $F$ 是 $X$ 的分布函数。先由“分布函数必须单调不减”确定 $a>0$，再把 $F_Y(y)=F(ay+b)=P(X\\le ay+b)$ 反解出 $Y$ 与 $X$ 的线性关系 $Y=\\dfrac{X-b}{a}$；最后用期望、方差的线性性质 $E(Y)=0$、$D(Y)=1$ 定出 $a,b$。这其实就是把 $X$ 标准化的过程。\n\n【解答】\n\n设 $F_Y(y)=F(ay+b)$。由于分布函数关于自变量单调不减，而 $F$ 本身不减，故必须 $a>0$（若 $a<0$ 则 $F(ay+b)$ 关于 $y$ 不增，不能作分布函数）。\n\n当 $a>0$ 时\n$$F_Y(y)=F(ay+b)=P(X\\le ay+b)=P\\!\\left(\\frac{X-b}{a}\\le y\\right),$$\n比较 $F_Y(y)=P(Y\\le y)$，得\n$$Y=\\frac{X-b}{a}.$$\n\n于是\n$$E(Y)=\\frac{E(X)-b}{a}=\\frac{\\mu-b}{a}=0\\ \\Rightarrow\\ b=\\mu,$$\n$$D(Y)=\\frac{D(X)}{a^2}=\\frac{\\sigma^2}{a^2}=1\\ \\Rightarrow\\ a^2=\\sigma^2\\ \\Rightarrow\\ a=\\sigma\\ (\\text{取正}).$$\n\n故 $a=\\sigma,\\ b=\\mu$，选 **A**。\n\n验证：$Y=\\dfrac{X-\\mu}{\\sigma}$ 正是 $X$ 的标准化，$E(Y)=0$、$D(Y)=1$，与题设一致。",
+      "wrong_options": {
+        "B": "$b=-\\mu$ 错。由 $E(Y)=\\dfrac{\\mu-b}{a}=0$ 得 $b=\\mu$，不是 $-\\mu$。",
+        "C": "$a=\\dfrac1\\sigma$ 错。由 $\\dfrac{\\sigma^2}{a^2}=1$ 得 $a=\\sigma$；写成 $\\dfrac1\\sigma$ 是把 $Y=\\dfrac{X-b}{a}$ 与 $Y=a X+\\cdots$ 的系数关系搞反。",
+        "D": "$a,b$ 两处都错：应为 $a=\\sigma,\\ b=\\mu$。"
+      },
+      "pitfalls": [
+        "由 $F_Y(y)=F(ay+b)$ 应反解出 $Y=\\dfrac{X-b}{a}$，而不是 $Y=aX+b$；这是定系数时最易翻车处。",
+        "分布函数要求单调不减，必须先确定 $a>0$，再开方取正根。",
+        "本质是标准化 $Y=\\dfrac{X-\\mu}{\\sigma}$，记住这个形式可快速验证答案。"
+      ],
+      "key_point": "由 $F_Y(y)=F(ay+b)$ 得 $Y=\\dfrac{X-b}{a}$（需 $a>0$），用 $E(Y)=0,D(Y)=1$ 解出 $a=\\sigma,b=\\mu$，即标准化。"
+    },
+    {
+      "id": 90110,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 X 的概率分布为 $P\\{X=k\\}=\\frac{1}{2^{k+1}}+\\frac{1}{3^{k}}$ （ $k=1,2,\\ldots$ ），则对于正整数 m、n 有（）",
+      "options": {
+        "A": "$P\\{X > m + n \\mid X > m\\} = P\\{X > m\\}$",
+        "B": "$P\\left\\{X > m + n \\mid X > m\\right\\} = P\\left\\{X > n\\right\\}$",
+        "C": "$P\\left\\{X > m + n \\mid X > m\\right\\} > P\\left\\{X > m\\right\\}$",
+        "D": "$P\\{X > m + n \\mid X > m\\} > P\\{X > n\\}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n分布 $P\\{X=k\\}=\\dfrac{1}{2^{k+1}}+\\dfrac{1}{3^{k}}$ 由两个几何型部分叠加而成。纯几何分布 $\\left(\\tfrac12\\right)^k$ 具有无记忆性，会给出 $P\\{X>m+n\\mid X>m\\}=P\\{X>n\\}$；但叠加了衰减更快的 $\\left(\\tfrac13\\right)^k$ 项后无记忆性被破坏。思路：先求尾概率 $P\\{X>m\\}$，再用条件概率 $P\\{X>m+n\\mid X>m\\}=\\dfrac{P\\{X>m+n\\}}{P\\{X>m\\}}$，与各选项右端比较；关键是判断 $P\\{X>m+n\\}$ 与 $P\\{X>m\\}P\\{X>n\\}$ 的大小，用因式分解给出严格证明。\n\n【解答】\n\n**第一步：求尾概率。** 对正整数 $m$，\n$$P\\{X>m\\}=\\sum_{k=m+1}^{\\infty}\\left(\\frac{1}{2^{k+1}}+\\frac{1}{3^{k}}\\right).$$\n两个几何级数分别求和：\n$$\\sum_{k=m+1}^{\\infty}\\frac{1}{2^{k+1}}=\\frac{1/2^{m+2}}{1-1/2}=\\frac{1}{2^{m+1}},\\qquad \\sum_{k=m+1}^{\\infty}\\frac{1}{3^{k}}=\\frac{1/3^{m+1}}{1-1/3}=\\frac{1}{2\\cdot 3^{m}}.$$\n故\n$$P\\{X>m\\}=\\frac{1}{2^{m+1}}+\\frac{1}{2\\cdot 3^{m}}=\\frac12\\left(\\frac{1}{2^{m}}+\\frac{1}{3^{m}}\\right).$$\n\n**第二步：比较 $P\\{X>m+n\\}$ 与 $P\\{X>m\\}\\,P\\{X>n\\}$。** 记 $u=\\dfrac{1}{2}$ 思路，直接代入：\n$$P\\{X>m+n\\}=\\frac12\\left(\\frac{1}{2^{m+n}}+\\frac{1}{3^{m+n}}\\right),$$\n$$P\\{X>m\\}\\,P\\{X>n\\}=\\frac14\\left(\\frac{1}{2^{m}}+\\frac{1}{3^{m}}\\right)\\left(\\frac{1}{2^{n}}+\\frac{1}{3^{n}}\\right).$$\n作差并通分（提出 $\\tfrac14$）：\n$$P\\{X>m+n\\}-P\\{X>m\\}P\\{X>n\\}=\\frac14\\left(\\frac{1}{2^{m+n}}+\\frac{1}{3^{m+n}}-\\frac{1}{2^{m}3^{n}}-\\frac{1}{2^{n}3^{m}}\\right).$$\n而括号内恰好是\n$$\\left(\\frac{1}{2^{m}}-\\frac{1}{3^{m}}\\right)\\left(\\frac{1}{2^{n}}-\\frac{1}{3^{n}}\\right).$$\n由于 $\\dfrac{1}{2^{k}}>\\dfrac{1}{3^{k}}$，两因子均为正，故差 $>0$，即\n$$P\\{X>m+n\\}>P\\{X>m\\}\\,P\\{X>n\\}.$$\n\n**第三步：得出条件概率。** 两边同除以 $P\\{X>m\\}>0$：\n$$P\\{X>m+n\\mid X>m\\}=\\frac{P\\{X>m+n\\}}{P\\{X>m\\}}>P\\{X>n\\}.$$\n\n故选 **D**。\n\n**验证（$m=n=1$）：** $P\\{X>1\\}=\\tfrac12(\\tfrac12+\\tfrac13)=\\tfrac{5}{12}$，$P\\{X>2\\}=\\tfrac12(\\tfrac14+\\tfrac19)=\\tfrac{13}{72}$，则 $P\\{X>2\\mid X>1\\}=\\dfrac{13/72}{5/12}=\\dfrac{13}{30}\\approx0.433$，而 $P\\{X>1\\}\\approx0.417$、$P\\{X>n\\}=P\\{X>1\\}\\approx0.417$，确有 $0.433>0.417$。再取 $m=1,n=2$：$P\\{X>3\\mid X>1\\}=\\dfrac{35/432}{5/12}=\\dfrac{7}{36}\\approx0.194$，此时 $>P\\{X>n\\}=P\\{X>2\\}\\approx0.181$ 仍成立，而 $<P\\{X>m\\}=P\\{X>1\\}\\approx0.417$，说明 C 不普遍成立、D 才对。",
+      "wrong_options": {
+        "A": "这是要求“等于 $P\\{X>m\\}$”，无任何依据；取 $m=n=1$ 得 $0.433\\ne0.417$，不成立。",
+        "B": "这是几何分布无记忆性 $P\\{X>m+n\\mid X>m\\}=P\\{X>n\\}$ 的结论；但本分布叠加了 $1/3^{k}$ 项，无记忆性被破坏，应是严格大于号，等号不成立。",
+        "C": "取 $m=1,n=2$ 时 $P\\{X>3\\mid X>1\\}\\approx0.194<P\\{X>1\\}\\approx0.417$，故并非恒大于 $P\\{X>m\\}$，C 不普遍成立。"
+      },
+      "pitfalls": [
+        "看到几何型分布别急着套无记忆性：只有纯 $(1-p)^{k-1}p$ 几何分布才无记忆，叠加项会破坏它，结论变为严格不等号。",
+        "尾概率求和起点是 $k=m+1$，等比级数首项与求和上下限要对齐，否则系数算错。",
+        "比较 $P\\{X>m+n\\}$ 与 $P\\{X>m\\}P\\{X>n\\}$ 时，作差能因式分解成两个正因子之积，是给出严格大于号的关键，单凭代特例只能排除不能证明。"
+      ],
+      "key_point": "尾概率 $P\\{X>m\\}=\\tfrac12(2^{-m}+3^{-m})$，作差得 $P\\{X>m+n\\}-P\\{X>m\\}P\\{X>n\\}=\\tfrac14(2^{-m}-3^{-m})(2^{-n}-3^{-n})>0$，故条件概率严格大于 $P\\{X>n\\}$。"
+    },
+    {
+      "id": 90111,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设向量 $\\overrightarrow{v_{1}}=(0,x,z)$ ， $\\overrightarrow{v_{2}}=(y,0,1)$ ，令 $\\overrightarrow{F}(x,y,z)=\\overrightarrow{v_{1}}\\times\\overrightarrow{v_{2}}$ ，则 $\\operatorname{div}\\overrightarrow{F}=$ \\_\\_\\_\\_.",
+      "options": {},
+      "answer": "1+z",
+      "analysis": "【分析】\n\n本题分两步：先按向量积的行列式定义算出向量场 $\\overrightarrow{F}$ 的三个分量，再用散度公式 $\\operatorname{div}\\overrightarrow{F}=\\dfrac{\\partial P}{\\partial x}+\\dfrac{\\partial Q}{\\partial y}+\\dfrac{\\partial R}{\\partial z}$ 求和。关键是叉乘时把第二行取 $\\overrightarrow{v_1}$、第三行取 $\\overrightarrow{v_2}$，符号别错。\n\n【解答】\n\n按定义\n$$\\overrightarrow{F}=\\overrightarrow{v_1}\\times\\overrightarrow{v_2}=\\begin{vmatrix}\\overrightarrow{i}&\\overrightarrow{j}&\\overrightarrow{k}\\\\0&x&z\\\\y&0&1\\end{vmatrix}.$$\n\n逐分量展开：\n\n- $\\overrightarrow{i}$ 分量：$x\\cdot 1-z\\cdot 0=x$；\n- $\\overrightarrow{j}$ 分量：$-(0\\cdot 1-z\\cdot y)=yz$；\n- $\\overrightarrow{k}$ 分量：$0\\cdot 0-x\\cdot y=-xy$。\n\n故 $\\overrightarrow{F}=(x,\\;yz,\\;-xy)$，即 $P=x,\\;Q=yz,\\;R=-xy$。\n\n再求散度：\n$$\\operatorname{div}\\overrightarrow{F}=\\frac{\\partial P}{\\partial x}+\\frac{\\partial Q}{\\partial y}+\\frac{\\partial R}{\\partial z}=\\frac{\\partial(x)}{\\partial x}+\\frac{\\partial(yz)}{\\partial y}+\\frac{\\partial(-xy)}{\\partial z}=1+z+0=1+z.$$\n\n所以 $\\operatorname{div}\\overrightarrow{F}=1+z$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "叉乘行列式第二、三行的次序不能颠倒，否则 $\\overrightarrow{F}$ 整体反号。",
+        "$\\overrightarrow{j}$ 分量前有负号，展开时容易漏掉。",
+        "求 $R=-xy$ 对 $z$ 的偏导时，$-xy$ 不含 $z$，结果为 $0$，不要误算。"
+      ],
+      "key_point": "先用行列式定义算清叉乘三分量，再逐项求偏导相加即得散度。"
+    },
+    {
+      "id": 90112,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\lim_{x\\to 0}\\left(\\frac{1}{x} -\\frac{\\ln(1 + x)}{x\\sin x}\\right) =$",
+      "options": {},
+      "answer": "\\dfrac{1}{2}",
+      "analysis": "【分析】$\\dfrac1x$ 与 $\\dfrac{\\ln(1+x)}{x\\sin x}$ 单独都发散，先通分成一个分式，化为 $\\dfrac{\\,0\\,}{\\,0\\,}$ 型再处理。分母 $x\\sin x\\sim x^2$，故只需把分子 $\\sin x-\\ln(1+x)$ 展到 $x^2$ 阶（泰勒展开最干净，避免反复用洛必达）。\n\n【解答】通分：\n$$\\frac1x-\\frac{\\ln(1+x)}{x\\sin x}=\\frac{\\sin x-\\ln(1+x)}{x\\sin x}.$$\n\n分母等价无穷小：$x\\sin x\\sim x\\cdot x=x^2\\ (x\\to0)$。\n\n分子用麦克劳林展开：\n$$\\sin x=x-\\frac{x^3}{6}+\\cdots,\\qquad \\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\cdots,$$\n相减得\n$$\\sin x-\\ln(1+x)=\\frac{x^2}{2}-\\frac{x^3}{2}+\\cdots=\\frac{x^2}{2}+o(x^2).$$\n\n（注意 $x$ 的一次项 $x-x=0$ 相消，这正是把它写成一个分式后能用等价无穷小的前提。）\n\n于是\n$$\\lim_{x\\to0}\\frac{\\sin x-\\ln(1+x)}{x\\sin x}=\\lim_{x\\to0}\\frac{\\tfrac{x^2}{2}+o(x^2)}{x^2}=\\frac12.$$\n\n故极限为 $\\dfrac12$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "两项各自发散，必须先通分成单一分式再求极限，不能拆开分别取极限。",
+        "分子展开要到 $x^2$ 阶才有非零首项（一次项相消）；若只展到一次项会误判为 0。",
+        "分母用 $x\\sin x\\sim x^2$ 是允许的（乘除中的等价代换），但分子是“加减”不能逐项随意替换，要看相消后的真实阶。"
+      ],
+      "key_point": "“相减发散”型先通分；分母取等价无穷小 $x\\sin x\\sim x^2$，分子泰勒展到同阶取首项系数。"
+    },
+    {
+      "id": 90113,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y = y(x)$ 由参数方程 $\\left\\{\\begin{aligned} x &= 2\\sin^{2}t \\\\ y &= t + \\cos t \\end{aligned}\\right. (t \\in (0, \\frac{\\pi}{2}))$ 确定，则 $\\frac{d^{2}y}{dx^{2}}\\bigg|_{t=\\frac{\\pi}{4}} =$ \\_\\_\\_\\_.",
+      "options": {},
+      "answer": "-\\dfrac{\\sqrt{2}}{8}",
+      "analysis": "【分析】\n\n参数方程求二阶导的标准套路：先得 $\\dfrac{dy}{dx}=\\dfrac{y'_t}{x'_t}$，再对它\"再求一次导\"，关键是 $\\dfrac{d^2y}{dx^2}=\\dfrac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{x'_t}$——分母仍是 $x'_t$，绝不是 $x''_t$。本题在 $t=\\frac{\\pi}{4}$ 取值，可先求出 $\\dfrac{dy}{dx}$ 关于 $t$ 的表达式，对 $t$ 求导后再代点，避免硬背公式。\n\n【解答】\n\n由 $x=2\\sin^2 t,\\;y=t+\\cos t$，得\n$$x'_t=4\\sin t\\cos t=2\\sin 2t,\\qquad y'_t=1-\\sin t.$$\n\n于是\n$$\\frac{dy}{dx}=\\frac{y'_t}{x'_t}=\\frac{1-\\sin t}{2\\sin 2t}.$$\n\n再对 $t$ 求导（商的求导法则）：\n$$\\frac{d}{dt}\\!\\left(\\frac{dy}{dx}\\right)=\\frac{(-\\cos t)\\cdot 2\\sin 2t-(1-\\sin t)\\cdot 4\\cos 2t}{(2\\sin 2t)^2}.$$\n\n在 $t=\\dfrac{\\pi}{4}$ 处：$\\sin t=\\cos t=\\dfrac{\\sqrt2}{2}$，$\\sin 2t=1$，$\\cos 2t=0$。代入分子：\n$$\\left(-\\frac{\\sqrt2}{2}\\right)\\cdot 2\\cdot 1-(1-\\tfrac{\\sqrt2}{2})\\cdot 4\\cdot 0=-\\sqrt2,$$\n分母 $(2\\cdot 1)^2=4$，故\n$$\\left.\\frac{d}{dt}\\!\\left(\\frac{dy}{dx}\\right)\\right|_{t=\\frac{\\pi}{4}}=-\\frac{\\sqrt2}{4}.$$\n\n又 $x'_t\\big|_{t=\\frac{\\pi}{4}}=2\\sin\\frac{\\pi}{2}=2$，所以\n$$\\left.\\frac{d^2y}{dx^2}\\right|_{t=\\frac{\\pi}{4}}=\\frac{-\\frac{\\sqrt2}{4}}{2}=-\\frac{\\sqrt2}{8}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导分母是 $x'_t$ 而非 $x''_t$，这是参数方程求二阶导最常见的错误。",
+        "对 $\\frac{dy}{dx}$ 求导时要对 $t$ 求导，不能直接再对 $x$ 求；先得到关于 $t$ 的式子再代值更稳妥。",
+        "可先化简后代点，但本题在 $t=\\frac{\\pi}{4}$ 处 $\\cos 2t=0$，直接代点反而省力。"
+      ],
+      "key_point": "$\\dfrac{d^2y}{dx^2}=\\dfrac{1}{x'_t}\\cdot\\dfrac{d}{dt}\\!\\left(\\dfrac{y'_t}{x'_t}\\right)$，分母永远是 $x'_t$。"
+    },
+    {
+      "id": 90114,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\int_{1}^{+\\infty} \\frac{\\ln(x + 1)}{x^2} \\mathrm{d}x =$ \\_\\_\\_\\_.",
+      "options": {},
+      "answer": "2\\ln 2",
+      "analysis": "【分析】\n\n被积函数是 $\\dfrac{\\ln(x+1)}{x^2}$，含对数因子，首选分部积分：取 $v=-\\dfrac1x$ 把 $\\ln(x+1)$ 求导掉。剩下的 $\\displaystyle\\int\\frac{1}{x(x+1)}dx$ 用部分分式 $\\dfrac{1}{x(x+1)}=\\dfrac1x-\\dfrac1{x+1}$。最后对无穷限和边界用极限处理，注意 $\\dfrac{\\ln(x+1)}{x}\\to 0\\,(x\\to+\\infty)$。\n\n【解答】\n\n令 $u=\\ln(x+1),\\;dv=\\dfrac{1}{x^2}dx$，则 $du=\\dfrac{1}{x+1}dx,\\;v=-\\dfrac1x$。分部积分：\n$$\\int_1^{+\\infty}\\frac{\\ln(x+1)}{x^2}dx=\\left[-\\frac{\\ln(x+1)}{x}\\right]_1^{+\\infty}+\\int_1^{+\\infty}\\frac{1}{x(x+1)}dx.$$\n\n先看边界项。当 $x\\to+\\infty$ 时 $\\dfrac{\\ln(x+1)}{x}\\to 0$；当 $x=1$ 时为 $-\\dfrac{\\ln 2}{1}=-\\ln 2$。故\n$$\\left[-\\frac{\\ln(x+1)}{x}\\right]_1^{+\\infty}=0-(-\\ln 2)=\\ln 2.$$\n\n再算剩余积分，用部分分式 $\\dfrac{1}{x(x+1)}=\\dfrac1x-\\dfrac1{x+1}$：\n$$\\int_1^{+\\infty}\\!\\left(\\frac1x-\\frac1{x+1}\\right)dx=\\left[\\ln\\frac{x}{x+1}\\right]_1^{+\\infty}.$$\n当 $x\\to+\\infty$，$\\ln\\dfrac{x}{x+1}\\to\\ln 1=0$；当 $x=1$ 为 $\\ln\\dfrac12=-\\ln 2$。故该积分 $=0-(-\\ln 2)=\\ln 2$。\n\n两部分相加：\n$$\\int_1^{+\\infty}\\frac{\\ln(x+1)}{x^2}dx=\\ln 2+\\ln 2=2\\ln 2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部积分后的两段（边界项与剩余积分）都要单独取极限，漏算任一段都会出错。",
+        "$\\ln\\frac{x}{x+1}$ 在上限取的是 $\\ln 1=0$，不要误写成发散。",
+        "边界代入 $x=1$ 时是减去 $(-\\ln 2)$，符号要算清。"
+      ],
+      "key_point": "对数比幂函数的反常积分，分部积分降幂后用部分分式收尾。"
+    },
+    {
+      "id": 90115,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $A=\\begin{pmatrix}1&0&0\\\\2&a&2\\\\0&2&a\\end{pmatrix}, B=\\begin{pmatrix}a&-1&-1\\\\-1&2&1\\\\-1&-1&a\\end{pmatrix}$ ，记 $m(X)$ 为 3 阶矩阵 X 的实特征值中的最大值，若 $m(A)<m(B)$ ，则 a 的取值范围为 \\_\\_\\_\\_.",
+      "options": {},
+      "answer": "(-\\infty,\\,0)",
+      "analysis": "【分析】\n\n$m(X)$ 是矩阵 $X$ 实特征值的最大者，所以要先把 $A,B$ 的特征值都求出来（本题两矩阵特征值恰好都是实数且能因式分解），再把 $m(A),m(B)$ 写成关于 $a$ 的分段函数，最后解不等式 $m(A)<m(B)$。关键技巧：$A$ 第一行只有一个非零元，沿第一行展开特征多项式立刻分解；$B$ 的特征多项式也能整体因式分解。\n\n【解答】\n\n**求 $A$ 的特征值。** 沿第一行展开 $\\det(A-\\lambda E)$：\n$$\\det(A-\\lambda E)=(1-\\lambda)\\begin{vmatrix}a-\\lambda&2\\\\2&a-\\lambda\\end{vmatrix}=(1-\\lambda)\\big[(a-\\lambda)^2-4\\big].$$\n由 $(a-\\lambda)^2=4$ 得 $\\lambda=a\\pm 2$，故 $A$ 的特征值为 $\\{1,\\;a+2,\\;a-2\\}$，全为实数。因 $a+2>a-2$，\n$$m(A)=\\max\\{1,\\;a+2\\}.$$\n\n**求 $B$ 的特征值。** 计算其特征多项式可分解为\n$$\\det(B-\\lambda E)=(2-\\lambda)\\big[(a-\\lambda)^2-1\\big]=(2-\\lambda)(a-1-\\lambda)(a+1-\\lambda),$$\n故 $B$ 的特征值为 $\\{2,\\;a-1,\\;a+1\\}$，全为实数。因 $a+1>a-1$，\n$$m(B)=\\max\\{2,\\;a+1\\}.$$\n\n**解不等式 $m(A)<m(B)$，即 $\\max\\{1,a+2\\}<\\max\\{2,a+1\\}$。** 分段讨论：\n\n1）当 $a\\ge 1$：$m(A)=a+2,\\;m(B)=a+1$，需 $a+2<a+1$，不可能，无解。\n\n2）当 $-1\\le a<1$：$m(A)=a+2,\\;m(B)=2$，需 $a+2<2$，即 $a<0$，结合范围得 $-1\\le a<0$。\n\n3）当 $a<-1$：$m(A)=1,\\;m(B)=2$，恒有 $1<2$ 成立，故全部 $a<-1$ 均满足。\n\n合并 2）3）得 $a<0$。\n\n（验证临界：$a=0$ 时 $m(A)=2=m(B)$，不满足，故 $0$ 取不到；$a=-1$ 时 $m(A)=1<2=m(B)$，满足。）\n\n所以 $a$ 的取值范围为 $a\\in(-\\infty,\\,0)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$m(X)$ 指实特征值的最大值，必须先确认特征值都是实数再取最大；本题恰好都实。",
+        "$m(A),m(B)$ 都随 $a$ 取 $\\max$，必须分段讨论，不能想当然地用某一个特征值直接比较。",
+        "端点要单独验证：$a=0$ 时两者相等取不到，$a=-1$ 满足，最终是开区间 $(-\\infty,0)$。"
+      ],
+      "key_point": "把两矩阵特征值算清后，将 $m(A)<m(B)$ 化为两个 $\\max$ 的分段不等式逐段求解。"
+    },
+    {
+      "id": 90116,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 X 服从参数为 1 的泊松分布，随机变量 Y 服从参数为 3 的泊松分布，X 与 Y - X 相互独立，则 $E(XY) =$ \\_\\_\\_\\_.",
+      "options": {},
+      "answer": "4",
+      "analysis": "【分析】\n直接对 $XY$ 求期望并不好算，因为题目没给 $X,Y$ 的联合分布，只给了一个独立性条件：$X$ 与 $Y-X$ 相互独立。看到这个条件，自然的想法是把 $Y$ 拆成 $Y=X+(Y-X)$，记 $Z=Y-X$，则 $X$ 与 $Z$ 独立。再利用泊松分布的可加性确定 $Z$ 的参数，最后用期望的线性性、独立时 $E(XZ)=E(X)E(Z)$ 以及 $E(X^2)=DX+(EX)^2$ 把结果算出来。\n\n【解答】\n记 $Z=Y-X$，则 $Y=X+Z$，且由条件 $X$ 与 $Z$ 相互独立。\n\n由于独立泊松分布之和仍服从泊松分布，且参数相加，故由 $X\\sim P(1)$、$Y=X+Z\\sim P(3)$ 可知\n$$Z\\sim P(3-1)=P(2),$$\n即 $E(Z)=2$。\n\n又 $X\\sim P(1)$，故 $E(X)=1,\\ D(X)=1$，从而\n$$E(X^2)=D(X)+[E(X)]^2=1+1^2=2.$$\n\n于是\n$$E(XY)=E\\big(X(X+Z)\\big)=E(X^2)+E(XZ).$$\n由 $X$ 与 $Z$ 独立得 $E(XZ)=E(X)E(Z)=1\\times 2=2$，所以\n$$E(XY)=E(X^2)+E(X)E(Z)=2+2=4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "不能直接写 E(XY)=E(X)E(Y)，因为 X 与 Y 并不独立（独立的是 X 与 Y-X）。",
+        "确定 Z=Y-X 的参数要用泊松可加性，参数是 3-1=2，别错写成 3 或 3·1。",
+        "E(X^2) 要用 DX+(EX)^2，泊松分布的方差等于参数，不要漏掉这一项。"
+      ],
+      "key_point": "把 Y 拆成 Y=X+(Y-X) 制造出独立因子，再用 E(X²)=DX+(EX)² 与独立性分别求各项期望。"
+    },
+    {
+      "id": 90117,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $f(x,y)=(2x^{2}-y^{2})e^{x}$ 的极值.",
+      "options": {},
+      "answer": "极大值 f(-2,0)=8e^{-2}；(0,0) 为非极值点（鞍点），无极小值",
+      "analysis": "【分析】二元函数求极值的标准三步：先解驻点（$f_x=f_y=0$），再用二阶判别式 $AC-B^2$ 判定类型。本题 $f_y=-2ye^x$ 极简，先定 $y=0$，再求 $x$，驻点很容易锁定；判别时注意 $e^x>0$ 不影响符号。\n\n【解答】$f(x,y)=(2x^2-y^2)e^x$。\n\n一阶偏导：\n$$f_x=(4x)e^x+(2x^2-y^2)e^x=(2x^2+4x-y^2)e^x,\\qquad f_y=-2y\\,e^x.$$\n\n求驻点：由 $f_y=0$ 得 $y=0$；代入 $f_x=0$ 得 $2x^2+4x=0$，即 $x(x+2)=0$，$x=0$ 或 $x=-2$。驻点为 $(0,0)$ 与 $(-2,0)$。\n\n二阶偏导：\n$$f_{xx}=(4x+4)e^x+(2x^2+4x-y^2)e^x=(2x^2+8x+4-y^2)e^x,$$\n$$f_{yy}=-2e^x,\\qquad f_{xy}=-2y\\,e^x.$$\n\n记 $A=f_{xx},\\,B=f_{xy},\\,C=f_{yy}$。\n\n在 $(0,0)$：$A=4e^0=4,\\ B=0,\\ C=-2$，$AC-B^2=4\\cdot(-2)-0=-8<0$，故 $(0,0)$ 不是极值点（鞍点）。\n\n在 $(-2,0)$：$A=(8-16+4)e^{-2}=-4e^{-2}<0,\\ B=0,\\ C=-2e^{-2}$，\n$$AC-B^2=(-4e^{-2})(-2e^{-2})=8e^{-4}>0,\\quad A<0,$$\n故 $(-2,0)$ 为极大值点，极大值\n$$f(-2,0)=(2\\cdot4-0)e^{-2}=8e^{-2}.$$\n\n结论：函数有唯一极值——极大值 $f(-2,0)=8e^{-2}$；$(0,0)$ 为非极值点，无极小值。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$f_{xx}$ 求导要对整个 $f_x=(2x^2+4x-y^2)e^x$ 用乘积法则，别只对多项式部分求导而漏掉 $\\cdot e^x$ 项。",
+        "$AC-B^2<0$ 时是鞍点（非极值），不要因为它是驻点就误当成极值。",
+        "极大值要回代原函数算数值 $8e^{-2}$，写成驻点坐标不算最终答案。"
+      ],
+      "key_point": "先用最简的 $f_y=0$ 定 $y=0$ 缩小驻点，再用 $AC-B^2$ 判型；$e^x>0$ 只影响幅度不影响符号判定。"
+    },
+    {
+      "id": 90118,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(u)$ 在 $(0,+\\infty)$ 内具有 3 阶连续导数，且存在可微函数 $F(x,y)$ 使\n\n$$\nd F (x, y) = \\frac {f (x y)}{x ^ {2} y} d x + \\frac {f ^ {\\prime \\prime} (x y)}{x y ^ {2}} d y (x y > 0).\n$$\n\n(1) 证明： $\\frac{f''(u)}{u}-\\frac{f(u)}{u}=c,\\quad c$ 为常数；  \n(2) 设 $f(1)=1$ ， $f'(1)=-1$ ， $f''(1)=0$ ，求 $f(u)$ 的表达式.",
+      "options": {},
+      "answer": "f(u)=u+e^{1-u}-e^{u-1}",
+      "analysis": "【分析】“存在可微 $F$ 使 $dF=P\\,dx+Q\\,dy$”等价于 $P\\,dx+Q\\,dy$ 是全微分，在单连通区域 $xy>0$ 上即 $\\dfrac{\\partial P}{\\partial y}=\\dfrac{\\partial Q}{\\partial x}$。把这个相等关系算出来，再令 $u=xy$ 整理，就能逼出关于 $f$ 的微分关系；第 (1) 问要证的式子提示我们去考察 $\\dfrac{f''(u)-f(u)}{u}$ 的导数。第 (2) 问是常系数线性 ODE 加初值。\n\n【解答】记 $u=xy$，$P=\\dfrac{f(xy)}{x^2y}$，$Q=\\dfrac{f''(xy)}{xy^2}$。\n\n（1）由全微分条件 $\\dfrac{\\partial P}{\\partial y}=\\dfrac{\\partial Q}{\\partial x}$。逐项算：\n$$\\frac{\\partial P}{\\partial y}=\\frac{f'(xy)\\cdot x}{x^2y}-\\frac{f(xy)}{x^2y^2}=\\frac{f'(u)}{xy}-\\frac{f(u)}{x^2y^2},$$\n$$\\frac{\\partial Q}{\\partial x}=\\frac{f'''(xy)\\cdot y}{xy^2}-\\frac{f''(xy)}{x^2y^2}=\\frac{f'''(u)}{xy}-\\frac{f''(u)}{x^2y^2}.$$\n令二者相等，乘以 $x^2y^2$（注意 $xy=u$）：\n$$f'(u)\\,u-f(u)=f'''(u)\\,u-f''(u),$$\n移项整理：\n$$\\big(f''(u)-f(u)\\big)-u\\big(f'''(u)-f'(u)\\big)=0.$$\n令 $g(u)=f''(u)-f(u)$，则 $g'(u)=f'''(u)-f'(u)$，上式即 $g(u)-u\\,g'(u)=0$。于是\n$$\\frac{d}{du}\\!\\left(\\frac{g(u)}{u}\\right)=\\frac{u\\,g'(u)-g(u)}{u^2}=0\\quad(u>0),$$\n故 $\\dfrac{g(u)}{u}=\\dfrac{f''(u)-f(u)}{u}=c$ 为常数，即 $\\dfrac{f''(u)}{u}-\\dfrac{f(u)}{u}=c$。证毕。\n\n（2）由 (1)，$f''(u)-f(u)=cu$。代入 $u=1$：$f''(1)-f(1)=0-1=-1=c\\cdot1$，故 $c=-1$，得 ODE\n$$f''(u)-f(u)=-u.$$\n特征方程 $r^2-1=0$，$r=\\pm1$，齐次解 $C_1e^{u}+C_2e^{-u}$；右端 $-u$ 为一次多项式，设特解 $f_p=au+b$，则 $f_p''-f_p=-(au+b)=-u$，得 $a=1,\\ b=0$，$f_p=u$。通解\n$$f(u)=u+C_1e^{u}+C_2e^{-u}.$$\n由初值定常数：$f'(u)=1+C_1e^{u}-C_2e^{-u}$。\n$$f(1)=1+C_1e+C_2e^{-1}=1\\Rightarrow C_1e+C_2e^{-1}=0,$$\n$$f'(1)=1+C_1e-C_2e^{-1}=-1\\Rightarrow C_1e-C_2e^{-1}=-2.$$\n两式相加得 $2C_1e=-2$，$C_1=-e^{-1}$；相减得 $2C_2e^{-1}=2$，$C_2=e$。（可验证 $f''(1)=C_1e+C_2e^{-1}=-1+1=0$，与条件相符。）\n\n故\n$$f(u)=u-e^{-1}e^{u}+e\\,e^{-u}=u+e^{1-u}-e^{u-1}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "全微分 $dy$ 项的分子是 $f''(xy)$（不是 $f(xy)$），对 $x$ 求导时内层链式因子是 $f'''(xy)\\cdot y$，别漏掉一阶到三阶的升阶。",
+        "（1）的题眼是构造 $g=f''-f$ 并对 $g/u$ 求导，证它导数为 0，而不是硬解三阶方程。",
+        "（2）定常数后务必用没用过的条件 $f''(1)=0$ 回验，确保三个初值自洽（题目三个条件本身相容）。"
+      ],
+      "key_point": "“存在 $F$ 使为全微分”⇒ $P_y=Q_x$；本题化简后令 $g=f''-f$，由 $g-ug'=0$ 推出 $g/u$ 恒为常数，第二问转成 $f''-f=-u$ 的常系数 ODE。"
+    },
+    {
+      "id": 90119,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有向曲线 L 为椭圆 $x^{2} + 3y^{2} = 1$ 上沿逆时针方向从点 $A(-\\frac{1}{2}, -\\frac{1}{2})$ 到点 $B(\\frac{1}{2}, \\frac{1}{2})$ 的部分，计算曲线积分 $I = \\int_{L} (e^{x^{2}} \\sin x - 2xy) dx + (6x - x^{2} - y \\cos^{4} y) dy$ .",
+      "options": {},
+      "answer": "I = \\sqrt{3}\\,\\pi - \\dfrac{1}{4}",
+      "analysis": "【分析】\n这是一条非闭的有向曲线上的第二类曲线积分。被积函数里含有 $e^{x^2}\\sin x$、$y\\cos^4 y$ 这类无法直接积出的项，提示我们用补线法：补上一段直线把曲线 $L$ 围成闭曲线，对闭区域用格林公式，再单独算补线段上的积分减回去。\n\n注意 $A\\left(-\\dfrac12,-\\dfrac12\\right)$、$B\\left(\\dfrac12,\\dfrac12\\right)$ 都在椭圆 $x^2+3y^2=1$ 上，且都在直线 $y=x$ 上。$L$ 是从 $A$ 沿逆时针到 $B$ 的椭圆弧（即直线 $y=x$ 下方的那半个椭圆）。用线段 $\\overline{BA}$（沿 $y=x$ 从 $B$ 回到 $A$）补成封闭曲线，所围正好是椭圆被 $y=x$ 截出的下半部分，方向恰为逆时针（正向）。\n\n【解答】\n记 $P=e^{x^2}\\sin x-2xy,\\quad Q=6x-x^2-y\\cos^4 y$。则\n$$\\frac{\\partial Q}{\\partial x}=6-2x,\\qquad \\frac{\\partial P}{\\partial y}=-2x,\\qquad \\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}=6.$$\n\n**补线。** 取直线段 $L_1:\\ \\overline{BA}$，由 $B\\left(\\dfrac12,\\dfrac12\\right)$ 沿 $y=x$ 到 $A\\left(-\\dfrac12,-\\dfrac12\\right)$。则 $L+L_1$ 构成一条封闭曲线，其所围区域 $D$ 为椭圆 $x^2+3y^2\\le 1$ 在直线 $y=x$ 下方的一半，且 $L+L_1$ 取正向（逆时针）。\n\n**对闭曲线用格林公式。**\n$$\\oint_{L+L_1}P\\,dx+Q\\,dy=\\iint_{D}\\Big(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\Big)\\,d\\sigma=\\iint_{D}6\\,d\\sigma=6\\,S_D.$$\n直线 $y=x$ 过椭圆中心，把椭圆面积平分。整个椭圆面积为 $\\pi ab=\\pi\\cdot 1\\cdot\\dfrac{1}{\\sqrt3}=\\dfrac{\\pi}{\\sqrt3}$，故 $S_D=\\dfrac12\\cdot\\dfrac{\\pi}{\\sqrt3}=\\dfrac{\\pi}{2\\sqrt3}$。于是\n$$\\oint_{L+L_1}=6\\cdot\\frac{\\pi}{2\\sqrt3}=\\frac{3\\pi}{\\sqrt3}=\\sqrt3\\,\\pi.$$\n\n**算补线段 $L_1$ 上的积分。** 在 $L_1$ 上 $y=x$，$dy=dx$，$x$ 从 $\\dfrac12$ 变到 $-\\dfrac12$：\n$$\\int_{L_1}P\\,dx+Q\\,dy=\\int_{1/2}^{-1/2}\\Big[(e^{x^2}\\sin x-2x^2)+(6x-x^2-x\\cos^4 x)\\Big]dx.$$\n被积函数 $=e^{x^2}\\sin x-x\\cos^4 x+6x-3x^2$。前三项均为奇函数，在关于原点对称的区间上其定积分相互抵消（注意积分上下限对称），只剩偶函数 $-3x^2$：\n$$\\int_{L_1}=\\int_{1/2}^{-1/2}(-3x^2)\\,dx=-\\big[x^3\\big]_{1/2}^{-1/2}=-\\Big(-\\frac18-\\frac18\\Big)=\\frac14.$$\n\n**回代。**\n$$I=\\int_{L}=\\oint_{L+L_1}-\\int_{L_1}=\\sqrt3\\,\\pi-\\frac14.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "判断补成闭曲线后的方向：L+L₁ 围成的是 y=x 下方半椭圆且为逆时针正向，格林公式才不带负号。",
+        "椭圆 x²+3y²=1 的半轴是 a=1, b=1/√3，面积 πab=π/√3，别误用 π。",
+        "补线段积分中 e^{x²}sinx、x cos⁴x、6x 都是奇函数在对称区间上抵消，只需算 -3x² 这一偶函数项。"
+      ],
+      "key_point": "非闭曲线第二类积分用补线+格林公式，∂Q/∂x-∂P/∂y 化为常数 6 后二重积分就是 6×半椭圆面积，补线段借奇偶性速算。"
+    },
+    {
+      "id": 90120,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设可导函数 $f(x)$ 严格单调递增且满足 $\\int_{-1}^{1}f(x)dx = 0$ ，记 $a = \\int_0^1 f(x)dx$ .\n\n(1) 证明 a > 0;  \n(2) 令 $F(x) = a(1 - x^2) + \\int_1^x f(t)dt$ ，证明：存在 $\\xi \\in (-1,1)$ 使 $F''(\\xi) = 0$ .",
+      "options": {},
+      "answer": "(1) a>0; (2) 存在 $\\xi\\in(-1,1)$ 使 $F''(\\xi)=0$",
+      "analysis": "【分析】\n(1) 要证 $a=\\int_0^1 f>0$。条件 $\\int_{-1}^1 f=0$ 把负半段与正半段联系起来：$\\int_{-1}^0 f=-a$。再把 $\\int_{-1}^0 f$ 换元成 $\\int_0^1 f(-x)dx$，作差得到 $2a=\\int_0^1[f(x)-f(-x)]dx$，利用 $f$ 严格单调递增（当 $x\\in(0,1)$ 时 $x>-x$ 故 $f(x)>f(-x)$）即得被积函数恒正，从而 $a>0$。\n\n(2) 要证存在 $\\xi$ 使 $F''(\\xi)=0$，标准做法是先找 $F$ 的三个零点，对相邻两段各用一次罗尔定理得到 $F'$ 的两个零点，再对 $F'$ 用一次罗尔定理。关键是验证 $F(-1)=F(0)=F(1)=0$。\n\n【解答】\n**(1)** 由 $\\int_{-1}^{1}f(x)dx=\\int_{-1}^{0}f(x)dx+\\int_{0}^{1}f(x)dx=0$ 及 $a=\\int_0^1 f(x)dx$，得\n$$\\int_{-1}^{0}f(x)dx=-a.$$\n对 $\\int_{-1}^0 f(x)dx$ 作代换 $x=-t$：\n$$\\int_{-1}^{0}f(x)dx=\\int_{1}^{0}f(-t)(-dt)=\\int_0^1 f(-t)\\,dt.$$\n于是\n$$2a=\\int_0^1 f(x)dx-\\int_{-1}^0 f(x)dx=\\int_0^1 f(x)dx-\\int_0^1 f(-x)dx=\\int_0^1\\big[f(x)-f(-x)\\big]dx.$$\n当 $x\\in(0,1)$ 时 $x>-x$，又 $f$ 严格单调递增，故 $f(x)-f(-x)>0$。被积函数在 $(0,1)$ 上恒正且连续，故\n$$2a=\\int_0^1\\big[f(x)-f(-x)\\big]dx>0\\ \\Longrightarrow\\ a>0.$$\n\n**(2)** 由 $F(x)=a(1-x^2)+\\displaystyle\\int_1^x f(t)\\,dt$，$f$ 可导故 $F$ 二阶可导，且\n$$F'(x)=-2ax+f(x),\\qquad F''(x)=-2a+f'(x).$$\n\n先验证 $F$ 在三点取零值：\n$$F(1)=a(1-1)+\\int_1^1 f=0;$$\n$$F(-1)=a(1-1)+\\int_1^{-1}f(t)dt=-\\int_{-1}^1 f(t)dt=0;$$\n$$F(0)=a(1-0)+\\int_1^0 f(t)dt=a-\\int_0^1 f(t)dt=a-a=0.$$\n即 $F(-1)=F(0)=F(1)=0$。\n\n$F$ 在 $[-1,0]$ 上连续、在 $(-1,0)$ 内可导且 $F(-1)=F(0)$，由罗尔定理存在 $\\xi_1\\in(-1,0)$ 使 $F'(\\xi_1)=0$；同理在 $[0,1]$ 上存在 $\\xi_2\\in(0,1)$ 使 $F'(\\xi_2)=0$。\n\n$F'$ 在 $[\\xi_1,\\xi_2]$ 上连续、在 $(\\xi_1,\\xi_2)$ 内可导，且 $F'(\\xi_1)=F'(\\xi_2)=0$，再由罗尔定理，存在\n$$\\xi\\in(\\xi_1,\\xi_2)\\subset(-1,1),\\quad F''(\\xi)=0.$$\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 不要只比较 f(x) 与 f(-x) 的符号，需借换元把两段积分凑成 ∫[f(x)-f(-x)]dx 才能用单调性。",
+        "(2) 计算 F(-1) 时 ∫_1^{-1} f = -∫_{-1}^1 f，符号易错；F(0) 用到 ∫_1^0 f=-a。",
+        "对 F' 用罗尔定理要先说明 F' 在 [ξ₁,ξ₂] 上可导（由 f 可导保证），这是题目给“可导”条件的用处。"
+      ],
+      "key_point": "找出 F 的三个零点 F(-1)=F(0)=F(1)=0，两次用罗尔得 F' 的两个零点，再用一次罗尔即得 F''(ξ)=0。"
+    },
+    {
+      "id": 90121,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知向量组 $\\alpha_{1}=\\begin{pmatrix}1\\\\0\\\\-1\\\\-1\\end{pmatrix}$ ， $\\alpha_{2}=\\begin{pmatrix}1\\\\-1\\\\0\\\\-2\\end{pmatrix}$ ， $\\alpha_{3}=\\begin{pmatrix}0\\\\-1\\\\1\\\\-1\\end{pmatrix}$ ， $\\alpha_{4}=\\begin{pmatrix}0\\\\1\\\\-1\\\\1\\end{pmatrix}$ ，记 $A=(\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4})$ ，\n\n$$\nG = \\left(\\alpha_ {1}, \\alpha_ {2}\\right)\n$$\n\n(1) 证明： $\\alpha_{1},\\alpha_{2}$ 是 $\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4}$ 的极大线性无关组.  \n(2) 求矩阵 H 使得 A = GH，并求 $A^{10}$ .",
+      "options": {},
+      "answer": "H=\\begin{pmatrix}1&0&-1&1\\\\0&1&1&-1\\end{pmatrix},\\quad A^{10}=\\begin{pmatrix}1&-8&-9&9\\\\0&-1&-1&1\\\\-1&9&10&-10\\\\-1&7&8&-8\\end{pmatrix}",
+      "analysis": "【分析】\n(1) 证极大无关组：只需说明 $\\alpha_1,\\alpha_2$ 线性无关，且 $\\alpha_3,\\alpha_4$ 都能由 $\\alpha_1,\\alpha_2$ 线性表示（等价地向量组的秩为 2）。\n\n(2) 求 $H$：因 $A=(\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4)$，$G=(\\alpha_1,\\alpha_2)$，$A=GH$ 意味着 $H$ 的第 $j$ 列就是 $\\alpha_j$ 在基 $\\alpha_1,\\alpha_2$ 下的坐标。求 $A^{10}$ 的关键技巧：$A=GH$，$G$ 是 $4\\times2$、$H$ 是 $2\\times4$，故\n$$A^{n}=(GH)^n=G(HG)^{n-1}H,$$\n其中 $HG$ 是 $2\\times2$ 矩阵，幂运算被降到二阶，极易计算。\n\n【解答】\n**(1)** $\\alpha_1,\\alpha_2$ 的对应分量不成比例（如第 2 分量为 $0,-1$，第 1 分量为 $1,1$），故 $\\alpha_1,\\alpha_2$ 线性无关。\n\n直接验证 $\\alpha_3,\\alpha_4$ 可由 $\\alpha_1,\\alpha_2$ 表示：\n$$-\\alpha_1+\\alpha_2=\\begin{pmatrix}-1+1\\\\0-1\\\\1+0\\\\1-2\\end{pmatrix}=\\begin{pmatrix}0\\\\-1\\\\1\\\\-1\\end{pmatrix}=\\alpha_3,$$\n$$\\alpha_1-\\alpha_2=\\begin{pmatrix}0\\\\1\\\\-1\\\\1\\end{pmatrix}=\\alpha_4.$$\n即 $\\alpha_3=-\\alpha_1+\\alpha_2,\\ \\alpha_4=\\alpha_1-\\alpha_2$。\n\n因此向量组的秩为 $2$，$\\alpha_1,\\alpha_2$ 线性无关且能线性表示其余向量，故 $\\alpha_1,\\alpha_2$ 是 $\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4$ 的一个极大线性无关组。\n\n**(2)** 由 (1)，各列在基 $\\alpha_1,\\alpha_2$ 下的坐标为\n$$\\alpha_1=\\binom{1}{0},\\ \\alpha_2=\\binom{0}{1},\\ \\alpha_3=\\binom{-1}{1},\\ \\alpha_4=\\binom{1}{-1},$$\n故\n$$H=\\begin{pmatrix}1&0&-1&1\\\\0&1&1&-1\\end{pmatrix},\\qquad A=GH.$$\n（可验证 $GH$ 的四列恰为 $\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4$。）\n\n求 $A^{10}$。先算二阶矩阵\n$$HG=\\begin{pmatrix}1&0&-1&1\\\\0&1&1&-1\\end{pmatrix}\\begin{pmatrix}1&1\\\\0&-1\\\\-1&0\\\\-1&-2\\end{pmatrix}=\\begin{pmatrix}1&-1\\\\0&1\\end{pmatrix}.$$\n这是个上三角“移位”矩阵，易得\n$$(HG)^{k}=\\begin{pmatrix}1&-k\\\\0&1\\end{pmatrix},\\qquad (HG)^{9}=\\begin{pmatrix}1&-9\\\\0&1\\end{pmatrix}.$$\n于是\n$$A^{10}=G(HG)^{9}H=\\begin{pmatrix}1&1\\\\0&-1\\\\-1&0\\\\-1&-2\\end{pmatrix}\\begin{pmatrix}1&-9\\\\0&1\\end{pmatrix}\\begin{pmatrix}1&0&-1&1\\\\0&1&1&-1\\end{pmatrix}.$$\n先算 $G(HG)^9=\\begin{pmatrix}1&-8\\\\0&-1\\\\-1&9\\\\-1&7\\end{pmatrix}$，再右乘 $H$：\n$$A^{10}=\\begin{pmatrix}1&-8\\\\0&-1\\\\-1&9\\\\-1&7\\end{pmatrix}\\begin{pmatrix}1&0&-1&1\\\\0&1&1&-1\\end{pmatrix}=\\begin{pmatrix}1&-8&-9&9\\\\0&-1&-1&1\\\\-1&9&10&-10\\\\-1&7&8&-8\\end{pmatrix}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "H 是 2×4 矩阵（不是方阵），它的列是各 αⱼ 在 α₁,α₂ 下的坐标，顺序不能乱。",
+        "求 A^10 不要直接乘 4×4 矩阵十次；用 A=GH 降阶为 Aⁿ=G(HG)^{n-1}H，HG 只是 2×2。",
+        "(HG)=[[1,-1],[0,1]] 的幂是 [[1,-k],[0,1]]，注意是 -k 不是 -1。"
+      ],
+      "key_point": "秩 2 时 A=GH 把 4 阶矩阵分解为列满秩 G 与 H 之积，借 Aⁿ=G(HG)^{n-1}H 把高次幂降到二阶矩阵 HG 上计算。"
+    },
+    {
+      "id": 90122,
+      "paper": "数学一",
+      "year": 2026,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设某种元件寿命服从指数分布,其均值 $\\theta$ 是未知参数,为估计 $\\theta$ ,取 n 个这种元件同时做寿命实验,试验直到出现 $k(1 \\leq k \\leq n)$ 个元件失效时停止.\n\n(1) 若 k=1, 失效元件寿命记为 T,(i) 求 T 的概率密度; (ii) 确定 a, 使 $\\hat{\\theta}=aT$ 是 $\\theta$ 的无偏估计, 并求 $D(\\hat{\\theta})$ ;\n\n(2) 已知 k 个失效元件寿命值分别为 $t_{1}, t_{2}, \\cdots, t_{k}$ ，且 $t_{1} \\leq t_{2} \\leq \\cdots \\leq t_{k}$ ，似然函数为\n\n$L(\\theta)=\\frac{1}{\\theta^{k}}e^{-\\frac{1}{\\theta}\\left[\\sum_{i=1}^{k}t_{i}+(n-k)t_{k}\\right]}$ ，求 $\\theta$ 的最大似然估计值.",
+      "options": {},
+      "answer": "(1) f_T(t)=\\dfrac{n}{\\theta}e^{-nt/\\theta}(t>0); a=n, \\hat\\theta=nT, D(\\hat\\theta)=\\theta^2. (2) \\hat\\theta=\\dfrac{1}{k}\\left[\\sum_{i=1}^{k}t_i+(n-k)t_k\\right]",
+      "analysis": "【分析】\n\n寿命服从均值为 $\\theta$ 的指数分布，密度 $f(x)=\\dfrac{1}{\\theta}e^{-x/\\theta}\\ (x>0)$，分布函数 $F(x)=1-e^{-x/\\theta}\\ (x>0)$。\n\n第(1)问 $k=1$，停止时刻是 $n$ 个寿命中**最小者** $T=\\min\\{X_1,\\dots,X_n\\}$，用最小次序统计量的分布求密度——指数分布的最小值仍是指数分布且参数变为 $n$ 倍（均值缩小为 $\\theta/n$）。无偏估计靠 $E(\\hat\\theta)=\\theta$ 定系数 $a$，方差直接由指数分布方差性质算。\n\n第(2)问对给定的似然函数取对数后求驻点即得最大似然估计。\n\n【解答】\n\n**(1)(i) 求 $T$ 的概率密度。**\n\n$T=\\min\\{X_1,\\dots,X_n\\}$，各 $X_i$ 独立同分布。其分布函数\n\n$$F_T(t)=P(T\\le t)=1-P(T>t)=1-\\prod_{i=1}^{n}P(X_i>t)=1-\\left(e^{-t/\\theta}\\right)^{n}=1-e^{-nt/\\theta},\\quad t>0,$$\n\n当 $t\\le0$ 时 $F_T(t)=0$。求导得密度\n\n$$f_T(t)=\\begin{cases}\\dfrac{n}{\\theta}\\,e^{-nt/\\theta}, & t>0,\\\\[4pt]0,& t\\le0.\\end{cases}$$\n\n即 $T$ 服从均值为 $\\theta/n$ 的指数分布。\n\n**(1)(ii) 确定 $a$ 并求 $D(\\hat\\theta)$。**\n\n由上知 $E(T)=\\dfrac{\\theta}{n}$，$D(T)=\\left(\\dfrac{\\theta}{n}\\right)^2=\\dfrac{\\theta^2}{n^2}$。\n\n要 $\\hat\\theta=aT$ 无偏，需 $E(\\hat\\theta)=aE(T)=a\\cdot\\dfrac{\\theta}{n}=\\theta$，解得\n\n$$a=n,\\qquad \\hat\\theta=nT.$$\n\n于是\n\n$$D(\\hat\\theta)=D(nT)=n^2 D(T)=n^2\\cdot\\frac{\\theta^2}{n^2}=\\theta^2.$$\n\n**(2) 求最大似然估计值。**\n\n似然函数\n\n$$L(\\theta)=\\frac{1}{\\theta^{k}}\\exp\\!\\left\\{-\\frac{1}{\\theta}\\Big[\\sum_{i=1}^{k}t_i+(n-k)t_k\\Big]\\right\\}.$$\n\n记 $S=\\sum_{i=1}^{k}t_i+(n-k)t_k$（常数）。取对数：\n\n$$\\ln L(\\theta)=-k\\ln\\theta-\\frac{S}{\\theta}.$$\n\n对 $\\theta$ 求导并令其为零：\n\n$$\\frac{d\\ln L}{d\\theta}=-\\frac{k}{\\theta}+\\frac{S}{\\theta^{2}}=0\\ \\Longrightarrow\\ \\frac{S}{\\theta^2}=\\frac{k}{\\theta}\\ \\Longrightarrow\\ \\theta=\\frac{S}{k}.$$\n\n（当 $\\theta<S/k$ 时导数为正、$\\theta>S/k$ 时为负，故为极大值点。）所以 $\\theta$ 的最大似然估计值为\n\n$$\\hat\\theta=\\frac{1}{k}\\Big[\\sum_{i=1}^{k}t_i+(n-k)t_k\\Big].$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "最小次序统计量用 $P(T>t)=\\prod P(X_i>t)=e^{-nt/\\theta}$ 求生存函数最稳妥，别错用最大值的 $F^n$。",
+        "指数分布（均值 $\\mu$）方差为 $\\mu^2$，故 $D(T)=(\\theta/n)^2$；$D(\\hat\\theta)=n^2D(T)=\\theta^2$ 恰好与 $n$ 无关。",
+        "第(2)问求导时 $-k\\ln\\theta$ 与 $-S/\\theta$ 的导数符号别弄反，结果 $\\hat\\theta=S/k$。"
+      ],
+      "key_point": "指数分布最小值仍为指数分布（均值 $\\theta/n$）；无偏由 $E(aT)=\\theta$ 定系数，方差用 $\\mu^2$；MLE 取对数求驻点。"
+    }
+  ]
+}

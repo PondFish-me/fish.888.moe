@@ -1,0 +1,492 @@
+{
+  "paper": "数学一",
+  "year": 2008,
+  "count": 23,
+  "questions": [
+    {
+      "id": 743,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x)=\\int_{0}^{x^{2}} \\ln (2+t) \\mathrm{d} t$, 则 $f^{\\prime}(x)$ 的零点个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "B",
+      "analysis": "由 $f^{\\prime}(x)=2 x \\ln \\left(2+x^2\\right)=0$, \r\n\r\n得 $x=0$, 即 $f^{\\prime}(x)$ 只有一个零点, 应选 (B)",
+      "wrong_options": {
+        "A": "求导漏乘链式因子 (x²)'=2x，把 f'(x) 误当成 ln(2+x²)（>0 恒正）→ 判无零点。",
+        "C": "误以为 ln(2+x²)=0 亦有解（其实 2+x²≥2，ln≥ln2>0 无解），多数一个。",
+        "D": "臆造出更多零点，无依据（凑数项）。"
+      },
+      "pitfalls": [
+        "上限是 x²，求导要乘 (x²)'=2x（复合）",
+        "ln(2+x²)≥ln2>0 恒正，唯一零点来自因子 2x"
+      ],
+      "key_point": "f'(x)=2x·ln(2+x²)，因 ln(2+x²)>0 恒成立，f'(x) 只有 x=0 一个零点。"
+    },
+    {
+      "id": 744,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x, y)=\\arctan \\dfrac{x}{y}$ 在点 $(0,1)$ 处的梯度等于 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol i$",
+        "B": "$- \\boldsymbol i$",
+        "C": "$\\boldsymbol j$",
+        "D": "$-\\boldsymbol j$"
+      },
+      "answer": "A",
+      "analysis": "$\\dfrac{\\partial f}{\\partial x}=\\dfrac{1}{1+\\frac{x^2}{y^2}} \\cdot \\dfrac{1}{y}=\\dfrac{y}{x^2+y^2}, \\\\\r\n\\dfrac{\\partial f}{\\partial y}=\\dfrac{1}{1+\\frac{x^2}{y^2}} \\cdot\\left(-\\dfrac{x}{y^2}\\right)=-\\dfrac{x}{x^2+y^2}$, \r\n\r\n由 $\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}=1,\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}=0$, \r\n\r\n则 $f(x, y)$ 在 $(0,1)$ 处的梯度为 $\\boldsymbol{i}$, 应选 (A)",
+      "wrong_options": {
+        "B": "把 f_x 误取成负号（(0,1) 处 f_x=+1），得 -i。",
+        "C": "误将对 y 的偏导（在 (0,1) 处为 0）当成梯度的 j 分量，方向取到 j。",
+        "D": "同 C 且符号又反，取到 -j。"
+      },
+      "pitfalls": [
+        "arctan(x/y) 对 y 求偏导内层 (x/y)'_y=-x/y²，勿丢负号",
+        "梯度是向量 (f_x,f_y)，(0,1) 处为 (1,0)=i"
+      ],
+      "key_point": "grad f=(f_x,f_y)|_{(0,1)}=(1,0)，即 i。"
+    },
+    {
+      "id": 745,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "在下列微分方程中, 以 $y=C_{1} \\mathrm{e}^{x}+C_{2} \\cos 2 x+C_{3} \\sin 2 x$ ( $C_{1}, C_{2}, C_{3}$ 为任意常数) 为通解的是 $(\\quad)$",
+      "options": {
+        "A": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}-4 y^{\\prime}-4 y=0$",
+        "B": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}+4 y^{\\prime}+4 y=0$",
+        "C": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}-4 y^{\\prime}+4 y=0$",
+        "D": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$"
+      },
+      "answer": "D",
+      "analysis": "由微分方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\cos 2 x+C_3 \\sin 2 x$, \r\n\r\n得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1=1, \\lambda_{2,3}= \\pm 2 \\mathrm{i}$,\r\n\r\n特征方程为 $(\\lambda-1)\\left(\\lambda^2+4\\right)=0$, 即 $\\lambda^3-\\lambda^2+4 \\lambda-4=0$, \r\n\r\n故所求微分方程为 $y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$, 应选 (D)",
+      "wrong_options": {
+        "A": "e^x 对应根取反成 -1，且把 cos2x/sin2x 误当实根 ±2（λ²-4），两处概念错（根变 -1,±2）。",
+        "B": "把 e^x 对应的特征根 1 误取成 -1（虚根 ±2i 部分正确），得 (λ+1)(λ²+4)。",
+        "C": "e^x 根 1 正确，但把 cos2x/sin2x 误当实根 ±2（λ²-4），概念性错误（根变 1,±2）。"
+      },
+      "pitfalls": [
+        "cos2x、sin2x 对应共轭虚根 ±2i（λ²+4=0），不是 λ²-4",
+        "(λ-1)(λ²+4)=λ³-λ²+4λ-4，逐项符号别错"
+      ],
+      "key_point": "特征根 1,±2i → (λ-1)(λ²+4)=0 → y'''-y''+4y'-4y=0。"
+    },
+    {
+      "id": 746,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内单调有界, $\\left\\{x_{n}\\right\\}$ 为数列, 下列命题正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\left\\{x_{n}\\right\\}$ 收敛, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
+        "B": "若 $\\left\\{x_{n}\\right\\}$ 单调, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
+        "C": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛, 则 $\\left\\{x_{n}\\right\\}$ 收敛",
+        "D": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 单调, 则 $\\left\\{x_{n}\\right\\}$ 收敛"
+      },
+      "answer": "B",
+      "analysis": "方法一 极限存在定理\r\n\r\n因为 $f(x)$ 单调, 所以当 $\\left\\{x_n\\right\\}$ 单调时, $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调;\r\n\r\n又因为 $f(x)$ 有界, 所以 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调有界, \r\n\r\n由极限存在定理得 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 应选 (B)\r\n\r\n方法二 反例法\r\n\r\n取 $f(x)=\\left\\{\\begin{array}{ll}-1, & x<0 \\\\ 0, & x=0 \\\\ 1, & x>0\\end{array}\\right. \\quad x_n=\\dfrac{(-1)^n}{n^2}$, \r\n\r\n显然 $f(x)$ 单调增加, $\\left\\{x_n\\right\\}$ 收敛,\r\n\r\n$f\\left(x_n\\right)=\\left\\{\\begin{array}{ll}-1, & n=1,3,5, \\cdots, \\\\ 1, & n=2,4,6, \\cdots,\\end{array}\\right.$ \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 发散, (A) 不对;\r\n\r\n取 $f(x)=\\dfrac{x^2}{1+x^2}, x_n=n, f\\left(x_n\\right)=\\dfrac{n^2}{1+n^2}$, \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 但 $\\left\\{x_n\\right\\}$ 发散, (C) 不对;\r\n\r\n取 $f(x)=\\arctan x, x_n=n$, 显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调增加, \r\n\r\n但 $\\left\\{x_n\\right\\}$ 发散, (D) 不对, 应选 (B)",
+      "wrong_options": {
+        "A": "{x_n} 收敛推不出 {f(x_n)} 收敛（f 仅单调可有跳跃间断，反例 f=符号型、x_n=(-1)ⁿ/n²）。",
+        "C": "{f(x_n)} 收敛推不出 {x_n} 收敛（f 有界，取 x_n=n 可发散）。",
+        "D": "{f(x_n)} 单调推不出 {x_n} 收敛（同 C 类反例）。"
+      },
+      "pitfalls": [
+        "f 只是单调有界、未必连续，'x_n收敛⇒f(x_n)收敛'不成立",
+        "由 f(x_n) 的性质推不回 x_n（f 非单射/有界压缩）"
+      ],
+      "key_point": "{x_n} 单调 ⇒ {f(x_n)} 单调有界 ⇒ 收敛（选 B）；A/C/D 均有反例。"
+    },
+    {
+      "id": 747,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶非零矩阵, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵. 若 $\\boldsymbol{A}^{3}=\\boldsymbol{O}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆",
+        "B": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
+        "C": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
+        "D": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆"
+      },
+      "answer": "C",
+      "analysis": "方法一 逆矩阵的定义 由 $\\boldsymbol{A}^3=\\boldsymbol{O}$, \r\n\r\n得 $\\boldsymbol{E}=\\boldsymbol{E}-\\boldsymbol{A}^3=(\\boldsymbol{E}-\\boldsymbol{A})\\left(\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$.\r\n\r\n由可逆矩阵的定义得 $\\boldsymbol{E}-\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}-\\boldsymbol{A})^{-1}=\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2$;\r\n\r\n再由 $\\boldsymbol{E}=\\boldsymbol{E}+\\boldsymbol{A}^3=(\\boldsymbol{E}+\\boldsymbol{A})\\left(\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$ \r\n\r\n得 $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}+\\boldsymbol{A})^{-1}=\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2$,\r\n应选 (C)\r\n\r\n方法二 定义法求特征值\r\n\r\n令 $\\boldsymbol{Ax}=\\lambda \\boldsymbol{x}(\\boldsymbol{x} \\neq \\boldsymbol{0})$, \r\n\r\n则 $\\boldsymbol{Ax}^3 =\\lambda^3 \\boldsymbol{x}$, \r\n\r\n由 $\\boldsymbol{A}^3=\\boldsymbol{O}$ 得 $\\lambda^3 \\boldsymbol{X}=\\mathbf{0}$, \r\n\r\n从而 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=\\lambda_3=0$, \r\n\r\n于是 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 的特征值为 $1, 1, 1$, \r\n\r\n由 $|\\boldsymbol{E}-\\boldsymbol{A}|=|\\boldsymbol{E}+\\boldsymbol{A}|=1 \\neq 0$, \r\n\r\n得 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 都可逆, 应选 (C)",
+      "wrong_options": {
+        "A": "只对 E-A 或都未构造出逆，误判两者都不可逆。",
+        "B": "误判 E-A 不可逆（漏掉 E-A³=(E-A)(E+A+A²) 的分解）。",
+        "D": "误判 E+A 不可逆（漏掉 E+A³=(E+A)(E-A+A²) 的分解）。"
+      },
+      "pitfalls": [
+        "A³=O 时 A 本身不可逆（幂零），但 E±A 都可逆",
+        "关键：E∓A³ 的两个因式分解都要用到"
+      ],
+      "key_point": "A³=O ⇒ E-A、E+A 均可逆（由 E∓A³ 的因式分解构造逆矩阵）。"
+    },
+    {
+      "id": 748,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, 如果二次曲面方程 $(x, y, z) \\boldsymbol{A}\\left(\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right)=1$ 在正交变换下的标准方程的图形如图所示, 则 $\\boldsymbol{A}$ 的正特征值的个数为  $(\\quad)$\n\n![二次曲面在正交变换下标准方程的图形](/uploads/books/8c0be165d219b2adbfb8f250374c5aa58411dce664a7385ace9b12767e99b6d6.png)",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "B",
+      "analysis": "题目图中的曲面是由 $L:\\left\\{\\begin{array}{l}\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1 \\\\ z=0\\end{array}\\right.$, 绕 $x$ 轴旋转一周而成的曲面, \r\n\r\n曲面方程为 $\\Sigma: \\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}-\\dfrac{z^2}{b^2}=1$, \r\n\r\n则 $\\boldsymbol{A}$ 的正特征值个数为 $1$ 个, 应选 (B)",
+      "wrong_options": {
+        "A": "误判系数全负（正特征值 0 个）。",
+        "C": "旋转轴弄反或系数符号数错，得 (+,+,-)。",
+        "D": "误当椭球面（系数全正、正特征值 3 个）。"
+      },
+      "pitfalls": [
+        "正交变换下特征值=标准方程平方项系数符号，个数即符号计数",
+        "本图为绕 x 轴旋转的单叶双曲面 x²/a²-y²/b²-z²/b²=1，正号仅一个"
+      ],
+      "key_point": "正交变换后系数符号即 A 的特征值符号；旋转单叶双曲面 (+,-,-) → 正特征值 1 个。"
+    },
+    {
+      "id": 749,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X, Y$ 独立同分布, 且 $X$ 的分布函数为 $F(x)$, 则 $Z=\\max \\{X, Y\\}$ 的分布函数为 $(\\quad)$",
+      "options": {
+        "A": "$F^{2}(x)$",
+        "B": "$F(x) F(y)$",
+        "C": "$1-[1-F(x)]^{2}$",
+        "D": "$[1-F(x)][1-F(y)]$"
+      },
+      "answer": "A",
+      "analysis": "由分布函数的定义得 $F_Z(x)=P\\{Z \\leqslant x\\}=P\\{\\max (X, Y) \\leqslant x\\}$, \r\n\r\n由 $X, Y$ 独立同分布, \r\n\r\n得 $F_Z(x)=P\\{X \\leqslant x, Y \\leqslant x\\}=P\\{X \\leqslant x\\} P\\{Y \\leqslant x\\}=F^2(x)$, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "错误引入第二变量 y，最值分布应是同一 x 的函数。",
+        "C": "1-[1-F(x)]² 是 min 的分布函数，与 max 混淆。",
+        "D": "min 与双变量都错。"
+      },
+      "pitfalls": [
+        "Z=max 的分布是 F²(x)（同一 x），别写成 F(x)F(y)",
+        "1-[1-F(x)]² 是 min 的分布函数，勿与 max 弄反"
+      ],
+      "key_point": "iid 时 F_max(x)=F²(x)（选 A）；1-[1-F]² 是 min。"
+    },
+    {
+      "id": 750,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X \\sim N(0,1), Y \\sim N(1,4)$, 且相关系数 $\\rho_{X Y}=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$P\\{Y=-2 X-1\\}=1$",
+        "B": "$P\\{Y=2 X-1\\}=1$",
+        "C": "$P\\{Y=-2 X+1\\}=1$",
+        "D": "$P\\{Y=2 X+1\\}=1$"
+      },
+      "answer": "D",
+      "analysis": "因 $\\rho_{X Y}=1$, 故存在常数 $a>0, b$, 使得 $P\\{Y=a X+b\\}=1$;\r\n\r\n也就是 $Y$ 一定可以由 $X$ 线性表示为 $Y=a X+b$,\r\n\r\n而 $E Y=a E X+b$, 又 $X \\sim N(0,1), Y \\sim N(1,4)$,\r\n有 $E X=0, E Y=1, D X=1, D Y=4,\\\\\r\nE Y=a E X+b \\Leftrightarrow 1=0+b$, 于是有 $b=1$;\r\n\r\n(此时已经可以排除选项 (A)(B)(C))\r\n\r\n再由 $\\displaystyle 1=\\rho_{X Y}\\\\\r\n=\\frac{E(X Y)-E X E Y}{\\sqrt{D X} \\sqrt{D Y}}\\\\\r\n=\\frac{E(X(a X+b))-0 \\times 1}{\\sqrt{1} \\cdot \\sqrt{4}}\\\\\r\n=\\frac{E\\left(a X^2+b X\\right)-0 \\times 1}{\\sqrt{1} \\cdot \\sqrt{4}}\\\\\r\n=\\frac{E\\left(a X^2+b X\\right)}{2} \\\\\r\n=\\frac{1}{2} E\\left(a X^2\\right)+\\frac{1}{2} E(b X) \\\\\r\n=\\frac{a}{2} E\\left(X^2\\right)+\\frac{b}{2} E(X) \\\\\r\n=\\frac{a}{2}\\left[D X+(E X)^2\\right]+\\frac{b}{2} E(X) \\\\\r\n=\\frac{a}{2}(1+0)+\\frac{b}{2} \\cdot 0=\\frac{a}{2}$,\r\n\r\n得 $a=2$, 应选 (D)",
+      "wrong_options": {
+        "A": "ρ=1 要求正相关 a>0，-2X 为负相关（对应 ρ=-1），且 b 错。",
+        "B": "a=2 对，但 b 由 EY=1 应为 +1，不是 -1。",
+        "C": "b 对，但 a 应取正 2（ρ=1 取正根）。"
+      },
+      "pitfalls": [
+        "ρ=1 ⇒ a=+√(DY/DX)=+2（正相关取正根），ρ=-1 才取负",
+        "b 由 EY=aEX+b=1、EX=0 得 b=1"
+      ],
+      "key_point": "ρ=1 ⇒ Y=aX+b，a=+√(DY/DX)=2、b=EY-aEX=1，即 Y=2X+1。"
+    },
+    {
+      "id": 751,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $x y^{\\prime}+y=0$ 满足条件 $y(1)=1$ 的解是 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{x}$",
+      "analysis": "方法一 由 $x y^{\\prime}+y=0$, \r\n\r\n得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}+\\dfrac{1}{x} y=0$, \r\n\r\n解得 $y=C \\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{d} x}=\\dfrac{C}{x}$,\r\n\r\n由 $y(1)=1$, 得 $C=1$, 于是 $y=\\dfrac{1}{x}$\r\n\r\n方法二 由 $x y^{\\prime}+y=0$, 得 $(x y)^{\\prime}=0$, 即 $x y=C$,\r\n\r\n再由 $y(1)=1$, 得 $C=1$, 故所求的特解为 $y=\\dfrac{1}{x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "解出通解 y=C/x 后须代初值 y(1)=1 定 C=1，漏代只得含 C 的通解不得分"
+      ],
+      "key_point": "xy'+y=(xy)'=0 ⇒ xy=C，由 y(1)=1 得 y=1/x。"
+    },
+    {
+      "id": 752,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\sin (x y)+\\ln (y-x)=x$ 在点 $(0,1)$ 处的切线方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x+1$",
+      "analysis": "方法一 $\\sin (x y)+\\ln (y-x)=x$ 两边对 $x$ 求导数, \r\n\r\n得 $\\cos (x y) \\cdot\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+\\dfrac{\\frac{\\mathrm{d} y}{\\mathrm{d} x}-1}{y-x}=1$,\r\n\r\n\r\n将 $x=0, y=1$ 代入得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=1$,\r\n\r\n故曲线在点 $(0,1)$ 处的切线方程为 $y-1=x-0$\r\n\r\n方法二 令 $F(x, y)=\\sin (x y)+\\ln (y-x)-x,\\\\\r\n\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\dfrac{F_x^{\\prime}}{F_y^{\\prime}}=-\\dfrac{y \\cos x y-\\frac{1}{y-x}-1}{x \\cos x y+\\frac{1}{y-x}}$,\r\n\r\n切线的斜率为 $k=\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{(0,1)}=1$, \r\n\r\n故切线方程为 $y=x+1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "隐函数求导要把 y 视为 x 的函数：sin(xy) 内层 (xy)'=y+xy'，勿把 y 当常数漏掉 xy'",
+        "求出的是斜率 y'=1，最终要写成切线方程 y=x+1（别只答斜率）"
+      ],
+      "key_point": "隐函数两边求导代 (0,1) 得 y'=1，切线 y=x+1。"
+    },
+    {
+      "id": 753,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_{n}(x+2)^{n}$ 在 $x=0$ 处收敛, 在 $x=-4$ 处发散, 则幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_{n}(x-3)^{n}$ 的收敛域为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1,5]$",
+      "analysis": "由 $\\displaystyle \\sum_{n=0}^{\\infty} a_n(x+2)^n$ 在 $x=0$ 处收敛得 \r\n\r\n$\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径 $R \\geqslant|0+2|=2$ 且 $\\displaystyle \\sum_{n=0}^{\\infty} a_n 2^n$ 收敛;\r\n\r\n由 $\\displaystyle \\sum_{n=0}^{\\infty} a_n(x+2)^n$ 在 $x=-4$ 处发散得 \r\n\r\n$\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径 $R \\leqslant|-4+2|=2$ 且 $\\displaystyle \\sum_{n=0}^{\\infty} a_n(-2)^n$ 发散,\r\n\r\n即幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径为 $R=2$, 收敛域为 $(-2,2]$,\r\n\r\n故 $\\displaystyle \\sum_{n=0}^{\\infty} a_n(x-3)^n$ 的收敛域为 $-2<x-3 \\leqslant 2$, 即 $(1,5]$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=0↔t=2（收敛）、x=-4↔t=-2（发散）⇒ R=2，右端闭左端开",
+        "换 (x-3)ⁿ 后收敛域 -2<x-3≤2 即 (1,5]，端点开闭随平移不变"
+      ],
+      "key_point": "R=2、收敛域 (-2,2]（右闭左开）；中心平移到 3 得 (1,5]。"
+    },
+    {
+      "id": 754,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设曲面 $\\Sigma$ 是 $z=\\sqrt{4-x^{2}-y^{2}}$ 的上侧, 则 $\\displaystyle \\iint\\limits_{\\Sigma} x y \\mathrm{d} y \\mathrm{d} z+x \\mathrm{d} z \\mathrm{d} x+x^{2} \\mathrm{d} x \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4 \\pi$",
+      "analysis": "方法一 高斯公式法 补充 $\\Sigma_0: z=0\\left(x^2+y^2 \\leqslant 4\\right), \\Sigma_0$ 取下侧, 则\r\n\r\n$\\displaystyle \\iint\\limits_{\\Sigma} x y \\mathrm{d} y \\mathrm{d} z+x \\mathrm{d} z \\mathrm{d} x+x^2 \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\oiint\\limits_{\\Sigma+\\Sigma_0} x y \\mathrm{d} y \\mathrm{d} z+x \\mathrm{d} z \\mathrm{d} x+x^2 \\mathrm{d} x \\mathrm{d} y\\\\\r\n-\\iint\\limits_{\\Sigma_0} x y \\mathrm{d} y \\mathrm{d} z+x \\mathrm{d} z \\mathrm{d} x+x^2 \\mathrm{d} x \\mathrm{d} y \\stackrel{\\Delta}{=}I_1-I_2$\r\n\r\n而\r\n\r\n$\\displaystyle I_1=\\iiint\\limits_{\\Omega} y \\mathrm{d} v=0\\\\\r\nI_2=\\iint\\limits_{\\Sigma_0} x^2 \\mathrm{d} x \\mathrm{d} y=-\\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y \\\\\r\n=-\\frac{1}{2} \\iint\\limits_D\\left(x^2+y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-\\frac{1}{2} \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^2 r^3 \\mathrm{d} r=-4 \\pi$\r\n\r\n故原式 $=4 \\pi$\r\n\r\n方法二 二重积分法\r\n\r\n令 $\\Sigma_1: x=\\sqrt{4-y^2-z^2}\\ (y^2+z^2 \\leqslant 4,z \\geqslant 0)$, 取前侧, \r\n\r\n由第二类曲面积分及二重积分的奇偶性质得\r\n\r\n$\\displaystyle \\iint\\limits_{\\Sigma} x y \\mathrm{d} y \\mathrm{d} z=2 \\iint\\limits_{\\Sigma_1} x y \\mathrm{d} y \\mathrm{d} z\\\\\r\n=2 \\iint\\limits_{y^2+z^2 \\leqslant 4} y \\sqrt{4-y^2-z^2} \\mathrm{d} y \\mathrm{d} z=0, \\\\\r\n\\iint\\limits_{\\Sigma} x \\mathrm{d} z \\mathrm{d} x=0, \\\\\r\n\\iint\\limits_{\\Sigma} x^2 \\mathrm{d} x \\mathrm{d} y=\\iint\\limits_{x^2+y^2 \\leqslant 4} x^2 \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\iint\\limits_{x^2+y^2 \\leqslant 4}\\left(x^2+y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^2 r^3 \\mathrm{d} r=4 \\pi$,\r\n\r\n故 $\\displaystyle \\iint\\limits_{\\Sigma} x y \\mathrm{d} y \\mathrm{d} z+x \\mathrm{d} z \\mathrm{d} x+x^2 \\mathrm{d} x \\mathrm{d} y=4 \\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "补 Σ₀ 取下侧，与 Σ 拼成外侧闭曲面",
+        "散度为 y，∭y dv 由对称性=0，主贡献来自补面 -∬x²dxdy=−(−4π)"
+      ],
+      "key_point": "补底面用高斯公式：∭y dv=0，减去补面积分得 4π。"
+    },
+    {
+      "id": 755,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $2$ 阶矩阵, $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$ 为线性无关的 $2$ 维列向量, $\\boldsymbol{A} \\boldsymbol{\\alpha}_{1}=\\mathbf{0}, \\boldsymbol{A} \\boldsymbol{\\alpha}_{2}=2 \\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}$, 则 $\\boldsymbol{A}$ 的非零特征值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "方法一 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, 所以 $\\boldsymbol{P}$ 可逆,\r\n\r\n由 $\\boldsymbol{A P}=\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2\\right)=\\left(\\mathbf{0}, 2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\boldsymbol{P}\\left(\\begin{array}{ll}0 & 2 \\\\ 0 & 1\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ll}0 & 2 \\\\ 0 & 1\\end{array}\\right)$, \r\n\r\n即 $\\boldsymbol{A} \\sim\\left(\\begin{array}{ll}0 & 2 \\\\ 0 & 1\\end{array}\\right)$, \r\n\r\n于是 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{cc}\\lambda & \\lambda-2 \\\\ 0 & \\lambda-1\\end{array}\\right|=\\lambda(\\lambda-1)=0$, \r\n\r\n得 $\\boldsymbol{A}$ 的非零特征值为 $\\lambda=1$\r\n\r\n方法二 由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\mathbf{0}=0 \\boldsymbol{\\alpha}_1$, 得 $\\lambda_1=0$ 为 $\\boldsymbol{A}$ 的一个特征值.\r\n\r\n又由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\mathbf{0}, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$, \r\n\r\n得 $\\boldsymbol{A}\\left(2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=1\\left(2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$, \r\n\r\n注意到 $2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$ 为非零向量, \r\n\r\n从而 $\\lambda_2=1$ 为 $\\boldsymbol{A}$ 的另一个特征值, \r\n\r\n故 $\\boldsymbol{A}$ 的非零特征值为 $1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Aα₂=2α₁+α₂ 给出 B=[[0,2],[0,1]]（上三角），特征值读对角 0、1",
+        "Aα₁=0 说明 0 也是特征值，非零特征值为 1"
+      ],
+      "key_point": "A~[[0,2],[0,1]]，特征值 0 与 1，非零特征值为 1。"
+    },
+    {
+      "id": 756,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $1$ 的泊松分布, 则 $P\\left\\{X=E\\left(X^{2}\\right)\\right\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2 \\mathrm{e}}$",
+      "analysis": "由 $X \\sim P(1)$ 得 $E(X)=D(X)=1$, \r\n\r\n从而 $E\\left(X^2\\right)=D(X)+(E X)^2=2$, \r\n\r\n于是 $P\\left\\{X=E\\left(X^2\\right)\\right\\}=P\\{X=2\\}=\\dfrac{1^2}{2 !} \\cdot \\mathrm{e}^{-1}=\\dfrac{1}{2 \\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "泊松 E(X)=D(X)=λ=1 ⇒ E(X²)=D+E²=2（不是 1）",
+        "P{X=2}=λ²/2!·e^{-λ}=1/(2e)"
+      ],
+      "key_point": "P(1)：E(X²)=D+E²=2，P{X=2}=1/(2e)。"
+    },
+    {
+      "id": 757,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^{4}}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{6}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle  \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\cdot \\frac{\\sin x}{x}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\cdot \\frac{\\sin ^3 x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法二 \r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{\\arcsin^4 t} \\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{t^4}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法三 由 $\\sin x=x-\\dfrac{x^3}{3 !}+o\\left(x^3\\right)$ 得\r\n\r\n$\\sin (\\sin x)=\\sin x-\\dfrac{\\sin ^3 x}{3 !}+o\\left(\\sin ^3 x\\right)$,\r\n\r\n从而 $\\sin x-\\sin (\\sin x) \\sim \\dfrac{1}{6} \\sin ^3 x \\sim \\dfrac{1}{6} x^3$,\r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}=\\frac{1}{6} \\lim _{x \\rightarrow 0} \\frac{\\sin x}{x}=\\frac{1}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先分离 sinx/x→1 降次，再处理 [sinx-sin(sinx)]/x³",
+        "换元 t=sinx 后 (t-sint)/t³ 才可用 1-cost~t²/2；勿在加减中乱用等价代换"
+      ],
+      "key_point": "分离 sinx~x 因子后换元 t=sinx，(t-sint)/t³=1/6。"
+    },
+    {
+      "id": 758,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲线积分 $\\displaystyle \\int_{L} \\sin 2 x \\mathrm{d} x+2\\left(x^{2}-1\\right) y \\mathrm{d} y$, 其中 $L$ 是曲线 $y=\\sin x$ 上从点 $(0,0)$ 到点 $(\\pi, 0)$ 的一段",
+      "options": {},
+      "answer": "$-\\dfrac{\\pi^{2}}{2}$",
+      "analysis": "方法一\r\n\r\n设点 $A(\\pi, 0), P(x, y)=\\sin 2 x, Q(x, y)=2\\left(x^2-1\\right) y$, 则\r\n\r\n$\\displaystyle \\int_L \\sin 2 x \\mathrm{d} x+2\\left(x^2-1\\right) y \\mathrm{d} y\\\\\r\n=\\oint_{L+\\overline{A O}} \\sin 2 x \\mathrm{d} x+2\\left(x^2-1\\right) y \\mathrm{d} y+\\int_{\\overline{O A}} \\sin 2 x \\mathrm{d} x+2\\left(x^2-1\\right) y \\mathrm{d} y\\\\\r\n\\stackrel{\\Delta}{=} I_1 + I_2$\r\n\r\n由格林公式得\r\n\r\n$\\displaystyle  I_1\r\n=-\\iint\\limits_D 4 x y \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-4 \\int_0^\\pi x \\mathrm{d} x \\int_0^{\\sin x} y \\mathrm{d} y \\\\\r\n=-2 \\int_0^\\pi x \\sin ^2 x \\mathrm{d} x\\\\\r\n=-2 \\cdot \\frac{\\pi}{2} \\int_0^\\pi \\sin ^2 x \\mathrm{d} x \\\\\r\n=-\\pi \\int_0^\\pi \\sin ^2 x \\mathrm{d} x\\\\\r\n=-2 \\pi \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\mathrm{d} x \\\\\r\n=-2 \\pi \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\mathrm{d} x=-2 \\pi \\cdot \\frac{1}{2} \\cdot \\frac{\\pi}{2}=-\\frac{\\pi^2}{2} \\\\\r\nI_2=\\int_0^\\pi \\sin 2 x \\mathrm{d} x\\\\\r\n=-\\left.\\frac{1}{2} \\cos 2 x\\right|_0 ^\\pi=0$\r\n\r\n故 $\\displaystyle \\int_L \\sin 2 x \\mathrm{d} x+2\\left(x^2-1\\right) y \\mathrm{d} y=-\\frac{\\pi^2}{2}$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\int_L \\sin 2 x \\mathrm{d} x+2\\left(x^2-1\\right) y \\mathrm{d} y \\\\\r\n=\\int_0^\\pi\\left[\\sin 2 x+2\\left(x^2-1\\right) \\sin x \\cos x\\right] \\mathrm{d} x \\\\\r\n=\\int_0^\\pi x^2 \\sin 2 x \\mathrm{d} x\\\\\r\n=\\int_0^\\pi x^2 \\mathrm{d}\\left(\\sin ^2 x\\right) \\\\\r\n=\\left.x^2 \\sin ^2 x\\right|_0 ^\\pi-2 \\int_0^\\pi x \\sin ^2 x \\mathrm{d} x \\\\\r\n=-2 \\cdot \\frac{\\pi}{2} \\int_0^\\pi \\sin ^2 x \\mathrm{d} x\\\\\r\n=-\\pi \\int_0^\\pi \\sin ^2 x \\mathrm{d} x \\\\\r\n=-2 \\pi \\int_0^{\\frac{\\pi}{2}} \\sin ^2 x \\mathrm{d} x\\\\\r\n=-2 \\pi \\cdot \\frac{1}{2} \\cdot \\frac{\\pi}{2} \\\\\r\n=-\\frac{\\pi^2}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "本题 ∂Q/∂x=4xy≠∂P/∂y=0，**不满足路径无关**，须补线段用格林公式，别误套路径无关",
+        "L+补线段是顺时针方向，格林公式要带负号（漏负号会把 -π²/2 算成 +π²/2）"
+      ],
+      "key_point": "补 x 轴线段用格林公式：∫_L=-∬_D 4xy dA=-π²/2。"
+    },
+    {
+      "id": 759,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线 $C:\\left\\{\\begin{array}{l}x^{2}+y^{2}-2 z^{2}=0 \\\\ x+y+3 z=5\\end{array}\\right.$ 求曲线 $C$ 上距离 $x O y$ 面最远的点和最近的点",
+      "options": {},
+      "answer": "曲线 $C$ 到 $x O y$ 平面距离最近和最远的点分别为 $(1,1,1)$ 和 $(-5,-5,5)$",
+      "analysis": "设 $P(x, y, z)$ 为曲线 $C$ 上任意一点, \r\n\r\n$P$ 到 $x O y$ 平面的距离为 $d=|z|$, \r\n\r\n记 $L(x, y, z)=z^2+\\lambda\\left(x^2+y^2-2 z^2\\right)+\\mu(x+y+3 z-5)$, \r\n\r\n由\r\n$\\left\\{\\begin{array}{l}\r\nL_x^{\\prime}=2 \\lambda x+\\mu=0 \\\\\r\nL_y^{\\prime}=2 \\lambda y+\\mu=0 \\\\\r\nL_z^{\\prime}=2 z-4 \\lambda z+3 \\mu=0 \\\\\r\nx^2+y^2-2 z^2=0 \\\\\r\nx+y+3 z=5\r\n\\end{array}\\right.$\r\n\r\n得 $x=y$, 从而\r\n$\\left\\{\\begin{array}{l}\r\n2 x^2-2 z^2=0 \\\\\r\n2 x+3 z=5\r\n\\end{array}\\right.$\r\n\r\n解得\r\n$\\left\\{\\begin{array} { l } \r\nx = - 5 \\\\\r\ny = - 5 \\\\\r\nz = 5 \r\n\\end{array}\\right.\r\n\\left\\{\\begin{array}{l}\r\nx=1\\\\\r\ny=1 \\\\\r\nz=1\r\n\\end{array}\\right.$\r\n\r\n故曲线 $C$ 到 $x O y$ 平面距离最近和最远的点分别为 $(1,1,1)$ 和 $(-5,-5,5)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "距 xOy 面距离 d=|z|，为可导取目标 z²",
+        "两约束需两个乘子 λ、μ，联立解得 x=y 再代约束"
+      ],
+      "key_point": "拉格朗日法（目标 z²、双约束）得 (1,1,1) 最近、(-5,-5,5) 最远。"
+    },
+    {
+      "id": 760,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是连续函数.\r\n\r\n(1) 利用定义证明函数 $\\displaystyle F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t$ 可导, 且 $F^{\\prime}(x)=f(x)$;\r\n\r\n(2) 当 $f(x)$ 是以 $2$ 为周期的周期函数时, 证明函数 $\\displaystyle G(x)=2 \\int_{0}^{x} f(t) \\mathrm{d} t-x \\int_{0}^{2} f(t) \\mathrm{d} t$ 也是以 $2$ 为周期的周期函数",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) $\\displaystyle \\Delta F(x)=F(x+\\Delta x)-F(x)\\\\\r\n=\\int_0^{x+\\Delta x} f(t) \\mathrm{d} t-\\int_0^x f(t) \\mathrm{d} t\\\\\r\n=\\int_x^{x+\\Delta x} f(t) \\mathrm{d} t$, \r\n\r\n因为 $f(x)$ 连续, 所以由积分中值定理\r\n\r\n$\\displaystyle \\Delta F(x)=\\int_x^{x+\\Delta x} f(t) \\mathrm{d} t=f(\\xi) \\Delta x$, 其中 $\\xi$ 位于 $x$ 与 $x+\\Delta x$ 之间,\r\n\r\n从而 $\\dfrac{\\Delta F(x)}{\\Delta x}=f(\\xi)$, \r\n\r\n于是 $\\displaystyle \\lim _{\\Delta x \\rightarrow 0} \\frac{\\Delta F(x)}{\\Delta x}=\\lim _{\\Delta x \\rightarrow 0} f(\\xi)=f(x)$, 即 $F^{\\prime}(x)=f(x)$\r\n\r\n(2) 设 $f(x+2)=f(x)$, 则\r\n\r\n$\\displaystyle G(x+2)=2 \\int_0^{x+2} f(t) \\mathrm{d} t-(x+2) \\int_0^2 f(t) \\mathrm{d} t\\\\\r\n=2 \\int_0^x f(t) \\mathrm{d} t-x \\int_0^2 f(t) \\mathrm{d} t+2 \\int_x^{x+2} f(t) \\mathrm{d} t-2 \\int_0^2 f(t) \\mathrm{d} t \\\\\r\n=G(x)+2 \\int_x^{x+2} f(t) \\mathrm{d} t-2 \\int_0^2 f(t) \\mathrm{d} t$,\r\n\r\n由周期函数的平移性质得 $\\displaystyle \\int_x^{x+2} f(t) \\mathrm{d} t=\\int_0^2 f(t) \\mathrm{d} t$, \r\n\r\n于是 $\\displaystyle 2 \\int_x^{x+2} f(t) \\mathrm{d} t-2 \\int_0^2 f(t) \\mathrm{d} t=0$, \r\n\r\n故 $G(x+2)=G(x)$, \r\n\r\n即 $G(x)$ 是以 $2$ 为周期的函数",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) ΔF=∫_x^{x+Δx}f 用积分中值定理=f(ξ)Δx，Δx→0 且 f 连续得 F'=f",
+        "(2) 算 G(x+2)-G(x)，用 ∫₀^{x+2}=∫₀^x+∫_x^{x+2} 且周期 ∫_x^{x+2}f=∫₀²f"
+      ],
+      "key_point": "(1) 定义+积分中值定理证 F'=f；(2) G(x+2)-G(x)=0 证周期。"
+    },
+    {
+      "id": 761,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $f(x)=1-x^{2}(0 \\leqslant x \\leqslant \\pi)$ 展开成余弦级数, 并求级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^{2}}$ 的和",
+      "options": {},
+      "answer": "$\\displaystyle 1-x^2=1-\\frac{\\pi^2}{3}+\\sum_{n=1}^{\\infty} \\frac{4(-1)^{n+1}}{n^2} \\cos n x \\quad(0 \\leqslant x \\leqslant \\pi)$; $\\dfrac{\\pi^2}{12}$",
+      "analysis": "将 $f(x)$ 进行偶延拓, 则\r\n\r\n$\\displaystyle a_0 =\\frac{2}{\\pi} \\int_0^\\pi f(x) \\mathrm{d} x\\\\\r\n=\\frac{2}{\\pi} \\int_0^\\pi\\left(1-x^2\\right) \\mathrm{d} x\\\\\r\n=2\\left(1-\\frac{\\pi^2}{3}\\right), \\\\\r\na_n  =\\frac{2}{\\pi} \\int_0^\\pi f(x) \\cos n x \\mathrm{d} x\\\\\r\n=\\frac{2}{\\pi} \\int_0^\\pi\\left(1-x^2\\right) \\cos n x \\mathrm{d} x \\\\\r\n =\\frac{2}{\\pi} \\int_0^\\pi \\cos n x \\mathrm{d} x-\\frac{2}{\\pi} \\int_0^\\pi x^2 \\cos n x \\mathrm{d} x\\\\\r\n=-\\frac{2}{n \\pi} \\int_0^\\pi x^2 \\mathrm{d}(\\sin n x) \\\\\r\n =-\\left.\\frac{2 x^2 \\sin n x}{n \\pi}\\right|_0 ^\\pi+\\frac{4}{n \\pi} \\int_0^\\pi x \\sin n x \\mathrm{d} x=\\frac{4}{n \\pi} \\int_0^\\pi x \\sin n x \\mathrm{d} x \\\\\r\n =-\\frac{4}{n^2 \\pi} \\int_0^\\pi x \\mathrm{d}(\\cos n x)\\\\\r\n=-\\left.\\frac{4 x \\cos n x}{n^2 \\pi}\\right|_0 ^\\pi+\\frac{4}{n^2 \\pi} \\int_0^\\pi \\cos n x \\mathrm{d} x \\\\\r\n =\\frac{4(-1)^{n+1}}{n^2}(n=1,2, \\cdots)$\r\n\r\n$b_n=0(n=1,2, \\cdots)$, \r\n\r\n于是 $f(x)=1-x^2$ 的余弦级数为 $\\displaystyle 1-x^2\\\\\r\n=1-\\frac{\\pi^2}{3}+\\sum_{n=1}^{\\infty} \\frac{4(-1)^{n+1}}{n^2} \\cos n x \\quad(0 \\leqslant x \\leqslant \\pi)$,\r\n\r\n令 $x=0$, 则 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2}=\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^2}=\\frac{\\pi^2}{12}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "余弦级数=偶延拓，只有 a_n（b_n=0）",
+        "求 Σ(-1)^{n-1}/n² 代 x=0：1=1-π²/3+Σ4(-1)^{n+1}/n²，解出 π²/12"
+      ],
+      "key_point": "偶延拓得余弦级数，代 x=0 得 Σ(-1)^{n-1}/n²=π²/12。"
+    },
+    {
+      "id": 762,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 为 $3$ 维列向量, 矩阵 $\\boldsymbol{A}=\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$, 其中 $\\boldsymbol{\\alpha}^{\\mathrm{T}}, \\boldsymbol{\\beta}^{\\mathrm{T}}$ 分别是 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 的转置\r\n证明: \r\n\r\n(1) $r(\\boldsymbol{A}) \\leqslant 2$\r\n\r\n(2) 若 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 线性相关, 则 $r(\\boldsymbol{A})<2$.",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) $r(\\boldsymbol{A})  \\\\\r\n=r\\left(\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}\\right) \\\\\r\n\\leqslant r\\left(\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}\\right)+r\\left(\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}\\right) \\\\\r\n=r(\\boldsymbol{\\alpha})+r(\\boldsymbol{\\beta})\\\\\r\n \\leqslant 1+1=2$\r\n\r\n(2) 若 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 线性相关, \r\n\r\n则 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 成比例, \r\n\r\n不妨设 $\\boldsymbol{\\beta}=k \\boldsymbol{\\alpha}$,\r\n\r\n则 $\\boldsymbol{A}=\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}=\\left(1+k^2\\right) \\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}$,\r\n\r\n于是 $r(\\boldsymbol{A})=r\\left[\\left(1+k^2\\right) \\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}\\right]=r\\left(\\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}\\right)=r(\\boldsymbol{\\alpha}) \\leqslant 1<2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(αα^T)≤r(α)≤1（秩 1 矩阵），故 r(A)≤r(αα^T)+r(ββ^T)≤2",
+        "α,β 相关设 β=kα ⇒ A=(1+k²)αα^T，r(A)≤1<2"
+      ],
+      "key_point": "r(A)≤r(αα^T)+r(ββ^T)≤2；相关时 A 退化为单个 αα^T，秩<2。"
+    },
+    {
+      "id": 763,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $n$ 元线性方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$, 其中\r\n\r\n$$\r\n\\boldsymbol{A}=\\left(\\begin{array}{cccccc}\r\n2 a & 1 & & & & \\\\\r\na^{2} & 2 a & 1 & & & \\\\\r\n& a^{2} & 2 a & 1 & & \\\\\r\n& & \\ddots & \\ddots & \\ddots & \\\\\r\n& & & a^{2} & 2 a & 1 \\\\\r\n& & & & a^{2} & 2 a\r\n\\end{array}\\right)_{n \\times n}, \\boldsymbol{x}=\\left(\\begin{array}{c}\r\nx_{1} \\\\\r\nx_{2} \\\\\r\n\\vdots \\\\\r\nx_{n}\r\n\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{array}\\right)\r\n$$\r\n\r\n(1) 证明 : 行列式 $|\\boldsymbol{A}|=(n+1) a^{n}$;\r\n\r\n(2) 当 $a$ 为何值时, 该方程组有唯一解, 并求 $x_{1}$;\r\n\r\n(3) 当 $a$ 为何值时, 该方程组有无穷多解, 并求通解",
+      "options": {},
+      "answer": "(1) $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n(2) $a \\neq 0$ 时, 方程组有唯一解, $x_1=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) $a=0$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "analysis": "(1) 方法一 数学归纳法\r\n\r\n当 $n=1$ 时, $|\\boldsymbol{A}|=D_1=2 a$, 结论显然成立;\r\n\r\n设当 $n=k$ 时, $|\\boldsymbol{A}|=D_k=(k+1) a^k$;\r\n\r\n当$n=k+1$ 时,\r\n\r\n$|\\boldsymbol{A}|=D_{k+1}=2 a D_k-a^2 D_{k-1}=2 a(k+1) a^k-k a^{k+1} \\\\\r\n=2(k+1) a^{k+1}-k a^{k+1}=(k+2) a^{k+1}$\r\n\r\n由数学归纳法, 对一切的自然数 $n$, 有 $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n方法二 $|\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ a^2 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ 0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=\\cdots\\\\\r\n=\\left|\\begin{array}{ccccc}\r\n2 a & 1 & 0 & \\cdots & 0 \\\\\r\n0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\\r\n0 & 0 & \\frac{4 a}{3} & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & \\frac{(n+1) a}{n}\r\n\\end{array}\\right|=(n+1) a^n$\r\n\r\n方法三 \r\n\r\n令 $D_n=|\\boldsymbol{A}|$, 将 $D_n$ 按第一列展开, \r\n\r\n得 $D_n=2 a D_{n-1}-a^2 D_{n-2}$,\r\n\r\n从而 $D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)$, 由递推关系得\r\n\r\n$D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)=\\cdots=a^{n-2}\\left(D_2-a D_1\\right)=a^n$,\r\n\r\n于是 $D_n=a D_{n-1}+a^n\\\\\r\n=a\\left(a D_{n-2}+a^{n-1}\\right)+a^n\\\\\r\n=a^2 D_{n-2}+2 a^n\\\\\r\n=\\cdots=a^{n-1} D_1+(n-1) a^n\\\\\r\n=(n+1) a^n$\r\n\r\n(2) 当 $r(\\boldsymbol{A})=n$ 或 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n即 $a \\neq 0$ 时, 方程组有唯一解,\r\n\r\n由 $\\widetilde{D}_1=\\left|\\begin{array}{ccccc}1 & 1 & 0 & \\cdots & 0 \\\\ 0 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=n a^{n-1}$, \r\n\r\n得 $x_1=\\dfrac{\\widetilde{D}_1}{|\\boldsymbol{A}|}=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) 当 $r(\\boldsymbol{A})<n$ 或 $|\\boldsymbol{A}|=0$, 即 $a=0$ 时, \r\n\r\n方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解,\r\n\r\n由 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccccc:c}0 & 1 & 0 & \\cdots & 0 & 1 \\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$, \r\n\r\n得通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "三对角行列式按第一列展开得递推 D_n=2aD_{n-1}-a²D_{n-2}",
+        "a=0 时 A 幂零、r(A)=n-1，方程组有无穷多解"
+      ],
+      "key_point": "递推证 |A|=(n+1)aⁿ；a≠0 唯一解、a=0 无穷多解。"
+    },
+    {
+      "id": 764,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, $X$ 的概率分布为 $P\\{X=i\\}=\\dfrac{1}{3}(i=-1,0,1), Y$ 的概率密度为 $f_{Y}(y)=\\left\\{\\begin{array}{ll}1, & 0 \\leqslant y<1 \\\\ 0, & \\text { 其他 }\\end{array}\\right.$ 记 $Z=X+Y$\r\n\r\n(1) 求 $P\\left\\{Z \\leqslant \\dfrac{1}{2} \\mid X=0\\right\\}$;\r\n\r\n(2) 求 $Z$ 的概率密度 $f_{Z}(z)$",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{2}$\r\n\r\n(2) $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "(1) 因为随机变量 $X$ 与 $Y$ 相互独立, \r\n\r\n$\\displaystyle P\\left\\{Z \\leqslant \\frac{1}{2} \\mid X=0\\right\\}=P\\left\\{Y \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} 1 \\mathrm{d} y=\\frac{1}{2}$\r\n\r\n(2) $F_Z(z)=P\\{Z \\leqslant z\\}=P\\{X+Y \\leqslant z\\}$,\r\n\r\n当 $z<-1$ 时, $F_Z(z)=0$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$\r\n\r\n当 $-1 \\leqslant z<2$时,\r\n\r\n$\\displaystyle F_Z(z)=  P\\{X=-1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=-1\\}\\\\\r\n+P\\{X=0\\} \\cdot P\\{X+Y \\leqslant z \\mid X=0\\} \\\\\r\n+P\\{X=1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=1\\} \\\\\r\n=  \\frac{1}{3} P\\{Y \\leqslant z+1\\}+\\frac{1}{3} P\\{Y \\leqslant z\\}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}$\r\n\r\n当 $-1 \\leqslant z<0$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3} P\\{Y \\leqslant z+1\\}=\\frac{1}{3} \\int_0^{z+1} \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $0 \\leqslant z<1$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3}+\\frac{1}{3} P\\{Y \\leqslant z\\}=\\frac{1}{3}+\\frac{1}{3} \\int_0^z \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $1 \\leqslant z<2$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{2}{3}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}\\\\\r\n=\\frac{2}{3}+\\frac{1}{3} \\int_0^{z-1} \\mathrm{d} y=\\frac{1}{3}(z+1)$,\r\n\r\n从而 $F_Z(z)= \\begin{cases}0, & z<-1 \\\\ \\dfrac{1}{3}(z+1), & -1 \\leqslant z<2 \\\\ 1, & z \\geqslant 2 \\end{cases}$\r\n\r\n故 $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X 与 Y 独立，P{Z≤1/2|X=0}=P{Y≤1/2}=1/2",
+        "Z=X+Y 在 [-1,0)、[0,1)、[1,2) 三段叠加，密度恒为 1/3，支撑 (-1,2)"
+      ],
+      "key_point": "独立离散+均匀之和：f_Z(z)=1/3 于 (-1,2)。"
+    },
+    {
+      "id": 765,
+      "paper": "数学一",
+      "year": 2008,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}$ 是总体 $N\\left(\\mu, \\sigma^{2}\\right)$ 的简单随机样本. 记\r\n\r\n$\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\quad S^{2}=\\frac{1}{n-1} \\sum_{i=1}^{n}\\left(X_{i}-\\bar{X}\\right)^{2}, \\quad T=\\bar{X}^{2}-\\frac{1}{n} S^{2}$\r\n\r\n(1) 证明: $T$ 是 $\\mu^{2}$ 的无偏估计量;\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, 求 $D(T)$",
+      "options": {},
+      "answer": "(2) $\\dfrac{2}{n(n-1)}$",
+      "analysis": "(1) 由 $\\bar{X} \\sim N\\left(\\mu, \\dfrac{\\sigma^2}{n}\\right)$, \r\n\r\n得 $\\displaystyle E\\left(\\bar{X}^2\\right)=D(\\bar{X})+[E(\\bar{X})]^2=\\frac{\\sigma^2}{n}+\\mu^2$,\r\n\r\n再由 $E\\left(S^2\\right)=\\sigma^2$, \r\n\r\n得 $\\displaystyle E(T)=E\\left(\\bar{X}^2\\right)-\\frac{1}{n} E\\left(S^2\\right)=\\frac{\\sigma^2}{n}+\\mu^2-\\frac{\\sigma^2}{n}=\\mu^2$. \r\n\r\n于是 $T=\\bar{X}^2-\\dfrac{1}{n} S^2$ 为 $\\mu^2$ 的无偏估计量\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, $\\bar{X} \\sim N\\left(0, \\dfrac{1}{n}\\right)$, \r\n\r\n标准化得 $\\sqrt{n} \\bar{X} \\sim N(0,1)$, \r\n\r\n于是 $n \\bar{X}^2 \\sim \\chi^2(1)$. \r\n\r\n又 $\\displaystyle \\frac{(n-1) S^2}{\\sigma^2}=(n-1) S^2 \\sim \\chi^2(n-1)$, \r\n\r\n且 $\\bar{X}$ 与 $S^2$ 独立, 得\r\n\r\n$\\displaystyle D(T)  =D\\left(\\bar{X}^2\\right)+\\frac{1}{n^2} D\\left(S^2\\right)\\\\\r\n=\\frac{1}{n^2} D\\left(n \\bar{X}^2\\right)+\\frac{1}{n^2(n-1)^2} D\\left[(n-1) S^2\\right] \\\\\r\n =\\frac{2}{n^2}+\\frac{2(n-1)}{n^2(n-1)^2}\\\\\r\n=\\frac{2}{n^2}+\\frac{2}{n^2(n-1)}=\\frac{2}{n(n-1)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(X̄²)=D(X̄)+(EX̄)²=σ²/n+μ²，E(S²)=σ² ⇒ E(T)=μ²（无偏）",
+        "μ=0,σ=1 时 nX̄²~χ²(1)、(n-1)S²~χ²(n-1) 且独立，D(T)=2/(n(n-1))"
+      ],
+      "key_point": "E(T)=μ² 证无偏；用 χ² 分布方差与独立性得 D(T)=2/(n(n-1))。"
+    }
+  ]
+}

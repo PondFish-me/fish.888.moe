@@ -1,0 +1,412 @@
+{
+  "paper": "数学三",
+  "year": 1998,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1885,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设曲线 $y=x^n$ 在点 $(1,1)$ 处的切线与 $x$ 轴的交点为 $\\left(\\xi_n, 0\\right)$, 则 $\\displaystyle \\lim \\xi_n^n=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^{-1}$",
+      "analysis": "$\\left.y^{\\prime}\\right|_{x=1}=n$, \r\n\r\n曲线 $y=x^n$ 在点 $(1,1)$ 处的切线为 $y-1=n(x-1)$.\r\n\r\n令 $y=0$ 得 $\\xi_n=1-\\dfrac{1}{n}$,\r\n\r\n则 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\xi_n^n=\\lim _{n \\rightarrow \\infty}\\left(1-\\frac{1}{n}\\right)^n\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left[\\left(1-\\frac{1}{n}\\right)^{-n}\\right]^{-1}=\\mathrm{e}^{-1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线斜率 y'|_{x=1}=n，截距 ξ_n=1-1/n",
+        "(1-1/n)^n→e⁻¹（注意是负指数），别写成 e"
+      ],
+      "key_point": "ξ_n=1-1/n，lim ξ_n^n=lim(1-1/n)^n=e⁻¹。"
+    },
+    {
+      "id": 1886,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int \\frac{\\ln x-1}{x^2} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{\\ln x}{x}+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\ln x-1}{x^2} \\mathrm{d} x\\\\\r\n=-\\int(\\ln x-1) \\mathrm{d}\\left(\\frac{1}{x}\\right)\\\\\r\n=-\\frac{\\ln x-1}{x}+\\int \\frac{1}{x^2} \\mathrm{d} x\\\\\r\n=-\\frac{\\ln x}{x}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1/x² dx=-d(1/x)，分部后 ∫(1/x²)dx 项与 -1/x 抵消",
+        "结果是 -ln x/x+C，别漏负号"
+      ],
+      "key_point": "-∫(ln x-1)d(1/x)=-(ln x-1)/x+∫1/x²dx=-ln x/x+C。"
+    },
+    {
+      "id": 1887,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "差分方程 $2 y_{t+1}+10 y_t-5 t=0$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle y_t=C(-5)^t+\\frac{5}{12}\\left(t-\\frac{1}{6}\\right)$ ( $C$ 为任意常数)",
+      "analysis": "将 $2 y_{t+1}+10 y_t-5 t=0$ 化为 $y_{t+1}+5 y_t=\\dfrac{5}{2} t, \\\\ \r\ny_{t+1}+5 y_t=0$ 的通解为 $y_t=C(-5)^t$;\r\n\r\n设 $y_{t+1}+5 y_t=\\dfrac{5}{2} t$ 的特解为 $y^*=a t+b$, \r\n\r\n代入得 $\\displaystyle a=\\frac{5}{12}, b=-\\frac{5}{72}$,\r\n\r\n故 $2 y_{t+1}+10 y_t-5 t=0$ 的通解为 \r\n\r\n$y_t=C(-5)^t+\\dfrac{5}{12}\\left(t-\\dfrac{1}{6}\\right) (C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "先除以 2 化为 y_{t+1}+5y_t=5t/2，齐次特征根是 -5",
+        "右端一次多项式设特解 at+b，解得 a=5/12,b=-5/72"
+      ],
+      "key_point": "齐次解 C(-5)^t，特解 5/12(t-1/6)。"
+    },
+    {
+      "id": 1888,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 满足 $\\boldsymbol{A}^* \\boldsymbol{B} \\boldsymbol{A}=2 \\boldsymbol{B} \\boldsymbol{A}-8 \\boldsymbol{E}$, 其中 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & -2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right), \\boldsymbol{E}$ 为单位矩阵, $\\boldsymbol{A} ^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 则 $\\boldsymbol{B}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}2 & 0 & 0 \\\\ 0 & -4 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+      "analysis": "$|\\boldsymbol{A}|=-2$,\r\n由 $\\boldsymbol{A}^{*} \\boldsymbol{B} \\boldsymbol{A}=2 \\boldsymbol{B} \\boldsymbol{A}-8 \\boldsymbol{E}$,\r\n\r\n得 $\\boldsymbol{A} \\boldsymbol{A}{ }^{*} \\boldsymbol{B} \\boldsymbol{A}=2 \\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}-8 \\boldsymbol{A}$,\r\n\r\n即 $-2 \\boldsymbol{B} \\boldsymbol{A}=2 \\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}-8 \\boldsymbol{A}$,\r\n\r\n整理得 $\\boldsymbol{B A}=-\\boldsymbol{A B \\boldsymbol { A }}+4 \\boldsymbol{A}$,\r\n\r\n因为 $\\boldsymbol{A}$ 可逆, 两边乘 $\\boldsymbol{A}^{-1}$\r\n\r\n得 $\\boldsymbol{B}=-\\boldsymbol{A} \\boldsymbol{B}+4 \\boldsymbol{E}$,\r\n\r\n\r\n解得 $(\\boldsymbol{E}+\\boldsymbol{A}) \\boldsymbol{B}=4 \\boldsymbol{E}$,\r\n\r\n故 $\\boldsymbol{B}=4(\\boldsymbol{E}+\\boldsymbol{A})^{-1}=\\left(\\begin{array}{ccc}\r\n2 & 0 & 0 \\\\\r\n0 & -4 & 0 \\\\\r\n0 & 0 & 2\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两边左乘 A 得 A·A*·BA=|A|BA，用 |A|=-2 代入",
+        "整理得 (E+A)B=4E，E+A=diag(2,-1,2) 求逆再乘 4"
+      ],
+      "key_point": "消 A* 后 (E+A)B=4E，B=4(E+A)⁻¹=diag(2,-4,2)。"
+    },
+    {
+      "id": 1889,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, X_3, X_4$ 是来自正态总体 $N\\left(0,2^2\\right)$ 的简单随机样本, $X=a\\left(X_1-2 X_2\\right)^2+$ $b\\left(3 X_3-4 X_4\\right)^2$, 则当 $a=\\rule{0.5cm}{0.2mm}$ , $b=\\rule{0.5cm}{0.2mm}$ 时, 统计量 $X$ 服从 $\\chi^2$ 分布, 其自由度为 $n=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{20}, \\dfrac{1}{100}, 2$",
+      "analysis": "因为 $X_1, X_2, X_3, X_4$ 服从正态分布 $N\\left(0,2^2\\right)$ 且相互独立,\r\n\r\n所以 $X_1-2 X_2 \\sim N(0,20), 3 X_3-4 X_4 \\sim N(0,100)$,\r\n\r\n从而 $\\dfrac{X_1-2 X_2}{\\sqrt{20}} \\sim N(0,1),\\\\ \\dfrac{3 X_3-4 X_4}{10} \\sim N(0,1)$ 且相互独立,\r\n\r\n于是 $\\displaystyle \\frac{1}{20}\\left(X_1-2 X_2\\right)^2+\\frac{1}{100}\\left(3 X_3-4 X_4\\right)^2 \\sim \\chi^2(2)$,\r\n\r\n故 $a=\\dfrac{1}{20}, b=\\dfrac{1}{100}, n=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X₁-2X₂~N(0,20)、3X₃-4X₄~N(0,100)，系数取方差倒数",
+        "两个标准化正态各平方得 χ²(1)，独立相加自由度 n=2"
+      ],
+      "key_point": "a=1/20,b=1/100 使两项标准化，X~χ²(2)。"
+    },
+    {
+      "id": 1890,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设周期函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内可导, 周期为 $4$ , 又 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(1)-f(1-x)}{2 x}=-1$, 则曲线 $y=f(x)$ 在点 $(5, f(5))$ 处的切线的斜率为 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{2}$",
+        "B": "$0$",
+        "C": "$-1$",
+        "D": "$-2$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(1)-f(1-x)}{2 x}\\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{f(1-x)-f(1)}{-x}\\\\\r\n=\\frac{1}{2} f^{\\prime}(1)=-1$ 得 $f^{\\prime}(1)=-2$,\r\n\r\n再由 $f^{\\prime}(5)=f^{\\prime}(1)$ 得 $f^{\\prime}(5)=-2$, 应选(D)",
+      "wrong_options": {
+        "A": "把系数 1/2 处理反了，误得 1/2",
+        "B": "误以为周期函数在对应点斜率为 0",
+        "C": "漏掉分母的 2 或差商方向，误得 -1"
+      },
+      "pitfalls": [
+        "[f(1)-f(1-x)]/(2x)=(1/2)f'(1)，注意差商方向与系数 1/2",
+        "周期为 4，f'(5)=f'(5-4)=f'(1)=-2"
+      ],
+      "key_point": "f'(1)=-2，周期性给 f'(5)=-2，选 D。"
+    },
+    {
+      "id": 1891,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x)=\\lim _{n \\rightarrow \\infty} \\frac{1+x}{1+x^{2 n}}$, 讨论函数 $f(x)$ 的间断点, 其结论为 $(\\quad)$",
+      "options": {
+        "A": "不存在间断点",
+        "B": "存在间断点 $x=1$",
+        "C": "存在间断点 $x=0$",
+        "D": "存在间断点 $x=-1$"
+      },
+      "answer": "B",
+      "analysis": "当 $|x|<1$ 时, $f(x)=1+x$;\r\n\r\n当 $|x|>1$ 时, $f(x)=0$,\r\n\r\n再由 $f(-1)=0, f(1)=1$ \r\n\r\n得 $f(x)= \\begin{cases}1+x, & |x|<1 \\\\ 0, & |x|>1 \\\\ 0, & x=-1 \\\\ 1, & x=1\\end{cases}$\r\n\r\n由 $f(1-0)=2 \\neq f(1+0)=0$ 得 $x=1$ 为间断点, 应选 (B)",
+      "wrong_options": {
+        "A": "漏判 x=1 处左右极限不等，误以为处处连续",
+        "C": "x=0 处 f=1+x 连续，不是间断点",
+        "D": "x=-1 处左右极限均为 0 且 f(-1)=0，连续，不是间断点"
+      },
+      "pitfalls": [
+        "|x|<1 时 f=1+x，|x|>1 时 f=0，端点 x=±1 单独代入",
+        "x=1 处 f(1⁻)=2≠f(1⁺)=0，是跳跃间断点"
+      ],
+      "key_point": "仅 x=1 处左右极限不等（2≠0），存在间断点 x=1，选 B。"
+    },
+    {
+      "id": 1892,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "齐次线性方程组 $\\left\\{\\begin{array}{l}\\lambda x_1+x_2+\\lambda^2 x_3=0 \\\\ x_1+\\lambda x_2+x_3=0 \\\\ x_1+x_2+\\lambda x_3=0\\end{array}\\right.$ 的系数矩阵记为 $\\boldsymbol{A}$, 若存在三阶矩阵 $\\boldsymbol{B} \\neq \\boldsymbol{O}$, 使得 $\\boldsymbol{A B}=\\boldsymbol{O}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda=-2$ 且 $|\\boldsymbol{B}|=0$",
+        "B": "$\\lambda=-2$ 且 $|\\boldsymbol{B}| \\neq 0$",
+        "C": "$\\lambda=1$ 且 $|\\boldsymbol{B}|=0$",
+        "D": "$\\lambda=1$ 且 $|\\boldsymbol{B}| \\neq 0$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{O}$ 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$,\r\n\r\n因为 $\\boldsymbol{B} \\neq \\boldsymbol{O}$, 所以 $r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n从而 $r(\\boldsymbol{A})<3$,于是 $|\\boldsymbol{A}|=0$,\r\n\r\n由 $\\left|\\begin{array}{ccc}\\lambda & 1 & \\lambda^2 \\\\ 1 & \\lambda & 1 \\\\ 1 & 1 & \\lambda\\end{array}\\right|=0$ 得 $\\lambda=1$,\r\n\r\n由 $\\boldsymbol{A} \\neq \\boldsymbol{O}$ 得 $r(\\boldsymbol{A}) \\geqslant 1$, \r\n\r\n从而 $r(\\boldsymbol{B}) \\leqslant 2<3$, 于是 $|\\boldsymbol{B}|=0$, 应选 (C)",
+      "wrong_options": {
+        "A": "|A|=0 解得 λ=1 而非 -2（行列式计算错）",
+        "B": "λ 错为 -2 且 |B|≠0 与 r(A)+r(B)≤3 矛盾",
+        "D": "λ=1 正确但 |B|≠0 错：r(A)≥1 迫使 r(B)≤2<3，故 |B|=0"
+      },
+      "pitfalls": [
+        "AB=O⇒r(A)+r(B)≤3，B≠O 故 r(A)<3，|A|=0 解出 λ=1",
+        "A≠O 故 r(A)≥1，从而 r(B)≤2，|B|=0"
+      ],
+      "key_point": "|A|=0 得 λ=1，且 r(B)≤2 故 |B|=0，选 C。"
+    },
+    {
+      "id": 1893,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n(n \\geqslant 3)$ 阶矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccccc}1 & a & a & \\cdots & a \\\\ a & 1 & a & \\cdots & a \\\\ a & a & 1 & \\cdots & a \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ a & a & a & \\cdots & 1\\end{array}\\right)$, 若矩阵 $\\boldsymbol{A}$ 的秩为 $n-1$, 则 $a$ 必为 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$\\dfrac{1}{1-n}$",
+        "C": "$-1$",
+        "D": "$\\dfrac{1}{n-1}$"
+      },
+      "answer": "B",
+      "analysis": "$|\\boldsymbol{A}|=[(n-1) a+1](1-a)^{n-1}$,\r\n\r\n由 $r(\\boldsymbol{A})<n$ 得 $a=1$ 或 $\\displaystyle a=\\frac{1}{1-n}$,\r\n\r\n当 $a=1$ 时, $r(\\boldsymbol{A})=1 \\neq n-1$, \r\n\r\n故 $\\displaystyle a=\\frac{1}{1-n}$, 应选 (B)",
+      "wrong_options": {
+        "A": "a=1 时全为 1 矩阵秩为 1≠n-1，须排除",
+        "C": "a=-1 不能使行列式为零，秩仍为 n",
+        "D": "1/(n-1) 符号错，正确是 1/(1-n)"
+      },
+      "pitfalls": [
+        "|A|=[(n-1)a+1](1-a)^{n-1}，零点是 a=1 与 a=1/(1-n)",
+        "a=1 时秩为 1（不是 n-1），故只能取 a=1/(1-n)"
+      ],
+      "key_point": "行列式为零给 a=1 或 1/(1-n)，秩 n-1 排除 a=1，选 B。"
+    },
+    {
+      "id": 1894,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $F_1(x)$ 与 $F_2(x)$ 分别为随机变量 $X_1$ 与 $X_2$ 的分布函数, 为使 $F(x)=a F_1(x)-b F_2(x)$ 是某个随机变量的分布函数, 在下列给定的各组数值中应取 $(\\quad)$",
+      "options": {
+        "A": "$a=\\dfrac{3}{5}, b=-\\dfrac{2}{5}$",
+        "B": "$a=\\dfrac{2}{3}, b=\\dfrac{2}{3}$",
+        "C": "$a=-\\dfrac{1}{2}, b=\\dfrac{3}{2}$",
+        "D": "$a=\\dfrac{1}{2}, b=-\\dfrac{3}{2}$"
+      },
+      "answer": "A",
+      "analysis": "因为 $F(x), F_1(x), F_2(x)$ 都是分布函数, \r\n\r\n所以 $F(+\\infty)=F_1(+\\infty)=F_2(+\\infty)=1$,\r\n\r\n从而 $a-b=1$, 应选 (A)",
+      "wrong_options": {
+        "B": "a-b=0≠1，右端极限不为 1",
+        "C": "a-b=-2≠1，且 a<0 违反单调",
+        "D": "a-b=2≠1，不满足归一"
+      },
+      "pitfalls": [
+        "F(+∞)=a·1-b·1=a-b 必须等于 1",
+        "还需 a≥0、-b≥0 保证单调非降，A 项 a=3/5,b=-2/5 均满足"
+      ],
+      "key_point": "a-b=1 且系数保证单调，只有 A（a=3/5,b=-2/5）成立。"
+    },
+    {
+      "id": 1895,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $z=\\left(x^2+y^2\\right) \\mathrm{e}^{-\\arctan \\frac{y}{x}}$, 求 $\\mathrm{d} z$ 与 $\\displaystyle \\frac{\\partial^2 z}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\displaystyle \\mathrm{d} z=\\mathrm{e}^{-\\arctan \\frac{y}{x}}[(2 x+y) \\mathrm{d} x+(2 y-x) \\mathrm{d} y];\\\\\n\\frac{\\partial^2 z}{\\partial x \\partial y}= \\frac{y^2-x y-x^2}{x^2+y^2} \\mathrm{e}^{-\\arctan \\frac{y}{x}}$",
+      "analysis": "$\\displaystyle\r\n\\frac{\\partial z}{\\partial x}\\\\\r\n=2 x \\mathrm{e}^{-\\arctan \\frac{y}{x}}-\\left(x^2+y^2\\right) \\mathrm{e}^{-\\arctan \\frac{y}{x}} \\cdot \\frac{1}{1+\\frac{y^2}{x^2}} \\cdot\\left(-\\frac{y}{x^2}\\right)\\\\\r\n=(2 x+y) \\mathrm{e}^{-\\arctan \\frac{y}{x}}\\\\\r\n\\frac{\\partial z}{\\partial y}\\\\\r\n=2 y \\mathrm{e}^{-\\arctan \\frac{y}{x}}-\\left(x^2+y^2\\right) \\mathrm{e}^{-\\arctan \\frac{y}{x}} \\cdot \\frac{1}{1+\\frac{y^2}{x^2}} \\cdot \\frac{1}{x}\\\\\r\n=(2 y-x) \\mathrm{e}^{-\\arctan \\frac{y}{x}}$\r\n\r\n则 $\\mathrm{d} z=\\mathrm{e}^{-\\arctan \\frac{y}{x}}[(2 x+y) \\mathrm{d} x+(2 y-x) \\mathrm{d} y]$.\r\n\r\n$\\displaystyle \r\n\\frac{\\partial^2 z}{\\partial x \\partial y}=\\mathrm{e}^{-\\arctan \\frac{y}{x}}-(2 x+y) \\mathrm{e}^{-\\arctan \\frac{y}{x}} \\cdot \\frac{1}{1+\\frac{y^2}{x^2}} \\cdot \\frac{1}{x}=\\frac{y^2-x y-x^2}{x^2+y^2} \\mathrm{e}^{-\\arctan \\frac{y}{x}} $",
+      "wrong_options": {},
+      "pitfalls": [
+        "arctan(y/x) 对 x、y 的偏导含 1/(1+y²/x²) 因子，符号易错",
+        "∂z/∂x 化简后是 (2x+y)e^{...}，混合偏导再对 y 求导"
+      ],
+      "key_point": "∂z/∂x=(2x+y)e^{-arctan(y/x)}，∂z/∂y=(2y-x)e^{...}，混合偏导如上。"
+    },
+    {
+      "id": 1896,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant x\\right\\}$, 求 $\\displaystyle \\iint\\limits_D \\sqrt{x} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{8}{15}$",
+      "analysis": "方法一 令 $\\left\\{\\begin{array}{l}x=r \\cos \\theta \\\\ y=r \\sin \\theta\\end{array}\\left(-\\dfrac{\\pi}{2} \\leqslant \\theta \\leqslant \\dfrac{\\pi}{2}, 0 \\leqslant r \\leqslant \\cos \\theta\\right)\\right.$, 则\r\n\r\n$\\displaystyle \r\n\\iint_D \\sqrt{x} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^{\\cos \\theta} r^{\\frac{3}{2}} \\sqrt{\\cos \\theta} \\mathrm{d} r\\\\\r\n=\\frac{4}{5} \\int_0^{\\frac{\\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta\\\\\r\n=\\frac{8}{15}$\r\n\r\n方法二 $D=\\left\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,-\\sqrt{x-x^2} \\leqslant y \\leqslant \\sqrt{x-x^2}\\right\\}$, 则\r\n\r\n$\\displaystyle \\iint\\limits_D \\sqrt{x} \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_0^1 \\sqrt{x} \\mathrm{d} x \\int_{-\\sqrt{x-x^2}}^{\\sqrt{x-x^2}} \\mathrm{d} y\\\\\r\n=2 \\int_0^1 x \\sqrt{1-x} \\mathrm{d} x \\\\\r\n=2 \\int_1^0\\left(1-t^2\\right) \\cdot\\left(-2 t^2\\right) \\mathrm{d} t\\\\\r\n=4 \\int_0^1\\left(t^2-t^4\\right) \\mathrm{d} t=4\\left(\\frac{1}{3}-\\frac{1}{5}\\right)=\\frac{8}{15}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x²+y²≤x 即 r≤cosθ，θ 范围 [-π/2,π/2]",
+        "被积 √x=√(r cosθ)，径向积分后化为 (4/5)∫cos³θ=8/15"
+      ],
+      "key_point": "极坐标下积分化为 (4/5)∫_{-π/2}^{π/2}cos³θ dθ=8/15。"
+    },
+    {
+      "id": 1897,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某酒厂有一批新酿的好酒, 如果现在出售 $(t=0)$, 总收入为 $R_0$ (元), 如果窖藏起来, 待来日按陈酒销售, $t$ 年末总收入为 $R=R_0 \\mathrm{e}^{\\frac{2}{5} \\sqrt{t}}$. 假定银行的年利率为 $r$, 并以连续复利计息, 试求窖藏多少年出售可使总收入的现值最大, 并求 $r=0.06$ 时的 $t$ 值",
+      "options": {},
+      "answer": "$t=\\dfrac{1}{25r^2}$；当 $r=0.06$ 时 $t=\\dfrac{100}{9}\\approx11$（年）",
+      "analysis": "以连续复利计息, 这批酒窖藏 $t$ 年末售出的总收入 $R$ 的现值为\r\n\r\n$A(t)=R \\mathrm{e}^{-r t}=R_0 \\mathrm{e}^{\\frac{2}{5} \\sqrt{t}-r t}$,\r\n\r\n令 $\\dfrac{\\mathrm{d} A}{\\mathrm{d} t}=R_0 \\mathrm{e}^{\\frac{2}{5} \\sqrt{t}-r t} \\cdot\\left(\\dfrac{1}{5 \\sqrt{t}}-r\\right)=0$, \r\n\r\n得 $t=\\dfrac{1}{25 r^2}$.\r\n\r\n因为当 $0<t<\\dfrac{1}{25 r^2}$ 时, $\\dfrac{\\mathrm{d} A}{\\mathrm{d} t}>0$; \r\n\r\n当 $t>\\dfrac{1}{25 r^2}$ 时, $\\dfrac{\\mathrm{d} A}{\\mathrm{d} t}<0$,\r\n\r\n所以当 $t=\\dfrac{1}{25 r^2}$ 时, \r\n\r\n总收入的现值最大,\r\n\r\n当 $r=0.06$ 时, $\\displaystyle t=\\frac{100}{9} \\approx 11$ (年)",
+      "wrong_options": {},
+      "pitfalls": [
+        "现值要乘贴现因子 e^{-rt}，指数是 (2/5)√t-rt",
+        "A'=0 给 1/(5√t)=r，即 t=1/(25r²)，r=0.06 代入得 ≈11 年"
+      ],
+      "key_point": "A(t)=R₀e^{(2/5)√t-rt}，最优 t=1/(25r²)，r=0.06 时约 11 年。"
+    },
+    {
+      "id": 1898,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 14,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内可导, 且 $f^{\\prime}(x) \\neq 0(a<x<b)$.\r\n证明: 存在 $\\xi, \\eta \\in(a, b)$, 使得\r\n\r\n$\\dfrac{f^{\\prime}(\\xi)}{f^{\\prime}(\\eta)}=\\dfrac{\\mathrm{e}^b-\\mathrm{e}^a}{b-a} \\mathrm{e}^{-\\eta}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $h(x)=\\mathrm{e}^x, h^{\\prime}(x)=\\mathrm{e}^x \\neq 0(a<x<b)$, \r\n\r\n由柯西中值定理, 存在 $\\eta \\in(a, b)$,\r\n\r\n使得 $\\dfrac{f(b)-f(a)}{h(b)-h(a)}=\\dfrac{f^{\\prime}(\\eta)}{h^{\\prime}(\\eta)}$,\r\n\r\n即 $\\dfrac{f(b)-f(a)}{\\mathrm{e}^b-\\mathrm{e}^a}=\\dfrac{f^{\\prime}(\\eta)}{\\mathrm{e}^\\eta}$,\r\n\r\n$\\dfrac{f(b)-f(a)}{b-a}=\\dfrac{\\mathrm{e}^b-\\mathrm{e}^a}{b-a} \\cdot \\dfrac{f^{\\prime}(\\eta)}{\\mathrm{e}^\\eta}$,\r\n\r\n从而 $\\dfrac{f(b)-f(a)}{b-a}=\\dfrac{\\mathrm{e}^b-\\mathrm{e}^a}{b-a} \\cdot \\dfrac{f^{\\prime}(\\eta)}{\\mathrm{e}^\\eta}$,\r\n\r\n再由拉格朗日中值定理, 存在 $\\xi \\in(a, b)$, \r\n\r\n使得 $f^{\\prime}(\\xi)=\\dfrac{f(b)-f(a)}{b-a}$,\r\n\r\n即 $f^{\\prime}(\\xi)=\\dfrac{\\mathrm{e}^b-\\mathrm{e}^a}{b-a} \\cdot \\dfrac{f^{\\prime}(\\eta)}{\\mathrm{e}^\\eta}$, \r\n\r\n故 $\\dfrac{f^{\\prime}(\\xi)}{f^{\\prime}(\\eta)}=\\dfrac{\\mathrm{e}^b-\\mathrm{e}^a}{b-a} \\mathrm{e}^{-\\eta}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "取 h(x)=e^x 用柯西中值定理得 [f(b)-f(a)]/(e^b-e^a)=f'(η)/e^η",
+        "再用拉格朗日中值定理 f'(ξ)=[f(b)-f(a)]/(b-a) 联立消去差商"
+      ],
+      "key_point": "柯西给 η、拉格朗日给 ξ，联立得 f'(ξ)/f'(η)=(e^b-e^a)/(b-a)·e^{-η}。"
+    },
+    {
+      "id": 1899,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有两条抛物线 $\\displaystyle y=n x^2+\\frac{1}{n}$ 和 $\\displaystyle y=(n+1) x^2+\\frac{1}{n+1}$, 记它们交点的横坐标的绝对值为 $a_n$\r\n\r\n(1) 求这两条抛物线所围成的平面图形的面积 $S_n$;\r\n\r\n(2) 求级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{S_n}{a_n}$ 的和",
+      "options": {},
+      "answer": "(1) $\\dfrac{4}{3} \\frac{1}{n(n+1) \\sqrt{n(n+1)}}$ (2) $\\frac{4}{3}$",
+      "analysis": "(1) 由 $\\left\\{\\begin{array}{l}y=n x^2+\\dfrac{1}{n} \\\\ y=(n+1) x^2+\\dfrac{1}{n+1}\\end{array}\\right.$\r\n\r\n得 $\\displaystyle x^2=\\frac{1}{n}-\\frac{1}{n+1}=\\frac{1}{n(n+1)}$, \r\n\r\n则 $\\displaystyle a_n=\\frac{1}{\\sqrt{n(n+1)}}$,\r\n\r\n由对称性得 $\\displaystyle S_n =2 \\int_0^{a_n}\\left[n x^2+\\frac{1}{n}-(n+1) x^2-\\frac{1}{n+1}\\right] \\mathrm{d} x\\\\\r\n=2 \\int_0^{a_n}\\left[\\frac{1}{n(n+1)}-x^2\\right] \\mathrm{d} x \\\\\r\n=\\frac{4}{3} \\frac{1}{n(n+1) \\sqrt{n(n+1)}}$\r\n\r\n(2) $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{S_n}{a_n}=\\frac{4}{3} \\sum_{n=1}^{\\infty} \\frac{1}{n(n+1)}$,\r\n部分和\r\n\r\n$\\displaystyle S_n^{\\prime}=\\frac{1}{1 \\times 2}+\\frac{1}{2 \\times 3}+\\cdots+\\frac{1}{n(n+1)}=1-\\frac{1}{n+1}$,\r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n^{\\prime}=1$, 所以 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{S_n}{a_n}=\\frac{4}{3} \\sum_{n=1}^{\\infty} \\frac{1}{n(n+1)}=\\frac{4}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "交点 a_n=1/√(n(n+1))，面积用对称性乘 2",
+        "S_n/a_n=(4/3)/(n(n+1))，裂项 Σ1/(n(n+1))=1，级数和 4/3"
+      ],
+      "key_point": "S_n/a_n=(4/3)·1/(n(n+1))，裂项求和得 4/3。"
+    },
+    {
+      "id": 1900,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[1,+\\infty)$ 上连续, 若由曲线 $y=f(x)$, 直线 $x=1, x=t(t>1)$ 与 $x$ 轴所围成的平面区域绕 $x$ 轴旋转一周所成的旋转体的体积为 $V(t)=\\dfrac{\\pi}{3}\\left[t^2 f(t)-f(1)\\right]$,\r\n\r\n试求 $y=f(x)$ 所满足的微分方程, 并求该微分方程满足条件 $\\displaystyle \\left.y\\right|_{x=2}=\\frac{2}{9}$ 的解",
+      "options": {},
+      "answer": "$y-x=-x^3 y$",
+      "analysis": "$\\displaystyle V(t)=\\pi \\int_1^t f^2(x) \\mathrm{d} x$,\r\n\r\n由题意得 $\\displaystyle \\frac{\\pi}{3}\\left[t^2 f(t)-f(1)\\right]=\\pi \\int_1^t f^2(x) \\mathrm{d} x$, \r\n\r\n即 $\\displaystyle t^2 f(t)-f(1)=3 \\int_1^t f^2(x) \\mathrm{d} x$,\r\n\r\n\r\n两边对 $t$ 求导得\r\n\r\n$2 t f(t)+t^2 f^{\\prime}(t)=3 f^2(t)$,\r\n\r\n从而 $y=f(x)$ 所满足的微分方程为 $2 x y+x^2 y^{\\prime}=3 y^2$.\r\n\r\n由 $2 x y+x^2 y^{\\prime}=3 y^2$ 得 $\\displaystyle y^{\\prime}=-2 \\frac{y}{x}+3\\left(\\frac{y}{x}\\right)^2$,\r\n\r\n令 $\\displaystyle u=\\frac{y}{x}$, 代入得 $\\displaystyle u+x \\frac{\\mathrm{d} u}{\\mathrm{d} x}=-2 u+3 u^2$,\r\n\r\n整理得 $\\displaystyle \\frac{\\mathrm{d} u}{u(u-1)}=3 \\frac{\\mathrm{d} x}{x}$,\r\n\r\n积分得 $\\displaystyle \\ln \\frac{u-1}{u}=\\ln x^3+C_1$,\r\n\r\n解得 $\\displaystyle \\frac{u-1}{u}=C_2 x^3$,\r\n\r\n通解为 $y-x=C_2 x^3 y$,\r\n\r\n将初始条件代入得 $C_2=-1$,\r\n\r\n所求的解为 $y-x=-x^3 y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "V(t)=π∫₁ᵗf²dx，对 t 求导得 2tf+t²f'=3f²",
+        "令 u=y/x 化齐次方程，变量分离积分后用初值 y(2)=2/9 定 C=-1"
+      ],
+      "key_point": "求导得 2xy+x²y'=3y²，齐次法解得 y-x=-x³y。"
+    },
+    {
+      "id": 1901,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设向量 $\\boldsymbol{\\alpha}=\\left(a_1, a_2, \\cdots, a_n\\right)^{\\mathrm{T}}, \\boldsymbol{\\beta}=\\left(b_1, b_2, \\cdots, b_n\\right)^{\\mathrm{T}}$ 都是非零向量, 且满足条件 $\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\beta}=0$, 记 $n$ 阶矩阵 $\\boldsymbol{A}=\\boldsymbol{\\alpha} \\boldsymbol{\\beta}^{\\mathrm{T}}$. 求:\r\n\r\n(1) $\\boldsymbol{A}^2$;\r\n\r\n(2) 矩阵 $\\boldsymbol{A}$ 的特征值与特征向量",
+      "options": {},
+      "answer": "(1) $\\boldsymbol{O}$; (2) $\\boldsymbol{A}$ 的特征值只有 $\\lambda=0$, 其对应的全部特征向量为 \r\n\r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_{n-1} \\boldsymbol{\\alpha}_{n-1}\\\\\r\n\\left(k_1, k_2, \\cdots, k_{n-1}\\right.$ 不全为零)",
+      "analysis": "(1) 由 $\\boldsymbol{\\alpha}^{\\mathrm T} \\boldsymbol{\\beta}=0$ 得 $\\boldsymbol{\\alpha} \\perp \\boldsymbol{\\beta}$,\r\n\r\n则 $\\boldsymbol{A}^2=\\boldsymbol{\\alpha} \\boldsymbol{\\beta}^{\\mathrm{T}} \\cdot \\boldsymbol{\\alpha} \\boldsymbol{\\beta}^{\\mathrm{T}}=\\boldsymbol{\\alpha}\\left(\\boldsymbol{\\beta}^{\\mathrm{T}} \\boldsymbol{\\alpha}\\right) \\boldsymbol{\\beta}^{\\mathrm{T}}=\\boldsymbol{O}$\r\n\r\n(2) 令 $\\boldsymbol{Ax} =\\lambda \\boldsymbol{x}$ ( $\\boldsymbol{x} \\neq = \\boldsymbol{0}$),\r\n\r\n由 $\\boldsymbol{A}^2 \\boldsymbol{x}=\\lambda^2 \\boldsymbol{x}=\\mathbf{0}$ \r\n\r\n得 $\\lambda_1=\\lambda_2=\\cdots=\\lambda_n=0$.\r\n\r\n不妨设 $a_1 \\neq 0, b_1 \\neq 0$,\r\n\r\n矩阵 $\\boldsymbol{A}$ 的属于特征值 $\\lambda_1=\\lambda_2=\\cdots=\\lambda_n=0$ 的特征向量即为方程组 $(0 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$ 的非零解,\r\n\r\n由 $0 \\boldsymbol{E}-\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{cccc}1 & \\frac{b_2}{b_1} & \\cdots & \\frac{b_n}{b_1} \\\\ 0 & 0 & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & 0\\end{array}\\right)$\r\n\r\n得 $\\lambda=0$ 对应的线性无关的特征向量为\r\n\r\n$\\boldsymbol{\\alpha}_1=\\begin{pmatrix}\r\n-\\frac{b_2}{b_1} \\\\\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{pmatrix},\r\n\\boldsymbol{\\alpha}_2=\\begin{pmatrix}\r\n-\\frac{b_3}{b_1} \\\\\r\n0 \\\\\r\n1 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{pmatrix},\r\n\\ldots,\r\n\\boldsymbol{\\alpha}_{n-1}=\\begin{pmatrix}\r\n-\\frac{b_n}{b_1} \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0 \\\\\r\n1\r\n\\end{pmatrix}$\r\n\r\n故属于 $\\lambda=0$ 的全部特征向量为 \r\n\r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_{n-1} \\boldsymbol{\\alpha}_{n-1}\\\\\r\n\\left(k_1, k_2, \\cdots, k_{n-1}\\right.$ 不全为零)",
+      "wrong_options": {},
+      "pitfalls": [
+        "A²=α(β^Tα)β^T，因 β^Tα=α^Tβ=0 故 A²=O",
+        "A²=O⇒λ²=0⇒λ=0，特征向量是 Ax=0 的解，共 n-1 个无关"
+      ],
+      "key_point": "A²=O 故特征值全 0，λ=0 的特征子空间维数 n-1。"
+    },
+    {
+      "id": 1902,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$, 矩阵 $\\boldsymbol{B}=(k \\boldsymbol{E}+\\boldsymbol{A})^2$, 其中 $k$ 为实数, $\\boldsymbol{E}$ 为单位矩阵. 求对角矩阵 $\\boldsymbol{\\Lambda}$, 使得 $\\boldsymbol{B}$ 与 $\\boldsymbol{\\Lambda}$ 相似, 并求当 $k$ 为何值时, $\\boldsymbol{B}$ 为正定矩阵",
+      "options": {},
+      "answer": "$k \\neq 0, k \\neq-2$",
+      "analysis": "由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\\lambda-1 & 0 & -1 \\\\ 0 & \\lambda-2 & 0 \\\\ -1 & 0 & \\lambda-1\\end{array}\\right|=\\lambda(\\lambda-2)^2$,\r\n\r\n得矩阵 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=\\lambda_3=2$,\r\n\r\n则存在正交矩阵 $\\boldsymbol{Q}$, 使得 $\\boldsymbol{Q}^{\\mathrm T} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$,\r\n\r\n从而 $\\boldsymbol{Q}^{\\mathrm{T}}(k \\boldsymbol{E}+\\boldsymbol{A}) \\boldsymbol{Q}\r\n=\\left(\\begin{array}{ccc}\r\nk & 0 & 0 \\\\\r\n0 & k+2 & 0 \\\\\r\n0 & 0 & k+2\r\n\\end{array}\\right)$\r\n\r\n于是 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{B} \\boldsymbol{Q}\\\\\r\n=\\boldsymbol{Q}^{\\mathrm{T}}(k \\boldsymbol{E}+\\boldsymbol{A})^2 \\boldsymbol{Q}\\\\\r\n=\\boldsymbol{Q}^{\\mathrm{T}}(k \\boldsymbol{E}+\\boldsymbol{A}) \\boldsymbol{Q} \\cdot \\boldsymbol{Q}^{\\mathrm{T}}(k \\boldsymbol{E}+\\boldsymbol{A}) \\boldsymbol{Q} \\\\\r\n=\\left(\\begin{array}{ccc}\r\nk^2 & 0 & 0 \\\\\r\n0 & (k+2)^2 & 0 \\\\\r\n0 & 0 & (k+2)^2\r\n\\end{array}\\right)\\\\\r\n\\boldsymbol{\\Lambda}=\\left(\\begin{array}{ccc}\r\nk^2 & 0 & 0 \\\\\r\n0 & (k+2)^2 & 0 \\\\\r\n0 & 0 & (k+2)^2\r\n\\end{array}\\right)$\r\n\r\n因为矩阵 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=\\lambda_3=2$,\r\n\r\n所以 $\\boldsymbol{B}=(k \\boldsymbol{E}+\\boldsymbol{A})^2$ 的特征值为 \r\n\r\n$\\lambda_1=k^2, \\lambda_2=\\lambda_3=(k+2)^2$.\r\n\r\n显然 $\\boldsymbol{B}$ 为实对称矩阵,\r\n\r\n故 $\\boldsymbol{B}$ 为正定矩阵的充分必要条件是 $k^2>0,(k+2)^2>0$, \r\n\r\n即 $k \\neq 0, k \\neq-2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 的特征值 0,2,2，故 kE+A 特征值 k,k+2,k+2，B 平方后为 k²,(k+2)²",
+        "B 实对称，正定要求全部特征值>0，即 k≠0 且 k≠-2"
+      ],
+      "key_point": "B 特征值 k²、(k+2)²，正定⇔k≠0 且 k≠-2。"
+    },
+    {
+      "id": 1903,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "一商店经销某种商品, 每周进货的数量 $X$ 与顾客对该商品的需求量 $Y$ 是相互独立的随机变量, 且都服从区间 $[10,20]$ 上的均匀分布. 商店每售出一单位商品可得利润 1000 元; 若需求量超过进货量, 商店可从其他商店调剂供货, 这时每单位商品获利为 500 元, 试求该商店经销该种商品每周所得利润的期望值",
+      "options": {},
+      "answer": "$14166.67 \\text { (元) }$",
+      "analysis": "设获利为 $Z$, 根据题意得\r\n\r\n$Z= \\begin{cases}1000 Y, & Y \\leqslant X \\\\ 1000 X+500(Y-X), & Y>X\\end{cases}$\r\n\r\n因为 $X, Y$ 相互独立且都服从 $[10,20]$ 上的均匀分布, \r\n\r\n所以 $X, Y$ 的联合概率密度为 $f(x, y)=\\\\\r\n\\begin{cases}\r\n\\dfrac{1}{100}, & 10 \\leqslant x \\leqslant 20,10 \\leqslant y \\leqslant 20 \\\\\r\n0, & \\text { 其他 }\r\n\\end{cases}$\r\n\r\n令 $D_1=\\{(x, y) \\mid 10 \\leqslant x \\leqslant 20,10 \\leqslant y \\leqslant x\\}$,\r\n\r\n$D_2=\\{(x, y) \\mid 10 \\leqslant x \\leqslant 20, x \\leqslant y \\leqslant 20\\}$,\r\n\r\n则\r\n\r\n$\\displaystyle E(Z)\\\\\r\n=\\frac{1}{100} \\iint\\limits_{D_1} 1000 y \\mathrm{d} x \\mathrm{d} y+\\frac{1}{100} \\iint\\limits_{D_2} 500(x+y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=10 \\int_{10}^{20} \\mathrm{d} x \\int_{10}^x y \\mathrm{d} y+5 \\int_{10}^{20} \\mathrm{d} x \\int_x^{20}(x+y) \\mathrm{d} y \\\\\r\n=5 \\int_{10}^{20}\\left(x^2-100\\right) \\mathrm{d} x+5 \\int_{10}^{20}\\left[x(20-x)+\\frac{400-x^2}{2}\\right] \\mathrm{d} x \\\\\r\n=14166.67 \\text { (元) }$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y≤X 时利润 1000Y，Y>X 时利润 1000X+500(Y-X)，须分区域",
+        "联合密度 1/100，分 D₁(Y≤X)、D₂(Y>X) 两块积分再相加"
+      ],
+      "key_point": "分需求超/不超两区域二重积分，E(Z)=14166.67 元。"
+    },
+    {
+      "id": 1904,
+      "paper": "数学三",
+      "year": 1998,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有来自三个地区的各 10 名、15 名和 25 名考生的报名表, 其中女生的报名表分别为 3 份、7 份和 5 份, 随机地取一个地区的报名表, 从中先后抽取两份\r\n\r\n(1) 求先抽到的一份是女生表的概率 $p$;\r\n\r\n(2) 已知后抽到的一份是男生表, 求先抽到的一份是女生表的概率 $q$",
+      "options": {},
+      "answer": "(1) $\\dfrac{29}{90}$ (2) $\\dfrac{20}{61}$",
+      "analysis": "(1) 令 $A_i=\\{$ 取第 $i$ 个地区 $\\}(i=1,2,3),\\\\\r\nB_i=\\{$ 第 $i$ 次取到女生报名表 $\\}(i=1,2)$\r\n\r\n显然 $\\displaystyle P\\left(A_1\\right)=P\\left(A_2\\right)=P\\left(A_3\\right)=\\frac{1}{3},\\\\\r\nP\\left(B_1 \\mid A_1\\right)=\\frac{3}{10}, P\\left(B_1 \\mid A_2\\right)=\\frac{7}{15}, P\\left(B_1 \\mid A_3\\right)=\\frac{5}{25}$\r\n\r\n则 $\\displaystyle p=P\\left(B_1\\right)=\\sum_{i=1}^3 P\\left(A_i\\right) P\\left(B_1 \\mid A_i\\right)=\\frac{1}{3}\\left(\\frac{3}{10}+\\frac{7}{15}+\\frac{5}{25}\\right)=\\frac{29}{90}$\r\n\r\n(2) $\\displaystyle q=P\\left(B_1 \\mid \\overline{B_2}\\right)=\\frac{P\\left(B_1 \\overline{B_2}\\right)}{P\\left(\\overline{B_2}\\right)}$,\r\n\r\n由 $\\displaystyle P\\left(B_2\\right)=P\\left(B_1\\right)=\\frac{29}{90}$, \r\n\r\n得 $\\displaystyle P\\left(\\overline{B_2}\\right)=1-P\\left(B_2\\right)=\\frac{61}{90}$,\r\n\r\n由 \r\n\r\n$\\displaystyle \r\nP\\left(B_1 \\overline{B_2} \\mid A_1\\right)=\\frac{3}{10} \\times \\frac{7}{9}=\\frac{7}{30}\\\\\r\nP\\left(B_1 \\overline{B_2} \\mid A_2\\right)=\\frac{7}{15} \\times \\frac{8}{14}=\\frac{8}{30}\\\\\r\nP\\left(B_1 \\overline{B_2} \\mid A_3\\right)=\\frac{5}{25} \\times \\frac{20}{24}=\\frac{1}{5} \\times \\frac{5}{6}=\\frac{5}{30}$\r\n\r\n得 $P\\left(B_1 \\overline{B_2}\\right)\\\\\r\n=P\\left(A_1\\right) P\\left(B_1 \\overline{B_2} \\mid A_1\\right)\\\\\r\n+P\\left(A_2\\right) P\\left(B_1 \\overline{B_2} \\mid A_2\\right)\\\\\r\n+P\\left(A_3\\right) P\\left(B_1 \\overline{B_2} \\mid A_3\\right)\\\\\r\n=\\dfrac{1}{3}\\left(\\dfrac{7}{30}+\\dfrac{8}{30}+\\dfrac{5}{30}\\right)=\\dfrac{2}{9}$\r\n\r\n故 $\\displaystyle q=\\frac{2}{9} \\times \\frac{90}{61}=\\frac{20}{61}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三地区选取等概 1/3，全概率 p=(1/3)(3/10+7/15+5/25)=29/90",
+        "q=P(B₁|B̄₂)=P(B₁B̄₂)/P(B̄₂)，不放回抽取条件概率要按地区分别算"
+      ],
+      "key_point": "全概率 p=29/90；贝叶斯 q=P(B₁B̄₂)/P(B̄₂)=(2/9)/(61/90)=20/61。"
+    }
+  ]
+}

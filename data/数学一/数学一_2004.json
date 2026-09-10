@@ -1,0 +1,493 @@
+{
+  "paper": "数学一",
+  "year": 2004,
+  "count": 23,
+  "questions": [
+    {
+      "id": 903,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\ln x$ 上与直线 $x+y=1$ 垂直的切线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x-1$",
+      "analysis": "设曲线 $y=\\ln x$ 上切点坐标为 $(a, \\ln a)$,\r\n\r\n因为 $x+y=1$ 的斜率为 $-1$ , 所以切线的斜率为 $1$,\r\n\r\n令 $\\dfrac{1}{a}=1$ 得 $a=1$, 切点为 $(1,0)$, 切线为 $y-0=x-1$, 即 $y=x-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "垂直⇒斜率乘积为 -1，切线斜率取 +1（不是直线的 -1）",
+        "须由 1/a=1 解出切点横坐标 a=1，再回代求纵坐标 ln1=0"
+      ],
+      "key_point": "切线斜率=1（与 x+y=1 垂直），切点 (1,0)，切线为 y=x-1。"
+    },
+    {
+      "id": 904,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知 $f^{\\prime}\\left(\\mathrm{e}^{x}\\right)=x \\mathrm{e}^{-x}$, 且 $f(1)=0$, 则 $f(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}(\\ln x)^2$",
+      "analysis": "令 $\\mathrm{e}^x=t$, 由 $f^{\\prime}\\left(\\mathrm{e}^x\\right)=x \\mathrm{e}^{-x}$, \r\n\r\n得 $f^{\\prime}(t)=\\dfrac{\\ln t}{t}$, \r\n\r\n从而 $f^{\\prime}(x)=\\dfrac{\\ln x}{x}$. \r\n\r\n于是 $f(x)=\\dfrac{1}{2}(\\ln x)^2+C$, \r\n\r\n由 $f(1)=0$ 得 $C=0$, \r\n\r\n故 $f(x)=\\dfrac{1}{2}(\\ln x)^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 t=e^x 则 x=ln t、e^{-x}=1/t，得 f'(t)=ln t / t，不能把 x 直接换成 t",
+        "∫ ln x / x dx = ½(ln x)²，再由 f(1)=0 定 C=0，漏定常数不得分"
+      ],
+      "key_point": "换元得 f'(x)=ln x / x，积分并由 f(1)=0 定 C=0，得 f(x)=½(ln x)²。"
+    },
+    {
+      "id": 905,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $L$ 为正向圆周 $x^{2}+y^{2}=2$ 在第一象限中的部分, 则曲线积分 $\\displaystyle \\int_{L} x \\mathrm{d} y-2 y \\mathrm{d} x$ 的值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{3 \\pi}{2}$",
+      "analysis": "方法一 令 $A(\\sqrt{2}, 0), B(0, \\sqrt{2})$, \r\n\r\n则 $\\displaystyle \\int_L x \\mathrm{d} y-2 y \\mathrm{d} x\\\\\r\n=\\oint_{L+\\overline{B O}+\\overline{O A}} x \\mathrm{d} y-2 y \\mathrm{d} x+\\int_{\\overline{O B}} x \\mathrm{d} y-2 y \\mathrm{d} x-\\int_{\\overline{O A}} x \\mathrm{d} y-2 y \\mathrm{d} x, \\\\\r\n\\oint_{L+\\overline{B O}+\\overline{O A}} x \\mathrm{d} y-2 y \\mathrm{d} x\\\\\r\n=3 \\iint_D \\mathrm{d} x \\mathrm{d} y=3 \\times \\frac{1}{4} \\times 2 \\pi=\\frac{3 \\pi}{2}, \\\\\r\n\\int_{\\overline{O B}} x \\mathrm{d} y-2 y \\mathrm{d} x=0, \\\\\r\n\\int_{\\overline{O A}} x \\mathrm{d} y-2 y \\mathrm{d} x=0$,\r\n\r\n于是 $\\displaystyle \\int_L x \\mathrm{d} y-2 y \\mathrm{d} x=\\frac{3 \\pi}{2}$\r\n\r\n方法二 令 $\\left\\{\\begin{array}{l}x=\\sqrt{2} \\cos \\theta, \\\\ y=\\sqrt{2} \\sin \\theta\\end{array}\\left(\\right.\\right.$ 起点 $\\theta=0$, 终点 $\\left.\\theta=\\dfrac{\\pi}{2}\\right)$, 则\r\n$\\displaystyle \\int_L x \\mathrm{d} y-2 y \\mathrm{d} x \\\\\r\n=\\int_0^{\\frac{\\pi}{2}}(\\sqrt{2} \\cos \\theta \\cdot \\sqrt{2} \\cos \\theta+2 \\sqrt{2} \\sin \\theta \\cdot \\sqrt{2} \\sin \\theta) \\mathrm{d} \\theta \\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}}\\left(1+\\sin ^2 \\theta\\right) \\mathrm{d} \\theta=\\pi+2 I_2=\\frac{3 \\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "L 是非闭弧，须补 OA、OB 两坐标轴线段才能用格林公式",
+        "∂Q/∂x-∂P/∂y=1-(-2)=3，∬3dA=3·(¼·π·(√2)²)=3π/2；补线段上 dx=0 或 dy=0 使积分为 0"
+      ],
+      "key_point": "补两坐标轴线段用格林公式，得 3×(四分之一圆盘面积 π/2)=3π/2。"
+    },
+    {
+      "id": 908,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "欧拉方程 $\\displaystyle x^{2} \\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}+4 x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+2 y=0(x>0)$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle y=\\frac{C_1}{x}+\\frac{C_2}{x^2}\\left(C_1, C_2\\right.$ 为任意常数)",
+      "analysis": "令 $x=\\mathrm{e}^t$, \r\n\r\n则 $\\displaystyle x^2 \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=\\mathrm{D}(\\mathrm{D}-1) y=\\frac{\\mathrm{d}^2 y}{\\mathrm{d} t^2}-\\frac{\\mathrm{d} y}{\\mathrm{d} t}, \\\\\r\nx \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\mathrm{D} y=\\frac{\\mathrm{d} y}{\\mathrm{d} t}$, \r\n\r\n代入原方程得 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} t^2}+3 \\frac{\\mathrm{d} y}{\\mathrm{d} t}+2 y=0$, \r\n\r\n通解为 $y=C_1 \\mathrm{e}^{-t}+C_2 \\mathrm{e}^{-2 t}$, \r\n\r\n故原方程的通解为 $\\displaystyle y=\\frac{C_1}{x}+\\frac{C_2}{x^2}$ ( $C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 x=e^t 时 x²y''=D(D-1)y、xy'=Dy，代入得特征方程 r²+3r+2=0（不是 r²+4r+2=0）",
+        "特征根 -1、-2 对应 e^{-t}、e^{-2t}，回代 t=ln x 得 1/x、1/x²"
+      ],
+      "key_point": "令 x=e^t 化欧拉方程为常系数方程，特征根 -1、-2，通解 y=C₁/x+C₂/x²。"
+    },
+    {
+      "id": 909,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}2 & 1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 矩阵 $\\boldsymbol{B}$ 满足 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^{*}=2 \\boldsymbol{B} \\boldsymbol{A}^{*}+\\boldsymbol{E}$, 其中 $\\boldsymbol{A}^{*}$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{E}$ 是单位矩阵, 则 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{9}$",
+      "analysis": "$|\\boldsymbol{A}|=3$, \r\n\r\n在 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^*=2 \\boldsymbol{B} \\boldsymbol{A}^*+\\boldsymbol{E}$ 两边右乘 $\\boldsymbol{A}$, \r\n\r\n得 $3 \\boldsymbol{A} \\boldsymbol{B}=6 \\boldsymbol{B}+\\boldsymbol{A}$, 即 $3(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=\\boldsymbol{A}$, \r\n\r\n于是 $3^3|\\boldsymbol{A}-2 \\boldsymbol{E}| \\cdot|\\boldsymbol{B}|=|\\boldsymbol{A}|$,\r\n\r\n而 $\\boldsymbol{A}-2 \\boldsymbol{E}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1\\end{array}\\right),|\\boldsymbol{A}-2 \\boldsymbol{E}|=1$, \r\n\r\n故 $\\displaystyle |\\boldsymbol{B}|=\\frac{1}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "右乘 A 用 A*A=|A|E=3E，化为 3(A-2E)B=A，别把 A* 当成 A 的逆直接消去",
+        "取行列式 3³|A-2E|·|B|=|A|，|A-2E|=1、|A|=3 ⇒ |B|=3/27=1/9，注意 3 阶行列式提公因子是 3³"
+      ],
+      "key_point": "右乘 A 用 AA*=|A|E 化简，取行列式得 |B|=|A|/(27|A-2E|)=1/9。"
+    },
+    {
+      "id": 910,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $\\lambda$ 的指数分布, 则 $P\\{X>\\sqrt{D(X)}\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "由 $X \\sim E(\\lambda)$, 得 $D(X)=\\dfrac{1}{\\lambda^2}$, \r\n\r\n且其分布函数为 $F(x)= \\begin{cases}0, & x<0 \\\\ 1-\\mathrm{e}^{-\\lambda x}, & x \\geqslant 0\\end{cases}$ \r\n\r\n于是 $\\displaystyle P\\{X>\\sqrt{D(X)}\\}\\\\\r\n=P\\left\\{X>\\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-P\\left\\{X \\leqslant \\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-F\\left(\\frac{1}{\\lambda}\\right)\\\\\r\n=\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数分布方差是 1/λ²（不是 1/λ），故 √D(X)=1/λ",
+        "P{X>1/λ}=e^{-λ·(1/λ)}=e^{-1}，结果与 λ 无关"
+      ],
+      "key_point": "√D(X)=1/λ，代尾概率 P{X>1/λ}=e^{-1}=1/e。"
+    },
+    {
+      "id": 911,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "把 $x \\rightarrow 0^{+}$时的无穷小量 $\\displaystyle \\alpha=\\int_{0}^{x} \\cos t^{2} \\mathrm{d} t, \\\\\r\n\\beta=\\int_{0}^{x^{2}} \\tan \\sqrt{t} \\mathrm{d} t, \\gamma=\\int_{0}^{\\sqrt{x}} \\sin t^{3} \\mathrm{d} t$ 排列起来, 使排在 后面的是前一个的高阶无穷小量, 则正确的排列次序是 $(\\quad)$",
+      "options": {
+        "A": "$\\alpha, \\beta, \\gamma$",
+        "B": "$\\alpha, \\gamma, \\beta$",
+        "C": "$\\beta, \\alpha, \\gamma$",
+        "D": "$\\beta, \\gamma, \\alpha$"
+      },
+      "answer": "B",
+      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\cos x^2=1$, 得 $\\alpha \\sim x$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{m x^{m-1}}$, 得 $m-1=2$, 即 $m=3$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^3}=\\frac{2}{3}$, 于是 $\\beta \\sim \\dfrac{2}{3} x^3$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\sin x \\sqrt{x}}{m x^{m-1}}$, 得 $m-1=1$, 即 $m=2$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^2}=\\frac{1}{4}$, 于是 $\\gamma \\sim \\dfrac{1}{4} x^2$\r\n\r\n故无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)\r\n\r\n方法二 因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{\\beta}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\cos x^2}{2 x \\tan x}=+\\infty,\\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{\\gamma}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}=0, \\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{\\alpha}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{\\int_0^x \\cos t^2 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}{\\cos x^2}=0$,\r\n\r\n所以无穷小量的阶数从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B).\r\n\r\n方法三 由 $t \\rightarrow 0^{+}$时, \r\n\r\n$\\cos t^2 \\rightarrow 1, \\tan \\sqrt{t} \\sim \\sqrt{t}, \\sin t^3 \\sim t^3$ 得\r\n\r\n$\\displaystyle \\alpha \\sim \\int_0^x 1 \\mathrm{d} t=x, \\beta \\sim \\int_0^{x^2} \\sqrt{t} \\mathrm{d} t=\\left.\\frac{2}{3} t^{\\frac{3}{2}}\\right|_0 ^{x^2}=\\frac{2}{3} x^3, \\gamma \\sim \\int_0^{\\sqrt{x}} t^3 \\mathrm{d} t=\\frac{1}{4} x^2$,\r\n\r\n显然无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)",
+      "wrong_options": {
+        "A": "误把 β 当 2 阶、γ 当 3 阶，弄反了 γ 与 β 的阶数（实际 γ 是 2 阶、β 是 3 阶）。",
+        "C": "误判 β 阶数最低（当成 1 阶），实际 β 是最高阶（3 阶）应排最后。",
+        "D": "阶数完全倒序，误以为 β 最低阶、α 最高阶，与实际 α<γ<β 相反。"
+      },
+      "pitfalls": [
+        "上限含 x²、√x，求导须乘链式因子后才能定准阶：α~x（1 阶）、γ~x²/4（2 阶）、β~(2/3)x³（3 阶）",
+        "“后者是前者的高阶无穷小”指阶数更高（趋 0 更快），故按阶数升序排 α,γ,β"
+      ],
+      "key_point": "三者阶数 α(1)<γ(2)<β(3)，后者为前者高阶无穷小，排列为 α,γ,β。"
+    },
+    {
+      "id": 912,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, 且 $f^{\\prime}(0)>0$, 则存在 $\\delta>0$, 使得 $(\\quad)$",
+      "options": {
+        "A": "$f(x)$ 在 $(0, \\delta)$ 内单调增加",
+        "B": "$f(x)$ 在 $(-\\delta, 0)$ 内单调减少",
+        "C": "对任意的 $x \\in(0, \\delta)$ 有 $f(x)>f(0)$",
+        "D": "对任意的 $x \\in(-\\delta, 0)$ 有 $f(x)>f(0)$"
+      },
+      "answer": "C",
+      "analysis": "根据导数的定义, $\\displaystyle f^{\\prime}(0)=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}>0$. \r\n\r\n由极限保号性, 存在 $\\delta>0$, \r\n\r\n当 $0<|x|<\\delta$ 时, $\\dfrac{f(x)-f(0)}{x}>0$. \r\n\r\n于是当 $x \\in(-\\delta, 0)$ 时, $f(x)<f(0)$; \r\n\r\n当 $x \\in(0, \\delta)$ 时, $f(x)>f(0)$, 应选 (C)",
+      "wrong_options": {
+        "A": "f'(0)>0 只给 0 点的信息，推不出 f 在整个 (0,δ) 上单调增（其余点导数符号未知）。",
+        "B": "同理一点导数正推不出 f 在 (-δ,0) 上单调减少，单调性需区间上导数符号。",
+        "D": "由保号性 x∈(-δ,0) 时 x<0 而商>0，得 f(x)<f(0)，与 D 所述 f(x)>f(0) 相反。"
+      },
+      "pitfalls": [
+        "f'(0)>0 只是一点信息，推不出邻域内的单调性（A、B 都错）",
+        "由 (f(x)-f(0))/x>0：x>0 得 f(x)>f(0)、x<0 得 f(x)<f(0)，符号随 x 正负而变"
+      ],
+      "key_point": "极限保号性给去心邻域 (f(x)-f(0))/x>0，故 x∈(0,δ) 时 f(x)>f(0)（选 C）。"
+    },
+    {
+      "id": 913,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 为正项级数,下列结论中正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_{n}=0$, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 收敛",
+        "B": "若存在非零常数 $\\lambda$, 使得 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_{n}=\\lambda$, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 发散",
+        "C": "若级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 收敛, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} n^{2} a_{n}=0$",
+        "D": "若级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 发散, 则存在非零常数 $\\lambda$, 使得 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_{n}=\\lambda$"
+      },
+      "answer": "B",
+      "analysis": "方法一 取 $\\displaystyle a_n=\\frac{1}{n \\ln (n+1)}$, \r\n\r\n显然 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n=0$, \r\n\r\n但级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n=\\sum_{n=1}^{\\infty} \\frac{1}{n \\ln (n+1)}$ 发散, (A) 不对;\r\n\r\n取 $\\displaystyle a_n=\\frac{1}{n^{\\frac{3}{2}}}$, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n=\\sum_{n=1}^{\\infty} \\frac{1}{n^{\\frac{3}{2}}}$ 收敛, \r\n\r\n但 $\\displaystyle \\lim _{n \\rightarrow \\infty} n^2 a_n=\\lim _{n \\rightarrow \\infty} \\sqrt{n}=+\\infty$, (C) 不对;\r\n\r\n取 $\\displaystyle a_n=\\frac{1}{\\ln (n+1)}$, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_n=\\sum_{n=1}^{\\infty} \\frac{1}{\\ln (n+1)}$ 发散, \r\n\r\n但 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n=+\\infty$, (D) 不对, 应选 (B).\r\n\r\n方法二 设 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n=\\lambda>0$, \r\n\r\n取 $\\varepsilon_0=\\dfrac{\\lambda}{2}>0$, 因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} n a_n=\\lambda$, \r\n\r\n所以存在 $N$, 当 $n>N$ 时,\r\n$\\displaystyle \\left|n a_n-\\lambda\\right|<\\frac{\\lambda}{2}$, \r\n\r\n于是 $\\displaystyle n a_n>\\frac{\\lambda}{2}$ 或 $\\displaystyle a_n>\\frac{\\lambda}{2 n}$, 而 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{\\lambda}{2 n}$ 发散, \r\n\r\n由正项级数的比较审敛法得 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 发散, 应选 (B)",
+      "wrong_options": {
+        "A": "na_n→0 推不出收敛，反例 a_n=1/[n·ln(n+1)]：na_n→0 但级数发散。",
+        "C": "收敛推不出 n²a_n→0，反例 a_n=1/n^{3/2}：级数收敛但 n²a_n=√n→∞。",
+        "D": "发散推不出 na_n 有非零极限，反例 a_n=1/ln(n+1)：级数发散但 na_n→∞。"
+      },
+      "pitfalls": [
+        "A、C、D 都能举反例否定，只有 B 恒成立",
+        "B 中 na_n→λ≠0 ⇒ a_n~λ/n，与调和级数比较得发散"
+      ],
+      "key_point": "na_n→λ≠0 时 a_n~λ/n 发散（选 B）；A、C、D 均有反例。"
+    },
+    {
+      "id": 914,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 为连续函数, $\\displaystyle F(t)=\\int_{1}^{t} \\mathrm{d} y \\int_{y}^{t} f(x) \\mathrm{d} x$, 则 $F^{\\prime}(2)$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$2 f(2)$",
+        "B": "$f(2)$",
+        "C": "$-f(2)$",
+        "D": "$0$"
+      },
+      "answer": "B",
+      "analysis": "方法一 交换积分次序, 得\r\n\r\n$\\displaystyle F(t)=\\int_1^t \\mathrm{d} y \\int_y^t f(x) \\mathrm{d} x=\\int_1^t \\mathrm{d} x \\int_1^x f(x) \\mathrm{d} y=\\int_1^t(x-1) f(x) \\mathrm{d} x$,\r\n\r\n$F^{\\prime}(t)=(t-1) f(t)$, \r\n\r\n则 $F^{\\prime}(2)=(2-1) f(2)=f(2)$, 应选 (B)\r\n\r\n方法二 令 $\\displaystyle G(x)=\\int_1^x f(t) \\mathrm{d} t$, 则\r\n\r\n$\\displaystyle F(t)  =\\int_1^t \\mathrm{d} y \\int_y^t f(x) \\mathrm{d} x\\\\\r\n=\\int_1^t[G(t)-G(y)] \\mathrm{d} y \\\\\r\n=(t-1) G(t)-\\int_1^t G(y) \\mathrm{d} y$,\r\n\r\n$F^{\\prime}(t)=G(t)+(t-1) G^{\\prime}(t)-G(t)=(t-1) f(t)$, \r\n\r\n于是 $F^{\\prime}(2)=f(2)$, 应选 $(\\mathrm{B})$",
+      "wrong_options": {
+        "A": "2f(2)——误把 F'(t) 当作把两处含 t 的贡献各算一次相加，重复计数。",
+        "C": "-f(2)——交换次序时积分限方向或求导符号弄反。",
+        "D": "0——误以为对 t 求导后代入得 0，忽略 t 同时出现在上限与被积区域。"
+      },
+      "pitfalls": [
+        "t 同时出现在两处上限，直接对原累次式求导易错，先交换次序更稳",
+        "交换后 F(t)=∫₁^t(x-1)f(x)dx，F'(t)=(t-1)f(t)，代 t=2 得 f(2)"
+      ],
+      "key_point": "交换次序 F(t)=∫₁^t(x-1)f(x)dx，F'(t)=(t-1)f(t)，F'(2)=f(2)。"
+    },
+    {
+      "id": 915,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶方阵, 将 $\\boldsymbol{A}$ 的第 $1$ 列与第 $2$ 列交换得 $\\boldsymbol{B}$, 再将 $\\boldsymbol{B}$ 的第 $2$ 列加到第 $3$ 列得 $\\boldsymbol{C}$, 则满足 $\\boldsymbol{A Q}=\\boldsymbol C$ 的可逆矩阵 $\\boldsymbol Q$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 1 & 1\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}0 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "由初等变换的定义, 得\r\n\r\n$\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right), \\\\\r\n\\boldsymbol{C}=\\boldsymbol{B}\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{C}=\\boldsymbol{A}\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{Q}=\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{lll}\r\n0 & 1 & 1 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$, 应选 (D)",
+      "wrong_options": {
+        "A": "把“第 2 列加到第 3 列”对应的初等矩阵位置写错（非对角元放错行列）。",
+        "B": "两初等矩阵相乘顺序颠倒（左右乘弄反），得错误 Q。",
+        "C": "把列变换误当左乘（用了行变换矩阵），非对角元位置随之出错。"
+      },
+      "pitfalls": [
+        "列变换=右乘初等矩阵、行变换=左乘，不能混",
+        "Q=E(交换1、2列)·E(第2列加到第3列)，右乘要按操作先后从左往右相乘"
+      ],
+      "key_point": "Q=E₁(交换 1、2 列)·E₂(2 列加到 3 列)=选项 D 的矩阵。"
+    },
+    {
+      "id": 916,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为满足 $\\boldsymbol{A B}=\\boldsymbol{O}$ 的任意两个非零矩阵, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
+        "B": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关",
+        "C": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
+        "D": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关"
+      },
+      "answer": "A",
+      "analysis": "方法一 设 $\\boldsymbol{A}$ 为 $m \\times n$ 矩阵, $\\boldsymbol{B}$ 为 $n \\times s$ 矩阵.\r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant n$.\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以 $r(\\boldsymbol{A}) \\geqslant 1, r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n于是 $r(\\boldsymbol{A})<n, r(\\boldsymbol{B})<n$.\r\n\r\n因为矩阵的秩、矩阵行向量组的秩、矩阵列向量组的秩都相等, \r\n\r\n于是 $\\boldsymbol{A}$ 的列向量组的秩小于列数, \r\n\r\n$\\boldsymbol{B}$ 的行向量组的秩小于行数, \r\n\r\n$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关, \r\n\r\n应选 (A)\r\n\r\n方法二\r\n\r\n设 $\\boldsymbol{A}\\\\\r\n=\\left(\\begin{array}{cccc}a_{11} & a_{12} & \\cdots & a_{1 n} \\\\ a_{21} & a_{22} & \\cdots & a_{2 n} \\\\ \\vdots & \\vdots & & \\vdots \\\\ a_{m 1} & a_{m 2} & \\cdots & a_{m n}\\end{array}\\right)\\\\\r\n=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n\\right), \\\\\r\n\\boldsymbol{B}\\\\\r\n=\\left(\\begin{array}{cccc}b_{11} & b_{12} & \\cdots & b_{1 s} \\\\ b_{21} & b_{22} & \\cdots & b_{2 s} \\\\ \\vdots & \\vdots & & \\vdots \\\\ b_{n 1} & b_{n 2} & \\cdots & b_{n s}\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{c}\\boldsymbol{\\beta}_1 \\\\ \\boldsymbol{\\beta}_2 \\\\ \\vdots \\\\ \\boldsymbol{\\beta}_n\\end{array}\\right)$, \r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$ 得\r\n\r\n$\\left\\{\\begin{array} { l }\r\n b _ { 1 1 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 1 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 1 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n b _ { 1 2 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 2 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 2 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n \\vdots  \\\\\r\n b _ { 1 s } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 s } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n s } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }  \r\n\\end{array}\\right.$\r\n\r\n及 $\\left\\{\\begin{array}{l}\r\na_{11} \\boldsymbol{\\beta}_1+a_{12} \\boldsymbol{\\beta}_2+\\cdots+a_{1 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\na_{21} \\boldsymbol{\\beta}_1+a_{22} \\boldsymbol{\\beta}_2+\\cdots+a_{2 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\n\\vdots \\\\\r\na_{m 1} \\boldsymbol{\\beta}_1+a_{m 2} \\boldsymbol{\\beta}_2+\\cdots+a_{m n} \\boldsymbol{\\beta}_n=\\mathbf{0}\r\n\\end{array}\\right.$\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以存在不全为零的常数 $b_{1 j}, b_{2 j}, \\cdots, b_{n j}$ 及 $a_{i 1}, a_{i 2}, \\cdots, a_{i n}$, \r\n\r\n使得 $b_{1 j} \\boldsymbol{\\alpha}_1+b_{2 j} \\boldsymbol{\\alpha}_2+\\cdots+b_{n j} \\boldsymbol{\\alpha}_n=\\mathbf{0}$ \r\n\r\n及 $a_{i 1} \\boldsymbol{\\beta}_1+a_{i 2} \\boldsymbol{\\beta}_2+\\cdots+a_{i n} \\boldsymbol{\\beta}_n=\\mathbf{0}$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 与 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_n$ 都线性相关, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "误判 B 列向量组相关；受约束的是 B 的行（r(B)<n=B 的行数），列数 s 未定。",
+        "C": "误判 A 行相关；由 Ax=0 有非零解只能推 A 的列向量组相关，不是行。",
+        "D": "A、B 的相关方向都判反（应为 A 列相关、B 行相关）。"
+      },
+      "pitfalls": [
+        "AB=O 表示 B 每列都是 Ax=0 的解，A 有非零解 ⇒ A 列向量组相关",
+        "r(A)+r(B)≤n 且 A、B 非零使二者秩≥1，故 r(B)<n=B 的行数 ⇒ B 行向量组相关"
+      ],
+      "key_point": "AB=O 且 A、B 非零 ⇒ A 列向量组线性相关、B 行向量组线性相关（选 A）。"
+    },
+    {
+      "id": 917,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从正态分布 $N(0,1)$, 对给定的 $\\alpha(0<\\alpha<1)$, 数 $u_{\\alpha}$ 满足 $P\\left\\{X>u_{\\alpha}\\right\\}=\\alpha$. 若 $P\\{|X|<x\\}=\\alpha$, 则 $x$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$u_{\\frac{a}{2}}$",
+        "B": "$u_{1-\\frac{a}{2}}$",
+        "C": "$u_{\\frac{1-\\alpha}{2}}$",
+        "D": "$u_{1-\\alpha}$"
+      },
+      "answer": "C",
+      "analysis": "由 $P\\{|X|<x\\}=1-P\\{|X| \\geqslant x\\}=1-2 P\\{X \\geqslant x\\}=\\alpha$, \r\n\r\n得 $\\displaystyle P\\{X \\geqslant x\\}=\\frac{1-\\alpha}{2}$.,\r\n\r\n再由 $P\\left\\{X>u_a\\right\\}=\\alpha$, \r\n\r\n得 $x=u_{\\frac{1-a}{2}}$, 应选 (C)",
+      "wrong_options": {
+        "A": "u_{α/2}——由 P{X>x}=(1-α)/2 应取下标 (1-α)/2，误把 α 与 1-α 弄反。",
+        "B": "u_{1-α/2}——下标取错，混淆上侧与下侧分位数。",
+        "D": "u_{1-α}——漏掉双侧对称的因子 1/2。"
+      },
+      "pitfalls": [
+        "P{|X|<x}=1-2P{X≥x}=α ⇒ P{X≥x}=(1-α)/2",
+        "u_α 的定义是 P{X>u_α}=α，故 x=u_{(1-α)/2}；易误写 α/2 或漏 1/2"
+      ],
+      "key_point": "由对称性 P{X≥x}=(1-α)/2，故 x=u_{(1-α)/2}（选 C）。"
+    },
+    {
+      "id": 918,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X_{1}, X_{2}, \\cdots, X_{n}(n>1)$ 独立同分布, 且其方差为 $\\sigma^{2}>0$. 令 $\\displaystyle Y=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\operatorname{Cov}\\left(X_{1}, Y\\right)=\\dfrac{\\sigma^{2}}{n}$",
+        "B": "$\\operatorname{Cov}\\left(X_{1}, Y\\right)=\\sigma^{2}$",
+        "C": "$D\\left(X_{1}+Y\\right)=\\dfrac{n+2}{n} \\sigma^{2}$",
+        "D": "$D\\left(X_{1}-Y\\right)=\\dfrac{n+1}{n} \\sigma^{2}$"
+      },
+      "answer": "A",
+      "analysis": "$\\operatorname{Cov}\\left(X_1, Y\\right)=\\dfrac{1}{n}\\left[\\operatorname{Cov}\\left(X_1, X_1\\right)+\\operatorname{Cov}\\left(X_1, X_2\\right)+\\cdots+\\operatorname{Cov}\\left(X_1, X_n\\right)\\right]$\r\n\r\n因为 $X_1, X_2, \\cdots, X_n$ 相互独立, \r\n\r\n所以 $\\operatorname{Cov}\\left(X_1, X_i\\right)=0(i=2,3, \\cdots, n)$, \r\n\r\n于是 $\\displaystyle \\operatorname{Cov}\\left(X_1, Y\\right)=\\frac{1}{n} D\\left(X_1\\right)=\\frac{\\sigma^2}{n}$, 应选 (A)",
+      "wrong_options": {
+        "B": "σ²——只算了 Cov(X₁,X₁)=σ² 却漏掉 Y=(1/n)ΣXᵢ 的 1/n 因子。",
+        "C": "D(X₁+Y)=(n+2)/n·σ² 错；正确为 (n+3)/n·σ²，漏算交叉项 2Cov=2σ²/n。",
+        "D": "D(X₁-Y)=(n+1)/n·σ² 错；正确为 (n-1)/n·σ²，减号下交叉项符号处理错。"
+      },
+      "pitfalls": [
+        "Cov(X₁,Y)=(1/n)Σ_i Cov(X₁,Xᵢ)，独立时 i≠1 项全为 0，只剩 (1/n)D(X₁)=σ²/n",
+        "算 D(X₁±Y) 必须含 ±2Cov(X₁,Y) 交叉项，别漏"
+      ],
+      "key_point": "Cov(X₁,Y)=(1/n)D(X₁)=σ²/n（选 A）。"
+    },
+    {
+      "id": 919,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 15,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\mathrm{e}<a<b<\\mathrm{e}^{2}$, 证明 $\\displaystyle : \\ln ^{2} b-\\ln ^{2} a>\\frac{4}{\\mathrm{e}^{2}}(b-a)$",
+      "options": {},
+      "answer": "证明题（详见解析）",
+      "analysis": "方法一 辅助函数法 (单调性)\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\\\ \r\n\\ln ^2 b-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(b-a)>0$,\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(x-a), \\quad f(a)=0\\\\\r\nf^{\\prime}(x)=\\frac{2 \\ln x}{x}-\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n因为 $\\displaystyle f^{\\prime \\prime}(x)=\\frac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以当 $x>\\mathrm{e}$ 时, $f^{\\prime}(x)$ 单调减少.\r\n\r\n由 $\\left\\{\\begin{array}{l}f^{\\prime}\\left(\\mathrm{e}^2\\right)=0 \\\\ f^{\\prime \\prime}(x)<0(x>\\mathrm{e})\\end{array}\\right.$ \r\n\r\n得 $f^{\\prime}(x)>0\\left(\\mathrm{e}<x<\\mathrm{e}^2\\right)$, \r\n\r\n即 $f(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调增加, \r\n\r\n由 $\\mathrm{e}<a<b<\\mathrm{e}^2$ 及 $f(a)=0$ 得 $f(b)>0$, \r\n\r\n故 $\\ln ^2 b-\\ln ^2 a>\\dfrac{4}{\\mathrm{e}^2}(b-a)$\r\n\r\n方法二 中值定理法\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x, f^{\\prime}(x)=\\frac{2 \\ln x}{x}$, \r\n\r\n由拉格朗日中值定理得\r\n\r\n$\\dfrac{\\ln ^2 b-\\ln ^2 a}{b-a}=\\dfrac{2 \\ln c}{c}$, 其中 $c \\in(a, b)$\r\n\r\n令 $\\varphi(x)=\\dfrac{2 \\ln x}{x}$, \r\n\r\n因为 $\\varphi^{\\prime}(x)=\\dfrac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以 $\\varphi(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调减少且 $\\varphi\\left(\\mathrm{e}^2\\right)=\\dfrac{4}{\\mathrm{e}^2}$, \r\n\r\n从而 $\\displaystyle \\frac{2 \\ln c}{c}>\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n即 $\\displaystyle \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 f(x)=ln²x-ln²a-4(x-a)/e²，须由 f''(x)<0(x>e) 得 f' 单减、f'(e²)=0，才推出 f'>0 于 (e,e²)",
+        "或用拉氏定理 ln²b-ln²a=(2lnξ/ξ)(b-a)，还要证 e<ξ<e² 时 2lnξ/ξ>4/e²，不能想当然"
+      ],
+      "key_point": "辅助函数 f(x)=ln²x-4x/e² 在 (e,e²) 内单调增，得 ln²b-ln²a>4(b-a)/e²。"
+    },
+    {
+      "id": 920,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某种飞机在机场降落时, 为了减少滑行距离, 在触地的瞬间, 飞机尾部张开减速伞, 以增大阻力, 使飞机迅速减速并停下. 现有一质量为 $9000 \\mathrm{kg}$ 的飞机, 着陆时的水平速度为 $700 \\mathrm{km} / \\mathrm{h}$. 经测试, 减速伞打开后, 飞机所受的总阻力与飞机的速度成正比 (比例系数为 $k=6.0 \\times 10^{6}$ ). 问从着陆点算起, 飞机滑行的最长距离是多少? (注 $: \\mathrm{kg}$ 表示千克, $\\mathrm{km} / \\mathrm{h}$ 表示千米/小时)",
+      "options": {},
+      "answer": "$1.05(\\mathrm{km})$",
+      "analysis": "设从着陆 $(t=0)$ 开始 $t$ 时刻飞机滑行的速度为 $v(t)$, \r\n\r\n根据题意和牛顿第二定律得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nm \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v \\\\\r\nv(0)=700\r\n\\end{array}\\right.$\r\n\r\n由 $m \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v$, 得 $\\dfrac{\\mathrm{d} v}{\\mathrm{d} t}+\\dfrac{k}{m} v=0$, \r\n\r\n解得 $\\displaystyle v(t)=C \\mathrm{e}^{-\\int \\frac{k}{m} \\mathrm{d} t}=C \\mathrm{e}^{-\\frac{k}{m} t}$,\r\n\r\n由 $v(0)=700$ 得 $C=700$, 于是 $\\displaystyle v(t)=700 \\mathrm{e}^{-\\frac{k}{m} t}$\r\n\r\n故飞机滑行的最大距离为\r\n\r\n$\\displaystyle \r\nS =\\int_0^{+\\infty} v(t) \\mathrm{d} t\\\\\r\n=700 \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d} t \\\\\r\n=\\frac{700 m}{k} \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d}\\left(\\frac{k}{m} t\\right)\\\\\r\n=\\frac{700 m}{k} \\Gamma(1)\\\\\r\n=\\frac{700 m}{k}=1.05(\\mathrm{km})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 m dv/dt=-kv 解得 v(t)=700e^{-kt/m}，v(0)=700 定常数",
+        "最长距离是 t→+∞ 的总路程 S=∫₀^{+∞}v dt=700m/k（反常积分），代 m=9000、k=6×10⁶ 得 1.05 km；v 用 km/h、结果自然为 km"
+      ],
+      "key_point": "阻力∝v 建立 mv'=-kv，S=∫₀^{+∞}v dt=700m/k=1.05 km。"
+    },
+    {
+      "id": 921,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分 $\\displaystyle I=\\iint\\limits_{\\Sigma} 2 x^{3} \\mathrm{d} y \\mathrm{d} z+2 y^{3} \\mathrm{d} z \\mathrm{d} x+3\\left(z^{2}-1\\right) \\mathrm{d} x \\mathrm{d} y$, 其中 $\\Sigma$ 是曲面 $z=1-x^{2}-y^{2}$ $(z \\geqslant 0)$ 的上侧",
+      "options": {},
+      "answer": "$-\\pi$",
+      "analysis": "补充 $\\displaystyle \\Sigma_0: z=0\\left(x^2+y^2 \\leqslant 1\\right)$, 取下侧,\r\n\r\n$\\displaystyle I=\\\\ \r\n\\left(\\oiint\\limits_{\\Sigma+\\Sigma_0}-\\iint\\limits_{\\Sigma_0}\\right) 2 x^3 \\mathrm{d} y \\mathrm{d} z+2 y^3 \\mathrm{d} z \\mathrm{d} x+3\\left(z^2-1\\right) \\mathrm{d} x \\mathrm{d} y\r\n\\stackrel{\\Delta}{=}I_1-I_2$,\r\n\r\n由高斯公式得\r\n\r\n$\\displaystyle I_1 =6 \\iiint\\limits_{\\Omega}\\left(x^2+y^2+z\\right) \\mathrm{d} v, \\\\\r\n= 6 \\int_0^1 \\mathrm{d} z \\iint\\limits_{x^2+y^2 \\leqslant 1-z}\\left(x^2+y^2+z\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=6 \\int_0^1 \\mathrm{d} z \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\sqrt{1-z}} r\\left(r^2+z\\right) \\mathrm{d} r \\\\\r\n= 12 \\pi \\int_0^1\\left[\\frac{(1-z)^2}{4}+\\frac{z(1-z)}{2}\\right] \\mathrm{d} z\\\\\r\n=3 \\pi \\int_0^1\\left(1-z^2\\right) \\mathrm{d} z=2 \\pi$\r\n\r\n而 $\\displaystyle I_2=-3 \\iint\\limits_{\\Sigma_0} \\mathrm{d} x \\mathrm{d} y=3 \\iint\\limits_D \\mathrm{d} x \\mathrm{d} y=3 \\pi$\r\n\r\n故 $\\displaystyle I=2 \\pi-3 \\pi=-\\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Σ 是上侧非闭曲面，须补底面 Σ₀:z=0(x²+y²≤1) 取下侧凑成外侧闭曲面",
+        "散度=6x²+6y²+6z，三重积分用柱坐标；最后要减去补面 ∬_{Σ₀}3(z²-1)dxdy（z=0 处为 -3·π=-3π，取下侧再变号），漏减或符号错则结果错"
+      ],
+      "key_point": "补底面用高斯公式，I=I₁-I₂=-π。"
+    },
+    {
+      "id": 922,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设有方程 $x^{n}+n x-1=0$, 其中 $n$ 为正整数, 证明此方程存在唯一正实根 $x_{n}$, 并证明当 $\\alpha>1$ 时, 级数 $\\displaystyle \\sum_{\\displaystyle n=1}^{\\infty} x_{n}^{\\alpha}$ 收敛",
+      "options": {},
+      "answer": "略",
+      "analysis": "记 $f(x)=x^n+n x-1,\\ f(0)=-1, f(1)=n$,\r\n\r\n因为 $f(0) f(1)<0$, 所以由零点定理, \r\n\r\n存在 $x_n \\in(0,1)$, 使得 $f\\left(x_n\\right)=0$, \r\n\r\n即方程 $x^n+n x-1=0$ 有正根 $x_n$,\r\n\r\n因为 $f^{\\prime}(x)=n x^{n-1}+n>0(x>0)$, \r\n\r\n所以 $f(x)$ 在 $[0,+\\infty)$ 上单调增加, \r\n\r\n故 $x^n+n x-1=0$ 存在唯一的正根 $x_n$,\r\n\r\n由 $x_n^n+n x_n-1=0$,\r\n\r\n得 $0<x_n=\\dfrac{1}{n}\\left(1-x_n^n\\right)<\\dfrac{1}{n}$, \r\n\r\n于是 $0<x_n^\\alpha<\\dfrac{1}{n^\\alpha}$.\r\n\r\n因为 $\\alpha>1$ 时 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^\\alpha}$ 收敛, \r\n\r\n所以由正项级数的比较审敛法得 $\\displaystyle \\sum_{n=1}^{\\infty} x_n^\\alpha$ 收敛",
+      "wrong_options": {},
+      "pitfalls": [
+        "f(0)f(1)<0 用零点定理得存在正根，f'(x)>0 得单调 ⇒ 唯一",
+        "关键放缩：由 xₙ^n+nxₙ-1=0 得 0<xₙ=(1-xₙ^n)/n<1/n，故 xₙ^α<1/n^α，α>1 时 p 级数收敛，比较判敛"
+      ],
+      "key_point": "零点定理+单调性证唯一正根；0<xₙ<1/n 放缩后与 p 级数比较得 Σxₙ^α 收敛。"
+    },
+    {
+      "id": 923,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $z=z(x, y)$ 是由 $x^{2}-6 x y+10 y^{2}-2 y z-z^{2}+18=0$ 确定的函数,求 $z=z(x, y)$ 的极值点和极值",
+      "options": {},
+      "answer": "$(x, y)=(9,3)$ 为函数 $z=z(x, y)$ 的极小值点, 极小值为 $3$;\r\n\r\n$(x, y)=(-9,-3)$ 为函数 $z=z(x, y)$ 的极大值点, 极大值为 $-3$",
+      "analysis": "方法一 \r\n\r\n$x^2-6 x y+10 y^2-2 y z-z^2+18=0$ 两边对 $x$ 求偏导,\r\n\r\n得 $\\displaystyle 2 x-6 y-2 y \\frac{\\partial z}{\\partial x}-2 z \\frac{\\partial z}{\\partial x}=0$, \r\n\r\n解得 $\\displaystyle \\frac{\\partial z}{\\partial x}=\\frac{x-3 y}{y+z}$;\r\n\r\n$x^2-6 x y+10 y^2-2 y z-z^2+18=0$ 两边对 $y$ 求偏导,\r\n\r\n得 $\\displaystyle -6 x+20 y-2 z-2 y \\frac{\\partial z}{\\partial y}-2 z \\frac{\\partial z}{\\partial y}=0$, \r\n\r\n解得 $\\displaystyle \\frac{\\partial z}{\\partial y}=\\frac{-3 x+10 y-z}{y+z}$,\r\n\r\n由 $\\left\\{\\begin{array}{l}\\dfrac{\\partial z}{\\partial x}=\\dfrac{x-3 y}{y+z}=0 \\\\ \\dfrac{\\partial z}{\\partial y}=\\dfrac{-3 x+10 y-z}{y+z}=0\\end{array}\\right.$ \r\n\r\n得 $\\left\\{\\begin{array}{l}x=9 \\\\ y=3\\end{array}\\right.$ 或 $\\left\\{\\begin{array}{l}x=-9 \\\\ y=-3 \\end{array}\\right.$\r\n\r\n方法二 \r\n\r\n记 $F(x, y, z)=x^2-6 x y+10 y^2-2 y z-z^2+18$,\r\n\r\n$F_x^{\\prime}=2 x-6 y,\\\\\r\n F_y^{\\prime}=-6 x+20 y-2 z,\\\\\r\nF_z^{\\prime}=-2 y-2 z$,\r\n\r\n由 $\\left\\{\\begin{array}{l}\\dfrac{\\partial z}{\\partial x}=-\\dfrac{F_x^{\\prime}}{F_z^{\\prime}}=\\dfrac{x-3 y}{y+z}=0 \\\\ \r\n\\dfrac{\\partial z}{\\partial y}=-\\dfrac{F_y^{\\prime}}{F_z^{\\prime}}=\\dfrac{-3 x+10 y-z}{y+z}=0\\\\ \r\nx^2-6 x y+10 y^2-2 y z-z^2+18=0\\end{array}\\right.$ \r\n\r\n得 $(x, y)=(9,3)$ 或 $(x, y)=(-9,-3)$.\r\n\r\n- 当 $(x, y)=(9,3)$ 时,\r\n\r\n$\\displaystyle A=\\left.\\frac{\\partial^2 z}{\\partial x^2}\\right|_{(9,3)}=\\frac{1}{6},\\\\\r\nB=\\left.\\frac{\\partial^2 z}{\\partial x \\partial y}\\right|_{(9,3)}=-\\frac{1}{2},\\\\\r\nC=\\left.\\frac{\\partial^2 z}{\\partial y^2}\\right|_{(9,3)}=\\frac{5}{3}$,\r\n\r\n因为 $A C-B^2=\\dfrac{1}{36}>0$ 且 $A>0$, \r\n\r\n所以当 $(x, y)=(9,3)$ 时, \r\n\r\n函数 $z=f(x, y)$ 取极小值 $f(9,3)=3$;\r\n\r\n- 当 $(x, y)=(-9,-3)$ 时,\r\n\r\n$\\displaystyle A=\\left.\\frac{\\partial^2 z}{\\partial x^2}\\right|_{(-9,-3)}=-\\frac{1}{6},\\\\\r\nB=\\left.\\frac{\\partial^2 z}{\\partial x \\partial y}\\right|_{(-9,-3)}=\\frac{1}{2},\\\\\r\nC=\\left.\\frac{\\partial^2 z}{\\partial y^2}\\right|_{(-9,-3)}=-\\frac{5}{3}$,\r\n\r\n因为 $A C-B^2=\\dfrac{1}{36}>0$ 且 $A<0$, \r\n\r\n所以当 $(x, y)=(-9,-3)$ 时, \r\n\r\n函数 $z=f(x, y)$ 取极大值 $f(-9,-3)=-3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 z_x=z_y=0 解出 x=9,y=3 与 x=-9,y=-3，但 z 须回代原方程解出（分别得 z=3、z=-3）",
+        "只解一阶驻点不能定极值，须算二阶偏导用 AC-B² 判别（正值处凹凸不同 ⇒ 一极小一极大）"
+      ],
+      "key_point": "隐函数一阶偏导定驻点、二阶判别：得 (9,3) 极小值 3、(-9,-3) 极大值 -3。"
+    },
+    {
+      "id": 924,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有齐次线性方程组\r\n\r\n$\\begin{cases}(1+a) x_{1}+x_{2}+\\cdots+x_{n}=0 \\\\ 2 x_{1}+(2+a) x_{2}+\\cdots+2 x_{n}=0 \\\\ \\vdots \\\\ n x_{1}+n x_{2}+\\cdots+(n+a) x_{n}=0  \\end{cases} \\quad(n \\geqslant 2)$,\r\n\r\n试问 $a$ 取何值时, 该方程组有非零解, 并求出其通解",
+      "options": {},
+      "answer": "当 $a=0$ 时, 方程组的通解为 $\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{c}-1 \\\\1 \\\\0 \\\\\\vdots \\\\0\\end{array}\\right)\r\n+C_2\\left(\\begin{array}{c}-1 \\\\0 \\\\1 \\\\\\vdots \\\\0\r\n\\end{array}\\right)+\\cdots+\r\nC_{n-1}\\left(\\begin{array}{c}-1 \\\\0 \\\\0 \\\\\\vdots \\\\1\\end{array}\\right)\r\n(C_1, C_2, \\cdots, C_{n-1} )$为任意常数;\r\n\r\n当 $a=-\\dfrac{n(n+1)}{2}$ 时, 原方程组的通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 2 \\\\ \\vdots \\\\ n\\end{array}\\right)$ (C 为任意常数)",
+      "analysis": "$|\\boldsymbol{A}| =\\left|\\begin{array}{cccc}\r\n1+a & 1 & \\cdots & 1 \\\\\r\n2 & 2+a & \\cdots & 2 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\nn & n & \\cdots & n+a\r\n\\end{array}\\right|\\\\\r\n=\\left[a+\\dfrac{n(n+1)}{2}\\right]\\left|\\begin{array}{cccc}\r\n1 & 1 & \\cdots & 1 \\\\\r\n2 & 2+a & \\cdots & 2 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\nn & n & \\cdots & n+a\r\n\\end{array}\\right| \\\\\r\n=\\left[a+\\dfrac{n(n+1)}{2}\\right] a^{n-1}$\r\n\r\n当 $a=0$ 或 $\\displaystyle a=-\\frac{n(n+1)}{2}$ 时, 方程组有非零解,\r\n\r\n- 当 $a=0$ 时, 由 \r\n\r\n$\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{cccc}1 & 1 & \\cdots & 1 \\\\ 0 & 0 & \\cdots & 0 \\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\cdots & 0\\end{array}\\right)$ 得方程组的通解为 $\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{c}-1 \\\\1 \\\\0 \\\\\\vdots \\\\0\\end{array}\\right)\r\n+C_2\\left(\\begin{array}{c}-1 \\\\0 \\\\1 \\\\\\vdots \\\\0\r\n\\end{array}\\right)+\\cdots+\r\nC_{n-1}\\left(\\begin{array}{c}-1 \\\\0 \\\\0 \\\\\\vdots \\\\1\\end{array}\\right)\r\n(C_1, C_2, \\cdots, C_{n-1} )$为任意常数 \r\n\r\n- 当 $a=-\\dfrac{n(n+1)}{2}$ 时,\r\n\r\n由 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1+a & 1 & \\cdots & 1 \\\\ 2 & 2+a & \\cdots & 2 \\\\ \\vdots & \\vdots & & \\vdots \\\\ n & n & \\cdots & n+a\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{cccc}1+a & 1 & \\cdots & 1 \\\\ -2 a & a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\cdots & \\vdots \\\\ -n a & 0 & \\cdots & a\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{cccc}\r\n1+a & 1 & \\cdots & 1 \\\\\r\n-2 & 1 & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n-n & 0 & \\cdots & 1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccccc}\r\n-2 & 1 & 0 & \\cdots & 0 \\\\\r\n-3 & 0 & 1 & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n-n & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & 0\r\n\\end{array}\\right)$,\r\n\r\n原方程组的通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 2 \\\\ \\vdots \\\\ n\\end{array}\\right)$ (C 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=[a+n(n+1)/2]·a^{n-1}，故非零解有 a=0 与 a=-n(n+1)/2 两种情形，须都讨论",
+        "a=0 时 r(A)=1 有 n-1 个自由变量（n-1 维解）；a=-n(n+1)/2 时 r(A)=n-1 只 1 维解，二者基础解系结构不同"
+      ],
+      "key_point": "|A|=[a+n(n+1)/2]a^{n-1}=0：a=0（解空间 n-1 维）或 a=-n(n+1)/2（解空间 1 维）。"
+    },
+    {
+      "id": 925,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 2 & -3 \\\\ -1 & 4 & -3 \\\\ 1 & a & 5\\end{array}\\right)$ 的特征方程有一个二重根, 求 $a$ 的值, 并讨论 $\\boldsymbol{A}$ 是否可相似对角化",
+      "options": {},
+      "answer": "略",
+      "analysis": "$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-1 & -2 & 3 \\\\ 1 & \\lambda-4 & 3 \\\\ -1 & -a & \\lambda-5\\end{array}\\right|\\\\\r\n=(\\lambda-2)\\left(\\lambda^2-8 \\lambda+3 a+18\\right)$,\r\n\r\n- 情形一 $: \\lambda=2$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n则当 $\\lambda=2$ 时, $\\lambda^2-8 \\lambda+3 a+18=0$, \r\n\r\n即 $4-16+3 a+$ $18=0$, 解得 $a=-2$.\r\n\r\n$2 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n1 & -2 & 3 \\\\\r\n-1 & 2 & -3\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$,\r\n\r\n因为 $r(2 \\boldsymbol{E}-\\boldsymbol{A})=1$, \r\n\r\n所以方程组 $(2 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$ 的基础解系只含两个线性无关的解向量, \r\n\r\n即 $\\lambda=2$ 有两个线性无关的特征向量,\r\n\r\n故 $\\boldsymbol{A}$ 可相似对角化\r\n\r\n- 情形二 $: \\lambda=2$ 为一重特征值, 则 $\\lambda^2-8 \\lambda+3 a+18=0$ 有二重根, \r\n\r\n即 $\\Delta=64-4(3 a+18)=0$,\r\n\r\n解得 $a=-\\dfrac{2}{3}$, \r\n\r\n二重特征值为 $\\lambda_2=\\lambda_3=-\\dfrac{-8}{2}=4$,\r\n\r\n$4 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n-1 & \\frac{2}{3} & -1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$\r\n\r\n因为 $r(4 \\boldsymbol{E}-\\boldsymbol{A})=2$, 所以 $\\boldsymbol{A}$ 不可相似对角化",
+      "wrong_options": {},
+      "pitfalls": [
+        "二重根有两条来路：λ=2 代入 λ²-8λ+18+3a=0 得 a=-2；或该二次判别式为 0 得 a=-2/3（二重根 λ=4），两种都要讨论",
+        "a=-2 时特征值 2,2,6，r(2E-A)=1 ⇒ 几何重数 2=代数重数 ⇒ 可对角化；a=-2/3 时特征值 2,4,4，r(4E-A)=2 ⇒ 几何重数 1<2 ⇒ 不可对角化"
+      ],
+      "key_point": "a=-2（特征值 2,2,6）可对角化；a=-2/3（特征值 2,4,4，几何重数不足）不可对角化。"
+    },
+    {
+      "id": 926,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为随机事件, 且 $\\displaystyle P(A)=\\frac{1}{4}, P(B \\mid A)=\\frac{1}{3},\\\\ P(A \\mid B)=\\frac{1}{2}$, 令\r\n\r\n$X=\\left\\{\\begin{array}{ll}\r\n1, & A \\text { 发生 } \\\\\r\n0, & A \\text { 不发生 }\r\n\\end{array} \\quad Y= \\begin{cases}1, & B \\text { 发生 } \\\\\r\n0, & B \\text { 不发生 }\\end{cases}\\right.$\r\n\r\n求: (1) 二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$\r\n\r\n(3) $Z=X^2+Y^2$ 的概率分布(数三)",
+      "options": {},
+      "answer": "(1) $\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $\\dfrac{\\sqrt{15}}{15}$\r\n\r\n(3) (数三) $Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "analysis": "由 $\\displaystyle P(B \\mid A)=\\frac{P(A B)}{P(A)}$, \r\n\r\n得 $\\displaystyle P(A B)=P(A) P(B \\mid A)=\\frac{1}{12}$,\r\n\r\n又由 $\\displaystyle P(A \\mid B)=\\frac{P(A B)}{P(B)}$, \r\n\r\n得 $\\displaystyle P(B)=\\frac{P(A B)}{P(A \\mid B)}=\\frac{1}{6}$\r\n\r\n(1) $(X, Y)$ 的可能取值为 $(0,0),(0,1),(1,0),(1,1)$,\r\n\r\n$P\\{X=0, Y=0\\}=P(\\bar{A} \\bar{B})\\\\\r\n=P(\\overline{A+B})=1-P(A+B) \\\\\r\n=1-P(A)-P(B)+P(A B)=\\dfrac{2}{3};\\\\\r\nP\\{X=0, Y=1\\}=P(\\bar{A} B)\\\\\r\n=P(B)-P(A B)=\\dfrac{1}{12} ; \\\\\r\nP\\{X=1, Y=0\\}=P(A \\bar{B})\\\\\r\n=P(A)-P(A B)=\\dfrac{1}{6} ; \\\\\r\nP\\{X=1, Y=1\\}=P(A B)=\\dfrac{1}{12}\\\\\r\n\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $X \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{3}{4} & \\frac{1}{4}\r\n\\end{array}\\right), \\\\\r\nY \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{5}{6} & \\frac{1}{6}\r\n\\end{array}\\right), \\\\\r\nX Y \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{11}{12} & \\frac{1}{12}\r\n\\end{array}\\right), \\\\\r\nE(X)=\\dfrac{1}{4}, E\\left(X^2\\right)=\\dfrac{1}{4},\\\\\r\nD(X)=E\\left(X^2\\right)-[E(X)]^2=\\dfrac{3}{16}, \\\\\r\nE(Y)=\\dfrac{1}{6}, E\\left(Y^2\\right)=\\dfrac{1}{6},\\\\\r\nD(Y)=E\\left(Y^2\\right)-[E(Y)]^2=\\dfrac{5}{36}$,\r\n\r\n由 $E(X Y)=\\dfrac{1}{12}$ 得 $\\operatorname{Cov}(X, Y)\\\\\r\n=E(X Y)-E(X) E(Y)\\\\\r\n=\\dfrac{1}{12}-\\dfrac{1}{24}=\\dfrac{1}{24}$\r\n\r\n则 $\\rho_{X Y}=\\frac{\\operatorname{Cov}(X, Y)}{\\sqrt{D(X)} \\cdot \\sqrt{D(Y)}}=\\dfrac{\\frac{1}{24}}{\\frac{\\sqrt{3}}{4} \\times \\frac{\\sqrt{5}}{6}}=\\dfrac{\\sqrt{15}}{15}$\r\n\r\n\r\n(3)(数三)\r\n\r\n$Z=X^2+Y^2$ 的可能取值为 $0,1,2$,\r\n\r\n$ P\\{Z=0\\}=P\\{X=0, Y=0\\}=\\dfrac{2}{3},\r\nP\\{Z=1\\}\\\\\r\n=P\\{X=0, Y=1\\}+P\\{X=1, Y=0\\}=\\dfrac{1}{4},\r\nP\\{Z=2\\}=P\\{X=1, Y=1\\}=\\dfrac{1}{12}$,\r\n\r\n故 $Z$ 的分布律为 $ Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由 P(AB)=P(A)P(B|A)=1/12、再由 P(B)=P(AB)/P(A|B)=1/6，才能填联合分布表",
+        "算 ρ 用 Cov=E(XY)-E(X)E(Y)=P(1,1)-P(A)P(B)=1/24，D(X)、D(Y) 为 0-1 分布 p(1-p)；第(3)问 Z=X²+Y² 是数三专属，数一不作答"
+      ],
+      "key_point": "条件概率定 P(AB)=1/12、P(B)=1/6，列联合分布得 ρ_{XY}=√15/15。"
+    },
+    {
+      "id": 927,
+      "paper": "数学一",
+      "year": 2004,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的分布函数为\r\n\r\n$F(x ; \\beta)= \\begin{cases}1-\\dfrac{1}{x^{\\beta}}, & x>1 \\\\ 0, & x \\leqslant 1\\end{cases}$\r\n\r\n其中未知参数 $\\beta>1, X_{1}, X_{2}, \\cdots, X_{n}$ 为来自总体 $X$ 的简单随机样本.\r\n\r\n求:(1) $\\beta$ 的矩估计量;\r\n\r\n(2) $\\beta$ 的最大似然估计量",
+      "options": {},
+      "answer": "(1) $\\beta$ 的矩估计量为 $\\hat{\\beta}=\\dfrac{\\bar{X}}{\\bar{X}-1}$\r\n\r\n(2) $\\beta$ 的最大似然估计量为 $\\hat{\\beta}=\\dfrac{n}{\\displaystyle \\sum_{i=1}^n \\ln X_i}$",
+      "analysis": "(1) 总体 $X$ 的密度函数为 $f(x ; \\beta)= \\begin{cases}\\dfrac{\\beta}{x^{\\beta+1}}, & x>1 \\\\ 0, & x \\leqslant 1\\end{cases}$\r\n\r\n$\\displaystyle E(X)=\\int_1^{+\\infty} x f(x ; \\beta) \\mathrm{d} x\\\\\r\n=\\beta \\int_1^{+\\infty} \\frac{1}{x^\\beta} \\mathrm{d} x=\\frac{\\beta}{\\beta-1}$,\r\n\r\n令 $E(X)=\\bar{X}$, 即 $\\dfrac{\\beta}{\\beta-1}=\\bar{X}$, \r\n\r\n得 $\\beta$ 的矩估计量为 $\\hat{\\beta}=\\dfrac{\\bar{X}}{\\bar{X}-1}$\r\n\r\n(2) 似然函数为\r\n\r\n$L\\left(x_1, x_2, \\cdots, x_n ; \\beta\\right) =f\\left(x_1, \\beta\\right) f\\left(x_2, \\beta\\right) \\cdots f\\left(x_n, \\beta\\right) \\\\\r\n=\\beta^n\\left(x_1 x_2 \\cdots x_n\\right)^{-\\beta-1},\\left(x_i>1, i=1,2, \\cdots, n\\right)$,\r\n\r\n取对数得 $\\displaystyle \\ln L=n \\ln \\beta-(\\beta+1) \\sum_{i=1}^n \\ln x_i$,\r\n\r\n令 $\\displaystyle \\frac{\\mathrm{d} \\ln L}{\\mathrm{d} \\beta}=\\frac{n}{\\beta}-\\sum_{i=1}^n \\ln x_i=0$, \r\n\r\n得 $\\beta$ 的最大似然估计值为 $\\hat{\\beta}=\\dfrac{n}{\\displaystyle \\sum_{i=1}^n \\ln x_i}$, \r\n\r\n$\\beta$ 的最大似然估计量为 $\\hat{\\beta}=\\dfrac{n}{\\displaystyle \\sum_{i=1}^n \\ln X_i}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先对 F 求导得密度 f(x;β)=β/x^{β+1}(x>1)，别直接对 F 做估计",
+        "矩估计：E(X)=∫₁^{+∞}xf dx=β/(β-1)，令=X̄ 得 β̂=X̄/(X̄-1)；MLE：lnL=n lnβ-(β+1)Σln xᵢ 求导令 0 得 β̂=n/Σln Xᵢ"
+      ],
+      "key_point": "E(X)=β/(β-1) 得矩估计 X̄/(X̄-1)；对数似然求导得 MLE n/Σln Xᵢ。"
+    }
+  ]
+}

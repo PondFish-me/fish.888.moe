@@ -1,0 +1,364 @@
+{
+  "paper": "数学二",
+  "year": 1988,
+  "count": 18,
+  "questions": [
+    {
+      "id": 1259,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)=\\mathrm{e}^{x^{2}}, f[\\varphi(x)]=1-x$, 且 $\\varphi(x) \\geqslant 0$, 求 $\\varphi(x)$, 并写出其定义域",
+      "options": {},
+      "answer": "$(-\\infty, 0]$",
+      "analysis": "由 $\\mathrm{e}^{\\varphi^2(x)}=1-x$, \r\n\r\n得 $\\varphi(x)=\\sqrt{\\ln (1-x)}$, \r\n\r\n由 $1-x \\geqslant 1$ 得, \r\n\r\n$\\varphi(x)$ 的定义域为 $(-\\infty, 0]$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{φ²}=1-x 只给 φ²，需借 φ(x)≥0 这一条件取正根开方",
+        "定义域由 ln(1-x)≥0 即 1-x≥1 得 x≤0，不是仅 1-x>0"
+      ],
+      "key_point": "φ(x)=√(ln(1-x))，由 ln 内需≥1 得定义域 (-∞,0]。"
+    },
+    {
+      "id": 1261,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f(t)=\\lim _{x \\rightarrow \\infty} t\\left(1+\\frac{1}{x}\\right)^{2 t x}$, 则 $f^{\\prime}(t)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1+2 t) \\mathrm{e}^{2 t}$",
+      "analysis": "$\\displaystyle f(t)=\\lim _{x \\rightarrow \\infty} t\\left(1+\\frac{1}{x}\\right)^{2 t x}=t \\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{1}{x}\\right)^x\\right]^{2 t}=t \\mathrm{e}^{2 t}$, \r\n\r\n则 $f^{\\prime}(t)=\\mathrm{e}^{2 t}+2 t \\mathrm{e}^{2 t}=(1+2 t) \\mathrm{e}^{2 t}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "极限对 x 求、结果是 t 的函数，t 当常数提到极限外",
+        "指数 2tx 拆成 [(1+1/x)ˣ]^{2t}→e^{2t}，别把 2t 丢了"
+      ],
+      "key_point": "f(t)=te^{2t}，f'(t)=(1+2t)e^{2t}。"
+    },
+    {
+      "id": 1263,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是连续函数, 且 $\\displaystyle \\int_{0}^{x^{3}-1} f(t) \\mathrm{d} t=x$, 则 $f(7)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{12}$",
+      "analysis": "$\\displaystyle \\int_0^{x^3-1} f(t) \\mathrm{d} t=x$ 两边对 $x$ 求导得 $3 x^2 f\\left(x^3-1\\right)=1$,\r\n\r\n取 $x=2$ 得 $\\displaystyle f(7)=\\frac{1}{12}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对上限 x³-1 求导须乘 (x³-1)'=3x²，漏乘会算错",
+        "要 f(7) 须令 x³-1=7 即 x=2 回代，别直接代 x=7"
+      ],
+      "key_point": "3x²f(x³-1)=1，取 x=2 得 f(7)=1/12。"
+    },
+    {
+      "id": 1265,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若函数 $y=f(x)$ 可导, 且 $\\displaystyle f^{\\prime}\\left(x_{0}\\right)=\\frac{1}{2}$, 则当 $\\Delta x \\rightarrow 0$ 时, 函数 $f(x)$ 在 $x=x_{0}$ 处的微分 $\\mathrm{d} y$ 是 $(\\quad)$",
+      "options": {
+        "A": "与 $\\Delta x$ 等价的无穷小",
+        "B": "与 $\\Delta x$ 同阶的无穷小",
+        "C": "比 $\\Delta x$ 低阶的无穷小",
+        "D": "比 $\\Delta x$ 高阶的无穷小"
+      },
+      "answer": "B",
+      "analysis": "因为 $f(x)$ 在 $x=x_0$ 处可导, 所以 $f(x)$ 在 $x=x_0$ 处可微, \r\n\r\n于是 $\\displaystyle \\mathrm{d} y=f^{\\prime}\\left(x_0\\right) \\Delta x=\\frac{1}{2} \\Delta x$, \r\n\r\n故函数在 $x=x_0$ 处的微分 $\\mathrm{d} y$ 是与 $\\Delta x$ 同阶而非等价的无穷小, 应选 (B)",
+      "wrong_options": {
+        "A": "误把可微就当等价，忽略 dy/Δx=1/2≠1，等价要求比值极限恰为 1",
+        "C": "把同阶错当低阶：低阶意味 dy/Δx→∞，与常数 1/2 矛盾",
+        "D": "把同阶错当高阶：高阶意味 dy/Δx→0，而此处比值恒为 1/2"
+      },
+      "pitfalls": [
+        "同阶与等价的界线是比值极限是否等于 1，1/2 只同阶不等价",
+        "dy=f'(x0)Δx 是线性主部，与 Δx 恒成比例"
+      ],
+      "key_point": "dy=½Δx，dy/Δx=½∈(0,∞)，与 Δx 同阶非等价，选 B。"
+    },
+    {
+      "id": 1266,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $y=f(x)$ 是微分方程 $y^{\\prime \\prime}-2 y^{\\prime}+4 y=0$ 的一个解, 若 $f\\left(x_{0}\\right)>0$ 且 $f^{\\prime}\\left(x_{0}\\right)=0$, 则函数 $f(x)$ 在 $x=x_{0}$ 处 $(\\quad)$",
+      "options": {
+        "A": "取得极大值",
+        "B": "取得极小值",
+        "C": "某邻域内单调增加",
+        "D": "某邻域内单调减少"
+      },
+      "answer": "A",
+      "analysis": "将 $x=x_0$ 代入 $y^{\\prime \\prime}-2 y^{\\prime}+4 y=0$, \r\n\r\n得 $f^{\\prime \\prime}\\left(x_0\\right)-2 f^{\\prime}\\left(x_0\\right)+4 f\\left(x_0\\right)=0$,\r\n\r\n\r\n从而 $f^{\\prime \\prime}\\left(x_0\\right)=-4 f\\left(x_0\\right)<0$, \r\n\r\n由极值判别法得 $x=x_0$ 为 $f(x)$ 的极大值点, 应选 (A)",
+      "wrong_options": {
+        "B": "把 f''(x0)=-4f(x0) 的符号看反，误认为 f''>0 得极小值",
+        "C": "忽视 f'(x0)=0 是驻点，误判该点单调增加",
+        "D": "同 C 且方向再反，误判单调减少"
+      },
+      "pitfalls": [
+        "无需解出方程，直接代 x0 得 f''(x0)=2f'(x0)-4f(x0)=-4f(x0)",
+        "f(x0)>0 保证 f''(x0)<0，第二判别法给极大值"
+      ],
+      "key_point": "f''(x0)=-4f(x0)<0 且 f'(x0)=0，取极大值，选 A。"
+    },
+    {
+      "id": 1271,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 满足微分方程 $y^{\\prime \\prime}-3 y^{\\prime}+2 y=2 \\mathrm{e}^{x}$, 且其图形在点 $(0,1)$ 处的切线与曲线 $y=x^{2}-x+1$ 在该点的切线重合, 求函数 $y=y(x)$",
+      "options": {},
+      "answer": "$y=(1-2 x) \\mathrm{e}^x$",
+      "analysis": "特征方程为 $\\lambda^2-3 \\lambda+2=0$, 特征根为 $\\lambda_1=1, \\lambda_2=2$,\r\n\r\n$y^{\\prime \\prime}-3 y^{\\prime}+2 y=0$ 的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}$;\r\n\r\n设原方程的特解为 $y_0(x)=a x \\mathrm{e}^x$, 代入得 $a=-2$,\r\n\r\n故原方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}-2 x \\mathrm{e}^x$\r\n\r\n ($C_1, C_2$ 为任意常数).\r\n\r\n因为曲线 $y=y(x)$ 经过点 $(0,1)$, 所以 $C_1+C_2=1$;\r\n\r\n$y=y(x)$ 在 $x=0$ 处切线的斜率为 $k=\\left.(2 x-1)\\right|_{x=0}=-1$,\r\n\r\n又由 $y^{\\prime}=C_1 \\mathrm{e}^x+2 C_2 \\mathrm{e}^{2 x}-2(x+1) \\mathrm{e}^x$, \r\n\r\n得 $C_1+2 C_2-2=-1$, 即 $C_1+2 C_2=1$,\r\n\r\n从而 $C_1=1, C_2=0$, 故所求函数为 $y=(1-2 x) \\mathrm{e}^x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1 是特征根，e^x 型特解须设 axe^x 而非 ae^x（共振要乘 x）",
+        "两初值来自切线：过 (0,1) 给 y(0)=1，斜率 -1 给 y'(0)=-1"
+      ],
+      "key_point": "通解 y=C₁eˣ+C₂e²ˣ-2xeˣ，由 y(0)=1、y'(0)=-1 得 y=(1-2x)eˣ。"
+    },
+    {
+      "id": 1320,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}2 x+a, & x \\leqslant 0 \\\\ \\mathrm{e}^x(\\sin x+\\cos x), & x>0\\end{array}\\right.$ 在 $(-\\infty,+\\infty)$ 内连续, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0^{-}} f(x)=\\lim _{x \\rightarrow 0^{-}}(2 x+a)=a$,\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=\\lim _{x \\rightarrow 0^{+}} \\mathrm{e}^x(\\sin x+\\cos x)=\\mathrm{e}^0(0+1)=1$\r\n\r\n因为 $f(x)$ 在 $x=0$ 处连续,\r\n\r\n所以 $\\displaystyle \\lim _{x \\rightarrow 0^{-}} f(x)=\\lim _{x \\rightarrow 0^{+}} f(x)$,故 $a=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "右极限 e^0(sin0+cos0)=1，左极限 =a；连续要求二者相等故 a=1，别把右极限算成 0"
+      ],
+      "key_point": "左极限 a，右极限 e^0(0+1)=1，连续得 a=1。"
+    },
+    {
+      "id": 1322,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\lim\\limits _{x \\rightarrow 0^{+}}\\left(\\dfrac{1}{\\sqrt{x}}\\right)^{\\tan x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$\\lim\\limits _{x \\rightarrow 0^{+}}\\left(\\frac{1}{\\sqrt{x}}\\right)^{\\tan x}=\\mathrm{e}^{\\lim\\limits _{x \\rightarrow 0^{+}} \\tan x \\ln \\frac{1}{\\sqrt{x}}}=\\mathrm{e}^{-\\frac{1}{2} \\lim\\limits _{x \\rightarrow 0^{+}} \\tan x \\ln x}=\\mathrm{e}^{-\\frac{1}{2} \\lim\\limits _{x \\rightarrow 0^{+}} x \\ln x}=\\mathrm{e}^{-\\frac{1}{2} \\lim\\limits _{x \\rightarrow 0^{+}} \\frac{\\ln x}{\\frac{1}{x}}}=\\mathrm{e}^{-\\frac{1}{2} \\lim\\limits _{x \\rightarrow 0^{+}}(-x)}=\\mathrm{e}^0=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数 tan x·ln(1/√x)~x·(-½ln x)，而 x ln x→0，故整个指数→0，极限为 e^0=1 而非 0 或 ∞"
+      ],
+      "key_point": "取对数得 -½·tan x·ln x~-½x ln x→0，极限 e^0=1。"
+    },
+    {
+      "id": 1323,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^4 \\mathrm{e}^{\\sqrt{x}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2\\left(\\mathrm{e}^2+1\\right)$",
+      "analysis": "$$\r\n\\begin{aligned}\r\n&\\int_0^4 \\mathrm{e}^{\\sqrt{x}} \\mathrm{d} x\\\\\r\n\\stackrel{\\sqrt x=t}{=} & \\int_0^2 \\mathrm{e}^t \\cdot 2 t \\mathrm{d} t\\\\\r\n=&2 \\int_0^2 t \\mathrm{d}\\left(\\mathrm{e}^t\\right)\\\\\r\n=&2\\left(\\left.t \\mathrm{e}^t\\right|_0 ^2-\\int_0^2 \\mathrm{e}^t \\mathrm{d} t\\right)\\\\\r\n=&2\\left(2 \\mathrm{e}^2-\\left.\\mathrm{e}^t\\right|_0 ^2\\right) \\\\\r\n=&2\\left[2 \\mathrm{e}^2-\\left(\\mathrm{e}^2-1\\right)\\right] \\\\\r\n=&2\\left(2 \\mathrm{e}^2-\\mathrm{e}^2+1\\right) \\\\\r\n=&2\\left(\\mathrm{e}^2+1\\right)\\\\\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "代换 √x=t 后 dx=2t dt，上限由 4 变 2；再分部积分，别漏掉换元带来的因子 2t"
+      ],
+      "key_point": "√x=t 化为 2∫_0^2 t e^t dt，分部得 2(e²+1)。"
+    },
+    {
+      "id": 1326,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 与 $g(x)$ 在 $(-\\infty,+\\infty)$ 上皆可导, 且 $f(x)<g(x)$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$f(-x)>g(-x)$",
+        "B": "$f^{\\prime}(x)<g^{\\prime}(x)$",
+        "C": "$\\displaystyle \\lim _{x \\rightarrow x_0} f(x)<\\lim _{x \\rightarrow x_0} g(x)$",
+        "D": "$\\displaystyle \\int_0^x f(t) \\mathrm{d} t<\\int_0^x g(t) \\mathrm{d} t$"
+      },
+      "answer": "C",
+      "analysis": "由 $f(x)$ 与 $g(x)$ 在 $(-\\infty,+\\infty)$ 上可导, \r\n\r\n知$f(x)$ 与 $g(x)$ 在 $(-\\infty,+\\infty)$ 上连续,\r\n\r\n则 $\\displaystyle \\lim _{x \\rightarrow x_0} f(x)=f\\left(x_0\\right), \\lim _{x \\rightarrow x_0} g(x)=g\\left(x_0\\right)$,\r\n\r\n又 $f(x)<g(x)$, 故 $f\\left(x_0\\right)<g\\left(x_0\\right)$,\r\n\r\n从而 $\\displaystyle \\lim _{x \\rightarrow x_0} f(x)<\\lim _{x \\rightarrow x_0} g(x)$,\r\n\r\n故本题应选 (C)",
+      "wrong_options": {
+        "A": "函数值大小与取 -x 无必然关系，f<g 不能推出反号后不等式",
+        "B": "函数值有序不代表导数（变化率）有序，可举反例",
+        "D": "变限积分当 x<0 时积分方向反使不等号反向，未必成立"
+      },
+      "pitfalls": [
+        "f<g 不能推出导数有序（B）、反号后不等式（A）或变限积分不等式（D，x<0 时方向反）；连续函数极限即函数值故 C 成立"
+      ],
+      "key_point": "可导⇒连续，lim f=f(x₀)<g(x₀)=lim g，故 C。"
+    },
+    {
+      "id": 1328,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "由曲线 $y=\\sin ^{\\frac{3}{2}} x(0 \\leqslant x \\leqslant \\pi)$ 与 $x$ 轴围成的平面图形绕 $x$ 轴旋转而成的旋转体的体积为 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{4}{3}$",
+        "B": "$\\dfrac{4}{3} \\pi$",
+        "C": "$\\dfrac{2}{3} \\pi^2$",
+        "D": "$\\dfrac{2}{3} \\pi$"
+      },
+      "answer": "B",
+      "analysis": "$\\displaystyle V=\\pi \\int_0^\\pi\\left(\\sin ^{\\frac{3}{2}} x\\right)^2 \\mathrm{~d} x \\\\\r\n=\\pi \\int_0^\\pi \\sin ^3 x \\mathrm{d} x\\\\\r\n=-\\pi \\int_0^\\pi\\left(1-\\cos ^2 x\\right) \\mathrm{d} \\cos x \\\\\r\n=-\\pi\\left(\\int_0^\\pi 1 \\mathrm{~d} \\cos x-\\int_0^\\pi \\cos ^2 x \\mathrm{~d} \\cos x\\right) \\\\\r\n=-\\pi\\left(\\left.\\cos x\\right|_0 ^\\pi-\\left.\\frac{1}{3} \\cos ^3 x\\right|_0 ^\\pi\\right) \\\\\r\n=-\\pi\\left[-1-1-\\frac{1}{3}(-1-1)\\right] \\\\\r\n=\\frac{4}{3} \\pi$\r\n\r\n故选择选项 (B)",
+      "wrong_options": {
+        "A": "漏掉体积公式的因子 π",
+        "C": "误把 ∫sin³x 算成含 π² 的量，被角度 π 混入",
+        "D": "∫_0^π sin³x dx 算错为 2/3 而非 4/3"
+      },
+      "pitfalls": [
+        "y²=(sin^{3/2}x)²=sin³x，别漏体积公式的 π；∫_0^π sin³x dx=4/3"
+      ],
+      "key_point": "V=π∫_0^π sin³x dx=4π/3。"
+    },
+    {
+      "id": 1331,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $y=1+x \\mathrm{e}^{x y}$, 求 $\\left.y^{\\prime}\\right|_{x=0}$ 及 $\\left.y^{\\prime \\prime}\\right|_{x=0}$",
+      "options": {},
+      "answer": "$1; 2$",
+      "analysis": "当 $x=0$ 时, $y=1+0 \\cdot \\mathrm{e}^0=1$\r\n\r\n下面对 $y=1+x \\mathrm{e}^{x y}$ 两侧同时关于 $x$ 求导 :\r\n\r\n$y^{\\prime}=1 \\cdot \\mathrm{e}^{x y}+x \\mathrm{e}^{x y}\\left(1 \\cdot y+x \\cdot y^{\\prime}\\right) \\\\=x \\mathrm{e}^{x y}\\left(x y^{\\prime}+y\\right)+\\mathrm{e}^{x y}\\\\=\\mathrm{e}^{x y}\\left(x^2 y^{\\prime}+x y+1\\right)$\r\n\r\n因此 $\\left.y^{\\prime}\\right|_{x=0}=\\mathrm{e}^0=1$\r\n\r\n下面对 $y^{\\prime}=\\mathrm{e}^{x y}\\left(x^2 y^{\\prime}+x y+1\\right)$ 两侧再关于 $x$ 求导 : \r\n\r\n$y^{\\prime \\prime}=\\mathrm{e}^{x y}\\left(y+x y^{\\prime}\\right)\\left(x^2 y^{\\prime}+x y+1\\right)+\\mathrm{e}^{x y}\\left(2 x y^{\\prime}+x^2 y^{\\prime \\prime}+y+x y^{\\prime}\\right)$\r\n\r\n即得 $\\left.y^{\\prime \\prime}\\right|_{x=0}=\\mathrm{e}^0+\\mathrm{e}^0=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由方程定 x=0 时 y=1；求二阶导时含 y′ 项要继续用乘积、链式，代入前先算出 y(0)、y′(0)"
+      ],
+      "key_point": "x=0 时 y=1；求导得 y′(0)=1，再求导代入得 y″(0)=2。"
+    },
+    {
+      "id": 1332,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\displaystyle y^{\\prime}+\\frac{1}{x} y=\\frac{1}{x\\left(x^2+1\\right)}$ 的通解",
+      "options": {},
+      "answer": "$y=\\dfrac{1}{x}(\\arctan x+C)$",
+      "analysis": "对微分方程 $y^{\\prime}+\\dfrac{1}{x} y=\\dfrac{1}{x\\left(x^2+1\\right)}$ 而言 \r\n\r\n$p(x)=\\dfrac{1}{x}, Q(x)=\\dfrac{1}{x\\left(x^2+1\\right)}$\r\n\r\n由通解公式可得通解为 \r\n\r\n$\\displaystyle y=\\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{d} x}\\left[\\int \\frac{1}{x\\left(x^2+1\\right)} \\mathrm{e}^{\\int \\frac{1}{x} \\mathrm{d} x} \\mathrm{d} x+C\\right] \\\\=\\mathrm{e}^{-\\ln x}\\left[\\int \\frac{1}{x\\left(x^2+1\\right)} \\mathrm{e}^{\\ln x} \\mathrm{d} x+C\\right] \\\\ =\\frac{1}{x}\\left[\\int \\frac{1}{x^2+1} \\mathrm{d} x+C\\right]\\\\=\\frac{1}{x}(\\arctan x+C)$\r\n\r\n其中 $C$ 是任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分因子 e^{∫dx/x}=x，与右端相乘后被积化为 1/(x²+1)，积出 arctan x"
+      ],
+      "key_point": "套公式积分因子 x，得 y=(arctan x+C)/x。"
+    },
+    {
+      "id": 1333,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "作函数 $\\displaystyle y=\\frac{6}{x^2-2 x+4}$ 的图形, 并填写下表\r\n\r\n$$\r\n\\begin{array}{|c|c|}\r\n\\hline \\text{单调增加区间} &   \\\\\r\n\\hline  \\text{单调减少区间} &   \\\\\r\n\\hline  \\text{极值点} &  \\\\\r\n\\hline  \\text{极值} &   \\\\\r\n\\hline \\text{凹区间}  &   \\\\\r\n\\hline \\text{凸区间} &   \\\\\r\n\\hline \\text{拐点}  &   \\\\\r\n\\hline \\text{渐近线}  &   \\\\\r\n\\hline \r\n\\end{array}\r\n$$",
+      "options": {},
+      "answer": "图片略\r\n$$\r\n\\begin{array}{|c|c|}\r\n\\hline \\text{单调增加区间} & (-\\infty, 1) \\\\\r\n\\hline \\text{单调减少区间} & (1,+\\infty) \\\\\r\n\\hline  \\text{极值点} & x=1 \\\\\r\n\\hline  \\text{极值} &  2 \\\\\r\n\\hline  \\text{凹区间}  & (-\\infty, 0) \\cup (2,+\\infty) \\\\\r\n\\hline \\text{凸区间} &  (0,2) \\\\\r\n\\hline \\text{拐点}  &  \\left(0, \\dfrac{3}{2}\\right) \\cup \\left(2, \\dfrac{3}{2}\\right) \\\\\r\n\\hline \\text{渐近线}  &  y=0\\\\\r\n\\hline\r\n\\end{array}\r\n$$",
+      "analysis": "$y=\\dfrac{6}{x^2-2 x+4}$ 的定义域为 $(-\\infty,+\\infty)$,\r\n\r\n$y^{\\prime}=\\dfrac{0-6(2 x-2)}{\\left(x^2-2 x+4\\right)^2}=-\\dfrac{12(x-1)}{\\left(x^2-2 x+4\\right)^2}$\r\n\r\n令 $y^{\\prime}=0$ 可得 $x=1$\r\n\r\n当 $x \\in(-\\infty, 1)$ 时, $y^{\\prime}>0$, 函数单增;\r\n\r\n当 $x \\in(1,+\\infty)$ 时, $y^{\\prime}<0$, 函数单减\r\n\r\n则函数的单调增加区间为 $(-\\infty, 1)$,\r\n\r\n单调减少区间为 $(1,+\\infty)$\r\n\r\n则极大值点为 $x=1$,\r\n\r\n极大值为 $y(1)=\\dfrac{6}{1-2+4}=2$\r\n\r\n若在区间 $I$ 上 $f^{\\prime \\prime}(x)>0(<0)$, \r\n\r\n则曲线 $y=f(x)$ 在 $I$ 上是凹 (凸) 的\r\n\r\n$\\displaystyle y^{\\prime \\prime}=\\left[-\\frac{12(x-1)}{\\left(x^2-2 x+4\\right)^2}\\right]^{\\prime}\\\\\r\n=-\\frac{12\\left(x^2-2 x+4\\right)-48(x-1)^2}{\\left(x^2-2 x+4\\right)^3} \\\\\r\n=-\\frac{12 x^2-24 x+48-48 x^2+96 x-48}{\\left(x^2-2 x+4\\right)^3} \\\\\r\n=\\frac{36 x^2-72 x}{\\left(x^2-2 x+4\\right)^3}=\\frac{36\\left(x^2-2 x\\right)}{\\left(x^2-2 x+4\\right)^3} $\r\n\r\n令 $y^{\\prime \\prime}=0$ 得 $x=0, x=2$\r\n\r\n当 $x \\in(-\\infty, 0)$ 时, $y^{\\prime \\prime}>0$, 曲线为凹\r\n\r\n当 $x \\in(0,2)$ 时, $y^{\\prime \\prime}<0$, 曲线为凸\r\n\r\n当 $x \\in(2,+\\infty)$ 时, $y^{\\prime \\prime}>0$, 曲线为凹\r\n\r\n则 $(-\\infty, 0)$ 及 $(2,+\\infty)$ 为曲线的凹区间;\r\n\r\n$(0,2)$ 是曲线的凸区间.\r\n\r\n代入 $x=0$ 得 $y=\\dfrac{3}{2} ; x=2$ 得 $y=\\dfrac{3}{2}$\r\n\r\n因此 $\\left(0, \\dfrac{3}{2}\\right)$ 及 $\\left(2, \\dfrac{3}{2}\\right)$ 为曲线的拐点\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow \\infty} y=\\lim _{x \\rightarrow \\infty} \\frac{6}{x^2-2 x+4}=0$\r\n\r\n得 $y=0$ 为曲线的水平渐近线\r\n\r\n由于 $\\displaystyle \\lim _{x \\rightarrow \\infty} \\frac{y}{x}=\\lim _{x \\rightarrow \\infty} \\frac{6}{x^3-2 x^2+4 x}=0$\r\n\r\n因此不存在斜渐近线\r\n\r\n因此渐近线为 $y=0$\r\n\r\n图形如下",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母 x²-2x+4 判别式<0 恒正无铅直渐近线；拐点有两个 x=0 与 x=2，别只算一个"
+      ],
+      "key_point": "y′=0 得 x=1 极大值 2；y″=0 得 x=0,2 两拐点；水平渐近线 y=0。"
+    },
+    {
+      "id": 1334,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将长为 $a$ 的铁丝切成两段,一段围成正方形, 另一段围成圆形, 问这两段铁丝各长多少时, 正方形与圆形的面积之和最小",
+      "options": {},
+      "answer": "圆周长 $\\dfrac{\\pi a}{4+\\pi}$，正方形周长 $\\dfrac{4a}{4+\\pi}$",
+      "analysis": "设圆形的周长为 $x$, 则正方形的周长为 $a-x$,\r\n\r\n圆形与正方形面积之和为 $A$\r\n\r\n$r=\\dfrac{x}{2 \\pi}$, 因此圆的面积为 $A_1=\\pi\\left(\\dfrac{x}{2 \\pi}\\right)^2$;\r\n\r\n正方形周长为 $a-x$, 则边长为 $\\dfrac{a-x}{4}$,\r\n\r\n因此正方形的面积为 $A_2=\\left(\\dfrac{a-x}{4}\\right)^2$, 则\r\n \r\n$\\displaystyle A=A_1+A_2 =\\pi\\left(\\frac{x}{2 \\pi}\\right)^2+\\left(\\frac{a-x}{4}\\right)^2 \\\\\r\n=\\frac{x^2}{4 \\pi}+\\frac{a^2-2 a x+x^2}{16} \\\\\r\n=\\frac{x^2}{4 \\pi}+\\frac{x^2}{16}-\\frac{a}{8} x+\\frac{a^2}{16}$\r\n\r\n$\\displaystyle A^{\\prime}=\\frac{x}{2 \\pi}+\\frac{x}{8}-\\frac{a}{8}=\\frac{4 x+\\pi x-a \\pi}{8 \\pi}=\\frac{x(4+\\pi)-a \\pi}{8 \\pi}$\r\n\r\n令 $\\displaystyle A^{\\prime}=0$, 得 $x=\\dfrac{\\pi a}{4+\\pi}$\r\n\r\n若 $\\displaystyle f^{\\prime}\\left(x_0\\right)=0, f^{\\prime \\prime}\\left(x_0\\right) \\neq 0$, 则 $f(x)$ 在 $x_0$ 处取得极值, \r\n\r\n其中当 $f^{\\prime \\prime}\\left(x_0\\right)>0(<0)$ 时, 函数取得极小 (大) 值\r\n\r\n$\\displaystyle A^{\\prime \\prime}=\\left(\\frac{x}{2 \\pi}+\\frac{x}{8}-\\frac{a}{8}\\right)^{\\prime}=\\frac{1}{2 \\pi}+\\frac{1}{8}>0$\r\n\r\n则 $A$ 在 $x=\\dfrac{\\pi a}{4+\\pi}$ 处取极小值\r\n\r\n由于极值点唯一且函数连续,\r\n\r\n则此极小值为 $A$ 的最小值.\r\n\r\n此时正方形周长：\r\n\r\n$\\displaystyle a-x=a-\\frac{\\pi a}{4+\\pi}=\\frac{a(4+\\pi)-\\pi a}{4+\\pi} \\\\=\\frac{4 a}{4+\\pi}$\r\n\r\n综上所述: 当圆的周长为 $\\frac{\\pi a}{4+\\pi}$, 正方形的周长为 $\\frac{4 a}{4+\\pi}$ 时, 两面积之和最小",
+      "wrong_options": {},
+      "pitfalls": [
+        "目标是面积之和 A(x)，圆面积用周长 x 表 r=x/(2π)；驻点唯一且 A″>0 即为最小，不必比较端点"
+      ],
+      "key_point": "A(x)=x²/(4π)+((a-x)/4)²，A′=0 得圆周长 πa/(4+π)、方周长 4a/(4+π)。"
+    },
+    {
+      "id": 1336,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $x \\geqslant-1$, 求 $\\displaystyle \\int_{-1}^x(1-|t|) \\mathrm{d} t$",
+      "options": {},
+      "answer": "$\\left\\{\\begin{array}{l}\r\n\\dfrac{1}{2}(1+x)^2,\\quad -1 \\leqslant x<0 \\\\\r\n1-\\dfrac{1}{2}(1-x)^2, x \\geqslant 0\r\n\\end{array}\\right.$",
+      "analysis": "当 $-1 \\leqslant x<0$ 时, $|t|=-t$ \r\n\r\n$\\displaystyle \\int_{-1}^x(1-|t|) \\mathrm{d} t\\\\\r\n=\\int_{-1}^x(1+t) \\mathrm{d} t=\\int_{-1}^x(1+t) \\mathrm{d}(1+t)\\\\\r\n=\\left.\\frac{1}{2}(1+t)^2\\right|_{-1} ^x \\\\\r\n=\\frac{1}{2}(1+x)^2-0=\\frac{1}{2}(1+x)^2$ \r\n\r\n当 $x \\geqslant 0$ 时, 应该先是 $(-1,0)$ 再是 $(0, x)$, \r\n\r\n故需要分别在这两段上去绝对值号\r\n\r\n$\\displaystyle \\int_{-1}^x(1-|t|) \\mathrm{d} t \\\\\r\n=\\int_{-1}^0(1+t) \\mathrm{d} t+\\int_0^x(1-t) \\mathrm{d} t  \\\\\r\n=\\int_{-1}^0(1+t) \\mathrm{d}(1+t)-\\int_0^x(1-t) \\mathrm{d}(1-t) \\\\\r\n=\\left.\\frac{1}{2}(1+t)^2\\right|_{-1} ^0-\\left.\\frac{1}{2}(1-t)^2\\right|_0 ^x \\\\\r\n=\\frac{1}{2}-\\left[\\frac{1}{2}(1-x)^2-\\frac{1}{2}\\right] \\\\\r\n=1-\\frac{1}{2}(1-x)^2$\r\n\r\n综上所述：\r\n$$\r\n\\int_{-1}^x(1-|t|) \\mathrm{d} t=\\left\\{\\begin{array}{l}\r\n\\dfrac{1}{2}(1+x)^2,\\quad -1 \\leqslant x<0 \\\\\r\n1-\\dfrac{1}{2}(1-x)^2, x \\geqslant 0\r\n\\end{array}\\right.\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "当 x≥0 时积分区间跨过 t=0，必须拆成 [-1,0] 与 [0,x] 两段分别去 |t|，不能整段用一个符号"
+      ],
+      "key_point": "x<0 时被积 1+t，x≥0 时拆两段，得分段结果。"
+    },
+    {
+      "id": 1337,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $(-\\infty,+\\infty)$ 上连续可导, 且 $m \\leqslant f(x) \\leqslant M, a>0$\r\n\r\n(1) 求 $\\displaystyle \\lim _{a \\rightarrow 0^{+}} \\frac{1}{4 a^2} \\int_{-a}^a[f(t+a)-f(t-a)] \\mathrm{d} t$\r\n\r\n(2) 证明: $\\displaystyle \\left|\\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t-f(x)\\right| \\leqslant M-m$",
+      "options": {},
+      "answer": "$f'(0)$；证明题（详见解析）",
+      "analysis": "(1)由于\r\n\r\n$\\displaystyle \\int_{-a}^a f(t+a) \\mathrm{d} t\\\\\r\n=\\int_{-a}^a f(t+a) \\mathrm{d}(t+a) \\\\\r\n\\stackrel{u=t+a}{=} \\int_0^{2 a} f(u) \\mathrm{d} u\\\\=\\int_0^{2 a} f(t) \\mathrm{d} t$\r\n\r\n$\\displaystyle \\int_{-a}^a f(t-a) \\mathrm{d} t\\\\\r\n=\\int_{-a}^a f(t-a) \\mathrm{d}(t-a) \\\\\r\n\\stackrel{u=t-a}{=}\\int_{-2 a}^0 f(u) \\mathrm{d} u \\\\\r\n=\\int_{-2 a}^0 f(t) \\mathrm{d} t=-\\int_0^{-2 a} f(t) \\mathrm{d} t$\r\n\r\n故 $\\displaystyle \\lim _{a \\rightarrow 0^{+}} \\frac{1}{4 a^2} \\int_{-a}^a[f(t+a)-f(t-a)] \\mathrm{d} t\\\\\r\n=\\lim _{a \\rightarrow 0^{+}} \\frac{\\int_0^{2 a} f(t) \\mathrm{d} t+\\int_0^{-2 a} f(t) \\mathrm{d} t}{4 a^2}\\\\\r\n=\\lim _{a \\rightarrow 0^{+}} \\frac{\\left(\\int_0^{2 a} f(t) \\mathrm{d} t+\\int_0^{-2 a} f(t) \\mathrm{d} t\\right)^{\\prime}}{\\left(4 a^2\\right)^{\\prime}}\\\\\r\n= \\lim _{a \\rightarrow 0^{+}} \\frac{2 f(2 a)-2 f(-2 a)}{8 a} \\\\\r\n= \\frac{1}{2} \\lim _{a \\rightarrow 0^{+}} \\frac{f(2 a)-f(-2 a)}{2 a}\\\\ \r\n=\\frac{1}{2} \\lim _{a \\rightarrow 0^{+}} \\frac{f(2 a)-f(0)-[f(-2 a)-f(0)]}{2 a} \\\\\r\n=\\frac{1}{2} \\lim _{a \\rightarrow 0^{+}}\\left[\\frac{f(2 a)-f(0)}{2 a}+\\frac{f(-2 a)-f(0)}{-2 a}\\right]$\r\n\r\n(2)\r\n对于 $\\displaystyle \\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t$ 使用积分中值定理\r\n\r\n若 $f(x)$ 在 $[a, b]$ 上连续, 则存在 $\\xi, a<\\xi<b$,\r\n\r\n使得 $\\displaystyle \\int_a^b f(x) \\mathrm{d} x=f(\\xi) \\cdot(b-a)$\r\n\r\n存在 $c \\in(-a, a)$ 使得\r\n\r\n$\\displaystyle \\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t\\\\=\\frac{1}{2 a} \\cdot[a-(-a)] \\cdot f(c) \\\\=f(c)$\r\n\r\n由于 $m \\leqslant f(x) \\leqslant M$,\r\n\r\n则 $m \\leqslant f(c) \\leqslant M$\r\n\r\n即 $\\displaystyle m \\leqslant \\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t \\leqslant M$ ,\r\n\r\n两边同时取负号\r\n\r\n又 $-M \\leqslant-f(x) \\leqslant-m$\r\n\r\n故有\r\n\r\n$\\displaystyle -M+m \\leqslant \\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t-f(x) \\leqslant M-m$\r\n\r\n即可得\r\n\r\n$\\displaystyle -(M-m) \\leqslant \\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t-f(x) \\leqslant M-m$,\r\n\r\n即 $\\displaystyle \\left|\\frac{1}{2 a} \\int_{-a}^a f(t) \\mathrm{d} t-f(x)\\right| \\leqslant M-m$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 换元后分子对 a 求导用变上限求导，极限凑成对称差商得 f′(0)；(2) 用积分中值定理把均值写成 f(c)，再借 m≤f≤M 夹逼"
+      ],
+      "key_point": "(1) 换元合并后洛必达得 f′(0)；(2) 中值定理 ½a∫=f(c)∈[m,M]，与 f(x) 差的绝对值≤M-m。"
+    },
+    {
+      "id": 1338,
+      "paper": "数学二",
+      "year": 1988,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle f(x)=\\frac{1}{3} x^3+\\frac{1}{2} x^2+6 x+1$ 的图形在点 $(0,1)$ 处的切线与 $x$ 轴交点的坐标为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(-\\dfrac{1}{6}, 0\\right)$",
+        "B": "$(-1,0)$",
+        "C": "$\\left(\\dfrac{1}{6}, 0\\right)$",
+        "D": "$(1,0)$"
+      },
+      "answer": "A",
+      "analysis": "$f^{\\prime}(x)=x^2+x+6, f^{\\prime}(0)=6$\r\n\r\n切线方程为 $y-1=6(x-0)$, 即 $y=6 x+1$, \r\n\r\n切线与 $x$ 轴的交点为 $\\displaystyle \\left(-\\frac{1}{6}, 0\\right)$, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "把斜率误当 1，得 x=-1",
+        "C": "符号错，令 6x+1=0 解成正号 x=1/6",
+        "D": "斜率取 1 且符号错，得 x=1"
+      },
+      "pitfalls": [
+        "f′(0)=6，切线 y=6x+1，令 y=0 得 x=-1/6（负号），别漏负号或把斜率当 1"
+      ],
+      "key_point": "f′(0)=6，切线 y=6x+1 与 x 轴交于 (-1/6,0)。"
+    }
+  ]
+}

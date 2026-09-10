@@ -1,0 +1,493 @@
+{
+  "paper": "数学三",
+  "year": 2005,
+  "count": 23,
+  "questions": [
+    {
+      "id": 885,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "从数 $1,2,3,4$ 中任取一个数, 记为 $X$, 再从 $1, \\cdots, X$ 中任取一个数, 记为 $Y$, 则 $P\\{Y=2\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{13}{48}$",
+      "analysis": "式得 $\\displaystyle P\\{Y=2\\}=P(B)\\\\\r\n=\\sum_{i=1}^4 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)\\\\\r\n=\\frac{1}{4}\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right)\\\\\r\n=\\frac{13}{48}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X=1 时取不到 Y=2，该项为 0，不能算进去",
+        "每个 X=i 的概率都是 1/4，条件概率才是 1/i"
+      ],
+      "key_point": "P(Y=2)=1/4·(1/2+1/3+1/4)=13/48。"
+    },
+    {
+      "id": 890,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\lambda_{1}, \\lambda_{2}$ 是矩阵 $\\boldsymbol{A}$ 的两个不同的特征值, 对应的特征向量分别为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$, 则 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)$ 线性无关的充分必要条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda_{1} \\neq 0$",
+        "B": "$\\lambda_{2} \\neq 0$",
+        "C": "$\\lambda_{1}=0$",
+        "D": "$\\lambda_{2}=0$"
+      },
+      "answer": "B",
+      "analysis": "方法一 因为矩阵的不同特征值对应的特征向量线性无关, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关. \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\lambda_1 \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2\\\\\r\n\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right)\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right),\\\\\r\n\\boldsymbol{\\alpha}_1, \r\n\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是\r\n\r\n矩阵 $\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right)$ 可逆, \r\n\r\n即 $\\left|\\begin{array}{cc}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)\r\n\r\n方法二 令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\lambda_1 \\boldsymbol{\\alpha}_1+\\right.$ $\\left.\\lambda_2 \\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n整理得 $\\left(k_1+\\lambda_1 k_2\\right) \\boldsymbol{\\alpha}_1+\\lambda_2 k_2 \\boldsymbol{\\alpha}_2=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0,\\end{array}\\right.$ \r\n\r\n于是 $\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是 \r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$ 当且仅当 $k_1=k_2=0$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0\\end{array}\\right.$ \r\n\r\n只有零解, 于是 $\\left|\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)",
+      "wrong_options": {
+        "A": "误以为决定无关性的是 λ₁，实际 α₁ 前的系数不影响与 α₁ 的相关性。",
+        "C": "把充要条件方向取反（写成 λ₁=0）。",
+        "D": "λ₂=0 时 A(α₁+α₂)=λ₁α₁ 与 α₁ 共线反而相关，结论正好取反。"
+      },
+      "pitfalls": [
+        "不同特征值的 α₁,α₂ 必线性无关，这是化简前提",
+        "决定无关性的关键行列式为 λ₂，与 λ₁ 无关"
+      ],
+      "key_point": "整体无关 ⟺ 系数阵行列式 λ₂≠0（选 B）。"
+    },
+    {
+      "id": 901,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & 0<x<1,0<y<2 x \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n求: (1) $(X, Y)$ 的边缘概率密度 $f_{X}(x), f_{Y}(y)$;\r\n\r\n(2) $Z=2 X-Y$ 的概率密度 $f_{Z}(z)$\r\n\r\n(3) (数三) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}$",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n$f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{1}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) (数三) $\\dfrac{3}{4}$",
+      "analysis": "(1) $\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时, $f_X(x)=0$; \r\n\r\n当 $0<x<1$ 时, $\\displaystyle f_X(x)=\\int_0^{2 x} \\mathrm{d} y=2 x$,\r\n\r\n则 $X$ 的边缘密度为 $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n$\\displaystyle f_Y(y)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} x$,\r\n\r\n当 $y \\leqslant 0$ 或 $y \\geqslant 2$ 时, $f_Y(y)=0$; \r\n\r\n当 $0<y<2$ 时, $\\displaystyle f_Y(y)=\\int_{\\frac{y}{2}}^1 \\mathrm{d} x=1-\\frac{y}{2}$,\r\n\r\n则 $Y$ 的边缘密度为 $f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F_Z(z)=P\\{Z \\leqslant z\\}\\\\\r\n=P\\{2 X-Y \\leqslant z\\}\\\\\r\n=\\iint\\limits_{2 x-y \\leqslant z} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n当 $z<0$ 时, $F_Z(z)=0$;\r\n\r\n当 $0 \\leqslant z<2$ 时 (如图所示),\n\n![区域 2X-Y 不超过 z](/uploads/books/8e9ef298fb201896f93e99a533e4d871d32906dcf5a9530ca4f617e85d7c55d2.jpg)\r\n\r\n$\\displaystyle F_Z(z)=1-\\int_{\\frac{z}{2}}^1 \\mathrm{d} x \\int_0^{2 x-z} \\mathrm{d} y\\\\\r\n=1-\\int_{\\frac{z}{2}}^1(2 x-z) \\mathrm{d} x=z-\\frac{z^2}{4} ;$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$,\r\n\r\n即 $\\displaystyle F_Z(z)= \\begin{cases}0, & z<0 \\\\\r\nz-\\dfrac{z^2}{4}, & 0 \\leqslant z<2\\\\ 1, & z \\geqslant 2\\end{cases}$\r\n\r\n于是 $Z$ 的密度函数为 $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{z}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\frac{P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}}{P\\left\\{X \\leqslant \\frac{1}{2}\\right\\}}$,\r\n\r\n而 $\\displaystyle P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\int_0^{\\frac{1}{4}} \\mathrm{d} x \\int_0^{2 x} \\mathrm{d} y+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} x \\int_0^{\\frac{1}{2}} \\mathrm{d} y=\\frac{3}{16},\\\\\r\nP\\left\\{X \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} f_X(x) \\mathrm{d} x=\\frac{1}{4}$,\r\n\r\n于是 $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}=\\frac{3}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f_X 对 y 积分限 0→2x 得 2x；f_Y 对 x 积分限 y/2→1 得 1-y/2",
+        "Z=2X-Y 的密度不是常数：F_Z(z)=z-z²/4，求导得 f_Z=1-z/2"
+      ],
+      "key_point": "f_X=2x(0<x<1)、f_Y=1-y/2(0<y<2)、f_Z=1-z/2(0<z<2)；注：官方答案键 f_Z 处为 OCR 残缺（显示 1-1/2），经 F_Z(z)=∫₀¹min(2x,z)dx=z-z²/4 求导核实应为 1-z/2。"
+    },
+    {
+      "id": 1643,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} \\sigma$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1\\}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}-\\dfrac{1}{3}$",
+      "analysis": "令 $D_1=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1, x \\geqslant 0, y \\geqslant 0\\right\\}, D_2=D-D_1$, \r\n\r\n如图所示, $\\left|x^2+y^2-1\\right|= \\begin{cases}1-x^2-y^2, &(x, y) \\in D_1 \\\\ x^2+y^2-1, & (x, y) \\in D_2\\end{cases}$ \n\n![单位圆把 D 分成 D1 与 D2](/uploads/books/28d97cd0a68f0911bb4c7b241523cbd36b63dba7c99d06709cc717f2d48548fa.jpg)\r\n\r\n则 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2}\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y+2 \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y$\r\n\r\n而 $\\displaystyle \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^1\\left(x^2+y^2-1\\right) \\mathrm{d} y=-\\frac{1}{3}, \\\\\r\n\\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^1 r\\left(1-r^2\\right) \\mathrm{d} r=\\frac{\\pi}{8}$\r\n\r\n\r\n故 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y=\\frac{\\pi}{4}-\\frac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "去绝对值：圆内 x²+y²≤1 取 1−x²−y²，圆外取 x²+y²−1，两块符号相反别写反",
+        "凑成整正方形积分（直角坐标 −1/3）加两倍圆内 1/4 圆盘积分（极坐标 π/8），合并 π/4−1/3"
+      ],
+      "key_point": "按单位圆拆域，∬=∬_D(x²+y²−1)+2∬_{D₁}(1−x²−y²)=−1/3+2·π/8=π/4−1/3。"
+    },
+    {
+      "id": 2023,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "极限 $\\displaystyle \\lim _{x \\rightarrow \\infty} x \\sin \\frac{2 x}{x^2+1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "方法一 $\\displaystyle \\lim _{x \\rightarrow \\infty} x \\sin \\frac{2 x}{x^2+1}=\\lim _{x \\rightarrow \\infty} \\frac{2 x^2}{1+x^2} \\cdot \\frac{\\sin \\frac{2 x}{1+x^2}}{\\frac{2 x}{1+x^2}}=2$\r\n\r\n方法二 $\\displaystyle \\lim _{x \\rightarrow \\infty} x \\sin \\frac{2 x}{x^2+1}=\\lim _{x \\rightarrow \\infty} x \\cdot \\frac{2 x}{x^2+1}=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x→∞ 时内层辐角 2x/(x²+1)→0 才能用 sinu~u，别对整体用",
+        "替换后 x·(2x/(x²+1))=2x²/(x²+1)→2"
+      ],
+      "key_point": "lim x·sin(2x/(x²+1))=lim 2x²/(x²+1)=2。"
+    },
+    {
+      "id": 2024,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $x y^{\\prime}+y=0$ 满足初始条件 $y(1)=2$ 的特解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\dfrac{2}{x}$",
+      "analysis": "方法一 由 $\\displaystyle x y^{\\prime}+y=0$, \r\n\r\n得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}+\\frac{1}{x} y=0$,\r\n\r\n解得 $\\displaystyle y=C \\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{d} x}=\\frac{C}{x}$.\r\n\r\n由 $y(1)=2$, 得 $C=2$, 故 $y=\\dfrac{2}{x}$.\r\n\r\n方法二 由 $x y^{\\prime}+y=0$, 得 $(x y)^{\\prime}=0$, 于是 $x y=C$,\r\n\r\n再由 $y(1)=2$, 得 $C=2$, 于是 $y=\\dfrac{2}{x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "xy'+y 恰是 (xy)' 的展开，凑全导数最快",
+        "通解 y=C/x，代 y(1)=2 得 C=2"
+      ],
+      "key_point": "(xy)'=0⇒xy=C，由 y(1)=2 得 y=2/x。"
+    },
+    {
+      "id": 2025,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设二元函数 $z=x \\mathrm{e}^{x+y}+(x+1) \\ln (1+y)$, 则 $\\left.\\mathrm{d} z\\right|_{(1,0)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\mathrm{ed} x+(\\mathrm{e}+2) \\mathrm{d} y$",
+      "analysis": "方法一 $z=x \\mathrm{e}^{x+y}+(x+1) \\ln (1+y)$ 两边对 $x$ 求偏导, 得\r\n\r\n$\\dfrac{\\partial z}{\\partial x}=(x+1) \\mathrm{e}^{x+y}+\\ln (1+y),\\left.\\ \\dfrac{\\partial z}{\\partial x}\\right|_{(1,0)}=2 \\mathrm{e}$\r\n\r\n$z=x \\mathrm{e}^{x+y}+(x+1) \\ln (1+y)$ 两边对 $y$ 求偏导, 得\r\n\r\n$\\dfrac{\\partial z}{\\partial y}=x \\mathrm{e}^{x+y}+\\dfrac{x+1}{1+y},\\left.\\dfrac{\\partial z}{\\partial y}\\right|_{(1,0)}=\\mathrm{e}+2$,\r\n\r\n于是 $\\left.\\mathrm{d} z\\right|_{(1,0)}=2 \\mathrm{ed} x+(\\mathrm{e}+2) \\mathrm{d} y$\r\n\r\n方法二 $z=x \\mathrm{e}^{x+y}+(x+1) \\ln (1+y)$ 两边求微分得\r\n\r\n$\\displaystyle \r\n\\mathrm{d} z =\\mathrm{d}\\left(x \\mathrm{e}^{x+y}\\right)+\\mathrm{d}[(x+1) \\ln (1+y)] \\\\\r\n=\\left(\\mathrm{e}^{x+y}+x \\mathrm{e}^{x+y}\\right) \\mathrm{d} x+x \\mathrm{e}^{x+y} \\mathrm{d} y+\\ln (1+y) \\mathrm{d} x+\\frac{x+1}{y+1} \\mathrm{d} y$\r\n\r\n则 $\\left.\\mathrm{d} z\\right|_{(1,0)}=2 \\mathrm{ed} x+\\mathrm{ed} y+2 \\mathrm{d} y=2 \\mathrm{ed} x+(\\mathrm{e}+2) \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "z_x=(x+1)e^{x+y}+ln(1+y)，代 (1,0) 得 2e",
+        "z_y=xe^{x+y}+(x+1)/(1+y)，代 (1,0) 得 e+2"
+      ],
+      "key_point": "z_x(1,0)=2e，z_y(1,0)=e+2，故 dz=2e·dx+(e+2)dy。"
+    },
+    {
+      "id": 2026,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设行向量组 $(2,1,1,1),(2,1, a, a),(3,2,1, a),(4,3,2,1)$ 线性相关, 且 $a \\neq 1$, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "因为 $(2,1,1,1),(2,1, a, a),(3,2,1, a),(4,3,2,1)$ 为 4 个四维向量,\r\n\r\n所以该向量组线性相关的充分必要条件是 \r\n\r\n$\\left|\\begin{array}{llll}2 & 2 & 3 & 4 \\\\ 1 & 1 & 2 & 3 \\\\ 1 & a & 1 & 2 \\\\ 1 & a & a & 1\\end{array}\\right|=0$,\r\n\r\n由 $\\left|\\begin{array}{llll}2 & 2 & 3 & 4 \\\\ 1 & 1 & 2 & 3 \\\\ 1 & a & 1 & 2 \\\\ 1 & a & a & 1\\end{array}\\right|=(2 a-1)(a-1)=0$ 且 $a \\neq 1$, \r\n\r\n得 $a=\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "n 个 n 维向量相关⇔行列式为 0，是充要条件",
+        "解得 a=1/2 或 a=1，题设 a≠1 故取 a=1/2"
+      ],
+      "key_point": "行列式=(2a−1)(a−1)=0 且 a≠1，得 a=1/2。"
+    },
+    {
+      "id": 2027,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率分布为\r\n\r\n$$\r\n\\begin{array}{c|cc}\r\n\\hline X \\diagdown Y & 0 & 1 \\\\\r\n\\hline 0 & 0.4 & a \\\\\r\n1 & b & 0.1 \\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n若随机事件 $\\{X=0\\}$ 与 $\\{X+Y=1\\}$ 相互独立, 则 $a=\\rule{0.5cm}{0.2mm}$ ,$b=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0.4,0.1$",
+      "analysis": "由分布律关系得 $0.4+a+b+0.1=1$, \r\n\r\n即 $a+b=0.5$,\r\n\r\n$P\\{X=0\\}=0.4+a, \\quad P\\{X+Y=1\\}=a+b, \\\\\r\nP\\{X=0, X+Y=1\\}=P\\{X=0, Y=1\\}=a$,\r\n\r\n因为 $\\{X=0\\}$ 与 $\\{X+Y=1\\}$ 独立, \r\n\r\n所以 $(0.4+a)(a+b)=a$,\r\n\r\n解得 $a=0.4, b=0.1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "{X=0,X+Y=1} 即 {X=0,Y=1}，概率为 a",
+        "独立方程 (0.4+a)(a+b)=a 与 a+b=0.5 联立"
+      ],
+      "key_point": "(0.4+a)(0.5)=a 且 a+b=0.5，解得 a=0.4、b=0.1。"
+    },
+    {
+      "id": 2028,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $a$ 取下列哪个值时, 函数 $f(x)=2 x^3-9 x^2+12 x-a$ 恰有两个不同的零点 $(\\quad)$",
+      "options": {
+        "A": "$2$",
+        "B": "$4$",
+        "C": "$6$",
+        "D": "$8$"
+      },
+      "answer": "B",
+      "analysis": "令 $f^{\\prime}(x)=6 x^2-18 x+12=0$, 得 $x=1$ 及 $x=2$,\r\n\r\n当 $x<1$ 时, $f^{\\prime}(x)>0$; 当 $1<x<2$ 时, $f^{\\prime}(x)<0$,\r\n\r\n则 $x=1$ 为 $f(x)$ 的极大值点, 极大值为 $f(1)=5-a$,\r\n\r\n又当 $x>2$ 时, $f^{\\prime}(x)>0$, 则 $x=2$ 为 $f(x)$ 的极小值点, 极小值为 $f(2)=4-a$,\r\n\r\n又 $\\displaystyle  \\lim _{x \\rightarrow-\\infty} f(x)=-\\infty, \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$,\r\n\r\n故当 $f(1)=0, f(2)<0$ 或 $f(1)>0, f(2)=0$ 时, $f(x)$ 恰有两个零点,\r\n\r\n因此 $a=4$, 应选 (B)",
+      "wrong_options": {
+        "A": "a=2 时 f(1)=3>0、f(2)=2>0，两极值同号，图像只穿过 x 轴一次，只有一个零点",
+        "C": "a=6 时 f(1)=−1<0、f(2)=−2<0，两极值均为负，只有一个零点",
+        "D": "a=8 时 f(1)=−3、f(2)=−4 更负，仍只有一个零点"
+      },
+      "pitfalls": [
+        "恰两个零点要让极大或极小之一恰等于 0 造出重根，不是让判别式为 0",
+        "a=5 使极大值为 0 也满足，但不在选项中，故选 a=4"
+      ],
+      "key_point": "f(2)=4−a=0⇒a=4，此时 x=2 为二重零点、另有一单零点，恰两个不同零点。"
+    },
+    {
+      "id": 2029,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I_1=\\iint\\limits_D \\cos \\sqrt{x^2+y^2} \\mathrm{d} \\sigma, I_2=\\iint\\limits_D \\cos \\left(x^2+y^2\\right) \\mathrm{d} \\sigma, I_3=\\iint_D \\cos \\left(x^2+y^2\\right)^2 \\mathrm{d} \\sigma$, 其中 $D=$ $\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1\\right\\}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$I_3>I_2>I_1$",
+        "B": "$I_1>I_2>I_3$",
+        "C": "$I_2>I_1>I_3$",
+        "D": "$I_3>I_1>I_2$"
+      },
+      "answer": "A",
+      "analysis": "当 $(x, y) \\in D$ 时, $\\displaystyle 0 \\leqslant\\left(x^2+y^2\\right)^2 \\leqslant x^2+y^2 \\leqslant \\sqrt{x^2+y^2} \\leqslant 1<\\frac{\\pi}{2}$,\r\n\r\n内为 $\\cos t$ 在 $\\displaystyle \\left[0, \\frac{\\pi}{2}\\right]$ 上为单调减函数, \r\n\r\n所以 $\\cos \\left(x^2+y^2\\right)^2 \\geqslant \\cos \\left(x^2+y^2\\right) \\geqslant \\cos \\sqrt{x^2+y^2}$, \r\n\r\n于是 $I_3>I_2>I_1$, 应选 (A)",
+      "wrong_options": {
+        "B": "误把 cos 当单调增，把三者大小顺序完全颠倒",
+        "C": "只判对中间项，I1 与 I3 的位置仍排错",
+        "D": "把 I1 错排到中间位置"
+      },
+      "pitfalls": [
+        "单位圆内各量都 ≤1<π/2，cos 在此区间单调减，自变量越大 cos 越小",
+        "三个被积函数自变量次序为 (x²+y²)²≤x²+y²≤√(x²+y²)，故积分反序"
+      ],
+      "key_point": "cos 单减⇒cos(x²+y²)²≥cos(x²+y²)≥cos√(x²+y²)，积分得 I3>I2>I1。"
+    },
+    {
+      "id": 2030,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $a_n>0, n=1,2, \\cdots$, 若 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 发散, $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} a_n$ 收敛,则下列结论正确的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n-1}$ 收敛, $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n}$ 发散",
+        "B": "$\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n}$ 收敛, $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n-1}$ 发散",
+        "C": "$\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_{2 n-1}+a_{2 n}\\right)$ 收敛",
+        "D": "$\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_{2 n-1}-a_{2 n}\\right)$ 收敛"
+      },
+      "answer": "D",
+      "analysis": "方法一 \r\n\r\n因为 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} a_n=a_1-a_2+a_3-a_4+\\cdots$ 收敛,\r\n\r\n所以 $\\displaystyle \\left(a_1-a_2\\right)+\\left(a_3-a_4\\right)+\\cdots=\\sum_{n=1}^{\\infty}\\left(a_{2 n-1}-a_{2 n}\\right)$ 收敛, 应选 (D)\r\n\r\n方法二 取 $\\displaystyle a_n=\\frac{1}{n}$, \r\n\r\n显然 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 发散, $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} a_n$ 收敛, \r\n\r\n但 $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n-1}$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} a_{2 n}$ 都发散,\r\n\r\n因为 $\\displaystyle a_{2 n-1}+a_{2 n}=\\frac{1}{2 n-1}+\\frac{1}{2 n} \\sim \\frac{1}{n}$ 且 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(a_{2 n-1}+a_{2 n}\\right)$ 发散, \r\n\r\n即 (A), (B), (C) 都不对, 应选 (D)",
+      "wrong_options": {
+        "A": "奇数项子级数 Σa_{2n−1} 未必收敛（a_n=1/n 时发散）",
+        "B": "偶数项子级数 Σa_{2n} 未必收敛（同反例发散）",
+        "C": "Σ(a_{2n−1}+a_{2n}) 未必收敛（a_n=1/n 时通项~1/n 发散）"
+      },
+      "pitfalls": [
+        "收敛级数加括号仍收敛，这是单向的（反向不成立）",
+        "D 恰是交错级数前项相邻两项加括号，必收敛"
+      ],
+      "key_point": "Σ(−1)^{n−1}a_n 收敛⇒其相邻两项括号和 Σ(a_{2n−1}−a_{2n}) 收敛。"
+    },
+    {
+      "id": 2031,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=x \\sin x+\\cos x$, 下列命题中正确的是 $(\\quad)$",
+      "options": {
+        "A": "$f(0)$ 是极大值, $f\\left(\\dfrac{\\pi}{2}\\right)$ 是极小值",
+        "B": "$f(0)$ 是极小值, $f\\left(\\dfrac{\\pi}{2}\\right)$ 是极大值",
+        "C": "$f(0)$ 是极大值, $f\\left(\\dfrac{\\pi}{2}\\right)$ 也是极大值",
+        "D": "$f(0)$ 是极小值, $f\\left(\\dfrac{\\pi}{2}\\right)$ 也是极小值"
+      },
+      "answer": "B",
+      "analysis": "$f(x)=x \\sin x+\\cos x, f^{\\prime}(x)=x \\cos x$,\r\n\r\n显然 $\\displaystyle x=0, x=\\frac{\\pi}{2}$ 为 $f(x)$ 的驻点,\r\n\r\n$f^{\\prime \\prime}(x)=\\cos x-x \\sin x$,\r\n\r\n因为 $\\displaystyle f^{\\prime \\prime}(0)=1>0, f^{\\prime \\prime}\\left(\\frac{\\pi}{2}\\right)=-\\frac{\\pi}{2}<0$, \r\n\r\n所以 $f(0)$ 为极小值, $\\displaystyle f\\left(\\frac{\\pi}{2}\\right)$ 为极大值,\r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "把极大极小判反（误把 f''>0 当极大）",
+        "C": "误判两点都是极大值",
+        "D": "误判两点都是极小值"
+      },
+      "pitfalls": [
+        "f'=sinx+xcosx−sinx=xcosx，两个 sinx 恰好抵消，别漏",
+        "二阶导判别：f''>0 极小、f''<0 极大，符号别记反"
+      ],
+      "key_point": "f''(0)=1>0⇒f(0)极小，f''(π/2)=−π/2<0⇒f(π/2)极大。"
+    },
+    {
+      "id": 2032,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "以下四个命题中, 正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $f^{\\prime}(x)$ 在 $(0,1)$ 内连续, 则 $f(x)$ 在 $(0,1)$ 内有界",
+        "B": "若 $f(x)$ 在 $(0,1)$ 内连续, 则 $f(x)$ 在 $(0,1)$ 内有界",
+        "C": "若 $f^{\\prime}(x)$ 在 $(0,1)$ 内有界, 则 $f(x)$ 在 $(0,1)$ 内有界",
+        "D": "若 $f(x)$ 在 $(0,1)$ 内有界, 则 $f^{\\prime}(x)$ 在 $(0,1)$ 内有界"
+      },
+      "answer": "C",
+      "analysis": "方法一 取 $\\displaystyle f^{\\prime}(x)=\\frac{1}{x^2}, f(x)=-\\frac{1}{x}$, \r\n\r\n显然 $f^{\\prime}(x)$ 在 $(0,1)$ 内连续,\r\n\r\n但 $f(x)$ 在 $(0,1)$ 内无界, (A)不对;\r\n\r\n取 $\\displaystyle f(x)=-\\frac{1}{x}$, \r\n\r\n显然 $f(x)$ 在 $(0,1)$ 内连续, 但无界, (B) 不对;\r\n\r\n取 $\\displaystyle f(x)=\\sqrt{x}, f^{\\prime}(x)=\\frac{1}{2 \\sqrt{x}}$ 在 $(0,1)$ 内无界, \r\n\r\n(D) 不对, 应选 (C)\r\n\r\n方法二 设 $f^{\\prime}(x)$ 在 $(0,1)$ 内有界, 即存在 $M>0$, \r\n\r\n使得 $\\left|f^{\\prime}(x)\\right| \\leqslant M$,\r\n\r\n由拉格朗日中值定理得 \r\n\r\n$f(x)=f\\left(\\dfrac{1}{2}\\right)+f^{\\prime}(\\xi)\\left(x-\\dfrac{1}{2}\\right)$,\r\n\r\n于是 $|f(x)| \\leqslant\\left|f\\left(\\dfrac{1}{2}\\right)\\right|+M\\left|x-\\dfrac{1}{2}\\right| \\leqslant\\left|f\\left(\\dfrac{1}{2}\\right)\\right|+M$,\r\n\r\n即若 $f^{\\prime}(x)$ 在 $(0,1)$ 内有界, \r\n\r\n则 $f(x)$ 在 $(0,1)$ 内有界, 应选 (C)",
+      "wrong_options": {
+        "A": "f' 在开区间连续不保证 f 有界（f=−1/x，f'=1/x² 连续但 f 无界）",
+        "B": "开区间上连续函数未必有界（f=−1/x 在 (0,1) 连续但无界）",
+        "D": "f 有界不保证 f' 有界（f=√x 有界，f'=1/(2√x) 无界）"
+      },
+      "pitfalls": [
+        "开区间 (0,1) 上连续 ≠ 有界，只有闭区间才保证有最值",
+        "导数有界是函数有界的充分条件，反之不成立"
+      ],
+      "key_point": "f' 有界⇒由拉氏中值定理 |f(x)|≤|f(1/2)|+M，故 f 有界，选 C。"
+    },
+    {
+      "id": 2033,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(a_{i j}\\right)_{3 \\times 3}$ 满足 $\\boldsymbol{A}^*=\\boldsymbol{A}^{\\mathrm{T}}$, 其中 $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{A}^{\\mathrm{T}}$ 为 $\\boldsymbol{A}$ 的转置矩阵. 若 $a_{11}, a_{12}, a_{13}$ 为三个相等的正数, 则 $a_{11}$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{\\sqrt{3}}{3}$",
+        "B": "$3$",
+        "C": "$\\dfrac{1}{3}$",
+        "D": "$\\sqrt{3}$"
+      },
+      "answer": "A",
+      "analysis": "由 $\\boldsymbol{A}^*=\\boldsymbol{A}^{\\mathrm{T}}$, 得 $a_{i j}=A_{i j}(i, j=1,2,3)$,\r\n\r\n令 $a_{11}=a_{12}=a_{13}=a$,\r\n\r\n则 $|\\boldsymbol{A}|\\\\\r\n=a_{11} A_{11}+a_{12} A_{12}+a_{13} A_{13}\\\\\r\n=a_{11}^2+a_{12}^2+a_{13}^2\r\n=3 a^2 \\neq 0$,\r\n\r\n由 $\\boldsymbol{A A}^*=|\\boldsymbol{A}| \\boldsymbol{E}$ 及 $\\boldsymbol{A} \\boldsymbol{A}^{\\mathrm{T}}=|\\boldsymbol{A}| \\boldsymbol{E}$,\r\n\r\n得 $|\\boldsymbol{A}| \\cdot|\\boldsymbol{A} *|=|\\boldsymbol{A}| \\cdot\\left|\\boldsymbol{A}^{\\mathrm{T}}\\right|$, \r\n\r\n即 $|\\boldsymbol{A}|^3=|\\boldsymbol{A}|^2$,\r\n\r\n于是 $|\\boldsymbol{A}|=1$, 故 $a_{11}=\\dfrac{\\sqrt{3}}{3}$, 应选 (A)",
+      "wrong_options": {
+        "B": "误把 |A|=|A|³ 处理错或漏开方，凑出 a=3",
+        "C": "把 3a²=1 误解成 a=1/3",
+        "D": "开方处理错，得 a=√3"
+      },
+      "pitfalls": [
+        "A*=A^T 等价于每个元素等于自身的代数余子式 a_ij=A_ij",
+        "按第一行展开 |A|=Σa_{1j}A_{1j}=Σa_{1j}²，结合 |A|²=|A| 定出 |A|=1"
+      ],
+      "key_point": "|A|=3a²、|A|³=|A|²⇒|A|=1，故 3a²=1，a_11=√3/3。"
+    },
+    {
+      "id": 2034,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设一批零件的长度服从正态分布 $N\\left(\\mu, \\sigma^2\\right)$, 其中 $\\mu, \\sigma^2$ 均未知. 现从中随机抽取 $16$ 个零件, 测得样本均值 $\\bar{x}=20(\\mathrm{cm})$, 样本标准差 $S=1(\\mathrm{cm})$, 则 $\\mu$ 的置信度为 $0.90$ 的置信区间是 $(\\quad)$",
+      "options": {
+        "A": "$\\left(20-\\dfrac{1}{4} t_{0.05}(16), 20+\\dfrac{1}{4} t_{0.05}(16)\\right)$",
+        "B": "$\\left(20-\\dfrac{1}{4} t_{0.1}(16), 20+\\dfrac{1}{4} t_{0.1}(16)\\right)$",
+        "C": "$\\left(20-\\dfrac{1}{4} t_{0.05}(15), 20+\\dfrac{1}{4} t_{0.05}(15)\\right)$",
+        "D": "$\\left(20-\\dfrac{1}{4} t_{0.1}(15), 20+\\dfrac{1}{4} t_{0.1}(15)\\right)$"
+      },
+      "answer": "C",
+      "analysis": "因为 $\\sigma^2$ 未知, 所以取统计量 $\\displaystyle T=\\frac{\\bar{X}-\\mu}{\\frac{S}{\\sqrt{n}}} \\sim t(n-1)$, \r\n\r\n显然 $\\quad P\\left\\{-t_{0.05}(n-1)<T<t_{0.05}(n-1)\\right\\}=0.9$,\r\n\r\n则 $\\mu$ 的置信度为 0.9 的置信区间为\r\n$\\displaystyle \\left(20-\\frac{1}{4} t_{0.05}(15), 20+\\frac{1}{4} t_{0.05}(15)\\right)$, 应选 (C)",
+      "wrong_options": {
+        "A": "自由度用错，应为 n−1=15 而非 16",
+        "B": "分位数下标取 0.1（单侧）错，双侧应为 α/2=0.05；自由度也错",
+        "D": "分位数下标 0.1 用错（应为 0.05）"
+      },
+      "pitfalls": [
+        "σ 未知用 t 分布而非正态，自由度为 n−1=15",
+        "置信度 0.90⇒α=0.10，双侧取 t_{α/2}=t_{0.05}"
+      ],
+      "key_point": "CI 为 (20±(1/4)t_{0.05}(15))，选 C。"
+    },
+    {
+      "id": 2035,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+x}{1-\\mathrm{e}^{-x}}-\\frac{1}{x}\\right)$",
+      "options": {},
+      "answer": "$\\dfrac{3}{2}$",
+      "analysis": "方法一 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+x}{1-\\mathrm{e}^{-x}}-\\frac{1}{x}\\right) \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x+x^2-1+\\mathrm{e}^{-x}}{x\\left(1-\\mathrm{e}^{-x}\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x+x^2-1+\\mathrm{e}^{-x}}{x^2} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{1+2 x-\\mathrm{e}^{-x}}{2 x}\\\\\r\n=1+\\lim _{x \\rightarrow 0} \\frac{1-\\mathrm{e}^{-x}}{2 x}=\\frac{3}{2}$\r\n\r\n方法二 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+x}{1-\\mathrm{e}^{-x}}-\\frac{1}{x}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2+x-1+\\mathrm{e}^{-x}}{x\\left(1-\\mathrm{e}^{-x}\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x^2+x-1+\\mathrm{e}^{-x}}{x^2}$,\r\n\r\n由 $\\mathrm{e}^x=1+x+\\dfrac{x^2}{2 !}+o\\left(x^2\\right)$ \r\n\r\n得 $\\mathrm{e}^{-x}=1-x+\\dfrac{x^2}{2 !}+o\\left(x^2\\right)$,\r\n\r\n于是 $x^2+x-1+\\mathrm{e}^{-x} \\sim \\dfrac{3}{2} x^2$, \r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+x}{1-\\mathrm{e}^{-x}}-\\frac{1}{x}\\right)=\\frac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先通分成一个分式，分母 x(1−e^{−x}) 可换成等价 x²",
+        "e^{−x}=1−x+x²/2+o(x²)，分子 x+x²−1+e^{−x}~(3/2)x²"
+      ],
+      "key_point": "原式=lim (x+x²−1+e^{−x})/x²=3/2。"
+    },
+    {
+      "id": 2036,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(u)$ 具有二阶连续导数, 且 $\\displaystyle g(x, y)=f\\left(\\frac{y}{x}\\right)+y f\\left(\\frac{x}{y}\\right)$, 求 $\\displaystyle x^2 \\frac{\\partial^2 g}{\\partial x^2}-y^2 \\frac{\\partial^2 g}{\\partial y^2}$",
+      "options": {},
+      "answer": "$\\dfrac{2 y}{x} f^{\\prime}\\left(\\frac{y}{x}\\right)$",
+      "analysis": "$\\displaystyle \\frac{\\partial g}{\\partial x}=-\\frac{y}{x^2} f^{\\prime}\\left(\\frac{y}{x}\\right)+f^{\\prime}\\left(\\frac{x}{y}\\right)\\\\\r\n\\frac{\\partial^2 g}{\\partial x^2}=\\frac{2 y}{x^3} f^{\\prime}\\left(\\frac{y}{x}\\right)+\\frac{y^2}{x^4} f^{\\prime \\prime}\\left(\\frac{y}{x}\\right)+\\frac{1}{y} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right), \\\\\r\n\\frac{\\partial g}{\\partial y}=\\frac{1}{x} f^{\\prime}\\left(\\frac{y}{x}\\right)+f\\left(\\frac{x}{y}\\right)-\\frac{x}{y} f^{\\prime}\\left(\\frac{x}{y}\\right), \\\\ \\frac{\\partial^2 g}{\\partial y^2}=\\frac{1}{x^2} f^{\\prime \\prime}\\left(\\frac{y}{x}\\right)-\\frac{x}{y^2} f^{\\prime}\\left(\\frac{x}{y}\\right)+\\frac{x}{y^2} f^{\\prime}\\left(\\frac{x}{y}\\right)+\\frac{x^2}{y^3} f^{\\prime \\prime}\\left(\\frac{x}{y}\\right)$,\r\n\r\n则 $\\displaystyle x^2 \\frac{\\partial^2 g}{\\partial x^2}-y^2 \\frac{\\partial^2 g}{\\partial y^2}=\\frac{2 y}{x} f^{\\prime}\\left(\\frac{y}{x}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求二阶偏导时内层 y/x、x/y 的导数别漏",
+        "组合后所有 f'' 项系数相消，验算时重点核对 f'' 抵消"
+      ],
+      "key_point": "g_xx、g_yy 代入组合，f''(y/x)、f''(x/y) 全消，结果为 (2y/x)f'(y/x)。"
+    },
+    {
+      "id": 2037,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2 n+1}-1\\right) x^{2 n}$ 在区间 $(-1,1)$ 内的和函数 $S(x)$",
+      "options": {},
+      "answer": "$S(x)= \\begin{cases}0, & x=0 \\\\ \\dfrac{1}{2 x} \\ln \\dfrac{1+x}{1-x}-\\dfrac{1}{1-x^2}, & -1<x<1 \\text { 且 } x \\neq 0\\end{cases}$",
+      "analysis": "方法一 令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2 n+1}-1\\right) x^{2 n}$,\r\n\r\n当 $x=0$ 时, $S(0)=0$;\r\n\r\n当 $x \\neq 0$ 时, $\\displaystyle S(x)\\\\\r\n=\\sum_{n=1}^{\\infty} \\frac{x^{2 n}}{2 n+1}-\\sum_{n=1}^{\\infty} x^{2 n}\\\\\r\n=\\frac{1}{x} \\sum_{n=1}^{\\infty} \\frac{x^{2 n+1}}{2 n+1}-\\frac{x^2}{1-x^2}\\\\\r\n=\\frac{1}{x} S_1(x)-\\frac{x^2}{1-x^2},\\\\\r\nS_1(x)=\\sum_{n=1}^{\\infty} \\frac{x^{2 n+1}}{2 n+1}, \\quad S_1(0)=0,\\\\\r\nS_1^{\\prime}(x)=\\sum_{n=1}^{\\infty} x^{2 n}=\\frac{x^2}{1-x^2}=-1-\\frac{1}{x^2-1} \\\\\r\nS_1(x)=S_1(0)+\\int_0^x S_1^{\\prime}(x) \\mathrm{d} x\\\\\r\n=-x-\\frac{1}{2} \\ln \\left|\\frac{x-1}{x+1}\\right|\\\\\r\n=-x-\\frac{1}{2} \\ln \\frac{1-x}{1+x}$\r\n\r\n于是 $S(x)= \\begin{cases}0, & x=0 \\\\ \\dfrac{1}{2 x} \\ln \\dfrac{1+x}{1-x}-\\dfrac{1}{1-x^2}, & -1<x<1 \\text { 且 } x \\neq 0\\end{cases}$\r\n\r\n方法二 令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2 n+1}-1\\right) x^{2 n}$,\r\n\r\n当 $x=0$ 时, $S(0)=0$;\r\n\r\n当 $x \\in(-1,1)$ 且 $x \\neq 0$ 时,\r\n\r\n$\\displaystyle S(x) =\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2 n+1}-1\\right) x^{2 n}\\\\\r\n=\\sum_{n=1}^{\\infty} \\frac{x^{2 n}}{2 n+1}-\\sum_{n=1}^{\\infty} x^{2 n} \\\\\r\n=\\frac{1}{x} \\sum_{n=1}^{\\infty} \\frac{x^{2 n+1}}{2 n+1}-\\frac{x^2}{1-x^2}\\\\\r\n=\\frac{1}{x} \\int_0^x\\left(\\sum_{n=1}^{\\infty} x^{2 n}\\right) \\mathrm{d} x-\\frac{x^2}{1-x^2}\\\\\r\n\\frac{1}{x} \\int_0^x \\frac{x^2}{1-x^2} \\mathrm{d} x-\\frac{x^2}{1-x^2} \\\\\r\n=\\frac{1}{x} \\int_0^x\\left(-1-\\frac{1}{x^2-1}\\right) \\mathrm{d} x-\\frac{x^2}{1-x^2}\\\\\r\n=\\frac{1}{2 x} \\ln \\frac{1+x}{1-x}-\\frac{1}{1-x^2}$\r\n\r\n故 $S(x)= \\begin{cases}0, & x=0 \\\\ \\dfrac{1}{2 x} \\ln \\dfrac{1+x}{1-x}-\\dfrac{1}{1-x^2}, & -1<x<1 \\text { 且 } x \\neq 0\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=0 要单独讨论，S(0)=0",
+        "Σx^{2n}/(2n+1)=(1/x)Σx^{2n+1}/(2n+1)，逐项积分前先提 1/x"
+      ],
+      "key_point": "S(x)=(1/(2x))ln((1+x)/(1−x))−1/(1−x²)（x≠0），S(0)=0。"
+    },
+    {
+      "id": 2038,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "$f(x), g(x)$ 在 $[0,1]$ 上的导数连续, 且 $f(0)=0, f^{\\prime}(x) \\geqslant 0, g^{\\prime}(x) \\geqslant 0$. 证明: 对任何 $a \\in[0,1]$,有 $\\displaystyle \\int_0^a g(x) f^{\\prime}(x) \\mathrm{d} x+\\int_0^1 f(x) g^{\\prime}(x) \\mathrm{d} x \\geqslant f(a) g(1)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle F(a)\\\\\r\n=\\int_0^a f^{\\prime}(x) g(x) \\mathrm{d} x+\\int_0^1 f(x) g^{\\prime}(x) \\mathrm{d} x-f(a) g(1)\\\\\r\nF^{\\prime}(a)=f^{\\prime}(a) g(a)-f^{\\prime}(a) g(1)\\\\\r\n=f^{\\prime}(a)[g(a)-g(1)]$\r\n\r\n因为 $g^{\\prime}(x) \\geqslant 0$, 所以 $g(a) \\leqslant g(1)$, \r\n\r\n又因为 $f^{\\prime}(x) \\geqslant 0$,\r\n\r\n所以 $F^{\\prime}(a) \\leqslant 0$, 从而 $F(x)$ 单调不增, 于是\r\n\r\n$\\displaystyle F(a) \\geqslant F(1) \\\\\r\n=\\int_0^1 f^{\\prime}(x) g(x) \\mathrm{d} x+\\int_0^1 f(x) g^{\\prime}(x) \\mathrm{d} x-f(1) g(1) \\\\\r\n=\\int_0^1[f(x) g(x)]^{\\prime} \\mathrm{d} x-f(1) g(1)\\\\\r\n=\\left.f(x) g(x)\\right|_0 ^1-f(1) g(1)=0$\r\n\r\n即 $\\displaystyle \\int_0^a f^{\\prime}(x) g(x) \\mathrm{d} x+\\int_0^1 f(x) g^{\\prime}(x) \\mathrm{d} x \\geqslant f(a) g(1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "把待证不等式移项构造 F(a) 是关键",
+        "g'≥0⇒g(a)≤g(1)，配 f'≥0 得 F'≤0；F(1) 恰用分部积分算成 0"
+      ],
+      "key_point": "F'(a)=f'(a)[g(a)−g(1)]≤0，F(a)≥F(1)=[f(x)g(x)]₀¹−f(1)g(1)=0。"
+    },
+    {
+      "id": 2039,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知齐次线性方程组\r\n(I) $\\left\\{\\begin{array}{l}x_1+2 x_2+3 x_3=0 \\\\ 2 x_1+3 x_2+5 x_3=0 \\\\ x_1+x_2+a x_3=0\\end{array}\\right.$ 和\r\n\r\n(II) $\\left\\{\\begin{array}{l}x_1+b x_2+c x_3=0 \\\\ 2 x_1+b^2 x_2+(c+1) x_3=0\\end{array}\\right.$\r\n同解, 求 $a, b, c$ 的值",
+      "options": {},
+      "answer": "$a=2, b=1, c=2$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 5 \\\\ 1 & 1 & a\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & b & c \\\\ 2 & b^2 & c+1\\end{array}\\right)$, \r\n\r\n因为方程组 (I) 与方程组 (II) 同解, 所以 $r(\\boldsymbol{A})=r(\\boldsymbol{B})$, \r\n\r\n又因为 $r(\\boldsymbol{B})<3$, 所以 $r(\\boldsymbol{A})<3$, \r\n\r\n即 $|\\boldsymbol{A}|=0$, 解得 $a=2$,\r\n\r\n由 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 5 \\\\ 1 & 1 & 2\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}1 & 2 & 3 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得(I)的通解为 $\\boldsymbol{X}=C\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right) ( C$ 为任意常数)\r\n\r\n因为(I)与(II)同解, \r\n\r\n所以将 $\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{c}-1 \\\\ -1 \\\\ 1\\end{array}\\right)$ 代入 (II)\r\n\r\n得 $\\left\\{\\begin{array}{l}b=0 \\\\ c=1\\end{array}\\right.$ 或 $\\left\\{\\begin{array}{l}b=1 \\\\ c=2 \\end{array}\\right.$, 而当 $\\left\\{\\begin{array}{l}b=0 \\\\ c=1\\end{array}\\right.$ 时,\r\n\r\n方程组 (II) 化为 $x_1+x_3=0$, \r\n\r\n因为两个方程组系数矩阵的秩不等, \r\n\r\n所以两个方程组不同解, 故 $a=2, b=1, c=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(II) 只有两个方程，r(B)<3，同解逼出 r(A)<3⇒|A|=0 定 a",
+        "代入解 b、c 得两组，b=0,c=1 时秩不等被排除，取 b=1,c=2"
+      ],
+      "key_point": "a=2、b=1、c=2。"
+    },
+    {
+      "id": 2040,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{D}=\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{C} \\\\ \\boldsymbol{C}^{\\mathrm{T}} & \\boldsymbol{B}\\end{array}\\right)$ 为正定矩阵, 其中 $\\boldsymbol{A}, \\boldsymbol{B}$ 分别为 $m$ 阶, $n$ 阶对称矩阵, $\\boldsymbol{C}$ 为 $m \\times n$ 矩阵\r\n\r\n(1) 计算 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D} \\boldsymbol{P}$, 其中 $\\boldsymbol{P}=\\left(\\begin{array}{cc}\\boldsymbol{E}_m & -\\boldsymbol{A}^{-1} \\boldsymbol{C} \\\\ \\boldsymbol{O} & \\boldsymbol{E}_n\\end{array}\\right)$;\r\n\r\n(2) 利用 (I) 的结果判断矩阵 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 是否为正定矩阵, 并证明你的结论",
+      "options": {},
+      "answer": "(1) $\\left(\\begin{array}{cc}\r\n\\boldsymbol{A} & \\boldsymbol{O} \\\\\r\n\\boldsymbol{O} & \\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}\r\n\\end{array}\\right)$",
+      "analysis": "(1) 显然 $\\boldsymbol{A}, \\boldsymbol{B}$ 为实对称矩阵,\r\n\r\n$\\boldsymbol{P}^{\\mathrm{T}}\\\\\r\n=\\left(\\begin{array}{cc}\r\n\\boldsymbol{E}_m & \\boldsymbol{O} \\\\\r\n-\\boldsymbol{C}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{-1}\\right)^{\\mathrm{T}} & \\boldsymbol{E}_n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{cc}\\boldsymbol{E}_m & \\boldsymbol{O} \\\\ -\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} & \\boldsymbol{E}_n\\end{array}\\right)\\\\\r\n\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D P} =\\left(\\begin{array}{cc}\r\n\\boldsymbol{E}_m & \\boldsymbol{O} \\\\\r\n-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} & \\boldsymbol{E}_n\r\n\\end{array}\\right)\\left(\\begin{array}{cc}\r\n\\boldsymbol{A} & \\boldsymbol{C} \\\\\r\n\\boldsymbol{C}^{\\mathrm{T}} & \\boldsymbol{B}\r\n\\end{array}\\right)\\left(\\begin{array}{cc}\r\n\\boldsymbol{E}_m & -\\boldsymbol{A}^{-1} \\boldsymbol{C} \\\\\r\n\\boldsymbol{O} & \\boldsymbol{E}_n\r\n\\end{array}\\right) \\\\\r\n=\\left(\\begin{array}{cc}\r\n\\boldsymbol{A} & \\boldsymbol{C} \\\\\r\n\\boldsymbol{O} & \\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}\r\n\\end{array}\\right)\\left(\\begin{array}{cc}\r\n\\boldsymbol{E}_m & -\\boldsymbol{A}^{-1} \\boldsymbol{C} \\\\\r\n\\boldsymbol{O} & \\boldsymbol{E}_n\r\n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{cc}\r\n\\boldsymbol{A} & \\boldsymbol{O} \\\\\r\n\\boldsymbol{O} & \\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}\r\n\\end{array}\\right)$\r\n\r\n(2) 方法一 显然 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 为实对称矩阵\r\n\r\n因为 $\\boldsymbol{D}$ 正定, \r\n\r\n所以 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D P}$ 也正定, \r\n\r\n于是 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D P}$ 的特征值全大于零,\r\n\r\n又因为 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 和 $\\boldsymbol{A}$ 的特征值为 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D P}$ 的特征值,\r\n\r\n所以 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 的特征值全大于零,\r\n\r\n故 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 为 正定矩阵\r\n\r\n方法二\r\n\r\n对任意的 $\\boldsymbol{x} \\neq \\mathbf{0}, \\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D} \\boldsymbol{P} \\boldsymbol{x}=(\\boldsymbol{P} \\boldsymbol{x})^{\\mathrm{T}} \\boldsymbol{D}(\\boldsymbol{P x})$,\r\n\r\n因为 $\\boldsymbol{P}$ 可逆, 所以 $\\boldsymbol{P x} \\neq \\mathbf{0}$, \r\n\r\n又因为 $\\boldsymbol{D}$ 正定,\r\n\r\n所以 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D P} \\boldsymbol{x}=(\\boldsymbol{P} \\boldsymbol{x})^{\\mathrm{T}} \\boldsymbol{D}(\\boldsymbol{P} \\boldsymbol{x})>0$.\r\n\r\n对任意的 $\\boldsymbol{y} \\neq \\mathbf{0}$, 取 $\\boldsymbol{x}=\\left(\\begin{array}{l}\\mathbf{0} \\\\ \\boldsymbol{y}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D} \\boldsymbol{P} \\boldsymbol{x}>0$,\r\n\r\n而 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{D} \\boldsymbol{P} \\boldsymbol{x}=\\boldsymbol{y}^{\\mathrm{T}}\\left(\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}\\right) \\boldsymbol{y}>0$,\r\n\r\n所以 $\\boldsymbol{B}-\\boldsymbol{C}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{C}$ 为正定矩阵.",
+      "wrong_options": {},
+      "pitfalls": [
+        "P 可逆故 P^TDP 与 D 合同，正定性保持",
+        "取 x=(0,y)^T 代 x^TP^TDPx 即得 y^T(B−C^TA^{−1}C)y>0，是最快的证法"
+      ],
+      "key_point": "P^TDP=diag(A, B−C^TA^{−1}C)，D 正定⇒B−C^TA^{−1}C 正定。"
+    },
+    {
+      "id": 2042,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, \\cdots, X_n(n>2)$ 为来自总体 $N\\left(0, \\sigma^2\\right)$ 的简单随机样本, 其样本均值为 $\\bar{X}$. 记 $Y_i=$ $X_i-\\bar{X}, i=1,2, \\cdots, n$.\r\n( I ) 求 $Y_i$ 的方差 $D\\left(Y_i\\right), i=1,2, \\cdots, n$;\r\n(II) 求 $Y_1$ 与 $Y_n$ 的协方差 $\\operatorname{Cov}\\left(Y_1, Y_n\\right)$;\r\n(III) 若 $c\\left(Y_1+Y_n\\right)^2$ 是 $\\sigma^2$ 的无偏估计量, 求常数 $c$",
+      "options": {},
+      "answer": "D(Y_i)=(n−1)σ²/n；Cov(Y_1,Y_n)=−σ²/n；c=n/(2n−4)",
+      "analysis": "（ I ) 方法一 $\\displaystyle Y_1=X_1-\\bar{X}=X_1-\\frac{1}{n} \\sum_{i=1}^n X_i=\\left(1-\\frac{1}{n}\\right) X_1-\\frac{1}{n} X_2-\\cdots-\\frac{1}{n} X_n$,\r\n因为 $X_i \\sim N\\left(0, \\sigma^2\\right)(1 \\leqslant i \\leqslant n)$ 且 $X_1, X_2, \\cdots, X_n$ 相互独立, 所以 $Y_1$ 服从正态分布,\r\n又因为 $\\displaystyle E\\left(Y_1\\right)=0, D\\left(Y_1\\right)=\\left(1-\\frac{1}{n}\\right)^2 D\\left(X_1\\right)+\\frac{1}{n^2} D\\left(X_2\\right)+\\cdots+\\frac{1}{n^2} D\\left(X_n\\right)=\\frac{n-1}{n} \\sigma^2$,\r\n所以 $Y_1 \\sim N\\left(0, \\frac{n-1}{n} \\sigma^2\\right)$, 同理 $Y_i \\sim N\\left(0, \\frac{n-1}{n} \\sigma^2\\right)(1 \\leqslant i \\leqslant n)$,\r\n于是 $\\displaystyle D\\left(Y_i\\right)=\\frac{n-1}{n} \\sigma^2(1 \\leqslant i \\leqslant n)$.\r\n方法二 因为 $X_i \\sim N\\left(0, \\sigma^2\\right)$, 所以 $E\\left(X_i\\right)=0, D\\left(X_i\\right)=\\sigma^2(i=1,2, \\cdots, n)$,\r\n\r\n$$\r\n\\begin{aligned}\r\n& E(\\bar{X})=\\frac{1}{n} \\sum_{i=1}^n E\\left(X_i\\right)=0\\\\\r\n&D(\\bar{X})=\\frac{1}{n^2} \\sum_{i=1}^n D\\left(X_i\\right)=\\frac{\\sigma^2}{n}\\\\\r\n&E\\left(\\bar{X}^2\\right)=D(\\bar{X})+[E(\\bar{X})]^2=\\frac{\\sigma^2}{n}\\\\\r\n& E\\left(Y_i\\right)=E\\left(X_i-\\bar{X}\\right)=E\\left(X_i\\right)-E(\\bar{X})=0, \\\\\r\n& D\\left(Y_i\\right)=E\\left(Y_i^2\\right)-\\left(E Y_i\\right)^2=E\\left(Y_i^2\\right)=E\\left(X_i^2-2 X_i \\bar{X}+\\bar{X}^2\\right)\\\\\r\n& =E\\left(X_i^2\\right)-\\frac{2}{n} E\\left[X_i\\left(X_1+\\cdots+X_n\\right)\\right]+E\\left(\\bar{X}^2\\right) \\\\\r\n& =D\\left(X_i\\right)-\\left[E\\left(X_i\\right)\\right]^2-\\frac{2}{n} E\\left(X_i^2\\right)+\\frac{\\sigma^2}{n}\\\\\r\n&=\\sigma^2-\\frac{2}{n} \\sigma^2+\\frac{\\sigma^2}{n}=\\left(1-\\frac{1}{n}\\right) \\sigma^2\r\n\\end{aligned}\r\n$$\r\n\r\n( II )\r\n\r\n$$\r\n\\begin{aligned}\r\n& \\operatorname{Cov}\\left(Y_1, Y_n\\right)=\\operatorname{Cov}\\left(X_1-\\bar{X}, X_n-\\bar{X}\\right) \\\\\r\n= & \\operatorname{Cov}\\left(X_1, X_n\\right)-\\operatorname{Cov}\\left(X_1, \\bar{X}\\right)-\\operatorname{Cov}\\left(\\bar{X}, X_n\\right)+\\operatorname{Cov}(\\bar{X}, \\bar{X}) \\\\\r\n= & -\\frac{1}{n} \\operatorname{Cov}\\left(X_1, X_1+X_2+\\cdots+X_n\\right)-\\frac{1}{n} \\operatorname{Cov}\\left(X_1+X_2+\\cdots+X_n, X_n\\right)+D(\\bar{X}) \\\\\r\n= & -\\frac{1}{n} \\operatorname{Cov}\\left(X_1, X_1\\right)-\\frac{1}{n} \\operatorname{Cov}\\left(X_n, X_n\\right)+\\frac{\\sigma^2}{n}=\\frac{\\sigma^2}{n}-\\frac{2 \\sigma^2}{n}=-\\frac{\\sigma^2}{n} .\r\n\\end{aligned}\r\n$$\r\n\r\n(III) $\\displaystyle Y_1+Y_n=\\left(1-\\frac{2}{n}\\right) X_1-\\frac{2}{n} X_2-\\frac{2}{n} X_3-\\cdots+\\left(1-\\frac{2}{n}\\right) X_n$,\r\n显然 $Y_1+Y_n$ 服从正态分布.\r\n因为 $\\displaystyle E\\left(Y_1+Y_n\\right)=0, D\\left(Y_1+Y_n\\right)=2\\left(1-\\frac{2}{n}\\right)^2 \\sigma^2+\\frac{4(n-2)}{n^2} \\sigma^2=\\frac{2 n-4}{n} \\sigma^2$,\r\n所以 $\\displaystyle Y_1+Y_n \\sim N\\left(0, \\frac{2 n-4}{n} \\sigma^2\\right)$, 故 $\\displaystyle E\\left[c\\left(Y_1+Y_n\\right)^2\\right]=c E\\left(Y_1+Y_n\\right)^2=\\frac{2 n-4}{n} c \\sigma^2$,\r\n因为 $c\\left(Y_1+Y_n\\right)^2$ 为 $\\sigma^2$ 的无偏估计量, 所以 $\\displaystyle \\frac{2 n-4}{n} c=1$, 故 $\\displaystyle c=\\frac{n}{2 n-4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "D(Y1+Yn)=2D(Y_i)+2Cov(Y1,Yn)=(2n−4)σ²/n，别漏协方差项",
+        "无偏是对 c(Y1+Yn)² 而非 Y1+Yn，令 c·(2n−4)/n=1 得 c=n/(2n−4)"
+      ],
+      "key_point": "D(Y_i)=(n−1)σ²/n，Cov(Y1,Yn)=−σ²/n，c=n/(2n−4)。"
+    }
+  ]
+}

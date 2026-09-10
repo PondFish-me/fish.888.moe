@@ -1,0 +1,448 @@
+{
+  "paper": "数学一",
+  "year": 1995,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1101,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0}(1+3 x)^{\\frac{2}{\\sin x}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^6$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0}(1+3 x)^{\\frac{2}{\\sin x}}=\\lim _{x \\rightarrow 0}\\left[(1+3 x)^{\\frac{1}{3 x}}\\right]^{\\frac{6 x}{\\sin x}}=\\mathrm{e}^6$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1^∞ 型不能直接把底代 1 得 1，必须凑 e 或用 e^{lim(底-1)·指数}",
+        "指数 2/sinx 中 sinx~x，极限为 lim 3x·2/x=6，别漏掉系数 3"
+      ],
+      "key_point": "1^∞ 型极限化为 e^{lim(1+3x-1)·2/sinx}=e^{6}。"
+    },
+    {
+      "id": 1102,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int_{x^{2}}^{0} x \\cos t^{2} \\mathrm{d} t=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle -\\int_0^{x^2} \\cos t^2 \\mathrm{d} t-2 x^2 \\cos x^4$",
+      "analysis": "$\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int_{x^2}^0 x \\cos t^2 \\mathrm{d} t=-\\frac{\\mathrm{d}}{\\mathrm{d} x}\\left(x \\int_0^{x^2} \\cos t^2 \\mathrm{d} t\\right)\\\\=-\\int_0^{x^2} \\cos t^2 \\mathrm{d} t-2 x^2 \\cos x^4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积函数里的 x 与积分变量 t 无关，必须先提到积分号外，否则无法直接套变限积分求导公式",
+        "对 ∫_0^{x^2} 求导要乘上限导数 (x^2)'=2x（链式），漏乘只得 cos x^4"
+      ],
+      "key_point": "把 x 提出后按乘积法则：−∫_0^{x^2}cos t^2 dt − x·cos(x^4)·2x。"
+    },
+    {
+      "id": 1103,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $(\\boldsymbol{a} \\times \\boldsymbol{b}) \\cdot \\boldsymbol{c}=2$, 则 $[(\\boldsymbol{a}+\\boldsymbol{b}) \\times(\\boldsymbol{b}+\\boldsymbol{c})] \\cdot(\\boldsymbol{c}+\\boldsymbol{a})=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "${[(\\boldsymbol{a}+\\boldsymbol{b}) \\times(\\boldsymbol{b}+\\boldsymbol{c})] \\cdot(\\boldsymbol{c}+\\boldsymbol{a}) } \\\\\r\n=(\\boldsymbol{a} \\times \\boldsymbol{b}+\\boldsymbol{a} \\times \\boldsymbol{c}+\\boldsymbol{b} \\times \\boldsymbol{c}) \\cdot(\\boldsymbol{c}+\\boldsymbol{a}) \\\\\r\n=(\\boldsymbol{a} \\times \\boldsymbol{b}) \\cdot \\boldsymbol{c}+(\\boldsymbol{b} \\times \\boldsymbol{c}) \\cdot \\boldsymbol{a}=2(\\boldsymbol{a} \\times \\boldsymbol{b}) \\cdot \\boldsymbol{c}=4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "展开后含重复向量的混合积（如 (a×b)·a）为 0，别当非零项保留",
+        "利用轮换对称把三项化为 2(a×b)·c，漏合并会算错倍数"
+      ],
+      "key_point": "展开只剩 2(a×b)·c=2×2=4。"
+    },
+    {
+      "id": 1104,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{n}{2^{n}+(-3)^{n}} x^{2 n-1}$ 的收敛半径 $R=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\sqrt{3}$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\lim _{n \\rightarrow \\infty} \\frac{n+1}{n} \\cdot\\left|\\frac{2^n+(-3)^n}{2^{n+1}+(-3)^{n+1}}\\right|=\\frac{1}{3}$,\r\n\r\n得收敛半径 $R=\\sqrt{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "级数按 x^{2n-1} 缺项排列，不能直接套 R=lim|a_n/a_{n+1}|，要对变量 x^2 求收敛区间",
+        "系数 2^n+(-3)^n 中 (-3)^n 主导，比值极限为 1/3，得 |x^2|<3 即 R=√3，别漏开方"
+      ],
+      "key_point": "缺项级数：|x^2|<3 收敛，故 R=√3。"
+    },
+    {
+      "id": 1105,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $3$ 阶方阵 $\\boldsymbol{A}, \\boldsymbol{B}$ 满足关系式 $\\boldsymbol{A}^{-1} \\boldsymbol{B} \\boldsymbol{A}=6 \\boldsymbol{A}+\\boldsymbol{B} \\boldsymbol{A}$, 且 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\\frac{1}{3} & 0 & 0 \\\\ 0 & \\frac{1}{4} & 0 \\\\ 0 & 0 & \\frac{1}{7}\\end{array}\\right)$, 则 $\\boldsymbol{B}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{lll}3 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A}^{-1} \\boldsymbol{B A}=6 \\boldsymbol{A}+\\boldsymbol{B A}$ 得 $\\boldsymbol{B A}=6 \\boldsymbol{A}^2+\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}$, \r\n\r\n然后右乘 $\\boldsymbol{A}^{-1}$ 得 $\\boldsymbol{B}=6 \\boldsymbol{A}+\\boldsymbol{A} \\boldsymbol{B}$, \r\n\r\n解得 $\\boldsymbol{B}=6(\\boldsymbol{E}-\\boldsymbol{A})^{-1} \\boldsymbol{A}=6\\left[\\boldsymbol{A}^{-1}(\\boldsymbol{E}-\\boldsymbol{A})\\right]^{-1}\\\\=6\\left(\\boldsymbol{A}^{-1}-\\boldsymbol{E}\\right)^{-1}$, \r\n\r\n由 $\\boldsymbol{A}^{-1}-\\boldsymbol{E}=\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 6\\end{array}\\right)$, \r\n\r\n得 $\\left(\\boldsymbol{A}^{-1}-\\boldsymbol{E}\\right)^{-1}=\\left(\\begin{array}{ccc}\\frac{1}{2} & 0 & 0 \\\\ 0 & \\frac{1}{3} & 0 \\\\ 0 & 0 & \\frac{1}{6}\\end{array}\\right)$, \r\n\r\n故 $\\boldsymbol{B}=\\left(\\begin{array}{lll}3 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "矩阵不可交换，左乘右乘要分清，A^{-1}BA=6A+BA 须右乘 A^{-1} 整理成 B=6A+AB",
+        "解出 B=6(A^{-1}−E)^{-1}·... 时，A^{-1}−E 是对角阵，逆是各对角元取倒数，勿整体求逆"
+      ],
+      "key_point": "化简得 B=6(A^{-1}−E)^{-1}=diag(3,2,1)。"
+    },
+    {
+      "id": 1106,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有直线 $L:\\left\\{\\begin{array}{l}x+3 y+2 z+1=0, \\\\ 2 x-y-10 z+3=0\\end{array}\\right.$ 及平面 $\\pi: 4 x-2 y+z-2=0$, 则直线 $L(\\quad)$",
+      "options": {
+        "A": "平行于 $\\pi$",
+        "B": "在 $\\pi$ 上",
+        "C": "垂直于 $\\pi$",
+        "D": "与 $\\pi$ 斜交"
+      },
+      "answer": "C",
+      "analysis": "直线 $L$ 的方向向量为 $\\boldsymbol{s}=\\{1,3,2\\} \\times\\{2,-1,-10\\}\\\\=\\{-28,14,-7\\}=-7\\{4,-2,1\\}$,\r\n\r\n因为平面 $\\pi$ 的法向量平行于 $L$ 的方向向量, 所以 $L \\perp \\pi$, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "把\"s∥n\"误当成平行条件；其实 s∥n 意味着直线垂直于平面，平行要求 s⊥n 即 s·n=0。",
+        "B": "在平面上除需 s·n=0 外还要直线上一点满足平面方程；此处方向向量与法向量平行，根本不可能落在平面上。",
+        "D": "斜交要求 s 与 n 既不平行也不垂直；本题 s=−7n 恰好平行，是垂直相交而非斜交。"
+      },
+      "pitfalls": [
+        "直线方向向量取两平面法向量的叉积 {1,3,2}×{2,−1,−10}",
+        "s={−28,14,−7}=−7{4,−2,1} 恰与平面法向量平行，故直线垂直于平面"
+      ],
+      "key_point": "s=n1×n2 平行于平面法向量 → 直线⊥平面，选 C。"
+    },
+    {
+      "id": 1107,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设在 $[0,1]$ 上 $f^{\\prime \\prime}(x)>0$, 则 $f^{\\prime}(0), f^{\\prime}(1), f(1)-f(0)$ 或 $f(0)-f(1)$ 的大小顺序为 $(\\quad)$",
+      "options": {
+        "A": "$f^{\\prime}(1)>f^{\\prime}(0)>f(1)-f(0)$",
+        "B": "$f^{\\prime}(1)>f(1)-f(0)>f^{\\prime}(0)$",
+        "C": "$f(1)-f(0)>f^{\\prime}(1)>f^{\\prime}(0)$",
+        "D": "$f^{\\prime}(1)>f(0)-f(1)>f^{\\prime}(0)$"
+      },
+      "answer": "B",
+      "analysis": "由拉格朗日中值定理得 $f(1)-f(0)=f^{\\prime}(c)$, \r\n\r\n其中 $0<c<1$, 由 $f^{\\prime \\prime}(x)>0$ \r\n\r\n得 $f^{\\prime}(x)$ 单调递增, 再由 $0<c<1$ \r\n\r\n得 $f^{\\prime}(1)>f^{\\prime}(c)>f^{\\prime}(0)$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "把 f(1)−f(0)=f'(c) 误排在最小，颠倒了中值 c∈(0,1) 使 f'(0)<f'(c)<f'(1) 的顺序。",
+        "C": "误以为差商 f(1)−f(0) 最大；它等于某中间点导数 f'(c)，不可能超过 f'(1)。",
+        "D": "用 f(0)−f(1)（符号反）参与比较，未理解差商应等于正的 f'(c)。"
+      },
+      "pitfalls": [
+        "f(1)−f(0)=f'(c) 由拉格朗日中值定理得，c∈(0,1)",
+        "f''>0 保证 f' 严格递增，故 f'(0)<f'(c)<f'(1)"
+      ],
+      "key_point": "f'(1)>f(1)−f(0)=f'(c)>f'(0)，选 B。"
+    },
+    {
+      "id": 1108,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 可导, $F(x)=f(x)(1+|\\sin x|)$, 则 $f(0)=0$ 是 $F(x)$ 在 $x=0$ 处可导的 $(\\quad)$",
+      "options": {
+        "A": "充分必要条件",
+        "B": "充分条件但非必要条件",
+        "C": "必要条件但非充分条件",
+        "D": "既非充分条件又非必要条件"
+      },
+      "answer": "A",
+      "analysis": "$\\displaystyle F_{-}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{-}} \\frac{F(x)-F(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{f(x)(1-\\sin x)-f(0)}{x} \\\\\r\n=\\lim _{x \\rightarrow 0^{-}}\\left[\\frac{f(x)-f(0)}{x}-f(x) \\cdot \\frac{\\sin x}{x}\\right]\\\\\r\n=f^{\\prime}(0)-f(0); \\\\\r\nF_{+}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{+}} \\frac{F(x)-F(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{f(x)(1+\\sin x)-f(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}}\\left[\\frac{f(x)-f(0)}{x}+f(x) \\cdot \\frac{\\sin x}{x}\\right]\\\\\r\n=f^{\\prime}(0)+f(0)$,\r\n\r\n$F(x)$ 在 $x=0$ 处可导的充分必要条件是 \r\n\r\n$f^{\\prime}(0)-f(0)=f^{\\prime}(0)+f(0)$, 即 $f(0)=0$, \r\n\r\n即 $f(0)=0$ 是 $F(x)$ 在 $x=0$ 处可导的充分必要条件, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "误判 f(0)=0 只是充分条件；实则左导 f'(0)−f(0) 与右导 f'(0)+f(0) 相等当且仅当 f(0)=0，是充要。",
+        "C": "误判为必要非充分；由 f(0)=0 可推出左右导数相等，充分性成立。",
+        "D": "误判两不相关；|sinx| 在 0 处产生 ±f(0) 的左右导数差，条件与可导严格等价。"
+      },
+      "pitfalls": [
+        "|sinx| 在 x=0 两侧为 ∓sinx，导致左右导数相差 2f(0)",
+        "F 在 0 处可导 ⇔ F'_-(0)=F'_+(0) ⇔ f(0)=0，是充要条件不是单向"
+      ],
+      "key_point": "左导 f'(0)−f(0)、右导 f'(0)+f(0)，相等 ⇔ f(0)=0，选 A。"
+    },
+    {
+      "id": 1109,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle u_{n}=(-1)^{n} \\ln \\left(1+\\frac{1}{\\sqrt{n}}\\right)$, 则级数 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\sum_{n=1}^{\\infty} u_{n}$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} u_{n}^{2}$ 都收敛",
+        "B": "$\\displaystyle \\sum_{n=1}^{\\infty} u_{n}$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} u_{n}^{2}$ 都发散",
+        "C": "$\\displaystyle \\sum_{n=1}^{\\infty} u_{n}$ 收敛而 $\\displaystyle \\sum_{n=1}^{\\infty} u_{n}^{2}$ 发散",
+        "D": "$\\displaystyle \\sum_{n=1}^{\\infty} u_{n}$ 发散而 $\\displaystyle \\sum_{n=1}^{\\infty} u_{n}^{2}$ 收敛"
+      },
+      "answer": "C",
+      "analysis": "由 $\\displaystyle \\left\\{\\ln \\left(1+\\frac{1}{\\sqrt{n}}\\right)\\right\\}$ 单调递减且 \r\n\r\n$\\displaystyle \\lim _{n \\rightarrow \\infty} \\ln \\left(1+\\frac{1}{\\sqrt{n}}\\right)=0$ 得 $\\displaystyle \\sum_{n=1}^{\\infty} u_n$ 收敛, \r\n\r\n由 $\\displaystyle u_n^2=\\ln ^2\\left(1+\\frac{1}{\\sqrt{n}}\\right) \\sim \\frac{1}{n}$ 且 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散得 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2$ 发散,应选 (C)",
+      "wrong_options": {
+        "A": "误以为 Σu_n 收敛则 Σu_n^2 也收敛；u_n^2~1/n 使平方级数发散，二者不同步。",
+        "B": "误判 Σu_n 也发散；它是满足莱布尼茨条件的交错级数，收敛。",
+        "D": "把收敛/发散判反：Σu_n 收敛、Σu_n^2 才是发散的那个。"
+      },
+      "pitfalls": [
+        "ln(1+1/√n) 单调递减趋 0，交错级数由莱布尼茨定理收敛（是条件收敛）",
+        "u_n^2=ln^2(1+1/√n)~1/n，与调和级数比较发散，别以为平方后更易收敛"
+      ],
+      "key_point": "Σu_n 莱布尼茨收敛，Σu_n^2~Σ1/n 发散，选 C。"
+    },
+    {
+      "id": 1110,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right), \\\\\r\n\\boldsymbol{B}=\\left(\\begin{array}{ccc}a_{21} & a_{22} & a_{23} \\\\ a_{11} & a_{12} & a_{13} \\\\ a_{31}+a_{11} & a_{32}+a_{12} & a_{33}+a_{13}\\end{array}\\right),\\\\\r\n \\boldsymbol{P}_{1}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right),\r\n\\boldsymbol{P}_{2}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A} \\boldsymbol{P}_{1} \\boldsymbol{P}_{2}=\\boldsymbol{B}$",
+        "B": "$\\boldsymbol{A} \\boldsymbol{P}_{2} \\boldsymbol{P}_{1}=\\boldsymbol{B}$",
+        "C": "$\\boldsymbol{P}_{1} \\boldsymbol{P}_{2} \\boldsymbol{A}=\\boldsymbol{B}$",
+        "D": "$\\boldsymbol{P}_{2} \\boldsymbol{P}_{1} \\boldsymbol{A}=\\boldsymbol{B}$"
+      },
+      "answer": "C",
+      "analysis": "将 $\\boldsymbol{A}$ 的第 $1$ 行加到第 $3$ 行, 再将第 $1$ 行与第 $2$ 行对调得 $\\boldsymbol{B}$, \r\n\r\n即 $\\boldsymbol{B}=\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1\\end{array}\\right) \\boldsymbol{A}=\\boldsymbol{P}_1 \\boldsymbol{P}_2 \\boldsymbol{A}$, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "B 由行变换得到应左乘；AP1P2 是对 A 做列变换，方向搞反。",
+        "B": "同样把行变换错当列变换右乘（AP2P1）。",
+        "D": "左乘顺序颠倒：先加行（P2）后对调（P1）应写成 P1P2A，P2P1A 顺序反了。"
+      },
+      "pitfalls": [
+        "行变换左乘、列变换右乘——B 是对 A 作行变换得来，必左乘",
+        "先\"1 行加到 3 行\"(P2) 再\"对调 1、2 行\"(P1)，复合是 P1P2A，顺序不能颠倒"
+      ],
+      "key_point": "行变换左乘初等矩阵，B=P1P2A，选 C。"
+    },
+    {
+      "id": 1111,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $u=f(x, y, z), \\varphi\\left(x^{2}, \\mathrm{e}^{y}, z\\right)=0, y=\\sin x$, 其中 $f, \\varphi$ 都具有一阶连续的偏导数, 且 $\\displaystyle \\frac{\\partial \\varphi}{\\partial z} \\neq 0$, 求 $\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}$",
+      "options": {},
+      "answer": "$\\displaystyle f_1^{\\prime}+f_2^{\\prime} \\cdot \\cos x-f_3^{\\prime} \\cdot\\left(2 x \\frac{\\varphi_1^{\\prime}}{\\varphi_3^{\\prime}}+\\frac{\\varphi_2^{\\prime}}{\\varphi_3^{\\prime}} \\mathrm{e}^{\\sin x} \\cos x\\right)$",
+      "analysis": "$u=f(x, y, z)$ 两边对 $x$ 求导得\r\n\r\n$\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}=f_1^{\\prime}+f_2^{\\prime} \\cdot \\frac{\\mathrm{d} y}{\\mathrm{d} x}+f_3^{\\prime} \\cdot \\frac{\\mathrm{d} z}{\\mathrm{d} x}$\r\n\r\n$\\varphi\\left(x^2, \\mathrm{e}^y, z\\right)=0$ 两边对 $x$ 求导得\r\n\r\n$\\displaystyle 2 x \\varphi_1^{\\prime}+\\varphi_2^{\\prime} \\cdot \\mathrm{e}^y \\cdot \\frac{\\mathrm{d} y}{\\mathrm{d} x}+\\varphi_3^{\\prime} \\cdot \\frac{\\mathrm{d} z}{\\mathrm{d} x}=0$,\r\n\r\n又 $\\displaystyle y=\\sin x, \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\cos x$, \r\n\r\n解得 $\\displaystyle \\frac{\\mathrm{d} z}{\\mathrm{d} x}=-2 x \\frac{\\varphi_1^{\\prime}}{\\varphi_3^{\\prime}}-\\frac{\\varphi_2^{\\prime}}{\\varphi_3^{\\prime}} \\mathrm{e}^{\\sin x} \\cos x$,\r\n\r\n故 $\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}=f_1^{\\prime}+f_2^{\\prime} \\cdot \\cos x-f_3^{\\prime} \\cdot\\left(2 x \\frac{\\varphi_1^{\\prime}}{\\varphi_3^{\\prime}}+\\frac{\\varphi_2^{\\prime}}{\\varphi_3^{\\prime}} \\mathrm{e}^{\\sin x} \\cos x\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "u 对 x 求全导要含三项 f_1'+f_2'·(dy/dx)+f_3'·(dz/dx)，dz/dx 未知需由 φ=0 解",
+        "φ(x^2,e^y,z)=0 对 x 求导内层 (x^2)'=2x、(e^y)'=e^y·(dy/dx)，别漏链式因子和 y=sinx"
+      ],
+      "key_point": "全导 du/dx=f_1'+f_2'cosx+f_3'·dz/dx，dz/dx 由隐函数 φ=0 求出。"
+    },
+    {
+      "id": 1112,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[0,1]$ 上连续, 并设 $\\displaystyle \\int_{0}^{1} f(x) \\mathrm{d} x=A$, 求 $\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{x}^{1} f(x) f(y) \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2} A^2$",
+      "analysis": "方法一 令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(1)=A$, 则\r\n\r\n$\\displaystyle \r\n\\int_0^1 \\mathrm{d} x \\int_x^1 f(x) f(y) \\mathrm{d} y \\\\\r\n=\\int_0^1 f(x) \\mathrm{d} x \\int_x^1 f(y) \\mathrm{d} y=\\int_0^1 f(x)[F(1)-F(x)] \\mathrm{d} x \\\\\r\n=A \\int_0^1 f(x) \\mathrm{d} x-\\int_0^1 f(x) F(x) \\mathrm{d} x=A^2-\\int_0^1 F(x) \\mathrm{d} F(x) \\\\\r\n=A^2-\\left.\\frac{1}{2} F^2(x)\\right|_0 ^1=\\frac{1}{2} A^2$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\int_0^1 \\mathrm{d} x \\int_x^1 f(x) f(y) \\mathrm{d} y=\\int_0^1 f(x) \\mathrm{d} x \\int_x^1 f(y) \\mathrm{d} y$, 又\r\n\r\n$\\displaystyle \r\n\\int_0^1 f(x) \\mathrm{d} x \\int_x^1 f(y) \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} y \\int_0^y f(x) f(y) \\mathrm{d} x\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^x f(y) f(x) \\mathrm{d} y \\\\\r\n=\\int_0^1 f(x) \\mathrm{d} x \\int_0^x f(y) \\mathrm{d} $\r\n\r\n于是 \r\n\r\n$\\displaystyle  2 \\int_0^1 \\mathrm{d} x \\int_x^1 f(x) f(y) \\mathrm{d} y\\\\\r\n=\\int_0^1 f(x) \\mathrm{d} x \\int_x^1 f(y) \\mathrm{d} y+\\int_0^1 f(x) \\mathrm{d} x \\int_0^x f(y) \\mathrm{d} y\\\\\r\n=\\int_0^1 f(x) \\mathrm{d} x \\int_0^1 f(y) \\mathrm{d} y\\\\\r\n=\\left[\\int_0^1 f(x) \\mathrm{d} x\\right]^2=A^2$\r\n\r\n故 $\\displaystyle \\int_0^1 \\mathrm{d} x \\int_x^1 f(x) f(y) \\mathrm{d} y=\\frac{1}{2} A^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "内层对 y 积分时 f(x) 是常数可提出，∫_x^1 f(y)dy=F(1)−F(x)=A−F(x)",
+        "记 ∫f(x)F(x)dx=∫F dF=½F^2，端点代入得 A^2−½A^2=½A^2，别丢½"
+      ],
+      "key_point": "化为 A²−∫F dF=A²−½A²=½A²。"
+    },
+    {
+      "id": 1113,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分 $\\displaystyle \\iint\\limits_{\\Sigma} z \\mathrm{d} S$, 其中 $\\Sigma$ 为锥面 $z=\\sqrt{x^{2}+y^{2}}$ 在柱体 $x^{2}+y^{2} \\leqslant 2 x$ 内的部分",
+      "options": {},
+      "answer": "$\\dfrac{32}{9} \\sqrt{2}$",
+      "analysis": "$\\Sigma: z=\\sqrt{x^2+y^2}$, 其中 $\\displaystyle x^2+y^2 \\leqslant 2 x,\\\\\r\n\\frac{\\partial z}{\\partial x}=\\frac{x}{\\sqrt{x^2+y^2}}, \\quad \\frac{\\partial z}{\\partial y}=\\frac{y}{\\sqrt{x^2+y^2}},\\\\\r\n\\iint\\limits_{\\Sigma} z \\mathrm{d} S\\\\\r\n=\\iint\\limits_{x^2+y^2 \\leqslant 2 x} \\sqrt{x^2+y^2} \\cdot \\sqrt{1+\\frac{x^2}{x^2+y^2}+\\frac{y^2}{x^2+y^2}} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{x^2+y^2 \\leqslant 2 x} \\sqrt{x^2+y^2} \\cdot \\sqrt{2} \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\sqrt{2} \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^{2 \\cos \\theta} r^2 \\mathrm{d} r\\\\\r\n=\\frac{8}{3} \\sqrt{2} \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta\\\\\r\n=\\frac{16}{3} \\sqrt{2} \\int_0^{\\frac{\\pi}{2}} \\cos ^3 \\theta \\mathrm{d} \\theta=\\frac{32}{9} \\sqrt{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "锥面 z_x²+z_y²=1，故 dS=√2 dxdy 是常数，别算成变量",
+        "投影域 x²+y²≤2x 是过原点的圆，极坐标 θ∈[−π/2,π/2]、r∈[0,2cosθ]，∫cos³θ=4/3"
+      ],
+      "key_point": "∬z dS=√2∬√(x²+y²)dxdy，极坐标得 32√2/9。"
+    },
+    {
+      "id": 1114,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $f(x)=x-1(0 \\leqslant x \\leqslant 2)$ 展开成周期为 $4$ 的余弦级数",
+      "options": {},
+      "answer": "$\\displaystyle -\\frac{8}{\\pi^2}\\left(\\frac{1}{1^2} \\cos \\frac{\\pi x}{2}+\\frac{1}{3^2} \\cos \\frac{3 \\pi x}{2}+\\frac{1}{5^2} \\cos \\frac{5 \\pi x}{2}+\\cdots\\right)$, 其中 $0 \\leqslant x \\leqslant 2$",
+      "analysis": "将 $f(x)$ 进行偶延拓再进行周期延拓, 则\r\n\r\n$\\displaystyle\r\na_0 =\\frac{2}{2} \\int_0^2 f(x) \\mathrm{d} x=\\int_0^2(x-1) \\mathrm{d} x=0; \\\\\r\na_n  =\\frac{2}{2} \\int_0^2 f(x) \\cos \\frac{n \\pi x}{2} \\mathrm{d} x\\\\\r\n=\\int_0^2(x-1) \\cos \\frac{n \\pi x}{2} \\mathrm{d} x \\\\\r\n=\\frac{2}{n \\pi} \\int_0^2(x-1) \\mathrm{d}\\left(\\sin \\frac{n \\pi x}{2}\\right)\\\\\r\n=\\left.\\frac{2}{n \\pi}(x-1) \\sin \\frac{n \\pi x}{2}\\right|_0 ^2-\\frac{2}{n \\pi} \\int_0^2 \\sin \\frac{n \\pi x}{2} \\mathrm{d} x \\\\\r\n=\\left.\\frac{4}{n^2 \\pi^2} \\cos \\frac{n \\pi x}{2}\\right|_0 ^2\\\\\r\n=\\frac{4}{n^2 \\pi^2}\\left[(-1)^n-1\\right]=\\\\\r\n\\begin{cases}-\\dfrac{8}{n^2 \\pi^2}, & n=1,3,5, \\cdots \\\\\r\n0, & n=2,4,6, \\cdots\\end{cases} \\\\\r\nb_n =0, n=1,2,3, \\cdots$\r\n\r\n则\r\n\r\n$\\displaystyle x -1\\\\=-\\frac{8}{\\pi^2}\\left(\\frac{1}{1^2} \\cos \\frac{\\pi x}{2}+\\frac{1}{3^2} \\cos \\frac{3 \\pi x}{2}+\\frac{1}{5^2} \\cos \\frac{5 \\pi x}{2}+\\cdots\\right)$\r\n\r\n其中 $0 \\leqslant x \\leqslant 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "余弦级数须偶延拓，b_n≡0，周期为 4 时半周期 l=2，a_n 积分区间 [0,2]",
+        "a_n=4/(n²π²)[(−1)^n−1]，n 偶为 0、n 奇为 −8/(n²π²)，只有奇次项，a_0=0"
+      ],
+      "key_point": "偶延拓余弦级数仅含奇次项 −8/(π²)·Σcos((2k−1)πx/2)/(2k−1)²。"
+    },
+    {
+      "id": 1115,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设曲线 $L$ 位于 $x O y$ 平面的第一象限内, $L$ 上任一点 $M$ 处的切线与 $y$ 轴总相交, 交点记为 A. 已知 $|\\overline{M A}|=|\\overline{O A}|$, 且 $L$ 过点 $\\displaystyle \\left(\\frac{3}{2}, \\frac{3}{2}\\right)$, 求 $L$ 的方程",
+      "options": {},
+      "answer": "$y=\\sqrt{3 x-x^2}(0<x<3)$",
+      "analysis": "设 $M(x, y)$ 为 $L$ 上的任意一点, \r\n\r\n$L$ 上 $M$ 处的切线方程为 $Y-y=y^{\\prime}(X-x)$,\r\n\r\n令 $X=0$ 得 $Y=y-x y^{\\prime}$, \r\n\r\n即 $A\\left(0, y-x y^{\\prime}\\right)$,\r\n\r\n$|\\overline{M A}|=\\sqrt{(x-0)^2+\\left(y-y+x y^{\\prime}\\right)^2}=x \\sqrt{1+y^{\\prime 2}}, \\quad|\\overline{O A}|=y-x y^{\\prime}$,\r\n\r\n由 $|\\overline{M A}|=|\\overline{O A}|$, \r\n\r\n有 $2 x y y^{\\prime}-y^2+x^2=0$,\r\n\r\n\r\n再令 $z=y^2$, 得 $\\displaystyle \\frac{\\mathrm{d} z}{\\mathrm{d} x}-\\frac{z}{x}=-x$,\r\n\r\n解得 $\\displaystyle\r\nz=\\mathrm{e}^{\\int \\frac{1}{x} \\mathrm{d} x}\\left(-\\int x \\mathrm{e}^{\\int-\\frac{1}{x} \\mathrm{d} x} \\mathrm{d} x+C\\right)\\\\\r\n=x(-x+C)$,\r\n\r\n即 $y^2=-x^2+C x$\r\n\r\n由于所求曲线在第一象限内, 知 $y>0$, \r\n\r\n故 $y=\\sqrt{C x-x^2}$\r\n\r\n将已知条件 $\\displaystyle y\\left(\\frac{3}{2}\\right)=\\frac{3}{2}$ 代入上式, 得 $C=3$, \r\n\r\n于是曲线方程为 $y=\\sqrt{3 x-x^2}(0<x<3)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线交 y 轴于 A(0,y−xy')，|MA|=x√(1+y'²)、|OA|=y−xy'，由相等平方整理得 2xyy'−y²+x²=0",
+        "令 z=y² 化为 dz/dx−z/x=−x 一阶线性方程；解出 y²=Cx−x² 后须代 (3/2,3/2) 定 C=3，取第一象限正根"
+      ],
+      "key_point": "由 |MA|=|OA| 建方程，换元 z=y² 解得 y=√(3x−x²)。"
+    },
+    {
+      "id": 1116,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $Q(x, y)$ 在 $x O y$ 平面上具有一阶连续偏导数, 曲线积分 $\\displaystyle \\int_{L} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y$ 与路径无关, 并且对任意 $t$ 恒有 $\\displaystyle \\int_{(0,0)}^{(t, 1)} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y=\\int_{(0,0)}^{(1, t)} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y$, 求 $Q(x, y)$",
+      "options": {},
+      "answer": "$Q(x, y)=x^2+2y-1$",
+      "analysis": "由 $\\displaystyle \\int_L 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y$ 与路径无关得 \r\n\r\n$\\dfrac{\\mathrm{Q}}{\\partial x}=2 x$, 则 $Q(x, y)=x^2+c(y)$,\r\n\r\n$\\displaystyle\r\n\\int_{(0,0)}^{(t, 1)} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y\\\\\r\n=\\int_{O A} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y\\\\+ \\int_{A B} 2 x y \\mathrm{~d} x+Q(x, y) \\mathrm{d} y \\\\\r\n=0+\\int_0^1 Q(t, y) \\mathrm{d} y \\\\\r\n=t^2+\\int_0^1 c(y) \\mathrm{d} y \\\\\r\n\\int_{(0,0)}^{(1, t)} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y\\\\\r\n=\\int_{O A} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y\\\\+ \\int_{A B} 2 x y \\mathrm{d} x+Q(x, y) \\mathrm{d} y \\\\\r\n=0+\\int_0^t Q(1, y) \\mathrm{d} y \\\\\r\n=\\int_0^t[1+c(y)] \\mathrm{d} y \\\\\r\n=t+\\int_0^t c(y) \\mathrm{d} y$\r\n\r\n由 $\\displaystyle t+\\int_0^t c(y) \\mathrm{d} y=t^2+\\int_0^1 c(y) \\mathrm{d} y$,\r\n\r\n得 $c(y)=2 y-1$, 得 $Q(x, y)=x^2+2y-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "路径无关给出 ∂Q/∂x=∂(2xy)/∂y=2x，积分得 Q=x²+c(y)，c(y) 为待定函数不能漏",
+        "把两条路径积分相等的恒等式对 t 求导得 2t=1+c(t)，解出 c(y)=2y−1"
+      ],
+      "key_point": "由 ∂Q/∂x=2x 得 Q=x²+c(y)，对 t 求导定 c(y)=2y−1。"
+    },
+    {
+      "id": 1117,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 在 $[a, b]$ 上存在二阶导数, 并且 $g^{\\prime \\prime}(x) \\neq 0, f(a)=f(b)=g(a)=$ $g(b)=0$,试证 :\r\n\r\n(1) 在开区间 $(a, b)$ 内 $g(x) \\neq 0$;\r\n\r\n(2) 在开区间 $(a, b)$ 内至少存在一点 $\\xi$, 使 \r\n\r\n$\\displaystyle \\frac{f(\\xi)}{g(\\xi)}=\\frac{f^{\\prime \\prime}(\\xi)}{g^{\\prime \\prime}(\\xi)}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) (反证法) 设存在 $c \\in(a, b)$, 使得 $g(c)=0$,\r\n\r\n由罗尔定理, 存在 $\\xi_1 \\in(a, c), \\xi_2 \\in(c, b)$, \r\n\r\n使得 $g^{\\prime}\\left(\\xi_1\\right)=g^{\\prime}\\left(\\xi_2\\right)=0$,\r\n\r\n再由罗尔定理, 存在 $\\xi \\in(a, b)$, 使得 $g^{\\prime \\prime}(\\xi)=0$, \r\n\r\n矛盾, 故在 $(a, b)$ 内 $g(x) \\neq 0$\r\n\r\n(2) 令 $\\varphi(x)=f(x) g^{\\prime}(x)-f^{\\prime}(x) g(x)$,\r\n\r\n则 $\\varphi(a)=\\varphi(b)=0$, \r\n\r\n由罗尔定理知, 存在 $\\xi \\in(a, b)$, 使 $\\varphi^{\\prime}(\\xi)=0$, \r\n\r\n即 $f(\\xi) g^{\\prime \\prime}(\\xi)-f^{\\prime \\prime}(\\xi) g(\\xi)=0$,\r\n\r\n因 $g(\\xi) \\neq 0, g^{\\prime \\prime}(\\xi) \\neq 0$, \r\n\r\n故得 $\\dfrac{f(\\xi)}{g(\\xi)}=\\dfrac{f^{\\prime \\prime}(\\xi)}{g^{\\prime \\prime}(\\xi)}, \\quad \\xi \\in(a, b)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 反证设 g(c)=0，两段各用罗尔得 g' 两零点，再用一次罗尔得 g''(ξ)=0 与 g''≠0 矛盾",
+        "(2) 辅助函数取 φ=fg'−f'g（不是 f/g，避免除零），φ(a)=φ(b)=0 后 φ'(ξ)=fg''−f''g=0，再除以 g(ξ)g''(ξ)"
+      ],
+      "key_point": "(1) 反证+罗尔证 g≠0；(2) 构造 φ=fg'−f'g 用罗尔得 f/g=f''/g''。"
+    },
+    {
+      "id": 1118,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $3$ 阶实对称矩阵 $\\boldsymbol{A}$ 的特征值为 $\\lambda_{1}=-1, \\lambda_{2}=\\lambda_{3}=1$, 对应于 $\\lambda_{1}$ 的特征向量为 $\\boldsymbol{\\xi}_{1}=$ $(0,1,1)^{\\mathrm{T}}$, 求 $\\boldsymbol{A}$",
+      "options": {},
+      "answer": "$\\begin{pmatrix}1&0&0\\\\0&0&-1\\\\0&-1&0\\end{pmatrix}$",
+      "analysis": "设 $\\boldsymbol{\\xi}=\\left(x_1, x_2, x_3\\right)^{\\mathrm{T}}$ 为 $\\lambda_2=\\lambda_3=1$ 对应的特征向量,\r\n\r\n由 $\\displaystyle \\boldsymbol{\\xi}_1^{\\mathrm{T}} \\boldsymbol{\\xi}=0$ 得 $x_2+x_3=0$, 则 $\\lambda_2=\\lambda_3=1$ 对应的线性无关的特征向量为\r\n\r\n$\\boldsymbol{\\xi}_2=\\left(\\begin{array}{l}1 \\\\0 \\\\0\\end{array}\\right), \\quad \\boldsymbol{\\xi}_3=\\left(\\begin{array}{c}0 \\\\1 \\\\-1\r\n\\end{array}\\right)$\r\n\r\n令 $\\boldsymbol{P}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 1 & 0 & -1\\end{array}\\right)$, \r\n\r\n由 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$ \r\n\r\n得 $\\boldsymbol{A}=\\boldsymbol{P}\\left(\\begin{array}{ccc}\r\n-1 & 0 & 0 \\\\\r\n0 & 1 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right) \\boldsymbol{P}^{-1}=\\left(\\begin{array}{ccc}\r\n1 & 0 & 0 \\\\\r\n0 & 0 & -1 \\\\\r\n0 & -1 & 0\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "实对称阵不同特征值的特征向量必正交，λ=1 的特征向量由 ξ1^Tξ=0 即 x2+x3=0 求出",
+        "A=PΛP^{-1} 需 P 可逆，代入 Λ=diag(−1,1,1) 算出 A=[[1,0,0],[0,0,−1],[0,−1,0]]（可验证特征值为 1,1,−1）"
+      ],
+      "key_point": "由正交性求 λ=1 特征向量，A=PΛP^{-1}=[[1,0,0],[0,0,−1],[0,−1,0]]。"
+    },
+    {
+      "id": 1119,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $n$ 阶矩阵, 满足 $\\boldsymbol{A} \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{E}$ ( $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵, $\\boldsymbol{A}^{\\mathrm{T}}$ 为 $\\boldsymbol{A}$ 的转置矩阵), $|\\boldsymbol{A}|<0$, 求 $|\\boldsymbol{A}+\\boldsymbol{E}|$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "方法一 由 $\\boldsymbol{A} \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{E}$ 得 $|\\boldsymbol{A}| \\cdot\\left|\\boldsymbol{A}^{\\mathrm{T}}\\right|=1$, \r\n\r\n即 $|\\boldsymbol{A}|^2=1$,\r\n\r\n再由 $|\\boldsymbol{A}|<0$ 得 $|\\boldsymbol{A}|=-1$.\r\n\r\n于是 $|\\boldsymbol{A}+\\boldsymbol{E}|=\\left|\\boldsymbol{A}+\\boldsymbol{A} \\boldsymbol{A}^{\\mathrm{T}}\\right|\\\\\r\n=|\\boldsymbol{A}| \\cdot\\left|\\boldsymbol{E}+\\boldsymbol{A}^{\\mathrm{T}}\\right|=-\\left|(\\boldsymbol{E}+\\boldsymbol{A})^{\\mathrm{T}}\\right|=-|\\boldsymbol{E}+\\boldsymbol{A}|$,\r\n\r\n故 $|\\boldsymbol{E}+\\boldsymbol{A}|=0$.\r\n\r\n方法二 令 $\\boldsymbol{A x}=\\lambda \\boldsymbol{x}(\\boldsymbol{x} \\neq \\mathbf{0})$,\r\n\r\n由 $\\boldsymbol{A x}=\\lambda \\boldsymbol{X}$ 得 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A}^{\\mathrm{T}}=\\lambda \\boldsymbol{x}^{\\mathrm{T}}$, \r\n\r\n两边右乘 $\\boldsymbol{Ax}$ 得\r\n$\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A}^{\\mathrm{T}} \\cdot \\boldsymbol{A} \\boldsymbol{x}=\\lambda \\boldsymbol{x}^{\\mathrm{T}} \\cdot \\boldsymbol{A} \\boldsymbol{x}$, \r\n\r\n即 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{x}=\\lambda^2 \\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{x}$, \r\n\r\n或 $\\left(\\lambda^2-1\\right) \\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{x}=\\mathbf{0}$,\r\n\r\n由 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{x}=\\|\\boldsymbol{X}\\|^2>0$ 得 $\\lambda^2-1=0$, 即 $\\lambda= \\pm 1$,\r\n\r\n因为 $|\\boldsymbol{A}|<0$, 所以 $\\boldsymbol{A}$ 至少有一个特征值为 $-1$ , \r\n\r\n从而 $\\boldsymbol{A}+\\boldsymbol{E}$ 的特征值至少有一个为 $0$ , 故 $|\\boldsymbol{A}+\\boldsymbol{E}|=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|AA^T|=|A|²=1 且 |A|<0，故 |A|=−1（正交阵行列式为 ±1）",
+        "A+E=A+AA^T=A(E+A^T)，取行列式 |A+E|=|A|·|E+A^T|=−|E+A|，移项得 |A+E|=0"
+      ],
+      "key_point": "|A|=−1，由 A+E=A(E+A^T) 得 |A+E|=−|A+E|，故 |A+E|=0。"
+    },
+    {
+      "id": 1120,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X$ 表示 $10$ 次独立重复射击命中目标的次数, 每次射中目标的命中率为 $0.4$ , 则 $X^{2}$ 的数学期望 $E\\left(X^{2}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "18.4",
+      "analysis": "显然 $X \\sim B(10,0.4)$,\r\n\r\n由 $E(X)=n p=4, D(X)=n p(1-p)\\\\=10 \\times 0.4 \\times 0.6=2.4$, \r\n\r\n得 $E\\left(X^2\\right)=D(X)+[E(X)]^2=2.4+16=18.4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 E(X²) 要用 E(X²)=D(X)+[E(X)]²，不能直接等于 [E(X)]²=16",
+        "二项分布 D(X)=np(1−p)=2.4，别漏 (1−p) 因子"
+      ],
+      "key_point": "E(X²)=D(X)+[E(X)]²=2.4+16=18.4。"
+    },
+    {
+      "id": 1121,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 21,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X$ 和 $Y$ 为两个随机变量, 且 $\\displaystyle P\\{X \\geqslant 0, Y \\geqslant 0\\}=\\frac{3}{7}, P\\{X \\geqslant 0\\}=P\\{Y \\geqslant 0\\}=\\frac{4}{7}$, 则 $P\\{\\max (X, Y) \\geqslant 0\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{5}{7}$",
+      "analysis": "令 $A=\\{X \\geqslant 0\\}, B=\\{Y \\geqslant 0\\}$, \r\n\r\n则 $P(A)=P(B)=\\dfrac{4}{7}, P(A B)=\\dfrac{3}{7}$, \r\n\r\n于是 $P\\{\\max (X, Y) \\geqslant 0\\}\\\\\r\n=1-P\\{\\max (X, Y)<0\\}\\\\\r\n=1-P\\{X<0, Y<0\\}\\\\\r\n=1-P(\\bar{A} \\cdot \\bar{B})\\\\\r\n=1-P(\\overline{A+B})\\\\\r\n=P(A+B) \\\\\r\n=P(A)+P(B)-P(A B)=\\dfrac{5}{7}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "{max(X,Y)≥0}={X≥0}∪{Y≥0}，是并事件不是交事件，别错用 P(AB)",
+        "加法公式 P(A∪B)=P(A)+P(B)−P(AB)=4/7+4/7−3/7=5/7，勿漏减交概率"
+      ],
+      "key_point": "P{max≥0}=P(A∪B)=4/7+4/7−3/7=5/7。"
+    },
+    {
+      "id": 1122,
+      "paper": "数学一",
+      "year": 1995,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为 $f_{X}(x)=\\left\\{\\begin{array}{ll}\\mathrm{e}^{-x}, & x \\geqslant 0 \\\\ 0, & x<0\\end{array}\\right.$ 求随机变量 $Y=\\mathrm{e}^{X}$ 的概率密度 $f_{Y}(y)$",
+      "options": {},
+      "answer": "$f_Y(y)= \\begin{cases}0, & y<1 \\\\ \\dfrac{1}{y^2}, & y \\geqslant 1\\end{cases}$",
+      "analysis": "$F_Y(y)=P\\{Y \\leqslant y\\}=P\\left\\{\\mathrm{e}^X \\leqslant y\\right\\}$,\r\n\r\n当 $y<1$ 时, $F_Y(y)=0$;\r\n\r\n当 $y \\geqslant 1$ 时, $\\displaystyle F_Y(y)=P\\{X \\leqslant \\ln y\\}\\\\\r\n=\\int_0^{\\ln y} \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=-\\left.\\mathrm{e}^{-x}\\right|_0 ^{\\ln y}\\\\\r\n=1-\\frac{1}{y}$,\r\n\r\n即 $F_Y(y)=\\left\\{\\begin{array}{ll}0, & y<1 \\\\ 1-\\dfrac{1}{y}, & y \\geqslant 1\\end{array}\\right.$ \r\n\r\n故 $Y=\\mathrm{e}^X$ 的概率密度为\r\n\r\n$f_Y(y)= \\begin{cases}0, & y<1 \\\\ \\dfrac{1}{y^2}, & y \\geqslant 1\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "Y=e^X 且 X≥0 ⇒ Y≥1，y<1 时密度为 0，别把支撑写成全体正数",
+        "F_Y(y)=P{X≤lny}=1−1/y (y≥1)，求导 f_Y=1/y²，勿漏对复合函数 lny 的求导链"
+      ],
+      "key_point": "F_Y(y)=1−1/y (y≥1)，求导得 f_Y(y)=1/y² (y≥1)，其余为 0。"
+    }
+  ]
+}

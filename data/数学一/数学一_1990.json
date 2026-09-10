@@ -1,0 +1,471 @@
+{
+  "paper": "数学一",
+  "year": 1990,
+  "count": 23,
+  "questions": [
+    {
+      "id": 1212,
+      "paper": "数学一",
+      "year": 1990,
+      "index": null,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "过点 $M(1,2,-1)$ 且与直线 $\\left\\{\\begin{array}{l}x=-t+2, \\\\ y=3t-4, \\\\ z=t-1\\end{array}\\right.$ 垂直的平面方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$x-3 y-z+4=0$",
+      "analysis": "",
+      "wrong_options": {},
+      "pitfalls": [
+        "从参数方程读方向向量 {-1,3,1}，勿把常数项当分量",
+        "点法式展开后要合并常数项，别漏 M 点回代"
+      ],
+      "key_point": ""
+    },
+    {
+      "id": 1213,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $a$ 为非零常数, 则 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{x+a}{x-a}\\right)^{x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^{2 a}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{x+a}{x-a}\\right)^x=\\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{2 a}{x-a}\\right)^{\\frac{x-a}{2 a}}\\right]^{x \\cdot \\frac{2 a}{x-a}}=\\mathrm{e}^{2 a}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "底 (x+a)/(x-a)=1+2a/(x-a)，增量是 2a/(x-a) 不是 a/x",
+        "指数应为 x·2a/(x-a)→2a，别只算到 2a/x 丢系数"
+      ],
+      "key_point": "1^∞ 型：极限=e^{lim x·2a/(x-a)}=e^{2a}。"
+    },
+    {
+      "id": 1214,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{l}1,|x| \\leqslant 1 \\\\ \r\n0,|x|>1\\end{array}\\right.$ 则函数 $f[f(x)]=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$f[f(x)]=\\left\\{\\begin{array}{l}1,|f(x)| \\leqslant 1 \\\\ 0,|f(x)|>1 \\end{array}\\right.$ \r\n\r\n因为 $|f(x)| \\leqslant 1$, 所以 $f[f(x)]=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "内层 f(x) 只取 0 或 1，恒有 |f(x)|≤1，故复合恒为 1",
+        "别按原变量 x 的分段直接套，要按内层函数值分段"
+      ],
+      "key_point": "f(x)∈{0,1} 恒满足 |f(x)|≤1，故 f[f(x)]≡1。"
+    },
+    {
+      "id": 1215,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "积分 $\\displaystyle \\int_{0}^{2} \\mathrm{d} x \\int_{x}^{2} \\mathrm{e}^{-y^{2}} \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{2}\\left(1-\\frac{1}{\\mathrm{e}^4}\\right)$",
+      "analysis": "改变积分次序得\r\n\r\n$\\displaystyle \\int_0^2 \\mathrm{d} x \\int_x^2 \\mathrm{e}^{-y^2} \\mathrm{d} y=\\int_0^2 \\mathrm{e}^{-y^2} \\mathrm{d} y \\int_0^y \\mathrm{d} x=\\int_0^2 y \\mathrm{e}^{-y^2} \\mathrm{d} y=-\\left.\\frac{1}{2} \\mathrm{e}^{-y^2}\\right|_0 ^2=\\frac{1}{2}\\left(1-\\frac{1}{\\mathrm{e}^4}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{-y²} 对 y 不可初等积分，必须换序让 x 先积出因子 y",
+        "换序后 x 从 0 到 y、y 从 0 到 2，上下限别抄反"
+      ],
+      "key_point": "换序后 ∫₀²∫₀^y=∫₀² y e^{-y²}dy=½(1-e^{-4})。"
+    },
+    {
+      "id": 1216,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知向量组 $\\boldsymbol{\\alpha}_{1}=(1,2,3,4), \\boldsymbol{\\alpha}_{2}=(2,3,4,5), \\boldsymbol{\\alpha}_{3}=(3,4,5,6), \\boldsymbol{\\alpha}_{4}=(4,5,6,7)$, 则该向量组的秩为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "$\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1^{\\mathrm{T}}, \\boldsymbol{\\alpha}_2^{\\mathrm{T}}, \\boldsymbol{\\alpha}_3^{\\mathrm{T}}, \\boldsymbol{\\alpha}_4^{\\mathrm{T}}\\right)=\\left(\\begin{array}{llll}1 & 2 & 3 & 4 \\\\ 2 & 3 & 4 & 5 \\\\ 3 & 4 & 5 & 6 \\\\ 4 & 5 & 6 & 7\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc}1 & 2 & 3 & 4 \\\\ 0 & -1 & -2 & -3 \\\\ 0 & -2 & -4 & -6 \\\\ 0 & -3 & -6 & -9\\end{array}\\right) \\rightarrow\\left(\\begin{array}{llll}1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n因为 $r(\\boldsymbol{A})=2$, 所以该向量组的秩为 $2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "四个向量相邻差为常向量，秩极易被误判为 3 或 4，其实只有 2",
+        "行变换后第 2 行起成比例，务必化到底再数非零行"
+      ],
+      "key_point": "初等变换化阶梯形得两个非零行，向量组秩=2。"
+    },
+    {
+      "id": 1217,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 为连续函数, $\\displaystyle F(x)=\\int_{x}^{e^{-x}} f(t) \\mathrm{d} t$, 则 $F^{\\prime}(x)=(\\quad)$",
+      "options": {
+        "A": "$-\\mathrm{e}^{-x} f\\left(\\mathrm{e}^{-x}\\right)-f(x)$",
+        "B": "$-\\mathrm{e}^{-x} f\\left(\\mathrm{e}^{-x}\\right)+f(x)$",
+        "C": "$\\mathrm{e}^{-x} f\\left(\\mathrm{e}^{-x}\\right)-f(x)$",
+        "D": "$\\mathrm{e}^{-x} f\\left(\\mathrm{e}^{-x}\\right)+f(x)$"
+      },
+      "answer": "A",
+      "analysis": "$F^{\\prime}(x)=f\\left(\\mathrm{e}^{-x}\\right)\\left(\\mathrm{e}^{-x}\\right)^{\\prime}-f(x)=-\\mathrm{e}^{-x} f\\left(\\mathrm{e}^{-x}\\right)-f(x)$, 应选 (A)",
+      "wrong_options": {
+        "B": "下限项符号错：F'=上限项-下限项，下限 x 求导 (x)'=1，其贡献应为 -f(x)，写成 +f(x) 漏了下限前的负号。",
+        "C": "上限 e^{-x} 的内层导数 (e^{-x})'=-e^{-x} 丢了负号，把上限项写成 +e^{-x}f(e^{-x})。",
+        "D": "上限内层导数丢负号、下限项符号也错，两处符号都出问题。"
+      },
+      "pitfalls": [
+        "上限项要乘内层导数 (e^{-x})'=-e^{-x}，勿只写 f(e^{-x})",
+        "下限项前有负号：整体是 f(上限)·上限' 减 f(下限)·下限'"
+      ],
+      "key_point": "F'(x)=f(e^{-x})·(-e^{-x})-f(x)=-e^{-x}f(e^{-x})-f(x)，选 A。"
+    },
+    {
+      "id": 1218,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)$ 具有任意阶连续导数, 且 $f^{\\prime}(x)=[f(x)]^{2}$, 则当 $n$ 为大于 2 的正整数时, $f(x)$ 的 $n$ 阶导数 $f^{(n)}(x)=(\\quad)$",
+      "options": {
+        "A": "$n ![f(x)]^{n+1}$",
+        "B": "$n[f(x)]^{n+1}$",
+        "C": "$[f(x)]^{2 n}$",
+        "D": "$n ![f(x)]^{2 n}$"
+      },
+      "answer": "A",
+      "analysis": "由 $f^{\\prime}(x)=[f(x)]^2$ 得\r\n\r\n$$\r\n\\begin{aligned}\r\n& f^{\\prime \\prime}(x)=2 f(x) f^{\\prime}(x)=2[f(x)]^3, \\\\\r\n& f^{\\prime \\prime \\prime}(x)=2 \\times 3[f(x)]^2 f^{\\prime}(x)=3 ![f(x)]^4,\r\n\\end{aligned}\r\n$$\r\n\r\n由归纳法得 $f^{(n)}(x)=n ![f(x)]^{n+1}$, 应选 (A)",
+      "wrong_options": {
+        "B": "归纳时把递推产生的阶乘系数误当成一次因子 n，漏掉每步复合求导累积的阶乘。",
+        "C": "只看首式 f'=[f]² 把指数外推成 2n，忽略求导链式使指数实际按 n+1 递增。",
+        "D": "指数取错为 2n（同 C）却又保留 n! 系数，系数与指数拼凑不自洽。"
+      },
+      "pitfalls": [
+        "每次对 [f]^k 求导得 k[f]^{k-1}f'=k[f]^{k+1}，系数逐步累乘成 n!",
+        "指数是 n+1 不是 2n：f'=2 次、f''=3 次…按 +1 递增"
+      ],
+      "key_point": "逐阶归纳得 f^{(n)}(x)=n![f(x)]^{n+1}，选 A。"
+    },
+    {
+      "id": 1219,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\alpha$ 为常数, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{\\sin n \\alpha}{n^{2}}-\\frac{1}{\\sqrt{n}}\\right)(\\quad)$",
+      "options": {
+        "A": "绝对收敛",
+        "B": "条件收敛",
+        "C": "发散",
+        "D": "收敛性与 $\\alpha$ 的取值有关"
+      },
+      "answer": "C",
+      "analysis": "因为 $\\displaystyle \\left|\\frac{\\sin n \\alpha}{n^2}\\right| \\leqslant \\frac{1}{n^2}$ 且 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ 收敛, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{\\sin n \\alpha}{n^2}$ 绝对收敛; \r\n\r\n因为 $\\displaystyle \\sum_{\\displaystyle n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$ 发散, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{\\sin n \\alpha}{n^2}-\\frac{1}{\\sqrt{n}}\\right)$ 发散, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "只看到 sin nα/n² 绝对收敛，忽略被减项 1/√n（p=1/2）发散，误判整体绝对收敛。",
+        "B": "误以为含 sin nα 会导致条件收敛，其实该项本身绝对收敛，发散完全来自 1/√n。",
+        "D": "误以为敛散性依赖 α，实则 |sin nα/n²|≤1/n² 对任意 α 都绝对收敛，α 不改变结论。"
+      },
+      "pitfalls": [
+        "sin nα/n² 恒绝对收敛（有界/n²），与 α 无关",
+        "1/√n 是 p=1/2<1 的 p-级数，发散；收敛-发散=发散"
+      ],
+      "key_point": "收敛项 Σsin nα/n² 减发散项 Σ1/√n，整体发散，选 C。"
+    },
+    {
+      "id": 1220,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)$ 在 $x=0$ 的某邻域内连续, 且 $\\displaystyle f(0)=0, \\lim _{x \\rightarrow 0} \\frac{f(x)}{1-\\cos x}=2$, 则在点 $x=0$ 处 $f(x)(\\quad)$",
+      "options": {
+        "A": "不可导",
+        "B": "可导, 且 $f^{\\prime}(0) \\neq 0$",
+        "C": "取得极大值",
+        "D": "取得极小值 $n$"
+      },
+      "answer": "D",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{1-\\cos x}=2$, \r\n\r\n所以由极限保号性, 存在 $\\delta>0$, \r\n\r\n当 $0<|x|<\\delta$ 时, $\\displaystyle \\frac{f(x)}{1-\\cos x}>0$. \r\n\r\n因为 $1-\\cos x>0$, 所以 $f(x)>0=f(0)$, \r\n\r\n故 $x=0$ 为极小值点, 应选(D)",
+      "wrong_options": {
+        "A": "把'仅由极限值判不出导数'误当成'不可导'，其实本题问的是极值，且由 f~2·½x²=x² 反而可导。",
+        "B": "误算导数：f(x)~2(1-cosx)~x² ⇒ f'(0)=0，并非非零。",
+        "C": "保号性给出邻域内 f(x)>0=f(0)，是极小值不是极大值，极值类型判反。"
+      },
+      "pitfalls": [
+        "极限>0 只在去心邻域成立，配合 1-cosx>0 才推出 f(x)>0",
+        "f(x)>f(0)=0 在邻域内成立 ⇒ x=0 是极小值点，非极大值"
+      ],
+      "key_point": "保号性 ⇒ 邻域内 f(x)>0=f(0)，故 x=0 取极小值，选 D。"
+    },
+    {
+      "id": 1221,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}$ 是非齐次线性方程组 $\\boldsymbol{A X}=\\boldsymbol{b}$ 的两个不同解, $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$ 是对应的齐次线性方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\mathbf{0}$ 的基础解系, $k_{1}, k_{2}$ 为任意常数, 则方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\boldsymbol{b}$ 的通解为 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle k_{1} \\boldsymbol{\\alpha}_{1}+k_{2}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)+\\frac{\\boldsymbol{\\beta}_{1}-\\boldsymbol{\\beta}_{2}}{2}$",
+        "B": "$\\displaystyle k_{1} \\boldsymbol{\\alpha}_{1}+k_{2}\\left(\\boldsymbol{\\alpha}_{1}-\\boldsymbol{\\alpha}_{2}\\right)+\\frac{\\boldsymbol{\\beta}_{1}+\\boldsymbol{\\beta}_{2}}{2}$",
+        "C": "$\\displaystyle k_{1} \\boldsymbol{\\alpha}_{1}+k_{2}\\left(\\boldsymbol{\\beta}_{1}+\\boldsymbol{\\beta}_{2}\\right)+\\frac{\\boldsymbol{\\beta}_{1}-\\boldsymbol{\\beta}_{2}}{2}$",
+        "D": "$\\displaystyle k_{1} \\boldsymbol{\\alpha}_{1}+k_{2}\\left(\\boldsymbol{\\beta}_{1}-\\boldsymbol{\\beta}_{2}\\right)+\\frac{\\boldsymbol{\\beta}_{1}+\\boldsymbol{\\beta}_{2}}{2}$"
+      },
+      "answer": "B",
+      "analysis": "令 $k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n即 $\\left(k_1+k_2\\right) \\boldsymbol{\\alpha}_1-k_2 \\boldsymbol{\\alpha}_2=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $k_1+k_2=0,-k_2=0$, 或 $k_1=0, k_2=0$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n又因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2$ 为齐次线性方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 的解, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2$ 为齐次线性方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 的基础解系;\r\n\r\n而 $\\displaystyle \\frac{\\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2}{2}$ 为非齐次线性方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\boldsymbol{b}$ 的解, \r\n\r\n故 $\\displaystyle k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)+\\frac{\\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2}{2}$ 为 $\\boldsymbol{A} \\boldsymbol{X}=\\boldsymbol{b}$ 的通解, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "特解取 (β₁-β₂)/2 错：β₁-β₂ 满足 A(β₁-β₂)=0 是齐次解，不能当非齐次特解（特解须满足 Ax=b）。",
+        "C": "把 β₁+β₂ 当基础解系向量错：A(β₁+β₂)=2b≠0，它不是齐次解，不能进基础解系。",
+        "D": "特解 (β₁+β₂)/2 对，但用 α₁,β₁-β₂ 作基础解系不可靠——β₁-β₂ 虽是齐次解却未必与 α₁ 线性无关，不能保证张成整个解空间。"
+      },
+      "pitfalls": [
+        "特解必须满足 Ax=b：只有 (β₁+β₂)/2 满足，(β₁-β₂)/2 是齐次解",
+        "基础解系两向量须线性无关：α₁ 与 α₁-α₂ 无关，而 α₁ 与 β₁-β₂ 无关性无保证"
+      ],
+      "key_point": "α₁,α₁-α₂ 为无关齐次解、(β₁+β₂)/2 为特解，通解取 B。"
+    },
+    {
+      "id": 1222,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int_{0}^{1} \\frac{\\ln (1+x)}{(2-x)^{2}} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3} \\ln 2$",
+      "analysis": "$\\displaystyle \\int_0^1 \\frac{\\ln (1+x)}{(2-x)^2} \\mathrm{d} x\\\\\r\n=\\int_0^1 \\ln (1+x) \\mathrm{d}\\left(\\frac{1}{2-x}\\right)\\\\\r\n=\\left.\\frac{\\ln (1+x)}{2-x}\\right|_0 ^1+\\int_0^1 \\frac{1}{(x-2)(x+1)} \\mathrm{d} x \\\\\r\n=\\ln 2+\\frac{1}{3} \\ln \\left|\\frac{x-2}{x+1}\\right|_0^1=\\ln 2-\\frac{2}{3} \\ln 2=\\frac{1}{3} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部时凑 1/(2-x)² 的原函数是 1/(2-x)（注意 (2-x)' 带负号）",
+        "部分分式两系数均为 ⅓，代限后 ln2-⅔ln2 才等于 ⅓ln2"
+      ],
+      "key_point": "分部+部分分式：原式=ln2-⅔ln2=⅓ln2。"
+    },
+    {
+      "id": 1223,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $z=f(2 x-y, y \\sin x)$, 其中 $f(u, v)$ 具有二阶连续偏导数, 求 $\\displaystyle \\frac{\\partial^{2} z}{\\partial x \\partial y}$",
+      "options": {},
+      "answer": "$\\displaystyle2 f_1^{\\prime}+y \\cos x \\cdot f_2^{\\prime},\\\\\r\n-2 f_{11}^{\\prime \\prime}+(2 \\sin x-y \\cos x) \\cdot f_{12}^{\\prime \\prime}+\\cos x \\cdot f_2^{\\prime}+y \\sin x \\cos x \\cdot f_{22}^{\\prime \\prime}$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=2 f_1^{\\prime}+y \\cos x \\cdot f_2^{\\prime},\\\\\r\n\\frac{\\partial^2 z}{\\partial x \\partial y}=\\\\\r\n2\\left(-f_{11}^{\\prime \\prime}+\\sin x \\cdot f_{12}^{\\prime \\prime}\\right)+\\cos x \\cdot f_2^{\\prime}+y \\cos x\\left(-f_{21}^{\\prime \\prime}+\\sin x \\cdot f_{22}^{\\prime \\prime}\\right) =\\\\\r\n-2 f_{11}^{\\prime \\prime}+(2 \\sin x-y \\cos x) \\cdot f_{12}^{\\prime \\prime}+\\cos x \\cdot f_2^{\\prime}+y \\sin x \\cos x \\cdot f_{22}^{\\prime \\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 y 求导时 f₁',f₂' 仍是 (2x-y,ysinx) 的复合函数，要继续乘内层对 y 的偏导",
+        "cosx·f₂' 一项来自 ycosx 对 y 求导，勿漏这个非二阶导项",
+        "f₁₂''=f₂₁''（二阶连续偏导可交换），合并同类项"
+      ],
+      "key_point": "两次链式求导并利用 f₁₂''=f₂₁'' 合并得含 f₁₁'',f₁₂'',f₂',f₂₂'' 的结果。"
+    },
+    {
+      "id": 1224,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}+4 y^{\\prime}+4 y=\\mathrm{e}^{-2 x}$ 的通解",
+      "options": {},
+      "answer": "$y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-2 x}+\\frac{1}{2} x^2 \\mathrm{e}^{-2 x}\\left(C_1, C_2\\right.$为任意常数)",
+      "analysis": "特征方程为 $\\lambda^2+4 \\lambda+4=0$, \r\n\r\n特征根为 $\\lambda_1=\\lambda_2=-2$. $y^{\\prime \\prime}+4 y^{\\prime}+4 y=0$ 的通解为 \r\n\r\n$y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-2 x}$; \r\n\r\n设特解为 $y_0(x)=a x^2 \\mathrm{e}^{-2 x}$, \r\n\r\n代入得 $\\displaystyle a=\\frac{1}{2}$, \r\n\r\n故 $y^{\\prime \\prime}+4 y^{\\prime}+4 y=\\mathrm{e}^{-2 x}$ 的通解为\r\n\r\n\r\n$y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-2 x}+\\frac{1}{2} x^2 \\mathrm{e}^{-2 x}\\left(C_1, C_2\\right.$为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "-2 是特征方程二重根，e^{-2x} 与之共振，特解须乘 x²（补两次重数）",
+        "特解设 ax²e^{-2x} 而非 ae^{-2x} 或 axe^{-2x}，否则代入恒为 0 定不出 a"
+      ],
+      "key_point": "重根 -2 与右端共振，特解 ½x²e^{-2x}，通解=(C₁+C₂x)e^{-2x}+½x²e^{-2x}。"
+    },
+    {
+      "id": 1225,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=0}^{\\infty}(2 n+1) x^{n}$ 的收敛域, 并求其和函数",
+      "options": {},
+      "answer": "收敛域 $(-1,1)$，$S(x)=\\dfrac{1+x}{(1-x)^2}$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=1$,\r\n\r\n得幂级数的收敛半径 $R=1$, \r\n\r\n当 $x= \\pm 1$ 时, $(2 n+1)( \\pm 1)^n \\rightarrow \\infty(n \\rightarrow \\infty)$, \r\n\r\n即 $x= \\pm 1$ 时, 幂级数发散, \r\n\r\n故幂级数的收敛域为 $(-1,1)$\r\n\r\n$\\displaystyle S(x) =\\sum_{n=0}^{\\infty}(2 n+1) x^n, \\\\\r\n=2 x \\sum_{n=1}^{\\infty} n x^{n-1}+\\sum_{n=0}^{\\infty} x^n=2 x\\left(\\sum_{n=1}^{\\infty} x^n\\right)^{\\prime}+\\frac{1}{1-x} \\\\\r\n=2 x\\left(\\frac{x}{1-x}\\right)^{\\prime}+\\frac{1}{1-x}=\\frac{1+x}{(1-x)^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "端点 x=±1 时通项 (2n+1)(±1)ⁿ 不趋 0，两端均发散，收敛域为开区间",
+        "拆项 2n+1=2n+1，Σnxⁿ 由 (Σxⁿ)' 乘 x 得 x/(1-x)²，别漏乘 x"
+      ],
+      "key_point": "收敛域 (-1,1)，S(x)=2x·x/(1-x)²'... 合得 (1+x)/(1-x)²。"
+    },
+    {
+      "id": 1226,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求曲面积分 $\\displaystyle I=\\iint\\limits_{\\Sigma} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y$, 其中 $\\Sigma$ 是球面 $x^{2}+y^{2}+z^{2}=4(z \\geqslant 0)$ 的外侧",
+      "options": {},
+      "answer": "$I=12 \\pi$",
+      "analysis": "方法一 令 $\\Sigma_0: z=0\\left(x^2+y^2 \\leqslant 4\\right)$, 取下侧,\r\n\r\n$\\displaystyle I=\\oiint\\limits_{\\Sigma+\\Sigma_0} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y-\\iint\\limits_{\\Sigma_0} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y \\overset{\\underset{\\Delta}{}}{=} I_1 - I_2$\r\n\r\n$\\displaystyle I_1=\\oiint\\limits_{\\Sigma+\\Sigma_0} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iiint\\limits_{\\Omega} z \\mathrm{d} v=\\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\varphi \\int_0^2 r^3 \\sin \\varphi \\cos \\varphi \\mathrm{d} r \\\\\r\n=2 \\pi \\int_0^{\\frac{\\pi}{2}} \\sin \\varphi \\cos \\varphi \\mathrm{d} \\varphi \\int_0^2 r^3 \\mathrm{d} r=4 \\pi \\\\\r\nI_2=\\iint\\limits_{\\Sigma_0} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y=\\iint\\limits_{\\Sigma_0} 2 \\mathrm{d} x \\mathrm{d} y\\\\\r\n=-2 \\iint\\limits_{x^2+y^2 \\leqslant 4} \\mathrm{d} x \\mathrm{d} y=-8 \\pi$\r\n\r\n故 $I=12 \\pi$\r\n\r\n方法二\r\n\r\n$\\displaystyle I=\\iint\\limits_{\\Sigma} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y=\\iint\\limits_{\\Sigma} y z \\mathrm{d} z \\mathrm{d} x+2 \\iint\\limits_{\\Sigma} \\mathrm{d} x \\mathrm{d} y\\overset{\\underset{\\Delta}{}}{=} I_1 + I_2$,\r\n\r\n令曲面 $\\Sigma$ 位于 $x O z$ 平面右侧的部分为 $\\Sigma_1$, 由对称性得\r\n\r\n$\\displaystyle I_1 =2 \\iint\\limits_{\\Sigma_1} y z \\mathrm{d} z \\mathrm{d} x\\\\\r\n=2 \\iint\\limits_{D_{x z}} z \\sqrt{4-x^2-z^2} \\mathrm{d} z \\mathrm{d} x \\\\\r\n=2 \\int_0^\\pi \\mathrm{d} \\theta \\int_0^2 r^2 \\sin \\theta \\cdot \\sqrt{4-r^2} \\mathrm{d} r\\\\\r\n=4 \\int_0^2 r^2 \\sqrt{4-r^2} \\mathrm{d} r \\\\\r\n\\stackrel{r =2 \\sin t}{=} 4 \\int_0^{\\frac{\\pi}{2}} 4 \\sin ^2 t \\cdot 4 \\cos ^2 t \\mathrm{d} t=64 \\int_0^{\\frac{\\pi}{2}}\\left(\\sin ^2 t-\\sin ^4 t\\right) \\mathrm{d} t \\\\\r\n=64\\left(\\frac{1}{2} \\cdot \\frac{\\pi}{2}-\\frac{3}{4} \\cdot \\frac{1}{2} \\cdot \\frac{\\pi}{2}\\right)=4 \\pi \\\\\r\nI_2=2 \\iint\\limits_{D_{x y}} \\mathrm{d} x \\mathrm{d} y =2 \\times 4 \\pi=8 \\pi$\r\n\r\n故 $\\displaystyle I=\\iint\\limits_{\\Sigma} y z \\mathrm{d} z \\mathrm{d} x+2 \\mathrm{d} x \\mathrm{d} y=12 \\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "散度 div=∂(yz)/∂y+∂(2)/∂z=z，∭z dv=4π 别算成 0",
+        "补底面取下侧才与上半球外侧拼成整体外侧闭曲面",
+        "补面上 z=0 使 yzdzdx 项为 0，但 2dxdy 项贡献 -8π，I=I₁-I₂=4π-(-8π)=12π"
+      ],
+      "key_point": "补底面用高斯得 ∭z dv=4π，减补面 -8π，故 I=12π。"
+    },
+    {
+      "id": 1227,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设不恒为常数的函数 $f(x)$ 在闭区间 $[a, b]$ 上连续, 在开区间 $(a, b)$ 内可导, 且 $f(a)=$ $f(b)$, 证明: 在 $(a, b)$ 内至少存在一点 $\\xi$, 使得 $f^{\\prime}(\\xi)>0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "因为 $f(x)$ 不恒为常数, \r\n\r\n且 $f(a)=f(b)$, 所以存在 $c \\in(a, b)$, \r\n\r\n使得 $f(c) \\neq f(a)$, 不妨设 $f(c)>f(a)$, \r\n\r\n由拉格朗日中值定理, 存在 $\\xi \\in(a, c) \\subset(a, b)$, 使得\r\n\r\n$f^{\\prime}(\\xi)=\\dfrac{f(c)-f(a)}{c-a}>0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "不能直接用罗尔（只给出 f'=0），要在子区间上用拉格朗日造出正导数",
+        "若 f(c)<f(a) 则改在 [c,b] 上做，保证差商为正，须分类或不妨设"
+      ],
+      "key_point": "取 f(c)≠f(a)，在 [a,c] 用拉格朗日得 f'(ξ)=[f(c)-f(a)]/(c-a)>0。"
+    },
+    {
+      "id": 1228,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 4 阶矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{cccc}1 & -1 & 0 & 0 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 1 & -1 \\\\ 0 & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{C}=\\left(\\begin{array}{llll}2 & 1 & 3 & 4 \\\\ 0 & 2 & 1 & 3 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 0 & 2\\end{array}\\right)$, 且矩阵 $\\boldsymbol{A}$ 满足关系式\r\n\r\n$\\boldsymbol{A}\\left(\\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right)^{\\mathrm{T}} \\boldsymbol{C}^{\\mathrm{T}}=\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 $4$ 阶单位矩阵, $\\boldsymbol{C}^{-1}$ 表示 $\\boldsymbol{C}$ 的逆矩阵, $\\boldsymbol{C}^{\\mathrm{T}}$ 表示 $\\boldsymbol{C}$ 的转置矩阵, 将上述关系式化简并求矩阵 $\\boldsymbol{A}$",
+      "options": {},
+      "answer": "$\\boldsymbol{A}=\\left[(\\boldsymbol{C}-\\boldsymbol{B})^{\\mathrm{T}}\\right]^{-1}$,\r\n\r\n$\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ -2 & 1 & 0 & 0 \\\\ 1 & -2 & 1 & 0 \\\\ 0 & 1 & -2 & 1\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A}\\left(\\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right)^{\\mathrm{T}} \\boldsymbol{C}^{\\mathrm{T}}=\\boldsymbol{E}$,\r\n\r\n得 $\\boldsymbol{A}\\left[\\boldsymbol{C}\\left(\\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right)\\right]^{\\mathrm{T}}=\\boldsymbol{E}$, \r\n\r\n即 $\\boldsymbol{A}(\\boldsymbol{C}-\\boldsymbol{B})^{\\mathrm{T}}=\\boldsymbol{E}$,\r\n\r\n解得 $\\boldsymbol{A}=\\left[(\\boldsymbol{C}-\\boldsymbol{B})^{\\mathrm{T}}\\right]^{-1}$,\r\n\r\n而 $\\boldsymbol{C}-\\boldsymbol{B}=\\left(\\begin{array}{llll}1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 1\\end{array}\\right), \\quad(\\boldsymbol{C}-\\boldsymbol{B})^{\\mathrm{T}}=\\left(\\begin{array}{llll}1 & 0 & 0 & 0 \\\\ 2 & 1 & 0 & 0 \\\\ 3 & 2 & 1 & 0 \\\\ 4 & 3 & 2 & 1\\end{array}\\right)$,\r\n\r\n由 $\\left(\\begin{array}{llll:llll}1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\\\ 2 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\\\ 3 & 2 & 1 & 0 & 0 & 0 & 1 & 0 \\\\ 4 & 3 & 2 & 1 & 0 & 0 & 0 & 1\\end{array}\\right) \\\\ \\rightarrow\\left(\\begin{array}{cccc:cccc}1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 & -2 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 & 1 & -2 & 1 & 0 \\\\ 0 & 0 & 0 & 1 & 0 & 1 & -2 & 1\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ -2 & 1 & 0 & 0 \\\\ 1 & -2 & 1 & 0 \\\\ 0 & 1 & -2 & 1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "化简用 (E-C⁻¹B)ᵀCᵀ=[C(E-C⁻¹B)]ᵀ=(C-B)ᵀ，转置乘积要反序",
+        "最后 A=[(C-B)ᵀ]⁻¹，求下三角矩阵的逆逐列回代，别漏符号"
+      ],
+      "key_point": "化简得 A(C-B)ᵀ=E，故 A=[(C-B)ᵀ]⁻¹，为给定下三角矩阵。"
+    },
+    {
+      "id": 1229,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求一个正交变换, 化二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=x_{1}^{2}+4 x_{2}^{2}+4 x_{3}^{2}-4 x_{1} x_{2}+4 x_{1} x_{3}-8 x_{2} x_{3}$ 为标准形",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}\\frac{2}{\\sqrt{5}} & -\\frac{2}{3 \\sqrt{5}} & \\frac{1}{3} \\\\ \\frac{1}{\\sqrt{5}} & \\frac{4}{3 \\sqrt{5}} & -\\frac{2}{3} \\\\ 0 & \\frac{5}{3 \\sqrt{5}} & \\frac{2}{3}\\end{array}\\right)$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & -2 & 2 \\\\-2 & 4 & -4 \\\\ 2 & -4 & 4\\end{array}\\right), \\boldsymbol{X}=\\left(\\begin{array}{l} x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$, \r\n\r\n则 $f=\\boldsymbol{X}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{X}$,\r\n\r\n由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\\lambda-1 & 2 & -2 \\\\ 2 & \\lambda-4 & 4 \\\\ -2 & 4 & \\lambda-4\\end{array}\\right|\\\\\r\n=\\lambda^2(\\lambda-9)=0$, \r\n\r\n得 $\\lambda_1=\\lambda_2=0, \\lambda_3=9$,\r\n\r\n由 $0 \\boldsymbol{E}-\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{ccc}1 & -2 & 2 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得 $\\lambda_1=\\lambda_2=0$,\r\n\r\n对应的线性无关的特征向量为\r\n\r\n$\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l} 2 \\\\1 \\\\0 \\end{array}\\right), \\quad \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}-2 \\\\0 \\\\1\\end{array}\\right)$\r\n\r\n由 $9 \\boldsymbol{E}-\\boldsymbol{A} \\rightarrow\\left(\\begin{array}{ccc}1 & 0 & -\\frac{1}{2} \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0\\end{array}\\right)$ 得 $\\lambda_3=9$, \r\n\r\n对应的特征向量为 $\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{c}1 \\\\ -2 \\\\ 2\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}2 \\\\1 \\\\0\\end{array}\\right)$,\r\n\r\n$\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2-\\dfrac{\\left(\\boldsymbol{\\alpha}_2, \r\n\\boldsymbol{\\beta}_1\\right)}{\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1\\right)}\\boldsymbol{\\beta}_1\\\\\r\n=\\left(\\begin{array}{c}\r\n-2 \\\\0 \\\\1\r\n\\end{array}\\right)+\\dfrac{4}{5}\\left(\\begin{array}{l}\r\n2 \\\\1 \\\\0\r\n\\end{array}\\right)=\\dfrac{1}{5}\\left(\\begin{array}{c}\r\n-2 \\\\4 \\\\5\r\n\\end{array}\\right)$,\r\n\r\n$\\boldsymbol{\\beta}_3=\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\2\r\n\\end{array}\\right)$\r\n\r\n规范化得 $\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{5}}\\left(\\begin{array}{l}2 \\\\ 1\\\\0\\end{array}\\right), \\\\\r\n\\boldsymbol{\\gamma}_2=\\dfrac{1}{3 \\sqrt{5}}\\left(\\begin{array}{c}2 \\\\ 4 \\\\ 5\\end{array}\\right), \\\\ \r\n\\boldsymbol{\\gamma}_3=\\dfrac{1}{3}\\left(\\begin{array}{c}1 \\\\ -2 \\\\ 2\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol Q=\\left(\\begin{array}{ccc}\\frac{2}{\\sqrt{5}} & -\\frac{2}{3 \\sqrt{5}} & \\frac{1}{3} \\\\ \\frac{1}{\\sqrt{5}} & \\frac{4}{3 \\sqrt{5}} & -\\frac{2}{3} \\\\ 0 & \\frac{5}{3 \\sqrt{5}} & \\frac{2}{3}\\end{array}\\right)$, \r\n\r\n所求的正交变换为 $\\boldsymbol{X}=\\boldsymbol{Q Y}$,\r\n则 $f=\\boldsymbol{X}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{X} \\stackrel{\\boldsymbol{X}=\\boldsymbol{Q Y}}{=} 9 y_3^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 的非对角元取交叉项系数的一半（-2,2,-4）",
+        "0 是二重特征值，其两个特征向量须先正交化再单位化才能拼正交阵",
+        "标准形系数即特征值 0,0,9，只保留 9y₃²"
+      ],
+      "key_point": "A 特征值 0,0,9，正交化后得 Q，标准形 f=9y₃²。"
+    },
+    {
+      "id": 1230,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "质点 $P$ 沿着以 $A B$ 为直径的半圆周, 从点 $A(1,2)$ 运动到点 $B(3,4)$ 的过程中受到力 $\\boldsymbol{F}$ 的 作用, $\\boldsymbol{F}$ 的大小等于点 $P$ 到原点 $O$ 之间的距离, 其方向垂直于线段 $O P$, 且与 $y$ 轴正 向的夹角小于 $\\dfrac{\\pi}{2}$, 求变力 $\\boldsymbol{F}$ 对质点 $P$ 所做的功",
+      "options": {},
+      "answer": "$W=2(\\pi-1)$",
+      "analysis": "设点 $P$ 的坐标为 $(x, y), \\overrightarrow{O P}=\\{x, y\\},|\\boldsymbol{F}|=\\sqrt{x^2+y^2}$, \r\n\r\n因为 $\\boldsymbol{F}$ 的方向垂直于 $O P$ 且与 $y$ 轴正向的夹角小于 $\\displaystyle \\frac{\\pi}{2}$,\r\n\r\n所以 $\\displaystyle \\boldsymbol{F}^0=\\frac{1}{\\sqrt{x^2+y^2}}\\{-y, x\\}$, \r\n\r\n则 $\\boldsymbol{F}=|\\boldsymbol{F}| \\cdot \\boldsymbol{F}^0=\\{-y, x\\}$,\r\n\r\n$\\displaystyle W=\\int_L(-y) \\mathrm{d} x+x \\mathrm{d} y=\\oint_{L+\\overline{B A}}(-y) \\mathrm{d} x+x \\mathrm{d} y+\\int_{\\overline{A B}}(-y) \\mathrm{d} x+x \\mathrm{d} y\\overset{\\underset{\\Delta}{}}{=} I_1 + I_2$,\r\n\r\n由格林公式\r\n\r\n$\\displaystyle I_1= \\oint_{L+\\overline{B A}}(-y) \\mathrm{d} x+x \\mathrm{d} y=2 \\iint_D \\mathrm{d} x \\mathrm{d} y=2 \\times \\frac{1}{2} \\pi(\\sqrt{2})^2=2 \\pi$,\r\n\r\n$\\overline{A B}: y=x+1$ (起点 $x=1$, 终点 $x=3$ ), \r\n\r\n则 $\\displaystyle I_2 =\\int_{\\overline{A B}}(-y) \\mathrm{d} x+x \\mathrm{d} y=\\int_1^3-(x+1) \\mathrm{d} x+x \\mathrm{d} x=-2$,\r\n\r\n故 $W=2(\\pi-1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 |F|=|OP|、F⊥OP 且与 y 轴正向夹角<π/2 定出 F={-y,x}（符号靠方向判）",
+        "半圆直径 AB=2√2，半径 √2，格林公式得 2∬dA=2π",
+        "补弦 AB 上积分为 -2，W=闭路 2π 减去弦贡献得 2(π-1)"
+      ],
+      "key_point": "F={-y,x}，补弦用格林：W=2·半圆面积-弦积分=2(π-1)。"
+    },
+    {
+      "id": 1231,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知随机变量 $X$ 的概率密度函数为 $\\displaystyle f(x)=\\frac{1}{2} \\mathrm{e}^{-|x|},-\\infty<x<+\\infty$, 则随机变量 $X$ 的概率分布函数为 $F(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\begin{cases}\\dfrac{1}{2} \\mathrm{e}^x, & x<0 \\\\ 1-\\dfrac{1}{2} \\mathrm{e}^{-x}, & x \\geqslant 0 \\end{cases}$",
+      "analysis": "$\\displaystyle F(x)=P\\{X \\leqslant x\\}=\\int_{-\\infty}^x f(x) \\mathrm{d} x$,\r\n\r\n- 当 $x<0$ 时, $\\displaystyle F(x)=\\frac{1}{2} \\int_{-\\infty}^x \\mathrm{e}^x \\mathrm{d} x=\\frac{1}{2} \\mathrm{e}^x$;\r\n\r\n- 当 $x \\geqslant 0$ 时, $\\displaystyle F(x)=\\int_{-\\infty}^0 f(x) \\mathrm{d} x+\\int_0^x f(x) \\mathrm{d} x=\\frac{1}{2}+\\frac{1}{2} \\int_0^x \\mathrm{e}^{-x} \\mathrm{d} x=1-\\frac{1}{2} \\mathrm{e}^{-x}$,\r\n\r\n故 $F(x)= \\begin{cases}\\dfrac{1}{2} \\mathrm{e}^x, & x<0 \\\\ 1-\\dfrac{1}{2} \\mathrm{e}^{-x}, & x \\geqslant 0 \\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "密度含 |x| 要分段：x<0 用 e^x、x≥0 用 e^{-x}",
+        "x≥0 段要加上 x<0 部分已累积的概率 ½，别只积 [0,x]"
+      ],
+      "key_point": "分段积分密度：x<0 时 F=½e^x，x≥0 时 F=1-½e^{-x}。"
+    },
+    {
+      "id": 1232,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 21,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机事件 $A, B$ 及其和事件 $A \\cup B$ 的概率分别为 $0.4,0.3$ 和 $0.6$ , 设 $\\bar{B}$ 为事件 $B$ 的对立事件, 则 $P(A \\bar{B})=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0.3$",
+      "analysis": "由 $P(A)=0.4, P(B)=0.3, P(A+B)=0.6$ \r\n\r\n得 $P(A B)=P(A)+P(B)-P(A+B)=0.1$,\r\n\r\n故 $P(A \\bar{B})=P(A)-P(A B)=0.4-0.1=0.3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先算 P(AB)=0.4+0.3-0.6=0.1，别误用独立性直接乘",
+        "AB̄=A 去掉 AB，P(AB̄)=P(A)-P(AB)=0.3，不是 P(A)P(B̄)"
+      ],
+      "key_point": "P(AB)=0.1，P(AB̄)=P(A)-P(AB)=0.4-0.1=0.3。"
+    },
+    {
+      "id": 1233,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 22,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知离散型随机变量 $X$ 服从参数为 $2$ 的泊松分布, 即 $\\displaystyle P\\{X=k\\}=\\frac{2^{k}}{k !} \\mathrm{e}^{-2}(k=0,1,2, \\cdots)$, 则随机变量 $Z=3 X-2$ 的数学期望 $E(Z)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "因为 $X$ 服从参数为 $2$ 的泊松分布, \r\n\r\n所以 $E(X)=2$, 于是 $E(Z)=3 E(X)-2=6-2=4$",
+      "wrong_options": {},
+      "pitfalls": [
+        "泊松参数 λ=2 即为期望 E(X)=2（也是方差）",
+        "E(3X-2)=3·2-2=4，常数项 -2 不乘系数"
+      ],
+      "key_point": "E(X)=λ=2，E(3X-2)=3·2-2=4。"
+    },
+    {
+      "id": 1234,
+      "paper": "数学一",
+      "year": 1990,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 在区域 $D=\\{(x, y)|0<x<1, |y|<x\\}$ 内服从均匀分布, 求关于 $X$ 的边缘概率密度及随机变量 $Z=2 X+1$ 的方差 $D(Z)$",
+      "options": {},
+      "answer": "$\\dfrac{2}{9}$",
+      "analysis": "区域 $D$ 的面积 $S=1$, 则 $(X, Y)$ 的联合概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & (x, y) \\in D \\\\ 0, & (x, y) \\notin D \\end{cases}$\r\n\r\n$\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n- 当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时, $f_X(x)=0$;\r\n\r\n- 当 $0<x<1$ 时, $\\displaystyle f_X(x)=\\int_{-x}^x 1 \\mathrm{d} y=2 x$,\r\n\r\n则随机变量 $X$ 的边缘概率密度为 $f_X(x)= \\begin{cases}2 x, & 0<x<1\\\\ 0, & \\text { 其他}\\end{cases}$\r\n\r\n由 $\\displaystyle E(X)=\\int_0^1 x f_X(x) \\mathrm{d} x=\\int_0^1 2 x^2 \\mathrm{d} x=\\frac{2}{3}$,\r\n\r\n$\\displaystyle E\\left(X^2\\right)=\\int_0^1 x^2 f_X(x) \\mathrm{d} x=\\int_0^1 2 x^3 \\mathrm{d} x=\\frac{1}{2}$, \r\n\r\n得 $\\displaystyle D(X)=\\frac{1}{2}-\\frac{4}{9}=\\frac{1}{18}$,\r\n\r\n故 $\\displaystyle D(Z)=D(2 X+1)=4 D(X)=\\frac{2}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "区域 |y|<x 关于 y 对称，对 y 积分限为 -x 到 x，得 f_X(x)=2x",
+        "D(Z)=D(2X+1)=4D(X)，常数 +1 不影响方差、系数 2 要平方",
+        "D(X)=E(X²)-[E(X)]²=½-4/9=1/18，别漏平方项"
+      ],
+      "key_point": "f_X(x)=2x (0<x<1)，D(X)=1/18，D(Z)=4D(X)=2/9。"
+    }
+  ]
+}

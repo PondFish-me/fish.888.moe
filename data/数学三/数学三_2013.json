@@ -1,0 +1,506 @@
+{
+  "paper": "数学三",
+  "year": 2013,
+  "count": 23,
+  "questions": [
+    {
+      "id": 496,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}, \\boldsymbol{C}$ 均为 $n$ 阶矩阵, 若 $\\boldsymbol{A B}=\\boldsymbol{C}$, 且 $\\boldsymbol{B}$ 可逆, 则 $(\\quad)$",
+      "options": {
+        "A": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{A}$ 的行向量组等价",
+        "B": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{A}$ 的列向量组等价",
+        "C": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{B}$ 的行向量组等价",
+        "D": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{B}$ 的列向量组等价"
+      },
+      "answer": "B",
+      "analysis": "【分析】$AB=C$ 且 $B$ 可逆。矩阵乘法的列视角：$C=AB$ 的每一列是 $A$ 的列向量的线性组合（组合系数取自 $B$ 的对应列）；反过来 $A=CB^{-1}$，$A$ 的列也是 $C$ 的列的线性组合。故 $C$ 与 $A$ 的列向量组可互相线性表示，即等价。行向量组没有这种关系。\n\n【解答】因 $B$ 可逆，由 $AB=C$ 得 $A=CB^{-1}$。\n列向量看：$C=AB$ 表明 $C$ 的列向量组可由 $A$ 的列向量组线性表示；$A=CB^{-1}$ 表明 $A$ 的列向量组可由 $C$ 的列向量组线性表示。两组列向量可互相表示，故\n$$C\\text{ 的列向量组与 }A\\text{ 的列向量组等价}.$$\n（本质上右乘可逆矩阵相当于对 $A$ 的列做可逆线性变换，不改变列空间。）故选 B。\n行向量方面：$AB=C$ 是对 $A$ 右乘，作用在列上，对行向量组没有“可逆线性变换”关系，故 A、C 错；C 与 B、A 与 B 的向量组维数/含义都不同，D 错。",
+      "wrong_options": {
+        "A": "右乘 B 作用于 A 的列，不是行；行向量组未必等价，C 的行空间与 A 的行空间一般不同",
+        "C": "C 的行向量组与 B 的行向量组无等价关系，B 是右乘的变换矩阵而非行的生成元",
+        "D": "C 的列虽由 A 的列组合而成，但与 B 的列向量组无等价关系，混淆了乘法两侧的角色"
+      },
+      "pitfalls": [
+        "右乘可逆矩阵 = 对列做可逆线性变换，保持列向量组等价（列空间不变）",
+        "左乘可逆矩阵才对应行向量组等价，二者别混",
+        "等价指两组向量可互相线性表示，需 B 可逆才能反推 A=CB^{-1}"
+      ],
+      "key_point": "AB=C、B 可逆：右乘可逆阵不改变列向量组等价关系（列空间）"
+    },
+    {
+      "id": 497,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "矩阵 $\\left(\\begin{array}{lll}1 & a & 1 \\\\ a & b & a \\\\ 1 & a & 1\\end{array}\\right)$ 与 $\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ 相似的充分必要条件为 $(\\quad)$",
+      "options": {
+        "A": "$a=0, b=2$",
+        "B": "$a=0, b$ 为任意常数",
+        "C": "$a=2, b=0$",
+        "D": "$a=2, b$ 为任意常数"
+      },
+      "answer": "B",
+      "analysis": "【分析】记 $A=\\begin{pmatrix}1&a&1\\\\a&b&a\\\\1&a&1\\end{pmatrix}$，$\\Lambda=\\begin{pmatrix}2&0&0\\\\0&b&0\\\\0&0&0\\end{pmatrix}$。两矩阵相似的必要条件是同特征值（含重数）、同迹、同秩、同行列式。$A$ 是实对称矩阵，必可正交对角化，因此 $A\\sim\\Lambda$ 当且仅当 $\\Lambda$ 恰是 $A$ 的特征值对角阵。关键看 $A$ 的特征值能否恰为 $2,b,0$，从而定出 $a$。\n\n【解答】$\\Lambda$ 的特征值为 $2,b,0$，迹 $=2+b$，且有零特征值。\n\n$A$ 的迹 $=1+b+1=2+b$，与 $\\Lambda$ 自动相等。又 $A$ 的第一、三行相同，故 $\\det A=0$，$0$ 必是 $A$ 的特征值。设其余两特征值为 $\\lambda_1,\\lambda_2$，则 $\\lambda_1+\\lambda_2=2+b$。\n\n要使 $A$ 的特征值恰为 $\\{2,b,0\\}$，须 $\\{\\lambda_1,\\lambda_2\\}=\\{2,b\\}$，即 $\\lambda_1\\lambda_2=2b$。而 $\\lambda_1\\lambda_2$ 等于 $A$ 的二阶主子式之和（因有零特征值，三阶主子式和 $=\\det A=0$）。计算二阶主子式之和：\n\n$$\\begin{vmatrix}1&a\\\\a&b\\end{vmatrix}+\\begin{vmatrix}1&1\\\\1&1\\end{vmatrix}+\\begin{vmatrix}b&a\\\\a&1\\end{vmatrix}=(b-a^2)+0+(b-a^2)=2b-2a^2.$$\n\n令其等于 $2b$，得 $2b-2a^2=2b$，即 $a^2=0$，故 $a=0$。\n\n反之，当 $a=0$ 时，$A=\\begin{pmatrix}1&0&1\\\\0&b&0\\\\1&0&1\\end{pmatrix}$，由 1、3 行（列）构成的块 $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ 特征值为 $0,2$，中间解耦出 $b$，故 $A$ 特征值恰为 $\\{2,b,0\\}$。$A$ 对称必可对角化，对任意 $b$ 均有 $A\\sim\\Lambda$。\n\n故充要条件为 $a=0$，$b$ 为任意常数，选 B。",
+      "wrong_options": {
+        "A": "$a=0$ 确为必要，但 $b=2$ 是多余约束。$a=0$ 时对任意 $b$ 都相似，把 $b$ 限死为 2 缩小了条件，非充要。",
+        "C": "$a=2$ 时二阶主子式之和 $=2b-2a^2=2b-8\\ne2b$，$A$ 的非零特征值之积不等于 $2b$，特征值不再是 $\\{2,b,0\\}$，不相似。",
+        "D": "同 C，$a=2$ 不满足特征值匹配（$a^2=0$ 才行），无论 $b$ 取何值都不相似。"
+      },
+      "pitfalls": [
+        "实对称矩阵必可对角化，故相似归结为特征值（含重数）完全一致，不必另查可对角化性。",
+        "由迹自动相等、$\\det A=0$ 得零特征值，再用二阶主子式之和 $=2b-2a^2$ 匹配 $2b$，定出 $a=0$。",
+        "$b$ 不受约束：$a=0$ 时对任意 $b$ 均相似，因此答案是‘$b$ 任意’而非某固定值。"
+      ],
+      "key_point": "对称阵相似于对角阵 $\\iff$ 特征值一致；用迹、$\\det$、主子式之和把待定参数逼出来。"
+    },
+    {
+      "id": 498,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, X_{3}$ 是随机变量, 且 $X_{1} \\sim N(0,1), X_{2} \\sim N\\left(0,2^{2}\\right), X_{3} \\sim N\\left(5,3^{2}\\right)$, $p_{i}=P\\left\\{-2 \\leqslant X_{i} \\leqslant 2\\right\\}(i=1,2,3)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$p_{1}>p_{2}>p_{3}$",
+        "B": "$p_{2}>p_{1}>p_{3}$",
+        "C": "$p_{3}>p_{1}>p_{2}$",
+        "D": "$p_{1}>p_{3}>p_{2}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n比较三个正态变量落在固定区间 $[-2,2]$ 内的概率。关键是把每个概率标准化为标准正态 $Z=\\dfrac{X-\\mu}{\\sigma}$ 的区间概率，再比较各自对应的标准化区间。区间越‘居中且越宽’，概率越大。\n\n【解答】\n\n**$p_1$：** $X_1\\sim N(0,1)$，\n$$p_1=P\\{-2\\le X_1\\le2\\}=\\Phi(2)-\\Phi(-2)=2\\Phi(2)-1.$$\n\n**$p_2$：** $X_2\\sim N(0,2^2)$，标准化 $Z=\\dfrac{X_2}{2}$，\n$$p_2=P\\Big\\{-1\\le \\tfrac{X_2}{2}\\le1\\Big\\}=2\\Phi(1)-1.$$\n\n**$p_3$：** $X_3\\sim N(5,3^2)$，标准化 $Z=\\dfrac{X_3-5}{3}$，\n$$p_3=P\\Big\\{\\tfrac{-2-5}{3}\\le Z\\le\\tfrac{2-5}{3}\\Big\\}=P\\Big\\{-\\tfrac73\\le Z\\le-1\\Big\\}=\\Phi(-1)-\\Phi\\!\\Big(-\\tfrac73\\Big).$$\n\n**比较 $p_1,p_2$：** 二者区间都关于 $0$ 对称，$p_1$ 对应 $|Z|\\le2$，$p_2$ 对应 $|Z|\\le1$。由于 $\\Phi(2)>\\Phi(1)$，得 $p_1=2\\Phi(2)-1>2\\Phi(1)-1=p_2$。\n\n**比较 $p_2,p_3$：** $p_3$ 对应的区间 $[-\\tfrac73,-1]$ 完全落在 $Z\\le-1$ 一侧（远离均值），其概率\n$$p_3=\\Phi(-1)-\\Phi(-\\tfrac73)<\\Phi(-1)=1-\\Phi(1).$$\n而 $p_2=2\\Phi(1)-1$。由于 $\\Phi(1)\\approx0.8413$，$p_2\\approx0.6826$，$p_3<1-0.8413=0.1587$。故 $p_2>p_3$。\n\n综上 $p_1>p_2>p_3$，选 **A**。\n\n**直觉验证：** $X_1$ 标准差最小且区间居中（$\\pm2\\sigma$），概率最大；$X_2$ 区间居中但只覆盖 $\\pm1\\sigma$；$X_3$ 均值 $5$ 远在区间右侧，落入 $[-2,2]$ 的概率极小。",
+      "wrong_options": {
+        "B": "把 p1、p2 比反了。p1 覆盖 ±2σ、p2 只覆盖 ±1σ，居中且更宽者概率更大，应 p1>p2。",
+        "C": "误以为均值 5 的 X3 概率最大；恰恰相反，区间 [-2,2] 远离 X3 的均值，p3 最小。",
+        "D": "认为 p3>p2。p3 对应的标准化区间 [-7/3,-1] 在远尾，概率不足 0.16，远小于 p2≈0.68。"
+      },
+      "pitfalls": [
+        "一律先标准化 Z=(X-μ)/σ，把问题转成标准正态在某区间的概率再比较。",
+        "区间相对均值‘是否居中、覆盖几个 σ’决定概率大小；均值偏离区间越远概率越小。",
+        "X3 均值 5 完全在 [-2,2] 之外，是把它判为最小的题眼。"
+      ],
+      "key_point": "标准化后比标准正态区间：居中且覆盖 σ 多者概率大，均值远离区间者概率小。"
+    },
+    {
+      "id": 504,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{1}^{+\\infty} \\frac{\\ln x}{(1+x)^{2}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\ln 2$",
+      "analysis": "【分析】\n\n被积函数含 $\\ln x$ 与 $\\dfrac{1}{(1+x)^2}$，后者恰是 $-\\dfrac{1}{1+x}$ 的导数，是典型的分部积分结构：取 $u=\\ln x$、$\\mathrm dv=\\dfrac{\\mathrm dx}{(1+x)^2}$，分部后对数被微分掉，化成一个有理函数的反常积分。\n\n【解答】\n\n令 $u=\\ln x,\\ \\mathrm dv=\\dfrac{\\mathrm dx}{(1+x)^2}$，则 $\\mathrm du=\\dfrac{\\mathrm dx}{x},\\ v=-\\dfrac{1}{1+x}$。\n\n$$\\int_1^{+\\infty}\\frac{\\ln x}{(1+x)^2}\\,\\mathrm dx=\\Big[-\\frac{\\ln x}{1+x}\\Big]_1^{+\\infty}+\\int_1^{+\\infty}\\frac{1}{x(1+x)}\\,\\mathrm dx.$$\n\n**边界项。** 上限：$\\dfrac{\\ln x}{1+x}\\to0$（$x\\to+\\infty$，对数比一次幂低阶）；下限：$x=1$ 时 $\\ln1=0$。故边界项 $=0$。\n\n**余下积分。** 部分分式 $\\dfrac{1}{x(1+x)}=\\dfrac1x-\\dfrac1{1+x}$，\n\n$$\\int_1^{+\\infty}\\Big(\\frac1x-\\frac1{1+x}\\Big)\\mathrm dx=\\Big[\\ln\\frac{x}{1+x}\\Big]_1^{+\\infty}=\\lim_{x\\to+\\infty}\\ln\\frac{x}{1+x}-\\ln\\frac12=\\ln1-\\ln\\frac12=\\ln2.$$\n\n所以原积分 $=0+\\ln2=\\ln2$。\n\n**验算：** 中间量 $\\ln\\dfrac{x}{1+x}$ 在 $+\\infty$ 处趋于 $\\ln1=0$，在 $x=1$ 处为 $\\ln\\tfrac12=-\\ln2$，差得 $\\ln2>0$，与被积函数在 $(1,\\infty)$ 上恒正一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部积分选 v=-1/(1+x)，注意负号别丢；u=ln x 求导后变 1/x。",
+        "边界项务必验证：上限处 ln x/(1+x)→0（对数低阶），下限处 ln1=0，整体为 0。",
+        "1/[x(1+x)] 拆成 1/x-1/(1+x)，原函数 ln(x/(1+x)) 一步到位。"
+      ],
+      "key_point": "ln x 配 1/(1+x)² 用分部积分消去对数，剩下的有理式用部分分式 ln(x/(1+x)) 求值。"
+    },
+    {
+      "id": 505,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 是 $3$ 阶非零矩阵, $|\\boldsymbol{A}|$ 为 $\\boldsymbol{A}$ 的行列式, $A_{i j}$ 为 $a_{i j}$ 的代数余子式,\r\n若 $a_{i j}+A_{i j}=0(i, j=1,2,3)$, 则 $|\\boldsymbol{A}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】条件 $a_{ij}+A_{ij}=0$ 即每个元素与其代数余子式互为相反数：$A_{ij}=-a_{ij}$。要联系 $|A|$，有两条线索：一是按行展开 $|A|=\\sum_j a_{ij}A_{ij}$，二是伴随矩阵 $A^*=(A_{ij})^T$。两者结合可定出 $|A|$，并需排除 $|A|=0$。\n\n【解答】由 $A_{ij}=-a_{ij}$，把 $|A|$ 按第 $i$ 行展开：\n$$|A|=\\sum_{j=1}^3 a_{ij}A_{ij}=\\sum_{j=1}^3 a_{ij}(-a_{ij})=-\\sum_{j=1}^3 a_{ij}^2\\le0.$$\n因 $A$ 为非零矩阵，至少某一行存在非零元，取该行展开则 $-\\sum_j a_{ij}^2<0$，故 $|A|<0$，特别地 $|A|\\neq0$。\n\n再用伴随矩阵确定具体值。$A^*=(A_{ij})^T$，由 $A_{ij}=-a_{ij}$ 得 $A^*=-A^T$。对 $3$ 阶矩阵取行列式：\n$$|A^*|=|-A^T|=(-1)^3|A^T|=-|A|.$$\n另一方面 $|A^*|=|A|^{\\,n-1}=|A|^2$。于是\n$$|A|^2=-|A|\\ \\Rightarrow\\ |A|\\,(|A|+1)=0.$$\n结合 $|A|\\neq0$，得 $|A|=-1$。\n\n验算：$|A|=-1$ 时 $|A^*|=|A|^2=1$，而 $-|A|=1$，两式相符。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|A^*|=|A|^{n-1}$，三阶时为 $|A|^2$，指数别记错。",
+        "必须用「按行展开 $|A|=-\\sum a_{ij}^2<0$」排除 $|A|=0$，否则会漏掉一个根。"
+      ],
+      "key_point": "$A_{ij}=-a_{ij}\\Rightarrow A^*=-A^T$，配合 $|A^*|=|A|^2$ 解出 $|A|$。"
+    },
+    {
+      "id": 512,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ll}1 & a \\\\ 1 & 0\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & b\\end{array}\\right)$, 当 $a, b$ 为何值时, 存在矩阵 $\\boldsymbol{C}$ 使得 $\\boldsymbol{A} \\boldsymbol{C}-\\boldsymbol{C} \\boldsymbol{A}=\\boldsymbol{B}$, 并求所有矩阵 $\\boldsymbol{C}$",
+      "options": {},
+      "answer": "当 $a=-1,\\ b=0$ 时存在；$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix}$（$k_1,k_2$ 为任意常数）",
+      "analysis": "【分析】把 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$ 设成未知，直接展开 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 得到关于 $x_1,x_2,x_3,x_4$ 的线性方程组。注意一个关键恒等式：对任意方阵 $\\operatorname{tr}(\\boldsymbol{AC})=\\operatorname{tr}(\\boldsymbol{CA})$，故 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$，这就强制 $\\operatorname{tr}\\boldsymbol{B}=0$，先定出 $b$；再让方程组有解定出 $a$，并解出全部 $\\boldsymbol{C}$。\n\n【解答】设 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$。计算\n$$\\boldsymbol{AC}=\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}=\\begin{pmatrix}x_1+ax_3 & x_2+ax_4\\\\ x_1 & x_2\\end{pmatrix},$$\n$$\\boldsymbol{CA}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}=\\begin{pmatrix}x_1+x_2 & ax_1\\\\ x_3+x_4 & ax_3\\end{pmatrix}.$$\n于是\n$$\\boldsymbol{AC}-\\boldsymbol{CA}=\\begin{pmatrix}ax_3-x_2 & x_2+ax_4-ax_1\\\\ x_1-x_3-x_4 & x_2-ax_3\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&b\\end{pmatrix}.$$\n比较四个元素得方程组\n$$\\begin{cases}ax_3-x_2=0,\\\\ -ax_1+x_2+ax_4=1,\\\\ x_1-x_3-x_4=1,\\\\ x_2-ax_3=b.\\end{cases}$$\n第 1 式给 $x_2=ax_3$，代入第 4 式得 $ax_3-ax_3=b$，即 $b=0$。这与恒等式 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 要求 $\\operatorname{tr}\\boldsymbol{B}=0+b=0$ 一致。\n\n取 $b=0$。此时第 1、4 式合并为 $x_2=ax_3$。把第 2 式整理：$-ax_1+ax_3+ax_4=1$（已用 $x_2=ax_3$），即 $-a(x_1-x_3-x_4)=1$。而第 3 式给 $x_1-x_3-x_4=1$，代入得 $-a\\cdot1=1$，故 $a=-1$。\n\n所以仅当 $a=-1,\\ b=0$ 时方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 有解。此时方程组退化为两个独立约束：\n$$x_2=ax_3=-x_3,\\qquad x_1=x_3+x_4+1.$$\n令自由参数 $x_3=k_1,\\ x_4=k_2$，则 $x_2=-k_1,\\ x_1=k_1+k_2+1$。故全部解为\n$$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix},\\qquad k_1,k_2\\ \\text{为任意常数}.$$\n验算（取 $a=-1$）：$\\boldsymbol{AC}-\\boldsymbol{CA}$ 的 $(1,1)$ 元 $=ax_3-x_2=-k_1-(-k_1)=0$，$(1,2)$ 元 $=x_2+ax_4-ax_1=-k_1-k_2+(k_1+k_2+1)=1$，$(2,1)$ 元 $=x_1-x_3-x_4=(k_1+k_2+1)-k_1-k_2=1$，$(2,2)$ 元 $=x_2-ax_3=-k_1+k_1=0=b$，与 $\\boldsymbol{B}$ 完全吻合。",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用迹关系 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 卡出 $b=0$，能避免漫无目的地解方程",
+        "$a=-1$ 是\"方程组相容\"的条件，若直接代具体数容易漏掉，需把第 2、3 式联立才暴露 $-a=1$",
+        "最终 $\\boldsymbol{C}$ 含两个自由参数，写成通解形式，别只给一个特解"
+      ],
+      "key_point": "矩阵方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 设元展开化为线性方程组；先用 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})\\equiv0$ 得相容必要条件 $\\operatorname{tr}\\boldsymbol{B}=0$"
+    },
+    {
+      "id": 513,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=2\\left(a_{1} x_{1}+a_{2} x_{2}+a_{3} x_{3}\\right)^{2}+\\left(b_{1} x_{1}+b_{2} x_{2}+b_{3} x_{3}\\right)^{2}$, 记\r\n\r\n$\\boldsymbol{\\alpha}=\\left(\\begin{array}{l}\r\na_{1} \\\\a_{2} \\\\a_{3}\\end{array}\\right), \r\n\\boldsymbol{\\beta}=\\left(\\begin{array}{l}\r\nb_{1} \\\\b_{2} \\\\b_{3}\\end{array}\\right)$\r\n\r\n(1) 证明:二次型 $f$ 对应的矩阵为 $2 \\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}$;\r\n\r\n(2) 若 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 正交且均为单位向量, 证明 $f$ 在正交变换下的标准形为 $2 y_{1}^{2}+y_{2}^{2}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第(1)问要证二次型矩阵就是 $2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，关键在于把 $(a_1x_1+a_2x_2+a_3x_3)^2$ 这种\"线性组合的平方\"写成 $(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$，并验证 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 对称。第(2)问当 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是正交单位向量时，直接求 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 的特征值：用 $A\\boldsymbol{\\alpha}$、$A\\boldsymbol{\\beta}$ 看 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是不是特征向量，再补上第三个正交方向，特征值即为标准形系数。\n\n【解答】（1）记 $\\boldsymbol{x}=(x_1,x_2,x_3)^{\\mathrm{T}}$。则\n$$a_1x_1+a_2x_2+a_3x_3=\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x},\\qquad b_1x_1+b_2x_2+b_3x_3=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x}.$$\n由于 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是数，转置等于自身，故\n$$(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=(\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})\\boldsymbol{x}.$$\n同理 $(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})\\boldsymbol{x}$。于是\n$$f=2(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2+(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\left(2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}\\right)\\boldsymbol{x}.$$\n又 $(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$，$(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，故 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 是对称矩阵，它就是二次型 $f$ 对应的矩阵。证毕。\n\n（2）设 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 正交且为单位向量，即\n$$\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}=1,\\quad \\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta}=1,\\quad \\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta}=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha}=0.$$\n考察 $A$ 作用在 $\\boldsymbol{\\alpha}$ 上：\n$$A\\boldsymbol{\\alpha}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha})=2\\boldsymbol{\\alpha}\\cdot1+\\boldsymbol{\\beta}\\cdot0=2\\boldsymbol{\\alpha},$$\n故 $\\lambda_1=2$ 是特征值，$\\boldsymbol{\\alpha}$ 为对应特征向量。再看 $\\boldsymbol{\\beta}$：\n$$A\\boldsymbol{\\beta}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta})=0+\\boldsymbol{\\beta}\\cdot1=\\boldsymbol{\\beta},$$\n故 $\\lambda_2=1$，$\\boldsymbol{\\beta}$ 为对应特征向量。取与 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 都正交的非零向量 $\\boldsymbol{\\gamma}$（三维空间中必存在），则\n$$A\\boldsymbol{\\gamma}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\gamma})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\gamma})=0+0=\\boldsymbol{0}=0\\cdot\\boldsymbol{\\gamma},$$\n故 $\\lambda_3=0$。于是 $A$ 的特征值为 $2,1,0$。\n\n由于 $A$ 是实对称矩阵，必存在正交矩阵 $Q$ 使 $\\boldsymbol{x}=Q\\boldsymbol{y}$ 把 $f$ 化为标准形，对应系数即特征值，故\n$$f=2y_1^2+y_2^2+0\\cdot y_3^2=2y_1^2+y_2^2.$$\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "把线性组合平方写成 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 时务必说明 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是标量从而可转置交换",
+        "第(2)问不要硬算特征多项式，利用 $A\\boldsymbol{\\alpha},A\\boldsymbol{\\beta}$ 直接读出特征值最干净，第三个特征值由正交补给出 $0$"
+      ],
+      "key_point": "秩 1 矩阵 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 的特征值是 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}$（特征向量 $\\boldsymbol{\\alpha}$）和 $0$；正交单位向量让两个秩 1 块互不干扰，特征值直接叠加"
+    },
+    {
+      "id": 515,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)=\\left\\{\\begin{array}{ll}\\dfrac{\\theta^2}{x^3} \\mathrm{e}^{-\\frac{\\theta}{x}}, & x>0, \\\\ 0, & \\text { 其他 }\\end{array}\\right.$ 其中 $\\theta$ 为未知参数且大于零. $X_{1}, X_{2}, \\cdots, X_{n}$ 为来自总体 $X$ 的简单随机样本\r\n\r\n(1) 求 $\\theta$ 的矩估计量;\r\n\r\n(2) 求 $\\theta$ 的最大似然估计量",
+      "options": {},
+      "answer": "(1) $\\hat{\\theta}=\\bar{X}$\r\n\r\n(2) $\\hat{\\theta}=\\dfrac{2 n}{\\sum\\limits_{i=1}^n \\dfrac{1}{X_i}}$",
+      "analysis": "【分析】(1) 矩估计：先算 $E(X)$，再令样本一阶矩 $\\bar X$ 等于 $E(X)$ 反解 $\\theta$。算 $E(X)$ 时作变量代换 $u=\\dfrac\\theta x$ 化为 $\\Gamma$ 积分。(2) 最大似然：写出似然函数取对数，对 $\\theta$ 求导令零。\n\n【解答】(1) 求总体期望：\n$$E(X)=\\int_0^{+\\infty}x\\cdot\\frac{\\theta^2}{x^3}\\mathrm{e}^{-\\theta/x}\\,\\mathrm{d}x=\\theta^2\\int_0^{+\\infty}\\frac{1}{x^2}\\mathrm{e}^{-\\theta/x}\\,\\mathrm{d}x.$$\n令 $u=\\dfrac\\theta x$，则 $x=\\dfrac\\theta u$，$\\mathrm{d}x=-\\dfrac{\\theta}{u^2}\\,\\mathrm{d}u$，$\\dfrac1{x^2}=\\dfrac{u^2}{\\theta^2}$；$x:0^+\\to+\\infty$ 对应 $u:+\\infty\\to 0^+$。于是\n$$\\int_0^{+\\infty}\\frac{1}{x^2}\\mathrm{e}^{-\\theta/x}\\,\\mathrm{d}x=\\int_{+\\infty}^{0}\\frac{u^2}{\\theta^2}\\mathrm{e}^{-u}\\left(-\\frac{\\theta}{u^2}\\right)\\mathrm{d}u=\\frac1\\theta\\int_0^{+\\infty}\\mathrm{e}^{-u}\\,\\mathrm{d}u=\\frac1\\theta.$$\n故 $E(X)=\\theta^2\\cdot\\dfrac1\\theta=\\theta$。令 $\\bar X=E(X)=\\theta$，得矩估计量\n$$\\hat\\theta=\\bar X.$$\n\n(2) 设样本观测值 $x_1,\\dots,x_n$（均 $>0$），似然函数\n$$L(\\theta)=\\prod_{i=1}^n\\frac{\\theta^2}{x_i^3}\\mathrm{e}^{-\\theta/x_i}=\\theta^{2n}\\left(\\prod_{i=1}^n x_i^{-3}\\right)\\mathrm{e}^{-\\theta\\sum_{i=1}^n 1/x_i}.$$\n取对数：\n$$\\ln L=2n\\ln\\theta-3\\sum_{i=1}^n\\ln x_i-\\theta\\sum_{i=1}^n\\frac1{x_i}.$$\n对 $\\theta$ 求导并令零：\n$$\\frac{\\mathrm{d}\\ln L}{\\mathrm{d}\\theta}=\\frac{2n}{\\theta}-\\sum_{i=1}^n\\frac1{x_i}=0\\ \\Longrightarrow\\ \\theta=\\frac{2n}{\\sum_{i=1}^n 1/x_i}.$$\n由于 $\\dfrac{\\mathrm{d}^2\\ln L}{\\mathrm{d}\\theta^2}=-\\dfrac{2n}{\\theta^2}<0$，为极大值点。故最大似然估计量\n$$\\hat\\theta=\\frac{2n}{\\sum_{i=1}^n \\dfrac1{X_i}}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "算 $E(X)$ 的换元 $u=\\theta/x$ 会颠倒积分上下限，负号与限的对调正好抵消，最终化为 $\\int_0^\\infty e^{-u}du=1$。",
+        "似然函数对数化后只与 $\\sum 1/x_i$ 有关，求导得到的是倒数的和，不要写成 $\\sum x_i$。"
+      ],
+      "key_point": "矩估计令 $E(X)=\\bar X$；最大似然取对数后对参数求导令零，注意辨清充分统计量是 $\\sum 1/x_i$。"
+    },
+    {
+      "id": 521,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $D_k$ 是圆域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1\\right\\}$ 在第 $k$ 象限的部分, 记 $\\displaystyle I_k=\\iint_{D_k}(y-x) \\mathrm{d} x \\mathrm{d} y$ $(k=1,2,3,4)$, 则 $(\\quad)$\n\n![单位圆四象限 D1-D4](/figures/521.svg)",
+      "options": {
+        "A": "$I_1>0$",
+        "B": "$I_2>0$",
+        "C": "$I_3>0$",
+        "D": "$I_4>0$"
+      },
+      "answer": "B",
+      "analysis": "【分析】不必硬算，靠被积函数 $y-x$ 在各象限的符号与积分区域的对称性判断 $I_k$ 的正负。第一、三象限的扇形关于直线 $y=x$ 对称，而 $y-x$ 关于该对称是奇的，积分为 0；第二象限 $y-x$ 恒正，第四象限恒负。\n\n【解答】$D_k$ 是单位圆在第 $k$ 象限的四分之一扇形。\n\n**$I_1$（第一象限，$x>0,y>0$）：** $D_1$ 关于直线 $y=x$ 对称，作代换 $(x,y)\\to(y,x)$ 把 $D_1$ 变到自身，被积函数 $y-x\\to x-y=-(y-x)$，故 $I_1=-I_1\\Rightarrow I_1=0$。\n\n**$I_3$（第三象限，$x<0,y<0$）：** 同样关于 $y=x$ 对称，$I_3=0$。\n\n**$I_2$（第二象限，$x<0,\\ y>0$）：** 此处 $y>0$ 且 $-x>0$，故 $y-x=y+(-x)>0$ 在区域内恒成立（除边界），积分 $I_2=\\displaystyle\\iint_{D_2}(y-x)\\,\\mathrm{d}x\\mathrm{d}y>0$。\n\n**$I_4$（第四象限，$x>0,\\ y<0$）：** 此处 $y<0,\\ -x<0$，$y-x<0$ 恒成立，故 $I_4<0$。\n\n综上 $I_1=I_3=0,\\ I_2>0,\\ I_4<0$，唯一成立的是 $I_2>0$，选 **B**。",
+      "wrong_options": {
+        "A": "$I_1=0$（$D_1$ 关于 $y=x$ 对称，$y-x$ 为奇），不大于 0，错。",
+        "C": "$I_3=0$（同理对称为零），不大于 0，错。",
+        "D": "第四象限 $x>0,y<0$，$y-x<0$，$I_4<0$，错。"
+      },
+      "pitfalls": [
+        "第一、三象限扇形关于 $y=x$ 对称，$y-x$ 在此对称下变号，积分必为 0，别去硬算。",
+        "判第二、四象限符号：看 $y-x$ 在该象限是否恒正/恒负，$D_2$ 中 $y>0,x<0$ 故 $y-x>0$。",
+        "对称性化零是这类\"比较积分正负\"题的题眼，先找奇对称再看剩下象限的符号。"
+      ],
+      "key_point": "对称区域上奇函数积分为零（$I_1=I_3=0$），再按象限定 $y-x$ 符号判 $I_2>0$。"
+    },
+    {
+      "id": 526,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D$ 是由曲线 $y=x^{\\frac{1}{3}}$, 直线 $x=a(a>0)$ 及 $x$ 轴所围成的平面图形, $V_x, V_y$ 分别是 $D$ 绕 $x$ 轴, $y$ 轴旋转一周所得旋转体的体积, 若 $V_y=10 V_x$, 求 $a$ 的值",
+      "options": {},
+      "answer": "$a=7 \\sqrt{7}$",
+      "analysis": "【分析】$D$ 是曲线 $y=x^{1/3}$、直线 $x=a$ 与 $x$ 轴围成的区域（$0\\le x\\le a$，$0\\le y\\le x^{1/3}$）。绕 $x$ 轴旋转用圆盘法 $V_x=\\pi\\int y^2\\,\\mathrm dx$；绕 $y$ 轴旋转用柱壳法 $V_y=2\\pi\\int x\\,y\\,\\mathrm dx$ 最省事。算出两体积后代入 $V_y=10V_x$ 解 $a$。\n\n【解答】曲线 $y=x^{1/3}$，$x\\in[0,a]$。\n\n**绕 $x$ 轴（圆盘法）：**\n$$V_x=\\pi\\int_0^a y^2\\,\\mathrm dx=\\pi\\int_0^a x^{2/3}\\,\\mathrm dx=\\pi\\cdot\\frac{x^{5/3}}{5/3}\\Big|_0^a=\\frac{3\\pi}{5}a^{5/3}.$$\n\n**绕 $y$ 轴（柱壳法）：**\n$$V_y=2\\pi\\int_0^a x\\,y\\,\\mathrm dx=2\\pi\\int_0^a x\\cdot x^{1/3}\\,\\mathrm dx=2\\pi\\int_0^a x^{4/3}\\,\\mathrm dx=2\\pi\\cdot\\frac{x^{7/3}}{7/3}\\Big|_0^a=\\frac{6\\pi}{7}a^{7/3}.$$\n\n**代入条件 $V_y=10V_x$：**\n$$\\frac{6\\pi}{7}a^{7/3}=10\\cdot\\frac{3\\pi}{5}a^{5/3}=6\\pi a^{5/3}.$$\n两边除以 $6\\pi a^{5/3}$（$a>0$）：\n$$\\frac{1}{7}a^{2/3}=1\\ \\Rightarrow\\ a^{2/3}=7\\ \\Rightarrow\\ a=7^{3/2}=7\\sqrt7.$$\n\n（验算：$a^{2/3}=(7^{3/2})^{2/3}=7$，成立。）故 $a=7\\sqrt7$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "绕 $y$ 轴旋转用柱壳法 $2\\pi\\int x\\,y\\,\\mathrm dx$ 最直接；若改用圆盘法需对 $y$ 积分并处理上下边界，易出错",
+        "幂指数运算 $a^{7/3}/a^{5/3}=a^{2/3}$、$a=7^{3/2}=7\\sqrt7$ 要算准",
+        "区域上界是曲线 $y=x^{1/3}$、下界是 $x$ 轴，积分上下限 $0$ 到 $a$ 别弄反"
+      ],
+      "key_point": "旋转体体积：绕 $x$ 轴圆盘 $\\pi\\int y^2\\mathrm dx$、绕 $y$ 轴柱壳 $2\\pi\\int xy\\,\\mathrm dx$；代入比例关系解参数。"
+    },
+    {
+      "id": 530,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, 用 \"$o(x)$\" 表示比 $x$ 高阶的无穷小量, 则下列式子中错误的是 $(\\quad)$",
+      "options": {
+        "A": "$x \\cdot o\\left(x^2\\right)=o\\left(x^3\\right)$",
+        "B": "$o(x) \\cdot o\\left(x^2\\right)=o\\left(x^3\\right)$",
+        "C": "$o\\left(x^2\\right)+o\\left(x^2\\right)=o\\left(x^2\\right)$",
+        "D": "$o(x)+o\\left(x^2\\right)=o\\left(x^2\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】$o(x^k)$ 表示当 $x\\to0$ 时比 $x^k$ 高阶的无穷小，即 $\\dfrac{o(x^k)}{x^k}\\to0$。判断各式正误，关键在\"和\"与\"积\"中保留的是\"阶最低（最大\"那个无穷小量\"还是最高\"的问题：两个不同阶无穷小相加，其和的阶由\"较低阶\"（趋零较慢的那个）决定。逐项检验。\n\n【解答】记 $x\\to0$。\n\nA：$x\\cdot o(x^2)$。设 $o(x^2)=\\alpha$，$\\alpha/x^2\\to0$，则 $\\dfrac{x\\alpha}{x^3}=\\dfrac{\\alpha}{x^2}\\to0$，故 $x\\cdot o(x^2)=o(x^3)$。正确。\n\nB：$o(x)\\cdot o(x^2)$。设 $\\beta/x\\to0,\\ \\gamma/x^2\\to0$，则 $\\dfrac{\\beta\\gamma}{x^3}=\\dfrac{\\beta}{x}\\cdot\\dfrac{\\gamma}{x^2}\\to0\\cdot0=0$，故为 $o(x^3)$。正确。\n\nC：$o(x^2)+o(x^2)$。两个比 $x^2$ 高阶的量之和仍比 $x^2$ 高阶：$\\dfrac{\\gamma_1+\\gamma_2}{x^2}\\to0+0=0$，故为 $o(x^2)$。正确。\n\nD：$o(x)+o(x^2)$。设 $u=o(x),\\ v=o(x^2)$。$v$ 一定也是 $o(x)$（比 $x^2$ 高阶必比 $x$ 高阶），故和 $u+v=o(x)$，其阶由\"较低阶\"的 $o(x)$ 决定，只能保证是 $o(x)$，不能保证是 $o(x^2)$。反例：取 $u=x^{1.5},\\ v=x^3$（均满足），则 $u+v=x^{1.5}+x^3$，$\\dfrac{u+v}{x^2}=x^{-0.5}+x\\to\\infty$，不是 $o(x^2)$。故 D 错误。\n\n所以错误的是 D，选 D。",
+      "wrong_options": {
+        "A": "$x\\cdot o(x^2)=o(x^3)$ 正确：因子 x 把阶抬高一级，[x·o(x²)]/x³=o(x²)/x²→0。本题要选\"错误\"项，故 A 不选。",
+        "B": "$o(x)\\cdot o(x^2)=o(x^3)$ 正确：两高阶量相乘阶相加，比 x³ 还高。是正确式，不选。",
+        "C": "$o(x^2)+o(x^2)=o(x^2)$ 正确：同阶高阶无穷小相加仍是同阶高阶无穷小。是正确式，不选。"
+      },
+      "pitfalls": [
+        "和的阶由\"较低阶\"（趋零慢的）那个决定：o(x)+o(x²)=o(x) 而非 o(x²)，这是 D 错的根源。",
+        "积的阶相加、和的阶取最低，是无穷小运算的两条基本法则，别混淆。",
+        "判错题要找反例：取 o(x)=x^{1.5} 即可证 o(x)+o(x²) 不必是 o(x²)。"
+      ],
+      "key_point": "无穷小阶运算：相乘阶相加（升阶），相加阶取最低（降到较粗那个）；o(x)+o(x²) 只能保证 o(x)。"
+    },
+    {
+      "id": 531,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\dfrac{|x|^x-1}{x(x+1) \\ln |x|}$ 的可去间断点的个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "C",
+      "analysis": "【分析】可去间断点指函数在该点无定义但极限存在（有限）的点。先找出使 $f$ 无定义的点：分母 $x(x+1)\\ln|x|=0$，即 $x=0,\\,x=-1,\\,x=\\pm1$。逐点考察极限是否存在且有限，存在则可去，为 $\\infty$ 则非可去。分子 $|x|^x-1=e^{x\\ln|x|}-1$，用等价无穷小 $e^u-1\\sim u$。\n\n【解答】$f(x)=\\dfrac{|x|^x-1}{x(x+1)\\ln|x|}=\\dfrac{e^{x\\ln|x|}-1}{x(x+1)\\ln|x|}$。无定义点：$x=0,\\,-1,\\,1$（$\\ln|x|=0\\Rightarrow x=\\pm1$，其中 $x=-1$ 同时使 $x+1=0$）。\n\n（i）$x\\to0$：$x\\ln|x|\\to0$，故分子 $e^{x\\ln|x|}-1\\sim x\\ln|x|$。\n$$f\\sim\\frac{x\\ln|x|}{x(x+1)\\ln|x|}=\\frac{1}{x+1}\\to1.$$\n极限存在，$x=0$ 为**可去**间断点。\n\n（ii）$x\\to1$：$\\ln|x|\\to0$，分子 $\\sim x\\ln|x|\\to0$。\n$$f\\sim\\frac{x\\ln|x|}{x(x+1)\\ln|x|}=\\frac{1}{x+1}\\to\\frac12.$$\n极限存在，$x=1$ 为**可去**间断点。\n\n（iii）$x\\to-1$：令 $x=-1+t,\\,t\\to0$。此时 $|x|=1-t$，$\\ln|x|=\\ln(1-t)\\sim -t$；分子 $e^{x\\ln|x|}-1\\sim x\\ln|x|=(-1+t)(-t)\\sim t$；分母 $x(x+1)\\ln|x|=(-1+t)\\,t\\,\\ln(1-t)\\sim(-1)\\,t\\,(-t)=t^2$。故\n$$f\\sim\\frac{t}{t^2}=\\frac1t\\to\\infty.$$\n极限为无穷，$x=-1$ 为**无穷（第二类）**间断点，不可去。\n\n综上，可去间断点有 $x=0,\\,x=1$ 共 **2** 个，选 C。",
+      "wrong_options": {
+        "A": "认为没有可去间断点是错的；$x=0$ 与 $x=1$ 处极限都存在，是可去间断点。",
+        "B": "只数出 1 个，往往漏掉 $x=0$ 处（误以为分子分母都趋 0 无极限，实际约分后极限为 1）。",
+        "D": "把 $x=-1$ 也算成可去是错的；该点 $f\\sim 1/t\\to\\infty$，是无穷间断点，不可去。共 2 个而非 3 个。"
+      },
+      "pitfalls": [
+        "无定义点共 3 个（$0,1,-1$），逐点判极限；$x=-1$ 处分母有 $x+1$ 与 $\\ln|x|$ 双重趋零，导致 $f\\to\\infty$。",
+        "分子 $|x|^x-1=e^{x\\ln|x|}-1\\sim x\\ln|x|$，且 $x\\ln|x|\\to0$（含 $x\\to0$ 时也成立），是约分关键。",
+        "可去间断点要求极限存在且有限，$\\infty$ 不算可去。"
+      ],
+      "key_point": "可去 $\\Leftrightarrow$ 极限存在有限；逐个无定义点用 $e^u-1\\sim u$ 约分判定，$x=-1$ 因双重零点发散不可去。"
+    },
+    {
+      "id": 532,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{a_n\\right\\}$ 为正项数列, 下列选项正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $a_n>a_{n+1}$, 则 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} a_n$ 收敛",
+        "B": "若 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n-1} a_n$ 收敛, 则 $a_n>a_{n+1}$",
+        "C": "若 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 收敛,则存在常数 $p>1$, 使 $\\displaystyle \\lim _{n \\rightarrow \\infty} n^p a_n$ 存在",
+        "D": "若存在常数 $p>1$, 使 $\\displaystyle \\lim _{n \\rightarrow \\infty} n^p a_n$ 存在, 则 $\\displaystyle \\sum_{n=1}^{\\infty} a_n$ 收敛"
+      },
+      "answer": "D",
+      "analysis": "【分析】正项数列 $\\{a_n\\}$，逐项考查级数收敛性命题。A、B 涉及交错级数与单调性（莱布尼茨条件只是充分非必要），C、D 涉及收敛与 $n^p a_n$ 极限的关系。D 用比较判别法（与 $p$-级数 $\\sum 1/n^p$ 比较）可证，其余三项各举反例否定。\n\n【解答】选项 D：若存在常数 $p>1$ 使 $\\displaystyle\\lim_{n\\to\\infty}n^p a_n$ 存在（设为 $L$），则数列 $\\{n^p a_n\\}$ 有界，存在 $M>0$ 使 $n^p a_n\\le M$，即 $0\\le a_n\\le \\dfrac{M}{n^p}$。由于 $p>1$，$\\sum\\dfrac{M}{n^p}$ 收敛，由比较判别法 $\\sum a_n$ 收敛。D 正确。\n\n下面说明其余三项错误（见各选项分析）。故选 D。",
+      "wrong_options": {
+        "A": "莱布尼茨定理要求 $a_n$ 单调递减且趋于 0 才保证交错级数收敛，单凭 $a_n>a_{n+1}$（递减）不够。反例 $a_n=1+\\dfrac1n$，满足 $a_n>a_{n+1}$，但 $a_n\\to1\\ne0$，$\\sum(-1)^{n-1}a_n$ 的一般项不趋于 0，发散。故 A 错。",
+        "B": "交错级数收敛不要求各项单调。反例：令 $a_1=1,a_2=\\dfrac12,a_3=\\dfrac13,a_4=\\dfrac14,\\dots$ 中人为打乱使某处 $a_n<a_{n+1}$（如取 $a_{2k-1}=\\dfrac1{2k},a_{2k}=\\dfrac1{2k-1}$），级数仍可收敛而单调性被破坏。故\"收敛 $\\Rightarrow a_n>a_{n+1}$\"不成立，B 错。",
+        "C": "$\\sum a_n$ 收敛推不出存在 $p>1$ 使 $\\lim n^p a_n$ 存在。反例 $a_n=\\dfrac{1}{n(\\ln n)^2}$（$n\\ge2$），由积分判别法 $\\sum a_n$ 收敛；但对任意 $p>1$，$n^p a_n=\\dfrac{n^{p-1}}{(\\ln n)^2}\\to+\\infty$，极限不存在（为无穷）。故 C 错。"
+      },
+      "pitfalls": [
+        "莱布尼茨判别法是充分条件而非必要：递减不够（还需趋 0），收敛也不必递减——A、B 正是这两个误区",
+        "D 的本质是\"若 $a_n=O(1/n^p),p>1$ 则收敛\"，靠极限存在得有界，再比较 $p$-级数；这是充分方向，C 是它的逆，逆不真",
+        "C 的反例选 $1/[n(\\ln n)^2]$ 这种\"收敛但比任何 $1/n^p$ 都慢\"的级数最有说服力"
+      ],
+      "key_point": "正项级数比较判别法 + $p$-级数：$\\lim n^p a_n$ 存在（$p>1$）$\\Rightarrow a_n=O(1/n^p)\\Rightarrow$ 收敛；交错级数的莱布尼茨条件只充分不必要"
+    },
+    {
+      "id": 533,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 相互独立, 且 $X$ 和 $Y$ 的概率分布分别为 $\\begin{array}{c|cccc}\r\n\\hline\r\nX & 0 & 1 & 2 & 3 \\\\\r\n\\hline P & \\dfrac{1}{2} & \\dfrac{1}{4} & \\dfrac{1}{8} & \\dfrac{1}{8}\\\\\r\n\\hline\r\n\\end{array}$ 和 $\\begin{array}{l|lll}\r\n\\hline\r\nY & -1 & 0 & 1 \\\\\r\n\\hline P & \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n则 $P\\{X+Y=2\\}=(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{12}$",
+        "B": "$\\dfrac{1}{8}$",
+        "C": "$\\dfrac{1}{6}$",
+        "D": "$\\dfrac{1}{2}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】$X,Y$ 独立，求 $P\\{X+Y=2\\}$。枚举使 $X+Y=2$ 的所有 $(x,y)$ 组合，独立时联合概率为各自概率之积，求和即可。$Y\\in\\{-1,0,1\\}$，故 $X$ 须取 $3,2,1$ 与之配对。\n\n【解答】$X+Y=2$ 的组合：$(X,Y)=(3,-1),(2,0),(1,1)$。由独立性\n$$P\\{X+Y=2\\}=P(X=3)P(Y=-1)+P(X=2)P(Y=0)+P(X=1)P(Y=1).$$\n代入 $P(X=3)=\\dfrac18,\\ P(X=2)=\\dfrac18,\\ P(X=1)=\\dfrac14$，$P(Y=-1)=P(Y=0)=P(Y=1)=\\dfrac13$：\n$$=\\frac18\\cdot\\frac13+\\frac18\\cdot\\frac13+\\frac14\\cdot\\frac13=\\frac1{24}+\\frac1{24}+\\frac1{12}=\\frac1{24}+\\frac1{24}+\\frac2{24}=\\frac4{24}=\\frac16.$$\n选 C。",
+      "wrong_options": {
+        "A": "$\\dfrac1{12}$ 只算了 $(1,1)$ 一项 $\\dfrac14\\cdot\\dfrac13$，漏掉了 $(3,-1)$、$(2,0)$ 两项。",
+        "B": "$\\dfrac18$ 可能漏项或把某个 $P(X)$ 取错（如只算 $(3,-1)+(2,0)=\\dfrac1{12}$ 再凑错）。",
+        "D": "$\\dfrac12$ 远大于正确值，疑似把 $Y$ 的概率当成 $1$ 或重复计数所致。"
+      },
+      "pitfalls": [
+        "要找全所有使 $X+Y=2$ 的组合：$(3,-1),(2,0),(1,1)$，一项都不能漏。",
+        "通分时 $\\dfrac1{12}=\\dfrac2{24}$，最后约简为 $\\dfrac16$。"
+      ],
+      "key_point": "独立离散变量求 $P\\{X+Y=k\\}$：枚举所有满足的组合，概率相乘再相加。"
+    },
+    {
+      "id": 534,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设曲线 $y=f(x)$ 与 $y=x^2-x$ 在点 $(1,0)$ 处有公共切线, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} n f\\left(\\frac{n}{n+2}\\right)= \\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-2$",
+      "analysis": "【分析】公共切线给出两条信息：$f(1)=0$（过同一点），$f'(1)=$ 抛物线在 $x=1$ 处的斜率。所求极限里 $\\dfrac{n}{n+2}\\to1$，$f$ 在 $1$ 附近可用一阶展开（导数定义）近似，从而把极限化成可算的形式。\n\n【解答】曲线 $y=x^2-x$ 在 $(1,0)$ 处：函数值 $1-1=0$，斜率 $y'=2x-1\\big|_{x=1}=1$。两曲线在 $(1,0)$ 有公共切线，故\n$$f(1)=0,\\qquad f'(1)=1.$$\n记 $x_n=\\dfrac{n}{n+2}=1-\\dfrac{2}{n+2}$，当 $n\\to\\infty$ 时 $x_n\\to1$。由可导（一阶展开）\n$$f(x_n)=f(1)+f'(1)(x_n-1)+o(x_n-1)=0+1\\cdot\\left(-\\frac{2}{n+2}\\right)+o\\!\\left(\\frac1n\\right).$$\n于是\n$$n f\\!\\left(\\frac{n}{n+2}\\right)=n\\left(-\\frac{2}{n+2}\\right)+n\\cdot o\\!\\left(\\frac1n\\right)=-\\frac{2n}{n+2}+o(1)\\xrightarrow{n\\to\\infty}-2.$$\n严格地，$\\dfrac{f(x_n)}{x_n-1}\\to f'(1)=1$，而 $n(x_n-1)=-\\dfrac{2n}{n+2}\\to-2$，故\n$$\\lim_{n\\to\\infty}nf\\!\\left(\\frac{n}{n+2}\\right)=\\lim_{n\\to\\infty}\\frac{f(x_n)}{x_n-1}\\cdot n(x_n-1)=1\\cdot(-2)=-2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "公共切线 = 同点 + 同斜率，二者缺一不可：$f(1)=0$ 与 $f'(1)=1$。",
+        "极限的拆法 $nf(x_n)=\\dfrac{f(x_n)-f(1)}{x_n-1}\\cdot n(x_n-1)$，前因子趋于 $f'(1)$，后因子趋于 $-2$，不要用洛必达硬算。"
+      ],
+      "key_point": "见到 $nf\\!\\left(\\frac{n}{n+k}\\right)$ 型极限，构造导数定义 $\\dfrac{f(x_n)-f(1)}{x_n-1}$，与 $n(x_n-1)$ 相乘取极限。"
+    },
+    {
+      "id": 535,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $z=z(x, y)$ 由方程 $(z+y)^x=x y$ 确定, 则 $\\displaystyle \\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,2)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2-2 \\ln 2$",
+      "analysis": "【分析】方程 $(z+y)^x=xy$ 含幂指结构，两边取对数化为 $x\\ln(z+y)=\\ln x+\\ln y$，再对 $x$ 隐函数求导（$y$ 视为常数）。先由原方程在 $(1,2)$ 处定出 $z$ 的值，再代入导数关系解出 $\\partial z/\\partial x$。\n\n【解答】先求 $z(1,2)$：代入 $(z+2)^1=1\\cdot2=2\\Rightarrow z+2=2\\Rightarrow z=0$。\n\n两边取自然对数：$x\\ln(z+y)=\\ln(xy)=\\ln x+\\ln y$。对 $x$ 求偏导（$z=z(x,y)$，$y$ 为常数）：\n$$\\ln(z+y)+x\\cdot\\frac{1}{z+y}\\cdot\\frac{\\partial z}{\\partial x}=\\frac{1}{x}.$$\n在点 $(1,2)$，$z=0$ 处代入：\n$$\\ln(0+2)+1\\cdot\\frac{1}{2}\\cdot\\frac{\\partial z}{\\partial x}=\\frac{1}{1},$$\n即\n$$\\ln 2+\\frac{1}{2}\\frac{\\partial z}{\\partial x}=1\\Rightarrow \\frac{1}{2}\\frac{\\partial z}{\\partial x}=1-\\ln2\\Rightarrow \\frac{\\partial z}{\\partial x}\\Big|_{(1,2)}=2-2\\ln2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "幂指型 $(z+y)^x$ 直接求导易错，先取对数最稳；右端 $\\ln(xy)=\\ln x+\\ln y$ 拆开便于对 $x$ 求导。",
+        "求导前先定出 $z(1,2)=0$，否则代入时 $\\ln(z+y)$ 无法取值。",
+        "对 $x$ 求导时含 $x$ 的因子要用乘积法则：$x\\ln(z+y)$ 的导数是 $\\ln(z+y)+x\\cdot\\frac{z_x}{z+y}$。"
+      ],
+      "key_point": "幂指方程取对数后隐函数求导；先用原方程在指定点定出 $z$ 值再代入。"
+    },
+    {
+      "id": 536,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $\\displaystyle y^{\\prime \\prime}-y^{\\prime}+\\frac{1}{4} y=0$ 的通解为 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(C_1+C_2 x\\right) \\mathrm{e}^{\\frac{x}{2}}$ ( $C_1, C_2$ 为任意常数)",
+      "analysis": "【分析】这是二阶常系数线性齐次微分方程，直接写特征方程求根。判别其根为实重根、共轭复根还是相异实根，对应给出通解形式。\n\n【解答】方程 $y''-y'+\\dfrac14 y=0$ 的特征方程为\n$$r^2-r+\\frac14=0\\ \\Longleftrightarrow\\ \\left(r-\\frac12\\right)^2=0.$$\n得二重实根 $r_1=r_2=\\dfrac12$。对二重根 $r$，通解形式为 $(C_1+C_2 x)\\mathrm{e}^{rx}$，故\n$$y=(C_1+C_2 x)\\mathrm{e}^{\\frac{x}{2}},\\qquad C_1,C_2\\ \\text{为任意常数}.$$\n验算：取 $y=x\\mathrm{e}^{x/2}$，$y'=\\mathrm{e}^{x/2}+\\tfrac12 x\\mathrm{e}^{x/2}$，$y''=\\mathrm{e}^{x/2}+\\tfrac14 x\\mathrm{e}^{x/2}$，代入 $y''-y'+\\tfrac14 y=\\left(1+\\tfrac14x-1-\\tfrac12x+\\tfrac14x\\right)\\mathrm{e}^{x/2}=0$ ✓。",
+      "wrong_options": {},
+      "pitfalls": [
+        "特征方程出现二重根时通解必须带因子 $x$，写成 $(C_1+C_2 x)\\mathrm{e}^{rx}$，漏掉 $C_2 x$ 是常见失分点",
+        "$\\dfrac14$ 恰使判别式为 $0$，别误判成两个不同实根或复根"
+      ],
+      "key_point": "二阶常系数齐次方程看特征根：相异实根 $C_1\\mathrm{e}^{r_1x}+C_2\\mathrm{e}^{r_2x}$，二重根 $(C_1+C_2x)\\mathrm{e}^{rx}$，复根 $\\mathrm{e}^{\\alpha x}(C_1\\cos\\beta x+C_2\\sin\\beta x)$"
+    },
+    {
+      "id": 537,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从标准正态分布 $N(0,1)$, 则 $E\\left(X \\mathrm{e}^{2 X}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\mathrm{e}^2$",
+      "analysis": "【分析】$X\\sim N(0,1)$，求 $E(X\\mathrm e^{2X})$。两条路：一是直接对积分凑配方；二是用矩母函数 $M(t)=E(\\mathrm e^{tX})=\\mathrm e^{t^2/2}$，注意到 $E(X\\mathrm e^{tX})=M'(t)$，取 $t=2$ 即得，最干净。\n\n【解答】标准正态的矩母函数为\n$$M(t)=E(\\mathrm e^{tX})=\\mathrm e^{t^2/2}.$$\n对 $t$ 求导（积分号下求导，把 $X$ 提出来）：\n$$M'(t)=E\\!\\left(X\\mathrm e^{tX}\\right)=t\\,\\mathrm e^{t^2/2}.$$\n令 $t=2$：\n$$E\\!\\left(X\\mathrm e^{2X}\\right)=2\\,\\mathrm e^{2}.$$\n（直接积分验证：$E(X\\mathrm e^{2X})=\\dfrac{1}{\\sqrt{2\\pi}}\\displaystyle\\int_{-\\infty}^{+\\infty}x\\,\\mathrm e^{2x}\\mathrm e^{-x^2/2}\\mathrm dx$，配方 $2x-\\dfrac{x^2}{2}=-\\dfrac12(x-2)^2+2$，令 $u=x-2$：$=\\dfrac{\\mathrm e^2}{\\sqrt{2\\pi}}\\displaystyle\\int(u+2)\\mathrm e^{-u^2/2}\\mathrm du=\\mathrm e^2(0+2)=2\\mathrm e^2$。一致。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "记牢标准正态矩母函数 $M(t)=\\mathrm e^{t^2/2}$，且 $E(X\\mathrm e^{tX})=M'(t)=t\\mathrm e^{t^2/2}$。",
+        "直接积分时配方要把 $2x-\\dfrac{x^2}{2}$ 凑成 $-\\dfrac12(x-2)^2+2$，常数 $\\mathrm e^2$ 提出后利用奇偶性，别漏掉 $+2$ 这一项。"
+      ],
+      "key_point": "$E(X\\mathrm e^{tX})=M'(t)$，标准正态 $M(t)=\\mathrm e^{t^2/2}$，代入即得。"
+    },
+    {
+      "id": 538,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $1-\\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x$ 与 $a x^n$ 为等价无穷小量, 求 $n$ 与 $a$ 的值",
+      "options": {},
+      "answer": "$n=2, a=7$",
+      "analysis": "【分析】当 $x\\to0$ 时，要把 $1-\\cos x\\cos2x\\cos3x$ 展成 $x$ 的最低次幂，配出 $ax^n$。最稳妥是用泰勒展开 $\\cos kx=1-\\dfrac{(kx)^2}{2}+o(x^2)$，相乘后保留到 $x^2$ 即可。也可记结论：$1-\\prod\\cos(k x)\\sim\\dfrac{1}{2}\\left(\\sum k^2\\right)x^2$。\n\n【解答】对每个因子作泰勒展开（保留到 $x^2$）：\n$$\\cos x=1-\\frac{x^2}{2}+o(x^2),\\quad \\cos2x=1-2x^2+o(x^2),\\quad \\cos3x=1-\\frac{9x^2}{2}+o(x^2).$$\n相乘时只保留到 $x^2$ 项（更高次并入 $o(x^2)$）：\n$$\\cos x\\cos2x\\cos3x=1-\\left(\\frac{1}{2}+2+\\frac{9}{2}\\right)x^2+o(x^2)=1-7x^2+o(x^2).$$\n于是\n$$1-\\cos x\\cos2x\\cos3x=7x^2+o(x^2).$$\n要与 $ax^n$ 为等价无穷小，须最低次幂相同且系数相等，故 $n=2,\\ a=7$。\n\n验算：$\\dfrac{1}{2}+2+\\dfrac{9}{2}=\\dfrac{1+4+9}{2}=\\dfrac{14}{2}=7$，即 $\\dfrac{1}{2}(1^2+2^2+3^2)=7$，与结论一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "相乘时只需保留到 $x^2$，但展开每个 $\\cos kx$ 都要用 $(kx)^2/2$，别把系数 $k^2$ 漏掉。",
+        "等价无穷小要求最低次数与系数都对上：$n$ 取最低次幂的次数，$a$ 取其系数。",
+        "可用速记结论 $1-\\prod_{k}\\cos(kx)\\sim\\tfrac12(\\sum k^2)x^2$ 快速核对。"
+      ],
+      "key_point": "多个余弦之积取对数或直接泰勒展开到 $x^2$，系数 $a=\\tfrac12\\sum k^2$。"
+    },
+    {
+      "id": 540,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设平面区域 $D$ 由直线 $x=3 y, y=3 x$ 及 $x+y=8$ 围成, 计算 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](/figures/540.svg)",
+      "options": {},
+      "answer": "$\\dfrac{416}{3}$",
+      "analysis": "【分析】$D$ 由两条过原点的直线 $y=3x$、$y=\\dfrac{x}{3}$（即 $x=3y$）和直线 $x+y=8$ 围成，是以 $(0,0)$ 为顶点、底边在 $x+y=8$ 上的三角形。被积函数 $x^2$ 只含 $x$，宜采用 X 型区域（先对 $y$ 后对 $x$），并在 $x=2$ 处分段，因为上边界从直线 $y=3x$ 切换到 $x+y=8$。\n\n【解答】**第一步：定顶点。**\n$y=3x$ 与 $x+y=8$：$4x=8\\Rightarrow(2,6)$；$y=\\dfrac{x}{3}$ 与 $x+y=8$：$\\dfrac{4x}{3}=8\\Rightarrow(6,2)$；两直线交于 $(0,0)$。故 $D$ 为三角形，顶点 $(0,0),(2,6),(6,2)$。\n\n**第二步：分段写积分限。** 下边界恒为 $y=\\dfrac{x}{3}$。\n当 $0\\le x\\le 2$ 时上边界为 $y=3x$；当 $2\\le x\\le 6$ 时上边界为 $y=8-x$。于是\n$$\\iint_D x^2\\,dxdy=\\int_0^2 x^2\\!\\int_{x/3}^{3x}dy\\,dx+\\int_2^6 x^2\\!\\int_{x/3}^{8-x}dy\\,dx.$$\n\n**第三步：逐段计算。**\n第一段：$\\displaystyle\\int_0^2 x^2\\Big(3x-\\dfrac{x}{3}\\Big)dx=\\int_0^2 \\dfrac{8}{3}x^3\\,dx=\\dfrac{8}{3}\\cdot\\dfrac{x^4}{4}\\Big|_0^2=\\dfrac{2}{3}\\cdot16=\\dfrac{32}{3}.$\n第二段：$\\displaystyle\\int_2^6 x^2\\Big(8-x-\\dfrac{x}{3}\\Big)dx=\\int_2^6\\Big(8x^2-\\dfrac{4}{3}x^3\\Big)dx$。\n$\\int_2^6 8x^2 dx=\\dfrac83(216-8)=\\dfrac{8}{3}\\cdot208=\\dfrac{1664}{3}$；$\\int_2^6 \\dfrac43 x^3 dx=\\dfrac43\\cdot\\dfrac{6^4-2^4}{4}=\\dfrac13(1296-16)=\\dfrac{1280}{3}$。\n第二段 $=\\dfrac{1664}{3}-\\dfrac{1280}{3}=\\dfrac{384}{3}=128.$\n\n**第四步：合计。** $\\dfrac{32}{3}+128=\\dfrac{32+384}{3}=\\dfrac{416}{3}.$\n所以 $\\displaystyle\\iint_D x^2\\,dxdy=\\dfrac{416}{3}.$",
+      "wrong_options": {},
+      "pitfalls": [
+        "上边界在 x=2 处由直线 y=3x 换成 x+y=8，必须分段，否则积分限错。",
+        "x=3y 表示 y=x/3 是较平缓的下边界，别把斜率 3 与 1/3 搞反。"
+      ],
+      "key_point": "二重积分被积函数只含 x：用 X 型区域，按上边界换线处分段定限。"
+    },
+    {
+      "id": 541,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设生产某产品的固定成本为 60000 元, 可变成本为 20 元/件, 价格函数为 $P=60-\\dfrac{Q}{1000}$ ( $P$ 是单价, 单位: 元, $Q$ 是销量, 单位: 件), 已知产销平衡, 求:\r\n\r\n(1) 该商品的边际利润;\r\n\r\n(2) 当 $P=50$ 时的边际利润, 并解释其经济意义;\r\n\r\n(3) 使得利润最大的定价 $P$",
+      "options": {},
+      "answer": "(1) $L^{\\prime}(Q)=40-\\dfrac{Q}{500}$\r\n\r\n(2) $L^{\\prime}(10000)=20$, 其经济意义为: 当 $P=50$ 时, \r\n销售第 10001 件产品时利润为 20 元\r\n\r\n(3) $Q=20000$, 即 $P=40$ 时, 利润最大",
+      "analysis": "【分析】经济应用题。先由价格函数与产销平衡写出收益 $R=PQ$，再减去总成本得利润 $L(Q)$；边际利润即 $L'(Q)$。第（2）问把指定价格换算成销量代入边际利润，并给出经济含义；第（3）问令 $L'(Q)=0$ 求最大利润对应的销量与定价。\n\n【解答】固定成本 $60000$，可变成本 $20$ 元/件，价格 $P=60-\\dfrac{Q}{1000}$。\n\n产销平衡时收益 $R=PQ=\\left(60-\\dfrac{Q}{1000}\\right)Q=60Q-\\dfrac{Q^2}{1000}$；\n总成本 $C=60000+20Q$。\n\n利润\n$$L(Q)=R-C=60Q-\\dfrac{Q^2}{1000}-60000-20Q=40Q-\\dfrac{Q^2}{1000}-60000.$$\n\n（1）边际利润 $L'(Q)=40-\\dfrac{Q}{500}$。\n\n（2）当 $P=50$：$50=60-\\dfrac{Q}{1000}\\Rightarrow Q=10000$。故\n$$L'(10000)=40-\\dfrac{10000}{500}=40-20=20.$$\n经济意义：在 $P=50$（即销量 $10000$ 件）的水平上，再多销售一件（第 $10001$ 件）约能带来 $20$ 元的利润增量。\n\n（3）令 $L'(Q)=40-\\dfrac{Q}{500}=0$，得 $Q=20000$。又 $L''(Q)=-\\dfrac{1}{500}<0$，故为极大也是最大。对应定价 $P=60-\\dfrac{20000}{1000}=40$。即定价 $P=40$ 元时利润最大。",
+      "wrong_options": {},
+      "pitfalls": [
+        "边际利润是对销量 Q 求导，不要对价格 P 求导",
+        "第（2）问要先把 P=50 换算成销量 Q=10000 再代入 L'(Q)",
+        "边际利润的经济意义指的是‘多销售第 10001 件’的利润增量，而非第 10000 件"
+      ],
+      "key_point": "经济最优化：利润 L=PQ-C，边际利润 L'(Q)，令 L'=0 求最大利润的产量与定价。"
+    },
+    {
+      "id": 542,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0,+\\infty)$ 上可导, $f(0)=0$, 且 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=2$, 证明:\r\n\r\n(1) 存在 $a>0$, 使得 $f(a)=1$;\r\n\r\n(2) 对 (1) 中的 $a$, 存在 $\\xi \\in(0, a)$, 使得 $f^{\\prime}(\\xi)=\\dfrac{1}{a}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第一问是典型的\"造端点 + 介值定理\"：$f$ 在 $[0,+\\infty)$ 可导必连续，$f(0)=0<1$，而 $\\lim\\limits_{x\\to+\\infty}f(x)=2>1$，由极限的保号性可找到一点函数值超过 $1$，再在闭区间上用介值定理即得 $f(a)=1$。第二问要出现 $f'(\\xi)=\\dfrac{1}{a}$，把它写成 $f'(\\xi)=\\dfrac{f(a)-f(0)}{a-0}$，这正是 $f$ 在 $[0,a]$ 上的 Lagrange 中值定理结论。\n\n【解答】(1) 因 $f$ 在 $[0,+\\infty)$ 上可导，故连续。由 $\\lim\\limits_{x\\to+\\infty}f(x)=2$，对 $\\varepsilon=\\dfrac12$，存在 $X>0$，当 $x>X$ 时 $|f(x)-2|<\\dfrac12$，即 $f(x)>\\dfrac32>1$。取定一点 $b>X$，则 $f(b)>1$。\n\n又 $f(0)=0<1$，$f$ 在闭区间 $[0,b]$ 上连续，且 $f(0)<1<f(b)$，由介值定理，存在 $a\\in(0,b)\\subset(0,+\\infty)$，使得 $f(a)=1$。\n\n(2) 对 (1) 中的 $a>0$，$f$ 在 $[0,a]$ 上连续、在 $(0,a)$ 内可导，由 Lagrange 中值定理，存在 $\\xi\\in(0,a)$，使得\n$$f'(\\xi)=\\frac{f(a)-f(0)}{a-0}=\\frac{1-0}{a}=\\frac{1}{a}.$$\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一问只能用极限保号性\"找到\"一个 $f(b)>1$ 的点，不能直接说 $f$ 取到 $2$（极限值未必达到）。",
+        "介值定理要在闭区间 $[0,b]$ 上用，且要先点明可导推出连续这一前提。"
+      ],
+      "key_point": "极限大于目标值→保号性造端点→介值定理证存在；导数等于差商→Lagrange 中值定理。"
+    },
+    {
+      "id": 543,
+      "paper": "数学三",
+      "year": 2013,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $(X, Y)$ 是二维随机变量, $X$ 的边缘概率密度为 \r\n\r\n$f_X(x)=\\left\\{\\begin{array}{ll}3 x^2, & 0<x<1, \\\\ 0, & \\text { 其他, }\\end{array}\\right.$ 在给定 $X=x(0<x<1)$ 的条件下, $Y$ 的条件概率密度为 \r\n\r\n$f_{Y \\mid X}(y \\mid x)= \\begin{cases}\\dfrac{3 y^2}{x^3}, & 0<y<x \\\\ 0, & \\text { 其他}\\end{cases}$\r\n\r\n(1) 求 $(X, Y)$ 的概率密度 $f(x, y)$;\r\n\r\n(2) 求 $Y$ 的边缘概率密度 $f_Y(y)$;\r\n\r\n(3) 求 $P\\{X>2 Y\\}$",
+      "options": {},
+      "answer": "(1) $f(x, y)=f_X(x) f_{Y \\mid X}(y \\mid x)= \\begin{cases}\\dfrac{9 y^2}{x}, & 0<x<1,0<y<x \\\\ 0, & \\text {其他}\\end{cases}$\r\n\r\n(2) $f_Y(y)= \\begin{cases}-9 y^2 \\ln y, & 0<y<1 \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(3) $\\dfrac{1}{8}$",
+      "analysis": "【分析】条件密度乘边缘密度得联合密度，这是定义直接给的。求 $f_Y$ 对 $x$ 积分要盯紧 $y$ 决定的积分限 $x\\in(y,1)$。求 $P\\{X>2Y\\}$ 在联合密度的支撑 $0<y<x<1$ 上再叠加 $y<\\dfrac x2$ 这个条件即可。\n\n【解答】**(1)** 由 $f(x,y)=f_X(x)f_{Y\\mid X}(y\\mid x)$，当 $0<x<1,\\ 0<y<x$ 时\n$$f(x,y)=3x^2\\cdot\\frac{3y^2}{x^3}=\\frac{9y^2}{x},$$\n其余处 $f(x,y)=0$。\n\n**(2)** 对固定的 $y\\in(0,1)$，由支撑 $0<y<x<1$ 知 $x$ 从 $y$ 到 $1$：\n$$f_Y(y)=\\int_y^1\\frac{9y^2}{x}\\,\\mathrm dx=9y^2\\left[\\ln x\\right]_y^1=9y^2(0-\\ln y)=-9y^2\\ln y,\\quad 0<y<1,$$\n其余为 $0$。（注意 $0<y<1$ 时 $\\ln y<0$，故 $-9y^2\\ln y>0$，是合法密度。）\n\n**(3)** $P\\{X>2Y\\}=P\\{Y<\\tfrac X2\\}$，在支撑上对 $x$ 先积：固定 $x\\in(0,1)$，$y$ 从 $0$ 到 $\\dfrac x2$（且 $\\dfrac x2<x$ 自动满足）：\n$$P\\{X>2Y\\}=\\int_0^1\\!\\!\\int_0^{x/2}\\frac{9y^2}{x}\\,\\mathrm dy\\,\\mathrm dx=\\int_0^1\\frac{9}{x}\\cdot\\frac{(x/2)^3}{3}\\,\\mathrm dx=\\int_0^1\\frac{9}{x}\\cdot\\frac{x^3}{24}\\,\\mathrm dx.$$\n$$=\\int_0^1\\frac{9x^2}{24}\\,\\mathrm dx=\\frac{9}{24}\\cdot\\frac13=\\frac{9}{72}=\\frac18.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 $f_Y(y)$ 的积分限：在支撑 $0<y<x<1$ 下，固定 $y$ 时 $x$ 从 $y$ 到 $1$，不是从 $0$ 到 $1$。",
+        "$P\\{X>2Y\\}$ 要同时受联合密度支撑 $y<x$ 与事件 $y<\\dfrac x2$ 约束，而 $\\dfrac x2<x$ 使后者更紧，限取 $0$ 到 $\\dfrac x2$。"
+      ],
+      "key_point": "联合密度＝边缘×条件；后续积分始终先确定支撑区域，再叠加事件约束。"
+    }
+  ]
+}

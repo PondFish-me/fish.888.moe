@@ -1,0 +1,412 @@
+{
+  "paper": "数学三",
+  "year": 2000,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1007,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
+        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
+      ],
+      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
+    },
+    {
+      "id": 1924,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle z=f\\left(x y, \\frac{x}{y}\\right)+g\\left(\\frac{y}{x}\\right)$, 其中 $f, g$ 均可微, 则 $\\displaystyle \\frac{\\partial z}{\\partial x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle y f_1^{\\prime}+\\frac{1}{y} f_2^{\\prime}-\\frac{y}{x^2} g^{\\prime}$",
+      "analysis": "由复合函数求导法则得\r\n\r\n$\\dfrac{\\partial z}{\\partial x}=y f_1^{\\prime}+\\dfrac{1}{y} f_2^{\\prime}-\\dfrac{y}{x^2} g^{\\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "xy 对 x 偏导是 y，x/y 对 x 偏导是 1/y",
+        "g(y/x) 对 x 偏导要乘 -y/x²，符号别漏"
+      ],
+      "key_point": "∂z/∂x=yf₁'+(1/y)f₂'-(y/x²)g'。"
+    },
+    {
+      "id": 1925,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_1^{+\\infty} \\frac{\\mathrm{d} x}{\\mathrm{e}^x+\\mathrm{e}^{2-x}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4 \\mathrm{e}}$",
+      "analysis": "$\\displaystyle \\int_1^{+\\infty} \\frac{\\mathrm{d} x}{\\mathrm{e}^x+\\mathrm{e}^{2-x}}\\\\\r\n=\\frac{1}{\\mathrm{e}} \\int_1^{+\\infty} \\frac{\\mathrm{d} x}{\\mathrm{e}^{x-1}+\\mathrm{e}^{1-x}}\\\\\r\n=\\frac{1}{\\mathrm{e}} \\int_1^{+\\infty} \\frac{\\mathrm{e}^{x-1} \\mathrm{d} x}{1+\\left(\\mathrm{e}^{x-1}\\right)^2}\\\\\r\n=\\frac{1}{\\mathrm{e}} \\int_1^{+\\infty} \\frac{\\mathrm{d}\\left(\\mathrm{e}^{x-1}\\right)}{1+\\left(\\mathrm{e}^{x-1}\\right)^2}\\\\\r\n=\\left.\\frac{1}{\\mathrm{e}} \\arctan \\mathrm{e}^{x-1}\\right|_1 ^{+\\infty}=\\frac{\\pi}{4 \\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分母 e^x+e^{2-x} 提出 e 得 e·(e^{x-1}+e^{1-x})",
+        "令 u=e^{x-1} 化为 arctan，上限 +∞ 给 π/2，下限 x=1 给 π/4"
+      ],
+      "key_point": "化为 (1/e)arctan e^{x-1}|₁^{+∞}=(1/e)(π/2-π/4)=π/(4e)。"
+    },
+    {
+      "id": 1926,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若 4 阶矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似,矩阵 $\\boldsymbol{A}$ 的特征值为 $\\displaystyle \\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}, \\frac{1}{5}$, 则行列式 $\\left|\\boldsymbol{B}^{-1}-\\boldsymbol{E}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$24$",
+      "analysis": "因为 $\\boldsymbol{A}$ 的特征值与 $\\boldsymbol{A}^{-1}$ 的特征值互为倒数, \r\n\r\n所以 $\\boldsymbol{A}^{-1}$ 的特征值为 $2,3,4,5$, \r\n\r\n又因为 $\\boldsymbol{A} \\sim \\boldsymbol{B}$, \r\n\r\n所以 $\\boldsymbol{B}^{-1}$ 的特征值为 $2,3,4,5$, \r\n\r\n于是 $\\boldsymbol{B}^{-1}-\\boldsymbol{E}$ 的特征值为 $1,2,3,4$, \r\n\r\n故 $\\left|\\boldsymbol{B}^{-1}-\\boldsymbol{E}\\right|=24$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A~B 故 B⁻¹ 与 A⁻¹ 同特征值 2,3,4,5",
+        "|B⁻¹-E|=∏(特征值-1)=1·2·3·4=24"
+      ],
+      "key_point": "B⁻¹ 特征值 2,3,4,5，B⁻¹-E 特征值 1,2,3,4，行列式=24。"
+    },
+    {
+      "id": 1927,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为 $f(x)= \\begin{cases}\\frac{1}{3}, & x \\in[0,1] \\\\ \\frac{2}{9}, & x \\in[3,6]  \\\\ 0, & \\text { 其他 }\\end{cases}$  若 $k$ 使得 $P\\{X \\geqslant k\\}=\\dfrac{2}{3}$, 则 $k$ 的取值范围是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1 \\leqslant k \\leqslant 3$",
+      "analysis": "当 $k>6$ 时, $P\\{X \\geqslant k\\}=0$;\r\n\r\n当 $3<k \\leqslant 6$ 时, $P\\{X \\geqslant k\\}=\\dfrac{2(6-k)}{9}<\\dfrac{2}{3}$;\r\n\r\n当 $1 \\leqslant k \\leqslant 3$ 时, $P\\{X \\geqslant k\\}=P\\{X \\geqslant 3\\}\\\\\r\n=\\dfrac{2 \\times(6-3)}{9}=\\dfrac{2}{3}$;\r\n\r\n当 $0 \\leqslant k<1$ 时, $P\\{X \\geqslant k\\}\\\\\r\n=\\dfrac{1-k}{3}+\\dfrac{2 \\times(6-3)}{9}>\\dfrac{2}{3}$;\r\n\r\n当 $k<0$ 时, $P\\{X \\geqslant k\\}=1$, 故 $1 \\leqslant k \\leqslant 3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "密度只在 [0,1] 和 [3,6] 非零，[1,3] 是空隙",
+        "k 落在空隙 [1,3] 时 P{X≥k}=P{X≥3}=2/3 恒成立"
+      ],
+      "key_point": "k∈[1,3] 时 P{X≥k}=∫₃⁶(2/9)dx=2/3。"
+    },
+    {
+      "id": 1928,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 在区间 $[-1,2]$ 上服从均匀分布; 随机变量 $Y= \\begin{cases}1, & X>0 \\\\ 0, & X=0 \\\\ -1, & X<0 \\end{cases}$, 则方差 $D(Y)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{8}{9}$",
+      "analysis": "$X$ 的密度函数为\r\n\r\n$f(x)= \\begin{cases}\r\n\\dfrac{1}{3}, & -1<x<2 \\\\\r\n0, & \\text { 其他 }\r\n\\end{cases}$\r\n\r\n$\\displaystyle P\\{Y=-1\\}=P\\{X<0\\}=\\int_{-1}^0 f(x) \\mathrm{d} x=\\frac{1}{3},\\\\\r\nP\\{Y=0\\}=0,\\\\\r\nP\\{Y=1\\}=P\\{X>0\\}=\\int_0^2 f(x) \\mathrm{d} x=\\frac{2}{3}$,\r\n\r\n即 $Y$ 的分布律为 $Y \\sim\\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ \\frac{1}{3} & 0 & \\frac{2}{3}\\end{array}\\right),\\\\\r\nE(Y)=\\dfrac{1}{3}, E\\left(Y^2\\right)=1$,\r\n\r\n故 $D(Y)=E\\left(Y^2\\right)-[E(Y)]^2=\\dfrac{8}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X~U[-1,2]，P{X<0}=1/3、P{X>0}=2/3，P{X=0}=0",
+        "E(Y)=1/3，E(Y²)=1，D(Y)=1-1/9=8/9"
+      ],
+      "key_point": "Y 取 -1,1 概率 1/3,2/3，D(Y)=1-(1/3)²=8/9。"
+    },
+    {
+      "id": 1929,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设对任意的 $x$, 总有 $\\varphi(x) \\leqslant f(x) \\leqslant g(x)$, 且 $\\displaystyle \\lim _{x \\rightarrow \\infty}[g(x)-\\varphi(x)]=0$, 则 $\\displaystyle \\lim _{x \\rightarrow \\infty} f(x)(\\quad)$",
+      "options": {
+        "A": "存在且等于零",
+        "B": "存在但不一定为零",
+        "C": "一定不存在",
+        "D": "不一定存在"
+      },
+      "answer": "D",
+      "analysis": "令 $\\displaystyle \\varphi(x)=\\frac{x^2-1}{x^2+1}, f(x)=1, g(x)=\\frac{x^2+2}{x^2+1}$, \r\n\r\n则 $\\varphi(x) \\leqslant f(x) \\leqslant g(x)$,\r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow \\infty}[g(x)-\\varphi(x)]=\\lim _{x \\rightarrow \\infty} \\frac{3}{x^2+1}=0$, \r\n\r\n但 $\\displaystyle \\lim _{x \\rightarrow \\infty} f(x)=1$, 则 (A), (C) 不正确;\r\n\r\n令 $\\varphi(x)=\\mathrm{e}^x-\\mathrm{e}^{-|x|}, f(x)=\\mathrm{e}^x, g(x)=\\mathrm{e}^x+\\mathrm{e}^{-|x|}$, \r\n\r\n则 $\\varphi(x) \\leqslant f(x) \\leqslant g(x)$,\r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow \\infty}[g(x)-\\varphi(x)]=\\lim _{x \\rightarrow \\infty} 2 \\mathrm{e}^{-|x|}=0$, \r\n\r\n但 $\\lim _{x \\rightarrow \\infty} f(x)$ 不存在, 则 (B) 不正确, 应选 (D)",
+      "wrong_options": {
+        "A": "两端之差趋零不等于两端趋零，f 极限可存在且非零",
+        "B": "f 极限可能根本不存在（如 e^x 型反例）",
+        "C": "f 极限也可能存在，不能断定一定不存在"
+      },
+      "pitfalls": [
+        "夹逼需两端有相同极限；这里只知差→0，两端可同为发散",
+        "可举 f 极限存在（=1）与 f 极限不存在（e^x）两个反例，故不一定存在"
+      ],
+      "key_point": "g-φ→0 不保证两端收敛，lim f 不一定存在，选 D。"
+    },
+    {
+      "id": 1930,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在点 $x=a$ 处可导, 则函数 $|f(x)|$ 在点 $x=a$ 处不可导的充分条件是 $(\\quad)$",
+      "options": {
+        "A": "$f(a)=0$ 且 $f^{\\prime}(a)=0$",
+        "B": "$f(a)=0$ 且 $f^{\\prime}(a) \\neq 0$",
+        "C": "$f(a)>0$ 且 $f^{\\prime}(a)>0$",
+        "D": "$f(a)<0$ 且 $f^{\\prime}(a)<0$"
+      },
+      "answer": "B",
+      "analysis": "设 $f(a)=0, f^{\\prime}(a) \\neq 0$, 令 $g(x)=|f(x)|$,\r\n\r\n$\\displaystyle g_{-}^{\\prime}(a)\\\\\r\n=\\lim _{x \\rightarrow a^{-}} \\frac{g(x)-g(a)}{x-a}\\\\\r\n=\\lim _{x \\rightarrow a^{-}} \\frac{|f(x)|}{x-a}\\\\\r\n=-\\lim _{x \\rightarrow a^{-}}\\left|\\frac{f(x)-f(a)}{x-a}\\right|\\\\\r\n=-\\left|f^{\\prime}(a)\\right|,\\\\\r\n\\displaystyle g_{+}^{\\prime}(a)\\\\\r\n=\\lim _{x \\rightarrow a^{+}} \\frac{g(x)-g(a)}{x-a}\\\\\r\n=\\lim _{x \\rightarrow a^{+}} \\frac{|f(x)|}{x-a}\\\\\r\n=\\lim _{x \\rightarrow a^{+}}\\left|\\frac{f(x)-f(a)}{x-a}\\right|\\\\\r\n=\\left|f^{\\prime}(a)\\right|$,\r\n\r\n若 $f^{\\prime}(a) \\neq 0$, 则 $g_{-}^{\\prime}(a) \\neq g_{+}^{\\prime}(a)$, \r\n\r\n即 $|f(x)|$ 在 $x=a$ 处不可导, 应选(B)",
+      "wrong_options": {
+        "A": "f(a)=0 且 f'(a)=0 时 |f| 反而可导（导数为 0）",
+        "C": "f(a)>0 时 |f|=f 在 a 附近可导",
+        "D": "f(a)<0 时 |f|=-f 在 a 附近可导"
+      },
+      "pitfalls": [
+        "只有过零点（f(a)=0）且斜率非零，绝对值才产生尖点",
+        "f(a)=0 且 f'(a)=0 时左右导都为 0，|f| 仍可导，要排除 A"
+      ],
+      "key_point": "f(a)=0 且 f'(a)≠0 使 |f| 左右导 ±|f'(a)| 不等，不可导，选 B。"
+    },
+    {
+      "id": 1931,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 是四元非齐次线性方程组 $\\boldsymbol{A x}=\\boldsymbol{b}$ 的 3 个解向量, 且 $r(\\boldsymbol{A})=3, \\boldsymbol{\\alpha}_1=(1,2,3,4)^{\\mathrm{T}}$, $\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3=(0,1,2,3)^{\\mathrm{T}}, c$ 表示任意常数, 则线性方程组 $\\boldsymbol{A x}=\\boldsymbol{b}$ 的通解为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right)+c\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1 \\\\ 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right)+c\\left(\\begin{array}{l}0 \\\\ 1 \\\\ 2 \\\\ 3\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right)+c\\left(\\begin{array}{l}2 \\\\ 3 \\\\ 4 \\\\ 5\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right)+c\\left(\\begin{array}{l}3 \\\\ 4 \\\\ 5 \\\\ 6\\end{array}\\right)$"
+      },
+      "answer": "C",
+      "analysis": "由 $r(\\boldsymbol{A})=3$, \r\n\r\n得 $\\boldsymbol{Ax}=\\mathbf{0}$ 的基础解系含一个线性无关的解向量,\r\n\r\n其基础解系为 $\\boldsymbol{\\xi}=\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)+\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_3\\right)\\\\\r\n=(2,3,4,5)^{\\mathrm{T}}$,\r\n\r\n故 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 的通解为 $\\boldsymbol{x}=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right)+c\\left(\\begin{array}{l}2 \\\\ 3 \\\\ 4 \\\\ 5\\end{array}\\right)\\\\( c$ 为任意常数), 应选 (C)",
+      "wrong_options": {
+        "A": "(1,1,1,1) 不是导出组 Ax=0 的解",
+        "B": "(0,1,2,3) 是两个解之差 α₂+α₃-2α₁ 的相反数方向但未×2，方向对但此处标准取 (2,3,4,5)",
+        "D": "(3,4,5,6) 不是导出组的解"
+      },
+      "pitfalls": [
+        "r(A)=3、四元⇒基础解系 1 个向量，取 ξ=2α₁-(α₂+α₃)=(2,3,4,5)",
+        "通解=特解 α₁+c·ξ，特解取 α₁=(1,2,3,4)"
+      ],
+      "key_point": "导出组解 ξ=(2,3,4,5)，通解 (1,2,3,4)+c(2,3,4,5)，选 C。"
+    },
+    {
+      "id": 1932,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶实矩阵, $\\boldsymbol{A}^{\\mathrm{T}}$ 是 $\\boldsymbol{A}$ 的转置矩阵, 则对于线性方程组 (I) $: \\boldsymbol{Ax} =\\mathbf{0}$ 和 (II) : $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A x}=\\mathbf{0}$, 必有 $(\\quad)$",
+      "options": {
+        "A": "(II) 的解是 (I) 的解, (I) 的解也是 (II) 的解",
+        "B": "(II) 的解是 (I) 的解, 但 (I) 的解不是 (II) 的解",
+        "C": "(I) 的解不是 (II) 的解, (II) 的解也不是 (I) 的解",
+        "D": "(I) 的解是 (II) 的解,但 (II) 的解不是 (I) 的解"
+      },
+      "answer": "A",
+      "analysis": "设 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$, 则 $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$, 即 (I) 的解一定是 (II) 的解;\r\n\r\n设 $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}_0=\\mathbf{0}$, \r\n\r\n则 $\\boldsymbol{x}_0^{\\mathrm{T}} \\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}_0=0$ \r\n\r\n或 $\\left(\\boldsymbol{A} \\boldsymbol{x}_0\\right)^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}_0=0$,\r\n\r\n于是 $\\boldsymbol{A} \\boldsymbol{x}_0=\\mathbf{0}$, 即 (I) 的解也一定是 (I) 的解, 应选 (A)",
+      "wrong_options": {
+        "B": "(I) 的解显然是 (II) 的解，B 说不是错",
+        "C": "两组同解，C 说互不为解错",
+        "D": "(II) 的解也是 (I) 的解（由 ‖Ax‖²=0），D 说不是错"
+      },
+      "pitfalls": [
+        "A^TAx=0 左乘 x^T 得 (Ax)^T(Ax)=‖Ax‖²=0⇒Ax=0",
+        "两方向都成立，故两方程组同解"
+      ],
+      "key_point": "‖Ax‖²=0⇒Ax=0，两组同解，选 A。"
+    },
+    {
+      "id": 1933,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "在电炉上安装了 4 个温控器, 其显示温度的误差是随机的. 在使用过程中, 只要有两个温控器显示的温度不低于临界温度 $t_0$, 电炉就断电. 以 $E$ 表示事件\"电炉断电”, 而 $T_{(1)} \\leqslant T_{(2)} \\leqslant T_{(3)} \\leqslant$ $T_{(4)}$ 为 4 个温控器显示的按递增顺序排列的温度值, 则事件 $E$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$\\left\\{T_{(1)} \\geqslant t_0\\right\\}$",
+        "B": "$\\left\\{T_{(2)} \\geqslant t_0\\right\\}$",
+        "C": "$\\left\\{T_{(3)} \\geqslant t_0\\right\\}$",
+        "D": "$\\left\\{T_{(4)} \\geqslant t_0\\right\\}$"
+      },
+      "answer": "C",
+      "analysis": "事件 $\\{$ 电炉断电 $\\}$ 发生当且仅当至少有两个温控器显示的温度值大于等于 $t_0$, \r\n\r\n若 4 个温控器的温度值有 $T_{(1)} \\leqslant T_{(2)} \\leqslant T_{(3)} \\leqslant T_{(4)}$, \r\n\r\n则事件 $E$ 等于 $\\left\\{T_{(3)} \\geqslant t_0\\right\\}$, 应选 (C)",
+      "wrong_options": {
+        "A": "T_{(1)}≥t₀ 意味全部≥t₀（至少四个），过强",
+        "B": "T_{(2)}≥t₀ 意味至少三个≥t₀，过强",
+        "D": "T_{(4)}≥t₀ 只保证至少一个≥t₀，不够"
+      },
+      "pitfalls": [
+        "至少两个≥t₀ ⇔ 从大到小第二个（即 T_{(3)}）≥t₀",
+        "T_{(3)} 是第三小=第二大，别与 T_{(2)} 混淆"
+      ],
+      "key_point": "至少两个≥t₀ 等价于 T_{(3)}≥t₀，选 C。"
+    },
+    {
+      "id": 1934,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}-2 y^{\\prime}-\\mathrm{e}^{2 x}=0$ 满足条件 $y(0)=1, y^{\\prime}(0)=1$ 的解",
+      "options": {},
+      "answer": "$y=\\dfrac{3}{4}+\\dfrac{1}{4} \\mathrm{e}^{2 x}+\\dfrac{1}{2} x \\mathrm{e}^{2 x}$",
+      "analysis": "$y^{\\prime \\prime}-2 y^{\\prime}=0$ 的特征方程为 $\\lambda^2-2 \\lambda=0$,\r\n\r\n特征根为 $\\lambda_1=0, \\lambda_2=2$,\r\n\r\n方程 $y^{\\prime \\prime}-2 y^{\\prime}=0$ 的通解为 \r\n\r\n$y=C_1+C_2 \\mathrm{e}^{2 x}$.\r\n\r\n设原方程的特解为 $y_0=a x \\mathrm{e}^{2 x}$,\r\n\r\n代入原方程得 $a=\\dfrac{1}{2}$,\r\n\r\n原方程的通解为 $y=C_1+C_2 \\mathrm{e}^{2 x}+\\dfrac{1}{2} x \\mathrm{e}^{2 x}$.\r\n\r\n由 $y(0)=1, y^{\\prime}(0)=1$ 得 $C_1=\\dfrac{3}{4}, C_2=\\dfrac{1}{4}$,\r\n\r\n故特解为 $y=\\dfrac{3}{4}+\\dfrac{1}{4} \\mathrm{e}^{2 x}+\\dfrac{1}{2} x \\mathrm{e}^{2 x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "特征根 0 和 2，e^{2x} 与根 2 共振，特解须带因子 x（axe^{2x}）",
+        "代入求 a=1/2，再用 y(0)=1、y'(0)=1 定 C₁=3/4、C₂=1/4"
+      ],
+      "key_point": "共振特解 (1/2)xe^{2x}，通解定常数得 y=3/4+e^{2x}/4+xe^{2x}/2。"
+    },
+    {
+      "id": 1935,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D \\frac{\\sqrt{x^2+y^2}}{\\sqrt{4 a^2-x^2-y^2}} \\mathrm{d} \\sigma$, 其中 $D$ 是由曲线 $y=-a+\\sqrt{a^2-x^2}(a>0)$ 和直线 $y=-x$ 围成的区域",
+      "options": {},
+      "answer": "$\\left(\\dfrac{\\pi^2}{16}-\\frac{1}{2}\\right) a^2$",
+      "analysis": "令 $\\left\\{\\begin{array}{l}x=r \\cos \\theta, \\\\ y=r \\sin \\theta\\end{array}\\left(-\\dfrac{\\pi}{4} \\leqslant \\theta \\leqslant 0,0 \\leqslant r \\leqslant-2 a \\sin \\theta\\right)\\right.$,\r\n\r\n\r\n则 $I = \\displaystyle \\iint\\limits_D \\frac{\\sqrt{x^2+y^2}}{\\sqrt{4 a^2-x^2-y^2}} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_{-\\frac{\\pi}{4}}^0 \\mathrm{d} \\theta \\int_0^{-2 a \\sin \\theta} \\frac{r^2}{\\sqrt{4 a^2-r^2}} \\mathrm{d} r$,\r\n\r\n而 $\\displaystyle \\int_0^{-2 a \\sin \\theta} \\frac{r^2}{\\sqrt{4 a^2-r^2}} \\mathrm{d} r \\\\\r\n\\stackrel{r=2 a \\sin t}{=} \\int_0^{-\\theta} \\frac{4 a^2 \\sin ^2 t}{2 a \\cos t} \\cdot 2 a \\cos t \\mathrm{d} t\\\\\r\n=4 a^2 \\int_0^{-\\theta} \\sin ^2 t \\mathrm{d} t\\\\\r\n=2 a^2 \\int_0^{-\\theta}(1-\\cos 2 t) \\mathrm{d} t \\\\\r\n=2 a^2\\left(-\\theta+\\frac{1}{2} \\sin 2 \\theta\\right)$\r\n\r\n于是 $\\displaystyle I=2 a^2 \\int_{-\\frac{\\pi}{4}}^0\\left(-\\theta+\\frac{1}{2} \\sin 2 \\theta\\right) \\mathrm{d} \\theta\\\\\r\n=\\left(\\frac{\\pi^2}{16}-\\frac{1}{2}\\right) a^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "圆 y=-a+√(a²-x²) 即 x²+(y+a)²=a²，极坐标 r=-2a sinθ",
+        "θ 范围由 y=-x（θ=-π/4）到 θ=0，径向用 r=2a sin t 换元"
+      ],
+      "key_point": "极坐标两次积分得 (π²/16-1/2)a²。"
+    },
+    {
+      "id": 1936,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设某企业在两个相互分割的市场上出售同一种产品, 两个市场的需求函数分别是 $p_1=18-2 Q_1,\\\\ p_2=12-Q_2$, 其中 $p_1$ 和 $p_2$ 分别表示该产品在两个市场的价格 (单位: 万元/吨), $Q_1$ 和 $Q_2$ 分别表示该产 品在两个市场的销售量 (即需求量, 单位: 吨), 并且该企业生产这种产品的总成本函数是 $C=2 Q+5$, 其中 $Q$ 表示该产品在两个市场的销售总量, 即 $Q=Q_1+Q_2$\r\n\r\n(1) 如果该企业实行价格差别策略, 试确定两个市场上该产品的销售量和价格, 使该企业获得最大利润;\r\n\r\n(2) 如果该企业实行价格无差别策略, 试确定两个市场上该产品的销售量及其统一的价格, 使该企业的总利润最大化; 并比较两种价格策略下的总利润大小",
+      "options": {},
+      "answer": "(1) $Q_1=4, Q_2=5, p_1=10, p_2=7, L(4,5)=52$ (万元)\r\n\r\n(2) $Q_1=5, Q_2=4, p=8, L=49$ (万元), 实行价格差别定价所得利润大于统一价格的利润",
+      "analysis": "(1) \r\n\r\n$R=p_1 Q_1+p_2 Q_2=18 Q_1+12 Q_2-2 Q_1^2-Q_2^2,\\\\\r\nL=R-C=-5+16 Q_1+10 Q_2-2 Q_1^2-Q_2^2$,\r\n\r\n令 $\\left\\{\\begin{array}{l}\\dfrac{\\partial L}{\\partial Q_1}=16-4 Q_1=0 \\\\ \\dfrac{\\partial L}{\\partial Q_2}=10-2 Q_2=0\\end{array}\\right.$\r\n\r\n得 $Q_1=4, Q_2=5, p_1=10, p_2=7$,\r\n\r\n当两个市场的销售量为 $Q_1=4, Q_2=5$, \r\n\r\n销售价格为 $p_1=10, p_2=7$ 时, \r\n\r\n企业获得最大利润, 最大利润为 $L(4,5)=52$ (万元).\r\n\r\n(2) 由 $p_1=p_2$, 得 $2 Q_1-Q_2-6=0$,\r\n\r\n得拉格朗日函数 $F\\left(Q_1, Q_2, \\lambda\\right)=-5+16 Q_1+10 Q_2-2 Q_1^2-Q_2^2+\\lambda\\left(2 Q_1-Q_2-6\\right)$,\r\n\r\n令 $\\left\\{\\begin{array}{l}\\dfrac{\\partial F}{\\partial Q_1}=16-4 Q_1+2 \\lambda=0 \\\\ \r\n\\dfrac{\\partial F}{\\partial Q_2}=10-2 Q_2-\\lambda=0 \\\\ \r\n\\dfrac{\\partial F}{\\partial \\lambda}=2 Q_1-Q_2-6=0,\\end{array}\\right.$ \r\n\r\n得 $Q_1=5, Q_2=4$, 从而 $p=8$,\r\n\r\n最大利润为 $L=49$ (万元).\r\n\r\n比较两种价格策略可知, \r\n\r\n实行价格差别定价所得利润大于统一价格的利润",
+      "wrong_options": {},
+      "pitfalls": [
+        "差别定价对 Q₁、Q₂ 分别求偏导取零，无约束",
+        "无差别定价加约束 p₁=p₂（即 2Q₁-Q₂-6=0）用拉格朗日，利润 49<52"
+      ],
+      "key_point": "差别定价 L=52，无差别 L=49，差别定价利润更大。"
+    },
+    {
+      "id": 1937,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $y=(x-1) \\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}$ 的单调区间和极值, 并求该函数图形的渐近线",
+      "options": {},
+      "answer": "$(-\\infty,-1]$ 及 $[0,+\\infty)$ 为函数的单调增区间; \r\n\r\n$[-1,0]$ 为函数的单调减区间, \r\n\r\n$x=-1$ 为极大值点, 极大值为 $y(-1)=-2 \\mathrm{e}^{\\frac{\\pi}{4}};\\\\ x=0$ 为极小值点, 极小值为 $y(0)=-\\mathrm{e}^{\\frac{\\pi}{2}}$,\r\n\r\n$y=x-2$ 为曲线的斜渐近线; $y=\\mathrm{e}^\\pi(x-2)$ 为曲线的另一条斜渐近线",
+      "analysis": "令 $y^{\\prime}=\\dfrac{x^2+x}{1+x^2} \\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}=0$, 得 $x=-1, x=0$.\r\n\r\n当 $x<-1$ 时, $y^{\\prime}>0$; \r\n\r\n当 $-1<x<0$ 时, $y^{\\prime}<0$; \r\n\r\n当 $x>0$ 时, $y^{\\prime}>0$,\r\n\r\n则 $(-\\infty,-1]$ 及 $[0,+\\infty)$ 为函数的单调增区间; \r\n\r\n$[-1,0]$ 为函数的单调减区间, \r\n\r\n$x=-1$ 为极大值点, 极大值为 $y(-1)=-2 \\mathrm{e}^{\\frac{\\pi}{4}};\\\\ x=0$ 为极小值点, 极小值为 $y(0)=-\\mathrm{e}^{\\frac{\\pi}{2}}$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow-\\infty} \\frac{f(x)}{x}=\\lim _{x \\rightarrow-\\infty} \\frac{x-1}{x} \\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}=1,\\\\\r\n\\lim _{x \\rightarrow-\\infty}[f(x)-x]\\\\\r\n=\\lim _{x \\rightarrow-\\infty}\\left[x\\left(\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}-1\\right)-\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}\\right] \\\\\r\n=\\lim _{x \\rightarrow-\\infty} \\frac{\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}-1}{\\frac{1}{x}}-1 \\\\\r\n=\\lim _{x \\rightarrow-\\infty} \\frac{\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x} \\cdot \\frac{1}{1+x^2}}{-\\frac{1}{x^2}}-1=-2$\r\n\r\n所以 $y=x-2$ 为曲线的斜渐近线;\r\n\r\n又因为 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{f(x)}{x}=\\lim _{x \\rightarrow+\\infty} \\frac{x-1}{x} \\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}=\\mathrm{e}^{\\pi},,\\\\\r\n\\lim _{x \\rightarrow+\\infty}\\left[f(x)-\\mathrm{e}^\\pi x\\right] \\\\\r\n=\\lim _{x \\rightarrow+\\infty}\\left[x\\left(\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}-\\mathrm{e}^\\pi\\right)-\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}\\right] \\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x}-\\mathrm{e}^\\pi}{\\frac{1}{x}}-\\mathrm{e}^\\pi\\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{\\mathrm{e}^{\\frac{\\pi}{2}+\\arctan x} \\cdot \\frac{1}{1+x^2}}{-\\frac{1}{x^2}}-\\mathrm{e}^\\pi=-2 \\mathrm{e}^\\pi$\r\n\r\n所以 $y=\\mathrm{e}^\\pi(x-2)$ 为曲线的另一条斜渐近线",
+      "wrong_options": {},
+      "pitfalls": [
+        "y'=(x²+x)/(1+x²)·e^{π/2+arctan x}，零点 x=-1、0",
+        "arctan 在 ±∞ 取 ±π/2，两方向斜率不同：x→-∞ 得 k=1、x→+∞ 得 k=e^π，两条斜渐近线"
+      ],
+      "key_point": "极大 y(-1)=-2e^{π/4}、极小 y(0)=-e^{π/2}；两条斜渐近线 y=x-2 与 y=e^π(x-2)。"
+    },
+    {
+      "id": 1938,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I_n=\\int_0^{\\frac{\\pi}{4}} \\sin ^n x \\cos x \\mathrm{d} x, n=0,1,2, \\cdots$, 求 $\\displaystyle \\sum_{n=0}^{\\infty} I_n$",
+      "options": {},
+      "answer": "$\\ln(2+\\sqrt{2})$",
+      "analysis": "由 $\\displaystyle I_n=\\int_0^{\\frac{\\pi}{4}} \\sin ^n x \\cos x \\mathrm{d} x\\\\\r\n=\\int_0^{\\frac{\\pi}{4}} \\sin ^n x \\mathrm{d}(\\sin x)\\\\\r\n=\\left.\\frac{1}{n+1} \\sin ^{n+1} x\\right|_0 ^{\\frac{\\pi}{4}}\\\\\r\n=\\frac{1}{n+1}\\left(\\frac{\\sqrt{2}}{2}\\right)^{n+1}$,\r\n\r\n得 $\\displaystyle \\sum_{n=0}^{\\infty} I_n=\\sum_{n=0}^{\\infty} \\frac{1}{n+1}\\left(\\frac{\\sqrt{2}}{2}\\right)^{n+1}$,\r\n\r\n令 $\\displaystyle S(x)=\\sum_{n=0}^{\\infty} \\frac{x^{n+1}}{n+1}$, \r\n\r\n级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{n+1}}{n+1}$ 的收敛区间为 $(-1,1)$,\r\n\r\n由 $\\displaystyle S^{\\prime}(x)=\\sum_{n=0}^{\\infty} x^n=\\frac{1}{1-x}$, \r\n\r\n得 $\\displaystyle S(x)=S(0)+\\int_0^x S^{\\prime}(x) \\mathrm{d} x=-\\ln (1-x)$,\r\n\r\n于是 $\\displaystyle \\sum_{n=0}^{\\infty} I_n\\\\\r\n=S\\left(\\frac{\\sqrt{2}}{2}\\right)=-\\ln \\left(1-\\frac{\\sqrt{2}}{2}\\right)=\\ln (2+\\sqrt{2})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "I_n=∫sinⁿx d(sinx)=(1/(n+1))(√2/2)^{n+1}",
+        "级数 Σx^{n+1}/(n+1)=-ln(1-x)，代 x=√2/2 得 -ln(1-√2/2)=ln(2+√2)"
+      ],
+      "key_point": "S(x)=-ln(1-x)，代 √2/2 得 Σ I_n=ln(2+√2)。"
+    },
+    {
+      "id": 1939,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "向量组 $\\boldsymbol{\\alpha}_1=(a, 2,10)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_2=(-2,1,5)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_3=(-1,1,4)^{\\mathrm{T}}, \\boldsymbol{\\beta}=(1, b, c)^{\\mathrm{T}}$, 试问 : 当 $a, b$, $c$ 满足什么条件时,\r\n\r\n(1) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表出, 且表示法唯一?\r\n\r\n(2) $\\boldsymbol{\\beta}$ 不能由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表出?\r\n\r\n(3) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表出, 但表示法不唯一? 并求出一般表示式",
+      "options": {},
+      "answer": "(1) $a \\neq-4$ (2) $a=-4$ 且 $c-3 b+1 \\neq 0$ \r\n\r\n(3) $a=-4$ 且 $c-3 b+1=0$　$\\displaystyle \\boldsymbol{\\beta}=-\\left(k+\\frac{b+1}{2}\\right) \\boldsymbol{\\alpha}_1+2 k \\boldsymbol{\\alpha}_2+(2 b+1) \\boldsymbol{\\alpha}_3$ ( $k$ 为任意常数)",
+      "analysis": "$\\boldsymbol{\\beta}$ 可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示等价于非齐次线性方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有解.\r\n\r\n$|\\boldsymbol{A}|=\\left|\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right|=\\left|\\begin{array}{ccc}\r\na & -2 & -1 \\\\\r\n2 & 1 & 1 \\\\\r\n10 & 5 & 4\r\n\\end{array}\\right|=-a-4$\r\n\r\n(1) 当 $a \\neq-4$ 时, \r\n\r\n因为方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有唯一解,\r\n\r\n所以 $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 唯一线性表示;\r\n\r\n当 $a=-4$ 时,\r\n\r\n$\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}\r\n-4 & -2 & -1 & 1 \\\\\r\n2 & 1 & 1 & b \\\\\r\n10 & 5 & 4 & c\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}\r\n2 & 1 & 1 & b \\\\\r\n0 & 0 & 1 & 2 b+1 \\\\\r\n0 & 0 & -1 & c-5 b\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}\r\n2 & 1 & 1 & b \\\\\r\n0 & 0 & 1 & 2 b+1 \\\\\r\n0 & 0 & 0 & c-3 b+1\r\n\\end{array}\\right)$,\r\n\r\n(2) 当 $c-3 b+1 \\neq 0$ 时, 因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, \r\n\r\n所以方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 无解, \r\n\r\n即 $\\boldsymbol{\\beta}$ 不可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示;\r\n\r\n(3) 当 $c-3 b+1=0$ 时, 因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$, \r\n\r\n所以方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有无数个解, \r\n\r\n即 $\\boldsymbol{\\beta}$ 可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 但表示方法不唯一, \r\n\r\n由 $\\bar{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{lll:c}\r\n2 & 1 & 1 & b \\\\\r\n0 & 0 & 1 & 2 b+1 \\\\\r\n0 & 0 & 0 & 0\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & \\frac{1}{2} & 0 & -\\frac{b+1}{2} \\\\\r\n0 & 0 & 1 & 2 b+1 \\\\\r\n0 & 0 & 0 & 0\r\n\\end{array}\\right)$\r\n\r\n得 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 的通解为 $\\boldsymbol{x}=k\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}-\\frac{b+1}{2} \\\\ 0 \\\\ 2 b+1\\end{array}\\right) (k$ 为任意常数), \r\n\r\n故 $\\displaystyle \\boldsymbol{\\beta}=-\\left(k+\\frac{b+1}{2}\\right) \\boldsymbol{\\alpha}_1+2 k \\boldsymbol{\\alpha}_2+(2 b+1) \\boldsymbol{\\alpha}_3$ ( $k$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=-a-4，a≠-4 时系数矩阵满秩、唯一表示",
+        "第(2)(3)问的前提都是 a=-4（此时行列式为零），源答案只写 c-3b+1 条件、漏了 a=-4"
+      ],
+      "key_point": "a≠-4 唯一表示；a=-4 时看 c-3b+1：≠0 不可表示，=0 无穷多表示。"
+    },
+    {
+      "id": 1940,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有 $n$ 元实二次型\r\n$f\\left(x_1, x_2, \\cdots, x_n\\right)=\\left(x_1+a_1 x_2\\right)^2+\\left(x_2+a_2 x_3\\right)^2+\\cdots+\\left(x_{n-1}+a_{n-1} x_n\\right)^2+\\left(x_n+a_n x_1\\right)^2$,\r\n其中 $a_i(i=1,2, \\cdots, n)$ 为实数. 试问: 当 $a_1, a_2, \\cdots, a_n$ 满足何种条件时, 二次型 $f\\left(x_1, x_2, \\cdots, x_n\\right)$\r\n为正定二次型",
+      "options": {},
+      "answer": "$1+(-1)^{n+1} a_1 a_2 \\cdots a_n \\neq 0$",
+      "analysis": "令 $\\boldsymbol{x}=\\left(\\begin{array}{c}x_1 \\\\ \\vdots \\\\ x_n\\end{array}\\right)$, \r\n\r\n对任意 $\\boldsymbol{x}$ 有 $f\\left(x_1, x_2, \\cdots, x_n\\right) \\geqslant 0$,\r\n\r\n且 $f\\left(x_1, x_2, \\cdots, x_n\\right)=0$ 当且仅当 \r\n\r\n$\\left\\{\\begin{array}{l}x_1+a_1 x_2=0 \\\\ x_2+a_2 x_3=0 \\\\ \\vdots \\\\ x_{n-1}+a_{n-1} x_n=0 \\\\ x_n+a_n x_1=0\\end{array}\\right.$ 时成立.\r\n\r\n该方程组只有零解的充分必要条件为\r\n\r\n$D=\\left|\\begin{array}{ccccc}\r\n1 & a_1 & 0 & \\cdots & 0 \\\\\r\n0 & 1 & a_2 & \\cdots & 0 \\\\\r\n0 & 0 & 1 & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\na_n & 0 & 0 & \\cdots & 1\r\n\\end{array}\\right|\\\\\r\n=1+(-1)^{n+1} a_1 a_2 \\cdots a_n \\neq 0$,\r\n\r\n于是当 $1+(-1)^{n+1} a_1 a_2 \\cdots a_n \\neq 0$ 时, \r\n\r\n对任意的 $\\boldsymbol{x} \\neq \\mathbf{0}$ 有 $f\\left(x_1, x_2, \\cdots, x_n\\right)>0$,\r\n\r\n即当 $1+(-1)^{n+1} a_1 a_2 \\cdots a_n \\neq 0$ 时, \r\n\r\n二次型 $f\\left(x_1, x_2, \\cdots, x_n\\right)$ 为正定二次型",
+      "wrong_options": {},
+      "pitfalls": [
+        "f 是平方和恒≥0，正定⇔f=0 仅有零解",
+        "f=0 对应线性方程组，系数行列式 1+(-1)^{n+1}a₁…aₙ≠0 保证仅零解"
+      ],
+      "key_point": "仅零解条件 1+(-1)^{n+1}a₁…aₙ≠0 即为正定条件。"
+    },
+    {
+      "id": 1941,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设 $0.50,1.25,0.80,2.00$ 是来自总体 $X$ 的简单随机样本值. 已知 $Y=\\ln X$ 服从正态分布 $N(\\mu, 1)$\r\n\r\n(1) 求 $X$ 的数学期望 $E(X)$ (记 $E(X)$ 为 $b$ );\r\n\r\n(2) 求 $\\mu$ 的置信度为 $0.95$ 的置信区间;\r\n\r\n(3) 利用上述结果求 $b$ 的置信度为 $0.95$ 的置信区间",
+      "options": {},
+      "answer": "(1) $\\mathrm{e}^{\\mu+\\frac{1}{2}}$\r\n(2) $(-0.98,0.98)$\r\n(3) $(\\mathrm{e}^{-0.48}, \\mathrm{e}^{1.48})$",
+      "analysis": "(1) $Y$ 的密度函数为\r\n\r\n$f(y)=\\dfrac{1}{\\sqrt{2 \\pi}} \\mathrm{e}^{-\\frac{(y-\\mu)^2}{2}}(-\\infty<y<+\\infty)$,\r\n\r\n$\\displaystyle\r\nb=E(X)=E\\left(\\mathrm{e}^Y\\right)\\\\\r\n=\\frac{1}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^y \\cdot \\mathrm{e}^{-\\frac{(y-\\mu)^2}{2}} \\mathrm{d} y\\\\\r\n=\\frac{\\mathrm{e}^\\mu}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{y-\\mu} \\cdot \\mathrm{e}^{-\\frac{(y-\\mu)^2}{2}} \\mathrm{d}(y-\\mu) \\\\\r\n=\\frac{\\mathrm{e}^\\mu}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^t \\cdot \\mathrm{e}^{-\\frac{t^2}{2}} \\mathrm{d} t\\\\\r\n=\\frac{\\mathrm{e}^{\\mu+\\frac{1}{2}}}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-\\frac{(t-1)^2}{2}} \\mathrm{d}(t-1)\\\\\r\n=\\mathrm{e}^{\\mu+\\frac{1}{2}} \\int_{-\\infty}^{+\\infty} \\frac{1}{\\sqrt{2 \\pi}} \\mathrm{e}^{-\\frac{t^2}{2}} \\mathrm{d} t=\\mathrm{e}^{\\mu+\\frac{1}{2}}$\r\n\r\n(2) 当 $\\alpha=0.05$ 时,标准正态分布的左、右分位点为 $\\pm 1.96$,\r\n\r\n因为 $\\displaystyle \\bar{Y} \\sim N\\left(\\mu, \\frac{1}{4}\\right)$, 所以 $2(\\bar{Y}-\\mu) \\sim N(0,1)$,\r\n\r\n于是 $P\\{-1.96<2(\\bar{Y}-\\mu)<1.96\\}=0.95$,\r\n\r\n又由 $\\displaystyle \\bar{y}=\\frac{\\ln 0.5+\\ln 0.8+\\ln 1.25+\\ln 2}{4}=0$, \r\n\r\n得 $P\\{-0.98<\\mu<0.98\\}=0.95$,\r\n\r\n即置信度为 $0.95$ 的 $\\mu$ 的置信区间为 $(-0.98,0.98)$\r\n\r\n(3) 由 $P\\{-0.98<\\mu<0.98\\}=0.95$, \r\n\r\n得 $P\\left\\{-0.48<\\mu+\\dfrac{1}{2}<1.48\\right\\}=0.95$, \r\n\r\n由 $\\mathrm{e}^x$ 的单调递增性得 $P\\left\\{\\mathrm{e}^{-0.48}<\\mathrm{e}^{\\mu+\\frac{1}{2}}<\\mathrm{e}^{1.48}\\right\\}=0.95$, \r\n\r\n即 $P\\left\\{\\mathrm{e}^{-0.48}<b<\\mathrm{e}^{1.48}\\right\\}=0.95$, \r\n\r\n故 $b$ 的置信度为 $0.95$ 的置信区间为 $(\\mathrm{e}^{-0.48}, \\mathrm{e}^{1.48})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(e^Y) 配方积分得 e^{μ+1/2}，别漏 +1/2",
+        "样本值乘积 0.5·0.8·1.25·2=1 故 ȳ=0；Ȳ~N(μ,1/4)，2(Ȳ-μ)~N(0,1)，半宽 1.96/2=0.98"
+      ],
+      "key_point": "E(X)=e^{μ+1/2}，μ∈(-0.98,0.98)，b∈(e^{-0.48},e^{1.48})。"
+    },
+    {
+      "id": 1942,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 是两个随机事件, 随机变量\r\n\r\n$X=\\left\\{\\begin{array}{ll}1, & A \\text { 出现 } \\\\ -1, & A \\text { 不出现 }\\end{array} \\\\\r\nY= \\begin{cases}1, & B \\text { 出现 } \\\\ -1, & B \\text { 不出现}\\end{cases}\\right.$\r\n\r\n试证明: 随机变量 $X$ 和 $Y$ 不相关的充分必要条件是 $A$ 与 $B$ 相互独立",
+      "options": {},
+      "answer": "略",
+      "analysis": "设 $P(A)=p, P(B)=q, P(A B)=r$,\r\n\r\n则 $X \\sim\\left(\\begin{array}{cc}\r\n-1 & 1 \\\\\r\n1-p & p\r\n\\end{array}\\right), Y \\sim\\left(\\begin{array}{cc}\r\n-1 & 1 \\\\\r\n1-q & q\r\n\\end{array}\\right)$\r\n\r\n于是 $E(X)=2 p-1, E(Y)=2 q-1$\r\n\r\n$\\displaystyle\r\nP\\{X Y=-1\\}\\\\\r\n=P(A \\bar{B})+P(\\bar{A} B)\\\\\r\n=P(A)-P(A B)+P(B)-P(A B)\\\\\r\n=p+q-2 r \\\\\r\nP\\{X Y=1\\}\\\\\r\n=P(A B)+P(\\bar{A} \\bar{B})\\\\\r\n=P(A B)+P(\\overline{A+B})\\\\\r\n=P(A B)+1-P(A+B) \\\\\r\n=1-P(A)-P(B)+2 P(A B)\\\\\r\n=1-p-q+2 r \\\\\r\nE(X Y)\\\\\r\n=(-1) \\times(p+q-2 r)+1 \\times(1-p-q+2 r)\\\\\r\n=1-2 p-2 q+4 r\\\\\r\n\\operatorname{Cov}(X, Y)=E(X Y)-E(X) E(Y)\\\\\r\n=1-2 p-2 q+4 r-(2 p-1)(2 q-1)\\\\\r\n=4 r-4 p q$,\r\n\r\n则 $X, Y$ 不相关的充分必要条件是 $\\operatorname{Cov}(X, Y)=0$ \r\n\r\n或 $p q=r$,  即事件 $A, B$ 独立",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(X)=2P(A)-1，E(XY) 按 XY=±1 的概率展开",
+        "Cov(X,Y)=4[P(AB)-P(A)P(B)]，为零即 P(AB)=P(A)P(B) 即独立"
+      ],
+      "key_point": "Cov(X,Y)=4(r-pq)，不相关⇔r=pq⇔A,B 独立。"
+    }
+  ]
+}

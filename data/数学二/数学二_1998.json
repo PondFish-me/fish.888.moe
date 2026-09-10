@@ -1,0 +1,431 @@
+{
+  "paper": "数学二",
+  "year": 1998,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1033,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1+x}+\\sqrt{1-x}-2}{x^{2}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{4}$",
+      "analysis": "方法一\r\n由 $\\displaystyle (1+x)^a=1+a x+\\frac{a(a-1)}{2 !} x^2+o\\left(x^2\\right)$ 得\r\n\r\n$\\displaystyle \\sqrt{1+x}=1+\\frac{1}{2} x-\\frac{1}{8} x^2+o\\left(x^2\\right), \\\\\r\n\\sqrt{1-x}=1-\\frac{1}{2} x-\\frac{1}{8} x^2+o\\left(x^2\\right)$,\r\n\r\n于是 $\\displaystyle \\sqrt{1+x}+\\sqrt{1-x}-2=-\\frac{1}{4} x^2+o\\left(x^2\\right) \\sim-\\frac{1}{4} x^2$,\r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1+x}+\\sqrt{1-x}-2}{x^2}=-\\frac{1}{4}$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1+x}+\\sqrt{1-x}-2}{x^2}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\frac{1}{2 \\sqrt{1+x}}-\\frac{1}{2 \\sqrt{1-x}}}{2 x} \\\\\r\n= \\frac{1}{4} \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1-x}-\\sqrt{1+x}}{x \\sqrt{1-x^2}}\\\\\r\n=\\frac{1}{4} \\lim _{x \\rightarrow 0} \\frac{-2 x}{x(\\sqrt{1+x}+\\sqrt{1-x})}=-\\frac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "√(1±x) 只展到一阶时一阶项恰好相消、常数项也抵消，必须展到 x² 才有主项",
+        "两根号的 x² 系数各为 -1/8，相加得 -1/4，漏掉任一项都会错"
+      ],
+      "key_point": "√(1+x)+√(1-x)-2 ~ -x²/4，故极限为 -1/4。"
+    },
+    {
+      "id": 1039,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\left(x^{2}-x-2\\right)\\left|x^{3}-x\\right|$ 不可导点的个数为 $(\\quad)$",
+      "options": {
+        "A": "$3$",
+        "B": "$2$",
+        "C": "$1$",
+        "D": "$0$"
+      },
+      "answer": "B",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow-1} \\frac{f(x)-f(-1)}{x+1}\\\\\r\n=\\lim _{x \\rightarrow-1} \\frac{(x+1)(x-2)\\left|x^3-x\\right|}{x+1} \\\\\r\n=\\lim _{x \\rightarrow-1}(x-2)\\left|x^3-x\\right|=0$,\r\n\r\n得 $f^{\\prime}(-1)=0$;\r\n\r\n$\\displaystyle  \\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x-0}=\\lim _{x \\rightarrow 0} \\frac{|x|}{x} \\cdot\\left(x^2-x-2\\right)\\left|x^2-1\\right|$,\r\n\r\n显然  $\\displaystyle  f_{-}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{-}} \\frac{|x|}{x} \\cdot\\left(x^2-x-2\\right)\\left|x^2-1\\right|=2, \\\\\r\nf_{+}^{\\prime}(0)=\\lim _{x \\rightarrow 0^{+}} \\frac{|x|}{x} \\cdot\\left(x^2-x-2\\right)\\left|x^2-1\\right|=-2$,\r\n\r\n因为 $f_{-}^{\\prime}(0) \\neq f_{+}^{\\prime}(0)$, 所以 $x=0$ 为不可导的点;\r\n\r\n$\\displaystyle \r\n\\lim _{x \\rightarrow 1} \\frac{f(x)-f(1)}{x-1}=\\lim _{x \\rightarrow 1} \\frac{|x-1|}{x-1} \\cdot\\left(x^2-x-2\\right)|x(x+1)|$,\r\n\r\n显然 $\\displaystyle f_{-}^{\\prime}(1)=\\lim _{x \\rightarrow 1^{-}} \\frac{|x-1|}{x-1} \\cdot\\left(x^2-x-2\\right)|x(x+1)|=4$,\r\n\r\n$\\displaystyle \r\nf_{+}^{\\prime}(1)=\\lim _{x \\rightarrow 1^{+}} \\frac{|x-1|}{x-1} \\cdot\\left(x^2-x-2\\right)|x(x+1)|=-4$,\r\n\r\n因为 $f_{-}^{\\prime}(1) \\neq f_{+}^{\\prime}(1)$, \r\n\r\n所以 $x=1$ 为不可导的点, \r\n\r\n即 $f(x)$ 有 $2$ 个不可导的点, 应选 (B)",
+      "wrong_options": {
+        "A": "把 -1,0,1 三个零点都判为不可导，漏看 x=-1 处 (x²-x-2) 含因子 (x+1) 抵消掉 |x+1| 的尖角。",
+        "C": "只数出一个不可导点，漏掉另一处。",
+        "D": "误以为处处可导，忽略 |·| 在无抵消零点处产生尖角。"
+      },
+      "pitfalls": [
+        "x=-1 处 (x²-x-2)=(x-2)(x+1) 的 (x+1) 与 |x³-x| 中的 |x+1| 相乘成 (x+1)|x+1| 可导，故此点可导",
+        "x=0、x=1 处无多项式因子抵消，左右导数不等，不可导，共 2 个"
+      ],
+      "key_point": "|x³-x| 三零点中仅 x=-1 被 (x+1) 因子抵消，不可导点 2 个。"
+    },
+    {
+      "id": 1040,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $y=y(x)$ 在任意点 $x$ 处的增量 $\\displaystyle \\Delta y=\\frac{y \\Delta x}{1+x^{2}}+\\alpha$, 且当 $\\Delta x \\rightarrow 0$ 时, $\\alpha$ 是 $\\Delta x$ 的高阶无穷小, $y(0)=\\pi$, 则 $y(1)=(\\quad)$",
+      "options": {
+        "A": "$2 \\pi$",
+        "B": "$\\pi$",
+        "C": "$\\mathrm{e}^{\\frac{\\pi}{4}}$",
+        "D": "$\\pi \\mathrm{e}^{\\frac{\\pi}{4}}$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle \\Delta y=\\frac{y \\Delta x}{1+x^2}+\\alpha$ 得 $y=y(x)$ 可微, \r\n\r\n从而 $y=y(x)$ 可导, 且 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{y}{1+x^2}$, \r\n\r\n解得 $\\displaystyle y=C \\mathrm{e}^{-\\int-\\frac{1}{1+x^2} \\mathrm{d} x}=C \\mathrm{e}^{\\arctan x}$,\r\n\r\n由 $y(0)=\\pi$ 得 $C=\\pi$, \r\n\r\n于是 $y(x)=\\pi \\mathrm{e}^{\\arctan x}$, 故 $\\displaystyle y(1)=\\pi \\mathrm{e}^{\\frac{\\pi}{4}}$, 应选 (D)",
+      "wrong_options": {
+        "A": "误当线性倍增或积分算错，凑出 2π，无依据。",
+        "B": "忽略指数因子，以为 y 从 π 不变。",
+        "C": "漏乘初值常数 C=π，只剩 e^{π/4}。"
+      },
+      "pitfalls": [
+        "∫dx/(1+x²)=arctan x，arctan1=π/4，别算成别的原函数",
+        "由 y(0)=π 定常数 C=π，最终 y(1)=πe^{π/4} 不能丢掉 π"
+      ],
+      "key_point": "dy/dx=y/(1+x²) ⇒ y=πe^{arctan x}，y(1)=πe^{π/4}，选 D。"
+    },
+    {
+      "id": 1045,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "从船上向海中沉放某种探测仪器,按探测要求, 需确定仪器的下沉深度 $y$ (从海平面算起) 与下沉速度 $v$ 之间的函数关系. 设仪器在重力作用下, 从海平面由静止开始铅直下沉, 在下沉过程中还受到阻力和浮力的作用. 设仪器的质量为 $m$, 体积为 $B$, 海水比重为 $\\rho$, 仪器所 受的阻力与下沉速度成正比, 比例常数为 $k(k>0)$. 试建立 $y$ 与 $v$ 所满足的微分方程, 并求出函数关系式 $y=y(v)$",
+      "options": {},
+      "answer": "$\\dfrac{m v \\mathrm{d} v}{\\mathrm{d} y}=m g-B \\rho-k v$,\r\n\r\n$y=-\\dfrac{m}{k} v-\\dfrac{m(m g-B \\rho)}{k^2} \\ln \\dfrac{m g-B \\rho-k v}{m g-B \\rho}$",
+      "analysis": "取沉放点为坐标原点, $y$ 轴铅直向下, 由牛顿第二定律得\r\n\r\n$m \\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} t^2}=m g-B \\rho-k v$,\r\n\r\n令 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} t}=v$, 则 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} t^2}=v \\frac{\\mathrm{d} v}{\\mathrm{d} y}$, \r\n\r\n代入得 $\\dfrac{m v \\mathrm{d} v}{\\mathrm{d} y}=m g-B \\rho-k v$,\r\n\r\n\r\n变量分离得 $\\displaystyle \\frac{m v \\mathrm{d} v}{m g-B \\rho-k v}=\\mathrm{d} y$, \r\n\r\n积分得 $y=-\\dfrac{m}{k} v-\\dfrac{m(m g-B \\rho)}{k^2} \\ln (m g-B \\rho-k v)+C_0$,\r\n\r\n由 $\\left.y\\right|_{t=0}=0,\\left.v\\right|_{t=0}=0$ \r\n\r\n得 $C_0=\\dfrac{m(m g-B \\rho)}{k^2} \\ln (m g-B \\rho)$,\r\n\r\n故 $y=-\\dfrac{m}{k} v-\\dfrac{m(m g-B \\rho)}{k^2} \\ln \\dfrac{m g-B \\rho-k v}{m g-B \\rho}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键代换 a=d²y/dt²=v·dv/dy 把 t 消去、化成 y 与 v 的可分离方程",
+        "初值 y=0、v=0 定积分常数，对数须写成 ln[(mg-Bρ-kv)/(mg-Bρ)] 使初值处为 0"
+      ],
+      "key_point": "牛顿定律+代换 v dv/dy 得可分离方程，积分代初值求出 y=y(v)。"
+    },
+    {
+      "id": 1049,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $y=f(x)$ 是区间 $[0,1]$ 上的任一非负连续函数.\r\n\r\n(1) 试证存在 $x_{0} \\in(0,1)$, 使得区间 $\\left[0, x_{0}\\right]$ 上以 $f\\left(x_{0}\\right)$ 为高的矩形面积等于区间 $\\left[x_{0}, 1\\right]$ 上以 $y=f(x)$ 为曲边的曲边梯形的面积;\r\n\r\n(2) 又设 $f(x)$ 在 $(0,1)$ 内可导, 且 $\\displaystyle f^{\\prime}(x)>-\\frac{2 f(x)}{x}$, 证明 (1) 中的 $x_{0}$ 是唯一的",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) $\\displaystyle S_1\\left(x_0\\right)=x_0 f\\left(x_0\\right), \\quad S_2\\left(x_0\\right)=\\int_{x_0}^1 f(x) \\mathrm{d} x$,\r\n\r\n令 $\\displaystyle \\varphi(x)=x f(x)-\\int_x^1 f(t) \\mathrm{d} t$,\r\n\r\n显然 $\\displaystyle F(x)=x \\int_1^x f(t) \\mathrm{d} t$ 为 $\\varphi(x)$ 的原函数, \r\n\r\n即 $F^{\\prime}(x)=\\varphi(x), F(0)=F(1)=0$, \r\n\r\n由罗尔定理, 存在 $x_0 \\in(0,1)$, 使得 $F^{\\prime}\\left(x_0\\right)=0$, \r\n\r\n即 $\\varphi\\left(x_0\\right)=0$, 故存在 $x_0 \\in(0,1)$,\r\n\r\n使得 $S_1\\left(x_0\\right)=S_2\\left(x_0\\right)$.\r\n\r\n(2) $\\varphi^{\\prime}(x)=f(x)+x f^{\\prime}(x)+f(x)=x f^{\\prime}(x)+2 f(x)$,\r\n\r\n由 $\\displaystyle f^{\\prime}(x)>-\\frac{2 f(x)}{x}$ 得 $x f^{\\prime}(x)+2 f(x)>0$, \r\n\r\n即 $\\varphi^{\\prime}(x)>0(0<x<1)$, 则 $\\varphi(x)$ 在 $(0,1)$ 内严格递增, \r\n\r\n故 (1) 中的 $x_0$ 是唯一的",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由 Aᵏx=0 有解 α 且 A^{k-1}α≠0 推出 Aᵏα=0（对 α 成立）",
+        "组合式左乘 A^{k-1} 只剩 l₀A^{k-1}α=0 得 l₀=0，再依次左乘 A^{k-2}、A^{k-3}… 得全部 lᵢ=0"
+      ],
+      "key_point": "组合式依次左乘 A 的幂，用 A^{k-1}α≠0 逐个逼出系数全为 0。"
+    },
+    {
+      "id": 1514,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=-x^3+x^2+2 x$ 与 $x$ 轴所围成的图形的面积 $A=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{37}{12}$",
+      "analysis": "由 $-x^3+x^2+2 x=-x\\left(x^2-x-2\\right)\\\\=-x(x+1)(x-2)$.\r\n\r\n得曲线与 $x$ 轴的交点横坐标为 $x=-1, x=0, x=2$.\r\n\r\n当 $-1 \\leqslant x \\leqslant 0$ 时, $y \\leqslant 0$; \r\n\r\n当 $0 \\leqslant x \\leqslant 2$ 时, $y \\geqslant 0$, 因此, 所求面积为 $\\displaystyle A\\\\\r\n=-\\int_{-1}^0-x(x+1)(x-2) \\mathrm{d} x+\\int_0^2-x(x+1)(x-2) \\mathrm{d} x=\\frac{37}{12}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "在[-1,0]上y≤0，该段面积须取相反数（加绝对值），直接从-1积到2会正负抵消得错值",
+        "交点x=-1,0,2三个都要找齐，漏掉x=-1会少算一块面积"
+      ],
+      "key_point": "面积A=∫|y|dx，[-1,0]段取负、[0,2]段取正相加=37/12。"
+    },
+    {
+      "id": 1515,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int \\frac{\\ln (\\sin x)}{\\sin ^2 x} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\cot x \\ln (\\sin x)-\\cot x-x+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\ln (\\sin x)}{\\sin ^2 x} \\mathrm{d} x\\\\\r\n=-\\int \\ln (\\sin x) \\mathrm{d}(\\cot x)\\\\\r\n=-\\cot x \\ln (\\sin x)+\\int \\cot x \\cdot \\frac{\\cos x}{\\sin x} \\mathrm{d} x\\\\\r\n=-\\cot x \\ln (\\sin x)+\\int\\left(\\csc ^2 x-1\\right) \\mathrm{d} x \\\\\r\n=-\\cot x \\ln (\\sin x)-\\cot x-x+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "凑微分要认出 dx/sin²x = -d(cotx)，负号别丢",
+        "回代出的∫cot²xdx要用cot²x=csc²x-1降次，不能直接积分"
+      ],
+      "key_point": "∫ln(sinx)/sin²x dx=-cotx·ln(sinx)+∫(csc²x-1)dx=-cotx·ln(sinx)-cotx-x+C。"
+    },
+    {
+      "id": 1516,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 连续,则 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int_0^x t f\\left(x^2-t^2\\right) \\mathrm{d} t=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$x fx^2$",
+      "analysis": "由 $\\displaystyle \\int_0^x t f\\left(x^2-t^2\\right) \\mathrm{d} t=-\\frac{1}{2} \\int_0^x f\\left(x^2-t^2\\right) \\mathrm{d}\\left(x^2-t^2\\right)\\\\\r\n\\stackrel{x^2-t^2=u}{=} \\frac{1}{2} \\int_0^{x^2} f(u) \\mathrm{d} u$, \r\n\r\n得 $\\displaystyle \\dfrac{\\mathrm{d}}{\\mathrm{d} x} \\int_0^x t f\\left(x^2-t^2\\right) \\mathrm{d} t\\\\\r\n=\\frac{1}{2} \\frac{\\mathrm{d}}{\\mathrm{d} x} \\int_0^{x^2} f(u) \\mathrm{d} u\\\\\r\n=x f\\left(x^2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积函数里含上限变量x，不能直接对上限求导，必须先换元x²-t²=u把x从被积函数搬到积分限",
+        "换元后上限变x²，求导链式要乘(x²)'=2x，与前面的½约掉恰得xf(x²)"
+      ],
+      "key_point": "原式=½∫₀^{x²}f(u)du，求导得½·f(x²)·2x=xf(x²)。"
+    },
+    {
+      "id": 1517,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\displaystyle y=x \\ln \\left(\\mathrm{e}+\\frac{1}{x}\\right)(x>0)$ 的渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x+\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "由题可知曲线不存在铅直浙近线和水平渐近线.\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{y}{x}=\\lim _{x \\rightarrow+\\infty} \\ln \\left(\\mathrm{e}+\\frac{1}{x}\\right)=1,\\\\\r\n\\lim _{x \\rightarrow+\\infty}(y-x)=\\lim _{x \\rightarrow+\\infty} \\frac{\\ln \\left(\\mathrm{e}+\\frac{1}{x}\\right)-1}{\\frac{1}{x}} \\\\ \r\n\\stackrel{\\frac{1}{x}=t}{=} \\lim _{t \\rightarrow 0} \\frac{\\ln (\\mathrm{e}+t)-1}{t}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{1}{\\mathrm{e}+t}=\\frac{1}{\\mathrm{e}}$\r\n\r\n得曲线 $\\displaystyle y=x \\ln \\left(\\mathrm{e}+\\frac{1}{x}\\right)$ 的斜渐近线为 $\\displaystyle y=x+\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先验证无水平、铅直渐近线，本题只有斜渐近线",
+        "求b时ln(e+1/x)→1形成的差要用1/x=t换元或洛必达算成1/e，别把对数当常数直接约掉"
+      ],
+      "key_point": "k=lim ln(e+1/x)=1，b=lim(y-x)=1/e，斜渐近线 y=x+1/e。"
+    },
+    {
+      "id": 1518,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设数列 $\\left\\{x_n\\right\\}$ 与 $\\left\\{y_n\\right\\}$ 满足 $\\lim x_n y_n=0$, 则下列判断正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\{x_n\\}$ 发散, 则 $\\{y_n\\}$ 必发散",
+        "B": "若 $\\{x_n\\}$ 无界, 则 $\\{y_n\\}$ 必有界",
+        "C": "若 $\\{x_n\\}$ 有界, 则 $\\{y_n\\}$ 必为无穷小",
+        "D": "若 $\\displaystyle \\{\\frac{1}{x_n}\\}$ 为无穷小, 则 $\\{y_n\\}$ 必为无穷小"
+      },
+      "answer": "D",
+      "analysis": "取 $\\displaystyle x_n=2 n, y_n=\\frac{1}{n^2},\\left\\{x_n\\right\\}$ 发散且 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n y_n=0$, \r\n\r\n但 $\\left\\{y_n\\right\\}$ 收敛, 排除(A);\r\n\r\n取 $x_n=n\\left[1+(-1)^n\\right], y_n=n\\left[1-(-1)^n\\right]$, \r\n\r\n显然 $\\left\\{x_n\\right\\}$ 无界, 且 $\\lim x_n y_n=0$, \r\n\r\n但 $\\left\\{y_n\\right\\}$ 无界, 排除 (B);\r\n\r\n取 $\\displaystyle x_n=\\frac{1}{n^2+1}, y_n=n,\\left\\{x_n\\right\\}$ 有界且 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_n y_n=0$, \r\n\r\n但 $\\displaystyle \\left\\{y_n\\right\\}$ 不是无穷小, 排除 (C), 应选 (D)",
+      "wrong_options": {
+        "A": "误以为xₙ发散会逼迫yₙ发散，反例xₙ=2n发散而yₙ=1/n²收敛且乘积→0",
+        "B": "误以为xₙ无界则yₙ必有界，反例xₙ=n[1+(-1)ⁿ]、yₙ=n[1-(-1)ⁿ]两者都无界而乘积恒为0",
+        "C": "误以为xₙ有界则yₙ必为无穷小，反例xₙ=1/(n²+1)有界、yₙ=n发散而乘积→0"
+      },
+      "pitfalls": [
+        "lim xₙyₙ=0只是乘积的约束，不能反推单个数列的敛散、有界或无穷小",
+        "D成立的关键：1/xₙ为无穷小即xₙ→∞，yₙ=xₙyₙ·(1/xₙ)是无穷小乘无穷小故为无穷小"
+      ],
+      "key_point": "A/B/C各有反例被排除；1/xₙ为无穷小⇒xₙ→∞⇒yₙ=(xₙyₙ)·(1/xₙ)→0，选D。"
+    },
+    {
+      "id": 1521,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=a$ 的某邻域内连续, 且 $f(a)$ 为极大值, 则存在 $\\delta>0$, 当 $x \\in(a-\\delta, a+\\delta)$ 时, 必有 $(\\quad)$",
+      "options": {
+        "A": "$(x-a)[f(x)-f(a)] \\geqslant 0$",
+        "B": "$(x-a)[f(x)-f(a)] \\leqslant 0$",
+        "C": "$\\displaystyle \\lim _{t \\rightarrow a} \\frac{f(t)-f(x)}{(t-x)^2} \\geqslant 0(x \\neq a)$",
+        "D": "$\\displaystyle \\lim _{t \\rightarrow a} \\frac{f(t)-f(x)}{(t-x)^2} \\leqslant 0(x \\neq a)$"
+      },
+      "answer": "C",
+      "analysis": "存在 $\\delta>0$, 当 $x \\in(a-\\delta, a+\\delta)$ 时, $f(x) \\leqslant f(a)$, \r\n\r\n从而 $\\displaystyle \\frac{f(x)-f(a)}{(x-a)^2} \\leqslant 0$,\r\n\r\n于是 $\\displaystyle \\lim _{t \\rightarrow a} \\frac{f(t)-f(x)}{(t-x)^2}\\\\\r\n=\\frac{f(a)-f(x)}{(a-x)^2}\\\\=-\\frac{f(x)-f(a)}{(x-a)^2} \\geqslant 0(x \\neq a)$, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "误以为(x-a)[f(x)-f(a)]≥0，但f(x)-f(a)≤0而(x-a)在a两侧变号，乘积不能定号",
+        "B": "同样把f(x)-f(a)≤0与(x-a)配对断成≤0，忽略(x-a)变号使乘积无固定符号",
+        "D": "认出极限=(f(a)-f(x))/(a-x)²但把符号判反，f(a)≥f(x)使其≥0而非≤0"
+      },
+      "pitfalls": [
+        "A、B错在(x-a)在a两侧变号，[f(x)-f(a)]虽≤0但整体乘积不定号",
+        "C/D的极限中x是固定参数、t→a，极限值=(f(a)-f(x))/(a-x)²，符号由f(a)-f(x)≥0决定"
+      ],
+      "key_point": "由f(x)≤f(a)得极限=(f(a)-f(x))/(a-x)²=-(f(x)-f(a))/(x-a)²≥0，选C。"
+    },
+    {
+      "id": 1522,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是任一 $n(n \\geqslant 3)$ 阶方阵, $\\boldsymbol{A}^*$ 是其伴随矩阵, 又 $k$ 为常数, 且 $k \\neq 0, \\pm 1$, 则必有 $(k \\boldsymbol{A})^*=(\\quad)$",
+      "options": {
+        "A": "$k \\boldsymbol{A}^{*}$",
+        "B": "$k^{n-1} \\boldsymbol{A}^*$",
+        "C": "$k^n \\boldsymbol{A}^{\\text {* }}$",
+        "D": "$k^{-1} \\boldsymbol{A}^*$"
+      },
+      "answer": "B",
+      "analysis": "设矩阵 $\\boldsymbol{A}=\\left[a_{i j}\\right]_{n \\times n}$, \r\n\r\n其元素 $a_{i j}$ 的代数余子式为 $A_{i j}$, \r\n\r\n其中， $A_{i j}$ 是 $a_{i j}$ 的代数余子式.\r\n\r\n则 $\\boldsymbol{A}^*=\\left[A_{i j}\\right]_{n \\times n}^T$, \r\n\r\n且 $k \\boldsymbol{A}=\\left[k a_{i j}\\right]_{n \\times n}$, \r\n\r\n其元素 $k a_{i j}$ 的代数余子式 $\\Delta_{i j}=k^{n-1} A_{i j},\\\\(i, j=1,2, \\cdots, n)$.\r\n\r\n于是有 $(k \\boldsymbol{A})^*=\\left[k^{n-1} A_{i j}\\right]_{n \\times n}^T=k^{n-1}\\left[A_{i j}\\right]_{n \\times n}^T$ $=k^{n-1} \\boldsymbol{A}^*$. 故选 (B)",
+      "wrong_options": {
+        "A": "误以为伴随对数乘线性(kA)*=kA*，忽略每个元素是n-1阶余子式",
+        "C": "把幂次记成n，与整个行列式|kA|=kⁿ|A|的次数混淆，多乘一个k",
+        "D": "把关系记反成k⁻¹，与A⁻¹=A*/|A|里的幂次搞混"
+      },
+      "pitfalls": [
+        "A*的每个元素是n-1阶代数余子式，kA每元素乘k后其n-1阶余子式提出k^{n-1}，不是k也不是kⁿ",
+        "别与|kA|=kⁿ|A|(整个行列式的次数)混淆"
+      ],
+      "key_point": "kA的每个代数余子式=k^{n-1}·原余子式，故(kA)*=k^{n-1}A*，选B。"
+    },
+    {
+      "id": 1523,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $f(x)=(1+x)^{\\frac{x}{\\tan \\left(x-\\frac{\\pi}{4}\\right)}}$ 在区间 $(0,2 \\pi)$ 内的间断点, 并判断其类型",
+      "options": {},
+      "answer": "$x=\\dfrac{\\pi}{4}, x=\\dfrac{5\\pi}{4}$ 为第二类间断点; 得 $x=\\dfrac{3 \\pi}{4}, x=\\dfrac{7 \\pi}{4}$ 为可去间断点;",
+      "analysis": "显然 $f(x)$ 的间断点为 $\\displaystyle x=\\frac{\\pi}{4}, \\frac{3 \\pi}{4}, \\frac{5 \\pi}{4}, \\frac{7 \\pi}{4}$,\r\n\r\n由 $f\\left(\\frac{\\pi}{4}+0\\right)=+\\infty, f\\left(\\frac{5\\pi}{4}+0\\right)=+\\infty $, \r\n\r\n得 $x=\\dfrac{\\pi}{4}, x=\\dfrac{5\\pi}{4}$ 为第二类间断点;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow \\frac{3 \\pi}{4}} f(x)=1= \\lim _{x \\rightarrow \\frac{7 \\pi}{4}} f(x)$, \r\n\r\n得 $x=\\dfrac{3 \\pi}{4}, x=\\dfrac{7 \\pi}{4}$ 为可去间断点;",
+      "wrong_options": {},
+      "pitfalls": [
+        "间断点来自指数tan(x-π/4)的零点(指数→∞，第二类)与无定义点(指数→0，f→1，可去)，两类要分开算",
+        "源答案把可去间断点写成两个3π/4是笔误，实为3π/4与7π/4"
+      ],
+      "key_point": "(0,2π)内四个间断点：π/4、5π/4为第二类，3π/4、7π/4为可去间断点。"
+    },
+    {
+      "id": 1524,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "确定常数 $a, b, c$ 的值, 使 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{a x-\\sin x}{\\int_b^x \\frac{\\ln \\left(1+t^3\\right)}{t} \\mathrm{d} t}=c(c \\neq 0)$",
+      "options": {},
+      "answer": "$a=1, b=0, c=\\dfrac{1}{2}$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{a x-\\sin x}{\\int_b^x \\frac{\\ln \\left(1+t^2\\right)}{t} \\mathrm{d} t}=c$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} \\int_b^x \\frac{\\ln \\left(1+t^3\\right)}{t} \\mathrm{d} t=0$, 从而 $b=0$;\r\n\r\n由 $\\displaystyle c=\\lim _{x \\rightarrow 0} \\frac{a x-\\sin x}{\\int_t^x \\frac{\\ln \\left(1+t^3\\right)}{t} \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{a-\\cos x}{\\frac{\\ln \\left(1+x^3\\right)}{x}}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{a-\\cos x}{x^2}$, \r\n\r\n得 $a=1, b=0, c=\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "c≠0要求分子分母同阶：先由分母极限存在且分子→0定b=0",
+        "洛必达后分母~x²，分子a-cosx必须→0即a=1，否则极限为∞与c≠0矛盾，再算得c=1/2"
+      ],
+      "key_point": "b=0(分母→0)，洛必达化为lim(a-cosx)/x²，须a=1，得c=1/2。"
+    },
+    {
+      "id": 1525,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "利用代换 $\\displaystyle y=\\frac{u}{\\cos x}$ 将方程 $y^{\\prime \\prime} \\cos x-2 y^{\\prime} \\sin x+3 y \\cos x=\\mathrm{e}^x$ 化简, 并求出原方程的通解",
+      "options": {},
+      "answer": "$y=\\dfrac{C_1 \\cos 2 x+C_2 \\sin 2 x+\\frac{1}{5} \\mathrm{e}^x}{\\cos x} \\\\\r\n\\left(C_1, C_2\\right.$ 为任意常数)",
+      "analysis": "$\\displaystyle y^{\\prime}=\\frac{u^{\\prime} \\cos x+u \\sin x}{\\cos ^2 x},\\\\\r\ny^{\\prime \\prime}=\\frac{\\left(u^{\\prime \\prime}+u\\right) \\cos ^2 x+2 u^{\\prime} \\sin x \\cos x+2 u \\sin ^2 x}{\\cos ^3 x}$,\r\n\r\n代入并化简得 $u^{\\prime \\prime}+4 u=\\mathrm{e}^x$.\r\n\r\n特征方程为 $\\lambda^2+4=0$, 特征根为 $\\lambda_{1,2}= \\pm 2 \\mathrm{i}$,\r\n\r\n则 $u^{\\prime \\prime}+4 u=0$ 的通解为 $u=C_1 \\cos 2 x+C_2 \\sin 2 x$.\r\n\r\n显然 $u^{\\prime \\prime}+4 u=\\mathrm{e}^x$ 的特解为 $u_0=\\dfrac{1}{5} \\mathrm{e}^x$,\r\n\r\n则 $u^{\\prime \\prime}+4 u=\\mathrm{e}^x$ 的通解为 \r\n\r\n$u=C_1 \\cos 2 x+C_2 \\sin 2 x+\\dfrac{1}{5} \\mathrm{e}^x$,\r\n\r\n故原方程的通解为 $y=\\dfrac{C_1 \\cos 2 x+C_2 \\sin 2 x+\\frac{1}{5} \\mathrm{e}^x}{\\cos x} \\\\\r\n\\left(C_1, C_2\\right.$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "代换后要正确算出y''含u''、u'、u三项，代入才恰好抵消成u''+4u=eˣ",
+        "特解设Aeˣ代入得A=1/5，最后通解别忘除以cosx回代成y"
+      ],
+      "key_point": "代换化简得u''+4u=eˣ，通解u=C₁cos2x+C₂sin2x+eˣ/5，y=u/cosx。"
+    },
+    {
+      "id": 1526,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算定积分 $\\displaystyle \\int_{\\frac{1}{2}}^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left|x-x^2\\right|}}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{2}+\\ln (2+\\sqrt{3})$",
+      "analysis": "$\\displaystyle I=\\int_{\\frac{1}{2}}^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left|x-x^2\\right|}}=\\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d} x}{\\sqrt{x-x^2}}+\\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{x^2-x}}=I_1+I_2$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 1^{-}}(1-x)^{\\frac{1}{2}} \\cdot \\frac{1}{\\sqrt{x-x^2}}=1$ 且 $\\displaystyle \\alpha=\\frac{1}{2}<1$, \r\n\r\n所以 $I_1$ 收敛;\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 1^{+}}(x-1)^{\\frac{1}{2}} \\cdot \\frac{1}{\\sqrt{x^2-x}}=1$ 且 $\\displaystyle \\alpha=\\frac{1}{2}<1$, \r\n\r\n所以 $I_2$ 收敛, \r\n\r\n于是 $\\displaystyle \\int_{\\frac{1}{2}}^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left|x-x^2\\right|}}$ 收敛.\r\n\r\n方法一\r\n\r\n$\\displaystyle I_1=\\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d} x}{\\sqrt{x-x^2}}\\\\\r\n=2 \\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d} x}{2 \\sqrt{x} \\cdot \\sqrt{1-x}}\\\\\r\n=2 \\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d}(\\sqrt{x})}{\\sqrt{1-(\\sqrt{x})^2}} \\\\\r\n=\\left.2 \\arcsin \\sqrt{x}\\right|_{\\frac{1}{2}} ^1=2\\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right)\\\\\r\n=\\frac{\\pi}{2} ; \\\\\r\nI_2=\\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{x^2-x}}\\\\\r\n=2 \\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{2 \\sqrt{x} \\cdot \\sqrt{x-1}}\\\\\r\n=2 \\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d}(\\sqrt{x})}{\\sqrt{(\\sqrt{x})^2-1}} \\\\\r\n=\\left.2 \\ln (\\sqrt{x}+\\sqrt{x-1})\\right|_1 ^{\\frac{3}{2}}=\\ln (2+\\sqrt{3})$,\r\n\r\n故 $\\displaystyle \\int_{\\frac{1}{2}}^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left|x-x^2\\right|}}=\\frac{\\pi}{2}+\\ln (2+\\sqrt{3})$\r\n\r\n方法二\r\n\r\n$\\displaystyle\r\nI_1 =\\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d} x}{\\sqrt{x-x^2}}\\\\\r\n=\\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d}\\left(x-\\frac{1}{2}\\right)}{\\sqrt{\\left(\\frac{1}{2}\\right)^2-\\left(x-\\frac{1}{2}\\right)^2}}\\\\\r\n=\\int_0^{\\frac{1}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left(\\frac{1}{2}\\right)^2-x^2}} \\\\\r\n=\\left.\\arcsin 2 x\\right|_0 ^{\\frac{1}{2}}=\\frac{\\pi}{2}\\\\\r\nI_2=\\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{x^2-x}}=\\int_1^{\\frac{3}{2}} \\frac{\\mathrm{d}\\left(x-\\frac{1}{2}\\right)}{\\sqrt{\\left(x-\\frac{1}{2}\\right)^2-\\left(\\frac{1}{2}\\right)^2}}\\\\\r\n=\\int_{\\frac{1}{2}}^1 \\frac{\\mathrm{d} x}{\\sqrt{x^2-\\left(\\frac{1}{2}\\right)^2}} \\\\\r\n=\\left.\\ln \\left(x+\\sqrt{x^2-\\frac{1}{4}}\\right)\\right|_{\\frac{1}{2}} ^1\\\\\r\n=\\ln \\left(1+\\frac{\\sqrt{3}}{2}\\right)-\\ln \\frac{1}{2}=\\ln (2+\\sqrt{3})$\r\n\r\n故 $\\displaystyle \\int_{\\frac{1}{2}}^{\\frac{3}{2}} \\frac{\\mathrm{d} x}{\\sqrt{\\left|x-x^2\\right|}}=\\frac{\\pi}{2}+\\ln (2+\\sqrt{3})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=1处|x-x²|=0是瑕点，须按x<1、x>1拆两段并验证反常积分收敛",
+        "两段分别配方成1/4-(x-1/2)²(得arcsin)与(x-1/2)²-1/4(得ln)，公式别用错",
+        "源题上限3/4疑为3/2之误，取3/2方与标准答案一致"
+      ],
+      "key_point": "I=∫_{1/2}^1 dx/√(x-x²)+∫_1^{3/2}dx/√(x²-x)=π/2+ln(2+√3)。"
+    },
+    {
+      "id": 1528,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $y=y(x)$ 是一向上凸的连续曲线, 其上任意一点 $(x, y)$ 处的曲率为 $\\displaystyle \\frac{1}{\\sqrt{1+y^{\\prime 2}}}$, 且此曲线上点 $(0,1)$ 处的切线方程为 $y=x+1$, 求该曲线的方程, 并求函数 $y=y(x)$ 的极值",
+      "options": {},
+      "answer": "$y=\\ln \\left|\\cos \\left(\\dfrac{\\pi}{4}-x\\right)\\right|+1+\\dfrac{1}{2} \\ln 2, x \\in (\\dfrac{-\\pi}{4}, \\dfrac{3\\pi}{4})$, 极大值为 $1+\\dfrac{1}{2} \\ln 2$",
+      "analysis": "由题意得 $y(0)=1, y^{\\prime}(0)=1$, \r\n\r\n点 $(x, y)$ 处的曲率为 $-\\dfrac{y^{\\prime \\prime}}{\\left(1+y^{\\prime 2}\\right)^{\\frac{3}{2}}}$,\r\n\r\n由题意得 $-\\dfrac{y^{\\prime \\prime}}{\\left(1+y^{\\prime 2}\\right)^{\\frac{3}{2}}}=\\dfrac{1}{\\sqrt{1+y^{\\prime 2}}}$, \r\n\r\n整理得 $y^{\\prime \\prime}+y^{\\prime 2}+1=0$,\r\n\r\n令 $y^{\\prime}=p$, 则 $\\dfrac{\\mathrm{d} p}{\\mathrm{d} x}=-\\left(1+p^2\\right)$, \r\n\r\n或 $\\displaystyle \\frac{\\mathrm{d} p}{1+p^2}=-\\mathrm{d} x$,\r\n\r\n解得 $\\arctan p=-x+C_1$.\r\n\r\n由 $y^{\\prime}(0)=1$ 得 $\\displaystyle C_1=\\frac{\\pi}{4}$, \r\n\r\n即 $y^{\\prime}=\\tan \\left(\\dfrac{\\pi}{4}-x\\right)$,\r\n\r\n解得 $y=\\ln \\left|\\cos \\left(\\dfrac{\\pi}{4}-x\\right)\\right|+C_2$.\r\n\r\n由 $y(0)=1$ 得 $C_2=1+\\dfrac{1}{2} \\ln 2$, \r\n\r\n即 $y=\\ln \\left|\\cos \\left(\\dfrac{\\pi}{4}-x\\right)\\right|+1+\\dfrac{1}{2} \\ln 2, x \\in (\\dfrac{-\\pi}{4}, \\dfrac{3\\pi}{4})$,\r\n\r\n因为 $\\cos \\left(\\frac{\\pi}{4}-x\\right) \\leq 1$ 且当 $x=\\frac{\\pi}{4}$ 时, \r\n\r\n$\\cos \\left(\\frac{\\pi}{4}-x\\right)=1$,\r\n\r\n所以当 $x=\\frac{\\pi}{4}$ 时, \r\n\r\n函数取得极大值 $y=1+\\frac{1}{2} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "向上凸y''<0，曲率取-y''/(1+y'²)^{3/2}，符号错会得到反号方程",
+        "切线y=x+1提供y(0)=1、y'(0)=1两个初值，分别定两次积分常数；极大值在y'=0即x=π/4处"
+      ],
+      "key_point": "y''+y'²+1=0，解得y'=tan(π/4-x)，y=ln|cos(π/4-x)|+1+½ln2，x=π/4处取极大值1+½ln2。"
+    },
+    {
+      "id": 1529,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $x \\in(0,1)$, 证明:\r\n\r\n(1) $(1+x) \\ln ^2(1+x)<x^2$;\r\n\r\n(2) $\\dfrac{1}{\\ln 2}-1<\\dfrac{1}{\\ln (1+x)}-\\dfrac{1}{x}<\\dfrac{1}{2}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 取 $\\displaystyle  f(x)=x^2-(1+x) \\ln ^2(1+x), f(0)=0,\\\\\r\nf^{\\prime}(x)=2 x-\\ln ^2(1+x)-2 \\ln (1+x), \\quad f^{\\prime}(0)=0,\\\\\r\nf^{\\prime \\prime}(x)=2-\\frac{2 \\ln (1+x)}{1+x}-\\frac{2}{1+x}\\\\=\\frac{2[x-\\ln (1+x)]}{1+x}>0 (0<x<1)$,\r\n\r\n由 $\\left\\{\\begin{array}{l}f^{\\prime}(0)=0, \\\\ f^{\\prime \\prime}(x)>0(0<x<1)\\end{array}\\right.$ \r\n\r\n得 $f^{\\prime}(x)>0(0<x<1)$;\r\n\r\n由 $\\left\\{\\begin{array}{l}f(0)=0, \\\\ f^{\\prime}(x)>0(0<x<1)\\end{array}\\right.$ \r\n\r\n得 $f(x)>0(0<x<1)$,\r\n\r\n当 $0<x<1$ 时, $(1+x) \\ln ^2(1+x)<x^2$.\r\n\r\n(2) 令 $\\displaystyle g(x)=\\frac{1}{\\ln (1+x)}-\\frac{1}{x}$,\r\n\r\n因为 $g^{\\prime}(x)=-\\dfrac{1}{(1+x) \\ln ^2(1+x)}+\\dfrac{1}{x^2} \\\\ \r\n=\\dfrac{(1+x) \\ln ^2(1+x)-x^2}{x^2(1+x) \\ln ^2(1+x)}<0(0<x<1)$,\r\n\r\n所以 $g(x)$ 在 $(0,1)$ 内单调递减.\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0^{+}} g(x)\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{x-\\ln (1+x)}{x \\ln (1+x)}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{x-\\ln (1+x)}{x^2}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{1-\\frac{1}{1+x}}{2 x}=\\frac{1}{2},\\\\\r\n\\lim _{x \\rightarrow 1^{-}} g(x)=\\lim _{x \\rightarrow 1^{-}}\\left[\\frac{1}{\\ln (1+x)}-\\frac{1}{x}\\right]=\\frac{1}{\\ln 2}-1$,\r\n\r\n所以当 $0<x<1$ 时, $\\dfrac{1}{\\ln 2}-1<\\dfrac{1}{\\ln (1+x)}-\\dfrac{1}{x}<\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1)构造f(x)=x²-(1+x)ln²(1+x)，靠f(0)=f'(0)=0与f''>0逐层推出f>0，不能一眼看出",
+        "(2)g'(x)分子恰是(1+x)ln²(1+x)-x²，由(1)知其<0故g单调减；严格界由端点极限(x→0⁺得1/2、x→1⁻得1/ln2-1)给出且取不到"
+      ],
+      "key_point": "辅助函数逐层递推证(1)；(1)⇒g'<0单调减，端点极限1/ln2-1<g<1/2。"
+    },
+    {
+      "id": 1530,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\left(2 \\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right) \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{C}^{-1}$, 其中 $\\boldsymbol{E}$ 是 4 阶单位矩阵, $\\boldsymbol{A}^{\\mathrm{T}}$ 是 4 阶矩阵 $\\boldsymbol{A}$ 的转置矩阵,\r\n\r\n$\\boldsymbol{B}=\\left(\\begin{array}{cccc}\r\n1 & 2 & -3 & -2 \\\\\r\n0 & 1 & 2 & -3 \\\\\r\n0 & 0 & 1 & 2 \\\\\r\n0 & 0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n$\\boldsymbol{C}=\\left(\\begin{array}{llll}\r\n1 & 2 & 0 & 1 \\\\\r\n0 & 1 & 2 & 0 \\\\\r\n0 & 0 & 1 & 2 \\\\\r\n0 & 0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n求 $\\boldsymbol A$",
+      "options": {},
+      "answer": "$\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ -2 & 1 & 0 & 0 \\\\ 1 & -2 & 1 & 0 \\\\ 0 & 1 & -2 & 1\\end{array}\\right)$",
+      "analysis": "由 $\\left(2 \\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right) \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{C}^{-1}$\r\n\r\n得 $\\boldsymbol{C}\\left(2 \\boldsymbol{E}-\\boldsymbol{C}^{-1} \\boldsymbol{B}\\right) \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{E}$,\r\n\r\n即 $(2 \\boldsymbol{C}-\\boldsymbol{B}) \\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{E}$,\r\n\r\n解得 $\\boldsymbol{A}^{\\mathrm{T}}=(2 \\boldsymbol{C}-\\boldsymbol{B})^{-1}$,\r\n\r\n而 $2 \\boldsymbol{C}-\\boldsymbol{B}=\\left(\\begin{array}{llll}1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n由 $\\left(\\begin{array}{llll:llll}\r\n1 & 2 & 3 & 4 & 1 & 0 & 0 & 0 \\\\\r\n0 & 1 & 2 & 3 & 0 & 1 & 0 & 0 \\\\\r\n0 & 0 & 1 & 2 & 0 & 0 & 1 & 0 \\\\\r\n0 & 0 & 0 & 1 & 0 & 0 & 0 & 1\r\n\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{cccc:cccc}\r\n1 & 0 & 0 & 0 & 1 & -2 & 1 & 0 \\\\\r\n0 & 1 & 0 & 0 & 0 & 1 & -2 & 1 \\\\\r\n0 & 0 & 1 & 0 & 0 & 0 & 1 & -2 \\\\\r\n0 & 0 & 0 & 1 & 0 & 0 & 0 & 1\r\n\\end{array}\\right)$\r\n\r\n得 $\\boldsymbol{A}^{\\mathrm T}=\\left(\\begin{array}{cccc}1 & -2 & 1 & 0 \\\\ 0 & 1 & -2 & 1 \\\\ 0 & 0 & 1 & -2 \\\\ 0 & 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ -2 & 1 & 0 & 0 \\\\ 1 & -2 & 1 & 0 \\\\ 0 & 1 & -2 & 1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先左乘C把C⁻¹B、C⁻¹一并消掉，化成(2C-B)A^T=E再求逆，比直接算C⁻¹B省事",
+        "求得的是A^T，最后要转置回A，别漏这一步"
+      ],
+      "key_point": "左乘C化简得(2C-B)A^T=E，2C-B为上三角，求逆并转置得A。"
+    },
+    {
+      "id": 1531,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{\\alpha}_1=(1,4,0,2)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_2=(2,7,1,3)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_3=(0,1,-1, a)^{\\mathrm{T}}, \\boldsymbol{\\beta}=(3,10, b, 4)^{\\mathrm{T}}$, 问\r\n\r\n(1) $a, b$ 取何值时, $\\boldsymbol{\\beta}$ 不能由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示?\r\n\r\n(2) $a, b$ 为何值时, $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示? 并写出此表达式.",
+      "options": {},
+      "answer": "(1) 当 $a$ 为任意常数且 $b \\neq 2$ 时, $\\boldsymbol{\\beta}$ 不能由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示;\r\n\r\n(2) 当 $a \\neq 1, b=2$ 时, 此时 $\\boldsymbol{\\beta}=(-2 k-1) \\boldsymbol{\\alpha}_1+(k+2) \\boldsymbol{\\alpha}_2+k \\boldsymbol{\\alpha}_3$ ( $k$ 为任意常数)",
+      "analysis": "令 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$,\r\n\r\n$\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}\r\n1 & 2 & 0 & 3 \\\\\r\n4 & 7 & 1 & 10 \\\\\r\n0 & 1 & -1 & b \\\\\r\n2 & 3 & a & 4\r\n\\end{array}\\right) \\\\\r\n\\rightarrow \\left(\\begin{array}{ccc:c}\r\n1 & 2 & 0 & 3 \\\\\r\n0 & -1 & 1 & -2 \\\\\r\n0 & 1 & -1 & b \\\\\r\n0 & -1 & a & -2\r\n\\end{array}\\right) \\\\\r\n\\rightarrow \\left(\\begin{array}{ccc:c}\r\n1 & 2 & 0 & 3 \\\\\r\n0 & 1 & -1 & 2 \\\\\r\n0 & 0 & a-1 & 0 \\\\\r\n0 & 0 & 0 & b-2\r\n\\end{array}\\right)$\r\n\r\n(1) 当 $a$ 为任意常数且 $b \\neq 2$ 时, $\\boldsymbol{\\beta}$ 不能由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示;\r\n\r\n(2) 当 $a \\neq 1, b=2$ 时, \r\n\r\n由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}1 & 0 & 0 & -1 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有唯一解 \r\n\r\n$\\boldsymbol{x}=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ 0\\end{array}\\right)$, 此时 $\\boldsymbol{\\beta}=-\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3$;\r\n\r\n当 $a=1, b=2$ 时, 由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}1 & 0 & 2 & -1 \\\\ 0 & 1 & -1 & 2 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_1 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=k\\left(\\begin{array}{c}2 \\\\ 1 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}1 \\\\ 2 \\\\ 0\\end{array}\\right)=\\left(\\begin{array}{c}-2 k-1 \\\\ k+2 \\\\ k\\end{array}\\right)$,\r\n\r\n此时 $\\boldsymbol{\\beta}=(-2 k-1) \\boldsymbol{\\alpha}_1+(k+2) \\boldsymbol{\\alpha}_2+k \\boldsymbol{\\alpha}_3$ ( $k$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "可否表示⟺r(α₁,α₂,α₃)是否等于r(α₁,α₂,α₃,β)，落在行阶梯末两行的a-1与b-2",
+        "b≠2时末行0=非零无解(不能表示)；a=1,b=2时秩降为2有无穷多表示法"
+      ],
+      "key_point": "b≠2不能表示；a≠1,b=2唯一表示β=-α₁+2α₂；a=1,b=2有一参数族表示。"
+    },
+    {
+      "id": 90402,
+      "paper": "数学二",
+      "year": 1998,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有曲线 $y=\\sqrt{x-1}$, 过原点作其切线, 求由此曲线、切线及 $x$ 轴围成的平面图形绕 $x$ 轴旋转一周所得到的旋转体的表面积.",
+      "options": {},
+      "answer": "$\\dfrac{(11\\sqrt5-1)\\pi}{6}$",
+      "analysis": "设切点为 $(x_0,\\sqrt{x_0-1})$. 由 $y'=\\dfrac{1}{2\\sqrt{x-1}}$ 且切线过原点, 得 $\\dfrac{\\sqrt{x_0-1}}{x_0}=\\dfrac{1}{2\\sqrt{x_0-1}}$, 解得 $x_0=2$, 切点 $(2,1)$, 切线 $y=\\dfrac{x}{2}$.\r\n旋转体表面由两部分组成:\r\n(1) 切线段绕 $x$ 轴成圆锥侧面, 底半径 $r=1$, 母线 $l=\\sqrt{2^2+1^2}=\\sqrt5$, $S_1=\\pi r l=\\sqrt5\\,\\pi$;\r\n(2) 曲线 $y=\\sqrt{x-1}\\,(1\\le x\\le2)$ 绕 $x$ 轴, $S_2=\\int_1^2 2\\pi y\\sqrt{1+y'^2}\\,\\mathrm{d}x=\\int_1^2\\pi\\sqrt{4x-3}\\,\\mathrm{d}x=\\dfrac{\\pi}{6}(5\\sqrt5-1)$.\r\n故总表面积 $S=\\sqrt5\\,\\pi+\\dfrac{\\pi}{6}(5\\sqrt5-1)=\\dfrac{(11\\sqrt5-1)\\pi}{6}$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "表面积由两块组成：切线段转出的圆锥侧面(用πrl)与曲线段转出的曲面(用∫2πy√(1+y'²)dx)，别只算一块",
+        "切点由√(x₀-1)/x₀=1/(2√(x₀-1))解出x₀=2，不能随手取"
+      ],
+      "key_point": "S=圆锥侧面√5π+曲面π(5√5-1)/6=(11√5-1)π/6。"
+    }
+  ]
+}

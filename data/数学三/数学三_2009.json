@@ -1,0 +1,509 @@
+{
+  "paper": "数学三",
+  "year": 2009,
+  "count": 23,
+  "questions": [
+    {
+      "id": 694,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $f(x)=x-\\sin a x$ 与 $g(x)=x^{2} \\ln (1-b x)$ 是等价无穷小量, 则 $(\\quad)$",
+      "options": {
+        "A": "$a=1, b=-\\dfrac{1}{6}$",
+        "B": "$a=1, b=\\dfrac{1}{6}$",
+        "C": "$a=-1, b=-\\dfrac{1}{6}$",
+        "D": "$a=-1, b=\\dfrac{1}{6}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】等价无穷小 $f\\sim g$ 意味着 $\\lim_{x\\to0}\\dfrac{f}{g}=1$，前提是二者同阶。先用泰勒展开把 $f(x)=x-\\sin ax$ 与 $g(x)=x^2\\ln(1-bx)$ 各自展到最低非零阶，要求阶相同且最低阶系数相等。\n\n【解答】当 $x\\to0$：\n\n$g(x)=x^2\\ln(1-bx)$。由 $\\ln(1-bx)=-bx+o(x)$，得\n$$g(x)=x^2(-bx+o(x))=-b\\,x^3+o(x^3).$$\n这是 $3$ 阶无穷小（当 $b\\neq0$）。\n\n$f(x)=x-\\sin ax$。由 $\\sin ax=ax-\\dfrac{(ax)^3}{6}+o(x^3)=ax-\\dfrac{a^3}{6}x^3+o(x^3)$，得\n$$f(x)=x-ax+\\frac{a^3}{6}x^3+o(x^3)=(1-a)x+\\frac{a^3}{6}x^3+o(x^3).$$\n\n要 $f\\sim g$，须二者同阶。$g$ 的最低阶为 $3$，故 $f$ 的一次项必须为零，即 $1-a=0\\Rightarrow a=1$。此时\n$$f(x)=\\frac{a^3}{6}x^3+o(x^3)=\\frac{1}{6}x^3+o(x^3).$$\n再令最低阶系数相等：$\\dfrac16=-b$，即 $b=-\\dfrac16$。\n\n所以 $a=1,\\ b=-\\dfrac16$，选 A。验证：$f\\sim \\tfrac16 x^3$，$g\\sim -bx^3=\\tfrac16 x^3$，比值 $\\to1$，确为等价无穷小。",
+      "wrong_options": {
+        "B": "$a=1,b=\\dfrac16$ 的 a 正确但 b 符号错：g(x)~-b x³，要等于 f~⅙x³ 须 -b=⅙，即 b=-⅙，不是 +⅙。",
+        "C": "$a=-1,b=-\\dfrac16$ 中 a=-1 使 f 的一次项 (1-a)x=2x≠0，f 变成一阶无穷小，与 g 的三阶不同阶，不可能等价。",
+        "D": "$a=-1,b=\\dfrac16$ 同样 a=-1 导致 f 为一阶无穷小，阶数不匹配，且 b 符号也错。"
+      },
+      "pitfalls": [
+        "f=x-sin ax 必须先让一次项 (1-a)x 消去（a=1），否则 f 是一阶、g 是三阶，根本不同阶。",
+        "g=x²ln(1-bx)~x²·(-bx)=-bx³，注意 ln(1-bx) 的首项是 -bx，符号决定 b=-1/6。",
+        "sin 的三次项系数为 a³/6，a=1 时为 1/6，别漏 1/6 或符号。"
+      ],
+      "key_point": "等价无穷小定阶定系数：泰勒展开后先消去低阶项使两者同阶，再令最低阶系数相等解 a,b。"
+    },
+    {
+      "id": 696,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 在区间 $[-1,3]$ 上的图形如上图所示, 则函数 $\\displaystyle F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t$ 的图形为 $(\\quad)$\n\n![f(x) 的图形](/figures/696.png)",
+      "options": {
+        "A": "![](/figures/696-a.png)",
+        "B": "![](/figures/696-b.png)",
+        "C": "![](/figures/696-c.png)",
+        "D": "![](/figures/696-d.png)"
+      },
+      "answer": "D",
+      "analysis": "【分析】本题给出 $f(x)$ 在 $[-1,3]$ 上的图形，要识别 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$ 的图形。**先看清 $f$ 是分段给出的，且在 $x=0$ 与 $x=2$ 处有跳跃间断**——这决定了该用哪三道筛子：(1) $F(0)=0$，图形必过原点；(2) 在 $f$ 的连续点处 $F'(x)=f(x)$，故 $f>0$ 处 $F$ 递增、$f<0$ 处 $F$ 递减、$f$ 变号处 $F$ 取极值；(3) $f$ 有界且分段连续 $\\Rightarrow$ $F$ **处处连续**，凡是跳断的候选图直接排除。\n\n⚠️ 不能拿\"光滑、无尖角\"当筛子：$F$ 在 $f$ 的跳跃点处左右导数分别等于 $f$ 的左右极限，**并不相等**，所以正确图形在 $x=0$ 与 $x=2$ 各有一个**折点**。用光滑性去筛会把正确答案一起排除掉。\n\n【解答】依 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$：\n\n第一，$F(0)=\\displaystyle\\int_0^0 f=0$，图形必过原点。C 的图形在 $x=0$ 处取值为 $1$，即 $F(0)=1\\neq0$，**排除 C**。\n\n第二，读原图 $f$ 的符号：$[-1,0)$ 上 $f\\equiv1>0$，故 $F(x)=\\displaystyle\\int_0^x 1\\,\\mathrm{d}t=x$ 是斜率为 $1$ 的**上升**直线，$F(-1)=-1$；$(0,1)$ 上 $f<0$、$(1,2)$ 上 $f>0$，故 $F$ 先降后升、在 $x=1$ 取极小值；$[2,3]$ 上 $f\\equiv0$，故 $F$ 是水平直线。A 在 $[-1,0)$ 上是**下降**的，与 $f>0$ 矛盾，**排除 A**。\n\n第三，$F$ 必处处连续。B 在 $x=2$ 处**跳断**（图上空心点加竖直虚线），变上限积分不可能跳跃，**排除 B**。\n\n于是只剩 D。回头核对 D 的两个折点：$F'(0^-)=1$、$F'(0^+)=-1$；$F'(2^-)=2$、$F'(2^+)=0$——恰与 $f$ 在这两点的左右极限一致，D 完全相容。\n\n综合\"过原点 + 增减随 $f$ 的正负 + 处处连续\"三项筛选，正确图形为 D。",
+      "wrong_options": {
+        "A": "在 $[-1,0)$ 上 $f\\equiv1>0$，$F$ 应是斜率为 $1$ 的上升直线（$F(-1)=-1$）；A 在这一段却在下降，与 $F'=f>0$ 矛盾。A 在 $x=0$ 处还是光滑的，也与 $f$ 在该处跳跃不符。",
+        "B": "B 在 $x=2$ 处跳断（空心点加竖直虚线，函数值直接掉到 $0$）。$f$ 有界可积 $\\Rightarrow$ $F(x)=\\int_0^x f$ 处处连续，变上限积分不可能跳跃，故错。",
+        "C": "C 的图形在 $x=0$ 处取值为 $1$，即 $F(0)=1\\neq0$，与 $F(0)=\\int_0^0 f=0$ 矛盾（不过原点），故错。注意 C 在 $x=0$ 处有尖角并不是它的毛病——正确答案 D 在这里同样是折点。"
+      },
+      "pitfalls": [
+        "$F(0)=0$ 是积分下限为 $0$ 带来的硬约束，先用它淘汰不过原点的图（本题即排除 C）。",
+        "$f$ 有跳跃间断时，$F$ 仍然处处连续，但在跳跃点不可导（左右导数等于 $f$ 的左右极限），正确图形在那里是折点。把「光滑无尖角」当判据会连正确答案一起排除。",
+        "$F'=f$ 只在 $f$ 的连续点成立；判增减必须逐段回到原图读 $f$ 的符号，别只数极值个数。"
+      ],
+      "key_point": "看 $F(x)=\\int_0^x f$ 的图，三道筛子是：过原点（$F(0)=0$）、增减随 $f$ 的正负、处处连续（跳断的排除）。$f$ 的跳跃点处 $F$ 是折点而非光滑点——别拿光滑性当筛子。"
+    },
+    {
+      "id": 699,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 均为 $2$ 阶矩阵, $\\boldsymbol{A}^{*}, \\boldsymbol{B}^{*}$ 分别为 $\\boldsymbol{A}, \\boldsymbol{B}$ 的伴随矩阵. 若 $|\\boldsymbol{A}|=2,|\\boldsymbol{B}|=3$, 则分块矩阵 $\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$ 的伴随矩阵为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 3 \\boldsymbol{B}^{*} \\\\ 2 \\boldsymbol{A}^{*} & \\boldsymbol{O}\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 2 \\boldsymbol{B}^{*} \\\\ 3 \\boldsymbol{A}^{*} & \\boldsymbol{O}\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 3 \\boldsymbol{A}^{*} \\\\ 2 \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 2 \\boldsymbol{A}^{*} \\\\ 3 \\boldsymbol{B}^{*} & \\boldsymbol{O}\\end{array}\\right)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】求伴随矩阵用核心公式 $M^*=|M|M^{-1}$。先算分块反对角矩阵 $M=\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}$ 的行列式与逆，再用 $A^*=|A|A^{-1}$、$B^*=|B|B^{-1}$ 把结果换成 $A^*,B^*$ 表达。\n\n【解答】记 $M=\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}$，$A,B$ 均 $2$ 阶。\n\n**行列式：** 对 $n$ 阶块的反对角分块阵 $\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}=(-1)^{n^2}|A||B|$，此处 $n=2$，$(-1)^{4}=1$，故\n$$|M|=|A|\\,|B|=2\\times3=6.$$\n\n**逆矩阵：** 由 $\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}=\\begin{pmatrix}AA^{-1}&O\\\\O&BB^{-1}\\end{pmatrix}=I$，得\n$$M^{-1}=\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}.$$\n\n**伴随：**\n$$M^*=|M|M^{-1}=6\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}=\\begin{pmatrix}O&6B^{-1}\\\\6A^{-1}&O\\end{pmatrix}.$$\n再用 $B^{-1}=\\dfrac{B^*}{|B|}=\\dfrac{B^*}{3}$，$A^{-1}=\\dfrac{A^*}{|A|}=\\dfrac{A^*}{2}$：\n$$6B^{-1}=\\frac{6}{3}B^*=2B^*,\\qquad 6A^{-1}=\\frac{6}{2}A^*=3A^*.$$\n故\n$$M^*=\\begin{pmatrix}O&2B^*\\\\3A^*&O\\end{pmatrix},$$\n选 **B**。\n\n（验证：取 $A=\\mathrm{diag}(2,1),B=\\mathrm{diag}(3,1)$ 直接计算 $M^*=|M|M^{-1}$，结果与 $\\begin{pmatrix}O&2B^*\\\\3A^*&O\\end{pmatrix}$ 完全一致。）",
+      "wrong_options": {
+        "A": "右上、左下系数写反成 $3B^*,2A^*$。由 $6B^{-1}=\\frac{6}{|B|}B^*=2B^*$、$6A^{-1}=\\frac{6}{|A|}A^*=3A^*$，系数应是 $2$ 配 $B^*$、$3$ 配 $A^*$。",
+        "C": "块的位置与类型混乱：把 $A^*$ 放到右上、且出现未取伴随的 $B$，与 $M^*$ 的反对角结构 $\\begin{pmatrix}O&\\cdot B^*\\\\\\cdot A^*&O\\end{pmatrix}$ 不符。",
+        "D": "右上写成 $2A^*$、左下写成 $3B^*$，把 $A^*$ 与 $B^*$ 的位置整体放反（应右上 $B^*$、左下 $A^*$）。"
+      },
+      "pitfalls": [
+        "核心公式 $M^*=|M|M^{-1}$；$|M|=|A||B|=6$（$2$ 阶块反对角符号 $(-1)^{4}=1$）",
+        "反对角块阵的逆是 $\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}$，注意 $A^{-1},B^{-1}$ 交叉到对角",
+        "换伴随时 $6B^{-1}=\\frac{6}{|B|}B^*=2B^*$、$6A^{-1}=\\frac{6}{|A|}A^*=3A^*$，系数与 $A^*/B^*$ 的搭配不要错位"
+      ],
+      "key_point": "伴随=$|M|M^{-1}$；分块反对角阵先求逆（交叉位置取逆），再用 $X^{-1}=X^*/|X|$ 换成伴随表达。"
+    },
+    {
+      "id": 701,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且 $X$ 服从标准正态分布 $N(0,1), Y$ 的概率分布为 $P\\{Y=0\\}=P\\{Y=1\\}=\\dfrac{1}{2}$, 记 $F_{Z}(z)$ 为随机变量 $Z=X Y$ 的分布函数, 则函数 $F_{Z}(z)$ 的间断点个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "B",
+      "analysis": "【分析】$Z=XY$，$Y$ 只取 $0,1$，用全概率公式按 $Y$ 的取值拆分。$Y=0$ 时 $Z\\equiv0$（退化分布，分布函数是阶跃，在 $0$ 处跳跃）；$Y=1$ 时 $Z=X\\sim N(0,1)$（连续）。把两部分按权重 $\\frac12$ 叠加，看 $F_Z(z)$ 在何处不连续。\n\n【解答】由 $X,Y$ 独立，用全概率公式：\n$$F_Z(z)=P\\{XY\\leq z\\}=P\\{Y=0\\}P\\{XY\\leq z\\mid Y=0\\}+P\\{Y=1\\}P\\{XY\\leq z\\mid Y=1\\}.$$\n当 $Y=0$：$XY=0$，故 $P\\{XY\\leq z\\mid Y=0\\}=P\\{0\\leq z\\}=\\begin{cases}1,&z\\geq0\\\\0,&z<0\\end{cases}$，记为单位阶跃 $\\mathbf 1_{\\{z\\geq0\\}}$。\n当 $Y=1$：$XY=X\\sim N(0,1)$，故 $P\\{XY\\leq z\\mid Y=1\\}=\\Phi(z)$。\n于是\n$$F_Z(z)=\\frac12\\mathbf 1_{\\{z\\geq0\\}}+\\frac12\\Phi(z).$$\n其中 $\\Phi(z)$ 处处连续；阶跃项 $\\frac12\\mathbf 1_{\\{z\\geq0\\}}$ 在 $z=0$ 处从 $0$ 跳到 $\\frac12$，其余处连续。\n检查 $z=0$：左极限 $F_Z(0^-)=\\frac12\\cdot0+\\frac12\\Phi(0)=\\frac12\\cdot\\frac12=\\frac14$；函数值 $F_Z(0)=\\frac12\\cdot1+\\frac12\\cdot\\frac12=\\frac34$。跳跃高度 $\\frac34-\\frac14=\\frac12\\neq0$，确为间断点。\n故 $F_Z(z)$ 仅在 $z=0$ 处有一个间断点，间断点个数为 $1$。选 B。",
+      "wrong_options": {
+        "A": "认为 0 个间断点，忽视了 Y=0 以概率 ½ 使 Z 退化为常数 0，从而 F_Z 在 z=0 有 ½ 的跳跃。",
+        "C": "认为 2 个，可能误以为 Φ(z) 也带来间断或重复计入；实际正态部分处处连续，只有 z=0 一个跳跃。",
+        "D": "认为 3 个，过度计数；分布函数只有单点 z=0 处的离散跳跃这一处不连续。"
+      },
+      "pitfalls": [
+        "按 Y 取值用全概率拆分：Y=0 给退化分布（阶跃），Y=1 给正态（连续）",
+        "间断点来自离散部分 P{Y=0}=½ 在 z=0 的跳跃，跳跃高度恰为 ½",
+        "正态分布函数 Φ(z) 处处连续，不贡献间断点，别误数"
+      ],
+      "key_point": "Z=XY 按 Y 全概率拆分：混合分布 F_Z=½·阶跃+½Φ，间断点只在退化部分的 z=0 处，共 1 个。"
+    },
+    {
+      "id": 708,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求二元函数 $f(x, y)=x^{2}\\left(2+y^{2}\\right)+y \\ln y$ 的极值",
+      "options": {},
+      "answer": "极小值为 $f\\left(0, \\dfrac{1}{\\mathrm{e}}\\right)=-\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "【分析】无条件二元极值的标准流程：求一阶偏导解驻点方程组，再用二阶偏导构造判别式 $AC-B^2$ 与 $A$ 的符号判定。注意 $y\\ln y$ 要求 $y>0$，定义域为上半平面。\n\n【解答】$f(x,y)=x^2(2+y^2)+y\\ln y$，定义域 $y>0$。一阶偏导\n$$f_x=2x(2+y^2),\\qquad f_y=2x^2 y+\\ln y+1.$$\n令 $f_x=0$：由 $2+y^2>0$ 得 $x=0$。代入 $f_y=0$：$0+\\ln y+1=0\\Rightarrow \\ln y=-1\\Rightarrow y=\\dfrac{1}{\\mathrm e}$。故唯一驻点 $\\left(0,\\dfrac{1}{\\mathrm e}\\right)$。\n二阶偏导\n$$A=f_{xx}=2(2+y^2),\\quad B=f_{xy}=4xy,\\quad C=f_{yy}=2x^2+\\frac{1}{y}.$$\n在驻点 $\\left(0,\\tfrac1{\\mathrm e}\\right)$：$A=2\\left(2+\\tfrac{1}{\\mathrm e^2}\\right)>0$，$B=0$，$C=0+\\mathrm e=\\mathrm e>0$。判别式\n$$AC-B^2=2\\left(2+\\frac{1}{\\mathrm e^2}\\right)\\cdot \\mathrm e-0>0,$$\n且 $A>0$，故该驻点为极小值点。极小值\n$$f\\!\\left(0,\\frac{1}{\\mathrm e}\\right)=0\\cdot\\Big(2+\\frac1{\\mathrm e^2}\\Big)+\\frac1{\\mathrm e}\\ln\\frac1{\\mathrm e}=\\frac1{\\mathrm e}\\cdot(-1)=-\\frac1{\\mathrm e}.$$\n故 $f$ 有极小值 $-\\dfrac{1}{\\mathrm e}$，无极大值。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$y\\ln y$ 要求 y>0，定义域限制不能丢，否则会漏判或多判驻点",
+        "由 f_x=0 得 x=0（因 2+y^2 恒正），再代入 f_y=0 解 y，避免遗漏",
+        "用 AC-B^2 与 A 的符号判定极值类型；A>0 且判别式正为极小值"
+      ],
+      "key_point": "无条件二元极值：解驻点 + Hesse 判别式 AC-B^2；注意 $y\\ln y$ 的定义域 y>0"
+    },
+    {
+      "id": 711,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "(1) 证明拉格朗日中值定理: 若函数 $f(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内可导, 则存在 $\\xi \\in(a, b)$, 使得 $f(b)-f(a)=f^{\\prime}(\\xi)(b-a)$;\r\n\r\n(2) 证明: 若函数 $f(x)$ 在 $x=0$ 处连续, 在 $(0, \\delta)(\\delta>0)$ 内可导, 且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=A$, 则 $f_{+}^{\\prime}(0)$ 存在, 且 $f_{+}^{\\prime}(0)=A$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第(1)问是教材定理，标准做法是构造辅助函数把拉格朗日中值定理化归为罗尔定理：减去连接两端点的直线（弦），使新函数在两端取相等值。第(2)问要证单侧导数存在并等于导函数极限，关键是用拉格朗日中值定理把差商 $\\dfrac{f(x)-f(0)}{x-0}$ 改写成某点的导数值，再让 $x\\to0^+$ 配合 $\\lim_{x\\to0^+}f'(x)=A$（导数极限定理）。\n\n【解答】**(1)** 构造辅助函数\n$$\\varphi(x)=f(x)-f(a)-\\frac{f(b)-f(a)}{b-a}(x-a).$$\n它在 $[a,b]$ 上连续、在 $(a,b)$ 内可导，且\n$$\\varphi(a)=0,\\qquad \\varphi(b)=f(b)-f(a)-\\frac{f(b)-f(a)}{b-a}(b-a)=0,$$\n即 $\\varphi(a)=\\varphi(b)$。由罗尔定理，存在 $\\xi\\in(a,b)$ 使 $\\varphi'(\\xi)=0$。而\n$$\\varphi'(x)=f'(x)-\\frac{f(b)-f(a)}{b-a},$$\n故 $f'(\\xi)=\\dfrac{f(b)-f(a)}{b-a}$，即 $f(b)-f(a)=f'(\\xi)(b-a)$。\n\n**(2)** 任取 $x\\in(0,\\delta)$。由于 $f$ 在 $x=0$ 处连续、在 $(0,x]$ 上可导（$f$ 在 $(0,\\delta)$ 内可导，在 $0$ 处连续），$f$ 在 $[0,x]$ 上满足拉格朗日中值定理条件，故存在 $\\xi_x\\in(0,x)$ 使\n$$\\frac{f(x)-f(0)}{x-0}=f'(\\xi_x).$$\n当 $x\\to0^+$ 时，由 $0<\\xi_x<x$ 及夹逼有 $\\xi_x\\to0^+$。又已知 $\\lim_{x\\to0^+}f'(x)=A$，故\n$$f_{+}'(0)=\\lim_{x\\to0^+}\\frac{f(x)-f(0)}{x-0}=\\lim_{x\\to0^+}f'(\\xi_x)=\\lim_{\\xi_x\\to0^+}f'(\\xi_x)=A.$$\n所以 $f_{+}'(0)$ 存在且等于 $A$，证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "构造辅助函数时务必让两端点函数值相等，才能用罗尔定理；不要直接对 $f$ 用罗尔定理。",
+        "第(2)问是用导数极限定理，必须先说明 $f$ 在 $[0,x]$ 上满足拉氏定理条件（端点处只需连续），再借 $\\xi_x\\to0^+$ 把极限传过去。",
+        "$f_{+}'(0)$ 的存在性来自差商极限存在，不能默认 $f$ 在 $0$ 处可导后再求值。"
+      ],
+      "key_point": "拉氏定理＝减弦化归罗尔；导数极限定理＝用拉氏定理把差商写成 $f'(\\xi_x)$ 再令 $\\xi_x\\to0^+$。"
+    },
+    {
+      "id": 713,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & -1 & -1 \\\\\r\n-1 & 1 & 1 \\\\\r\n0 & -4 & -2\r\n\\end{array}\\right), \\quad \\boldsymbol \\xi_{1}=\\left(\\begin{array}{c}\r\n-1 \\\\1 \\\\-2\\end{array}\\right)$\r\n\r\n(1) 求满足 $\\boldsymbol{A} \\boldsymbol{\\xi}_{2}=\\boldsymbol{\\xi}_{1}, \\boldsymbol A^{2} \\boldsymbol{\\xi}_{3}=\\boldsymbol{\\xi}_{1}$ 的所有向量 $\\boldsymbol{\\xi}_{2}, \\boldsymbol{\\xi}_{3}$;\r\n\r\n(2) 对 (1) 中的任意向量 $\\boldsymbol\\xi_{2}, \\boldsymbol\\xi_{3}$, 证明 $\\boldsymbol\\xi_{1}, \\boldsymbol\\xi_{2}, \\boldsymbol\\xi_{3}$ 线性无关",
+      "options": {},
+      "answer": "$\\boldsymbol{\\xi}_2=\\left(\\begin{array}{c}\\frac{1}{2} k_1-\\frac{1}{2} \\\\ -\\frac{1}{2} k_1+\\frac{1}{2} \\\\ k_1\\end{array}\\right)( k_1$ 为任意常数)\r\n\r\n$\\boldsymbol{\\xi}_3=\\left(\\begin{array}{c}\r\n-k_2-\\frac{1}{2} \\\\k_2 \\\\k_3\r\n\\end{array}\\right)( k_2, k_3$ 为任意常数)",
+      "analysis": "【分析】(1) 是解两个非齐次线性方程组 $A\\xi_2=\\xi_1$ 与 $A^2\\xi_3=\\xi_1$，用增广矩阵初等行变换求通解。(2) 证三向量线性无关，最干净的办法是说明矩阵 $(\\xi_1,\\xi_2,\\xi_3)$ 的行列式恒不为零（与参数 $k_i$ 无关）。\n\n【解答】记 $A=\\begin{pmatrix}1&-1&-1\\\\-1&1&1\\\\0&-4&-2\\end{pmatrix}$，$\\xi_1=\\begin{pmatrix}-1\\\\1\\\\-2\\end{pmatrix}$。\n\n**(1) 求 $\\xi_2$。** 解 $A\\xi_2=\\xi_1$，对增广矩阵 $(A\\mid\\xi_1)$ 行变换：\n$$\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\-1&1&1&1\\\\0&-4&-2&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\0&0&0&0\\\\0&-4&-2&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\0&2&1&1\\\\0&0&0&0\\end{array}\\right).$$\n由第二行 $2x_2+x_3=1$，取 $x_3=k_1$ 为自由元，得 $x_2=\\dfrac{1-k_1}{2}=-\\dfrac12 k_1+\\dfrac12$；第一行 $x_1=x_2+x_3-1=\\left(-\\tfrac12 k_1+\\tfrac12\\right)+k_1-1=\\dfrac12 k_1-\\dfrac12$。故\n$$\\xi_2=\\begin{pmatrix}\\tfrac12 k_1-\\tfrac12\\\\[2pt]-\\tfrac12 k_1+\\tfrac12\\\\[2pt]k_1\\end{pmatrix},\\quad k_1\\ \\text{为任意常数}.$$\n\n**求 $\\xi_3$。** 先算 $A^2$：\n$$A^2=\\begin{pmatrix}1&-1&-1\\\\-1&1&1\\\\0&-4&-2\\end{pmatrix}^2=\\begin{pmatrix}2&2&0\\\\-2&-2&0\\\\4&4&0\\end{pmatrix}.$$\n解 $A^2\\xi_3=\\xi_1$，增广矩阵\n$$\\left(\\begin{array}{ccc|c}2&2&0&-1\\\\-2&-2&0&1\\\\4&4&0&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}2&2&0&-1\\\\0&0&0&0\\\\0&0&0&0\\end{array}\\right).$$\n仅一个有效方程 $2x_1+2x_2=-1$。取 $x_2=k_2,\\ x_3=k_3$ 为自由元，则 $x_1=-k_2-\\dfrac12$。故\n$$\\xi_3=\\begin{pmatrix}-k_2-\\tfrac12\\\\k_2\\\\k_3\\end{pmatrix},\\quad k_2,k_3\\ \\text{为任意常数}.$$\n\n**(2) 证 $\\xi_1,\\xi_2,\\xi_3$ 线性无关。** 计算以三者为列的矩阵的行列式：\n$$\\det(\\xi_1,\\xi_2,\\xi_3)=\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12&-k_2-\\tfrac12\\\\1&-\\tfrac12 k_1+\\tfrac12&k_2\\\\-2&k_1&k_3\\end{vmatrix}.$$\n第二行加第一行（不改变行列式），第一、二行相加后第二行变为 $(0,\\ 0,\\ -\\tfrac12)$：\n$$=\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12&-k_2-\\tfrac12\\\\0&0&-\\tfrac12\\\\-2&k_1&k_3\\end{vmatrix}.$$\n按第二行展开（只有第 $3$ 列非零 $-\\tfrac12$，位置 $(2,3)$，符号 $(-1)^{2+3}=-1$）：\n$$=-\\left(-\\dfrac12\\right)\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12\\\\-2&k_1\\end{vmatrix}=\\dfrac12\\Big[(-1)k_1-(-2)\\left(\\tfrac12 k_1-\\tfrac12\\right)\\Big]=\\dfrac12\\big[-k_1+(k_1-1)\\big]=\\dfrac12(-1)=-\\dfrac12.$$\n行列式恒为 $-\\dfrac12\\neq0$，与 $k_1,k_2,k_3$ 取值无关，故 $\\xi_1,\\xi_2,\\xi_3$ 线性无关。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解 $A^2\\xi_3=\\xi_1$ 要先把 $A^2$ 算对（秩为 $1$），有两个自由参数 $k_2,k_3$。",
+        "证无关用「列行列式恒非零」最稳，结果须与所有 $k_i$ 无关才算证完。"
+      ],
+      "key_point": "非齐次组求通解 + 拼成方阵算行列式恒 $\\neq0$ 证线性无关。"
+    },
+    {
+      "id": 714,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=a x_{1}^{2}+a x_{2}^{2}+(a-1) x_{3}^{2}+2 x_{1} x_{3}-2 x_{2} x_{3}$\r\n\r\n(1) 求二次型 $f$ 的矩阵的所有特征值;\r\n\r\n(2) 若二次型 $f$ 的规范形为 $y_{1}^{2}+y_{2}^{2}$, 求 $a$ 的值",
+      "options": {},
+      "answer": "(1) $\\lambda_1=a, \\lambda_2=a+1, \\lambda_3=a-2$\r\n\r\n(2) $a=2$",
+      "analysis": "【分析】先写出二次型的对称矩阵 $A$，求特征值即解 $|A-\\lambda E|=0$。规范形为 $y_1^2+y_2^2$ 说明正惯性指数为 $2$、负惯性指数为 $0$、秩为 $2$，即三个特征值中恰有两个正、一个为零，据此筛选 $a$。\n\n【解答】\n\n（1）二次型矩阵\n$$A=\\begin{pmatrix} a & 0 & 1\\\\ 0 & a & -1\\\\ 1 & -1 & a-1\\end{pmatrix}.$$\n特征多项式 $|A-\\lambda E|$：\n$$\\begin{vmatrix} a-\\lambda & 0 & 1\\\\ 0 & a-\\lambda & -1\\\\ 1 & -1 & a-1-\\lambda\\end{vmatrix}.$$\n按第一行展开：\n$$(a-\\lambda)\\big[(a-\\lambda)(a-1-\\lambda)-1\\big]+1\\cdot\\big[0-(a-\\lambda)\\big].$$\n第二项 $=-(a-\\lambda)$。提出公因子 $(a-\\lambda)$：\n$$(a-\\lambda)\\Big[(a-\\lambda)(a-1-\\lambda)-1-1\\Big]=(a-\\lambda)\\Big[(a-\\lambda)(a-1-\\lambda)-2\\Big].$$\n令 $u=a-\\lambda$，方括号内 $=u(u-1)-2=u^2-u-2=(u-2)(u+1)$。\n即 $|A-\\lambda E|=(a-\\lambda)(a-\\lambda-2)(a-\\lambda+1)$。\n令其为 $0$：\n$$\\lambda_1=a,\\qquad \\lambda_2=a+1,\\qquad \\lambda_3=a-2.$$\n（验证迹：$\\lambda_1+\\lambda_2+\\lambda_3=3a-1=a+a+(a-1)=\\operatorname{tr}A$，吻合。）\n\n（2）规范形为 $y_1^2+y_2^2$，说明 $A$ 有两个正特征值、一个零特征值（正惯性指数 $2$，秩 $2$）。三个特征值 $a,\\ a+1,\\ a-2$ 中必有一个为 $0$：\n- 若 $a=0$：特征值为 $0,1,-2$，含负值，规范形为 $y_1^2-y_2^2$，不符；\n- 若 $a=-1$：特征值为 $-1,0,-3$，两负一零，不符；\n- 若 $a=2$：特征值为 $2,3,0$，两正一零，规范形恰为 $y_1^2+y_2^2$，符合。\n\n所以 $a=2$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "对称矩阵非对角元取交叉项系数的一半：$2x_1x_3$ 对应 $a_{13}=a_{31}=1$，$-2x_2x_3$ 对应 $a_{23}=a_{32}=-1$",
+        "规范形 $y_1^2+y_2^2$ 要求正惯性指数=2、负惯性指数=0、秩=2，需同时满足两正一零，单看秩为 2 会漏掉对正负号的判断"
+      ],
+      "key_point": "二次型特征值：写对称矩阵解特征方程；规范形 $\\sum y_i^2$ 的系数即正、负、零惯性指数，据此定参数。"
+    },
+    {
+      "id": 715,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "袋中有 $1$ 个红球、$2$ 个黑球与 $3$ 个白球. 现有放回地从袋中取两次, 每次取一个球. 以 $X$, $Y, Z$ 分别表示两次取球所取得的红球、黑球与白球的个数\r\n\r\n(1) 求 $P\\{X=1 \\mid Z=0\\}$;\r\n\r\n(2) 求二维随机变量 $(X, Y)$ 的概率分布",
+      "options": {},
+      "answer": "P\\{X=1\\mid Z=0\\}=\\dfrac{4}{9};\\ (X,Y) 联合分布见解答（X+Y\\le2 的六个非零格子）",
+      "analysis": "【分析】袋中 $1$ 红、$2$ 黑、$3$ 白共 $6$ 球，有放回取两次，每次：红 $p_r=\\tfrac16$、黑 $p_b=\\tfrac13$、白 $p_w=\\tfrac12$。两次独立。$(X,Y,Z)$ 服从参数 $(2;p_r,p_b,p_w)$ 的多项分布，$X+Y+Z=2$。(1) 用条件概率定义，$Z=0$ 即两次都不取白；(2) 列 $X+Y\\le2$ 的联合分布表，由多项概率公式逐格算。\n\n【解答】(1) $Z=0$ 表示两次都没取到白球，每次取到非白（红或黑）概率 $p_r+p_b=\\tfrac12$，故\n$$P\\{Z=0\\}=\\Big(\\tfrac12\\Big)^2=\\tfrac14.$$\n$\\{X=1,Z=0\\}$ 表示两次中恰一次红、一次黑（无白）：\n$$P\\{X=1,Z=0\\}=2\\,p_r p_b=2\\cdot\\tfrac16\\cdot\\tfrac13=\\tfrac19.$$\n所以\n$$P\\{X=1\\mid Z=0\\}=\\frac{P\\{X=1,Z=0\\}}{P\\{Z=0\\}}=\\frac{1/9}{1/4}=\\frac49.$$\n(2) 由多项分布 $P\\{X=i,Y=j\\}=\\dfrac{2!}{i!\\,j!\\,(2-i-j)!}p_r^{\\,i}p_b^{\\,j}p_w^{\\,2-i-j}$（$i+j\\le2$）：\n$$P\\{0,0\\}=p_w^2=\\tfrac14,\\quad P\\{0,1\\}=2p_bp_w=2\\cdot\\tfrac13\\cdot\\tfrac12=\\tfrac13,\\quad P\\{0,2\\}=p_b^2=\\tfrac19,$$\n$$P\\{1,0\\}=2p_rp_w=2\\cdot\\tfrac16\\cdot\\tfrac12=\\tfrac16,\\quad P\\{1,1\\}=2p_rp_b=\\tfrac19,\\quad P\\{2,0\\}=p_r^2=\\tfrac1{36},$$\n其余（$i+j>2$）为 $0$。验算总和：$\\tfrac14+\\tfrac13+\\tfrac19+\\tfrac16+\\tfrac19+\\tfrac1{36}=\\tfrac{9+12+4+6+4+1}{36}=\\tfrac{36}{36}=1$。\n即 $(X,Y)$ 分布表：$P(0,0)=\\tfrac14,\\ P(0,1)=\\tfrac13,\\ P(0,2)=\\tfrac19,\\ P(1,0)=\\tfrac16,\\ P(1,1)=\\tfrac19,\\ P(2,0)=\\tfrac1{36}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "有放回⇒两次独立、概率不变，是多项分布；切勿用超几何（无放回）公式。",
+        "X+Y≤2 的约束限定只有 6 个非零格子；混合事件如 {X=1,Z=0} 别漏掉两次先后顺序的系数 2。"
+      ],
+      "key_point": "有放回三色取球=多项分布(n=2)；条件概率回归定义，联合分布按多项公式逐格算并用总和=1 自检。"
+    },
+    {
+      "id": 717,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $\\displaystyle f(x)=\\frac{x-x^3}{\\sin \\pi x}$ 的可去间断点的个数为 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "无穷多个"
+      },
+      "answer": "C",
+      "analysis": "【分析】$f(x)=\\dfrac{x-x^3}{\\sin\\pi x}$ 的间断点是分母 $\\sin\\pi x=0$ 处，即所有整数 $x=n$。判断每个 $n$ 是否为可去间断点：看 $\\lim_{x\\to n}f(x)$ 是否存在且有限。分子 $x-x^3=x(1-x)(1+x)$ 只在 $x=0,\\pm1$ 为零，能与分母的零抵消（极限有限）；其余整数处分子非零、分母趋零，极限为 $\\infty$，是无穷（第二类）间断点，不可去。\n\n【解答】定义域排除 $\\sin\\pi x=0$ 即所有整数 $x=n\\ (n\\in\\mathbb Z)$，故间断点为全体整数。\n\n分子 $x-x^3=x(1-x^2)=x(1-x)(1+x)$，零点为 $x=0,1,-1$。\n\n（1）$x=n\\notin\\{0,1,-1\\}$（如 $x=2$）：分子 $\\to n-n^3\\neq0$，分母 $\\to0$，故 $\\lim_{x\\to n}f(x)=\\infty$，为无穷间断点，不可去。\n\n（2）$x=0,1,-1$：分子、分母同为简单零点，极限有限。逐一算（用 $\\sin\\pi x$ 在整数处导数 $\\pi\\cos\\pi n=\\pm\\pi$，或洛必达）：\n$$\\lim_{x\\to0}\\dfrac{x-x^3}{\\sin\\pi x}=\\dfrac{1}{\\pi},\\quad \\lim_{x\\to1}=\\dfrac{1-3}{\\pi\\cos\\pi}=\\dfrac{-2}{-\\pi}=\\dfrac{2}{\\pi},\\quad \\lim_{x\\to-1}=\\dfrac{1-3}{\\pi\\cos(-\\pi)}=\\dfrac{-2}{-\\pi}=\\dfrac{2}{\\pi}.$$\n三处极限均存在且有限，故 $x=0,1,-1$ 都是可去间断点。\n\n可去间断点共 $3$ 个，选 C。",
+      "wrong_options": {
+        "A": "1 个：只数了某一个零点（如只看 x=0），漏了 x=±1 也使分子为零、极限有限。",
+        "B": "2 个：可能只算了 x=0 与 x=1，遗漏 x=-1（注意 1+x 因子在 x=-1 处为零）。",
+        "D": "无穷多个：把所有整数间断点都当可去。实际除 0,±1 外的整数处分子非零，极限为 ∞，是无穷间断点，不可去。"
+      },
+      "pitfalls": [
+        "间断点是全体整数，但可去的只有分子也为零的 x=0,1,-1（分子 x(1-x)(1+x)）",
+        "其余整数处极限为 ∞，是第二类(无穷)间断点，绝非可去——排除 D",
+        "x=-1 易被漏：1+x 因子在此为零，使其也成为可去间断点，共 3 个"
+      ],
+      "key_point": "可去间断点 ⟺ 极限存在且有限 ⟺ 分母零点被分子零点抵消；本题为分子零点 x=0,±1，共 3 个。"
+    },
+    {
+      "id": 721,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{P}$ 均为 3 阶矩阵, $\\boldsymbol{P}^{\\mathrm{T}}$ 为 $\\boldsymbol{P}$ 的转置矩阵, 且 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, 若 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, $\\boldsymbol Q=\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, 则 $\\boldsymbol Q^{\\mathrm{T}} \\boldsymbol{A Q}$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}2 & 1 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}1 & 1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】$Q$ 的各列是 $P$ 各列的线性组合，故存在过渡矩阵 $M$ 使 $Q=PM$。则 $Q^{\\mathrm T}AQ=M^{\\mathrm T}(P^{\\mathrm T}AP)M=M^{\\mathrm T}DM$，其中 $D=\\operatorname{diag}(1,1,2)$ 已知，只需写出 $M$ 做两次矩阵乘法。\n\n【解答】由 $Q=(\\alpha_1+\\alpha_2,\\ \\alpha_2,\\ \\alpha_3)$，各列用 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$ 表示：第 1 列 $=P(1,1,0)^{\\mathrm T}$，第 2 列 $=P(0,1,0)^{\\mathrm T}$，第 3 列 $=P(0,0,1)^{\\mathrm T}$，故 $Q=PM$，\n$$M=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix}.$$\n于是\n$$Q^{\\mathrm T}AQ=(PM)^{\\mathrm T}A(PM)=M^{\\mathrm T}(P^{\\mathrm T}AP)M=M^{\\mathrm T}DM,\\quad D=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}.$$\n先算 $DM=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}$，再左乘 $M^{\\mathrm T}=\\begin{pmatrix}1&1&0\\\\0&1&0\\\\0&0&1\\end{pmatrix}$：\n$$M^{\\mathrm T}DM=\\begin{pmatrix}1&1&0\\\\0&1&0\\\\0&0&1\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}=\\begin{pmatrix}2&1&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}.$$\n故选 **A**。",
+      "wrong_options": {
+        "B": "$\\begin{pmatrix}1&1&0\\\\1&2&0\\\\0&0&2\\end{pmatrix}$：把过渡矩阵 $M$ 与 $M^{\\mathrm T}$ 用反了（误算 $MDM^{\\mathrm T}$），导致左上 $2\\times2$ 块算成 $(1,1;1,2)$。",
+        "C": "$\\operatorname{diag}(2,1,2)$：误以为合同变换仍保持对角，忽略了非对角元 $1$，这是把 $Q$ 当成只缩放某一列。",
+        "D": "$\\operatorname{diag}(1,2,2)$：直接照搬 $D$ 并随意改动元素，未做矩阵乘法。"
+      },
+      "pitfalls": [
+        "关键是写对过渡矩阵 $M$：$Q$ 的列＝$P$ 的列组合，组合系数按列竖排进 $M$。",
+        "$Q^{\\mathrm T}AQ=M^{\\mathrm T}DM$ 是合同变换，结果一般不再对角，会出现非对角元。",
+        "乘法顺序 $M^{\\mathrm T}(DM)$ 不能写反，否则得到错误的对称位置。"
+      ],
+      "key_point": "$Q=PM$ 则 $Q^{\\mathrm T}AQ=M^{\\mathrm T}(P^{\\mathrm T}AP)M$；找准过渡矩阵 $M$ 是全题枢纽。"
+    },
+    {
+      "id": 728,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算不定积分 $\\displaystyle \\int \\ln \\left(1+\\sqrt{\\frac{1+x}{x}}\\right) \\mathrm{d} x(x>0)$",
+      "options": {},
+      "answer": "$\\displaystyle x \\ln \\left(1+\\sqrt{\\frac{1+x}{x}}\\right)+\\frac{1}{2} \\ln (\\sqrt{1+x}+\\sqrt{x})+\\frac{1}{2} x-\\frac{1}{2} \\sqrt{x+x^2}+C$",
+      "analysis": "【分析】被积函数是一个对数复合式，没有现成公式，首选**分部积分**把对数\"求导掉\"。取 $u=\\ln\\big(1+\\sqrt{\\tfrac{1+x}{x}}\\big),\\ \\mathrm{d}v=\\mathrm{d}x$，分部后会出现一个含根式的有理积分，关键技巧是把分母 $1+\\sqrt{\\tfrac{1+x}{x}}$ 通分、有理化，化简成 $1-\\sqrt{\\tfrac{x}{1+x}}$ 这样可直接积分的形式。\n\n【解答】记 $w=\\sqrt{\\dfrac{1+x}{x}}=\\sqrt{1+\\dfrac1x}\\ (x>0)$。\n\n**第一步：分部积分。** 取 $u=\\ln(1+w),\\ \\mathrm{d}v=\\mathrm{d}x,\\ v=x$。先求 $u'$：\n$$w'=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\Big(1+\\tfrac1x\\Big)^{1/2}=\\frac12\\Big(1+\\tfrac1x\\Big)^{-1/2}\\!\\Big(-\\tfrac1{x^2}\\Big)=-\\frac{1}{2x^2w},$$\n$$u'=\\frac{w'}{1+w}=-\\frac{1}{2x^2w(1+w)}.$$\n于是\n$$I=x\\ln(1+w)-\\int x\\cdot\\Big(-\\frac{1}{2x^2w(1+w)}\\Big)\\mathrm{d}x=x\\ln(1+w)+\\frac12\\int\\frac{\\mathrm{d}x}{x\\,w\\,(1+w)}.$$\n\n**第二步：化简余下积分。** 注意 $xw=x\\sqrt{\\tfrac{1+x}{x}}=\\sqrt{x(1+x)}$，且 $1+w=1+\\sqrt{\\tfrac{1+x}{x}}=\\dfrac{\\sqrt{x}+\\sqrt{1+x}}{\\sqrt{x}}$。故\n$$\\frac{1}{x\\,w\\,(1+w)}=\\frac{1}{\\sqrt{x(1+x)}}\\cdot\\frac{\\sqrt{x}}{\\sqrt{x}+\\sqrt{1+x}}=\\frac{1}{\\sqrt{1+x}\\,(\\sqrt{x}+\\sqrt{1+x})}.$$\n分子分母同乘 $(\\sqrt{1+x}-\\sqrt{x})$，分母得 $\\sqrt{1+x}\\big[(1+x)-x\\big]=\\sqrt{1+x}$：\n$$=\\frac{\\sqrt{1+x}-\\sqrt{x}}{\\sqrt{1+x}}=1-\\sqrt{\\frac{x}{1+x}}.$$\n\n**第三步：积出。**\n$$\\int\\frac{\\mathrm{d}x}{x\\,w\\,(1+w)}=\\int\\Big(1-\\sqrt{\\tfrac{x}{1+x}}\\Big)\\mathrm{d}x=x-\\int\\sqrt{\\frac{x}{1+x}}\\,\\mathrm{d}x.$$\n而（可对结果求导验证）\n$$\\int\\sqrt{\\frac{x}{1+x}}\\,\\mathrm{d}x=\\sqrt{x(1+x)}-\\ln\\big(\\sqrt{x}+\\sqrt{1+x}\\big)+C_0,$$\n故\n$$\\int\\frac{\\mathrm{d}x}{x\\,w\\,(1+w)}=x-\\sqrt{x+x^2}+\\ln\\big(\\sqrt{x}+\\sqrt{1+x}\\big)+C_0.$$\n\n**第四步：合并。**\n$$I=x\\ln\\Big(1+\\sqrt{\\tfrac{1+x}{x}}\\Big)+\\frac12\\Big[x-\\sqrt{x+x^2}+\\ln\\big(\\sqrt{x}+\\sqrt{1+x}\\big)\\Big]+C,$$\n即\n$$\\boxed{\\,I=x\\ln\\!\\Big(1+\\sqrt{\\tfrac{1+x}{x}}\\Big)+\\frac12\\ln\\big(\\sqrt{1+x}+\\sqrt{x}\\big)+\\frac12x-\\frac12\\sqrt{x+x^2}+C\\,}.$$\n（已对结果求导，化简后等于原被积函数，正确。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部积分后的根式积分别硬算，关键是把 $1+w$ 通分并有理化成 $1-\\sqrt{\\tfrac{x}{1+x}}$，难度立刻降一档。",
+        "$xw=\\sqrt{x(1+x)}$ 这一步合并要看准（$x>0$ 才能开平方进去），否则化简卡住。",
+        "$\\int\\sqrt{\\tfrac{x}{1+x}}\\mathrm{d}x$ 的对数项写成 $\\ln(\\sqrt{x}+\\sqrt{1+x})$，与反双曲余弦只差常数，结果等价。"
+      ],
+      "key_point": "对数被积函数先分部积分降阶，余下根式积分靠通分有理化为 $1-\\sqrt{x/(1+x)}$ 后直接积出。"
+    },
+    {
+      "id": 731,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint_D(x-y) \\mathrm{d} x \\mathrm{d} y$, 其中 \r\n\r\n$D=\\left\\{(x, y) \\mid(x-1)^2+(y-1)^2 \\leqslant 2, y \\geqslant x\\right\\}$",
+      "options": {},
+      "answer": "$-\\dfrac{8}{3}$",
+      "analysis": "【分析】区域 $D$ 是圆盘 $(x-1)^2+(y-1)^2\\le2$（圆心 $(1,1)$，半径 $\\sqrt2$）被直线 $y=x$ 切出的上半部分（$y\\ge x$）。直线 $y=x$ 恰过圆心，故 $D$ 是半圆盘。做平移 $u=x-1,\\ v=y-1$ 把圆心移到原点，被积函数 $x-y=u-v$，区域变为 $u^2+v^2\\le2,\\ v\\ge u$。再用极坐标，利用半圆盘的对称性快速积分。\n\n【解答】令 $u=x-1,\\ v=y-1$，则 $\\mathrm{d}x\\,\\mathrm{d}y=\\mathrm{d}u\\,\\mathrm{d}v$，$x-y=u-v$，区域化为\n$$D':\\ u^2+v^2\\le2,\\quad v\\ge u.$$\n这是半径 $\\sqrt2$ 的半圆盘（直线 $v=u$ 过原点）。于是\n$$I=\\iint_{D'}(u-v)\\,\\mathrm{d}u\\,\\mathrm{d}v.$$\n用极坐标 $u=r\\cos\\theta,\\ v=r\\sin\\theta$，$u-v=r(\\cos\\theta-\\sin\\theta)$。条件 $v\\ge u$ 即 $\\sin\\theta\\ge\\cos\\theta$，对应 $\\theta\\in\\left[\\dfrac{\\pi}{4},\\dfrac{5\\pi}{4}\\right]$，$r\\in[0,\\sqrt2]$。故\n$$I=\\int_{\\pi/4}^{5\\pi/4}\\int_0^{\\sqrt2}r(\\cos\\theta-\\sin\\theta)\\cdot r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\left(\\int_0^{\\sqrt2}r^2\\,\\mathrm{d}r\\right)\\left(\\int_{\\pi/4}^{5\\pi/4}(\\cos\\theta-\\sin\\theta)\\,\\mathrm{d}\\theta\\right).$$\n径向：$\\displaystyle\\int_0^{\\sqrt2}r^2\\,\\mathrm{d}r=\\frac{(\\sqrt2)^3}{3}=\\frac{2\\sqrt2}{3}$。\n角向：原函数为 $\\sin\\theta+\\cos\\theta$，\n$$\\int_{\\pi/4}^{5\\pi/4}(\\cos\\theta-\\sin\\theta)\\,\\mathrm{d}\\theta=\\big[\\sin\\theta+\\cos\\theta\\big]_{\\pi/4}^{5\\pi/4}=\\left(-\\frac{\\sqrt2}{2}-\\frac{\\sqrt2}{2}\\right)-\\left(\\frac{\\sqrt2}{2}+\\frac{\\sqrt2}{2}\\right)=-\\sqrt2-\\sqrt2=-2\\sqrt2.$$\n相乘：\n$$I=\\frac{2\\sqrt2}{3}\\times(-2\\sqrt2)=-\\frac{4\\cdot2}{3}=-\\frac{8}{3}.$$\n所以 $\\displaystyle\\iint_D(x-y)\\,\\mathrm{d}x\\,\\mathrm{d}y=-\\dfrac{8}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "直线 $y=x$ 过圆心，$D$ 是半圆盘而非弓形，平移到原点后对称性最强、积分最省事",
+        "在 $v\\ge u$ 半盘上 $u-v\\le0$，结果应为负，符号不能丢；若误用全圆盘则积分为 $0$",
+        "角度范围 $\\theta\\in[\\pi/4,5\\pi/4]$ 来自 $\\sin\\theta\\ge\\cos\\theta$，别错写成 $[\\pi/4,\\pi/2]$"
+      ],
+      "key_point": "圆盘上的积分先平移圆心到原点再极坐标；当切割直线过圆心时区域是规整半盘，径向与角向积分可分离"
+    },
+    {
+      "id": 733,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设事件 $A$ 与事件 $B$ 互不相容, 则 $(\\quad)$",
+      "options": {
+        "A": "$P(\\bar{A} \\bar{B})=0$",
+        "B": "$P(A B)=P(A) P(B)$",
+        "C": "$P(A)=1-P(B)$",
+        "D": "$P(\\bar{A} \\cup \\bar{B})=1$"
+      },
+      "answer": "D",
+      "analysis": "【分析】「$A$ 与 $B$ 互不相容」即 $AB=\\varnothing$，等价于 $P(AB)=0$。逐项检验哪一个是由此必然成立的恒等式。重点是 $P(\\bar A\\cup\\bar B)$ 用德摩根律 $\\bar A\\cup\\bar B=\\overline{AB}$，再用 $P(\\overline{AB})=1-P(AB)$。\n\n【解答】互不相容 $\\Rightarrow AB=\\varnothing\\Rightarrow P(AB)=0$。\n\n看 D：由德摩根律 $\\bar A\\cup\\bar B=\\overline{A\\cap B}=\\overline{AB}$，故\n$$P(\\bar A\\cup\\bar B)=P(\\overline{AB})=1-P(AB)=1-0=1.$$\n恒成立，故选 D。\n\n（说明：原题选项 A 实为 $P(\\bar A\\bar B)=0$，对互不相容并不一定成立——$P(\\bar A\\bar B)=P(\\overline{A\\cup B})=1-P(A)-P(B)$ 未必为 0，故 A 错。B 是独立性的判据，与互不相容无关；C 要求 $A,B$ 互为对立事件，比互不相容强，也不成立。）",
+      "wrong_options": {
+        "A": "错。原题为 P(ĀB̄)=0。互不相容时 P(ĀB̄)=P(¬(A∪B))=1-P(A)-P(B)，一般不为 0；只有 A∪B=Ω（即 A,B 还互为对立）时才成立。",
+        "B": "错。P(AB)=P(A)P(B) 是相互独立的特征。互不相容（AB=∅）时 P(AB)=0，若 P(A),P(B)>0 则 P(A)P(B)>0≠0，二者通常矛盾，故不成立。",
+        "C": "错。P(A)=1-P(B) 即 P(A)+P(B)=1，意味着 A,B 恰为对立事件（A∪B=Ω 且互斥），这比单纯互不相容强，不必然成立。"
+      },
+      "pitfalls": [
+        "互不相容 AB=∅ ⇏ A,B 对立，也 ⇏ 独立；这三者要分清。",
+        "P(ĀB̄)=P(¬(A∪B))=1-P(A∪B)=1-P(A)-P(B)（互斥时），不是 0。",
+        "D 项用德摩根 Ā∪B̄=¬(AB)，概率 =1-P(AB)=1，是唯一恒成立的。"
+      ],
+      "key_point": "互不相容只给出 P(AB)=0；判选项时把每项用德摩根/对立化到 P(AB) 上即见真伪。"
+    },
+    {
+      "id": 734,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}-\\mathrm{e}^{\\cos x}}{\\sqrt[3]{1+x^2}-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{3 \\mathrm{e}}{2}$",
+      "analysis": "【分析】$\\dfrac{0}{0}$ 型极限，用等价无穷小最快。分母 $\\sqrt[3]{1+x^2}-1$ 用 $(1+u)^{1/3}-1\\sim\\dfrac{u}{3}$；分子提出公因子 $\\mathrm{e}$ 后化为 $\\mathrm{e}\\big(1-\\mathrm{e}^{\\cos x-1}\\big)$，再用 $\\mathrm{e}^{v}-1\\sim v$ 与 $\\cos x-1\\sim-\\dfrac{x^2}{2}$。\n\n【解答】分母：$\\sqrt[3]{1+x^2}-1\\sim\\dfrac{x^2}{3}$（$x\\to0$）。\n\n分子：\n$$\\mathrm{e}-\\mathrm{e}^{\\cos x}=\\mathrm{e}\\big(1-\\mathrm{e}^{\\cos x-1}\\big).$$\n当 $x\\to0$，$\\cos x-1\\sim-\\dfrac{x^2}{2}\\to0$，故 $\\mathrm{e}^{\\cos x-1}-1\\sim\\cos x-1\\sim-\\dfrac{x^2}{2}$，即 $1-\\mathrm{e}^{\\cos x-1}\\sim\\dfrac{x^2}{2}$。于是分子 $\\sim\\mathrm{e}\\cdot\\dfrac{x^2}{2}$。\n\n所以\n$$\\lim_{x\\to0}\\frac{\\mathrm{e}-\\mathrm{e}^{\\cos x}}{\\sqrt[3]{1+x^2}-1}=\\frac{\\mathrm{e}\\,x^2/2}{x^2/3}=\\frac{3\\mathrm{e}}{2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子先提公因子 e 再用 e^v-1~v，不要直接对 e^{cos x} 套等价无穷小。",
+        "cos x-1~-x²/2（带系数 1/2），漏掉系数会得错值。",
+        "立方根用 (1+u)^{1/3}-1~u/3，分母系数是 1/3。"
+      ],
+      "key_point": "0/0 型先提公因子化出 e^v-1 与 (1+u)^a-1 标准形，再套等价无穷小定阶定系数。"
+    },
+    {
+      "id": 735,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $z=\\left(x+\\mathrm{e}^y\\right)^x$, 则 $\\displaystyle \\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,0)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\ln 2+1$",
+      "analysis": "【分析】求 $\\dfrac{\\partial z}{\\partial x}$ 时把 $y$ 看作常数，$z=(x+\\mathrm{e}^y)^x$ 是「底数、指数都含 $x$」的幂指函数，用对数求导（取对数后隐函数求导）最稳。\n\n【解答】\n对 $z=(x+\\mathrm{e}^y)^x$ 取对数（视 $y$ 为常数）：\n$$\\ln z=x\\ln(x+\\mathrm{e}^y).$$\n两边对 $x$ 求偏导：\n$$\\dfrac{1}{z}\\dfrac{\\partial z}{\\partial x}=\\ln(x+\\mathrm{e}^y)+x\\cdot\\dfrac{1}{x+\\mathrm{e}^y}.$$\n即 $\\dfrac{\\partial z}{\\partial x}=(x+\\mathrm{e}^y)^x\\left[\\ln(x+\\mathrm{e}^y)+\\dfrac{x}{x+\\mathrm{e}^y}\\right].$\n\n在 $(1,0)$ 处：$x+\\mathrm{e}^y=1+1=2$，$z=2^1=2$，\n$$\\left.\\dfrac{\\partial z}{\\partial x}\\right|_{(1,0)}=2\\left[\\ln 2+\\dfrac{1}{2}\\right]=2\\ln 2+1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "幂指函数求偏导不能只按幂函数或只按指数函数法则，对数求导后两项都要有（$\\ln$ 项 + 链式项）",
+        "求 $\\partial/\\partial x$ 时 $\\mathrm{e}^y$ 视为常数，但它仍随 $x$ 出现在底数 $x+\\mathrm{e}^y$ 中，链式项 $\\frac{x}{x+\\mathrm{e}^y}$ 不可漏"
+      ],
+      "key_point": "底数指数都含变量的幂指函数，先取对数再求偏导，得「$\\ln$ 底数 + 指数·底数导/底数」两项。"
+    },
+    {
+      "id": 736,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{\\mathrm{e}^n-(-1)^n}{n^2} x^n$ 的收敛半径为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "【分析】收敛半径由系数的增长率决定，用根值法 $R=\\dfrac{1}{\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}}$。系数 $a_n=\\dfrac{\\mathrm e^n-(-1)^n}{n^2}$ 中 $\\mathrm e^n$ 起主导。\n\n【解答】系数 $a_n=\\dfrac{\\mathrm e^n-(-1)^n}{n^2}$。考察\n$$\\sqrt[n]{|a_n|}=\\frac{\\big(\\mathrm e^n-(-1)^n\\big)^{1/n}}{n^{2/n}}.$$\n因 $\\mathrm e^n-(-1)^n=\\mathrm e^n\\big(1-(-1)^n\\mathrm e^{-n}\\big)$，故 $\\big(\\mathrm e^n-(-1)^n\\big)^{1/n}=\\mathrm e\\cdot\\big(1-(-1)^n\\mathrm e^{-n}\\big)^{1/n}\\to\\mathrm e$，又 $n^{2/n}=\\mathrm e^{\\frac{2\\ln n}{n}}\\to1$。所以\n$$\\lim_{n\\to\\infty}\\sqrt[n]{|a_n|}=\\mathrm e.$$\n收敛半径 $R=\\dfrac{1}{\\mathrm e}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "用根值法时 e^n 主导，(-1)^n 与 n^2 都不改变 $\\sqrt[n]{|a_n|}$ 的极限",
+        "$n^{2/n}\\to 1$，多项式因子不影响收敛半径",
+        "$R=1/\\lim\\sqrt[n]{|a_n|}=1/e$，别取倒数取反"
+      ],
+      "key_point": "幂级数收敛半径用根值法，指数项 e^n 决定极限为 e，R=1/e"
+    },
+    {
+      "id": 737,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设某产品的需求函数为 $Q=Q(P)$, 其对价格 $P$ 的弹性 $\\varepsilon_P=0.2$, 则当需求量为 10000 件时, 价格增加 1 元会使产品收益增加 $\\rule{0.5cm}{0.2mm}$元",
+      "options": {},
+      "answer": "$8000$",
+      "analysis": "【分析】考查收益对价格的边际分析与需求价格弹性的关系。收益 $R=PQ$，对 $P$ 求导得边际收益 $\\dfrac{\\mathrm{d}R}{\\mathrm{d}P}$，用弹性 $\\varepsilon_P$ 表示后代入数值，价格增加 1 元的收益增量近似为该导数值。\n\n【解答】收益 $R=PQ$，对价格 $P$ 求导：\n\n$$\\dfrac{\\mathrm{d}R}{\\mathrm{d}P}=Q+P\\dfrac{\\mathrm{d}Q}{\\mathrm{d}P}=Q\\left(1+\\dfrac{P}{Q}\\dfrac{\\mathrm{d}Q}{\\mathrm{d}P}\\right).$$\n\n需求价格弹性（取正值定义）$\\varepsilon_P=-\\dfrac{P}{Q}\\dfrac{\\mathrm{d}Q}{\\mathrm{d}P}=0.2$，故 $\\dfrac{P}{Q}\\dfrac{\\mathrm{d}Q}{\\mathrm{d}P}=-0.2$，于是\n\n$$\\dfrac{\\mathrm{d}R}{\\mathrm{d}P}=Q(1-\\varepsilon_P)=Q(1-0.2)=0.8\\,Q.$$\n\n当需求量 $Q=10000$ 时，$\\dfrac{\\mathrm{d}R}{\\mathrm{d}P}=0.8\\times10000=8000$。价格增加 1 元，收益约增加\n\n$$\\Delta R\\approx\\dfrac{\\mathrm{d}R}{\\mathrm{d}P}\\cdot\\Delta P=8000\\times1=8000\\ (\\text{元}).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "弹性 $\\varepsilon_P=0.2<1$ 为低弹性（缺乏弹性），$1-\\varepsilon_P>0$，故涨价收益增加。",
+        "边际收益 $\\frac{\\mathrm{d}R}{\\mathrm{d}P}=Q(1-\\varepsilon_P)$，注意弹性取正值定义时这里是 $1-\\varepsilon_P$。"
+      ],
+      "key_point": "$R=PQ\\Rightarrow \\frac{\\mathrm{d}R}{\\mathrm{d}P}=Q(1-\\varepsilon_P)$，弹性小于 1 涨价增收。"
+    },
+    {
+      "id": 738,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, \\cdots, X_m$ 为来自二项分布总体 $B(n, p)$ 的简单随机样本, $\\bar{X}$ 和 $S^2$ 分别为样本均值和样本方差. 记统计量 $T=\\bar{X}-S^2$, 则 $E(T)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$n p^2$",
+      "analysis": "【分析】关键是两个无偏性事实：样本均值的期望 $E(\\bar X)=E(X)$；样本方差 $S^2$ 是总体方差的无偏估计，$E(S^2)=D(X)$。对二项总体 $B(n,p)$ 代入 $E(X)=np,\\ D(X)=np(1-p)$ 即可。\n\n【解答】总体 $X\\sim B(n,p)$，故 $E(X)=np$，$D(X)=np(1-p)$。\n样本均值的期望：\n$$E(\\bar X)=E(X)=np.$$\n样本方差 $S^2=\\dfrac{1}{m-1}\\sum_{i=1}^m(X_i-\\bar X)^2$ 是总体方差的无偏估计：\n$$E(S^2)=D(X)=np(1-p).$$\n于是\n$$E(T)=E(\\bar X)-E(S^2)=np-np(1-p)=np\\big[1-(1-p)\\big]=np\\cdot p=np^2.$$\n故 $E(T)=np^2$。\n验算：$np-np(1-p)=np-np+np^2=np^2$，运算无误；量纲上 $E(\\bar X)$ 与 $E(S^2)$ 均为期望/方差，相减得 $np^2$ 合理。",
+      "wrong_options": {},
+      "pitfalls": [
+        "样本方差 S²（除以 m-1）是无偏估计，E(S²)=D(X)，不要错记成除以 m 或写成 D(X)/m",
+        "二项分布方差是 np(1-p)，别漏掉 (1-p) 因子",
+        "E(X̄)=E(X)=np 与样本容量 m 无关，化简后 m 完全消去"
+      ],
+      "key_point": "E(X̄)=E(X)、E(S²)=D(X) 两条无偏性，代二项 np 与 np(1-p) 即得 np²。"
+    },
+    {
+      "id": 739,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设曲线 $y=f(x)$, 其中 $f(x)$ 是可导函数, 且 $f(x)>0$. 已知曲线 $y=f(x)$ 与直线 $y=0$, $x=1$ 及 $x=t(t>1)$ 所围成的曲边梯形绕 $x$ 轴旋转一周所得的立体体积值是该曲边梯形面积值的 $\\pi t$ 倍, 求该曲线的方程",
+      "options": {},
+      "answer": "$x=\\dfrac{1}{3}\\left(\\dfrac{1}{\\sqrt{y}}+2 y\\right)$",
+      "analysis": "【分析】把体积、面积都写成含上限 $t$ 的变限积分，由条件得到一个积分方程；对 $t$ 求导消去积分号，得到 $f$ 与 $t$ 的关系。由于结果以 $x$ 关于 $y$ 的形式给出，将关系整理成以 $y$ 为自变量、$x$ 为未知函数的一阶线性方程求解；初值由 $t\\to1$ 时面积、体积均为 $0$ 确定。\n\n【解答】记 $y=f(x)>0$。曲边梯形（$1\\leq x\\leq t$）绕 $x$ 轴体积与面积分别为\n$$V(t)=\\pi\\int_1^t f^2(x)\\,\\mathrm{d}x,\\qquad S(t)=\\int_1^t f(x)\\,\\mathrm{d}x.$$\n由题设 $V(t)=\\pi t\\,S(t)$，约去 $\\pi$：\n$$\\int_1^t f^2(x)\\,\\mathrm{d}x=t\\int_1^t f(x)\\,\\mathrm{d}x.\\qquad(\\ast)$$\n对 $t$ 求导：\n$$f^2(t)=\\int_1^t f(x)\\,\\mathrm{d}x+t f(t).\\qquad(\\ast\\ast)$$\n先取初值：在 $(\\ast\\ast)$ 中令 $t=1$，右端积分为 $0$，得 $f^2(1)=f(1)$，由 $f>0$ 知 $f(1)=1$。\n\n对 $(\\ast\\ast)$ 再对 $t$ 求导（记 $y=f(t)$）：\n$$2f(t)f'(t)=f(t)+\\bigl[f(t)+t f'(t)\\bigr]=2f(t)+t f'(t),$$\n即\n$$f'(t)\\bigl(2f(t)-t\\bigr)=2f(t)\\ \\Longrightarrow\\ \\frac{\\mathrm{d}y}{\\mathrm{d}t}=\\frac{2y}{2y-t}.$$\n以 $y$ 为自变量、$x(=t)$ 为未知函数取倒数：\n$$\\frac{\\mathrm{d}x}{\\mathrm{d}y}=\\frac{2y-x}{2y}=1-\\frac{x}{2y}\\ \\Longrightarrow\\ \\frac{\\mathrm{d}x}{\\mathrm{d}y}+\\frac{1}{2y}x=1.$$\n这是一阶线性方程。积分因子 $\\mu=\\mathrm{e}^{\\int \\frac{1}{2y}\\mathrm{d}y}=\\sqrt y$，故\n$$\\bigl(x\\sqrt y\\bigr)'=\\sqrt y\\ \\Longrightarrow\\ x\\sqrt y=\\frac23 y^{3/2}+C\\ \\Longrightarrow\\ x=\\frac23 y+\\frac{C}{\\sqrt y}.$$\n代入初值 $(x,y)=(1,1)$（即 $t=1$ 时 $f(1)=1$）：$1=\\dfrac23+C\\Rightarrow C=\\dfrac13$。故曲线方程\n$$x=\\frac23 y+\\frac{1}{3\\sqrt y}=\\frac13\\left(\\frac{1}{\\sqrt y}+2y\\right).$$\n验算：该式满足 $x(1)=1$，且 $\\dfrac{\\mathrm{d}x}{\\mathrm{d}y}=\\dfrac23-\\dfrac{1}{6}y^{-3/2}$，代回 $\\dfrac{\\mathrm{d}x}{\\mathrm{d}y}=1-\\dfrac{x}{2y}=1-\\dfrac13-\\dfrac{1}{6}y^{-3/2}=\\dfrac23-\\dfrac16 y^{-3/2}$，一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分方程 $(\\ast)$ 右端的 $t$ 在积分号外，求导要按乘积法则对 $t\\cdot S(t)$ 求导。",
+        "初值不是已知点而要从 $t=1$ 处面积/体积为零推出 $f(1)=1$，漏掉它就定不出常数 $C$。",
+        "题目结果以 $x$ 关于 $y$ 给出，需把方程转写成 $\\dfrac{\\mathrm{d}x}{\\mathrm{d}y}$ 的一阶线性方程。"
+      ],
+      "key_point": "变限积分等式两边对上限求导降阶；遇到 $\\dfrac{dy}{dx}=\\dfrac{2y}{2y-x}$ 这类齐次/分式形式，取倒数化为关于 $x(y)$ 的一阶线性方程。"
+    },
+    {
+      "id": 740,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)= \\begin{cases}\\mathrm{e}^{-x}, & 0<y<x, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(1) 求条件概率密度 $f_{Y \\mid X}(y \\mid x)$;\r\n\r\n(2) 求条件概率 $P\\{X \\leqslant 1 \\mid Y \\leqslant 1\\}$",
+      "options": {},
+      "answer": "(1) $f_{Y \\mid X}(y \\mid x)=\\dfrac{f(x, y)}{f_X(x)}= \\begin{cases}\\dfrac{1}{x}, & x>0,0<y<x, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) $\\dfrac{\\mathrm{e}-2}{\\mathrm{e}-1}$",
+      "analysis": "【分析】(1) 求条件密度需先求边缘密度 $f_X(x)$，再用 $f_{Y\\mid X}(y\\mid x)=\\dfrac{f(x,y)}{f_X(x)}$。(2) 是离散化的条件概率公式 $P\\{X\\le1\\mid Y\\le1\\}=\\dfrac{P\\{X\\le1,Y\\le1\\}}{P\\{Y\\le1\\}}$，两个概率都对联合密度在相应区域积分，关键是把 $0<y<x$ 这个三角形区域和限制 $X\\le1$、$Y\\le1$ 画清楚。\n\n【解答】**(1)** 边缘密度（$x>0$）：\n$$f_X(x)=\\int_{-\\infty}^{\\infty}f(x,y)\\,\\mathrm dy=\\int_0^x \\mathrm e^{-x}\\,\\mathrm dy=x\\mathrm e^{-x},\\qquad x>0.$$\n故当 $x>0$ 时\n$$f_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}=\\frac{\\mathrm e^{-x}}{x\\mathrm e^{-x}}=\\frac1x,\\quad 0<y<x;$$\n其余处为 $0$。（即给定 $X=x$ 时 $Y$ 在 $(0,x)$ 上均匀分布。）\n\n**(2)** 由条件概率\n$$P\\{X\\le1\\mid Y\\le1\\}=\\frac{P\\{X\\le1,\\ Y\\le1\\}}{P\\{Y\\le1\\}}.$$\n密度非零区域为 $0<y<x$。\n\n分子 $P\\{X\\le1,Y\\le1\\}$：在 $0<y<x\\le1$ 上积分（此时 $y<x\\le1$ 自动满足 $y\\le1$）：\n$$\\int_0^1\\!\\!\\int_0^x \\mathrm e^{-x}\\,\\mathrm dy\\,\\mathrm dx=\\int_0^1 x\\mathrm e^{-x}\\,\\mathrm dx=\\big[-(x+1)\\mathrm e^{-x}\\big]_0^1=1-2\\mathrm e^{-1}.$$\n\n分母 $P\\{Y\\le1\\}$：在 $0<y\\le1,\\ x>y$ 上积分：\n$$\\int_0^1\\!\\!\\int_y^{\\infty}\\mathrm e^{-x}\\,\\mathrm dx\\,\\mathrm dy=\\int_0^1 \\mathrm e^{-y}\\,\\mathrm dy=1-\\mathrm e^{-1}.$$\n\n于是\n$$P\\{X\\le1\\mid Y\\le1\\}=\\frac{1-2\\mathrm e^{-1}}{1-\\mathrm e^{-1}}=\\frac{\\mathrm e-2}{\\mathrm e-1}.$$\n（验证：$\\dfrac{\\mathrm e-2}{\\mathrm e-1}\\approx\\dfrac{0.718}{1.718}\\approx0.418\\in(0,1)$，合理。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "条件密度先算边缘 $f_X(x)=x\\mathrm e^{-x}$，注意上限是 $x$ 不是 $\\infty$（因 $0<y<x$）",
+        "(2) 中 $\\{X\\le1,Y\\le1\\}$ 的积分区域是三角形 $0<y<x\\le1$，限制 $Y\\le1$ 已被 $x\\le1$ 覆盖",
+        "$\\int_0^1 x\\mathrm e^{-x}\\mathrm dx$ 用分部积分得 $1-2\\mathrm e^{-1}$，符号别错"
+      ],
+      "key_point": "条件密度 $=\\dfrac{联合}{边缘}$；连续型条件概率 $P\\{A\\mid B\\}=\\dfrac{P\\{A,B\\}}{P\\{B\\}}$，对联合密度在区域上二重积分。"
+    },
+    {
+      "id": 741,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 为 $3$ 维列向量, $\\boldsymbol{\\beta}^{\\mathrm{T}}$ 为 $\\boldsymbol{\\beta}$ 的转置, 若矩阵 $\\boldsymbol{\\alpha} \\boldsymbol{\\beta}^{\\mathrm{T}}$ 相似于 $\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, 则 $\\boldsymbol{\\beta}^{\\mathrm{T}} \\boldsymbol{\\alpha}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "【分析】$\\boldsymbol{\\alpha}\\boldsymbol{\\beta}^{\\mathrm T}$ 是 $3\\times3$ 的秩 1 矩阵（$\\boldsymbol\\alpha$ 列、$\\boldsymbol\\beta^{\\mathrm T}$ 行）。而 $\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$ 是 $1\\times1$ 的数。两者的关键联系是迹：$\\operatorname{tr}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})=\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$。相似矩阵迹相等，由给定的相似对角阵读出迹即可。\n\n【解答】关键恒等式：对列向量 $\\boldsymbol\\alpha,\\boldsymbol\\beta$，\n$$\\operatorname{tr}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})=\\sum_{i=1}^{3}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})_{ii}=\\sum_{i=1}^{3}\\alpha_i\\beta_i=\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha.$$\n即矩阵 $\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T}$ 的迹恰等于数 $\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$。\n\n相似的矩阵有相同的迹。已知\n$$\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T}\\sim\\begin{pmatrix}2&0&0\\\\0&0&0\\\\0&0&0\\end{pmatrix},$$\n右端矩阵的迹为 $2+0+0=2$，故\n$$\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha=\\operatorname{tr}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})=2.$$\n\n补充自洽性：$\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T}$ 的非零特征值恰为 $\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$（因 $\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha=\\boldsymbol\\alpha(\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha)=(\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha)\\boldsymbol\\alpha$，即 $\\boldsymbol\\alpha$ 是特征向量、$\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$ 是特征值）。相似对角阵的非零特征值为 $2$，故 $\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha=2$，与迹法一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "核心是 $\\operatorname{tr}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})=\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha$（迹的轮换性 $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$ 的特例）。",
+        "相似不改变迹与特征值，直接从对角阵读出非零值 2 即可，无需求出 $\\boldsymbol\\alpha,\\boldsymbol\\beta$ 具体分量。"
+      ],
+      "key_point": "$\\boldsymbol\\beta^{\\mathrm T}\\boldsymbol\\alpha=\\operatorname{tr}(\\boldsymbol\\alpha\\boldsymbol\\beta^{\\mathrm T})=$ 相似对角阵的迹 $=2$。"
+    },
+    {
+      "id": 742,
+      "paper": "数学三",
+      "year": 2009,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "使不等式 $\\displaystyle \\int_1^x \\frac{\\sin t}{t} \\mathrm{d} t>\\ln x$ 成立的 $x$ 的范围是 $(\\quad)$",
+      "options": {
+        "A": "$(0,1)$",
+        "B": "$\\left(1, \\dfrac{\\pi}{2}\\right)$",
+        "C": "$\\left(\\dfrac{\\pi}{2}, \\pi\\right)$",
+        "D": "$(\\pi,+\\infty)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】把不等式两边作差构造函数 $F(x)=\\displaystyle\\int_1^x\\dfrac{\\sin t}{t}\\mathrm{d}t-\\ln x$。注意 $\\ln x=\\int_1^x\\dfrac{1}{t}\\mathrm{d}t$，可把两项合并成同一积分，再看被积函数符号。\n\n【解答】\n$$F(x)=\\int_1^x\\dfrac{\\sin t}{t}\\,\\mathrm{d}t-\\int_1^x\\dfrac{1}{t}\\,\\mathrm{d}t=\\int_1^x\\dfrac{\\sin t-1}{t}\\,\\mathrm{d}t.$$\n对 $t>0$，$\\sin t-1\\le0$（仅在 $t=\\frac{\\pi}{2}+2k\\pi$ 个别点为 0），故被积函数 $\\dfrac{\\sin t-1}{t}\\le0$ 且不恒为 0。\n\n- 当 $0<x<1$：$\\displaystyle\\int_1^x=-\\int_x^1$，而 $\\int_x^1\\dfrac{\\sin t-1}{t}\\mathrm{d}t<0$，所以 $F(x)=-\\int_x^1(\\cdots)>0$，即原不等式成立。\n- 当 $x>1$：被积函数非正且不恒零，$\\displaystyle\\int_1^x\\dfrac{\\sin t-1}{t}\\mathrm{d}t<0$，即 $F(x)<0$，不等式不成立。\n- 当 $x=1$：$F=0$，等号，不满足严格不等式。\n\n故使不等式成立的范围是 $0<x<1$，即 $(0,1)$，选 A。",
+      "wrong_options": {
+        "B": "$\\left(1,\\frac{\\pi}{2}\\right)\\subset(1,+\\infty)$，此区间内 $x>1$，$F(x)=\\int_1^x\\frac{\\sin t-1}{t}\\mathrm{d}t<0$，不等式不成立。",
+        "C": "$\\left(\\frac{\\pi}{2},\\pi\\right)$ 仍在 $x>1$ 一侧，$F(x)<0$，不满足；$\\sin t\\le1$ 决定了 $x>1$ 时差恒为负。",
+        "D": "$(\\pi,+\\infty)$ 中 $x>1$，积分累积更负，$F(x)<0$，不等式不成立。"
+      },
+      "pitfalls": [
+        "构造差函数时把 $\\ln x$ 写成 $\\int_1^x\\frac1t\\mathrm{d}t$ 合并，关键看 $\\sin t-1\\le0$",
+        "$0<x<1$ 时积分下上限颠倒，$\\int_1^x=-\\int_x^1$ 使非正被积函数的积分变为正，这是 A 正确的根源"
+      ],
+      "key_point": "比较 $\\int$ 与 $\\ln$：作差合并为 $\\int_1^x\\frac{\\sin t-1}{t}\\mathrm{d}t$，被积非正，区间在 1 左侧才翻号为正。"
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "paper": "数学一",
+  "year": 1994,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1123,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\cot x\\left(\\frac{1}{\\sin x}-\\frac{1}{x}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{6}$",
+      "analysis": "$\\displaystyle \r\n\\lim _{x \\rightarrow 0} \\cot x\\left(\\frac{1}{\\sin x}-\\frac{1}{x}\\right) =\\lim _{x \\rightarrow 0} \\frac{x-\\sin x}{x \\sin x \\tan x} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{x-\\sin x}{x^3}=\\frac{1}{3} \\lim _{x \\rightarrow 0} \\frac{1-\\cos x}{x^2}=\\frac{1}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先通分再整体处理，别把 1/sinx 与 1/x 各自求极限（都发散无法拆）",
+        "分母三个因子 x·sinx·tanx 都等价于 x，凑成 x³ 才能用 x−sinx~x³/6",
+        "cot x·(…) 是 ∞·0 型，须化为 0/0"
+      ],
+      "key_point": "cotx(1/sinx−1/x)=(x−sinx)/(x sinx tanx)，分母~x³、分子~x³/6，极限为 1/6。"
+    },
+    {
+      "id": 1124,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲面 $z-\\mathrm{e}^{z}+2 x y=3$ 在点 $(1,2,0)$ 处的切平面方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 x+y-4=0$",
+      "analysis": "令 $F=2 x y+z-\\mathrm{e}^z-3$,\r\n\r\n法向量为 $\\boldsymbol{n}=\\left.\\{2 y, 2 x, 1-\\mathrm{e}^z\\}\\right|_{(1,2,0)}=\\{4,2,0\\}$,\r\n\r\n则切平面为 $4(x-1)+2(y-2)+0(z-0)=0$, \r\n\r\n即 $2 x+y-4=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "须先把方程移项成 F=2xy+z−e^z−3=0 再求梯度，别对原式左右分别求导",
+        "F_z=1−e^z 在 z=0 处恰为 0，切平面不含 z，勿误写系数",
+        "代点后要整理成最简整系数方程"
+      ],
+      "key_point": "n=(2y,2x,1−e^z)|_{(1,2,0)}=(4,2,0)，切平面 4(x−1)+2(y−2)=0 即 2x+y−4=0。"
+    },
+    {
+      "id": 1125,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle u=\\mathrm{e}^{-x} \\sin \\frac{x}{y}$, 则 $\\displaystyle \\frac{\\partial^{2} u}{\\partial x \\partial y}$ 在点 $\\displaystyle \\left(2, \\frac{1}{\\pi}\\right)$ 处的值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi^2}{\\mathrm{e}^2}$",
+      "analysis": "$\\displaystyle \\frac{\\partial u}{\\partial x}=-\\mathrm{e}^{-x} \\sin \\frac{x}{y}+\\frac{\\mathrm{e}^{-x}}{y} \\cos \\frac{x}{y},\\\\\r\n\\frac{\\partial^2 u}{\\partial x \\partial y}=\\frac{x \\mathrm{e}^{-x}}{y^2} \\cos \\frac{x}{y}-\\frac{\\mathrm{e}^{-x}}{y^2} \\cos \\frac{x}{y}+\\frac{x \\mathrm{e}^{-x}}{y^3} \\sin \\frac{x}{y}$,\r\n\r\n故 $\\displaystyle \\left.\\quad \\frac{\\partial^2 u}{\\partial x \\partial y}\\right|_{\\left(2, \\frac{1}{\\pi}\\right)}=\\left(\\frac{\\pi}{\\mathrm{e}}\\right)^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 y 求导时内层 (x/y)'_y=−x/y²，负号与 1/y² 都别丢",
+        "∂u/∂x 有两项，再对 y 求导每项都要用乘积法则，会漏项",
+        "代点 (2,1/π)：x/y=2π 使 cos=1、sin=0，第三项归零"
+      ],
+      "key_point": "∂²u/∂x∂y 在 (2,1/π) 处 sin(x/y)=sin2π=0，仅余含 cos 项，值为 π²/e²。"
+    },
+    {
+      "id": 1126,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设区域 $D$ 为 $x^{2}+y^{2} \\leqslant R^{2}$, 则 $\\displaystyle \\iint\\limits_{D}\\left(\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}\\right) \\mathrm{d} x \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{\\pi R^4}{4}\\left(\\frac{1}{a^2}+\\frac{1}{b^2}\\right)$",
+      "analysis": "由对称性得 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\iint\\limits_D y^2 \\mathrm{d} x \\mathrm{d} y=\\frac{1}{2} \\iint\\limits_D\\left(x^2+y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_0^{2 \\pi} \\mathrm{d} \\theta \\int_0^R r^3 \\mathrm{d} r\\\\\r\n=\\frac{\\pi R^4}{4}$, \r\n\r\n于是 $\\displaystyle \\iint\\limits_D\\left(\\frac{x^2}{a^2}+\\frac{y^2}{b^2}\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\frac{1}{a^2} \\iint_D x^2 \\mathrm{d} x \\mathrm{d} y+\\frac{1}{b^2} \\iint\\limits_D y^2 \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\frac{\\pi R^4}{4}\\left(\\frac{1}{a^2}+\\frac{1}{b^2}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "圆域对 x、y 对称，∬x²=∬y² 直接省一半计算",
+        "极坐标下 r³ 而非 r²（面元 r dr dθ 带一个 r）",
+        "系数 1/a²、1/b² 提到积分号外分别乘"
+      ],
+      "key_point": "对称性 ∬x²=∬y²=πR⁴/4，故原积分=πR⁴/4·(1/a²+1/b²)。"
+    },
+    {
+      "id": 1127,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle \\boldsymbol{\\alpha}=(1,2,3), \\boldsymbol{\\beta}=\\left(1, \\frac{1}{2}, \\frac{1}{3}\\right)$, 设 $\\boldsymbol{A}=\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\beta}$, 其中 $\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 是 $\\boldsymbol{\\alpha}$ 的转置, 则 $\\boldsymbol{A}^{n}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle 3^{n-1}\\left(\\begin{array}{ccc}1 & \\frac{1}{2} & \\frac{1}{3} \\\\ 2 & 1 & \\frac{2}{3} \\\\ 3 & \\frac{3}{2} & 1\\end{array}\\right)$",
+      "analysis": "因为 $(\\boldsymbol{\\alpha}, \\boldsymbol{\\beta})=3, \\boldsymbol{A}=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right)\\\\\r\n\\left(1, \\dfrac{1}{2}, \\dfrac{1}{3}\\right)=\\left(\\begin{array}{lll}1 & \\frac{1}{2} & \\frac{1}{3} \\\\ 2 & 1 & \\frac{2}{3} \\\\ 3 & \\frac{3}{2} & 1\\end{array}\\right)$,\r\n\r\n\r\n所以 $\r\n\\boldsymbol{A}^n=3^{n-1} \\boldsymbol{A}=3^{n-1}\\left(\\begin{array}{lll}\r\n1 & \\frac{1}{2} & \\frac{1}{3} \\\\\r\n2 & 1 & \\frac{2}{3} \\\\\r\n3 & \\frac{3}{2} & 1\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A=αᵀβ 是列乘行得 3×3 矩阵；βαᵀ 是行乘列得数 3，两者别混",
+        "关键标量 k=βαᵀ=1+1+1=3，A^n=k^{n-1}A，指数是 n−1 不是 n",
+        "A¹=A（n=1 时 3⁰=1），验证公式一致"
+      ],
+      "key_point": "A=αᵀβ 秩1，βαᵀ=trA=3，故 A^n=3^{n-1}A。"
+    },
+    {
+      "id": 1128,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle M=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^{2}} \\cos ^{4} x \\mathrm{d} x, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^{3} x+\\cos ^{4} x\\right) \\mathrm{d} x,\\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^{2} \\sin ^{3} x-\\cos ^{4} x\\right) \\mathrm{d} x$, 则 $(\\quad)$",
+      "options": {
+        "A": "$N<P<M$",
+        "B": "$M<P<N$",
+        "C": "$N<M<P$",
+        "D": "$P<M<N$"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle \r\nM=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^2} \\cos ^4 x \\mathrm{d} x=0, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^3 x+\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x>0, \\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^2 \\sin ^3 x-\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=-2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x<0$, \r\n\r\n则 $P<M<N$, 应选 (D)",
+      "wrong_options": {
+        "A": "把 M 当最大、N 当最小，未识别 M 为奇函数积分=0、N 含 cos⁴x>0 恒为正。",
+        "B": "误判 P>0：P 中 x²sin³x 为奇函数积分=0，只剩 −cos⁴x 积分<0，实为最小。",
+        "C": "C 项 N<M<P 把三者大小全排反：实际 P<0（=−∫cos⁴x）、M=0（奇函数积分）、N>0，正确序是 P<M<N。"
+      },
+      "pitfalls": [
+        "M 的分子 sinx/(1+x²)·cos⁴x 整体是奇函数，对称区间积分恒为 0，不必硬算",
+        "P 里 x²sin³x 是奇函数(积分0)，−cos⁴x 才是主体且为负",
+        "N=2∫₀^{π/2}cos⁴x>0，三者符号定序 P<M<N"
+      ],
+      "key_point": "M=0（奇函数）、N>0、P<0，故 P<M<N，选 D。"
+    },
+    {
+      "id": 1129,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二元函数 $f(x, y)$ 在点 $\\left(x_{0}, y_{0}\\right)$ 处两个偏导数 $f_{x}^{\\prime}\\left(x_{0}, y_{0}\\right), f_{y}^{\\prime}\\left(x_{0}, y_{0}\\right)$ 存在是 $f(x, y)$ 在该点连续的 $(\\quad)$",
+      "options": {
+        "A": "充分条件但非必要条件",
+        "B": "必要条件但非充分条件",
+        "C": "充分必要条件",
+        "D": "既非充分条件又非必要条件"
+      },
+      "answer": "D",
+      "analysis": "取 $f(x, y)= \\begin{cases}\\dfrac{x y}{x^2+y^2}, & (x, y) \\neq(0,0) \\\\ 0, & (x, y)=(0,0) \\end{cases}$,\r\n\r\n由 $\\lim\\limits _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x-0}=0$ 得 $f_x^{\\prime}(0,0)=0$, \r\n\r\n同理 $f_y^{\\prime}(0,0)=0$, 即 $f(x, y)$ 在 $(0,0)$ 处可偏导.\r\n\r\n因为 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y=x}} f(x, y)=\\frac{1}{2} \\neq \\lim _{\\substack{x \\rightarrow 0 \\\\ y=-x}} f(x, y)=-\\frac{1}{2}$, \r\n\r\n所以 $\\displaystyle \\lim _{\\substack{x \\rightarrow 0 \\\\ y \\rightarrow 0}} f(x, y)$ 不存在,\r\n\r\n故 $f(x, y)$ 在 $(0,0)$ 处不连续; \r\n\r\n令 $f(x, y)=|x|+|y|$, 显然 $f(x, y)$ 在 $(0,0)$ 处连续,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=\\lim _{x \\rightarrow 0} \\frac{|x|}{x}$ 不存在, \r\n\r\n所以 $f(x, y)$ 在 $(0,0)$ 处对 $x$ 不可偏导, \r\n\r\n同理 $f(x, y)$ 在 $(0,0)$ 处对 $y$ 也不可偏导.\r\n\r\n故 $f(x, y)$ 在 $\\left(x_0, y_0\\right)$ 处可偏导既非 $f(x, y)$ 在 $\\left(x_0, y_0\\right)$ 处连续的充分条件也非必要条件, 应选 (D)",
+      "wrong_options": {
+        "A": "误以为可偏导⇒连续（一元的可导⇒连续搬到多元），反例 xy/(x²+y²) 在原点可偏导却不连续。",
+        "B": "误以为连续⇒可偏导，反例 |x|+|y| 在原点连续但对 x 不可偏导。",
+        "C": "误判互为充要，两个方向都各有反例。"
+      },
+      "pitfalls": [
+        "多元与一元根本不同：偏导只沿坐标轴方向，控制不住二维趋近下的连续性",
+        "证不连续须找两条路径极限不等（y=x 与 y=−x）",
+        "证不可偏导用单侧极限 |x|/x 在 0 处不存在"
+      ],
+      "key_point": "多元中偏导存在与连续互不蕴含，反例双向可构造，故既非充分又非必要，选 D。"
+    },
+    {
+      "id": 1130,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设常数 $\\lambda>0$, 且级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}^{2}$ 收敛, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n} \\frac{\\left|a_{n}\\right|}{\\sqrt{n^{2}+\\lambda}}(\\quad)$",
+      "options": {
+        "A": "发散",
+        "B": "条件收敛",
+        "C": "绝对收敛",
+        "D": "收敛性与 $\\lambda$ 有关"
+      },
+      "answer": "C",
+      "analysis": "$\\displaystyle \\left|(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}\\right| \\leqslant \\frac{1}{2}\\left(a_n^2+\\frac{1}{n^2+\\lambda}\\right)$,\r\n\r\n因为 $\\displaystyle \\sum_{n=1}^{\\infty} a_n^2$ 及 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2+\\lambda}$ 都收敛, \r\n\r\n由正项级数的比较审敛法得 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}\\right|$ 收敛,\r\n\r\n即 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n \\frac{\\left|a_n\\right|}{\\sqrt{n^2+\\lambda}}$ 绝对收敛, 应选 (C)",
+      "wrong_options": {
+        "A": "只看 (−1)ⁿ 就套莱布尼茨误判发散，未对绝对值级数做比较审敛。",
+        "B": "误判仅条件收敛，忽略绝对值级数经放缩即被收敛正项级数控制而收敛。",
+        "D": "误以为 λ 影响敛散，其实 λ>0 时 1/(n²+λ) 恒收敛，收敛性与 λ 无关。"
+      },
+      "pitfalls": [
+        "a_n 未知符号，不能直接用莱布尼茨，须从绝对收敛入手",
+        "关键放缩 |a_n·(…)|≤½(a_n²+1/(n²+λ))，两个正项级数都收敛",
+        "λ>0 保证 1/(n²+λ) 与 1/n² 同阶收敛，答案与 λ 无关"
+      ],
+      "key_point": "均值不等式放缩后绝对值级数被收敛正项级数控制，故原级数绝对收敛，选 C。"
+    },
+    {
+      "id": 1131,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{a \\tan x+b(1-\\cos x)}{c \\ln (1-2 x)+d\\left(1-\\mathrm{e}^{-x^{2}}\\right)}=2$, 其中 $a^{2}+c^{2} \\neq 0$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$b=4 d$",
+        "B": "$b=-4 d$",
+        "C": "$a=4 c$",
+        "D": "$a=-4 c$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle 2=\\lim _{x \\rightarrow 0} \\frac{a \\tan x+b(1-\\cos x)}{c \\ln (1-2 x)+d\\left(1-\\mathrm{e}^{-x^2}\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\frac{a \\tan x}{x}+\\frac{b(1-\\cos x)}{x}}{\\frac{c \\ln (1-2 x)}{x}+\\frac{d\\left(1-\\mathrm{e}^{-x^2}\\right)}{x}}=\\frac{a}{-2 c}$, \r\n\r\n得 $a=-4 c$, 应选 (D)",
+      "wrong_options": {
+        "A": "误把二阶项 1−cosx~x²/2、1−e^{-x²}~x² 当主导，抓错阶数得 b=4d。",
+        "B": "同 A 抓错阶数且符号又错。",
+        "C": "抓对一阶主导但漏掉 ln(1−2x)~−2x 的系数 −2，符号错成 a=4c。"
+      },
+      "pitfalls": [
+        "分子 tanx~x（一阶）主导，1−cosx~x²/2（二阶）可略；分母同理只留 ln(1−2x)~−2x",
+        "ln(1−2x)~−2x 带负号，极限=a/(−2c)",
+        "由 a/(−2c)=2 解得 a=−4c，b、d 因是高阶项不进结果"
+      ],
+      "key_point": "只留一阶主项，极限=a/(−2c)=2，故必有 a=−4c，选 D。"
+    },
+    {
+      "id": 1132,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知向量组 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 线性无关, 则向量组 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{4}, \\boldsymbol{\\alpha}_{4}+\\boldsymbol{\\alpha}_{1}$ 线性无关",
+        "B": "$\\boldsymbol{\\alpha}_{1}-\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}-\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}-\\boldsymbol{\\alpha}_{4}, \\boldsymbol{\\alpha}_{4}-\\boldsymbol{\\alpha}_{1}$ 线性无关",
+        "C": "$\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{4}, \\boldsymbol{\\alpha}_{4}-\\boldsymbol{\\alpha}_{1}$ 线性无关",
+        "D": "$\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}-\\boldsymbol{\\alpha}_{4}, \\boldsymbol{\\alpha}_{4}-\\boldsymbol{\\alpha}_{1}$ 线性无关"
+      },
+      "answer": "C",
+      "analysis": "由 $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)-\\left(\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3\\right)+\\left(\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4\\right)-\\left(\\boldsymbol{\\alpha}_4+\\boldsymbol{\\alpha}_1\\right)=0$ \r\n\r\n得向量组 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4, \\boldsymbol{\\alpha}_4+\\boldsymbol{\\alpha}_1$ 线性相关, (A) 不对;\r\n\r\n由 $\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)+\\left(\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3\\right)+\\left(\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_4\\right)+\\left(\\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1\\right)=\\mathbf{0}$ \r\n\r\n得向量组 $\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_4, \\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1$ 线性相关, (B) 不对;\r\n\r\n由 $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)-\\left(\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3\\right)+\\left(\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_4\\right)+\\left(\\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1\\right)=\\mathbf{0}$ \r\n\r\n得向量组 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_4, \\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1$ 线性相关, (D) 不对, 应选 (C).\r\n\r\n方法二 令 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 线性无关,\r\n\r\n所以 $r(\\boldsymbol{A})=4$.\r\n\r\n令 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4, \\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1\\right)$, \r\n\r\n则 $\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{array}{llll}1 & 0 & 0 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 1 & 1\\end{array}\\right)$,\r\n\r\n因为 $\\left|\\begin{array}{cccc}1 & 0 & 0 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 1 & 1\\end{array}\\right|=2 \\neq 0$, \r\n\r\n得 $\\left(\\begin{array}{cccc}1 & 0 & 0 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 1 & 1\\end{array}\\right)$ 满秩,\r\n\r\n所以 $r(\\boldsymbol{B})=r(\\boldsymbol{A})=4$, \r\n\r\n故 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4, \\boldsymbol{\\alpha}_4-\\boldsymbol{\\alpha}_1$ 线性无关, \r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "(α₁+α₂)−(α₂+α₃)+(α₃+α₄)−(α₄+α₁)=0，首尾成环，线性相关。",
+        "B": "四个差向量循环相加恒为零向量，必线性相关。",
+        "D": "存在非零组合使其为零（系数行列式=0），线性相关。"
+      },
+      "pitfalls": [
+        "'原组无关'不等于'任意组合组无关'，须逐一验证",
+        "全加号或全减号循环时系数交替/相同必凑出零组合",
+        "偶数个向量成环时把某个符号改成减(如 α₄−α₁)才可能打破环路保持无关"
+      ],
+      "key_point": "只有 C 的组合组系数行列式非零无法凑出零组合，线性无关，选 C。"
+    },
+    {
+      "id": 1133,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=\\cos t^{2} \\\\ \\displaystyle  y=t \\cos t^{2}-\\int_{1}^{t^{2}} \\frac{1}{2 \\sqrt{u}} \\cos u \\mathrm{d} u\\end{array}\\right.$ 求 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}, \\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}$ 在 $t=\\sqrt{\\dfrac{\\pi}{2}}$ 时的值",
+      "options": {},
+      "answer": "$\\sqrt{\\dfrac{\\pi}{2}}; -\\dfrac{1}{\\sqrt{2 \\pi}}$",
+      "analysis": "$\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{\\cos t^2-2 t^2 \\sin t^2-2 t \\cdot \\frac{1}{2 t} \\cos t^2}{-2 t \\sin t^2}=t$, \r\n\r\n则 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=\\sqrt{\\frac{\\pi}{2}}}=\\sqrt{\\frac{\\pi}{2}}$ ；\r\n\r\n$\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right) / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{1}{-2 t \\sin t^2}$, \r\n\r\n则 $\\displaystyle \\left.\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{t=\\sqrt{\\frac{\\pi}{2}}}=-\\frac{1}{\\sqrt{2 \\pi}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dy/dt 中变限积分 ∫₁^{t²}(1/2√u)cosu du 对 t 求导=cos(t²)（含内层 2t 抵消 1/2√(t²)），大量抵消后 dy/dt=−2t²sin t²",
+        "二阶导是对 t 求导再除以 dx/dt，不是再对 x 直接求",
+        "dy/dx 恰好约简为 t，代 t=√(π/2) 直接得值"
+      ],
+      "key_point": "约分得 dy/dx=t，d²y/dx²=1/(−2t sin t²)，代 t=√(π/2) 得 √(π/2) 与 −1/√(2π)。"
+    },
+    {
+      "id": 1134,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $\\displaystyle f(x)=\\frac{1}{4} \\ln \\frac{1+x}{1-x}+\\frac{1}{2} \\arctan x-x$ 展开成 $x$ 的幂级数",
+      "options": {},
+      "answer": "$\\displaystyle \\sum_{n=1}^{\\infty} \\frac{x^{4 n+1}}{4 n+1} \\quad(-1<x<1)$",
+      "analysis": "$\\displaystyle f(0)=0, \\\\\r\nf^{\\prime}(x)\\\\\r\n=\\frac{1}{2\\left(1-x^2\\right)}+\\frac{1}{2\\left(1+x^2\\right)}-1\\\\\r\n=\\frac{1}{1-x^4}-1\\\\\r\n=\\sum_{n=1}^{\\infty}\\left(x^4\\right)^n=\\sum_{n=1}^{\\infty} x^{4 n} \\quad(-1<x<1)$,\r\n\r\n于是 $\\displaystyle f(x)=f(x)-f(0)=\\int_0^x f^{\\prime}(x) \\mathrm{d} x=\\sum_{n=1}^{\\infty} \\frac{x^{4 n+1}}{4 n+1} \\quad(-1<x<1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "直接展开三项很难，先求导使 1/[2(1−x²)]+1/[2(1+x²)]−1=1/(1−x⁴)−1 大幅简化",
+        "1/(1−x⁴)−1=Σ_{n≥1}x^{4n}（从 n=1 起，减掉的 1 消去 n=0 项）",
+        "逐项积分后 f(0)=0 保证无常数项，收敛区间 (−1,1)"
+      ],
+      "key_point": "f'(x)=1/(1−x⁴)−1=Σ_{n≥1}x^{4n}，积分得 f(x)=Σ_{n≥1}x^{4n+1}/(4n+1)，(−1,1)。"
+    },
+    {
+      "id": 1135,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\dfrac{1}{4 \\sin ^2 x}+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}\\\\\r\n=\\frac{1}{2} \\int \\frac{\\mathrm{d} x}{\\sin x(1+\\cos x)}\\\\\r\n=\\frac{1}{2} \\int \\frac{(1-\\cos x) \\mathrm{d} x}{\\sin ^3 x} \\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x-\\frac{1}{2} \\int \\frac{\\mathrm{d}(\\sin x)}{\\sin ^3 x}\\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x+\\frac{1}{4 \\sin ^2 x}$\r\n\r\n令 $\\displaystyle I=\\int \\csc ^3 x \\mathrm{d} x$, 则\r\n\r\n$\\displaystyle I=-\\int \\csc x \\mathrm{d}(\\cot x)\\\\\r\n=-\\csc x \\cot x-\\int \\csc x \\cot ^2 x \\mathrm{d} x \\\\\r\n=\\csc x \\cot x-I+\\ln |\\csc x-\\cot x|, \\\\\r\nI=\\frac{1}{2}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+C$,\r\n\r\n\r\n故 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}=\\frac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\frac{1}{4 \\sin ^2 x}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用 sin2x=2sinxcosx 提出 2sinx(1+cosx)，再乘 (1−cosx)/(1−cosx) 化 sin³x",
+        "∫csc³x dx 须分部积分产生 I=…−I 移项解出，别硬凑",
+        "别忘 −½∫d(sinx)/sin³x=1/(4sin²x) 这一项"
+      ],
+      "key_point": "分母化 2sinx(1+cosx) 后拆成 ½∫csc³x+1/(4sin²x)，csc³x 递推得终结果。"
+    },
+    {
+      "id": 1136,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分 $\\displaystyle \\iint\\limits_{S} \\frac{x \\mathrm{d} y \\mathrm{d} z+z^{2} \\mathrm{d} x \\mathrm{d} y}{x^{2}+y^{2}+z^{2}}$, 其中 $S$ 是由曲面 $x^{2}+y^{2}=R^{2}$ 及两个平面 $z=R$, $z=-R(R>0)$ 所围成的立体表面的外侧",
+      "options": {},
+      "answer": "$\\dfrac{\\pi^2 R}{2}$",
+      "analysis": "令 $\\Sigma_1: z=-R\\left(x^2+y^2 \\leqslant R^2\\right)$, 取下侧,\r\n\r\n$\\Sigma_2: z=R\\left(x^2+y^2 \\leqslant R^2\\right)$, 取上侧,\r\n\r\n$\\Sigma_3: x^2+y^2=R^2(-R \\leqslant z \\leqslant R)$, 取外侧,\r\n\r\n显然 $\\displaystyle \\iint\\limits_{\\Sigma_3} \\frac{z^2 \\mathrm{d} x \\mathrm{d} y}{x^2+y^2+z^2}=0$,\r\n\r\n因为 $\\displaystyle \\frac{z^2}{x^2+y^2+z^2}$ 为 $z$ 的偶函数, \r\n\r\n所以 $\\displaystyle \\iint\\limits_{\\Sigma_1+\\Sigma_2} \\frac{z^2 \\mathrm{d} x \\mathrm{d} y}{x^2+y^2+z^2}=0$, 故 $\\displaystyle \\iint\\limits_S \\frac{z^2 \\mathrm{d} x \\mathrm{d} y}{x^2+y^2+z^2}=0$.\r\n\r\n于是 $\\displaystyle I=\\iint\\limits_S \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}\\\\\r\n=\\iint\\limits_{\\Sigma_1} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}+\\iint\\limits_{\\Sigma_2} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}+\\iint\\limits_{\\Sigma_3} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}$\r\n\r\n再由 $\\displaystyle \\iint\\limits_{\\Sigma_1} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}=0=\\iint\\limits_{\\Sigma_2} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}$,\r\n\r\n得 $\\displaystyle I=\\iint\\limits_{\\Sigma_3} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}$,\r\n\r\n令 $\\Sigma_3^{(1)}: x^2+y^2=R^2(x \\geqslant 0)$, \r\n\r\n取前侧, 因为 $\\dfrac{x}{x^2+y^2+z^2}$ 为 $x$ 的奇函数,\r\n\r\n所以$\\displaystyle I=\\iint\\limits_{\\Sigma_3} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}\\\\\r\n=2 \\iint\\limits_{\\Sigma_3^{(1)}} \\frac{x \\mathrm{d} y \\mathrm{d} z}{x^2+y^2+z^2}\\\\\r\n=2 \\int_{-R}^R \\mathrm{d} y \\int_{-R}^R \\frac{\\sqrt{R^2-y^2}}{R^2+z^2} \\mathrm{d} z\\\\\r\n=8 \\int_0^R \\sqrt{R^2-y^2} \\mathrm{d} y \\int_0^R \\frac{\\mathrm{d} z}{R^2+z^2} \\\\\r\n=8 \\times \\frac{\\pi R^2}{4} \\times\\left.\\frac{1}{R} \\arctan \\frac{z}{R}\\right|_0 ^R=\\frac{\\pi^2 R}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "z²/(x²+y²+z²) 是 z 的偶函数，上下底(取向相反)相消，柱面上 dxdy 分量本就为 0，故 z²dxdy 项整体为 0",
+        "上下底平面法向竖直，x dydz 在其上投影为 0，x dydz 仅柱面侧面有贡献",
+        "柱面上 x²+y²=R²，分母化 R²+z² 后按前后半柱面投影积分"
+      ],
+      "key_point": "z²dxdy 项因偶对称为 0，只剩柱面上 x dydz 积分，结果 π²R/2。"
+    },
+    {
+      "id": 1137,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 具有二阶连续导数, $f(0)=0, f^{\\prime}(0)=1$, 且\r\n\r\n$[x y(x+y)-f(x) y] \\mathrm{d} x+\\left[f^{\\prime}(x)+x^{2} y\\right] \\mathrm{d} y=0$\r\n\r\n为一个全微分方程, 求 $f(x)$ 及此全微分方程的通解",
+      "options": {},
+      "answer": "$f(x)=2\\cos x+\\sin x+x^2-2$；通解 $\\dfrac{x^2y^2}{2}-2y\\sin x+y\\cos x+2xy=C$",
+      "analysis": "令 $P(x, y)=x y(x+y)-f(x) y, \\\\Q(x, y)=f^{\\prime}(x)+x^2 y$, \r\n\r\n由 $[x y(x+y)-f(x) y] \\mathrm{d} x+\\left[f^{\\prime}(x)+x^2 y\\right] \\mathrm{d} y=0$ \r\n\r\n为全微分方程得 $\\displaystyle \\frac{\\partial Q}{\\partial x}=\\frac{\\partial P}{\\partial y}$, \r\n\r\n即 $x^2+2 x y-f(x)=f^{\\prime \\prime}(x)+2 x y$, \r\n\r\n整理得 $f^{\\prime \\prime}(x)+f(x)=x^2$,\r\n\r\n特征方程为 $\\lambda^2+1=0$, \r\n\r\n特征根为 $\\lambda_1=-\\mathrm{i}, \\lambda_2=\\mathrm{i}$,\r\n\r\n显然方程 $f^{\\prime \\prime}(x)+f(x)=x^2$ 有特解 $\\displaystyle f_0(x)=x^2-2$,\r\n\r\n则通解为 $f(x)=C_1 \\cos x+C_2 \\sin x+x^2-2$,\r\n\r\n由 $f(0)=0, f^{\\prime}(0)=1$ 得 $C_1=2, C_2=1$, \r\n\r\n故 $f(x)=2 \\cos x+\\sin x+x^2-2$.\r\n\r\n于是原方程为 $\\left[x y^2-(2 \\cos x+\\sin x) y+2 y\\right] \\mathrm{d} x+\\left(-2 \\sin x+\\cos x+2 x+x^2 y\\right) \\mathrm{d} y=0$,\r\n\r\n其通解是 $\\displaystyle -2 y \\sin x+y \\cos x+\\frac{x^2 y^2}{2}+2 x y=C$, \r\n\r\n其中 $C$ 为任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "全微分条件 P_y=Q_x 里 Q_x=f''(x)+2xy、P_y=x²+2xy−f(x)，消去 2xy 得 f''+f=x²",
+        "特解 f₀=x²−2（不是 x²），代入验证常数项 −2",
+        "由 f(0)=0、f'(0)=1 定 C₁=2、C₂=1；最后势函数要含全部交叉项"
+      ],
+      "key_point": "全微分条件给出 f''+f=x²，解得 f=2cosx+sinx+x²−2，势函数 ½x²y²−2ysinx+ycosx+2xy=C。"
+    },
+    {
+      "id": 1138,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $x=0$ 的某一邻域内具有二阶连续导数, 且 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=0$, 证明: 级数 $\\displaystyle \\sum_{n=1}^{\\infty} f\\left(\\frac{1}{n}\\right)$ 绝对收敛",
+      "options": {},
+      "answer": "略",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=0$ 得 $f(0)=0, f^{\\prime}(0)=0$,\r\n\r\n由 $f(x)$ 在 $x=0$ 的某一邻域内具有二阶连续导数得\r\n\r\n$f(x)=f(0)+f^{\\prime}(0) x+\\dfrac{f^{\\prime \\prime}(0)}{2 !} x^2+o\\left(x^2\\right)\\\\\r\n=\\dfrac{f^{\\prime \\prime}(0)}{2 !} x^2+o\\left(x^2\\right)$,\r\n\r\n\r\n从而 $\\displaystyle f\\left(\\frac{1}{n}\\right)=\\frac{f^{\\prime \\prime}(0)}{2 !} \\cdot \\frac{1}{n^2}+o\\left(\\frac{1}{n^2}\\right)$, \r\n\r\n于是 $\\displaystyle \\left|f\\left(\\frac{1}{n}\\right)\\right| \\sim \\frac{\\left|f^{\\prime \\prime}(0)\\right|}{2 !} \\cdot \\frac{1}{n^2}$,\r\n\r\n因为 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{\\left|f^{\\prime \\prime}(0)\\right|}{2 !} \\cdot \\frac{1}{n^2}$ 收敛, \r\n\r\n所以由正项级数比较审敛法得 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|f\\left(\\frac{1}{n}\\right)\\right|$ 收敛, \r\n\r\n即 $\\displaystyle \\sum_{n=1}^{\\infty} f\\left(\\frac{1}{n}\\right)$ 绝对收敛.",
+      "wrong_options": {},
+      "pitfalls": [
+        "lim f(x)/x=0 且 f 连续可导先推出 f(0)=0，再推 f'(0)=0（两步别只推一个）",
+        "二阶连续导数保证泰勒展开到 x² 项、余项 o(x²)，故 f(1/n)~C/n²",
+        "|f(1/n)| 与收敛的 Σ1/n² 同阶，比较审敛得绝对收敛（若 f''(0)=0 亦收敛）"
+      ],
+      "key_point": "f(0)=f'(0)=0 使 f(1/n)~f''(0)/(2n²)，与 Σ1/n² 同阶，故级数绝对收敛。"
+    },
+    {
+      "id": 1139,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知点 $A$ 与点 $B$ 的直角坐标分别为 $(1,0,0)$ 与 $(0,1,1)$, 线段 $A B$ 绕 $z$ 轴旋转一周所围成的旋转曲面为 $S$, 求由 $S$ 及两平面 $z=0, z=1$ 所围成的立体的体积",
+      "options": {},
+      "answer": "$\\dfrac{2 \\pi}{3}$",
+      "analysis": "$\\overrightarrow{A B}=\\{-1,1,1\\}, A B$ 所在的直线 $L$ 的方程为\r\n\r\n$\\dfrac{x-1}{-1}=\\dfrac{y}{1}=\\dfrac{z}{1}$,\r\n\r\n任取 $M(x, y, z) \\in S$, \r\n\r\n其所在的圆对应的直线 $L$ 上的点为 $M_0\\left(x_0, y_0, z\\right)$, \r\n\r\n圆心为 $T(0,0, z)$,\r\n\r\n由 $|M T|=\\left|M_0 T\\right|$ 得 $x^2+y^2=x_0^2+y_0^2$,\r\n\r\n因为 $M_0\\left(x_0, y_0, z\\right) \\in L$, \r\n\r\n所以 $\\displaystyle \\frac{x_0-1}{-1}=\\frac{y_0}{1}=\\frac{z}{1}$, \r\n\r\n解得 $x_0=1-z, y_0=z$,\r\n\r\n故曲面 $S$ 的方程为 \r\n\r\n$x^2+y^2=(1-z)^2+z^2$, \r\n\r\n即 $S: x^2+y^2=1-2 z+2 z^2$\r\n\r\n所求的体积为 $\\displaystyle V=\\int_0^1 \\mathrm{d} z \\iint\\limits_{D_z} \\mathrm{d} x \\mathrm{d} y=\\int_0^1 \\mathrm{d} z \\iint\\limits_{x^2+y^2 \\leqslant 1-2 z+2 z^2} \\mathrm{d} x \\mathrm{d} y=\\pi \\int_0^1\\left(1-2 z+2 z^2\\right) \\mathrm{d} z=\\frac{2 \\pi}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋转面上点到 z 轴距离平方 x²+y² 等于直线 L 上同高度点的 x₀²+y₀²，先解 x₀=1−z、y₀=z",
+        "半径平方 R²(z)=(1−z)²+z²=1−2z+2z²，切片面积 πR²(z)",
+        "V=π∫₀¹(1−2z+2z²)dz，逐项积分得 2π/3"
+      ],
+      "key_point": "旋转面 x²+y²=1−2z+2z²，V=π∫₀¹(1−2z+2z²)dz=2π/3。"
+    },
+    {
+      "id": 1140,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设四元齐次线性方程组 (I) 为 $\\left\\{\\begin{array}{l}x_1+x_2=0 \\\\ x_2-x_4=0\\end{array}\\right.$ 又已知某线性齐次方程组 (II) 的通解为 $k_{1}(0,1,1,0)^{\\mathrm{T}}+k_{2}(-1,2,2,1)^{\\mathrm{T}}$\r\n\r\n(1) 求线性方程组 (I)的基础解系;\r\n\r\n(2) 问线性方程组 (I) 与 (II) 是否有非零公共解? 若有, 求出所有非零的公共解; 若没有, 说明理由.",
+      "options": {},
+      "answer": "(1) $(0,0,1,0)^{\\mathrm T},(-1,1,0,1)^{\\mathrm T}$；(2) 有非零公共解，全部为 $k(-1,1,1,1)^{\\mathrm T}\\ (k\\neq0)$",
+      "analysis": "(1) 由 (I) 有 $\\left\\{\\begin{array}{l}x_1=-x_2 \\\\ x_4=x_2 \\end{array}\\right.$ \r\n\r\n分别取 $\\left(\\begin{array}{l}x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{l}0 \\\\ 1\\end{array}\\right)$ 和 $\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right)$,\r\n\r\n得 (I) 的基础解系为 $(0,0,1,0)^{\\mathrm{T}},(-1,1,0,1)^{\\mathrm{T}}$\r\n\r\n(2) 有非零公共解. \r\n\r\n(II) 的通解可表示为 \r\n\r\n$\\left(x_1, x_2, x_3, x_4\\right)^{\\mathrm{T}}=\\left(-k_2, k_1+2 k_2, k_1+2 k_2, k_2\\right)^{\\mathrm{T}}$, \r\n\r\n将其代入 (I) 得\r\n\r\n$\\left\\{\\begin{array}{l}\r\n-k_2+\\left(k_1+2 k_2\\right)=0 \\\\\r\n\\left(k_1+2 k_2\\right)-k_2=0\r\n\\end{array}\\right.$\r\n\r\n解得 $k_1=-k_2$\r\n\r\n当 $k_1=-k_2 \\neq 0$ 时, (II) 的通解化为\r\n\r\n$k_1(0,1,1,0)^{\\mathrm{T}}+k_2(-1,2,2,1)^{\\mathrm{T}}\\\\\r\n=k_2\\left[(0,-1,-1,0)^{\\mathrm{T}}+(-1,2,2,1)^{\\mathrm{T}}\\right]\\\\\r\n=k_2(-1,1,1,1)^{\\mathrm{T}}$,\r\n\r\n此向量即是 (I) 与 (II) 的非零公共解, \r\n\r\n故方程组 (I) (II) 的所有非零公共解是 $k(-1,1,1,1)^{\\mathrm{T}}$,\r\n\r\n( $k$ 是不为零的任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "(I) 是两个方程四未知量，秩2、基础解系含 4−2=2 个向量",
+        "求公共解须把 (II) 的通解形式代回 (I) 得 k₁=−k₂，而非解联立矩阵秩",
+        "回代 k₁=−k₂ 化简得公共解方向 (−1,1,1,1)ᵀ，注意约去公因子"
+      ],
+      "key_point": "(I) 基础解系两向量；(II) 代入 (I) 得 k₁=−k₂，公共解为 k(−1,1,1,1)ᵀ (k≠0)。"
+    },
+    {
+      "id": 1141,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶非零方阵, $\\boldsymbol{A}^{*}$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{A}^{\\mathrm{T}}$ 是 $\\boldsymbol{A}$ 的转置矩阵, 当 $\\boldsymbol{A}^{*}=\\boldsymbol{A}^{\\mathrm{T}}$ 时, 证明: $|\\boldsymbol A| \\neq 0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "由 $\\boldsymbol{A}^*=\\boldsymbol{A}^{\\mathrm{T}}$ \r\n\r\n得 $a_{i j}=A_{i j}(i, j=1,2, \\cdots, n)$,\r\n\r\n因为 $\\boldsymbol{A}$ 为非零矩阵,\r\n\r\n所以矩阵 $\\boldsymbol{A}$ 中有非零元素, \r\n\r\n不妨设 $a_{11} \\neq 0$,\r\n\r\n故 $|\\boldsymbol{A}|=a_{11} A_{11}+a_{12} A_{12}+\\cdots+a_{1 n} A_{1 n}\\\\\r\n=a_{11}^2+a_{12}^2+\\cdots+a_{1 n}^2>0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A*=(A_ji) 的转置排布，A*=Aᵀ 逐元比对得 a_ij=A_ij（代数余子式，非余子式）",
+        "A 非零⇒某行有非零元，按该行展开 |A|=a_{i1}A_{i1}+…=a_{i1}²+…>0",
+        "关键在'非零方阵'保证展开式为正的平方和不全为零"
+      ],
+      "key_point": "A*=Aᵀ 给出 a_ij=A_ij，按非零行展开 |A|=Σa_{1j}²>0，故 |A|≠0。"
+    },
+    {
+      "id": 1142,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机事件 $A, B$ 满足条件 $P(A B)=P(\\bar{A} \\bar{B})$, 且 $P(A)=p$, 则 $P(B)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1-p$",
+      "analysis": "由 $P(A B)=P(\\bar{A} \\bar{B})$ 得\r\n\r\n$P(A B)=P(\\overline{A+B})\\\\=1-P(A+B)=1-P(A)-P(B)+P(A B)$,\r\n\r\n即 $1-P(A)-P(B)=0$, \r\n\r\n解得 $P(B)=1-P(A)=1-p$",
+      "wrong_options": {},
+      "pitfalls": [
+        "ĀB̄=¬(A∪B) 用德摩根律，P(ĀB̄)=1−P(A∪B)",
+        "P(A∪B)=P(A)+P(B)−P(AB)，代入后 P(AB) 两边抵消",
+        "无需 A、B 独立假设，直接得 P(A)+P(B)=1"
+      ],
+      "key_point": "由对偶律与加法公式得 P(A)+P(B)=1，故 P(B)=1−p。"
+    },
+    {
+      "id": 1143,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 21,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设相互独立的两个随机变量 $X, Y$ 具有同一分布律, 且 $X$ 的分布律为\r\n\r\n$$\r\n\\begin{array}{|c|c|c|}\r\n\\hline X & 0 & 1 \\\\\r\n\\hline P & \\frac{1}{2} & \\frac{1}{2}\\\\\r\n\\hline\r\n\\end{array}\r\n$$\r\n\r\n则随机变量 $Z=\\max \\{X, Y\\}$ 的分布律为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$Z \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ \\dfrac{1}{4} & \\dfrac{3}{4}\\end{array}\\right)$",
+      "analysis": "$Z$ 的可能取值为 $0,1$,\r\n\r\n$\\displaystyle P\\{Z=0\\} \\\\\r\n=P\\{\\max (X, Y)=0\\}\r\n=P\\{X=0, Y=0\\} \\\\\r\n=P\\{X=0\\} \\cdot P\\{Y=0\\}\r\n=\\frac{1}{4},\\\\\r\nP\\{Z=1\\}=1-P\\{Z=0\\}=\\frac{3}{4}$, \r\n\r\n则 $Z$ 的分布律为 $Z \\sim\\left(\\begin{array}{cc}0 & 1 \\\\ \\dfrac{1}{4} & \\dfrac{3}{4}\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "max=0 当且仅当 X、Y 都为 0，独立时概率相乘=1/2·1/2=1/4",
+        "P{Z=1} 用 1−P{Z=0}=3/4，别去逐项加 P{X=1}等重复计数",
+        "结果必须写成分布律(取值+概率两行)"
+      ],
+      "key_point": "Z=max，P{Z=0}=1/4、P{Z=1}=3/4。"
+    },
+    {
+      "id": 1144,
+      "paper": "数学一",
+      "year": 1994,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知随机变量 $(X, Y)$ 服从二维正态分布, 且 $X$ 和 $Y$ 分别服从正态分布 $N\\left(1,3^{2}\\right)$ 和 $N\\left(0,4^{2}\\right)$, $X, Y$ 的相关系数 $\\displaystyle \\rho_{X Y}=-\\frac{1}{2}$, 设 $\\displaystyle Z=\\frac{X}{3}+\\frac{Y}{2}$.\r\n\r\n(1) 求 $Z$ 的数学期望 $E(Z)$ 和方差 $D(Z)$;\r\n\r\n(2) 求 $X$ 与 $Z$ 的相关系数 $\\rho_{X Z}$;\r\n\r\n(3) 问 $X$ 与 $Z$ 是否相互独立? 为什么?",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{3}, 3$;\r\n(2) $0$;\r\n(3) 独立",
+      "analysis": "(1) $\\displaystyle E(Z)=\\frac{1}{3} E(X)+\\frac{1}{2} E(Y)=\\frac{1}{3}$,\r\n\r\n又 $\\displaystyle D(X)=9, D(Y)=16,\\\\\r\n\\operatorname{Cov}(X, Y)=\\rho_{X Y} \\cdot \\sqrt{D(X)} \\cdot \\sqrt{D(Y)}\\\\\r\n=\\left(-\\frac{1}{2}\\right) \\times 3 \\times 4=-6$,\r\n\r\n则 $\\displaystyle\r\nD(Z) =\\left(\\frac{1}{3}\\right)^2 D(X)+\\left(\\frac{1}{2}\\right)^2 D(Y)+2 \\times \\frac{1}{3} \\times \\frac{1}{2} \\operatorname{Cov}(X, Y) \\\\\r\n=\\frac{1}{9} D(X)+\\frac{1}{4} D(Y)+\\frac{1}{3} \\operatorname{Cov}(X, Y)=1+4-2=3$\r\n\r\n(2) $\\displaystyle \\operatorname{Cov}(X, Z)=\\operatorname{Cov}\\left(X, \\frac{X}{3}\\right)+\\operatorname{Cov}\\left(X, \\frac{Y}{2}\\right)=\\frac{1}{3} \\operatorname{Cov}(X, X)+\\frac{1}{2} \\operatorname{Cov}(X, Y)$,\r\n\r\n又 $\\operatorname{Cov}(X, X)=D(X)=9, \\operatorname{Cov}(X, Y)=-6$,\r\n\r\n则 $\\displaystyle \\operatorname{Cov}(X, Z)=\\frac{1}{3} \\times 9+\\frac{1}{2} \\times(-6)=3-3=0$.\r\n\r\n所以 $\\rho_{X Z}=\\dfrac{\\operatorname{Cov}(X, Z)}{\\sqrt{D(X)} \\cdot \\sqrt{D(Z)}}=0$\r\n\r\n(3) $\\left(\\begin{array}{l}X \\\\ Z\\end{array}\\right)=\\left(\\begin{array}{cc}1 & 0 \\\\ \\dfrac{1}{3} & \\dfrac{1}{2}\\end{array}\\right)\\left(\\begin{array}{l}X \\\\ Y\\end{array}\\right) \\triangleq \\boldsymbol{A}\\left(\\begin{array}{l}X \\\\ Y\\end{array}\\right)$. \r\n\r\n因为 $\\boldsymbol{A}$ 可逆, \r\n\r\n且 $(X, Y)$ 服从二维正态分布, \r\n\r\n故 $(X, Z)$ 也服从二维正态分布, \r\n\r\n又因为 $\\rho_{X Z}=0$, 所以 $X$ 与 $Z$ 相互独立",
+      "wrong_options": {},
+      "pitfalls": [
+        "D(Z) 须含交叉项 2·(1/3)(1/2)Cov(X,Y)，Cov=ρ√(DX)√(DY)=−6，别漏或算错符号",
+        "Cov(X,Z)=1/3·D(X)+1/2·Cov(X,Y)=3−3=0，故 ρ_{XZ}=0",
+        "只有二维正态下'不相关⇒独立'才成立，须点明 (X,Z) 服从二维正态这一前提"
+      ],
+      "key_point": "E(Z)=1/3、D(Z)=3、ρ_{XZ}=0；(X,Z) 为二维正态且不相关，故 X 与 Z 相互独立。"
+    }
+  ]
+}

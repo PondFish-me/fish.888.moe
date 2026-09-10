@@ -1,0 +1,448 @@
+{
+  "paper": "数学三",
+  "year": 1991,
+  "count": 22,
+  "questions": [
+    {
+      "id": 1739,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle z=\\mathrm{e}^{\\sin (x y)}$, 则 $\\mathrm{d} z=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\cos (x y) \\cdot \\mathrm{e}^{\\sin (x y)}(y \\mathrm{d} x+x \\mathrm{d} y)$",
+      "analysis": "由 $\\displaystyle \\frac{\\partial z}{\\partial x}=y \\cos (x y) \\cdot \\mathrm{e}^{\\sin (x y)}, \\frac{\\partial z}{\\partial y}=x \\cos (x y) \\cdot \\mathrm{e}^{\\sin (x y)}$ ，\r\n\r\n得 $\\mathrm{d} z=\\dfrac{\\partial z}{\\partial x} \\mathrm{d} x+\\dfrac{\\partial z}{\\partial y} \\mathrm{d} y=\\cos (x y) \\cdot \\mathrm{e}^{\\sin (x y)}(y \\mathrm{d} x+x \\mathrm{d} y)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两层复合：外层 e^u 求导得 e^{sin(xy)}，中层 sin 得 cos(xy)，内层对 x 得 y、对 y 得 x",
+        "提公因子后括号内是 y dx+x dy，别把 x、y 的位置对调"
+      ],
+      "key_point": "dz=cos(xy)e^{sin(xy)}(y dx+x dy)。"
+    },
+    {
+      "id": 1740,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设曲线 $f(x)=x^3+a x$ 与 $g(x)=b x^2+c$ 都通过点 $(-1,0)$, 且在点 $(-1,0)$ 有公共切线, 则 $a=\\rule{0.5cm}{0.2mm}, b=\\rule{0.5cm}{0.2mm}, c=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1,-1,1$",
+      "analysis": "$f^{\\prime}(x)=3 x^2+a, g^{\\prime}(x)=2 b x$,\r\n\r\n由题意得 $\\left\\{\\begin{array}{l}-1-a=0 \\\\ b+c=0 \\\\ 3+a=-2 b\\end{array}\\right.$\r\n\r\n解得 $a=-1, b=-1, c=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三个条件缺一不可：f 过点给 a，g 过点给 b+c=0，导数相等给 3+a=−2b",
+        "f'(-1)=3+a、g'(-1)=−2b，代入 a=−1 得 b=−1，再由 b+c=0 得 c=1"
+      ],
+      "key_point": "由 −1−a=0、b+c=0、3+a=−2b 解得 a=−1,b=−1,c=1。"
+    },
+    {
+      "id": 1741,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=x \\mathrm{e}^x$, 则 $f^{(n)}(x)$ 在点 $x=\\rule{0.5cm}{0.2mm}$ 处取极小值 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-(n+1),-\\dfrac{1}{\\mathrm{e}^{n+1}}$",
+      "analysis": "$f^{\\prime}(x)=(x+1) \\mathrm{e}^x, f^{\\prime \\prime}(x)=(x+2) \\mathrm{e}^x$, \r\n\r\n由归纳法得 $f^{(n)}(x)=(x+n) \\mathrm{e}^x$,\r\n\r\n由 $f^{(n+1)}(x)=(x+n+1) \\mathrm{e}^x=0$ 得 $x=-(n+1)$,\r\n\r\n当 $x<-(n+1)$ 时, $f^{(n+1)}(x)<0$; \r\n\r\n当 $x>-(n+1)$ 时, $f^{(n+1)}(x)>0$,\r\n\r\n故当 $x=-(n+1)$ 时, $f^{(n)}(x)$ 取极小值, \r\n\r\n且极小值为 $f^{(n)}(-n-1)=-\\dfrac{1}{\\mathrm{e}^{n+1}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 f^{(n)} 的极值要令其导数 f^{(n+1)}=(x+n+1)eˣ 为零，别与 f^{(n)}=0 混淆",
+        "代回极小值 f^{(n)}(−n−1)=(−1)e^{−(n+1)}=−1/e^{n+1}，负号别丢"
+      ],
+      "key_point": "f^{(n)}=(x+n)eˣ，x=−(n+1) 处取极小值 −1/e^{n+1}。"
+    },
+    {
+      "id": 1742,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 和 $\\boldsymbol{B}$ 为可逆矩阵, $\\boldsymbol{X}=\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$ 为分块矩阵, 则 $\\boldsymbol{X}^{-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{cc}\\boldsymbol O & \\boldsymbol B^{-1} \\\\ \\boldsymbol A^{-1} & \\boldsymbol O\\end{array}\\right)$",
+      "analysis": "令 $\\boldsymbol{X}^{-1}=\\left(\\begin{array}{ll}\\boldsymbol{X}_{11} & \\boldsymbol{X}_{12} \\\\ \\boldsymbol{X}_{21} & \\boldsymbol{X}_{22}\\end{array}\\right)$,\r\n\r\n由 $\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)\\left(\\begin{array}{ll}\\boldsymbol{X}_{11} & \\boldsymbol{X}_{12} \\\\ \\boldsymbol{X}_{21} & \\boldsymbol{X}_{22}\\end{array}\\right)=\\left(\\begin{array}{ll}\\boldsymbol{E} & \\boldsymbol{O} \\\\ \\boldsymbol{O} & \\boldsymbol{E}\\end{array}\\right)$ \r\n\r\n得 $\\left\\{\\begin{array}{l}\\boldsymbol{A} \\boldsymbol{X}_{21}=\\boldsymbol{E}, \\\\ \\boldsymbol{A} \\boldsymbol{X}_{22}=\\boldsymbol{O}, \\\\ \\boldsymbol{B} \\boldsymbol{X}_{11}=\\boldsymbol{O}, \\\\ \\boldsymbol{B} \\boldsymbol{X}_{12}=\\boldsymbol{E} .\\end{array}\\right.$\r\n从而 $\\boldsymbol{X}_{11}=\\boldsymbol{O}, \\boldsymbol{X}_{12}=\\boldsymbol{B}^{-1}, \\boldsymbol{X}_{21}=\\boldsymbol{A}^{-1}, \\boldsymbol{X}_{22}=\\boldsymbol{O}$, \r\n\r\n故 $\\boldsymbol{X}^{-1}=\\left(\\begin{array}{cc}\\boldsymbol{O} & \\boldsymbol{B}^{-1} \\\\ \\boldsymbol{A}^{-1} & \\boldsymbol{O}\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "反对角块 X 的逆仍是反对角，但两块互换成 B⁻¹（右上）、A⁻¹（左下），别写成 A⁻¹ 在右上",
+        "分块乘法要保持子块左乘/右乘顺序，AX₂₁=E 给 X₂₁=A⁻¹、BX₁₂=E 给 X₁₂=B⁻¹"
+      ],
+      "key_point": "X⁻¹ 的右上块为 B⁻¹、左下块为 A⁻¹，对角块为 O。"
+    },
+    {
+      "id": 1743,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的分布函数为\r\n$$\r\nF(x)=P\\{X \\leqslant x\\}= \r\n\\begin{cases}0, & x<-1 \\\\ \r\n0.4, & -1 \\leqslant x<1 \\\\ \r\n0.8, & 1 \\leqslant x<3 \\\\ \r\n1, & x \\geqslant 3\r\n\\end{cases}\r\n$$\r\n则 $X$ 的概率分布为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$X \\sim\\left(\\begin{array}{ccc}-1 & 1 & 3 \\\\ 0.4 & 0.4 & 0.2\\end{array}\\right)$",
+      "analysis": "因为 $F(x)$ 的图形为阶梯形, \r\n\r\n所以随机变量 $X$ 为离散型, 其可能的取值为 $-1,1,3$,\r\n\r\n$ P\\{X=-1\\}=F(-1)-F(-1-0)=0.4, \\\\\r\nP\\{X=1\\}=F(1)-F(1-0)=0.8-0.4=0.4, \\\\\r\nP\\{X=3\\}=F(3)-F(3-0)=1-0.8=0.2$,\r\n\r\n故 $X$ 的概率分布为 $X \\sim\\left(\\begin{array}{ccc}-1 & 1 & 3 \\\\ 0.4 & 0.4 & 0.2\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "每点概率是右值减左极限：P{X=1}=0.8−0.4=0.4，别直接取 F(1)=0.8",
+        "跳跃点取右连续，概率总和须为 1（0.4+0.4+0.2）可自检"
+      ],
+      "key_point": "跳跃高度即概率：P=0.4,0.4,0.2 于 −1,1,3。"
+    },
+    {
+      "id": 1744,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列各式正确的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}}\\left(1+\\frac{1}{x}\\right)^x=1$",
+        "B": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}}\\left(1+\\frac{1}{x}\\right)^x=\\mathrm{e}$",
+        "C": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(1-\\frac{1}{x}\\right)^x=-\\mathrm{e}$",
+        "D": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(1+\\frac{1}{x}\\right)^{-x}=\\mathrm{e}$"
+      },
+      "answer": "A",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}}\\left(1+\\frac{1}{x}\\right)^x\\\\\r\n=\\mathrm{e}^{\\lim\\limits _{x \\rightarrow 0^{+}} \\ln \\left(1+\\frac{1}{x}\\right)}\\\\\r\n=\\mathrm{e}^{\\lim\\limits _{x \\rightarrow 0^{+}} \\frac{\\ln \\left(1+\\frac{1}{x}\\right)}{\\frac{1}{x}}}\\\\\r\n\\stackrel{\\frac{1}{x}=t}{=} \\mathrm{e}^{\\lim\\limits _{t \\rightarrow+\\infty} \\frac{\\ln (1+x)}{t}}\\\\\r\n=\\mathrm{e}^{\\lim\\limits _{t+\\infty} \\frac{1}{x+1}}=\\mathrm{e}^0=1$,\r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "x→0⁺ 时指数 x→0（非 →∞），极限是 1 不是 e，把它当成标准 (1+1/x)^x→e 是套错场景",
+        "C": "lim_{x→∞}(1−1/x)^x=e⁻¹>0，绝不会等于负数 −e",
+        "D": "lim_{x→∞}(1+1/x)^{−x}=e⁻¹，不是 e"
+      },
+      "pitfalls": [
+        "A 的关键是 x→0⁺ 而非 x→∞：底趋 ∞、指数趋 0，取对数得 x ln(1/x)→0，极限为 e⁰=1",
+        "C 出现负底数概念错误——实指数幂的极限不可能为负"
+      ],
+      "key_point": "x→0⁺ 时 (1+1/x)^x→e^{x ln(1+1/x)}→e⁰=1，选 A。"
+    },
+    {
+      "id": 1745,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle 0 \\leqslant a_n<\\frac{1}{n}(n=1,2, \\cdots)$, 则下列级数中一定收敛的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\sum_{n=1}^{\\infty} a_n$",
+        "B": "$\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n a_n$",
+        "C": "$\\displaystyle \\sum_{n=1}^{\\infty} \\sqrt{a_n}$",
+        "D": "$\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n a_n^2$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle 0 \\leqslant a_n<\\frac{1}{n}$ \r\n\r\n得 $\\displaystyle 0 \\leqslant\\left|(-1)^n a_n^2\\right|=a_n^2<\\frac{1}{n^2}$,\r\n\r\n因为 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ 收敛, \r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|(-1)^n a_n^2\\right|$ 收敛, \r\n\r\n即级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n a_n^2$ 绝对收敛, \r\n\r\n故 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n a_n^2$ 一定收敛, 应选(D)",
+      "wrong_options": {
+        "A": "aₙ 可取近 1/n（如 1/(n+1)），Σaₙ 可发散",
+        "B": "aₙ 未必单调，交错级数莱布尼茨条件不满足，不保证收敛",
+        "C": "√aₙ 可比 aₙ 大得多（如 aₙ~1/n² 时 √aₙ~1/n），Σ√aₙ 可发散"
+      },
+      "pitfalls": [
+        "只有平方项 aₙ²<1/n² 由 p=2 级数控制得绝对收敛，稳收敛",
+        "'0≤aₙ<1/n' 只是上界约束，不给单调性，故 B 的莱布尼茨不适用"
+      ],
+      "key_point": "aₙ²<1/n² ⇒ Σ(−1)ⁿaₙ² 绝对收敛，选 D。"
+    },
+    {
+      "id": 1746,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶可逆矩阵, $\\lambda$ 为 $\\boldsymbol{A}$ 的一个特征值, 则 $\\boldsymbol{A}$ 的伴随矩阵 $\\boldsymbol{A}^*$ 的特征值之一是 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda^{-1}|\\boldsymbol{A}|^n$",
+        "B": "$\\lambda^{-1}|\\boldsymbol{A}|$",
+        "C": "$\\lambda|\\boldsymbol{A}|$",
+        "D": "$\\lambda|\\boldsymbol{A}|^n$"
+      },
+      "answer": "B",
+      "analysis": "由 $\\boldsymbol{A} \\boldsymbol{X}=\\lambda \\boldsymbol{X}$,\r\n\r\n得 $\\boldsymbol{A}^{-1} \\boldsymbol{X}=\\lambda^{-1} \\boldsymbol{X}$.\r\n\r\n而 $\\boldsymbol{A} ^*=|\\boldsymbol{A}| \\boldsymbol{A}^{-1}$, \r\n\r\n于是 $\\boldsymbol{A}^* \\boldsymbol{X}=|\\boldsymbol{A}| \\boldsymbol{A}^{-1} \\boldsymbol{X}=\\lambda^{-1}|\\boldsymbol{A}| \\boldsymbol{X}$,\r\n\r\n故 $\\boldsymbol{A}^*$ 的一个特征根为 $\\lambda^{-1}|\\boldsymbol{A}|$, 应选 (B)",
+      "wrong_options": {
+        "A": "多乘了一个 |A|：A*=|A|A⁻¹ 只带一次 |A|，不是 |A|ⁿ",
+        "C": "用了 λ|A| 而非 λ⁻¹|A|，把 A⁻¹ 的特征值 λ⁻¹ 记成 λ",
+        "D": "同时错在 |A| 的幂次与 λ 的方向"
+      },
+      "pitfalls": [
+        "A*=|A|A⁻¹ 只带一个行列式因子，特征值是 λ⁻¹·|A|",
+        "A⁻¹ 的特征值是 λ 的倒数，别写成 λ"
+      ],
+      "key_point": "A*x=|A|A⁻¹x=λ⁻¹|A|x，选 B。"
+    },
+    {
+      "id": 1747,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $A$ 和 $B$ 是任意两个概率不为零的互不相容事件, 则下列结论中一定正确的是 $(\\quad)$",
+      "options": {
+        "A": "$\\bar{A}$ 与 $\\bar{B}$ 不相容",
+        "B": "$\\bar{A}$ 与 $\\bar{B}$ 相容",
+        "C": "$P(A B)=P(A) P(B)$",
+        "D": "$P(A-B)=P(A)$"
+      },
+      "answer": "D",
+      "analysis": "因为 $A$ 和 $B$ 不相容, 所以 $A B=\\varnothing$,\r\n\r\n于是 $P(A-B)=P(A)-P(A B)=P(A)$, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "A、B 互斥不代表 Ā、B̄ 互斥；Ā∪B̄=(AB)ᶜ=Ω，两者反而必相容",
+        "B": "Ā、B̄ 是否相容取决于 A∪B 是否为 Ω，不一定成立，不能保证",
+        "C": "互斥时 P(AB)=0，而 P(A)P(B)≠0，故 P(AB)=P(A)P(B) 不成立（互斥且非零概率必不独立）"
+      },
+      "pitfalls": [
+        "互斥 ⇒ AB=∅ ⇒ P(A−B)=P(A)−0=P(A)，这是恒成立项",
+        "别把'互斥'与'独立'混：非零概率的互斥事件一定不独立，C 错"
+      ],
+      "key_point": "AB=∅ ⇒ P(A−B)=P(A)，选 D。"
+    },
+    {
+      "id": 1748,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "对任意两个随机变量 $X$ 和 $Y$, 若 $E(X Y)=E(X) \\cdot E(Y)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$D(X Y)=D(X) \\cdot D(Y)$",
+        "B": "$D(X+Y)=D(X)+D(Y)$",
+        "C": "$X$ 和 $Y$ 独立",
+        "D": "$X$ 和 $Y$ 不独立"
+      },
+      "answer": "B",
+      "analysis": "由 $E(X Y)=E(X) \\cdot E(Y)$ 得 $\\operatorname{Cov}(X, Y)=0$,\r\n\r\n于是 $D(X+Y)=D(X)+D(Y)+2 \\operatorname{Cov}(X, Y)=D(X)+D(Y)$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "方差无乘积可拆公式，D(XY)=D(X)D(Y) 一般不成立",
+        "C": "不相关（Cov=0）不等于独立，除非二维正态",
+        "D": "同理不能由不相关推出'不独立'，二者无必然关系"
+      },
+      "pitfalls": [
+        "E(XY)=E(X)E(Y) 只给出'不相关'（Cov=0），仅够推方差可加，推不出独立与否",
+        "D(X+Y) 的交叉项 2Cov=0 才使其等于 D(X)+D(Y)"
+      ],
+      "key_point": "Cov=0 ⇒ D(X+Y)=D(X)+D(Y)，选 B。"
+    },
+    {
+      "id": 1749,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{\\mathrm{e}^x+\\mathrm{e}^{2 x}+\\cdots+\\mathrm{e}^{n x}}{n}\\right)^{\\frac{1}{x}}$, 其中 $n$ 是给定的自然数",
+      "options": {},
+      "answer": "$\\mathrm{e}^{\\frac{n+1}{2}}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{\\mathrm{e}^x+\\mathrm{e}^{2 x}+\\cdots+\\mathrm{e}^{n x}}{n}\\right)^{\\frac{1}{x}}\\\\\r\n=\\mathrm{e}^{\\lim\\limits _{x \\rightarrow 0} \\frac{1}{x} \\cdot \\frac{\\mathrm{e}^x+\\mathrm{e}^{2 x}+\\cdots+\\mathrm{e}^{n x}-n}{n}}\\\\\r\n=\\mathrm{e}^{\\frac{1}{n} \\lim\\limits _{x \\rightarrow 0} \\frac{\\mathrm{e}^x+\\mathrm{e}^{2 x}+\\cdots+\\mathrm{e}^{n x}-n}{x}} \\\\\r\n=\\mathrm{e}^{\\frac{1}{n} \\lim\\limits _{x \\rightarrow 0}\\left(\\mathrm{e}^x+2 \\mathrm{e}^{2 x}+\\cdots+n \\mathrm{e}^{n x}\\right)}\\\\\r\n=\\mathrm{e}^{\\frac{1+2+\\cdots+n}{n}}=\\mathrm{e}^{\\frac{n+1}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先取对数把 1/x 指数拉下来，(Σe^{kx}−n)/x → Σk（每个 e^{kx}−1~kx）",
+        "别忘外层还有 1/n，最终指数是 (1+2+…+n)/n=(n+1)/2"
+      ],
+      "key_point": "极限=e^{(1/n)·Σₖ₌₁ⁿk}=e^{(n+1)/2}。"
+    },
+    {
+      "id": 1750,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle I=\\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y$, 其中 $D$ 是由 $x$ 轴, $y$ 轴与曲线 $\\displaystyle \\sqrt{\\frac{x}{a}}+\\sqrt{\\frac{y}{b}}=1$ 所围成的区域, 其中 $a>0, b>0$",
+      "options": {},
+      "answer": "$\\dfrac{a b^2}{30}$",
+      "analysis": "由 $\\displaystyle \\sqrt{\\frac{x}{a}}+\\sqrt{\\frac{y}{b}}=1$ \r\n\r\n得 $\\displaystyle y=b\\left(1-\\sqrt{\\frac{x}{a}}\\right)^2$,\r\n\r\n于是\r\n\r\n$\\displaystyle \\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^a \\mathrm{d} x \\int_0^{b\\left(1-\\sqrt{\\frac{x}{a}}\\right)^2} y \\mathrm{d} y \\\\\r\n=\\frac{b^2}{2} \\int_0^a\\left(\\sqrt{\\frac{x}{a}}-1\\right)^4 \\mathrm{d} x\\\\\r\n \\stackrel{\\sqrt{\\frac{x}{a}}=t}{=} \\frac{b^2}{2} \\int_0^1(t-1)^4 \\cdot 2 a t \\mathrm{d} t \\\\\r\n=a b^2 \\int_0^1(t-1)^4 \\cdot[(t-1)+1] \\mathrm{d} t \\\\\r\n=a b^2\\left[\\left.\\frac{1}{6}(t-1)^6\\right|_0 ^1+\\left.\\frac{1}{5}(t-1)^5\\right|_0 ^1\\right] \\\\\r\n=a b^2\\left(\\frac{1}{5}-\\frac{1}{6}\\right)=\\frac{a b^2}{30}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "上边界 y=b(1−√(x/a))²，先对 y 积得 (b²/2)(1−√(x/a))⁴",
+        "换元 t=√(x/a)、x=at²、dx=2at dt 后化为 ab²∫₀¹t(1−t)⁴dt=ab²·1/30"
+      ],
+      "key_point": "I=ab²∫₀¹t(1−t)⁴dt=ab²/30。"
+    },
+    {
+      "id": 1751,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\displaystyle x y \\frac{\\mathrm{d} y}{\\mathrm{d} x}=x^2+y^2$ 满足条件 $\\left.y\\right|_{x=\\mathrm{e}}=2 \\mathrm{e}$ 的特解",
+      "options": {},
+      "answer": "$y^2=x^2 \\ln x^2+2 x^2$",
+      "analysis": "由 $\\displaystyle x y \\frac{\\mathrm{d} y}{\\mathrm{d} x}=x^2+y^2$ \r\n\r\n得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{x}{y}+\\frac{y}{x}$,\r\n\r\n令 $\\displaystyle u=\\frac{y}{x}$, 则 $u+x \\dfrac{\\mathrm{d} u}{\\mathrm{d} x}=\\dfrac{1}{u}+u$,\r\n\r\n整理得 $\\displaystyle u \\mathrm{d} u=\\frac{\\mathrm{d} x}{x}$, \r\n\r\n积分得 $u^2=\\ln x^2+C$,\r\n\r\n将 $\\left.y\\right|_{x=\\mathrm{e}}=2 \\mathrm{e}$ 代入得 $C=2$, \r\n\r\n所求的特解为 $y^2=x^2 \\ln x^2+2 x^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "u=y/x 代入后 xu'=1/u 恰好可分离，u du=dx/x 积分得 u²=ln x²+C",
+        "代 x=e,y=2e ⇒ u=2、u²=4=2+C ⇒ C=2，回代 y²=x²(ln x²+2)"
+      ],
+      "key_point": "u=y/x：u²=ln x²+C，初值定 C=2，得 y²=x²ln x²+2x²。"
+    },
+    {
+      "id": 1752,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设曲线 $L_1: y=1-x^2(0 \\leqslant x \\leqslant 1), x$ 轴和 $y$ 轴所围区域被曲线 $L_2: y=a x^2$ 分为面积相等的两部分, 其中 $a$ 是大于零的常数, 试确定 $a$ 的值",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "由 $\\left\\{\\begin{array}{l}y=1-x^2, \\\\ y=a x^2\\end{array}\\right.$,\r\n\r\n得 $\\displaystyle x=\\frac{1}{\\sqrt{a+1}}$\r\n\r\n曲线 $L_1: y=1-x^2(0 \\leqslant x \\leqslant 1)$ 与两坐标轴围成的面积为\r\n\r\n$\\displaystyle S=\\int_0^1\\left(1-x^2\\right) \\mathrm{d} x=\\frac{2}{3}$,\r\n\r\n曲线 $L_1: y=1-x^2$ 与 $L_2: y=a x^2$ 围成的位于第一象限上方的面积为\r\n\r\n$\\displaystyle S_1 =\\int_0^{\\frac{1}{\\sqrt{a+1}}}\\left(1-x^2-a x^2\\right) \\mathrm{d} x \\\\\r\n=\\frac{1}{\\sqrt{a+1}}-\\left.\\frac{(a+1)}{3} x^3\\right|_0 ^{\\frac{1}{\\sqrt{a+1}}}=\\frac{2}{3 \\sqrt{a+1}}$,\r\n\r\n由 $2 S_1=S$ 得 $\\displaystyle \\frac{4}{3 \\sqrt{a+1}}=\\frac{2}{3}$ 得 $a=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两曲线交点 x=1/√(a+1)，上部面积 S₁=∫₀^{1/√(a+1)}(1−x²−ax²)dx=2/(3√(a+1))",
+        "等分条件是 2S₁=S=2/3 ⇒ √(a+1)=2 ⇒ a=3，别把方程列成 S₁=S"
+      ],
+      "key_point": "S=2/3，S₁=2/(3√(a+1))，由 2S₁=S 得 a=3。"
+    },
+    {
+      "id": 1753,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某厂家生产的一种产品同时在两个市场销售, 售价分别为 $p_1$ 和 $p_2$; 销售量分别为 $q_1$ 和 $q_2$; 需求函数分别为 $q_1=24-0.2 p_1$ 和 $q_2=10-0.05 p_2$, 总成本函数为 $C=35+40\\left(q_1+q_2\\right)$, 试问: 厂家如何确定两个市场的售价, 能使其获得的总利润最大? 最大总利润为多少?",
+      "options": {},
+      "answer": "当 $p_1=80, p_2=120$ 时, 总利润最大, \r\n\r\n最大利润为 $L_{\\max }=605$",
+      "analysis": "收入函数为\r\n\r\n$R=p_1 q_1+p_2 q_2=24 p_1-0.2 p_1^2+10 p_2-0.05 p_2^2,\\\\\r\nL=R-C=p_1 q_1+p_2 q_2\\\\\r\n=24 p_1-0.2 p_1^2+10 p_2-0.05 p_2^2-\\left[35+40\\left(q_1+q_2\\right)\\right] \\\\\r\n=32 p_1-0.2 p_1^2+12 p_2-0.05 p_2^2-1395$\r\n\r\n由 $\\left\\{\\begin{array}{l}\r\n\\dfrac{\\partial L}{\\partial p_1}=32-0.4 p_1=0 \\\\\r\n\\dfrac{\\partial L}{\\partial p_2}=12-0.1 p_2=0\r\n\\end{array}\\right.$\r\n\r\n得 $p_1=80, p_2=120$,\r\n\r\n故当 $p_1=80, p_2=120$ 时, \r\n\r\n总利润最大, 最大利润为 $L_{\\max }=605$",
+      "wrong_options": {},
+      "pitfalls": [
+        "成本 C=35+40(q₁+q₂) 要用需求函数写回 p₁,p₂，L 化简后 p₁、p₂ 完全解耦",
+        "∂L/∂p₁=32−0.4p₁、∂L/∂p₂=12−0.1p₂，分别令零得 p₁=80、p₂=120"
+      ],
+      "key_point": "L=32p₁−0.2p₁²+12p₂−0.05p₂²−1395，最优 (80,120)，L_max=605。"
+    },
+    {
+      "id": 1754,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "试证明函数 $\\displaystyle f(x)=\\left(1+\\frac{1}{x}\\right)^x$ 在区间 $(0,+\\infty)$ 内单调增加",
+      "options": {},
+      "answer": "略",
+      "analysis": "$\\displaystyle f(x)=\\mathrm{e}^{x \\ln \\left(1+\\frac{1}{x}\\right)}, \\\\\r\nf^{\\prime}(x)=\\mathrm{e}^{x \\ln \\left(1+\\frac{1}{x}\\right)} \\cdot\\left[\\ln \\left(1+\\frac{1}{x}\\right)+x \\cdot \\frac{1}{1+\\frac{1}{x}} \\cdot\\left(-\\frac{1}{x^2}\\right)\\right] \\\\\r\n=\\left(1+\\frac{1}{x}\\right)^x \\cdot\\left[\\ln \\left(1+\\frac{1}{x}\\right)-\\frac{1}{x+1}\\right]$\r\n\r\n记 $\\displaystyle g(x)=\\ln \\left(1+\\frac{1}{x}\\right)-\\frac{1}{1+x}, \\\\\r\ng^{\\prime}(x)=\\frac{-1}{x(1+x)^2}<0(x>0)$,\r\n\r\n所以 $g(x)$ 在 $(0,+\\infty)$ 上单调减少.\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow+\\infty} g(x)=0$,\r\n\r\n所以对任意 $x \\in(0,+\\infty)$, 有 $g(x)>0$,\r\n\r\n于是当 $x>0$ 时, $f^{\\prime}(x)>0$,\r\n\r\n即函数 $\\displaystyle f(x)=\\left(1+\\frac{1}{x}\\right)^x$ 在 $(0,+\\infty)$ 内单调增加",
+      "wrong_options": {},
+      "pitfalls": [
+        "f'>0 归结为括号内 g(x)=ln(1+1/x)−1/(1+x)>0，不能直接判号，须再对 g 分析",
+        "g'(x)=−1/[x(1+x)²]<0 且 lim_{x→+∞}g=0 ⇒ g 在 (0,∞) 恒正，故 f'>0"
+      ],
+      "key_point": "f'=(1+1/x)^x·g(x)，g 单减趋 0 故恒正，f 递增。"
+    },
+    {
+      "id": 1755,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设有三维向量\r\n\r\n$\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}\r\n1+\\lambda \\\\1 \\\\1\r\n\\end{array}\\right), \\\\\r\n\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}\r\n1 \\\\\\lambda+1 \\\\1\r\n\\end{array}\\right), \\\\\r\n\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{c}\r\n1 \\\\1 \\\\\r\n\\lambda+1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}=\\left(\\begin{array}{c}\r\n0 \\\\\\lambda \\\\\\lambda^2\r\n\\end{array}\\right)$\r\n\r\n问 $\\lambda$ 取何值时:\r\n\r\n(1) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 且表达式唯一;\r\n\r\n(2) $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 且表达式不唯一;\r\n\r\n(3) $\\boldsymbol{\\beta}$ 不可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示",
+      "options": {},
+      "answer": "(1) $\\lambda \\neq-3, \\lambda \\neq 0$\r\n\r\n(2) $\\lambda=0$\r\n\r\n(3) $\\lambda=-3$",
+      "analysis": "令 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$,\r\n\r\n$|\\boldsymbol{A}|=\\left|\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right|=(\\lambda+3) \\lambda^2$,\r\n\r\n(1) 当 $\\lambda \\neq-3, \\lambda \\neq 0$ 时, \r\n\r\n方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有唯一解,\r\n\r\n即 $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 且表达式唯一;\r\n\r\n(2) 当 $\\lambda=0$ 时; $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=1<3$,\r\n\r\n方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 有无数个解,\r\n\r\n即 $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示, 且表达式不唯一;\r\n\r\n(3) 当 $\\lambda=-3$ 时,\r\n\r\n$\\bar{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}\r\n-2 & 1 & 1 & 0 \\\\\r\n1 & -2 & 1 & -3 \\\\\r\n1 & 1 & -2 & 9\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & -2 & 1 & -3 \\\\\r\n0 & -3 & 3 & -6 \\\\\r\n0 & 3 & -3 & 12\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & -2 & 1 & -3 \\\\\r\n0 & 1 & -1 & 2 \\\\\r\n0 & 0 & 0 & 6\r\n\\end{array}\\right)$,\r\n\r\n由 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$ 得方程组 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\beta}$ 无解,\r\n\r\n即 $\\boldsymbol{\\beta}$ 不可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=(λ+3)λ²，λ=0 是二重根，须单独验：此时 β=0 且系数阵秩 1，为无穷多解而非无解",
+        "λ=−3 时行化简出矛盾行 (0=6)，秩不等故无解，别只看行列式为零就判无穷解"
+      ],
+      "key_point": "λ≠−3,0 唯一表示；λ=0 表示不唯一；λ=−3 不可表示。"
+    },
+    {
+      "id": 1756,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "二次型 $f\\left(x_1, x_2, x_3\\right)=x_1^2+4 x_2^2+4 x_3^2+2 \\lambda x_1 x_2-2 x_1 x_3+4 x_2 x_3$, 问 $\\lambda$ 取何值时, $f$ 为 正定二次型",
+      "options": {},
+      "answer": "$-2<\\lambda<1$",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & \\lambda & -1 \\\\ \\lambda & 4 & 2 \\\\ -1 & 2 & 4\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$, \r\n\r\n则 $f=\\boldsymbol{X}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{X}$,\r\n\r\n二次型 $f=\\boldsymbol{X}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{X}$ 为正定二次型的充分必要条件是\r\n\r\n$\\left\\{\\begin{array}{l}\r\n1>0\\\\\r\n\\left|\\begin{array}{ll}\r\n1 & \\lambda \\\\\r\n\\lambda & 4\r\n\\end{array}\\right|>0\\\\\r\n|\\boldsymbol{A}|=\\left|\\begin{array}{ccc}\r\n1 & \\lambda & -1 \\\\\r\n\\lambda & 4 & 2 \\\\\r\n-1 & 2 & 4\r\n\\end{array}\\right|>0\r\n\\end{array}\\right.$\r\n\r\n解得 $-2<\\lambda<1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "交叉项系数要减半填矩阵：2λx₁x₂→a₁₂=λ、−2x₁x₃→a₁₃=−1、4x₂x₃→a₂₃=2",
+        "三个主子式条件交集：4−λ²>0 给 (−2,2)，|A|>0 给 (−2,1)，取交得 (−2,1)"
+      ],
+      "key_point": "M₁,M₂,M₃>0 交集 ⇒ −2<λ<1。"
+    },
+    {
+      "id": 1757,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "试证明 $n$ 维列向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 线性无关的充分必要条件是\r\n\r\n$$\r\nD=\\left|\\begin{array}{cccc}\r\n\\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_n \\\\\r\n\\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_n \\\\\r\n\\vdots & \\vdots & & \\vdots \\\\\r\n\\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_n\r\n\\end{array}\\right| \\neq 0,\r\n$$\r\n\r\n其中 $\\boldsymbol{\\alpha}_i^{\\mathrm{T}}$ 为向量 $\\boldsymbol{\\alpha}_i$ 的转置 $(i=1,2, \\cdots, n)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n\\right),\\\\\r\n\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}=\\left(\\begin{array}{cccc}\\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}_n \\\\ \\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_2^{\\mathrm{T}} \\boldsymbol{\\alpha}_n \\\\ \\vdots & \\vdots & & \\vdots \\\\ \\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_1 & \\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_2 & \\cdots & \\boldsymbol{\\alpha}_n^{\\mathrm{T}} \\boldsymbol{\\alpha}_n\\end{array}\\right)$,\r\n\r\n则向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 线性无关的充分必要条件是 $r(\\boldsymbol{A})=n$,\r\n\r\n因为 $r(\\boldsymbol{A})=r\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right)$, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 线性无关的充分必要条件是 $r\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right)=n$,\r\n\r\n即 $\\left|\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right| \\neq 0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键识别所给行列式 D=|AᵀA|（Gram 行列式），元素 αᵢᵀαⱼ 就是内积",
+        "核心恒等式 r(A)=r(AᵀA)：n 阶方阵 AᵀA 非奇异 ⇔ r(A)=n ⇔ 无关"
+      ],
+      "key_point": "D=|AᵀA|，由 r(A)=r(AᵀA) 得无关 ⇔ D≠0。"
+    },
+    {
+      "id": 1758,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "一汽车沿一街道行驶, 需要经过三个均设有红绿信号灯的路口, 每个信号灯为红或绿与其他信号灯为红或绿相互独立, 且红绿两种信号显示的时间相等, 以 $X$ 表示该汽车首次遇到红灯前已通过的路口的个数, 求 $X$ 的概率分布",
+      "options": {},
+      "answer": "$X \\sim\\left(\\begin{array}{cccc}\r\n0 & 1 & 2 & 3 \\\\\r\n\\frac{1}{2} & \\frac{1}{4} & \\frac{1}{8} & \\frac{1}{8}\r\n\\end{array}\\right)$",
+      "analysis": "$X$ 的可能取值为 $0,1,2,3$,\r\n\r\n以 $A_i(i=1,2,3)$ 表示事件 \" 汽车在第 $i$ 个路口首次遇到红灯,  则 $A_1, A_2, A_3$ 相互独立, \r\n\r\n且 $P\\left(A_i\\right)=P\\left(\\bar{A_i}\\right)=\\dfrac{1}{2}, i=1,2,3$\r\n\r\n$\\displaystyle P\\{X=0\\}=P(A_1)=\\frac{1}{2}, \\\\\r\nP\\{X=1\\}=P(\\bar A_1 A_2)=\\frac{1}{2} \\times\\left(1-\\frac{1}{2}\\right)=\\frac{1}{4}, \\\\\r\nP\\{X=2\\}=P(\\bar A_1 \\bar A_2 A_3)=\\frac{1}{2} \\times \\frac{1}{2} \\times\\left(1-\\frac{1}{2}\\right)=\\frac{1}{8}, \\\\\r\nP\\{X=3\\}=P(\\bar A_1 \\bar A_2 \\bar A_3)=\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}=\\frac{1}{8}$,\r\n\r\n则 $X \\sim\\left(\\begin{array}{cccc}\r\n0 & 1 & 2 & 3 \\\\\r\n\\frac{1}{2} & \\frac{1}{4} & \\frac{1}{8} & \\frac{1}{8}\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "只有三个路口，X=3 表示三灯全绿（没遇红灯），概率是 (1/2)³=1/8，不再乘'第四次红'",
+        "X=2 是前两绿第三红=(1/2)³=1/8，与 X=3 概率相等，别漏这一特殊收尾"
+      ],
+      "key_point": "P{X=0,1,2,3}=1/2,1/4,1/8,1/8（X=3 为全绿）。"
+    },
+    {
+      "id": 1759,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设随机变量 $X$ 和 $Y$ 在圆域 $x^2+y^2 \\leqslant r^2$ 上服从联合均匀分布\r\n\r\n(1) 求 $X$ 和 $Y$ 的相关系数 $\\rho$;\r\n\r\n(2) 问 $X$ 和 $Y$ 是否独立?",
+      "options": {},
+      "answer": "(1) $0$; (2) 不独立",
+      "analysis": "$(X, Y)$ 的联合密度函数为\r\n\r\n$f(x, y)= \\begin{cases}\\dfrac{1}{\\pi r^2}, & x^2+y^2 \\leqslant r^2 \\\\\r\n0, & x^2+y^2>r^2\\end{cases}$\r\n\r\n$\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n当 $|x| \\geqslant r$ 时, $f_X(x)=0$;\r\n\r\n当 $|x|<r$ 时, $\\displaystyle f_X(x)=\\int_{-\\sqrt{r^2-x^2}}^{\\sqrt{r^2-x^2}} \\frac{1}{\\pi r^2} \\mathrm{d} y=\\frac{2 \\sqrt{r^2-x^2}}{\\pi r^2}$;\r\n\r\n即 $f_X(x)= \\begin{cases}\\dfrac{2 \\sqrt{r^2-x^2}}{\\pi r^2}, & |x|<r \\\\ 0, & |x| \\geqslant r\\end{cases}$\r\n\r\n同理 $f_Y(y)= \\begin{cases}\\dfrac{2 \\sqrt{r^2-y^2}}{\\pi r^2}, & |y|<r \\\\ 0, & |y| \\geqslant r\\end{cases}$\r\n\r\n(1) $\\displaystyle E(X)=\\int_{-r}^r x f_X(x) \\mathrm{d} x=0, \\\\\r\nE(Y)=\\int_{-r}^r y f_Y(y) \\mathrm{d} y=0,\\\\\r\n E(X Y)=\\iint\\limits_{x^2+y^2 \\leqslant r^2} x y f(x, y) \\mathrm{d} x \\mathrm{d} y=0$,\r\n\r\n由 $\\operatorname{Cov}(X, Y)=E(X Y)-E(X) E(Y)=0$,\r\n\r\n得 $X, Y$ 的相关系数 $\\rho=0$\r\n\r\n(2) 因为 $f(x, y) \\neq f_X(x) f_Y(y)$, 所以 $X, Y$ 不独立",
+      "wrong_options": {},
+      "pitfalls": [
+        "这是'不相关但不独立'的经典反例：ρ=0 由奇对称直接得，无需硬算积分",
+        "边缘 f_X(x)=2√(r²−x²)/(πr²)，其乘积 ≠ 圆域内常值联合密度，故不独立"
+      ],
+      "key_point": "对称性 ⇒ ρ=0；f≠f_X f_Y ⇒ 不独立（不相关≠独立）。"
+    },
+    {
+      "id": 1760,
+      "paper": "数学三",
+      "year": 1991,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 \r\n\r\n$f(x ; \\lambda)=\\left\\{\\begin{array}{ll}\\lambda a x^{a-1} \\mathrm{e}^{-\\lambda x^a}, & x>0\\\\ 0, & x \\leqslant 0\\end{array}\\right.$ \r\n\r\n其中 $\\lambda>0$ 是未知参数, $a>0$ 是已知常数, 试根据来自总体 $X$ 的简单随机样本 $X_1, X_2, \\cdots, X_n$, 求 $\\lambda$ 的最大似然估计量 $\\hat{\\lambda}$",
+      "options": {},
+      "answer": "$\\hat{\\lambda}=\\dfrac{n}{X_1^a+X_2^a+\\cdots+X_n^a}$",
+      "analysis": "$\\displaystyle \r\nL(\\lambda)=f\\left(x_1 ; \\lambda\\right) f\\left(x_2 ; \\lambda\\right) \\cdots f\\left(x_n ; \\lambda\\right)\\\\\r\n=\\lambda^n a^n\\left(x_1 x_2 \\cdots x_n\\right)^{a-1} \\mathrm{e}^{-\\lambda\\left(x_1^a+x_2^a+\\cdots+x_n^a\\right)}\\\\\r\n\\left(x_i>0, i=1,2, \\cdots, n\\right)\\\\\r\n\\ln L(\\lambda)=n \\ln \\lambda+n \\ln a+(a-1) \\ln \\left(x_1 x_2 \\cdots x_n\\right)-\\lambda\\left(x_1^a+x_2^a+\\cdots+x_n^a\\right)$\r\n\r\n令 $\\dfrac{\\mathrm{d}}{\\mathrm{d} \\lambda} \\ln L(\\lambda)=\\dfrac{n}{\\lambda}-\\left(x_1^a+x_2^a+\\cdots+x_n^a\\right)=0$,\r\n\r\n得 $\\lambda$ 的最大似然估计值为 $\\displaystyle \\lambda=\\frac{n}{x_1^a+x_2^a+\\cdots+x_n^a}$,\r\n\r\n故参数 $\\lambda$ 的最大似然估计量为 $\\hat{\\lambda}=\\dfrac{n}{X_1^a+X_2^a+\\cdots+X_n^a}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "a 是已知常数，只对 λ 求导；ln L 中 (a−1)ln∏xᵢ 与 λ 无关求导即消",
+        "d(ln L)/dλ=n/λ−Σxᵢᵃ=0 ⇒ λ̂=n/Σxᵢᵃ，估计量把 xᵢ 换成 Xᵢ"
+      ],
+      "key_point": "由 n/λ=Σxᵢᵃ 得 λ̂=n/(X₁ᵃ+…+Xₙᵃ)。"
+    }
+  ]
+}

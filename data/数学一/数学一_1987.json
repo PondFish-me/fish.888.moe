@@ -1,0 +1,421 @@
+{
+  "paper": "数学一",
+  "year": 1987,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1280,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 1,
+      "type": "判断题",
+      "difficulty": 0,
+      "stem": "与两直线 $\\left\\{\\begin{array}{l}x=1, \\\\ y=-1+t  \\\\ z=2+t\\end{array}\\right.$ 及 $\\dfrac{x+1}{1}=\\dfrac{y+2}{2}=\\dfrac{z-1}{1}$ 都平行，且过原点的平面方程是",
+      "options": {},
+      "answer": "$x-y+z=0$",
+      "analysis": "直线 $\\left\\{\\begin{array}{l}x=1, \\\\ y=-1+t  \\\\ z=2+t\\end{array}\\right.$ 的方向向量为 $\\boldsymbol{s}_1=\\{0,1,1\\}$, \r\n\r\n直线 $\\dfrac{x+1}{1}=\\dfrac{y+2}{2}=\\dfrac{z-1}{1}$ 的方向向量为 $\\boldsymbol{s}_2=\\{1,2,1\\}$, \r\n\r\n所求平面的法向量为 $\\boldsymbol{n}=\\{0,1,1\\} \\times\\{1,2,1\\}=\\{-1,1,-1\\}$, \r\n\r\n则所求平面方程为 $\\pi: x-y+z=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一条直线是参数式，方向向量取 $\\{0,1,1\\}$，别把点坐标当方向",
+        "叉乘 $\\{-1,1,-1\\}$ 与 $\\{1,-1,1\\}$ 同为法向量，方程可约去符号，最终仍是 $x-y+z=0$"
+      ],
+      "key_point": "两平行方向向量叉乘得法向量，过原点故无常数项，平面为 $x-y+z=0$。"
+    },
+    {
+      "id": 1281,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "当 $x=(\\quad)$时,函数 $y=x 2^{x}$ 取得极小值 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{\\ln 2}$",
+      "analysis": "由 $y^{\\prime}=2^x(1+x \\ln 2)=0$, 得 $\\displaystyle x=-\\frac{1}{\\ln 2}$.\r\n\r\n当 $\\displaystyle x<-\\frac{1}{\\ln 2}$ 时 $y^{\\prime}<0$; \r\n\r\n当 $\\displaystyle x>-\\frac{1}{\\ln 2}$ 时 $y^{\\prime}>0$, \r\n\r\n故当 $\\displaystyle x=-\\frac{1}{\\ln 2}$ 时, 函数 $y=x 2^x$ 取得极小值",
+      "wrong_options": {},
+      "pitfalls": [
+        "$(2^x)'=2^x\\ln 2$，别漏 $\\ln 2$ 因子",
+        "驻点左负右正才是极小值，需验证变号方向"
+      ],
+      "key_point": "$y'=2^x(1+x\\ln2)=0$ 得 $x=-1/\\ln2$，左负右正为极小值点。"
+    },
+    {
+      "id": 1282,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "由曲线 $y=\\ln x$ 与两直线 $y=(\\mathrm{e}+1)-x$ 及 $y=0$ 所围成的平面图形的面积为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{2}$",
+      "analysis": "由 $\\ln x=(\\mathrm{e}+1)-x$ 得出 $x=\\mathrm{e}$, 曲线 $y=\\ln x$ 与直线 $y=(\\mathrm{e}+1)-x$ 的交点为 $(\\mathrm{e}, 1)$, 则所围成的平面图形的面积为\r\n\r\n$\\displaystyle A=\\int_1^{\\mathrm{e}} \\ln x \\mathrm{d} x+\\int_{\\mathrm{e}}^{\\mathrm{e}+1}(\\mathrm{e}+1-x) \\mathrm{d} x=\\left.x \\ln x\\right|_{1} ^{\\mathrm{e}}-(\\mathrm{e}-1)+(\\mathrm{e}+1)-\\frac{(\\mathrm{e}+1)^2-\\mathrm{e}^2}{2}=\\frac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "交点在 $x=\\mathrm{e}$，面积须以 $x=\\mathrm{e}$ 为界拆成两块，勿只算一块",
+        "第二块是直线 $y=(\\mathrm{e}+1)-x$ 与 $y=0$ 围的三角形，可直接算但别漏"
+      ],
+      "key_point": "以交点 $(\\mathrm{e},1)$ 分界两块积分，$A=\\int_1^{\\mathrm{e}}\\ln x\\,dx+\\int_{\\mathrm{e}}^{\\mathrm{e}+1}(\\mathrm{e}+1-x)dx=\\tfrac{3}{2}$。"
+    },
+    {
+      "id": 1283,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $L$ 为取正向的圆 $x^{2}+y^{2}=9$, 则曲线积分 $\\displaystyle \\oint_{L}(2 x y-2 y) \\mathrm{d} x+\\left(x^{2}-4 x\\right) \\mathrm{d} y$ 的值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-18 \\pi$",
+      "analysis": "方法一 由格林公式得\r\n\r\n$$\r\n\\begin{aligned}\r\n&\\oint_L(2 x y-2 y) \\mathrm{d} x+\\left(x^2-4 x\\right) \\mathrm{d} y \\\\\r\n=&\\iint_D(2 x-4-2 x+2) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=&-2 \\iint_D \\mathrm{d} x \\mathrm{d} y=-18 \\pi \r\n\\end{aligned}\r\n$$\r\n\r\n方法二 \r\n令 $L:\\left\\{\\begin{array}{l}x=3 \\cos t, \\\\ y=3 \\sin t\\end{array}\\right.$ (起点 $t=0$, 终点 $t=2 \\pi$), 则\r\n\r\n$$\r\n\\begin{aligned}\r\n&\\oint_L(2 x y-2 y) \\mathrm{d} x+\\left(x^2-4 x\\right) \\mathrm{d} y\\\\\r\n= & \\int_0^{2 \\pi}(18 \\sin t \\cos t-6 \\sin t) \\cdot(-3 \\sin t) \\mathrm{d} t \\\\\r\n&+ \\left(9 \\cos ^2 t-12 \\cos t\\right) \\cdot 3 \\cos t \\mathrm{d} t \\\\\r\n= & 18 \\int_0^{2 \\pi} \\sin ^2 t \\mathrm{d} t-36 \\int_0^{2 \\pi} \\cos ^2 t \\mathrm{d} t \\\\\r\n= & 36 \\int_0^\\pi \\sin ^2 t \\mathrm{d} t-72 \\int_0^\\pi \\cos ^2 t \\mathrm{d} t \\\\\r\n= & (18-36)\\pi + 0=-18 \\pi\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\partial Q/\\partial x-\\partial P/\\partial y=(2x-4)-(2x-2)=-2$，$x$ 项恰好抵消勿算错",
+        "正向（逆时针）用格林公式不带负号，圆盘面积为 $\\pi\\cdot3^2=9\\pi$"
+      ],
+      "key_point": "格林公式得 $\\iint_D(-2)\\,d\\sigma=-2\\cdot9\\pi=-18\\pi$。"
+    },
+    {
+      "id": 1284,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知 3 维线性空间的一组基为 $\\boldsymbol{\\alpha}_{1}=(1,1,0), \\boldsymbol{\\alpha}_{2}=(1,0,1), \\boldsymbol{\\alpha}_{3}=(0,1,1)$, 则向量 $\\boldsymbol{\\alpha}=$ $(2,0,0)$ 在上述基底下的坐标为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1,1,-1)$",
+      "analysis": "令 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}$,\r\n\r\n由 $\\left(\\begin{array}{llll}1 & 1 & 0 & 2 \\\\ 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc}1 & 1 & 0 & 2 \\\\ 0 & 1 & -1 & 2 \\\\ 0 & 0 & 1 & -1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{cccc}1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & -1\\end{array}\\right)$, \r\n\r\n得向量 $\\boldsymbol{\\alpha}$ 在基底 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 下的坐标为 $(1,1,-1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "坐标是把 $\\alpha$ 用基线性表示的系数，别把 $\\alpha$ 的分量 $(2,0,0)$ 直接当坐标",
+        "$\\alpha_i$ 按列排成矩阵，解方程组得系数 $(1,1,-1)$"
+      ],
+      "key_point": "解 $x_1\\alpha_1+x_2\\alpha_2+x_3\\alpha_3=\\alpha$ 得坐标 $(1,1,-1)$。"
+    },
+    {
+      "id": 1285,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 6,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求正常数 $a$ 与 $b$, 使得 $\\displaystyle\\lim _{x \\rightarrow 0} \\frac{1}{b x-\\sin x} \\int_{0}^{x} \\frac{t^{2}}{\\sqrt{a+t^{2}}} \\mathrm{d} t=1$ 成立",
+      "options": {},
+      "answer": "$a=4, b=1$",
+      "analysis": "由 $\\displaystyle\\lim _{x \\rightarrow 0} \\frac{\\int_0^x \\frac{t^2}{\\sqrt{a+t^2}} \\mathrm{d} t}{x^3}=\\lim _{x \\rightarrow 0} \\frac{\\frac{x^2}{\\sqrt{a+x^2}}}{3 x^2}=\\frac{1}{3 \\sqrt{a}}$, \r\n\r\n得 $\\displaystyle \\int_0^x \\frac{t^2}{\\sqrt{a+t^2}} \\mathrm{d} t \\sim \\frac{1}{3 \\sqrt{a}} x^3$, \r\n从而 $b=1$, \r\n\r\n再由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{1}{b x-\\sin x} \\int_0^x \\frac{t^2}{\\sqrt{a+t^2}} \\mathrm{d} t=\\lim _{x \\rightarrow 0} \\frac{\\frac{x^3}{3 \\sqrt{a}}}{x-\\sin x}\\\\=\\frac{1}{\\sqrt{a}} \\lim _{x \\rightarrow 0} \\frac{x^2}{1-\\cos x}=\\frac{2}{\\sqrt{a}}=1$, \r\n\r\n得 $a=4$, 故 $a=4, b=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先看分母 $bx-\\sin x$ 阶数：$b\\neq1$ 时是一阶无穷小、极限为 $\\infty$ 或 $0$，故必 $b=1$ 才是三阶",
+        "$b=1$ 后 $x-\\sin x\\sim x^3/6$，与分子 $x^3/(3\\sqrt a)$ 配平解出 $a=4$"
+      ],
+      "key_point": "变限积分 $\\sim x^3/(3\\sqrt a)$，令分母同为三阶得 $b=1$，配平得 $a=4$。"
+    },
+    {
+      "id": 1286,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 7,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f, g$ 连续可微, $u=f(x, x y), v=g(x+x y)$, 求 $\\displaystyle\\frac{\\partial u}{\\partial x} \\cdot \\frac{\\partial v}{\\partial x}$",
+      "options": {},
+      "answer": "$g^{\\prime}\\left(f_x^{\\prime}+y f_y^{\\prime}\\right)(1+y)$",
+      "analysis": "$\\dfrac{\\partial u}{\\partial x}=f_x^{\\prime}+y f_y^{\\prime}, \\dfrac{\\partial v}{\\partial x}=g^{\\prime} \\cdot(1+y)$ , 故 $\\dfrac{\\partial u}{\\partial x} \\cdot \\dfrac{\\partial v}{\\partial x}=g^{\\prime}\\left(f_x^{\\prime}+y f_y^{\\prime}\\right)(1+y)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$u=f(x,xy)$ 对 $x$：第一变量导 $f_x'$，第二变量 $xy$ 对 $x$ 导为 $y$ 得 $y f_y'$",
+        "$v=g(x+xy)$ 内层对 $x$ 导为 $1+y$，$g$ 是一元函数用 $g'$"
+      ],
+      "key_point": "$u_x=f_x'+y f_y'$，$v_x=g'(1+y)$，乘积为 $g'(f_x'+y f_y')(1+y)$。"
+    },
+    {
+      "id": 1287,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 8,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 满足 $\\boldsymbol{A B}=\\boldsymbol{A}+2 \\boldsymbol{B}$, 其中 $\\boldsymbol{A}=\\left(\\begin{array}{lll}3 & 0 & 1 \\\\ 1 & 1 & 0 \\\\ 0 & 1 & 4\\end{array}\\right)$, 求矩阵 $\\boldsymbol{B}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}5 & -2 & -2 \\\\ 4 & -3 & -2 \\\\ -2 & 2 & 3\\end{array}\\right)$",
+      "analysis": "由 $\\boldsymbol{A} \\boldsymbol{B}=\\boldsymbol{A}+2 \\boldsymbol{B}$, \r\n\r\n得 $(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=\\boldsymbol{A}$, \r\n\r\n解得 $\\boldsymbol{B}=(\\boldsymbol{A}-2 \\boldsymbol{E})^{-1} \\boldsymbol{A}$,\r\n\r\n而 $\\boldsymbol{A}-2 \\boldsymbol{E}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 1 & -1 & 0 \\\\ 0 & 1 & 2\\end{array}\\right)$,\r\n\r\n由 $\\left(\\begin{array}{ccc:ccc}1 & 0 & 1 & 1 & 0 & 0 \\\\ 1 & -1 & 0 & 0 & 1 & 0 \\\\ 0 & 1 & 2 & 0 & 0 & 1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc:ccc}1 & 0 & 1 & 1 & 0 & 0 \\\\ 0 & -1 & -1 & -1 & 1 & 0 \\\\ 0 & 0 & 1 & -1 & 1 & 1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc:ccc}1 & 0 & 0 & 2 & -1 & -1 \\\\ 0 & 1 & 0 & 2 & -2 & -1 \\\\ 0 & 0 & 1 & -1 & 1 & 1\\end{array}\\right)$,\r\n\r\n得 $(\\boldsymbol{A}-2 \\boldsymbol{E})^{-1}=\\left(\\begin{array}{ccc}2 & -1 & -1 \\\\ 2 & -2 & -1 \\\\ -1 & 1 & 1\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & -1 & -1 \\\\ 2 & -2 & -1 \\\\ -1 & 1 & 1\\end{array}\\right)\\left(\\begin{array}{lll}3 & 0 & 1 \\\\ 1 & 1 & 0 \\\\ 0 & 1 & 4\\end{array}\\right)=\\left(\\begin{array}{ccc}5 & -2 & -2 \\\\ 4 & -3 & -2 \\\\ -2 & 2 & 3\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$B$ 在左侧被 $(A-2E)$ 乘，逆矩阵须左乘：$B=(A-2E)^{-1}A$，勿写成 $A(A-2E)^{-1}$",
+        "先验证 $|A-2E|\\neq0$ 保证可逆，再用 $(A-2E\\mid E)$ 行变换求逆"
+      ],
+      "key_point": "$(A-2E)B=A\\Rightarrow B=(A-2E)^{-1}A$，算得 $\\begin{pmatrix}5&-2&-2\\\\4&-3&-2\\\\-2&2&3\\end{pmatrix}$。"
+    },
+    {
+      "id": 1288,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 9,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime \\prime}+6 y^{\\prime \\prime}+\\left(9+a^{2}\\right) y^{\\prime}=1$ 的通解, 其中常数 $a>0$",
+      "options": {},
+      "answer": "$\\displaystyle y=C_1+\\mathrm{e}^{-3 x}\\left(C_2 \\cos a x+C_3 \\sin a x\\right)+\\frac{x}{9+a^2}$",
+      "analysis": "方法一\r\n$y^{\\prime \\prime \\prime}+6 y^{\\prime \\prime}+\\left(9+a^2\\right) y^{\\prime}=1$,\r\n\r\n两边积分得 $y^{\\prime \\prime}+6 y^{\\prime}+\\left(9+a^2\\right) y=x+C_0$,\r\n\r\n$y^{\\prime \\prime}+6 y^{\\prime}+\\left(9+a^2\\right) y=0$ 的特征方程为 $\\lambda^2+6 \\lambda+\\left(9+a^2\\right)=0$,\r\n解得 $\\lambda_{1,2}=-3 \\pm a \\mathrm{i}$,\r\n\r\n则方程 $y^{\\prime \\prime}+6 y^{\\prime}+\\left(9+a^2\\right) y=0$ 的通解为 \r\n\r\n$y=\\mathrm{e}^{-3 x}\\left(C_1 \\cos a x+C_2 \\sin a x\\right)$;\r\n\r\n设 $y^{\\prime \\prime}+6 y^{\\prime}+\\left(9+a^2\\right) y=x+C_0$ 的特解为\r\n\r\n$y^*=A x+B$, 代入得\r\n\r\n$A=\\dfrac{1}{9+a^2}, B=\\dfrac{C_0}{9+a^2}-\\dfrac{6}{\\left(9+a^2\\right)^2}$\r\n\r\n故原方程的通解为\r\n\r\n$y=\\mathrm{e}^{-3 x}\\left(C_1 \\cos a x+C_2 \\sin a x\\right)+\\dfrac{x}{9+a^2}+\\dfrac{C_0}{9+a^2}-\\dfrac{6}{\\left(9+a^2\\right)^2}$\r\n\r\n方法二\r\n\r\n特征方程为 $\\lambda^3+6 \\lambda^2+\\left(9+a^2\\right) \\lambda=0$,\r\n\r\n解得特征根为 $\\lambda_1=0, \\lambda_2=-3+a \\mathrm{i}, \\quad \\lambda_3=-3-a \\mathrm{i}$,\r\n\r\n$y^{\\prime \\prime \\prime}+6 y^{\\prime \\prime}+\\left(9+a^2\\right) y^{\\prime}=0$ 的通解为\r\n\r\n$y=C_1+\\mathrm{e}^{-3 x}\\left(C_2 \\cos a x+C_3 \\sin a x\\right)$,\r\n\r\n显然原方程有特解 $\\displaystyle y_0(x)=\\frac{x}{9+a^2}$,\r\n\r\n故原方程通解为 $\\displaystyle y=C_1+\\mathrm{e}^{-3 x}\\left(C_2 \\cos a x+C_3 \\sin a x\\right)+\\frac{x}{9+a^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "方程无 $y$ 项，$\\lambda=0$ 是特征根，对应常数项 $C_1$，别漏这一支",
+        "右端为常数 1 而 0 是单根，特解须设为 $Ax$ 而非常数，得 $x/(9+a^2)$"
+      ],
+      "key_point": "特征根 $0,-3\\pm ai$，通解 $C_1+\\mathrm{e}^{-3x}(C_2\\cos ax+C_3\\sin ax)+x/(9+a^2)$。"
+    },
+    {
+      "id": 1289,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设常数 $k>0$, 则级数 $\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n} \\frac{k+n}{n^{2}}(\\quad)$",
+      "options": {
+        "A": "发散",
+        "B": "绝对收敛",
+        "C": "条件收敛",
+        "D": "收敛或发散与 $k$ 的取值有关"
+      },
+      "answer": "C",
+      "analysis": "$\\displaystyle\\sum_{n=1}^{\\infty}(-1)^n \\frac{k+n}{n^2}=k \\sum_{n=1}^{\\infty}(-1)^n \\frac{1}{n^2}+\\sum_{n=1}^{\\infty}(-1)^n \\frac{1}{n}$,\r\n\r\n因为级数 $\\displaystyle\\sum_{n=1\\displaystyle}^{\\infty}(-1)^n \\frac{1}{n^2}$ 绝对收敛, \r\n\r\n级数 $\\displaystyle\\sum_{n=1}^{\\infty}(-1)^n \\frac{1}{n}$ 条件收敛, 所以原级数条件收敛, 应选 (C)",
+      "wrong_options": {
+        "A": "只看通项 $(k+n)/n^2\\sim1/n$ 就类比调和级数断言发散，忽视交错因子 $(-1)^n$ 带来的收敛。",
+        "B": "误判整体绝对收敛——取绝对值后含 $\\sum1/n$ 发散部分，并非绝对收敛。",
+        "D": "误以为敛散依赖 $k$；$k$ 仅作用在绝对收敛的 $\\sum(-1)^n/n^2$ 上，不改变整体条件收敛的定性。"
+      },
+      "pitfalls": [
+        "取绝对值后主项 $\\sum1/n$ 发散，故非绝对收敛",
+        "拆出的 $\\sum(-1)^n/n$ 条件收敛，叠加绝对收敛部分仍条件收敛，与 $k$ 无关"
+      ],
+      "key_point": "拆为绝对收敛的 $k\\sum(-1)^n/n^2$ 与条件收敛的 $\\sum(-1)^n/n$，整体条件收敛。"
+    },
+    {
+      "id": 1290,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I=t \\int_{0}^{\\frac{s}{t}} f(t x) \\mathrm{d} x$, 其中 $f(x)$ 为连续数, $s>0, t>0$, 则 $I$ 的值 $(\\quad)$",
+      "options": {
+        "A": "依赖于 $s, t$",
+        "B": "依赖于 $s, t, x$",
+        "C": "依赖于 $t, x$, 不依赖于 $s$",
+        "D": "依赖于 $s$, 不依赖于 $t$"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle I=t \\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d} x=\\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d}(t x) \\stackrel{t x=u}{=} \\int_0^s f(u) \\mathrm{d} u$, 显然 $I$ 与 $s$ 有关, 与 $t$ 无关, 应选 (D)",
+      "wrong_options": {
+        "A": "未换元，误以为被积中的 $t$ 也影响结果；实际 $u=tx$ 后 $t$ 被抵消，只余 $s$。",
+        "B": "把积分变量 $x$（哑变量）当成结果自变量，混淆定积分值与积分变量。",
+        "C": "换元方向弄反，误判保留 $t$ 消去 $s$；实为 $s$ 决定上限、$t$ 抵消。"
+      },
+      "pitfalls": [
+        "$t\\,dx=d(tx)$ 与上限 $t\\cdot(s/t)=s$ 配合，$t$ 恰好全部抵消",
+        "积分变量 $x$ 是哑变量，定积分值只由上下限决定"
+      ],
+      "key_point": "换元 $u=tx$ 得 $I=\\int_0^s f(u)du$，仅依赖 $s$，与 $t$ 无关，选 D。"
+    },
+    {
+      "id": 1291,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\lim _{x \\rightarrow a} \\frac{f(x)-f(a)}{(x-a)^{2}}=-1$, 则在点 $x=a$ 处 $(\\quad)$",
+      "options": {
+        "A": "$f(x)$ 可导且 $f^{\\prime}(a) \\neq 0$",
+        "B": "$f(x)$ 取得极大值",
+        "C": "$f(x)$ 取得极小值",
+        "D": "$f(x)$ 的导数不存在"
+      },
+      "answer": "B",
+      "analysis": "由极限的保号性可知, 存在 $\\delta>0$, 当 $0<|x-a|<\\delta$ 时, \r\n\r\n$\\dfrac{f(x)-f(a)}{(x-a)^2}<0$, 即 $f(x)<f(a)$, \r\n\r\n故 $x=a$ 为极大值点, 应选 (B)",
+      "wrong_options": {
+        "A": "由二阶比值极限存在误推一阶导非零；分母是二阶无穷小，恰能推出 $f'(a)=0$。",
+        "C": "保号性用反——分式极限为负说明 $f(x)<f(a)$ 是极大值，误当极小值即不等号方向搞反。",
+        "D": "由二阶比值存在错误否定导数存在；此极限反而保证 $f'(a)=0$，导数存在。"
+      },
+      "pitfalls": [
+        "分母 $(x-a)^2>0$，极限为负 $\\Rightarrow f(x)-f(a)<0$，即 $f(x)<f(a)$ 为极大",
+        "别被 $-1$ 迷惑去猜一阶导；此比值给出的是极值信息，不是可导与否的反例"
+      ],
+      "key_point": "保号性得邻域内 $f(x)<f(a)$，故 $x=a$ 取极大值，选 B。"
+    },
+    {
+      "id": 1292,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶矩阵, 且 $|\\boldsymbol{A}|=a \\neq 0, \\boldsymbol{A}^{*}$ 是 $\\boldsymbol{A}$ 的伴随矩阵,则 $\\left|\\boldsymbol{A}^{*}\\right|=(\\quad)$",
+      "options": {
+        "A": "$a$",
+        "B": "$\\dfrac{1}{a}$",
+        "C": "$a^{n-1}$",
+        "D": "$a^{n}$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\boldsymbol{A A}^*=|\\boldsymbol{A}| \\boldsymbol{E}$ 得出 $|\\boldsymbol{A}| \\cdot\\left|\\boldsymbol{A}{ }^*\\right|=|| \\boldsymbol{A}|\\boldsymbol{E}|=|\\boldsymbol{A}|^n$, 由 $|\\boldsymbol{A}|=a \\neq 0$ 得 $\\left|\\boldsymbol{A}^*\\right|=a^{n-1}$, 应选 (C)",
+      "wrong_options": {
+        "A": "误用错误公式 $|A^*|=|A|$，直接搬 $|A|$ 本身。",
+        "B": "把伴随当逆矩阵，套 $|A^{-1}|=1/|A|$，混淆 $A^*$ 与 $A^{-1}$（相差 $|A|$ 因子）。",
+        "D": "误记 $|A^*|=|A|^n$，把指数 $n-1$ 记成 $n$（取行列式后未除掉一个 $|A|$）。"
+      },
+      "pitfalls": [
+        "$|kE|=k^n$，故 $||A|E|=|A|^n$，右边是 $n$ 次幂",
+        "两边约去 $|A|=a\\neq0$，指数降为 $n-1$"
+      ],
+      "key_point": "$|A||A^*|=|A|^n\\Rightarrow|A^*|=a^{n-1}$，选 C。"
+    },
+    {
+      "id": 1293,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n 2^{n}} x^{n-1}$ 的收敛域, 并求其和函数",
+      "options": {},
+      "answer": "收敛域 $[-2,2)$；$S(x)=\\dfrac{1}{2}\\ (x=0)$，$S(x)=-\\dfrac{1}{x}\\ln\\left(1-\\dfrac{x}{2}\\right)\\ (x\\in[-2,0)\\cup(0,2))$",
+      "analysis": "由 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\frac{1}{2}$, \r\n得幂级数的收敛半径为 $R=2$,\r\n\r\n- 当 $x=-2$ 时,级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n 2^n}(-2)^{n-1}=\\frac{1}{2} \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n}$ 收敛;\r\n\r\n- 当 $x=2$ 时,级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n 2^n} 2^{n-1}=\\frac{1}{2} \\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散,\r\n\r\n故收敛域为 $[-2,2)$;\r\n令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty} \\frac{1}{n 2^n} x^{n-1}$,\r\n\r\n- 当 $x=0$ 时, $\\displaystyle S(0)=\\frac{1}{2}$;\r\n\r\n- 当 $x \\neq 0$ 时, $\\displaystyle S(x)=\\frac{1}{x} \\sum_{n=1}^{\\infty} \\frac{\\left(\\frac{x}{2}\\right)^n}{n}=-\\frac{1}{x} \\ln \\left(1-\\frac{x}{2}\\right)$\r\n\r\n故 $\\displaystyle S(x)= \\begin{cases}\\frac{1}{2}, & x=0, \\\\ -\\frac{1}{x} \\ln \\left(1-\\frac{x}{2}\\right), & -2 \\leqslant x<2 \\text { 且 } x \\neq 0 .\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "端点 $x=-2$ 收敛（交错）、$x=2$ 发散（调和），收敛域左闭右开 $[-2,2)$",
+        "级数首项含 $x^{n-1}$，提出 $1/x$ 后凑成 $\\sum(x/2)^n/n=-\\ln(1-x/2)$，$x=0$ 须单独取 $S(0)=1/2$"
+      ],
+      "key_point": "$R=2$、收敛域 $[-2,2)$；和函数 $S(x)=-\\frac{1}{x}\\ln(1-\\frac{x}{2})$，$S(0)=1/2$。"
+    },
+    {
+      "id": 1294,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分\r\n\r\n$\\displaystyle I=\\iint\\limits_{S} x(8 y+1) \\mathrm{d} y \\mathrm{d} z+2\\left(1-y^{2}\\right) \\mathrm{d} z \\mathrm{d} x-4 y z \\mathrm{d} x \\mathrm{d} y$, \r\n\r\n其中 $S$ 是由曲线 $\\left\\{\\begin{array}{l}z=\\sqrt{y-1} \\\\ x=0\\end{array}\\right.\\quad (1 \\leqslant y \\leqslant 3)$ 绕 $y$ 轴旋转一周所成的曲面, \r\n\r\n它的法向量与 $y$ 轴正向的夹角大 于 $\\dfrac{\\pi}{2}$",
+      "options": {},
+      "answer": "$34 \\pi$",
+      "analysis": "曲面 $S$ 的方程为 $S: y-1=x^2+z^2(1 \\leqslant y \\leqslant 3)$, 取外侧, 令 $S_0: y=3\\left(x^2+z^2 \\leqslant 2\\right)$, 取右侧, 则\r\n\r\n$\\displaystyle I=\\left(\\oiint\\limits_{S+S_0}-\\iint\\limits_{S_0}\\right) x(8 y+1) \\mathrm{d} y \\mathrm{d} z+2\\left(1-y^2\\right) \\mathrm{d} z \\mathrm{d} x-4 y z \\mathrm{d} x \\mathrm{d} y \\stackrel{\\Delta}{=} I_1 - I_2$,\r\n\r\n$\\displaystyle I_1 = \\oiint\\limits_{S+S_0} x(8 y+1) \\mathrm{d} y \\mathrm{d} z+2\\left(1-y^2\\right) \\mathrm{d} z \\mathrm{d} x-4 y z \\mathrm{d} x \\mathrm{d} y=\\iiint\\limits_{\\Omega} \\mathrm{d} v=\\int_1^3 \\mathrm{d} y \\iint\\limits_{x^2+z^2 \\leqslant y-1} \\mathrm{d} x \\mathrm{d} z=\\pi \\int_1^3(y-1)\\mathrm{d} y=2 \\pi$,\r\n\r\n$\\displaystyle I_2= \\iint\\limits_{S_0} x(8 y+1) \\mathrm{d} y \\mathrm{d} z+2\\left(1-y^2\\right) \\mathrm{d} z \\mathrm{d} x-4 y z \\mathrm{d} x \\mathrm{d} y=  \\iint\\limits_{S_0} 2\\left(1-y^2\\right) \\mathrm{d} z \\mathrm{d} x=-16 \\iint\\limits_{S_0} \\mathrm{d} z \\mathrm{d} x=-16 \\iint\\limits_{x^2+z^2 \\leqslant 2} \\mathrm{d} z \\mathrm{d} x=-32 \\pi$,\r\n\r\n故 $I=34 \\pi$",
+      "wrong_options": {},
+      "pitfalls": [
+        "法向量与 $y$ 轴正向夹角 $>\\pi/2$ 即取外侧，补面 $y=3$ 取右侧凑成外侧闭曲面",
+        "散度 $=(8y+1)+(-4y)+(-4y)=1$，闭曲面积分 $=$ 体积 $2\\pi$；补面积分 $I_2=-32\\pi$，$I=2\\pi-(-32\\pi)=34\\pi$"
+      ],
+      "key_point": "补顶盘用高斯：$I_1=\\iiint1\\,dv=2\\pi$，减补面 $I_2=-32\\pi$，得 $I=34\\pi$。"
+    },
+    {
+      "id": 1295,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在闭区间 $[0,1]$ 上可微, 对于 $[0,1]$ 上的每个 $x$, 函数的值都在区间 $(0,1)$ 内, 且 $f^{\\prime}(x) \\neq 1$, 证明: 在 $(0,1)$ 内有且仅有一个 $x$, 使得 $f(x)=x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $g(x)=f(x)-x$,\r\n\r\n因为 $0<f(x)<1(0 \\leqslant x \\leqslant 1)$, \r\n\r\n所以 $g(0)=f(0)>0, g(1)=f(1)-1<0$,\r\n\r\n由零点定理, $g(x)$ 在 $(0,1)$ 内有零点, \r\n\r\n即存在 $x \\in(0,1)$, 使得 $g(x)=0$, 即 $f(x)=x$.\r\n\r\n$g^{\\prime}(x)=f^{\\prime}(x)-1$, \r\n\r\n因为 $f^{\\prime}(x) \\neq 1$, \r\n\r\n所以 $g^{\\prime}(x)>0$ 或 $g^{\\prime}(x)<0$,\r\n\r\n即 $g(x)$ 在 $[0,1]$ 上严格单调, \r\n\r\n故 $g(x)$ 在 $(0,1)$ 内零点唯一,\r\n\r\n即在 $(0,1)$ 内有且仅有一个 $x$, 使得 $f(x)=x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 $0<f(x)<1$ 得 $g(0)=f(0)>0$、$g(1)=f(1)-1<0$，端点严格异号才能用零点定理",
+        "$f'(x)\\neq1$ 且 $f'$ 有介值性 $\\Rightarrow g'=f'-1$ 恒正或恒负，故严格单调保证唯一"
+      ],
+      "key_point": "$g=f-x$ 端点异号得存在，$g'=f'-1\\neq0$ 严格单调得唯一。"
+    },
+    {
+      "id": 1296,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "问 $a, b$ 为何值时, 线性方程组 \r\n\r\n$\\left\\{\\begin{array}{l}x_{1}+x_{2}+x_{3}+x_{4}=0 \\\\ x_{2}+2 x_{3}+2 x_{4}=1 \\\\ -x_{2}+(a-3) x_{3}-2 x_{4}=b \\\\ 3 x_{1}+2 x_{2}+x_{3}+a x_{4}=-1\\end{array}\\right.$ \r\n\r\n有唯一解? 无解? 有无穷多个解? 并求出有无穷多个解时的通解",
+      "options": {},
+      "answer": "$a\\neq1$ 唯一解；$a=1,b\\neq-1$ 无解；$a=1,b=-1$ 无穷多解，通解 $\\boldsymbol{x}=(-1,1,0,0)^{\\mathrm{T}}+k_1(1,-2,1,0)^{\\mathrm{T}}+k_2(1,-2,0,1)^{\\mathrm{T}}$",
+      "analysis": "$$\r\n\\begin{aligned}\r\n\\bar{\\boldsymbol{A}}\r\n=&\\left(\\begin{array}{cccc:c}\r\n1 & 1 & 1 & 1 & 0 \\\\ \r\n0 & 1 & 2 & 2 & 1 \\\\ \r\n0 & -1 & a-3 & -2 & b \\\\ \r\n3 & 2 & 1 & a & -1\r\n\\end{array}\\right)\\\\\r\n\\rightarrow & \\left(\\begin{array}{cccc:c}\r\n1 & 1 & 1 & 1 & 0 \\\\ \r\n0 & 1 & 2 & 2 & 1 \\\\ \r\n0 & -1 & a-3 & -2 & b \\\\ \r\n0 & -1 & -2 & a-3 & -1\r\n\\end{array}\\right)\\\\\r\n\\rightarrow & \\left(\\begin{array}{cccc:c}\r\n1 & 1 & 1 & 1 & 0 \\\\\r\n0 & 1 & 2 & 2 & 1 \\\\\r\n0 & 0 & a-1 & 0 & b+1 \\\\\r\n0 & 0 & 0 & a-1 & 0\r\n\\end{array}\\right)\r\n\\end{aligned}\r\n$$\r\n\r\n- 当 $a \\neq 1, b$ 为任意常数时, 方程组有唯一解;\r\n\r\n- 当 $a=1, b \\neq-1$ 时, 方程组无解;\r\n\r\n- 当 $a=1, b=-1$ 时, 方程组有无数个解, 将 $a, b$ 代入后得出\r\n\r\n$\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{cccc:c}1 & 0 & -1 & -1 & -1 \\\\ 0 & 1 & 2 & 2 & 1 \\\\ 0 & 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 & 0\\end{array}\\right)$,\r\n得方程组的通解为\r\n\r\n$\\boldsymbol{X}=k_1\\left(\\begin{array}{c}\r\n1 \\\\\r\n-2 \\\\\r\n1 \\\\\r\n0\r\n\\end{array}\\right)+k_2\\left(\\begin{array}{c}\r\n1 \\\\\r\n-2 \\\\\r\n0 \\\\\r\n1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n-1 \\\\\r\n1 \\\\\r\n0 \\\\\r\n0\r\n\\end{array}\\right)\\left(k_1, k_2 \\text { 为任意常数 }\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "消元后出现 $(a-1)x_3=b+1$ 与 $(a-1)x_4=0$，$a=1$ 时系数矩阵秩降为 2",
+        "$a=1,b=-1$ 时 $r(A)=r(\\bar A)=2<4$，两个自由未知量，通解含两个任意常数"
+      ],
+      "key_point": "主元 $(a-1)$：$a\\neq1$ 唯一解；$a=1$ 时 $b=-1$ 有无穷解（否则无解），通解含两自由参数。"
+    },
+    {
+      "id": 1297,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 18,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "假设在一次试验中, 事件 $A$ 发生的概率为 $p$, 现进行 $n$ 次独立试验, 则 $A$ 至少发生一次的概率为, 而事件 $A$ 至多发生一次的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1-(1-p)^n, \\quad[1+(n-1) p](1-p)^{n-1}$",
+      "analysis": "设 $n$ 次试验中 $A$ 发生的次数为 $X$, 显然 $X \\sim B(n, p)$, 则 \r\n\r\n$P\\{X \\geqslant 1\\}=1-P\\{X=0\\}=1-\\mathrm{C}_n^0 p^0(1-p)^n=1-(1-p)^n$;\r\n\r\n$P\\{X \\leqslant 1\\} =P\\{X=0\\}+P\\{X=1\\}=\\mathrm{C}_n^0 p^0(1-p)^n+\\mathrm{C}_n^1 p(1-p)^{n-1} =(1-p)^{n-1}[1+(n-1) p]$",
+      "wrong_options": {},
+      "pitfalls": [
+        "“至少一次”走对立事件 $1-P(X{=}0)=1-(1-p)^n$，别硬加各项",
+        "“至多一次”是 $P(X{=}0)+P(X{=}1)$，提公因子得 $[1+(n-1)p](1-p)^{n-1}$"
+      ],
+      "key_point": "$X\\sim B(n,p)$：至少一次 $1-(1-p)^n$，至多一次 $[1+(n-1)p](1-p)^{n-1}$。"
+    },
+    {
+      "id": 1298,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 19,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "三个箱子, 第一个箱子中有 $4$ 个黑球 $1$ 个白球, 第二个箱子中有 $3$ 个黑球 $3$ 个白球, 第三个箱子中有 $3$ 个黑球 $5$ 个白球. 现随机地取一个箱子, 再从这个箱子中取出 $1$ 个球, 这个球为白球的概率等于$(\\quad)$, 已知取出的球是白球, 此球属于第二个箱子的概率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{53}{120}, \\quad \\dfrac{20}{53}$",
+      "analysis": "记 $A_i=\\{$ 取的是第 $i$ 个箱子 $\\}(i=1,2,3), B=\\{$ 从箱子中取出的是白球 $\\}$, 则\r\n\r\n$\\displaystyle P\\left(A_1\\right)=P\\left(A_2\\right)=P\\left(A_3\\right)=\\frac{1}{3}, P\\left(B \\mid A_1\\right)=\\frac{1}{5}, P\\left(B \\mid A_2\\right)=\\frac{3}{6}=\\frac{1}{2}, P\\left(B \\mid A_3\\right)=\\frac{5}{8}$\r\n\r\n$(1)$ 由全概率公式知: $\\displaystyle P(B)=P\\left(A_1\\right) P\\left(B \\mid A_1\\right)+P\\left(A_2\\right) P\\left(B \\mid A_2\\right)+P\\left(A_3\\right) P\\left(B \\mid A_3\\right)=\\frac{1}{3} \\times \\frac{1}{5}+\\frac{1}{3} \\times \\frac{1}{2}+\\frac{1}{3} \\times \\frac{5}{8}=\\frac{53}{120}$\r\n\r\n$(2)$ $\\displaystyle P\\left(A_2 \\mid B\\right)=\\frac{P\\left(A_2 B\\right)}{P(B)}=\\frac{P\\left(A_2\\right) P\\left(B \\mid A_2\\right)}{P(B)}=\\frac{\\frac{1}{3} \\times \\frac{1}{2}}{\\frac{53}{120}}=\\frac{20}{53}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "选箱等可能 $P(A_i)=1/3$，别忘乘这个先验；三箱白球比例分别 $1/5,1/2,5/8$",
+        "贝叶斯分母是全概率 $P(B)=53/120$，$P(A_2|B)=\\frac{(1/3)(1/2)}{53/120}=20/53$"
+      ],
+      "key_point": "全概率 $P(白)=53/120$；贝叶斯 $P(第二箱|白)=20/53$。"
+    },
+    {
+      "id": 1299,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 20,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知连续型随机变量 $X$ 的概率密度为 $\\displaystyle f(x)=\\frac{1}{\\sqrt{\\pi}} \\mathrm{e}^{-x^{2}+2 x-1}$, 则 $X$ 的数学期望为 $(\\quad)$, $X$ 的方差为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1, \\dfrac{1}{2}$",
+      "analysis": "方法一\r\n\r\n由 $\\displaystyle f(x)=\\frac{1}{\\sqrt{\\pi}} \\mathrm{e}^{-x^2+2 x-1}=\\frac{1}{\\sqrt{2 \\pi} \\cdot \\frac{1}{\\sqrt{2}}} \\mathrm{e}^{-\\frac{(x-1)^2}{2\\left(\\frac{1}{\\sqrt{2}}\\right)^2}}$, \r\n\r\n得 $X \\sim N\\left(1, \\frac{1}{2}\\right)$,\r\n\r\n故 $E(X)=1, \\quad D(X)=\\dfrac{1}{2}$\r\n\r\n方法二\r\n\r\n$$\r\n\\begin{aligned}\r\nE(X) =&\\int_{-\\infty}^{+\\infty} x f(x) \\mathrm{d} x\\\\\r\n=&\\frac{1}{\\sqrt{\\pi}} \\int_{-\\infty}^{+\\infty} x \\mathrm{e}^{-(x-1)^2} \\mathrm{d} x \\\\\r\n=&\\frac{1}{\\sqrt{\\pi}} \\int_{-\\infty}^{+\\infty}[1+(x-1)] \\mathrm{e}^{-(x-1)^2} \\mathrm{d}(x-1)\\\\\r\n=&\\frac{1}{\\sqrt{\\pi}} \\int_{-\\infty}^{+\\infty}(1+x) \\mathrm{e}^{-x^2} \\mathrm{d} x \\\\\r\n=&\\frac{2}{\\sqrt{\\pi}} \\int_0^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x \\\\\r\n\\stackrel{x^2=t}{=} &{\\frac{2}{\\sqrt{\\pi}}} \\int_0^{+\\infty} \\frac{1}{2 \\sqrt{t}} \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=&\\frac{1}{\\sqrt{\\pi}} \\int_0^{+\\infty} t^{-\\frac{1}{2}} \\mathrm{e}^{-t} \\mathrm{d} t\\\\\r\n=&\\frac{1}{\\sqrt{\\pi}} \\Gamma\\left(\\frac{1}{2}\\right)=1 \r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数 $-(x-1)^2$ 对应 $\\frac{(x-1)^2}{2\\sigma^2}$，故 $2\\sigma^2=1$ 即 $\\sigma^2=1/2$，别把方差当 1",
+        "系数 $1/\\sqrt\\pi=1/(\\sqrt{2\\pi}\\sigma)$ 也印证 $\\sigma^2=1/2$；均值 $\\mu=1$"
+      ],
+      "key_point": "$f$ 配方得 $X\\sim N(1,\\tfrac12)$，故 $E(X)=1,\\ D(X)=\\tfrac12$。"
+    },
+    {
+      "id": 1300,
+      "paper": "数学一",
+      "year": 1987,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X, Y$ 相互独立, 其概率密度函数分别为\r\n\r\n$f_{X}(x)=\\begin{cases}\r\n1, & 0<x<1\\\\\r\n0, & \\text { 其他 }\r\n\\end{cases}$\r\n\r\n$f_{Y}(y)= \\begin{cases}\r\n\\mathrm{e}^{-y}, & y>0\\\\\r\n0, & y \\leqslant 0\r\n\\end{cases}$\r\n\r\n求随机变量 $Z=2 X+Y$ 的概率密度函数 $f_{Z}(z)$",
+      "options": {},
+      "answer": "$f_Z(z)= \\begin{cases}0, & z<0 \\\\ \\dfrac{1}{2}\\left(1-\\mathrm{e}^{-z}\\right), & 0 \\leqslant z \\leqslant 2 \\\\ \\dfrac{1}{2} \\mathrm{e}^{-z}\\left(\\mathrm{e}^2-1\\right), & z>2 \\end{cases}$",
+      "analysis": "因为随机变量 $X, Y$ 相互独立, 所以 $(X, Y)$ 的联合概率密度为\r\n\r\n$$\r\nf(x, y)=f_X(x) f_Y(y)= \\begin{cases}\\mathrm{e}^{-y}, & 0<x<1, y>0 \\\\ 0, & \\text { 其他}\\end{cases}\r\n$$\r\n\r\n则 $\\displaystyle F_Z(z)=P\\{Z \\leqslant z\\}=P\\{2 X+Y \\leqslant z\\}=\\iint\\limits_{2 x+y \\leqslant z} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n- 当 $z<0$ 时, $F_Z(z)=0$;\r\n\r\n- 当 $0 \\leqslant z<2$ 时, $\\displaystyle F_z(z)=\\int_0^{\\frac{z}{2}} \\mathrm{d} x \\int_0^{z-2 x} \\mathrm{e}^{-y} \\mathrm{d} y=\\int_0^{\\frac{z}{2}}\\left(1-\\mathrm{e}^{2 x-z}\\right) \\mathrm{d} x=\\frac{z}{2}-\\frac{1}{2}+\\frac{1}{2} \\mathrm{e}^{-z}$;\r\n\r\n- 当 $z \\geqslant 2$ 时, $\\displaystyle F_Z(z)=\\int_0^1 \\mathrm{d} x \\int_0^{z-2 x} \\mathrm{e}^{-y} \\mathrm{d} y=\\int_0^1\\left(1-\\mathrm{e}^{2 x-z}\\right) \\mathrm{d} x=1-\\frac{1}{2}\\left(\\mathrm{e}^2-1\\right) \\mathrm{e}^{-z}$,\r\n\r\n故 $f_Z(z)= \\begin{cases}0, & z<0 \\\\ \\dfrac{1}{2}\\left(1-\\mathrm{e}^{-z}\\right), & 0 \\leqslant z \\leqslant 2 \\\\ \\dfrac{1}{2} \\mathrm{e}^{-z}\\left(\\mathrm{e}^2-1\\right), & z>2 \\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分区域受 $0<x<1$、$y>0$ 双重限制，按 $z<0$、$0\\le z<2$、$z\\ge2$ 三段讨论上下限",
+        "由 $2X$（支撑 $(0,2)$）与 $Y$（$(0,\\infty)$）叠加，分界点在 $z=2$，两段密度表达式不同"
+      ],
+      "key_point": "分区间积分 $F_Z$ 再求导：$f_Z=\\tfrac12(1-\\mathrm{e}^{-z})$ 于 $[0,2]$、$\\tfrac12\\mathrm{e}^{-z}(\\mathrm{e}^2-1)$ 于 $z>2$。"
+    }
+  ]
+}

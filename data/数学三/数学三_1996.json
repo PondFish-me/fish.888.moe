@@ -1,0 +1,427 @@
+{
+  "paper": "数学三",
+  "year": 1996,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1839,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设方程 $x=y^y$ 确定 $y$ 是 $x$ 的函数, 则 $\\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{x(1+\\ln y)} \\mathrm{d} x$",
+      "analysis": "由 $x=y^y$ 得 $\\ln x=y \\ln y$,\r\n\r\n两边对 $x$ 求导得 $\\dfrac{1}{x}=\\dfrac{\\mathrm{d} y}{\\mathrm{d} x} \\cdot \\ln y+\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}$,\r\n\r\n解得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{1}{x(1+\\ln y)}$,\r\n\r\n则 $\\mathrm{d} y=\\dfrac{1}{x(1+\\ln y)} \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "y^y 直接求导困难，先取对数 lnx=ylny",
+        "右端 (ylny)′=y′(1+lny)，别漏 lny 旁的 +1"
+      ],
+      "key_point": "1/x=y′(1+lny)⇒dy=dx/(x(1+lny))。"
+    },
+    {
+      "id": 1840,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\int x f(x) \\mathrm{d} x=\\arcsin x+C$, 则 $\\displaystyle \\int \\frac{1}{f(x)} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{3}\\left(1-x^2\\right)^{\\frac{3}{2}}+C$",
+      "analysis": "$\\displaystyle \\int x f(x) \\mathrm{d} x=\\arcsin x+C$\r\n\r\n两边对 $x$ 求导得 $x f(x)=\\dfrac{1}{\\sqrt{1-x^2}}$,\r\n\r\n解得 $\\displaystyle \\frac{1}{f(x)}=x \\sqrt{1-x^2}$,\r\n\r\n故$\\displaystyle \r\n\\int \\frac{1}{f(x)} \\mathrm{d} x\\\\\r\n=\\int x \\sqrt{1-x^2} \\mathrm{d} x\\\\\r\n=-\\frac{1}{2} \\int\\left(1-x^2\\right)^{\\frac{1}{2}} \\mathrm{d}\\left(1-x^2\\right)\\\\\r\n=-\\frac{1}{3}\\left(1-x^2\\right)^{\\frac{3}{2}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 ∫xf=arcsinx+C 求导得 xf=1/√(1-x²)，故 1/f=x√(1-x²)",
+        "∫x√(1-x²)dx 凑 -(1/2)d(1-x²)，得 -(1/3)(1-x²)^{3/2}"
+      ],
+      "key_point": "1/f=x√(1-x²)，积分得 -(1/3)(1-x²)^{3/2}+C。"
+    },
+    {
+      "id": 1841,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left(x_0, y_0\\right)$ 是抛物线 $y=a x^2+b x+c$ 上的一点, 若在该点的切线过原点, 则系数应该满足的关系是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$c=a x_0^2, b$ 取任意常数",
+      "analysis": "$y^{\\prime}=2 a x+b$,\r\n\r\n曲线在点 $\\left(x_0, y_0\\right)$ 的切线为 $y-y_0=\\left(2 a x_0+b\\right)\\left(x-x_0\\right)$,\r\n\r\n因为该切线过原点,\r\n\r\n所以 $y_0=2 a x_0^2+b x_0$,\r\n\r\n再由 $y_0=a x_0^2+b x_0+c$\r\n\r\n得 $c=a x_0^2, b$ 取任意常数",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线过原点给 y₀=(2ax₀+b)x₀=2ax₀²+bx₀，与 y₀=ax₀²+bx₀+c 相减",
+        "相减后 bx₀ 消去，得 c=ax₀²，b 不受约束"
+      ],
+      "key_point": "两式相减 bx₀ 抵消，得 c=ax₀²、b 任意。"
+    },
+    {
+      "id": 1842,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccccc}1 & 1 & 1 & \\cdots & 1 \\\\ a_1 & a_2 & a_3 & \\cdots & a_n \\\\ a_1^2 & a_2^2 & a_3^2 & \\cdots & a_n^2 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ a_1^{n-1} & a_2^{n-1} & a_3^{n-1} & \\cdots & a_n^{n-1}\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{c}x_1 \\\\ x_2 \\\\ x_3 \\\\ \\vdots \\\\ x_n\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{c}1 \\\\ 1 \\\\ 1 \\\\ \\vdots \\\\ 1\\end{array}\\right)$, 其中 $a_i \\neq a_j(i \\neq j ; i, j=1$, $2, \\cdots, n)$, 则线性方程组 $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{x}=\\boldsymbol{B}$ 的解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(1,0,0, \\cdots, 0)^{\\mathrm{T}}$",
+      "analysis": "$\\left|\\boldsymbol{A}^{\\mathrm{T}}\\right|=\\prod\\limits_{1<j<i<n}\\left(a_i-a_j\\right) \\neq 0,\\\\\r\nD_1=|\\boldsymbol{A}|, D_2=0, \\cdots, D_n=0$,\r\n\r\n则 $\\displaystyle x_1=\\frac{D_1}{|\\boldsymbol{A}|}=1, x_2=0, \\cdots, x_n=0$,\r\n\r\n故方程组 $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{x}=\\boldsymbol{B}$ 的解为 $(1,0,0, \\cdots, 0)^{\\mathrm{T}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "AᵀX=B 每行要求 x₁+x₂aᵢ+…+xₙaᵢ^{n-1}=1，即 n-1 次多项式在 n 个互异点恒为 1",
+        "故该多项式≡1，只有常数项 x₁=1，其余为 0"
+      ],
+      "key_point": "多项式在 n 点取 1⇒恒为 1⇒解 (1,0,…,0)ᵀ。"
+    },
+    {
+      "id": 1843,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设有来自正态总体 $X \\sim N\\left(\\mu, 0.9^2\\right)$ 容量为 $9$ 的简单随机样本, 样本均值为 $\\bar{x}=5$, 则未知参数 $\\mu$ 的置信度为 $0.95$ 的置信区间为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(4.412,5.588)$",
+      "analysis": "取统计量 $\\dfrac{\\bar{X}-\\mu}{\\frac{0.9}{3}} \\sim N(0,1)$,\r\n\r\n$\\alpha=0.05, u_{0.025}=1.96$,\r\n\r\n则参数 $\\mu$ 的置信度为 $0.95$ 的置信区间为\r\n\r\n$\\left(\\bar{x}-\\dfrac{0.9}{3} \\cdot u_{0.025}, \\bar{x}+\\dfrac{0.9}{3} \\cdot u_{0.025}\\right)=(4.412,5.588)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "σ/√n=0.9/3=0.3，半宽 1.96×0.3=0.588",
+        "注：区间估计在现行数三考纲已删，此题按老卷归入抽样分布"
+      ],
+      "key_point": "5±1.96×0.3=(4.412,5.588)。"
+    },
+    {
+      "id": 1845,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "累次积分 $\\displaystyle \\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^{\\cos \\theta} f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d} r$ 可以写成 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_0^{\\sqrt{y-y^2}} f(x, y) \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_0^{\\sqrt{1-y^2}} f(x, y) \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_0^1 \\mathrm{d} x \\int_0^1 f(x, y) \\mathrm{d} y$",
+        "D": "$\\displaystyle \\int_0^1 \\mathrm{d} x \\int_0^{\\sqrt{x-x^2}} f(x, y) \\mathrm{d} y$"
+      },
+      "answer": "D",
+      "analysis": "变换坐标系, 则\r\n\r\n$\\displaystyle\r\n\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^{\\cos \\theta} f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d} r\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^{\\sqrt{x-x^2}} f(x, y) \\mathrm{d} y$\r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "上限 √(y-y²) 却先积 x，区域方向错",
+        "B": "√(1-y²) 误把区域当单位圆",
+        "C": "[0,1]² 方形区域，与半圆盘不符"
+      },
+      "pitfalls": [
+        "r≤cosθ 即 x²+y²≤x，是圆心 (1/2,0)、半径 1/2 的上半圆盘",
+        "还原为 ∫₀¹dx∫₀^{√(x-x²)}f dy"
+      ],
+      "key_point": "区域 x²+y²≤x（上半），选 D。"
+    },
+    {
+      "id": 1846,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下述各选项正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2$ 和 $\\displaystyle \\sum_{n=1}^{\\infty} v_n^2$ 都收敛, 则 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_n+v_n\\right)^2$ 收敛",
+        "B": "若 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|u_n v_n\\right|$ 收敛, 则 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} v_n^2$ 都收敛",
+        "C": "若正项级数 $\\displaystyle v\\sum_{n=1}^{\\infty} u_n$ 发散, 则 $\\displaystyle u_n \\geqslant \\frac{1}{n}$",
+        "D": "若级数 $\\displaystyle \\sum_{n=1}^{\\infty} u_n$ 收敛, 且 $u_n \\geqslant v_n(n=1,2, \\cdots)$, 则级数 $\\displaystyle \\sum_{n=1}^{\\infty} v_n$ 收敛"
+      },
+      "answer": "A",
+      "analysis": "方法一 若 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} v_n^2$ 都收敛,\r\n\r\n则 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_n^2+v_n^2\\right)$ 收敛,\r\n\r\n由 $0 \\leqslant\\left(u_n+v_n\\right)^2 \\leqslant 2\\left(u_n^2+v_n^2\\right)$ 及正项级数比较审敛法, \r\n\r\n级数 $\\displaystyle \\sum_{n=1}^{\\infty}\\left(u_n+v_n\\right)^2$ 收敛, 应选 (A).\r\n\r\n方法二 取 $\\displaystyle u_n=\\frac{1}{\\sqrt{n}}, v_n=\\frac{1}{n}$, \r\n\r\n显然 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|u_n v_n\\right|=\\sum_{n=1}^{\\infty} \\frac{1}{n^{\\frac{3}{2}}}$ 收敛, 但 $\\displaystyle \\sum_{n=1}^{\\infty} u_n^2$ 发散, (B) 不对;\r\n\r\n取 $\\displaystyle u_n=\\frac{1}{2 n}$, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} u_n$ 发散, \r\n\r\n但 $\\displaystyle u_n=\\frac{1}{2 n}<\\frac{1}{n}$, (C) 不对;\r\n\r\n取 $\\displaystyle u_n=\\frac{1}{n^2}, v_n=-1$, \r\n\r\n显然 $u_n \\geqslant v_n(n=1,2, \\cdots)$ 且 $\\displaystyle \\sum_{n=1}^{\\infty} u_n$ 收敛, \r\n\r\n但 $\\displaystyle \\sum_{n=1}^{\\infty} v_n$ 发散, (D) 不对, 所以应选 (A)",
+      "wrong_options": {
+        "B": "Σ|uₙvₙ| 收敛推不出 Σuₙ² 收敛（反例 uₙ=1/√n,vₙ=1/n）",
+        "C": "Σuₙ 发散不推 uₙ≥1/n（反例 uₙ=1/(2n)）",
+        "D": "Σuₙ 收敛且 uₙ≥vₙ 推不出 Σvₙ 收敛（反例 vₙ=-1）"
+      },
+      "pitfalls": [
+        "A 靠 0≤(uₙ+vₙ)²≤2(uₙ²+vₙ²) 及比较审敛法，正项级数才可用比较",
+        "比较判别法只对正项级数有效，D 的 vₙ 可为负故失效"
+      ],
+      "key_point": "(uₙ+vₙ)²≤2(uₙ²+vₙ²)⇒A 收敛，选 A。"
+    },
+    {
+      "id": 1847,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶矩阵 $\\boldsymbol{A}$ 非奇异 $(n \\geqslant 2), \\boldsymbol{A}$ 是矩阵 $\\boldsymbol{A}$ 的伴随矩阵, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\boldsymbol{A}^*\\right)^*=|\\boldsymbol{A}|^{n-1} \\boldsymbol{A}$",
+        "B": "$\\left(\\boldsymbol{A}^*\\right)^*=|\\boldsymbol{A}|^{n+1} \\boldsymbol{A}$",
+        "C": "$\\left(\\boldsymbol{A}^*\\right)^*=|\\boldsymbol{A}|^{n-2} \\boldsymbol{A}$",
+        "D": "$\\left(\\boldsymbol{A}^*\\right)^*=|\\boldsymbol{A}|{ }^{n+2} \\boldsymbol{A}$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\boldsymbol{A}^*=|\\boldsymbol{A}| \\boldsymbol{A}^{-1}$ 得\r\n\r\n$\\left(\\boldsymbol{A}^*\\right)^*=\\left|\\boldsymbol{A}^*\\right|\\left(\\boldsymbol{A}^*\\right)^{-1}=|\\boldsymbol{A}|^{n-1} \\cdot \\dfrac{1}{|\\boldsymbol{A}|} \\boldsymbol{A}=|\\boldsymbol{A}|^{n-2} \\boldsymbol{A}$,\r\n\r\n应选 (C)",
+      "wrong_options": {
+        "A": "|A|^{n-1}A——多算一次幂",
+        "B": "|A|^{n+1}A——幂次方向错",
+        "D": "|A|^{n+2}A——幂次错"
+      },
+      "pitfalls": [
+        "关键 |A*|=|A|^{n-1}，再乘 (A*)⁻¹=A/|A|，幂次 (n-1)-1=n-2"
+      ],
+      "key_point": "(A*)*=|A|^{n-2}A，选 C。"
+    },
+    {
+      "id": 1848,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有任意两个 $n$ 维向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 和 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$, 若存在两组不全为零的数 $\\lambda_1$, $\\lambda_2, \\cdots, \\lambda_m$ 和 $k_1, k_2, \\cdots, k_m$, 使得 $\\left(\\lambda_1+k_1\\right) \\boldsymbol{\\alpha}_1+\\cdots+\\left(\\lambda_m+k_m\\right) \\boldsymbol{\\alpha}_m+\\left(\\lambda_1-k_1\\right) \\boldsymbol{\\beta}_1+\\cdots+$ $\\left(\\lambda_m-k_m\\right) \\boldsymbol{\\beta}_m=\\mathbf{0}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 和 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$ 都线性相关",
+        "B": "$\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_m$ 和 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_m$ 都线性无关",
+        "C": "$\\boldsymbol{\\alpha}_1+\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\alpha}_m+\\boldsymbol{\\beta}_m, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\alpha}_m-\\boldsymbol{\\beta}_m$ 线性无关",
+        "D": "$\\boldsymbol{\\alpha}_1+\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\alpha}_m+\\boldsymbol{\\beta}_m, \\boldsymbol{\\alpha}_1-\\boldsymbol{\\beta}_1, \\cdots, \\boldsymbol{\\alpha}_m-\\boldsymbol{\\beta}_m$ 线性相关"
+      },
+      "answer": "D",
+      "analysis": "由 $\\left(\\lambda_1+k_1\\right) \\boldsymbol{\\alpha}_1+\\cdots+\\left(\\lambda_m+k_m\\right) \\boldsymbol{\\alpha}_m+\\left(\\lambda_1-k_1\\right) \\boldsymbol{\\beta}_1+\\cdots+\\left(\\lambda_m-k_m\\right) \\boldsymbol{\\beta}_m=\\mathbf{0}$, \r\n\r\n得 $\\lambda_1\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\beta}_1\\right)+\\cdots+\r\n\\lambda_m\\left(\\boldsymbol{\\alpha}_m+\\boldsymbol{\\beta}_m\\right)\\\\+k_1\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\beta}_1\\right)+\\cdots+k_m\\left(\\boldsymbol{\\alpha}_m-\\boldsymbol{\\beta}_m\\right)=\\mathbf{0}$\r\n\r\n因为 $\\lambda_1, \\lambda_2, \\cdots, \\lambda_m$ 和 $k_1, k_2, \\cdots, k_m$ 都不全为零,\r\n\r\n所以 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\beta}_1, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\alpha}_m+\\boldsymbol{\\beta}_m,\\\\\r\n \\boldsymbol{\\alpha}_1-\\boldsymbol{\\beta}_1, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\alpha}_m-\\boldsymbol{\\beta}_m$ 线性相关, 应选 (D)",
+      "wrong_options": {
+        "A": "α 组、β 组都相关——原两组信息推不出",
+        "B": "α 组、β 组都无关——同样推不出",
+        "C": "和差组无关——恰与所证相反"
+      },
+      "pitfalls": [
+        "重组后 Σλᵢ(αᵢ+βᵢ)+Σkᵢ(αᵢ-βᵢ)=0 且 λ、k 不全为零，正是‘存在非零组合’即相关"
+      ],
+      "key_point": "重组得非零零组合⇒和差合并组线性相关，选 D。"
+    },
+    {
+      "id": 1849,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $0<P(B)<1$ 且 $P\\left[\\left(A_1+A_2\\right) \\mid B\\right]=P\\left(A_1 \\mid B\\right)+P\\left(A_2 \\mid B\\right)$, 则下列选项成立的是 $(\\quad)$",
+      "options": {
+        "A": "$P\\left[\\left(A_1+A_2\\right) \\mid \\bar{B}\\right]=P\\left(A_1 \\mid \\bar{B}\\right)+P\\left(A_2 \\mid \\bar{B}\\right)$",
+        "B": "$P\\left(A_1 B+A_2 B\\right)=P\\left(A_1 B\\right)+P\\left(A_2 B\\right)$",
+        "C": "$P\\left(A_1+A_2\\right)=P\\left(A_1 \\mid B\\right)+P\\left(A_2 \\mid B\\right)$",
+        "D": "$P(B)=P\\left(A_1\\right) P\\left(B \\mid A_1\\right)+P\\left(A_2\\right) P\\left(B \\mid A_2\\right)$"
+      },
+      "answer": "B",
+      "analysis": "由 $P\\left[\\left(A_1+A_2\\right) \\mid B\\right]\\\\=P\\left(A_1 \\mid B\\right)+P\\left(A_2 \\mid B\\right)-P\\left(A_1 A_2 \\mid B\\right)$,\r\n\r\n得 $P\\left(A_1 A_2 \\mid B\\right)=0$,\r\n\r\n从而 $P\\left(A_1 A_2 B\\right)=0$,\r\n\r\n于是 $P\\left(A_1 B+A_2 B\\right)=P\\left(A_1 B\\right)+P\\left(A_2 B\\right)-P\\left(A_1 A_2 B\\right)=P\\left(A_1 B\\right)+P\\left(A_2 B\\right)$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "对 B̄ 的条件可加——推不出",
+        "C": "P(A₁+A₂)=P(A₁|B)+P(A₂|B)——混淆条件与无条件概率",
+        "D": "全概率式——与题设无关"
+      },
+      "pitfalls": [
+        "条件式给 P(A₁A₂|B)=0，故 P(A₁A₂B)=0，去掉交项得 B 成立"
+      ],
+      "key_point": "P(A₁A₂B)=0⇒P(A₁B+A₂B)=P(A₁B)+P(A₂B)，选 B。"
+    },
+    {
+      "id": 1850,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{g(x)-\\mathrm{e}^{-x}}{x}, & x \\neq 0 \\\\ 0, & x=0\\end{array}\\right.$ 其中 $g(x)$ 有二阶连续导数, 且 $g(0)=1, g^{\\prime}(0)=-1$\r\n\r\n(1) 求 $f^{\\prime}(x)$;\r\n\r\n(2) 讨论 $f^{\\prime}(x)$ 在 $(-\\infty,+\\infty)$ 的连续性",
+      "options": {},
+      "answer": "(1)  $f^{\\prime}(x)=\r\n\\begin{cases}\r\n\\dfrac{x\\left[g^{\\prime}(x)+\\mathrm{e}^{-x}\\right]-\\left[g(x)-\\mathrm{e}^{-x}\\right]}{x^2}, & x \\neq 0 \\\\\r\n\\dfrac{1}{2}\\left[g^{\\prime \\prime}(0)-1\\right], & x=0\r\n\\end{cases}$\r\n(2) 连续",
+      "analysis": "(1) 当 $x \\neq 0$ 时, $\\displaystyle f^{\\prime}(x)=\\frac{x\\left[g^{\\prime}(x)+\\mathrm{e}^{-x}\\right]-\\left[g(x)-\\mathrm{e}^{-x}\\right]}{x^2}$;\r\n当 $x=0$ 时,\r\n由\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{g(x)-\\mathrm{e}^{-x}}{x^2}\\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)+\\mathrm{e}^{-x}}{x} \\\\\r\n=\\frac{1}{2}\\left[\\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)-g^{\\prime}(0)}{x}+\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^{-x}-1}{x}\\right]\\\\\r\n=\\frac{1}{2}\\left[g^{\\prime \\prime}(0)-1\\right]$\r\n\r\n得 $\\displaystyle f^{\\prime}(0)=\\frac{1}{2}\\left[g^{\\prime \\prime}(0)-1\\right]$,\r\n\r\n故 $f^{\\prime}(x)=\r\n\\begin{cases}\r\n\\dfrac{x\\left[g^{\\prime}(x)+\\mathrm{e}^{-x}\\right]-\\left[g(x)-\\mathrm{e}^{-x}\\right]}{x^2}, & x \\neq 0 \\\\\r\n\\dfrac{1}{2}\\left[g^{\\prime \\prime}(0)-1\\right], & x=0\r\n\\end{cases}$\r\n\r\n(2)\r\n\r\n$\\displaystyle\r\n\\lim _{x \\rightarrow 0} f^{\\prime}(x) =\\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)+\\mathrm{e}^{-x}}{x}-\\lim _{x \\rightarrow 0} \\frac{g(x)-\\mathrm{e}^{-x}}{x^2} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)+\\mathrm{e}^{-x}}{x}-\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)+\\mathrm{e}^{-x}}{x}\\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)+\\mathrm{e}^{-x}}{x}\\\\\r\n=\\frac{1}{2}\\left[\\lim _{x \\rightarrow 0} \\frac{g^{\\prime}(x)-g^{\\prime}(0)}{x}+\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^{-x}-1}{x}\\right]\\\\\r\n=\\frac{1}{2}\\left[g^{\\prime \\prime}(0)-1\\right]$\r\n\r\n因为 $\\lim\\limits _{x \\rightarrow 0} f^{\\prime}(x)=f^{\\prime}(0)$,\r\n\r\n所以 $f^{\\prime}(x)$ 在 $(-\\infty,+\\infty)$ 内连续",
+      "wrong_options": {},
+      "pitfalls": [
+        "f′(0) 由差商 (g(x)-e^{-x})/x² 两次洛必达，用 g(0)=1,g′(0)=-1",
+        "(2) lim_{x→0}f′(x) 也等于 (1/2)(g″(0)-1)=f′(0)，故导函数连续"
+      ],
+      "key_point": "f′(0)=(1/2)(g″(0)-1) 且 lim f′(x)=f′(0)，f′ 处处连续。"
+    },
+    {
+      "id": 1851,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $z=f(u)$, 方程 $\\displaystyle u=\\varphi(u)+\\int_y^x p(t) \\mathrm{d} t$ 确定 $u$ 是 $x, y$ 的函数, 其中 $f(u), \\varphi(u)$ 可微, $p(t), \\varphi^{\\prime}(u)$ 连续, 且 $\\varphi^{\\prime}(u) \\neq 1$, 求 $\\displaystyle p(y) \\frac{\\partial z}{\\partial x}+p(x) \\frac{\\partial z}{\\partial y}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "$\\displaystyle \\left\\{\\begin{array}{l}z=f(u), \\\\\\displaystyle u=\\varphi(u)+\\int_y^x p(t) \\mathrm{d} t\\end{array}\\right.$\r\n\r\n两边对 $x$ 求偏导得 $\\left\\{\\begin{array}{l}\\dfrac{\\partial z}{\\partial x}=f^{\\prime}(u) \\dfrac{\\partial u}{\\partial x} \\\\ \r\n\\dfrac{\\partial u}{\\partial x}=\\varphi^{\\prime}(u) \\dfrac{\\partial u}{\\partial x}+p(x)\\end{array}\\right.$\r\n\r\n解得 $\\dfrac{\\partial z}{\\partial x}=\\dfrac{f^{\\prime}(u) p(x)}{1-\\varphi^{\\prime}(u)}$;\r\n\r\n两边对 $y$ 求偏导得 $\\dfrac{\\partial z}{\\partial y}=-\\dfrac{f^{\\prime}(u) p(y)}{1-\\varphi^{\\prime}(u)}$,\r\n\r\n故 $p(y) \\dfrac{\\partial z}{\\partial x}+p(x) \\dfrac{\\partial z}{\\partial y}=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "u 方程含 ∫_y^x p，∂u/∂x=p(x)/(1-φ′)、∂u/∂y=-p(y)/(1-φ′)",
+        "zₓ=f′p(x)/(1-φ′)、z_y=-f′p(y)/(1-φ′)，p(y)zₓ+p(x)z_y 恰抵消"
+      ],
+      "key_point": "两偏导反号对称，p(y)zₓ+p(x)z_y=0。"
+    },
+    {
+      "id": 1852,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{e}^{-x}}{\\left(1+\\mathrm{e}^{-x}\\right)^2} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\ln 2$",
+      "analysis": "方法一 由\r\n\r\n$\\displaystyle \\int \\frac{x \\mathrm{e}^{-x}}{\\left(1+\\mathrm{e}^{-x}\\right)^2} \\mathrm{d} x=\\int x \\mathrm{d}\\left(\\frac{1}{1+\\mathrm{e}^{-x}}\\right)\\\\\r\n=\\frac{x}{1+\\mathrm{e}^{-x}}-\\int \\frac{1}{1+\\mathrm{e}^{-x}} \\mathrm{d} x\\\\\r\n=\\frac{x}{1+\\mathrm{e}^{-x}}-\\ln \\left(1+\\mathrm{e}^x\\right)+C$\r\n\r\n得\r\n\r\n$\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{e}^{-x}}{\\left(1+\\mathrm{e}^{-x}\\right)^2} \\mathrm{d} x\\\\\r\n=\\lim _{x \\rightarrow+\\infty}\\left[\\frac{x}{1+\\mathrm{e}^{-x}}-\\ln \\left(1+\\mathrm{e}^x\\right)\\right]+\\ln 2 \\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{x \\mathrm{e}^x-\\left(1+\\mathrm{e}^x\\right) \\ln \\left(1+\\mathrm{e}^x\\right)}{1+\\mathrm{e}^x}+\\ln 2 \\\\\r\n=\\lim _{x \\rightarrow+\\infty}\\left[x-\\ln \\left(1+\\mathrm{e}^x\\right)\\right]+\\ln 2 \\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\ln \\frac{\\mathrm{e}^x}{1+\\mathrm{e}^x}+\\ln 2=\\ln 2$\r\n\r\n方法二\r\n\r\n$\\displaystyle \\int_0^{+\\infty} \\frac{x \\mathrm{e}^{-x}}{\\left(1+\\mathrm{e}^{-x}\\right)^2} \\mathrm{d} x \\\\\r\n=\\int_0^{+\\infty} \\frac{x \\mathrm{e}^x}{\\left(\\mathrm{e}^x+1\\right)^2} \\mathrm{d} x\\\\\r\n=-\\int_0^{+\\infty} x \\mathrm{d}\\left(\\frac{1}{\\mathrm{e}^x+1}\\right) \\\\\r\n=-\\left.\\frac{x}{\\mathrm{e}^x+1}\\right|_0 ^{+\\infty}+\\int_0^{+\\infty} \\frac{1}{\\mathrm{e}^x+1} \\mathrm{d} x\\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{e}^{-x}}{\\mathrm{e}^{-x}+1} \\mathrm{d} x \\\\\r\n=-\\left.\\ln \\left(\\mathrm{e}^{-x}+1\\right)\\right|_0 ^{+\\infty}=\\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积恰为 x d(1/(1+e^{-x}))，分部后边界项 x/(eˣ+1)→0",
+        "剩 ∫₀^∞ e^{-x}/(e^{-x}+1)dx=ln2"
+      ],
+      "key_point": "分部后积分为 -ln(e^{-x}+1)|₀^∞=ln2。"
+    },
+    {
+      "id": 1853,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $[0,1]$ 上可微, 且满足 $\\displaystyle f(1)=2 \\int_0^{\\frac{1}{2}} x f(x) \\mathrm{d} x$. 试证: 存在 $\\xi \\in(0,1)$, 使得 $f(\\xi)+\\xi f^{\\prime}(\\xi)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\varphi(x)=x f(x)$, 由积分中值定理, \r\n\r\n存在 $\\displaystyle c \\in\\left[0, \\frac{1}{2}\\right]$, 使得\r\n\r\n$\\displaystyle f(1)=2 \\int_0^{\\frac{1}{2}} x f(x) \\mathrm{d} x=2 \\cdot c f(c) \\cdot \\frac{1}{2}=c f(c)$,\r\n\r\n即 $\\varphi(c)=\\varphi(1)$,\r\n\r\n由罗尔定理, 存在 $\\xi \\in(c, 1) \\subset(0,1)$, \r\n\r\n使得 $\\varphi^{\\prime}(\\xi)=0$,\r\n\r\n而 $\\varphi^{\\prime}(x)=f(x)+x f^{\\prime}(x)$, \r\n\r\n故 $f(\\xi)+\\xi f^{\\prime}(\\xi)=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分中值：2∫₀^{1/2}xf dx=2·cf(c)·(1/2)=cf(c)=φ(c)，恰等于 φ(1)=f(1)",
+        "对 φ(x)=xf(x) 用罗尔，φ′=f+xf′，故 f(ξ)+ξf′(ξ)=0"
+      ],
+      "key_point": "φ=xf，φ(c)=φ(1) 用罗尔得 f(ξ)+ξf′(ξ)=0。"
+    },
+    {
+      "id": 1854,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某种商品的单价为 $p$ 时, 售出的商品数量 $Q$ 可以表示成\r\n\r\n$Q=\\dfrac{a}{p+b}-c$,\r\n\r\n其中 $a, b, c$ 均为正数, 且 $a>b c$\r\n\r\n(1) 求 $p$ 在何范围变化时, 使相应销售额增加或减少;\r\n\r\n(2）要使销售额最大, 商品单价 $p$ 应取何值? 最大销售额是多少?",
+      "options": {},
+      "answer": "(1) 当 $0<p<\\sqrt{\\dfrac{a b}{c}}-b$ 时, $\\dfrac{\\mathrm{d} R}{\\mathrm{d} p}>0$, \r\n\r\n此时单价 $p$ 越大, 销售收入增加;\r\n\r\n当 $\\displaystyle p>\\sqrt{\\frac{a b}{c}}-b$ 时, $\\displaystyle \\frac{\\mathrm{d} R}{\\mathrm{d} p}<0$, \r\n此时销售单价 $p$ 越大, 销售收入减少\r\n\r\n(2) 当商品单价 $\\displaystyle p=\\sqrt{\\frac{a b}{c}}-b$ 时,销售额最大, 最大销售额是 $R_{\\max}=(\\sqrt{a}-\\sqrt{b c})^2$",
+      "analysis": "(1) 收益函数 $R=p Q=\\dfrac{a p}{p+b}-c p=\\dfrac{(a-b c) p-c p^2}{p+b}$,\r\n\r\n$\\displaystyle \\frac{\\mathrm{d} R}{\\mathrm{d} p}=\\dfrac{(p+b)(a-b c-2 c p)-(a-b c) p+c p^2}{(p+b)^2}=\\frac{a b-c(p+b)^2}{(p+b)^2}$,\r\n\r\n由 $\\dfrac{\\mathrm{d} R}{\\mathrm{d} p}=0$ 得 $p=\\sqrt{\\dfrac{a b}{c}}-b>0$ ，\r\n\r\n当 $0<p<\\sqrt{\\dfrac{a b}{c}}-b$ 时, $\\dfrac{\\mathrm{d} R}{\\mathrm{d} p}>0$, \r\n\r\n此时单价 $p$ 越大, 销售收入增加;\r\n\r\n当 $\\displaystyle p>\\sqrt{\\frac{a b}{c}}-b$ 时, $\\displaystyle \\frac{\\mathrm{d} R}{\\mathrm{d} p}<0$, \r\n此时销售单价 $p$ 越大, 销售收入减少\r\n\r\n(2) 当商品单价 $\\displaystyle p=\\sqrt{\\frac{a b}{c}}-b$ 时,销售额最大, 最大销售额是\r\n\r\n$R_{\\max }=R\\left(\\sqrt{\\frac{a b}{c}}-b\\right)=(\\sqrt{a}-\\sqrt{b c})^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dR/dp=(ab-c(p+b)²)/(p+b)²，令零得 p=√(ab/c)-b>0（由 a>bc）",
+        "【源数据小瑕】答案字段 (2) 的最大销售额被截断未写出，解析中为 R_max=(√a-√(bc))²"
+      ],
+      "key_point": "p*=√(ab/c)-b，R_max=(√a-√(bc))²。"
+    },
+    {
+      "id": 1855,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\displaystyle \\mathrm{d} y=\\frac{y-\\sqrt{x^2+y^2}}{x}$ 的通解",
+      "options": {},
+      "answer": "$y=\\dfrac{1}{2}\\left(\\dfrac{1}{C}-C x^2\\right) (C$ 为任意常数)",
+      "analysis": "当 $x>0$ 时, $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{y}{x}-\\sqrt{\\left(\\frac{y}{x}\\right)^2+1}$,\r\n\r\n令 $\\displaystyle u=\\frac{y}{x}$, 则 $\\displaystyle u+x \\frac{\\mathrm{d} u}{\\mathrm{d} x}=u-\\sqrt{u^2+1}$, \r\n\r\n即 $\\dfrac{\\mathrm{d} u}{\\sqrt{u^2+1}}=-\\dfrac{\\mathrm{d} x}{x}$,\r\n\r\n积分得 $\\ln \\left(u+\\sqrt{u^2+1}\\right)=\\ln \\dfrac{1}{x}+C_1$, \r\n\r\n解得 $u+\\sqrt{u^2+1}=\\dfrac{C}{x}$,\r\n\r\n再由 $-u+\\sqrt{u^2+1}=\\dfrac{x}{C}$,\r\n\r\n得 $u=\\dfrac{1}{2}\\left(\\dfrac{C}{x}-\\dfrac{x}{C}\\right)$, \r\n\r\n故通解为 $y=\\dfrac{1}{2}\\left(C-\\dfrac{x^2}{C}\\right)$;\r\n\r\n当 $x<0$ 时, $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\dfrac{y}{x}+\\sqrt{\\left(\\frac{y}{x}\\right)^2+1}$,\r\n\r\n令 $u=\\dfrac{y}{x}$, 则 $u+x \\dfrac{\\mathrm{d} u}{\\mathrm{d} x}=u+\\sqrt{u^2+1}$,\r\n\r\n即 $\\dfrac{\\mathrm{d} u}{\\sqrt{u^2+1}}=\\dfrac{\\mathrm{d} x}{x}$,\r\n\r\n积分得 $\\ln \\left(u+\\sqrt{u^2+1}\\right)=\\ln (-x)+\\ln C$, \r\n\r\n解得 $u+\\sqrt{u^2+1}=-C x$,\r\n\r\n再由 $-u+\\sqrt{u^2+1}=-\\dfrac{1}{C x}$,\r\n\r\n得 $u=\\dfrac{1}{2}\\left(\\dfrac{1}{C x}-C x\\right)$,\r\n\r\n故通解为 $y=\\dfrac{1}{2}\\left(\\dfrac{1}{C}-C x^2\\right) (C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 u=y/x 后 x u′=-√(u²+1)，分离得 du/√(u²+1)=-dx/x",
+        "积分得 u+√(u²+1)=C/x，再解出 u；【源数据小瑕】题干 ‘dy=...’ 缺 /dx 与分式记号，应为 dy/dx=(y-√(x²+y²))/x"
+      ],
+      "key_point": "齐次代换积分得 y=(1/2)(1/C-Cx²)。"
+    },
+    {
+      "id": 1856,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{llll}0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & y & 1 \\\\ 0 & 0 & 1 & 2\\end{array}\\right)$\r\n\r\n(1) 已知 $\\boldsymbol{A}$ 的一个特征值为 $3$ , 求 $y$;\r\n\r\n(2) 求矩阵 $\\boldsymbol{P}$, 使得 $(\\boldsymbol{A P})^{\\mathrm{T}}(\\boldsymbol{A P})$ 为对角矩阵",
+      "options": {},
+      "answer": "(1) $2$ (2) $\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\ 0 & 0 & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}}\\end{array}\\right)$",
+      "analysis": "(1) 令 $\\boldsymbol{A}_1=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right), \\boldsymbol{A}_2=\\left(\\begin{array}{ll}y & 1 \\\\ 1 & 2\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{A}=\\left(\\begin{array}{ll}\\boldsymbol{A}_1 & \\boldsymbol{O} \\\\ \\boldsymbol{O} & \\boldsymbol{A}_2\\end{array}\\right)$,\r\n\r\n$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\lambda \\boldsymbol{E}-\\boldsymbol{A}_1\\right| \\cdot\\left|\\lambda \\boldsymbol{E}-\\boldsymbol{A}_2\\right|=\\left(\\lambda^2-1\\right)\\left[\\lambda^2-(y+2) \\lambda+2 y-1\\right]$,\r\n\r\n因为 $\\boldsymbol{A}$ 有一个特征值为 $3$, \r\n\r\n所以 $\\left(3^2-1\\right)\\left[3^2-3(y+2)+2 y-1\\right]=0$, 解得 $y=2$\r\n\r\n(2) $\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}=\\left(\\begin{array}{llll}0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 1 & 2\\end{array}\\right)\\left(\\begin{array}{llll}0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 1 & 2\\end{array}\\right)=\\left(\\begin{array}{llll}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 5 & 4 \\\\ 0 & 0 & 4 & 5\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol{A}_3=\\left(\\begin{array}{ll}5 & 4 \\\\ 4 & 5\\end{array}\\right)$,\r\n\r\n由 $\\left|\\lambda \\boldsymbol{E}-\\boldsymbol{A}_3\\right|=\\lambda^2-10 \\lambda+9=0$ \r\n\r\n得 $\\lambda_1=1, \\lambda_2=9$,\r\n\r\n由 $\\boldsymbol{E}-\\boldsymbol{A}_3 \\rightarrow\\left(\\begin{array}{ll}1 & 1 \\\\ 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\lambda_1=1$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 1\\end{array}\\right)$,\r\n\r\n由 $9 \\boldsymbol{E}-\\boldsymbol{A}_3 \\rightarrow\\left(\\begin{array}{cc}1 & -1 \\\\ 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\lambda_2=9$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$,\r\n\r\n规范化得 $\\boldsymbol{\\gamma}_1=\\frac{1}{\\sqrt{2}}\\left(\\begin{array}{c}-1 \\\\ 1\\end{array}\\right), \\quad \\gamma_2=\\frac{1}{\\sqrt{2}}\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$,\r\n\r\n故所求的矩阵 $\\boldsymbol{P}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\ 0 & 0 & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}}\\end{array}\\right)$, \r\n\r\n且 $(\\boldsymbol{A P})^{\\mathrm{T}}(\\boldsymbol{A P})=\\boldsymbol{P}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{P}=\\left(\\begin{array}{cccc}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 9\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) 特征多项式 (λ²-1)(λ²-(y+2)λ+2y-1)，代 λ=3 解 y=2",
+        "(2) AᵀA 的下右块 [[5,4],[4,5]] 特征值 1,9，正交化特征向量拼 P 使乘积对角化"
+      ],
+      "key_point": "y=2；对 AᵀA 的活跃块正交对角化得 P，(AP)ᵀ(AP)=diag(1,1,1,9)。"
+    },
+    {
+      "id": 1859,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}$, 是齐次线性方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的一个基础解系, 向量 $\\boldsymbol{\\beta}$ 不是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的解, 即 $\\boldsymbol{A \\beta} \\neq \\mathbf{0}$. 证明: 向量组 $\\boldsymbol{\\beta}, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_1, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_t$ 线性无关",
+      "options": {},
+      "answer": "略",
+      "analysis": "因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_t$ 为基础解系, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_t$ 线性无关,\r\n\r\n令 $k_0 \\boldsymbol{\\beta}+k_1\\left(\\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_1\\right)\r\n+k_2\\left(\\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_2\\right)\\\\\r\n+\\cdots+k_i\\left(\\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_t\\right)=\\mathbf{0}$, \r\n\r\n即 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_t \\boldsymbol{\\alpha}_t+\\left(k_0+k_1+\\cdots+k_t\\right) \\boldsymbol{\\beta}=\\mathbf{0}$,\r\n\r\n两边左乘 $\\boldsymbol{A}$ \r\n\r\n得 $\\left(k_0+k_1+\\cdots+k_t\\right) \\boldsymbol{A} \\boldsymbol{\\beta}=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{A} \\boldsymbol{\\beta} \\neq \\mathbf{0}$, 所以 $k_0+k_1+\\cdots+k_2=0$,\r\n\r\n从而 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+\\cdots+k_t \\boldsymbol{\\alpha}_t=\\mathbf{0}$,\r\n\r\n由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_t$ 线性无关得 $k_1=k_2=\\cdots=k_t=0$,\r\n\r\n于是 $k_0=0$, 故向量组 $\\boldsymbol{\\beta}, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_1, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\beta}+\\boldsymbol{\\alpha}$, 线性无关",
+      "wrong_options": {},
+      "pitfalls": [
+        "零组合两边左乘 A：αᵢ 项消失（Aαᵢ=0），剩 (Σkⱼ)Aβ=0，因 Aβ≠0 得系数和为零",
+        "回代后 Σkⱼαⱼ=0，由 αⱼ 无关得全零，再推 k₀=0"
+      ],
+      "key_point": "左乘 A 得系数和为 0，再用 αᵢ 无关逼出全部系数为零。"
+    },
+    {
+      "id": 1860,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设一部机器在一天内发生故障的概率为 $0.2$ , 机器发生故障时全天停止工作, 若一周 $5$ 个工作日里无故障, 可获利润 $10$ 万元; 发生一次故障仍可获利润 $5$ 万元; 发生两次故障所获利润为 $0$ , 发生三次或三次以上则亏损 $2$ 万元, 求一周内期望利润是多少?",
+      "options": {},
+      "answer": "$5.20896$ (万元)",
+      "analysis": "设 $X$ 表示一周内机器发生故障的次数,则 $X \\sim B(5,0.2)$,\r\n\r\n设一周内所获利润为 $Y$, 则\r\n\r\n$Y= \\begin{cases}10, & X=0 \\\\\r\n5, & X=1 \\\\\r\n0, & X=2 \\\\\r\n-2, & 3 \\leqslant X \\leqslant 5\\end{cases}\\\\\r\nE(Y)=10 P\\{X=0\\}+5 P\\{X=1\\}-2 P\\{3 \\leqslant X \\leqslant 5\\}$,\r\n\r\n由 $P\\{X=0\\}=0.8^5=0.32768,\\\\\r\nP\\{X=1\\}=5 \\times 0.8^4 \\times 0.2=0.4096, \\\\\r\nP\\{X=2\\}=10 \\times 0.8^3 \\times 0.2^2=0.2048, \\\\\r\nP\\{X \\geqslant 3\\}=1-P\\{X=0\\}-P\\{X=1\\}-P\\{X=2\\}=0.05792$,\r\n\r\n得 $E(Y)=5.20896$ (万元)",
+      "wrong_options": {},
+      "pitfalls": [
+        "X~B(5,0.2)，P{X=0}=0.8⁵、P{X=1}=5·0.8⁴·0.2、P{X=2}=10·0.8³·0.2²",
+        "E(Y)=10P₀+5P₁+0·P₂-2P{X≥3}=5.20896"
+      ],
+      "key_point": "E(Y)=10·0.32768+5·0.4096-2·0.05792=5.20896 万元。"
+    },
+    {
+      "id": 1861,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "考虑一元二次方程 $x^2+B x+C=0$, 其中 $B, C$ 分别是将一枚骰子接连扔两次先后出现的点数, 求该方程有实根的概率 $p$ 和有重根的概率 $q$",
+      "options": {},
+      "answer": "$p=\\dfrac{19}{36}, q=\\dfrac{1}{18}$",
+      "analysis": "令 $A_1=\\{$ 方程有实根 $\\}, A_2=\\{$ 方程有重根 $\\}$,\r\n\r\n则 $A_1=\\left\\{B^2-4 C \\geqslant 0\\right\\}=\\left\\{B^2 \\geqslant 4 C\\right\\}, A_2=\\left\\{B^2-4 C=0\\right\\}=\\left\\{B^2=4 C\\right\\}$,\r\n\r\n骰子连续扔两次的样本点总数为 $n=36$,\r\n\r\n$B, C$ 的可能取值为 $1,2,3,4,5,6$,\r\n\r\n$B=1$ 时, 有利于 $A_1$ 的样本点为 $0$, 有利于 $A_2$ 的样本点为 $0$\r\n\r\n$B=2$ 时, 有利于 $A_1$ 的样本点为 $1$, 有利于 $A_2$ 的样本点为 $1$\r\n\r\n$B=3$ 时, 有利于 $A_1$ 的样本点为 $2$, 有利于 $A_2$ 的样本点为 $0$\r\n\r\n$B=4$ 时, 有利于 $A_1$ 的样本点为 $4$, 有利于 $A_2$ 的样本点为 $1$\r\n\r\n$B=5$ 时, 有利于 $A_1$ 的样本点为 $6$, 有利于 $A_2$ 的样本点为 $0$\r\n\r\n$B=6$ 时, 有利于 $A_1$ 的样本点为 $6$, 有利于 $A_2$ 的样本点为 $0$\r\n\r\n故 $\\displaystyle p=\\frac{0+1+2+4+6+6}{36}=\\frac{19}{36}, q=\\frac{1+1}{36}=\\frac{1}{18}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "实根数按 B=1..6 为 0,1,2,4,6,6，共 19",
+        "重根 B²=4C 只有 (B,C)=(2,1),(4,4) 两点，q=2/36=1/18"
+      ],
+      "key_point": "p=(0+1+2+4+6+6)/36=19/36，q=2/36=1/18。"
+    },
+    {
+      "id": 1862,
+      "paper": "数学三",
+      "year": 1996,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设 $X_1, X_2, \\cdots, X_n$ 是来自总体 $X$ 的简单随机样本, 已知 $E\\left(X^k\\right)=a_k(k=1,2,3,4)$, 证明: 当 $n$ 充分大时, 随机变量 $\\displaystyle Z_n=\\frac{1}{n} \\sum_{i=1}^n X_i^2$ 近似服从正态分布, 并指出其分布参数",
+      "options": {},
+      "answer": "Zₙ 近似服从 N(a₂,(a₄-a₂²)/n)",
+      "analysis": "由 $X_1, X_2, \\cdots, X_n$ 独立同分布,\r\n\r\n得 $X_1^2, X_2^2, \\cdots, X_n^2$ 独立同分布,\r\n\r\n由 $E\\left(X_i^2\\right)=a_2,\\\\\r\nD\\left(X_i^2\\right)=E\\left(X_i^4\\right)-\\left[E\\left(X_i^2\\right)\\right]^2=a_4-a_2^2$,\r\n\r\n得 $\\displaystyle E\\left(Z_n\\right)=\\frac{1}{n} \\sum_{i=1}^n E\\left(X_i^2\\right)=a_2$, $D\\left(Z_n\\right)=\\dfrac{a_4-a_2^2}{n}$,\r\n\r\n由中心极限定理, $\\displaystyle U=\\frac{Z_n-a_2}{\\sqrt{\\frac{a_4-a_2^2}{n}}}$ 近似服从标准正态分布,\r\n\r\n故 $\\displaystyle Z_n=\\frac{1}{n} \\sum_{i=1}^n X_i^2$ 近似服从正态分布 $\\displaystyle N\\left(a_2, \\frac{a_4-a_2^2}{n}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(Xᵢ²)=a₂、D(Xᵢ²)=a₄-a₂²（需 a₄ 存在）",
+        "Zₙ 是均值型，中心极限给 N(a₂,(a₄-a₂²)/n)，方差含 1/n"
+      ],
+      "key_point": "由 CLT，Zₙ≈N(a₂,(a₄-a₂²)/n)。"
+    }
+  ]
+}

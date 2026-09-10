@@ -1,0 +1,409 @@
+{
+  "paper": "数学三",
+  "year": 1995,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1819,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\dfrac{1-x}{1+x}$, 则 $f^{(n)}(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2(-1)^n n !}{(x+1)^{n+1}}$",
+      "analysis": "由 $f(x)=\\dfrac{1-x}{1+x}=-1+\\dfrac{2}{x+1}$,\r\n\r\n得 $f^{(n)}(x)=\\dfrac{2(-1)^n n !}{(x+1)^{n+1}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先写 (1-x)/(1+x)=-1+2/(x+1)，常数项求导后消失",
+        "(x+1)^{-1} 的 n 阶导带 (-1)ⁿn! 与升幂 n+1"
+      ],
+      "key_point": "f=-1+2/(x+1)，fⁿ=2(-1)ⁿn!/(x+1)^{n+1}。"
+    },
+    {
+      "id": 1820,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $z=x y f\\left(\\dfrac{y}{x}\\right), f(u)$ 可导, 则 $x z_x^{\\prime}+y z_y^{\\prime}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 x y f\\left(\\dfrac{y}{x}\\right)$",
+      "analysis": "$z_x^{\\prime}=y f-\\dfrac{y^2}{x} f^{\\prime}, z_y^{\\prime}=x f+y f^{\\prime}$, \r\n\r\n则 $x z_x^{\\prime}+y z_y^{\\prime}=2 x y f\\left(\\dfrac{y}{x}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "xy 为 2 次、f(y/x) 为 0 次，故 z 是 2 次齐次，欧拉定理给 2z",
+        "直接求偏导时 f′ 项恰好抵消，只剩 2xyf"
+      ],
+      "key_point": "z 二次齐次，x zₓ+y z_y=2z=2xyf(y/x)。"
+    },
+    {
+      "id": 1821,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f^{\\prime}(\\ln x)=1+x$, 则 $f(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$x+\\mathrm{e}^x+C$",
+      "analysis": "由 $f^{\\prime}(\\ln x)=1+x$, 即 $f^{\\prime}(\\ln x)=1+\\mathrm{e}^{\\ln x}$,\r\n\r\n得 $f^{\\prime}(x)=1+\\mathrm{e}^x$, 故 $f(x)=x+\\mathrm{e}^x+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f′(lnx)=1+x，令 t=lnx 得 f′(t)=1+eᵗ，别漏把 x 换成 eᵗ",
+        "积分后必带任意常数 C"
+      ],
+      "key_point": "f′(x)=1+eˣ⇒f(x)=x+eˣ+C。"
+    },
+    {
+      "id": 1822,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 2 & 2 & 0 \\\\ 3 & 4 & 5\\end{array}\\right), \\boldsymbol{A}^*$ 是 $\\boldsymbol{A}$ 的伴随矩阵, 则 $\\left(\\boldsymbol{A}^*\\right)^{-1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\frac{1}{10}\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 2 & 2 & 0 \\\\ 3 & 4 & 5\\end{array}\\right)$",
+      "analysis": "$|\\boldsymbol{A}|=10$, 由 $\\boldsymbol{A}^*=|\\boldsymbol{A}| \\boldsymbol{A}^{-1}=10 \\boldsymbol{A}^{-1}$ 得\r\n\r\n$\\left(\\boldsymbol{A}^*\\right)^{-1}=\\dfrac{1}{10} \\boldsymbol{A}=\\dfrac{1}{10}\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n2 & 2 & 0 \\\\\r\n3 & 4 & 5\r\n\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(A*)⁻¹=(|A|A⁻¹)⁻¹=(1/|A|)A，不需真的求 A⁻¹",
+        "下三角阵 |A|=1·2·5=10"
+      ],
+      "key_point": "(A*)⁻¹=A/10。"
+    },
+    {
+      "id": 1823,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X_1, \\cdots, X_n$ 是来自总体 $N\\left(\\mu, \\sigma^2\\right)$ 的简单随机样本, 其中参数 $\\mu$ 与 $\\sigma^2$ 未知, 记 $\\bar{X}=$ $\\displaystyle \\frac{1}{n} \\sum_{i=1}^n X_i, Q^2=\\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2$, 则假设 $H_0: \\mu=0$ 的 $t$ 检验使用的统计量 $t=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\bar{X} \\cdot \\dfrac{\\sqrt{n(n-1)}}{Q}$",
+      "analysis": "$\\displaystyle S^2=\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2=\\frac{1}{n-1} Q^2$,\r\n\r\n\r\n因为参数 $\\mu$ 与 $\\sigma^2$ 未知, \r\n\r\n所以对假设 $H_0: \\mu=0$, 应取的统计量为 \r\n\r\n$t=\\dfrac{\\bar{X}}{\\frac{S}{\\sqrt{n}}}=\\bar{X} \\cdot \\dfrac{\\sqrt{n(n-1)}}{Q}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "σ 未知用样本标准差 S，S=Q/√(n-1)，代入 X̄/(S/√n) 化为 X̄√(n(n-1))/Q",
+        "注：假设检验在现行数三考纲已删，此题按老卷归入抽样分布/统计量"
+      ],
+      "key_point": "t=X̄/(S/√n)=X̄√(n(n-1))/Q。"
+    },
+    {
+      "id": 1824,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 为可导函数, 且满足条件 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(1)-f(1-x)}{2 x}=-1$, 则曲线 $y=f(x)$ 在点 $(1, f(1))$ 处的切线斜率为 $(\\quad)$",
+      "options": {
+        "A": "$2$",
+        "B": "$-1$",
+        "C": "$\\dfrac{1}{2}$",
+        "D": "$-2$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle -1=\\lim _{x \\rightarrow 0} \\frac{f(1)-f(1-x)}{2 x}\\\\=\\frac{1}{2} \\lim _{x \\rightarrow 0} \\frac{f(1-x)-f(1)}{-x}=\\frac{1}{2} f^{\\prime}(1)$,\r\n\r\n得 $f^{\\prime}(1)=-2$, 应选 $(\\mathrm{D})$",
+      "wrong_options": {
+        "A": "2——漏掉负号且系数处理反",
+        "B": "-1——忘了极限式带因子 1/2，未还原",
+        "C": "1/2——把 1/2 当结果，未解出 f′(1)"
+      },
+      "pitfalls": [
+        "(f(1)-f(1-x))/(2x)=(1/2)·(f(1-x)-f(1))/(-x)→(1/2)f′(1)",
+        "令 (1/2)f′(1)=-1 得 f′(1)=-2，即切线斜率"
+      ],
+      "key_point": "(1/2)f′(1)=-1⇒f′(1)=-2，选 D。"
+    },
+    {
+      "id": 1825,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列广义积分发散的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{-1}^1 \\frac{1}{\\sin x} \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_{-1}^1 \\frac{1}{\\sqrt{1-x^2}} \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_0^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_2^{+\\infty} \\frac{1}{x \\ln ^2 x} \\mathrm{d} x$"
+      },
+      "answer": "A",
+      "analysis": "方法一 对 $\\displaystyle \\int_0^1 \\frac{1}{\\sin x} \\mathrm{d} x$, \r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}}(x-0)^1 \\cdot \\frac{1}{\\sin x}=1$\r\n\r\n且 $1 \\geqslant 1$, 所以 $\\displaystyle \\int_0^1 \\frac{1}{\\sin x} \\mathrm{d} x$ 发散,\r\n\r\n从而 $\\displaystyle \\int_{-1}^1 \\frac{1}{\\sin x} \\mathrm{d} x$ 发散, 应选 (A)\r\n\r\n方法二 \r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow-1^{+}}(x+1)^{\\frac{1}{2}} \\cdot \\frac{1}{\\sqrt{1-x^2}}\\\\\r\n=\\frac{1}{\\sqrt{2}}, \\lim _{x \\rightarrow 1^{-}}(1-x)^{\\frac{1}{2}} \\cdot \\frac{1}{\\sqrt{1-x^2}}=\\frac{1}{\\sqrt{2}}$ \r\n\r\n且 $\\displaystyle \\frac{1}{2}<1$, 所以 $\\displaystyle \\int_{-1}^1 \\frac{1}{\\sqrt{1-x^2}} \\mathrm{d} x$ 收敛;\r\n\r\n因为 $\\displaystyle \\int_0^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x \\stackrel{x^2=t}{=} \\frac{1}{2} \\int_0^{+\\infty} t^{-\\frac{1}{2}} \\mathrm{e}^{-t} \\mathrm{d} t=\\frac{1}{2} \\Gamma\\left(\\frac{1}{2}\\right)=\\frac{\\sqrt{\\pi}}{2}$,  所以 $\\displaystyle  \\int_0^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x$ 收敛; \r\n\r\n由 $\\displaystyle \\int_2^{+\\infty} \\frac{1}{x \\ln ^2 x} \\mathrm{d} x=-\\left.\\frac{1}{\\ln x}\\right|_2 ^{+\\infty}=\\frac{1}{\\ln 2}$, 得 $\\displaystyle \\int_2^{+\\infty} \\frac{1}{x \\ln ^2 x} \\mathrm{d} x$ 收敛,\r\n\r\n故应选 ( A)",
+      "wrong_options": {
+        "B": "1/√(1-x²) 端点为 1/2 阶瑕点，收敛",
+        "C": "e^{-x²} 化 Γ(1/2)/2 收敛",
+        "D": "1/(x ln²x) 原函数 -1/lnx，积分值 1/ln2 收敛"
+      },
+      "pitfalls": [
+        "A 在内点 x=0 有瑕点，1/sinx~1/x 是 1 阶（≥1）故发散，是唯一发散者"
+      ],
+      "key_point": "∫_{-1}^1 1/sinx 于 x=0 发散，选 A。"
+    },
+    {
+      "id": 1826,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}_{m \\times n}$ 的秩 $r(\\boldsymbol{A})=m<n, \\boldsymbol{E}_m$ 为 $m$ 阶单位矩阵,下列结论中正确的是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 的任意 $m$ 个列向量必线性无关",
+        "B": "$\\boldsymbol{A}$ 的任意一个 $m$ 阶子式不等于零",
+        "C": "若矩阵 $\\boldsymbol{B}$ 满足 $\\boldsymbol{B A}=\\boldsymbol{O}$, 则 $\\boldsymbol{B}=\\boldsymbol{O}$",
+        "D": "$\\boldsymbol{A}$ 通过初等行变换, 必可以化为 $\\left(\\boldsymbol{E}_m, \\boldsymbol{O}\\right)$ 的形式"
+      },
+      "answer": "C",
+      "analysis": "因为矩阵 $\\boldsymbol{A}_{m \\times n}$ 的秩为 $r(\\boldsymbol{A})=m<n$,\r\n\r\n所以 $\\boldsymbol{A}$ 存在一个 $m$ 阶子式不等于零,\r\n\r\n从而存在 $m$ 个列向量线性无关.\r\n\r\n选项 (A) 和 (B) 把 \"存在\" 改成了 \"任意\",\r\n\r\n所以这两选项均错误.\r\n\r\n反例如下: $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 0\\end{array}\\right)$,\r\n\r\n此时 $\\boldsymbol{A}_{2 \\times 3}$ 的秩为 $r(\\boldsymbol{A})=2<3$,\r\n\r\n但 $\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right)$ 与 $\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right)$ 线性相关, \r\n\r\n且 2 阶子式 $\\left|\\begin{array}{ll}1 & 1 \\\\ 0 & 0\\end{array}\\right|=0$,\r\n\r\n由 $\\boldsymbol{B} \\boldsymbol{A}=\\boldsymbol{O}$ 得 $r(\\boldsymbol{B})+r(\\boldsymbol{A}) \\leqslant m$, \r\n\r\n再由 $r(\\boldsymbol{A})=m$ 得 $r(\\boldsymbol{B})=0$, \r\n\r\n即 $\\boldsymbol{B}=\\boldsymbol{O}$, 应选 (C)\r\n\r\n根据矩阵初等变换的理论知 :\r\n\r\n矩阵 $\\boldsymbol{A}$ 通过初等变换可化为标准型 $\\left(\\boldsymbol{E}_m \\boldsymbol{O}\\right)$,\r\n\r\n但选项 (D) 将此处的\"初等变换\" 改成 \"初等行变换\", \r\n\r\n少了初等列变换, 故不一定成立.\r\n\r\n反例如下: $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 0\\end{array}\\right)$,\r\n\r\n此时 $\\boldsymbol{A}_{2 \\times 3}$ 的秩为 $r(\\boldsymbol{A})=2<3$,\r\n\r\n无论对 $\\boldsymbol{A}$ 怎样做初等行变换都得不到 $\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0\\end{array}\\right)$,\r\n\r\n但若做初等变换 (包括列和行变换)，\r\n\r\n即第三列减第一列, 则可以得到 $\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0\\end{array}\\right)$.\r\n\r\n故 (D) 选项错误, 排除 (D)",
+      "wrong_options": {
+        "A": "‘任意 m 个列向量无关’——应为‘存在’，可举相关的 m 列反例",
+        "B": "‘任意 m 阶子式≠0’——应为‘存在一个’",
+        "D": "‘初等行变换化 (Eₘ,O)’——仅行变换不够，一般需列变换"
+      },
+      "pitfalls": [
+        "r(A)=m 只保证‘存在’m 阶非零子式/m 个无关列，不能推‘任意’",
+        "BA=O 且 r(A)=m⇒r(B)=0，故 B=O，C 正确"
+      ],
+      "key_point": "BA=O 且 A 行满秩⇒B=O，选 C。"
+    },
+    {
+      "id": 1827,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 独立同分布, 记 $U=X-Y, V=X+Y$, 则随机变量 $U$ 与 $V$ 必然 $(\\quad)$",
+      "options": {
+        "A": "不独立",
+        "B": "独立",
+        "C": "相关系数不为零",
+        "D": "相关系数为零"
+      },
+      "answer": "D",
+      "analysis": "因为 $X, Y$ 独立同分布,\r\n\r\n所以 $\\operatorname{Cov}(U, V)=\\operatorname{Cov}(X-Y, X+Y)=\\operatorname{Cov}(X, X)-\\operatorname{Cov}(Y, Y)=D(X)-D(Y)=0$,\r\n\r\n于是 $\\displaystyle \\rho_{U V}=\\frac{\\operatorname{Cov}(U, V)}{\\sqrt{D(U)} \\cdot \\sqrt{D(V)}}=0$, 应选 (D)",
+      "wrong_options": {
+        "A": "不独立——不一定，反例存在",
+        "B": "独立——不相关不等于独立",
+        "C": "相关系数不为零——Cov 恰为 0"
+      },
+      "pitfalls": [
+        "Cov(U,V)=D(X)-D(Y)=0 只给不相关，不能断定独立（除非正态）"
+      ],
+      "key_point": "Cov(U,V)=0⇒ρ=0，选 D。"
+    },
+    {
+      "id": 1828,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从正态分布 $N\\left(\\mu, \\sigma^2\\right)$, 则随 $\\sigma$ 增加, 概率 $P\\{|X-\\mu|<\\sigma\\}(\\quad)$",
+      "options": {
+        "A": "单调增加",
+        "B": "单调减少",
+        "C": "保持不变",
+        "D": "增减不定"
+      },
+      "answer": "C",
+      "analysis": "由 $X \\sim N\\left(\\mu, \\sigma^2\\right)$ 得 $\\displaystyle \\frac{X-\\mu}{\\sigma} \\sim N(0,1)$,\r\n\r\n则 $P\\{|X-\\mu|<\\sigma\\}=P\\left\\{-1<\\frac{X-\\mu}{\\sigma}<1\\right\\}\\\\=\\Phi(1)-\\Phi(-1)$\r\n\r\n即概率不变, 应选 (C)",
+      "wrong_options": {
+        "A": "单调增——忽略标准化后 σ 消去",
+        "B": "单调减——同上",
+        "D": "增减不定——概率其实是定值"
+      },
+      "pitfalls": [
+        "把区间宽度写成 σ 的倍数，标准化后 σ 全部约掉，概率为常数 Φ(1)-Φ(-1)≈0.6826"
+      ],
+      "key_point": "P{|X-μ|<σ}=Φ(1)-Φ(-1) 恒定，选 C。"
+    },
+    {
+      "id": 1829,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)= \\begin{cases}\\dfrac{2}{x^2}(1-\\cos x), & x<0 \\\\ 1, & x=0 \\\\\\displaystyle  \\frac{1}{x} \\int_0^x \\cos t^2 \\mathrm{d} t, & x>0 \\end{cases}$ 试讨论 $f(x)$ 在 $x=0$ 处的连续性和可导性",
+      "options": {},
+      "answer": "连续且可导",
+      "analysis": "$\\displaystyle f(0-0)=\\lim _{x \\rightarrow 0^{-}} \\frac{2(1-\\cos x)}{x^2}=1,\\\\\r\n f(0+0)=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{x}=\\lim _{x \\rightarrow 0^{+}} \\cos x^2=1$,\r\n\r\n因为 $f(0-0)=f(0)=f(0+0)=1$, \r\n\r\n所以 $f(x)$ 在 $x=0$ 处连续\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0^{-}} \\frac{f(x)-f(0)}{x-0} \\\\\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{\\frac{2(1-\\cos x)}{x^2}-1}{x}=\\lim _{x \\rightarrow 0^{-}} \\frac{2(1-\\cos x)-x^2}{x^3} \\\\\r\n =\\lim _{x \\rightarrow 0^{-}} \\frac{2 \\sin x-2 x}{3 x^2}=\\frac{2}{3} \\lim _{x \\rightarrow 0^{-}} \\frac{\\sin x-x}{x^2}=0$\r\n\r\n则 $f^{\\prime}_{-}(0)=0$;\r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{f(x)-f(0)}{x-0}=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{x}-1}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t-x}{x^2}=\\lim _{x \\rightarrow 0^{+}} \\frac{\\cos x^2-1}{2 x}=0$,\r\n\r\n\r\n则 $f^{\\prime}_{+}(0)=0$,\r\n\r\n因为 $f^{\\prime}_{-}(0)=f^{\\prime}_{+}(0)=0$,\r\n\r\n所以 $f(x)$ 在 $x=0$ 处可导,\r\n\r\n且 $f^{\\prime}(0)=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "左段 2(1-cosx)/x²→1、右段 (1/x)∫₀ˣcost²dt→1，与 f(0)=1 一致故连续",
+        "左差商 [2(1-cosx)-x²]/x³→0、右差商 (cosx²-1)/(2x)→0，故 f′(0)=0"
+      ],
+      "key_point": "左右极限与导数均达标，连续且可导，f′(0)=0。"
+    },
+    {
+      "id": 1830,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知连续函数 $f(x)$ 满足条件 $\\displaystyle f(x)=\\int_0^{3 x} f\\left(\\frac{t}{3}\\right) \\mathrm{d} t+\\mathrm{e}^{2 x}$, 求 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=3 \\mathrm{e}^{3 x}-2 \\mathrm{e}^{2 x}$",
+      "analysis": "由 $\\displaystyle f(x)=\\int_0^{3 x} f\\left(\\frac{t}{3}\\right) \\mathrm{d} t+\\mathrm{e}^{2 x}$\r\n\r\n得 $f^{\\prime}(x)-3 f(x)=2 \\mathrm{e}^{2 x}$,\r\n\r\n解得\r\n\r\n$\\displaystyle\r\nf(x)=\\left(\\int 2 \\mathrm{e}^{2 x} \\cdot \\mathrm{e}^{\\int-3 \\mathrm{d} x} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int-3 \\mathrm{d} x}\\\\\r\n=\\left(-2 \\mathrm{e}^{-x}+C\\right) \\mathrm{e}^{3 x} \\\\\r\n=C \\mathrm{e}^{3 x}-2 \\mathrm{e}^{2 x}$\r\n\r\n再由 $f(0)=1$ 得 $C=3$, 故 $f(x)=3 \\mathrm{e}^{3 x}-2 \\mathrm{e}^{2 x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "d/dx∫₀^{3x}f(t/3)dt=f(x)·3=3f(x)，别漏链式因子 3",
+        "初值 f(0)=e⁰=1 定出 C=3"
+      ],
+      "key_point": "f′-3f=2e^{2x}，通解 Ce^{3x}-2e^{2x}，代 f(0)=1 得 f=3e^{3x}-2e^{2x}。"
+    },
+    {
+      "id": 1831,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "将函数 $y=\\ln \\left(1-x-2 x^2\\right)$ 展成 $x$ 的幂级数, 并指出其收敛区间",
+      "options": {},
+      "answer": "$\\displaystyle \\ln \\left(1-x-2 x^2\\right)=\\sum_{n=1}^{\\infty}\\left[\\frac{(-1)^{n-1}}{n}-\\frac{2^n}{n}\\right] x^n$, 其收敛区间为 $\\displaystyle \\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$",
+      "analysis": "$y=\\ln [(1+x)(1-2 x)]=\\ln (1+x)+\\ln (1-2 x)$,\r\n\r\n$\\displaystyle \\ln (1+x)=\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n} x^n$, 其中 $-1<x \\leqslant 1$;\r\n\r\n$\\displaystyle \\ln (1-2 x)=-\\sum_{n=1}^{\\infty} \\frac{2^n}{n} x^n$, 其中 $\\displaystyle -\\frac{1}{2} \\leqslant x<\\frac{1}{2}$,\r\n\r\n故 $\\displaystyle \\ln \\left(1-x-2 x^2\\right)=\\sum_{n=1}^{\\infty}\\left[\\frac{(-1)^{n-1}}{n}-\\frac{2^n}{n}\\right] x^n$,\r\n\r\n其收敛区间为 $\\displaystyle \\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先分解 1-x-2x²=(1+x)(1-2x) 才能拆成两个对数",
+        "ln(1+x) 收敛 (-1,1]、ln(1-2x) 收敛 [-1/2,1/2)，交集给收敛区间 (-1/2,1/2)"
+      ],
+      "key_point": "两对数展开相加，系数 (-1)^{n-1}/n-2ⁿ/n，收敛区间 (-1/2,1/2)。"
+    },
+    {
+      "id": 1832,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} \\min \\{x, y\\} \\mathrm{e}^{-\\left(x^2+y^2\\right)} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$-\\sqrt{\\dfrac{\\pi}{2}}$",
+      "analysis": "方法一 令 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant R^2\\right\\}$, 则\r\n\r\n$\\displaystyle \\iint\\limits_D \\min \\{x, y\\} \\mathrm{e}^{-\\left(x^2+y^2\\right)} \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\int_0^{\\frac{\\pi}{4}} \\sin \\theta \\mathrm{d} \\theta \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r\\\\+\\int_{\\frac{\\pi}{4}}^{\\frac{5 \\pi}{4}} \\cos \\theta \\mathrm{d} \\theta \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r\\\\+\\int_{\\frac{5 \\pi}{4}}^{2 \\pi} \\sin \\theta \\mathrm{d} \\theta \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r \\\\\r\n= \\left(1-\\frac{\\sqrt{2}}{2}\\right) \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r-\\sqrt{2} \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r-\\left(1+\\frac{\\sqrt{2}}{2}\\right) \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r \\\\\r\n= -2 \\sqrt{2} \\int_0^R r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r\\\\\r\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} \\min \\{x, y\\} \\mathrm{e}^{-\\left(x^2+y^2\\right)} \\mathrm{d} x \\mathrm{d} y=-2 \\sqrt{2} \\int_0^{+\\infty} r^2 \\mathrm{e}^{-r^2} \\mathrm{d} r \\stackrel{r^2=t}{=}-\\sqrt{2} \\int_0^{+\\infty} t^{\\frac{1}{2}} \\mathrm{e}^{-t} \\mathrm{d} t \\\\\r\n=-\\sqrt{2} \\Gamma\\left(\\frac{1}{2}+1\\right)=-\\frac{\\sqrt{2 \\pi}}{2}$\r\n\r\n方法二 $\\displaystyle \r\nI=\\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-y^2} \\mathrm{d} y \\int_{-\\infty}^y x \\mathrm{e}^{-x^2} \\mathrm{d} x+\\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x \\int_{-\\infty}^x y \\mathrm{e}^{-y^2} \\mathrm{d} y \\\\\r\n\\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-y^2} \\mathrm{d} y \\int_{-\\infty}^y x \\mathrm{e}^{-x^2} \\mathrm{d} x \\\\\r\n=-\\left.\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-y^2}\\left(\\mathrm{e}^{-x^2}\\right)\\right|_{-\\infty} ^y \\mathrm{d} y \\\\\r\n=-\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-2 y^2} \\mathrm{d} y \\\\\r\n \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-x^2} \\mathrm{d} x \\int_{-\\infty}^x y \\mathrm{e}^{-y^2} \\mathrm{~d} y \\\\\r\n =-\\left.\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-x^2}\\left(\\mathrm{e}^{-y^2}\\right)\\right|_{-\\infty} ^x \\mathrm{d} y \\\\\r\n =-\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-2 x^2} \\mathrm{d} x \\\\\r\n =-\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-2 y^2} \\mathrm{d} y-\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-2 x^2} \\mathrm{d} x \\\\\r\n =-\\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-2 x^2} \\mathrm{d} x$\r\n\r\n作换元, 令 $\\displaystyle x=\\frac{t}{2}, \\mathrm{d} x=\\frac{\\mathrm{d} t}{2},\\\\\r\nI  =-\\frac{1}{2} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-\\frac{t^2}{2}} \\mathrm{d} t \\\\\r\n =-\\frac{\\sqrt{2 \\pi}}{2} \\cdot \\frac{1}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} \\mathrm{e}^{-\\frac{t^2}{2}} \\mathrm{d} t\\\\\r\n=-\\frac{\\sqrt{2 \\pi}}{2}=-\\sqrt{\\frac{\\pi}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "min{x,y} 在直线 y=x 两侧取不同变量，须分区处理",
+        "化为 -2√2∫₀^∞r²e^{-r²}dr 或 -∫e^{-2x²}dx，得 -√(2π)/2=-√(π/2)"
+      ],
+      "key_point": "分区+对称化得 I=-√(2π)/2=-√(π/2)。"
+    },
+    {
+      "id": 1833,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设某产品的需求函数为 $Q=Q(P)$, 收益函数为 $R=P Q$, 其中 $P$ 为产品价格, $Q$ 为需求量 (产品的产量), $Q(P)$ 是单调减函数. 如果当价格为 $P_0$, 对应产量为 $Q_0$ 时, 边际收益 $\\displaystyle \\left.\\frac{\\mathrm{d} R}{\\mathrm{d} Q}\\right|_{Q=Q_0}=a>0$, 收益对价格的边际效应 $\\displaystyle \\left.\\frac{\\mathrm{d} R}{\\mathrm{d} P}\\right|_{P=P_0}=c<0$, 需求对价格的弹性为 $E_P=b>1$, 求 $P_0$ 和 $Q_0$",
+      "options": {},
+      "answer": "$\\displaystyle P_0=\\frac{a b}{b-1};Q_0=\\frac{c}{1-b}$",
+      "analysis": "$\\displaystyle \\frac{\\mathrm{d} R}{\\mathrm{d} Q}=P+Q \\frac{\\mathrm{d} P}{\\mathrm{d} Q}=P+P \\cdot \\frac{\\mathrm{d} P / \\mathrm{d} Q}{P / Q}=\\left(1-\\frac{1}{b}\\right) P$,\r\n\r\n由 $\\displaystyle \\left.\\frac{\\mathrm{d} R}{\\mathrm{d} Q}\\right|_{Q=Q_0}=a$, 得 $\\displaystyle P_0=\\frac{a b}{b-1}\\\\\r\n\\frac{\\mathrm{d} R}{\\mathrm{d} P}=Q+P \\frac{\\mathrm{d} Q}{\\mathrm{d} P}=Q+Q \\cdot \\frac{\\mathrm{d} Q / \\mathrm{d} P}{Q / P}=(1-b) Q$\r\n\r\n由 $\\displaystyle \\left.\\frac{\\mathrm{d} R}{\\mathrm{d} P}\\right|_{P=P_0}=c<0$ 得 $\\displaystyle Q_0=\\frac{c}{1-b}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dR/dQ=P(1-1/b)=a 给 P₀=ab/(b-1)（b>1 故正）",
+        "dR/dP=Q(1-b)=c 给 Q₀=c/(1-b)（c<0,b>1 故正）"
+      ],
+      "key_point": "用弹性 b 表示两边际，解得 P₀=ab/(b-1)、Q₀=c/(1-b)。"
+    },
+    {
+      "id": 1834,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x), g(x)$ 在区间 $[-a, a](a>0)$ 上连续, $g(x)$ 为偶函数, 且 $f(x)$ 满足条件 $f(x)+f(-x)=A ( A$ 为常数)\r\n\r\n(1) 证明: $\\displaystyle \\int_{-a}^a f(x) g(x) \\mathrm{d} x=A \\int_0^a g(x) \\mathrm{d} x$;\r\n\r\n(2) 利用(1) 的结论计算定积分 $\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}|\\sin x| \\arctan \\mathrm{e}^x \\mathrm{d} x$",
+      "options": {},
+      "answer": "(2) $\\dfrac{\\pi}{2}$",
+      "analysis": "(1) 因为 $g(-x)=g(x)$,\r\n所以 $\\displaystyle \\int_{-a}^a f(x) g(x) \\mathrm{d} x  =\\int_0^a[f(-x) g(-x)+f(x) g(x)] \\mathrm{d} x \\\\\r\n=\\int_0^a[f(-x)+f(x)] g(x) \\mathrm{d} x=A \\int_0^a g(x) \\mathrm{d} x$\r\n\r\n(2) $\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}|\\sin x| \\arctan \\mathrm{e}^x \\mathrm{d} x=\\int_0^{\\frac{\\pi}{2}}\\left(\\arctan \\mathrm{e}^x+\\arctan \\mathrm{e}^{-x}\\right) \\sin x \\mathrm{d} x$,\r\n\r\n因为 $\\displaystyle \\left(\\arctan \\mathrm{e}^x+\\arctan \\mathrm{e}^{-x}\\right)^{\\prime}=\\frac{\\mathrm{e}^x}{1+\\mathrm{e}^{2 x}}-\\frac{\\mathrm{e}^{-x}}{1+\\mathrm{e}^{-2 x}}=0$,\r\n\r\n所以 $\\arctan \\mathrm{e}^x+\\arctan \\mathrm{e}^{-x} \\equiv A$,\r\n\r\n取 $x=0$ 得 $\\displaystyle A=\\frac{\\pi}{2}$,\r\n\r\n故 $\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}|\\sin x| \\arctan \\mathrm{e}^x \\mathrm{d} x=\\frac{\\pi}{2} \\int_0^{\\frac{\\pi}{2}} \\sin x \\mathrm{d} x=\\frac{\\pi}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(2) 中 arctaneˣ+arctane^{-x} 求导为 0，取 x=0 得常数 A=π/2",
+        "化为 (π/2)∫₀^{π/2}sinx dx=π/2"
+      ],
+      "key_point": "公式 ∫_{-a}^a fg=A∫₀^a g；(2) A=π/2，结果 π/2。"
+    },
+    {
+      "id": 1835,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 17,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知向量组 $(\\mathrm{I}) \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3;\\\\\r\n(\\mathrm{II}) \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4;\\\\\r\n(\\mathrm{III}) \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5$, \r\n\r\n如果各向量组的秩分别为 $r(\\mathrm{I})=r(\\mathrm{II})=3, r(\\mathrm{III})=4$.\r\n证明: 向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4$ 的秩等于 $4$",
+      "options": {},
+      "answer": "略",
+      "analysis": "方法一 因为 $r(\\mathrm{I})=3$, 所以向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关,\r\n\r\n又因为 $r( \\mathrm{II} )=3$, 所以向量 $\\boldsymbol{\\alpha}_4$ 可由向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示,\r\n\r\n不妨设 $\\boldsymbol{\\alpha}_4=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2+l_3 \\boldsymbol{\\alpha}_3$,\r\n\r\n再由 $r(\\mathrm{III})=4$ 得向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5$ 线性无关,\r\n\r\n设 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3+k_4\\left(\\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4\\right)=\\mathbf{0}$,\r\n\r\n代入整理得\r\n\r\n$\\left(k_1-l_1 k_4\\right) \\boldsymbol{\\alpha}_1+\\left(k_2-l_2 k_4\\right) \\boldsymbol{\\alpha}_2+\\left(k_3-l_3 k_4\\right) \\boldsymbol{\\alpha}_3+k_4 \\boldsymbol{\\alpha}_5=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5$ 线性无关, 所以 $k_1-l_1 k_4=k_2-l_2 k_4=k_3-l_3 k_4=k_4=0$,\r\n\r\n从而 $k_1=k_2=k_3=k_4=0$, \r\n\r\n即向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4$ 线性无关,\r\n\r\n故向量组 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4$ 的秩为 4\r\n\r\n方法二\r\n\r\n由向量组 (I) 与 (II) 的秩为 $3$\r\n\r\n得 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关且 $\\boldsymbol{\\alpha}_4$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性表示,\r\n\r\n不妨设 $\\boldsymbol{\\alpha}_4=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3$;\r\n\r\n由向量组 (III) 的秩为 $4$ 得 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5$ 线性无关,\r\n\r\n令 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5\\right)$, 则 $r(\\boldsymbol{A})=4$,\r\n\r\n令 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3,-k_1 \\boldsymbol{\\alpha}_1-k_2 \\boldsymbol{\\alpha}_2-k_3 \\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_5\\right)$, 则\r\n\r\n$\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{array}{cccc}\r\n1 & 0 & 0 & -k_1 \\\\\r\n0 & 1 & 0 & -k_2 \\\\\r\n0 & 0 & 1 & -k_3 \\\\\r\n0 & 0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n因为 $\\left(\\begin{array}{cccc}1 & 0 & 0 & -k_1 \\\\ 0 & 1 & 0 & -k_2 \\\\ 0 & 0 & 1 & -k_3 \\\\ 0 & 0 & 0 & 1\\end{array}\\right)$ 可逆, 所以 $r(\\boldsymbol{B})=r(\\boldsymbol{A})=4$,\r\n\r\n从而 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_5-\\boldsymbol{\\alpha}_4$ 线性无关",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(II)=3=r(I) 说明 α₄ 落在 α₁α₂α₃ 张成空间，可线性表示",
+        "α₅-α₄ 用 α₄ 的表示式代入后，零组合含 k₄α₅，由 α₅ 无关逼出全零"
+      ],
+      "key_point": "α₄ 可表示、α₅ 独立，过渡矩阵可逆，故新组秩为 4。"
+    },
+    {
+      "id": 1836,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知二次型 $f\\left(x_1, x_2, x_3\\right)=4 x_2^2-3 x_3^2+4 x_1 x_2-4 x_1 x_3+8 x_2 x_3$\r\n\r\n(1) 写出二次型 $f$ 的矩阵表达式;\r\n\r\n(2) 用正交变换把二次型 $f$ 化为标准形, 并写出相应的正交矩阵",
+      "options": {},
+      "answer": "(1) $\\left(\\begin{array}{ccc}0 & 2 & -2 \\\\ 2 & 4 & 4 \\\\ -2 & 4 & -3\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$\r\n\r\n(2) $\\boldsymbol{Q}=\\left(\\begin{array}{ccc}\\frac{1}{\\sqrt{6}} & -\\frac{2}{\\sqrt{5}} & \\frac{1}{\\sqrt{30}} \\\\ -\\frac{1}{\\sqrt{6}} & 0 & \\frac{5}{\\sqrt{30}} \\\\ \\frac{2}{\\sqrt{6}} & \\frac{1}{\\sqrt{5}} & \\frac{2}{\\sqrt{30}}\\end{array}\\right)$",
+      "analysis": "(1) 令 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & 2 & -2 \\\\ 2 & 4 & 4 \\\\ -2 & 4 & -3\\end{array}\\right), \\boldsymbol{x}=\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)$,\r\n则 $f\\left(x_1, x_2, x_3\\right)=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$\r\n\r\n(2) 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\=\\left|\\begin{array}{ccc}\\lambda & -2 & 2 \\\\ -2 & \\lambda-4 & -4 \\\\ 2 & -4 & \\lambda+3\\end{array}\\right|=(\\lambda+6)(\\lambda-1)(\\lambda-6)=0$,\r\n\r\n得 $\\lambda_1=-6, \\lambda_2=1, \\lambda_3=6$,\r\n\r\n由 $6 \\boldsymbol{E}+\\boldsymbol{A}=\\left(\\begin{array}{ccc}6 & 2 & -2 \\\\ 2 & 10 & 4 \\\\ -2 & 4 & 3\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & 5 & 2 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc}1 & 0 & -\\frac{1}{2} \\\\ 0 & 1 & \\frac{1}{2} \\\\ 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得 $\\lambda_1=-6$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 2\\end{array}\\right)$;\r\n\r\n由 $\\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & -2 & 2 \\\\ -2 & -3 & -4 \\\\ 2 & -4 & 4\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & 0 & 2 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得 $\\lambda_2=1$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}-2 \\\\ 0 \\\\ 1\\end{array}\\right) ;$\r\n\r\n由 $6 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}6 & -2 & 2 \\\\ -2 & 2 & -4 \\\\ 2 & -4 & 9\\end{array}\\right) \\rightarrow\\left(\\begin{array}{llc}1 & 0 & -\\frac{1}{2} \\\\ 0 & 1 & -\\frac{5}{2} \\\\ 0 & 0 & 0\\end{array}\\right)$,\r\n\r\n得 $\\lambda_3=6$ 对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 5 \\\\ 2\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol{\\gamma_1}=\\frac{1}{\\sqrt{6}}\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 2\\end{array}\\right), \\boldsymbol{\\gamma_2}=\\frac{1}{\\sqrt{5}}\\left(\\begin{array}{c}-2 \\\\ 0 \\\\ 1\\end{array}\\right), \\boldsymbol{\\gamma_3}=\\frac{1}{\\sqrt{30}}\\left(\\begin{array}{l}1 \\\\ 5 \\\\ 2\\end{array}\\right)$,\r\n\r\n所求的正交矩阵为 $\\boldsymbol{Q}=\\left(\\begin{array}{ccc}\\frac{1}{\\sqrt{6}} & -\\frac{2}{\\sqrt{5}} & \\frac{1}{\\sqrt{30}} \\\\ -\\frac{1}{\\sqrt{6}} & 0 & \\frac{5}{\\sqrt{30}} \\\\ \\frac{2}{\\sqrt{6}} & \\frac{1}{\\sqrt{5}} & \\frac{2}{\\sqrt{30}}\\end{array}\\right)$.\r\n\r\n作正交变换 $\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\boldsymbol{Q}\\left(\\begin{array}{l}y_1 \\\\ y_2 \\\\ y_3\\end{array}\\right)$, \r\n\r\n则二次型 $f$ 化为标准形 $f=-6 y_1^2+y_2^2+6 y_3^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "矩阵非对角元取交叉系数之半：a₁₂=2,a₁₃=-2,a₂₃=4",
+        "三特征向量两两正交，直接规范化即得正交阵；标准形应为 -6y₁²+y₂²+6y₃²（原解析末尾 6y₃ 漏平方，答案矩阵无误）"
+      ],
+      "key_point": "特征值 -6,1,6；Q 由规范化特征向量拼成，标准形 -6y₁²+y₂²+6y₃²。"
+    },
+    {
+      "id": 1837,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "假设一厂家生产的每台仪器, 以概率 $0.70$ 可以直接出厂; 以概率 $0.30$ 需进一步调试, 经调试后以概率 $0.80$ 可以出厂; 以概率 $0.20$ 定为不合格品不能出厂. 现该厂新生产了 $n(n \\geqslant 2)$ 台仪器 (假设各台仪器的生产过程相互独立). 求:\r\n\r\n(1) 全部能出厂的概率 $\\alpha$;\r\n\r\n(2) 其中恰好有两台不能出厂的概率 $\\beta$;\r\n\r\n(3) 其中至少有两台不能出厂的概率 $\\theta$",
+      "options": {},
+      "answer": "(1) $\\alpha=0.94^n$;\r\n\r\n(2) $\\beta=C_n^{n-2} \\cdot 0.94^{n-2} \\cdot 0.06^2$;\r\n\r\n(3) $\\theta=1-n \\cdot 0.94^{n-1} \\cdot 0.06-0.94^n$",
+      "analysis": "令 $A=\\{$ 仪器需要进一步检测 $\\}, B=\\{$ 仪器可以出厂 $\\}$,\r\n$A B=\\{$ 仪器经过检测后可以出厂 $\\}$, \r\n\r\n由题意得 $B=\\bar{A}+A B$,\r\n\r\n$P(A)=0.3, \\quad P(B \\mid A)=0.8, \\\\P(A B)=P(A) P(B \\mid A)=0.24$,\r\n\r\n由概率的有限可加性得 $P(B)=P(\\bar{A})+P(A B)=0.94$.\r\n\r\n设 $X$ 表示 $n$ 台仪器中能出厂的台数, 则 $X \\sim B(n, 0.94)$, \r\n\r\n故\r\n(1) $\\alpha=P\\{X=n\\}=0.94^n$;\r\n\r\n(2) $\\beta=C_n^{n-2} \\cdot 0.94^{n-2} \\cdot 0.06^2$;\r\n\r\n(3) $\\theta=P\\{X \\leqslant n-2\\}\\\\=1-P\\{X=n\\}-P\\{X=n-1\\}\\\\=1-n \\cdot 0.94^{n-1} \\cdot 0.06-0.94^n$",
+      "wrong_options": {},
+      "pitfalls": [
+        "单台出厂 P=0.7+0.3×0.8=0.94，不合格 0.06",
+        "(3) ‘至少两台不出厂’取补：1-P{全出厂}-P{恰一台不出厂}"
+      ],
+      "key_point": "X~B(n,0.94)：α=0.94ⁿ，β=Cₙ²0.94^{n-2}0.06²，θ=1-n·0.94^{n-1}0.06-0.94ⁿ。"
+    },
+    {
+      "id": 1838,
+      "paper": "数学三",
+      "year": 1995,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知随机变量 $X$ 和 $Y$ 的联合概率密度为\r\n\r\n$$\r\n\\varphi(x, y)= \\begin{cases}4 x y, & 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1 \\\\ 0, & \\text { 其他 }\\end{cases}\r\n$$\r\n\r\n求 $X$ 和 $Y$ 的联合分布函数",
+      "options": {},
+      "answer": "$F(x, y)= \\begin{cases}x^2 y^2, & 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1 \\\\ x^2, & 0 \\leqslant x \\leqslant 1, y>1 \\\\ y^2, & x>1,0 \\leqslant y \\leqslant 1 \\\\ 1, & x>1, y>1 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "$\\displaystyle F(x, y)=P\\{X \\leqslant x, Y \\leqslant y\\}=\\int_{-\\infty}^x \\mathrm{d} x \\int_{-\\infty}^y f(x, y) \\mathrm{d} y$\r\n\r\n- 当 $x<0$ 或 $y<0$ 时, $F(x, y)=0$;\r\n\r\n- 当 $0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1$ 时, $\\displaystyle F(x, y)=\\int_0^x 4 u \\mathrm{d} u \\int_0^y v \\mathrm{d} v=x^2 y^2$;\r\n\r\n- 当 $0 \\leqslant x \\leqslant 1, y>1$ 时, $\\displaystyle F(x, y)=\\int_0^x 4 u \\mathrm{d} u \\int_0^1 v \\mathrm{d} v=x^2$;\r\n\r\n- 当 $x>1,0 \\leqslant y \\leqslant 1$ 时, $\\displaystyle F(x, y)=\\int_0^1 4 u \\mathrm{d} u \\int_0^y v \\mathrm{d} v=y^2$;\r\n\r\n- 当 $x>1, y>1$ 时, $F\\displaystyle (x, y)=\\int_0^1 4 u \\mathrm{d} u \\int_0^1 v \\mathrm{d} v=1$;\r\n\r\n故 $F(x, y)= \\begin{cases}x^2 y^2, & 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1 \\\\ x^2, & 0 \\leqslant x \\leqslant 1, y>1 \\\\ y^2, & x>1,0 \\leqslant y \\leqslant 1 \\\\ 1, & x>1, y>1 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "支撑在单位正方形，超出某一维后该维积分饱和为 1，F 退化为另一维的平方",
+        "∫₀ˣ4u du=2x²、∫₀ʸv dv=y²/2，乘积恰为 x²y²"
+      ],
+      "key_point": "分四区域积分得分片 F，主区 x²y²。"
+    }
+  ]
+}

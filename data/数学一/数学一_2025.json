@@ -1,0 +1,509 @@
+{
+  "paper": "数学一",
+  "year": 2025,
+  "count": 22,
+  "questions": [
+    {
+      "id": 2426,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle f(x)=\\int_0^x \\mathrm{e}^{t^2} \\sin t \\mathrm{d} t, g(x)=\\int_0^x \\mathrm{e}^{t^2} \\mathrm{d} t \\cdot \\sin ^2 x$ ，则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点．",
+        "B": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点．",
+        "C": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查变限积分求导、极值的充分条件与拐点判定。对 $f(x)$，用变限积分求导得 $f'(x)$，再判断 $x=0$ 是否极值点、是否拐点；对 $g(x)$，因其是“变限积分 $\\times\\sin^2x$”的乘积，最快的办法是用等价无穷小定出其在 $0$ 附近的主项（首项幂次），由主项的奇偶/次数直接判断极值与拐点：偶次主项 $\\Rightarrow$ 极值点，奇次（且 $\\ge3$）主项 $\\Rightarrow$ 拐点。\n\n【解答】\n\n**对 $f(x)=\\displaystyle\\int_0^x e^{t^2}\\sin t\\,dt$：**\n\n求导 $f'(x)=e^{x^2}\\sin x$，$f'(0)=0$。当 $t\\to0$，$e^{t^2}\\sin t\\sim t$，故\n$$f(x)=\\int_0^x e^{t^2}\\sin t\\,dt\\sim \\int_0^x t\\,dt=\\frac{x^2}{2}>0\\quad(x\\ne0\\,\\text{附近}),$$\n即 $f(x)$ 在 $x=0$ 处取**极小值**，$x=0$ **是 $f$ 的极值点**。\n\n再看拐点：$f''(x)=e^{x^2}(2x\\sin x+\\cos x)$，$f''(0)=1\\ne0$，二阶导在 $0$ 处不变号，故 $(0,0)$ **不是** $y=f(x)$ 的拐点。于是含“$(0,0)$ 是 $f$ 的拐点”的 C、D 被排除。\n\n**对 $g(x)=\\displaystyle\\Big(\\int_0^x e^{t^2}dt\\Big)\\sin^2x$：**\n\n当 $x\\to0$：$\\displaystyle\\int_0^x e^{t^2}dt\\sim x$，$\\sin^2x\\sim x^2$，故\n$$g(x)\\sim x\\cdot x^2=x^3.$$\n主项为奇次 $x^3$：$g(x)$ 在 $0$ 两侧异号，故 $x=0$ **不是 $g$ 的极值点**（排除 A）；而 $g''(x)$ 的主项 $\\sim 6x$ 在 $0$ 处变号，故 $(0,0)$ **是 $y=g(x)$ 的拐点**。\n\n综合：$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是 $y=g(x)$ 的拐点，故选 **B**。",
+      "wrong_options": {
+        "A": "$g(x)\\sim x^3$ 在 $0$ 两侧异号，$x=0$ 不是 $g$ 的极值点，故 A 错。",
+        "C": "$f''(0)=1\\ne0$，二阶导不变号，$(0,0)$ 不是 $y=f(x)$ 的拐点，故 C 错。",
+        "D": "$(0,0)$ 不是 $y=f(x)$ 的拐点（$f''(0)\\ne0$），故 D 错。"
+      },
+      "pitfalls": [
+        "判定极值/拐点最稳妥的是定出函数在 $0$ 附近的主项幂次：偶次主项对应极值点，奇次（$\\ge3$）主项对应拐点。",
+        "$f''(0)=1\\ne0$ 是排除“$f$ 在原点有拐点”的关键，别被 $f'(0)=0$ 误导成既是极值又是拐点。",
+        "$g$ 是乘积，需把变限积分与 $\\sin^2x$ 各自的等价无穷小相乘得主项，不可只看其中一个因子。"
+      ],
+      "key_point": "用等价无穷小定出函数在 $0$ 附近的最低次主项：偶次幂 $\\Rightarrow$ 极值点，奇次幂 $\\Rightarrow$ 拐点。"
+    },
+    {
+      "id": 2427,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知级数 $(1) \\displaystyle \\sum_{n=1}^{\\infty} \\sin \\frac{n^3 \\pi}{n^2+1} \\quad(2)\\sum_{n=1}^{\\infty}(-1)^n\\left(\\frac{1}{\\sqrt[3]{n^2}}-\\tan \\frac{1}{\\sqrt[3]{n^2}}\\right)$, 则 $(\\quad)$",
+      "options": {
+        "A": "（1）条件收敛， （2）条件收敛",
+        "B": "（1）条件收敛， （2）绝对收敛",
+        "C": "（1）绝对收敛， （2）条件收敛",
+        "D": "（1）绝对收敛， （2）绝对收敛"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n判断绝对/条件收敛的标准流程：先把通项化简（利用三角函数的周期性约化角度），再用等价无穷小定出通项的阶，最后用 $p$ 级数比较判别绝对收敛性、用莱布尼茨判别条件收敛性。\n\n级数 (1) 的关键是把 $\\dfrac{n^3\\pi}{n^2+1}$ 拆成“整数倍 $\\pi$ 加小角”，从而约出符号因子 $(-1)^n$；级数 (2) 的关键是用 $\\tan u=u+\\dfrac{u^3}{3}+\\cdots$ 定出括号的阶。\n\n【解答】\n\n**级数 (1) $\\displaystyle\\sum_{n=1}^\\infty \\sin\\frac{n^3\\pi}{n^2+1}$：**\n\n做带余除法：\n$$\\frac{n^3}{n^2+1}=n-\\frac{n}{n^2+1}\\ \\Rightarrow\\ \\frac{n^3\\pi}{n^2+1}=n\\pi-\\frac{n\\pi}{n^2+1}.$$\n于是\n$$\\sin\\frac{n^3\\pi}{n^2+1}=\\sin\\!\\Big(n\\pi-\\frac{n\\pi}{n^2+1}\\Big)=-\\cos(n\\pi)\\sin\\frac{n\\pi}{n^2+1}=(-1)^{n+1}\\sin\\frac{n\\pi}{n^2+1}.$$\n记 $a_n=\\sin\\dfrac{n\\pi}{n^2+1}>0$。由于 $\\dfrac{n\\pi}{n^2+1}\\sim\\dfrac{\\pi}{n}\\to0$，故 $a_n\\sim\\dfrac{\\pi}{n}$。\n\n绝对值级数 $\\sum a_n\\sim\\sum\\dfrac{\\pi}{n}$ 发散，故**不绝对收敛**。又 $a_n\\to0$ 且 $a_n$ 单调递减（$\\dfrac{n\\pi}{n^2+1}$ 当 $n\\ge1$ 时递减且落在 $(0,\\pi/2)$ 内，$\\sin$ 在此递增），由莱布尼茨判别法 $\\sum(-1)^{n+1}a_n$ 收敛。故级数 (1) **条件收敛**。\n\n**级数 (2) $\\displaystyle\\sum_{n=1}^\\infty(-1)^n\\Big(\\frac{1}{\\sqrt[3]{n^2}}-\\tan\\frac{1}{\\sqrt[3]{n^2}}\\Big)$：**\n\n令 $u=\\dfrac{1}{\\sqrt[3]{n^2}}=n^{-2/3}\\to0$。由 $\\tan u=u+\\dfrac{u^3}{3}+o(u^3)$ 得\n$$u-\\tan u=-\\frac{u^3}{3}+o(u^3)\\sim-\\frac{1}{3}u^3=-\\frac{1}{3n^2}.$$\n故通项绝对值\n$$\\Big|(-1)^n\\big(u-\\tan u\\big)\\Big|\\sim\\frac{1}{3n^2}.$$\n绝对值级数 $\\sim\\sum\\dfrac{1}{3n^2}$ 为 $p=2>1$ 的 $p$ 级数，收敛，故级数 (2) **绝对收敛**。\n\n综上，(1) 条件收敛，(2) 绝对收敛，选 **B**。",
+      "wrong_options": {
+        "A": "级数 (2) 通项 $\\sim\\dfrac{1}{3n^2}$（$p=2$）绝对收敛，并非条件收敛，故 A 错。",
+        "C": "级数 (1) 化简后 $\\sim(-1)^{n+1}\\dfrac{\\pi}{n}$，绝对值发散，只是条件收敛而非绝对收敛，故 C 错。",
+        "D": "级数 (1) 不绝对收敛（绝对值级数同调和级数同阶发散），故 D 错。"
+      },
+      "pitfalls": [
+        "$\\sin\\dfrac{n^3\\pi}{n^2+1}$ 必须先做带余除法约出 $n\\pi$，再用 $\\sin(n\\pi-\\theta)=(-1)^{n+1}\\sin\\theta$ 提出符号，切勿直接当正项处理。",
+        "$u-\\tan u$ 的主项是 $-\\dfrac{u^3}{3}$（不是 $u-u=0$，也不是 $-\\dfrac{u^3}{2}$），泰勒展开 $\\tan u=u+\\dfrac{u^3}{3}+\\cdots$ 要记准。",
+        "条件收敛需同时满足两点：绝对值级数发散 + 交错级数本身收敛，缺一不可。"
+      ],
+      "key_point": "通项化简定阶：(1) 三角约化出 $(-1)^n\\cdot\\dfrac{\\pi}{n}$ 走莱布尼茨；(2) 泰勒展开定出 $\\dfrac{1}{3n^2}$ 走 $p$ 级数。"
+    },
+    {
+      "id": 2428,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 在 $[0,+\\infty)$ 上可导，则（ ）",
+      "options": {
+        "A": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)$ 存在时， $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)$ 存在．",
+        "B": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)$ 存在时， $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)$ 存在．",
+        "C": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x}$ 存在时， $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)$ 存在．",
+        "D": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)$ 存在时， $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x}$ 存在．"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题辨析三类极限之间的蕴含关系：$\\lim\\limits_{x\\to+\\infty}f(x)$、$\\lim\\limits_{x\\to+\\infty}f'(x)$、$\\lim\\limits_{x\\to+\\infty}\\dfrac{1}{x}\\int_0^x f(t)\\,dt$（即 $f$ 的平均值极限）。对错误选项用反例排除，对正确选项给出证明。核心事实：函数收敛 $\\Rightarrow$ 平均值收敛（且极限相同），但反向以及与导数之间的蕴含都不成立。\n\n【解答】\n\n**A 错。** $\\lim f$ 存在不能推出 $\\lim f'$ 存在。反例 $f(x)=\\dfrac{\\sin x^2}{x}$：当 $x\\to+\\infty$ 时 $f(x)\\to0$ 存在，但 $f'(x)=2\\cos x^2-\\dfrac{\\sin x^2}{x^2}$，其中 $2\\cos x^2$ 持续振荡无极限，故 $\\lim f'$ 不存在。\n\n**B 错。** $\\lim f'$ 存在不能推出 $\\lim f$ 存在。反例 $f(x)=x$：$f'(x)=1$ 极限存在，但 $f(x)\\to+\\infty$，$\\lim f$ 不存在（取 $f'\\to c\\ne0$ 时 $f$ 必趋于 $\\pm\\infty$）。\n\n**C 错。** 平均值极限存在不能推出 $\\lim f$ 存在。反例 $f(x)=\\sin x$：$\\dfrac{1}{x}\\int_0^x\\sin t\\,dt=\\dfrac{1-\\cos x}{x}\\to0$ 极限存在，但 $\\lim\\limits_{x\\to+\\infty}\\sin x$ 不存在。\n\n**D 对。** 设 $\\lim\\limits_{x\\to+\\infty}f(x)=L$。考察\n$$\\lim_{x\\to+\\infty}\\frac{\\int_0^x f(t)\\,dt}{x}.$$\n因 $f$ 收敛于 $L$，它在 $[0,+\\infty)$ 上有界，故当 $x\\to+\\infty$ 时 $\\int_0^x f(t)\\,dt$ 与 $x$ 同趋于 $\\infty$（或为 $\\frac{*}{\\infty}$ 型），属 $\\dfrac{\\ast}{\\infty}$ 型，可用洛必达法则：分子求导得 $f(x)$，分母求导得 $1$，于是\n$$\\lim_{x\\to+\\infty}\\frac{\\int_0^x f(t)\\,dt}{x}=\\lim_{x\\to+\\infty}\\frac{f(x)}{1}=L,$$\n极限存在（等于 $L$）。这正是“收敛序列的算术平均收敛于同一极限”（Cesàro 定理）的积分版本。故 D 正确。\n\n综上，选 **D**。",
+      "wrong_options": {
+        "A": "反例 $f(x)=\\dfrac{\\sin x^2}{x}$：$f\\to0$ 但 $f'$ 含 $2\\cos x^2$ 持续振荡无极限。",
+        "B": "反例 $f(x)=x$：$f'\\equiv1$ 极限存在，但 $f\\to+\\infty$，$\\lim f$ 不存在。",
+        "C": "反例 $f(x)=\\sin x$：平均值 $\\dfrac{1-\\cos x}{x}\\to0$ 存在，但 $\\sin x$ 无极限。"
+      },
+      "pitfalls": [
+        "“$f$ 收敛 $\\Rightarrow$ 平均值收敛”成立（D），但反向（C）不成立，方向不能颠倒。",
+        "$\\lim f'$ 存在只保证 $f'$ 有极限，若该极限非零则 $f$ 趋于无穷，故推不出 $\\lim f$ 存在（B）。",
+        "对 $\\dfrac{\\int_0^x f}{x}$ 用洛必达属 $\\frac{\\ast}{\\infty}$ 型，求导后正好得 $f(x)$，是证明 D 的标准手法。"
+      ],
+      "key_point": "记牢“函数收敛 $\\Rightarrow$ 其平均值收敛到同一极限”（积分版 Cesàro），其余三个方向均可举振荡或线性反例否定。"
+    },
+    {
+      "id": 2429,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 连续，则 $\\displaystyle \\int_{-2}^2 d x \\int_{4-x^2}^4 f(x, y) \\mathrm{d} y=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_2^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "D": "$\\displaystyle 2 \\int_0^4 \\mathrm{~d} y \\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查二重积分**交换积分次序**。原式是先对 $y$ 后对 $x$ 的累次积分，关键是先画出积分区域 $D$，再把它改写成先对 $x$ 后对 $y$ 的形式。难点在于反解曲线 $y=4-x^2$ 得到 $x=\\pm\\sqrt{4-y}$ 时出现两支，需要按 $x$ 的正负把区域**分块**。\n\n【解答】\n\n由原积分知区域为\n$$D=\\\\{(x,y)\\mid -2\\le x\\le 2,\\\\ 4-x^2\\le y\\le 4\\\\}.$$\n\n曲线 $y=4-x^2$ 是开口向下、顶点为 $(0,4)$ 的抛物线，在 $x=\\pm2$ 处 $y=0$。因此 $D$ 是抛物线**上方**、直线 $y=4$ **下方**、且 $-2\\le x\\le 2$ 的那块区域。\n\n现改为先对 $x$ 积分。$y$ 的取值范围为 $0\\le y\\le 4$。对固定的 $y$，约束 $y\\ge 4-x^2$ 即 $x^2\\ge 4-y$，亦即\n$$|x|\\ge\\sqrt{4-y}.$$\n再结合 $-2\\le x\\le 2$，得 $x$ 的取值为两段：\n$$x\\in[-2,\\,-\\sqrt{4-y}]\\\\ \\cup\\\\ [\\sqrt{4-y},\\,2].$$\n\n于是\n$$\\int_{-2}^{2}dx\\int_{4-x^2}^{4}f(x,y)\\,dy=\\int_0^4\\Big[\\int_{-2}^{-\\sqrt{4-y}}f(x,y)\\,dx+\\int_{\\sqrt{4-y}}^{2}f(x,y)\\,dx\\Big]dy.$$\n\n与选项 A 完全吻合，故选 **A**。",
+      "wrong_options": {
+        "B": "把左支下限写成了 $-2$ 到 $\\sqrt{4-y}$，等于把抛物线内部（$|x|<\\sqrt{4-y}$）也算了进来，积分区域出错。",
+        "C": "第二段上下限写反为 $\\int_2^{\\sqrt{4-y}}$，积分限颠倒导致符号错误。",
+        "D": "误把区域当成关于 $y$ 轴对称的同一被积函数而提出系数 $2$；但 $f(x,y)$ 一般不是 $x$ 的偶函数，左右两支不能合并，错误。"
+      },
+      "pitfalls": [
+        "反解抛物线得 $x=\\pm\\sqrt{4-y}$ 有左右两支，区域是 $|x|\\ge\\sqrt{4-y}$ 的两块，不能漏掉负支。",
+        "被积函数 $f(x,y)$ 不一定关于 $x$ 为偶函数，左右两块不能简单地用系数 2 合并。"
+      ],
+      "key_point": "交换次序先画区域、再按曲线两支把 $x$ 拆成左右两段。"
+    },
+    {
+      "id": 2430,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二次型 $f\\left(x_1, x_2, x_3\\right)=x_1^2+2 x_1 x_2+2 x_1 x_3$ 的正惯性指数是 $(\\quad)$",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n求二次型的正惯性指数，最稳妥的是用**配方法**（拉格朗日配方）把二次型化为平方和的代数和，平方项前系数为正的个数就是正惯性指数。本题只含 $x_1^2$ 与交叉项 $x_1x_2,\\,x_1x_3$，以 $x_1$ 为主元配方即可。\n\n【解答】\n\n$$f=x_1^2+2x_1x_2+2x_1x_3=x_1^2+2x_1(x_2+x_3).$$\n\n以 $x_1$ 配方：\n$$f=(x_1+x_2+x_3)^2-(x_2+x_3)^2.$$\n\n作满秩线性变换\n$$y_1=x_1+x_2+x_3,\\quad y_2=x_2+x_3,\\quad y_3=x_3,$$\n（系数矩阵为上三角且对角线全为 $1$，行列式为 $1\\ne0$，故为可逆变换）则\n$$f=y_1^2-y_2^2.$$\n\n标准形中正平方项 $1$ 个、负平方项 $1$ 个，故正惯性指数为 $1$，选 **B**。\n\n（验证：负惯性指数为 $1$，秩为 $2$，与原矩阵 $A=\\begin{pmatrix}1&1&1\\\\1&0&0\\\\1&0&0\\end{pmatrix}$ 秩为 $2$ 一致。）",
+      "wrong_options": {
+        "A": "正惯性指数为 $0$ 意味着无正特征值，但 $f$ 取 $x_1=1,x_2=x_3=0$ 时 $f=1>0$，矛盾。",
+        "C": "正惯性指数 $2$ 需要两个正平方项，但配方后只得一个正项，秩仅为 $2$ 且含一个负项。",
+        "D": "正惯性指数 $3$ 要求 $A$ 正定，而 $A$ 的秩只有 $2$（不满秩），不可能。"
+      },
+      "pitfalls": [
+        "配方所用的变换必须可逆（满秩），否则不能保持惯性指数不变。",
+        "标准形里 $-(x_2+x_3)^2$ 是负平方项，别误当成正项而多数。"
+      ],
+      "key_point": "以含平方项的变量为主元配方，数正平方项个数即正惯性指数。"
+    },
+    {
+      "id": 2431,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 是 $n$ 维向量， $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关， $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关，且 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_4=\\mathbf{0}$ ，在空间直角坐标系 $O-x y z$ 中，关于 $x, y, z$ 的方程组 $x \\boldsymbol{\\alpha}_1+y \\boldsymbol{\\alpha}_2+z \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_4$ 的空间图形是（ ）",
+      "options": {
+        "A": "过原点的平面",
+        "B": "过原点的直线",
+        "C": "不过原点的平面",
+        "D": "不过原点的直线"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n方程组 $x\\boldsymbol{\\alpha}_1+y\\boldsymbol{\\alpha}_2+z\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_4$ 的解 $(x,y,z)$ 在 $O\\text{-}xyz$ 中描出的图形，取决于解集的**维数**（一个解→点，一维→直线，二维→平面）以及**是否过原点**（原点 $(0,0,0)$ 是否为解）。\n\n核心利用两条条件：$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 无关而 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 相关，说明 $\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性表示；再用 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_4=\\mathbf 0$ 定出右端。\n\n【解答】\n\n由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关、$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 线性相关，知 $\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 唯一线性表示，设\n$$\\boldsymbol{\\alpha}_3=a\\boldsymbol{\\alpha}_1+b\\boldsymbol{\\alpha}_2.$$\n由 $\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_4=\\mathbf 0$ 得 $\\boldsymbol{\\alpha}_4=-\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2$。代入方程组：\n$$x\\boldsymbol{\\alpha}_1+y\\boldsymbol{\\alpha}_2+z(a\\boldsymbol{\\alpha}_1+b\\boldsymbol{\\alpha}_2)=-\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2,$$\n即\n$$(x+az)\\boldsymbol{\\alpha}_1+(y+bz)\\boldsymbol{\\alpha}_2=-\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2.$$\n因 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关，对应系数相等：\n$$\\begin{cases}x+az=-1,\\\\ y+bz=-1.\\end{cases}$$\n\n这是关于 $(x,y,z)$ 的两个线性方程，系数矩阵 $\\begin{pmatrix}1&0&a\\\\0&1&b\\end{pmatrix}$ 秩为 $2$，故解集是 $3-2=1$ 维，即一条**直线**。\n\n再看是否过原点：把 $(x,y,z)=(0,0,0)$ 代入得 $0=-1$，不成立，故原点不在解集上，直线**不过原点**。\n\n综上，空间图形是不过原点的直线，选 **D**。",
+      "wrong_options": {
+        "A": "解集由两个独立方程约束，是一维直线而非二维平面；且不含原点。",
+        "B": "维数判断虽对（直线），但 $(0,0,0)$ 不满足方程，直线不过原点。",
+        "C": "图形是直线不是平面；且不过原点。"
+      },
+      "pitfalls": [
+        "$\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 表示是因为前两者无关而三者相关，这一步是解题枢纽。",
+        "判断是否过原点只需把 $(0,0,0)$ 代入，得 $0=-1$ 矛盾即不过原点，别凭直觉。",
+        "解集维数 = 未知量个数 3 减去独立方程数 2，等于 1，故为直线。"
+      ],
+      "key_point": "把 $\\boldsymbol{\\alpha}_3,\\boldsymbol{\\alpha}_4$ 用无关组 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 表示，比较系数得方程组，由秩定维数、代原点定位置。"
+    },
+    {
+      "id": 2432,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $n$ 阶矩阵 $\\boldsymbol{A}, \\boldsymbol{B}, \\boldsymbol{C}$ 满足 $r(\\boldsymbol{A})+r(\\boldsymbol{B})+r(\\boldsymbol{C})=r(\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{C})+2 n$ ，给出下列四个结论：\r\n\r\n（1）$r(\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{C})+n=r(\\boldsymbol{A} \\boldsymbol{B})+r(\\boldsymbol{C})$ ；\r\n\r\n（2）$r(\\boldsymbol{A B})+n=r(\\boldsymbol{A})+r(\\boldsymbol{B})$ ；\r\n\r\n（3）$r(\\boldsymbol{A})=r(\\boldsymbol{B})=r(\\boldsymbol{C})=n$ ；\r\n\r\n（4）$r(\\boldsymbol{A B})=r(\\boldsymbol{B C})=n$,\r\n\r\n其中正确的选项是（ ）",
+      "options": {
+        "A": "（1）（2）",
+        "B": "（1）（3）",
+        "C": "（2）（4）",
+        "D": "（3）（4）"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题给出 $r(A)+r(B)+r(C)=r(ABC)+2n$，要判断四个结论。关键工具是 **Sylvester 秩不等式** $r(MN)\\ge r(M)+r(N)-n$（$M,N$ 均为 $n$ 阶）。把它对 $AB$、对 $(AB)C$ 各用一次，再与已知等式比较，会发现一系列不等式被**逼成等号**，从而确定哪些结论成立。\n\n【解答】\n\n对 $n$ 阶方阵反复用 Sylvester 不等式：\n$$r(AB)\\ge r(A)+r(B)-n,\\qquad(\\ast)$$\n$$r(ABC)=r\\big((AB)C\\big)\\ge r(AB)+r(C)-n.\\qquad(\\ast\\ast)$$\n把 $(\\ast)$ 代入 $(\\ast\\ast)$：\n$$r(ABC)\\ge r(AB)+r(C)-n\\ge \\big(r(A)+r(B)-n\\big)+r(C)-n=r(A)+r(B)+r(C)-2n.$$\n而由已知 $r(A)+r(B)+r(C)-2n=r(ABC)$，于是上面这条链的首尾相等，**夹逼**使两个 $\\ge$ 全部取等：\n$$r(ABC)=r(AB)+r(C)-n,\\qquad r(AB)=r(A)+r(B)-n.$$\n\n- 结论 **(1)** $r(ABC)+n=r(AB)+r(C)$：由 $r(ABC)=r(AB)+r(C)-n$ 移项即得，**成立**。\n- 结论 **(2)** $r(AB)+n=r(A)+r(B)$：由 $r(AB)=r(A)+r(B)-n$ 移项即得，**成立**。\n- 结论 **(3)** $r(A)=r(B)=r(C)=n$：不一定。取 $n=2$，$A=B=C=\\begin{pmatrix}0&0\\\\0&0\\end{pmatrix}$ 时 $r=0$，$0+0+0=r(ABC)+4$ 不满足；但只要构造满足等式而某矩阵不满秩的例子即可否定。例如 $n=2$，$A=I,\\,B=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix},\\,C=I$：$r(A)+r(B)+r(C)=2+1+2=5$，$r(ABC)=r(B)=1$，$1+2n=1+4=5$，等式成立，但 $r(B)=1\\ne 2$，故 (3) **不成立**。\n- 结论 **(4)** $r(AB)=r(BC)=n$：同一反例中 $r(AB)=r(B)=1\\ne 2=n$，故 (4) **不成立**。\n\n综上，正确的是 (1)(2)，选 **A**。",
+      "wrong_options": {
+        "B": "含 (3)，但已构造反例（$B$ 不满秩仍满足条件）说明 (3) 不必成立。",
+        "C": "含 (4)，反例中 $r(AB)=1\\ne n$，(4) 不成立；且 (2) 虽对但与 (4) 不能同选。",
+        "D": "(3)(4) 都不必成立，反例 $A=C=I,\\\\,B=\\mathrm{diag}(1,0)$ 即可否定。"
+      },
+      "pitfalls": [
+        "已知等式只把若干 Sylvester 不等式逼成等号，得到的是秩之间的恒等关系 (1)(2)，并不能推出各矩阵满秩。",
+        "用夹逼时要把 $r(ABC)$ 的下界一路放到 $r(A)+r(B)+r(C)-2n$，再与已知比较，缺一步链条就断。",
+        "判断 (3)(4) 错误时举一个满足条件但不满秩的反例即可，不必正面证明。"
+      ],
+      "key_point": "对 $AB$ 和 $(AB)C$ 各用一次 Sylvester 不等式，已知等式将其全部逼成等号，得 (1)(2)。"
+    },
+    {
+      "id": 2433,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 服从正态分布 $N(0,0 ; 1,1 ; \\rho)$ ，其中 $\\rho \\in(-1,1)$ ，若 $a, b$ 为满足 $a^2+b^2=1$ 的任意实数，则 $D(a X+b Y)$ 的最大值为 $(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$1+|\\rho|$",
+        "D": "$1+\\rho^2$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n题目给定 $(X,Y)\\sim N(0,0;1,1;\\rho)$，即 $EX=EY=0$，$DX=DY=1$，相关系数为 $\\rho$，故协方差 $\\mathrm{Cov}(X,Y)=\\rho\\sqrt{DX}\\sqrt{DY}=\\rho$。核心是把线性组合的方差用 $D(aX+bY)=a^2DX+b^2DY+2ab\\,\\mathrm{Cov}(X,Y)$ 展开，再在约束 $a^2+b^2=1$ 下求 $2ab$ 的取值范围，从而求最大值。这是“方差展开 + 条件极值”的标准套路。\n\n【解答】\n\n由方差的性质，\n$$D(aX+bY)=a^2DX+b^2DY+2ab\\,\\mathrm{Cov}(X,Y)=a^2+b^2+2ab\\rho.$$\n代入约束 $a^2+b^2=1$，得\n$$D(aX+bY)=1+2ab\\rho.$$\n\n由基本不等式 $|2ab|\\le a^2+b^2=1$，即 $2ab\\in[-1,1]$，因此\n$$2ab\\rho\\le |2ab|\\cdot|\\rho|\\le |\\rho|.$$\n当 $\\rho\\ge 0$ 时取 $a=b=\\dfrac{\\sqrt2}{2}$（此时 $2ab=1$），当 $\\rho<0$ 时取 $a=\\dfrac{\\sqrt2}{2},\\,b=-\\dfrac{\\sqrt2}{2}$（此时 $2ab=-1$），均可使 $2ab\\rho=|\\rho|$，上界可达。\n\n故 $D(aX+bY)$ 的最大值为 $1+|\\rho|$。选 **C**。",
+      "wrong_options": {
+        "A": "漏掉了协方差项 $2ab\\rho$，误以为方差恒等于 $a^2+b^2=1$；只有 $\\rho=0$（独立）时才如此。",
+        "B": "把 $2ab\\rho$ 的上界错当成 $1$（即默认 $\\rho=1$），但 $\\rho\\in(-1,1)$，最大值应含 $|\\rho|$。",
+        "D": "误把 $2ab\\rho$ 的最大值算成 $\\rho^2$，混淆了 $2ab$ 的范围（其上界为 $1$ 而非 $|\\rho|$）。"
+      },
+      "pitfalls": [
+        "标准记号 $N(\\mu_1,\\mu_2;\\sigma_1^2,\\sigma_2^2;\\rho)$ 中第三、四位是方差，本题为 $1,1$，协方差 $=\\rho\\cdot 1\\cdot 1=\\rho$，不要漏 $2ab\\rho$。",
+        "$\\rho$ 可能为负，最值要用 $|\\rho|$ 统一表达，结论是 $1+|\\rho|$ 而非 $1+\\rho$。"
+      ],
+      "key_point": "线性组合方差先展开成 $a^2DX+b^2DY+2ab\\mathrm{Cov}$，再用 $|2ab|\\le a^2+b^2=1$ 卡上界。"
+    },
+    {
+      "id": 2434,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $x_1, x_2, \\cdots, x_{20}$ 是总体 $B(1,0.1)$ 的简单随机样本，令 $\\displaystyle T=\\sum_{i=1}^{20} x_i$ ，利用泊松分布近似表示二项分布的方法可得 $P\\{T \\leqslant 1\\} \\approx(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{\\mathrm{e}^2}$",
+        "B": "$\\dfrac{2}{\\mathrm{e}^2}$",
+        "C": "$\\dfrac{3}{\\mathrm{e}^2}$",
+        "D": "$\\dfrac{4}{\\mathrm{e}^2}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n$x_1,\\dots,x_{20}$ 独立同分布于 $B(1,0.1)$（两点分布），其和 $T=\\sum_{i=1}^{20}x_i\\sim B(20,0.1)$。当 $n$ 较大、$p$ 较小时，二项分布可用泊松分布近似，参数 $\\lambda=np=20\\times0.1=2$。于是 $T$ 近似服从泊松分布 $P(2)$，再按泊松分布概率公式计算 $P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}$。\n\n【解答】\n\n由泊松定理，$T\\sim B(20,0.1)$ 可用 $\\lambda=np=2$ 的泊松分布近似，泊松分布概率为 $P\\{T=k\\}=\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$。\n\n故\n$$P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}=\\dfrac{2^0}{0!}e^{-2}+\\dfrac{2^1}{1!}e^{-2}=e^{-2}+2e^{-2}=3e^{-2}=\\dfrac{3}{e^{2}}.$$\n\n选 **C**。",
+      "wrong_options": {
+        "A": "只算了 $P\\{T=0\\}=e^{-2}$，漏掉了 $P\\{T=1\\}$。",
+        "B": "只算了 $P\\{T=1\\}=2e^{-2}$，漏掉了 $P\\{T=0\\}$。",
+        "D": "误把 $P\\{T=1\\}$ 当成 $\\dfrac{2^2}{2!}e^{-2}$ 之类，或多加了 $P\\{T=2\\}$，导致系数错为 $4$。"
+      },
+      "pitfalls": [
+        "泊松近似参数 $\\lambda=np=2$，不要错取成 $0.1$ 或 $20$。",
+        "$P\\{T\\le1\\}$ 含 $T=0$ 与 $T=1$ 两项，注意 $0!=1$，不要漏掉 $T=0$ 项。"
+      ],
+      "key_point": "二项 $B(n,p)$ 当 $n$ 大 $p$ 小时用泊松近似，$\\lambda=np$，再按 $\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$ 求和。"
+    },
+    {
+      "id": 2435,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $x_1, x_2, \\cdots, x_n$ 为来自正态总体 $N(\\mu, 2)$ 的简单随机样本，记 $\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^n x_i, Z_\\alpha$ 表示标准正态分布的上侧 $\\alpha$ 分位数，假设检验问题 ：$H_0: \\mu \\leqslant 1, H_1: \\mu>1$ 的显著性水平为 $\\alpha$ 的检验的拒绝域为 （ ）",
+      "options": {
+        "A": "$\\displaystyle \\left\\{\\left(x_1, x_2, \\cdots, x_n\\right) \\left\\lvert\\, \\bar{X}>1+\\frac{2}{n} Z_\\alpha\\right.\\right\\}$",
+        "B": "$\\displaystyle \\left\\{\\left(x_1, x_2, \\cdots, x_n\\right) \\left\\lvert\\, \\bar{X}>1+\\frac{\\sqrt{2}}{n} Z_\\alpha\\right.\\right\\}$",
+        "C": "$\\displaystyle \\left\\{\\left(x_1, x_2, \\cdots, x_n\\right) \\left\\lvert\\, \\bar{X}>1+\\frac{2}{\\sqrt{n}} Z_\\alpha\\right.\\right\\}$",
+        "D": "$\\displaystyle \\left\\{\\left(x_1, x_2, \\cdots, x_n\\right) \\left\\lvert\\, \\bar{X}>1+\\sqrt{\\frac{2}{n}} Z_\\alpha\\right.\\right\\}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n总体 $N(\\mu,2)$，方差 $\\sigma^2=2$ 已知，对均值作右侧检验 $H_0:\\mu\\le1,\\ H_1:\\mu>1$，应使用 $Z$ 检验。样本均值 $\\bar X\\sim N(\\mu,\\sigma^2/n)=N(\\mu,2/n)$，在边界 $\\mu=1$ 处构造标准化统计量 $Z=\\dfrac{\\bar X-1}{\\sqrt{2/n}}\\sim N(0,1)$。备择假设是 $\\mu>1$，故 $\\bar X$ 偏大时拒绝 $H_0$，拒绝域为右侧 $Z>Z_\\alpha$，反解出 $\\bar X$ 的临界值。关键在于标准差是 $\\sqrt{\\sigma^2/n}=\\sqrt{2/n}$，而非 $2/n$ 或 $2/\\sqrt n$。\n\n【解答】\n\n方差已知 $\\sigma^2=2$，故 $\\bar X$ 的标准差为 $\\sigma_{\\bar X}=\\sqrt{\\dfrac{\\sigma^2}{n}}=\\sqrt{\\dfrac{2}{n}}$。在 $H_0$ 边界 $\\mu=1$ 下，\n$$Z=\\frac{\\bar X-1}{\\sqrt{2/n}}\\sim N(0,1).$$\n\n由于 $H_1:\\mu>1$ 为右侧检验，给定显著性水平 $\\alpha$，拒绝域为\n$$Z>Z_\\alpha\\quad\\Longleftrightarrow\\quad \\frac{\\bar X-1}{\\sqrt{2/n}}>Z_\\alpha\\quad\\Longleftrightarrow\\quad \\bar X>1+\\sqrt{\\frac{2}{n}}\\,Z_\\alpha.$$\n\n即拒绝域为 $\\left\\{(x_1,\\dots,x_n)\\ \\middle|\\ \\bar X>1+\\sqrt{\\dfrac{2}{n}}\\,Z_\\alpha\\right\\}$。选 **D**。",
+      "wrong_options": {
+        "A": "把标准差错当成 $\\dfrac{2}{n}$（既未开方也未正确处理 $n$），量纲与系数均错。",
+        "B": "把标准差错当成 $\\dfrac{\\sqrt2}{n}$，分母用了 $n$ 而非 $\\sqrt n$。",
+        "C": "把方差 $\\sigma^2=2$ 误当成标准差 $\\sigma=2$，得到 $\\dfrac{2}{\\sqrt n}$，应为 $\\dfrac{\\sqrt2}{\\sqrt n}=\\sqrt{2/n}$。"
+      },
+      "pitfalls": [
+        "$N(\\mu,2)$ 中的 $2$ 是方差，标准差为 $\\sqrt2$，$\\bar X$ 的标准差是 $\\sqrt{2/n}$，别把方差当标准差。",
+        "右侧检验 $H_1:\\mu>1$ 用上侧分位数 $Z_\\alpha$，拒绝域取 $\\bar X$ 偏大一侧。"
+      ],
+      "key_point": "方差已知作均值单侧 $Z$ 检验，临界值 $=\\mu_0+\\sqrt{\\sigma^2/n}\\,Z_\\alpha$，注意把方差开方得标准差。"
+    },
+    {
+      "id": 2436,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{x^x-1}{\\ln x \\cdot \\ln (1-x)}=\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】\n\n这是 $x\\to0^+$ 的 $\\dfrac{0}{0}$ 型极限。分子 $x^x-1$ 是幂指型，先写成 $x^x=e^{x\\ln x}$。注意 $x\\to0^+$ 时 $x\\ln x\\to0$，故可用等价无穷小 $e^{t}-1\\sim t$（$t\\to0$）得 $x^x-1\\sim x\\ln x$。分母中 $\\ln(1-x)\\sim -x$（$x\\to0$）。代入即可约去，无需洛必达。\n\n【解答】\n\n当 $x\\to0^+$ 时，$x\\ln x\\to0$，由 $e^{t}-1\\sim t\\ (t\\to0)$ 得\n$$x^x-1=e^{x\\ln x}-1\\sim x\\ln x.$$\n又当 $x\\to0^+$ 时 $\\ln(1-x)\\sim -x$。于是\n$$\\lim_{x\\to0^+}\\frac{x^x-1}{\\ln x\\cdot\\ln(1-x)}=\\lim_{x\\to0^+}\\frac{x\\ln x}{\\ln x\\cdot(-x)}=\\lim_{x\\to0^+}\\frac{x\\ln x}{-x\\ln x}=-1.$$\n\n故极限为 $-1$。\n\n（验证：$\\ln x$ 与 $x$ 在分子分母中精确对消，无须保留更高阶项，结果稳健为 $-1$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x^x-1$ 要先化 $e^{x\\ln x}-1$，再用 $e^t-1\\sim t$，得 $\\sim x\\ln x$，不能直接当成 $\\sim x$ 或 $\\sim \\ln x$。",
+        "$\\ln(1-x)\\sim -x$ 带负号，符号丢了会得到 $+1$。",
+        "分子分母中的 $\\ln x$ 恰好对消，是本题简化的关键，不必动用洛必达。"
+      ],
+      "key_point": "幂指函数取对数化指数，$x^x-1\\sim x\\ln x$、$\\ln(1-x)\\sim-x$，对消即得 $-1$。"
+    },
+    {
+      "id": 2437,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}0, & 0 \\leqslant x<\\dfrac{1}{2} \\\\ x^2, & \\dfrac{1}{2} \\leqslant x \\leqslant 1\\end{array}\\right.$ 的傅里叶级数为 $\\displaystyle \\sum_{n=1}^{\\infty} b_n \\sin n \\pi x$，$S(x)$ 为 $\\displaystyle \\sum_{n=1}^{\\infty} b_n \\sin n \\pi x$ 的和函数，则 $S\\left(-\\dfrac{7}{2}\\right)=\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{8}$",
+      "analysis": "【分析】\n\n题目把 $f(x)$ 展成正弦级数 $\\displaystyle\\sum_{n=1}^{\\infty}b_n\\sin n\\pi x$，这本质上是对 $f$ 在 $[0,1]$ 上作**奇延拓**后再以 $T=2$ 为周期作周期延拓。因此和函数 $S(x)$ 是一个**奇函数且周期为 $2$** 的函数。求 $S(-\\tfrac72)$ 的思路是两步：先用奇性与周期性把自变量化到我们了解的区间内，再在落点处用**狄利克雷收敛定理**确定取值（连续点取 $f$ 值，跳跃间断点取左右极限的算术平均）。\n\n【解答】\n\n第一步，利用周期 $T=2$ 平移自变量：\n$$S\\left(-\\tfrac{7}{2}\\right)=S\\left(-\\tfrac{7}{2}+2\\right)=S\\left(-\\tfrac{3}{2}\\right)=S\\left(-\\tfrac{3}{2}+2\\right)=S\\left(\\tfrac{1}{2}\\right).$$\n\n（也可直接用奇性 $S(-\\tfrac72)=-S(\\tfrac72)$，再周期平移到 $S(\\tfrac12)$，结果一致。）\n\n第二步，考察 $x=\\tfrac12$。这是 $f$ 的分段衔接点：\n$$f\\!\\left(\\tfrac12^-\\right)=0,\\qquad f\\!\\left(\\tfrac12^+\\right)=\\left(\\tfrac12\\right)^2=\\tfrac14,$$\n左右极限不相等，故 $x=\\tfrac12$ 是跳跃间断点。由狄利克雷收敛定理，傅里叶级数在间断点收敛到左右极限的平均值：\n$$S\\left(\\tfrac12\\right)=\\frac{f(\\tfrac12^-)+f(\\tfrac12^+)}{2}=\\frac{0+\\tfrac14}{2}=\\frac{1}{8}.$$\n\n所以\n$$S\\left(-\\tfrac{7}{2}\\right)=\\frac{1}{8}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "误把 S(x) 当成 f(x) 本身，直接代 f 的某段表达式求值，忽略了和函数是奇延拓+周期延拓后的函数。",
+        "在间断点 x=1/2 处直接取 f(1/2)=1/4，漏掉狄利克雷定理在跳跃点要取左右极限平均值。",
+        "周期取错：正弦级数 sin(nπx) 对应周期 T=2（半周期为 1），不是 T=1。"
+      ],
+      "key_point": "正弦级数的和函数是奇延拓+周期 2 延拓；先用奇性周期性把点化到 [0,1]，再在间断点用狄利克雷定理取左右极限平均。"
+    },
+    {
+      "id": 2438,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知函数 $u(x, y, z)=x y^2 z^3$ ，向量 $\\boldsymbol{n}=(2,2,-1)$ ，则 $\\left.\\dfrac{\\partial u}{\\partial \\boldsymbol{n}}\\right|_{(1,1,1)}=\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "【分析】\n\n求函数沿给定向量 $\\boldsymbol n$ 方向的方向导数，标准公式是\n$$\\frac{\\partial u}{\\partial \\boldsymbol n}=\\nabla u\\cdot \\boldsymbol e_{\\boldsymbol n},$$\n其中 $\\boldsymbol e_{\\boldsymbol n}$ 是 $\\boldsymbol n$ 的**单位**方向向量。关键有两点：一是先在指定点求出梯度 $\\nabla u$；二是务必把方向向量单位化（除以它的模），方向导数取的是单位方向上的变化率。\n\n【解答】\n\n第一步，求梯度。$u=xy^2z^3$，\n$$\\nabla u=\\left(\\frac{\\partial u}{\\partial x},\\frac{\\partial u}{\\partial y},\\frac{\\partial u}{\\partial z}\\right)=\\left(y^2z^3,\\;2xyz^3,\\;3xy^2z^2\\right).$$\n在点 $(1,1,1)$ 处：\n$$\\nabla u\\big|_{(1,1,1)}=(1,\\;2,\\;3).$$\n\n第二步，单位化方向向量。$\\boldsymbol n=(2,2,-1)$，\n$$|\\boldsymbol n|=\\sqrt{2^2+2^2+(-1)^2}=\\sqrt{9}=3,\\qquad \\boldsymbol e_{\\boldsymbol n}=\\frac{1}{3}(2,2,-1).$$\n\n第三步，点乘求方向导数：\n$$\\frac{\\partial u}{\\partial \\boldsymbol n}\\Big|_{(1,1,1)}=\\nabla u\\cdot \\boldsymbol e_{\\boldsymbol n}=(1,2,3)\\cdot\\frac{1}{3}(2,2,-1)=\\frac{2+4-3}{3}=\\frac{3}{3}=1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "忘记把方向向量单位化，直接用 ∇u·n=2+4-3=3，漏除以模长 3。",
+        "梯度对 y、z 求偏导时指数处理出错，应有 ∂u/∂y=2xyz³、∂u/∂z=3xy²z²。"
+      ],
+      "key_point": "方向导数 = 梯度点乘单位方向向量；务必先把方向向量单位化。"
+    },
+    {
+      "id": 2439,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知有向曲线 $L$ 是沿抛物线 $y=1-x^2$ 从点 $(1,0)$ 到 $(-1,0)$ 的段，则曲线积分 $\\displaystyle \\int_L(y+\\cos x) \\mathrm{d} x+(2 x+\\cos y) \\mathrm{d} y=\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$\\dfrac{4}{3}-2 \\sin 1$",
+      "analysis": "【分析】\n\n记 $P=y+\\cos x$，$Q=2x+\\cos y$，则\n$$\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}=2-1=1\\neq 0,$$\n被积场不是保守场，不能用原函数法，但 $Q_x-P_y$ 是常数，适合用**补线 + 格林公式**。$L$ 是从 $(1,0)$ 沿抛物线 $y=1-x^2$（上凸、在 $x$ 轴上方）到 $(-1,0)$ 的非闭曲线。补一条沿 $x$ 轴从 $(-1,0)$ 回到 $(1,0)$ 的有向线段 $L_1$，则 $L+L_1$ 围成抛物线与 $x$ 轴之间的闭区域 $D$，且这个绕行方向恰为**逆时针（正向）**。对闭曲线用格林公式得二重积分，再减去补线段上的积分即可。\n\n【解答】\n\n设补线 $L_1$：沿 $x$ 轴由 $(-1,0)$ 到 $(1,0)$。$L+L_1$ 为正向（逆时针）闭曲线，所围区域 $D=\\{(x,y):-1\\le x\\le 1,\\;0\\le y\\le 1-x^2\\}$。\n\n由格林公式：\n$$\\oint_{L+L_1}P\\,\\mathrm dx+Q\\,\\mathrm dy=\\iint_D\\Big(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\Big)\\,\\mathrm d\\sigma=\\iint_D 1\\,\\mathrm d\\sigma=\\text{面积}(D).$$\n\n面积：\n$$\\iint_D 1\\,\\mathrm d\\sigma=\\int_{-1}^{1}(1-x^2)\\,\\mathrm dx=\\Big[x-\\frac{x^3}{3}\\Big]_{-1}^{1}=\\Big(1-\\tfrac13\\Big)-\\Big(-1+\\tfrac13\\Big)=\\frac{4}{3}.$$\n\n再算补线段上的积分。$L_1$ 上 $y=0$，$\\mathrm dy=0$，$x$ 从 $-1$ 到 $1$：\n$$\\int_{L_1}P\\,\\mathrm dx+Q\\,\\mathrm dy=\\int_{-1}^{1}(0+\\cos x)\\,\\mathrm dx=\\big[\\sin x\\big]_{-1}^{1}=\\sin 1-\\sin(-1)=2\\sin 1.$$\n\n于是所求：\n$$\\int_L=\\oint_{L+L_1}-\\int_{L_1}=\\frac{4}{3}-2\\sin 1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "判错闭曲线绕向导致格林公式符号搞反：L 在上方从右到左、补线沿 x 轴从左到右，合成的是逆时针正向，二重积分取正号。",
+        "误以为是保守场用原函数法：因 Q_x-P_y=1≠0，必须补线。",
+        "补线段积分方向要与闭曲线一致（由 (-1,0) 到 (1,0)），最后用 ∫_L = ∮ - ∫_{L1} 时不要漏减或符号写反。"
+      ],
+      "key_point": "非闭曲线遇 Q_x-P_y 为常数：补线成闭曲线用格林公式化为面积，再减去补线段上的直接积分。"
+    },
+    {
+      "id": 2440,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}4 & 2 & -3 \\\\ a & 3 & -4 \\\\ b & 5 & -7\\end{array}\\right)$ ，若方程组 $\\boldsymbol{A}^2 \\boldsymbol{x}=\\mathbf{0}$ 与 $\\boldsymbol{A} \\boldsymbol{x}=\\mathbf{0}$ 不同解，则 $a-b=\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$-4$",
+      "analysis": "【分析】\n\n核心结论：$\\boldsymbol A^2\\boldsymbol x=\\boldsymbol 0$ 与 $\\boldsymbol A\\boldsymbol x=\\boldsymbol 0$ **同解**的充要条件是 $r(\\boldsymbol A^2)=r(\\boldsymbol A)$。因为 $\\boldsymbol A\\boldsymbol x=\\boldsymbol 0$ 的解必是 $\\boldsymbol A^2\\boldsymbol x=\\boldsymbol 0$ 的解，故解集总有包含关系，解空间维数 $n-r(\\boldsymbol A)\\le n-r(\\boldsymbol A^2)$，即 $r(\\boldsymbol A^2)\\le r(\\boldsymbol A)$。两者**不同解** $\\iff$ 解空间维数严格变大 $\\iff r(\\boldsymbol A^2)<r(\\boldsymbol A)$。\n\n先看 $\\boldsymbol A$ 是否可逆：若 $\\det\\boldsymbol A\\neq 0$，则 $\\boldsymbol A,\\boldsymbol A^2$ 都可逆，两方程组都只有零解，必同解。所以不同解的前提是 $\\det\\boldsymbol A=0$，再进一步要求 $r(\\boldsymbol A^2)<r(\\boldsymbol A)$，由此定出 $a,b$。\n\n【解答】\n\n第一步，算 $\\det\\boldsymbol A$，并要求其为 $0$。\n$$\\boldsymbol A=\\begin{pmatrix}4&2&-3\\\\ a&3&-4\\\\ b&5&-7\\end{pmatrix},\\qquad \\det\\boldsymbol A=b-a-4.$$\n（按第一列展开：$4(3\\cdot(-7)-(-4)\\cdot5)-a(2\\cdot(-7)-(-3)\\cdot5)+b(2\\cdot(-4)-(-3)\\cdot3)=4(-1)-a(1)+b(1)=b-a-4$。）\n\n令 $\\det\\boldsymbol A=0$，得 $b=a+4$。此时观察 $\\boldsymbol A$ 的前两行已线性无关（如 $\\begin{vmatrix}4&2\\\\ a&3\\end{vmatrix}=12-2a$，一般非零），故通常 $r(\\boldsymbol A)=2$。\n\n第二步，要求 $r(\\boldsymbol A^2)<r(\\boldsymbol A)=2$，即 $r(\\boldsymbol A^2)\\le 1$。在 $b=a+4$ 下计算 $\\boldsymbol A^2$，并让其秩降为 $1$。直接计算得\n$$\\boldsymbol A^2=\\begin{pmatrix}4-a&-1&1\\\\ 3a-16&2a-11&16-3a\\\\ 2a-12&2a-12&17-3a\\end{pmatrix}.$$\n要 $r(\\boldsymbol A^2)\\le 1$，需所有二阶子式为零。由第一行与第三行的子式 $\\begin{vmatrix}4-a&-1\\\\ 2a-12&2a-12\\end{vmatrix}=(4-a)(2a-12)+(2a-12)=(2a-12)(5-a)=0$，结合其余子式同时为零，解得 $a=5$。\n\n验证 $a=5,\\;b=a+4=9$：\n$$\\boldsymbol A=\\begin{pmatrix}4&2&-3\\\\ 5&3&-4\\\\ 9&5&-7\\end{pmatrix},\\quad \\boldsymbol A^2=\\begin{pmatrix}-1&-1&1\\\\ -1&-1&1\\\\ -2&-2&2\\end{pmatrix}.$$\n此时 $r(\\boldsymbol A)=2$（前两行无关），$r(\\boldsymbol A^2)=1$（三行成比例）。于是 $\\boldsymbol A\\boldsymbol x=\\boldsymbol 0$ 解空间维数为 $1$，$\\boldsymbol A^2\\boldsymbol x=\\boldsymbol 0$ 解空间维数为 $2$，二者不同解，符合要求。\n\n第三步，求所问：\n$$a-b=5-9=-4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "误以为 A²x=0 与 Ax=0 不同解只需 det A=0。det A=0 只保证 r(A)<3，还要进一步 r(A²)<r(A)（本题需秩从 2 降到 1），仅 b=a+4 不够。",
+        "把同解条件方向记反：同解 ⇔ r(A²)=r(A)，不同解 ⇔ r(A²)<r(A)。",
+        "若 A 可逆则两方程组都只有零解、必同解，所以必须先排除 det A≠0 的情形。"
+      ],
+      "key_point": "A²x=0 与 Ax=0 同解 ⇔ r(A²)=r(A)；不同解则 r(A²)<r(A)，本题须使 r(A) 从 2 经 A² 降为 1 来定参数。"
+    },
+    {
+      "id": 2441,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为两个不同的随机事件，且相互独立，已知\r\n$P(A)=2 P(B), P(A \\cup B)=\\dfrac{5}{8}$ ，则 $A, B$ 中至少有一个发生的条件下，$A, B$ 中恰好有一个发生的概率为 $\\underline{\\qquad}$",
+      "options": {},
+      "answer": "$\\dfrac{4}{5}$",
+      "analysis": "【分析】\n\n本题考查独立事件、并的加法公式与条件概率的综合运用。先用 $P(A)=2P(B)$ 与独立性把 $P(A\\cup B)=\\dfrac{5}{8}$ 化成关于 $P(B)$ 的一元二次方程，定出 $P(A)$、$P(B)$；再分别计算\"至少有一个发生\"与\"恰好有一个发生\"的概率，最后用条件概率公式 $P(\\text{恰好一个}\\mid\\text{至少一个})=\\dfrac{P(\\text{恰好一个})}{P(\\text{至少一个})}$。注意\"恰好有一个\"是\"至少有一个\"的子事件，所以两者的交就是\"恰好有一个\"。\n\n【解答】\n\n设 $P(B)=p$，则 $P(A)=2p$。由独立性 $P(AB)=P(A)P(B)=2p^2$，于是\n\n$$P(A\\cup B)=P(A)+P(B)-P(AB)=2p+p-2p^2=3p-2p^2=\\dfrac{5}{8}.$$\n\n整理得 $16p^2-24p+5=0$，解得\n\n$$p=\\dfrac{24\\pm\\sqrt{576-320}}{32}=\\dfrac{24\\pm16}{32},$$\n\n即 $p=\\dfrac{5}{4}$（舍去，概率不能大于 $1$）或 $p=\\dfrac{1}{4}$。故\n\n$$P(B)=\\dfrac{1}{4},\\quad P(A)=\\dfrac{1}{2},\\quad P(AB)=2p^2=\\dfrac{1}{8}.$$\n\n记 $C=$\"至少有一个发生\"，$D=$\"恰好有一个发生\"。则\n\n$$P(C)=P(A\\cup B)=\\dfrac{5}{8},$$\n\n$$P(D)=P(A)+P(B)-2P(AB)=\\dfrac{1}{2}+\\dfrac{1}{4}-2\\times\\dfrac{1}{8}=\\dfrac{3}{4}-\\dfrac{1}{4}=\\dfrac{1}{2}.$$\n\n由于\"恰好有一个\"必然包含于\"至少有一个\"，故 $D\\subset C$，$P(DC)=P(D)=\\dfrac{1}{2}$。所求条件概率为\n\n$$P(D\\mid C)=\\dfrac{P(DC)}{P(C)}=\\dfrac{1/2}{5/8}=\\dfrac{4}{5}.$$\n\n所以在 $A,B$ 中至少有一个发生的条件下，恰好有一个发生的概率为 $\\dfrac{4}{5}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解一元二次方程后得到 $p=5/4$ 的根必须舍去，概率必须落在 $[0,1]$。",
+        "\"恰好有一个发生\"的概率是 $P(A)+P(B)-2P(AB)$，常被误写成 $P(A)+P(B)-P(AB)$（那是\"至少有一个\"）。",
+        "条件概率分子应取两事件之交；因 $D\\subset C$，交即为 $D$，不要再乘一次概率。"
+      ],
+      "key_point": "先用独立性与加法公式解出各事件概率，再认清\"恰好一个\"是\"至少一个\"的子事件，条件概率即两者概率之比。"
+    },
+    {
+      "id": 2442,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
+      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
+        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
+        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
+      ],
+      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
+    },
+    {
+      "id": 2443,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(u)$ 在区间 $(0,+\\infty)$ 内具有二阶导数，记 $g(x, y)=f\\left(\\dfrac{x}{y}\\right)$ ，若 $g(x, y)$ 满足\r\n$\\displaystyle x^2 \\frac{\\partial^2 g}{\\partial x^2}+x y \\frac{\\partial^2 g}{\\partial x \\partial y}+y^2 \\frac{\\partial^2 g}{\\partial y^2}=1$ ，且 $\\displaystyle g(x, x)=1, \\left.\\frac{\\partial g}{\\partial x}\\right|_{(x, x)}=\\frac{2}{x}$ ，求 $f(u)$",
+      "options": {},
+      "answer": "f(u)=\\dfrac{1}{2}\\ln^2 u+2\\ln u+1\\ (u>0)",
+      "analysis": "【分析】\n\n$g(x,y)=f\\left(\\dfrac{x}{y}\\right)$ 是单变量函数 $f$ 与 $u=\\dfrac{x}{y}$ 的复合。先按链式法则算出 $g$ 的二阶偏导 $g_{xx},g_{xy},g_{yy}$，代入给定的二阶偏微分方程。关键观察：代入后含 $f''$ 的项与含 $f'$ 的项的系数都能整理成关于 $u=\\dfrac{x}{y}$ 的纯量，从而把偏微分方程化成 $f(u)$ 的一个二阶常微分方程 $u^2f''+uf'=1$。这是欧拉型方程，可直接降阶：注意 $u^2f''+uf'=u\\dfrac{\\mathrm{d}}{\\mathrm{d}u}(uf')$，积分两次即得 $f$，再用 $g(x,x)=1$、$g_x|_{(x,x)}=\\dfrac{2}{x}$ 这两个定解条件确定常数。\n\n【解答】\n\n记 $u=\\dfrac{x}{y}$。则\n\n$$g_x=f'(u)\\cdot\\dfrac{1}{y},\\qquad g_{xx}=f''(u)\\cdot\\dfrac{1}{y^2}.$$\n\n$$g_{xy}=\\dfrac{\\partial}{\\partial y}\\left(\\dfrac{f'(u)}{y}\\right)=f''(u)\\cdot\\left(-\\dfrac{x}{y^2}\\right)\\cdot\\dfrac{1}{y}+f'(u)\\cdot\\left(-\\dfrac{1}{y^2}\\right)=-\\dfrac{x}{y^3}f''-\\dfrac{1}{y^2}f'.$$\n\n$$g_y=f'(u)\\cdot\\left(-\\dfrac{x}{y^2}\\right),$$\n\n$$g_{yy}=\\dfrac{\\partial}{\\partial y}\\left(-\\dfrac{x}{y^2}f'(u)\\right)=-x\\left[-\\dfrac{2}{y^3}f'+\\dfrac{1}{y^2}f''\\cdot\\left(-\\dfrac{x}{y^2}\\right)\\right]=\\dfrac{2x}{y^3}f'+\\dfrac{x^2}{y^4}f''.$$\n\n代入方程 $x^2g_{xx}+xy\\,g_{xy}+y^2g_{yy}=1$：\n\n含 $f''$ 的项：\n\n$$x^2\\cdot\\dfrac{1}{y^2}+xy\\cdot\\left(-\\dfrac{x}{y^3}\\right)+y^2\\cdot\\dfrac{x^2}{y^4}=\\dfrac{x^2}{y^2}-\\dfrac{x^2}{y^2}+\\dfrac{x^2}{y^2}=\\dfrac{x^2}{y^2}=u^2.$$\n\n含 $f'$ 的项：\n\n$$xy\\cdot\\left(-\\dfrac{1}{y^2}\\right)+y^2\\cdot\\dfrac{2x}{y^3}=-\\dfrac{x}{y}+\\dfrac{2x}{y}=\\dfrac{x}{y}=u.$$\n\n于是方程化为\n\n$$u^2f''(u)+u f'(u)=1.$$\n\n注意到 $\\dfrac{\\mathrm{d}}{\\mathrm{d}u}\\big(uf'\\big)=f'+uf''$，故 $u^2f''+uf'=u\\cdot\\dfrac{\\mathrm{d}}{\\mathrm{d}u}\\big(uf'\\big)=1$，即\n\n$$\\dfrac{\\mathrm{d}}{\\mathrm{d}u}\\big(uf'\\big)=\\dfrac{1}{u}.$$\n\n积分得 $uf'(u)=\\ln u+C_1$，即\n\n$$f'(u)=\\dfrac{\\ln u}{u}+\\dfrac{C_1}{u}.$$\n\n再积分（用 $\\int\\dfrac{\\ln u}{u}\\,\\mathrm{d}u=\\dfrac{1}{2}\\ln^2 u$）：\n\n$$f(u)=\\dfrac{1}{2}\\ln^2 u+C_1\\ln u+C_2.$$\n\n下面用定解条件定常数。由 $g(x,x)=f(1)=1$ 得\n\n$$f(1)=\\dfrac{1}{2}\\cdot 0+C_1\\cdot 0+C_2=C_2=1.$$\n\n又 $g_x=\\dfrac{1}{y}f'(u)$，在点 $(x,x)$（即 $u=1$）处 $g_x|_{(x,x)}=\\dfrac{1}{x}f'(1)=\\dfrac{2}{x}$，故 $f'(1)=2$。而\n\n$$f'(1)=\\dfrac{\\ln 1}{1}+\\dfrac{C_1}{1}=C_1,$$\n\n所以 $C_1=2$。\n\n综上\n\n$$f(u)=\\dfrac{1}{2}\\ln^2 u+2\\ln u+1\\quad(u>0).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "求 $g_{xy}$、$g_{yy}$ 时 $f'(u)$ 仍是 $u$ 的函数，对 $y$ 求导要再乘 $u$ 对 $y$ 的偏导 $-\\dfrac{x}{y^2}$，不要漏掉这一层链式法则。",
+        "代入后务必把 $f''$ 与 $f'$ 的系数分别整理，验证它们恰好化为 $u^2$ 与 $u$，否则后续 ODE 形式会出错。",
+        "定解条件 $g_x|_{(x,x)}$ 含因子 $\\dfrac{1}{y}$，在 $y=x$ 处给出 $f'(1)=2$ 而非 $f'(1)=\\dfrac{2}{x}$。"
+      ],
+      "key_point": "复合函数 $f(x/y)$ 代入二阶 PDE，系数恰好凑成 $u$ 的纯量，化为欧拉型 ODE $u^2f''+uf'=1$，借 $u\\dfrac{d}{du}(uf')$ 降阶后两次积分。"
+    },
+    {
+      "id": 2444,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
+        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
+        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
+      ],
+      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
+    },
+    {
+      "id": 2445,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\Sigma$ 是由直线 $\\left\\{\\begin{array}{l}x=0, \\\\ y=0,\\end{array}\\right.$ 绕直线 $\\left\\{\\begin{array}{l}x=t, \\\\ y=t, \\\\ z=t\\end{array}\\right.$（ $t$ 为参数）旋转一周得到的曲面，$\\Sigma_1$ 是 $\\Sigma$ 介于平面 $x+y+z=0$ 与 $x+y+z=1$ 之间部分的外侧，计算曲面积分\r\n\r\n$\\displaystyle \r\nI=\\iint_{\\Sigma_1} x \\mathrm{d} y \\mathrm{d} z+(y+1) \\mathrm{d} z \\mathrm{d} x+(z+2) \\mathrm{d} x \\mathrm{d} y\r\n$\n\n![旋转曲面 Sigma 示意图](/figures/2445.svg)",
+      "options": {},
+      "answer": "I=-\\dfrac{2\\sqrt{3}}{3}\\pi",
+      "analysis": "【分析】\n\n第一步建立旋转曲面方程。被旋转的直线是 $z$ 轴（$x=0,y=0$），旋转轴是过原点、方向为 $(1,1,1)$ 的直线，两线相交于原点，故旋转面是顶点在原点的圆锥。设动点为 $(x,y,z)$，记它在轴上的投影长 $h=\\dfrac{x+y+z}{\\sqrt3}$，到轴的距离平方 $r^2=(x^2+y^2+z^2)-h^2$。$z$ 轴上点 $(0,0,z)$ 有 $h=\\dfrac{z}{\\sqrt3}$，$r^2=z^2-\\dfrac{z^2}{3}=\\dfrac23z^2=2h^2$，故圆锥满足 $r^2=2h^2$，化简得 $\\Sigma:\\ xy+yz+zx=0$。\n\n第二步算积分。曲面 $\\Sigma_1$ 不封闭且被积式是第二类曲面积分，散度 $\\operatorname{div}\\boldsymbol F=1+1+1=3$ 为常数，宜用**补面 + 高斯公式**：在平面 $x+y+z=1$ 处补上圆锥的截口圆盘 $\\Sigma_2$（取上侧法向 $\\dfrac{1}{\\sqrt3}(1,1,1)$），与外侧的 $\\Sigma_1$ 围成实心圆锥 $\\Omega$（顶点 $x+y+z=0$ 到底 $x+y+z=1$），整体取外侧即得 $\\Sigma_1$ 所求量等于 $3V_\\Omega$ 减去补面通量。\n\n【解答】\n\n**1. 圆锥与截口几何量。** 由上分析 $\\Sigma:\\,xy+yz+zx=0$，且 $r^2=2h^2$。在平面 $x+y+z=1$ 上 $h=\\dfrac{1}{\\sqrt3}$，故截口圆半径 $R^2=r^2=2h^2=\\dfrac23$，截口圆盘面积 $S=\\pi R^2=\\dfrac{2\\pi}{3}$。\n\n实心圆锥 $\\Omega$ 的高（沿轴）为 $h=\\dfrac{1}{\\sqrt3}$，体积\n$$V=\\frac13 S\\cdot h=\\frac13\\cdot\\frac{2\\pi}{3}\\cdot\\frac{1}{\\sqrt3}=\\frac{2\\pi}{9\\sqrt3}.$$\n\n**2. 高斯公式。** 设 $\\boldsymbol F=(x,\\,y+1,\\,z+2)$，$\\operatorname{div}\\boldsymbol F=3$。$\\Sigma_1$（外侧）与 $\\Sigma_2$（上侧，外法向）合成 $\\Omega$ 的外侧闭曲面，\n$$\\iint_{\\Sigma_1}+\\iint_{\\Sigma_2}=\\iiint_\\Omega 3\\,\\mathrm dV=3V=3\\cdot\\frac{2\\pi}{9\\sqrt3}=\\frac{2\\pi}{3\\sqrt3}.$$\n\n**3. 计算补面通量 $\\iint_{\\Sigma_2}$。** $\\Sigma_2$ 在平面 $x+y+z=1$ 上，单位外法向 $\\boldsymbol n=\\dfrac{1}{\\sqrt3}(1,1,1)$，于是\n$$\\iint_{\\Sigma_2}=\\iint_{\\Sigma_2}\\boldsymbol F\\cdot\\boldsymbol n\\,\\mathrm dS=\\iint_{\\Sigma_2}\\frac{x+(y+1)+(z+2)}{\\sqrt3}\\,\\mathrm dS.$$\n在该平面上 $x+y+z=1$，故被积函数 $=\\dfrac{1+3}{\\sqrt3}=\\dfrac{4}{\\sqrt3}$ 为常数，\n$$\\iint_{\\Sigma_2}=\\frac{4}{\\sqrt3}\\cdot S=\\frac{4}{\\sqrt3}\\cdot\\frac{2\\pi}{3}=\\frac{8\\pi}{3\\sqrt3}.$$\n\n**4. 求 $I$。**\n$$I=\\iint_{\\Sigma_1}=3V-\\iint_{\\Sigma_2}=\\frac{2\\pi}{3\\sqrt3}-\\frac{8\\pi}{3\\sqrt3}=-\\frac{6\\pi}{3\\sqrt3}=-\\frac{2\\pi}{\\sqrt3}=-\\frac{2\\sqrt3}{3}\\pi.$$\n\n故 $\\displaystyle I=-\\frac{2\\sqrt3}{3}\\pi$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋转面方程不要直接套公式：两线交于原点是圆锥，关键关系 $r^2=2h^2$，整理后是 $xy+yz+zx=0$。",
+        "补面 $\\Sigma_2$ 的外法向应指向 $+(1,1,1)$ 方向（远离实心锥），与“$\\Sigma_1$ 外侧”一致，方向取反会差一个符号。",
+        "顶点所在平面 $x+y+z=0$ 过原点（锥顶），那里不需补面；只需在 $x+y+z=1$ 处补一个圆盘。"
+      ],
+      "key_point": "交轴旋转得圆锥（$r^2=2h^2\\Rightarrow xy+yz+zx=0$），散度为常数时补截口圆盘用高斯公式，$I=3V-\\iint_{\\Sigma_2}$。"
+    },
+    {
+      "id": 2446,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left[\\begin{array}{ccc}0 & -1 & 2 \\\\ -1 & 0 & 2 \\\\ -1 & -1 & a\\end{array}\\right]$ ，已知 $1$ 是 $\\boldsymbol{A}$ 的特征多项式的重根\r\n\r\n(1) 求 $a$ 的值；\r\n\r\n(2) 求所有满足 $\\boldsymbol{A} \\boldsymbol{\\alpha}=\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}, \\boldsymbol{A}^2 \\boldsymbol{\\alpha}=\\boldsymbol{\\alpha}+\\mathbf{2} \\boldsymbol{\\beta}$ 的非零列向量 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$",
+      "options": {},
+      "answer": "(1) $a=3$ ；\r\n．",
+      "analysis": "【分析】\n\n(1) “$1$ 是特征多项式的重根”意味着 $\\lambda=1$ 至少为二重根，即 $f(\\lambda)=|\\lambda E-A|$ 满足 $f(1)=0$ 且 $f'(1)=0$。展开特征多项式后，$f(1)=0$ 恒成立，由 $f'(1)=0$ 解出 $a$。\n\n(2) 把条件 $A^2\\alpha=\\alpha+2\\beta$ 用 $A\\alpha=\\alpha+\\beta$ 化简：$A^2\\alpha=A(\\alpha+\\beta)=A\\alpha+A\\beta=(\\alpha+\\beta)+A\\beta$，令其等于 $\\alpha+2\\beta$ 得 $A\\beta=\\beta$，即 $\\beta$ 是属于特征值 $1$ 的特征向量，且 $\\beta=(A-E)\\alpha$。于是问题化为解线性方程组（广义特征向量链）。\n\n【解答】\n\n**(1) 求 $a$。** 特征多项式\n$$f(\\lambda)=|\\lambda E-A|=\\lambda^3-a\\lambda^2+(a+3)\\lambda-4.$$\n（按定义直接展开 $\\begin{vmatrix}\\lambda&1&-2\\\\1&\\lambda&-2\\\\1&1&\\lambda-a\\end{vmatrix}$ 即得。）代入 $\\lambda=1$：$f(1)=1-a+(a+3)-4=0$，对一切 $a$ 成立，说明 $1$ 恒为根。要求 $1$ 为重根，需 $f'(1)=0$。$f'(\\lambda)=3\\lambda^2-2a\\lambda+(a+3)$，$f'(1)=3-2a+a+3=6-2a=0$，故 $\\boxed{a=3}$。\n\n此时 $f(\\lambda)=\\lambda^3-3\\lambda^2+6\\lambda-4=(\\lambda-1)^3$，即 $A$ 只有三重特征值 $1$。\n\n**(2) 求 $\\alpha,\\beta$。** 取 $a=3$，\n$$A-E=\\begin{pmatrix}-1&-1&2\\\\-1&-1&2\\\\-1&-1&2\\end{pmatrix}.$$\n注意 $(A-E)^2=O$（直接相乘即得零矩阵）。\n\n由条件 $\\beta=(A-E)\\alpha$，且需 $A\\beta=\\beta$，即 $(A-E)\\beta=(A-E)^2\\alpha=0$——因 $(A-E)^2=O$，此式对**任何** $\\alpha$ 自动成立。故唯一的实质约束是 $\\beta=(A-E)\\alpha\\ne0$（题目要求 $\\alpha,\\beta$ 非零；$\\beta\\ne0$ 自然保证 $\\alpha\\ne0$）。\n\n设 $\\alpha=(x_1,x_2,x_3)^T$，则\n$$\\beta=(A-E)\\alpha=(-x_1-x_2+2x_3)\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix},$$\n要求 $-x_1-x_2+2x_3\\ne0$，即 $2x_3-x_1-x_2\\ne0$。\n\n用基底表达：$A-E$ 的零空间（特征值 $1$ 的特征子空间）由 $\\xi_1=(-1,1,0)^T,\\ \\xi_2=(2,0,1)^T$ 张成；再取一个不在零空间中的向量 $\\eta=(1,0,0)^T$（满足 $(A-E)\\eta=-(1,1,1)^T\\ne0$）。于是通解为\n$$\\alpha=c_1\\xi_1+c_2\\xi_2+c_3\\eta=\\begin{pmatrix}-c_1+2c_2+c_3\\\\ c_1\\\\ c_2\\end{pmatrix},\\qquad \\beta=(A-E)\\alpha=-c_3\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix},$$\n其中 $c_1,c_2$ 为任意常数，$c_3\\ne0$。\n\n**验算**：$A\\alpha-(\\alpha+\\beta)=0$，$A^2\\alpha-(\\alpha+2\\beta)=0$ 对上述任意 $c_1,c_2$ 与 $c_3\\ne0$ 均成立。例如取 $c_1=c_2=0,c_3=1$：$\\alpha=(1,0,0)^T,\\ \\beta=(-1,-1,-1)^T$，则 $A\\alpha=(0,-1,-1)^T=\\alpha+\\beta$，$A^2\\alpha=(-1,-2,-2)^T=\\alpha+2\\beta$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "“1 是特征多项式重根”不能只用 f(1)=0（本题对任意 a 都成立），必须再加 f'(1)=0 才能定 a。",
+        "第二个条件不要硬算 A^2，用 A^2α=A(α+β)=α+β+Aβ 立刻化为 Aβ=β（β 为特征向量），思路才清晰。",
+        "本题 (A-E)^2=O，故 α 几乎任意，唯一限制是 β=(A-E)α≠0（即 2x_3-x_1-x_2≠0），别漏掉非零要求或多加约束。"
+      ],
+      "key_point": "重根需 f(1)=f'(1)=0 定参数；向量方程用 A^2α=A(α+β) 化为 Aβ=β 与 β=(A-E)α 的广义特征向量链。"
+    },
+    {
+      "id": 2447,
+      "paper": "数学一",
+      "year": 2025,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "投保人的损失事件发生时，保险公司的赔付额  $Y$ 与投保人的损失额 $X$ 的关系为\r\n\r\n$Y=\\left\\{\\begin{array}{ll}0, & X \\leqslant 100, \\\\ X-100, & X>100 .\\end{array}\\right.$\r\n\r\n损失事件发生时，投保人的损失额 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}\\dfrac{2 \\times 100^2}{(100+x)^3}, & x>0, \\\\ 0, & x \\leqslant 0 .\\end{cases}$\r\n\r\n（1）求 $P\\{Y>0\\}$ 及 $E(Y)$ ；\r\n\r\n（2）这种损失事件在一年内发生的次数记为 $N$ ，保险公司在一年内就这种损失事件产生的理赔次数记为 $M$ ，假设 $N$ 服从参数为 8 的泊松分布，在 $N=n(n \\geqslant 1)$ 的条件下，$M$ 服从二项分布 $B(n, p)$ ，其中 $p=P\\{Y>0)$ ，求 $M$ 的概率分布",
+      "options": {},
+      "answer": "(1) P{Y>0}=\\dfrac14，E(Y)=50；(2) P{M=m}=\\dfrac{2^m}{m!}e^{-2}，m=0,1,2,\\cdots（即 M\\sim P(2)）",
+      "analysis": "【分析】\n\n(1) $Y>0$ 当且仅当 $X>100$，故 $P\\{Y>0\\}=P\\{X>100\\}$ 由密度积分得到。$E(Y)$ 用随机变量函数的期望：$Y$ 在 $X\\le100$ 时取 $0$，故 $E(Y)=\\int_{100}^{+\\infty}(x-100)f(x)\\,\\mathrm dx$。\n\n(2) $N\\sim P(8)$，给定 $N=n$ 时 $M\\sim B(n,p)$，$p=P\\{Y>0\\}$。这是“泊松流被以概率 $p$ 独立稀疏”的经典模型，结论是 $M\\sim P(8p)$。用全概率公式对 $n$ 求和即可严格证明。\n\n【解答】\n\n**(1)** $P\\{Y>0\\}=P\\{X>100\\}=\\displaystyle\\int_{100}^{+\\infty}\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$\n令 $u=100+x$，原式 $=\\displaystyle\\int_{200}^{+\\infty}\\frac{2\\cdot100^2}{u^3}\\,\\mathrm du=2\\cdot100^2\\cdot\\Big[-\\frac{1}{2u^2}\\Big]_{200}^{+\\infty}=\\frac{100^2}{200^2}=\\frac14.$\n\n再求 $E(Y)$：\n$$E(Y)=\\int_{100}^{+\\infty}(x-100)\\cdot\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$$\n仍令 $u=100+x$（则 $x-100=u-200$，$x:100\\to\\infty$ 对应 $u:200\\to\\infty$）：\n$$E(Y)=2\\cdot100^2\\int_{200}^{+\\infty}\\frac{u-200}{u^3}\\,\\mathrm du=2\\cdot100^2\\int_{200}^{+\\infty}\\Big(\\frac{1}{u^2}-\\frac{200}{u^3}\\Big)\\mathrm du.$$\n$$\\int_{200}^{+\\infty}\\frac{1}{u^2}\\mathrm du=\\frac{1}{200},\\qquad \\int_{200}^{+\\infty}\\frac{200}{u^3}\\mathrm du=200\\cdot\\frac{1}{2\\cdot200^2}=\\frac{1}{400}.$$\n故 $E(Y)=2\\cdot100^2\\Big(\\dfrac{1}{200}-\\dfrac{1}{400}\\Big)=2\\cdot10000\\cdot\\dfrac{1}{400}=50.$\n\n即 $P\\{Y>0\\}=\\dfrac14,\\quad E(Y)=50.$\n\n**(2)** 由 (1) 知 $p=P\\{Y>0\\}=\\dfrac14$。已知 $N\\sim P(8)$：$P\\{N=n\\}=\\dfrac{8^n}{n!}e^{-8}$，且 $M\\mid N=n\\sim B(n,p)$。对固定 $m\\ge0$，由全概率公式（注意 $n\\ge m$ 才有非零项）：\n$$P\\{M=m\\}=\\sum_{n=m}^{\\infty}P\\{N=n\\}\\binom{n}{m}p^m(1-p)^{n-m}=\\sum_{n=m}^{\\infty}\\frac{8^n}{n!}e^{-8}\\cdot\\frac{n!}{m!(n-m)!}p^m(1-p)^{n-m}.$$\n约去 $n!$，令 $k=n-m$：\n$$P\\{M=m\\}=\\frac{e^{-8}p^m}{m!}\\sum_{k=0}^{\\infty}\\frac{8^{m+k}(1-p)^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}\\sum_{k=0}^{\\infty}\\frac{[8(1-p)]^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}e^{8(1-p)}.$$\n合并指数：$e^{-8}\\cdot e^{8(1-p)}=e^{-8p}$，故\n$$P\\{M=m\\}=\\frac{(8p)^m}{m!}e^{-8p}.$$\n代入 $p=\\dfrac14$，$8p=2$：\n$$\\boxed{\\,P\\{M=m\\}=\\frac{2^m}{m!}e^{-2},\\quad m=0,1,2,\\cdots\\,}$$\n即 $M$ 服从参数为 $2$ 的泊松分布 $P(2)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(Y) 是 Y=g(X) 的函数期望，积分下限取 100（X≤100 时 Y=0 贡献为 0），不要错写成 ∫(x-100)f 在 (0,∞) 上。",
+        "求和时下限是 n=m（二项系数要求 n≥m），换元 k=n-m 后才能凑出 e 的级数。",
+        "复合结论 8p=2，最终参数是 8p 而非 8 或 p；务必把 e^{-8}·e^{8(1-p)} 合并成 e^{-8p}。"
+      ],
+      "key_point": "Y=g(X) 用分段积分求 E(Y)；泊松流以概率 p 稀疏后仍为泊松，参数变为 8p=2。"
+    }
+  ]
+}

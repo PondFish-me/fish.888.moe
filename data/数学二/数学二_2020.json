@@ -1,0 +1,513 @@
+{
+  "paper": "数学二",
+  "year": 2020,
+  "count": 23,
+  "questions": [
+    {
+      "id": 148,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0^{+}$时, 下列无穷小量中最高阶的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{0}^{x}\\left(\\mathrm{e}^{t^{2}}-1\\right) \\mathrm{d} t$",
+        "B": "$\\displaystyle \\int_{0}^{x} \\ln \\left(1+\\sqrt{t^{3}}\\right) \\mathrm{d} t$",
+        "C": "$\\displaystyle \\int_{0}^{\\sin x} \\sin t^{2} \\mathrm{d} t$",
+        "D": "$\\displaystyle \\int_{0}^{1-\\cos x} \\sqrt{\\sin ^{3} t} \\mathrm{d} t$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n比较四个变上限积分在 $x\\to0^+$ 时的无穷小阶数。核心结论：若被积函数 $f(t)\\sim Ct^{\\alpha}$（$t\\to0^+$，$\\alpha>-1$），则 $\\displaystyle\\int_0^{u(x)} f(t)\\,\\mathrm{d}t\\sim \\frac{C}{\\alpha+1}\\,[u(x)]^{\\alpha+1}$，其阶数等于把上限 $u(x)$ 的阶数乘以 $(\\alpha+1)$。这里“最高阶”指阶数最大（趋于零最快）的那个。逐项用等价无穷小定出被积函数的阶、再结合上限的阶即可。\n\n【解答】\n\n逐项确定阶数（均指 $x\\to0^+$，上限趋于 $0$）。\n\n**A.** $e^{t^2}-1\\sim t^2$（阶 $2$），上限为 $x$（阶 $1$），积分阶 $=2+1=3$，即 $\\displaystyle\\int_0^x(e^{t^2}-1)\\,\\mathrm{d}t\\sim\\frac{x^3}{3}$，**3 阶**。\n\n**B.** $\\ln(1+\\sqrt{t^3})\\sim t^{3/2}$（阶 $\\frac32$），上限 $x$，积分阶 $=\\frac32+1=\\frac52$，即 $\\sim\\dfrac{x^{5/2}}{5/2}$，**$\\frac52$ 阶**。\n\n**C.** 被积 $\\sin t^2\\sim t^2$（阶 $2$），上限为 $\\sin x\\sim x$（阶 $1$），积分 $\\sim\\dfrac{(\\sin x)^3}{3}\\sim\\dfrac{x^3}{3}$，**3 阶**。\n\n**D.** 被积 $\\sqrt{\\sin^3 t}=(\\sin t)^{3/2}\\sim t^{3/2}$（阶 $\\frac32$），上限为 $1-\\cos x\\sim\\dfrac{x^2}{2}$（阶 $2$）。积分 $\\sim\\dfrac{(1-\\cos x)^{5/2}}{5/2}$，而 $(1-\\cos x)^{5/2}\\sim\\Big(\\dfrac{x^2}{2}\\Big)^{5/2}=\\dfrac{x^5}{2^{5/2}}$，故积分阶 $=\\frac32+1$ 再乘以上限阶 $2$，得 $\\frac52\\times 2=5$，**5 阶**。\n\n比较：A、C 为 3 阶，B 为 $\\frac52$ 阶，D 为 5 阶。阶数最高（最高阶无穷小）的是 D。\n\n故选 **D**。",
+      "wrong_options": {
+        "A": "$\\int_0^x(e^{t^2}-1)\\,\\mathrm{d}t\\sim\\frac{x^3}{3}$ 仅为 3 阶，低于 D 的 5 阶。",
+        "B": "$\\int_0^x\\ln(1+\\sqrt{t^3})\\,\\mathrm{d}t\\sim\\frac{2}{5}x^{5/2}$ 为 $\\frac52$ 阶，是四者中最低阶，恰恰相反。",
+        "C": "上限 $\\sin x\\sim x$，积分 $\\sim\\frac{x^3}{3}$ 为 3 阶，低于 D。"
+      },
+      "pitfalls": [
+        "“最高阶无穷小”指阶数最大、趋零最快者；本题易把最低阶 B 误当答案。",
+        "变上限积分定阶要兼顾被积函数阶与上限的阶：积分阶 = (被积阶 +1) × 上限阶。",
+        "D 中上限 $1-\\cos x\\sim\\frac{x^2}{2}$ 自带 2 阶，再被 $\\frac52$ 次方放大，阶数显著抬高。"
+      ],
+      "key_point": "变限积分定阶口诀：被积 $\\sim t^{\\alpha}$、上限 $\\sim x^{\\beta}$，则积分阶 $=(\\alpha+1)\\beta$，取最大者。"
+    },
+    {
+      "id": 157,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=\\sqrt{t^{2}+1}, \\\\ y=\\ln \\left(t+\\sqrt{t^{2}+1}\\right),\\end{array}\\right.$ 则 $\\left.\\dfrac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\sqrt{2}$",
+      "analysis": "【分析】\n\n参数方程 $\\begin{cases}x=x(t)\\\\ y=y(t)\\end{cases}$ 求二阶导,核心是两步链式法则:先求 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}$,得到的仍是 $t$ 的函数,记作 $\\varphi(t)$;再对 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}$ 套同样的公式:\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\Big)=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\varphi(t)}{x'(t)}.$$\n\n最关键也最容易错的一点:第二步分母仍是 $x'(t)$,**不是** $[x'(t)]^2$。本题里 $y$ 恰好是反双曲正弦,先把 $y'(t)$、$x'(t)$ 老实算出来,会发现 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{1}{t}$,后面就很干净了。\n\n【解答】\n\n先求一阶导数。\n\n$$x'(t)=\\dfrac{t}{\\sqrt{t^2+1}}.$$\n\n对 $y=\\ln\\big(t+\\sqrt{t^2+1}\\big)$,\n\n$$y'(t)=\\dfrac{1+\\dfrac{t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{\\dfrac{\\sqrt{t^2+1}+t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{1}{\\sqrt{t^2+1}}.$$\n\n于是\n\n$$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}=\\dfrac{\\dfrac{1}{\\sqrt{t^2+1}}}{\\dfrac{t}{\\sqrt{t^2+1}}}=\\dfrac{1}{t}.$$\n\n再求二阶导数。对 $\\dfrac{1}{t}$ 关于 $t$ 求导得 $-\\dfrac{1}{t^2}$,故\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\Big(\\dfrac{1}{t}\\Big)}{x'(t)}=\\dfrac{-\\dfrac{1}{t^2}}{\\dfrac{t}{\\sqrt{t^2+1}}}=-\\dfrac{\\sqrt{t^2+1}}{t^3}.$$\n\n代入 $t=1$:\n\n$$\\left.\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1}=-\\dfrac{\\sqrt{2}}{1}=-\\sqrt{2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导数公式分母是 x'(t),不是 [x'(t)]^2,这是参数方程二阶导最高频错误。",
+        "求 dy/dx 后得到的是 t 的函数,第二步必须再对 t 求导,不能直接对 x 求。",
+        "化简 y'(t) 时注意 1+t/√(t²+1) 要通分成 (√(t²+1)+t)/√(t²+1),否则约不掉。"
+      ],
+      "key_point": "参数方程二阶导=对(dy/dx)再求一次t的导,然后整体除以x'(t)。"
+    },
+    {
+      "id": 160,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "行列式 $\\left|\\begin{array}{cccc}a & 0 & -1 & 1 \\\\ 0 & a & 1 & -1 \\\\ -1 & 1 & a & 0 \\\\ 1 & -1 & 0 & a\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-4 a^2+a^4$",
+      "analysis": "【分析】\n\n这是一个带参数 $a$ 的四阶行列式。直接按行展开会出现一堆三阶行列式,容易算错。观察系数结构:第 1、2 行的非零非对角元 $(-1,1)$ 与第 3、4 行有明显的对称/相反关系。可以用行(列)的线性运算先制造零、降低复杂度,再按含零最多的行(列)展开。这里给一条稳妥又好验算的思路:把它看成分块或直接做列变换化简。下面用列变换 + 按列展开,过程清楚、可逐步验算。\n\n【解答】\n\n记\n\n$$D=\\begin{vmatrix}a&0&-1&1\\\\ 0&a&1&-1\\\\ -1&1&a&0\\\\ 1&-1&0&a\\end{vmatrix}.$$\n\n做列变换 $c_3\\to c_3+c_4$(行列式值不变),注意第 3、4 列对应元素之和:\n\n第1行 $-1+1=0$;第2行 $1+(-1)=0$;第3行 $a+0=a$;第4行 $0+a=a$。于是\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 1&-1&a&a\\end{vmatrix}.$$\n\n再做行变换 $r_4\\to r_4-r_3$(值不变):\n\n第4行变为 $(1-(-1),\\,-1-1,\\,a-a,\\,a-0)=(2,\\,-2,\\,0,\\,a)$,得\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 2&-2&0&a\\end{vmatrix}.$$\n\n此时第 3 列只有第 3 行元素 $a$ 非零,按第 3 列展开(该元素位于第 3 行第 3 列,代数余子式符号 $(-1)^{3+3}=+1$):\n\n$$D=a\\cdot\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}.$$\n\n展开这个三阶行列式(按第一行):\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}-0+1\\cdot\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}.$$\n\n其中 $\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}=a^2-2$,$\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}=0-2a=-2a$。故\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a(a^2-2)+(-2a)=a^3-2a-2a=a^3-4a.$$\n\n于是\n\n$$D=a\\cdot(a^3-4a)=a^4-4a^2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "列(行)变换 c_i→c_i+c_j、r_i→r_i-r_j 不改变行列式值;若用了交换两行/列或某行乘常数,要相应变号或除回。",
+        "按某列展开时代数余子式符号 (-1)^{i+j} 别弄错,本题展开元素在 (3,3) 位置符号为 +。",
+        "最终化简 a(a³-2a)-2a 时注意是 a³-2a-2a=a³-4a,不要漏掉或多算 a。"
+      ],
+      "key_point": "高阶含参行列式先用行列变换造零降阶,再按零最多的行列展开。"
+    },
+    {
+      "id": 162,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $f(x, y)=x^{3}+8 y^{3}-x y$ 的极值",
+      "options": {},
+      "answer": "极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点",
+      "analysis": "【分析】\n\n二元函数无条件极值的标准流程: 先令两个一阶偏导同时为零解出所有驻点; 再用二阶判别式 $AC-B^2$ 判定每个驻点是否为极值, 其中 $A=f_{xx}$, $B=f_{xy}$, $C=f_{yy}$。判别准则: 当 $AC-B^2>0$ 时为极值($A>0$ 极小, $A<0$ 极大); 当 $AC-B^2<0$ 时非极值(鞍点); 当 $AC-B^2=0$ 时方法失效需另判。本题关键是解驻点方程组时不要漏掉 $(0,0)$。\n\n【解答】\n\n**第一步: 求驻点。** 计算一阶偏导并令其为零:\n\n$$f_x=3x^2-y=0,\\qquad f_y=24y^2-x=0.$$\n\n由第一式得 $y=3x^2$, 代入第二式:\n\n$$24(3x^2)^2-x=216x^4-x=x(216x^3-1)=0.$$\n\n故 $x=0$ 或 $x^3=\\dfrac{1}{216}$, 即 $x=\\dfrac{1}{6}$。\n\n- 当 $x=0$ 时, $y=3\\cdot 0^2=0$, 得驻点 $(0,0)$;\n- 当 $x=\\dfrac{1}{6}$ 时, $y=3\\cdot\\dfrac{1}{36}=\\dfrac{1}{12}$, 得驻点 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$。\n\n**第二步: 求二阶偏导。**\n\n$$A=f_{xx}=6x,\\quad B=f_{xy}=-1,\\quad C=f_{yy}=48y.$$\n\n**第三步: 判别。**\n\n在 $(0,0)$ 处: $A=0,\\ B=-1,\\ C=0$, 故\n\n$$AC-B^2=0\\cdot 0-(-1)^2=-1<0,$$\n\n所以 $(0,0)$ **不是极值点**(鞍点)。\n\n在 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$ 处: $A=6\\cdot\\dfrac{1}{6}=1,\\ B=-1,\\ C=48\\cdot\\dfrac{1}{12}=4$, 故\n\n$$AC-B^2=1\\cdot 4-(-1)^2=3>0,$$\n\n且 $A=1>0$, 所以该点取**极小值**。\n\n**第四步: 求极小值。**\n\n$$f\\left(\\frac{1}{6},\\frac{1}{12}\\right)=\\left(\\frac{1}{6}\\right)^3+8\\left(\\frac{1}{12}\\right)^3-\\frac{1}{6}\\cdot\\frac{1}{12}=\\frac{1}{216}+\\frac{8}{1728}-\\frac{1}{72}.$$\n\n通分(以 $216$ 为分母): $\\dfrac{1}{216}+\\dfrac{1}{216}-\\dfrac{3}{216}=-\\dfrac{1}{216}$。\n\n所以函数有极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解 $216x^4-x=0$ 时漏掉 $x=0$ 这个根, 从而漏掉驻点 $(0,0)$。",
+        "$(0,0)$ 处 $AC-B^2<0$ 说明它是鞍点, 不能误判为极值点。",
+        "代入求极小值时 $8\\left(\\dfrac{1}{12}\\right)^3=\\dfrac{8}{1728}=\\dfrac{1}{216}$, 通分易算错符号或分母。"
+      ],
+      "key_point": "无条件极值: 一阶偏导联立求全部驻点, 再用 $AC-B^2$ 逐点判别, 别漏零驻点。"
+    },
+    {
+      "id": 168,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $2$ 阶矩阵, $\\boldsymbol{P}=(\\boldsymbol{\\alpha}, \\boldsymbol{A} \\boldsymbol{\\alpha})$, 其中 $\\boldsymbol{\\alpha}$ 是非零向量且不是 $\\boldsymbol{A}$ 的特征向量\r\n\r\n(1) 证明 $\\boldsymbol{P}$ 为可逆矩阵;\r\n\r\n(2) 若 $\\boldsymbol{A}^{2} \\boldsymbol{\\alpha}+\\boldsymbol{A} \\boldsymbol{\\alpha}-6 \\boldsymbol{\\alpha}=\\mathbf{0}$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$, 并判断 $\\boldsymbol{A}$ 是否相似于对角矩阵",
+      "options": {},
+      "answer": "P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}，A 相似于对角矩阵 \\operatorname{diag}(2,-3)",
+      "analysis": "【分析】\n\n本题考查“向量在一组基下的坐标”与相似对角化判别。\n\n- (1) 要证 $P=(\\alpha,\\,A\\alpha)$ 可逆，即证 $\\alpha,\\,A\\alpha$ **线性无关**。用反证：若相关，则 $A\\alpha=\\lambda\\alpha$，与“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n- (2) 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 把 $A^2\\alpha$ 用 $\\alpha,A\\alpha$ 线性表示，从而把 $A\\alpha$、$A(A\\alpha)$ 在基 $\\{\\alpha,A\\alpha\\}$ 下写出坐标，得到 $P^{-1}AP$。再看其特征值是否互异判断可对角化。\n\n【解答】\n\n**(1)** 反设 $\\alpha,\\,A\\alpha$ 线性相关。因 $\\alpha\\ne0$，必存在数 $\\lambda$ 使 $A\\alpha=\\lambda\\alpha$。这说明 $\\alpha$ 是 $A$ 的属于特征值 $\\lambda$ 的特征向量，与题设“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n\n故 $\\alpha,\\,A\\alpha$ 线性无关。又 $A$ 为 $2$ 阶矩阵，$P=(\\alpha,\\,A\\alpha)$ 的两列线性无关，$\\operatorname{rank}P=2$，所以 $P$ 可逆。$\\blacksquare$\n\n**(2)** 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 得\n$$A^2\\alpha=6\\alpha-A\\alpha.$$\n考察 $A$ 作用在 $P$ 的两列上，并在基 $\\{\\alpha,\\,A\\alpha\\}$ 下表示：\n$$A\\alpha=0\\cdot\\alpha+1\\cdot(A\\alpha),$$\n$$A(A\\alpha)=A^2\\alpha=6\\alpha-A\\alpha=6\\cdot\\alpha+(-1)\\cdot(A\\alpha).$$\n于是\n$$AP=A(\\alpha,\\,A\\alpha)=(A\\alpha,\\,A^2\\alpha)=(\\alpha,\\,A\\alpha)\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}=P\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix},$$\n两边左乘 $P^{-1}$：\n$$P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}.$$\n\n**判断相似对角化**：设 $B=P^{-1}AP$，$A$ 与 $B$ 相似，故二者同时（或同不）可对角化。求 $B$ 的特征值：\n$$\\det(B-\\lambda I)=\\begin{vmatrix}-\\lambda&6\\\\1&-1-\\lambda\\end{vmatrix}=\\lambda(\\lambda+1)-6=\\lambda^2+\\lambda-6=(\\lambda-2)(\\lambda+3)=0,$$\n得 $\\lambda_1=2,\\ \\lambda_2=-3$，是两个**互异**特征值。$2$ 阶矩阵有 $2$ 个不同特征值，必可对角化，故 $A$ 相似于对角矩阵\n$$A\\sim\\begin{pmatrix}2&0\\\\0&-3\\end{pmatrix}.$$\n\n所以 $A$ 可以相似对角化。",
+      "wrong_options": {},
+      "pitfalls": [
+        "证 P 可逆的关键是“α 不是特征向量 ⇒ α 与 Aα 线性无关”，不能直接说 P 列不为零就可逆。",
+        "求 P^{-1}AP 用的是“Aα、A(Aα) 在基 {α,Aα} 下的坐标按列排成矩阵”，注意 A^2α=6α−Aα 给出第二列 (6,−1)^T，列序别写反。",
+        "判别对角化看 P^{-1}AP（与 A 相似）的特征值：2 阶有两个相异特征值即可对角化，无需再算特征向量。"
+      ],
+      "key_point": "α 非特征向量 ⇒ {α,Aα} 是基从而 P 可逆；将 Aα、A^2α 在该基下取坐标得 P^{-1}AP，特征值相异即相似对角化。"
+    },
+    {
+      "id": 173,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle f(x)=\\frac{\\mathrm{e}^{\\frac{1}{x-1}} \\ln |1+x|}{\\left(\\mathrm{e}^x-1\\right)(x-2)}$ 的第二类间断点的个数为 $(\\quad)$",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n先找出 $f(x)=\\dfrac{\\mathrm{e}^{\\frac{1}{x-1}}\\ln|1+x|}{(\\mathrm{e}^x-1)(x-2)}$ 所有无定义的点：$\\mathrm{e}^{\\frac{1}{x-1}}$ 要求 $x\\ne1$；$\\ln|1+x|$ 要求 $x\\ne-1$；分母 $(\\mathrm{e}^x-1)(x-2)$ 要求 $x\\ne0$ 且 $x\\ne2$。逐个判断间断点类型：若两个单侧极限都存在且相等（或为同一有限值/可去），是第一类；只要有一侧极限为 $\\infty$ 或单侧极限不存在，就是第二类。重点用 $\\ln(1+x)\\sim x$、$\\mathrm{e}^x-1\\sim x$ 等价无穷小化简。\n\n【解答】\n\n无定义点共四个：$x=-1,\\,0,\\,1,\\,2$，逐一判别。\n\n**$x=0$：** 此时 $\\mathrm{e}^x-1\\sim x$，$\\ln|1+x|\\sim x$，且 $\\mathrm{e}^{\\frac{1}{x-1}}\\to\\mathrm{e}^{-1}$，$x-2\\to-2$。故\n$$\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\dfrac{\\mathrm{e}^{-1}\\cdot x}{x\\cdot(-2)}=-\\dfrac{1}{2\\mathrm{e}},$$\n极限存在有限，是**可去间断点（第一类）**。\n\n**$x=1$：** 其余因子在 $x=1$ 处极限为 $\\dfrac{\\ln 2}{(\\mathrm{e}-1)(1-2)}$，有限且非零。看 $\\mathrm{e}^{\\frac{1}{x-1}}$：当 $x\\to1^-$ 时 $\\dfrac{1}{x-1}\\to-\\infty$，因子 $\\to0$，左极限为 $0$；当 $x\\to1^+$ 时 $\\dfrac{1}{x-1}\\to+\\infty$，因子 $\\to+\\infty$，右极限为 $\\infty$。右极限为无穷，是**第二类间断点（无穷型）**。\n\n**$x=2$：** 分子 $\\mathrm{e}^{\\frac{1}{1}}\\ln 3=\\mathrm{e}\\ln3\\ne0$，$\\mathrm{e}^2-1\\ne0$，而 $x-2\\to0$，故 $|f(x)|\\to+\\infty$，是**第二类间断点（无穷型）**。\n\n**$x=-1$：** $\\ln|1+x|\\to-\\infty$，其余因子有限非零（$\\mathrm{e}^{\\frac{1}{-2}},\\,\\mathrm{e}^{-1}-1,\\,-3$ 均有限非零），故 $|f(x)|\\to+\\infty$，是**第二类间断点（无穷型）**。\n\n综上，第二类间断点为 $x=1,\\,2,\\,-1$，共 $3$ 个。选 C。",
+      "wrong_options": {
+        "A": "只数到 1 个，可能漏判 $x=-1$（$\\ln|1+x|\\to-\\infty$）与 $x=2$ 这两个无穷型间断点。",
+        "B": "数到 2 个，通常漏掉了 $x=-1$，忘了 $\\ln|1+x|$ 在 $x=-1$ 处趋于负无穷。",
+        "D": "把 $x=0$ 也算成第二类。其实 $x=0$ 处 $\\ln|1+x|\\sim x$ 与 $\\mathrm{e}^x-1\\sim x$ 相消，极限有限，是可去间断点（第一类）。"
+      },
+      "pitfalls": [
+        "$x=0$ 处分子的 $\\ln|1+x|\\sim x$ 与分母的 $\\mathrm{e}^x-1\\sim x$ 相消，极限有限，属第一类可去，不要算进第二类。",
+        "$x=1$ 处 $\\mathrm{e}^{\\frac{1}{x-1}}$ 左右极限不同（左 $0$、右 $+\\infty$），右侧为无穷，必须分左右讨论。",
+        "别漏掉 $\\ln|1+x|$ 带来的 $x=-1$ 这个无穷型间断点。"
+      ],
+      "key_point": "先列全所有无定义点，再用等价无穷小判断是否相消：相消则第一类（可去），出现单侧无穷即第二类。"
+    },
+    {
+      "id": 174,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^1 \\frac{\\arcsin \\sqrt{x}}{\\sqrt{x(1-x)}} \\mathrm{d} x=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\frac{\\pi^2}{4}$",
+        "B": "$\\displaystyle \\frac{\\pi^2}{8}$",
+        "C": "$\\displaystyle \\frac{\\pi}{4}$",
+        "D": "$\\displaystyle \\frac{\\pi}{8}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n被积函数中同时出现 $\\arcsin\\sqrt{x}$ 与 $\\dfrac{1}{\\sqrt{x(1-x)}}$，这是一个典型的“凑微分/换元”信号。注意到\n$$\\mathrm{d}\\left(\\arcsin\\sqrt{x}\\right)=\\frac{1}{\\sqrt{1-x}}\\cdot\\frac{1}{2\\sqrt{x}}\\,\\mathrm{d}x=\\frac{1}{2\\sqrt{x(1-x)}}\\,\\mathrm{d}x,$$\n恰好和被积式中的 $\\dfrac{1}{\\sqrt{x(1-x)}}\\,\\mathrm{d}x$ 成比例。于是直接令 $t=\\arcsin\\sqrt{x}$ 即可把积分化为关于 $t$ 的最简形式。\n\n【解答】\n\n令 $t=\\arcsin\\sqrt{x}$，则 $\\sqrt{x}=\\sin t$，即 $x=\\sin^2 t$，$t\\in\\left[0,\\dfrac{\\pi}{2}\\right]$。\n\n此时 $\\mathrm{d}x=2\\sin t\\cos t\\,\\mathrm{d}t$，且\n$$\\sqrt{x(1-x)}=\\sqrt{\\sin^2 t\\,\\cos^2 t}=\\sin t\\cos t\\quad(t\\in[0,\\tfrac{\\pi}{2}]\\text{ 时非负}).$$\n\n换限：$x=0\\Rightarrow t=0$，$x=1\\Rightarrow t=\\dfrac{\\pi}{2}$。代入得\n$$\\int_0^1 \\frac{\\arcsin\\sqrt{x}}{\\sqrt{x(1-x)}}\\,\\mathrm{d}x=\\int_0^{\\frac{\\pi}{2}}\\frac{t}{\\sin t\\cos t}\\cdot 2\\sin t\\cos t\\,\\mathrm{d}t=\\int_0^{\\frac{\\pi}{2}}2t\\,\\mathrm{d}t.$$\n\n于是\n$$\\int_0^{\\frac{\\pi}{2}}2t\\,\\mathrm{d}t=\\left.t^2\\right|_0^{\\frac{\\pi}{2}}=\\frac{\\pi^2}{4}.$$\n\n故选 **A**。",
+      "wrong_options": {
+        "B": "$\\dfrac{\\pi^2}{8}$ 多见于把 $\\int_0^{\\pi/2}2t\\,\\mathrm{d}t$ 误算成 $\\int_0^{\\pi/2}t\\,\\mathrm{d}t$（漏掉换元中的因子 $2$）。",
+        "C": "$\\dfrac{\\pi}{4}$ 量纲不对，多源于把 $\\arcsin\\sqrt{x}$ 当成常数或漏掉对 $t$ 的积分。",
+        "D": "$\\dfrac{\\pi}{8}$ 同样是把被积函数错误简化、未正确换元所致。"
+      },
+      "pitfalls": [
+        "化简 $\\sqrt{x(1-x)}=\\sin t\\cos t$ 时要注意 $t\\in[0,\\pi/2]$ 上 $\\sin t,\\cos t$ 均非负，不能丢绝对值或符号。",
+        "$\\mathrm{d}x=2\\sin t\\cos t\\,\\mathrm{d}t$ 中的因子 $2$ 不能漏，否则结果差一半。"
+      ],
+      "key_point": "看到 $\\dfrac{\\mathrm{d}x}{\\sqrt{x(1-x)}}$ 就联想到它正是 $2\\,\\mathrm{d}(\\arcsin\\sqrt{x})$，令 $t=\\arcsin\\sqrt{x}$ 一步到位。"
+    },
+    {
+      "id": 175,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=x^2 \\ln (1-x)$, 当 $n \\geqslant 3$ 时, $f^{(n)}(0)=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle -\\frac{n !}{n-2}$",
+        "B": "$\\displaystyle \\frac{n !}{n-2}$",
+        "C": "$\\displaystyle -\\frac{(n-2) !}{n}$",
+        "D": "$\\displaystyle \\frac{(n-2) !}{n}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n求 $f^{(n)}(0)$ 这类“某点高阶导数”问题，直接逐阶求导几乎不可行，应当用麦克劳林展开：若 $f(x)=\\sum_{k}a_k x^k$，则泰勒系数与导数的关系为 $a_n=\\dfrac{f^{(n)}(0)}{n!}$，即 $f^{(n)}(0)=n!\\,a_n$。\n\n本题 $f(x)=x^2\\ln(1-x)$，只需把 $\\ln(1-x)$ 的标准幂级数展开乘上 $x^2$，再读出 $x^n$ 的系数即可。\n\n【解答】\n\n已知标准展开\n$$\\ln(1-x)=-\\sum_{k=1}^{\\infty}\\frac{x^k}{k}=-x-\\frac{x^2}{2}-\\frac{x^3}{3}-\\cdots,\\quad x\\in[-1,1).$$\n\n于是\n$$f(x)=x^2\\ln(1-x)=-\\sum_{k=1}^{\\infty}\\frac{x^{k+2}}{k}.$$\n\n令 $k+2=n$，即 $k=n-2$（当 $n\\ge 3$ 时 $k\\ge1$ 成立），则 $x^n$ 项的系数为\n$$a_n=-\\frac{1}{n-2}.$$\n\n由 $f^{(n)}(0)=n!\\,a_n$ 得\n$$f^{(n)}(0)=n!\\cdot\\left(-\\frac{1}{n-2}\\right)=-\\frac{n!}{n-2}\\quad(n\\ge 3).$$\n\n故选 **A**。",
+      "wrong_options": {
+        "B": "$\\dfrac{n!}{n-2}$ 漏掉了 $\\ln(1-x)$ 展开式整体的负号。",
+        "C": "$-\\dfrac{(n-2)!}{n}$ 误把 $f^{(n)}(0)=n!\\,a_n$ 中的阶乘与下标搞反。",
+        "D": "$\\dfrac{(n-2)!}{n}$ 既弄错阶乘关系又丢了负号。"
+      },
+      "pitfalls": [
+        "关键关系是 $f^{(n)}(0)=n!\\,a_n$，不要把 $n!$ 写成 $(n-2)!$ 或漏乘阶乘。",
+        "$\\ln(1-x)$ 展开整体带负号，最终结果符号为负。",
+        "乘 $x^2$ 后下标平移：$x^n$ 对应原级数的 $k=n-2$ 项，系数分母是 $n-2$ 而非 $n$。"
+      ],
+      "key_point": "高阶导 $f^{(n)}(0)$ 用麦克劳林系数法：展成幂级数，取 $x^n$ 系数再乘 $n!$。"
+    },
+    {
+      "id": 176,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "关于函数 $f(x, y)=\\left\\{\\begin{array}{ll}x y, & x y \\neq 0, \\\\ x, & y=0, \\\\ y, & x=0,\\end{array}\\right.$ 给出如下结论\r\n(1) $\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,0)}=1$;\r\n(2) $\\displaystyle \\left.\\frac{\\partial^2 f}{\\partial x \\partial y}\\right|_{(0,0)}=1$;\r\n(3) $\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} f(x, y)=0$;\r\n(4) $\\displaystyle \\lim _{y \\rightarrow 0} \\lim _{x \\rightarrow 0} f(x, y)=0$\r\n其中正确的个数是 $(\\quad)$",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "2",
+        "D": "1"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n这道题考查分段函数在原点处的偏导数、二阶混合偏导以及二重极限与累次极限的关系。核心是：凡是带 \"在某点的偏导数\" 的结论，一律退回到**偏导数的定义**(差商极限)去算，不能套公式；极限类结论则要分清**二重极限**(沿任意路径)与**累次极限**(先后求极限)。逐条核验四个结论。\n\n【解答】\n\n记 $f(x,y)=\\begin{cases} xy,& xy\\neq 0,\\\\ x,& y=0,\\\\ y,& x=0.\\end{cases}$ 注意 $f(0,0)=0$。\n\n**结论(1)。** 沿 $x$ 轴 $(y=0)$ 有 $f(x,0)=x$，由定义\n$$\\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,0)}=\\lim_{x\\to 0}\\frac{f(x,0)-f(0,0)}{x-0}=\\lim_{x\\to 0}\\frac{x-0}{x}=1.$$\n故(1)正确。\n\n**结论(3)。** 当 $xy\\neq 0$ 时 $f=xy\\to 0$；当落在坐标轴上时 $f=x$ 或 $f=y$，也随 $(x,y)\\to(0,0)$ 趋于 $0$。综合得\n$$\\lim_{(x,y)\\to(0,0)}f(x,y)=0,$$\n故(3)正确。\n\n**结论(4)。** 先固定 $y$ 求 $\\lim_{x\\to 0}f(x,y)$：若 $y\\neq 0$，当 $x\\to 0$ 时 $xy\\neq 0$，$f=xy\\to 0$；若 $y=0$，则 $f(x,0)=x\\to 0$。两种情形内层极限都是 $0$。于是\n$$\\lim_{y\\to 0}\\lim_{x\\to 0}f(x,y)=\\lim_{y\\to 0}0=0,$$\n故(4)正确。\n\n**结论(2)。** $\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\Big|_{(0,0)}$ 指 $\\dfrac{\\partial}{\\partial x}\\Big(\\dfrac{\\partial f}{\\partial y}\\Big)$ 在 $(0,0)$ 的值，需先得到 $f_y(x,0)$ 这条 $x$ 的函数再对 $x$ 求导。\n\n- 在 $(0,0)$ 处：沿 $y$ 轴 $f(0,y)=y$，$f_y(0,0)=\\lim_{k\\to 0}\\dfrac{f(0,k)-f(0,0)}{k}=\\lim_{k\\to 0}\\dfrac{k}{k}=1$。\n- 在 $(x,0)$ 处且 $x\\neq 0$：\n$$f_y(x,0)=\\lim_{k\\to 0}\\frac{f(x,k)-f(x,0)}{k}=\\lim_{k\\to 0}\\frac{xk-x}{k}=\\lim_{k\\to 0}\\frac{x(k-1)}{k},$$\n因 $x\\neq 0$ 该极限发散，即 $f_y(x,0)$ **在任何 $x\\neq 0$ 处都不存在**。\n\n既然 $f_y(x,0)$ 仅在 $x=0$ 一点有定义，它对 $x$ 在 $0$ 处的导数(差商极限)无从谈起，故 $\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\Big|_{(0,0)}$ **不存在**，结论(2)错误。\n\n综上，(1)(3)(4)正确，(2)错误，正确的个数为 $3$，选 **B**。",
+      "wrong_options": {
+        "A": "认为 4 条全对，错在没识破(2)中 $f_y(x,0)$ 在 $x\\neq 0$ 处根本不存在，混合偏导无定义。",
+        "C": "判为 2 条，多半误把(4)的累次极限或(3)的二重极限当成不存在/不为 0，实际两者都为 0。",
+        "D": "判为 1 条，严重低估，(1)(3)(4)均可直接验证为正确。"
+      },
+      "pitfalls": [
+        "求 (1)(2) 这类\"某点偏导数\"必须用差商定义，分段点处不能直接代公式。",
+        "$\\dfrac{\\partial^2 f}{\\partial x\\partial y}$ 是先对 $y$ 后对 $x$；要先求出 $f_y(x,0)$ 这条曲线，发现它仅在 $x=0$ 有定义，混合偏导才暴露为不存在。",
+        "累次极限(4)与二重极限(3)是两回事，本题恰好都为 0，但不可想当然画等号。"
+      ],
+      "key_point": "分段点偏导退回定义算；混合偏导先求 $f_y(x,0)$ 再对 $x$ 求导，发现它只在一点有定义即知不存在。"
+    },
+    {
+      "id": 177,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[-2,2]$ 上可导, 且 $f^{\\prime}(x)>f(x)>0$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\frac{f(-2)}{f(-1)}>1$",
+        "B": "$\\displaystyle \\frac{f(0)}{f(-1)}>\\mathrm{e}$",
+        "C": "$\\displaystyle \\frac{f(1)}{f(-1)}<\\mathrm{e}^2$",
+        "D": "$\\displaystyle \\frac{f(2)}{f(-1)}<\\mathrm{e}^3$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n条件 $f'(x)>f(x)>0$ 中同时出现 $f'$ 与 $f$，且各选项都形如 $\\dfrac{f(b)}{f(a)}$ 与 $\\mathrm{e}^{b-a}$ 比较，这是构造辅助函数 $g(x)=\\dfrac{f(x)}{\\mathrm{e}^x}$ 的典型信号：求导后 $g'$ 的符号正好由 $f'-f$ 决定。先定 $g$ 的单调性，再把每个选项翻译成 $g$ 在两点的大小关系逐一判定。\n\n【解答】\n\n令\n$$g(x)=\\frac{f(x)}{\\mathrm{e}^x},\\qquad g'(x)=\\frac{f'(x)\\mathrm{e}^x-f(x)\\mathrm{e}^x}{\\mathrm{e}^{2x}}=\\frac{f'(x)-f(x)}{\\mathrm{e}^x}.$$\n由 $f'(x)>f(x)$ 知 $g'(x)>0$，故 $g(x)$ 在 $[-2,2]$ 上**严格单调递增**。又 $f'(x)>0$，$f$ 本身也严格递增且恒正。\n\n**选项 B。** 由 $g(0)>g(-1)$：\n$$\\frac{f(0)}{\\mathrm{e}^{0}}>\\frac{f(-1)}{\\mathrm{e}^{-1}}\\;\\Longrightarrow\\; f(0)>\\mathrm{e}\\,f(-1)\\;\\Longrightarrow\\;\\frac{f(0)}{f(-1)}>\\mathrm{e}.$$\n(因 $f(-1)>0$，除以它不变号。)故 B 正确，选 **B**。\n\n**其余选项核验：**\n\n- A：$f$ 严格递增，$f(-2)<f(-1)$，故 $\\dfrac{f(-2)}{f(-1)}<1$，A 错。\n- C：由 $g(1)>g(-1)$ 得 $\\dfrac{f(1)}{\\mathrm{e}}>\\dfrac{f(-1)}{\\mathrm{e}^{-1}}$，即 $f(1)>\\mathrm{e}^2 f(-1)$，故 $\\dfrac{f(1)}{f(-1)}>\\mathrm{e}^2$，与 C 的 $<\\mathrm{e}^2$ 相反，C 错。\n- D：由 $g(2)>g(-1)$ 得 $\\dfrac{f(2)}{\\mathrm{e}^{2}}>\\dfrac{f(-1)}{\\mathrm{e}^{-1}}$，即 $f(2)>\\mathrm{e}^3 f(-1)$，故 $\\dfrac{f(2)}{f(-1)}>\\mathrm{e}^3$，与 D 的 $<\\mathrm{e}^3$ 相反，D 错。\n\n综上只有 B 成立。",
+      "wrong_options": {
+        "A": "$f'(x)>0$ 说明 $f$ 严格递增，$f(-2)<f(-1)$，比值应 $<1$，不可能 $>1$。",
+        "C": "由 $g$ 递增推出 $\\dfrac{f(1)}{f(-1)}>\\mathrm{e}^2$，方向恰与选项相反。",
+        "D": "由 $g$ 递增推出 $\\dfrac{f(2)}{f(-1)}>\\mathrm{e}^3$，方向恰与选项相反。"
+      },
+      "pitfalls": [
+        "看到 $f'-f$ 结构与 $\\mathrm{e}^{b-a}$ 比较，应立刻想到除以 $\\mathrm{e}^x$ 构造 $g=f/\\mathrm{e}^x$。",
+        "把 $g(b)>g(a)$ 还原成 $f$ 的不等式时，区分指数符号；如 $g(-1)=f(-1)\\mathrm{e}$，别把 $\\mathrm{e}^{-1}$ 写反。",
+        "$f$ 恒正才能放心两边乘除不变号，这是条件 $f(x)>0$ 的用处。"
+      ],
+      "key_point": "$f'>f$ 提示构造 $g(x)=f(x)/\\mathrm{e}^x$，其严格递增把各选项统一化为 $g$ 两点比较。"
+    },
+    {
+      "id": 179,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\sqrt{y}}^1 \\sqrt{x^3+1} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{2(2 \\sqrt{2}-1)}{9}$",
+      "analysis": "【分析】\n\n被积函数 $\\sqrt{x^3+1}$ 对 $x$ 没有初等原函数，先对 $x$ 积分行不通。注意若改为**先对 $y$ 积分**，$\\sqrt{x^3+1}$ 视作 $x$ 的常数，可直接积出，再凑微分 $\\mathrm{d}(x^3+1)$ 即可。所以本题关键是**交换积分次序**。\n\n【解答】\n\n原积分的积分区域由 $0\\le y\\le 1,\\ \\sqrt{y}\\le x\\le 1$ 给出。由 $\\sqrt{y}\\le x$ 即 $y\\le x^2$，区域等价描述为\n$$D:\\ 0\\le x\\le 1,\\quad 0\\le y\\le x^2.$$\n交换次序：\n$$\\int_0^1\\!\\mathrm{d}y\\int_{\\sqrt{y}}^1\\!\\sqrt{x^3+1}\\,\\mathrm{d}x=\\int_0^1\\!\\mathrm{d}x\\int_0^{x^2}\\!\\sqrt{x^3+1}\\,\\mathrm{d}y=\\int_0^1 x^2\\sqrt{x^3+1}\\,\\mathrm{d}x.$$\n令 $u=x^3+1$，$\\mathrm{d}u=3x^2\\,\\mathrm{d}x$，当 $x:0\\to 1$ 时 $u:1\\to 2$：\n$$\\int_0^1 x^2\\sqrt{x^3+1}\\,\\mathrm{d}x=\\frac{1}{3}\\int_1^2 \\sqrt{u}\\,\\mathrm{d}u=\\frac{1}{3}\\cdot\\frac{2}{3}u^{3/2}\\Big|_1^2=\\frac{2}{9}\\left(2^{3/2}-1\\right)=\\frac{2(2\\sqrt{2}-1)}{9}.$$\n所以原积分 $=\\dfrac{2(2\\sqrt{2}-1)}{9}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 $\\sqrt{y}\\le x$ 翻译区域时是 $y\\le x^2$（不是 $y\\le x$），交换后内层上限为 $x^2$。",
+        "换元后上限 $u=2$ 时 $u^{3/2}=2\\sqrt{2}$，别误写成 $2$ 或 $\\sqrt2$。"
+      ],
+      "key_point": "$\\sqrt{x^3+1}$ 无初等原函数，交换次序先对 $y$ 积分凑出 $x^2\\,\\mathrm{d}x$ 再换元。"
+    },
+    {
+      "id": 181,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "斜边长为 $2a$ 的等腰直角三角形平板铅直地沉没在水中, 且斜边与水面齐平, 设重力加速度为 $g$, 水的密度为 $\\rho$, 则该平板一侧所受的水压力为 $\\rule{0.5cm}{0.2mm}$\n\n![闸门示意图](/figures/181.svg)",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{3} a^3 \\rho g$",
+      "analysis": "【分析】\n\n水压力题用**微元法**：在深度 $y$ 处取一条水平窄条，面积微元 $\\mathrm{d}A=\\ell(y)\\,\\mathrm{d}y$（$\\ell(y)$ 为该深度处板的宽度），该处压强为 $\\rho g y$，故压力微元 $\\mathrm{d}F=\\rho g\\,y\\,\\ell(y)\\,\\mathrm{d}y$，积分即得。关键是求出宽度 $\\ell(y)$ 与三角形的最深处坐标。\n\n【解答】\n\n等腰直角三角形斜边长 $2a$ 且与水面相齐，直角顶点朝下。斜边上的高(从斜边到直角顶点的距离)为斜边的一半，即 $a$，所以三角形最深处在水下 $a$ 处。\n\n以水面为 $y=0$、向下为正方向。三角形是上宽下尖的对称形状：在 $y=0$ 处宽度为斜边 $2a$，在 $y=a$ 处宽度为 $0$，宽度随深度线性递减，故深度 $y$ 处的宽度\n$$\\ell(y)=2a\\Big(1-\\frac{y}{a}\\Big)=2(a-y),\\qquad 0\\le y\\le a.$$\n压力微元 $\\mathrm{d}F=\\rho g\\,y\\,\\ell(y)\\,\\mathrm{d}y=2\\rho g\\,y(a-y)\\,\\mathrm{d}y$。积分：\n$$F=\\int_0^a 2\\rho g\\,y(a-y)\\,\\mathrm{d}y=2\\rho g\\int_0^a (ay-y^2)\\,\\mathrm{d}y=2\\rho g\\left[\\frac{a y^2}{2}-\\frac{y^3}{3}\\right]_0^a.$$\n代入上限：\n$$F=2\\rho g\\left(\\frac{a^3}{2}-\\frac{a^3}{3}\\right)=2\\rho g\\cdot\\frac{a^3}{6}=\\frac{1}{3}a^3\\rho g.$$\n所以平板一侧所受水压力为 $\\dfrac{1}{3}a^3\\rho g$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "斜边 $2a$ 对应的高是 $a$（等腰直角三角形斜边上的高 = 斜边的一半），积分上限取 $a$ 不是 $2a$。",
+        "宽度随深度线性递减 $\\ell(y)=2(a-y)$，别漏掉它而把宽当常数 $2a$。",
+        "压强用 $\\rho g y$，压力是压强乘以宽度微元面积再积分，不要漏 $\\rho g$。"
+      ],
+      "key_point": "微元法 $F=\\int \\rho g\\,y\\,\\ell(y)\\,\\mathrm{d}y$，先求出最深处深度 $a$ 与线性宽度 $\\ell(y)=2(a-y)$。"
+    },
+    {
+      "id": 182,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $y=y(x)$ 满足 $y^{\\prime \\prime}+2 y^{\\prime}+y=0$, 且 $y(0)=0, y^{\\prime}(0)=1$, 则 $\\int_0^{+\\infty} y(x) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "1",
+      "analysis": "【分析】\n\n这是\"先解二阶常系数齐次线性方程的初值问题求出 $y(x)$，再算无穷限反常积分\"的复合题。方程 $y''+2y'+y=0$ 是常系数齐次方程，直接写特征方程；由 $r^2+2r+1=(r+1)^2=0$ 得二重根 $r=-1$，解的结构为 $(C_1+C_2x)e^{-x}$。用两个初值定出常数后，积分 $\\displaystyle\\int_0^{+\\infty}xe^{-x}\\mathrm{d}x$ 用分部积分（本质是 $\\Gamma(2)$）即可。\n\n【解答】\n\n第一步，解方程。特征方程\n$$r^2+2r+1=0\\ \\Rightarrow\\ (r+1)^2=0\\ \\Rightarrow\\ r_{1,2}=-1.$$\n二重根，故通解为\n$$y=(C_1+C_2x)e^{-x}.$$\n\n第二步，代入初值。由 $y(0)=C_1=0$。又\n$$y'=C_2e^{-x}-(C_1+C_2x)e^{-x},$$\n故 $y'(0)=C_2-C_1=C_2=1$。于是\n$$y=xe^{-x}.$$\n\n第三步，算反常积分。\n$$\\int_0^{+\\infty}xe^{-x}\\mathrm{d}x=\\Big[-xe^{-x}\\Big]_0^{+\\infty}+\\int_0^{+\\infty}e^{-x}\\mathrm{d}x.$$\n其中 $\\displaystyle\\lim_{x\\to+\\infty}xe^{-x}=0$，故第一项为 $0$；而 $\\displaystyle\\int_0^{+\\infty}e^{-x}\\mathrm{d}x=\\Big[-e^{-x}\\Big]_0^{+\\infty}=1$。\n\n所以\n$$\\int_0^{+\\infty}y(x)\\mathrm{d}x=1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "特征方程是二重根，通解必须带因子 $x$，写成 $(C_1+C_2x)e^{-x}$，漏掉 $x$ 会算错初值。",
+        "分部积分中边界项 $-xe^{-x}\\big|^{+\\infty}$ 要用洛必达或增长性说明趋于 $0$，不能想当然丢掉。"
+      ],
+      "key_point": "二重特征根解带 $x$ 因子；$\\int_0^{+\\infty}xe^{-x}\\mathrm{d}x=\\Gamma(2)=1$。"
+    },
+    {
+      "id": 183,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求曲线 $\\displaystyle y=\\frac{x^{1+x}}{(1+x)^x}(x>0)$ 的斜渐近线方程",
+      "options": {},
+      "answer": "y=\\dfrac{1}{e}x+\\dfrac{1}{2e}",
+      "analysis": "【分析】\n\n求斜渐近线 $y=kx+b$ 的标准两步：$k=\\displaystyle\\lim_{x\\to+\\infty}\\frac{y}{x}$，$b=\\displaystyle\\lim_{x\\to+\\infty}(y-kx)$。本题 $y=\\dfrac{x^{1+x}}{(1+x)^x}$，关键是把它整理成 $y=x\\left(\\dfrac{x}{1+x}\\right)^x=x\\left(1+\\dfrac1x\\right)^{-x}$，于是 $\\dfrac yx=\\left(1+\\dfrac1x\\right)^{-x}\\to e^{-1}$，得 $k$。求 $b$ 时令 $t=1/x\\to0^+$，对 $(1+t)^{-1/t}$ 取对数做泰勒展开，提出 $e^{-1}$ 后保留一阶项即可。\n\n【解答】\n\n先化简。当 $x>0$，\n$$y=\\frac{x^{1+x}}{(1+x)^x}=x\\cdot\\frac{x^{x}}{(1+x)^x}=x\\left(\\frac{x}{1+x}\\right)^{x}=x\\left(1+\\frac1x\\right)^{-x}.$$\n\n第一步，求 $k$：\n$$k=\\lim_{x\\to+\\infty}\\frac yx=\\lim_{x\\to+\\infty}\\left(1+\\frac1x\\right)^{-x}=e^{-1}=\\frac1e.$$\n\n第二步，求 $b$：\n$$b=\\lim_{x\\to+\\infty}\\big(y-kx\\big)=\\lim_{x\\to+\\infty}x\\left[\\left(1+\\frac1x\\right)^{-x}-e^{-1}\\right].$$\n令 $t=\\dfrac1x\\to0^+$，则\n$$b=\\lim_{t\\to0^+}\\frac{(1+t)^{-1/t}-e^{-1}}{t}.$$\n而 $(1+t)^{-1/t}=\\exp\\!\\left(-\\dfrac{\\ln(1+t)}{t}\\right)$，利用\n$$\\frac{\\ln(1+t)}{t}=1-\\frac t2+\\frac{t^2}{3}-\\cdots,$$\n得\n$$-\\frac{\\ln(1+t)}{t}=-1+\\frac t2-\\frac{t^2}{3}+\\cdots,$$\n故\n$$(1+t)^{-1/t}=e^{-1}\\cdot e^{\\frac t2-\\frac{t^2}{3}+\\cdots}=e^{-1}\\left(1+\\frac t2+o(t)\\right)=e^{-1}+\\frac{1}{2e}\\,t+o(t).$$\n代入得\n$$b=\\lim_{t\\to0^+}\\frac{\\dfrac{1}{2e}t+o(t)}{t}=\\frac{1}{2e}.$$\n\n所以斜渐近线为\n$$y=\\frac1e x+\\frac{1}{2e}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "化简时别把 $x^{1+x}$ 拆错：$x^{1+x}=x\\cdot x^{x}$，进而 $y=x\\left(\\dfrac{x}{1+x}\\right)^x$。",
+        "求 $b$ 不能只把 $(1+1/x)^{-x}$ 当成 $e^{-1}$ 直接代（那样 $b$ 会算成 $0$），必须保留到一阶，用泰勒展开求出 $\\dfrac{1}{2e}$。",
+        "$\\dfrac{\\ln(1+t)}{t}=1-\\dfrac t2+\\cdots$ 的符号要算准，错号会导致 $b$ 变成 $-\\dfrac{1}{2e}$。"
+      ],
+      "key_point": "斜渐近线两步法 $k=\\lim y/x,\\ b=\\lim(y-kx)$；求 $b$ 时对 $e$ 型极限取对数展开保留一阶。"
+    },
+    {
+      "id": 184,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 连续且 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=1, g(x)=\\int_0^1 f(x t) \\mathrm{d} t$, 求 $g^{\\prime}(x)$, 并证明 $g^{\\prime}(x)$ 在 $x=0$ 处连续",
+      "options": {},
+      "answer": "x\\neq0 时 g'(x)=\\dfrac{f(x)}{x}-\\dfrac{1}{x^2}\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t，g'(0)=\\dfrac12，且 g'(x) 在 x=0 处连续",
+      "analysis": "【分析】\n\n积分 $g(x)=\\displaystyle\\int_0^1 f(xt)\\,\\mathrm{d}t$ 中被积变量是 $t$，含参数 $x$。$x\\neq0$ 时换元 $u=xt$ 把它化成变限积分 $g(x)=\\dfrac1x\\displaystyle\\int_0^x f(u)\\,\\mathrm{d}u$，再用商的求导法则与变限积分求导得 $g'(x)$。$x=0$ 处不能直接代公式（分母为 $0$），要用导数定义求 $g'(0)$。最后证连续性，即验证 $\\displaystyle\\lim_{x\\to0}g'(x)=g'(0)$。注意由 $\\displaystyle\\lim_{x\\to0}\\frac{f(x)}{x}=1$ 且 $f$ 连续可得 $f(0)=0$。\n\n【解答】\n\n由 $\\displaystyle\\lim_{x\\to0}\\frac{f(x)}{x}=1$ 且 $f$ 在 $0$ 处连续，分母趋于 $0$ 而极限有限，故 $f(0)=0$。\n\n**求 $g(x)$ 的表达式。** 当 $x\\neq0$，令 $u=xt$，则 $\\mathrm{d}u=x\\,\\mathrm{d}t$，$t:0\\to1$ 对应 $u:0\\to x$，\n$$g(x)=\\int_0^1 f(xt)\\,\\mathrm{d}t=\\frac1x\\int_0^x f(u)\\,\\mathrm{d}u.$$\n当 $x=0$，$g(0)=\\displaystyle\\int_0^1 f(0)\\,\\mathrm{d}t=0$。\n\n**求 $g'(x)$（$x\\neq0$）。** 由商的求导法则及 $\\dfrac{\\mathrm d}{\\mathrm dx}\\displaystyle\\int_0^x f(u)\\,\\mathrm{d}u=f(x)$，\n$$g'(x)=\\frac{x f(x)-\\displaystyle\\int_0^x f(u)\\,\\mathrm{d}u}{x^2}=\\frac{f(x)}{x}-\\frac{1}{x^2}\\int_0^x f(u)\\,\\mathrm{d}u.$$\n\n**求 $g'(0)$（用定义）。**\n$$g'(0)=\\lim_{x\\to0}\\frac{g(x)-g(0)}{x}=\\lim_{x\\to0}\\frac{1}{x^2}\\int_0^x f(u)\\,\\mathrm{d}u.$$\n这是 $\\dfrac00$ 型，由洛必达法则（分子求导得 $f(x)$）：\n$$g'(0)=\\lim_{x\\to0}\\frac{f(x)}{2x}=\\frac12\\lim_{x\\to0}\\frac{f(x)}{x}=\\frac12.$$\n\n**证 $g'(x)$ 在 $x=0$ 连续。** 即证 $\\displaystyle\\lim_{x\\to0}g'(x)=g'(0)=\\frac12$。\n\n对 $x\\neq0$，由上：\n$$\\lim_{x\\to0}\\frac{f(x)}{x}=1,\\qquad \\lim_{x\\to0}\\frac{1}{x^2}\\int_0^x f(u)\\,\\mathrm{d}u=g'(0)=\\frac12.$$\n故\n$$\\lim_{x\\to0}g'(x)=\\lim_{x\\to0}\\frac{f(x)}{x}-\\lim_{x\\to0}\\frac{1}{x^2}\\int_0^x f(u)\\,\\mathrm{d}u=1-\\frac12=\\frac12=g'(0).$$\n所以 $g'(x)$ 在 $x=0$ 处连续。\n\n综上\n$$g'(x)=\\begin{cases}\\dfrac{f(x)}{x}-\\dfrac{1}{x^2}\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t,& x\\neq0,\\\\[2mm]\\dfrac12,& x=0,\\end{cases}$$\n且在 $x=0$ 处连续。",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元时上限要随之改变：$t$ 从 $0$ 到 $1$ 对应 $u=xt$ 从 $0$ 到 $x$，且 $\\mathrm{d}t=\\mathrm{d}u/x$。",
+        "$x=0$ 处 $g'(0)$ 不能把公式 $\\dfrac{f(x)}{x}-\\cdots$ 直接令 $x=0$，必须用导数定义求。",
+        "证连续要回到\"极限等于函数值\"的定义：$\\lim_{x\\to0}g'(x)=g'(0)$，而不是只把表达式形式上代 $0$。"
+      ],
+      "key_point": "含参积分换元 $u=xt$ 化为 $g(x)=\\frac1x\\int_0^x f$，分段求导后用 $\\lim g'(x)=g'(0)$ 验连续。"
+    },
+    {
+      "id": 185,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 的定义域为 $(0,+\\infty)$ 且满足 $\\displaystyle 2 f(x)+x^2 f\\left(\\frac{1}{x}\\right)=\\frac{x^2+2 x}{\\sqrt{1+x^2}}$, 求 $f(x)$, 并求 曲线 $\\displaystyle y=f(x), y=\\frac{1}{2}, y=\\frac{\\sqrt{3}}{2}$ 及 $y$ 轴所围图形绕 $x$ 轴旋转所成旋转体的体积",
+      "options": {},
+      "answer": "f(x)=\\dfrac{x}{\\sqrt{1+x^2}}，旋转体体积 V=\\dfrac{\\pi^2}{6}",
+      "analysis": "【分析】\n\n含 $f(x)$ 与 $f(1/x)$ 的函数方程，用 $x\\to\\dfrac1x$ 代换得到第二个方程，与原方程联立消去 $f(1/x)$ 即可解出 $f(x)$。代换时注意 $x>0$，$|x|=x$，根式 $\\sqrt{1+1/x^2}=\\dfrac{\\sqrt{1+x^2}}{x}$ 要化对。求得 $f(x)=\\dfrac{x}{\\sqrt{1+x^2}}$（在 $(0,+\\infty)$ 上从 $0$ 单调增到 $1$）。后半段求绕 $x$ 轴的旋转体体积：图形由曲线、$y=\\dfrac12$、$y=\\dfrac{\\sqrt3}{2}$ 及 $y$ 轴围成，用水平条（柱壳法）绕 $x$ 轴旋转最方便，$V=2\\pi\\displaystyle\\int_{1/2}^{\\sqrt3/2} y\\cdot x(y)\\,\\mathrm{d}y$，其中由曲线反解 $x=\\dfrac{y}{\\sqrt{1-y^2}}$。\n\n【解答】\n\n**第一步：求 $f(x)$。** 原方程\n$$2f(x)+x^2 f\\!\\left(\\tfrac1x\\right)=\\frac{x^2+2x}{\\sqrt{1+x^2}}.\\qquad(1)$$\n以 $\\dfrac1x$ 代 $x$（$x>0$），注意 $\\sqrt{1+\\frac1{x^2}}=\\dfrac{\\sqrt{1+x^2}}{x}$：\n$$2f\\!\\left(\\tfrac1x\\right)+\\frac{1}{x^2}f(x)=\\frac{\\frac1{x^2}+\\frac2x}{\\sqrt{1+\\frac1{x^2}}}=\\frac{\\frac{1+2x}{x^2}}{\\frac{\\sqrt{1+x^2}}{x}}=\\frac{1+2x}{x\\sqrt{1+x^2}}.\\qquad(2)$$\n由 $(1)$ 解出 $f\\!\\left(\\tfrac1x\\right)=\\dfrac{1}{x^2}\\!\\left[\\dfrac{x^2+2x}{\\sqrt{1+x^2}}-2f(x)\\right]$，代入 $(2)$ 并两边乘 $x^2$：\n$$2\\cdot\\frac{x^2+2x}{\\sqrt{1+x^2}}-4f(x)+f(x)=\\frac{x(1+2x)}{\\sqrt{1+x^2}},$$\n即\n$$\\frac{2x^2+4x}{\\sqrt{1+x^2}}-3f(x)=\\frac{2x^2+x}{\\sqrt{1+x^2}},$$\n$$3f(x)=\\frac{(2x^2+4x)-(2x^2+x)}{\\sqrt{1+x^2}}=\\frac{3x}{\\sqrt{1+x^2}}.$$\n所以\n$$\\boxed{f(x)=\\frac{x}{\\sqrt{1+x^2}}},\\quad x>0.$$\n（验证：$2\\cdot\\dfrac{x}{\\sqrt{1+x^2}}+x^2\\cdot\\dfrac{1/x}{\\sqrt{1+x^2}/x}=\\dfrac{2x+x^2}{\\sqrt{1+x^2}}$，与右端一致。）\n\n**第二步：求旋转体体积。** $f$ 在 $(0,+\\infty)$ 上单调增。由 $f(x)=\\dfrac12$ 得 $x=\\dfrac{1}{\\sqrt3}$；由 $f(x)=\\dfrac{\\sqrt3}{2}$ 得 $x=\\sqrt3$。所围图形是：左边界 $y$ 轴（$x=0$），上下边界 $y=\\dfrac{\\sqrt3}{2}$、$y=\\dfrac12$，右边界为曲线。由 $y=\\dfrac{x}{\\sqrt{1+x^2}}$ 反解得\n$$x=\\frac{y}{\\sqrt{1-y^2}}.$$\n绕 $x$ 轴旋转，用柱壳法（水平条，半径 $y$，长 $x(y)$，厚 $\\mathrm{d}y$）：\n$$V=2\\pi\\int_{1/2}^{\\sqrt3/2} y\\cdot\\frac{y}{\\sqrt{1-y^2}}\\,\\mathrm{d}y=2\\pi\\int_{1/2}^{\\sqrt3/2}\\frac{y^2}{\\sqrt{1-y^2}}\\,\\mathrm{d}y.$$\n令 $y=\\sin\\theta$，$\\mathrm{d}y=\\cos\\theta\\,\\mathrm{d}\\theta$，$\\sqrt{1-y^2}=\\cos\\theta$，下限 $y=\\dfrac12\\Rightarrow\\theta=\\dfrac\\pi6$，上限 $y=\\dfrac{\\sqrt3}{2}\\Rightarrow\\theta=\\dfrac\\pi3$：\n$$\\int\\frac{y^2}{\\sqrt{1-y^2}}\\,\\mathrm{d}y=\\int\\sin^2\\theta\\,\\mathrm{d}\\theta=\\frac\\theta2-\\frac{\\sin2\\theta}{4}.$$\n代入上下限：\n$$\\left[\\frac\\theta2-\\frac{\\sin2\\theta}{4}\\right]_{\\pi/6}^{\\pi/3}=\\left(\\frac\\pi6-\\frac{\\sqrt3}{8}\\right)-\\left(\\frac{\\pi}{12}-\\frac{\\sqrt3}{8}\\right)=\\frac{\\pi}{12}.$$\n所以\n$$V=2\\pi\\cdot\\frac{\\pi}{12}=\\frac{\\pi^2}{6}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "代换 $x\\to1/x$ 时右端根式 $\\sqrt{1+1/x^2}$ 必须化成 $\\dfrac{\\sqrt{1+x^2}}{x}$（$x>0$ 取正），化错符号或漏 $x$ 会解错。",
+        "旋转图形绕 $x$ 轴、区域远离 $x$ 轴，用水平条柱壳法 $V=2\\pi\\int y\\,x(y)\\,\\mathrm{d}y$ 最稳；若按 $x$ 积分要用环柱，易把上下界搞混。",
+        "上下限对应的 $x$ 值要算准：$y=\\frac12\\Rightarrow x=\\frac1{\\sqrt3}$，$y=\\frac{\\sqrt3}{2}\\Rightarrow x=\\sqrt3$。"
+      ],
+      "key_point": "函数方程 $x\\leftrightarrow1/x$ 联立消元得 $f$；绕 $x$ 轴体积用柱壳 $2\\pi\\int y\\,x(y)\\,\\mathrm{d}y$ 配三角换元。"
+    },
+    {
+      "id": 186,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "平面区域 $D$ 由直线 $x=1, x=2, y=x$ 与 $x$ 轴围成, 计算 $\\displaystyle \\iint_D \\frac{\\sqrt{x^2+y^2}}{x} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "\\dfrac{3}{4}\\left(\\sqrt{2}+\\ln(1+\\sqrt{2})\\right)",
+      "analysis": "【分析】\n\n被积函数 $\\dfrac{\\sqrt{x^2+y^2}}{x}$ 含 $\\sqrt{x^2+y^2}$, 这是用极坐标的典型信号。换元后 $\\sqrt{x^2+y^2}=r$, $x=r\\cos\\theta$, 于是被积函数化为 $\\dfrac{r}{r\\cos\\theta}=\\sec\\theta$, 异常简洁。关键在于把区域 $D$ 在极坐标下定限: 区域由 $x=1,\\,x=2,\\,y=x$ 与 $x$ 轴围成, 即 $1\\le x\\le 2,\\,0\\le y\\le x$, 角度从 $\\theta=0$(正 $x$ 轴)到 $\\theta=\\dfrac{\\pi}{4}$(直线 $y=x$); 而直线 $x=1,x=2$ 在极坐标下是 $r\\cos\\theta=1,2$, 即 $r=\\sec\\theta,\\,r=2\\sec\\theta$。最后归结为计算 $\\displaystyle\\int\\sec^3\\theta\\,\\mathrm{d}\\theta$。\n\n【解答】\n\n区域 $D$: $1\\le x\\le 2,\\ 0\\le y\\le x$。作极坐标变换 $x=r\\cos\\theta,\\ y=r\\sin\\theta$, $\\mathrm{d}x\\,\\mathrm{d}y=r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta$。\n\n角度范围: 下边界 $x$ 轴对应 $\\theta=0$, 上边界 $y=x$ 对应 $\\theta=\\dfrac{\\pi}{4}$。\n\n半径范围: 左边界 $x=1$ 即 $r\\cos\\theta=1$, $r=\\sec\\theta$; 右边界 $x=2$ 即 $r=2\\sec\\theta$。\n\n被积函数 $\\dfrac{\\sqrt{x^2+y^2}}{x}=\\dfrac{r}{r\\cos\\theta}=\\sec\\theta$。于是\n\n$$\\iint_D \\frac{\\sqrt{x^2+y^2}}{x}\\,\\mathrm{d}x\\,\\mathrm{d}y=\\int_0^{\\pi/4}\\sec\\theta\\left(\\int_{\\sec\\theta}^{2\\sec\\theta} r\\,\\mathrm{d}r\\right)\\mathrm{d}\\theta.$$\n\n内层: $\\displaystyle\\int_{\\sec\\theta}^{2\\sec\\theta} r\\,\\mathrm{d}r=\\frac{1}{2}\\left(4\\sec^2\\theta-\\sec^2\\theta\\right)=\\frac{3}{2}\\sec^2\\theta$。\n\n故原积分 $=\\displaystyle\\int_0^{\\pi/4}\\sec\\theta\\cdot\\frac{3}{2}\\sec^2\\theta\\,\\mathrm{d}\\theta=\\frac{3}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,\\mathrm{d}\\theta$。\n\n利用公式 $\\displaystyle\\int\\sec^3\\theta\\,\\mathrm{d}\\theta=\\frac{1}{2}\\left(\\sec\\theta\\tan\\theta+\\ln|\\sec\\theta+\\tan\\theta|\\right)+C$:\n\n$$\\int_0^{\\pi/4}\\sec^3\\theta\\,\\mathrm{d}\\theta=\\frac{1}{2}\\left[\\sec\\theta\\tan\\theta+\\ln|\\sec\\theta+\\tan\\theta|\\right]_0^{\\pi/4}.$$\n\n当 $\\theta=\\dfrac{\\pi}{4}$: $\\sec=\\sqrt2,\\ \\tan=1$, 得 $\\sqrt2\\cdot1+\\ln(\\sqrt2+1)$; 当 $\\theta=0$: $0+\\ln1=0$。所以\n\n$$\\int_0^{\\pi/4}\\sec^3\\theta\\,\\mathrm{d}\\theta=\\frac{1}{2}\\left(\\sqrt2+\\ln(1+\\sqrt2)\\right).$$\n\n代回:\n\n$$\\iint_D \\frac{\\sqrt{x^2+y^2}}{x}\\,\\mathrm{d}x\\,\\mathrm{d}y=\\frac{3}{2}\\cdot\\frac{1}{2}\\left(\\sqrt2+\\ln(1+\\sqrt2)\\right)=\\frac{3}{4}\\left(\\sqrt2+\\ln(1+\\sqrt2)\\right).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "角度上限是直线 $y=x$ 对应的 $\\dfrac{\\pi}{4}$, 不是 $\\dfrac{\\pi}{2}$; 下限是 $x$ 轴对应的 $0$。",
+        "$x=1,x=2$ 在极坐标下不是常数 $r$, 而是 $r=\\sec\\theta,\\,r=2\\sec\\theta$, 半径上下限都随 $\\theta$ 变化。",
+        "$\\int\\sec^3\\theta\\,\\mathrm{d}\\theta$ 需用分部积分(或记公式), 不要错记成 $\\tan\\theta$。"
+      ],
+      "key_point": "见 $\\sqrt{x^2+y^2}$ 上极坐标, 被积函数化为 $\\sec\\theta$, 竖直边界 $x=$常数 化为 $r=$常数$\\cdot\\sec\\theta$。"
+    },
+    {
+      "id": 187,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f(x)=\\int_1^x \\mathrm{e}^{t^2} \\mathrm{d} t$.\r\n( I ) 证明: 存在 $\\xi \\in(1,2)$, 使得 $f(\\xi)=(2-\\xi) \\mathrm{e}^{\\xi^2}$;\r\n(II) 证明: 存在 $\\eta \\in(1,2)$, 使得 $f(2)=\\ln 2 \\cdot \\eta \\mathrm{e}^{\\eta^2}$",
+      "options": {},
+      "answer": "",
+      "analysis": "【分析】\n\n本题是中值定理的存在性证明, 核心是构造辅助函数。\n\n第(I)问要证 $f(\\xi)=(2-\\xi)\\mathrm{e}^{\\xi^2}$, 即 $f(\\xi)+(\\xi-2)\\mathrm{e}^{\\xi^2}=0$。注意 $\\mathrm{e}^{\\xi^2}=f'(\\xi)$, 故等式即 $f(\\xi)+(\\xi-2)f'(\\xi)=0$, 这正是 $[(x-2)f(x)]'$ 在 $\\xi$ 处为零。于是令 $F(x)=(x-2)f(x)$, 它在端点 $x=1,2$ 处都为零(因 $f(1)=0$, 而 $x-2$ 在 $x=2$ 为零), 用罗尔定理即得。\n\n第(II)问要证 $f(2)=\\ln2\\cdot\\eta\\,\\mathrm{e}^{\\eta^2}$。关键观察: $\\ln 2=\\ln 2-\\ln 1$, 且右端 $\\eta\\mathrm{e}^{\\eta^2}=\\dfrac{\\mathrm{e}^{\\eta^2}}{1/\\eta}=\\dfrac{f'(\\eta)}{(\\ln x)'|_{\\eta}}$。这提示对 $f(x)$ 与 $h(x)=\\ln x$ 在 $[1,2]$ 上用柯西中值定理。\n\n【解答】\n\n首先 $f(x)=\\displaystyle\\int_1^x \\mathrm{e}^{t^2}\\,\\mathrm{d}t$, 故 $f(1)=0$, 且 $f'(x)=\\mathrm{e}^{x^2}$, $f(x)$ 在 $[1,2]$ 上连续、可导。\n\n**(I)** 令 $F(x)=(x-2)f(x)$, 它在 $[1,2]$ 上连续, 在 $(1,2)$ 内可导。\n\n端点值: $F(1)=(1-2)f(1)=(-1)\\cdot 0=0$; $F(2)=(2-2)f(2)=0$。\n\n故 $F(1)=F(2)=0$, 由罗尔定理, 存在 $\\xi\\in(1,2)$ 使 $F'(\\xi)=0$。而\n\n$$F'(x)=f(x)+(x-2)f'(x)=f(x)+(x-2)\\mathrm{e}^{x^2}.$$\n\n令 $F'(\\xi)=0$, 得 $f(\\xi)+(\\xi-2)\\mathrm{e}^{\\xi^2}=0$, 即\n\n$$f(\\xi)=(2-\\xi)\\mathrm{e}^{\\xi^2}.\\qquad\\blacksquare$$\n\n**(II)** 取 $h(x)=\\ln x$, 它在 $[1,2]$ 上连续、在 $(1,2)$ 内可导, 且 $h'(x)=\\dfrac{1}{x}\\neq 0$。对 $f(x)$ 与 $h(x)$ 在 $[1,2]$ 上用柯西中值定理: 存在 $\\eta\\in(1,2)$, 使\n\n$$\\frac{f(2)-f(1)}{h(2)-h(1)}=\\frac{f'(\\eta)}{h'(\\eta)}.$$\n\n代入 $f(1)=0$, $h(2)-h(1)=\\ln2-\\ln1=\\ln2$, $f'(\\eta)=\\mathrm{e}^{\\eta^2}$, $h'(\\eta)=\\dfrac{1}{\\eta}$:\n\n$$\\frac{f(2)}{\\ln2}=\\frac{\\mathrm{e}^{\\eta^2}}{1/\\eta}=\\eta\\,\\mathrm{e}^{\\eta^2}.$$\n\n整理即得\n\n$$f(2)=\\ln2\\cdot\\eta\\,\\mathrm{e}^{\\eta^2}.\\qquad\\blacksquare$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "第(I)问辅助函数取 $F(x)=(x-2)f(x)$ 的关键是利用 $f(1)=0$ 与 $x-2$ 在 $2$ 处为零, 凑出两端点同值才能用罗尔。",
+        "第(II)问 $\\ln2$ 要识别为 $\\ln2-\\ln1$, 从而把 $\\ln x$ 取作柯西定理中的分母函数 $h(x)$。",
+        "用柯西中值定理须验证 $h'(x)=1/x$ 在 $(1,2)$ 内不为零。"
+      ],
+      "key_point": "把待证等式还原成某辅助函数的导数为零(罗尔), 或还原成两函数增量之比(柯西), 是中值定理证明的两条主线。"
+    },
+    {
+      "id": 188,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设曲线 $y=f(x)$ 可导, 且 $f^{\\prime}(x)>0$, 曲线 $y=f(x)(x \\geqslant 0)$ 经过坐标原点 $O$, 其上任意 一点 $M$ 处的切线与 $x$ 轴交于 $T$, 又 $M P$ 垂直 $x$ 轴于点 $P$, 已知由曲线 $y=f(x)$, 直线 $M P$ 以及 $x$ 轴所围图形的面积与 $\\triangle M T P$ 的面积之比恒为 $3: 2$, 求满足上述条件的曲线方程\n\n![曲线与切线示意图](/figures/188.svg)",
+      "options": {},
+      "answer": "y=Cx^3\\ (C>0)",
+      "analysis": "【分析】\n\n这是\"几何量列积分方程, 再求导化微分方程\"的典型题。设动点 $M=(x,f(x))$, $P$ 是 $M$ 在 $x$ 轴上的垂足 $(x,0)$, $T$ 是 $M$ 处切线与 $x$ 轴的交点。\n\n- 曲边图形(由曲线、$MP$、$x$ 轴所围)的面积用变限积分 $\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$ 表示;\n- $\\triangle MTP$ 是直角三角形, 两直角边为 $TP$ 与 $MP$, 面积用切线截距表示。\n\n面积之比恒为 $3:2$ 给出一个含变限积分的方程。两端对 $x$ 求导消去积分号, 得到关于 $f,f',f''$ 的微分方程; 通过降阶(变量分离)解出, 再用过原点 $f(0)=0$ 定常数。\n\n【解答】\n\n设 $M=(x,f(x))$ ($x>0$), 则 $P=(x,0)$, $MP=f(x)$。\n\n**切线与 $T$ 点:** 过 $M$ 的切线为 $Y-f(x)=f'(x)(X-x)$。令 $Y=0$, 解得交点横坐标 $X=x-\\dfrac{f(x)}{f'(x)}$, 即 $T=\\left(x-\\dfrac{f(x)}{f'(x)},\\,0\\right)$。由 $f>0,f'>0$, 有\n\n$$TP=\\left|x-\\left(x-\\frac{f}{f'}\\right)\\right|=\\frac{f(x)}{f'(x)}.$$\n\n**两块面积:** 曲边面积 $\\displaystyle S_1=\\int_0^x f(t)\\,\\mathrm{d}t$; 直角三角形 $\\triangle MTP$ 面积\n\n$$S_2=\\frac{1}{2}\\,TP\\cdot MP=\\frac{1}{2}\\cdot\\frac{f}{f'}\\cdot f=\\frac{f^2}{2f'}.$$\n\n**列方程:** 由 $S_1:S_2=3:2$, 即 $\\dfrac{S_1}{S_2}=\\dfrac{3}{2}$:\n\n$$\\int_0^x f(t)\\,\\mathrm{d}t=\\frac{3}{2}\\cdot\\frac{f^2}{2f'}=\\frac{3f^2}{4f'}.$$\n\n**求导化微分方程:** 两端对 $x$ 求导。左端 $=f$; 右端 $=\\dfrac{3}{4}\\cdot\\dfrac{2ff'\\cdot f'-f^2f''}{(f')^2}=\\dfrac{3}{4}\\cdot\\dfrac{2f(f')^2-f^2f''}{(f')^2}$。即\n\n$$f=\\frac{3}{4}\\cdot\\frac{2f(f')^2-f^2f''}{(f')^2}.$$\n\n因 $x>0$ 时 $f>0$, 两端除以 $f$:\n\n$$1=\\frac{3}{4}\\left(2-\\frac{f f''}{(f')^2}\\right)\\ \\Longrightarrow\\ \\frac{ff''}{(f')^2}=2-\\frac{4}{3}=\\frac{2}{3}.$$\n\n**降阶求解:** 令 $p=f'$, 视 $p$ 为 $f$ 的函数, 则 $f''=p\\dfrac{\\mathrm{d}p}{\\mathrm{d}f}$。代入:\n\n$$\\frac{f\\cdot p\\,\\frac{\\mathrm{d}p}{\\mathrm{d}f}}{p^2}=\\frac{2}{3}\\ \\Longrightarrow\\ \\frac{\\mathrm{d}p}{p}=\\frac{2}{3}\\cdot\\frac{\\mathrm{d}f}{f}.$$\n\n积分得 $\\ln p=\\dfrac{2}{3}\\ln f+\\text{常数}$, 即 $p=f'=C_1 f^{2/3}$ ($C_1>0$)。分离变量:\n\n$$f^{-2/3}\\,\\mathrm{d}f=C_1\\,\\mathrm{d}x\\ \\Longrightarrow\\ 3f^{1/3}=C_1 x+C_2.$$\n\n**定常数:** 曲线过原点, $f(0)=0$, 代入得 $C_2=0$。于是 $3f^{1/3}=C_1 x$, 即 $f^{1/3}=\\dfrac{C_1}{3}x$, 故\n\n$$f(x)=\\left(\\frac{C_1}{3}\\right)^3 x^3=Cx^3\\quad(C>0).$$\n\n**验证:** 对 $y=Cx^3$: $\\displaystyle\\int_0^x Ct^3\\,\\mathrm{d}t=\\dfrac{Cx^4}{4}$; $f'=3Cx^2$, $\\dfrac{f^2}{2f'}=\\dfrac{C^2x^6}{6Cx^2}=\\dfrac{Cx^4}{6}$; 比值 $=\\dfrac{Cx^4/4}{Cx^4/6}=\\dfrac{3}{2}$, 符合条件。\n\n所求曲线方程为 $y=Cx^3$ ($C>0$ 为任意常数)。",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线在 $x$ 轴上的截距 $X=x-\\dfrac{f}{f'}$, $TP=\\dfrac{f}{f'}$; 三角形面积是 $\\dfrac{1}{2}TP\\cdot MP=\\dfrac{f^2}{2f'}$, 别漏 $\\dfrac12$。",
+        "对含变限积分的方程两端求导后是二阶方程, 须用 $f''=p\\dfrac{\\mathrm{d}p}{\\mathrm{d}f}$ 降阶。",
+        "由 $f(0)=0$ 定出积分常数 $C_2=0$, 不可遗漏初始条件; 最终答案保留任意常数 $C>0$。"
+      ],
+      "key_point": "几何条件先列含变限积分的等式, 求导消积分号得微分方程, 二阶用降阶 $f''=p\\,\\mathrm{d}p/\\mathrm{d}f$ 化为可分离变量。"
+    },
+    {
+      "id": 189,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_1, x_2, x_3\\right)=x_1^2+x_2^2+x_3^2+2 a x_1 x_2+2 a x_1 x_3+2 a x_2 x_3$ 经可逆线性变换 $\\left(\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3 \\end{array}\\right)=\\boldsymbol{P}\\left(\\begin{array}{l}y_1 \\\\ y_2 \\\\ y_3\\end{array}\\right)$ 化为二次型 $g\\left(y_1, y_2, y_3\\right)=y_1^2+y_2^2+4 y_3^2+2 y_1 y_2$.\r\n(I) 求 $a$ 的值;\r\n(II) 求可逆矩阵 $\\boldsymbol{P}$",
+      "options": {},
+      "answer": "a=-\\dfrac{1}{2};\\ P=\\begin{pmatrix}1&2&\\frac{2\\sqrt{3}}{3}\\\\0&1&\\frac{4\\sqrt{3}}{3}\\\\0&1&0\\end{pmatrix}",
+      "analysis": "【分析】\n\n两个二次型经可逆线性变换互化, 等价于它们的矩阵 **合同**, 由惯性定理, 二者有相同的正、负惯性指数(从而秩相同)。先写出两个二次型的矩阵 $A,B$, 用合同必要条件(正惯性指数与秩相等)定出 $a$; 第(II)问则把 $f,g$ 分别用配方法化成标准形, 借助同一个标准形把两组变量连接起来求过渡矩阵 $P$。\n\n二次型矩阵:\n$$A=\\begin{pmatrix}1&a&a\\\\a&1&a\\\\a&a&1\\end{pmatrix},\\qquad B=\\begin{pmatrix}1&1&0\\\\1&1&0\\\\0&0&4\\end{pmatrix}.$$\n\n【解答】\n\n**(I) 求 $a$。** 变换 $x=Py$ 把 $f$ 化为 $g$, 即 $P^{T}AP=B$, 故 $A,B$ 合同, 二者正惯性指数与秩均相同。\n\n先看 $B$: $g=y_1^2+y_2^2+4y_3^2+2y_1y_2=(y_1+y_2)^2+4y_3^2$, 是两个正平方和, 故 $B$ 的正惯性指数 $=2$, 负惯性指数 $=0$, 秩 $=2$。\n\n再看 $A$ 的特征值: $A=(1-a)I+a\\,J$ ($J$ 为全 $1$ 矩阵), 特征值为 $1+2a$(单)与 $1-a$(二重)。要与 $B$ 同惯性指数(正 $2$, 零 $1$, 无负), 须恰有一个特征值为 $0$、另两个为正:\n\n- 若 $1+2a=0$, 即 $a=-\\dfrac{1}{2}$: 则 $1-a=\\dfrac{3}{2}>0$(二重)。特征值为 $0,\\dfrac32,\\dfrac32$, 正惯性指数 $2$, 秩 $2$, 与 $B$ 一致。✓\n- 若 $1-a=0$, 即 $a=1$: 特征值为 $3,0,0$, 正惯性指数仅 $1$, 不符。✗\n\n故 $\\boxed{a=-\\dfrac{1}{2}}$。\n\n**(II) 求可逆矩阵 $P$。** 取 $a=-\\dfrac12$, 则\n\n$$f=x_1^2+x_2^2+x_3^2-x_1x_2-x_1x_3-x_2x_3.$$\n\n对 $f$ 配方: 先配含 $x_1$ 的项,\n\n$$f=\\left(x_1-\\tfrac12 x_2-\\tfrac12 x_3\\right)^2-\\tfrac14(x_2+x_3)^2+x_2^2+x_3^2-x_2x_3.$$\n\n其余项 $=-\\tfrac14(x_2^2+2x_2x_3+x_3^2)+x_2^2+x_3^2-x_2x_3=\\tfrac34x_2^2+\\tfrac34x_3^2-\\tfrac32x_2x_3=\\tfrac34(x_2-x_3)^2$。所以\n\n$$f=\\left(x_1-\\tfrac12x_2-\\tfrac12x_3\\right)^2+\\frac34(x_2-x_3)^2.$$\n\n令 $\\begin{cases}u_1=x_1-\\tfrac12x_2-\\tfrac12x_3\\\\ u_2=\\tfrac{\\sqrt3}{2}(x_2-x_3)\\\\ u_3=x_3\\end{cases}$, 则 $f=u_1^2+u_2^2$。此即 $u=C_1^{-1}x$, 其中 $C_1^{-1}=\\begin{pmatrix}1&-\\tfrac12&-\\tfrac12\\\\0&\\tfrac{\\sqrt3}{2}&-\\tfrac{\\sqrt3}{2}\\\\0&0&1\\end{pmatrix}$, 可逆, 故 $x=C_1u$, 其中\n\n$$C_1=\\begin{pmatrix}1&\\tfrac{\\sqrt3}{3}&1\\\\0&\\tfrac{2\\sqrt3}{3}&1\\\\0&0&1\\end{pmatrix}.$$\n\n对 $g$ 配方: $g=(y_1+y_2)^2+4y_3^2$。令 $\\begin{cases}u_1=y_1+y_2\\\\ u_2=2y_3\\\\ u_3=y_2\\end{cases}$, 则 $g=u_1^2+u_2^2$, 与 $f$ 同一标准形。此即 $u=C_2^{-1}y$, $C_2^{-1}=\\begin{pmatrix}1&1&0\\\\0&0&2\\\\0&1&0\\end{pmatrix}$, 故 $y=C_2u$。\n\n由 $f$ 与 $g$ 经同一变量 $u$ 相连: $x=C_1u=C_1C_2^{-1}y$, 取\n\n$$P=C_1C_2^{-1}=\\begin{pmatrix}1&\\tfrac{\\sqrt3}{3}&1\\\\0&\\tfrac{2\\sqrt3}{3}&1\\\\0&0&1\\end{pmatrix}\\begin{pmatrix}1&1&0\\\\0&0&2\\\\0&1&0\\end{pmatrix}=\\begin{pmatrix}1&2&\\tfrac{2\\sqrt3}{3}\\\\0&1&\\tfrac{4\\sqrt3}{3}\\\\0&1&0\\end{pmatrix}.$$\n\n该 $P$ 可逆, 经验算 $P^{T}AP=B$, 即变换 $x=Py$ 把 $f$ 化为 $g$。(注: $P$ 不唯一, 此为一组解。)",
+      "wrong_options": {},
+      "pitfalls": [
+        "可逆线性变换互化是\"合同\"(同正负惯性指数), 不是\"相似\"(同特征值); 切勿要求两矩阵特征值相同。",
+        "$A$ 的特征值为 $1+2a$(单)与 $1-a$(二重), 须挑使惯性指数与 $B$ 一致的根, $a=1$ 会让正惯性指数只剩 $1$, 应舍去。",
+        "求 $P$ 时分别把 $f,g$ 配成同一标准形 $u_1^2+u_2^2$, 再由 $x=C_1u,\\ y=C_2u$ 得 $P=C_1C_2^{-1}$; $P$ 不唯一。"
+      ],
+      "key_point": "两二次型可逆互化即矩阵合同, 用惯性定理定参数; 各自配方化同一标准形后 $P=C_1C_2^{-1}$。"
+    },
+    {
+      "id": 193,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 4 阶矩阵 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 不可逆, $a_{12}$ 的代数余子式 $A_{12} \\neq 0, \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 为矩阵 $\\boldsymbol{A}$ 的列向量 组, $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 则方程组 $\\boldsymbol{A}^* \\boldsymbol{X}=\\mathbf{0}$ 的通解为 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "B": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "C": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "D": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_2+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题综合考查：(1) 伴随矩阵秩公式 $r(A^*)$ 与 $r(A)$ 的关系；(2) 由秩定基础解系个数；(3) 利用 $A^*A=|A|E$ 把 $A$ 的列向量识别为 $A^*X=0$ 的解；(4) 由具体代数余子式 $A_{12}\\neq0$ 锁定哪三个列向量线性无关。\n\n四阶方阵 $A$ 的伴随矩阵秩公式为\n$$r(A^*)=\\begin{cases} 4,& r(A)=4,\\\\ 1,& r(A)=3,\\\\ 0,& r(A)<3.\\end{cases}$$\n\n【解答】\n\n第一步：确定 $r(A)$ 与解空间维数。\n\n$A$ 不可逆 $\\Rightarrow r(A)\\le 3$。又代数余子式 $A_{12}\\neq0$，说明 $A$ 存在非零的三阶子式（$A_{12}$ 对应删去第 1 行、第 2 列后的三阶子式），故 $r(A)\\ge 3$。两者结合得 $r(A)=3$。\n\n由伴随秩公式，$r(A^*)=1$。于是 $A^*X=0$ 的解空间维数为 $4-r(A^*)=4-1=3$，基础解系含 3 个线性无关向量。\n\n第二步：找出 $A^*X=0$ 的解。\n\n由 $A^*A=|A|E$，而 $A$ 不可逆，$|A|=0$，故\n$$A^*A=O.$$\n把 $A=(\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4)$ 按列代入，得 $A^*\\alpha_i=0\\,(i=1,2,3,4)$，即 $A$ 的每一列都是 $A^*X=0$ 的解。\n\n第三步：选出 3 个线性无关的列。\n\n解空间是 3 维，需要从 $\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4$ 中取出 3 个线性无关者作为基础解系。由 $r(A)=3$，四列中恰有某三列线性无关。\n\n$A_{12}$ 是删去第 1 行、第 2 列所得三阶子式（带符号）。$A_{12}\\neq0$ 意味着 $A$ 去掉第 2 列后、再去掉第 1 行剩下的三阶矩阵可逆，该三阶矩阵的列正是 $\\alpha_1,\\alpha_3,\\alpha_4$ 的第 2、3、4 个分量构成的列。其行列式非零，说明 $\\alpha_1,\\alpha_3,\\alpha_4$ 这三个四维列向量线性无关（它们的某个三阶子式非零）。\n\n因此 $\\alpha_1,\\alpha_3,\\alpha_4$ 构成 $A^*X=0$ 的一个基础解系，通解为\n$$X=k_1\\alpha_1+k_2\\alpha_3+k_3\\alpha_4\\quad(k_1,k_2,k_3\\text{ 任意}).$$\n\n选 C。",
+      "wrong_options": {
+        "A": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_3\\\\}$ 不一定线性无关：$A_{12}\\neq0$ 保证无关的是去掉第 2 列的 $\\alpha_1,\\alpha_3,\\alpha_4$，这里含被去掉的 $\\alpha_2$，无法断定其无关。",
+        "B": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_4\\\\}$ 含 $\\alpha_2$，同样无法由 $A_{12}\\neq0$ 保证线性无关。",
+        "D": "$\\\\{\\alpha_2,\\alpha_3,\\alpha_4\\\\}$ 含 $\\alpha_2$ 却不含 $\\alpha_1$，而 $A_{12}\\neq0$ 锁定的无关组恰是 $\\alpha_1,\\alpha_3,\\alpha_4$，故不能保证 D 中三列无关。"
+      },
+      "pitfalls": [
+        "把 $r(A^*)$ 算错：四阶矩阵在 $r(A)=3$ 时 $r(A^*)=1$，解空间是 3 维而非 1 维。",
+        "知道列向量是解，却选错了线性无关的三列——$A_{12}$ 删的是第 2 列，故无关组应排除 $\\alpha_2$。",
+        "忘记用 $A^*A=|A|E=O$ 这一桥梁，导致不知道 $A$ 的列就是 $A^*X=0$ 的解。"
+      ],
+      "key_point": "$r(A)=3\\Rightarrow r(A^*)=1$，解空间 3 维；由 $A^*A=O$ 知列向量皆为解，再用 $A_{12}\\neq0$ 锁定无关列 $\\alpha_1,\\alpha_3,\\alpha_4$。"
+    },
+    {
+      "id": 194,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的属于特征值 1 的线性无关的特征向量, $\\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{A}$ 的属于特征 值 -1 的特征向量, 则满足 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$ 的可逆矩阵 $\\boldsymbol{P}$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
+        "B": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
+        "C": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$",
+        "D": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题考查相似对角化中 $P$ 各列与对角矩阵对角元的对应关系。若 $P^{-1}AP=\\Lambda=\\mathrm{diag}(\\lambda_1,\\lambda_2,\\lambda_3)$，即 $AP=P\\Lambda$，逐列比较得 $A p_i=\\lambda_i p_i$，所以 $P$ 的第 $i$ 列必须是属于特征值 $\\lambda_i$ 的特征向量，且三列线性无关（$P$ 可逆）。本题 $\\Lambda=\\mathrm{diag}(1,-1,1)$，故 $P$ 的第 1 列、第 3 列要是属于特征值 $1$ 的特征向量，第 2 列要是属于特征值 $-1$ 的特征向量。\n\n【解答】\n\n设 $P=(p_1,p_2,p_3)$。由 $AP=P\\Lambda$ 且 $\\Lambda=\\mathrm{diag}(1,-1,1)$，需满足\n$$Ap_1=1\\cdot p_1,\\qquad Ap_2=-1\\cdot p_2,\\qquad Ap_3=1\\cdot p_3,$$\n即 $p_1,p_3$ 是特征值 $1$ 的特征向量，$p_2$ 是特征值 $-1$ 的特征向量，且 $p_1,p_2,p_3$ 线性无关。\n\n已知：$\\alpha_1,\\alpha_2$ 是特征值 $1$ 的线性无关特征向量；$\\alpha_3$ 是特征值 $-1$ 的特征向量。\n\n关于特征值 $1$ 的特征向量：$\\alpha_1,\\alpha_2$ 及其非零线性组合（如 $\\alpha_1+\\alpha_2$）都是特征值 $1$ 的特征向量。注意 $\\alpha_1+\\alpha_3$ 不是任何单一特征值的特征向量（因为 $A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$ 不是 $\\alpha_1+\\alpha_3$ 的倍数），故凡含 $\\alpha_1+\\alpha_3$ 作为某列的选项都不合格。\n\n关于特征值 $-1$ 的特征向量：$\\alpha_3$ 与 $-\\alpha_3$ 都是特征值 $-1$ 的特征向量。\n\n逐项核对位置（第 1、3 列需属于 $1$，第 2 列需属于 $-1$）：\n\n- A $=(\\alpha_1+\\alpha_3,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，且第 2 列 $\\alpha_2$ 属于 $1$ 而该位置要 $-1$，错。\n- B $=(\\alpha_1+\\alpha_2,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$（对），但第 2 列 $\\alpha_2$ 属于 $1$，而该位置要求属于 $-1$，错。\n- C $=(\\alpha_1+\\alpha_3,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，错。\n- D $=(\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$；第 2 列 $-\\alpha_3$ 属于 $-1$；第 3 列 $\\alpha_2$ 属于 $1$，位置全部吻合。\n\n再验线性无关：$\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2$。由于 $\\alpha_1,\\alpha_2$ 无关且分属特征值 $1$、$\\alpha_3$ 属特征值 $-1$（不同特征值特征向量无关），可验证这三个向量线性无关：若 $c_1(\\alpha_1+\\alpha_2)+c_2(-\\alpha_3)+c_3\\alpha_2=0$，即 $c_1\\alpha_1+(c_1+c_3)\\alpha_2-c_2\\alpha_3=0$，因 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关得 $c_1=0,\\\\;c_1+c_3=0,\\\\;c_2=0$，故 $c_1=c_2=c_3=0$。$P$ 可逆。\n\n选 D。",
+      "wrong_options": {
+        "A": "第 2 列 $\\alpha_2$ 属于特征值 $1$，但该位置对应对角元 $-1$，需属于 $-1$；且第 1 列 $\\alpha_1+\\alpha_3$ 根本不是特征向量。",
+        "B": "第 2 列 $\\alpha_2$ 属于特征值 $1$，而第 2 个对角元为 $-1$，位置不匹配。",
+        "C": "第 1 列 $\\alpha_1+\\alpha_3$ 是不同特征值特征向量之和，已不是 $A$ 的特征向量（$A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$），不满足 $Ap_1=p_1$。"
+      },
+      "pitfalls": [
+        "忽视 $P$ 各列与 $\\Lambda$ 对角元的「按序对应」：第 2 列必须配特征值 $-1$，不能放属于 $1$ 的向量。",
+        "误以为 $\\alpha_1+\\alpha_3$（不同特征值特征向量之和）仍是特征向量——它一般不是。",
+        "$-\\alpha_3$ 仍是属于 $-1$ 的特征向量（特征向量的非零倍数仍是特征向量），不要因为负号而排除。"
+      ],
+      "key_point": "$AP=P\\Lambda$ 要求 $P$ 第 $i$ 列是属于第 $i$ 个对角元的特征向量，按 $1,-1,1$ 的顺序对号入座。"
+    },
+    {
+      "id": 196,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $z=\\arctan [x y+\\sin (x+y)]$, 则 $\\left.\\mathrm{d} z\\right|_{(0, \\pi)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(\\pi-1) \\mathrm{d} x-\\mathrm{d} y$",
+      "analysis": "【分析】\n这是复合函数求全微分。设外层 $z=\\arctan u$，内层 $u=xy+\\sin(x+y)$。利用 $(\\arctan u)'=\\dfrac{1}{1+u^2}$ 配合链式法则分别求 $z_x,z_y$，再代入点 $(0,\\pi)$，按全微分公式 $\\mathrm{d}z=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y$ 写出结果。关键是先算出该点处内层 $u$ 的值，从而确定因子 $\\dfrac{1}{1+u^2}$。\n\n【解答】\n令 $u=xy+\\sin(x+y)$。在点 $(0,\\pi)$ 处：\n$$u\\big|_{(0,\\pi)}=0\\cdot\\pi+\\sin(0+\\pi)=0,\\qquad \\dfrac{1}{1+u^2}\\Big|_{(0,\\pi)}=\\dfrac{1}{1+0}=1.$$\n\n求偏导（链式法则）：\n$$z_x=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial x}=\\dfrac{1}{1+u^2}\\big[y+\\cos(x+y)\\big],$$\n$$z_y=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial y}=\\dfrac{1}{1+u^2}\\big[x+\\cos(x+y)\\big].$$\n\n代入 $(0,\\pi)$，注意 $\\cos(0+\\pi)=-1$：\n$$z_x\\big|_{(0,\\pi)}=1\\cdot\\big[\\pi+(-1)\\big]=\\pi-1,$$\n$$z_y\\big|_{(0,\\pi)}=1\\cdot\\big[0+(-1)\\big]=-1.$$\n\n故全微分\n$$\\mathrm{d}z\\big|_{(0,\\pi)}=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y=(\\pi-1)\\,\\mathrm{d}x-\\mathrm{d}y.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先在该点求出内层 $u=0$，使外层因子 $\\dfrac{1}{1+u^2}=1$，否则容易漏掉这个系数。",
+        "$\\cos(x+y)$ 在求 $z_x$ 和 $z_y$ 时都出现，别只在一处求导。",
+        "$\\dfrac{\\partial}{\\partial y}(xy)=x$ 在 $x=0$ 处为 0，但 $\\cos(x+y)$ 的贡献仍在，结果 $z_y=-1$ 不为 0。"
+      ],
+      "key_point": "复合函数链式求偏导，先算该点内层值定因子，再套全微分公式。"
+    }
+  ]
+}

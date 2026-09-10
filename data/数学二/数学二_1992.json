@@ -1,0 +1,412 @@
+{
+  "paper": "数学二",
+  "year": 1992,
+  "count": 20,
+  "questions": [
+    {
+      "id": 1173,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 1$ 时, 函数 $\\displaystyle \\frac{x^{2}-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 的极限 $(\\quad)$",
+      "options": {
+        "A": "等于 $2$",
+        "B": "等于 $0$",
+        "C": "为 $\\infty$",
+        "D": "不存在但不是 $\\infty$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 1^{-}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{-}} \\mathrm{e}^{\\frac{1}{x-1}}=0,\\\\\r\n \\lim _{x \\rightarrow 1^{+}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{+}} \\mathrm{e}^{\\frac{1}{x-1}}=+\\infty$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 不存在但不是 $\\infty$, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "只算前一因子 (x²-1)/(x-1)→2，忽略了指数因子 e^{1/(x-1)} 在 x=1 两侧的截然不同行为。",
+        "B": "只考察左极限（x→1⁻ 时 e^{1/(x-1)}→0 使乘积→0），漏掉右极限。",
+        "C": "只考察右极限（x→1⁺ 时乘积→+∞），误把它当作整体极限，得 ∞。"
+      },
+      "pitfalls": [
+        "e^{1/(x-1)} 在 x=1 处左右极限分别为 0 与 +∞，必须分侧讨论",
+        "左极限有限（0）、右极限为 +∞，故极限不存在但也不是 ∞"
+      ],
+      "key_point": "左极限 0、右极限 +∞ 不相等且一侧有限，故极限不存在但不是 ∞。"
+    },
+    {
+      "id": 1180,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}1+x^{2}, & x \\leqslant 0 \\\\ \\mathrm{e}^{-x}, & x>0\\end{array}\\right.$ 求 $\\displaystyle \\int_{1}^{3} f(x-2) \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{7}{3}-\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "$\\displaystyle \\int_1^3 f(x-2) \\mathrm{d} x \\\\\r\n=\\int_1^3 f(x-2) \\mathrm{d}(x-2)=\\int_{-1}^1 f(x) \\mathrm{d} x \\\\\r\n=\\int_{-1}^0\\left(1+x^2\\right) \\mathrm{d} x+\\int_0^1 \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\frac{7}{3}-\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元 u=x-2 后积分限由 [1,3] 变为 [-1,1]，别忘同步变限",
+        "被积在 u=0 处分段，须拆成 ∫_{-1}^0(1+u²)+∫_0^1 e^{-u}，用错分支会错"
+      ],
+      "key_point": "u=x-2 化为 ∫_{-1}^{1}f，分段积分得 7/3-1/e。"
+    },
+    {
+      "id": 1183,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f^{\\prime \\prime}(x)<0, f(0)=0$, 证明: 对任意的 $x_{1}>0, x_{2}>0$, 有 $f\\left(x_{1}+x_{2}\\right)<f\\left(x_{1}\\right)+f\\left(x_{2}\\right)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "不妨设 $0<x_1<x_2$, 由拉格朗日中值定理得\r\n\r\n$f\\left(x_1\\right)=f\\left(x_1\\right)-f(0)=f^{\\prime}\\left(\\xi_1\\right) x_1$,\r\n\r\n其中 $0<\\xi_1<x_1$,\r\n\r\n$f\\left(x_1+x_2\\right)-f\\left(x_2\\right)=f^{\\prime}\\left(\\xi_2\\right) x_1$,\r\n\r\n其中 $x_2<\\xi_2<x_1+x_2$,\r\n\r\n\r\n因为 $f^{\\prime \\prime}(x)<0$, 所以 $f^{\\prime}(x)$ 单调递减, \r\n\r\n又因为 $\\xi_1<\\xi_2$, 所以 $f^{\\prime}\\left(\\xi_1\\right)>f^{\\prime}\\left(\\xi_2\\right)$,\r\n\r\n即 $f\\left(x_1\\right)>f\\left(x_1+x_2\\right)-f\\left(x_2\\right)$, \r\n\r\n故 $f\\left(x_1+x_2\\right)<f\\left(x_1\\right)+f\\left(x_2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 f(x₁)-f(0) 与 f(x₁+x₂)-f(x₂) 各用一次中值定理，两个中值点 ξ₁<ξ₂ 的大小关系是要害",
+        "f''<0 给出 f' 严格递减，故 f'(ξ₁)>f'(ξ₂)，不等号方向别弄反"
+      ],
+      "key_point": "两段增量各用中值定理，f' 递减使 f'(ξ₁)>f'(ξ₂)，即得 f(x₁+x₂)<f(x₁)+f(x₂)。"
+    },
+    {
+      "id": 1400,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=f(t)-\\pi \\\\ y=f\\left(\\mathrm{e}^{3 t}-1\\right)\\end{array}\\right.$, 其中 $f$ 可导, 且 $f^{\\prime}(0) \\neq 0$, 则 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "$\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{3 \\mathrm{e}^{3 t} f^{\\prime}\\left(\\mathrm{e}^{3 t}-1\\right)}{f^{\\prime}(t)}$, \r\n\r\n则 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=0}=3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t}=3\\mathrm{e}^{3t}f'(\\mathrm{e}^{3t}-1)$ 要用复合函数链式法则",
+        "代 $t=0$ 时 $\\mathrm{e}^{0}-1=0$，分子分母的 $f'(0)$ 约去（$f'(0)\\ne0$ 保证可约）"
+      ],
+      "key_point": "$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\Big|_{t=0}=\\dfrac{3f'(0)}{f'(0)}=3$。"
+    },
+    {
+      "id": 1401,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $y=x+2 \\cos x$ 在区间 $\\left[0, \\dfrac{\\pi}{2}\\right]$ 上的最大值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{6}+\\sqrt{3}$",
+      "analysis": "由 $y^{\\prime}=1-2 \\sin x=0$, 得 $x=\\dfrac{\\pi}{6}$.\r\n\r\n由 $y(0)=2, y\\left(\\dfrac{\\pi}{6}\\right)=\\dfrac{\\pi}{6}+\\sqrt{3}, y\\left(\\dfrac{\\pi}{2}\\right)=\\dfrac{\\pi}{2}$,\r\n\r\n得最大值为 $y\\left(\\dfrac{\\pi}{6}\\right)=\\dfrac{\\pi}{6}+\\sqrt{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "闭区间最值要比较驻点 $x=\\dfrac{\\pi}{6}$ 与两端点 $0,\\dfrac{\\pi}{2}$ 的值",
+        "$y(\\pi/6)=\\dfrac{\\pi}{6}+\\sqrt3$ 最大，别漏比端点"
+      ],
+      "key_point": "驻点 $x=\\dfrac{\\pi}{6}$ 处 $y=\\dfrac{\\pi}{6}+\\sqrt3$ 为最大值。"
+    },
+    {
+      "id": 1402,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{1-\\sqrt{1-x^2}}{\\mathrm{e}^x-\\cos x}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "由 $1-\\sqrt{1-x^2}=-\\left[\\left(1-x^2\\right)^{\\frac{1}{2}}-1\\right] \\sim-\\dfrac{1}{2}\\left(-x^2\\right)=\\dfrac{1}{2} x^2,\\\\\r\n\\mathrm{e}^x-\\cos x \\sim 1+x+\\dfrac{1}{2} x^2-\\left(1-\\frac{1}{2} x^2\\right)=x+x^2$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{1-\\sqrt{1-x^2}}{\\mathrm{e}^x-\\cos x}=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子 $1-\\sqrt{1-x^2}\\sim\\dfrac{x^2}{2}$（二阶），分母 $\\mathrm{e}^x-\\cos x\\sim x$（一阶），比值 $\\sim\\dfrac{x}{2}\\to0$",
+        "分母主项是一阶的 x（来自 e^x 的 x 项），不要误配成二阶"
+      ],
+      "key_point": "分子二阶、分母一阶，极限为 0。"
+    },
+    {
+      "id": 1403,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_1^{+\\infty} \\frac{\\mathrm{d} x}{x\\left(x^2+1\\right)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2} \\ln 2$",
+      "analysis": "$\\displaystyle \\int_1^{+\\infty} \\frac{\\mathrm{d} x}{x\\left(x^2+1\\right)}\\\\\r\n=\\frac{1}{2} \\int_1^{+\\infty} \\frac{\\mathrm{d}\\left(x^2\\right)}{x^2\\left(x^2+1\\right)}\\\\\r\n=\\left.\\frac{1}{2} \\ln \\frac{x^2}{x^2+1}\\right|_1 ^{+\\infty}=\\frac{1}{2} \\ln 2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "凑 $\\mathrm{d}(x^2)$ 后 $\\dfrac{1}{x^2(x^2+1)}=\\dfrac{1}{x^2}-\\dfrac{1}{x^2+1}$",
+        "上限取极限时 $\\ln\\dfrac{x^2}{x^2+1}\\to\\ln1=0$"
+      ],
+      "key_point": "$\\dfrac12\\ln\\dfrac{x^2}{x^2+1}\\Big|_1^{+\\infty}=\\dfrac12\\ln2$。"
+    },
+    {
+      "id": 1404,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "由曲线 $y=x \\mathrm{e}^x$ 与直线 $y=\\mathrm{e} x$ 所围成图形的面积 $S=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\mathrm{e}}{2}-1$",
+      "analysis": "$\\displaystyle S=\\int_0^1\\left(\\mathrm{e} x-x \\mathrm{e}^x\\right) \\mathrm{d} x=\\frac{\\mathrm{e}}{2}-\\left.(x-1) \\mathrm{e}^x\\right|_0 ^1=\\frac{\\mathrm{e}}{2}-1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "在 $[0,1]$ 上直线 $\\mathrm{e}x$ 在上、曲线 $x\\mathrm{e}^x$ 在下，面积取上减下",
+        "$\\int x\\mathrm{e}^x\\mathrm{d}x=(x-1)\\mathrm{e}^x$ 用分部积分"
+      ],
+      "key_point": "$S=\\int_0^1(\\mathrm{e}x-x\\mathrm{e}^x)\\mathrm{d}x=\\dfrac{\\mathrm{e}}{2}-1$。"
+    },
+    {
+      "id": 1405,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $x-\\sin x$ 是 $x^2$ 的 $(\\quad)$",
+      "options": {
+        "A": "低阶无穷小",
+        "B": "高阶无穷小",
+        "C": "等价无穷小",
+        "D": "同阶但非等价的无穷小"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x-\\sin x}{x^2}=\\lim _{x \\rightarrow 0} \\frac{1-\\cos x}{2 x}=0$, \r\n\r\n所以应选 (B)",
+      "wrong_options": {
+        "A": "误判 x-sinx 阶低于 x²，方向相反",
+        "C": "误以为极限为 1（等价），实际为 0",
+        "D": "误以为极限为非零常数（同阶），实际为 0"
+      },
+      "pitfalls": [
+        "$x-\\sin x\\sim\\dfrac{x^3}{6}$ 是三阶无穷小，比二阶的 $x^2$ 更高阶",
+        "$\\lim\\dfrac{x-\\sin x}{x^2}=0$ 即为高阶无穷小"
+      ],
+      "key_point": "$\\lim\\dfrac{x-\\sin x}{x^2}=0$，故为 $x^2$ 的高阶无穷小，选 B。"
+    },
+    {
+      "id": 1406,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}x^2, & x \\leqslant 0 \\\\ x^2+x, & x>0\\end{array}\\right.$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f(-x)= \\begin{cases}-x^2, & x \\leqslant 0 \\\\ -\\left(x^2+x\\right), & x>0\\end{cases}$",
+        "B": "$f(-x)= \\begin{cases}-\\left(x^2+x\\right), & x<0 \\\\ -x^2, & x \\geqslant 0\\end{cases}$",
+        "C": "$f(-x)= \\begin{cases}x^2, & x \\leqslant 0 \\\\ x^2-x, & x>0\\end{cases}$",
+        "D": "$f(-x)= \\begin{cases}x^2-x, & x<0 \\\\ x^2, & x \\geqslant 0\\end{cases}$"
+      },
+      "answer": "D",
+      "analysis": "- 当 $x<0$ 时, $-x>0$, \r\n\r\n则 $f(-x)=(-x)^2+(-x)=x^2-x$;\r\n\r\n- 当 $x \\geqslant 0$ 时, $-x \\leqslant 0$, \r\n\r\n则 $f(-x)=(-x)^2=x^2$,\r\n\r\n故 $f(-x)=\\left\\{\\begin{array}{ll}x^2-x, & x<0 \\\\ x^2, & x \\geqslant 0\\end{array}\\right.$ \r\n\r\n应选(D)",
+      "wrong_options": {
+        "A": "错把 f(-x) 当成 -f(x)，整体加负号",
+        "B": "区间划分与表达式对应错位",
+        "C": "定义域范围反解错，把 $x\\le0$ 段与 $x>0$ 段搞反"
+      },
+      "pitfalls": [
+        "$x<0$ 时 $-x>0$ 用 $x^2+x$ 段得 $f(-x)=x^2-x$；$x\\ge0$ 时 $-x\\le0$ 用 $x^2$ 段",
+        "注意端点开闭随反射改变（$x=0$ 归入 $x\\ge0$ 段）"
+      ],
+      "key_point": "$f(-x)=\\begin{cases}x^2-x,&x<0\\\\x^2,&x\\ge0\\end{cases}$，选 D。"
+    },
+    {
+      "id": 1407,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 连续, $\\displaystyle F(x)=\\int_0^{x^2} f\\left(t^2\\right) \\mathrm{d} t$, 则 $F^{\\prime}(x)$ 等于$(\\quad)$",
+      "options": {
+        "A": "$f\\left(x^4\\right)$",
+        "B": "$x^2 f\\left(x^4\\right)$",
+        "C": "$2 x f\\left(x^4\\right)$",
+        "D": "$2 x f\\left(x^2\\right)$"
+      },
+      "answer": "C",
+      "analysis": "$F^{\\prime}(x)=f\\left(x^4\\right) \\cdot\\left(x^2\\right)^{\\prime}=2 x f\\left(x^4\\right)$, 应选 (C)",
+      "wrong_options": {
+        "A": "漏乘上限 $x^2$ 的导数 $2x$",
+        "B": "上限导数错写成 $x^2$ 而非 $2x$",
+        "D": "把被积函数 $f(t^2)$ 在上限处代成 $f(x^2)$，应为 $f((x^2)^2)=f(x^4)$"
+      },
+      "pitfalls": [
+        "被积函数为 $f(t^2)$，在上限 $t=x^2$ 处取值为 $f((x^2)^2)=f(x^4)$",
+        "再乘以上限导数 $(x^2)'=2x$"
+      ],
+      "key_point": "$F'(x)=f(x^4)\\cdot 2x=2xf(x^4)$，选 C。"
+    },
+    {
+      "id": 1408,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若 $f(x)$ 的导函数是 $\\sin x$, 则 $f(x)$ 有一个原函数为 $(\\quad)$",
+      "options": {
+        "A": "$1+\\sin x$",
+        "B": "$1-\\sin x$",
+        "C": "$1+\\cos x$",
+        "D": "$1-\\cos x$"
+      },
+      "answer": "B",
+      "analysis": "因为 $f^{\\prime}(x)=\\sin x$, 所以 $f(x)=-\\cos x+C_1$, \r\n\r\n于是 $f(x)$ 的原函数\r\n$\\displaystyle F(x)=\\int f(x) \\mathrm{d} x=\\int\\left(-\\cos x+C_1\\right) \\mathrm{d} x=-\\sin x+C_1 x+C_2$\r\n\r\n令 $C_1=0, C_2=1$, 得 $f(x)$ 的一个原函数为 $1-\\sin x$,\r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "符号错，$f$ 的原函数应含 $-\\sin x$",
+        "C": "只积分一次停在 $f$ 层面，答成 $1+\\cos x$",
+        "D": "混淆 f 与其原函数，答成 $1-\\cos x$"
+      },
+      "pitfalls": [
+        "要积分两次：$f=-\\cos x+C_1$，其原函数为 $-\\sin x+C_1x+C_2$",
+        "取 $C_1=0,C_2=1$ 得一个原函数 $1-\\sin x$"
+      ],
+      "key_point": "$f$ 的原函数 $\\int(-\\cos x)\\mathrm{d}x=-\\sin x+C$，取得 $1-\\sin x$，选 B。"
+    },
+    {
+      "id": 1409,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{3+x}{6+x}\\right)^{\\frac{x-1}{2}}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^{-\\frac{3}{2}}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{3+x}{6+x}\\right)^{\\frac{x-1}{2}}\\\\\r\n=\\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{-3}{6+x}\\right)^{-\\frac{6+x}{3}}\\right]^{\\frac{x-1}{2} \\cdot\\left(-\\frac{3}{6+x}\\right)}\\\\\r\n=\\mathrm{e}^{-\\frac{3}{2} \\lim\\limits _{x \\rightarrow \\infty} \\frac{x-1}{6+x}}=\\mathrm{e}^{-\\frac{3}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\dfrac{3+x}{6+x}=1+\\dfrac{-3}{6+x}$，凑成 $1^\\infty$ 用第二重要极限",
+        "指数上极限 $-\\dfrac32\\lim\\dfrac{x-1}{6+x}=-\\dfrac32$"
+      ],
+      "key_point": "极限为 $\\mathrm{e}^{-3/2}$。"
+    },
+    {
+      "id": 1410,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由方程 $y-x \\mathrm{e}^y=1$ 确定, 求 $\\left.\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{x=0}$ 的值",
+      "options": {},
+      "answer": "$2 \\mathrm{e}^2$",
+      "analysis": "当 $x=0$ 时 $y=1,y-x \\mathrm{e}^y=1$ \r\n\r\n两边对 $x$ 求导得 $y^{\\prime}-\\mathrm{e}^y-x \\mathrm{e}^y y^{\\prime}=0$,\r\n\r\n代入得 $y^{\\prime}(0)=\\mathrm{e}$;\r\n\r\n$y^{\\prime}-\\mathrm{e}^y-x \\mathrm{e}^y y^{\\prime}=0$ 两边再对 $x$ 求导得\r\n\r\n$y^{\\prime \\prime}-\\mathrm{e}^y y^{\\prime}-\\mathrm{e}^y y^{\\prime}-x \\mathrm{e}^y y^{\\prime 2}-x \\mathrm{e}^y y^{\\prime \\prime}=0$,\r\n\r\n代入得 $\\left.\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{x=0}=2 \\mathrm{e}^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由 $x=0$ 求出 $y=1$，一阶导得 $y'(0)=\\mathrm{e}$",
+        "对 $y'-\\mathrm{e}^y-x\\mathrm{e}^y y'=0$ 再求导，代入得 $y''(0)=2\\mathrm{e}^2$"
+      ],
+      "key_point": "$y''(0)=2\\mathrm{e}^y y'\\big|_{x=0}=2\\cdot\\mathrm{e}\\cdot\\mathrm{e}=2\\mathrm{e}^2$。"
+    },
+    {
+      "id": 1411,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{x^3}{\\sqrt{1+x^2}} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3}\\left(x^2+1\\right)^{\\frac{3}{2}}-\\left(x^2+1\\right)^{\\frac{1}{2}}+C$",
+      "analysis": "$\\displaystyle \\int \\frac{x^3}{\\sqrt{1+x^2}} \\mathrm{d} x \\\\\r\n \\stackrel{x=\\tan t}{=} \\int \\frac{\\tan ^3 t}{\\sec t} \\cdot \\sec ^2 t \\mathrm{d} t\\\\\r\n=\\int \\tan ^3 t \\sec t \\mathrm{d} t \\\\\r\n=\\int\\left(\\sec ^2 t-1\\right) \\mathrm{d}(\\sec t)=\\frac{1}{3} \\sec ^3 t-\\sec t+C \\\\\r\n=\\frac{1}{3}\\left(x^2+1\\right)^{\\frac{3}{2}}-\\left(x^2+1\\right)^{\\frac{1}{2}}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "也可令 $t=\\sqrt{1+x^2}$ 直接凑，$x^2=t^2-1$，避免三角回代",
+        "回代后写成 $(x^2+1)$ 的幂，注意常数 C"
+      ],
+      "key_point": "$\\int\\dfrac{x^3}{\\sqrt{1+x^2}}\\mathrm{d}x=\\tfrac13(x^2+1)^{3/2}-(x^2+1)^{1/2}+C$。"
+    },
+    {
+      "id": 1412,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int_0^\\pi \\sqrt{1-\\sin x} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$4(\\sqrt{2}-1)$",
+      "analysis": "$\\displaystyle \r\n\\int_0^\\pi \\sqrt{1-\\sin x} \\mathrm{d} x \\\\\r\n=\\int_0^\\pi\\left|\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right| \\mathrm{d} x\\\\\r\n=2 \\int_0^\\pi\\left|\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right| \\mathrm{d}\\left(\\frac{x}{2}\\right) \\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}}|\\cos x-\\sin x| \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{4}}(\\cos x-\\sin x) \\mathrm{d} x+2 \\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{2}}(\\sin x-\\cos x) \\mathrm{d} x \\\\\r\n=\\left.2(\\sin x+\\cos x)\\right|_0 ^{\\frac{\\pi}{4}}-\\left.2(\\sin x+\\cos x)\\right|_{\\frac{\\pi}{4}} ^{\\frac{\\pi}{2}}\\\\\r\n=4(\\sqrt{2}-1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\sqrt{1-\\sin x}=\\left|\\cos\\dfrac{x}{2}-\\sin\\dfrac{x}{2}\\right|$，开方后必须带绝对值",
+        "在 $[0,\\pi]$ 上 $\\cos\\dfrac x2-\\sin\\dfrac x2$ 变号，须以 $x=\\dfrac{\\pi}{2}$ 为界分段"
+      ],
+      "key_point": "分段去绝对值积分得 $4(\\sqrt2-1)$。"
+    },
+    {
+      "id": 1413,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $\\left(y-x^3\\right) \\mathrm{d} x-2 x \\mathrm{d} y=0$ 的通解",
+      "options": {},
+      "answer": "$C \\sqrt{x}-\\frac{1}{5} x^3 \\quad ( C$ 为任意常数)",
+      "analysis": "由 $\\left(y-x^3\\right) \\mathrm{d} x-2 x \\mathrm{d} y=0$, \r\n\r\n得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}-\\dfrac{1}{2 x} y=-\\dfrac{1}{2} x^2$, \r\n\r\n解得 $\\displaystyle y=\\left[\\int\\left(-\\frac{1}{2} x^2\\right) \\mathrm{e}^{\\int-\\frac{1}{2 x} \\mathrm{d} x} \\mathrm{d} x+C\\right] \\mathrm{e}^{-\\int-\\frac{1}{2 x} \\mathrm{d} x}\\\\\r\n=C \\sqrt{x}-\\frac{1}{5} x^3 \\quad ( C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "先整理成 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}-\\dfrac{1}{2x}y=-\\dfrac12x^2$ 的标准线性型",
+        "积分因子 $\\mathrm{e}^{-\\int\\frac{1}{2x}\\mathrm{d}x}=x^{-1/2}$"
+      ],
+      "key_point": "通解 $y=C\\sqrt{x}-\\dfrac15x^3$。"
+    },
+    {
+      "id": 1414,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}-3 y^{\\prime}+2 y=x \\mathrm{e}^x$ 的通解",
+      "options": {},
+      "answer": "$y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}-\\left(\\dfrac{x^2}{2}+x\\right) \\mathrm{e}^x \\\\ \\left(C_1, C_2\\right.$ 为任意常数)",
+      "analysis": "特征方程为 $\\lambda^2-3 \\lambda+2=0$,\r\n\r\n特征根为 $\\lambda_1=1, \\lambda_2=2$,\r\n\r\n$y^{\\prime \\prime}-3 y^{\\prime}+2 y=0$ 的通解为 \r\n\r\n$y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}$;\r\n\r\n设原方程的通解为 $y_0(x)=\\left(a x^2+b x\\right) \\mathrm{e}^x$,\r\n\r\n代入得 $a=-\\dfrac{1}{2}, b=-1$,\r\n\r\n原方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}-\\left(\\dfrac{x^2}{2}+x\\right) \\mathrm{e}^x \\\\ \\left(C_1, C_2\\right.$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\lambda=1$ 是单特征根，$x\\mathrm{e}^x$ 共振，特解须设 $(ax^2+bx)\\mathrm{e}^x$（乘 x）",
+        "比较系数得 $a=-\\dfrac12,b=-1$"
+      ],
+      "key_point": "通解 $y=C_1\\mathrm{e}^x+C_2\\mathrm{e}^{2x}-\\left(\\tfrac{x^2}{2}+x\\right)\\mathrm{e}^x$。"
+    },
+    {
+      "id": 1415,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲线 $y=\\ln \\left(1-x^2\\right)$ 上相应于 $0 \\leqslant x \\leqslant \\dfrac{1}{2}$ 的一段弧的长度",
+      "options": {},
+      "answer": "$\\ln 3-\\frac{1}{2}$",
+      "analysis": "$y^{\\prime}=\\dfrac{-2 x}{1-x^2}$, 则所求的弧长为\r\n\r\n$\\displaystyle \r\nl =\\int_0^{\\frac{1}{2}} \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=\\int_0^{\\frac{1}{2}} \\sqrt{1+\\frac{4 x^2}{\\left(1-x^2\\right)^2}} \\mathrm{d} x \\\\\r\n=\\int_0^{\\frac{1}{2}} \\frac{1+x^2}{1-x^2} \\mathrm{d} x=\\int_0^{\\frac{1}{2}}\\left(\\frac{2}{1-x^2}-1\\right) \\mathrm{d} x \\\\\r\n=\\left.\\ln \\frac{1+x}{1-x}\\right|_0 ^{\\frac{1}{2}}-\\frac{1}{2}=\\ln 3-\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$1+y'^2=\\dfrac{(1+x^2)^2}{(1-x^2)^2}$ 恰为完全平方，开方得 $\\dfrac{1+x^2}{1-x^2}$",
+        "$\\dfrac{1+x^2}{1-x^2}=\\dfrac{2}{1-x^2}-1$ 后积分"
+      ],
+      "key_point": "$l=\\int_0^{1/2}\\dfrac{1+x^2}{1-x^2}\\mathrm{d}x=\\ln3-\\dfrac12$。"
+    },
+    {
+      "id": 1416,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求曲线 $y=\\sqrt{x}$ 的一条切线 $l$, 使该曲线与切线 $l$ 及直线 $x=0, x=2$ 所围成图形的面积最小",
+      "options": {},
+      "answer": "$y=\\dfrac{x}{2}+\\dfrac{1}{2}$",
+      "analysis": "设切点为 $(a, \\sqrt{a})$, \r\n\r\n切线方程为 $y-\\sqrt{a}=\\dfrac{1}{2 \\sqrt{a}}(x-a)$, \r\n\r\n即 $y=\\dfrac{x}{2 \\sqrt{a}}+\\dfrac{\\sqrt{a}}{2}$,\r\n\r\n所围成的面积为 $\\displaystyle S=\\int_0^2\\left(\\frac{x}{2 \\sqrt{a}}+\\frac{\\sqrt{a}}{2}\\right) \\mathrm{d} x-\\int_0^2 \\sqrt{x} \\mathrm{d} x=\\frac{1}{\\sqrt{a}}+\\sqrt{a}-\\frac{4 \\sqrt{2}}{3}$,\r\n\r\n由 $S^{\\prime}=-\\dfrac{1}{2 a \\sqrt{a}}+\\dfrac{1}{2 \\sqrt{a}}=\\dfrac{a-1}{2 a \\sqrt{a}}=0$ 得 $a=1$,\r\n\r\n当 $0<a<1$ 时 $S^{\\prime}<0$; 当 $a>1$ 时 $S^{\\prime}>0$, \r\n\r\n则当 $a=1$ 时所围成的面积最小,\r\n\r\n故所求的切线为 $y=\\dfrac{x}{2}+\\dfrac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "切线含参数 a，面积 $S(a)=\\dfrac{1}{\\sqrt a}+\\sqrt a-\\dfrac{4\\sqrt2}{3}$",
+        "$S'(a)=\\dfrac{a-1}{2a\\sqrt a}=0$ 得 $a=1$，左减右增为极小值"
+      ],
+      "key_point": "$a=1$ 时面积最小，切线 $y=\\dfrac{x}{2}+\\dfrac12$。"
+    }
+  ]
+}

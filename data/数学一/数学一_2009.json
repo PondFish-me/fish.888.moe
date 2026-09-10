@@ -1,0 +1,505 @@
+{
+  "paper": "数学一",
+  "year": 2009,
+  "count": 23,
+  "questions": [
+    {
+      "id": 694,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $f(x)=x-\\sin a x$ 与 $g(x)=x^{2} \\ln (1-b x)$ 是等价无穷小量, 则 $(\\quad)$",
+      "options": {
+        "A": "$a=1, b=-\\dfrac{1}{6}$",
+        "B": "$a=1, b=\\dfrac{1}{6}$",
+        "C": "$a=-1, b=-\\dfrac{1}{6}$",
+        "D": "$a=-1, b=\\dfrac{1}{6}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】等价无穷小 $f\\sim g$ 意味着 $\\lim_{x\\to0}\\dfrac{f}{g}=1$，前提是二者同阶。先用泰勒展开把 $f(x)=x-\\sin ax$ 与 $g(x)=x^2\\ln(1-bx)$ 各自展到最低非零阶，要求阶相同且最低阶系数相等。\n\n【解答】当 $x\\to0$：\n\n$g(x)=x^2\\ln(1-bx)$。由 $\\ln(1-bx)=-bx+o(x)$，得\n$$g(x)=x^2(-bx+o(x))=-b\\,x^3+o(x^3).$$\n这是 $3$ 阶无穷小（当 $b\\neq0$）。\n\n$f(x)=x-\\sin ax$。由 $\\sin ax=ax-\\dfrac{(ax)^3}{6}+o(x^3)=ax-\\dfrac{a^3}{6}x^3+o(x^3)$，得\n$$f(x)=x-ax+\\frac{a^3}{6}x^3+o(x^3)=(1-a)x+\\frac{a^3}{6}x^3+o(x^3).$$\n\n要 $f\\sim g$，须二者同阶。$g$ 的最低阶为 $3$，故 $f$ 的一次项必须为零，即 $1-a=0\\Rightarrow a=1$。此时\n$$f(x)=\\frac{a^3}{6}x^3+o(x^3)=\\frac{1}{6}x^3+o(x^3).$$\n再令最低阶系数相等：$\\dfrac16=-b$，即 $b=-\\dfrac16$。\n\n所以 $a=1,\\ b=-\\dfrac16$，选 A。验证：$f\\sim \\tfrac16 x^3$，$g\\sim -bx^3=\\tfrac16 x^3$，比值 $\\to1$，确为等价无穷小。",
+      "wrong_options": {
+        "B": "$a=1,b=\\dfrac16$ 的 a 正确但 b 符号错：g(x)~-b x³，要等于 f~⅙x³ 须 -b=⅙，即 b=-⅙，不是 +⅙。",
+        "C": "$a=-1,b=-\\dfrac16$ 中 a=-1 使 f 的一次项 (1-a)x=2x≠0，f 变成一阶无穷小，与 g 的三阶不同阶，不可能等价。",
+        "D": "$a=-1,b=\\dfrac16$ 同样 a=-1 导致 f 为一阶无穷小，阶数不匹配，且 b 符号也错。"
+      },
+      "pitfalls": [
+        "f=x-sin ax 必须先让一次项 (1-a)x 消去（a=1），否则 f 是一阶、g 是三阶，根本不同阶。",
+        "g=x²ln(1-bx)~x²·(-bx)=-bx³，注意 ln(1-bx) 的首项是 -bx，符号决定 b=-1/6。",
+        "sin 的三次项系数为 a³/6，a=1 时为 1/6，别漏 1/6 或符号。"
+      ],
+      "key_point": "等价无穷小定阶定系数：泰勒展开后先消去低阶项使两者同阶，再令最低阶系数相等解 a,b。"
+    },
+    {
+      "id": 695,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "如图所示, 正方形 $\\{(x, y) \\mid | x|\\leqslant 1, |y| \\leqslant 1\\}$ 被其对角线划分为四个区域 $D_{k}(k=1,2,3$, 4), $\\displaystyle I_{k}=\\iint\\limits_{D_{k}} y \\cos x \\mathrm{d} x \\mathrm{d} y$, 则 $\\max \\limits_{1 \\leqslant k \\leqslant 4}\\left\\{I_{k}\\right\\}=(\\quad)$\n\n![正方形区域 D1-D4](/figures/695.png)",
+      "options": {
+        "A": "$I_{1}$",
+        "B": "$I_{2}$",
+        "C": "$I_{3}$",
+        "D": "$I_{4}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】正方形被两条对角线 $y=x$、$y=-x$ 分成上、右、下、左四个三角形区域。被积函数 $y\\cos x$ 中 $\\cos x>0$（因 $|x|\\le1<\\frac\\pi2$），符号由 $y$ 决定。利用各区域关于坐标轴的对称性比较四个积分大小：上区域 $y>0$ 积分为正且最大，下区域为负，左右两区域因关于 $x$ 轴对称、被积函数关于 $y$ 为奇函数而积分为 0。\n\n【解答】按惯例（逆时针）记上、右、下、左四块为 $D_1,D_2,D_3,D_4$。在整个正方形上 $|x|\\le1$，故 $\\cos x\\ge\\cos1>0$。\n\n• 上块 $D_1=\\{|x|\\le y,\\,0\\le y\\le1\\}$：其上 $y\\ge0$ 且关于 $y$ 轴对称，被积函数 $y\\cos x$ 关于 $x$ 偶、关于 $y$ 取正，故 $I_1=\\iint_{D_1}y\\cos x>0$。\n\n• 下块 $D_3$ 与 $D_1$ 关于 $x$ 轴对称，$y\\le0$，故 $I_3=-I_1<0$。\n\n• 右块 $D_2$ 与左块 $D_4$ 均关于 $x$ 轴对称（即 $(x,y)\\in D_2\\Leftrightarrow(x,-y)\\in D_2$）。被积函数 $y\\cos x$ 关于 $y$ 为奇函数，故\n$$I_2=\\iint_{D_2}y\\cos x\\,dxdy=0,\\qquad I_4=0.$$\n\n比较：$I_1>0=I_2=I_4>I_3$，故最大值为 $I_1$，选 A。",
+      "wrong_options": {
+        "B": "右块 $D_2$ 关于 $x$ 轴对称，$y\\cos x$ 关于 $y$ 是奇函数，$I_2=0$，并非最大。",
+        "C": "下块 $D_3$ 中 $y<0$，$I_3=-I_1<0$，是四者中最小，不可能是最大。",
+        "D": "左块 $D_4$ 同 $D_2$ 一样关于 $x$ 轴对称，$I_4=0$，不是最大。"
+      },
+      "pitfalls": [
+        "依赖原图的区域编号约定（此处按 $D_1$ 上、$D_2$ 右、$D_3$ 下、$D_4$ 左）；若图中编号不同，结论字母需对应调整，但「最大者为上方区域」不变。",
+        "$\\cos x$ 在 $|x|\\le1$ 上恒正，符号完全由 $y$ 决定，这是比较大小的核心。",
+        "左右两块用「区域关于 $x$ 轴对称 + 被积函数关于 $y$ 为奇」直接判 0，不必硬算。"
+      ],
+      "key_point": "$\\cos x>0$ 时符号看 $y$；上块最大、下块最小，左右两块因奇对称为 0。"
+    },
+    {
+      "id": 696,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 在区间 $[-1,3]$ 上的图形如上图所示, 则函数 $\\displaystyle F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t$ 的图形为 $(\\quad)$\n\n![f(x) 的图形](/figures/696.png)",
+      "options": {
+        "A": "![](/figures/696-a.png)",
+        "B": "![](/figures/696-b.png)",
+        "C": "![](/figures/696-c.png)",
+        "D": "![](/figures/696-d.png)"
+      },
+      "answer": "D",
+      "analysis": "【分析】本题给出 $f(x)$ 在 $[-1,3]$ 上的图形，要识别 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$ 的图形。**先看清 $f$ 是分段给出的，且在 $x=0$ 与 $x=2$ 处有跳跃间断**——这决定了该用哪三道筛子：(1) $F(0)=0$，图形必过原点；(2) 在 $f$ 的连续点处 $F'(x)=f(x)$，故 $f>0$ 处 $F$ 递增、$f<0$ 处 $F$ 递减、$f$ 变号处 $F$ 取极值；(3) $f$ 有界且分段连续 $\\Rightarrow$ $F$ **处处连续**，凡是跳断的候选图直接排除。\n\n⚠️ 不能拿\"光滑、无尖角\"当筛子：$F$ 在 $f$ 的跳跃点处左右导数分别等于 $f$ 的左右极限，**并不相等**，所以正确图形在 $x=0$ 与 $x=2$ 各有一个**折点**。用光滑性去筛会把正确答案一起排除掉。\n\n【解答】依 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$：\n\n第一，$F(0)=\\displaystyle\\int_0^0 f=0$，图形必过原点。C 的图形在 $x=0$ 处取值为 $1$，即 $F(0)=1\\neq0$，**排除 C**。\n\n第二，读原图 $f$ 的符号：$[-1,0)$ 上 $f\\equiv1>0$，故 $F(x)=\\displaystyle\\int_0^x 1\\,\\mathrm{d}t=x$ 是斜率为 $1$ 的**上升**直线，$F(-1)=-1$；$(0,1)$ 上 $f<0$、$(1,2)$ 上 $f>0$，故 $F$ 先降后升、在 $x=1$ 取极小值；$[2,3]$ 上 $f\\equiv0$，故 $F$ 是水平直线。A 在 $[-1,0)$ 上是**下降**的，与 $f>0$ 矛盾，**排除 A**。\n\n第三，$F$ 必处处连续。B 在 $x=2$ 处**跳断**（图上空心点加竖直虚线），变上限积分不可能跳跃，**排除 B**。\n\n于是只剩 D。回头核对 D 的两个折点：$F'(0^-)=1$、$F'(0^+)=-1$；$F'(2^-)=2$、$F'(2^+)=0$——恰与 $f$ 在这两点的左右极限一致，D 完全相容。\n\n综合\"过原点 + 增减随 $f$ 的正负 + 处处连续\"三项筛选，正确图形为 D。",
+      "wrong_options": {
+        "A": "在 $[-1,0)$ 上 $f\\equiv1>0$，$F$ 应是斜率为 $1$ 的上升直线（$F(-1)=-1$）；A 在这一段却在下降，与 $F'=f>0$ 矛盾。A 在 $x=0$ 处还是光滑的，也与 $f$ 在该处跳跃不符。",
+        "B": "B 在 $x=2$ 处跳断（空心点加竖直虚线，函数值直接掉到 $0$）。$f$ 有界可积 $\\Rightarrow$ $F(x)=\\int_0^x f$ 处处连续，变上限积分不可能跳跃，故错。",
+        "C": "C 的图形在 $x=0$ 处取值为 $1$，即 $F(0)=1\\neq0$，与 $F(0)=\\int_0^0 f=0$ 矛盾（不过原点），故错。注意 C 在 $x=0$ 处有尖角并不是它的毛病——正确答案 D 在这里同样是折点。"
+      },
+      "pitfalls": [
+        "$F(0)=0$ 是积分下限为 $0$ 带来的硬约束，先用它淘汰不过原点的图（本题即排除 C）。",
+        "$f$ 有跳跃间断时，$F$ 仍然处处连续，但在跳跃点不可导（左右导数等于 $f$ 的左右极限），正确图形在那里是折点。把「光滑无尖角」当判据会连正确答案一起排除。",
+        "$F'=f$ 只在 $f$ 的连续点成立；判增减必须逐段回到原图读 $f$ 的符号，别只数极值个数。"
+      ],
+      "key_point": "看 $F(x)=\\int_0^x f$ 的图，三道筛子是：过原点（$F(0)=0$）、增减随 $f$ 的正负、处处连续（跳断的排除）。$f$ 的跳跃点处 $F$ 是折点而非光滑点——别拿光滑性当筛子。"
+    },
+    {
+      "id": 697,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有两个数列 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\}$, 若 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}=0$, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\sum_{n=1}^{\\infty} b_{n}$ 收敛时,$\\displaystyle \\sum_{n=1}^{\\infty} a_{n} b_{n}$ 收敛",
+        "B": "当 $\\displaystyle \\sum_{n=1}^{\\infty} b_{n}$ 发散时, $\\displaystyle\\sum_{n=1}^{\\infty} a_{n} b_{n}$ 发散",
+        "C": "当 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|b_{n}\\right|$ 收敛时, $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}^{2} b_{n}^{2}$ 收敛",
+        "D": "当 $\\displaystyle \\sum_{n=1}^{\\infty}\\left|b_{n}\\right|$ 发散时,$\\displaystyle \\sum_{n=1}^{\\infty} a_{n}^{2} b_{n}^{2}$ 发散"
+      },
+      "answer": "C",
+      "analysis": "【分析】题目只给 $\\lim\\limits_{n\\to\\infty}a_n=0$（故 $\\{a_n\\}$ 有界），考察四个关于级数收敛/发散的命题哪个一定成立。这类判定题应正面用比较判别法证明正确选项，反面对每个错误选项各举一个反例否定。\n\n【解答】**正确项 C：** 设 $\\displaystyle\\sum_{n=1}^{\\infty}|b_n|$ 收敛。由收敛必要条件 $b_n\\to0$，故存在 $N$，当 $n>N$ 时 $|b_n|<1$，从而 $b_n^2=|b_n|\\cdot|b_n|\\le|b_n|$，由比较判别法 $\\displaystyle\\sum b_n^2$ 收敛。又 $a_n\\to0$ 故 $\\{a_n\\}$ 有界，设 $|a_n|\\le M$，则 $0\\le a_n^2 b_n^2\\le M^2 b_n^2$，再由比较判别法知 $\\displaystyle\\sum_{n=1}^{\\infty}a_n^2 b_n^2$ 收敛。故 C 成立，选 C。\n\n**反例否定其余三项：**\n- A 错。取 $a_n=b_n=\\dfrac{(-1)^n}{\\sqrt n}$，则 $a_n\\to0$；$\\displaystyle\\sum b_n=\\sum\\dfrac{(-1)^n}{\\sqrt n}$ 由莱布尼茨判别法收敛，但 $\\displaystyle\\sum a_n b_n=\\sum\\dfrac1n$ 发散。可见 $\\sum b_n$ 收敛不能保证 $\\sum a_n b_n$ 收敛。\n- B 错。取 $a_n=b_n=\\dfrac1n$，则 $a_n\\to0$；$\\displaystyle\\sum b_n=\\sum\\dfrac1n$ 发散，而 $\\displaystyle\\sum a_n b_n=\\sum\\dfrac1{n^2}$ 收敛。可见 $\\sum b_n$ 发散不能保证 $\\sum a_n b_n$ 发散。\n- D 错。取 $a_n=b_n=\\dfrac1{\\sqrt n}$，则 $a_n\\to0$；$\\displaystyle\\sum|b_n|=\\sum\\dfrac1{\\sqrt n}$ 发散，而 $\\displaystyle\\sum a_n^2 b_n^2=\\sum\\dfrac1{n^2}$ 收敛。可见 $\\sum|b_n|$ 发散不能保证 $\\sum a_n^2 b_n^2$ 发散。\n\n综上，只有 C 一定成立，选 **C**。",
+      "wrong_options": {
+        "A": "反例 $a_n=b_n=\\dfrac{(-1)^n}{\\sqrt n}$：$\\sum b_n$ 收敛，但 $\\sum a_n b_n=\\sum\\dfrac1n$ 发散。仅 $a_n\\to0$ 不能保证 $\\sum a_n b_n$ 收敛。",
+        "B": "反例 $a_n=b_n=\\dfrac1n$：$\\sum b_n$ 发散，而 $\\sum a_n b_n=\\sum\\dfrac1{n^2}$ 收敛。发散级数乘以趋零因子可变收敛。",
+        "D": "反例 $a_n=b_n=\\dfrac1{\\sqrt n}$：$\\sum|b_n|$ 发散，而 $\\sum a_n^2 b_n^2=\\sum\\dfrac1{n^2}$ 收敛。"
+      },
+      "pitfalls": [
+        "$a_n\\to0$ 只说明 $\\{a_n\\}$ 有界，绝不能由此推出 $\\sum a_n$ 或 $\\sum a_n b_n$ 收敛。",
+        "正面命题用比较判别法（绝对收敛 $\\Rightarrow b_n^2\\le|b_n|$ 平方收敛，再乘有界 $a_n^2$）；反面命题各举一反例即可否定。"
+      ],
+      "key_point": "级数判定题：正确项用比较法证明（趋零→有界、绝对收敛→平方收敛），错误项一一举反例否定。"
+    },
+    {
+      "id": 698,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 是 $3$ 维向量空间 $\\mathbf{R}^{3}$ 的一组基, 则由基 $\\boldsymbol{\\alpha}_{1}, \\dfrac{1}{2} \\boldsymbol{\\alpha}_{2}, \\dfrac{1}{3} \\boldsymbol{\\alpha}_{3}$ 到基 $\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}$, $\\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{1}$ 的过渡矩阵为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 2 & 2 & 0 \\\\ 0 & 3 & 3\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}1 & 2 & 0 \\\\ 0 & 2 & 3 \\\\ 1 & 0 & 3\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{ccc}\\frac{1}{2} & \\frac{1}{4} & -\\frac{1}{6} \\\\ -\\frac{1}{2} & \\frac{1}{4} & \\frac{1}{6} \\\\ \\frac{1}{2} & -\\frac{1}{4} & \\frac{1}{6}\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{ccc}\\frac{1}{2} & -\\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{4} & \\frac{1}{4} & -\\frac{1}{4} \\\\ -\\frac{1}{6} & \\frac{1}{6} & \\frac{1}{6}\\end{array}\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】过渡矩阵 $P$ 满足『新基 = 旧基 $\\times P$』，即 $P$ 的第 $j$ 列是第 $j$ 个新基向量在旧基下的坐标。把新基向量用旧基 $\\bigl(\\alpha_1,\\tfrac12\\alpha_2,\\tfrac13\\alpha_3\\bigr)$ 线性表出，读出坐标即为各列。\n\n【解答】记旧基 $e_1=\\alpha_1,\\ e_2=\\dfrac12\\alpha_2,\\ e_3=\\dfrac13\\alpha_3$，则\n$$\\alpha_1=e_1,\\qquad \\alpha_2=2e_2,\\qquad \\alpha_3=3e_3.$$\n将新基逐个用 $e_1,e_2,e_3$ 表出：\n$$\\alpha_1+\\alpha_2=e_1+2e_2\\ \\Rightarrow\\ (1,2,0)^{\\mathrm T},$$\n$$\\alpha_2+\\alpha_3=2e_2+3e_3\\ \\Rightarrow\\ (0,2,3)^{\\mathrm T},$$\n$$\\alpha_3+\\alpha_1=e_1+3e_3\\ \\Rightarrow\\ (1,0,3)^{\\mathrm T}.$$\n这三个坐标列依次作为 $P$ 的第一、二、三列：\n$$P=\\begin{pmatrix}1&0&1\\\\2&2&0\\\\0&3&3\\end{pmatrix}.$$\n即由基 $\\alpha_1,\\tfrac12\\alpha_2,\\tfrac13\\alpha_3$ 到基 $\\alpha_1+\\alpha_2,\\alpha_2+\\alpha_3,\\alpha_3+\\alpha_1$ 的过渡矩阵为选项 A。\n\n验证（以第一列为例）：旧基乘第一列 $=1\\cdot\\alpha_1+2\\cdot\\tfrac12\\alpha_2+0\\cdot\\tfrac13\\alpha_3=\\alpha_1+\\alpha_2$，正是第一个新基向量，正确。",
+      "wrong_options": {
+        "B": "把坐标按行排了（或求成了逆/转置方向）：$(1,2,0),(0,2,3),(1,0,3)$ 应作列而非行，B 是这些向量作行的结果，方向错。",
+        "C": "这是反方向（由新基到旧基）的过渡矩阵，即 A 的逆，求解时把基的先后次序弄反了。",
+        "D": "同样是逆方向且再转置，含 $\\tfrac12,\\tfrac14,-\\tfrac16$ 等分数，是错误地对旧基系数取倒数所致。"
+      },
+      "pitfalls": [
+        "过渡矩阵约定『新基 = 旧基 × P』，$P$ 的列是新基在旧基下的坐标；分清谁是旧基谁是新基，方向反了得到的是逆矩阵。",
+        "旧基里的 $\\tfrac12\\alpha_2,\\tfrac13\\alpha_3$ 反解出 $\\alpha_2=2e_2,\\alpha_3=3e_3$，系数取的是 $2,3$ 而非 $\\tfrac12,\\tfrac13$。"
+      ],
+      "key_point": "求过渡矩阵：把新基向量用旧基线性表示，所得坐标按列拼起来即得；坐标按列、方向莫反。"
+    },
+    {
+      "id": 699,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 均为 $2$ 阶矩阵, $\\boldsymbol{A}^{*}, \\boldsymbol{B}^{*}$ 分别为 $\\boldsymbol{A}, \\boldsymbol{B}$ 的伴随矩阵. 若 $|\\boldsymbol{A}|=2,|\\boldsymbol{B}|=3$, 则分块矩阵 $\\left(\\begin{array}{ll}\\boldsymbol{O} & \\boldsymbol{A} \\\\ \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$ 的伴随矩阵为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 3 \\boldsymbol{B}^{*} \\\\ 2 \\boldsymbol{A}^{*} & \\boldsymbol{O}\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 2 \\boldsymbol{B}^{*} \\\\ 3 \\boldsymbol{A}^{*} & \\boldsymbol{O}\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 3 \\boldsymbol{A}^{*} \\\\ 2 \\boldsymbol{B} & \\boldsymbol{O}\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{cc}\\boldsymbol{O} & 2 \\boldsymbol{A}^{*} \\\\ 3 \\boldsymbol{B}^{*} & \\boldsymbol{O}\\end{array}\\right)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】求伴随矩阵用核心公式 $M^*=|M|M^{-1}$。先算分块反对角矩阵 $M=\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}$ 的行列式与逆，再用 $A^*=|A|A^{-1}$、$B^*=|B|B^{-1}$ 把结果换成 $A^*,B^*$ 表达。\n\n【解答】记 $M=\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}$，$A,B$ 均 $2$ 阶。\n\n**行列式：** 对 $n$ 阶块的反对角分块阵 $\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}=(-1)^{n^2}|A||B|$，此处 $n=2$，$(-1)^{4}=1$，故\n$$|M|=|A|\\,|B|=2\\times3=6.$$\n\n**逆矩阵：** 由 $\\begin{pmatrix}O&A\\\\B&O\\end{pmatrix}\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}=\\begin{pmatrix}AA^{-1}&O\\\\O&BB^{-1}\\end{pmatrix}=I$，得\n$$M^{-1}=\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}.$$\n\n**伴随：**\n$$M^*=|M|M^{-1}=6\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}=\\begin{pmatrix}O&6B^{-1}\\\\6A^{-1}&O\\end{pmatrix}.$$\n再用 $B^{-1}=\\dfrac{B^*}{|B|}=\\dfrac{B^*}{3}$，$A^{-1}=\\dfrac{A^*}{|A|}=\\dfrac{A^*}{2}$：\n$$6B^{-1}=\\frac{6}{3}B^*=2B^*,\\qquad 6A^{-1}=\\frac{6}{2}A^*=3A^*.$$\n故\n$$M^*=\\begin{pmatrix}O&2B^*\\\\3A^*&O\\end{pmatrix},$$\n选 **B**。\n\n（验证：取 $A=\\mathrm{diag}(2,1),B=\\mathrm{diag}(3,1)$ 直接计算 $M^*=|M|M^{-1}$，结果与 $\\begin{pmatrix}O&2B^*\\\\3A^*&O\\end{pmatrix}$ 完全一致。）",
+      "wrong_options": {
+        "A": "右上、左下系数写反成 $3B^*,2A^*$。由 $6B^{-1}=\\frac{6}{|B|}B^*=2B^*$、$6A^{-1}=\\frac{6}{|A|}A^*=3A^*$，系数应是 $2$ 配 $B^*$、$3$ 配 $A^*$。",
+        "C": "块的位置与类型混乱：把 $A^*$ 放到右上、且出现未取伴随的 $B$，与 $M^*$ 的反对角结构 $\\begin{pmatrix}O&\\cdot B^*\\\\\\cdot A^*&O\\end{pmatrix}$ 不符。",
+        "D": "右上写成 $2A^*$、左下写成 $3B^*$，把 $A^*$ 与 $B^*$ 的位置整体放反（应右上 $B^*$、左下 $A^*$）。"
+      },
+      "pitfalls": [
+        "核心公式 $M^*=|M|M^{-1}$；$|M|=|A||B|=6$（$2$ 阶块反对角符号 $(-1)^{4}=1$）",
+        "反对角块阵的逆是 $\\begin{pmatrix}O&B^{-1}\\\\A^{-1}&O\\end{pmatrix}$，注意 $A^{-1},B^{-1}$ 交叉到对角",
+        "换伴随时 $6B^{-1}=\\frac{6}{|B|}B^*=2B^*$、$6A^{-1}=\\frac{6}{|A|}A^*=3A^*$，系数与 $A^*/B^*$ 的搭配不要错位"
+      ],
+      "key_point": "伴随=$|M|M^{-1}$；分块反对角阵先求逆（交叉位置取逆），再用 $X^{-1}=X^*/|X|$ 换成伴随表达。"
+    },
+    {
+      "id": 700,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的分布函数为 $F(x)=0.3 \\Phi(x)+0.7 \\Phi\\left(\\dfrac{x-1}{2}\\right)$, 其中 $\\Phi(x)$ 为标准正态分布的分布函数, 则 $E(X)=(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$0.3$",
+        "C": "$0.7$",
+        "D": "$1$"
+      },
+      "answer": "C",
+      "analysis": "【分析】分布函数是两个正态分布函数的凸组合,这意味着 $X$ 是\"混合分布\":以概率 $0.3$ 服从 $N(0,1)$,以概率 $0.7$ 服从 $N(1,2^2)$。混合分布的期望等于各成分期望按权重加权(由期望线性性立得),无需求密度积分。\n\n【解答】$F(x)=0.3\\,\\Phi(x)+0.7\\,\\Phi\\!\\left(\\dfrac{x-1}{2}\\right)$。\n其中 $\\Phi(x)$ 是 $N(0,1)$ 的分布函数,均值 $\\mu_1=0$;\n$\\Phi\\!\\left(\\dfrac{x-1}{2}\\right)$ 是 $N(1,2^2)$ 的分布函数,均值 $\\mu_2=1$。\n两个分布函数都对应概率密度,故 $f(x)=0.3 f_1(x)+0.7 f_2(x)$ 是混合密度,权重 $0.3$ 与 $0.7$ 之和为 $1$。由期望线性性:\n$$E(X)=\\int_{-\\infty}^{+\\infty}x f(x)\\,\\mathrm{d}x=0.3\\int x f_1\\,\\mathrm{d}x+0.7\\int x f_2\\,\\mathrm{d}x=0.3\\mu_1+0.7\\mu_2.$$\n代入 $\\mu_1=0,\\ \\mu_2=1$:\n$$E(X)=0.3\\times 0+0.7\\times 1=0.7.$$\n选 C。",
+      "wrong_options": {
+        "A": "$0$ 只取了第一个成分 $N(0,1)$ 的均值,忽略了占权重 $0.7$ 的 $N(1,4)$ 成分。",
+        "B": "$0.3$ 把权重与均值对应错位,误用第一成分权重当期望。",
+        "D": "$1$ 是第二成分 $N(1,4)$ 的均值,没有按权重 $0.7$ 折算。"
+      },
+      "pitfalls": [
+        "$\\Phi\\!\\left(\\dfrac{x-1}{2}\\right)$ 对应的是均值 $1$、标准差 $2$ 的正态;期望只与均值有关,方差不进入 $E(X)$。",
+        "混合(凸组合)分布的期望是各成分期望的加权和,权重恰是组合系数 $0.3$ 与 $0.7$。"
+      ],
+      "key_point": "分布函数凸组合=混合分布,$E(X)=\\sum$ 权重×成分均值。"
+    },
+    {
+      "id": 701,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且 $X$ 服从标准正态分布 $N(0,1), Y$ 的概率分布为 $P\\{Y=0\\}=P\\{Y=1\\}=\\dfrac{1}{2}$, 记 $F_{Z}(z)$ 为随机变量 $Z=X Y$ 的分布函数, 则函数 $F_{Z}(z)$ 的间断点个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "B",
+      "analysis": "【分析】$Z=XY$，$Y$ 只取 $0,1$，用全概率公式按 $Y$ 的取值拆分。$Y=0$ 时 $Z\\equiv0$（退化分布，分布函数是阶跃，在 $0$ 处跳跃）；$Y=1$ 时 $Z=X\\sim N(0,1)$（连续）。把两部分按权重 $\\frac12$ 叠加，看 $F_Z(z)$ 在何处不连续。\n\n【解答】由 $X,Y$ 独立，用全概率公式：\n$$F_Z(z)=P\\{XY\\leq z\\}=P\\{Y=0\\}P\\{XY\\leq z\\mid Y=0\\}+P\\{Y=1\\}P\\{XY\\leq z\\mid Y=1\\}.$$\n当 $Y=0$：$XY=0$，故 $P\\{XY\\leq z\\mid Y=0\\}=P\\{0\\leq z\\}=\\begin{cases}1,&z\\geq0\\\\0,&z<0\\end{cases}$，记为单位阶跃 $\\mathbf 1_{\\{z\\geq0\\}}$。\n当 $Y=1$：$XY=X\\sim N(0,1)$，故 $P\\{XY\\leq z\\mid Y=1\\}=\\Phi(z)$。\n于是\n$$F_Z(z)=\\frac12\\mathbf 1_{\\{z\\geq0\\}}+\\frac12\\Phi(z).$$\n其中 $\\Phi(z)$ 处处连续；阶跃项 $\\frac12\\mathbf 1_{\\{z\\geq0\\}}$ 在 $z=0$ 处从 $0$ 跳到 $\\frac12$，其余处连续。\n检查 $z=0$：左极限 $F_Z(0^-)=\\frac12\\cdot0+\\frac12\\Phi(0)=\\frac12\\cdot\\frac12=\\frac14$；函数值 $F_Z(0)=\\frac12\\cdot1+\\frac12\\cdot\\frac12=\\frac34$。跳跃高度 $\\frac34-\\frac14=\\frac12\\neq0$，确为间断点。\n故 $F_Z(z)$ 仅在 $z=0$ 处有一个间断点，间断点个数为 $1$。选 B。",
+      "wrong_options": {
+        "A": "认为 0 个间断点，忽视了 Y=0 以概率 ½ 使 Z 退化为常数 0，从而 F_Z 在 z=0 有 ½ 的跳跃。",
+        "C": "认为 2 个，可能误以为 Φ(z) 也带来间断或重复计入；实际正态部分处处连续，只有 z=0 一个跳跃。",
+        "D": "认为 3 个，过度计数；分布函数只有单点 z=0 处的离散跳跃这一处不连续。"
+      },
+      "pitfalls": [
+        "按 Y 取值用全概率拆分：Y=0 给退化分布（阶跃），Y=1 给正态（连续）",
+        "间断点来自离散部分 P{Y=0}=½ 在 z=0 的跳跃，跳跃高度恰为 ½",
+        "正态分布函数 Φ(z) 处处连续，不贡献间断点，别误数"
+      ],
+      "key_point": "Z=XY 按 Y 全概率拆分：混合分布 F_Z=½·阶跃+½Φ，间断点只在退化部分的 z=0 处，共 1 个。"
+    },
+    {
+      "id": 702,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u, v)$ 具有二阶连续偏导数, $z=f(x, x y)$, 则 $\\dfrac{\\partial^{2} z}{\\partial x \\partial y}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$x f_{12}^{\\prime \\prime}+f_2^{\\prime}+x y f_{22}^{\\prime \\prime}$",
+      "analysis": "【分析】复合函数 $z=f(x,xy)$，记中间变量 $u=x,\\ v=xy$。求混合偏导 $\\dfrac{\\partial^2 z}{\\partial x\\partial y}$，先对 $x$ 求一阶偏导，再对 $y$ 求偏导。注意一阶偏导里的 $f_1,f_2$ 仍是 $(u,v)=(x,xy)$ 的函数，对 $y$ 求导要继续用链式法则，且 $v=xy$ 对 $y$ 的偏导是 $x$。\n\n【解答】记 $f_1=f_u',\\ f_2=f_v'$，自变量为 $(x,xy)$。$u=x$ 对 $x$ 偏导为 1、对 $y$ 偏导为 0；$v=xy$ 对 $x$ 偏导为 $y$、对 $y$ 偏导为 $x$。\n\n先对 $x$：\n$$\\frac{\\partial z}{\\partial x}=f_1\\cdot\\frac{\\partial u}{\\partial x}+f_2\\cdot\\frac{\\partial v}{\\partial x}=f_1\\cdot1+f_2\\cdot y=f_1+y\\,f_2.$$\n再对 $y$（把上式整体对 $y$ 求导，$y\\,f_2$ 用乘积法则）：\n$$\\frac{\\partial^2 z}{\\partial x\\partial y}=\\frac{\\partial f_1}{\\partial y}+f_2+y\\frac{\\partial f_2}{\\partial y}.$$\n其中 $f_1=f_1(x,xy)$ 对 $y$ 求导：$\\dfrac{\\partial f_1}{\\partial y}=f_{11}''\\cdot\\dfrac{\\partial u}{\\partial y}+f_{12}''\\cdot\\dfrac{\\partial v}{\\partial y}=f_{11}''\\cdot0+f_{12}''\\cdot x=x\\,f_{12}''$。\n同理 $\\dfrac{\\partial f_2}{\\partial y}=f_{21}''\\cdot0+f_{22}''\\cdot x=x\\,f_{22}''$。由二阶偏导连续 $f_{21}''=f_{12}''$。代入：\n$$\\frac{\\partial^2 z}{\\partial x\\partial y}=x\\,f_{12}''+f_2+y\\cdot x\\,f_{22}''=f_2'+xy\\,f_{22}''+x\\,f_{12}''.$$\n与标准答案 $x f_{12}''+f_2'+xy f_{22}''$ 完全一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 $x$ 求一阶导后得 $f_1+y f_2$，再对 $y$ 求导时 $y f_2$ 必须用乘积法则，会冒出单独的 $f_2'$ 项，这是最易漏的一项",
+        "$f_1,f_2$ 是 $(x,xy)$ 的复合函数，对 $y$ 求导只通过 $v=xy$ 传递（$\\partial v/\\partial y=x$），$u=x$ 与 $y$ 无关贡献为 0",
+        "二阶连续偏导才有 $f_{12}''=f_{21}''$，题设已给，可放心合并"
+      ],
+      "key_point": "多元复合二阶混合偏导：先一阶链式，再对结果整体求导，切记一阶导中的 $f_i$ 仍是复合函数、含乘积时要用乘积法则补出 $f_2'$ 项"
+    },
+    {
+      "id": 703,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若二阶常系数齐次线性微分方程 $y^{\\prime \\prime}+a y^{\\prime}+b y=0$ 的通解为 $y=\\left(C_{1}+C_{2} x\\right) \\mathrm{e}^{x}$, 则非齐次方程 $y^{\\prime \\prime}+a y^{\\prime}+b y=x$ 满足条件 $y(0)=2, y^{\\prime}(0)=0$ 的解为 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$x\\left(1-\\mathrm{e}^x\\right)+2$",
+      "analysis": "【分析】先由齐次方程通解 $y=(C_1+C_2x)\\mathrm e^{x}$ 反推 $a,b$：通解形式说明特征方程有二重根 $r=1$，即特征方程为 $(r-1)^2=r^2-2r+1=0$，故 $a=-2,b=1$。再对非齐次方程 $y''-2y'+y=x$ 求特解（右端为一次多项式且 $0$ 不是特征根，设一次多项式特解），写出通解后用两个初值定常数。\n\n【解答】由通解 $(C_1+C_2x)\\mathrm e^x$ 知特征根为 $r=1$（二重），特征方程 $(r-1)^2=r^2-2r+1=0$，对照 $r^2+ar+b=0$ 得 $a=-2,\\ b=1$。非齐次方程为\n$$y''-2y'+y=x.$$\n$0$ 不是特征根，设特解 $y^*=Ax+B$，则 $y^{*\\prime}=A,\\ y^{*\\prime\\prime}=0$，代入：\n$$0-2A+(Ax+B)=x\\ \\Rightarrow\\ Ax+(B-2A)=x,$$\n比较系数 $A=1,\\ B-2A=0\\Rightarrow B=2$，故 $y^*=x+2$。通解\n$$y=(C_1+C_2x)\\mathrm e^x+x+2.$$\n用初值。$y(0)=C_1+2=2\\Rightarrow C_1=0$。\n$y'=C_2\\mathrm e^x+(C_1+C_2x)\\mathrm e^x+1$，$y'(0)=C_2+C_1+1=0\\Rightarrow C_2=-1$。\n所以\n$$y=-x\\,\\mathrm e^x+x+2=x\\left(1-\\mathrm e^x\\right)+2.$$\n（验证 $y(0)=2$，$y'(0)=0$，且代回方程成立。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "通解形如 $(C_1+C_2x)\\mathrm e^x$ 对应二重根 $r=1$，得 $a=-2,b=1$，别把符号写反。",
+        "特解设 $Ax+B$ 后要算出 $B=2$；求 $C_2$ 时 $y'$ 用乘积法则别漏 $C_2\\mathrm e^x$ 这一项。"
+      ],
+      "key_point": "由齐次通解反推特征方程定 $a,b$；非齐次按右端多项式设特解，再用初值定常数。"
+    },
+    {
+      "id": 704,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知曲线 $L: y=x^{2}(0 \\leqslant x \\leqslant \\sqrt{2})$, 则 $\\displaystyle \\int_{L} x \\mathrm{d} s=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{13}{6}$",
+      "analysis": "【分析】第一类曲线积分（对弧长），$L:y=x^2$ 用 $x$ 作参数，弧长微元 $\\mathrm{d}s=\\sqrt{1+y'^2}\\,\\mathrm{d}x$，化为关于 $x$ 的定积分，凑微分积出。\n\n【解答】曲线 $y=x^2$，$y'=2x$，故\n$$\\mathrm{d}s=\\sqrt{1+(2x)^2}\\,\\mathrm{d}x=\\sqrt{1+4x^2}\\,\\mathrm{d}x.$$\n于是\n$$\\int_L x\\,\\mathrm{d}s=\\int_0^{\\sqrt2}x\\sqrt{1+4x^2}\\,\\mathrm{d}x.$$\n令 $u=1+4x^2$，$\\mathrm{d}u=8x\\,\\mathrm{d}x$，即 $x\\,\\mathrm{d}x=\\dfrac18\\mathrm{d}u$；$x:0\\to\\sqrt2$ 对应 $u:1\\to 9$。\n$$\\int_0^{\\sqrt2}x\\sqrt{1+4x^2}\\,\\mathrm{d}x=\\frac18\\int_1^9 u^{1/2}\\,\\mathrm{d}u=\\frac18\\cdot\\frac23 u^{3/2}\\Big|_1^9=\\frac{1}{12}\\bigl(9^{3/2}-1\\bigr).$$\n$9^{3/2}=27$，故\n$$=\\frac{1}{12}(27-1)=\\frac{26}{12}=\\frac{13}{6}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对弧长积分 $\\mathrm{d}s=\\sqrt{1+y'^2}\\,\\mathrm{d}x$ 恒为正，无方向问题，积分限按 $x$ 从小到大取。",
+        "换元后上限 $x=\\sqrt2$ 对应 $u=1+4\\cdot2=9$，别算成别的值。"
+      ],
+      "key_point": "第一类曲线积分把 $\\mathrm{d}s=\\sqrt{1+y'^2}\\,\\mathrm{d}x$ 代入化为定积分；$x\\sqrt{1+4x^2}$ 用凑微分 $u=1+4x^2$。"
+    },
+    {
+      "id": 705,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\Omega=\\left\\{(x, y, z) \\mid x^{2}+y^{2}+z^{2} \\leqslant 1\\right\\}$, 则 $\\displaystyle \\iiint\\limits_{\\Omega} z^{2} \\mathrm{d} x \\mathrm{d} y \\mathrm{d} z=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{4}{15} \\pi$",
+      "analysis": "【分析】积分区域是单位球，被积函数 $z^2$ 关于坐标轮换对称，可用对称性 + 球坐标。最快的做法：由对称性 $\\iiint z^2=\\iiint x^2=\\iiint y^2$，三者相加等于 $\\iiint(x^2+y^2+z^2)=\\iiint r^2$，故 $\\iiint z^2=\\dfrac13\\iiint r^2\\,\\mathrm dV$，后者用球坐标一重积分即可。\n\n【解答】记 $I=\\displaystyle\\iiint_\\Omega z^2\\,\\mathrm dV$，$\\Omega:x^2+y^2+z^2\\le1$。由区域关于 $x,y,z$ 的轮换对称性，\n$$\\iiint_\\Omega x^2\\,\\mathrm dV=\\iiint_\\Omega y^2\\,\\mathrm dV=\\iiint_\\Omega z^2\\,\\mathrm dV=I.$$\n三式相加：\n$$3I=\\iiint_\\Omega(x^2+y^2+z^2)\\,\\mathrm dV=\\iiint_\\Omega r^2\\,\\mathrm dV.$$\n用球坐标，体积元 $\\mathrm dV=r^2\\sin\\varphi\\,\\mathrm dr\\,\\mathrm d\\varphi\\,\\mathrm d\\theta$，按球壳积分（球面积 $4\\pi r^2$）：\n$$\\iiint_\\Omega r^2\\,\\mathrm dV=\\int_0^1 r^2\\cdot4\\pi r^2\\,\\mathrm dr=4\\pi\\int_0^1 r^4\\,\\mathrm dr=4\\pi\\cdot\\frac15=\\frac{4\\pi}{5}.$$\n故\n$$I=\\frac13\\cdot\\frac{4\\pi}{5}=\\frac{4}{15}\\pi.$$\n\n（验证：直接球坐标 $z=r\\cos\\varphi$，$\\int_0^{2\\pi}\\!\\!\\int_0^\\pi\\!\\!\\int_0^1 r^2\\cos^2\\varphi\\cdot r^2\\sin\\varphi\\,\\mathrm dr\\,\\mathrm d\\varphi\\,\\mathrm d\\theta=2\\pi\\cdot\\frac15\\cdot\\frac23=\\frac{4\\pi}{15}$，吻合。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "用轮换对称把 $\\iiint z^2$ 转成 $\\frac13\\iiint r^2$，避免直接处理 $\\cos^2\\varphi$，更快更稳",
+        "球坐标体积元 $r^2\\sin\\varphi$ 不能漏；按球壳积分时面积因子是 $4\\pi r^2$",
+        "$\\int_0^\\pi\\sin\\varphi\\cos^2\\varphi\\,\\mathrm d\\varphi=\\frac23$，若直接算别把这步弄错"
+      ],
+      "key_point": "球域上 $\\iiint z^2=\\frac13\\iiint r^2\\,\\mathrm dV$（轮换对称），球壳积分一重搞定。"
+    },
+    {
+      "id": 706,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若 $3$ 维列向量 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 满足 $\\boldsymbol{\\alpha}^{\\mathrm{T}} \\boldsymbol{\\beta}=2$, 其中 $\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 为 $\\boldsymbol{\\alpha}$ 的转置, 则矩阵 $\\boldsymbol{\\beta} \\boldsymbol{\\alpha}^{\\mathrm{T}}$ 的非零特征值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "【分析】$\\boldsymbol{\\beta}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 是 $3\\times 3$ 矩阵,但由列向量乘行向量得到,秩为 $1$(当 $\\boldsymbol\\alpha,\\boldsymbol\\beta$ 非零时),故它只有一个非零特征值。关键技巧:这个非零特征值等于矩阵的迹,而 $\\operatorname{tr}(\\boldsymbol{\\beta}\\boldsymbol{\\alpha}^{\\mathrm{T}})=\\operatorname{tr}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta})=\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta}$。\n\n【解答】记 $A=\\boldsymbol{\\beta}\\boldsymbol{\\alpha}^{\\mathrm{T}}$。因 $\\boldsymbol\\beta$ 为 $3\\times1$、$\\boldsymbol\\alpha^{\\mathrm{T}}$ 为 $1\\times3$,$A$ 是秩 $\\le 1$ 的 $3$ 阶方阵,故至少有两个特征值为 $0$,至多一个非零特征值。\n\n直接验证:对向量 $\\boldsymbol\\beta$,\n$$A\\boldsymbol\\beta=\\boldsymbol\\beta\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta=\\boldsymbol\\beta(\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta)=(\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta)\\boldsymbol\\beta=2\\boldsymbol\\beta,$$\n这里用到 $\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta=2$ 是标量。故 $\\boldsymbol\\beta$ 是 $A$ 的特征向量,对应特征值 $2$。\n\n另证(迹):三个特征值之和等于迹,$\\operatorname{tr}(\\boldsymbol\\beta\\boldsymbol\\alpha^{\\mathrm{T}})=\\operatorname{tr}(\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta)=\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta=2$,而另两个特征值为 $0$,故非零特征值为 $2$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\boldsymbol\\alpha^{\\mathrm{T}}\\boldsymbol\\beta$ 是 $1\\times1$ 的标量,$\\boldsymbol\\beta\\boldsymbol\\alpha^{\\mathrm{T}}$ 是 $3\\times3$ 矩阵,两者别混。",
+        "秩 1 矩阵恰有一个非零特征值且等于迹,$\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$ 是核心。"
+      ],
+      "key_point": "秩 1 矩阵 $\\boldsymbol\\beta\\boldsymbol\\alpha^{\\mathrm T}$ 唯一非零特征值=迹=$\\boldsymbol\\alpha^{\\mathrm T}\\boldsymbol\\beta$。"
+    },
+    {
+      "id": 707,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{m}$ 为来自二项分布总体 $B(n, p)$ 的简单随机样本, $\\bar{X}$ 和 $S^{2}$ 分别为样本均值和样本方差, 若 $\\bar{X}+k S^{2}$ 为 $n p^{2}$ 的无偏估计量, 则 $k=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】无偏估计要求 $E(\\bar X+kS^2)=np^2$。用样本均值和样本方差的期望：$E(\\bar X)=E(X_1)=np$，$E(S^2)=D(X_1)=np(1-p)$（样本方差是总体方差的无偏估计）。代入解出使等式对一切参数成立的 $k$。\n\n【解答】总体 $B(n,p)$ 的期望 $E(X)=np$，方差 $D(X)=np(1-p)$。\n样本均值与样本方差满足\n$$E(\\bar X)=np,\\qquad E(S^2)=D(X)=np(1-p).$$\n于是\n$$E(\\bar X+kS^2)=np+k\\,np(1-p)=np+k\\,np-k\\,np^2.$$\n要其为 $np^2$ 的无偏估计，即对一切 $n,p$ 有\n$$np+k\\,np-k\\,np^2=np^2.$$\n整理：$np(1+k)-k\\,np^2=np^2$。两边除以 $np$（$>0$）：\n$$(1+k)-kp=p.$$\n这对一切 $p$ 成立，比较常数项与 $p$ 的系数：常数项 $1+k=0$，$p$ 的系数 $-k=1$，二者一致给出\n$$k=-1.$$\n（验算：$k=-1$ 时 $E(\\bar X-S^2)=np-np(1-p)=np-np+np^2=np^2$，正确。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "样本方差 S² 是总体方差的无偏估计，故 E(S²)=D(X)=np(1−p)，别误用 (n−1) 之类的修正",
+        "无偏要求对一切 p 成立，需把含 p 与不含 p 的项分别配平，得 k=−1",
+        "二项分布方差是 np(1−p) 而非 np；用错方差公式会得错误 k"
+      ],
+      "key_point": "无偏估计令期望相等：E(X̄)=np、E(S²)=np(1−p)，凑成 np² 并对一切 p 配平得 k=−1。"
+    },
+    {
+      "id": 708,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求二元函数 $f(x, y)=x^{2}\\left(2+y^{2}\\right)+y \\ln y$ 的极值",
+      "options": {},
+      "answer": "极小值为 $f\\left(0, \\dfrac{1}{\\mathrm{e}}\\right)=-\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "【分析】无条件二元极值的标准流程：求一阶偏导解驻点方程组，再用二阶偏导构造判别式 $AC-B^2$ 与 $A$ 的符号判定。注意 $y\\ln y$ 要求 $y>0$，定义域为上半平面。\n\n【解答】$f(x,y)=x^2(2+y^2)+y\\ln y$，定义域 $y>0$。一阶偏导\n$$f_x=2x(2+y^2),\\qquad f_y=2x^2 y+\\ln y+1.$$\n令 $f_x=0$：由 $2+y^2>0$ 得 $x=0$。代入 $f_y=0$：$0+\\ln y+1=0\\Rightarrow \\ln y=-1\\Rightarrow y=\\dfrac{1}{\\mathrm e}$。故唯一驻点 $\\left(0,\\dfrac{1}{\\mathrm e}\\right)$。\n二阶偏导\n$$A=f_{xx}=2(2+y^2),\\quad B=f_{xy}=4xy,\\quad C=f_{yy}=2x^2+\\frac{1}{y}.$$\n在驻点 $\\left(0,\\tfrac1{\\mathrm e}\\right)$：$A=2\\left(2+\\tfrac{1}{\\mathrm e^2}\\right)>0$，$B=0$，$C=0+\\mathrm e=\\mathrm e>0$。判别式\n$$AC-B^2=2\\left(2+\\frac{1}{\\mathrm e^2}\\right)\\cdot \\mathrm e-0>0,$$\n且 $A>0$，故该驻点为极小值点。极小值\n$$f\\!\\left(0,\\frac{1}{\\mathrm e}\\right)=0\\cdot\\Big(2+\\frac1{\\mathrm e^2}\\Big)+\\frac1{\\mathrm e}\\ln\\frac1{\\mathrm e}=\\frac1{\\mathrm e}\\cdot(-1)=-\\frac1{\\mathrm e}.$$\n故 $f$ 有极小值 $-\\dfrac{1}{\\mathrm e}$，无极大值。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$y\\ln y$ 要求 y>0，定义域限制不能丢，否则会漏判或多判驻点",
+        "由 f_x=0 得 x=0（因 2+y^2 恒正），再代入 f_y=0 解 y，避免遗漏",
+        "用 AC-B^2 与 A 的符号判定极值类型；A>0 且判别式正为极小值"
+      ],
+      "key_point": "无条件二元极值：解驻点 + Hesse 判别式 AC-B^2；注意 $y\\ln y$ 的定义域 y>0"
+    },
+    {
+      "id": 709,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $a_{n}$ 为曲线 $y=x^{n}$ 与 $y=x^{n+1}(n=1,2, \\cdots)$ 所围成区域的面积, 记 $\\displaystyle S_{1}=\\sum_{n=1}^{\\infty} a_{n}$, $\\displaystyle S_{2}=\\sum_{n=1}^{\\infty} a_{2 n-1}$, 求 $S_{1}$ 与 $S_{2}$ 的值",
+      "options": {},
+      "answer": "$S_1=\\dfrac{1}{2}; S_2=1-\\ln 2$",
+      "analysis": "【分析】先求一般项 $a_n$。在 $[0,1]$ 上 $x^n\\ge x^{n+1}$，两曲线交于 $x=0,1$，故 $a_n=\\int_0^1(x^n-x^{n+1})\\,\\mathrm{d}x$，算出后 $a_n$ 是可裂项的差分形式。$S_1$ 直接裂项求和（望远镜）；$S_2$ 取奇数下标项 $a_{2n-1}$，凑成 $\\ln 2$ 的交错级数。\n\n【解答】\n\n$$a_n=\\int_0^1(x^n-x^{n+1})\\,\\mathrm{d}x=\\dfrac{1}{n+1}-\\dfrac{1}{n+2}.$$\n\n（1）求 $S_1$。这是望远镜级数：\n\n$$S_1=\\sum_{n=1}^{\\infty}\\left(\\dfrac{1}{n+1}-\\dfrac{1}{n+2}\\right)=\\lim_{N\\to\\infty}\\left(\\dfrac{1}{2}-\\dfrac{1}{N+2}\\right)=\\dfrac{1}{2}.$$\n\n（2）求 $S_2$。取 $n\\to2n-1$，则\n\n$$a_{2n-1}=\\dfrac{1}{2n}-\\dfrac{1}{2n+1},$$\n\n$$S_2=\\sum_{n=1}^{\\infty}\\left(\\dfrac{1}{2n}-\\dfrac{1}{2n+1}\\right)=\\left(\\dfrac12-\\dfrac13\\right)+\\left(\\dfrac14-\\dfrac15\\right)+\\left(\\dfrac16-\\dfrac17\\right)+\\cdots.$$\n\n利用 $\\ln 2=\\displaystyle\\sum_{k=1}^{\\infty}\\dfrac{(-1)^{k-1}}{k}=1-\\dfrac12+\\dfrac13-\\dfrac14+\\dfrac15-\\cdots$，故\n\n$$1-\\ln 2=1-\\left(1-\\dfrac12+\\dfrac13-\\dfrac14+\\cdots\\right)=\\dfrac12-\\dfrac13+\\dfrac14-\\dfrac15+\\cdots=\\left(\\dfrac12-\\dfrac13\\right)+\\left(\\dfrac14-\\dfrac15\\right)+\\cdots=S_2.$$\n\n所以 $S_2=1-\\ln 2$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$a_n$ 的积分上下界是两曲线交点 $0,1$，且 $[0,1]$ 上 $x^n\\ge x^{n+1}$，被积函数取 $x^n-x^{n+1}$。",
+        "$S_2$ 是部分项之和，须把 $a_{2n-1}$ 写成 $\\frac{1}{2n}-\\frac{1}{2n+1}$ 再凑 $\\ln 2$ 的交错级数，别误当成 $S_1$ 的一半。"
+      ],
+      "key_point": "面积差化裂项；全和用望远镜，奇数项和凑 $\\ln 2=1-\\frac12+\\frac13-\\cdots$。"
+    },
+    {
+      "id": 710,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "椭球面 $S_{1}$ 是椭圆 $\\displaystyle \\frac{x^{2}}{4}+\\frac{y^{2}}{3}=1$ 绕 $x$ 轴旋转而成, 圆锥面 $S_{2}$ 是由过点 $(4,0)$ 且与椭圆 $\\dfrac{x^{2}}{4}+\\dfrac{y^{2}}{3}=1$ 相切的直线绕 $x$ 轴旋转而成.\r\n\r\n(1) 求 $S_{1}$ 及 $S_{2}$ 的方程;\r\n\r\n(2) 求 $S_{1}$ 与 $S_{2}$ 之间的立体的体积",
+      "options": {},
+      "answer": "(1)椭球面 $S_1$ 的方程为 $\\displaystyle \\frac{x^2}{4}+\\frac{y^2+z^2}{3}=1$, 圆锥面 $S_2$ 的方程为 $\\displaystyle \\left(\\frac{x}{4}-1\\right)^2=\\frac{y^2+z^2}{4}$, \r\n\r\n\r\n(2) $\\pi$",
+      "analysis": "【分析】(1) 绕 $x$ 轴旋转，把 $y^2$ 换成 $y^2+z^2$ 即得旋转面方程；圆锥面先求过 $(4,0)$ 与椭圆相切的切线，再旋转。(2) 两曲面在切点处相切（同一圈），所求体积 = 圆锥体（顶点 $(4,0)$、底在切点处）的体积减去伸入其中的椭球冠的体积，用平行截面（圆盘）积分。\n\n【解答】(1) 椭圆 $\\dfrac{x^2}{4}+\\dfrac{y^2}{3}=1$ 绕 $x$ 轴旋转：\n$$S_1:\\quad \\dfrac{x^2}{4}+\\dfrac{y^2+z^2}{3}=1.$$\n求过 $(4,0)$ 的切线 $y=k(x-4)$。代入椭圆，切线条件 $c^2=a^2k^2+b^2$（此处 $c=-4k,\\ a^2=4,\\ b^2=3$）：\n$$16k^2=4k^2+3\\ \\Rightarrow\\ k^2=\\dfrac14,\\ k=\\pm\\dfrac12.$$\n切点 $x_0=-\\dfrac{a^2k}{c}=-\\dfrac{4k}{-4k}=1$，对应 $y_0^2=3(1-\\tfrac14)=\\tfrac94$，切点 $(1,\\pm\\tfrac32)$。\n切线 $y=\\pm\\dfrac12(x-4)$ 绕 $x$ 轴旋转，半径 $r=\\dfrac{|x-4|}{2}$：\n$$S_2:\\quad y^2+z^2=\\dfrac{(x-4)^2}{4}\\quad\\Big(\\text{即}\\ \\big(\\tfrac{x}{4}-1\\big)^2=\\tfrac{y^2+z^2}{4}\\Big).$$\n\n(2) 两面在切点 $x=1$ 处相切：椭球截面半径平方 $R_1^2=3(1-\\tfrac{x^2}{4})$，$x=1$ 时 $=\\tfrac94$；圆锥截面半径平方 $R_2^2=\\dfrac{(x-4)^2}{4}$，$x=1$ 时 $=\\tfrac94$，吻合。\n\n圆锥体（$x$ 从 $1$ 到顶点 $4$）的体积：\n$$V_{\\text{锥}}=\\int_1^4 \\pi R_2^2\\,\\mathrm{d}x=\\dfrac{\\pi}{4}\\int_1^4(x-4)^2\\,\\mathrm{d}x=\\dfrac{\\pi}{4}\\Big[\\dfrac{(x-4)^3}{3}\\Big]_1^4=\\dfrac{\\pi}{4}\\cdot\\dfrac{27}{3}=\\dfrac{9\\pi}{4}.$$\n伸入锥内的椭球冠（$x$ 从 $1$ 到 $2$）：\n$$V_{\\text{冠}}=\\int_1^2 \\pi\\cdot3\\Big(1-\\dfrac{x^2}{4}\\Big)\\mathrm{d}x=3\\pi\\Big[x-\\dfrac{x^3}{12}\\Big]_1^2=3\\pi\\Big[\\Big(2-\\dfrac{2}{3}\\Big)-\\Big(1-\\dfrac{1}{12}\\Big)\\Big]=3\\pi\\cdot\\dfrac{5}{12}=\\dfrac{5\\pi}{4}.$$\n所求体积\n$$V=V_{\\text{锥}}-V_{\\text{冠}}=\\dfrac{9\\pi}{4}-\\dfrac{5\\pi}{4}=\\boxed{\\pi}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋转面方程是把 $y^2$ 替换为 $y^2+z^2$，不是简单换字母。",
+        "所求体积是\"锥体减去椭球冠\"，椭球只到 $x=2$ 而圆锥到 $x=4$，两段积分上下限不同，切点 $x=1$ 是公共起点。"
+      ],
+      "key_point": "切线条件 c²=a²k²+b² 定切线，旋转换 y²→y²+z²；体积用圆盘截面，锥体减去内嵌椭球冠。"
+    },
+    {
+      "id": 711,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "(1) 证明拉格朗日中值定理: 若函数 $f(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内可导, 则存在 $\\xi \\in(a, b)$, 使得 $f(b)-f(a)=f^{\\prime}(\\xi)(b-a)$;\r\n\r\n(2) 证明: 若函数 $f(x)$ 在 $x=0$ 处连续, 在 $(0, \\delta)(\\delta>0)$ 内可导, 且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=A$, 则 $f_{+}^{\\prime}(0)$ 存在, 且 $f_{+}^{\\prime}(0)=A$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第(1)问是教材定理，标准做法是构造辅助函数把拉格朗日中值定理化归为罗尔定理：减去连接两端点的直线（弦），使新函数在两端取相等值。第(2)问要证单侧导数存在并等于导函数极限，关键是用拉格朗日中值定理把差商 $\\dfrac{f(x)-f(0)}{x-0}$ 改写成某点的导数值，再让 $x\\to0^+$ 配合 $\\lim_{x\\to0^+}f'(x)=A$（导数极限定理）。\n\n【解答】**(1)** 构造辅助函数\n$$\\varphi(x)=f(x)-f(a)-\\frac{f(b)-f(a)}{b-a}(x-a).$$\n它在 $[a,b]$ 上连续、在 $(a,b)$ 内可导，且\n$$\\varphi(a)=0,\\qquad \\varphi(b)=f(b)-f(a)-\\frac{f(b)-f(a)}{b-a}(b-a)=0,$$\n即 $\\varphi(a)=\\varphi(b)$。由罗尔定理，存在 $\\xi\\in(a,b)$ 使 $\\varphi'(\\xi)=0$。而\n$$\\varphi'(x)=f'(x)-\\frac{f(b)-f(a)}{b-a},$$\n故 $f'(\\xi)=\\dfrac{f(b)-f(a)}{b-a}$，即 $f(b)-f(a)=f'(\\xi)(b-a)$。\n\n**(2)** 任取 $x\\in(0,\\delta)$。由于 $f$ 在 $x=0$ 处连续、在 $(0,x]$ 上可导（$f$ 在 $(0,\\delta)$ 内可导，在 $0$ 处连续），$f$ 在 $[0,x]$ 上满足拉格朗日中值定理条件，故存在 $\\xi_x\\in(0,x)$ 使\n$$\\frac{f(x)-f(0)}{x-0}=f'(\\xi_x).$$\n当 $x\\to0^+$ 时，由 $0<\\xi_x<x$ 及夹逼有 $\\xi_x\\to0^+$。又已知 $\\lim_{x\\to0^+}f'(x)=A$，故\n$$f_{+}'(0)=\\lim_{x\\to0^+}\\frac{f(x)-f(0)}{x-0}=\\lim_{x\\to0^+}f'(\\xi_x)=\\lim_{\\xi_x\\to0^+}f'(\\xi_x)=A.$$\n所以 $f_{+}'(0)$ 存在且等于 $A$，证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "构造辅助函数时务必让两端点函数值相等，才能用罗尔定理；不要直接对 $f$ 用罗尔定理。",
+        "第(2)问是用导数极限定理，必须先说明 $f$ 在 $[0,x]$ 上满足拉氏定理条件（端点处只需连续），再借 $\\xi_x\\to0^+$ 把极限传过去。",
+        "$f_{+}'(0)$ 的存在性来自差商极限存在，不能默认 $f$ 在 $0$ 处可导后再求值。"
+      ],
+      "key_point": "拉氏定理＝减弦化归罗尔；导数极限定理＝用拉氏定理把差商写成 $f'(\\xi_x)$ 再令 $\\xi_x\\to0^+$。"
+    },
+    {
+      "id": 712,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算曲面积分 $\\displaystyle I=\\oiint\\limits_{\\Sigma} \\frac{x \\mathrm{d} y \\mathrm{d} z+y \\mathrm{d} z \\mathrm{d} x+z \\mathrm{d} x \\mathrm{d} y}{\\left(x^{2}+y^{2}+z^{2}\\right)^{\\frac{3}{2}}}$, 其中 $\\Sigma$ 是曲面 $2 x^{2}+2 y^{2}+z^{2}=4$ 的外侧",
+      "options": {},
+      "answer": "$4 \\pi$",
+      "analysis": "【分析】\n\n被积是著名的‘平方反比场’ $\\vec F=\\dfrac{(x,y,z)}{(x^2+y^2+z^2)^{3/2}}=\\dfrac{\\vec r}{r^3}$ 的通量。该场在除原点外处处满足 $\\operatorname{div}\\vec F=0$，但在原点有奇性。曲面 $2x^2+2y^2+z^2=4$ 是个包含原点的椭球，不能直接对椭球用高斯公式（原点是奇点）。标准技巧：在原点处挖一个小球面 $\\Sigma_\\varepsilon$，对椭球与小球之间的区域用高斯公式（该区域内 $\\operatorname{div}\\vec F=0$），把椭球上的通量转化为小球面上的通量，后者可直接算。\n\n【解答】\n\n**散度为零。** 在 $r\\ne0$ 处直接验证 $\\operatorname{div}\\dfrac{\\vec r}{r^3}=0$（标准结论）。\n\n**挖小球。** 取小球面 $\\Sigma_\\varepsilon:\\ x^2+y^2+z^2=\\varepsilon^2$（$\\varepsilon$ 足够小，含于椭球内），取**内侧**（朝原点）。在椭球外侧 $\\Sigma$ 与小球之间的区域 $V$ 内，$\\operatorname{div}\\vec F=0$，由高斯公式\n$$\\oiint_{\\Sigma_{\\text{外}}}\\vec F\\cdot\\mathrm d\\vec S+\\oiint_{\\Sigma_\\varepsilon(\\text{内侧})}\\vec F\\cdot\\mathrm d\\vec S=\\iiint_V\\operatorname{div}\\vec F\\,\\mathrm dV=0,$$\n故 $I=\\displaystyle\\oiint_\\Sigma\\vec F\\cdot\\mathrm d\\vec S=\\oiint_{\\Sigma_\\varepsilon(\\text{外侧})}\\vec F\\cdot\\mathrm d\\vec S$（两次反向抵消，等于小球**外侧**通量）。\n\n**算小球面通量。** 在 $\\Sigma_\\varepsilon$ 上 $r=\\varepsilon$，外法向单位向量 $\\vec n=\\dfrac{\\vec r}{\\varepsilon}$，\n$$\\vec F\\cdot\\vec n=\\frac{\\vec r}{\\varepsilon^3}\\cdot\\frac{\\vec r}{\\varepsilon}=\\frac{r^2}{\\varepsilon^4}=\\frac{\\varepsilon^2}{\\varepsilon^4}=\\frac{1}{\\varepsilon^2}.$$\n于是\n$$\\oiint_{\\Sigma_\\varepsilon}\\vec F\\cdot\\mathrm d\\vec S=\\frac1{\\varepsilon^2}\\cdot(\\text{小球面积})=\\frac1{\\varepsilon^2}\\cdot4\\pi\\varepsilon^2=4\\pi.$$\n\n所以 $I=4\\pi$。\n\n**验算/说明：** 结果与 $\\varepsilon$ 无关，也与外曲面的具体形状无关——只要闭曲面包含原点一次，平方反比场的通量恒为 $4\\pi$（这正是高斯定律的几何内核）。",
+      "wrong_options": {},
+      "pitfalls": [
+        "椭球内含奇点(原点)，绝不能直接对原椭球用高斯公式得 0；必须挖小球。",
+        "选小球 x²+y²+z²=ε² 而不是椭球面，是因为在球面上 r 为常数、F·n 能化成常数，积分秒算。",
+        "答案 4π 与曲面形状、ε 都无关，只取决于是否包含原点；这是平方反比场通量的本质。"
+      ],
+      "key_point": "平方反比场 r/r³ 散度为零但原点奇异：挖小球面，闭曲面只要含原点一次，通量恒为 4π。"
+    },
+    {
+      "id": 713,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & -1 & -1 \\\\\r\n-1 & 1 & 1 \\\\\r\n0 & -4 & -2\r\n\\end{array}\\right), \\quad \\boldsymbol \\xi_{1}=\\left(\\begin{array}{c}\r\n-1 \\\\1 \\\\-2\\end{array}\\right)$\r\n\r\n(1) 求满足 $\\boldsymbol{A} \\boldsymbol{\\xi}_{2}=\\boldsymbol{\\xi}_{1}, \\boldsymbol A^{2} \\boldsymbol{\\xi}_{3}=\\boldsymbol{\\xi}_{1}$ 的所有向量 $\\boldsymbol{\\xi}_{2}, \\boldsymbol{\\xi}_{3}$;\r\n\r\n(2) 对 (1) 中的任意向量 $\\boldsymbol\\xi_{2}, \\boldsymbol\\xi_{3}$, 证明 $\\boldsymbol\\xi_{1}, \\boldsymbol\\xi_{2}, \\boldsymbol\\xi_{3}$ 线性无关",
+      "options": {},
+      "answer": "$\\boldsymbol{\\xi}_2=\\left(\\begin{array}{c}\\frac{1}{2} k_1-\\frac{1}{2} \\\\ -\\frac{1}{2} k_1+\\frac{1}{2} \\\\ k_1\\end{array}\\right)( k_1$ 为任意常数)\r\n\r\n$\\boldsymbol{\\xi}_3=\\left(\\begin{array}{c}\r\n-k_2-\\frac{1}{2} \\\\k_2 \\\\k_3\r\n\\end{array}\\right)( k_2, k_3$ 为任意常数)",
+      "analysis": "【分析】(1) 是解两个非齐次线性方程组 $A\\xi_2=\\xi_1$ 与 $A^2\\xi_3=\\xi_1$，用增广矩阵初等行变换求通解。(2) 证三向量线性无关，最干净的办法是说明矩阵 $(\\xi_1,\\xi_2,\\xi_3)$ 的行列式恒不为零（与参数 $k_i$ 无关）。\n\n【解答】记 $A=\\begin{pmatrix}1&-1&-1\\\\-1&1&1\\\\0&-4&-2\\end{pmatrix}$，$\\xi_1=\\begin{pmatrix}-1\\\\1\\\\-2\\end{pmatrix}$。\n\n**(1) 求 $\\xi_2$。** 解 $A\\xi_2=\\xi_1$，对增广矩阵 $(A\\mid\\xi_1)$ 行变换：\n$$\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\-1&1&1&1\\\\0&-4&-2&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\0&0&0&0\\\\0&-4&-2&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}1&-1&-1&-1\\\\0&2&1&1\\\\0&0&0&0\\end{array}\\right).$$\n由第二行 $2x_2+x_3=1$，取 $x_3=k_1$ 为自由元，得 $x_2=\\dfrac{1-k_1}{2}=-\\dfrac12 k_1+\\dfrac12$；第一行 $x_1=x_2+x_3-1=\\left(-\\tfrac12 k_1+\\tfrac12\\right)+k_1-1=\\dfrac12 k_1-\\dfrac12$。故\n$$\\xi_2=\\begin{pmatrix}\\tfrac12 k_1-\\tfrac12\\\\[2pt]-\\tfrac12 k_1+\\tfrac12\\\\[2pt]k_1\\end{pmatrix},\\quad k_1\\ \\text{为任意常数}.$$\n\n**求 $\\xi_3$。** 先算 $A^2$：\n$$A^2=\\begin{pmatrix}1&-1&-1\\\\-1&1&1\\\\0&-4&-2\\end{pmatrix}^2=\\begin{pmatrix}2&2&0\\\\-2&-2&0\\\\4&4&0\\end{pmatrix}.$$\n解 $A^2\\xi_3=\\xi_1$，增广矩阵\n$$\\left(\\begin{array}{ccc|c}2&2&0&-1\\\\-2&-2&0&1\\\\4&4&0&-2\\end{array}\\right)\\to\\left(\\begin{array}{ccc|c}2&2&0&-1\\\\0&0&0&0\\\\0&0&0&0\\end{array}\\right).$$\n仅一个有效方程 $2x_1+2x_2=-1$。取 $x_2=k_2,\\ x_3=k_3$ 为自由元，则 $x_1=-k_2-\\dfrac12$。故\n$$\\xi_3=\\begin{pmatrix}-k_2-\\tfrac12\\\\k_2\\\\k_3\\end{pmatrix},\\quad k_2,k_3\\ \\text{为任意常数}.$$\n\n**(2) 证 $\\xi_1,\\xi_2,\\xi_3$ 线性无关。** 计算以三者为列的矩阵的行列式：\n$$\\det(\\xi_1,\\xi_2,\\xi_3)=\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12&-k_2-\\tfrac12\\\\1&-\\tfrac12 k_1+\\tfrac12&k_2\\\\-2&k_1&k_3\\end{vmatrix}.$$\n第二行加第一行（不改变行列式），第一、二行相加后第二行变为 $(0,\\ 0,\\ -\\tfrac12)$：\n$$=\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12&-k_2-\\tfrac12\\\\0&0&-\\tfrac12\\\\-2&k_1&k_3\\end{vmatrix}.$$\n按第二行展开（只有第 $3$ 列非零 $-\\tfrac12$，位置 $(2,3)$，符号 $(-1)^{2+3}=-1$）：\n$$=-\\left(-\\dfrac12\\right)\\begin{vmatrix}-1&\\tfrac12 k_1-\\tfrac12\\\\-2&k_1\\end{vmatrix}=\\dfrac12\\Big[(-1)k_1-(-2)\\left(\\tfrac12 k_1-\\tfrac12\\right)\\Big]=\\dfrac12\\big[-k_1+(k_1-1)\\big]=\\dfrac12(-1)=-\\dfrac12.$$\n行列式恒为 $-\\dfrac12\\neq0$，与 $k_1,k_2,k_3$ 取值无关，故 $\\xi_1,\\xi_2,\\xi_3$ 线性无关。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解 $A^2\\xi_3=\\xi_1$ 要先把 $A^2$ 算对（秩为 $1$），有两个自由参数 $k_2,k_3$。",
+        "证无关用「列行列式恒非零」最稳，结果须与所有 $k_i$ 无关才算证完。"
+      ],
+      "key_point": "非齐次组求通解 + 拼成方阵算行列式恒 $\\neq0$ 证线性无关。"
+    },
+    {
+      "id": 714,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=a x_{1}^{2}+a x_{2}^{2}+(a-1) x_{3}^{2}+2 x_{1} x_{3}-2 x_{2} x_{3}$\r\n\r\n(1) 求二次型 $f$ 的矩阵的所有特征值;\r\n\r\n(2) 若二次型 $f$ 的规范形为 $y_{1}^{2}+y_{2}^{2}$, 求 $a$ 的值",
+      "options": {},
+      "answer": "(1) $\\lambda_1=a, \\lambda_2=a+1, \\lambda_3=a-2$\r\n\r\n(2) $a=2$",
+      "analysis": "【分析】先写出二次型的对称矩阵 $A$，求特征值即解 $|A-\\lambda E|=0$。规范形为 $y_1^2+y_2^2$ 说明正惯性指数为 $2$、负惯性指数为 $0$、秩为 $2$，即三个特征值中恰有两个正、一个为零，据此筛选 $a$。\n\n【解答】\n\n（1）二次型矩阵\n$$A=\\begin{pmatrix} a & 0 & 1\\\\ 0 & a & -1\\\\ 1 & -1 & a-1\\end{pmatrix}.$$\n特征多项式 $|A-\\lambda E|$：\n$$\\begin{vmatrix} a-\\lambda & 0 & 1\\\\ 0 & a-\\lambda & -1\\\\ 1 & -1 & a-1-\\lambda\\end{vmatrix}.$$\n按第一行展开：\n$$(a-\\lambda)\\big[(a-\\lambda)(a-1-\\lambda)-1\\big]+1\\cdot\\big[0-(a-\\lambda)\\big].$$\n第二项 $=-(a-\\lambda)$。提出公因子 $(a-\\lambda)$：\n$$(a-\\lambda)\\Big[(a-\\lambda)(a-1-\\lambda)-1-1\\Big]=(a-\\lambda)\\Big[(a-\\lambda)(a-1-\\lambda)-2\\Big].$$\n令 $u=a-\\lambda$，方括号内 $=u(u-1)-2=u^2-u-2=(u-2)(u+1)$。\n即 $|A-\\lambda E|=(a-\\lambda)(a-\\lambda-2)(a-\\lambda+1)$。\n令其为 $0$：\n$$\\lambda_1=a,\\qquad \\lambda_2=a+1,\\qquad \\lambda_3=a-2.$$\n（验证迹：$\\lambda_1+\\lambda_2+\\lambda_3=3a-1=a+a+(a-1)=\\operatorname{tr}A$，吻合。）\n\n（2）规范形为 $y_1^2+y_2^2$，说明 $A$ 有两个正特征值、一个零特征值（正惯性指数 $2$，秩 $2$）。三个特征值 $a,\\ a+1,\\ a-2$ 中必有一个为 $0$：\n- 若 $a=0$：特征值为 $0,1,-2$，含负值，规范形为 $y_1^2-y_2^2$，不符；\n- 若 $a=-1$：特征值为 $-1,0,-3$，两负一零，不符；\n- 若 $a=2$：特征值为 $2,3,0$，两正一零，规范形恰为 $y_1^2+y_2^2$，符合。\n\n所以 $a=2$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "对称矩阵非对角元取交叉项系数的一半：$2x_1x_3$ 对应 $a_{13}=a_{31}=1$，$-2x_2x_3$ 对应 $a_{23}=a_{32}=-1$",
+        "规范形 $y_1^2+y_2^2$ 要求正惯性指数=2、负惯性指数=0、秩=2，需同时满足两正一零，单看秩为 2 会漏掉对正负号的判断"
+      ],
+      "key_point": "二次型特征值：写对称矩阵解特征方程；规范形 $\\sum y_i^2$ 的系数即正、负、零惯性指数，据此定参数。"
+    },
+    {
+      "id": 715,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "袋中有 $1$ 个红球、$2$ 个黑球与 $3$ 个白球. 现有放回地从袋中取两次, 每次取一个球. 以 $X$, $Y, Z$ 分别表示两次取球所取得的红球、黑球与白球的个数\r\n\r\n(1) 求 $P\\{X=1 \\mid Z=0\\}$;\r\n\r\n(2) 求二维随机变量 $(X, Y)$ 的概率分布",
+      "options": {},
+      "answer": "P\\{X=1\\mid Z=0\\}=\\dfrac{4}{9};\\ (X,Y) 联合分布见解答（X+Y\\le2 的六个非零格子）",
+      "analysis": "【分析】袋中 $1$ 红、$2$ 黑、$3$ 白共 $6$ 球，有放回取两次，每次：红 $p_r=\\tfrac16$、黑 $p_b=\\tfrac13$、白 $p_w=\\tfrac12$。两次独立。$(X,Y,Z)$ 服从参数 $(2;p_r,p_b,p_w)$ 的多项分布，$X+Y+Z=2$。(1) 用条件概率定义，$Z=0$ 即两次都不取白；(2) 列 $X+Y\\le2$ 的联合分布表，由多项概率公式逐格算。\n\n【解答】(1) $Z=0$ 表示两次都没取到白球，每次取到非白（红或黑）概率 $p_r+p_b=\\tfrac12$，故\n$$P\\{Z=0\\}=\\Big(\\tfrac12\\Big)^2=\\tfrac14.$$\n$\\{X=1,Z=0\\}$ 表示两次中恰一次红、一次黑（无白）：\n$$P\\{X=1,Z=0\\}=2\\,p_r p_b=2\\cdot\\tfrac16\\cdot\\tfrac13=\\tfrac19.$$\n所以\n$$P\\{X=1\\mid Z=0\\}=\\frac{P\\{X=1,Z=0\\}}{P\\{Z=0\\}}=\\frac{1/9}{1/4}=\\frac49.$$\n(2) 由多项分布 $P\\{X=i,Y=j\\}=\\dfrac{2!}{i!\\,j!\\,(2-i-j)!}p_r^{\\,i}p_b^{\\,j}p_w^{\\,2-i-j}$（$i+j\\le2$）：\n$$P\\{0,0\\}=p_w^2=\\tfrac14,\\quad P\\{0,1\\}=2p_bp_w=2\\cdot\\tfrac13\\cdot\\tfrac12=\\tfrac13,\\quad P\\{0,2\\}=p_b^2=\\tfrac19,$$\n$$P\\{1,0\\}=2p_rp_w=2\\cdot\\tfrac16\\cdot\\tfrac12=\\tfrac16,\\quad P\\{1,1\\}=2p_rp_b=\\tfrac19,\\quad P\\{2,0\\}=p_r^2=\\tfrac1{36},$$\n其余（$i+j>2$）为 $0$。验算总和：$\\tfrac14+\\tfrac13+\\tfrac19+\\tfrac16+\\tfrac19+\\tfrac1{36}=\\tfrac{9+12+4+6+4+1}{36}=\\tfrac{36}{36}=1$。\n即 $(X,Y)$ 分布表：$P(0,0)=\\tfrac14,\\ P(0,1)=\\tfrac13,\\ P(0,2)=\\tfrac19,\\ P(1,0)=\\tfrac16,\\ P(1,1)=\\tfrac19,\\ P(2,0)=\\tfrac1{36}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "有放回⇒两次独立、概率不变，是多项分布；切勿用超几何（无放回）公式。",
+        "X+Y≤2 的约束限定只有 6 个非零格子；混合事件如 {X=1,Z=0} 别漏掉两次先后顺序的系数 2。"
+      ],
+      "key_point": "有放回三色取球=多项分布(n=2)；条件概率回归定义，联合分布按多项公式逐格算并用总和=1 自检。"
+    },
+    {
+      "id": 716,
+      "paper": "数学一",
+      "year": 2009,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}\\lambda^{2} x \\mathrm{e}^{-\\lambda x}, & x>0 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n其中参数 $\\lambda(\\lambda>0)$ 未知, $X_{1}, X_{2}, \\cdots, X_{n}$ 是来自总体 $X$ 的简单随机样本\r\n\r\n(1) 求参数 $\\lambda$ 的矩估计量;\r\n\r\n(2) 求参数 $\\lambda$ 的最大似然估计量",
+      "options": {},
+      "answer": "(1) $\\hat{\\lambda}=\\dfrac{2}{\\bar{X}}$\r\n\r\n(2) $\\hat{\\lambda}_2=\\dfrac{2}{\\bar X}$",
+      "analysis": "【分析】该密度是 $\\Gamma(2,\\lambda)$ 分布（形状参数 $2$、率参数 $\\lambda$）。矩估计：求总体一阶矩 $E(X)$，令其等于样本均值 $\\bar X$ 反解 $\\lambda$。最大似然：写出似然函数取对数，对 $\\lambda$ 求导令零。\n\n【解答】**(1) 矩估计。** 先算 $E(X)$：\n$$E(X)=\\int_0^{+\\infty}x\\cdot\\lambda^2 x\\mathrm{e}^{-\\lambda x}\\mathrm{d}x=\\lambda^2\\int_0^{+\\infty}x^2\\mathrm{e}^{-\\lambda x}\\mathrm{d}x=\\lambda^2\\cdot\\dfrac{2!}{\\lambda^3}=\\dfrac{2}{\\lambda}.$$\n令 $E(X)=\\bar X$，即 $\\dfrac{2}{\\lambda}=\\bar X$，解得矩估计量\n$$\\hat\\lambda=\\dfrac{2}{\\bar X}.$$\n**(2) 最大似然估计。** 设样本观测值 $x_1,\\dots,x_n$（均 $>0$），似然函数\n$$L(\\lambda)=\\prod_{i=1}^n\\lambda^2 x_i\\mathrm{e}^{-\\lambda x_i}=\\lambda^{2n}\\Big(\\prod_{i=1}^n x_i\\Big)\\mathrm{e}^{-\\lambda\\sum_{i=1}^n x_i}.$$\n取对数：\n$$\\ln L=2n\\ln\\lambda+\\sum_{i=1}^n\\ln x_i-\\lambda\\sum_{i=1}^n x_i.$$\n对 $\\lambda$ 求导并令零：\n$$\\dfrac{\\mathrm{d}\\ln L}{\\mathrm{d}\\lambda}=\\dfrac{2n}{\\lambda}-\\sum_{i=1}^n x_i=0\\ \\Rightarrow\\ \\lambda=\\dfrac{2n}{\\sum_{i=1}^n x_i}=\\dfrac{2}{\\bar x}.$$\n二阶导 $-\\dfrac{2n}{\\lambda^2}<0$ 为极大。故最大似然估计量\n$$\\hat\\lambda=\\dfrac{2}{\\bar X}.$$\n两种估计结果一致，均为 $\\dfrac{2}{\\bar X}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$E(X)$ 用 $\\int_0^\\infty x^2\\mathrm{e}^{-\\lambda x}\\mathrm{d}x=2/\\lambda^3$（伽马积分 $\\int_0^\\infty x^n\\mathrm{e}^{-\\lambda x}=n!/\\lambda^{n+1}$）。",
+        "似然函数中 $\\lambda^2$ 是 $n$ 次方得 $\\lambda^{2n}$，对数后是 $2n\\ln\\lambda$，系数别丢 $2$。",
+        "最后用 $\\bar X=\\frac1n\\sum X_i$ 把 $\\frac{2n}{\\sum X_i}$ 写成 $\\frac{2}{\\bar X}$。"
+      ],
+      "key_point": "$\\Gamma(2,\\lambda)$ 的 $E(X)=2/\\lambda$；矩估计与 MLE 都给出 $\\hat\\lambda=2/\\bar X$。"
+    }
+  ]
+}

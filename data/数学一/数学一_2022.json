@@ -1,0 +1,509 @@
+{
+  "paper": "数学一",
+  "year": 2022,
+  "count": 22,
+  "questions": [
+    {
+      "id": 47,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{f(x)}{\\ln x}=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f(1)=0$",
+        "B": "$\\displaystyle \\lim _{x \\rightarrow 1} f(x)=0$",
+        "C": "$f^{\\prime}(1)=1$",
+        "D": "$\\displaystyle \\lim _{x \\rightarrow 1} f^{\\prime}(x)=1$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n本题考查极限的基本判断：当 $x\\to 1$ 时分母 $\\ln x\\to 0$，而整个分式有有限极限 $1$，由此只能反推出分子 $f(x)$ 必趋于 $0$。注意题目只给了极限信息，没有任何连续性、可导性假设，因此凡是涉及 $f(1)$ 的取值、$f$ 的可导性的选项都站不住脚。\n\n【解答】\n由 $\\displaystyle\\lim_{x\\to 1}\\frac{f(x)}{\\ln x}=1$ 且 $\\displaystyle\\lim_{x\\to 1}\\ln x=0$，作恒等变形\n$$f(x)=\\frac{f(x)}{\\ln x}\\cdot \\ln x.$$\n两端取 $x\\to 1$ 的极限，右端是“有限极限 $\\times$ 趋于 $0$ 的量”，故\n$$\\lim_{x\\to 1}f(x)=\\lim_{x\\to 1}\\frac{f(x)}{\\ln x}\\cdot\\lim_{x\\to 1}\\ln x=1\\times 0=0.$$\n因此 $\\displaystyle\\lim_{x\\to 1}f(x)=0$，选 B。\n\n说明：极限 $\\displaystyle\\lim_{x\\to 1}f(x)=0$ 只刻画了 $f$ 在 $x=1$ 处的“趋近值”，并不要求 $f$ 在 $1$ 处有定义或连续，更谈不上可导，所以 A、C、D 均无法保证。",
+      "wrong_options": {
+        "A": "极限存在且为 0 不等于函数值，$f(1)$ 可以没有定义或不等于 0（例如 $x=1$ 是可去间断点），故 $f(1)=0$ 不一定成立。",
+        "C": "题中无可导性假设，$f'(1)$ 不一定存在；即便存在也无法定出其值为 1。",
+        "D": "导函数极限既未假设存在，也无法由原条件推出其值为 1。"
+      },
+      "pitfalls": [
+        "误以为“极限为 0”就等于“函数值为 0”而错选 A，忽略了可去间断点的情形。",
+        "在没有可导性假设下擅自对 $f$ 求导，错选 C 或 D。"
+      ],
+      "key_point": "分母趋于 0 而分式极限有限，立即反推分子趋于 0：$f(x)=\\frac{f(x)}{\\ln x}\\cdot\\ln x$。"
+    },
+    {
+      "id": 48,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(u)$ 可导, $z=x y f\\left(\\dfrac{y}{x}\\right)$, 若 $x \\dfrac{\\partial z}{\\partial x}+y \\dfrac{\\partial z}{\\partial y}=y^{2}(\\ln y-\\ln x)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle f(1)=\\frac{1}{2}-f^{\\prime}(1)=0$",
+        "B": "$\\displaystyle f(1)=0, f^{\\prime}(1)=\\frac{1}{2}$",
+        "C": "$f(1)=\\dfrac{1}{2}, f^{\\prime}(1)=1$",
+        "D": "$f(1)=0, f^{\\prime}(1)=1$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n$z=xy\\,f(y/x)$ 是经典的复合函数偏导问题。直接计算 $x z_x+y z_y$ 会发现含 $f'$ 的项恰好抵消，化简为 $2xy\\,f(y/x)$，再与右端 $y^2\\ln(y/x)$ 比对即可解出 $f$ 的表达式，从而读出 $f(1)$ 与 $f'(1)$。这正是欧拉齐次关系的体现（$z$ 关于 $x,y$ 是二次齐次的）。\n\n【解答】\n记 $u=\\dfrac{y}{x}$。先求偏导：\n$$z_x=y\\,f(u)+xy\\,f'(u)\\cdot\\left(-\\frac{y}{x^2}\\right)=y\\,f(u)-\\frac{y^2}{x}f'(u),$$\n$$z_y=x\\,f(u)+xy\\,f'(u)\\cdot\\frac{1}{x}=x\\,f(u)+y\\,f'(u).$$\n于是\n$$x z_x+y z_y=\\big(xy f-y^2 f'\\big)+\\big(xy f+y^2 f'\\big)=2xy\\,f(u).$$\n依题意 $2xy\\,f\\!\\left(\\dfrac{y}{x}\\right)=y^2(\\ln y-\\ln x)=y^2\\ln\\dfrac{y}{x}$。\n令 $y=ux$（$x>0$），代入得\n$$2x(ux)f(u)=(ux)^2\\ln u\\\\ \\Longrightarrow\\\\ 2x^2 u\\,f(u)=u^2x^2\\ln u,$$\n约去 $x^2$ 与一个 $u$（$u\\neq0$）得\n$$f(u)=\\frac{u\\ln u}{2}.$$\n故 $f(1)=\\dfrac{1\\cdot\\ln 1}{2}=0$。又\n$$f'(u)=\\frac12\\big(\\ln u+1\\big),\\qquad f'(1)=\\frac12(0+1)=\\frac12.$$\n即 $f(1)=0,\\\\ f'(1)=\\dfrac12$，选 B。",
+      "wrong_options": {
+        "A": "该式 $f(1)=\\tfrac12-f'(1)=0$ 要求 $f(1)=0$ 且 $f'(1)=\\tfrac12$ 同时满足“$\\tfrac12-f'(1)=0$”，逻辑成立，但它额外断言 $f(1)=\\tfrac12-f'(1)$，写法把 $f(1)$ 也等同于 0 之外的连等，表述与正确结论不符，属干扰项。",
+        "C": "$f(1)=\\tfrac12$ 与正确值 $f(1)=0$ 矛盾，且 $f'(1)=1$ 也错。",
+        "D": "$f(1)=0$ 正确，但 $f'(1)=1$ 与正确值 $\\tfrac12$ 不符。"
+      },
+      "pitfalls": [
+        "求 $z_x$ 时漏掉 $f'(u)$ 对 $u=y/x$ 的链式导数 $-y/x^2$。",
+        "化简后忘记约去 $u$，导致 $f(u)$ 多出一个因子。",
+        "对 $f(u)=\\tfrac12 u\\ln u$ 求导时漏掉乘积法则中的 $\\tfrac12\\ln u$ 项。"
+      ],
+      "key_point": "代入 $u=y/x$ 后含 $f'$ 的项相消，$x z_x+y z_y=2xy f(y/x)$，再比对系数解出 $f$。"
+    },
+    {
+      "id": 49,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设数列 $\\left\\{x_{n}\\right\\}$ 满足 $-\\dfrac{\\pi}{2} \\leqslant x_{n} \\leqslant \\dfrac{\\pi}{2}$, 则 $(\\quad)$",
+      "options": {
+        "A": "若 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\cos \\left(\\sin x_{n}\\right)$ 存在, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n}$ 存在",
+        "B": "若 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\sin \\left(\\cos x_{n}\\right)$ 存在, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n}$ 存在",
+        "C": "若 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\cos \\left(\\sin x_{n}\\right)$ 存在, 则 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\sin x_{n}$ 存在, 但 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n}$ 不一定存在",
+        "D": "若 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\sin \\left(\\cos x_{n}\\right)$ 存在, 则 $\\displaystyle \\displaystyle \\lim _{n \\rightarrow \\infty} \\cos x_{n}$ 存在, 但 $\\displaystyle \\lim _{n \\rightarrow \\infty} x_{n}$ 不一定存在"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n关键在于“外层函数在内层取值范围上是否单调”。由 $x_n\\in[-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2}]$ 可知：\n- $\\cos x_n\\in[0,1]$，而 $\\sin$ 在 $[0,1]\\subset[0,\\tfrac{\\pi}{2}]$ 上严格单调递增且连续，其反函数连续，故由 $\\sin(\\cos x_n)$ 收敛可反推 $\\cos x_n$ 收敛；\n- $\\sin x_n\\in[-1,1]$，而 $\\cos$ 在 $[-1,1]$ 上不单调（偶函数），故由 $\\cos(\\sin x_n)$ 收敛无法反推 $\\sin x_n$ 收敛。\n再注意：即便 $\\cos x_n$（或 $\\sin x_n$）收敛，$x_n$ 也未必收敛。逐项排查即得 D。\n\n【解答】\n先看含 $\\sin(\\cos x_n)$ 的选项（B、D）。因 $x_n\\in[-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2}]$，故 $\\cos x_n\\in[0,1]$。函数 $g(t)=\\sin t$ 在 $[0,1]$ 上严格递增、连续，其反函数 $\\arcsin$ 在 $[\\,0,\\sin 1\\,]$ 上连续。设 $\\lim_{n\\to\\infty}\\sin(\\cos x_n)=A$，则\n$$\\lim_{n\\to\\infty}\\cos x_n=\\lim_{n\\to\\infty}\\arcsin\\big(\\sin(\\cos x_n)\\big)=\\arcsin A$$\n存在。这说明 $\\lim_{n\\to\\infty}\\cos x_n$ 一定存在——D 的前半句正确。\n\n但 $x_n$ 不一定收敛。反例：取 $x_n=(-1)^n$，则 $-\\tfrac{\\pi}{2}\\le x_n\\le\\tfrac{\\pi}{2}$，$\\cos x_n\\equiv\\cos 1$ 收敛，$\\sin(\\cos x_n)\\equiv\\sin(\\cos 1)$ 收敛，而 $x_n$ 在 $\\pm1$ 间振荡不收敛。故 D 的“但 $\\lim x_n$ 不一定存在”也正确，D 整体成立。\n\n相应地，B 断言由 $\\sin(\\cos x_n)$ 收敛可得 $x_n$ 收敛，被上述反例否定，B 错。\n\n再看含 $\\cos(\\sin x_n)$ 的选项（A、C）。此时 $\\sin x_n\\in[-1,1]$，而 $\\cos$ 在 $[-1,1]$ 上为偶函数、不单调。反例：取 $x_n=(-1)^n\\cdot\\dfrac{\\pi}{6}$，则 $\\sin x_n=(-1)^n\\cdot\\tfrac12$ 不收敛，但 $\\cos(\\sin x_n)=\\cos\\tfrac12$ 收敛。可见由 $\\cos(\\sin x_n)$ 收敛既不能推出 $\\sin x_n$ 收敛，更不能推出 $x_n$ 收敛，故 A、C 均错。\n\n综上选 D。",
+      "wrong_options": {
+        "A": "$\\cos$ 在 $\\sin x_n$ 的取值区间 $[-1,1]$ 上不单调，$\\cos(\\sin x_n)$ 收敛推不出 $x_n$ 收敛；取 $x_n=(-1)^n\\tfrac{\\pi}{6}$ 即为反例。",
+        "B": "$\\sin(\\cos x_n)$ 收敛仅能推出 $\\cos x_n$ 收敛，不能推出 $x_n$ 收敛；取 $x_n=(-1)^n$ 反例否定。",
+        "C": "由 $\\cos(\\sin x_n)$ 收敛连 $\\sin x_n$ 收敛都推不出（$\\cos$ 在 $[-1,1]$ 上不单调），取 $x_n=(-1)^n\\tfrac{\\pi}{6}$ 时 $\\sin x_n$ 振荡，故 C 前半句即错。"
+      },
+      "pitfalls": [
+        "忽视“外层函数在内层取值区间上是否单调”，把 $\\cos$ 当成可逆而误判 A、C。",
+        "混淆“$\\cos x_n$ 收敛”与“$x_n$ 收敛”，误选 B；偶函数复合会丢失符号信息。",
+        "未注意 $x_n\\in[-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2}]$ 使 $\\cos x_n\\in[0,1]$ 落在 $\\sin$ 的单调区间内，这是 D 成立的关键。"
+      ],
+      "key_point": "复合极限反推要看外层在内层取值区间上是否单调：单调可逆才能反推内层，且内层收敛未必使 $x_n$ 收敛。"
+    },
+    {
+      "id": 50,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若 $\\displaystyle I_{1}=\\int_{0}^{1} \\frac{x}{2(1+\\cos x)} \\mathrm{d} x, I_{2}=\\int_{0}^{1} \\frac{\\ln (1+x)}{1+\\cos x} \\mathrm{~d} x, I_{3}=\\int_{0}^{1} \\frac{2 x}{1+\\sin x} \\mathrm{d} x$, 则 $(\\quad)$",
+      "options": {
+        "A": "$I_{1}<I_{2}<I_{3}$",
+        "B": "$I_{2}<I_{1}<I_{3}$",
+        "C": "$I_{1}<I_{3}<I_{2}$",
+        "D": "$I_{3}<I_{2}<I_{1}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n三个积分都在 $[0,1]$ 上，区间相同，故只需逐对比较被积函数的大小，再用定积分的保号性（$f\\le g\\Rightarrow\\int f\\le\\int g$，且非恒等时严格）即可定序。比较时把分母配成相同形式，化为初等不等式 $\\ln(1+x)\\le x$、$\\sin x\\le 1$、$\\cos x>0$ 等来判断。\n\n【解答】\n在 $(0,1]$ 上 $\\cos x>0,\\\\ \\sin x>0$，分母均为正。\n\n第一步：比较 $I_1$ 与 $I_2$。它们分母同为 $1+\\cos x$（把 $I_1$ 写成同一分母）：\n$$\\frac{x}{2(1+\\cos x)}\\quad\\text{与}\\quad\\frac{\\ln(1+x)}{1+\\cos x}=\\frac{2\\ln(1+x)}{2(1+\\cos x)}.$$\n只需比较分子 $x$ 与 $2\\ln(1+x)$。令 $\\varphi(x)=2\\ln(1+x)-x$，则 $\\varphi(0)=0$，$\\varphi'(x)=\\dfrac{2}{1+x}-1=\\dfrac{1-x}{1+x}\\ge0$ 在 $[0,1]$ 上成立（仅 $x=1$ 处为 0）。故 $\\varphi(x)>0$ 在 $(0,1]$ 上成立，即 $2\\ln(1+x)>x$。于是被积函数 $I_2$ 严格大于 $I_1$ 的被积函数，从而\n$$I_1<I_2.$$\n\n第二步：比较 $I_2$ 与 $I_3$。利用 $\\ln(1+x)\\le x$，先有\n$$\\frac{\\ln(1+x)}{1+\\cos x}\\le\\frac{x}{1+\\cos x}.$$\n再比较 $\\dfrac{x}{1+\\cos x}$ 与 $I_3$ 的被积函数 $\\dfrac{2x}{1+\\sin x}$，即比较 $\\dfrac{1}{1+\\cos x}$ 与 $\\dfrac{2}{1+\\sin x}$。交叉相乘（分母皆正）比较 $1+\\sin x$ 与 $2(1+\\cos x)$：在 $[0,1]$ 上，由 $\\pi>3$ 知 $1<\\dfrac{\\pi}{3}$，而 $\\cos x$ 在 $\\left[0,\\dfrac{\\pi}{2}\\right]$ 上单调减，故 $\\cos x\\ge\\cos 1>\\cos\\dfrac{\\pi}{3}=\\dfrac12$，于是 $2(1+\\cos x)>3$；而 $1+\\sin x\\le2<3$，恒有 $1+\\sin x<2(1+\\cos x)$（全程只用 $\\pi>3$，不需要小数估值）。因此\n$$\\frac{x}{1+\\cos x}<\\frac{2x}{1+\\sin x}\\quad(x\\in(0,1]).$$\n串联得被积函数 $\\dfrac{\\ln(1+x)}{1+\\cos x}<\\dfrac{2x}{1+\\sin x}$，故\n$$I_2<I_3.$$\n\n综合两步：$I_1<I_2<I_3$，选 A。\n\n（附核验 $I_1<I_3$：$\\dfrac{x}{2(1+\\cos x)}<\\dfrac{x}{1+\\cos x}<\\dfrac{2x}{1+\\sin x}$，与上一致。）",
+      "wrong_options": {
+        "B": "误判 $I_2<I_1$。实际由 $2\\ln(1+x)>x$ 知 $I_2>I_1$，方向相反。",
+        "C": "$I_3<I_2$ 错误：已证被积函数 $\\frac{\\ln(1+x)}{1+\\cos x}<\\frac{2x}{1+\\sin x}$，故 $I_2<I_3$。",
+        "D": "把次序完全颠倒，$I_3$ 的被积函数最大，应居首大而非最小，全错。"
+      },
+      "pitfalls": [
+        "$I_1$ 分母带系数 2，比较时务必通分成同一分母 $2(1+\\cos x)$ 再比分子，否则方向易判反。",
+        "比较 $I_2,I_3$ 时直接比 $\\ln(1+x)$ 与 $2x$ 不够，需要分母 $1+\\sin x$ 与 $1+\\cos x$ 一并放缩。",
+        "忘记 $\\ln(1+x)\\le x$ 这一基本不等式，导致 $I_2,I_3$ 无法定序。",
+        "比较 $1+\\sin x$ 与 $2(1+\\cos x)$ 别靠 $\\cos 1\\approx0.54$ 这类小数估值（考场无计算器，且这么卡太薄）：用 $1<\\dfrac{\\pi}{3}$ 得 $\\cos x>\\dfrac12$ 即可，结论严格。"
+      ],
+      "key_point": "同区间积分比大小只比被积函数：通分成同分母比分子，再用 $\\ln(1+x)\\le x$ 与分母放缩串联定序。"
+    },
+    {
+      "id": 51,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列 $4$ 个条件中, $3$ 阶矩阵 $\\boldsymbol{A}$ 可相似对角化的一个充分非必要条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 有 3 个不同的特征值",
+        "B": "$\\boldsymbol{A}$ 有 3 个线性无关的特征向量",
+        "C": "$\\boldsymbol{A}$ 有 3 个两两线性无关的特征向量",
+        "D": "$\\boldsymbol{A}$ 的属于不同特征值的特征向量相互正交"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查 $n$ 阶矩阵可相似对角化的判别。核心结论:$n$ 阶矩阵 $\\boldsymbol{A}$ 可相似对角化 $\\iff$ $\\boldsymbol{A}$ 有 $n$ 个线性无关的特征向量 $\\iff$ 每个特征值的几何重数等于代数重数。题目要找的是\"充分非必要\"条件,即:该条件成立能保证可对角化(充分),但可对角化未必要求该条件(非必要)。逐项用这两条标准检验即可。\n\n【解答】\n\n逐项分析(以下均针对 $3$ 阶矩阵 $\\boldsymbol{A}$):\n\n**A 项**:$\\boldsymbol{A}$ 有 $3$ 个不同的特征值。不同特征值对应的特征向量必线性无关,故 $3$ 个不同特征值必有 $3$ 个线性无关的特征向量,从而可对角化——**充分**。但可对角化不要求特征值互异,如单位矩阵 $\\boldsymbol{E}$ 只有特征值 $1$(三重),却显然可对角化——**非必要**。故 A 是充分非必要条件。\n\n**B 项**:$\\boldsymbol{A}$ 有 $3$ 个线性无关的特征向量。这恰是 $3$ 阶矩阵可对角化的**充要条件**(既充分又必要),不符合\"非必要\"。\n\n**C 项**:$\\boldsymbol{A}$ 有 $3$ 个两两线性无关的特征向量。\"两两线性无关\"远弱于\"整体线性无关\":三个向量两两不成比例,仍可能整体线性相关。例如取 $\\boldsymbol{\\xi}_1,\\boldsymbol{\\xi}_2$ 线性无关,$\\boldsymbol{\\xi}_3=\\boldsymbol{\\xi}_1+\\boldsymbol{\\xi}_2$,则三者两两线性无关但整体相关,凑不出 $3$ 个线性无关的特征向量,不能保证可对角化——**不充分**。\n\n**D 项**:$\\boldsymbol{A}$ 属于不同特征值的特征向量相互正交。这是实对称矩阵的性质,但对一般矩阵,该条件既不充分也非充要。例如 $\\boldsymbol{A}=\\begin{pmatrix}1&1&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}$,特征值 $1$(二重)与 $2$,属于 $1,2$ 的特征向量分别为 $(1,0,0)^{\\mathrm{T}}$ 与 $(0,0,1)^{\\mathrm{T}}$,二者正交,满足 D,但特征值 $1$ 几何重数为 $1<2$,$\\boldsymbol{A}$ **不可**对角化。故 D 不充分。\n\n综上,唯一的充分非必要条件是 **A**。",
+      "wrong_options": {
+        "B": "$3$ 阶矩阵有 $3$ 个线性无关的特征向量是可对角化的充分必要条件,既充分又必要,不满足题目要求的\"非必要\"。",
+        "C": "\"两两线性无关\"只保证任意两个不成比例,无法保证三个向量整体线性无关(如 $\\boldsymbol{\\xi}_3=\\boldsymbol{\\xi}_1+\\boldsymbol{\\xi}_2$),不足以推出可对角化,故不充分。",
+        "D": "不同特征值的特征向量正交不能阻止同一特征值出现几何重数小于代数重数的情形,可举出满足该条件却不可对角化的反例,故既不充分。"
+      },
+      "pitfalls": [
+        "混淆\"两两线性无关\"与\"整体线性无关\":前者弱得多,不能推出可对角化。",
+        "把\"充要条件\"(B)当成答案——题目明确要\"充分非必要\",充要条件不符合。",
+        "误以为不同特征值特征向量正交是一般矩阵的固有性质,实际上只对实对称矩阵成立。"
+      ],
+      "key_point": "$n$ 个不同特征值 $\\Rightarrow$ 可对角化(充分),但单位阵等说明非必要;充要条件(B)不算\"充分非必要\"。"
+    },
+    {
+      "id": 52,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A , B}$ 为 $n$ 阶矩阵, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵, 若方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 与 $\\boldsymbol{B x}=\\boldsymbol 0$ 同解, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{ll}\\boldsymbol A & \\boldsymbol O \\\\ \\boldsymbol E & \\boldsymbol B\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 只有零解",
+        "B": "$\\left(\\begin{array}{cc}\\boldsymbol{E} & \\boldsymbol{A} \\\\ \\boldsymbol{O} & \\boldsymbol{A B}\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 只有零解",
+        "C": "$\\left(\\begin{array}{ll}\\boldsymbol A & \\boldsymbol B \\\\ \\boldsymbol O & \\boldsymbol B\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 与 $\\left(\\begin{array}{ll}\\boldsymbol B & \\boldsymbol A \\\\ \\boldsymbol O & \\boldsymbol A\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 同解",
+        "D": "$\\left(\\begin{array}{cc}\\boldsymbol {A B} & \\boldsymbol B \\\\ \\boldsymbol O & \\boldsymbol A\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 与 $\\left(\\begin{array}{cc}\\boldsymbol {B A} & \\boldsymbol A \\\\ \\boldsymbol O & \\boldsymbol B\\end{array}\\right) \\boldsymbol{y}=\\boldsymbol 0$ 同解"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题给出 $Ax=0$ 与 $Bx=0$ 同解，这等价于：二者解空间完全相同，从而 $r(A)=r(B)$，且对任一向量 $\\xi$ 有 $A\\xi=0\\Leftrightarrow B\\xi=0$。逐一把各分块方程组按分量 $y=(y_1,y_2)^{\\mathrm T}$ 展开，利用上述等价关系判断各选项是否成立。\n\n【解答】\n\n设解向量按维数分块为 $y=\\begin{pmatrix}y_1\\\\y_2\\end{pmatrix}$。关键事实：对任意 $\\xi$，$A\\xi=0\\Leftrightarrow B\\xi=0$。\n\n**逐项分析。**\n\n**A 错。** $\\begin{pmatrix}A&O\\\\E&B\\end{pmatrix}y=0$ 展开为 $Ay_1=0$ 与 $y_1+By_2=0$。若 $A$ 不可逆（题中并未假设可逆），$Ay_1=0$ 有非零解，相应可解出 $y_2$，故方程组有非零解，不一定只有零解。\n\n**B 错。** $\\begin{pmatrix}E&A\\\\O&AB\\end{pmatrix}y=0$ 展开为 $y_1+Ay_2=0$ 与 $ABy_2=0$。当 $A,B$ 不可逆时 $ABy_2=0$ 可有非零解 $y_2$，再令 $y_1=-Ay_2$，得非零解，故不一定只有零解。\n\n**C 对。** 系统一 $\\begin{pmatrix}A&B\\\\O&B\\end{pmatrix}y=0$ 即 $\\begin{cases}Ay_1+By_2=0\\\\By_2=0\\end{cases}$。由 $By_2=0$ 代入第一式得 $Ay_1=0$，故系统一 $\\Leftrightarrow\\{Ay_1=0,\\ By_2=0\\}$。系统二 $\\begin{pmatrix}B&A\\\\O&A\\end{pmatrix}y=0$ 即 $\\begin{cases}By_1+Ay_2=0\\\\Ay_2=0\\end{cases}$，同理 $\\Leftrightarrow\\{By_1=0,\\ Ay_2=0\\}$。由同解条件 $Ay_1=0\\Leftrightarrow By_1=0$、$By_2=0\\Leftrightarrow Ay_2=0$，两系统都等价于 $\\{Ay_1=0,\\ Ay_2=0\\}$，故两方程组同解。\n\n**D 错。** $\\begin{pmatrix}AB&B\\\\O&A\\end{pmatrix}y=0$ 即 $\\{ABy_1+By_2=0,\\ Ay_2=0\\}$；另一组 $\\begin{pmatrix}BA&A\\\\O&B\\end{pmatrix}y=0$ 即 $\\{BAy_1+Ay_2=0,\\ By_2=0\\}$。$Ax=0$ 与 $Bx=0$ 同解并不能推出 $ABx=0$ 与 $BAx=0$ 同解（$AB$、$BA$ 的零空间一般不同），故两方程组未必同解。\n\n综上选 **C**。",
+      "wrong_options": {
+        "A": "误以为含单位块 $E$ 就保证只有零解。$Ay_1=0$ 在 $A$ 不可逆时有非零解，由此可构造整体非零解。",
+        "B": "误以为首行的 $E$ 强制 $y_1=0$ 进而只有零解。其实 $ABy_2=0$ 可有非零解 $y_2$，再取 $y_1=-Ay_2$ 即得非零解。",
+        "D": "同解条件只对 $A,B$ 本身成立，推不到乘积 $AB$ 与 $BA$；$AB$、$BA$ 的解空间一般不同，故两方程组未必同解。"
+      },
+      "pitfalls": [
+        "“$Ax=0$ 与 $Bx=0$ 同解”等价于解空间相同（$r(A)=r(B)$ 且 $A\\xi=0\\Leftrightarrow B\\xi=0$），这是唯一可直接使用的条件。",
+        "题中未假设 $A,B$ 可逆，凡靠“可逆”得只有零解的选项（A、B）都不成立。",
+        "同解关系不能随意传递到乘积 $AB$、$BA$，D 的陷阱正在于此。"
+      ],
+      "key_point": "同解 $\\Leftrightarrow$ 解空间相同；分块方程组按分量展开，利用 $A\\xi=0\\Leftrightarrow B\\xi=0$ 化简，C 中两组都归结为 $Ay_1=0,Ay_2=0$ 故同解。"
+    },
+    {
+      "id": 53,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}=(\\lambda, 1,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(1, \\lambda, 1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(1,1, \\lambda)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{4}=\\left(1, \\lambda, \\lambda^{2}\\right)^{\\mathrm{T}}$, 若 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 与 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$, $\\boldsymbol{\\alpha}_{4}$ 等价, 则 $\\lambda$ 的取值范围是 $(\\quad)$",
+      "options": {
+        "A": "$\\{0,1\\}$",
+        "B": "$\\{\\lambda \\mid \\lambda \\in \\mathbf{R}, \\lambda \\neq-2\\}$",
+        "C": "$\\{\\lambda \\mid \\lambda \\in \\mathbf{R}, \\lambda \\neq-1, \\lambda \\neq-2\\}$",
+        "D": "$\\{\\lambda \\mid \\lambda \\in \\mathbf{R}, \\lambda \\neq-1\\}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n两个向量组等价 $\\iff$ 二者可相互线性表示 $\\iff$ 它们生成同一子空间 $\\iff$ 秩相等且都等于合并向量组的秩。这里两组共用 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2$,等价的关键是:$\\boldsymbol\\alpha_3$ 能被 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4$ 表示,且 $\\boldsymbol\\alpha_4$ 能被 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3$ 表示。统一的秩判据为\n$$r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3)=r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4)=r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4).$$\n通过两个三阶行列式的因式分解定位参数 $\\lambda$。\n\n【解答】\n\n计算两组的方阵行列式。\n\n$$|\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3|=\\begin{vmatrix}\\lambda&1&1\\\\1&\\lambda&1\\\\1&1&\\lambda\\end{vmatrix}=(\\lambda+2)(\\lambda-1)^2.$$\n\n$$|\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4|=\\begin{vmatrix}\\lambda&1&1\\\\1&\\lambda&\\lambda\\\\1&1&\\lambda^2\\end{vmatrix}=(\\lambda-1)^2(\\lambda+1)^2.$$\n\n**情形一:$(\\lambda+2)(\\lambda-1)^2\\neq0$,即 $\\lambda\\neq-2$ 且 $\\lambda\\neq1$。**\n此时 $r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3)=3$,$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3$ 是 $\\mathbf R^3$ 的一组基,故 $\\boldsymbol\\alpha_4$ 必可由其表示。要使两组等价,还需 $\\boldsymbol\\alpha_4$ 与 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2$ 一起也张成 $\\mathbf R^3$,即 $r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4)=3$,亦即 $(\\lambda-1)^2(\\lambda+1)^2\\neq0$。在 $\\lambda\\neq1$ 的前提下,这要求 $\\lambda\\neq-1$。故此情形下等价 $\\iff\\lambda\\neq-2,\\lambda\\neq-1$(且 $\\lambda\\neq1$)。\n\n**情形二:$\\lambda=1$。**\n此时 $\\boldsymbol\\alpha_1=\\boldsymbol\\alpha_2=\\boldsymbol\\alpha_3=\\boldsymbol\\alpha_4=(1,1,1)^{\\mathrm T}$,两组都退化为同一向量,秩均为 $1$ 且相等,显然等价。故 $\\lambda=1$ **可以取**。\n\n**情形三:$\\lambda=-2$。**\n$r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3)=2$,而 $r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4)$:由 $(\\lambda-1)^2(\\lambda+1)^2$ 在 $\\lambda=-2$ 取值 $9\\cdot1=9\\neq0$,得秩为 $3$。两组秩不等($2\\neq3$),不等价。排除 $\\lambda=-2$。\n\n**情形四:$\\lambda=-1$。**\n$r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3)$:由 $(\\lambda+2)(\\lambda-1)^2$ 在 $\\lambda=-1$ 取值 $1\\cdot4=4\\neq0$,秩为 $3$;而 $r(\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4)=0$(因 $(\\lambda-1)^2(\\lambda+1)^2=0$),实际秩为 $2$。两组秩不等($3\\neq2$),不等价。排除 $\\lambda=-1$。\n\n综合四种情形:等价当且仅当 $\\lambda\\neq-1$ 且 $\\lambda\\neq-2$($\\lambda=1$ 允许)。即取值范围为 $\\{\\lambda\\mid\\lambda\\in\\mathbf R,\\lambda\\neq-1,\\lambda\\neq-2\\}$,选 **C**。",
+      "wrong_options": {
+        "A": "$\\{0,1\\}$ 只是满足条件的两个特例,远未穷尽全部取值(如 $\\lambda=2$ 同样等价),范围太窄。",
+        "B": "只排除了 $\\lambda=-2$,漏掉了 $\\lambda=-1$:当 $\\lambda=-1$ 时第二组秩为 $2$ 而第一组秩为 $3$,两组不等价,故 $\\lambda=-1$ 必须排除。",
+        "D": "只排除了 $\\lambda=-1$,漏掉了 $\\lambda=-2$:当 $\\lambda=-2$ 时第一组秩为 $2$ 而第二组秩为 $3$,两组不等价,故 $\\lambda=-2$ 也必须排除。"
+      },
+      "pitfalls": [
+        "等价不是只要求一组能表示另一组,而是要相互表示,等价于三个秩相等;两个行列式都要算。",
+        "$\\lambda=1$ 时所有向量退化为同一个,两组秩都为 $1$ 仍然等价,容易误以为该排除。",
+        "$\\lambda=-1$ 与 $\\lambda=-2$ 分别让不同的一组掉秩,需各自单独验算,不能只盯一个行列式。"
+      ],
+      "key_point": "等价 $\\iff r(\\boldsymbol\\alpha_1\\boldsymbol\\alpha_2\\boldsymbol\\alpha_3)=r(\\boldsymbol\\alpha_1\\boldsymbol\\alpha_2\\boldsymbol\\alpha_4)=r$(合并);两个三阶行列式分别给出 $\\lambda\\neq-2$ 与 $\\lambda\\neq-1$。"
+    },
+    {
+      "id": 54,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从区间 $(0,3)$ 上的均匀分布, 随机变量 $Y$ 服从参数为 $2$ 的泊松分布, 且 $X$ 与 $Y$ 的协方差为 $-1$ , 则 $D(2 X-Y+1)=(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$5$",
+        "C": "$9$",
+        "D": "$12$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题考查方差的线性组合公式。对随机变量 $X,Y$ 及常数 $a,b,c$,有\n$$D(aX+bY+c)=a^2D(X)+b^2D(Y)+2ab\\,\\mathrm{Cov}(X,Y).$$\n常数 $c$ 不影响方差。再代入两个分布的方差:$(0,3)$ 上均匀分布的方差为 $\\dfrac{(3-0)^2}{12}$;参数为 $2$ 的泊松分布方差等于其参数 $2$。结合已知协方差即可。\n\n【解答】\n\n取 $a=2,\\ b=-1,\\ c=1$,则\n$$D(2X-Y+1)=2^2D(X)+(-1)^2D(Y)+2\\cdot2\\cdot(-1)\\,\\mathrm{Cov}(X,Y)=4D(X)+D(Y)-4\\,\\mathrm{Cov}(X,Y).$$\n\n分别计算各量:\n\n- $X\\sim U(0,3)$,故 $D(X)=\\dfrac{(3-0)^2}{12}=\\dfrac{9}{12}=\\dfrac34$;\n- $Y\\sim P(2)$(泊松分布),其方差等于参数,$D(Y)=2$;\n- 已知 $\\mathrm{Cov}(X,Y)=-1$。\n\n代入:\n$$D(2X-Y+1)=4\\times\\dfrac34+2-4\\times(-1)=3+2+4=9.$$\n\n故选 **C**。",
+      "wrong_options": {
+        "A": "$1$ 可能源于把交叉项 $2ab\\,\\mathrm{Cov}$ 的符号弄反(算成 $3+2-4$)或漏算系数,与正确值 $9$ 不符。",
+        "B": "$5=4\\cdot\\frac34+2$,是漏掉了协方差交叉项 $-4\\,\\mathrm{Cov}(X,Y)=+4$ 的结果,错误地把 $X,Y$ 当成不相关处理。",
+        "D": "$12$ 通常来自把均匀分布方差误算为 $\\frac{(3-0)^2}{4}$ 或系数 $a^2$ 处理错误,使 $4D(X)$ 偏大。"
+      },
+      "pitfalls": [
+        "交叉项系数是 $2ab=2\\cdot2\\cdot(-1)=-4$,而 $\\mathrm{Cov}=-1$,二者相乘得 $+4$,符号最易出错。",
+        "$Y$ 前的系数是 $-1$,平方后为 $+1$,$D(Y)$ 仍取正;切勿因减号丢掉 $D(Y)$。",
+        "$(0,3)$ 均匀分布方差是 $\\frac{(b-a)^2}{12}=\\frac{9}{12}=\\frac34$,不是 $\\frac94$ 或 $\\frac34$ 之外的值;常数 $+1$ 对方差无贡献。"
+      ],
+      "key_point": "$D(2X-Y+1)=4D(X)+D(Y)-4\\mathrm{Cov}(X,Y)$;均匀方差 $\\frac{(b-a)^2}{12}$、泊松方差等于参数,交叉项符号要算准。"
+    },
+    {
+      "id": 55,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X_{1}, X_{2}, \\cdots, X_{n}$ 独立同分布, 且 $X_{1}$ 的 4 阶矩存在, $E\\left(X_{1}^{k}\\right)=\\mu_{k}(k=1,2,3,4)$, 则根据切比雪夫不等式, 对任意 $\\varepsilon>0$, 都有 $\\displaystyle P\\left\\{\\left|\\dfrac{1}{n} \\sum_{i=1}^{n} X_{i}^{2}-\\mu_{2}\\right| \\geqslant \\varepsilon\\right\\} \\leqslant(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{\\mu_{4}-\\mu_{2}^{2}}{n \\varepsilon^{2}}$",
+        "B": "$\\dfrac{\\mu_{4}-\\mu_{2}^{2}}{\\sqrt{n} \\varepsilon^{2}}$",
+        "C": "$\\dfrac{\\mu_{2}-\\mu_{1}^{2}}{n \\varepsilon^{2}}$",
+        "D": "$\\dfrac{\\mu_{2}-\\mu_{1}^{2}}{\\sqrt{n} \\varepsilon^{2}}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n切比雪夫不等式的标准形式为:对随机变量 $Z$, 若 $EZ=\\mu$, $DZ=\\sigma^2$ 存在, 则对任意 $\\varepsilon>0$ 有\n$$P\\{|Z-\\mu|\\geqslant\\varepsilon\\}\\leqslant\\dfrac{DZ}{\\varepsilon^2}.$$\n本题中 $Z=\\dfrac{1}{n}\\sum_{i=1}^{n}X_i^2$, 它的均值恰为 $\\mu_2$, 因此关键是算出 $D(Z)=D\\left(\\dfrac{1}{n}\\sum X_i^2\\right)$。注意求方差的对象是 $X_i^2$(不是 $X_i$), 所以要用到 $X_1$ 的 4 阶矩。\n\n【解答】\n\n令 $Y_i=X_i^2$。由于 $X_1,\\cdots,X_n$ 独立同分布, 故 $Y_1,\\cdots,Y_n$ 也独立同分布。\n\n先求单个 $Y_i$ 的期望与方差:\n$$E(Y_i)=E(X_i^2)=\\mu_2,$$\n$$D(Y_i)=E(X_i^4)-[E(X_i^2)]^2=\\mu_4-\\mu_2^2.$$\n\n于是\n$$E\\left(\\dfrac{1}{n}\\sum_{i=1}^{n}X_i^2\\right)=\\dfrac{1}{n}\\sum_{i=1}^{n}E(Y_i)=\\mu_2,$$\n再由独立性(方差对独立和可加)及常数倍提出平方:\n$$D\\left(\\dfrac{1}{n}\\sum_{i=1}^{n}X_i^2\\right)=\\dfrac{1}{n^2}\\sum_{i=1}^{n}D(Y_i)=\\dfrac{1}{n^2}\\cdot n(\\mu_4-\\mu_2^2)=\\dfrac{\\mu_4-\\mu_2^2}{n}.$$\n\n代入切比雪夫不等式:\n$$P\\left\\{\\left|\\dfrac{1}{n}\\sum_{i=1}^{n}X_i^2-\\mu_2\\right|\\geqslant\\varepsilon\\right\\}\\leqslant\\dfrac{D\\left(\\frac{1}{n}\\sum X_i^2\\right)}{\\varepsilon^2}=\\dfrac{\\mu_4-\\mu_2^2}{n\\varepsilon^2}.$$\n\n故选 **A**。",
+      "wrong_options": {
+        "B": "分母错把 $n$ 写成 $\\sqrt{n}$。方差对独立和可加, $\\frac{1}{n^2}\\cdot n=\\frac{1}{n}$, 出现的是 $n$ 而非 $\\sqrt{n}$。",
+        "C": "误把求方差的对象当成 $X_i$, 算成 $D(X_1)=\\mu_2-\\mu_1^2$。本题中心化的是 $\\frac{1}{n}\\sum X_i^2$, 需要的是 $D(X_i^2)=\\mu_4-\\mu_2^2$。",
+        "D": "同时犯了 C 的对象错误和 B 的 $\\sqrt{n}$ 错误。"
+      },
+      "pitfalls": [
+        "求方差的随机变量是 $X_i^2$ 而不是 $X_i$, 所以用到的是 4 阶矩 $\\mu_4$, $D(X_i^2)=\\mu_4-\\mu_2^2$。",
+        "$\\frac{1}{n}$ 提出方差要平方, 再与独立和的 $n$ 项相乘, 最终是 $\\frac{1}{n}$ 而非 $\\frac{1}{\\sqrt{n}}$。"
+      ],
+      "key_point": "切比雪夫不等式右端是 $\\frac{DZ}{\\varepsilon^2}$, 本题 $Z=\\frac{1}{n}\\sum X_i^2$, 故核心是算 $D(X_i^2)=\\mu_4-\\mu_2^2$ 再除以 $n$。"
+    },
+    {
+      "id": 56,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X \\sim N(0,1)$, 若在 $X=x$ 的条件下, 随机变量 $Y \\sim N(x, 1)$, 则 $X$ 与 $Y$ 的相关系数为 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{4}$",
+        "B": "$\\dfrac{1}{2}$",
+        "C": "$\\dfrac{\\sqrt{3}}{3}$",
+        "D": "$\\dfrac{\\sqrt{2}}{2}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n相关系数定义为 $\\rho_{XY}=\\dfrac{\\mathrm{Cov}(X,Y)}{\\sqrt{DX}\\sqrt{DY}}$。题目给的是条件分布:在 $X=x$ 下 $Y\\sim N(x,1)$, 即条件均值 $E(Y\\mid X=x)=x$、条件方差恒为 $1$。把这类\"条件分布\"翻译成线性表示是最快的:$Y=X+\\varepsilon$, 其中 $\\varepsilon\\sim N(0,1)$ 且与 $X$ 独立。这样 $\\mathrm{Cov}(X,Y)$、$DY$ 都可直接算出。\n\n【解答】\n\n由 $Y\\mid X=x\\sim N(x,1)$ 可设\n$$Y=X+\\varepsilon,\\qquad \\varepsilon\\sim N(0,1),\\ \\varepsilon\\ \\text{与}\\ X\\ \\text{独立}.$$\n(验证:给定 $X=x$ 时 $Y=x+\\varepsilon\\sim N(x,1)$, 与条件吻合。)\n\n已知 $X\\sim N(0,1)$, 故 $DX=1$;$\\varepsilon\\sim N(0,1)$, 故 $D\\varepsilon=1$。\n\n协方差(利用 $X,\\varepsilon$ 独立, $\\mathrm{Cov}(X,\\varepsilon)=0$):\n$$\\mathrm{Cov}(X,Y)=\\mathrm{Cov}(X,X+\\varepsilon)=DX+\\mathrm{Cov}(X,\\varepsilon)=1+0=1.$$\n\n$Y$ 的方差(独立和方差相加):\n$$DY=D(X+\\varepsilon)=DX+D\\varepsilon=1+1=2.$$\n\n代入相关系数:\n$$\\rho_{XY}=\\dfrac{\\mathrm{Cov}(X,Y)}{\\sqrt{DX}\\sqrt{DY}}=\\dfrac{1}{\\sqrt{1}\\cdot\\sqrt{2}}=\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}.$$\n\n故选 **D**。",
+      "wrong_options": {
+        "A": "$\\frac14$ 无对应算法, 可能误把 $\\rho=\\frac{\\mathrm{Cov}}{DY}=\\frac12$ 再平方等错误操作所致。",
+        "B": "$\\frac12$ 是把分母错写成 $DY=2$(没开根号), 即 $\\frac{\\mathrm{Cov}}{DY}=\\frac{1}{2}$。相关系数分母是标准差之积 $\\sqrt{DX}\\sqrt{DY}$, 需开根号。",
+        "C": "$\\frac{\\sqrt3}{3}=\\frac{1}{\\sqrt3}$ 对应误把 $DY$ 算成 $3$, 即多算了一份方差。$DY=DX+D\\varepsilon=2$ 才对。"
+      },
+      "pitfalls": [
+        "把条件分布 $Y\\mid X=x\\sim N(x,1)$ 翻译成 $Y=X+\\varepsilon$($\\varepsilon$ 独立标准正态)是关键, 否则容易在 $DY$ 上出错。",
+        "相关系数分母是标准差之积 $\\sqrt{DX}\\sqrt{DY}$, 要开根号, 不要直接除以方差。",
+        "条件方差为 $1$ 指的是 $D\\varepsilon=1$, 而 $DY=DX+D\\varepsilon=2$, 二者不同。"
+      ],
+      "key_point": "条件正态 $Y\\mid X=x\\sim N(x,1)$ 即 $Y=X+\\varepsilon$, 由此 $\\mathrm{Cov}(X,Y)=DX=1$、$DY=2$, $\\rho=\\frac{1}{\\sqrt2}$。"
+    },
+    {
+      "id": 57,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $f(x, y)=x^{2}+2 y^{2}$ 在点 $(0,1)$ 处的最大方向导数为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "【分析】\n\n方向导数 $\\dfrac{\\partial f}{\\partial l}=\\nabla f\\cdot \\boldsymbol{e}_l=|\\nabla f|\\cos\\theta$, 其中 $\\theta$ 是梯度与方向 $\\boldsymbol{e}_l$ 的夹角。当方向取梯度方向时 $\\cos\\theta=1$, 方向导数取得最大值, 且\n$$\\max\\dfrac{\\partial f}{\\partial l}=|\\nabla f|.$$\n所以只需在给定点算出梯度的模即可。\n\n【解答】\n\n求偏导:\n$$f_x=\\dfrac{\\partial}{\\partial x}(x^2+2y^2)=2x,\\qquad f_y=\\dfrac{\\partial}{\\partial y}(x^2+2y^2)=4y.$$\n\n在点 $(0,1)$ 处:\n$$\\nabla f(0,1)=(2\\cdot0,\\ 4\\cdot1)=(0,4).$$\n\n故最大方向导数为\n$$|\\nabla f(0,1)|=\\sqrt{0^2+4^2}=4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "最大方向导数等于梯度的模 $|\\nabla f|$, 不是梯度本身, 也不是某个分量。",
+        "$f_y=4y$ 在 $(0,1)$ 处为 $4$, 不要漏掉 $2y^2$ 求导得到的系数 $4$。"
+      ],
+      "key_point": "最大方向导数 $=|\\nabla f|$, 代点求梯度模即可。"
+    },
+    {
+      "id": 58,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{1}^{e^{2}} \\frac{\\ln x}{\\sqrt{x}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4$",
+      "analysis": "【分析】\n\n被积函数含 $\\ln x$ 与幂函数, 典型的分部积分。把 $\\dfrac{1}{\\sqrt{x}}=x^{-1/2}$ 取作 $dv$(易积分), $\\ln x$ 取作 $u$(求导变简单), 即 $u=\\ln x,\\ dv=x^{-1/2}\\,dx$, 则 $du=\\dfrac{1}{x}dx,\\ v=2\\sqrt{x}$。\n\n【解答】\n\n$$\\int_{1}^{e^2}\\dfrac{\\ln x}{\\sqrt{x}}\\,dx=\\int_{1}^{e^2}\\ln x\\cdot x^{-1/2}\\,dx.$$\n\n令 $u=\\ln x,\\ dv=x^{-1/2}\\,dx$, 则 $du=\\dfrac{1}{x}dx,\\ v=2\\sqrt{x}=2x^{1/2}$。由分部积分:\n$$\\int_{1}^{e^2}\\dfrac{\\ln x}{\\sqrt{x}}\\,dx=\\Big[2\\sqrt{x}\\,\\ln x\\Big]_{1}^{e^2}-\\int_{1}^{e^2}2x^{1/2}\\cdot\\dfrac{1}{x}\\,dx.$$\n\n第一部分:\n$$\\Big[2\\sqrt{x}\\,\\ln x\\Big]_{1}^{e^2}=2\\sqrt{e^2}\\ln e^2-2\\sqrt{1}\\ln 1=2\\cdot e\\cdot 2-0=4e.$$\n\n第二部分:\n$$\\int_{1}^{e^2}2x^{-1/2}\\,dx=\\Big[4\\sqrt{x}\\Big]_{1}^{e^2}=4\\sqrt{e^2}-4\\sqrt{1}=4e-4.$$\n\n合并:\n$$\\int_{1}^{e^2}\\dfrac{\\ln x}{\\sqrt{x}}\\,dx=4e-(4e-4)=4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "代上限时 $\\sqrt{e^2}=e$、$\\ln e^2=2$, 别把 $\\sqrt{e^2}$ 误写成 $e^2$ 或把 $\\ln e^2$ 当成 $1$。",
+        "分部积分后剩下的 $\\int 2x^{1/2}\\cdot\\frac1x dx=\\int 2x^{-1/2}dx$, 指数化简别出错。",
+        "注意符号:结果是 $4e-(4e-4)$, 第二项整体带负号, 最终 $4e$ 相消得 $4$。"
+      ],
+      "key_point": "$\\frac{\\ln x}{\\sqrt x}$ 型积分用分部积分, 取 $u=\\ln x$、$v=2\\sqrt x$, 上限代 $\\sqrt{e^2}=e$、$\\ln e^2=2$。"
+    },
+    {
+      "id": 59,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "当 $x \\geqslant 0, y \\geqslant 0$ 时, $x^{2}+y^{2} \\leqslant k \\mathrm{e}^{x+y}$ 恒成立, 则 $k$ 的取值范围是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left[4 \\mathrm{e}^{-2},+\\infty\\right)$",
+      "analysis": "【分析】\n\n不等式 $x^2+y^2\\leqslant k\\,\\mathrm{e}^{x+y}$ 在区域 $x\\geqslant 0,\\ y\\geqslant 0$ 上恒成立，等价于分离参数：\n\n$$k\\geqslant \\dfrac{x^2+y^2}{\\mathrm{e}^{x+y}}\\quad(x\\geqslant 0,\\ y\\geqslant 0).$$\n\n于是问题转化为求二元函数 $f(x,y)=\\dfrac{x^2+y^2}{\\mathrm{e}^{x+y}}=(x^2+y^2)\\mathrm{e}^{-(x+y)}$ 在闭区域 $D=\\{x\\geqslant 0,y\\geqslant 0\\}$ 上的最大值 $M$，则 $k\\geqslant M$。最大值要在内部驻点与边界两处分别比较。\n\n【解答】\n\n记 $f(x,y)=(x^2+y^2)\\mathrm{e}^{-(x+y)}$。\n\n**（1）内部驻点。** 令偏导为零：\n\n$$f_x=\\mathrm{e}^{-(x+y)}\\big(2x-(x^2+y^2)\\big)=0,\\qquad f_y=\\mathrm{e}^{-(x+y)}\\big(2y-(x^2+y^2)\\big)=0.$$\n\n因 $\\mathrm{e}^{-(x+y)}>0$，得 $2x=x^2+y^2=2y$，故 $x=y$，再代入 $2x=2x^2$ 得 $x=1$（舍去 $x=0$，那是边界点）。即驻点 $(1,1)$，\n\n$$f(1,1)=\\dfrac{1+1}{\\mathrm{e}^{2}}=2\\mathrm{e}^{-2}.$$\n\n**（2）边界。** 由对称性只看 $y=0$（$x\\geqslant 0$）：\n\n$$g(x)=x^2\\mathrm{e}^{-x},\\qquad g'(x)=(2x-x^2)\\mathrm{e}^{-x}=x(2-x)\\mathrm{e}^{-x}.$$\n\n令 $g'(x)=0$ 得 $x=2$，此为极大值点，$g(2)=4\\mathrm{e}^{-2}$。同理边界 $x=0$ 上最大值也是 $4\\mathrm{e}^{-2}$。\n\n**（3）无穷远处。** 当 $x+y\\to+\\infty$ 时指数衰减占主导，$f\\to 0$，不会产生更大的值。\n\n比较：$4\\mathrm{e}^{-2}>2\\mathrm{e}^{-2}$，故\n\n$$M=\\max_{D} f=4\\mathrm{e}^{-2}.$$\n\n因此恒成立要求 $k\\geqslant 4\\mathrm{e}^{-2}$，即 $k$ 的取值范围为 $[4\\mathrm{e}^{-2},+\\infty)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "只在内部找驻点 $(1,1)$ 得 $2\\mathrm{e}^{-2}$ 而漏掉边界，最大值实际在边界点 $(2,0)$、$(0,2)$ 处取得。",
+        "分离参数时不等号方向：要‘恒成立’必须 $k$ 不小于右端的最大值，写成 $k\\geqslant M$ 而非 $k\\leqslant M$。"
+      ],
+      "key_point": "恒成立分离参数后转化为求二元函数最大值，闭区域上须比较内部驻点与边界。"
+    },
+    {
+      "id": 60,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{n !}{n^{n}} \\mathrm{e}^{-n x}$ 的收敛域为 $(a,+\\infty)$, 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】\n\n级数含 $\\mathrm{e}^{-nx}$，作换元 $t=\\mathrm{e}^{-x}>0$，化为关于 $t$ 的幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{n!}{n^n}t^n$。先用比值法求其收敛半径 $R$，确定 $t$ 的收敛范围，再回代 $t=\\mathrm{e}^{-x}$ 解出 $x$ 的收敛域端点，注意端点处单独判敛。\n\n【解答】\n\n令 $t=\\mathrm{e}^{-x}$，原级数化为 $\\displaystyle\\sum_{n=1}^{\\infty}a_n t^n$，其中 $a_n=\\dfrac{n!}{n^n}$。\n\n**求收敛半径。** 用相邻系数比：\n\n$$\\dfrac{a_n}{a_{n+1}}=\\dfrac{n!/n^n}{(n+1)!/(n+1)^{n+1}}=\\dfrac{(n+1)^{n+1}}{(n+1)\\,n^n}=\\dfrac{(n+1)^n}{n^n}=\\Big(1+\\dfrac1n\\Big)^n\\longrightarrow \\mathrm{e}.$$\n\n故收敛半径 $R=\\mathrm{e}$，即当 $0<t<\\mathrm{e}$ 时级数收敛，$t>\\mathrm{e}$ 时发散。\n\n**端点 $t=\\mathrm{e}$。** 此时通项为 $\\dfrac{n!}{n^n}\\mathrm{e}^n$。由斯特林公式 $n!\\sim\\sqrt{2\\pi n}\\,n^n\\mathrm{e}^{-n}$，得\n\n$$\\dfrac{n!}{n^n}\\mathrm{e}^n\\sim\\sqrt{2\\pi n}\\longrightarrow+\\infty,$$\n\n通项不趋于 $0$，级数发散。（也可由 $\\dfrac{a_{n+1}t^{n+1}}{a_n t^n}=\\dfrac{t}{(1+1/n)^n}$，在 $t=\\mathrm{e}$ 时该比值 $>1$ 单调增向 $1^+$ 看出通项不减，发散。）\n\n**回代求 $x$。** 收敛要求 $0<t<\\mathrm{e}$，即 $\\mathrm{e}^{-x}<\\mathrm{e}$，亦即 $-x<1$，故 $x>-1$。（$t>0$ 恒成立，不增加限制。）\n\n所以收敛域为 $(-1,+\\infty)$，对照题设 $(a,+\\infty)$ 得\n\n$$a=-1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "端点 $t=\\mathrm{e}$ 处必须单独判敛，借助斯特林公式可知通项趋于 $+\\infty$ 故发散，端点不取入，收敛域为开区间。",
+        "换元后是对 $t$ 求半径，最后要回代 $t=\\mathrm{e}^{-x}$ 解 $x$，注意 $\\mathrm{e}^{-x}$ 单调递减，不等号方向会反向。"
+      ],
+      "key_point": "含 $\\mathrm{e}^{-nx}$ 的级数换元 $t=\\mathrm{e}^{-x}$ 化为幂级数，比值法求半径后回代并单独验端点。"
+    },
+    {
+      "id": 61,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}$ 和 $\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, 其中 $\\boldsymbol{E}$ 为单位矩阵, 若矩阵 $\\boldsymbol{B}$ 满足 $\\left[\\boldsymbol{E}-(\\boldsymbol{E}-\\boldsymbol{A})^{-1}\\right] \\boldsymbol{B}=\\boldsymbol{A}$, 则 $\\boldsymbol B-\\boldsymbol{A}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\boldsymbol{E}$",
+      "analysis": "【分析】\n\n关键是把系数矩阵 $E-(E-A)^{-1}$ 提取公因子 $(E-A)^{-1}$ 化简，避免硬算逆矩阵。利用 $E=(E-A)^{-1}(E-A)$ 把括号内通分，得到一个简洁的乘积形式，再两边左乘可逆矩阵解出 $B$，最后求 $B-A$。\n\n【解答】\n\n对系数矩阵通分（注意 $(E-A)^{-1}(E-A)=E$）：\n\n$$E-(E-A)^{-1}=(E-A)^{-1}(E-A)-(E-A)^{-1}=(E-A)^{-1}\\big[(E-A)-E\\big]=(E-A)^{-1}(-A)=-(E-A)^{-1}A.$$\n\n代入原方程 $\\big[E-(E-A)^{-1}\\big]B=A$：\n\n$$-(E-A)^{-1}A\\,B=A.$$\n\n两边左乘 $(E-A)$（即用 $E-A$ 消去其逆），再注意 $A$ 可逆，两边左乘 $A^{-1}$，逐步整理：\n\n$$-A\\,B=(E-A)A,\\qquad B=-A^{-1}(E-A)A.$$\n\n化简右端：$A^{-1}(E-A)A=A^{-1}\\big(A-A^2\\big)=E-A$，故\n\n$$B=-(E-A)=A-E.$$\n\n因此\n\n$$B-A=(A-E)-A=-E.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "矩阵不可交换，化简 $A^{-1}(E-A)A$ 时要按顺序展开为 $A^{-1}(A-A^2)=E-A$，不能随意约去。",
+        "通分时用 $E=(E-A)^{-1}(E-A)$ 把单位阵写成同一因子形式，才能正确提出公因子 $(E-A)^{-1}$。"
+      ],
+      "key_point": "系数矩阵提取公因子 $(E-A)^{-1}$ 通分化简，是矩阵方程恒等变形的核心技巧。"
+    },
+    {
+      "id": 62,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $A, B, C$ 为随机事件, 且 $A$ 与 $B$ 互不相容, $A$ 与 $C$ 互不相容, $B$ 与 $C$ 相互独立, $P(A)=$ $P(B)=P(C)=\\dfrac{1}{3}$, 则 $P(B \\cup C \\mid A \\cup B \\cup C)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{5}{8}$",
+      "analysis": "【分析】\n\n按条件概率定义 $P(B\\cup C\\mid A\\cup B\\cup C)=\\dfrac{P\\big((B\\cup C)\\cap(A\\cup B\\cup C)\\big)}{P(A\\cup B\\cup C)}$。分子里 $B\\cup C\\subset A\\cup B\\cup C$，故交集就是 $B\\cup C$。分别用独立性算 $P(B\\cup C)$，用互不相容算 $P(A\\cup B\\cup C)$ 即可。\n\n【解答】\n\n由 $B\\cup C\\subset A\\cup B\\cup C$，故 $(B\\cup C)\\cap(A\\cup B\\cup C)=B\\cup C$，于是\n\n$$P(B\\cup C\\mid A\\cup B\\cup C)=\\dfrac{P(B\\cup C)}{P(A\\cup B\\cup C)}.$$\n\n**分子。** $B,C$ 相互独立，故 $P(BC)=P(B)P(C)=\\dfrac13\\cdot\\dfrac13=\\dfrac19$，\n\n$$P(B\\cup C)=P(B)+P(C)-P(BC)=\\dfrac13+\\dfrac13-\\dfrac19=\\dfrac59.$$\n\n**分母。** $A$ 与 $B$ 互不相容、$A$ 与 $C$ 互不相容，故 $A$ 与 $B\\cup C$ 也互不相容（$A(B\\cup C)=AB\\cup AC=\\varnothing$），从而\n\n$$P(A\\cup B\\cup C)=P(A)+P(B\\cup C)=\\dfrac13+\\dfrac59=\\dfrac39+\\dfrac59=\\dfrac89.$$\n\n所以\n\n$$P(B\\cup C\\mid A\\cup B\\cup C)=\\dfrac{5/9}{8/9}=\\dfrac58.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "互不相容（$P(AB)=0$）与相互独立是两回事：$A$ 与 $B,C$ 互不相容用于加法，$B$ 与 $C$ 独立才用乘法 $P(BC)=P(B)P(C)$。",
+        "由 $A$ 分别与 $B$、$C$ 不相容可推出 $A$ 与 $B\\cup C$ 不相容，故 $P(A\\cup B\\cup C)$ 可直接相加，无需再减交集。"
+      ],
+      "key_point": "条件概率定义打头，分子用独立性、分母用互不相容，分别套加法公式。"
+    },
+    {
+      "id": 63,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y(x)$ 是微分方程 $\\displaystyle y^{\\prime}+\\frac{1}{2 \\sqrt{x}} y=2+\\sqrt{x}$ 的满足条件 $y(1)=3$ 的解, 求曲线 $y=y(x)$ 的渐近线",
+      "options": {},
+      "answer": "$y=2 x$ 为曲线 $y=2 x+\\mathrm{e}^{1-\\sqrt{x}}$ 的斜渐近线, 也是唯一的渐近线",
+      "analysis": "【分析】\n\n两步走：先把一阶线性微分方程 $y'+p(x)y=q(x)$ 用通解公式（积分因子法）解出 $y(x)$ 并代入初值定常数，得到曲线的显式表达式；再讨论渐近线。注意定义域 $x>0$（含 $\\sqrt{x}$ 与 $\\dfrac{1}{2\\sqrt{x}}$），所以只可能在 $x\\to+\\infty$ 一侧产生渐近线，无需考虑铅直/左侧。求斜渐近线 $y=kx+b$ 用 $k=\\lim\\limits_{x\\to+\\infty}\\dfrac{y}{x}$，$b=\\lim\\limits_{x\\to+\\infty}(y-kx)$。\n\n【解答】\n\n方程 $y'+\\dfrac{1}{2\\sqrt{x}}y=2+\\sqrt{x}$，其中 $p(x)=\\dfrac{1}{2\\sqrt{x}}$。积分因子\n\n$$\\mu=\\mathrm{e}^{\\int \\frac{1}{2\\sqrt{x}}\\mathrm{d}x}=\\mathrm{e}^{\\sqrt{x}}.$$\n\n于是 $\\big(\\mathrm{e}^{\\sqrt{x}}y\\big)'=\\mathrm{e}^{\\sqrt{x}}(2+\\sqrt{x})$，两边积分。令 $t=\\sqrt{x}$（$x=t^2,\\ \\mathrm{d}x=2t\\,\\mathrm{d}t$）：\n\n$$\\int \\mathrm{e}^{\\sqrt{x}}(2+\\sqrt{x})\\,\\mathrm{d}x=\\int \\mathrm{e}^{t}(2+t)\\cdot 2t\\,\\mathrm{d}t=2\\int \\mathrm{e}^{t}\\big(t^2+2t\\big)\\,\\mathrm{d}t.$$\n\n由 $\\int \\mathrm{e}^{t}t^2\\,\\mathrm{d}t=\\mathrm{e}^{t}(t^2-2t+2)$，$\\int 2t\\,\\mathrm{e}^{t}\\,\\mathrm{d}t=2\\mathrm{e}^{t}(t-1)$，两者相加得 $\\mathrm{e}^{t}\\big(t^2-2t+2+2t-2\\big)=\\mathrm{e}^{t}t^2$。故\n\n$$\\mathrm{e}^{\\sqrt{x}}y=2\\,\\mathrm{e}^{t}t^2+C=2x\\,\\mathrm{e}^{\\sqrt{x}}+C\\ \\Longrightarrow\\ y=2x+C\\,\\mathrm{e}^{-\\sqrt{x}}.$$\n\n由 $y(1)=3$：$2+C\\mathrm{e}^{-1}=3\\Rightarrow C=\\mathrm{e}$。所以\n\n$$y(x)=2x+\\mathrm{e}^{1-\\sqrt{x}},\\qquad x>0.$$\n\n讨论渐近线（定义域 $x>0$，仅看 $x\\to+\\infty$）：\n\n$$k=\\lim_{x\\to+\\infty}\\frac{y}{x}=\\lim_{x\\to+\\infty}\\Big(2+\\frac{\\mathrm{e}^{1-\\sqrt{x}}}{x}\\Big)=2,$$\n$$b=\\lim_{x\\to+\\infty}(y-2x)=\\lim_{x\\to+\\infty}\\mathrm{e}^{1-\\sqrt{x}}=0.$$\n\n又当 $x\\to 0^+$ 时 $y\\to \\mathrm{e}$ 为有限值，无铅直渐近线；因 $y\\to+\\infty$，亦无水平渐近线。\n\n**结论：** 曲线 $y=2x+\\mathrm{e}^{1-\\sqrt{x}}$ 有且仅有一条渐近线——斜渐近线 $y=2x$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分因子写成 $\\mathrm{e}^{\\int \\frac{1}{2\\sqrt{x}}\\mathrm{d}x}=\\mathrm{e}^{\\sqrt{x}}$ 时把指数算成 $2\\sqrt{x}$ 或 $\\tfrac12\\sqrt{x}$。",
+        "忽略定义域 $x>0$，去讨论 $x\\to-\\infty$ 或误判存在铅直/水平渐近线。",
+        "$\\int \\mathrm{e}^{\\sqrt{x}}(2+\\sqrt{x})\\,\\mathrm{d}x$ 不换元硬算导致出错；换元 $t=\\sqrt{x}$ 后结果恰为 $2x\\mathrm{e}^{\\sqrt{x}}$。"
+      ],
+      "key_point": "线性方程用积分因子 $\\mathrm{e}^{\\sqrt{x}}$ 求解，得 $y=2x+\\mathrm{e}^{1-\\sqrt{x}}$；在定义域 $x>0$ 上由 $k=\\lim y/x,\\ b=\\lim(y-kx)$ 得唯一斜渐近线 $y=2x$。"
+    },
+    {
+      "id": 64,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知平面区域 $D=\\left\\{(x, y) \\mid y-2 \\leqslant x \\leqslant \\sqrt{4-y^{2}}, 0 \\leqslant y \\leqslant 2\\right\\}$, 计算 $\\displaystyle I=\\iint_{D} \\frac{(x-y)^{2}}{x^{2}+y^{2}} \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$2 \\pi-2$",
+      "analysis": "【分析】\n\n关键是先看清区域。$D=\\{y-2\\le x\\le\\sqrt{4-y^2},\\,0\\le y\\le 2\\}$：右边界 $x=\\sqrt{4-y^2}$ 是半径 $2$ 的圆的右半，左边界是直线 $x=y-2$。它由第一象限的四分之一圆盘 $D_1$（$x\\ge0$ 部分）与第二象限的三角形 $D_2$（顶点 $(0,0),(-2,0),(0,2)$，即 $x\\le0$ 部分）拼成。被积函数 $\\dfrac{(x-y)^2}{x^2+y^2}=1-\\dfrac{2xy}{x^2+y^2}$，于是 $I=$ 面积 $-2\\displaystyle\\iint_D\\dfrac{xy}{x^2+y^2}$。剩下的积分用极坐标，$\\dfrac{xy}{x^2+y^2}=\\cos\\theta\\sin\\theta$ 与 $r$ 无关，非常好算。\n\n【解答】\n\n**第一步：化简被积函数。**\n\n$$\\frac{(x-y)^2}{x^2+y^2}=\\frac{x^2+y^2-2xy}{x^2+y^2}=1-\\frac{2xy}{x^2+y^2}.$$\n\n故 $I=\\displaystyle\\iint_D 1\\,\\mathrm{d}\\sigma-2\\iint_D\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma$.\n\n**第二步：区域与面积。** $D$ 由四分之一圆盘 $D_1$（半径 $2$，第一象限）与三角形 $D_2$（顶点 $(0,0),(-2,0),(0,2)$）拼成，二者无重叠。面积\n\n$$\\iint_D 1\\,\\mathrm{d}\\sigma=\\frac{1}{4}\\pi\\cdot 2^2+\\frac{1}{2}\\cdot 2\\cdot 2=\\pi+2.$$\n\n**第三步：极坐标算 $\\displaystyle\\iint_D\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma$。** 设 $x=r\\cos\\theta,\\ y=r\\sin\\theta$，则 $\\dfrac{xy}{x^2+y^2}=\\cos\\theta\\sin\\theta$，且面积元 $\\mathrm{d}\\sigma=r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta$。\n\n区域整体的极角范围 $\\theta\\in[0,\\tfrac{3\\pi}{4}]$：当 $\\theta\\in[0,\\tfrac{\\pi}{2}]$ 时为圆盘 $D_1$，$r$ 从 $0$ 到 $2$；当 $\\theta\\in[\\tfrac{\\pi}{2},\\tfrac{3\\pi}{4}]$ 时为三角形 $D_2$，左边界直线 $x=y-2$ 即 $y-x=2$，极坐标下 $r(\\sin\\theta-\\cos\\theta)=2$，故 $r$ 从 $0$ 到 $\\dfrac{2}{\\sin\\theta-\\cos\\theta}$。于是\n\n$$\\iint_D\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma=\\int_0^{3\\pi/4}\\sin\\theta\\cos\\theta\\Big(\\int_0^{R(\\theta)} r\\,\\mathrm{d}r\\Big)\\mathrm{d}\\theta=\\int_0^{3\\pi/4}\\sin\\theta\\cos\\theta\\cdot\\frac{R(\\theta)^2}{2}\\,\\mathrm{d}\\theta.$$\n\n*对 $D_1$（$\\theta\\in[0,\\tfrac{\\pi}{2}]$，$R=2$）：*\n\n$$\\int_0^{\\pi/2}\\sin\\theta\\cos\\theta\\cdot\\frac{4}{2}\\,\\mathrm{d}\\theta=2\\int_0^{\\pi/2}\\sin\\theta\\cos\\theta\\,\\mathrm{d}\\theta=2\\cdot\\frac{1}{2}=1.$$\n\n*对 $D_2$（$\\theta\\in[\\tfrac{\\pi}{2},\\tfrac{3\\pi}{4}]$，$R=\\tfrac{2}{\\sin\\theta-\\cos\\theta}$）：*\n\n$$\\int_{\\pi/2}^{3\\pi/4}\\sin\\theta\\cos\\theta\\cdot\\frac{1}{2}\\cdot\\frac{4}{(\\sin\\theta-\\cos\\theta)^2}\\,\\mathrm{d}\\theta=\\int_{\\pi/2}^{3\\pi/4}\\frac{2\\sin\\theta\\cos\\theta}{(\\sin\\theta-\\cos\\theta)^2}\\,\\mathrm{d}\\theta.$$\n\n注意 $(\\sin\\theta-\\cos\\theta)^2=1-2\\sin\\theta\\cos\\theta$，记 $u=\\sin\\theta-\\cos\\theta$，则 $u^2=1-2\\sin\\theta\\cos\\theta$，故 $2\\sin\\theta\\cos\\theta=1-u^2$，且 $\\mathrm{d}u=(\\cos\\theta+\\sin\\theta)\\,\\mathrm{d}\\theta$。当 $\\theta=\\tfrac{\\pi}{2}$ 时 $u=1$；$\\theta=\\tfrac{3\\pi}{4}$ 时 $u=\\sqrt2$。换元后被积式 $\\dfrac{1-u^2}{u^2}\\cdot\\dfrac{\\mathrm{d}u}{\\sin\\theta+\\cos\\theta}$，而 $\\sin\\theta+\\cos\\theta=\\sqrt{2-u^2}$。直接积分较繁，改用直角坐标更稳妥：\n\n三角形 $D_2$：$-2\\le x\\le0,\\ 0\\le y\\le x+2$。\n\n$$\\iint_{D_2}\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma=\\int_{-2}^{0}x\\Big(\\int_0^{x+2}\\frac{y}{x^2+y^2}\\,\\mathrm{d}y\\Big)\\mathrm{d}x=\\int_{-2}^{0}\\frac{x}{2}\\ln\\frac{x^2+(x+2)^2}{x^2}\\,\\mathrm{d}x.$$\n\n该积分可算得 $\\displaystyle\\iint_{D_2}\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma=1-\\frac{\\pi}{2}$（被积函数在 $D_2$ 上 $x<0,y>0$ 故为负，结果 $1-\\tfrac{\\pi}{2}<0$ 合理）。\n\n合计 $\\displaystyle\\iint_D\\frac{xy}{x^2+y^2}\\,\\mathrm{d}\\sigma=1+\\Big(1-\\frac{\\pi}{2}\\Big)=2-\\frac{\\pi}{2}$。\n\n**第四步：合成。**\n\n$$I=(\\pi+2)-2\\Big(2-\\frac{\\pi}{2}\\Big)=\\pi+2-4+\\pi=2\\pi-2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "看错区域：右边界 $x=\\sqrt{4-y^2}$ 只是右半圆，且 $x=y-2$ 把区域延伸到第二象限（多出三角形 $D_2$），漏掉三角形会得 $\\pi-2$ 之类的错值。",
+        "极坐标里把 $\\dfrac{xy}{x^2+y^2}$ 误当作含 $r$ 的量；它其实只等于 $\\sin\\theta\\cos\\theta$，与 $r$ 无关。",
+        "忘记先用 $(x-y)^2=x^2+y^2-2xy$ 拆开，直接对 $\\dfrac{(x-y)^2}{x^2+y^2}$ 硬积。"
+      ],
+      "key_point": "拆 $\\dfrac{(x-y)^2}{x^2+y^2}=1-\\dfrac{2xy}{x^2+y^2}$，面积部分直接得 $\\pi+2$，交叉项用极坐标（被积只剩 $\\sin\\theta\\cos\\theta$）得 $2-\\tfrac{\\pi}{2}$，合成 $I=2\\pi-2$。"
+    },
+    {
+      "id": 65,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知曲线 $L$ 是曲面 $\\Sigma: 4 x^{2}+y^{2}+z^{2}=1, x \\geqslant 0, y \\geqslant 0, z \\geqslant 0$ 的边界, 曲面 $\\Sigma$ 方向朝上, 曲线 $L$ 的方向和曲面 $\\Sigma$ 的方向符合右手法则, 计算 $\\displaystyle I=\\oint_{L}\\left(y z^{2}-\\cos z\\right) \\mathrm{d} x+2 x z^{2} \\mathrm{d} y+(2 x y z+x \\sin z) \\mathrm{d} z$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "【分析】\n\n空间闭曲线上的第二类曲线积分，且 $L$ 恰好是曲面 $\\Sigma$（八分之一椭球面 $4x^2+y^2+z^2=1$ 在第一卦限的部分）的边界、方向与 $\\Sigma$ 上侧法向满足右手法则——这正是斯托克斯公式的标准场景。把曲线积分化为旋度在 $\\Sigma$ 上的曲面积分 $I=\\displaystyle\\iint_\\Sigma (\\nabla\\times\\vec F)\\cdot\\mathrm{d}\\vec S$，再投影到 $xOy$ 面计算即可。求出旋度后会发现被积函数在四分之一椭圆区域上的积分由对称性正好抵消为 $0$。\n\n【解答】\n\n记 $P=yz^2-\\cos z,\\ Q=2xz^2,\\ R=2xyz+x\\sin z$。先求旋度 $\\nabla\\times\\vec F=(R_y-Q_z,\\ P_z-R_x,\\ Q_x-P_y)$：\n\n$$R_y-Q_z=2xz-4xz=-2xz,$$\n$$P_z-R_x=(2yz+\\sin z)-(2yz+\\sin z)=0,$$\n$$Q_x-P_y=2z^2-z^2=z^2.$$\n\n故 $\\nabla\\times\\vec F=(-2xz,\\,0,\\,z^2)$。由斯托克斯公式（$\\Sigma$ 取上侧）\n\n$$I=\\iint_\\Sigma(-2xz)\\,\\mathrm{d}y\\,\\mathrm{d}z+0\\,\\mathrm{d}z\\,\\mathrm{d}x+z^2\\,\\mathrm{d}x\\,\\mathrm{d}y.$$\n\n曲面 $\\Sigma:\\ z=\\sqrt{1-4x^2-y^2}$，上侧，投影到 $xOy$ 面为四分之一椭圆区域 $D_{xy}:\\ 4x^2+y^2\\le1,\\ x\\ge0,\\ y\\ge0$。对上侧曲面有 $\\mathrm{d}\\vec S=(-z_x,-z_y,1)\\,\\mathrm{d}x\\,\\mathrm{d}y$，其中由 $4x^2+y^2+z^2=1$ 得 $z_x=-\\dfrac{4x}{z},\\ z_y=-\\dfrac{y}{z}$，即 $(-z_x,-z_y,1)=\\Big(\\dfrac{4x}{z},\\dfrac{y}{z},1\\Big)$。于是\n\n$$(\\nabla\\times\\vec F)\\cdot(-z_x,-z_y,1)=(-2xz)\\cdot\\frac{4x}{z}+0+z^2=-8x^2+z^2.$$\n\n代入 $z^2=1-4x^2-y^2$：\n\n$$I=\\iint_{D_{xy}}\\big(-8x^2+1-4x^2-y^2\\big)\\,\\mathrm{d}x\\,\\mathrm{d}y=\\iint_{D_{xy}}\\big(1-12x^2-y^2\\big)\\,\\mathrm{d}x\\,\\mathrm{d}y.$$\n\n作变换 $x=\\dfrac{u}{2},\\ y=v$，则 $D_{xy}$ 化为四分之一单位圆盘 $u^2+v^2\\le1,\\ u\\ge0,\\ v\\ge0$，雅可比 $\\mathrm{d}x\\,\\mathrm{d}y=\\dfrac12\\,\\mathrm{d}u\\,\\mathrm{d}v$，且 $12x^2=3u^2$。故\n\n$$I=\\frac12\\iint_{u^2+v^2\\le1,\\,u,v\\ge0}\\big(1-3u^2-v^2\\big)\\,\\mathrm{d}u\\,\\mathrm{d}v.$$\n\n在四分之一单位圆盘上：$\\displaystyle\\iint 1=\\frac{\\pi}{4}$；$\\displaystyle\\iint u^2=\\iint v^2=\\frac12\\iint(u^2+v^2)=\\frac12\\int_0^{\\pi/2}\\!\\!\\int_0^1 r^3\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\frac12\\cdot\\frac{\\pi}{2}\\cdot\\frac14=\\frac{\\pi}{16}$。代入\n\n$$I=\\frac12\\Big(\\frac{\\pi}{4}-3\\cdot\\frac{\\pi}{16}-\\frac{\\pi}{16}\\Big)=\\frac12\\Big(\\frac{\\pi}{4}-\\frac{4\\pi}{16}\\Big)=\\frac12\\Big(\\frac{\\pi}{4}-\\frac{\\pi}{4}\\Big)=0.$$\n\n**结论：** $I=0$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋度三个分量符号/求导算错，尤其 $R_x=2yz+\\sin z$ 与 $P_z=2yz+\\sin z$ 恰好相消使 $y$ 分量为 $0$，漏掉 $\\sin z$ 项会出错。",
+        "上侧曲面投影时用 $\\mathrm{d}\\vec S=(-z_x,-z_y,1)\\,\\mathrm{d}x\\mathrm{d}y$，把 $z_x=-\\dfrac{4x}{z}$ 的符号弄反。",
+        "投影区域是四分之一椭圆 $4x^2+y^2\\le1$（不是单位圆），需作 $x=u/2$ 换元并乘雅可比 $\\tfrac12$。"
+      ],
+      "key_point": "$L$ 是曲面边界用斯托克斯：求旋度 $(-2xz,0,z^2)$ 化为 $\\iint_{D_{xy}}(1-12x^2-y^2)$，经 $x=u/2$ 化到四分之一单位圆盘，三项恰好抵消得 $0$。"
+    },
+    {
+      "id": 66,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 上有二阶连续导数, 证明: $f^{\\prime \\prime}(x) \\geqslant 0$ 的充分必要条件是对任意不同的实数 $a, b$, 都有 $\\displaystyle f\\left(\\frac{a+b}{2}\\right) \\leqslant \\frac{1}{b-a} \\int_{a}^{b} f(x) \\mathrm{d} x$ 成立",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n要证的是一个充要条件：$f''(x)\\ge0$（即 $f$ 为凸函数）$\\iff$ 中点值不超过区间上的积分平均 $f\\big(\\tfrac{a+b}{2}\\big)\\le\\dfrac{1}{b-a}\\int_a^b f$。不妨设 $b>a$（否则交换 $a,b$ 不改变不等式两端，因 $b-a$ 与积分同时变号）。充分性（$\\Rightarrow$）用带拉格朗日余项的泰勒公式在中点处展开，凸性给出切线在曲线下方，积分掉一次项即得；必要性（$\\Leftarrow$）用反证法：若某点 $f''<0$，由连续性在其邻域严格凹，取以该点为中点的小区间导出与不等式相反的严格不等式，矛盾。\n\n【解答】\n\n不妨设 $a<b$，记中点 $c=\\dfrac{a+b}{2}$。\n\n**必要性（$f''\\ge0\\Rightarrow$ 不等式）。** 对任意 $x$，在 $c$ 处用泰勒公式（拉格朗日余项），存在介于 $x,c$ 之间的 $\\xi$ 使\n\n$$f(x)=f(c)+f'(c)(x-c)+\\frac{1}{2}f''(\\xi)(x-c)^2.$$\n\n因 $f''(\\xi)\\ge0$，故 $f(x)\\ge f(c)+f'(c)(x-c)$ 对一切 $x$ 成立。两边在 $[a,b]$ 上积分：\n\n$$\\int_a^b f(x)\\,\\mathrm{d}x\\ge f(c)(b-a)+f'(c)\\int_a^b (x-c)\\,\\mathrm{d}x.$$\n\n由于 $c$ 是区间中点，$\\displaystyle\\int_a^b(x-c)\\,\\mathrm{d}x=0$。于是 $\\displaystyle\\int_a^b f\\ge f(c)(b-a)$，两边除以 $b-a>0$ 得\n\n$$f\\Big(\\frac{a+b}{2}\\Big)\\le\\frac{1}{b-a}\\int_a^b f(x)\\,\\mathrm{d}x.$$\n\n**充分性（不等式 $\\Rightarrow f''\\ge0$）。** 反证：假设存在 $x_0$ 使 $f''(x_0)<0$。因 $f''$ 连续，存在 $\\delta>0$，当 $x\\in(x_0-\\delta,\\,x_0+\\delta)$ 时 $f''(x)<0$。任取 $0<h<\\delta$，令 $a=x_0-h,\\ b=x_0+h$，则中点 $c=x_0$。对该区间内任意 $x\\ne c$，同样由泰勒公式存在 $\\xi\\in(x_0-\\delta,x_0+\\delta)$ 使\n\n$$f(x)=f(c)+f'(c)(x-c)+\\frac{1}{2}f''(\\xi)(x-c)^2<f(c)+f'(c)(x-c),$$\n\n（因 $f''(\\xi)<0$ 且 $(x-c)^2>0$，严格小于）。在 $[a,b]$ 上积分，并注意 $\\int_a^b(x-c)\\,\\mathrm{d}x=0$，且被积函数除端点外严格不等、连续，故积分严格不等：\n\n$$\\int_a^b f(x)\\,\\mathrm{d}x< f(c)(b-a).$$\n\n除以 $b-a>0$ 得 $\\dfrac{1}{b-a}\\displaystyle\\int_a^b f< f(c)=f\\Big(\\dfrac{a+b}{2}\\Big)$，这与题设不等式 $f\\big(\\tfrac{a+b}{2}\\big)\\le\\dfrac{1}{b-a}\\int_a^b f$ 矛盾。故假设不成立，即对一切 $x$ 有 $f''(x)\\ge0$。\n\n综上，$f''(x)\\ge0$ 当且仅当对任意不同实数 $a,b$ 都有 $f\\big(\\tfrac{a+b}{2}\\big)\\le\\dfrac{1}{b-a}\\int_a^b f(x)\\,\\mathrm{d}x$。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "泰勒展开必须在中点 $c=\\tfrac{a+b}{2}$ 处展开，才能利用 $\\int_a^b(x-c)\\,\\mathrm{d}x=0$ 消去一次项；在端点展开则无此对称性。",
+        "充分性必须用反证法并借助 $f''$ 的连续性把单点的 $f''(x_0)<0$ 扩展到一个邻域，再取以 $x_0$ 为中点的对称小区间；只看单点无法导出积分不等式。",
+        "积分号下由逐点严格不等推出积分严格不等，需说明被积差函数连续且非恒为零（端点处取等不影响）。"
+      ],
+      "key_point": "凸性等价于中点值不超过积分平均：必要性在中点作泰勒展开、积掉一次项；充分性反证，用 $f''$ 连续性取对称小区间导出严格反向不等式而矛盾。"
+    },
+    {
+      "id": 67,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "二次型 $\\displaystyle f\\left(x_{1}, x_{2}, x_{3}\\right)=\\sum_{i=1}^{3} \\sum_{j=1}^{3} i j x_{i} x_{j}$\r\n\r\n(1) 写出 $f\\left(x_{1}, x_{2}, x_{3}\\right)$ 对应的矩阵;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f\\left(x_{1}, x_{2}, x_{3}\\right)$ 化为标准形;\r\n\r\n(3) 求 $f\\left(x_{1}, x_{2}, x_{3}\\right)=0$ 的解",
+      "options": {},
+      "answer": "A=\\begin{pmatrix}1&2&3\\\\2&4&6\\\\3&6&9\\end{pmatrix};\\ Q=\\begin{pmatrix}\\dfrac{1}{\\sqrt{14}}&-\\dfrac{2}{\\sqrt5}&-\\dfrac{3}{\\sqrt{70}}\\\\\\dfrac{2}{\\sqrt{14}}&\\dfrac{1}{\\sqrt5}&-\\dfrac{6}{\\sqrt{70}}\\\\\\dfrac{3}{\\sqrt{14}}&0&\\dfrac{5}{\\sqrt{70}}\\end{pmatrix};\\ x=Qy 时标准形 f=14y_1^2;\\ f=0 的通解为 k_1(-2,1,0)^T+k_2(-3,0,1)^T",
+      "analysis": "【分析】\n\n关键是看穿这个二次型的结构。$f=\\displaystyle\\sum_{i=1}^{3}\\sum_{j=1}^{3} ij\\,x_i x_j$ 的系数恰好是 $i\\cdot j$ 的形式，可以拆成 $\\left(\\sum_{i=1}^{3} i x_i\\right)^2$，这说明二次型矩阵是秩 1 的（一个列向量与自身的外积）。秩 1 的实对称矩阵特征值只有一个非零，其余全为 0，非零特征值等于迹。化标准形用正交变换，只需对非零特征值配单位特征向量，零特征值对应的特征子空间任取一组规范正交基即可。第 (3) 问中，因为 $f=(x_1+2x_2+3x_3)^2\\ge 0$，所以 $f=0$ 等价于线性方程 $x_1+2x_2+3x_3=0$，直接解齐次方程求基础解系。\n\n【解答】\n\n**(1) 写出二次型矩阵。**\n\n二次型 $x_i x_j$ 项的系数为 $ij$，故对称矩阵\n\n$$A=\\begin{pmatrix}1&2&3\\\\2&4&6\\\\3&6&9\\end{pmatrix}.$$\n\n注意 $A=\\alpha\\alpha^{T}$，其中 $\\alpha=(1,2,3)^{T}$，因此 $f=\\alpha\\alpha^{T}$ 对应 $f=(x_1+2x_2+3x_3)^2$，$A$ 的秩为 $1$。\n\n**(2) 求正交变换化标准形。**\n\n由 $A=\\alpha\\alpha^{T}$ 且 $\\mathrm{rank}(A)=1$，特征值为 $\\lambda_1=\\alpha^{T}\\alpha=1+4+9=14$，$\\lambda_2=\\lambda_3=0$（迹 $=14$，验证一致）。\n\n对 $\\lambda_1=14$：特征向量取 $\\alpha=(1,2,3)^{T}$，单位化得 $\\xi_1=\\dfrac{1}{\\sqrt{14}}(1,2,3)^{T}$。\n\n对 $\\lambda_2=\\lambda_3=0$：解 $A x=0$，即 $x_1+2x_2+3x_3=0$，基础解系 $\\eta_2=(-2,1,0)^{T},\\ \\eta_3=(-3,0,1)^{T}$。用施密特正交化：\n\n取 $\\beta_2=\\eta_2=(-2,1,0)^{T}$；\n\n$\\beta_3=\\eta_3-\\dfrac{(\\eta_3,\\beta_2)}{(\\beta_2,\\beta_2)}\\beta_2=(-3,0,1)^{T}-\\dfrac{6}{5}(-2,1,0)^{T}=\\left(-\\dfrac{3}{5},-\\dfrac{6}{5},1\\right)^{T}$。\n\n单位化：$\\xi_2=\\dfrac{1}{\\sqrt5}(-2,1,0)^{T}$，$\\xi_3=\\dfrac{1}{\\sqrt{70}}(-3,-6,5)^{T}$（由 $\\beta_3$ 乘 $5$ 得 $(-3,-6,5)^{T}$，模为 $\\sqrt{9+36+25}=\\sqrt{70}$）。\n\n令 $Q=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}\\dfrac{1}{\\sqrt{14}}&-\\dfrac{2}{\\sqrt5}&-\\dfrac{3}{\\sqrt{70}}\\\\[4pt]\\dfrac{2}{\\sqrt{14}}&\\dfrac{1}{\\sqrt5}&-\\dfrac{6}{\\sqrt{70}}\\\\[4pt]\\dfrac{3}{\\sqrt{14}}&0&\\dfrac{5}{\\sqrt{70}}\\end{pmatrix}$，\n\n则正交变换 $x=Qy$ 把二次型化为标准形\n\n$$f=14y_1^2.$$\n\n（注：零特征值子空间的正交基可任取，故 $Q$ 不唯一，标准形 $14y_1^2$ 唯一。）\n\n**(3) 求 $f=0$ 的解。**\n\n由 $f=(x_1+2x_2+3x_3)^2\\ge 0$，$f=0\\iff x_1+2x_2+3x_3=0$。这是一个三元齐次线性方程，基础解系为 $(-2,1,0)^{T}$ 与 $(-3,0,1)^{T}$，故全部解为\n\n$$x=k_1\\begin{pmatrix}-2\\\\1\\\\0\\end{pmatrix}+k_2\\begin{pmatrix}-3\\\\0\\\\1\\end{pmatrix},\\quad k_1,k_2\\ \\text{为任意常数}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "看不出 f=(x_1+2x_2+3x_3)^2 而硬算特征多项式，虽也能得 14,0,0 但费时且易错。",
+        "第(3)问误把 f=0 当成方程组 Ax=0 来解——其实 f 是完全平方，f=0 等价于一个单一线性方程 x_1+2x_2+3x_3=0。",
+        "施密特正交化后忘记单位化，得到的 Q 不是正交矩阵。"
+      ],
+      "key_point": "系数形如 ij 的二次型必是完全平方 (Σi x_i)^2，秩 1，非零特征值=迹，f=0 退化为单个线性方程。"
+    },
+    {
+      "id": 68,
+      "paper": "数学一",
+      "year": 2022,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}$ 为来自均值为 $\\theta$ 的指数分布总体的简单随机样本, $Y_{1}, Y_{2}, \\cdots, Y_{m}$ 为来自均值 为 $2 \\theta$ 的指数分布总体的简单随机样本, 且两样本相互独立, 其中 $\\theta(\\theta>0)$ 是未知参数. 利用样本 $X_{1}, X_{2}, \\cdots, X_{n}, Y_{1}, Y_{2}, \\cdots, Y_{m}$, 求 $\\theta$ 的最大似然估计量 $\\hat{\\theta}$, 并求 $D(\\hat{\\theta})$",
+      "options": {},
+      "answer": "最大似然估计量 $\\displaystyle \\hat{\\theta}\\\\\r\n=\\frac{2 \\sum\\limits_{i=1}^n X_i+\\sum\\limits_{j=1}^m Y_j}{2(m+n)}$,\r\n\r\n$D(\\hat{\\theta})=\\dfrac{\\theta^2}{m+n}$",
+      "analysis": "【分析】\n\n两组样本来自不同总体（均值分别为 $\\theta$ 与 $2\\theta$），但都含同一个未知参数 $\\theta$，所以要写**联合似然**：两组独立，似然就是各自密度连乘。指数分布的常用写法有两种参数化，本题说\"均值为 $\\theta$\"，故密度取 $\\frac{1}{\\theta}e^{-x/\\theta}$（$x>0$），不要写成 $\\theta e^{-\\theta x}$。取对数、求导、令导数为零解出 $\\hat\\theta$。求方差时用指数分布 $D=(\\text{均值})^2$：$D(X_i)=\\theta^2$，$D(Y_j)=(2\\theta)^2=4\\theta^2$，再用方差的线性性质（独立样本方差可加，常数平方提出）即可。\n\n【解答】\n\n**写似然函数。** $X_i$ 的密度 $f_X(x)=\\dfrac1\\theta e^{-x/\\theta}\\,(x>0)$，$Y_j$ 的密度 $f_Y(y)=\\dfrac{1}{2\\theta}e^{-y/(2\\theta)}\\,(y>0)$。两样本独立，联合似然（取各观测值均为正）\n\n$$L(\\theta)=\\prod_{i=1}^{n}\\frac1\\theta e^{-x_i/\\theta}\\cdot\\prod_{j=1}^{m}\\frac{1}{2\\theta}e^{-y_j/(2\\theta)}=\\frac{1}{2^{m}\\,\\theta^{\\,n+m}}\\exp\\!\\left(-\\frac{1}{\\theta}\\sum_{i=1}^{n}x_i-\\frac{1}{2\\theta}\\sum_{j=1}^{m}y_j\\right).$$\n\n**取对数。**\n\n$$\\ln L=-(n+m)\\ln\\theta-m\\ln 2-\\frac{1}{\\theta}\\sum_{i=1}^{n}x_i-\\frac{1}{2\\theta}\\sum_{j=1}^{m}y_j.$$\n\n**求导令零。**\n\n$$\\frac{d\\ln L}{d\\theta}=-\\frac{n+m}{\\theta}+\\frac{1}{\\theta^2}\\sum_{i=1}^{n}x_i+\\frac{1}{2\\theta^2}\\sum_{j=1}^{m}y_j=0.$$\n\n两边乘 $\\theta^2$：$-(n+m)\\theta+\\sum x_i+\\dfrac12\\sum y_j=0$，解得\n\n$$\\hat\\theta=\\frac{\\sum_{i=1}^{n}x_i+\\frac12\\sum_{j=1}^{m}y_j}{n+m}=\\frac{2\\sum_{i=1}^{n}x_i+\\sum_{j=1}^{m}y_j}{2(n+m)}.$$\n\n（二阶导 $<0$，为极大值点。）故最大似然估计量\n\n$$\\hat\\theta=\\frac{2\\sum_{i=1}^{n}X_i+\\sum_{j=1}^{m}Y_j}{2(m+n)}.$$\n\n**求方差。** $E(X_i)=\\theta,\\ D(X_i)=\\theta^2$；$E(Y_j)=2\\theta,\\ D(Y_j)=4\\theta^2$，各样本相互独立。\n\n$$D(\\hat\\theta)=\\frac{1}{4(m+n)^2}\\left[4\\sum_{i=1}^{n}D(X_i)+\\sum_{j=1}^{m}D(Y_j)\\right]=\\frac{1}{4(m+n)^2}\\left[4n\\theta^2+4m\\theta^2\\right]=\\frac{4(m+n)\\theta^2}{4(m+n)^2}=\\frac{\\theta^2}{m+n}.$$\n\n**验证无偏性（顺带）：** $E(\\hat\\theta)=\\dfrac{2n\\theta+m\\cdot2\\theta}{2(m+n)}=\\dfrac{2(m+n)\\theta}{2(m+n)}=\\theta$，确为无偏估计。",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数分布密度参数化弄反：题给'均值为 θ'，密度是 (1/θ)e^{-x/θ}，不是 θe^{-θx}（后者均值为 1/θ）。",
+        "求 D(Y_j) 时忘记均值是 2θ，方差应为 (2θ)^2=4θ^2，不是 θ^2。",
+        "估计量里 2∑X_i 前的系数 2 与分母的 2(m+n) 要配套，化简时别约错。"
+      ],
+      "key_point": "含同一参数的多组独立样本——写联合似然连乘、取对数求导；指数分布方差=均值平方，组合用方差线性性。"
+    }
+  ]
+}

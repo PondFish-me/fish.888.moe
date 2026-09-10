@@ -1,0 +1,513 @@
+{
+  "paper": "数学三",
+  "year": 2023,
+  "count": 22,
+  "questions": [
+    {
+      "id": 2,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若微分方程 $y^{\\prime \\prime}+a y^{\\prime} +by=0$ 的解在 $(-\\infty,+\\infty)$ 上有界, 则 $(\\quad)$",
+      "options": {
+        "A": "$a<0, b>0$",
+        "B": "$a>0, b>0$",
+        "C": "$a=0, b>0$",
+        "D": "$a=0, b<0$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n二阶常系数齐次线性方程 $y''+ay'+by=0$ 的所有解由特征方程 $r^2+ar+b=0$ 的根决定。题目要求**所有解**都在 $(-\\infty,+\\infty)$ 上有界，需逐类讨论特征根：\n\n- 两不等实根 $r_1,r_2$：通解含 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$。只要有一个非零实根，对应指数函数在某一端 $x\\to\\pm\\infty$ 必无界；若有零根，另一根非零仍无界。\n- 二重实根 $r$：通解含 $\\mathrm e^{rx},x\\mathrm e^{rx}$。即使 $r=0$（得 $1,x$），$x$ 也在 $\\mathbb R$ 上无界。\n- 共轭复根 $r=\\alpha\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$：通解含 $\\mathrm e^{\\alpha x}\\cos\\beta x,\\ \\mathrm e^{\\alpha x}\\sin\\beta x$。在 $(-\\infty,+\\infty)$ 上有界当且仅当 $\\alpha=0$。\n\n据此只有“纯虚根”一种情形能让全体解有界。\n\n【解答】\n\n特征方程 $r^2+ar+b=0$，根为 $r=\\dfrac{-a\\pm\\sqrt{a^2-4b}}{2}$，注意 $r_1+r_2=-a,\\ r_1r_2=b$。\n\n要使两个基本解 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$（或重根、复根情形对应的解）在整个 $\\mathbb R$ 上都有界，唯一可行的是特征根为**纯虚数** $\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$，此时通解\n\n$$y=C_1\\cos\\beta x+C_2\\sin\\beta x$$\n\n有界。纯虚根要求实部为零且为共轭复根，即\n\n$$r_1+r_2=-a=0\\ \\Rightarrow\\ a=0,\\qquad r_1r_2=b=\\beta^2>0\\ \\Rightarrow\\ b>0.$$\n\n反过来验证：\n\n- 若 $a=0,b>0$：根 $\\pm\\sqrt b\\,\\mathrm i$，解为 $\\cos\\sqrt b\\,x,\\ \\sin\\sqrt b\\,x$，有界。✓\n- 若 $a=0,b<0$（选项 D）：根 $\\pm\\sqrt{-b}$ 为非零实根，$\\mathrm e^{\\sqrt{-b}\\,x}$ 当 $x\\to+\\infty$ 无界。✗\n- 若 $a=0,b=0$：根为二重 $0$，解含 $x$，无界。\n- 若 $a>0,b>0$（选项 B）：根实部 $-a/2<0$，解当 $x\\to-\\infty$ 无界。✗\n- 若 $a<0,b>0$（选项 A）：根实部 $-a/2>0$，解当 $x\\to+\\infty$ 无界。✗\n\n故仅有 $a=0,b>0$ 满足要求，选 **C**。",
+      "wrong_options": {
+        "A": "a<0 时特征根实部 -a/2>0（或存在正实根），解含 e^{正数·x}，当 x→+∞ 无界。",
+        "B": "a>0 时根实部 -a/2<0，解当 x→+∞ 衰减到 0 没问题，但当 x→-∞ 时 e^{(负实部)x}→∞，在整个 (-∞,+∞) 上无界。",
+        "D": "a=0,b<0 时特征方程 r²=-b>0 有两个非零实根 ±√(-b)，对应 e^{±√(-b)x} 在某一端无界。"
+      },
+      "pitfalls": [
+        "题目要求在整个 (-∞,+∞) 上有界，而非只在 x→+∞。a>0 的衰减解在 x→-∞ 会爆掉，所以 B 错。",
+        "复根有界的充要条件是实部 α=0；别误以为只要是复根就有界。",
+        "a=b=0 或重根 r=0 会出现 x 这一项，仍然无界，必须 b>0 给出真正的纯虚根。"
+      ],
+      "key_point": "全体解在 R 上有界 ⇔ 特征根为纯虚数 ⇔ 实部为零且共轭复根，即 a=0 且 b>0。"
+    },
+    {
+      "id": 4,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $a_{n}<b_{n}(n=1,2, \\cdots)$, 若级数 $\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 与 $\\displaystyle \\sum_{n=1}^{\\infty} b_{n}$ 均收敛, 则 \"$\\displaystyle \\sum_{n=1}^{\\infty} a_{n}$ 绝对收敛\" 是 \"$\\displaystyle \\sum_{n=1}^{\\infty} b_{n}$ 绝对收敛的\"  $(\\quad)$",
+      "options": {
+        "A": "充分必要条件",
+        "B": "充分不必要条件",
+        "C": "必要不充分条件",
+        "D": "既不充分也不必要条件"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n关键的桥梁是**辅助级数** $\\sum(b_n-a_n)$：由条件 $a_n<b_n$ 知其通项 $b_n-a_n>0$，又 $\\sum a_n,\\sum b_n$ 均收敛，故 $\\sum(b_n-a_n)$ 收敛；而一个收敛的正项级数必**绝对收敛**。于是把 $a_n,b_n$ 互相用对方加（减）这个绝对收敛级数表示，再利用\"两个绝对收敛级数之和（差）仍绝对收敛\"，即可在两个方向上互推。\n\n【解答】\n\n令 $c_n=b_n-a_n$。由 $a_n<b_n$ 得 $c_n>0$；由 $\\sum a_n$、$\\sum b_n$ 收敛及级数线性运算，$\\sum c_n=\\sum b_n-\\sum a_n$ 收敛。正项级数收敛即绝对收敛，故 $\\sum c_n$ 绝对收敛。\n\n**充分性（$\\sum a_n$ 绝对收敛 $\\Rightarrow\\sum b_n$ 绝对收敛）：**\n\n$b_n=a_n+c_n$，由 $|b_n|\\le|a_n|+|c_n|$ 及比较判别法，$\\sum|a_n|$、$\\sum|c_n|$ 均收敛 $\\Rightarrow\\sum|b_n|$ 收敛，即 $\\sum b_n$ 绝对收敛。\n\n**必要性（$\\sum b_n$ 绝对收敛 $\\Rightarrow\\sum a_n$ 绝对收敛）：**\n\n$a_n=b_n-c_n$，由 $|a_n|\\le|b_n|+|c_n|$，同理 $\\sum|b_n|$、$\\sum|c_n|$ 收敛 $\\Rightarrow\\sum|a_n|$ 收敛，即 $\\sum a_n$ 绝对收敛。\n\n两个方向都成立，所以\"$\\sum a_n$ 绝对收敛\"是\"$\\sum b_n$ 绝对收敛\"的**充分必要条件**，选 **A**。",
+      "wrong_options": {
+        "B": "已证必要性也成立，不只是充分，故不是\"充分不必要\"。",
+        "C": "已证充分性也成立，不只是必要，故不是\"必要不充分\"。",
+        "D": "两个方向均可互推，绝非\"既不充分也不必要\"。"
+      },
+      "pitfalls": [
+        "核心是辅助级数 $\\sum(b_n-a_n)$ 通项为正且收敛，从而绝对收敛——这是连接两边的唯一关键。",
+        "若没有 $a_n<b_n$ 这个符号条件，$\\sum(b_n-a_n)$ 未必绝对收敛，结论就不成立，不要漏掉对它的利用。"
+      ],
+      "key_point": "用通项恒正的收敛辅助级数 $\\sum(b_n-a_n)$ 做桥梁，借绝对收敛级数的线性运算双向互推。"
+    },
+    {
+      "id": 7,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知向量 $\\boldsymbol \\alpha_{1}=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right), \\quad \\boldsymbol \\alpha_{2}=\\left(\\begin{array}{l}2 \\\\ 1 \\\\ 1\\end{array}\\right), \\quad \\boldsymbol \\beta_{1}=\\left(\\begin{array}{l}2 \\\\ 5 \\\\ 9\\end{array}\\right), \\quad \\boldsymbol \\beta_{2}=\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)$, 若 $\\boldsymbol \\gamma$ 既可由 $\\boldsymbol \\alpha_{1}, \\boldsymbol \\alpha_{2}$ 线性表示, 也可由 $\\boldsymbol \\beta_{1}, \\boldsymbol \\beta_{2}$ 线性表示, 则 $\\boldsymbol \\gamma=(\\quad)$",
+      "options": {
+        "A": "$k\\left(\\begin{array}{l}3 \\\\ 3 \\\\ 4\\end{array}\\right), k \\in \\mathbb{R}$",
+        "B": "$k\\left(\\begin{array}{c}3 \\\\ 5 \\\\ 10\\end{array}\\right), k \\in \\mathbb{R}$",
+        "C": "$k\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 2\\end{array}\\right), k \\in \\mathbb{R}$",
+        "D": "$k\\left(\\begin{array}{l}1 \\\\ 5 \\\\ 8\\end{array}\\right), k \\in \\mathbb{R}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题求两个生成子空间的交：$\\gamma$ 既属于 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$，又属于 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$。标准做法是设两种表示相等，转化为一个齐次线性方程组求解：\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=y_1\\boldsymbol\\beta_1+y_2\\boldsymbol\\beta_2,$$\n\n即 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$。对系数矩阵 $[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]$ 做初等行变换求基础解系，再回代即可得到 $\\gamma$。\n\n【解答】\n\n设 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$，其系数矩阵为\n\n$$A=[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]=\\begin{pmatrix}1&2&2&1\\\\2&1&5&0\\\\3&1&9&1\\end{pmatrix}.$$\n\n行变换：$r_2-2r_1,\\\\;r_3-3r_1$ 得\n\n$$\\begin{pmatrix}1&2&2&1\\\\0&-3&1&-2\\\\0&-5&3&-2\\end{pmatrix},$$\n\n继续消元化为行最简形\n\n$$\\begin{pmatrix}1&0&0&-3\\\\0&1&0&1\\\\0&0&1&1\\end{pmatrix}.$$\n\n秩为 $3$，自由变量取 $y_2$。令 $y_2=1$，得基础解系\n\n$$(x_1,x_2,y_1,y_2)^{T}=(3,-1,-1,1)^{T}.$$\n\n于是\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=3\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}-\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix}.$$\n\n验算另一侧：$-\\boldsymbol\\beta_1+\\boldsymbol\\beta_2=-(2,5,9)^{T}+(1,0,1)^{T}=(-1,-5,-8)^{T}=-\\gamma$，方向一致（差一个非零常数因子），表明 $\\gamma$ 确实同时被两组向量表示。故\n\n$$\\gamma=k\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix},\\quad k\\in\\mathbb R.$$\n\n选 **D**。",
+      "wrong_options": {
+        "A": "$(3,3,4)^{T}$ 不在 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$ 与 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$ 的交中，不满足联立方程组。",
+        "B": "$(3,5,10)^{T}$ 不能同时由两组向量线性表示，验证方程组无相容解。",
+        "C": "$(-1,1,2)^{T}$ 同样不属于两个子空间的交，代入后方程组矛盾。"
+      },
+      "pitfalls": [
+        "公共向量需同时满足两种表示，必须联立成齐次方程组求解，而不是分别判断。",
+        "求出基础解系后要回代到 $\\boldsymbol\\alpha$ 一侧（或 $\\boldsymbol\\beta$ 一侧）算出 $\\gamma$ 本身，符号别弄反。",
+        "答案是含任意常数 $k$ 的一维直线，注意交空间是子空间而非单个向量。"
+      ],
+      "key_point": "两子空间的交：令两种线性表示相等，化为齐次方程组求基础解系再回代。"
+    },
+    {
+      "id": 8,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $1$ 的泊松分布, 则 $E(|X-E X|)=(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{\\mathrm e}$",
+        "B": "$\\dfrac{1}{2}$",
+        "C": "$\\dfrac{2}{\\mathrm e}$",
+        "D": "$1$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n$X\\sim P(1)$，$P(X=k)=\\dfrac{\\mathrm e^{-1}}{k!}\\\\;(k=0,1,2,\\cdots)$，且 $EX=\\lambda=1$。所求 $E(|X-EX|)=E(|X-1|)$ 是随机变量函数的期望，按定义写成级数\n\n$$E(|X-1|)=\\sum_{k=0}^{\\infty}|k-1|\\cdot\\frac{\\mathrm e^{-1}}{k!}.$$\n\n关键技巧：把绝对值按 $k$ 与 $1$ 的大小拆开，再利用 $\\dfrac{k}{k!}=\\dfrac{1}{(k-1)!}$ 错位求和，并配合 $\\sum_{k\\ge0}\\dfrac{1}{k!}=\\mathrm e$。\n\n【解答】\n\n由 $EX=1$，\n\n$$E(|X-1|)=\\mathrm e^{-1}\\sum_{k=0}^{\\infty}\\frac{|k-1|}{k!}.$$\n\n按 $|k-1|$ 分段：$k=0$ 时 $|k-1|=1$；$k=1$ 时为 $0$；$k\\ge 2$ 时 $|k-1|=k-1$。故\n\n$$\\sum_{k=0}^{\\infty}\\frac{|k-1|}{k!}=1+\\sum_{k=2}^{\\infty}\\frac{k-1}{k!}.$$\n\n把后一项拆成两部分：\n\n$$\\sum_{k=2}^{\\infty}\\frac{k}{k!}-\\sum_{k=2}^{\\infty}\\frac{1}{k!}=\\sum_{k=2}^{\\infty}\\frac{1}{(k-1)!}-\\sum_{k=2}^{\\infty}\\frac{1}{k!}.$$\n\n第一项令 $j=k-1$：$\\sum_{j=1}^{\\infty}\\dfrac{1}{j!}=\\mathrm e-1$；第二项 $\\sum_{k=2}^{\\infty}\\dfrac{1}{k!}=\\mathrm e-1-1=\\mathrm e-2$。相减得\n\n$$(\\mathrm e-1)-(\\mathrm e-2)=1.$$\n\n于是\n\n$$\\sum_{k=0}^{\\infty}\\frac{|k-1|}{k!}=1+1=2,$$\n\n从而\n\n$$E(|X-1|)=\\mathrm e^{-1}\\cdot 2=\\frac{2}{\\mathrm e}.$$\n\n数值约为 $0.7358$。选 **C**。",
+      "wrong_options": {
+        "A": "$\\dfrac{1}{\\mathrm e}$ 漏算了级数中的项，例如只取 $k=0$ 一项或求和系数算错。",
+        "B": "$\\dfrac{1}{2}$ 与泊松分布无关，是凭直觉乱填的结果。",
+        "D": "$1$ 是括号内级数和 $\\sum\\dfrac{|k-1|}{k!}=2$ 的一半，或忘乘 $\\mathrm e^{-1}$ 导致的错误。"
+      },
+      "pitfalls": [
+        "$E(|X-EX|)$ 是绝对差的期望，不是方差，也不等于标准差。",
+        "$|k-1|$ 必须分段处理（$k=0,1$ 与 $k\\ge2$），直接当成 $k-1$ 会漏掉 $k=0$ 的贡献。",
+        "错位求和时要换元 $\\dfrac{k}{k!}=\\dfrac{1}{(k-1)!}$，并记得乘上前面的 $\\mathrm e^{-1}$。"
+      ],
+      "key_point": "随机变量函数的期望按定义写成级数，绝对值分段后用 $\\frac{k}{k!}=\\frac{1}{(k-1)!}$ 错位求和。"
+    },
+    {
+      "id": 9,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}$ 为来自总体 $N\\left(\\mu_{1}, \\sigma^{2}\\right)$ 的简单随机样本, $Y_{1}, Y_{2}, \\cdots, Y_{m}$ 为来自总体 $N\\left(\\mu_{2}, 2 \\sigma^{2}\\right)$ 的简单随机样本, 且两样本相互独立, 记 $\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\displaystyle \\bar{Y}=\\frac{1}{m} \\sum_{i=1}^{m} Y_{i}, \\quad S_{1}^{2}=\\frac{1}{n-1} \\sum_{i=1}^{n}\\left(X_{i}-\\bar{X}\\right)^{2}, \\quad S_{2}^{2}=\\frac{1}{m-1} \\sum_{i=1}^{m}\\left(Y_{i}-\\bar{Y}\\right)^{2}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\frac{S_{1}^{2}}{S_{2}^{2}} \\sim F(n, m)$",
+        "B": "$\\displaystyle \\frac{S_{1}^{2}}{S_{2}^{2}} \\sim F(n-1, m-1)$",
+        "C": "$\\displaystyle \\frac{2 S_{1}^{2}}{S_{2}^{2}} \\sim F(n, m)$",
+        "D": "$\\displaystyle \\frac{2 S_{1}^{2}}{S_{2}^{2}} \\sim F(n-1, m-1)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n两个总体方差不同：$X$ 来自 $N(\\mu_1,\\sigma^2)$，$Y$ 来自 $N(\\mu_2,2\\sigma^2)$。构造 $F$ 分布的核心是先把样本方差化成卡方分布：对方差为 $\\tau^2$ 的正态样本，有 $\\dfrac{(n-1)S^2}{\\tau^2}\\sim\\chi^2(n-1)$。两个独立卡方除以各自自由度之比服从 $F$ 分布。由于两总体方差不等，需要把 $2\\sigma^2$ 这个系数配进去，才能消掉 $\\sigma^2$。\n\n【解答】\n\n对 $X$ 样本（方差 $\\sigma^2$）：\n\n$$\\frac{(n-1)S_1^2}{\\sigma^2}\\sim\\chi^2(n-1).$$\n\n对 $Y$ 样本（方差 $2\\sigma^2$）：\n\n$$\\frac{(m-1)S_2^2}{2\\sigma^2}\\sim\\chi^2(m-1).$$\n\n两者相互独立，由 $F$ 分布定义\n\n$$F=\\frac{\\dfrac{1}{n-1}\\cdot\\dfrac{(n-1)S_1^2}{\\sigma^2}}{\\dfrac{1}{m-1}\\cdot\\dfrac{(m-1)S_2^2}{2\\sigma^2}}=\\frac{\\dfrac{S_1^2}{\\sigma^2}}{\\dfrac{S_2^2}{2\\sigma^2}}=\\frac{2S_1^2}{S_2^2}\\sim F(n-1,m-1).$$\n\n其中 $\\sigma^2$ 被约去，系数 $2$ 来自 $Y$ 总体方差 $2\\sigma^2$。故\n\n$$\\frac{2S_1^2}{S_2^2}\\sim F(n-1,m-1).$$\n\n选 **D**。",
+      "wrong_options": {
+        "A": "自由度错：样本方差对应的卡方自由度是 $n-1,m-1$ 而非 $n,m$；且未处理 $2\\sigma^2$，系数也缺 $2$。",
+        "B": "未把 $Y$ 总体方差 $2\\sigma^2$ 配入，$\\sigma^2$ 没能约去，缺少系数 $2$。",
+        "C": "系数 $2$ 对了，但自由度写成 $(n,m)$ 错误，应为 $(n-1,m-1)$。"
+      },
+      "pitfalls": [
+        "样本方差化卡方时自由度是 $n-1$（用了样本均值估计），不是 $n$。",
+        "两总体方差不等时，必须把各自方差配进去消 $\\sigma^2$，这里 $Y$ 的方差是 $2\\sigma^2$，故出现系数 $2$。",
+        "$F$ 分布是‘分子卡方/自由度’除以‘分母卡方/自由度’，分子分母位置和自由度顺序要对应。"
+      ],
+      "key_point": "样本方差化卡方 $\\frac{(n-1)S^2}{\\tau^2}\\sim\\chi^2(n-1)$，方差不等时配比例消 $\\sigma^2$ 再按 $F$ 定义组合。"
+    },
+    {
+      "id": 10,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}$ 为来自总体 $N\\left(\\mu, \\sigma^{2}\\right)$ 的简单随机样本, 其中 $\\sigma(\\sigma>0)$ 是未知参数, 若 $\\hat{\\sigma}=a\\left|X_{1}-X_{2}\\right|$ 为 $\\sigma$ 的无偏估计, 则 $a=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\frac{\\sqrt{\\pi}}{2}$",
+        "B": "$\\displaystyle \\frac{\\sqrt{2 \\pi}}{2}$",
+        "C": "$\\sqrt{\\pi}$",
+        "D": "$\\sqrt{2 \\pi}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n无偏估计要求 $E(\\hat\\sigma)=\\sigma$，即 $a\\,E|X_1-X_2|=\\sigma$。关键是算出 $E|X_1-X_2|$：$X_1,X_2$ 独立同分布 $N(\\mu,\\sigma^2)$，故 $X_1-X_2\\sim N(0,2\\sigma^2)$。对 $Z\\sim N(0,\\tau^2)$ 有折叠正态的期望公式 $E|Z|=\\tau\\sqrt{\\dfrac{2}{\\pi}}$，代入即可解出 $a$。\n\n【解答】\n\n因为 $X_1,X_2$ 独立，\n\n$$X_1-X_2\\sim N\\big(0,\\\\;\\sigma^2+\\sigma^2\\big)=N(0,2\\sigma^2),$$\n\n其标准差为 $\\tau=\\sqrt{2}\\,\\sigma$。对 $Z\\sim N(0,\\tau^2)$，\n\n$$E|Z|=\\int_{-\\infty}^{\\infty}|z|\\frac{1}{\\sqrt{2\\pi}\\,\\tau}\\mathrm e^{-z^2/(2\\tau^2)}\\,\\mathrm dz=\\tau\\sqrt{\\frac{2}{\\pi}}.$$\n\n故\n\n$$E|X_1-X_2|=\\sqrt{2}\\,\\sigma\\cdot\\sqrt{\\frac{2}{\\pi}}=\\frac{2\\sigma}{\\sqrt{\\pi}}.$$\n\n由无偏性 $E(\\hat\\sigma)=a\\,E|X_1-X_2|=\\sigma$：\n\n$$a\\cdot\\frac{2\\sigma}{\\sqrt{\\pi}}=\\sigma\\\\;\\Longrightarrow\\\\;a=\\frac{\\sqrt{\\pi}}{2}.$$\n\n选 **A**。",
+      "wrong_options": {
+        "B": "$\\dfrac{\\sqrt{2\\pi}}{2}$ 来自把 $X_1-X_2$ 的方差误当成 $\\sigma^2$（漏了 $2$ 倍），或期望公式用错。",
+        "C": "$\\sqrt{\\pi}$ 是正确值 $\\dfrac{\\sqrt\\pi}{2}$ 的 $2$ 倍，多半是把 $E|X_1-X_2|$ 算成 $\\dfrac{\\sigma}{\\sqrt\\pi}$ 所致。",
+        "D": "$\\sqrt{2\\pi}$ 同时弄错了方差倍数与系数，与无偏条件不符。"
+      },
+      "pitfalls": [
+        "$X_1-X_2$ 的方差是 $\\sigma^2+\\sigma^2=2\\sigma^2$，不是 $\\sigma^2$，标准差为 $\\sqrt2\\sigma$。",
+        "$E|Z|=\\tau\\sqrt{2/\\pi}$ 用的是标准差 $\\tau$，别误用方差。",
+        "无偏是对期望的要求 $E(\\hat\\sigma)=\\sigma$，要先求 $E|X_1-X_2|$ 再解 $a$。"
+      ],
+      "key_point": "$X_1-X_2\\sim N(0,2\\sigma^2)$，用折叠正态 $E|Z|=\\tau\\sqrt{2/\\pi}$ 配无偏条件 $aE|X_1-X_2|=\\sigma$ 解 $a$。"
+    },
+    {
+      "id": 20,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[-a, a]$ 上具有二阶连续导数, 证明:\r\n\r\n(1) 若 $f(0)=0$, 则存在 $\\xi \\in(-a, a)$, 使得 $f^{\\prime \\prime}(\\xi)=\\dfrac{1}{a^{2}}[f(a)+f(-a)]$;\r\n\r\n(2) 若 $f(x)$ 在 $(-a, a)$ 内取得极值, 则存在 $\\eta \\in(-a, a)$ 使得  $\r\n\\left|f^{\\prime \\prime}(\\eta)\\right| \\geq \\dfrac{1}{2 a^{2}}|f(a)-f(-a)|$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n两小问的共同武器都是带拉格朗日余项的泰勒公式，把 $f(a)$、$f(-a)$ 在某个内点展开到二阶。第（1）问在 $x=0$ 展开，利用 $f(0)=0$，把 $f(a)+f(-a)$ 表示成两个二阶导数之和的形式；再借助 $f''$ 连续，用介值定理把 \"两点二阶导的平均值\" 实现为某一点 $\\xi$ 处的值。第（2）问在极值点 $c$ 处展开，此时 $f'(c)=0$，作差消去一阶项后取绝对值放大，关键是用 $|c|<a$ 把 $(a-c)^2+(a+c)^2$ 控制住。\n\n【解答】\n\n**(1)** 因 $f$ 在 $[-a,a]$ 上有二阶连续导数，在 $x=0$ 处用泰勒公式展开（带拉格朗日余项），存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使得\n\n$$f(a)=f(0)+f'(0)\\,a+\\dfrac{f''(\\xi_1)}{2}a^2,$$\n\n$$f(-a)=f(0)+f'(0)(-a)+\\dfrac{f''(\\xi_2)}{2}a^2.$$\n\n两式相加，并代入 $f(0)=0$，一阶项相消：\n\n$$f(a)+f(-a)=\\dfrac{a^2}{2}\\left[f''(\\xi_1)+f''(\\xi_2)\\right],$$\n\n即\n\n$$\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n由于 $f''$ 在闭区间 $[\\xi_2,\\xi_1]$ 上连续，记 $m=\\min\\{f''(\\xi_1),f''(\\xi_2)\\}$，$M=\\max\\{f''(\\xi_1),f''(\\xi_2)\\}$，则上式右端的平均值介于 $m$ 与 $M$ 之间。由介值定理，存在 $\\xi$ 介于 $\\xi_1,\\xi_2$ 之间（从而 $\\xi\\in(-a,a)$），使得\n\n$$f''(\\xi)=\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n证毕。\n\n**(2)** 设 $f$ 在 $c\\in(-a,a)$ 处取得极值，由费马定理 $f'(c)=0$。在 $x=c$ 处对端点作二阶泰勒展开：存在 $\\xi_1$ 介于 $c$ 与 $a$ 之间、$\\xi_2$ 介于 $-a$ 与 $c$ 之间，使得\n\n$$f(a)=f(c)+f'(c)(a-c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2=f(c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2,$$\n\n$$f(-a)=f(c)+\\dfrac{f''(\\xi_2)}{2}(-a-c)^2=f(c)+\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n两式相减，消去 $f(c)$：\n\n$$f(a)-f(-a)=\\dfrac{f''(\\xi_1)}{2}(a-c)^2-\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n取绝对值并放大，令 $M=\\max\\{|f''(\\xi_1)|,|f''(\\xi_2)|\\}$，则记达到此最大值的点为 $\\eta\\in(-a,a)$，有 $|f''(\\eta)|=M$，且\n\n$$|f(a)-f(-a)|\\le \\dfrac{|f''(\\xi_1)|}{2}(a-c)^2+\\dfrac{|f''(\\xi_2)|}{2}(a+c)^2\\le \\dfrac{M}{2}\\left[(a-c)^2+(a+c)^2\\right].$$\n\n而 $(a-c)^2+(a+c)^2=2a^2+2c^2$，因 $|c|<a$ 有 $c^2< a^2$，故\n\n$$(a-c)^2+(a+c)^2=2a^2+2c^2\\le 4a^2.$$\n\n于是\n\n$$|f(a)-f(-a)|\\le \\dfrac{M}{2}\\cdot 4a^2=2a^2 M=2a^2\\,|f''(\\eta)|,$$\n\n即\n\n$$|f''(\\eta)|\\ge \\dfrac{1}{2a^2}\\,|f(a)-f(-a)|.$$\n\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第（1）问相加时务必用 $f(0)=0$ 消掉一阶项，两个余项的展开点 $\\xi_1,\\xi_2$ 分居 $0$ 两侧。",
+        "由 $f''(\\xi_1),f''(\\xi_2)$ 的平均值得到 $f''(\\xi)$ 需要 $f''$ 连续这一条件，用的是介值定理而非中值定理。",
+        "第（2）问放大时关键不等式是 $2a^2+2c^2\\le 4a^2$，用到了极值点 $|c|<a$；$\\eta$ 取 $|f''|$ 较大的那个点。"
+      ],
+      "key_point": "对称端点的二阶导估计，套路是在内点（$0$ 或极值点 $c$）泰勒展开后相加/相减，再用介值定理或绝对值放大。"
+    },
+    {
+      "id": 23,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1}{\\sqrt{1+x^2}}, & x \\leqslant 0, \\\\ (x+1) \\cos x, & x>0\\end{array}\\right.$ 的一个原函数为 $(\\quad)$",
+      "options": {
+        "A": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right), & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
+        "B": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
+        "C": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right), & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$",
+        "D": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n求分段函数的原函数，分两关：\n\n1. **逐段求导验证** $F'(x)=f(x)$：每一段分别对 $F$ 求导，要恰好等于对应段的 $f$；\n2. **衔接条件**：原函数必须在分段点 $x=0$ 处**连续**（其实要可导，连续是必要前提）。若两段在 $x=0$ 处左右极限不相等，则该函数在 $x=0$ 处不连续，根本不可导，就不是原函数。\n\n据此可以淘汰导数错误的选项，再用连续性确定常数项。\n\n【解答】\n\n**第一步：验证 $x\\le 0$ 段。** 对 $\\ln\\big(\\sqrt{1+x^2}+x\\big)$ 求导：\n\n$$\\frac{d}{dx}\\ln\\big(\\sqrt{1+x^2}+x\\big)=\\frac{\\dfrac{x}{\\sqrt{1+x^2}}+1}{\\sqrt{1+x^2}+x}=\\frac{\\dfrac{x+\\sqrt{1+x^2}}{\\sqrt{1+x^2}}}{\\sqrt{1+x^2}+x}=\\frac{1}{\\sqrt{1+x^2}},$$\n\n正好等于该段的 $f(x)$。而 $\\ln\\big(\\sqrt{1+x^2}-x\\big)$ 求导得 $-\\dfrac{1}{\\sqrt{1+x^2}}$，符号相反，**错误**——排除 A、B。\n\n**第二步：验证 $x>0$ 段。** 对 $(x+1)\\sin x+\\cos x$ 求导：\n\n$$\\frac{d}{dx}\\big[(x+1)\\sin x+\\cos x\\big]=\\sin x+(x+1)\\cos x-\\sin x=(x+1)\\cos x,$$\n\n正好等于该段 $f(x)$（C、D 均满足）。而 A、B 的 $(x+1)\\cos x-\\sin x$ 求导得 $-(x+1)\\sin x$，也不对。\n\n**第三步：用连续性在 C、D 间定夺。** 分段点 $x=0$ 处必须连续：\n\n- 右极限：$\\lim\\limits_{x\\to 0^+}\\big[(x+1)\\sin x+\\cos x\\big]=0+1=1$；\n- 左值：$x\\le 0$ 段在 $x=0$ 处 $\\ln\\big(\\sqrt{1}+0\\big)=\\ln 1=0$。\n\n要连续需左 = 右 $=1$，所以 $x\\le 0$ 段须加常数 $1$，即写成 $\\ln\\big(\\sqrt{1+x^2}+x\\big)+1$。\n\n- 选项 C 左值为 $0\\ne 1$，在 $x=0$ 处**不连续**，不是原函数；\n- 选项 D 左值为 $0+1=1$，与右极限相等，连续，符合。\n\n故选 **D**。",
+      "wrong_options": {
+        "A": "x≤0 段取 ln(√(1+x²)−x)，求导得 −1/√(1+x²)，符号相反；x>0 段求导得 −(x+1)sin x，两段导数都不对。",
+        "B": "与 A 同样的导数错误（两段求导都得不到 f），加不加常数 1 都无济于事。",
+        "C": "两段导数虽正确，但在 x=0 处左值为 0、右极限为 1，函数不连续，因而不可导，不能作为原函数。"
+      },
+      "pitfalls": [
+        "ln(√(1+x²)+x) 与 ln(√(1+x²)−x) 求导差一个负号，务必算清符号（前者才得 +1/√(1+x²)）。",
+        "原函数必须在分段点连续，这一步用来定常数；只验导数不验衔接会误选 C。",
+        "(x+1)sin x+cos x 求导时 sin x 与 −sin x 相消，结果恰为 (x+1)cos x，别算漏。"
+      ],
+      "key_point": "分段函数原函数：各段求导对上 f，再用分段点连续性确定常数，缺一不可。"
+    },
+    {
+      "id": 27,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol A, \\boldsymbol B$ 为 $n$ 阶可逆矩阵, $\\boldsymbol E$ 为 $n$ 阶单位矩阵, $\\boldsymbol M^*$ 为矩阵 $\\boldsymbol M$ 的伴随矩阵, 则 $\\left(\\begin{array}{ll}\\boldsymbol A & \\boldsymbol E \\\\ \\boldsymbol O & \\boldsymbol B\\end{array}\\right)^*= (\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题考查分块上三角矩阵的伴随矩阵。核心公式是：对可逆矩阵 $M$，有 $M^*=|M|\\,M^{-1}$。因此先求分块矩阵 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$ 的行列式与逆，再相乘，最后用 $A^*=|A|A^{-1}$、$B^*=|B|B^{-1}$ 把结果换成伴随矩阵的形式。\n\n【解答】\n\n记 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$。\n\n**行列式。** 分块上三角，$|M|=|A|\\,|B|\\ne0$，故 $M$ 可逆。\n\n**求逆。** 设 $M^{-1}=\\begin{pmatrix}X&Y\\\\Z&W\\end{pmatrix}$，由 $MM^{-1}=E$ 比较分块得 $X=A^{-1}$，$Z=O$，$W=B^{-1}$，且 $AY+B^{-1}=O$ 给出 $Y=-A^{-1}B^{-1}$。于是\n\n$$M^{-1}=\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}.$$\n\n**求伴随。** 由 $M^*=|M|\\,M^{-1}=|A|\\,|B|\\,M^{-1}$：\n\n$$M^*=|A||B|\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}=\\begin{pmatrix}|B|\\big(|A|A^{-1}\\big)&-\\big(|A|A^{-1}\\big)\\big(|B|B^{-1}\\big)\\\\O&|A|\\big(|B|B^{-1}\\big)\\end{pmatrix}.$$\n\n代入 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，得\n\n$$M^*=\\begin{pmatrix}|B|A^*&-A^*B^*\\\\O&|A|B^*\\end{pmatrix}.$$\n\n对照选项，选 **D**。",
+      "wrong_options": {
+        "A": "左上、右下两块的标量系数写反，写成 $|A|B^*$、$|B|A^*$，且右上块顺序错为 $-B^*A^*$。",
+        "B": "左上、右下系数同样写反成 $|A|B^*$ 与 $|B|A^*$（虽右上块 $-A^*B^*$ 顺序正确），整体不符。",
+        "C": "右上块乘积顺序写反成 $-B^*A^*$。由 $-A^{-1}B^{-1}$ 化来应为 $-A^*B^*$，矩阵乘法不可交换，顺序不能颠倒。"
+      },
+      "pitfalls": [
+        "用 $M^*=|M|M^{-1}$ 时，$|M|=|A||B|$ 要乘进每一块，注意各块对应的标量是 $|B|A^*$ 与 $|A|B^*$（系数与块“交叉”）。",
+        "右上块由 $-A^{-1}B^{-1}$ 化为 $-A^*B^*$，乘法顺序不可交换，不能写成 $-B^*A^*$。",
+        "化简用 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，把多余的行列式因子恰好分配到两个伴随上。"
+      ],
+      "key_point": "分块矩阵伴随用 $M^*=|M|M^{-1}$：先求 $|M|=|A||B|$ 与分块逆，再用 $|A|A^{-1}=A^*$ 还原，注意乘积顺序与系数交叉。"
+    },
+    {
+      "id": 32,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知线性方程组 $\\left\\{\\begin{array}{l}\r\na x_1+x_3=1, \\\\ \r\nx_1+a x_2+x_3=0, \\\\ \r\nx_1+2 x_2+a x_3=0, \\\\ \r\na x_1+b x_2=2\r\n\\end{array}\\right.$, 有解, 其中 $a, b$ 为常数.\r\n若 $\\left|\\begin{array}{lll}\r\na & 0 & 1 \\\\ \r\n1 & a & 1 \\\\ \r\n1 & 2 & a\r\n\\end{array}\\right|=4$, 则 $\\left|\\begin{array}{lll} \r\n1 & a & 1 \\\\ \r\n1 & 2 & a \\\\ \r\na & b & 0 \r\n\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "8",
+      "analysis": "【分析】\n\n这是一个 $4$ 个方程、$3$ 个未知量的超定方程组。前三个方程的系数矩阵恰好就是题目给的行列式\n\n$$D=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=4\\neq 0,$$\n\n说明前三个方程的系数矩阵满秩（秩为 $3$），即整个方程组的系数矩阵秩为 $3$。方程组\"有解\"（相容）的充要条件是增广矩阵的秩也等于 $3$。由于系数矩阵已有一个 $3$ 阶非零子式，增广矩阵（$4\\times4$）秩等于 $3$ 就等价于其行列式为零。把这个 $4\\times4$ 增广行列式按最后一列（常数列）展开，恰好能用题目要求的目标行列式 $T$ 和已知的 $D$ 表示，从而 $T$ 由 $D$ 直接算出，无需求解 $a,b$。\n\n【解答】\n\n记前三个方程对应的系数行列式为 $D$，已知 $D=4\\neq0$，故系数矩阵秩为 $3$。方程组有解 $\\iff$ 增广矩阵秩 $=3$ $\\iff$ 增广矩阵的 $4$ 阶行列式为零：\n\n$$\\Delta=\\begin{vmatrix} a&0&1&1\\\\ 1&a&1&0\\\\ 1&2&a&0\\\\ a&b&0&2\\end{vmatrix}=0.$$\n\n把 $\\Delta$ 按**最后一列** $(1,0,0,2)^{\\mathsf T}$ 展开。该列只有第 $1$ 行元素 $1$ 与第 $4$ 行元素 $2$ 非零：\n\n第 $1$ 行、第 $4$ 列元素 $1$，代数余子式 $(-1)^{1+4}M_{14}$，其中余子式 $M_{14}$ 是删去第 $1$ 行第 $4$ 列后的三阶行列式（即第 $2,3,4$ 行、第 $1,2,3$ 列）：\n\n$$M_{14}=\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=T,$$\n\n这正是题目要求的目标行列式 $T$。\n\n第 $4$ 行、第 $4$ 列元素 $2$，代数余子式 $(-1)^{4+4}M_{44}$，其中\n\n$$M_{44}=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=D=4.$$\n\n于是\n\n$$\\Delta=1\\cdot(-1)^{1+4}\\,T+2\\cdot(-1)^{4+4}\\,D=-T+2D.$$\n\n由相容条件 $\\Delta=0$，得\n\n$$-T+2D=0\\ \\Longrightarrow\\ T=2D=2\\times 4=8.$$\n\n所以\n\n$$\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=8.$$\n\n（可验证：$D=4$ 给出 $a=-1$ 或 $a=2$；相容条件相应定出 $b=\\tfrac72$ 或 $b=-4$，代入目标行列式两种情形都得 $8$，与上述结果一致。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "要先判断系数矩阵的秩：因为 $D=4\\neq0$，系数矩阵满秩，相容条件才简化为\"增广 $4$ 阶行列式 $=0$\"；若不先确认 $D\\neq0$，相容性的等价转化不成立。",
+        "按最后一列展开时代数余子式的符号 $(-1)^{i+j}$ 不能漏：第 $1$ 行第 $4$ 列是负号，第 $4$ 行第 $4$ 列是正号。",
+        "目标行列式 $T$ 的行恰是增广行列式去掉第一行后的前三列，要看清行列对应关系，不要错排成别的子式。"
+      ],
+      "key_point": "系数阵满秩时\"有解\"等价于增广 $4$ 阶行列式为零，按常数列展开即把目标行列式 $T$ 与已知 $D$ 联系起来：$T=2D$。"
+    },
+    {
+      "id": 35,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知平面区域 $D=\\left\\{(x, y) \\mid 0 \\leqslant y \\leqslant \\dfrac{1}{x \\sqrt{1+x^2}}, x \\geqslant 1\\right\\}$\r\n\r\n(1) 求 $D$ 的面积;\r\n\r\n(2) 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积",
+      "options": {},
+      "answer": "(1) $\\ln (\\sqrt{2}+1)$\r\n\r\n(2) $\\pi\\left(1-\\dfrac{\\pi}{4}\\right) $",
+      "analysis": "【分析】\n\n区域 $D$ 在 $[1,+\\infty)$ 上无界，故面积与体积都是反常积分。(1) 面积 $S=\\displaystyle\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}$，被积形如 $\\dfrac{1}{x\\sqrt{1+x^2}}$，用倒代换 $x=\\dfrac{1}{t}$（或三角代换）化掉根号。(2) 绕 $x$ 轴旋转，用圆盘法 $V=\\pi\\displaystyle\\int_1^{+\\infty}[\\,y(x)\\,]^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}$，被积有理函数用部分分式拆开。\n\n【解答】\n\n**(1) 面积。**\n\n$$S=\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}.$$\n\n令 $x=\\dfrac{1}{t}$，则 $dx=-\\dfrac{1}{t^2}dt$，$\\sqrt{1+x^2}=\\dfrac{\\sqrt{1+t^2}}{|t|}=\\dfrac{\\sqrt{1+t^2}}{t}\\ (t>0)$；当 $x:1\\to+\\infty$ 时 $t:1\\to0^+$。\n\n$$S=\\int_{1}^{0^+}\\frac{1}{\\frac1t\\cdot\\frac{\\sqrt{1+t^2}}{t}}\\Big(-\\frac{1}{t^2}\\Big)dt=\\int_{0^+}^{1}\\frac{t^2}{\\sqrt{1+t^2}}\\cdot\\frac{1}{t^2}\\,dt=\\int_0^1\\frac{dt}{\\sqrt{1+t^2}}.$$\n\n而 $\\displaystyle\\int\\frac{dt}{\\sqrt{1+t^2}}=\\ln\\big(t+\\sqrt{1+t^2}\\big)+C$，故\n\n$$S=\\Big[\\ln\\big(t+\\sqrt{1+t^2}\\big)\\Big]_0^1=\\ln(1+\\sqrt2)-\\ln 1=\\ln(\\sqrt2+1).$$\n\n**(2) 旋转体体积。**\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x\\sqrt{1+x^2}}\\Big)^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}.$$\n\n部分分式：$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$。于是\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x^2}-\\frac{1}{1+x^2}\\Big)dx=\\pi\\Big[-\\frac{1}{x}-\\arctan x\\Big]_1^{+\\infty}.$$\n\n上限：$x\\to+\\infty$ 时 $-\\dfrac1x\\to0,\\ \\arctan x\\to\\dfrac{\\pi}{2}$，得 $0-\\dfrac{\\pi}{2}$。\n\n下限 $x=1$：$-1-\\dfrac{\\pi}{4}$。\n\n$$V=\\pi\\Big[\\Big(0-\\frac{\\pi}{2}\\Big)-\\Big(-1-\\frac{\\pi}{4}\\Big)\\Big]=\\pi\\Big(1-\\frac{\\pi}{2}+\\frac{\\pi}{4}\\Big)=\\pi\\Big(1-\\frac{\\pi}{4}\\Big).$$\n\n故 $D$ 的面积为 $\\ln(\\sqrt2+1)$，旋转体体积为 $\\pi\\left(1-\\dfrac{\\pi}{4}\\right)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "无界区域的面积/体积是反常积分，上限要取极限 $x\\to+\\infty$ 而非直接代入",
+        "体积用圆盘法时被积是 $y^2$，即 $\\dfrac{1}{x^2(1+x^2)}$，别漏掉平方",
+        "$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$ 是关键拆分，分母 $x^2$ 与 $1+x^2$ 不要拆错"
+      ],
+      "key_point": "无界域面积/体积归结为反常积分；倒代换去 $x\\sqrt{1+x^2}$ 的根号，体积被积用部分分式 1/x²-1/(1+x²)。"
+    },
+    {
+      "id": 37,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 满足: 对任意 $x_1, x_2, x_3$ 均有 $\\boldsymbol{A}\\left(\\begin{array}{c}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{c}x_1+x_2+x_3 \\\\ 2 x_1-x_2+x_3 \\\\ x_2-x_3\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol A$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol P$ 与对角矩阵 $\\boldsymbol \\Lambda$, 使得 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\boldsymbol \\Lambda$",
+      "options": {},
+      "answer": "(1) A=[[1,1,1],[2,-1,1],[0,1,-1]]; (2) P=[[0,-1,4],[-1,0,3],[1,2,1]], Λ=diag(-2,-1,2)",
+      "analysis": "【分析】\n\n第 (1) 问的关键是读懂\"线性变换的像\"与矩阵的对应关系：若 $\\boldsymbol A\\boldsymbol x$ 的第 $i$ 个分量为 $x_1,x_2,x_3$ 的线性组合，则该组合的系数恰好就是 $\\boldsymbol A$ 的第 $i$ 行。把右端三个分量的系数逐行抄下来即得 $\\boldsymbol A$。\n\n第 (2) 问是标准的相似对角化：先解特征方程 $\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=0$ 求特征值，再对每个特征值解齐次方程组 $(\\boldsymbol A-\\lambda\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$ 求特征向量。本题 $\\boldsymbol A$ 有三个互异特征值，故必可对角化，把三个特征向量按列拼成 $\\boldsymbol P$，对应特征值按相同顺序排成 $\\boldsymbol\\Lambda$ 即可。\n\n【解答】\n\n**(1)** 由\n$$\\boldsymbol A\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix}=\\begin{pmatrix}x_1+x_2+x_3\\\\2x_1-x_2+x_3\\\\x_2-x_3\\end{pmatrix},$$\n按行抄系数得\n$$\\boldsymbol A=\\begin{pmatrix}1&1&1\\\\2&-1&1\\\\0&1&-1\\end{pmatrix}.$$\n\n**(2)** 求特征值：\n$$\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=\\begin{vmatrix}1-\\lambda&1&1\\\\2&-1-\\lambda&1\\\\0&1&-1-\\lambda\\end{vmatrix}=-(\\lambda-2)(\\lambda+1)(\\lambda+2).$$\n令其为 $0$，得 $\\lambda_1=-2,\\ \\lambda_2=-1,\\ \\lambda_3=2$。\n\n对 $\\lambda_1=-2$：解 $(\\boldsymbol A+2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_1=(0,-1,1)^{\\mathrm T}$。\n\n对 $\\lambda_2=-1$：解 $(\\boldsymbol A+\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_2=(-1,0,2)^{\\mathrm T}$。\n\n对 $\\lambda_3=2$：解 $(\\boldsymbol A-2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_3=(4,3,1)^{\\mathrm T}$。\n\n三个特征值互异，故 $\\boldsymbol A$ 可对角化。取\n$$\\boldsymbol P=(\\boldsymbol\\xi_1,\\boldsymbol\\xi_2,\\boldsymbol\\xi_3)=\\begin{pmatrix}0&-1&4\\\\-1&0&3\\\\1&2&1\\end{pmatrix},$$\n则 $\\boldsymbol P$ 可逆（$\\det\\boldsymbol P=-12\\neq 0$），且\n$$\\boldsymbol P^{-1}\\boldsymbol A\\boldsymbol P=\\boldsymbol\\Lambda=\\begin{pmatrix}-2&0&0\\\\0&-1&0\\\\0&0&2\\end{pmatrix}.$$\n（验算：直接计算 $\\boldsymbol A\\boldsymbol P$ 各列分别等于 $-2\\boldsymbol\\xi_1,\\,-\\boldsymbol\\xi_2,\\,2\\boldsymbol\\xi_3$，即 $\\boldsymbol A\\boldsymbol P=\\boldsymbol P\\boldsymbol\\Lambda$，成立。）\n\n注：$\\boldsymbol P$ 的取法不唯一，特征向量可乘任意非零常数、各列也可重排，只要 $\\boldsymbol\\Lambda$ 的对角元顺序与之对应即可。",
+      "wrong_options": {},
+      "pitfalls": [
+        "由变换写 A 时容易把系数按列填入，正确做法是\"每个输出分量的系数作为 A 的对应行\"。",
+        "特征向量与对角阵的排列顺序必须一一对应，第二列特征值 -1 对应的向量是 (-1,0,2)，验算时应满足 Aξ=λξ。",
+        "三个特征值互异即保证可对角化，无需再验线性无关，但 P 必须确认可逆。"
+      ],
+      "key_point": "像的系数按行写出 A；互异特征值各取一个特征向量按列拼成 P，对应特征值排成 Λ。"
+    },
+    {
+      "id": 38,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x, y)=\\ln (y+|x \\sin y|)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 不存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 存在",
+        "B": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 不存在",
+        "C": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均存在",
+        "D": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均不存在"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查多元函数偏导数的**定义**。题中含绝对值 $|x\\sin y|$，在 $x=0$ 处绝对值会带来左右单侧导数不一致的问题，所以求 $\\dfrac{\\partial f}{\\partial x}$ 时**不能直接套公式求导**，必须回到偏导数定义用极限判断。而对 $y$ 求偏导时把 $x=0$ 代入后绝对值项消失，函数光滑，可直接求导。\n\n核心结论：含 $|x|$ 这类因子的函数，在该因子为零的点处往往只有单侧导数、双侧导数不存在。\n\n【解答】\n\n**第一步：求 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$。**\n\n固定 $y=1$，得一元函数 $f(x,1)=\\ln\\big(1+|x\\sin 1|\\big)=\\ln\\big(1+|x|\\sin 1\\big)$（因 $\\sin 1>0$）。又 $f(0,1)=\\ln 1=0$，按定义\n\n$$\\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}=\\lim_{x\\to 0}\\frac{f(x,1)-f(0,1)}{x}=\\lim_{x\\to 0}\\frac{\\ln\\big(1+|x|\\sin 1\\big)}{x}.$$\n\n当 $x\\to 0$ 时 $\\ln(1+|x|\\sin 1)\\sim |x|\\sin 1$，于是\n\n$$\\lim_{x\\to 0^+}\\frac{|x|\\sin 1}{x}=\\sin 1,\\qquad \\lim_{x\\to 0^-}\\frac{|x|\\sin 1}{x}=-\\sin 1.$$\n\n左右极限不相等，故 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$ **不存在**。\n\n**第二步：求 $\\left.\\dfrac{\\partial f}{\\partial y}\\right|_{(0,1)}$。**\n\n固定 $x=0$，得 $f(0,y)=\\ln\\big(y+|0\\cdot\\sin y|\\big)=\\ln y$（在 $y=1$ 附近 $y>0$，函数光滑）。直接求导\n\n$$\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}=\\left.\\frac{1}{y}\\right|_{y=1}=1,$$\n\n**存在**。\n\n综上：$\\dfrac{\\partial f}{\\partial x}$ 不存在、$\\dfrac{\\partial f}{\\partial y}$ 存在，选 **A**。",
+      "wrong_options": {
+        "B": "把两个偏导的存在性判断恰好搞反了。对 x 的偏导因绝对值产生左右极限 ±sin1 而不存在；对 y 的偏导代入 x=0 后是 ln y，导数为 1 存在。",
+        "C": "误以为对 x 也可直接求导。x=0 处 |x|sin1 的差商左右极限不一致，对 x 的偏导其实不存在。",
+        "D": "对 y 求偏导时代入 x=0，绝对值项 |x sin y| 整体为 0，f(0,y)=ln y 光滑可导，故对 y 的偏导是存在的，不可能两者都不存在。"
+      },
+      "pitfalls": [
+        "求 ∂f/∂x 时不能直接对 |x sin y| 形式求导，必须回到定义算差商的左右极限。",
+        "判断 ∂f/∂y 要先代入 x=0，此时绝对值项消失为 0，别被 |x sin y| 吓住而误判不存在。",
+        "sin 1>0，因此 |x sin1|=|x|sin1，符号分析时 sin1 是正常数。"
+      ],
+      "key_point": "含绝对值的偏导在零点处要用定义查左右差商极限，是否相等决定双侧偏导是否存在。"
+    },
+    {
+      "id": 39,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow \\infty} x^2\\left(2-x \\sin \\frac{1}{x}-\\cos \\frac{1}{x}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "【分析】\n\n这是 $x\\to\\infty$ 型的 $\\infty\\cdot 0$ 极限。标准做法是**换元** $t=\\dfrac1x$，把 $x\\to\\infty$ 化为 $t\\to 0$，再对 $\\sin t$、$\\cos t$ 做**泰勒展开**。注意括号内是 $2-x\\sin\\frac1x-\\cos\\frac1x$，每一项都趋于 $1$，相消后是高阶无穷小，需要展开到 $t^2$ 项才能与外面的 $\\dfrac1{t^2}$ 配平。展开阶数取够是关键。\n\n【解答】\n\n令 $t=\\dfrac1x$，则 $x\\to\\infty$ 时 $t\\to 0$，且 $x^2=\\dfrac1{t^2}$。原式化为\n\n$$\\lim_{t\\to 0}\\frac{1}{t^2}\\left(2-\\frac{\\sin t}{t}-\\cos t\\right).$$\n\n对分子用泰勒展开（到 $t^2$ 阶）：\n\n$$\\sin t=t-\\frac{t^3}{6}+o(t^3)\\ \\Rightarrow\\ \\frac{\\sin t}{t}=1-\\frac{t^2}{6}+o(t^2),$$\n\n$$\\cos t=1-\\frac{t^2}{2}+o(t^2).$$\n\n代入括号：\n\n$$2-\\frac{\\sin t}{t}-\\cos t=2-\\left(1-\\frac{t^2}{6}\\right)-\\left(1-\\frac{t^2}{2}\\right)+o(t^2)=\\frac{t^2}{6}+\\frac{t^2}{2}+o(t^2)=\\frac{2t^2}{3}+o(t^2).$$\n\n于是\n\n$$\\lim_{t\\to 0}\\frac{1}{t^2}\\cdot\\left(\\frac{2}{3}t^2+o(t^2)\\right)=\\frac{2}{3}.$$\n\n故原极限 $=\\dfrac{2}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "sin t 必须展开到 t^3 项（即 sin t / t 展开到 t^2），只展开到一阶会把高阶信息丢掉得到错误结果。",
+        "1/6 + 1/2 = 2/3，不要漏掉 sin t/t 那一项贡献的 1/6。",
+        "换元后 x^2 对应 1/t^2，量级要与括号内的 t^2 阶无穷小精确配平。"
+      ],
+      "key_point": "x→∞ 的 ∞·0 极限令 t=1/x，把 sin、cos 泰勒展开到与外因子配平的阶数即可。"
+    },
+    {
+      "id": 40,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x, y)$ 满足 $\\displaystyle \\mathrm{d} f(x, y)=\\frac{x \\mathrm{d} y-y \\mathrm{~d} x}{x^2+y^2}, f(1,1)=\\frac{\\pi}{4}$, 则 $f(\\sqrt{3}, 3)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{3}$",
+      "analysis": "【分析】\n\n题目给出了 $f$ 的全微分表达式 $\\mathrm{d}f=\\dfrac{x\\,\\mathrm{d}y-y\\,\\mathrm{d}x}{x^2+y^2}$，要求反求出 $f$ 本身。本质是\"凑全微分\"：看到 $\\dfrac{x\\,\\mathrm{d}y-y\\,\\mathrm{d}x}{x^2+y^2}$ 这种结构，应立刻联想到 $\\arctan\\dfrac{y}{x}$ 的微分。求出 $f=\\arctan\\dfrac{y}{x}+C$ 后，用初值 $f(1,1)=\\dfrac{\\pi}{4}$ 定出常数 $C$，再代入 $(\\sqrt{3},3)$ 求值即可。\n\n【解答】\n\n回忆复合函数微分：设 $u=\\arctan\\dfrac{y}{x}$，则\n\n$$\\frac{\\partial u}{\\partial x}=\\frac{1}{1+\\left(\\frac{y}{x}\\right)^2}\\cdot\\left(-\\frac{y}{x^2}\\right)=\\frac{-y}{x^2+y^2},\\qquad \\frac{\\partial u}{\\partial y}=\\frac{1}{1+\\left(\\frac{y}{x}\\right)^2}\\cdot\\frac{1}{x}=\\frac{x}{x^2+y^2}.$$\n\n于是\n\n$$\\mathrm{d}\\left(\\arctan\\frac{y}{x}\\right)=\\frac{-y}{x^2+y^2}\\,\\mathrm{d}x+\\frac{x}{x^2+y^2}\\,\\mathrm{d}y=\\frac{x\\,\\mathrm{d}y-y\\,\\mathrm{d}x}{x^2+y^2},$$\n\n这正是 $\\mathrm{d}f$。因此（在不含 $y$ 轴的区域内）\n\n$$f(x,y)=\\arctan\\frac{y}{x}+C.$$\n\n由初值 $f(1,1)=\\dfrac{\\pi}{4}$：$\\arctan 1+C=\\dfrac{\\pi}{4}+C=\\dfrac{\\pi}{4}$，故 $C=0$，即 $f(x,y)=\\arctan\\dfrac{y}{x}$。\n\n代入点 $(\\sqrt{3},3)$：\n\n$$f(\\sqrt{3},3)=\\arctan\\frac{3}{\\sqrt{3}}=\\arctan\\sqrt{3}=\\frac{\\pi}{3}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "凑微分时要核对两个偏导数都对得上，不要只验一个就下结论；符号 $x\\,\\mathrm{d}y-y\\,\\mathrm{d}x$ 的顺序决定是 $\\arctan(y/x)$ 还是 $-\\arctan(x/y)$。",
+        "别忘了任意常数 $C$，必须用初值确定后再代点。",
+        "$\\dfrac{3}{\\sqrt{3}}=\\sqrt{3}$ 要化简到位，$\\arctan\\sqrt{3}=\\dfrac{\\pi}{3}$。"
+      ],
+      "key_point": "见到 $\\dfrac{x\\,\\mathrm{d}y-y\\,\\mathrm{d}x}{x^2+y^2}$ 直接还原成 $\\mathrm{d}\\!\\left(\\arctan\\dfrac{y}{x}\\right)$，再用初值定常数。"
+    },
+    {
+      "id": 41,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{2 n}}{(2 n) !}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{2} e^x+\\frac{1}{2} e^{-x}$",
+      "analysis": "【分析】\n\n这是幂级数求和函数的题。关键是认出通项 $\\dfrac{x^{2n}}{(2n)!}$ 恰好是指数函数展开式 $e^x=\\displaystyle\\sum_{k=0}^{\\infty}\\dfrac{x^k}{k!}$ 中的全部偶次项。利用 $e^{-x}=\\displaystyle\\sum_{k=0}^{\\infty}\\dfrac{(-x)^k}{k!}$，把 $e^x$ 与 $e^{-x}$ 相加，奇次项相消、偶次项加倍，从而分离出偶次部分，即得和函数（这正是双曲余弦 $\\cosh x$）。\n\n【解答】\n\n由 $e^x$ 的麦克劳林展开式\n\n$$e^x=\\sum_{k=0}^{\\infty}\\frac{x^k}{k!},\\qquad e^{-x}=\\sum_{k=0}^{\\infty}\\frac{(-x)^k}{k!}=\\sum_{k=0}^{\\infty}(-1)^k\\frac{x^k}{k!},\\qquad x\\in(-\\infty,+\\infty).$$\n\n两式相加，奇次项（$k$ 为奇数）系数 $1+(-1)^k=0$ 相消，偶次项（$k=2n$）系数 $1+1=2$：\n\n$$e^x+e^{-x}=\\sum_{k=0}^{\\infty}\\bigl[1+(-1)^k\\bigr]\\frac{x^k}{k!}=2\\sum_{n=0}^{\\infty}\\frac{x^{2n}}{(2n)!}.$$\n\n两边同除以 $2$，即得\n\n$$\\sum_{n=0}^{\\infty}\\frac{x^{2n}}{(2n)!}=\\frac{e^x+e^{-x}}{2}=\\frac{1}{2}e^x+\\frac{1}{2}e^{-x}\\quad(=\\cosh x).$$\n\n该级数对一切实数 $x$ 收敛。",
+      "wrong_options": {},
+      "pitfalls": [
+        "不要把它和 $\\dfrac{x^{2n}}{(2n+1)!}$（对应 $\\dfrac{\\sinh x}{x}$）或带 $(-1)^n$ 的 $\\cos x$ 展开混淆——本题分母是 $(2n)!$ 且无交错符号。",
+        "结果写成 $\\dfrac{e^x+e^{-x}}{2}$ 即可，也可写作 $\\cosh x$，注意收敛域是全体实数。"
+      ],
+      "key_point": "$\\dfrac{x^{2n}}{(2n)!}$ 是 $e^x$ 展开式的偶次项，用 $\\dfrac{e^x+e^{-x}}{2}$ 一步分离。"
+    },
+    {
+      "id": 42,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设某公司在 $t$ 时刻的资产为 $f(t)$ ，从 0 时刻到 $t$ 时刻的平均资产等于 $\\dfrac{f(t)}{t}-t$ ，假设 $f(t)$ 连续且 $f(0)=0$ ，则 $f(t)=$ $\\qquad$",
+      "options": {},
+      "answer": "$-2 t-2+2 \\mathrm{e}^t$",
+      "analysis": "【分析】\n\n\"从 $0$ 到 $t$ 的平均资产\"就是 $\\dfrac{1}{t}\\displaystyle\\int_0^t f(s)\\,\\mathrm{d}s$，题意给出它等于 $\\dfrac{f(t)}{t}-t$，这就建立了一个含变限积分的方程（积分方程）。处理积分方程的标准手法：先去分母得到只含 $\\int_0^t f$ 与 $f(t)$ 的等式，再对 $t$ 求导把积分号消掉，化成一阶线性微分方程 $f'-f=2t$，最后用通解公式求解，并由 $f(0)=0$ 定常数。\n\n【解答】\n\n依题意\n\n$$\\frac{1}{t}\\int_0^t f(s)\\,\\mathrm{d}s=\\frac{f(t)}{t}-t.$$\n\n两边同乘 $t$：\n\n$$\\int_0^t f(s)\\,\\mathrm{d}s=f(t)-t^2.\\qquad(\\ast)$$\n\n（注：在 $(\\ast)$ 中令 $t=0$ 得 $0=f(0)-0$，与已知 $f(0)=0$ 一致。）对 $(\\ast)$ 两边关于 $t$ 求导，左边由变限积分求导得 $f(t)$：\n\n$$f(t)=f'(t)-2t,\\qquad\\text{即}\\qquad f'(t)-f(t)=2t.$$\n\n这是一阶线性微分方程，$P(t)=-1,\\ Q(t)=2t$。用通解公式\n\n$$f(t)=e^{-\\int P\\,\\mathrm{d}t}\\left(\\int Q\\,e^{\\int P\\,\\mathrm{d}t}\\,\\mathrm{d}t+C\\right)=e^{t}\\left(\\int 2t\\,e^{-t}\\,\\mathrm{d}t+C\\right).$$\n\n分部积分：\n\n$$\\int 2t\\,e^{-t}\\,\\mathrm{d}t=-2t\\,e^{-t}+\\int 2e^{-t}\\,\\mathrm{d}t=-2t\\,e^{-t}-2e^{-t}.$$\n\n代回：\n\n$$f(t)=e^{t}\\left(-2t\\,e^{-t}-2e^{-t}+C\\right)=-2t-2+C\\,e^{t}.$$\n\n由 $f(0)=0$：$-0-2+C=0\\Rightarrow C=2$。故\n\n$$f(t)=-2t-2+2e^{t}.$$\n\n验算：$f'(t)=-2+2e^{t}$，$f'-f=(-2+2e^t)-(-2t-2+2e^t)=2t$，且 $f(0)=0$，满足全部条件。",
+      "wrong_options": {},
+      "pitfalls": [
+        "\"平均资产\"是 $\\dfrac{1}{t}\\int_0^t f$，别漏掉前面的 $\\dfrac{1}{t}$；先乘 $t$ 去分母再求导，否则直接对带 $\\dfrac1t$ 的式子求导会很乱。",
+        "对变限积分 $\\int_0^t f(s)\\,\\mathrm{d}s$ 求导结果是 $f(t)$，不要写成 $f(s)$ 或漏掉。",
+        "常数 $C$ 必须用 $f(0)=0$ 确定；分部积分的符号容易出错，建议代回原方程验算。"
+      ],
+      "key_point": "积分方程先去分母再对 $t$ 求导化为一阶线性方程 $f'-f=2t$，套通解公式并用 $f(0)=0$ 定常数。"
+    },
+    {
+      "id": 43,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且 $X \\sim B(1, p), Y \\sim B(2, p), p \\in(0,1)$, 则 $X+Y$ 与 $X-Y$ 的相关系数为",
+      "options": {},
+      "answer": "$-\\dfrac{1}{3}$",
+      "analysis": "【分析】\n\n本题求两个随机变量线性组合的相关系数。核心是相关系数公式 $\\rho_{UV}=\\dfrac{\\operatorname{Cov}(U,V)}{\\sqrt{D(U)}\\sqrt{D(V)}}$，配合协方差的双线性性展开。关键信息：$X,Y$ 相互独立，故 $\\operatorname{Cov}(X,Y)=0$；二项分布方差 $D(X\\sim B(n,p))=np(1-p)$。\n\n【解答】\n\n记 $q=1-p$。由二项分布方差公式\n\n$$D(X)=1\\cdot p(1-p)=pq,\\qquad D(Y)=2\\cdot p(1-p)=2pq.$$\n\n因 $X,Y$ 独立，$\\operatorname{Cov}(X,Y)=0$。\n\n令 $U=X+Y,\\ V=X-Y$。利用协方差双线性展开：\n\n$$\\operatorname{Cov}(U,V)=\\operatorname{Cov}(X+Y,\\,X-Y)=D(X)-\\operatorname{Cov}(X,Y)+\\operatorname{Cov}(Y,X)-D(Y)=D(X)-D(Y)=pq-2pq=-pq.$$\n\n再算方差（独立时方差可加）：\n\n$$D(U)=D(X)+D(Y)=3pq,\\qquad D(V)=D(X)+D(Y)=3pq.$$\n\n（注意 $D(X-Y)=D(X)+D(Y)-2\\operatorname{Cov}(X,Y)=D(X)+D(Y)$。）\n\n代入相关系数公式：\n\n$$\\rho_{UV}=\\frac{\\operatorname{Cov}(U,V)}{\\sqrt{D(U)D(V)}}=\\frac{-pq}{\\sqrt{3pq\\cdot 3pq}}=\\frac{-pq}{3pq}=-\\frac{1}{3}.$$\n\n由于 $p\\in(0,1)$，$pq>0$，可放心约去。故所求相关系数为 $-\\dfrac{1}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "计算 $D(X-Y)$ 时是加方差 $D(X)+D(Y)$，不要误写成 $D(X)-D(Y)$",
+        "$\\operatorname{Cov}(U,V)$ 展开后中间两项是 $-\\operatorname{Cov}(X,Y)+\\operatorname{Cov}(Y,X)=0$，独立才能消去",
+        "结果与 $p$ 无关，约分时需 $pq\\ne0$，由 $p\\in(0,1)$ 保证成立"
+      ],
+      "key_point": "相关系数 = 协方差除以两方差几何平均；独立令 Cov(X,Y)=0，再用协方差双线性展开。"
+    },
+    {
+      "id": 44,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知可导函数 $y=y(x)$ 满足 $a e^x+y^2+y-\\ln (1+x) \\cos y+b=0$, 且 $y(0)=0$, ${y}^{\\prime}(0)=0$\r\n\r\n(1) 求 $a, b$ 的值;\r\n\r\n(2) 判断 $x=0$ 是否为 $y(x)$ 的极值点",
+      "options": {},
+      "answer": "a=1,\\ b=-1;\\ x=0 \\text{ 为极大值点}",
+      "analysis": "【分析】\n\n第 (1) 问：把 $x=0,\\,y(0)=0$ 代入隐式方程得一个含 $a,b$ 的关系；再对方程两边关于 $x$ 求一阶导，代入 $x=0,y=0,y'(0)=0$ 得第二个方程，联立解出 $a,b$。第 (2) 问：判断 $x=0$ 是否极值点，用二阶导数判别法——已知 $y'(0)=0$（驻点），只需求 $y''(0)$ 的符号：$y''(0)<0$ 为极大，$>0$ 为极小。\n\n【解答】\n\n原方程 $a e^x+y^2+y-\\ln(1+x)\\cos y+b=0.\\quad(\\ast)$\n\n**(1) 求 $a,b$。**\n\n将 $x=0,\\,y=0$ 代入 $(\\ast)$：$a\\cdot 1+0+0-\\ln 1\\cdot\\cos 0+b=0$，即\n\n$$a+b=0.\\quad(1)$$\n\n对 $(\\ast)$ 两边关于 $x$ 求导（$y$ 是 $x$ 的函数）：\n\n$$a e^x+2yy'+y'-\\Big[\\frac{1}{1+x}\\cos y-\\ln(1+x)\\sin y\\cdot y'\\Big]=0.\\quad(\\ast\\ast)$$\n\n代入 $x=0,\\,y=0,\\,y'=0$：$a+0+0-\\big[1\\cdot1-0\\big]=0$，即 $a-1=0$，故 $a=1$。代回 $(1)$ 得 $b=-1$。\n\n$$\\boxed{a=1,\\quad b=-1.}$$\n\n**(2) 判断 $x=0$ 是否极值点。**\n\n此时 $y'(0)=0$，$x=0$ 是驻点，需求 $y''(0)$。对 $(\\ast\\ast)$ 再关于 $x$ 求导。先把 $(\\ast\\ast)$ 写成\n\n$$a e^x+2yy'+y'-\\frac{\\cos y}{1+x}+\\ln(1+x)\\sin y\\cdot y'=0.$$\n\n逐项求导：\n\n- $\\dfrac{d}{dx}(a e^x)=a e^x$；\n- $\\dfrac{d}{dx}(2yy')=2(y')^2+2yy''$；\n- $\\dfrac{d}{dx}(y')=y''$；\n- $\\dfrac{d}{dx}\\!\\Big(-\\dfrac{\\cos y}{1+x}\\Big)=-\\dfrac{-\\sin y\\cdot y'(1+x)-\\cos y}{(1+x)^2}=\\dfrac{\\sin y\\cdot y'(1+x)+\\cos y}{(1+x)^2}$；\n- 末项 $\\ln(1+x)\\sin y\\cdot y'$ 含因子 $\\ln(1+x)$ 与 $y'$，求导后每一项都至少保留 $\\ln(1+x)$ 或 $\\sin y$（在该点为 $0$）、或 $y'$（在该点为 $0$）。\n\n代入 $x=0,\\,y=0,\\,y'=0$ 计算各项：\n\n- $a e^0=1$；\n- $2(y')^2+2yy''=0$；\n- $y''$（待求）；\n- $\\dfrac{\\sin 0\\cdot 0\\cdot 1+\\cos 0}{1}=1$，前面带负号即 $-1$；\n- 末项在该点为 $0$（其各项分别含 $\\ln 1=0$、$\\sin0=0$ 或 $y'=0$）。\n\n于是\n\n$$1+0+y''(0)-1+0=0\\ \\Longrightarrow\\ y''(0)=-2.$$\n\n等等，重新对齐符号：第四项整体为 $-\\dfrac{\\cos y}{1+x}$ 的导数，其值为 $+1$，方程中这一整块带正号写入，故方程为 $1+y''(0)+1=0$，得\n\n$$y''(0)=-2<0.$$\n\n由二阶导数判别法：$y'(0)=0$ 且 $y''(0)=-2<0$，故 $x=0$ 是 $y(x)$ 的**极大值点**。",
+      "wrong_options": {},
+      "pitfalls": [
+        "对隐式方程求导务必把 $y$ 视为 $x$ 的函数，$\\cos y,\\ y^2$ 等都要乘 $y'$",
+        "求 $y''(0)$ 时含 $\\ln(1+x)$、$y'$、$\\sin y$ 的项在 $x=0$ 处取值为 $0$，可直接判定为零，避免硬算",
+        "二阶导判别：$y''(0)<0$ 为极大值点，符号不要弄反"
+      ],
+      "key_point": "隐函数逐阶求导代点定参数；驻点处用 y''(0) 的符号判极值，负号即极大。"
+    },
+    {
+      "id": 45,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知平面区域 $\\mathrm{D}=\\left\\{(x, y) \\mid({x}-1)^2+{y}^2 \\leqslant 1\\right\\}$, 计算二重积分 $\\displaystyle \\iint\\limits_D\\left|\\sqrt{x^2+y^2}-1\\right| \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$-\\dfrac{\\pi+32}{9}+3 \\sqrt{3}$",
+      "analysis": "【分析】\n\n积分区域是圆 $(x-1)^2+y^2\\le1$（圆心 $(1,0)$，半径 $1$，过原点），且被积含 $\\sqrt{x^2+y^2}$，强烈提示用极坐标。在极坐标下该圆边界为 $r=2\\cos\\theta$，$\\theta\\in[-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2}]$，面积元 $dxdy=r\\,dr\\,d\\theta$，被积化为 $|r-1|\\,r$。难点在绝对值：以 $r=1$ 分界。当射线最远点 $2\\cos\\theta\\ge1$（即 $|\\theta|\\le\\tfrac{\\pi}{3}$）时，$r$ 跨过 $1$，需在 $[0,1]$ 与 $[1,2\\cos\\theta]$ 上分段；当 $|\\theta|\\in(\\tfrac{\\pi}{3},\\tfrac{\\pi}{2}]$ 时 $2\\cos\\theta<1$，整段 $r\\le1$。利用关于 $\\theta$ 的偶对称只算 $[0,\\tfrac{\\pi}{2}]$ 再乘 $2$。\n\n【解答】\n\n极坐标下 $I=\\displaystyle\\iint_D|r-1|\\,r\\,dr\\,d\\theta$，边界 $r=2\\cos\\theta$。被积关于 $\\theta$ 为偶函数，故\n\n$$I=2\\int_0^{\\pi/2}\\!\\!\\int_0^{2\\cos\\theta}|r-1|\\,r\\,dr\\,d\\theta.$$\n\n**情形一：$0\\le\\theta\\le\\tfrac{\\pi}{3}$**（此时 $2\\cos\\theta\\ge1$，分段）。\n\n$$\\int_0^1(1-r)r\\,dr+\\int_1^{2\\cos\\theta}(r-1)r\\,dr.$$\n\n第一段 $=\\Big[\\tfrac{r^2}{2}-\\tfrac{r^3}{3}\\Big]_0^1=\\tfrac12-\\tfrac13=\\tfrac16$。\n\n第二段 $=\\Big[\\tfrac{r^3}{3}-\\tfrac{r^2}{2}\\Big]_1^{2\\cos\\theta}=\\Big(\\tfrac{8\\cos^3\\theta}{3}-2\\cos^2\\theta\\Big)-\\Big(\\tfrac13-\\tfrac12\\Big)=\\tfrac{8\\cos^3\\theta}{3}-2\\cos^2\\theta+\\tfrac16.$\n\n合计内层 $g_1(\\theta)=\\dfrac{8\\cos^3\\theta}{3}-2\\cos^2\\theta+\\dfrac13.$\n\n**情形二：$\\tfrac{\\pi}{3}<\\theta\\le\\tfrac{\\pi}{2}$**（此时 $2\\cos\\theta<1$，全程 $r\\le1$，$|r-1|=1-r$）。\n\n$$g_2(\\theta)=\\int_0^{2\\cos\\theta}(1-r)r\\,dr=\\Big[\\tfrac{r^2}{2}-\\tfrac{r^3}{3}\\Big]_0^{2\\cos\\theta}=2\\cos^2\\theta-\\frac{8\\cos^3\\theta}{3}.$$\n\n**外层积分。** 记 $I=2\\Big(\\int_0^{\\pi/3}g_1\\,d\\theta+\\int_{\\pi/3}^{\\pi/2}g_2\\,d\\theta\\Big)$。用到\n\n$$\\int\\cos^2\\theta\\,d\\theta=\\frac{\\theta}{2}+\\frac{\\sin2\\theta}{4},\\qquad \\int\\cos^3\\theta\\,d\\theta=\\sin\\theta-\\frac{\\sin^3\\theta}{3}.$$\n\n先算 $\\displaystyle\\int_0^{\\pi/3}g_1\\,d\\theta$。\n\n$\\displaystyle\\int_0^{\\pi/3}\\cos^3\\theta\\,d\\theta=\\Big[\\sin\\theta-\\tfrac{\\sin^3\\theta}{3}\\Big]_0^{\\pi/3}=\\tfrac{\\sqrt3}{2}-\\tfrac13\\cdot\\tfrac{3\\sqrt3}{8}=\\tfrac{\\sqrt3}{2}-\\tfrac{\\sqrt3}{8}=\\tfrac{3\\sqrt3}{8}.$\n\n$\\displaystyle\\int_0^{\\pi/3}\\cos^2\\theta\\,d\\theta=\\Big[\\tfrac{\\theta}{2}+\\tfrac{\\sin2\\theta}{4}\\Big]_0^{\\pi/3}=\\tfrac{\\pi}{6}+\\tfrac14\\cdot\\tfrac{\\sqrt3}{2}=\\tfrac{\\pi}{6}+\\tfrac{\\sqrt3}{8}.$\n\n于是\n\n$$\\int_0^{\\pi/3}g_1\\,d\\theta=\\frac83\\cdot\\frac{3\\sqrt3}{8}-2\\Big(\\frac{\\pi}{6}+\\frac{\\sqrt3}{8}\\Big)+\\frac13\\cdot\\frac{\\pi}{3}=\\sqrt3-\\frac{\\pi}{3}-\\frac{\\sqrt3}{4}+\\frac{\\pi}{9}.$$\n\n化简：$\\sqrt3-\\tfrac{\\sqrt3}{4}=\\tfrac{3\\sqrt3}{4}$，$-\\tfrac{\\pi}{3}+\\tfrac{\\pi}{9}=-\\tfrac{2\\pi}{9}$，得 $\\dfrac{3\\sqrt3}{4}-\\dfrac{2\\pi}{9}.$\n\n再算 $\\displaystyle\\int_{\\pi/3}^{\\pi/2}g_2\\,d\\theta$。\n\n$\\displaystyle\\int_{\\pi/3}^{\\pi/2}\\cos^2\\theta\\,d\\theta=\\Big[\\tfrac{\\theta}{2}+\\tfrac{\\sin2\\theta}{4}\\Big]_{\\pi/3}^{\\pi/2}=\\Big(\\tfrac{\\pi}{4}+0\\Big)-\\Big(\\tfrac{\\pi}{6}+\\tfrac{\\sqrt3}{8}\\Big)=\\tfrac{\\pi}{12}-\\tfrac{\\sqrt3}{8}.$\n\n$\\displaystyle\\int_{\\pi/3}^{\\pi/2}\\cos^3\\theta\\,d\\theta=\\Big[\\sin\\theta-\\tfrac{\\sin^3\\theta}{3}\\Big]_{\\pi/3}^{\\pi/2}=\\Big(1-\\tfrac13\\Big)-\\tfrac{3\\sqrt3}{8}=\\tfrac23-\\tfrac{3\\sqrt3}{8}.$\n\n于是\n\n$$\\int_{\\pi/3}^{\\pi/2}g_2\\,d\\theta=2\\Big(\\frac{\\pi}{12}-\\frac{\\sqrt3}{8}\\Big)-\\frac83\\Big(\\frac23-\\frac{3\\sqrt3}{8}\\Big)=\\frac{\\pi}{6}-\\frac{\\sqrt3}{4}-\\frac{16}{9}+\\sqrt3=\\frac{\\pi}{6}+\\frac{3\\sqrt3}{4}-\\frac{16}{9}.$$\n\n两段相加：\n\n$$\\int_0^{\\pi/3}g_1+\\int_{\\pi/3}^{\\pi/2}g_2=\\Big(\\frac{3\\sqrt3}{4}-\\frac{2\\pi}{9}\\Big)+\\Big(\\frac{\\pi}{6}+\\frac{3\\sqrt3}{4}-\\frac{16}{9}\\Big).$$\n\n$\\sqrt3$ 项：$\\tfrac{3\\sqrt3}{4}+\\tfrac{3\\sqrt3}{4}=\\tfrac{3\\sqrt3}{2}$。$\\pi$ 项：$-\\tfrac{2\\pi}{9}+\\tfrac{\\pi}{6}=-\\tfrac{4\\pi}{18}+\\tfrac{3\\pi}{18}=-\\tfrac{\\pi}{18}$。常数：$-\\tfrac{16}{9}$。\n\n$$=\\frac{3\\sqrt3}{2}-\\frac{\\pi}{18}-\\frac{16}{9}.$$\n\n最后 $I=2\\times$ 上式：\n\n$$I=3\\sqrt3-\\frac{\\pi}{9}-\\frac{32}{9}=3\\sqrt3-\\frac{\\pi+32}{9}.$$\n\n（数值约 $1.2915$，与逐点数值积分吻合。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "圆 $(x-1)^2+y^2\\le1$ 过原点，极坐标边界是 $r=2\\cos\\theta$，$\\theta\\in[-\\tfrac{\\pi}{2},\\tfrac{\\pi}{2}]$，不要写成 $r\\le1$",
+        "被积带绝对值 $|r-1|$，必须按 $2\\cos\\theta$ 与 $1$ 的大小在 $\\theta=\\pm\\tfrac{\\pi}{3}$ 处分区域，否则会漏掉 $r>1$ 段",
+        "面积元 $r\\,dr\\,d\\theta$ 与被积里的 $r$ 相乘，内层是 $|r-1|\\cdot r$，别漏雅可比因子 $r$"
+      ],
+      "key_point": "过原点圆用 r=2cosθ；遇 |√(x²+y²)−1| 以 r=1 为界、按 θ=±π/3 分区域，分段积分再合并。"
+    },
+    {
+      "id": 46,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为 $\\displaystyle f(x)=\\frac{\\mathrm{e}^x}{\\left(1+\\mathrm{e}^x\\right)^2},-\\infty<x<+\\infty$, 令 ${Y}=\\mathrm{e}^{X}$\r\n\r\n(1) 求 $X$ 的分布函数;\r\n\r\n(2) 求 $Y$ 的概率密度;\r\n\r\n(3) $Y$ 的期望是否存在?",
+      "options": {},
+      "answer": "(1) F(x)=\\dfrac{e^x}{1+e^x}; (2) f_Y(y)=\\dfrac{1}{(1+y)^2}(y>0), 否则0; (3) E(Y) 不存在",
+      "analysis": "【分析】\n\n第 (1) 问由密度求分布函数，做积分 $F(x)=\\int_{-\\infty}^{x}f(t)\\,\\mathrm dt$，注意被积函数 $\\dfrac{e^t}{(1+e^t)^2}$ 恰是 $-\\dfrac{1}{1+e^t}$ 的导数（或令 $u=e^t$ 换元），可直接积出。\n\n第 (2) 问 $Y=e^X$ 是 $X$ 的单调递增函数且取值 $Y>0$，最稳妥的做法是\"分布函数法\"：先写 $F_Y(y)=P(Y\\le y)$，借助第 (1) 问的 $F(x)$ 表示，再求导得密度，避免套公式时漏掉单调区间与定义域。\n\n第 (3) 问判断期望是否存在，本质是判定反常积分 $\\int_0^{+\\infty}y\\,f_Y(y)\\,\\mathrm dy$ 是否绝对收敛。被积函数在 $y\\to+\\infty$ 时与 $\\dfrac1y$ 同阶，积分发散，故期望不存在——这正是该分布\"重尾\"的体现。\n\n【解答】\n\n**(1)** 令 $u=e^t$，则\n$$F(x)=\\int_{-\\infty}^{x}\\frac{e^t}{(1+e^t)^2}\\,\\mathrm dt=\\left[-\\frac{1}{1+e^t}\\right]_{-\\infty}^{x}=-\\frac{1}{1+e^x}+1=\\frac{e^x}{1+e^x}.$$\n即 $F(x)=\\dfrac{e^x}{1+e^x},\\ x\\in\\mathbb R$。（验证：$F(-\\infty)=0,\\ F(+\\infty)=1$，单调递增，合理。）\n\n**(2)** 因 $Y=e^X>0$，当 $y\\le 0$ 时 $F_Y(y)=0$。当 $y>0$ 时\n$$F_Y(y)=P(e^X\\le y)=P(X\\le\\ln y)=F(\\ln y)=\\frac{e^{\\ln y}}{1+e^{\\ln y}}=\\frac{y}{1+y}.$$\n求导得\n$$f_Y(y)=\\frac{\\mathrm d}{\\mathrm dy}\\frac{y}{1+y}=\\frac{(1+y)-y}{(1+y)^2}=\\frac{1}{(1+y)^2},\\quad y>0,$$\n故\n$$f_Y(y)=\\begin{cases}\\dfrac{1}{(1+y)^2},&y>0,\\\\0,&\\text{其他}.\\end{cases}$$\n\n**(3)** 考察\n$$E(Y)=\\int_0^{+\\infty}y\\cdot\\frac{1}{(1+y)^2}\\,\\mathrm dy.$$\n当 $y\\to+\\infty$ 时，$\\dfrac{y}{(1+y)^2}\\sim\\dfrac1y$，而 $\\int^{+\\infty}\\dfrac1y\\,\\mathrm dy$ 发散。更直接地，\n$$\\int_0^{A}\\frac{y}{(1+y)^2}\\,\\mathrm dy=\\int_0^{A}\\left(\\frac{1}{1+y}-\\frac{1}{(1+y)^2}\\right)\\mathrm dy=\\ln(1+A)+\\frac{1}{1+A}-1\\to+\\infty\\ (A\\to+\\infty).$$\n积分发散，所以 $Y$ 的数学期望不存在。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第 (2) 问 Y=e^X 恒为正，密度在 y≤0 处必须为 0，写定义域时勿漏。",
+        "用分布函数法时要把 P(X≤ln y) 写成 F(ln y) 再代入，不要凭记忆套变换公式而忽略单调方向。",
+        "判断期望存在性要看 ∫y·f_Y(y)dy 是否收敛；该被积函数尾部与 1/y 同阶导致发散，结论是\"不存在\"而非\"无穷大\"。"
+      ],
+      "key_point": "密度积分得 F(x)=e^x/(1+e^x)；单调变换用分布函数法求 f_Y；期望存在性归结为反常积分收敛性，尾部 1/y 故发散。"
+    },
+    {
+      "id": 90325,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二次型 $f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_1+x_3)^2-4(x_2-x_3)^2$ 的规范形为",
+      "options": {
+        "A": "$y_1^2+y_2^2$",
+        "B": "$y_1^2-y_2^2$",
+        "C": "$y_1^2+y_2^2-4y_3^2$",
+        "D": "$y_1^2+y_2^2-y_3^2$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n求规范形只需知道**正、负惯性指数**（正、负平方项各几个）。可以写出二次型矩阵求特征值，但本题有个更快的观察：三个线性形式 $x_1+x_2,\\ x_1+x_3,\\ x_2-x_3$ **线性相关**——因为 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$。作换元后二次型只含两个变量，惯性指数一眼可得。\n\n【解答】\n\n**解法一（换元降元）。** 令 $u=x_1+x_2,\\ v=x_1+x_3$，则 $x_2-x_3=u-v$，于是\n$$f=u^2+v^2-4(u-v)^2=-3u^2-3v^2+8uv.$$\n这是关于 $u,v$ 的二次型，矩阵为 $\\begin{pmatrix}-3&4\\\\4&-3\\end{pmatrix}$，特征值 $-3\\pm4=1,\\ -7$。一正一负 ⇒ 正惯性指数 $1$、负惯性指数 $1$、秩 $2$，规范形为 $y_1^2-y_2^2$。\n\n**解法二（原矩阵特征值）。** 展开得矩阵 $A=\\begin{pmatrix}2&1&1\\\\1&-3&4\\\\1&4&-3\\end{pmatrix}$，特征多项式给出特征值 $3,\\ -7,\\ 0$，同样是正、负各一，秩 $2$。\n\n两法都得正惯性指数 $p=1$、负惯性指数 $q=1$，故规范形为\n$$f=y_1^2-y_2^2.$$\n故选 **B**。",
+      "wrong_options": {
+        "A": "$y_1^2+y_2^2$ 需正定（$p=2,q=0$），但本题有负惯性指数，错。",
+        "C": "$y_1^2+y_2^2-4y_3^2$ 把系数 $4$ 也留下了——规范形系数只能是 $\\pm1,0$，且这里秩为 $2$ 而非 $3$。",
+        "D": "$y_1^2+y_2^2-y_3^2$ 误判为秩 $3$（$p=2,q=1$）。没看出三个线性形式线性相关，实际秩只有 $2$。"
+      },
+      "pitfalls": [
+        "识破 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$ 的线性相关，秩只有 2，别当成 3。",
+        "规范形的系数只允许 $+1,-1,0$，出现 $4$ 之类系数的选项一定错。",
+        "只需正、负惯性指数，不必真的把矩阵对角化到底。"
+      ],
+      "key_point": "规范形由正负惯性指数唯一决定；识别线性形式相关可快速降元定秩。"
+    }
+  ]
+}

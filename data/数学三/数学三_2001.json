@@ -1,0 +1,409 @@
+{
+  "paper": "数学三",
+  "year": 2001,
+  "count": 20,
+  "questions": [
+    {
+      "id": 980,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "将一枚硬币重复掷 $n$ 次, 以 $X$ 和 $Y$ 分别表示正面向上和反面向上的次数, 则 $X$ 和 $Y$ 的相关系数等于 $(\\quad)$",
+      "options": {
+        "A": "$-1$",
+        "B": "$0$",
+        "C": "$\\dfrac{1}{2}$",
+        "D": "$1$"
+      },
+      "answer": "A",
+      "analysis": "因为 $P\\{Y=-X+n\\}=1$ 且 $-1<0$, \r\n\r\n所以 $\\rho_{X Y}=-1$, 应选 (A)",
+      "wrong_options": {
+        "B": "0 表示不相关，但 X+Y=n 是严格线性关系，属完全相关，不是 0。",
+        "C": "1/2 非满相关值；线性关系下 |ρ|=1，且此处为负相关。",
+        "D": "+1 是正相关，但 Y 随 X 增大而减小，应取 -1，符号反。"
+      },
+      "pitfalls": [
+        "X+Y=n 恒成立，Y=-X+n 斜率为负 ⇒ ρ=-1，不是正相关的 +1",
+        "完全线性依赖 |ρ|=1，别误判为不相关 0"
+      ],
+      "key_point": "Y=-X+n 完全负线性相关，ρ_{XY}=-1，选 A。"
+    },
+    {
+      "id": 1943,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设生产函数为 $Q=A L^\\alpha K^\\beta$, 其中 $Q$ 是产出量, $L$ 是劳动投入量, $K$ 是资本投入量, 而 $A, \\alpha, \\beta$ 均为大于零的参数, 则当 $Q=1$ 时 $K$ 关于 $L$ 的弹性为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{\\alpha}{\\beta}$",
+      "analysis": "当 $Q=1$ 时, 由 $A L^\\alpha K^\\beta=1$, 得 $K=A^{-\\frac{1}{\\beta}} L^{-\\frac{\\alpha}{\\beta}}$,\r\n\r\n则 $K$ 对 $L$ 的弹性为\r\n\r\n$\\displaystyle \\eta=\\frac{L}{K} \\cdot \\frac{\\mathrm{d} K}{\\mathrm{d} L} \\\\ \r\n=\\frac{L}{A^{-\\frac{1}{\\beta}} L^{-\\frac{\\alpha}{\\beta}}} \\cdot A^{-\\frac{1}{\\beta}} \\cdot\\left(-\\frac{\\alpha}{\\beta} \\cdot L^{-\\frac{\\alpha}{\\beta}-1}\\right) \\\\ \r\n=L^{1+\\frac{\\alpha}{\\beta}} \\cdot\\left(-\\frac{\\alpha}{\\beta} \\cdot L^{-\\frac{\\alpha}{\\beta}-1}\\right)\r\n=-\\frac{\\alpha}{\\beta}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "幂函数 y=cx^k 的弹性恒等于指数 k，与系数 c 无关，不必真去代回化简",
+        "题干 L^a 的指数应为 α（与参数 α,β 一致），勿被记为独立字母 a"
+      ],
+      "key_point": "常弹性生产函数在 Q=1 约束下，K 关于 L 的弹性就是幂指数 -α/β。"
+    },
+    {
+      "id": 1944,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "某公司每年的工资总额在比上一年增加 $20 \\%$ 的基础上再追加 $2$ 百万元. 若以 $W_t$ 表示第 $t$ 年的工资总额 (单位:百万元), 则 $W_t$ 满足的差分方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$W_t=1.2 W_{t-1}+2$",
+      "analysis": "由题意得 $W_t$ 满足的差分方程为 $W_t=1.2 W_{t-1}+2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "“增加 20%”是乘 1.2 而非只加 0.2W_{t-1}，追加的 2 是常数项不能漏"
+      ],
+      "key_point": "工资在上年基础上增 20% 再加 2：W_t=1.2W_{t-1}+2。"
+    },
+    {
+      "id": 1945,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{llll}k & 1 & 1 & 1 \\\\ 1 & k & 1 & 1 \\\\ 1 & 1 & k & 1 \\\\ 1 & 1 & 1 & k\\end{array}\\right)$ 且 $r(\\boldsymbol{A})=3$, 则 $k=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-3$",
+      "analysis": "$|\\boldsymbol{A}|=(k+3)(k-1)^3$, \r\n\r\n因为 $r(\\boldsymbol{A})=3<4$, 所以 $|\\boldsymbol{A}|=0$, \r\n\r\n又因为当 $k=1$ 时, $r(\\boldsymbol{A})=1$, \r\n\r\n所以 $k=-3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=0 给出 k=-3 或 k=1 两根，k=1 时 A 各行相同秩为 1 不满足 r=3，必须回代排除"
+      ],
+      "key_point": "该型矩阵 |A|=(k+3)(k-1)^3，秩恰为 3 只能取 k=-3。"
+    },
+    {
+      "id": 1946,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 的数学期望分别为 $-2$ 和 $2$ , 方差分别为 $1$ 和 $4$, 而相关系数为 $-0.5$, 则 根据切比雪夫不等式, $P\\{|X+Y| \\geqslant 6\\} \\leqslant \\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{12}$",
+      "analysis": "由 $E(X)=-2, E(Y)=2$ 得 $E(X+Y)=0$,\r\n\r\n于是 $\\displaystyle\r\nD(X+Y) =D(X)+D(Y)+2 \\operatorname{Cov}(X, Y) \\\\\r\n=D(X)+D(Y)+2 \\rho_{X Y} \\sqrt{D(X)} \\cdot \\sqrt{D(Y)}=3$,\r\n\r\n\r\n由切比雪夫不等式得 $P\\{|X+Y| \\geqslant 6\\}\\\\\r\n=P\\{|(X+Y)-E(X+Y)| \\geqslant 6\\}\\\\\r\n\\leqslant \\dfrac{D(X+Y)}{6^2}=\\dfrac{1}{12}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "D(X+Y) 里的交叉项是 2ρσ_Xσ_Y（负相关取负）而非 2ρ；漏掉协方差会算成 5",
+        "切比雪夫分母是偏差界 6 的平方 36，不是 6"
+      ],
+      "key_point": "E(X+Y)=0、D(X+Y)=3，切比雪夫给出 P{|X+Y|≥6}≤3/36=1/12。"
+    },
+    {
+      "id": 1947,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 服从正态分布 $N\\left(0,2^2\\right)$, 而 $X_1, X_2, \\cdots, X_{15}$ 是来自总体 $X$ 的简单随机样本, 则随机变量 $\\displaystyle Y=\\frac{X_1^2+\\cdots+X_{10}^2}{2\\left(X_{11}^2+\\cdots+X_{15}^2\\right)}$ 服从 $\\rule{0.5cm}{0.2mm}$ 分布, 参数为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$F; (10,5)$",
+      "analysis": "由 $X_i \\sim N(0,4)$, 得 $\\displaystyle \\frac{X_i}{2} \\sim N(0,1)(1 \\leqslant i \\leqslant 15)$,\r\n\r\n于是 $\\displaystyle \\frac{1}{4}\\left(X_1^2+\\cdots+X_{10}^2\\right) \\sim \\chi^2(10),\\\\\r\n \\frac{1}{4}\\left(X_{11}^2+\\cdots+X_{15}^2\\right) \\sim \\chi^2(5)$,\r\n\r\n再由 $\\displaystyle \\frac{1}{4}\\left(X_1^2+\\cdots+X_{10}^2\\right)$ 与 $\\displaystyle \\frac{1}{4}\\left(X_{11}^2+\\cdots+X_{15}^2\\right)$ 独立, 得\r\n\r\n$\\displaystyle \\frac{\\frac{1}{4}\\left(X_1^2+\\cdots+X_{10}^2\\right) / 10}{\\frac{1}{4}\\left(X_{11}^2+\\cdots+X_{15}^2\\right) / 5} \\sim F(10,5), \\\\\r\n\\frac{X_1^2+\\cdots+X_{10}^2}{2\\left(X_{11}^2+\\cdots+X_{15}^2\\right)} \\sim F(10,5)$\r\n\r\n即 $\\dfrac{X_1^2+\\cdots+X_{10}^2}{2\\left(X_{11}^2+\\cdots+X_{15}^2\\right)} \\sim F(10,5)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "方差为 4 要用 X_i/2 才标准化；题中分母的系数 2 恰好凑成除以自由度之比，参数是 (10,5) 不是 (5,10)"
+      ],
+      "key_point": "各项除以 2 后平方和为 χ²，商除自由度得 Y~F(10,5)。"
+    },
+    {
+      "id": 1948,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 的导数在 $x=a$ 处连续, 又 $\\displaystyle \\lim _{x \\rightarrow a} \\frac{f^{\\prime}(x)}{x-a}=-1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$x=a$ 是 $f(x)$ 的极小值点",
+        "B": "$x=a$ 是 $f(x)$ 的极大值点",
+        "C": "$(a, f(a))$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$x=a$ 不是 $f(x)$ 的极值点, $(a, f(a))$ 也不是曲线 $y=f(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow a} \\frac{f^{\\prime}(x)}{x-a}=-1<0$, 由极限保号性, \r\n\r\n存在 $\\delta>0$, 当 $0<|x-a|<\\delta$ 时, $\\dfrac{f^{\\prime}(x)}{x-a}<0$\r\n\r\n当 $x \\in(a-\\delta, a)$ 时, 由 $x-a<0$ 得 $f^{\\prime}(x)>0$;\r\n\r\n当 $x \\in(a, a+\\delta)$ 时, 由 $x-a>0$ 得 $f^{\\prime}(x)<0$, \r\n\r\n于是 $x=a$ 为 $f(x)$ 的极大值点, 应选 (B)",
+      "wrong_options": {
+        "A": "把 f'/(x-a)<0 误读成 f'<0 单调递减，从而反判成极小值",
+        "C": "只盯着导数在 a 处的“值”而没分析两侧变号，错当成拐点",
+        "D": "忽视保号性给出的两侧异号信息，误以为 a 处无极值"
+      },
+      "pitfalls": [
+        "f'/(x-a)<0 意味着 f' 与 (x-a) 异号：a 左侧 f'>0、右侧 f'<0，是极大不是极小",
+        "该极限还隐含 f'(a)=0，才使 a 成为驻点"
+      ],
+      "key_point": "f'(x) 与 x-a 反号 ⇒ 左增右减 ⇒ x=a 为极大值点。"
+    },
+    {
+      "id": 1949,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle g(x)=\\int_0^x f(u) \\mathrm{d} u$, 其中 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1}{2}\\left(x^2+1\\right), & 0 \\leqslant x<1 \\\\ \\dfrac{1}{3}(x-1), & 1 \\leqslant x<2\\end{array}\\right.$ 则 $g(x)$ 在区间 $(0,2)$ 内 $(\\quad)$",
+      "options": {
+        "A": "无界",
+        "B": "递减",
+        "C": "不连续",
+        "D": "连续"
+      },
+      "answer": "D",
+      "analysis": "当 $0 \\leqslant x<1$ 时, \r\n\r\n$\\displaystyle g(x)=\\int_0^x \\frac{1}{2}\\left(x^2+1\\right) \\mathrm{d} x=\\frac{x^3}{6}+\\frac{x}{2}$;\r\n\r\n当 $1 \\leqslant x \\leqslant 2$ 时, \r\n\r\n$\\displaystyle g(x)\\\\\r\n=\\int_0^1 \\frac{1}{2}\\left(x^2+1\\right) \\mathrm{d} x+\\int_1^x \\frac{1}{3}(x-1) \\mathrm{d} x\\\\\r\n=\\frac{2}{3}+\\frac{(x-1)^2}{6}$,\r\n\r\n则 $g(x)=\\left\\{\\begin{array}{ll}\\dfrac{x^3}{6}+\\dfrac{x}{2}, & 0 \\leqslant x<1 \\\\ \\dfrac{2}{3}+\\dfrac{(x-1)^2}{6}, & 1 \\leqslant x \\leqslant 2\\end{array}\\right.$ \r\n\r\n显然 $g(x)$ 在 $(0,2)$ 内连续, 应选(D)",
+      "wrong_options": {
+        "A": "误以为 f 在 x=1 跳跃会使 g 无界，实则积分抹平跳跃",
+        "B": "g'=f 在 (0,2) 有正有负（第二段 (x-1)/3 起点为 0 后为正但首段为正），并非全程递减",
+        "C": "把被积函数 f 的间断误当成 g 的间断，忽略变限积分自带连续性"
+      },
+      "pitfalls": [
+        "被积函数可以在 x=1 跳跃间断，但其变限积分 g 仍连续——这是本题核心",
+        "g 在 x=1 处左右两段表达式在该点取值一致，衔接连续"
+      ],
+      "key_point": "变限积分把可积（含跳跃）被积函数积成连续函数，g 在 (0,2) 连续。"
+    },
+    {
+      "id": 1950,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{llll}a_{11} & a_{12} & a_{13} & a_{14} \\\\ a_{21} & a_{22} & a_{23} & a_{24} \\\\ a_{31} & a_{32} & a_{33} & a_{34} \\\\ a_{41} & a_{42} & a_{43} & a_{44}\\end{array}\\right), \\\\\\boldsymbol{B}=\\left(\\begin{array}{llll}a_{14} & a_{13} & a_{12} & a_{11} \\\\ a_{24} & a_{23} & a_{22} & a_{21} \\\\ a_{34} & a_{33} & a_{32} & a_{31} \\\\ a_{44} & a_{43} & a_{42} & a_{41}\\end{array}\\right), \\\\\r\n\\boldsymbol{P}_1=\\left(\\begin{array}{llll}0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 1 & 0 & 0 & 0\\end{array}\\right),\\\\\r\n\\boldsymbol{P}_2=\\left(\\begin{array}{llll}1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1\\end{array}\\right)$, 其中 $\\boldsymbol{A}$ 可逆, 则 $\\boldsymbol{B}^{-1}$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}^{-1} \\boldsymbol{P}_1 \\boldsymbol{P}_2$",
+        "B": "$\\boldsymbol{P}_1 \\boldsymbol{A}^{-1} \\boldsymbol{P}_2$",
+        "C": "$\\boldsymbol{P}_1 \\boldsymbol{P}_2 \\boldsymbol{A}^{-1}$",
+        "D": "$\\boldsymbol{P}_2 \\boldsymbol{A}^{-1} \\boldsymbol{P}_1$"
+      },
+      "answer": "C",
+      "analysis": "由 $\\boldsymbol{B}=\\boldsymbol{A} \\boldsymbol{P}_2 \\boldsymbol{P}_1$, \r\n\r\n得 $\\boldsymbol{B}^{-1}=\\boldsymbol{P}_1^{-1} \\boldsymbol{P}_2^{-1} \\boldsymbol{A}^{-1}$,\r\n\r\n再由 $\\boldsymbol{P}_1^{-1}=\\boldsymbol{P}_1, \\boldsymbol{P}_2^{-1}=\\boldsymbol{P}_2$, \r\n\r\n得 $\\boldsymbol{B}^{-1}=\\boldsymbol{P}_1 \\boldsymbol{P}_2 \\boldsymbol{A}^{-1}$, 应选 (C)",
+      "wrong_options": {
+        "A": "把列变换误写成左乘（A^{-1}P_1P_2 顺序），行/列与左/右乘对应关系搞反",
+        "B": "求逆时未反序，把 P_1AP_2 直接照搬",
+        "D": "置换阵顺序与反序都弄错，凑成 P_2A^{-1}P_1"
+      },
+      "pitfalls": [
+        "对列做变换是右乘初等矩阵：B=AP_2P_1（先换 2、3 列再换 1、4 列），左乘对应行变换要分清",
+        "(AP_2P_1)^{-1}=P_1^{-1}P_2^{-1}A^{-1}，且 P_1=P_1^{-1}, P_2=P_2^{-1}"
+      ],
+      "key_point": "B 由 A 列反序得 B=AP_2P_1，故 B^{-1}=P_1P_2A^{-1}。"
+    },
+    {
+      "id": 1951,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $n$ 阶矩阵, $\\boldsymbol{\\alpha}$ 是 $n$ 维列向量. 若 $r\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{\\alpha} \\\\ \\boldsymbol{\\alpha}^{\\mathrm{T}} & 0\\end{array}\\right)=r(\\boldsymbol{A})$, 则线性方程组 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{Ax}=\\boldsymbol{\\alpha}$ 必有无穷多解",
+        "B": "$\\boldsymbol{Ax}=\\boldsymbol{\\alpha}$ 必有唯一解",
+        "C": "$\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{\\alpha} \\\\ \\boldsymbol{\\alpha}^{\\mathrm{T}} & 0\\end{array}\\right)\\left(\\begin{array}{l}\\boldsymbol{x} \\\\ \\boldsymbol y\\end{array}\\right)=\\mathbf{0}$ 仅有零解",
+        "D": "$\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{\\alpha} \\\\ \\boldsymbol{\\alpha}^{\\mathrm{T}} & 0\\end{array}\\right)\\left(\\begin{array}{l}\\boldsymbol{x} \\\\ \\boldsymbol y\\end{array}\\right)=\\mathbf{0}$ 必有非零解"
+      },
+      "answer": "D",
+      "analysis": "因为 $r(\\boldsymbol{A}) \\leqslant n$, \r\n\r\n所以 $r\\left(\\begin{array}{cc}\\boldsymbol{A} & \\boldsymbol{\\alpha} \\\\ \\boldsymbol{\\alpha}^{\\mathrm{T}} & 0\\end{array}\\right)=r(\\boldsymbol{A}) \\leqslant n<n+1$, \r\n\r\n于是 $\\left(\\begin{array}{ll}\\boldsymbol{A} & \\boldsymbol{\\alpha} \\\\ \\boldsymbol{\\alpha}^{\\mathrm{T}} & 0\\end{array}\\right)\\left(\\begin{array}{l}\\boldsymbol{X} \\\\ y\\end{array}\\right)=\\mathbf{0}$ 有非零解, 应选 (D)",
+      "wrong_options": {
+        "A": "由 r(加边)=r(A) 推不出 Ax=α 有解（还需比较 r(A) 与 r(A|α)），更推不出无穷多解",
+        "B": "同理无法保证唯一解，A 未必满秩",
+        "C": "加边矩阵是 n+1 阶但秩≤n，不满秩，齐次方程有非零解而非仅零解"
+      },
+      "pitfalls": [
+        "加边矩阵是 (n+1) 阶方阵，其秩 = r(A) ≤ n < n+1，故列相关，齐次系统必有非零解",
+        "秩条件针对的是加边矩阵的齐次方程，不能直接断言 Ax=α 的解情况"
+      ],
+      "key_point": "(n+1) 阶加边矩阵秩只有 r(A)≤n，不满秩 ⇒ 对应齐次方程必有非零解。"
+    },
+    {
+      "id": 1952,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $u=f(x, y, z)$ 有连续的一阶偏导数, 又函数 $y=y(x)$ 及 $z=z(x)$ 分别由下列两式确 定: $\\mathrm{e}^{x y}-x y=2$ 和 $\\displaystyle \\mathrm{e}^x=\\int_0^{x-z} \\frac{\\sin t}{t} \\mathrm{d} t$, 求 $\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}=\\frac{\\partial f}{\\partial x}-\\frac{y}{x} \\cdot \\frac{\\partial f}{\\partial y}+\\frac{\\sin (x-z)-(x-z) \\mathrm{e}^x}{\\sin (x-z)} \\cdot \\frac{\\partial f}{\\partial z}$",
+      "analysis": "方法一 由 $u=f(x, y, z)$ 两边对 $x$ 求导数,\r\n\r\n得 $\\dfrac{\\mathrm{d} u}{\\mathrm{d} x}=\\dfrac{\\partial f}{\\partial x}+\\dfrac{\\partial f}{\\partial y} \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}+\\dfrac{\\partial f}{\\partial z} \\cdot \\dfrac{\\mathrm{d} z}{\\mathrm{d} x}$,\r\n\r\n$\\left\\{\\begin{array} { l } \r\n \\mathrm { e } ^ { x y } - x y = 2  \\\\\r\n\\displaystyle  \\mathrm { e } ^ { x } = \\int _ { 0 } ^ { x - z } \\frac { \\operatorname { s i n } t } { t } \\mathrm { d } t \r\n\\end{array}\\right.$ \r\n\r\n对 $x$求导数, 得\r\n\r\n$\\left\\{\\begin{array}{l}\r\n\\mathrm{e}^{x y}\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)-\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)=0 \\\\\r\n\\mathrm{e}^x=\\dfrac{\\sin (x-z)}{x-z}\\left(1-\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}\\right)\r\n\\end{array}\\right.$\r\n\r\n解得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\dfrac{y}{x}$ $\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}=1-\\dfrac{(x-z) \\mathrm{e}^x}{\\sin (x-z)}$\r\n\r\n于是\r\n\r\n$\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}=\\frac{\\partial f}{\\partial x}-\\frac{y}{x} \\cdot \\frac{\\partial f}{\\partial y}+\\left[1-\\frac{(x-z) \\mathrm{e}^x}{\\sin (x-z)}\\right] \\frac{\\partial f}{\\partial z}$\r\n\r\n方法二 $u=f(x, y, z)$ 两边求微分, 得\r\n\r\n$\\displaystyle \\mathrm{d} u=\\frac{\\partial f}{\\partial x} \\mathrm{d} x+\\frac{\\partial f}{\\partial y} \\mathrm{d} y+\\frac{\\partial f}{\\partial z} \\mathrm{d} z$\r\n\r\n将 $\\displaystyle \\left\\{\\begin{array}{l}\\mathrm{e}^{x y}-x y=2 \\\\ \\displaystyle \\mathrm{e}^x=\\int_0^{x-z} \\frac{\\sin t}{t} \\mathrm{d} t\\end{array}\\right.$ 求微分,\r\n\r\n得 $\\left\\{\\begin{array}{l}\\mathrm{e}^{x y}(y \\mathrm{d} x+x \\mathrm{d} y)-x \\mathrm{d} y-y \\mathrm{d} x=0 \\\\ \\mathrm{e}^x=\\dfrac{\\sin (x-z)}{x-z} \\cdot\\left(1-\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}\\right)\\end{array}\\right.$\r\n\r\n解得\r\n\r\n$\\left\\{\\begin{array}{l}\r\n\\mathrm{d} y=-\\dfrac{y}{x} \\mathrm{d} x \\\\\r\n\\mathrm{d} z=\\dfrac{\\sin (x-z)-(x-z) \\mathrm{e}^x}{\\sin (x-z)} \\mathrm{d} x\r\n\\end{array}\\right.$\r\n\r\n于是\r\n\r\n$\\displaystyle \\mathrm{d} u=\\left[\\frac{\\partial f}{\\partial x}-\\frac{y}{x}+\\frac{\\sin (x-z)-(x-z) \\mathrm{e}^x}{\\sin (x-z)}\\right] \\mathrm{d} x$,\r\n\r\n故 $\\displaystyle \\frac{\\mathrm{d} u}{\\mathrm{d} x}=\\frac{\\partial f}{\\partial x}-\\frac{y}{x} \\cdot \\frac{\\partial f}{\\partial y}+\\frac{\\sin (x-z)-(x-z) \\mathrm{e}^x}{\\sin (x-z)} \\cdot \\frac{\\partial f}{\\partial z}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{xy}-xy=2 求导提出公因子 (e^{xy}-1)(y+xy')=0，因子 e^{xy}-1≠0 才得 y'=-y/x",
+        "对 e^x=∫_0^{x-z} sin t/t dt 求导，右端上限求导得 [sin(x-z)/(x-z)]·(1-z')"
+      ],
+      "key_point": "链式 du/dx = f_x - (y/x)f_y + [1-(x-z)e^x/sin(x-z)] f_z。"
+    },
+    {
+      "id": 1953,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $f(x)$ 在 $(-\\infty,+\\infty)$ 内可导, 且 $\\displaystyle \\lim _{x \\rightarrow \\infty} f^{\\prime}(x)=\\mathrm{e}, \\\\\r\n\\lim _{x \\rightarrow \\infty}\\left(\\frac{x+c}{x-c}\\right)^x=\\lim _{x \\rightarrow \\infty}[f(x)-f(x-1)]$,\r\n\r\n求 $c$ 的值",
+      "options": {},
+      "answer": "$c=\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow \\infty}\\left(\\frac{x+c}{x-c}\\right)^x\\\\\r\n=\\lim _{x \\rightarrow \\infty}\\left(1+\\frac{2 c}{x-c}\\right)^x\\\\\r\n=\\lim _{x \\rightarrow \\infty}\\left[\\left(1+\\frac{2 c}{x-c}\\right)^{\\frac{x-c}{2 c}}\\right]^{\\frac{2 c x}{x-c}}=\\mathrm{e}^{2 c}$,\r\n\r\n由微分中值定理得 \r\n\r\n$f(x)-f(x-1)=f^{\\prime}(\\xi)(x-1<\\xi<x)$,\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow \\infty} f^{\\prime}(x)=\\mathrm{e}$ 得 $\\displaystyle \\lim _{x \\rightarrow \\infty} f^{\\prime}(\\xi)=\\mathrm{e}$, \r\n\r\n于是 $\\mathrm{e}^{2 c}=\\mathrm{e}$, 故 $\\displaystyle c=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f(x)-f(x-1) 不能直接换成导数值，须用拉格朗日中值定理 f'(ξ)，ξ∈(x-1,x)，再借 lim f'=e 传递",
+        "((x+c)/(x-c))^x 的极限是 e^{2c}（指数里出现 2c）而非 e^c"
+      ],
+      "key_point": "e^{2c}=e ⇒ 2c=1 ⇒ c=1/2。"
+    },
+    {
+      "id": 1954,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求二重积分 $\\displaystyle \\iint\\limits_D y\\left[1+x \\mathrm{e}^{\\frac{1}{2}\\left(x^2+y^2\\right)}\\right] \\mathrm{d} x \\mathrm{d} y$ 的值, 其中 $D$ 是由直线 $y=x, y=-1$ 及 $x=1$ 围成的平面区域",
+      "options": {},
+      "answer": "$=-\\dfrac{2}{3}$",
+      "analysis": "如图所示, 令 $D_1=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,-x \\leqslant y \\leqslant x\\}$, $D_2=\\{(x, y) \\mid y \\leqslant x \\leqslant-y,-1 \\leqslant y \\leqslant 0\\}$, 则\n\n![积分区域 D](/uploads/books/3ea44bcafe130ae605770bc2b77ebf8a5b19be5851ff496bd93fe70b0457e926.jpg)\r\n\r\n$\\displaystyle \\iint\\limits_D y\\left(1+x \\mathrm{e}^{\\frac{x^2+y^2}{2}}\\right) \\mathrm{d} x \\mathrm{d} y=\\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_D x y \\mathrm{e}^{\\frac{x^2+y^2}{2}} \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n由奇偶性及对称性得\r\n\r\n$\\displaystyle \\iint\\limits_D x y \\mathrm{e}^{\\frac{x^2+y^2}{2}} \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{e}^{\\frac{x^2+y^2}{2}} \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2} x y \\mathrm{e}^{\\frac{x^2+y^2}{2}} \\mathrm{d} x \\mathrm{d} y=0, \\\\\r\n\\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_{-1}^1 \\mathrm{d} x \\int_{-1}^x y \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_{-1}^1\\left(x^2-1\\right) \\mathrm{d} x \\\\\r\n=\\int_0^1\\left(x^2-1\\right) \\mathrm{d} x=-\\frac{2}{3}$\r\n\r\n而 $\\displaystyle \\iint\\limits_D y \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_{-1}^1 \\mathrm{d} x \\int_{-1}^x y \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_{-1}^1\\left(x^2-1\\right) \\mathrm{d} x \\\\\r\n\\\\\r\n=\\int_0^1\\left(x^2-1\\right) \\mathrm{d} x=-\\frac{2}{3}$\r\n\r\n故所求积分 $=-\\dfrac{2}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三角形区域 (1,1)(-1,-1)(1,-1) 可分成关于 y 轴对称块与关于 x 轴对称块，使 xy·e^{(x²+y²)/2} 两次奇对称积分为 0",
+        "剩下 ∬y dxdy=∫_{-1}^1 dx∫_{-1}^x y dy=-2/3，注意 y 下限恒为 -1"
+      ],
+      "key_point": "对称性消掉指数项，只剩 ∬y dxdy=-2/3。"
+    },
+    {
+      "id": 1955,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知抛物线 $y=p x^2+q x$ (其中 $p<0, q>0$ ) 在第一象限内与直线 $x+y=5$ 相切, 且此抛物线与 $x$ 轴所围成的平面图形的面积为 $S$\r\n\r\n(1) 问 $p$ 和 $q$ 为何值时, $S$ 达到最大值?\r\n\r\n(2) 求出此最大值",
+      "options": {},
+      "answer": "(1) 故当 $q=3$ 时面积最大, 此时 $p=-\\dfrac{4}{5}$, \r\n\r\n(2) 最大面积为 $S(3)=\\dfrac{225}{32}$",
+      "analysis": "抛物线与 $x$ 轴交点的横坐标为 $x=0$ 及 $\\displaystyle x=-\\frac{q}{p}$,\r\n\r\n抛物线与 $x$ 轴围成的面积为 \r\n\r\n$\\displaystyle S=\\int_0^{-\\frac{q}{p}}\\left(p x^2+q x\\right) \\mathrm{d} x=\\frac{q^3}{6 p^2}$\r\n\r\n因为直线 $x+y=5$ 与抛物线 $y=p x^2+q x$ 相切, \r\n\r\n$\\left\\{\\begin{array}{l}x+y=5 \\\\ y=p x^2+q x\\end{array}\\right.$ \r\n\r\n得 $p x^2+(1+q) x-5=0, \\\\\\Delta=(1+q)^2+20 p=0$\r\n\r\n即 $p=-\\dfrac{1}{20}(1+q)^2$, 故 $S(q)=\\dfrac{200 q^3}{3(1+q)^4}$.\r\n\r\n由 $S^{\\prime}(q)=\\dfrac{200 q^2(3-q)}{3(1+q)^5}=0$, 得 $q=3$,\r\n\r\n且当 $0<q<3$ 时, $S^{\\prime}>0$, 当 $q>3$ 时, $S^{\\prime}<0$,\r\n\r\n(1) 故当 $q=3$ 时面积最大, 此时 $p=-\\dfrac{4}{5}$, \r\n\r\n(2) 最大面积为 $S(3)=\\dfrac{225}{32}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "相切等价于联立后二次方程判别式为 0，据此把 p 用 q 表示再单变量优化",
+        "面积积分上限是另一交点 -q/p（因 p<0,q>0 为正），别写成定值"
+      ],
+      "key_point": "消元后 S(q)=200q³/(3(1+q)^4)，q=3 取最大值 225/32。"
+    },
+    {
+      "id": 1956,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且满足\r\n\r\n$\\displaystyle f(1)=k \\int_0^{\\frac{1}{k}} x \\mathrm{e}^{1-x} f(x) \\mathrm{d} x(k>1)$,\r\n\r\n证明: 至少存在一点 $\\xi \\in(0,1)$, 使得 \r\n\r\n$f^{\\prime}(\\xi)=\\left(1-\\xi^{-1}\\right) f(\\xi)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\varphi(x)=x \\mathrm{e}^{-x} f(x)$,\r\n\r\n由积分中值定理得\r\n\r\n$\\displaystyle f(1)=k \\int_0^{\\frac{1}{k}} x \\mathrm{e}^{1-x} f(x) \\mathrm{d}x \\\\\r\n=k \\cdot c \\mathrm{e}^{1-c} f(c) \\cdot \\frac{1}{k}\\\\\r\n=c \\mathrm{e}^{1-c} f(c), c \\in\\left[0, \\frac{1}{k}\\right]$\r\n\r\n于是 $1 \\cdot \\mathrm{e}^{-1} f(1)=c \\mathrm{e}^{-c} f(c)$, 即 $\\varphi(c)=\\varphi(1)$,\r\n\r\n由罗尔定理, 存在 $\\xi \\in(c, 1) \\subset(0,1)$, 使得 $\\varphi^{\\prime}(\\xi)=0$.\r\n\r\n而 $\\varphi^{\\prime}(x)=\\mathrm{e}^{-x}\\left[f(x)-x f(x)+x f^{\\prime}(x)\\right]$ 且 $\\mathrm{e}^{-x} \\neq 0$,\r\n\r\n所以 $f(\\xi)-\\xi f(\\xi)+\\xi f^{\\prime}(\\xi)=0$, \r\n\r\n故 $f^{\\prime}(\\xi)=\\left(1-\\xi^{-1}\\right) f(\\xi)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "把待证式 f'(ξ)=(1-ξ^{-1})f(ξ) 反推出辅助函数须为 φ=xe^{-x}f（含 x 因子），少了 x 因子构造失败",
+        "积分中值把 k∫_0^{1/k} 恰好抵消系数 k，得到 φ(c)=φ(1)"
+      ],
+      "key_point": "φ=xe^{-x}f 两端点等值 ⇒ 罗尔给出 φ'(ξ)=0 ⇔ f'(ξ)=(1-ξ^{-1})f(ξ)。"
+    },
+    {
+      "id": 1957,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $f_n(x)$ 满足 $f_n^{\\prime}(x)=f_n(x)+x^{n-1} \\mathrm{e}^x$ ( $n$ 为正整数) 且 $\\displaystyle f_n(1)=\\frac{\\mathrm{e}}{n}$, 求函数项级数 $\\displaystyle \\sum_{n=1}^{\\infty} f_n(x)$ 之和",
+      "options": {},
+      "answer": "$-\\mathrm{e}^x \\ln (1-x)(-1 \\leqslant x<1)$",
+      "analysis": "由 $f_n^{\\prime}(x)=f_n(x)+x^{n-1} \\mathrm{e}^x$, \r\n\r\n得 $f_n^{\\prime}(x)-f_n(x)=x^{n-1} \\mathrm{e}^x$, 解得\r\n\r\n$\\displaystyle f_n(x)=\\left(\\int x^{n-1} \\mathrm{e}^x \\mathrm{e}^{\\int(-1) \\mathrm{d} x} \\mathrm{d} x+C\\right) \\mathrm{e}^{-\\int(-1) \\mathrm{d} x}\\\\\r\n=\\left(\\frac{1}{n} x^n+C\\right) \\mathrm{e}^x$\r\n\r\n由 $\\displaystyle f_n(1)=\\frac{\\mathrm{e}}{n}$, 得 $C=0$, 于是 $\\displaystyle f_n(x)=\\frac{\\mathrm{e}^x}{n} x^n$,\r\n\r\n$\\displaystyle \\sum_{n=1}^{\\infty} f_n(x)=\\sum_{n=1}^{\\infty} \\frac{\\mathrm{e}^x}{n} x^n\\\\\r\n=\\mathrm{e}^x \\sum_{n=1}^{\\infty} \\frac{x^n}{n}=-\\mathrm{e}^x \\ln (1-x)(-1 \\leqslant x<1)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先解 ODE 求出 f_n 的显式 e^x x^n/n，再求和，两步顺序不能颠倒",
+        "Σx^n/n 收敛域为 -1≤x<1（x=-1 处交错收敛），和函数写 -ln(1-x)，别丢左端点"
+      ],
+      "key_point": "f_n=e^x x^n/n，级数和 = e^x·Σx^n/n = -e^x ln(1-x)。"
+    },
+    {
+      "id": 1958,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 1 & a \\\\ 1 & a & 1 \\\\ a & 1 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ 1 \\\\ -2\\end{array}\\right)$. 已知线性方程组 $\\boldsymbol{A} \\boldsymbol{x}=\\boldsymbol{\\beta}$ 有解但不唯一, 试求:\r\n\r\n(1) $a$ 的值;\r\n\r\n(2) 正交矩阵 $\\boldsymbol{Q}$, 使 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}$ 为对角矩阵",
+      "options": {},
+      "answer": "(1) $a=-2$ \r\n\r\n(2) $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{ccc}-3 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 3\\end{array}\\right)$",
+      "analysis": "(1) 方法一 因为方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有解但不唯一, \r\n\r\n所以 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})<3$,\r\n\r\n于是 $|\\boldsymbol{A}|=\\left|\\begin{array}{lll}1 & 1 & a \\\\ 1 & a & 1 \\\\ a & 1 & 1\\end{array}\\right|=-(a+2)(a-1)^2=0$, \r\n\r\n即 $a=-2$ 或 $a=1$,\r\n\r\n因为当 $a=1$ 时, $r(\\boldsymbol{A})=1<r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 无解, 故 $a=-2$.\r\n\r\n方法二\r\n\r\n$\\displaystyle \\bar{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}\r\n1 & 1 & a & 1 \\\\\r\n1 & a & 1 & 1 \\\\\r\na & 1 & 1 & -2\r\n\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & a & 1 \\\\\r\n0 & a-1 & 1-a & 0 \\\\\r\n0 & 1-a & 1-a^2 & -2-a\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & a & 1 \\\\\r\n0 & a-1 & 1-a & 0 \\\\\r\n0 & 0 & 2-a-a^2 & -2-a\r\n\\end{array}\\right)$\r\n\r\n当 $\\left\\{\\begin{array}{l}2-a-a^2=0 \\\\ -2-a \\neq 0\\end{array}\\right.$, 即 $a=1$ 时, \r\n\r\n因为 $r(\\boldsymbol{A})=1<r(\\overline{\\boldsymbol{A}})=2$, 所以方程组无解, 故 $a \\neq 1$;\r\n\r\n当 $\\left\\{\\begin{array}{l}2-a-a^2=0, \\\\ -2-a=0,\\end{array}\\right.$ 即 $a=-2$ 时, \r\n\r\n因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$, 所以方程组有无数个解,\r\n\r\n故 $a=-2$.\r\n\r\n(2)  $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & 1 & -2 \\\\\r\n1 & -2 & 1 \\\\\r\n-2 & 1 & 1\r\n\\end{array}\\right)$\r\n\r\n由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\r\n\\lambda-1 & -1 & 2 \\\\\r\n-1 & \\lambda+2 & -1 \\\\\r\n2 & -1 & \\lambda-1\r\n\\end{array}\\right|\\\\\r\n=(\\lambda+3) \\lambda(\\lambda-3)=0$,\r\n\r\n得 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=-3, \\lambda_2=0, \\lambda_3=3$.\r\n\r\n当 $\\lambda_1=-3$ 时, 由 $(-3 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$,\r\n\r\n得 $\\boldsymbol{\\xi}_1=(1,-2,1)^{\\mathrm{T}}$;\r\n\r\n当 $\\lambda_2=0$ 时, 由 $(0 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{X}=\\mathbf{0}$,\r\n\r\n得 $\\boldsymbol{\\xi}_2=(1,1,1)^{\\mathrm{T}}$;\r\n\r\n当 $\\lambda_3=3$ 时,由 $(3 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{X}=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{\\xi}_3=(1,0,-1)^{\\mathrm{T}}$,\r\n单位化得\r\n\r\n$\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{6}}\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1\r\n\\end{array}\\right), \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{3}}\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1\r\n\\end{array}\\right), \\boldsymbol{\\gamma}_3=\\dfrac{1}{\\sqrt{2}}\\left(\\begin{array}{c}1 \\\\0 \\\\-1\r\n\\end{array}\\right)$,\r\n\r\n令 $\\boldsymbol Q=\\left(\\begin{array}{ccc}\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} \\\\ -\\frac{2}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} & 0 \\\\ \\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{ccc}-3 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 3\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|A|=0 给 a=-2 或 a=1，a=1 时 r(A)=1<r(A|β)=2 无解，必须排除",
+        "实对称矩阵不同特征值的特征向量自动正交，只需单位化即得正交矩阵 Q"
+      ],
+      "key_point": "a=-2；A 特征值 -3,0,3，正交单位化得 Q 使 Q^TAQ=diag(-3,0,3)。"
+    },
+    {
+      "id": 1959,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶实对称矩阵, $r(\\boldsymbol{A})=n, A_{i j}$ 是 $\\boldsymbol{A}=\\left(a_{i j}\\right)_{n \\times n}$ 中元素 $a_{i j}$ 的代数余子式 $(i, j=1$, $2, \\cdots, n)$, 二次型 $\\displaystyle f\\left(x_1, x_2, \\cdots, x_n\\right)=\\sum_{i=1}^n \\sum_{j=1}^n \\frac{A_{i j}}{|\\boldsymbol{A}|} x_i x_j$\r\n\r\n(1) 记 $\\boldsymbol{x}=\\left(x_1, x_2, \\cdots, x_n\\right)^{\\mathrm{T}}$, 把 $f\\left(x_1, x_2, \\cdots, x_n\\right)$ 写成矩阵形式, 并证明二次型 $f(\\boldsymbol{x})$ 的矩阵为 $\\boldsymbol{A}^{-1}$;\r\n\r\n(2) 二次型 $g(\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 与 $f(\\boldsymbol{x})$ 的规范形是否相同? 说明理由",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 令 $\\boldsymbol{B}=\\dfrac{1}{|\\boldsymbol{A}|}\\left(\\begin{array}{cccc}A_{11} & A_{21} & \\cdots & A_{n 1} \\\\ A_{12} & A_{22} & \\cdots & A_{n 2} \\\\ \\vdots & \\vdots & & \\vdots \\\\ A_{1 n} & A_{2 n} & \\cdots & A_{n n}\\end{array}\\right),\\\\\r\n \\boldsymbol{x}=\\left(\\begin{array}{c}x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n\\end{array}\\right)$,\r\n\r\n则二次型 $f\\left(x_1, x_2, \\cdots, x_n\\right)$ 的矩阵形式为 \r\n\r\n$f\\left(x_1, x_2, \\cdots, x_n\\right)=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{B} \\boldsymbol{x}$,\r\n\r\n因为 $r(\\boldsymbol{A})=n$, 所以 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n于是 $\\boldsymbol{B}=\\boldsymbol{A}^{-1}$.\r\n由 $\\boldsymbol{A}^{\\mathrm{T}}=\\boldsymbol{A}$, 得  $\\boldsymbol{B}^{\\mathrm{T}}=\\left(\\boldsymbol{A}^{-1}\\right)^{\\mathrm{T}}\r\n=\\left(\\boldsymbol{A}^{\\mathrm{T}}\\right)^{-1}=\\boldsymbol{A}^{-1}$, \r\n\r\n即 $\\boldsymbol{B}$ 是实对称矩阵,\r\n\r\n故二次型 $f\\left(x_1, x_2, \\cdots, x_n\\right)$ 的矩阵为 $\\boldsymbol{A}^{-1}$\r\n\r\n(2) 因为 $\\boldsymbol{A}$ 与 $\\boldsymbol{A}^{-1}$ 的特征值互为倒数, \r\n\r\n故 $\\boldsymbol{A}$ 与 $\\boldsymbol{A}^{-1}$ 的特征值中正、负个数相同, \r\n\r\n即 $\\boldsymbol{A}$ 与 $\\boldsymbol{A}^{-1}$ 合同, \r\n\r\n于是 $g(\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 与 $f(\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A}^{-1} \\boldsymbol{x}$ 有相同的规范形",
+      "wrong_options": {},
+      "pitfalls": [
+        "系数 A_{ij}/|A| 排成的矩阵是伴随阵转置再除 |A|，即 (A*)^T/|A|=A^{-1}（对称阵 A* 亦对称）",
+        "A 与 A^{-1} 特征值互为倒数、符号一致 ⇒ 正负惯性指数相同 ⇒ 规范形相同"
+      ],
+      "key_point": "f 的矩阵是 A^{-1}；A 与 A^{-1} 正负惯性指数相同故规范形相同。"
+    },
+    {
+      "id": 1960,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "一生产线生产的产品成箱包装, 每箱的重量是随机的. 假设每箱平均重 $50$ 千克, 标准差为 $5$ 千克. 若用最大载重量为 $5$ 吨的汽车承运, 试利用中心极限定理说明每辆车最多可以装多少箱, 才能保障不超载的概率大于 $0.977$  ( $\\Phi(2)=0.977$, 其中 $\\Phi(x)$ 是标准正态分布函数 )",
+      "options": {},
+      "answer": "$98$",
+      "analysis": "设最多可装 $n$ 箱, 令 $X_i$ 为第 $i$ 箱的重量 $(i=1,2, \\cdots, n)$, \r\n\r\n其中 $X_1, X_2, \\cdots, X_n$ 为独立同分布的随机变量\r\n\r\n总重量为 $T=X_1+X_2+\\cdots+X_n$,\r\n\r\n$\\displaystyle E(T)=E\\left(X_1\\right)+E\\left(X_2\\right)+\\cdots+E\\left(X_n\\right)=50 n, \\\\\r\nD(T)=D\\left(X_1\\right)+D\\left(X_2\\right)+\\cdots+D\\left(X_n\\right)=25 n$,\r\n\r\n由列维一林德伯格中心极限定理, \r\n\r\n$T$ 近似服从正态分布 $N(50 n, 25 n)$,\r\n\r\n或 $\\displaystyle \\frac{T-50 n}{5 \\sqrt{n}}$ 近似服从标准正态分布 $N(0,1)$,\r\n\r\n由 $\\displaystyle P\\{T \\leqslant 5000\\} \\\\\r\n=P\\left\\{\\frac{T-50 n}{5 \\sqrt{n}} \\leqslant \\frac{1000-10 n}{\\sqrt{n}}\\right\\} \\\\\r\n\\approx \\Phi\\left(\\frac{1000-10 n}{\\sqrt{n}}\\right)>0.977=\\Phi(2)$,\r\n\r\n得 $\\dfrac{1000-10 n}{\\sqrt{n}}>2$, 解得 $n<98.0199$,\r\n\r\n即最多可以装 $98$ 箱, 可以保证不超载的概率大于 $0.977$",
+      "wrong_options": {},
+      "pitfalls": [
+        "标准差 5 对应方差 25，D(T)=25n，标准化分母是 5√n 不是 5n",
+        "解出 n<98.02 后向下取整为 98（要保障概率大于 0.977，取满足严格不等式的最大整数）"
+      ],
+      "key_point": "T≈N(50n,25n)，Φ((1000-10n)/√n)>Φ(2) ⇒ n≤98。"
+    },
+    {
+      "id": 1961,
+      "paper": "数学三",
+      "year": 2001,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 和 $Y$ 的联合分布是正方形 $G=\\{(x, y) \\mid 1 \\leqslant x \\leqslant 3,1 \\leqslant y \\leqslant 3\\}$ 上的均匀分布, 试求随机变量 $U=|X-Y|$ 的概率密度 $p(u)$",
+      "options": {},
+      "answer": "$p(u)= \\begin{cases}\\dfrac{2-u}{2}, & 0<u<2 \\\\\r\n0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "二维随机变量 $(X, Y)$ 的联合密度函数为\r\n\r\n$f(x, y)= \\begin{cases}\\dfrac{1}{4}, & 1 \\leqslant x \\leqslant 3,1 \\leqslant y \\leqslant 3 \\\\\r\n0, & \\text { 其他 }\\end{cases}$\r\n\r\n$U$ 的分布函数为 \r\n\r\n$\\displaystyle F_U(u)=P\\{U \\leqslant u\\}=P\\{|X-Y| \\leqslant u\\}\\\\\r\n=\\iint\\limits_{|x-y| \\leqslant u} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n当 $u<0$ 时, $F_U(u)=0$;\r\n\r\n当 $0 \\leqslant u<2$ 时, $\\displaystyle F_U(u)\\\\\r\n=\\iint\\limits_{|x-y|<u} f(x, y) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\iint\\limits_{|x-y|<u} \\frac{1}{4} \\mathrm{d} x \\mathrm{~d} y\\\\\r\n=\\frac{1}{4}\\left[4-2 \\cdot \\frac{1}{2}(2-u)^2\\right] \\\\ \r\n=\\frac{1}{4}\\left[4-(2-u)^2\\right] \\\\ \r\n=1-\\frac{(2-u)^2}{4}$;\r\n\r\n当 $u \\geqslant 2$ 时, $F_U(u)=1$, 即\r\n\r\n$\\displaystyle\r\nF_U(u)= \\begin{cases}0, & u<0, \\\\\r\n1-\\dfrac{(2-u)^2}{4}, & 0 \\leqslant u<2, \\\\\r\n1, & u \\geqslant 2,\\end{cases}$\r\n\r\n于是 $U$ 的密度函数为 \r\n\r\n$p(u)= \\begin{cases}\\dfrac{2-u}{2}, & 0<u<2 \\\\\r\n0, & \\text { 其他 }\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|X-Y| 只在 0<u<2 取值；F_U 由正方形内 |x-y|≤u 的带状面积占比 1-(2-u)²/4 求得",
+        "对分布函数求导才得密度，密度 (2-u)/2 是随 u 递减的三角形而非常数"
+      ],
+      "key_point": "带状面积法得 F_U，求导给出 p(u)=(2-u)/2, 0<u<2。"
+    }
+  ]
+}

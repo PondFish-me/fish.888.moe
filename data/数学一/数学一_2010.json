@@ -1,0 +1,505 @@
+{
+  "paper": "数学一",
+  "year": 2010,
+  "count": 23,
+  "questions": [
+    {
+      "id": 642,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "极限 $\\displaystyle \\lim _{x \\rightarrow \\infty}\\left[\\frac{x^{2}}{(x-a)(x+b)}\\right]^{x}=(\\quad)$",
+      "options": {
+        "A": "$1$",
+        "B": "$\\mathrm{e}$",
+        "C": "$\\mathrm{e}^{a-b}$",
+        "D": "$\\mathrm{e}^{b-a}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】$1^\\infty$ 型幂极限。标准做法：取对数化为 $\\lim x\\ln(\\text{底})$，对 $\\ln$ 用 $\\ln(1+u)\\sim u$（$u\\to0$）抓主部，或直接用公式 $\\lim f^g=e^{\\lim g(f-1)}$。\n\n【解答】底数 $\\dfrac{x^2}{(x-a)(x+b)}=\\dfrac{x^2}{x^2+(b-a)x-ab}\\to1$，指数 $x\\to\\infty$，为 $1^\\infty$ 型。\n令 $L=\\displaystyle\\lim_{x\\to\\infty}x\\ln\\dfrac{x^2}{(x-a)(x+b)}$，原极限 $=e^{L}$。\n$$\\ln\\dfrac{x^2}{(x-a)(x+b)}=-\\ln\\dfrac{(x-a)(x+b)}{x^2}=-\\ln\\!\\left(1+\\dfrac{(b-a)x-ab}{x^2}\\right).$$\n记 $u=\\dfrac{(b-a)x-ab}{x^2}=\\dfrac{b-a}{x}-\\dfrac{ab}{x^2}\\to0$，用 $\\ln(1+u)\\sim u$：\n$$L=\\lim_{x\\to\\infty}x\\cdot(-u)=\\lim_{x\\to\\infty}x\\left(-\\dfrac{b-a}{x}+\\dfrac{ab}{x^2}\\right)=-(b-a)=a-b.$$\n故原极限 $=e^{a-b}$，选 **C**。\n（亦可用 $f^g\\to e^{g(f-1)}$：$f-1=\\dfrac{x^2-(x-a)(x+b)}{(x-a)(x+b)}=\\dfrac{(a-b)x+ab}{(x-a)(x+b)}\\sim\\dfrac{a-b}{x}$，$x(f-1)\\to a-b$，同样得 $e^{a-b}$。）",
+      "wrong_options": {
+        "A": "答 1 等于忽略了 1^∞ 型不能直接代入；底虽趋于 1 但指数趋于 ∞，极限不一定为 1。",
+        "B": "答 e 相当于把指数主部算成 1，但实际 x·ln(底)→a-b，并非 1。",
+        "D": "e^{b-a} 是符号搞反的结果：底数比 1 大还是小取决于 (a-b)/x，主部是 a-b 不是 b-a。"
+      },
+      "pitfalls": [
+        "1^∞ 型必须取对数或用 e^{g(f-1)} 公式，不能直接把底代成 1。",
+        "符号最易错：x(f-1)→a-b，故指数是 a-b 不是 b-a，对应 e^{a-b}。"
+      ],
+      "key_point": "1^∞ 幂极限：原式=e^{lim x(f-1)}，本题 x(f-1)→a-b，故为 e^{a-b}。"
+    },
+    {
+      "id": 643,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $z=z(x, y)$ 是由方程 $\\displaystyle F\\left(\\frac{y}{x}, \\frac{z}{x}\\right)=0$ 确定的, 其中 $F$ 为可微函数, 且 $F_{2}^{\\prime} \\neq 0$, 则 $\\displaystyle x \\frac{\\partial z}{\\partial x}+y \\frac{\\partial z}{\\partial y}=(\\quad)$",
+      "options": {
+        "A": "$x$",
+        "B": "$z$",
+        "C": "$-x$",
+        "D": "$-z$"
+      },
+      "answer": "B",
+      "analysis": "【分析】复合隐函数求偏导。$F\\left(\\frac{y}{x},\\frac{z}{x}\\right)=0$ 中 $z=z(x,y)$。设 $u=\\frac{y}{x},v=\\frac{z}{x}$，对 $x,y$ 分别求偏导，再组合 $x z_x+y z_y$，利用齐次结构让 $F_1$ 项相消。\n\n【解答】记 $F_1=F_u',F_2=F_v'$。\n\n对 $x$ 求偏导（$z=z(x,y)$）：\n$$F_1\\cdot\\left(-\\dfrac{y}{x^2}\\right)+F_2\\cdot\\dfrac{z_x x-z}{x^2}=0.$$\n两边乘 $x^2$：$-F_1y+F_2(xz_x-z)=0$，故\n$$x z_x=z+\\dfrac{F_1}{F_2}\\,y.\\qquad(\\ast)$$\n\n对 $y$ 求偏导：\n$$F_1\\cdot\\dfrac1x+F_2\\cdot\\dfrac{z_y}{x}=0\\Rightarrow F_1+F_2z_y=0\\Rightarrow z_y=-\\dfrac{F_1}{F_2},$$\n于是 $y z_y=-\\dfrac{F_1}{F_2}y.\\qquad(\\ast\\ast)$\n\n$(\\ast)+(\\ast\\ast)$：\n$$x\\dfrac{\\partial z}{\\partial x}+y\\dfrac{\\partial z}{\\partial y}=z+\\dfrac{F_1}{F_2}y-\\dfrac{F_1}{F_2}y=z.$$\n（这正是 $z$ 关于 $(x,y)$ 一次齐次的欧拉关系。）对应选项 B。",
+      "wrong_options": {
+        "A": "$x$：把欧拉关系的结果误认成自变量 x；正确是齐次函数 z 本身。",
+        "C": "$-x$：符号与对象都错，缺乏依据。",
+        "D": "$-z$：求偏导时把某项符号弄反，导致 F₁ 项未相消而出现 -z。"
+      },
+      "pitfalls": [
+        "对 z/x 求 x 偏导要用商法则：∂(z/x)/∂x=(x z_x - z)/x²，别漏 -z/x²",
+        "F₂'≠0 才能解出 z_y=-F₁/F₂；最终 F₁ 项相消得到 z，体现 z 是一次齐次函数（欧拉定理）"
+      ],
+      "key_point": "F(y/x,z/x)=0 说明 z 关于 (x,y) 一次齐次，欧拉关系给出 x z_x+y z_y=z。"
+    },
+    {
+      "id": 644,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $m, n$ 均是正整数, 则反常积分 $\\displaystyle \\int_{0}^{1} \\frac{\\sqrt[m]{\\ln ^{2}(1-x)}}{\\sqrt[n]{x}} \\mathrm{d} x$ 的敛散性 $(\\quad)$",
+      "options": {
+        "A": "仅与 $m$ 的取值有关",
+        "B": "仅与 $n$ 的取值有关",
+        "C": "与 $m, n$ 的取值都有关",
+        "D": "与 $m, n$ 的取值都无关"
+      },
+      "answer": "D",
+      "analysis": "【分析】被积函数在 $x=0$ 与 $x=1$ 两处都可能奇异，需分别判敛散。$x\\to0^+$ 时用 $\\ln^2(1-x)\\sim x^2$ 把分子化成幂函数，看 $x$ 的幂次；$x\\to1^-$ 时 $\\ln(1-x)\\to-\\infty$ 但只是对数型，分母 $\\sqrt[n]{x}\\to1$ 不奇异。逐一估计两端的可积性，会发现对所有正整数 $m,n$ 都收敛。\n\n【解答】记 $g(x)=\\dfrac{\\sqrt[m]{\\ln^2(1-x)}}{\\sqrt[n]{x}}=\\dfrac{|\\ln(1-x)|^{2/m}}{x^{1/n}}$。\n\n**$x\\to0^+$**：$\\ln(1-x)\\sim-x$，故 $|\\ln(1-x)|^{2/m}\\sim x^{2/m}$，于是\n$$g(x)\\sim\\frac{x^{2/m}}{x^{1/n}}=x^{\\,2/m-1/n}.$$\n$\\displaystyle\\int_0\\frac{\\mathrm dx}{x^{\\alpha}}$ 收敛 $\\iff\\alpha<1$，这里 $\\alpha=\\dfrac1n-\\dfrac2m$。因 $m,n$ 为正整数，$\\dfrac1n\\le1$、$\\dfrac2m>0$，故 $\\alpha=\\dfrac1n-\\dfrac2m<1$ 恒成立，**在 $0$ 端总收敛**。\n\n**$x\\to1^-$**：令 $t=1-x\\to0^+$，$g\\sim\\dfrac{|\\ln t|^{2/m}}{1}=|\\ln t|^{2/m}$。对数的任意正幂在 $0$ 端可积：$\\displaystyle\\int_0|\\ln t|^{\\beta}\\mathrm dt$ 对一切 $\\beta>0$ 收敛（对数增长被任意小的幂压制）。故**在 $1$ 端也总收敛**。\n\n两端对一切正整数 $m,n$ 均收敛，故该反常积分的敛散性与 $m,n$ 取值都无关。选 **D**。",
+      "wrong_options": {
+        "A": "“仅与 $m$ 有关”错：$0$ 端的幂次 $\\dfrac1n-\\dfrac2m<1$ 恒成立、$1$ 端对数幂总可积，与 $m$ 是否变化无关。",
+        "B": "“仅与 $n$ 有关”错：$0$ 端收敛对一切 $n$（$\\dfrac1n\\le1$）都成立，不会因 $n$ 改变而发散。",
+        "C": "“与 $m,n$ 都有关”错：误以为存在某些 $m,n$ 使积分发散；实际两端对所有正整数组合都收敛。"
+      },
+      "pitfalls": [
+        "两个奇点 $x=0$ 与 $x=1$ 都要单独判，漏掉任一端都会判错。",
+        "$0$ 端幂次 $\\dfrac1n-\\dfrac2m$：因 $\\dfrac1n\\le1$ 且 $\\dfrac2m>0$，恒 $<1$，故对一切 $m,n$ 收敛——这是“无关”的根源。",
+        "$1$ 端只是对数发散，$|\\ln t|^{2/m}$ 任意正幂均可积，不影响敛散。"
+      ],
+      "key_point": "多奇点反常积分：分点用等价无穷小化幂函数比阶；对数的任意正幂在端点总可积。"
+    },
+    {
+      "id": 645,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\frac{n}{(n+i)\\left(n^{2}+j^{2}\\right)}=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
+        "D": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$"
+      },
+      "answer": "D",
+      "analysis": "【分析】双重和的通项可按 $i$、$j$ 分离：$\\dfrac{n}{(n+i)(n^2+j^2)}=\\dfrac{1}{n+i}\\cdot\\dfrac{n}{n^2+j^2}$，于是整个和等于两个单和之积。再把每个单和凑成黎曼和 $\\dfrac1n\\sum g\\big(\\tfrac{k}{n}\\big)$，分别对应一个定积分，乘起来即得二重积分形式，与选项对照。\n\n【解答】通项分离：\n$$\\sum_{i=1}^n\\sum_{j=1}^n\\frac{n}{(n+i)(n^2+j^2)}=\\Big(\\sum_{i=1}^n\\frac{1}{n+i}\\Big)\\Big(\\sum_{j=1}^n\\frac{n}{n^2+j^2}\\Big).$$\n第一个和：$\\displaystyle\\sum_{i=1}^n\\frac{1}{n+i}=\\frac1n\\sum_{i=1}^n\\frac{1}{1+i/n}\\to\\int_0^1\\frac{1}{1+x}\\,\\mathrm{d}x.$\n第二个和：$\\displaystyle\\sum_{j=1}^n\\frac{n}{n^2+j^2}=\\frac1n\\sum_{j=1}^n\\frac{1}{1+(j/n)^2}\\to\\int_0^1\\frac{1}{1+y^2}\\,\\mathrm{d}y.$\n两极限均存在且有限，故原极限等于二者之积：\n$$\\int_0^1\\frac{\\mathrm{d}x}{1+x}\\cdot\\int_0^1\\frac{\\mathrm{d}y}{1+y^2}=\\int_0^1\\mathrm{d}x\\int_0^1\\frac{1}{(1+x)(1+y^2)}\\,\\mathrm{d}y.$$\n这正是选项 D。",
+      "wrong_options": {
+        "A": "错。内层积分上限写成 x（即 ∫₀ˣ），但 i、j 各自独立从 1 到 n，对应上限都应为 1，不存在 y≤x 的耦合。",
+        "B": "错。既把上限误写成 x，又把第二因子分母写成 (1+y) 而非 (1+y²)——n/(n²+j²) 对应的是 1/(1+y²)。",
+        "C": "错。上限正确为 1，但第二因子分母 (1+y) 错了，应是 (1+y²)。"
+      },
+      "pitfalls": [
+        "n/(n²+j²)=1/n · 1/(1+(j/n)²)，凑黎曼和后分母是 1+y²，不是 1+y。",
+        "i、j 互相独立，两个上限都是 1，不会出现 ∫₀ˣ 这种耦合上限。",
+        "先分离成两个单和之积，再各自取极限相乘，比硬凑二重和清晰。"
+      ],
+      "key_point": "可分离的双重和→两个黎曼和之积→两个定积分相乘，关键看每个分母凑出 1+x 还是 1+y²。"
+    },
+    {
+      "id": 646,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $m \\times n$ 矩阵, $\\boldsymbol{B}$ 为 $n \\times m$ 矩阵, $\\boldsymbol{E}$ 为 $m$ 阶单位矩阵. 若 $\\boldsymbol{AB}=\\boldsymbol{E}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$r(\\boldsymbol{A})=m, r(\\boldsymbol{B})=m$",
+        "B": "$r(\\boldsymbol{A})=m, r(\\boldsymbol{B})=n$",
+        "C": "$r(\\boldsymbol{A})=n, r(\\boldsymbol{B})=m$",
+        "D": "$r(\\boldsymbol{A})=n, r(\\boldsymbol{B})=n$"
+      },
+      "answer": "A",
+      "analysis": "【分析】用秩的两条基本性质：$r(AB)\\le\\min\\{r(A),r(B)\\}$，以及 $A$ 为 $m\\times n$ 矩阵时 $r(A)\\le m$、$B$ 为 $n\\times m$ 时 $r(B)\\le m$。$AB=E_m$ 满秩，秩为 $m$，由此夹逼出 $r(A)=r(B)=m$。\n\n【解答】\n$AB=E_m$，而 $r(E_m)=m$。由 $r(AB)\\le\\min\\{r(A),r(B)\\}$ 得\n$$m=r(AB)\\le r(A),\\qquad m=r(AB)\\le r(B).$$\n另一方面，$A$ 是 $m\\times n$ 矩阵，行数为 $m$，故 $r(A)\\le m$；$B$ 是 $n\\times m$ 矩阵，列数为 $m$，故 $r(B)\\le m$。\n\n两面夹逼：$r(A)=m,\\ r(B)=m$。选 A。\n\n（附带可知此时必有 $m\\le n$，否则 $AB=E_m$ 不可能成立。）",
+      "wrong_options": {
+        "B": "$r(B)=n$ 错：$B$ 为 $n\\times m$，其秩 $\\le\\min\\{n,m\\}$，而 $AB=E_m$ 又迫使 $r(B)\\ge m$，故 $r(B)=m$，不是 $n$（一般 $m\\le n$，$n$ 偏大）。",
+        "C": "$r(A)=n$ 错：$A$ 为 $m\\times n$，$r(A)\\le m$，又 $\\ge m$，只能是 $m$，写成 $n$ 与行数限制矛盾。",
+        "D": "$r(A)=r(B)=n$ 同时把两个秩都写成 $n$，与 $r(A)\\le m,\\ r(AB)=m$ 的夹逼矛盾，错误。"
+      },
+      "pitfalls": [
+        "秩不超过行数也不超过列数：$r(A)\\le\\min\\{m,n\\}$，本题被 $AB=E_m$ 顶到上界 $m$",
+        "$AB=E$ 只说明 $r=m$，不要误把秩写成 $n$；$A,B$ 各自的秩都被夹逼为 $m$"
+      ],
+      "key_point": "$AB=E_m\\Rightarrow m=r(AB)\\le\\min\\{r(A),r(B)\\}\\le m$，夹逼得 $r(A)=r(B)=m$。"
+    },
+    {
+      "id": 647,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $4$ 阶实对称矩阵, 且 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=\\boldsymbol{O}$. 若 $\\boldsymbol{A}$ 的秩为 $3$, 则 $\\boldsymbol{A}$ 相似于 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & 1 & \\\\ & & & 0\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{llll}1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{llll}-1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】实对称矩阵必可对角化，相似标准形即其特征值排成的对角阵。由 $A^2+A=O$ 知特征值满足 $\\lambda^2+\\lambda=0$，即 $\\lambda\\in\\{0,-1\\}$。再由“$4$ 阶、秩为 $3$”确定特征值 $0$ 的个数（即 $0$ 的重数），从而定出标准形。\n\n【解答】$A$ 为实对称矩阵，必相似于对角阵，其特征值即对角元。\n设 $\\lambda$ 为特征值，对应特征向量 $\\xi\\neq0$，由 $A^2+A=O$ 得 $(\\lambda^2+\\lambda)\\xi=0$，故 $\\lambda^2+\\lambda=0$，$\\lambda=0$ 或 $\\lambda=-1$。\n$A$ 为 $4$ 阶且 $r(A)=3$，故 $A$ 的零特征值重数 $=4-r(A)=1$（即 $\\dim\\ker A=4-3=1$），其余 $3$ 个特征值均为 $-1$。所以 $A$ 的特征值为 $-1,-1,-1,0$，相似于\n$$\\begin{pmatrix}-1&&&\\\\&-1&&\\\\&&-1&\\\\&&&0\\end{pmatrix}.$$\n选 D。",
+      "wrong_options": {
+        "A": "特征值取成 1,1,1,0，但由 $\\lambda^2+\\lambda=0$ 只能取 0 或 -1，不会有 1",
+        "B": "混入了 1 作为特征值，违反 $\\lambda^2+\\lambda=0$；非零特征值只能是 -1",
+        "C": "同样错误地取了特征值 1，且 -1 的个数不对；非零特征值应全为 -1（共 3 个）"
+      },
+      "pitfalls": [
+        "实对称必可对角化，标准形就是特征值对角阵",
+        "由矩阵多项式方程 A^2+A=O 推出特征值满足 $\\lambda^2+\\lambda=0$，得 $\\lambda\\in\\{0,-1\\}$",
+        "零特征值的重数 = 4 - r(A) = 1，其余 3 个都是 -1"
+      ],
+      "key_point": "实对称对角化：特征值由 A 的零化多项式定，重数由秩 4-r(A) 定零特征值个数"
+    },
+    {
+      "id": 648,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的分布函数 $F(x)= \\begin{cases}0, & x<0\\\\ \\dfrac{1}{2}, & 0 \\leqslant x<1\\\\ 1-\\mathrm{e}^{-x}, & x \\geqslant 1\\end{cases}$, 则 $P\\{X=1\\}=(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$\\dfrac{1}{2}$",
+        "C": "$\\dfrac{1}{2}-\\mathrm{e}^{-1}$",
+        "D": "$1-\\mathrm{e}^{-1}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】离散点 $x=1$ 处的概率等于分布函数在该点的跳跃高度：$P\\{X=1\\}=F(1)-F(1^-)$。分布函数在 $x=1$ 处可能间断，须分别取右值（含端点的那段）与左极限。\n\n【解答】由分布函数\n\n$$F(x)=\\begin{cases}0,&x<0\\\\[2pt]\\dfrac12,&0\\le x<1\\\\[2pt]1-\\mathrm{e}^{-x},&x\\ge1\\end{cases}$$\n\n在 $x=1$ 处：\n\n$$F(1)=1-\\mathrm{e}^{-1}\\quad(\\text{用 }x\\ge1\\text{ 段}),$$\n\n$$F(1^-)=\\lim_{x\\to1^-}F(x)=\\dfrac12\\quad(\\text{用 }0\\le x<1\\text{ 段}).$$\n\n故\n\n$$P\\{X=1\\}=F(1)-F(1^-)=\\left(1-\\mathrm{e}^{-1}\\right)-\\dfrac12=\\dfrac12-\\mathrm{e}^{-1}.$$\n\n（验证非负：$\\mathrm{e}^{-1}\\approx0.368<0.5$，故 $\\dfrac12-\\mathrm{e}^{-1}\\approx0.132>0$，合理。）选 C。",
+      "wrong_options": {
+        "A": "$0$ 是误以为 $F$ 在 $x=1$ 连续（即把 $X$ 当连续型）。但此处 $F$ 有跳跃，$X$ 是混合型，$P\\{X=1\\}\\ne0$。",
+        "B": "$\\dfrac12$ 是误把 $x=0$ 处的跳跃 $F(0)-F(0^-)=\\frac12-0$ 当成 $x=1$ 处的概率，搞错了点。",
+        "D": "$1-\\mathrm{e}^{-1}$ 只取了 $F(1)$ 的值而忘记减去左极限 $F(1^-)=\\frac12$，漏掉了减项。"
+      },
+      "pitfalls": [
+        "$P\\{X=a\\}=F(a)-F(a^-)$ 等于分布函数在该点的跳跃高度，连续型才为 0。",
+        "$F(1)$ 取 $x\\ge1$ 段得 $1-\\mathrm{e}^{-1}$，$F(1^-)$ 取 $0\\le x<1$ 段得 $\\frac12$，两者相减。"
+      ],
+      "key_point": "单点概率 = 分布函数跳跃高度 $F(a)-F(a^-)$，混合型分布的核心考点。"
+    },
+    {
+      "id": 649,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f_{1}(x)$ 为标准正态分布的概率密度, $f_{2}(x)$ 为 $[-1,3]$ 上均匀分布的概率密度, 若 $f(x)=\\left\\{\\begin{array}{ll}a f_{1}(x), & x \\leqslant 0, \\\\ b f_{2}(x), & x>0\\end{array}(a>0, b>0)\\right.$ 为概率密度, 则 $a, b$ 应满足 $(\\quad)$",
+      "options": {
+        "A": "$2 a+3 b=4$",
+        "B": "$3 a+2 b=4$",
+        "C": "$a+b=1$",
+        "D": "$a+b=2$"
+      },
+      "answer": "A",
+      "analysis": "【分析】概率密度的充要条件是非负且全空间积分为 $1$。$a,b>0$ 已保证非负，只需让 $\\displaystyle\\int_{-\\infty}^{+\\infty}f(x)\\,\\mathrm{d}x=1$。分段积分：标准正态密度只在 $x\\le0$ 取一半质量，均匀密度只在 $x>0$ 取相应区间的质量。\n\n【解答】$f_1$ 为标准正态密度，关于 $0$ 对称，故\n$$\\int_{-\\infty}^{0}f_1(x)\\,\\mathrm{d}x=\\dfrac12.$$\n$f_2$ 为 $[-1,3]$ 上均匀分布密度，区间长 $3-(-1)=4$，故\n$$f_2(x)=\\begin{cases}\\dfrac14,&-1\\le x\\le3,\\\\0,&\\text{其它}.\\end{cases}$$\n在 $x>0$ 上积分，有效区间为 $(0,3]$，长度 $3$，\n$$\\int_{0}^{+\\infty}f_2(x)\\,\\mathrm{d}x=\\int_{0}^{3}\\dfrac14\\,\\mathrm{d}x=\\dfrac34.$$\n于是归一化条件：\n$$\\int_{-\\infty}^{+\\infty}f(x)\\,\\mathrm{d}x=a\\int_{-\\infty}^{0}f_1(x)\\,\\mathrm{d}x+b\\int_{0}^{+\\infty}f_2(x)\\,\\mathrm{d}x=a\\cdot\\dfrac12+b\\cdot\\dfrac34=1.$$\n两边乘 $4$：\n$$2a+3b=4,$$\n即选 A。\n\n验算：若取 $a=\\dfrac12,b=1$，则 $2\\cdot\\frac12+3\\cdot1=4$ 成立，且 $\\frac12\\cdot\\frac12+1\\cdot\\frac34=\\frac14+\\frac34=1$，归一化无误。",
+      "wrong_options": {
+        "B": "系数搞反了。正态在 $x\\le0$ 贡献 $\\frac12$（对应 $a$），均匀在 $x>0$ 贡献 $\\frac34$（对应 $b$），应是 $2a+3b=4$ 而非 $3a+2b$。",
+        "C": "$a+b=1$ 错误地把两段积分都当成各取 1（或把权重当概率），未考虑正态只取半个、均匀只取 $(0,3]$ 部分。",
+        "D": "$a+b=2$ 同样忽略了 $\\frac12$ 与 $\\frac34$ 这两个实际积分值，凑不出归一化。"
+      },
+      "pitfalls": [
+        "标准正态在 $(-\\infty,0]$ 上恰好积分 $\\frac12$，靠对称性直接得到。",
+        "均匀密度高度是 $\\frac{1}{\\text{区间长}}=\\frac14$，在 $x>0$ 只剩 $(0,3]$，质量 $\\frac34$，别错用整段 $[-1,3]$。"
+      ],
+      "key_point": "密度归一化：$a\\cdot\\frac12+b\\cdot\\frac34=1\\Rightarrow 2a+3b=4$。"
+    },
+    {
+      "id": 650,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=\\mathrm{e}^{-t}, \\\\ y=\\displaystyle \\int_0^t \\ln \\left(1+u^2\\right) \\mathrm{d} u,\\end{array}\\right.$ 则 $\\left.\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{t=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "【分析】参数方程求二阶导。$\\dfrac{dy}{dx}=\\dfrac{y'_t}{x'_t}$，二阶导 $\\dfrac{d^2y}{dx^2}=\\dfrac{\\dfrac{d}{dt}\\!\\left(\\dfrac{dy}{dx}\\right)}{x'_t}$。注意 $y$ 是变限积分，$y'_t=\\ln(1+t^2)$，最后代 $t=0$。\n\n【解答】$x=e^{-t}\\Rightarrow x'_t=-e^{-t}$；$y=\\displaystyle\\int_0^t\\ln(1+u^2)\\,du\\Rightarrow y'_t=\\ln(1+t^2)$。\n一阶导：\n$$\\dfrac{dy}{dx}=\\dfrac{\\ln(1+t^2)}{-e^{-t}}=-e^{t}\\ln(1+t^2).$$\n对 $t$ 求导：\n$$\\dfrac{d}{dt}\\!\\left(\\dfrac{dy}{dx}\\right)=-e^{t}\\ln(1+t^2)-e^{t}\\cdot\\dfrac{2t}{1+t^2}.$$\n再除以 $x'_t=-e^{-t}$：\n$$\\dfrac{d^2y}{dx^2}=\\dfrac{-e^{t}\\ln(1+t^2)-e^{t}\\dfrac{2t}{1+t^2}}{-e^{-t}}=e^{2t}\\left[\\ln(1+t^2)+\\dfrac{2t}{1+t^2}\\right].$$\n代 $t=0$：$\\ln 1=0$，$\\dfrac{2\\cdot0}{1}=0$，故\n$$\\dfrac{d^2y}{dx^2}\\Big|_{t=0}=e^{0}\\cdot(0+0)=0.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导是 d/dt(dy/dx) 再除以 x'_t，不能直接对 dy/dx 关于 x 求导也不能除两次。",
+        "y'_t 来自变限积分，直接等于被积函数 ln(1+t²)，不必先积分。"
+      ],
+      "key_point": "参数方程二阶导：先 (y'_t)/(x'_t)，再 d/dt 该式除以 x'_t，最后代 t 值。"
+    },
+    {
+      "id": 651,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_{0}^{\\pi^{2}} \\sqrt{x} \\cos \\sqrt{x} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-4 \\pi$",
+      "analysis": "【分析】被积函数含 $\\sqrt x$，作换元 $t=\\sqrt x$ 去根号，化为多项式乘三角函数的定积分，再分部积分两次。\n\n【解答】令 $t=\\sqrt x$，则 $x=t^2,\\ dx=2t\\,dt$；$x:0\\to\\pi^2$ 对应 $t:0\\to\\pi$。\n$$\\int_0^{\\pi^2}\\sqrt x\\cos\\sqrt x\\,dx=\\int_0^{\\pi}t\\cos t\\cdot 2t\\,dt=2\\int_0^{\\pi}t^2\\cos t\\,dt.$$\n用分部积分：$\\displaystyle\\int t^2\\cos t\\,dt=t^2\\sin t-\\int 2t\\sin t\\,dt=t^2\\sin t+2t\\cos t-2\\sin t+C.$\n（验证：$\\int 2t\\sin t\\,dt=-2t\\cos t+2\\sin t$，故 $-\\int=2t\\cos t-2\\sin t$。）\n代入上下限：\n$$\\big[t^2\\sin t+2t\\cos t-2\\sin t\\big]_0^{\\pi}=\\left(\\pi^2\\cdot0+2\\pi\\cdot(-1)-0\\right)-0=-2\\pi.$$\n故原积分 $=2\\cdot(-2\\pi)=-4\\pi$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元后 dx=2t dt 别漏了 2t，被积函数变为 2t²cos t",
+        "分部积分两次，符号容易错；终值处 sin π=0、cos π=-1 代入要仔细"
+      ],
+      "key_point": "含 √x 的积分先令 t=√x 去根号，再对 t²cos t 分部积分两次。"
+    },
+    {
+      "id": 652,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知曲线 $L$ 的方程为 $y=1-|x|(x \\in[-1,1])$, 起点是 $(-1,0)$, 终点为 $(1,0)$, 则曲线积分 $\\displaystyle \\int_{L} x y \\mathrm{d} x+x^{2} \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$0$",
+      "analysis": "【分析】曲线 $y=1-|x|$ 是上凸的折线（尖角在 $(0,1)$），不是闭曲线，不能直接用格林公式。分成左段 $x\\in[-1,0]$（$y=1+x$）与右段 $x\\in[0,1]$（$y=1-x$）两段，把 $y,\\mathrm dy$ 都化成 $x$ 的表达式后直接定积分。\n\n【解答】**左段** $x:-1\\to0$，$y=1+x$，$\\mathrm dy=\\mathrm dx$：\n$$\\int_{-1}^0\\Big[x(1+x)+x^2\\Big]\\mathrm dx=\\int_{-1}^0(x+2x^2)\\,\\mathrm dx=\\left[\\frac{x^2}{2}+\\frac{2x^3}{3}\\right]_{-1}^0=0-\\left(\\frac12-\\frac23\\right)=\\frac16.$$\n**右段** $x:0\\to1$，$y=1-x$，$\\mathrm dy=-\\mathrm dx$：\n$$\\int_0^1\\Big[x(1-x)+x^2(-1)\\Big]\\mathrm dx=\\int_0^1(x-2x^2)\\,\\mathrm dx=\\left[\\frac{x^2}{2}-\\frac{2x^3}{3}\\right]_0^1=\\frac12-\\frac23=-\\frac16.$$\n两段相加：\n$$\\int_L xy\\,\\mathrm dx+x^2\\,\\mathrm dy=\\frac16+\\left(-\\frac16\\right)=0.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "曲线非闭合，不能直接套格林公式；要按尖点 $x=0$ 拆成两段分别参数化。",
+        "右段 $y=1-x$ 时 $\\mathrm dy=-\\mathrm dx$，符号是常见失分点。"
+      ],
+      "key_point": "非闭合折线型曲线积分：以尖点为界分段，统一用 $x$ 作参数直接积。"
+    },
+    {
+      "id": 653,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\Omega=\\left\\{(x, y, z) \\mid x^{2}+y^{2} \\leqslant z \\leqslant 1\\right\\}$, 则 $\\Omega$ 的形心的竖坐标 $\\bar{z}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "【分析】$\\Omega$ 是抛物面 $z=x^2+y^2$ 与平面 $z=1$ 之间的立体（旋转对称）。形心竖坐标 $\\bar z=\\dfrac{\\iiint_\\Omega z\\,\\mathrm{d}V}{\\iiint_\\Omega\\mathrm{d}V}$。用「先二后一」（按 $z$ 切片）最方便：高度 $z$ 处截面是半径 $\\sqrt z$ 的圆盘，面积 $\\pi z$。\n\n【解答】对每个 $z\\in[0,1]$，截面 $x^2+y^2\\le z$ 是半径 $\\sqrt z$ 的圆，面积 $A(z)=\\pi z$。\n\n体积\n$$V=\\iiint_\\Omega\\mathrm{d}V=\\int_0^1\\pi z\\,\\mathrm{d}z=\\frac{\\pi}{2}.$$\n一次矩\n$$\\iiint_\\Omega z\\,\\mathrm{d}V=\\int_0^1 z\\cdot\\pi z\\,\\mathrm{d}z=\\pi\\int_0^1 z^2\\,\\mathrm{d}z=\\frac{\\pi}{3}.$$\n故\n$$\\bar z=\\frac{\\pi/3}{\\pi/2}=\\frac{2}{3}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "截面圆半径是 √z（由 x²+y²≤z），面积 πz 而非 πz²。",
+        "用切片法时积分变量只剩 z，直接 ∫₀¹（…）dz，无需化三重积分硬算。",
+        "形心是均匀密度下的几何中心，分子是 ∫z dV、分母是体积，不要混入密度。"
+      ],
+      "key_point": "旋转体形心竖坐标用「按 z 切片」：截面面积 A(z) 一出，体积与一次矩都是单积分。"
+    },
+    {
+      "id": 654,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}=(1,2,-1,0)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(1,1,0,2)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(2,1,1, a)^{\\mathrm{T}}$. 若由 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 生成的向量空间的维数为 $2$ , 则 $a=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$6$",
+      "analysis": "【分析】由 $\\alpha_1,\\alpha_2,\\alpha_3$ 生成的向量空间维数即向量组的秩。维数为 2 说明秩为 2：三向量线性相关，而其中存在 2 个线性无关。$\\alpha_1,\\alpha_2$ 显然不成比例（已线性无关），故只需让 $\\alpha_3$ 能由 $\\alpha_1,\\alpha_2$ 线性表示，由此定出 $a$。\n\n【解答】\n设 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$，按分量：\n$$\\begin{cases}k_1+k_2=2,\\\\ 2k_1+k_2=1,\\\\ -k_1=1,\\\\ 2k_2=a.\\end{cases}$$\n由第三式 $k_1=-1$；代入第一式得 $k_2=3$；验证第二式 $2(-1)+3=1$ 成立。于是 $a=2k_2=6$。\n\n此时 $\\alpha_3=-\\alpha_1+3\\alpha_2$，秩为 2，生成空间维数为 2，符合要求。故 $a=6$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "维数 = 秩；秩为 2 等价于三向量相关且 $\\alpha_1,\\alpha_2$ 这一对无关，关键是 $\\alpha_3$ 落入 $\\alpha_1,\\alpha_2$ 张成的空间",
+        "解出 $k_1,k_2$ 后要把前三个分量方程都验证一致，再由第四分量定 $a$，避免无解情形"
+      ],
+      "key_point": "生成空间维数=向量组秩；令第三个向量由前两个线性表示，联立分量方程定参数。"
+    },
+    {
+      "id": 655,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率分布为 $P\\{X=k\\}=\\dfrac{C}{k !}, k=0,1,2, \\cdots$, 则 $E\\left(X^{2}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "【分析】$P\\{X=k\\}=\\dfrac{C}{k!}$ 正是泊松分布的形状。先由归一化 $\\sum_k P=1$ 定常数 $C$，识别出 $\\lambda$，再用泊松分布 $E(X)=\\lambda$、$D(X)=\\lambda$ 得 $E(X^2)=D(X)+[E(X)]^2$。\n\n【解答】由 $\\displaystyle\\sum_{k=0}^\\infty\\frac{C}{k!}=C\\sum_{k=0}^\\infty\\frac{1}{k!}=C\\mathrm e=1$，得 $C=\\dfrac1{\\mathrm e}$。于是\n$$P\\{X=k\\}=\\frac{1}{\\mathrm e\\,k!}=\\frac{\\mathrm e^{-1}\\cdot1^k}{k!},\\quad k=0,1,2,\\dots,$$\n即 $X\\sim$ 泊松分布 $P(\\lambda)$，参数 $\\lambda=1$。故 $E(X)=\\lambda=1$，$D(X)=\\lambda=1$，从而\n$$E(X^2)=D(X)+[E(X)]^2=1+1^2=2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用 $\\sum 1/k!=e$ 归一化定 C=1/e，识别出泊松 $\\lambda=1$",
+        "泊松分布 $E(X)=D(X)=\\lambda$，别把 $\\lambda$ 当成别的值",
+        "E(X^2)=D(X)+[E(X)]^2，不要漏掉均值平方项"
+      ],
+      "key_point": "认出 C/k! 是泊松分布；归一化定 $\\lambda$，再 $E(X^2)=\\lambda+\\lambda^2$"
+    },
+    {
+      "id": 656,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}-3 y^{\\prime}+2 y=2 x \\mathrm{e}^{x}$ 的通解",
+      "options": {},
+      "answer": "$y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{2 x}-\\left(x^2+2 x\\right) \\mathrm{e}^x$ ( $C_1, C_2$ 为任意常数)",
+      "analysis": "【分析】二阶常系数线性非齐次方程。先解特征方程得齐次通解，再按右端 $2x\\mathrm{e}^x$ 设特解。右端是 $\\mathrm{e}^{\\lambda x}P_m(x)$ 型，$\\lambda=1$ 恰是特征单根，发生一重共振，故特解要乘 $x$：$y^*=x(ax+b)\\mathrm{e}^x$。\n\n【解答】**齐次部分。** 特征方程 $r^2-3r+2=0$，即 $(r-1)(r-2)=0$，根 $r_1=1,\\ r_2=2$，齐次通解\n$$\\bar y=C_1\\mathrm{e}^x+C_2\\mathrm{e}^{2x}.$$\n**特解。** 右端 $2x\\mathrm{e}^x$ 中 $\\lambda=1$ 是特征单根，设\n$$y^*=x(ax+b)\\mathrm{e}^x=(ax^2+bx)\\mathrm{e}^x.$$\n记 $u=ax^2+bx$，则 $y^*=u\\mathrm{e}^x$，代入算子有恒等式 $(y^*)''-3(y^*)'+2y^*=\\big(u''-u'\\big)\\mathrm{e}^x$（因 $1$ 为单根，$\\mathrm{e}^x$ 部分化简后只剩 $u''-u'$）。其中 $u'=2ax+b,\\ u''=2a$，故\n$$u''-u'=2a-(2ax+b)=-2ax+(2a-b).$$\n令其等于 $2x$：\n$$-2a=2\\Rightarrow a=-1;\\qquad 2a-b=0\\Rightarrow b=2a=-2.$$\n于是 $y^*=(-x^2-2x)\\mathrm{e}^x=-(x^2+2x)\\mathrm{e}^x$。\n**通解。**\n$$y=C_1\\mathrm{e}^x+C_2\\mathrm{e}^{2x}-(x^2+2x)\\mathrm{e}^x\\quad(C_1,C_2\\ \\text{为任意常数}).$$\n验算：将 $y^*=-(x^2+2x)\\mathrm{e}^x$ 代入 $y''-3y'+2y$ 得 $2x\\mathrm{e}^x$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\lambda=1$ 是特征单根，特解必须乘 $x$（设 $x(ax+b)\\mathrm{e}^x$），漏乘会导致方程无解。",
+        "用代换 $y^*=u\\mathrm{e}^x$ 时，因 $1$ 是单根，方程降为 $u''-u'=2x$，可快速定系数。",
+        "通解里两个任意常数缺一不可。"
+      ],
+      "key_point": "特征根 $1,2$；右端 $\\lambda=1$ 撞单根，特解乘 $x$ 设 $x(ax+b)\\mathrm{e}^x$。"
+    },
+    {
+      "id": 657,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x)=\\int_{1}^{x^{2}}\\left(x^{2}-t\\right) \\mathrm{e}^{-t^{2}} \\mathrm{d} t$ 的单调区间与极值",
+      "options": {},
+      "answer": "$f(x)$ 在 $(-\\infty,-1]$ 及 $[0,1]$ 上单调减少, $f(x)$ 在 $[-1,0]$ 及 $[1,+\\infty)$ 上单调增加;\r\n\r\n极小值为 $f( \\pm 1)=0$, 极大值为 $\\displaystyle f(0)=\\frac{1}{2}\\left(1-\\frac{1}{\\mathrm{e}}\\right)$",
+      "analysis": "【分析】被积函数里含参数 $x$，不能直接套变限积分求导公式，应先把 $x^2$ 提到积分号外，拆成两个变限积分，再求导。求导后会发现两个含 $\\mathrm{e}^{-x^4}$ 的项相消，得到结构清晰的 $f'(x)=2x\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。\n\n【解答】先分离参数：\n$$f(x)=x^2\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t-\\int_1^{x^2}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n求导（对第一项用乘积法则 + 变限求导，对第二项用变限求导）：\n$$f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t+x^2\\cdot\\mathrm{e}^{-x^4}\\cdot2x-x^2\\,\\mathrm{e}^{-x^4}\\cdot2x=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n记 $g(x)=\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。因 $\\mathrm{e}^{-t^2}>0$：当 $x^2>1$（即 $|x|>1$）时 $g>0$；当 $|x|<1$ 时 $g<0$；$g(\\pm1)=0$。\n\n于是 $f'(x)=2x\\,g(x)$ 的符号：\n- $x<-1$：$2x<0,\\,g>0\\Rightarrow f'<0$（减）；\n- $-1<x<0$：$2x<0,\\,g<0\\Rightarrow f'>0$（增）；\n- $0<x<1$：$2x>0,\\,g<0\\Rightarrow f'<0$（减）；\n- $x>1$：$2x>0,\\,g>0\\Rightarrow f'>0$（增）。\n\n故 $f$ 在 $(-\\infty,-1]$ 与 $[0,1]$ 上单调减少，在 $[-1,0]$ 与 $[1,+\\infty)$ 上单调增加。\n\n极值点 $x=-1,0,1$（$f'=0$）：\n- $x=\\pm1$ 处由减转增，取极小值。$f(\\pm1)=\\displaystyle\\int_1^{1}(\\cdots)\\mathrm{d}t=0$。\n- $x=0$ 处由增转减，取极大值：\n$$f(0)=\\int_1^{0}(0-t)\\mathrm{e}^{-t^2}\\mathrm{d}t=\\int_0^{1}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t=\\Big[-\\tfrac12\\mathrm{e}^{-t^2}\\Big]_0^1=\\frac12\\Big(1-\\frac{1}{\\mathrm{e}}\\Big).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积函数含参数 $x$，必须先把 $x^2$ 提出积分号再求导，否则会错用变限积分求导公式。",
+        "求导后两项 $\\pm x^2\\mathrm{e}^{-x^4}\\cdot2x$ 恰好相消，得到简洁的 $f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。",
+        "判号要同时考虑 $2x$ 与 $g(x)=\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$ 两个因子的符号，$x=\\pm1,0$ 均为极值点。"
+      ],
+      "key_point": "含参变限积分先分离参数再求导；导数化为 $2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$，按两因子符号定单调性。"
+    },
+    {
+      "id": 658,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "(1) 比较 $\\displaystyle \\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t$ 与 $\\displaystyle \\int_{0}^{1} t^{n}|\\ln t| \\mathrm{d} t(n=1,2, \\cdots)$ 的大小, 说明理由;\r\n\r\n(2) 记 $\\displaystyle u_{n}=\\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t\\left(n=1,2, \\cdots\\right)$, 求极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} u_{n}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】(1) 两个积分被积式只差一个因子：$[\\ln(1+t)]^n$ 与 $t^n$。在 $(0,1)$ 上比较 $\\ln(1+t)$ 与 $t$ 的大小即可逐点比较被积函数，进而比较积分。(2) 第(1)问已给出 $u_n$ 的上界 $\\displaystyle\\int_0^1 t^n|\\ln t|\\mathrm{d}t$，把这个上界算成 $\\dfrac{1}{(n+1)^2}$，再配下界 $0$，夹逼即得极限。\n\n【解答】**(1)** 在 $(0,1)$ 上 $t>0$，由经典不等式 $\\ln(1+t)<t$（因 $\\varphi(t)=t-\\ln(1+t)$ 有 $\\varphi'(t)=\\dfrac{t}{1+t}>0,\\ \\varphi(0)=0$）。又 $\\ln(1+t)>0$，故 $0<\\ln(1+t)<t$，从而对 $n\\ge1$\n$$[\\ln(1+t)]^n<t^n\\quad(0<t<1).$$\n而 $|\\ln t|>0$ 在 $(0,1)$ 上，故\n$$|\\ln t|[\\ln(1+t)]^n<t^n|\\ln t|\\quad(0<t<1).$$\n两端在 $(0,1)$ 上积分（被积式连续且不恒等），得严格不等式\n$$\\int_0^1|\\ln t|[\\ln(1+t)]^n\\,\\mathrm{d}t<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t.$$\n即**前者小于后者**。\n\n**(2)** 先算右端这个上界。在 $(0,1)$ 上 $\\ln t<0$，$|\\ln t|=-\\ln t$，\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t.$$\n分部积分，取 $u=-\\ln t,\\ \\mathrm{d}v=t^n\\mathrm{d}t$，$v=\\dfrac{t^{n+1}}{n+1}$：\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t=\\Big[-\\ln t\\cdot\\frac{t^{n+1}}{n+1}\\Big]_0^1+\\frac{1}{n+1}\\int_0^1 t^{n+1}\\cdot\\frac{1}{t}\\,\\mathrm{d}t.$$\n边界项：$t\\to1$ 时 $\\ln1=0$；$t\\to0^+$ 时 $t^{n+1}\\ln t\\to0$，故边界项为 $0$。剩下\n$$=\\frac{1}{n+1}\\int_0^1 t^{n}\\,\\mathrm{d}t=\\frac{1}{n+1}\\cdot\\frac{1}{n+1}=\\frac{1}{(n+1)^2}.$$\n又被积函数非负，故 $u_n\\ge0$。结合(1)得\n$$0\\le u_n<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t=\\frac{1}{(n+1)^2}.$$\n令 $n\\to\\infty$，$\\dfrac{1}{(n+1)^2}\\to0$，由夹逼准则\n$$\\boxed{\\lim_{n\\to\\infty}u_n=0}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "比较时要点明 $0<\\ln(1+t)<t$ 在 $(0,1)$ 上同时成立（正且小于 $t$），才能放心地 $n$ 次方保序。",
+        "$\\int_0^1 t^n|\\ln t|\\mathrm{d}t$ 中 $|\\ln t|=-\\ln t$（区间内 $\\ln t<0$），分部积分的边界项 $t^{n+1}\\ln t\\to0$ 要交代清楚。",
+        "第(2)问本质是用第(1)问的上界做夹逼，下界 $0$ 由被积函数非负保证，别漏。"
+      ],
+      "key_point": "用 $\\ln(1+t)<t$ 逐点比较被积函数定大小；上界积分算成 $\\tfrac{1}{(n+1)^2}$ 后夹逼求极限。"
+    },
+    {
+      "id": 659,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求幂级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2 n-1} x^{2 n}$ 的收敛域及和函数",
+      "options": {},
+      "answer": "收敛域为 $[-1,1], S(x)=x \\arctan x$",
+      "analysis": "【分析】这是缺项幂级数（只含偶次幂），先用比值法定收敛半径，再单独判断端点。求和函数则把它和已知的 $\\arctan x$ 的麦克劳林展开对照：$\\arctan x=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{2n-1}x^{2n-1}$，本级数恰是它乘以 $x$。也可走\"逐项求导/积分\"标准流程验证。\n\n【解答】记 $u_n(x)=\\dfrac{(-1)^{n-1}}{2n-1}x^{2n}$。\n\n（一）收敛域。用比值判别法考察 $\\left|\\dfrac{u_{n+1}}{u_n}\\right|$：\n$$\\left|\\frac{u_{n+1}}{u_n}\\right|=\\frac{2n-1}{2n+1}\\,|x|^2\\xrightarrow{n\\to\\infty}|x|^2.$$\n当 $|x|^2<1$ 即 $|x|<1$ 时收敛，$|x|>1$ 时发散，故收敛半径 $R=1$。\n\n端点 $x=\\pm 1$：此时 $x^{2n}=1$，级数化为 $\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{2n-1}=1-\\tfrac13+\\tfrac15-\\cdots$，这是莱布尼茨型交错级数（$\\tfrac1{2n-1}$ 单调趋零），收敛。故两端点都收敛。收敛域为 $[-1,1]$。\n\n（二）和函数。在 $(-1,1)$ 内，利用已知展开\n$$\\arctan x=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{2n-1}x^{2n-1},\\quad |x|\\le 1.$$\n两边乘 $x$：\n$$x\\arctan x=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{2n-1}x^{2n}=S(x).$$\n\n若不直接套用，可逐项求导验证：设 $S(x)=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{2n-1}x^{2n}$，则\n$$S'(x)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}\\cdot 2n}{2n-1}x^{2n-1}.$$\n直接对 $x\\arctan x$ 求导：$(x\\arctan x)'=\\arctan x+\\dfrac{x}{1+x^2}$，其在原点的展开与 $S'(x)$ 一致，且 $S(0)=0=0\\cdot\\arctan 0$，故 $S(x)=x\\arctan x$。\n\n再由 $x\\arctan x$ 在 $x=\\pm1$ 连续，且原级数在端点收敛，由阿贝尔定理和函数在 $[-1,1]$ 上连续，故\n$$S(x)=x\\arctan x,\\qquad x\\in[-1,1].$$\n验算：$x=\\tfrac12$ 时数值 $S(\\tfrac12)\\approx 0.2318$，与 $\\tfrac12\\arctan\\tfrac12\\approx 0.2318$ 完全吻合。结论与标准答案一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "缺偶次项幂级数用比值法时应对 |x|^2 取极限，半径由 |x|<1 给出，别漏算成 |x|<相关常数。",
+        "端点必须单独判敛：x=±1 化为交错级数 ∑(-1)^{n-1}/(2n-1)，收敛，故收敛域是闭区间 [-1,1]。",
+        "识别 ∑(-1)^{n-1}x^{2n}/(2n-1) = x·arctan x 是题眼，记牢 arctan 的麦克劳林展开。"
+      ],
+      "key_point": "幂级数求和的核心是凑已知展开：本题 = x·(arctan x 的展开)，即 S(x)=x arctan x。"
+    },
+    {
+      "id": 660,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $P$ 为椭球面 $S: x^{2}+y^{2}+z^{2}-y z=1$ 上的动点, 若 $S$ 在点 $P$ 处的切平面与 $x O y$ 面垂直, 求点 $P$ 的轨迹 $C$, 并计算曲面积分 $\\displaystyle I=\\iint_{\\Sigma} \\frac{(x+\\sqrt{3})|y-2 z|}{\\sqrt{4+y^{2}+z^{2}-4 y z}} \\mathrm{d} S$, 其中 $\\Sigma$ 是椭球面 $S$ 位 于曲线 $C$ 上方的部分",
+      "options": {},
+      "answer": "$2 \\pi$",
+      "analysis": "【分析】「切平面与 $xOy$ 面垂直」等价于曲面法向量在 $z$ 方向的分量为零，由此得到 $P$ 满足的关系，与 $S$ 联立得轨迹 $C$。曲面积分的妙处在于：把 $dS$ 用投影公式 $dS=\\dfrac{|\\nabla F|}{|F_z|}\\,dxdy$ 代入后，被积式中的 $|y-2z|$ 与 $|F_z|$ 约掉，且 $|\\nabla F|$ 与分母根式恰好相等（要用到 $S$ 的方程），整个积分塌缩成平面区域上对 $(x+\\sqrt3)$ 的二重积分。\n\n【解答】记 $F(x,y,z)=x^2+y^2+z^2-yz-1$，则 $\\nabla F=(2x,\\,2y-z,\\,2z-y)$。\n\n求 $C$：切平面与 $xOy$ 垂直 $\\Leftrightarrow$ 法向量水平 $\\Leftrightarrow F_z=2z-y=0$，即 $y=2z$。代入 $S$：\n$$x^2+(2z)^2+z^2-(2z)z=1\\Rightarrow x^2+4z^2+z^2-2z^2=1\\Rightarrow x^2+3z^2=1.$$\n故轨迹 $C:\\;\\begin{cases}x^2+3z^2=1\\\\ y=2z\\end{cases}$。\n\n求 $I$：$\\Sigma$ 为 $S$ 在 $C$ 上方部分。由投影公式 $dS=\\dfrac{|\\nabla F|}{|F_z|}\\,dxdy=\\dfrac{|\\nabla F|}{|2z-y|}\\,dxdy=\\dfrac{|\\nabla F|}{|y-2z|}\\,dxdy$，于是\n$$I=\\iint_\\Sigma\\frac{(x+\\sqrt3)\\,|y-2z|}{\\sqrt{4+y^2+z^2-4yz}}\\,dS=\\iint_{D}\\frac{(x+\\sqrt3)\\,|\\nabla F|}{\\sqrt{4+y^2+z^2-4yz}}\\,dxdy,$$\n其中 $D$ 是 $\\Sigma$ 在 $xOy$ 面上的投影。\n\n计算 $|\\nabla F|^2$：\n$$|\\nabla F|^2=4x^2+(2y-z)^2+(2z-y)^2=4x^2+5y^2+5z^2-8yz.$$\n而在 $S$ 上 $x^2+y^2+z^2-yz=1$，即 $4=4x^2+4y^2+4z^2-4yz$，故\n$$4+y^2+z^2-4yz=(4x^2+4y^2+4z^2-4yz)+y^2+z^2-4yz=4x^2+5y^2+5z^2-8yz=|\\nabla F|^2.$$\n所以 $\\dfrac{|\\nabla F|}{\\sqrt{4+y^2+z^2-4yz}}=1$，从而\n$$I=\\iint_{D}(x+\\sqrt3)\\,dxdy.$$\n\n求投影区域 $D$：对固定 $(x,y)$，$z$ 满足 $z^2-yz+(x^2+y^2-1)=0$ 有实根，要求判别式\n$$y^2-4(x^2+y^2-1)\\ge0\\Rightarrow 4x^2+3y^2\\le4,$$\n即椭圆 $\\dfrac{x^2}{1}+\\dfrac{y^2}{4/3}\\le1$，其面积 $S_D=\\pi\\cdot1\\cdot\\dfrac{2}{\\sqrt3}=\\dfrac{2\\pi}{\\sqrt3}$。\n\n$D$ 关于 $x=0$ 对称，故 $\\displaystyle\\iint_D x\\,dxdy=0$，于是\n$$I=\\sqrt3\\iint_D dxdy=\\sqrt3\\cdot\\frac{2\\pi}{\\sqrt3}=2\\pi.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "「切平面垂直于 $xOy$ 面」的代数刻画是法向量 $z$ 分量为零，即 $F_z=0$，不要错写成 $F_x=0$ 或 $F_z=$ 某常数。",
+        "关键化简 $4+y^2+z^2-4yz=|\\nabla F|^2$ 必须借助 $S$ 的方程把常数 $4$ 替换掉，纯代数硬凑算不出。",
+        "投影区域由「$z$ 有实根」的判别式给出，是椭圆 $4x^2+3y^2\\le4$ 而非 $C$ 本身围的区域。"
+      ],
+      "key_point": "切平面竖直 $\\Leftrightarrow F_z=0$；曲面积分用投影公式让 $|F_z|$ 与 $|\\nabla F|$ 约去，整式塌缩为平面二重积分。"
+    },
+    {
+      "id": 661,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\\lambda & 1 & 1 \\\\ 0 & \\lambda-1 & 0 \\\\ 1 & 1 & \\lambda\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{l}a \\\\ 1 \\\\ 1\\end{array}\\right)$. 已知线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{b}$ 存在两个不同的解\r\n\r\n(1) 求 $\\lambda, a$;\r\n\r\n(2) 求方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 的通解",
+      "options": {},
+      "answer": "(1) $a=-2 \\lambda=-1$\r\n\r\n(2) $\\boldsymbol{x}=k\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}\\frac{3}{2} \\\\ -\\frac{1}{2} \\\\ 0\\end{array}\\right)$ ( $k$ 为任意常数)",
+      "analysis": "【分析】方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有两个不同解 $\\Rightarrow$ 有无穷多解 $\\Rightarrow$ 系数矩阵不满秩，即 $|\\boldsymbol{A}|=0$，由此先定 $\\lambda$；再要求增广矩阵与系数矩阵同秩（相容），定 $a$。最后对取定参数的方程组做初等行变换求通解。\n\n【解答】（1）先算行列式。按第二行（只有中间元 $\\lambda-1$ 非零）展开：\n$$|\\boldsymbol{A}|=\\begin{vmatrix}\\lambda&1&1\\\\0&\\lambda-1&0\\\\1&1&\\lambda\\end{vmatrix}=(\\lambda-1)\\begin{vmatrix}\\lambda&1\\\\1&\\lambda\\end{vmatrix}=(\\lambda-1)(\\lambda^2-1)=(\\lambda-1)^2(\\lambda+1).$$\n有无穷多解需 $|\\boldsymbol{A}|=0$，故 $\\lambda=1$ 或 $\\lambda=-1$。\n\n若 $\\lambda=1$：$\\boldsymbol{A}=\\begin{pmatrix}1&1&1\\\\0&0&0\\\\1&1&1\\end{pmatrix}$，第二行对应方程为 $0=1$（$\\boldsymbol{b}$ 第二分量为 $1$），矛盾，无解，舍去。\n\n若 $\\lambda=-1$：$\\boldsymbol{A}=\\begin{pmatrix}-1&1&1\\\\0&-2&0\\\\1&1&-1\\end{pmatrix}$，$\\boldsymbol{b}=\\begin{pmatrix}a\\\\1\\\\1\\end{pmatrix}$。对增广矩阵行变换：\n$$\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\1&1&-1&1\\end{array}\\right)\\xrightarrow{r_3+r_1}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&2&0&1+a\\end{array}\\right)\\xrightarrow{r_3+r_2}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&0&0&2+a\\end{array}\\right).$$\n相容需末行 $2+a=0$，即 $a=-2$。综上 $\\lambda=-1,\\ a=-2$。\n\n（2）取 $\\lambda=-1,\\ a=-2$，上面化简结果为\n$$\\left(\\begin{array}{ccc|c}-1&1&1&-2\\\\0&-2&0&1\\\\0&0&0&0\\end{array}\\right).$$\n由第二行 $-2x_2=1\\Rightarrow x_2=-\\dfrac12$。由第一行 $-x_1+x_2+x_3=-2\\Rightarrow x_1=x_2+x_3+2=x_3+\\dfrac32$。令自由未知量 $x_3=k$，得\n$$x_1=k+\\frac32,\\quad x_2=-\\frac12,\\quad x_3=k,$$\n即\n$$\\boldsymbol{x}=k\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}+\\begin{pmatrix}\\tfrac32\\\\-\\tfrac12\\\\0\\end{pmatrix},\\qquad k\\ \\text{为任意常数}.$$\n验算特解 $\\left(\\tfrac32,-\\tfrac12,0\\right)$：$\\boldsymbol{A}$ 第一行 $-\\tfrac32-\\tfrac12+0=-2=a$ ✓，第二行 $-2\\cdot(-\\tfrac12)=1$ ✓，第三行 $\\tfrac32-\\tfrac12-0=1$ ✓。导出组解 $(1,0,1)^{\\mathrm{T}}$ 满足 $\\boldsymbol{A}(1,0,1)^{\\mathrm{T}}=\\boldsymbol{0}$ ✓。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|\\boldsymbol{A}|=0$ 给出 $\\lambda=1$ 或 $-1$ 两个候选，必须代回检验相容性才能排除 $\\lambda=1$（它使方程组无解）",
+        "\"两个不同解\"等价于\"无穷多解\"，不要误以为只需 $|\\boldsymbol{A}|=0$ 而漏掉对 $a$ 的相容性约束",
+        "通解 = 特解 + 导出组基础解系的线性组合，别把特解的 $x_2=-\\tfrac12$ 写进齐次解里"
+      ],
+      "key_point": "含参方程组有无穷多解：先 $|\\boldsymbol{A}|=0$ 定参，再要求 $r(\\boldsymbol{A})=r(\\boldsymbol{A}\\mid\\boldsymbol{b})<n$ 定相容参数，逐一排除不相容的候选"
+    },
+    {
+      "id": 662,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{Ax}$ 在正交变换 $\\boldsymbol{x}=\\boldsymbol{Qy} $ 下的标准形为 $y_{1}^{2}+y_{2}^{2}$, 且 $\\boldsymbol{Q}$ 的第 $3$ 列为 $\\left(\\dfrac{\\sqrt{2}}{2}, 0, \\dfrac{\\sqrt{2}}{2}\\right)^{\\mathrm{T}}$\r\n\r\n(1) 求矩阵 $\\boldsymbol{A}$;\r\n\r\n(2) 证明 $\\boldsymbol{A}+\\boldsymbol{E}$ 为正定矩阵, 其中 $\\boldsymbol{E}$ 为 3 阶单位矩阵",
+      "options": {},
+      "answer": "(1) $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\\frac{1}{2} & 0 & -\\frac{1}{2} \\\\ 0 & 1 & 0 \\\\ -\\frac{1}{2} & 0 & \\frac{1}{2}\\end{array}\\right)$",
+      "analysis": "【分析】正交变换 $\\boldsymbol x=\\boldsymbol{Qy}$ 化二次型为标准形 $y_1^2+y_2^2$，说明 $\\boldsymbol A$ 的特征值为 $1,1,0$，$\\boldsymbol Q$ 各列是对应的单位正交特征向量。已知第 $3$ 列是 $\\lambda=0$ 的特征向量。由 $\\boldsymbol A=\\boldsymbol Q\\,\\mathrm{diag}(1,1,0)\\,\\boldsymbol Q^{\\mathrm T}$，并注意 $\\mathrm{diag}(1,1,0)=\\boldsymbol E-\\mathrm{diag}(0,0,1)$，可得 $\\boldsymbol A=\\boldsymbol E-\\boldsymbol q_3\\boldsymbol q_3^{\\mathrm T}$，避免去求另外两列。第二问只需 $\\boldsymbol A+\\boldsymbol E$ 特征值全正。\n\n【解答】(1) 由标准形 $y_1^2+y_2^2$ 知 $\\boldsymbol A$ 特征值为 $\\lambda_1=\\lambda_2=1$，$\\lambda_3=0$，且 $\\boldsymbol q_3=\\left(\\dfrac{\\sqrt2}{2},0,\\dfrac{\\sqrt2}{2}\\right)^{\\mathrm T}$ 是 $\\lambda_3=0$ 的单位特征向量。\n\n因 $\\boldsymbol A=\\boldsymbol Q\\,\\mathrm{diag}(1,1,0)\\,\\boldsymbol Q^{\\mathrm T}$，而 $\\mathrm{diag}(1,1,0)=\\boldsymbol E-\\mathrm{diag}(0,0,1)$，于是\n$$\\boldsymbol A=\\boldsymbol Q\\boldsymbol E\\boldsymbol Q^{\\mathrm T}-\\boldsymbol Q\\,\\mathrm{diag}(0,0,1)\\,\\boldsymbol Q^{\\mathrm T}=\\boldsymbol E-\\boldsymbol q_3\\boldsymbol q_3^{\\mathrm T}.$$\n计算\n$$\\boldsymbol q_3\\boldsymbol q_3^{\\mathrm T}=\\begin{pmatrix}\\frac{\\sqrt2}{2}\\\\0\\\\\\frac{\\sqrt2}{2}\\end{pmatrix}\\!\\left(\\tfrac{\\sqrt2}{2},0,\\tfrac{\\sqrt2}{2}\\right)=\\begin{pmatrix}\\frac12&0&\\frac12\\\\0&0&0\\\\\\frac12&0&\\frac12\\end{pmatrix},$$\n故\n$$\\boldsymbol A=\\boldsymbol E-\\boldsymbol q_3\\boldsymbol q_3^{\\mathrm T}=\\begin{pmatrix}\\frac12&0&-\\frac12\\\\0&1&0\\\\-\\frac12&0&\\frac12\\end{pmatrix}.$$\n（验证：$\\boldsymbol A\\boldsymbol q_3=\\boldsymbol 0$，$\\mathrm{tr}\\,\\boldsymbol A=2=1+1+0$，符合。）\n\n(2) $\\boldsymbol A$ 实对称，$\\boldsymbol A+\\boldsymbol E$ 仍实对称。$\\boldsymbol A$ 的特征值为 $1,1,0$，故 $\\boldsymbol A+\\boldsymbol E$ 的特征值为 $1+1,\\;1+1,\\;0+1$，即 $2,2,1$，全为正。实对称矩阵特征值全正等价于正定，所以 $\\boldsymbol A+\\boldsymbol E$ 为正定矩阵。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "用 $\\boldsymbol A=\\boldsymbol E-\\boldsymbol q_3\\boldsymbol q_3^{\\mathrm T}$ 的关键是 $\\boldsymbol q_3$ 必须是单位向量（题给向量模长为 $1$，恰好满足）。",
+        "证正定要先指出 $\\boldsymbol A+\\boldsymbol E$ 对称，再用特征值全正这一充要条件，不能只验证某个主子式。"
+      ],
+      "key_point": "标准形给出特征值，已知一个特征向量时用 $\\boldsymbol A=\\boldsymbol E-\\boldsymbol q\\boldsymbol q^{\\mathrm T}$ 巧算；正定 ⟺ 实对称且特征值全正。"
+    },
+    {
+      "id": 663,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)=A \\mathrm{e}^{-2 x^{2}+2 x y-y^{2}},-\\infty<x<+\\infty,-\\infty<y<+\\infty$,\r\n\r\n求常数 $A$ 及条件概率密度 $f_{Y \\mid X}(y \\mid x)$",
+      "options": {},
+      "answer": "$A=\\dfrac{1}{\\pi}, \\displaystyle f_{Y \\mid X}(y \\mid x)=\\frac{1}{\\sqrt{\\pi}} \\mathrm{e}^{-(x-y)^2},\\\\\r\n-\\infty<x<+\\infty,-\\infty<y<+\\infty$",
+      "analysis": "【分析】指数上是 $x,y$ 的二次型，配方化成 $-x^2-(x-y)^2$ 后，密度分离为两个高斯因子，便于用 $\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-t^2}\\mathrm{d}t=\\sqrt\\pi$ 定 $A$，并求边缘密度 $f_X(x)$，最后由 $f_{Y\\mid X}=f/f_X$ 得条件密度。\n\n【解答】先对指数配方：\n$$-2x^2+2xy-y^2=-x^2-(x^2-2xy+y^2)=-x^2-(x-y)^2.$$\n故\n$$f(x,y)=A\\,\\mathrm{e}^{-x^2}\\,\\mathrm{e}^{-(x-y)^2}.$$\n\n定常数 $A$：由归一性\n$$\\iint_{\\mathbb{R}^2}f\\,\\mathrm{d}x\\,\\mathrm{d}y=A\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-x^2}\\left(\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-(x-y)^2}\\,\\mathrm{d}y\\right)\\mathrm{d}x.$$\n内层对 $y$（$x$ 固定）平移得 $\\displaystyle\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-(x-y)^2}\\,\\mathrm{d}y=\\sqrt\\pi$，于是\n$$=A\\sqrt\\pi\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-x^2}\\,\\mathrm{d}x=A\\sqrt\\pi\\cdot\\sqrt\\pi=A\\pi=1\\ \\Longrightarrow\\ A=\\frac1\\pi.$$\n\n求 $X$ 的边缘密度：\n$$f_X(x)=\\int_{-\\infty}^{+\\infty}f(x,y)\\,\\mathrm{d}y=\\frac1\\pi\\mathrm{e}^{-x^2}\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{-(x-y)^2}\\,\\mathrm{d}y=\\frac1\\pi\\mathrm{e}^{-x^2}\\cdot\\sqrt\\pi=\\frac{1}{\\sqrt\\pi}\\mathrm{e}^{-x^2}.$$\n（即 $X\\sim N(0,\\tfrac12)$。）\n\n条件密度：当 $f_X(x)>0$（恒成立）时\n$$f_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}=\\frac{\\dfrac1\\pi\\mathrm{e}^{-x^2}\\mathrm{e}^{-(x-y)^2}}{\\dfrac{1}{\\sqrt\\pi}\\mathrm{e}^{-x^2}}=\\frac{1}{\\sqrt\\pi}\\mathrm{e}^{-(x-y)^2},$$\n对一切 $-\\infty<x,y<+\\infty$ 成立。（这表明在 $X=x$ 下 $Y\\sim N(x,\\tfrac12)$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数配方要凑成两个独立的完全平方 $-x^2-(x-y)^2$，便于分离积分；不要直接套二维正态系数公式记混。",
+        "条件密度 $f_{Y\\mid X}=f(x,y)/f_X(x)$，分母用的是边缘密度而非联合密度，约去 $\\mathrm{e}^{-x^2}$ 后只剩 $(x-y)^2$ 项。"
+      ],
+      "key_point": "二维正态型密度：指数配方分离高斯因子，用 $\\int e^{-t^2}dt=\\sqrt\\pi$ 定常数、求边缘，再相除得条件密度。"
+    },
+    {
+      "id": 664,
+      "paper": "数学一",
+      "year": 2010,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率分布为 $\\begin{array}{c|c|c|c}\r\nX & 1 & 2 & 3 \\\\\r\n\\hline p & 1-\\theta & \\theta-\\theta^{2} & \\theta^{2}\r\n\\end{array}$\r\n\r\n其中参数 $\\theta \\in(0,1)$ 未知. 以 $N_{i}$ 表示来自总体 $X$ 的简单随机样本 (样本容量为 $n$) 中等于 $i$ 的个数 $(i=1,2,3)$. 试求常数 $a_{1}, a_{2}, a_{3}$, 使 $\\displaystyle T=\\sum_{i=1}^{3} a_{i} N_{i}$ 为 $\\theta$ 的无偏估计量, 并求 $T$ 的方差",
+      "options": {},
+      "answer": "a_1=0,\\ a_2=a_3=\\dfrac{1}{n};\\ D(T)=\\dfrac{\\theta(1-\\theta)}{n}",
+      "analysis": "【分析】$(N_1,N_2,N_3)$ 服从多项分布，故 $E(N_i)=np_i$。无偏即要求 $E(T)=\\theta$ 对一切 $\\theta\\in(0,1)$ 恒成立，把 $E(T)$ 展成 $\\theta$ 的多项式并令各次系数与 $\\theta$ 匹配，即可解出 $a_i$。求方差时注意解出的 $T$ 其实只依赖 $N_1$，化简后 $N_1\\sim B(n,1-\\theta)$，直接用二项分布方差。\n\n【解答】**求 $a_i$。** 由多项分布，$E(N_i)=np_i$，其中 $p_1=1-\\theta,\\ p_2=\\theta-\\theta^2,\\ p_3=\\theta^2$。于是\n$$E(T)=\\sum_{i=1}^3 a_iE(N_i)=n\\big[a_1(1-\\theta)+a_2(\\theta-\\theta^2)+a_3\\theta^2\\big].$$\n整理成 $\\theta$ 的多项式：\n$$E(T)=n\\Big[a_1+(a_2-a_1)\\theta+(a_3-a_2)\\theta^2\\Big].$$\n要使 $E(T)\\equiv\\theta$，比较各次系数：\n$$na_1=0,\\quad n(a_2-a_1)=1,\\quad n(a_3-a_2)=0.$$\n解得 $a_1=0,\\ a_2=\\dfrac1n,\\ a_3=\\dfrac1n$。\n\n**求 $D(T)$。** 此时\n$$T=\\frac1n(N_2+N_3)=\\frac1n(n-N_1)=1-\\frac{N_1}{n},$$\n这里用了 $N_1+N_2+N_3=n$。而 $N_1$ 是 $n$ 次独立试验中\"取值为 $1$\"出现的次数，每次概率 $p_1=1-\\theta$，故 $N_1\\sim B(n,1-\\theta)$，$D(N_1)=n(1-\\theta)\\theta$。于是\n$$D(T)=D\\left(1-\\frac{N_1}{n}\\right)=\\frac{1}{n^2}D(N_1)=\\frac{n(1-\\theta)\\theta}{n^2}=\\frac{\\theta(1-\\theta)}{n}.$$\n\n（验证无偏：$E(T)=1-\\dfrac{E(N_1)}{n}=1-\\dfrac{n(1-\\theta)}{n}=\\theta$，吻合。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "无偏是对一切 $\\theta$ 恒成立，须按 $\\theta$ 的幂次逐项匹配系数，不能只代某个 $\\theta$",
+        "求方差前先把 $T$ 化简成只含 $N_1$ 的形式（用 $\\sum N_i=n$），避免去算多项分布的协方差",
+        "$N_1\\sim B(n,1-\\theta)$ 的方差是 $n(1-\\theta)\\theta$，别把成功概率写成 $\\theta$"
+      ],
+      "key_point": "无偏估计：令 $E(T)\\equiv\\theta$ 按 $\\theta$ 幂次匹配系数；方差先化简 $T$ 至单个计数变量再套二项分布方差。"
+    }
+  ]
+}

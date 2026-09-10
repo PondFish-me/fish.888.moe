@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>考研数学真题 · 墨题库</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;600&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="js/katex/katex.min.css" />
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- header -->
+  <header class="header">
+    <div class="header__brand">
+      <button class="menu-btn" id="menuBtn" aria-label="展开目录" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="seal" aria-hidden="true">墨</div>
+      <div>
+        <div class="header__title display">考研数学真题</div>
+        <div class="header__sub">1987–2026 · 2185 题全收录</div>
+      </div>
+    </div>
+    <div class="header__stats meta">
+      <span><strong id="statTotal">—</strong> 题</span>
+      <span><strong id="statPapers">—</strong> 套卷</span>
+      <span><strong id="statDone">—</strong> 已刷</span>
+    </div>
+  </header>
+
+  <!-- sidebar -->
+  <aside class="sidebar" id="sidebar" aria-label="年份目录">
+    <nav class="sidebar__nav">
+      <button class="cat-btn active" data-cat="数学一">数学一 <span class="count"></span></button>
+      <button class="cat-btn" data-cat="数学二">数学二 <span class="count"></span></button>
+      <button class="cat-btn" data-cat="数学三">数学三 <span class="count"></span></button>
+    </nav>
+    <div class="sidebar__years" id="years"></div>
+  </aside>
+
+  <!-- main -->
+  <main class="main">
+    <div class="mode-bar">
+      <button class="mode-tab active" data-mode="quiz">刷题模式</button>
+      <button class="mode-tab" data-mode="read">纯浏览</button>
+      <span class="divider" aria-hidden="true"></span>
+      <span class="progress-text" id="progressText"></span>
+    </div>
+    <div class="tool-row" id="toolRow">
+      <button class="btn btn--icon" id="prevBtn" title="上一题">‹ 上一题</button>
+      <button class="btn btn--icon" id="nextBtn" title="下一题">下一题 ›</button>
+      <span style="flex:1"></span>
+      <button class="btn btn--primary" id="submitBtn">交卷</button>
+    </div>
+    <div class="canvas" id="canvas">
+      <div class="canvas-inner" id="inner"></div>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/katex/katex.min.js"></script>
+<script src="js/katex/auto-render.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

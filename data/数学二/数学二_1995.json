@@ -1,0 +1,430 @@
+{
+  "paper": "数学二",
+  "year": 1995,
+  "count": 21,
+  "questions": [
+    {
+      "id": 1107,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设在 $[0,1]$ 上 $f^{\\prime \\prime}(x)>0$, 则 $f^{\\prime}(0), f^{\\prime}(1), f(1)-f(0)$ 或 $f(0)-f(1)$ 的大小顺序为 $(\\quad)$",
+      "options": {
+        "A": "$f^{\\prime}(1)>f^{\\prime}(0)>f(1)-f(0)$",
+        "B": "$f^{\\prime}(1)>f(1)-f(0)>f^{\\prime}(0)$",
+        "C": "$f(1)-f(0)>f^{\\prime}(1)>f^{\\prime}(0)$",
+        "D": "$f^{\\prime}(1)>f(0)-f(1)>f^{\\prime}(0)$"
+      },
+      "answer": "B",
+      "analysis": "由拉格朗日中值定理得 $f(1)-f(0)=f^{\\prime}(c)$, \r\n\r\n其中 $0<c<1$, 由 $f^{\\prime \\prime}(x)>0$ \r\n\r\n得 $f^{\\prime}(x)$ 单调递增, 再由 $0<c<1$ \r\n\r\n得 $f^{\\prime}(1)>f^{\\prime}(c)>f^{\\prime}(0)$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "把 f(1)−f(0)=f'(c) 误排在最小，颠倒了中值 c∈(0,1) 使 f'(0)<f'(c)<f'(1) 的顺序。",
+        "C": "误以为差商 f(1)−f(0) 最大；它等于某中间点导数 f'(c)，不可能超过 f'(1)。",
+        "D": "用 f(0)−f(1)（符号反）参与比较，未理解差商应等于正的 f'(c)。"
+      },
+      "pitfalls": [
+        "f(1)−f(0)=f'(c) 由拉格朗日中值定理得，c∈(0,1)",
+        "f''>0 保证 f' 严格递增，故 f'(0)<f'(c)<f'(1)"
+      ],
+      "key_point": "f'(1)>f(1)−f(0)=f'(c)>f'(0)，选 B。"
+    },
+    {
+      "id": 1454,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $y=\\cos x^2 \\sin ^2 \\dfrac{1}{x}$, 则 $y^{\\prime}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle -2 x \\sin x^2 \\sin ^2 \\frac{1}{x}-\\frac{1}{x^2} \\cos x^2 \\sin \\frac{2}{x}$",
+      "analysis": "$$\r\n\\begin{aligned}\r\ny^{\\prime}&=-2 x \\sin x^2 \\sin ^2 \\frac{1}{x}+\\cos x^2 \\cdot 2 \\sin \\frac{1}{x} \\cdot \\cos \\frac{1}{x} \\cdot\\left(-\\frac{1}{x^2}\\right)\\\\\r\n&=-2 x \\sin x^2 \\sin ^2 \\frac{1}{x}-\\frac{1}{x^2} \\cos x^2 \\sin \\frac{2}{x}\r\n\\end{aligned}\r\n$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "sin²(1/x) 要先当幂函数求导再链式到内层 1/x，内层导数是 -1/x²",
+        "2sin(1/x)cos(1/x) 应合并成 sin(2/x)，别漏倍角系数"
+      ],
+      "key_point": "y′=−2x sin x² sin²(1/x) − (1/x²) cos x² sin(2/x)：乘积两项各自链式求导后相加。"
+    },
+    {
+      "id": 1455,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}+y=-2 x$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=C_1 \\cos x+C_2 \\sin x-2 x \\\\(C_1, C_2$ 为任意常数)",
+      "analysis": "特征方程为 $\\lambda^2+1=0$, 特征值为 $\\lambda_{1,2}= \\pm \\mathrm{i}$,\r\n\r\n则 $y^{\\prime \\prime}+y=0$ 的通解为 $y=C_1 \\cos x+C_2 \\sin x$;\r\n\r\n显然 $y^{\\prime \\prime}+y=-2 x$ 的特解为 $y_0(x)=-2 x$, \r\n\r\n故通解为 $y=C_1 \\cos x+C_2 \\sin x-2 x \\\\(C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "λ²+1=0 得纯虚根 ±i，齐次解为 C₁cos x+C₂sin x",
+        "因 y″=0，特解可直接看出 y₀=−2x，无需待定系数硬算"
+      ],
+      "key_point": "齐次解 C₁cos x+C₂sin x 加特解 −2x 即通解。"
+    },
+    {
+      "id": 1456,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\left\\{\\begin{array}{l}x=1+t^2\\\\ y=t^3\\end{array}\\right.$ 在 $t=2$ 处的切线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=3 x-7$",
+      "analysis": "当 $t=2$ 时, $x=5, y=8$,\r\n\r\n$\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{3 t^2}{2 t}=\\frac{3}{2} t\\\\\r\n\\left. \\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=2}=3$\r\n\r\n则切线方程为 $y-8=3(x-5)$, \r\n\r\n即 $y=3 x-7$",
+      "wrong_options": {},
+      "pitfalls": [
+        "t=2 时切点是 (5,8)，不是 (1,8)，x=1+t² 要代对",
+        "dy/dx=(3t²)/(2t)=1.5t，代 t=2 得斜率 3"
+      ],
+      "key_point": "切点 (5,8)、斜率 3，切线 y=3x−7。"
+    },
+    {
+      "id": 1457,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{2}{n^2+n+2}+\\cdots+\\frac{n}{n^2+n+n}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "由 $\\displaystyle \\frac{1+2+\\cdots+n}{n^2+n+n} \\leqslant\\\\\r\n \\frac{1}{n^2+n+1}+\\frac{2}{n^2+n+2}+\\cdots+\\frac{n}{n^2+n+n}\\\\\r\n \\leqslant \\frac{1+2+\\cdots+n}{n^2+n+1} \\frac{1}{2} \\cdot \\frac{n^2+n}{n^2+n+n}\\\\\r\n \\leqslant \\frac{1}{n^2+n+1}+\\frac{2}{n^2+n+2}+\\cdots+\\frac{n}{n^2+n+n}\\\\\r\n \\leqslant \\frac{1}{2} \\cdot \\frac{n^2+n}{n^2+n+1}$,\r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{1}{2} \\cdot \\frac{n^2+n}{n^2+n+n}=\\frac{1}{2}, \\\\\r\n\\lim _{n \\rightarrow \\infty} \\frac{1}{2} \\cdot \\frac{n^2+n}{n^2+n+1}=\\frac{1}{2}$,\r\n\r\n所以 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{2}{n^2+n+2}+\\cdots+\\frac{n}{n^2+n+n}\\right)=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "各项分母不同，不能直接当定积分定义处理，需上下界放缩",
+        "上界用最小分母、下界用最大分母，两端极限都为 1/2 才能夹住"
+      ],
+      "key_point": "分子和为 n(n+1)/2，上下界极限都是 1/2，夹逼得 1/2。"
+    },
+    {
+      "id": 1458,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=x^2 \\mathrm{e}^{-x^2}$ 的渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=0$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow \\infty} x^2 \\mathrm{e}^{-x^2}=\\lim _{x \\rightarrow \\infty} \\frac{x^2}{\\mathrm{e}^{x^2}}=0$,\r\n\r\n得 $y=0$ 为曲线的水平渐近线",
+      "wrong_options": {},
+      "pitfalls": [
+        "x²/e^{x²} 当 x→∞ 时分母指数增长压过分子，极限为 0",
+        "定义域为全体实数，无竖直渐近线，只有水平渐近线 y=0"
+      ],
+      "key_point": "lim_{x→∞} x²e^{−x²}=0，水平渐近线 y=0。"
+    },
+    {
+      "id": 1459,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 和 $\\varphi(x)$ 在 $(-\\infty,+\\infty)$ 上有定义, $f(x)$ 为连续函数, 且 $f(x) \\neq 0, \\varphi(x)$ 有间断点, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\varphi[f(x)]$ 必有间断点",
+        "B": "$[\\varphi(x)]^2$ 必有间断点",
+        "C": "$f[\\varphi(x)]$ 必有间断点",
+        "D": "$\\displaystyle \\frac{\\varphi(x)}{f(x)}$ 必有间断点"
+      },
+      "answer": "D",
+      "analysis": "方法一\r\n\r\n取 $\\varphi(x)=\\left\\{\\begin{array}{ll}1, & x \\in \\mathbf{Q} \\\\ -1, & x \\in \\mathbf{R} \\backslash \\mathbf{Q}\\end{array}\\right.$ 显然 $\\varphi(x)$ 处处间断, \r\n\r\n但 $[\\varphi(x)]^2 \\equiv 1$ 处处连续, 排除 (B);\r\n\r\n取 $f(x) \\equiv 1 \\neq 0$, 显然 $f(x)$ 是非零的连续函数, \r\n\r\n但 $f[\\varphi(x)] \\equiv 1$ 为非零连续函数, 排除 (C);\r\n\r\n但 $\\varphi[f(x)] \\equiv 1$ 为非零连续函数, 排除 (A), 应选 (D)\r\n\r\n方法二\r\n\r\n令 $\\displaystyle g(x)=\\frac{\\varphi(x)}{f(x)}$, 若 $\\displaystyle \\frac{\\varphi(x)}{f(x)}$ 连续, \r\n\r\n则 $\\varphi(x)=f(x) g(x)$ 一定连续, 矛盾, 应选 (D)",
+      "wrong_options": {
+        "A": "取 φ 处处间断而 f≡1，则 φ[f(x)]≡φ(1) 为常数连续，可举反例排除",
+        "B": "取 φ=±1 型处处间断函数，则 [φ(x)]²≡1 连续，可举反例排除",
+        "C": "取 f≡1（非零连续），则 f[φ(x)]≡1 连续，可举反例排除"
+      },
+      "pitfalls": [
+        "间断函数经平方、经连续函数复合都可能变连续，只有除以处处非零连续函数不改变间断性",
+        "反证：若 φ/f 连续，则 φ=f·(φ/f) 作为两连续函数之积必连续，与 φ 有间断点矛盾"
+      ],
+      "key_point": "φ/f 必有间断点：由 φ=f·(φ/f) 反证；其余三项均可举反例。"
+    },
+    {
+      "id": 1460,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=x(x-1)(2-x)$ 与 $x$ 轴所围成图形的面积可表示为 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle -\\int_0^2 x(x-1)(2-x) \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_0^1 x(x-1)(2-x) \\mathrm{d} x\\\\-\\int_1^2 x(x-1)(2-x) \\mathrm{d} x$",
+        "C": "$\\displaystyle -\\int_0^1 x(x-1)(2-x) \\mathrm{d} x\\\\+\\int_1^2 x(x-1)(2-x) \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_0^2 x(x-1)(2-x) \\mathrm{d} x$"
+      },
+      "answer": "C",
+      "analysis": "$\\displaystyle\r\n\\mathrm{S}=\\int_0^2|x(x-1)(2-x)| \\mathrm{d} x\\\\\r\n=\\int_0^2[-x(x-1)(2-x)+x(x-1)(2-x)] \\mathrm{d} x \\\\\r\n=-\\int_0^1 x(x-1)(2-x) \\mathrm{d} x+\\int_1^2 x(x-1)(2-x) \\mathrm{d} x$",
+      "wrong_options": {
+        "A": "整段取 −∫₀² 忽略函数在 (1,2) 上为正，符号处理错",
+        "B": "两段符号取反了：(0,1) 上函数为负应取负、(1,2) 上为正应取正",
+        "D": "直接 ∫₀² 不加绝对值，正负面积相消得不到几何面积"
+      },
+      "pitfalls": [
+        "x(x−1)(2−x) 在 (0,1) 上为负、(1,2) 上为正，去绝对值时两段符号相反",
+        "几何面积必须对 |y| 积分，直接对 y 积分会正负抵消"
+      ],
+      "key_point": "S=−∫₀¹+∫₁²，按符号分段去绝对值。"
+    },
+    {
+      "id": 1461,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 在 $(-\\infty,+\\infty)$ 内可导, 且对任意的 $x_1, x_2$, 当 $x_1>x_2$ 时, 都有 $f\\left(x_1\\right)>f\\left(x_2\\right)$, 则 $(\\quad)$",
+      "options": {
+        "A": "对任意的 $x, f^{\\prime}(x)>0$",
+        "B": "对任意的 $x, f^{\\prime}(-x) \\leqslant 0$",
+        "C": "函数 $f(-x)$ 单调增加",
+        "D": "函数 $-f(-x)$ 单调增加"
+      },
+      "answer": "D",
+      "analysis": "- 排除选项 (A), \r\n因为可导函数严格单调递增不能推出导函数严格大于$0$, \r\n例如取 $f(x)=x^3$, \r\n则 $f(x)$ 在 $(-\\infty,+\\infty)$ 上严格单调递增, \r\n但是 $f^{\\prime}(x)=3 x^2 \\geqslant 0$, \r\n\r\n- 排除选项 (B), \r\n因函数 $f(x)$ 严格单调增加, \r\n故 $f^{\\prime}(x) \\geqslant 0$, \r\n即无论 $x$ 取什么值, 均有 $f^{\\prime}(x) \\geqslant 0$. \r\n那么自然 $f^{\\prime}(-x)$ 也是 $\\geqslant 0$ 的\r\n\r\n当然, 该选项同学们容易陷入这样的误区, $f(x)$ 单调递增, \r\n因此 $f(-x)$ 单调递减, 从而 $f^{\\prime}(-x) \\leqslant 0$.\r\n实际上, $f(-x)$ 单调递减, 所以 $[f(-x)]^{\\prime}=-f^{\\prime}(-x) \\leqslant 0$, \r\n从而 $f^{\\prime}(-x) \\geqslant 0$.\r\n\r\n- 排除选项 (C)\r\n$f(x)$ 严格单调增加, $f(-x)$ 应为严格单调减少, \r\n因为 $f(x)$ 和 $f(-x)$ 的图像关于 $y$ 轴对称, 例如:\r\n$f(x)=x$ 严格单调增加, 但是 $f(-x)=-x$ 严格单调减少.\r\n\r\n- 证明判断选项 (D):\r\n\r\n由于 $y=f(x)$ 与 $y=f(-x)$ 的图像关于 $y$ 轴对称, \r\n而 $y=f(x)$ 严格单调递增, \r\n因此 $y=f(-x)$\r\n严格单调递减, 故 $y=-f(-x)$ 严格单调递增, 选项 (D) 正确.\r\n\r\n或者也可以从导数的角度出发, 由于 $f(x)$ 严格单调增加, \r\n故 $f^{\\prime}(x) \\geqslant 0, f^{\\prime}(-x) \\geqslant 0$, \r\n于是$[-f(-x)]^{\\prime}=f^{\\prime}(-x) \\geqslant 0$, \r\n即函数 $-f(-x)$ 单调增加",
+      "wrong_options": {
+        "A": "误以为严格递增⇒f′>0，反例 f=x³ 在 0 处 f′(0)=0，只能得 f′≥0",
+        "B": "由 f(−x) 递减误得 f′(−x)≤0，实际 [f(−x)]′=−f′(−x)≤0 反推 f′(−x)≥0",
+        "C": "f(−x) 与 f(x) 图像关于 y 轴对称，应严格递减而非递增"
+      },
+      "pitfalls": [
+        "可导且严格递增只保证 f′≥0，不保证处处 f′>0",
+        "复合 f(−x) 求导带负号：[−f(−x)]′=f′(−x)≥0，故 −f(−x) 递增"
+      ],
+      "key_point": "−f(−x) 单调增加：其导数 f′(−x)≥0。"
+    },
+    {
+      "id": 1463,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 可导, $F(x)=f(x)(1+|\\sin x|)$. 若 $F(x)$ 在 $x=0$ 处可导, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$f(0)=0$",
+        "B": "$f^{\\prime}(0)=0$",
+        "C": "$f(0)+f^{\\prime}(0)=0$",
+        "D": "$f(0)-f^{\\prime}(0)=0$"
+      },
+      "answer": "A",
+      "analysis": "$\\displaystyle\r\nF^{\\prime}(0)=\\lim _{x \\rightarrow 0^{-}} \\frac{F(x)-F(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{f(x)(1-\\sin x)-f(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{-}} \\frac{f(x)-f(0)}{x}-\\lim _{x \\rightarrow 0^{+}} f(x) \\cdot \\frac{\\sin x}{x}\\\\\r\n=f^{\\prime}(0)-f(0); \\\\\r\nF_{+}^{\\prime}(0) =\\lim _{x \\rightarrow 0^{+}} \\frac{F(x)-F(0)}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{f(x)(1+\\sin x)-f(0)}{x} \\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{f(x)-f(0)}{x}+\\lim _{x \\rightarrow 0^{+}} f(x) \\cdot \\frac{\\sin x}{x}\\\\\r\n=f^{\\prime}(0)+f(0)$,\r\n\r\n因为 $F(x)$ 在 $x=0$ 处可导, 所以 $f^{\\prime}(0)-f(0)=f^{\\prime}(0)+f(0)$, 故 $f(0)=0$, 应选 (A)",
+      "wrong_options": {
+        "B": "把结论错记成 f′(0)=0，实际相等条件消去的是 f′(0) 留下 f(0)=0",
+        "C": "误把两式相加令 f(0)+f′(0)=0，实为两式相等（相减）",
+        "D": "符号弄反写成 f(0)−f′(0)=0，正确结果是 f(0)=0"
+      },
+      "pitfalls": [
+        "|sin x| 在 0 左侧为 −sin x、右侧为 sin x，导致左右导数相差 2f(0)",
+        "左导 f′(0)−f(0)、右导 f′(0)+f(0)，可导要求二者相等 ⇒ f(0)=0"
+      ],
+      "key_point": "可导必有 f(0)=0：左右导数相等消去 f′(0)。"
+    },
+    {
+      "id": 1464,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 11,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{1-\\sqrt{\\cos x}}{x(1-\\cos \\sqrt{x})}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{1-\\sqrt{\\cos x}}{x(1-\\cos \\sqrt{x})}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{1}{1+\\sqrt{\\cos x}} \\cdot \\frac{1-\\cos x}{x(1-\\cos \\sqrt{x})} \\\\\r\n=\\frac{1}{2} \\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2} x^2}{x \\cdot \\frac{1}{2}(\\sqrt{x})^2}=\\frac{1}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "1−cos√x~(√x)²/2=x/2，分母整体是 x·(x/2)=x²/2",
+        "1−cos x~x²/2，有理化后 1/(1+√cos x)→1/2"
+      ],
+      "key_point": "有理化+两处 1−cos 等价无穷小，极限为 1/2。"
+    },
+    {
+      "id": 1465,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 12,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由方程 $x \\mathrm{e}^{f(y)}=\\mathrm{e}^y$ 确定, 其中 $f$ 具有二阶导数, 且 $f^{\\prime} \\neq 1$, 求 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}$",
+      "options": {},
+      "answer": "$\\displaystyle -\\frac{\\left[1-f^{\\prime}(y)\\right]^2-f^{\\prime \\prime}(y)}{x^2\\left[1-f^{\\prime}(y)\\right]^3}$",
+      "analysis": "解得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{1}{x\\left[1-f^{\\prime}(y)\\right]};\\\\\r\n\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=-\\frac{1-f^{\\prime}(y)-x f^{\\prime \\prime}(y) \\cdot \\frac{\\mathrm{d} y}{\\mathrm{d} x}}{x^2\\left[1-f^{\\prime}(y)\\right]^2}\\\\\r\n=-\\frac{\\left[1-f^{\\prime}(y)\\right]^2-f^{\\prime \\prime}(y)}{x^2\\left[1-f^{\\prime}(y)\\right]^3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两边取对数得 ln x+f(y)=y，求导大幅简化",
+        "求二阶导时 f′(y)、f″(y) 内层 y 是 x 的函数，必须把 dy/dx 回代"
+      ],
+      "key_point": "y′=1/{x[1−f′(y)]}，再求导回代得二阶导。"
+    },
+    {
+      "id": 1466,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 13,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f\\left(x^2-1\\right)=\\ln \\frac{x^2}{x^2-2}$, 且 $f[\\varphi(x)]=\\ln x$, 求 $\\int \\varphi(x) \\mathrm{d} x$.",
+      "options": {},
+      "answer": "$x+\\ln (x-1)^2+C$",
+      "analysis": "由 $f\\left(x^2-1\\right)=\\ln \\dfrac{x^2}{x^2-2}$, \r\n\r\n即 $f\\left(x^2-1\\right)=\\ln \\dfrac{\\left(x^2-1\\right)+1}{\\left(x^2-1\\right)-1}$, \r\n\r\n得 $f(x)=\\ln \\dfrac{x+1}{x-1}$;\r\n\r\n由 $f[\\varphi(x)]=\\ln \\dfrac{\\varphi(x)+1}{\\varphi(x)-1}=\\ln x$, \r\n\r\n得 $\\displaystyle \\varphi(x)=\\dfrac{x+1}{x-1}$,\r\n\r\n故 $\\displaystyle \\int \\varphi(x) \\mathrm{d} x\\\\\r\n=\\int \\frac{x+1}{x-1} \\mathrm{d} x=\\int\\left(1+\\frac{2}{x-1}\\right) \\mathrm{d} x=x+\\ln (x-1)^2+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f(x²−1)=ln[((x²−1)+1)/((x²−1)−1)]，换元得 f(x)=ln((x+1)/(x−1))",
+        "φ(x)=(x+1)/(x−1)=1+2/(x−1)，积分得 x+ln(x−1)²+C"
+      ],
+      "key_point": "先求 f 再解 φ=(x+1)/(x−1)，积分 x+ln(x−1)²+C。"
+    },
+    {
+      "id": 1467,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{l}x \\arctan \\dfrac{1}{x^2},& x \\neq 0 \\\\ 0,& x=0\\end{array}\\right.$ 讨论 $f^{\\prime}(x)$ 在 $x=0$ 处的连续性",
+      "options": {},
+      "answer": "$f^{\\prime}(x)$ 在 $x=0$ 处连续",
+      "analysis": "当 $x \\neq 0$ 时, $\\displaystyle f^{\\prime}(x)=\\arctan \\frac{1}{x^2}+x \\frac{1}{1+\\frac{1}{x^4}}\\left(-\\frac{2}{x^3}\\right)\\\\\r\n=\\arctan \\frac{1}{x^2}-\\frac{2 x^2}{1+x^4},\\\\\r\nf^{\\prime}(0)=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}=\\operatorname{limarctan}_{x \\rightarrow 0} \\frac{1}{x^2}=\\frac{\\pi}{2}$,\r\n\r\n即 $f^{\\prime}(x)= \\begin{cases}\\dfrac{\\pi}{2}, & x=0 \\\\ \\arctan \\dfrac{1}{x^2}-\\dfrac{2 x^2}{1+x^4}, & x \\neq 0\\end{cases}$\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow 0} f^{\\prime}(x)=\\frac{\\pi}{2}=f^{\\prime}(0)$, \r\n\r\n所以 $f^{\\prime}(x)$ 在 $x=0$ 处连续",
+      "wrong_options": {},
+      "pitfalls": [
+        "f′(0) 必须用定义 lim[f(x)−f(0)]/x 求得 π/2，不能把非零处的导数公式代 x=0",
+        "再算 lim_{x→0} f′(x)=arctan(+∞)=π/2 与 f′(0) 相等才连续"
+      ],
+      "key_point": "f′(0)=π/2 且 lim f′(x)=π/2，故 f′ 在 0 处连续。"
+    },
+    {
+      "id": 1468,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求摆线 $\\left\\{\\begin{array}{l}x=1-\\cos t \\\\ y=t-\\sin t\\end{array}(0 \\leqslant t \\leqslant 2 \\pi)\\right.$ 一拱的弧长",
+      "options": {},
+      "answer": "$8$",
+      "analysis": "$\\displaystyle \r\nl =\\int_0^{2 \\pi} \\sqrt{\\left(\\frac{\\mathrm{d} x}{\\mathrm{d} t}\\right)^2+\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} t}\\right)^2} \\mathrm{d} t\\\\\r\n=\\int_0^{t \\pi} \\sqrt{\\sin ^2 t+(1-\\cos t)^2} \\mathrm{d} t \\\\\r\n=\\int_0^{2 \\pi} \\sqrt{2-2 \\cos t} \\mathrm{d} t\\\\\r\n=2 \\int_0^{2 \\pi}\\left|\\sin \\frac{t}{2}\\right| \\mathrm{d} t \\\\\r\n=4 \\int_0^{2 \\pi} \\sin \\frac{t}{2} \\mathrm{d}\\left(\\frac{t}{2}\\right)\\\\\r\n=4 \\int_0^\\pi \\sin t \\mathrm{d} t=8 \\int_0^{\\frac{\\pi}{2}} \\sin t \\mathrm{d} t=8$",
+      "wrong_options": {},
+      "pitfalls": [
+        "√(sin²t+(1−cos t)²)=√(2−2cos t)=2|sin(t/2)|",
+        "[0,2π] 上 sin(t/2)≥0，绝对值可直接去掉"
+      ],
+      "key_point": "被积化为 2sin(t/2)，一拱弧长为 8。"
+    },
+    {
+      "id": 1469,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设单位质点在水平面内作直线运动, 初速度 $\\left.v\\right|_{t=0}=v_0$. 已知阻力与速度成正比 (比例常数 为 1 , 问 $t$ 为多少时此质点的速度为 $\\displaystyle \\frac{v_0}{3}$? 并求从开始到此时刻质点所经过的路程",
+      "options": {},
+      "answer": "$\\ln 3; \\dfrac{2}{3} v_0$",
+      "analysis": "设物体的运动规律为 $v=v(t), v(0)=v_0$,\r\n\r\n由题意得 $\\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-v$, \r\n\r\n解得 $\\displaystyle v(t)=C \\mathrm{e}^{-\\int \\mathrm{d} t}=C \\mathrm{e}^{-t}$,\r\n\r\n由 $v(0)=v_0$, 得 $C=v_0$, 故 $v(t)=v_0 \\mathrm{e}^{-t}$.\r\n\r\n令 $v(t)=\\dfrac{v_0}{3}$, 即 $v_0 \\mathrm{e}^{-t}=\\dfrac{v_0}{3}$, 解得 $t=\\ln 3$,\r\n\r\n则所求的路程为 \r\n\r\n$\\displaystyle S=\\int_0^{\\ln 3} v_0 \\mathrm{e}^{-t} \\mathrm{d} t=-\\left.v_0 \\mathrm{e}^{-t}\\right|_0 ^{\\ln 3}=\\frac{2}{3} v_0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "单位质点比例常数 1，方程即 dv/dt=−v，解 v=v₀e^{−t}",
+        "令 v=v₀/3 得 t=ln3；路程 S=∫₀^{ln3}v₀e^{−t}dt=(2/3)v₀"
+      ],
+      "key_point": "v=v₀e^{−t}，t=ln3 时速度 v₀/3，路程 (2/3)v₀。"
+    },
+    {
+      "id": 1470,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x)=\\int_0^{x^2}(2-t) \\mathrm{e}^{-t} \\mathrm{d} t$ 的最大值和最小值",
+      "options": {},
+      "answer": "$M=1+\\mathrm{e}^{-2}$; $m=0$",
+      "analysis": "显然 $f(x)$ 为偶函数, 只需要研究 $f(x)$ 在 $[0,+\\infty)$ 上的最小值和最大值.\r\n\r\n令 $f^{\\prime}(x)=2 x\\left(2-x^2\\right) \\mathrm{e}^{-x^2}=0$ 得 $x=\\sqrt{2}$.\r\n\r\n当 $0<x<\\sqrt{2}$ 时, $f^{\\prime}(x)>0$; 当 $x>\\sqrt{2}$ 时, $f^{\\prime}(x)<0$,\r\n\r\n所以 $x=\\sqrt{2}$ 为最大值点, \r\n\r\n最大值 $\\displaystyle M=f(\\sqrt{2})=\\int_0^2(2-t) \\mathrm{e}^{-t} \\mathrm{d} t=1+\\mathrm{e}^{-2}$;\r\n\r\n又 $\\displaystyle f(0)=0,\\\\\r\n \\lim _{x \\rightarrow+\\infty} f(x)=\\int_0^{+\\infty}(2-t) \\mathrm{e}^{-t} \\mathrm{d} t=2 \\int_0^{+\\infty} \\mathrm{e}^{-t} \\mathrm{d} t-\\int_0^{+\\infty} t \\mathrm{e}^{-t} \\mathrm{d} t=1$,\r\n\r\n于是 $f(x)$ 的最小值 $m=0$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f 是偶函数，只需研究 [0,+∞)；f′(x)=2x(2−x²)e^{−x²}，驻点 x=√2",
+        "最小值不在驻点：比较 f(0)=0、f(√2)=1+e^{−2}、lim_{x→∞}f=1，得 m=0"
+      ],
+      "key_point": "最大值 f(√2)=1+e^{−2}，最小值 f(0)=0。"
+    },
+    {
+      "id": 1471,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $y=\\mathrm{e}^x$ 是微分方程 $x y^{\\prime}+p(x) y=x$ 的一个解, 求此微分方程满足条件 $\\left.y\\right|_{x=\\ln 2}=0$ 的特解",
+      "options": {},
+      "answer": "$y=\\mathrm{e}^x-\\mathrm{e}^{\\mathrm{e}^{-x}+x-\\frac{1}{2}}$",
+      "analysis": "将 $y=\\mathrm{e}^x$ 代入得 $p(x)=x\\left(\\mathrm{e}^{-x}-1\\right)$,\r\n\r\n原方程即为 $y^{\\prime}+\\left(\\mathrm{e}^{-x}-1\\right) y=1$, \r\n\r\n解得 $\\displaystyle y=\\left[\\int 1 \\cdot \\mathrm{e}^{\\int\\left(\\mathrm{e}^{-x}-1\\right) d x} \\mathrm{d} x+C\\right] \\mathrm{e}^{-\\int\\left(\\mathrm{e}^{-x}-1\\right) \\mathrm{d} x}\\\\=C \\mathrm{e}^{e^{-x}+x}+\\mathrm{e}^x$,\r\n\r\n由 $y(\\ln 2)=0$, 得 $\\displaystyle C=-\\mathrm{e}^{-\\frac{1}{2}}$, \r\n\r\n故满足条件的特解为 $y=\\mathrm{e}^x-\\mathrm{e}^{\\mathrm{e}^{-x}+x-\\frac{1}{2}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "把 y=e^x 代入得 p(x)=x(e^{−x}−1)，方程化为 y′+(e^{−x}−1)y=1",
+        "通解 y=Ce^{e^{−x}+x}+e^x，由 y(ln2)=0 定 C=−e^{−1/2}"
+      ],
+      "key_point": "先定 p(x) 再解一阶线性，特解 y=e^x−e^{e^{−x}+x−1/2}。"
+    },
+    {
+      "id": 1472,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "如右图所示, 设曲线 $L$ 的方程为 $y=f(x)$, 且 $y^{\\prime \\prime}>0$, 又 $M T, M P$ 分别为该曲线在点 $M\\left(x_0, y_0\\right)$ 处的切线和法线. 已知线段 $M P$ 的长度 为 $\\dfrac{\\left(1+y_0^{\\prime 2}\\right)^{\\frac{3}{2}}}{y_0^{\\prime \\prime}}$, 其中 $y_0^{\\prime}=y^{\\prime}\\left(x_0\\right), y_0^{\\prime \\prime}=y^{\\prime \\prime}\\left(x_0\\right)$, 试推导出点 $P(\\xi, \\eta)$ 的坐标表达式 ![曲线 L、切线 T 与点 M、P](/uploads/books/54fea8a7c706ed20ead46878fb9507ec35a929bbd43519d4ae88974156893044.jpg)",
+      "options": {},
+      "answer": "$\\xi=x_0-\\dfrac{y_0^{\\prime}\\left(1+y_0^{\\prime 2}\\right)}{y_0^{\\prime \\prime}}, \\quad \\eta=y_0+\\dfrac{1+y_0^{\\prime 2}}{y_0^{\\prime \\prime}}$",
+      "analysis": "由题设得\r\n\r\n$\\left(x_0-\\xi\\right)^2+\\left(y_0-\\eta\\right)^2=\\dfrac{\\left(1+y_0^{\\prime 2}\\right)^3}{y_0^{\\prime \\prime 2}}$,\r\n\r\n又因为 $P M \\perp M T$, 所以 $y_0^{\\prime}=-\\dfrac{x_0-\\xi}{y_0-\\eta}$,\r\n\r\n解得 $\\left(y_0-\\eta\\right)^2=\\dfrac{\\left(1+y_0^{\\prime 2}\\right)^2}{y_0^{\\prime 2}}$\r\n\r\n由于 $y^{\\prime \\prime}>0$, 所以曲线 $L$ 是凹的, 故 $y_0-\\eta<0$, \r\n\r\n从而 $\\displaystyle y_0-\\eta=-\\frac{1+y_0^{\\prime 2}}{y_0^{\\prime \\prime}}$.\r\n\r\n又 $x_0-\\xi=-y_0^{\\prime}\\left(y_0-\\eta\\right)=\\dfrac{y_0^{\\prime}\\left(1+y_0^{\\prime 2}\\right)}{y_0^{\\prime}}$,\r\n\r\n于是得 $\\xi=x_0-\\dfrac{y_0^{\\prime}\\left(1+y_0^{\\prime 2}\\right)}{y_0^{\\prime \\prime}}, \\quad \\eta=y_0+\\dfrac{1+y_0^{\\prime 2}}{y_0^{\\prime \\prime}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "|MP|² 给一个方程，PM⊥MT 即 y₀′=−(x₀−ξ)/(y₀−η) 给另一个",
+        "y″>0 曲线下凹，P 在凹侧，据此定 y₀−η<0 的符号"
+      ],
+      "key_point": "联立长度方程与垂直条件，凹凸性定符号得 P 坐标。"
+    },
+    {
+      "id": 1473,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle f(x)=\\int_0^x \\frac{\\sin t}{\\pi-t} \\mathrm{d} t$, 计算 $\\displaystyle \\int_0^\\pi f(x) \\mathrm{d} x$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "$\\displaystyle \\int_0^\\pi f(x) \\mathrm{d} x\\\\\r\n=\\left.x f(x)\\right|_0 ^\\pi-\\int_0^\\pi x f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=\\pi f(\\pi)-\\int_0^\\pi \\frac{x \\sin x}{\\pi-x} \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\frac{\\pi \\sin x}{\\pi-x} \\mathrm{d} x-\\int_0^\\pi \\frac{x \\sin x}{\\pi-x} \\mathrm{d} x=\\int_0^\\pi \\sin x \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\sin x \\mathrm{d} x=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部得 πf(π)−∫₀^π x f′(x)dx，其中 f′(x)=sin x/(π−x)",
+        "πf(π)=∫₀^π πsin x/(π−x)dx 与后项同分母相减，分子 (π−x)sin x/(π−x)=sin x"
+      ],
+      "key_point": "分部后两积分合并为 ∫₀^π sin x dx=2。"
+    },
+    {
+      "id": 1474,
+      "paper": "数学二",
+      "year": 1995,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=1$, 且 $f^{\\prime \\prime}(x)>0$, 证明: $f(x) \\geqslant x$",
+      "options": {},
+      "answer": "略",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=1$ 得 $f(0)=0, f^{\\prime}(0)=1$, \r\n\r\n则有 $f(x)=f(0)+f^{\\prime}(0) x+\\dfrac{f^{\\prime \\prime}(\\xi)}{2 !} x^2$, \r\n\r\n其中 $\\xi$ 介于 0 与 $x$ 之间,\r\n\r\n因为 $f^{\\prime \\prime}(x)>0$, 所以 $f(x) \\geqslant f(0)+f^{\\prime}(0) x=x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "lim f(x)/x=1 蕴含 f(0)=0 且 f′(0)=1，这是展开的前提",
+        "f(x)=f(0)+f′(0)x+f″(ξ)x²/2，因 f″>0 余项≥0，故 f(x)≥x"
+      ],
+      "key_point": "带拉氏余项泰勒展开，余项 f″(ξ)x²/2≥0 得 f(x)≥x。"
+    }
+  ]
+}

@@ -1,0 +1,726 @@
+{
+  "total_unique_questions": 2185,
+  "total_with_solution": 2185,
+  "papers": [
+    {
+      "paper": "数学一",
+      "year": 1987,
+      "count": 21,
+      "file": "数学一\\数学一_1987.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1988,
+      "count": 22,
+      "file": "数学一\\数学一_1988.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1989,
+      "count": 23,
+      "file": "数学一\\数学一_1989.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1990,
+      "count": 23,
+      "file": "数学一\\数学一_1990.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1991,
+      "count": 22,
+      "file": "数学一\\数学一_1991.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1992,
+      "count": 22,
+      "file": "数学一\\数学一_1992.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1993,
+      "count": 23,
+      "file": "数学一\\数学一_1993.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1994,
+      "count": 22,
+      "file": "数学一\\数学一_1994.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1995,
+      "count": 22,
+      "file": "数学一\\数学一_1995.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1996,
+      "count": 22,
+      "file": "数学一\\数学一_1996.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1997,
+      "count": 22,
+      "file": "数学一\\数学一_1997.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1998,
+      "count": 23,
+      "file": "数学一\\数学一_1998.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 1999,
+      "count": 21,
+      "file": "数学一\\数学一_1999.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2000,
+      "count": 21,
+      "file": "数学一\\数学一_2000.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2001,
+      "count": 20,
+      "file": "数学一\\数学一_2001.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2002,
+      "count": 20,
+      "file": "数学一\\数学一_2002.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2003,
+      "count": 22,
+      "file": "数学一\\数学一_2003.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2004,
+      "count": 23,
+      "file": "数学一\\数学一_2004.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2005,
+      "count": 23,
+      "file": "数学一\\数学一_2005.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2006,
+      "count": 23,
+      "file": "数学一\\数学一_2006.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2007,
+      "count": 24,
+      "file": "数学一\\数学一_2007.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2008,
+      "count": 23,
+      "file": "数学一\\数学一_2008.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2009,
+      "count": 23,
+      "file": "数学一\\数学一_2009.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2010,
+      "count": 23,
+      "file": "数学一\\数学一_2010.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2011,
+      "count": 23,
+      "file": "数学一\\数学一_2011.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2012,
+      "count": 23,
+      "file": "数学一\\数学一_2012.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2013,
+      "count": 23,
+      "file": "数学一\\数学一_2013.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2014,
+      "count": 23,
+      "file": "数学一\\数学一_2014.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2015,
+      "count": 23,
+      "file": "数学一\\数学一_2015.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2016,
+      "count": 23,
+      "file": "数学一\\数学一_2016.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2017,
+      "count": 23,
+      "file": "数学一\\数学一_2017.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2018,
+      "count": 23,
+      "file": "数学一\\数学一_2018.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2019,
+      "count": 23,
+      "file": "数学一\\数学一_2019.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2020,
+      "count": 23,
+      "file": "数学一\\数学一_2020.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2021,
+      "count": 22,
+      "file": "数学一\\数学一_2021.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2022,
+      "count": 22,
+      "file": "数学一\\数学一_2022.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2023,
+      "count": 22,
+      "file": "数学一\\数学一_2023.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2024,
+      "count": 22,
+      "file": "数学一\\数学一_2024.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2025,
+      "count": 22,
+      "file": "数学一\\数学一_2025.json"
+    },
+    {
+      "paper": "数学一",
+      "year": 2026,
+      "count": 22,
+      "file": "数学一\\数学一_2026.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1987,
+      "count": 18,
+      "file": "数学二\\数学二_1987.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1988,
+      "count": 18,
+      "file": "数学二\\数学二_1988.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1989,
+      "count": 23,
+      "file": "数学二\\数学二_1989.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1990,
+      "count": 20,
+      "file": "数学二\\数学二_1990.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1991,
+      "count": 20,
+      "file": "数学二\\数学二_1991.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1992,
+      "count": 20,
+      "file": "数学二\\数学二_1992.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1993,
+      "count": 20,
+      "file": "数学二\\数学二_1993.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1994,
+      "count": 20,
+      "file": "数学二\\数学二_1994.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1995,
+      "count": 21,
+      "file": "数学二\\数学二_1995.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1996,
+      "count": 21,
+      "file": "数学二\\数学二_1996.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1997,
+      "count": 21,
+      "file": "数学二\\数学二_1997.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1998,
+      "count": 21,
+      "file": "数学二\\数学二_1998.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 1999,
+      "count": 20,
+      "file": "数学二\\数学二_1999.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2000,
+      "count": 21,
+      "file": "数学二\\数学二_2000.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2001,
+      "count": 20,
+      "file": "数学二\\数学二_2001.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2002,
+      "count": 20,
+      "file": "数学二\\数学二_2002.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2003,
+      "count": 22,
+      "file": "数学二\\数学二_2003.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2004,
+      "count": 23,
+      "file": "数学二\\数学二_2004.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2005,
+      "count": 23,
+      "file": "数学二\\数学二_2005.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2006,
+      "count": 23,
+      "file": "数学二\\数学二_2006.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2007,
+      "count": 24,
+      "file": "数学二\\数学二_2007.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2008,
+      "count": 23,
+      "file": "数学二\\数学二_2008.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2009,
+      "count": 23,
+      "file": "数学二\\数学二_2009.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2010,
+      "count": 23,
+      "file": "数学二\\数学二_2010.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2011,
+      "count": 23,
+      "file": "数学二\\数学二_2011.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2012,
+      "count": 23,
+      "file": "数学二\\数学二_2012.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2013,
+      "count": 23,
+      "file": "数学二\\数学二_2013.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2014,
+      "count": 23,
+      "file": "数学二\\数学二_2014.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2015,
+      "count": 23,
+      "file": "数学二\\数学二_2015.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2016,
+      "count": 23,
+      "file": "数学二\\数学二_2016.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2017,
+      "count": 23,
+      "file": "数学二\\数学二_2017.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2018,
+      "count": 23,
+      "file": "数学二\\数学二_2018.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2019,
+      "count": 23,
+      "file": "数学二\\数学二_2019.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2020,
+      "count": 23,
+      "file": "数学二\\数学二_2020.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2021,
+      "count": 22,
+      "file": "数学二\\数学二_2021.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2022,
+      "count": 22,
+      "file": "数学二\\数学二_2022.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2023,
+      "count": 22,
+      "file": "数学二\\数学二_2023.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2024,
+      "count": 22,
+      "file": "数学二\\数学二_2024.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2025,
+      "count": 22,
+      "file": "数学二\\数学二_2025.json"
+    },
+    {
+      "paper": "数学二",
+      "year": 2026,
+      "count": 22,
+      "file": "数学二\\数学二_2026.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1987,
+      "count": 24,
+      "file": "数学三\\数学三_1987.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1988,
+      "count": 23,
+      "file": "数学三\\数学三_1988.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1989,
+      "count": 21,
+      "file": "数学三\\数学三_1989.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1990,
+      "count": 22,
+      "file": "数学三\\数学三_1990.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1991,
+      "count": 22,
+      "file": "数学三\\数学三_1991.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1992,
+      "count": 22,
+      "file": "数学三\\数学三_1992.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1993,
+      "count": 19,
+      "file": "数学三\\数学三_1993.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1994,
+      "count": 20,
+      "file": "数学三\\数学三_1994.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1995,
+      "count": 20,
+      "file": "数学三\\数学三_1995.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1996,
+      "count": 21,
+      "file": "数学三\\数学三_1996.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1997,
+      "count": 21,
+      "file": "数学三\\数学三_1997.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1998,
+      "count": 20,
+      "file": "数学三\\数学三_1998.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 1999,
+      "count": 20,
+      "file": "数学三\\数学三_1999.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2000,
+      "count": 20,
+      "file": "数学三\\数学三_2000.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2001,
+      "count": 20,
+      "file": "数学三\\数学三_2001.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2002,
+      "count": 20,
+      "file": "数学三\\数学三_2002.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2003,
+      "count": 22,
+      "file": "数学三\\数学三_2003.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2004,
+      "count": 23,
+      "file": "数学三\\数学三_2004.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2005,
+      "count": 23,
+      "file": "数学三\\数学三_2005.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2006,
+      "count": 23,
+      "file": "数学三\\数学三_2006.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2007,
+      "count": 24,
+      "file": "数学三\\数学三_2007.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2008,
+      "count": 23,
+      "file": "数学三\\数学三_2008.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2009,
+      "count": 23,
+      "file": "数学三\\数学三_2009.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2010,
+      "count": 23,
+      "file": "数学三\\数学三_2010.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2011,
+      "count": 23,
+      "file": "数学三\\数学三_2011.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2012,
+      "count": 23,
+      "file": "数学三\\数学三_2012.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2013,
+      "count": 23,
+      "file": "数学三\\数学三_2013.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2014,
+      "count": 23,
+      "file": "数学三\\数学三_2014.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2015,
+      "count": 23,
+      "file": "数学三\\数学三_2015.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2016,
+      "count": 23,
+      "file": "数学三\\数学三_2016.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2017,
+      "count": 23,
+      "file": "数学三\\数学三_2017.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2018,
+      "count": 23,
+      "file": "数学三\\数学三_2018.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2019,
+      "count": 23,
+      "file": "数学三\\数学三_2019.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2020,
+      "count": 23,
+      "file": "数学三\\数学三_2020.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2021,
+      "count": 22,
+      "file": "数学三\\数学三_2021.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2022,
+      "count": 22,
+      "file": "数学三\\数学三_2022.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2023,
+      "count": 22,
+      "file": "数学三\\数学三_2023.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2024,
+      "count": 22,
+      "file": "数学三\\数学三_2024.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2025,
+      "count": 22,
+      "file": "数学三\\数学三_2025.json"
+    },
+    {
+      "paper": "数学三",
+      "year": 2026,
+      "count": 22,
+      "file": "数学三\\数学三_2026.json"
+    }
+  ]
+}

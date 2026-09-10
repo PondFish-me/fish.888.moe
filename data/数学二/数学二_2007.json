@@ -1,0 +1,529 @@
+{
+  "paper": "数学二",
+  "year": 2007,
+  "count": 24,
+  "questions": [
+    {
+      "id": 793,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0^{+}$时,与 $\\sqrt{x}$ 等价的无穷小量是 $(\\quad)$",
+      "options": {
+        "A": "$1-\\mathrm{e}^{\\sqrt{x}}$",
+        "B": "$\\ln \\dfrac{1+x}{1-\\sqrt{x}}$",
+        "C": "$\\sqrt{1+\\sqrt{x}}-1$",
+        "D": "$1-\\cos \\sqrt{x}$"
+      },
+      "answer": "B",
+      "analysis": "$\\ln \\dfrac{1+x}{1-\\sqrt{x}}=\\ln (1+x)-\\ln (1-\\sqrt{x})$, \r\n\r\n由 $\\ln (1+x) \\sim x, \\ln (1-\\sqrt{x}) \\sim-\\sqrt{x}$, \r\n\r\n得 $\\ln \\dfrac{1+x}{1-\\sqrt{x}} \\sim \\sqrt{x}$, 应选 (B)",
+      "wrong_options": {
+        "A": "只看到 1-e^u~-u 便判等价，忽略了符号：1-e^√x~-√x 与 √x 差一个负号（是等价于 -√x 而非 √x）",
+        "C": "漏掉系数：√(1+u)-1~u/2，故 √(1+√x)-1~√x/2，把差常数系数 1/2 的量误当等价",
+        "D": "阶数判错：1-cos u~u²/2，故 1-cos√x~x/2 是 1 阶无穷小，而 √x 是 1/2 阶，根本不同阶"
+      },
+      "pitfalls": [
+        "等价要求系数为 1，√(1+√x)-1 与 1-cos√x 都因系数/阶数不符被淘汰",
+        "1-e^√x 的负号容易被吞，导致误选"
+      ],
+      "key_point": "x→0+ 时 ln((1+x)/(1-√x))=ln(1+x)-ln(1-√x)~x+√x~√x，唯一与 √x 等价的是 B。"
+    },
+    {
+      "id": 794,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\dfrac{1}{x}+\\ln \\left(1+\\mathrm{e}^{x}\\right)$ 渐近线的条数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=\\infty$, \r\n\r\n得 $x=0$ 为 $y=\\dfrac{1}{x}+\\ln \\left(1+\\mathrm{e}^x\\right)$ 的铅直渐近线;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow-\\infty} f(x)=0, \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, \r\n\r\n得 $y=0$ 为 $y=\\dfrac{1}{x}+\\ln \\left(1+\\mathrm{e}^x\\right)$ 的水平渐近线;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{f(x)}{x}=1, \\lim _{x \\rightarrow+\\infty}[f(x)-x]=\\lim _{x \\rightarrow+\\infty} \\ln \\frac{1+\\mathrm{e}^x}{\\mathrm{e}^x}=0$, \r\n\r\n得 $y=x$ 为 $y=\\dfrac{1}{x}+\\ln \\left(1+\\mathrm{e}^x\\right)$ 的斜渐近线, \r\n\r\n于是曲线 $y=\\dfrac{1}{x}+\\ln \\left(1+\\mathrm{e}^x\\right)$ 有 3 条渐近线, 应选(D)",
+      "wrong_options": {
+        "A": "误以为函数处处有限、增长平缓而判无渐近线，漏查 x=0 处的发散",
+        "B": "只查了 x=0 处铅直渐近线一条，未分 x→-∞ 与 x→+∞ 讨论水平/斜渐近线",
+        "C": "找到铅直 x=0 与水平 y=0 后就停手，漏掉 x→+∞ 方向 ln(1+e^x)~x 产生的斜渐近线 y=x"
+      },
+      "pitfalls": [
+        "水平与斜渐近线必须分 x→-∞、x→+∞ 两个方向单独判：本题 x→-∞ 有水平 y=0，x→+∞ 有斜 y=x，不冲突",
+        "x→+∞ 时 ln(1+e^x)=x+ln(1+e^{-x})~x，故 f-x→0 给出斜渐近线，不要漏"
+      ],
+      "key_point": "铅直 x=0、水平 y=0（x→-∞）、斜 y=x（x→+∞）共 3 条渐近线。"
+    },
+    {
+      "id": 795,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "如图所示, 连续函数 $y=f(x)$ 在区间 $[-3,-2],[2,3]$ 上的图形分别是直径为 $1$ 的上、下半圆周, 在区间 $[-2,0]$, $[0,2]$ 上的图形分别是直径为 $2$ 的下、上半圆周. 设 $F(x)=$ $\\displaystyle \\int_{0}^{x} f(t) \\mathrm{d} t$, 则下列结论正确的是 $(\\quad)$\n\n![y=f(x) 的图形：四段半圆周](/uploads/books/7da8d101738688cb56bbd4fae80993f6c05a861880a2bb57b8b25c55f96ca17f.png)",
+      "options": {
+        "A": "$F(3)=-\\dfrac{3}{4} F(-2)$",
+        "B": "$F(3)=\\dfrac{5}{4} F(2)$",
+        "C": "$F(-3)=\\dfrac{3}{4} F(2)$",
+        "D": "$F(-3)=-\\dfrac{5}{4} F(-2)$"
+      },
+      "answer": "C",
+      "analysis": "方法一 因为 $f(x)$ 是奇函数,\r\n\r\n所以 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t$ 为偶函数, \r\n\r\n于是 $F(-3)=F(3), F(-2)=F(2)$, 根据定积分的几何意义, 得\r\n\r\n$\\displaystyle F(2)=\\frac{1}{2} \\cdot \\pi \\cdot 1^2=\\frac{\\pi}{2}, \\\\\r\nF(3)=\\frac{\\pi}{2}-\\frac{1}{2} \\cdot \\pi \\cdot\\left(\\frac{1}{2}\\right)^2=\\frac{3 \\pi}{8}, \\\\\r\nF(-3)=\\frac{3}{4} F(2)$,\r\n应选 (C)\r\n\r\n方法二 根据定积分的几何意义, 得\r\n\r\n$\\displaystyle F(-3)=\\int_0^{-3} f(t) \\mathrm{d} t\\\\\r\n=-\\int_{-3}^0 f(t) \\mathrm{d} t\\\\\r\n=-\\left(\\frac{\\pi}{8}-\\frac{\\pi}{2}\\right)=\\frac{3 \\pi}{8}, \\\\\r\nF(-2)=\\int_0^{-2} f(t) \\mathrm{d} t\\\\\r\n=-\\int_{-2}^0 f(t) \\mathrm{d} t=-\\left(-\\frac{\\pi}{2}\\right)=\\frac{\\pi}{2}, \\\\\r\nF(2)=\\int_0^2 f(t) \\mathrm{d} t=\\frac{\\pi}{2}, \\\\\r\nF(3)=\\int_0^3 f(t) \\mathrm{d} t=\\frac{\\pi}{2}-\\frac{\\pi}{8}=\\frac{3 \\pi}{8}$, 应选 (C)",
+      "wrong_options": {
+        "A": "误把 F 当奇函数（其实 f 奇→F 偶），于是取 F(-2)=-F(2)，凑出带负号的关系",
+        "B": "把 [2,3] 上的下半圆（负面积）当成正面积去加，得 F(3)=π/2+π/8=5π/8=5/4·F(2)",
+        "D": "同时犯了 F 奇偶判错与半圆面积符号错，凑出 -5/4 的系数"
+      },
+      "pitfalls": [
+        "f 是奇函数 ⇒ F(x)=∫₀ˣf 是偶函数，故 F(-3)=F(3)、F(-2)=F(2)，别把 F 也当奇函数",
+        "[2,3] 是下半圆，面积取负；[0,2] 上半圆取正，符号不能混"
+      ],
+      "key_point": "f 奇 ⇒ F 偶，F(2)=π/2、F(3)=3π/8，F(-3)=F(3)=3π/8=(3/4)F(2)。"
+    },
+    {
+      "id": 796,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续, 下列命题错误的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}$ 存在, 则 $f(0)=0$",
+        "B": "若 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)+f(-x)}{x}$ 存在, 则 $f(0)=0$",
+        "C": "若 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}$ 存在, 则 $f^{\\prime}(0)$ 存在",
+        "D": "若 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)-f(-x)}{x}$ 存在, 则 $f^{\\prime}(0)$ 存在"
+      },
+      "answer": "D",
+      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}$ 存在, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=0$, 由 $f(x)$ 在 $x=0$ 处连续, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=f(0)=0$; \r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)+f(-x)}{x}$ 存在, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0}[f(x)+f(-x)]=0$, \r\n\r\n由 $f(x)$ 在 $x=0$ 处连续, 得 $\\lim _{x \\rightarrow 0}[f(x)+f(-x)]=2 f(0)=0$, \r\n\r\n于是 $f(0)=0$; 由 $\\lim _{x \\rightarrow 0} \\frac{f(x)}{x}$ 存在, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=0$, \r\n\r\n因为 $f(x)$ 在 $x=0$ 处连续, 所以 $\\displaystyle \\lim _{x \\rightarrow 0} f(x)=f(0)=0$, \r\n\r\n再由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)}{x}=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}$ 存在, 得 $f^{\\prime}(0)$ 存在, 应选(D)\r\n\r\n方法二 取 $f(x)=|x|$, 它在 $x=0$ 处连续, 满足题设. \n\n此时 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x)-f(-x)}{x}=\\lim _{x \\rightarrow 0} \\frac{|x|-|-x|}{x}=0$ 存在, \n\n但 $f_{-}^{\\prime}(0)=-1 \\neq f_{+}^{\\prime}(0)=1$, 即 $f(x)$ 在 $x=0$ 处不可导, 应选 (D)\n\n【注】$f(x)=\\left\\{\\begin{array}{ll}x^2, & x \\neq 0, \\\\ 2, & x=0\\end{array}\\right.$ 不能拿来当反例：它在 $x=0$ 处不连续, 不满足题设.",
+      "wrong_options": {
+        "A": "误以为极限存在推不出分子趋 0 而判其错；实则 lim f(x)/x 存在⇒lim f(x)=0，再由连续得 f(0)=0，A 是对的",
+        "B": "误以为 f(x)+f(-x) 在 0 处未必等于 2f(0) 而判其错；由连续 lim[f(x)+f(-x)]=2f(0)=0，B 是对的",
+        "C": "误以为 f(x)/x 存在不等于导数定义；因已推出 f(0)=0，故 f(x)/x=(f(x)-f(0))/x 的极限正是 f'(0)，C 是对的"
+      },
+      "pitfalls": [
+        "D 的反例是偶型函数如 f=|x|：(f(x)-f(-x))/x≡0 极限存在，但 f'(0) 不存在",
+        "A、C 能成立的关键是先由极限存在得 f(0)=0，再套导数定义；不能跳过 f(0)=0 这一步"
+      ],
+      "key_point": "对称差商 (f(x)-f(-x))/x 存在只保证左右导数之和，推不出可导（f=|x| 为反例），故 D 为错误命题。"
+    },
+    {
+      "id": 797,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(0,+\\infty)$ 上具有二阶导数, 且 $f^{\\prime \\prime}(x)>0$, 令 $u_{n}=f(n)(n=1,2, \\cdots)$, 则 下列结论正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $u_{1}>u_{2}$, 则 $\\left\\{u_{n}\\right\\}$ 必收敛",
+        "B": "若 $u_{1}>u_{2}$, 则 $\\left\\{u_{n}\\right\\}$ 必发散",
+        "C": "若 $u_{1}<u_{2}$, 则 $\\left\\{u_{n}\\right\\}$ 必收敛",
+        "D": "若 $u_{1}<u_{2}$, 则 $\\left\\{u_{n}\\right\\}$ 必发散"
+      },
+      "answer": "D",
+      "analysis": "方法一 取 $f(x)=-\\ln x, f^{\\prime \\prime}(x)=\\dfrac{1}{x^2}>0, \\\\\r\nu_1=f(1)=0>u_2=f(2)=-\\ln 2$, \r\n\r\n但 $\\left\\{u_n\\right\\}$ 发散, (A) 不对;\r\n\r\n取 $\\displaystyle f(x)=\\frac{1}{x^2}, f^{\\prime \\prime}(x)=\\frac{6}{x^4}>0, u_1=1>u_2=\\frac{1}{4}$, \r\n\r\n但 $\\left\\{u_n\\right\\}$ 收敛, (B) 不对;\r\n\r\n取 $f(x)=x^3, f^{\\prime \\prime}(x)=6 x>0, u_1=1<u_2=8$, \r\n\r\n但 $\\left\\{u_n\\right\\}$ 发散, (C) 不对, 应选 (D)\r\n\r\n方法二 由拉格朗日中值定理, \r\n\r\n存在 $\\xi_1 \\in(1,2), \\xi_2 \\in(2,3), \\cdots, \\xi_{n-1} \\in(n-1, n)$, 使得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nu_2-u_1=f(2)-f(1)=f^{\\prime}\\left(\\xi_1\\right) \\\\\r\nu_3-u_2=f(3)-f(2)=f^{\\prime}\\left(\\xi_2\\right)\\\\\r\n\\vdots \\\\\r\nu_n-u_{n-1}=f(n)-f(n-1)=f^{\\prime}\\left(\\xi_{n-1}\\right),\r\n\\end{array}\\right.$\r\n\r\n相加得 $u_n=u_1+f^{\\prime}\\left(\\xi_1\\right)+f^{\\prime}\\left(\\xi_2\\right)\r\n+\\cdots+f^{\\prime}\\left(\\xi_{n-1}\\right)$, \r\n\r\n因为 $f^{\\prime \\prime}(x)>0$, 所以 $f^{\\prime}(x)$ 单调增加, \r\n\r\n从而 $f^{\\prime}\\left(\\xi_1\\right)<f^{\\prime}\\left(\\xi_2\\right)<\\cdots<f^{\\prime}\\left(\\xi_{n-1}\\right)$, \r\n\r\n于是 $u_n \\geqslant u_1+(n-1) f^{\\prime}\\left(\\xi_1\\right)=u_1+n\\left(u_2-u_1\\right)$, \r\n\r\n当 $u_1<u_2$ 时, $\\displaystyle \\lim _{n \\rightarrow \\infty} u_n=+\\infty$, 应选 (D)",
+      "wrong_options": {
+        "A": "把'单调下降'误当成'必收敛'，忽略凸函数可无下界：取 f=-ln x，u1>u2 但 {u_n} 发散到 -∞",
+        "B": "把'u1>u2'误当'必发散'，忽略凸函数可有下界：取 f=1/x²，u1>u2 且 {u_n} 收敛到 0",
+        "C": "把'单调上升'误当'必收敛'，忽略凸性使增量越来越大：取 f=x³，u1<u2 但 {u_n} 发散"
+      },
+      "pitfalls": [
+        "f''>0 只说明 f' 单调增，不保证 f 有界，故'单调'不能推'收敛'（A/C 错）",
+        "关键在起始差的符号：u1<u2 ⇒ f'(ξ₁)>0 ⇒ 后续所有增量 ≥ f'(ξ₁)>0 ⇒ 累加发散"
+      ],
+      "key_point": "f 凸 ⇒ f' 递增；u1<u2 使增量恒正且递增，u_n→+∞ 必发散，故选 D。"
+    },
+    {
+      "id": 799,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量组 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性无关, 则下列向量组线性相关的是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}-\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}-\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}-\\boldsymbol{\\alpha}_{1}$",
+        "B": "$\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{1}$",
+        "C": "$\\boldsymbol{\\alpha}_{1}-2 \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}-2 \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}-2 \\boldsymbol{\\alpha}_{1}$",
+        "D": "$\\boldsymbol{\\alpha}_{1}+2 \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}+2 \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{3}+2 \\boldsymbol{\\alpha}_{1}$"
+      },
+      "answer": "A",
+      "analysis": "方法一 由 $\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2\\right)+\\left(\\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3\\right)+\\left(\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_1\\right)=\\mathbf{0}$, \r\n\r\n得向量组 $\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$, $\\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_1$ 线性相关, 应选 (A)\r\n\r\n方法二 $\\quad\\left(\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_1\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right) \\cdot\\left(\\begin{array}{ccc}1 & 0 & -1 \\\\ -1 & 1 & 0 \\\\ 0 & -1 & 1\\end{array}\\right)$,\r\n\r\n由 $\\left|\\begin{array}{ccc}1 & 0 & -1 \\\\ -1 & 1 & 0 \\\\ 0 & -1 & 1\\end{array}\\right|=\\left|\\begin{array}{ccc}1 & 0 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & -1 & 1\\end{array}\\right|=0$, \r\n\r\n得 $\\left|\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_1\\right|=\\left|\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right| \\cdot 0=0$,\r\n\r\n于是向量组 $\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_3-\\boldsymbol{\\alpha}_1$ 线性相关, 应选 (A)",
+      "wrong_options": {
+        "B": "α₁+α₂,α₂+α₃,α₃+α₁ 的系数行列式 |P|=2≠0，线性无关；误以为循环对称形式一定相关",
+        "C": "α₁-2α₂,α₂-2α₃,α₃-2α₁ 的系数行列式 |P|=1+(-2)³=-7≠0，线性无关；误以为带系数 -2 就退化相关",
+        "D": "α₁+2α₂,α₂+2α₃,α₃+2α₁ 的系数行列式 |P|=1+8=9≠0，线性无关"
+      },
+      "pitfalls": [
+        "循环'差'组 (α₁-α₂)+(α₂-α₃)+(α₃-α₁)=0 天然给出非零零组合，故相关；循环'和'组却无此关系",
+        "判据是系数矩阵行列式是否为 0，别凭'长得对称'瞎猜"
+      ],
+      "key_point": "只有 A 组三向量之和为零向量（系数行列式=0），故线性相关。"
+    },
+    {
+      "id": 800,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}2 & -1 & -1 \\\\ -1 & 2 & -1 \\\\ -1 & -1 & 2\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}(\\quad)$",
+      "options": {
+        "A": "合同, 且相似",
+        "B": "合同, 但不相似",
+        "C": "不合同, 但相似",
+        "D": "既不合同, 也不相似"
+      },
+      "answer": "B",
+      "analysis": "由 $\\operatorname {tr}(\\boldsymbol{A}) \\neq \\operatorname {tr}(\\boldsymbol{B})$, 所以 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 不相似,\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 都是实对称矩阵, 且正、负惯性指数相同, \r\n\r\n所以 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 合同, 应选 (B)",
+      "wrong_options": {
+        "A": "误判相似：没算特征值/迹就以为两实对称阵'差不多'即相似，实则 tr A=6≠tr B=2，特征值 {0,3,3} 与 {0,1,1} 不同",
+        "C": "把相似与合同的判据弄反：相似要求特征值相同（此处不满足），合同只要惯性指数相同（此处满足）",
+        "D": "误判正负惯性指数不同：其实 A 的特征值 0,3,3 与 B 的 1,1,0 都是 2 正 0 负 1 零，惯性指数一致故合同"
+      },
+      "pitfalls": [
+        "相似的必要条件是特征值全同（迹、行列式相等），合同（实对称）只需正负惯性指数相同——两套判据别混",
+        "A 的特征值是 0,3,3（行和为零故有特征值 0），不要误算"
+      ],
+      "key_point": "tr A≠tr B 故不相似；A、B 实对称且都是 2 正 0 负，惯性指数相同故合同——合同但不相似。"
+    },
+    {
+      "id": 805,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "二阶常系数非齐次线性微分方程 $y^{\\prime \\prime}-4 y^{\\prime}+3 y=2 \\mathrm{e}^{2 x}$ 的通解为 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{3 x}-2 \\mathrm{e}^{2 x} (C_1, C_2$ 为任意常数)",
+      "analysis": "$y^{\\prime \\prime}-4 y^{\\prime}+3 y=0$ 的特征方程为 $\\lambda^2-4 \\lambda+3=0$, \r\n\r\n特征值为 $\\lambda_1=1, \\lambda_2=3$, 设原方程的通解为 \r\n\r\n$y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{3 x}$ ( $C_1, C_2$ 为任意常数),\r\n\r\n令原方程的特解为 $y_0(x)=a \\mathrm{e}^{2 x}$, 代入原方程得 $a=-2$, \r\n\r\n于是原方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\mathrm{e}^{3 x}-2 \\mathrm{e}^{2 x} ( C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "2 不是特征根（根是 1、3），特解直接设 ae^{2x} 即可，不用乘 x",
+        "代入得 a(4-8+3)=2 即 -a=2，a=-2，符号别错；通解须写全 C₁、C₂"
+      ],
+      "key_point": "特征根 1、3，特解 -2e^{2x}，通解 y=C₁e^x+C₂e^{3x}-2e^{2x}。"
+    },
+    {
+      "id": 807,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{llll}0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}^{3}$ 的秩为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "由 $\\boldsymbol{A}=\\left(\\begin{array}{llll}0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{A}^3=\\left(\\begin{array}{llll}0 & 0 & 0 & 1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n于是 $r\\left(\\boldsymbol{A}^3\\right)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "A 每乘一次，那条'1'的次对角线就右上移一位：A² 到第二上对角线，A³ 到第三上对角线只剩右上角一个 1，A⁴=O",
+        "别误以为 A³=O（那是 4 阶还差一步），秩是 1 不是 0"
+      ],
+      "key_point": "A³ 仅 (1,4) 元为 1，其余全 0，故 r(A³)=1。"
+    },
+    {
+      "id": 811,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内具有二阶导数且存在相等的最大值, $f(a)=g(a), f(b)=g(b)$, 证明 : \r\n\r\n存在 $\\xi \\in(a, b)$, 使得 $f^{\\prime \\prime}(\\xi)=g^{\\prime \\prime}(\\xi)$\r\n\r\n(数三第一问: 证明存在 $\\eta \\in(a, b)$, 使得 $f(\\eta)=g(\\eta)$)",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $h(x)=f(x)-g(x)$, 则 $h(x)$ 在 $[a, b]$ 上连续, \r\n\r\n在 $(a, b)$ 内二阶可导, 且 $h(a)=h(b)=0$.\r\n\r\n设 $f(x), g(x)$ 在 $(a, b)$ 内的相同最大值为 $M$, \r\n\r\n且令 $\\displaystyle M=f\\left(x_1\\right)=\\max _{a \\leqslant x \\leqslant b} f(x)$, $\\displaystyle M=g\\left(x_2\\right)=\\max _{a \\leqslant x \\leqslant b} g(x)$, \r\n\r\n其中 $x_1 \\in(a, b), x_2 \\in(a, b)$, 不妨设 $x_1 \\leqslant x_2$. \r\n\r\n- 当 $x_1=x_2$ 时, $h\\left(x_1\\right)=0, h(a)=h\\left(x_1\\right)=h(b)=0$.\r\n\r\n由罗尔中值定理, 存在 $\\xi_1 \\in\\left(a, x_1\\right), \\xi_2 \\in\\left(x_1, b\\right)$, \r\n\r\n使得 $h^{\\prime}\\left(\\xi_1\\right)=h^{\\prime}\\left(\\xi_2\\right)=0$.\r\n\r\n再由罗尔中值定理, 存在 $\\xi \\in\\left(\\xi_1, \\xi_2\\right) \\subset(a, b)$, \r\n\r\n使得 $h^{\\prime \\prime}(\\xi)=0$, \r\n\r\n即 $f^{\\prime \\prime}(\\xi)=g^{\\prime \\prime}(\\xi)$.\r\n\r\n- 当 $x_1<x_2$ 时, $h\\left(x_1\\right)=M-g\\left(x_1\\right)>0, h\\left(x_2\\right)=f\\left(x_2\\right)-M<0$,\r\n\r\n因为 $h\\left(x_1\\right) h\\left(x_2\\right)<0$, \r\n\r\n所以由零点定理, 存在 $c \\in\\left(x_1, x_2\\right) \\subset(a, b)$, \r\n\r\n使得 $h(c)=0$, 于是 $h(a)=h(c)=h(b)=0$.\r\n\r\n由罗尔中值定理, 存在 $\\xi_1 \\in(a, c), \\xi_2 \\in(c, b)$, \r\n\r\n使得 $h^{\\prime}\\left(\\xi_1\\right)=h^{\\prime}\\left(\\xi_2\\right)=0$, \r\n\r\n再由罗尔中值定理, \r\n\r\n存在 $\\xi \\in\\left(\\xi_1, \\xi_2\\right) \\subset(a, b)$, \r\n\r\n使得 $h^{\\prime \\prime}(\\xi)=0$, 即 $f^{\\prime \\prime}(\\xi)=g^{\\prime \\prime}(\\xi)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "难点在制造 h 的第三个零点：设 f、g 分别在 x₁、x₂ 取相等最大值 M，若 x₁=x₂ 则 h(x₁)=0 直接得三零点；若 x₁≠x₂，则 h(x₁)=M-g(x₁)≥0、h(x₂)=f(x₂)-M≤0，由介值定理在 (x₁,x₂) 得零点",
+        "得三零点后两次用罗尔：先得 h' 的两个零点，再得 h''(ξ)=0，即 f''(ξ)=g''(ξ)——不要只用一次罗尔"
+      ],
+      "key_point": "作 h=f-g，用相等最大值凑出 h 的三个零点，两次罗尔定理给出 h''(ξ)=0。"
+    },
+    {
+      "id": 813,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设线性方程组 (1) $\\left\\{\\begin{array}{l}\r\nx_{1}+x_{2}+x_{3}=0 \\\\\r\nx_{1}+2 x_{2}+a x_{3}=0 \\\\\r\nx_{1}+4 x_{2}+a^{2} x_{3}=0\r\n\\end{array}\\right.$\r\n\r\n与方程 (2) $x_{1}+2 x_{2}+x_{3}=a-1$ 有公共解, 求 $a$ 的值及所有公共解",
+      "options": {},
+      "answer": "- 当 $a=1$ 时, 两方程组的公共解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right) ( C$ 为任意常数);\r\n- 当 $a=2$ 时, 唯一公共解为 \r\n$\\boldsymbol{x}=\\left(\\begin{array}{c}0 \\\\ 1 \\\\ -1\\end{array}\\right)$",
+      "analysis": "令 (3) $\\left\\{\\begin{array}{l}\r\nx_1+x_2+x_3=0 \\\\\r\nx_1+2 x_2+a x_3=0 \\\\\r\nx_1+4 x_2+a^2 x_3=0 \\\\\r\nx_1+2 x_2+x_3=a-1\r\n\\end{array}\\right.$\r\n\r\n方程组 (1)、(2) 有公共解的充分必要条件是方程组 (3) 有解,\r\n\r\n$\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccc:c}\r\n1 & 1 & 1 & 0 \\\\\r\n1 & 2 & a & 0 \\\\\r\n1 & 4 & a^2 & 0 \\\\\r\n1 & 2 & 1 & a-1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & 1 & 0 \\\\\r\n0 & 1 & a-1 & 0 \\\\\r\n0 & 3 & a^2-1 & 0 \\\\\r\n0 & 1 & 0 & a-1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & 1 & 0 \\\\\r\n0 & 1 & a-1 & 0 \\\\\r\n0 & 0 & (a-1)(a-2) & 0 \\\\\r\n0 & 0 & 1-a & a-1\r\n\\end{array}\\right)$,\r\n\r\n- 当 $a=1$ 时, 方程组 (3) 为齐次线性方程组, 两个方程组一定有公共解,\r\n\r\n由 $\\boldsymbol{A}=\\left(\\begin{array}{lll}1 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 4 & 1 \\\\ 1 & 2 & 1\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & 1 & 1 \\\\ 0 & 1 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 0\\end{array}\\right) \\rightarrow\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得两方程组的公共解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right) ( C$ 为任意常数);\r\n\r\n- 当 $a \\neq 1$ 时,\r\n\r\n$\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & 1 & 0 \\\\\r\n0 & 1 & a-1 & 0 \\\\\r\n0 & 0 & a-2 & 0 \\\\\r\n0 & 0 & 1 & -1\r\n\\end{array}\\right) \\rightarrow\\left(\\begin{array}{ccc:c}\r\n1 & 1 & 1 & 0 \\\\\r\n0 & 1 & a-1 & 0 \\\\\r\n0 & 0 & 1 & -1 \\\\\r\n0 & 0 & 0 & a-2\r\n\\end{array}\\right)$\r\n\r\n1. 当 $a \\neq 2$ 时, 因为 $r(\\boldsymbol{A}) \\neq r(\\overline{\\boldsymbol{A}})$, \r\n\r\n所以两个方程组没有公共解; \r\n\r\n2. 当 $a=2$ 时, 由 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=3$ \r\n\r\n得两个方程组有唯一的公共解, \r\n\r\n由 $\\overline{\\boldsymbol{A}} \\rightarrow\\left(\\begin{array}{ccc:c}1 & 1 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 1 & -1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll:c}1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & -1 \\\\ 0 & 0 & 0 & 0\\end{array}\\right)$ \r\n\r\n得唯一公共解为 \r\n$\\boldsymbol{x}=\\left(\\begin{array}{c}0 \\\\ 1 \\\\ -1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "'有公共解'的正确处理是把(1)的三式与(2)拼成 4×3 的方程组(3)再判有解，不是分别解两组再求交",
+        "化简后关键行给出 (a-1)(a-2)x₃=0 与 (1-a)x₃=a-1，须分 a=1（退化为齐次、无穷多公共解）与 a=2（唯一解）两情形，别漏 a=1"
+      ],
+      "key_point": "联立成方程组(3)：a=1 时有一维公共解 C(-1,0,1)^T，a=2 时唯一公共解 (0,1,-1)^T。"
+    },
+    {
+      "id": 814,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 24,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 3 阶实对称矩阵 $\\boldsymbol{A}$ 的特征值 $\\lambda_{1}=1, \\lambda_{2}=2, \\lambda_{3}=-2$, 且 $\\boldsymbol{\\alpha}_{1}=(1,-1,1)^{\\mathrm{T}}$ 是 $\\boldsymbol{A}$ 的属于 $\\lambda_{1}$ 的一个特征向量. 记 $\\boldsymbol{B}=\\boldsymbol{A}^{5}-4 \\boldsymbol{A}^{3}+\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 3 阶单位矩阵\r\n\r\n(1) 验证 $\\boldsymbol{\\alpha}_{1}$ 是矩阵 $\\boldsymbol{B}$ 的特征向量, 并求 $\\boldsymbol{B}$ 的全部特征值与特征向量;\r\n\r\n(2) 求矩阵 $\\boldsymbol{B}$",
+      "options": {},
+      "answer": "(2) $\\left(\\begin{array}{ccc}0 & 1 & -1 \\\\ 1 & 0 & 1 \\\\ -1 & 1 & 0\\end{array}\\right)$",
+      "analysis": "(1) 由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\boldsymbol{\\alpha}_1$, \r\n\r\n得 $\\boldsymbol{B} \\boldsymbol{\\alpha}_1\\\\\r\n=\\left(\\boldsymbol{A}^5-4 \\boldsymbol{A}^3+\\boldsymbol{E}\\right) \\boldsymbol{\\alpha}_1\\\\\r\n=\\boldsymbol{A}^5 \\boldsymbol{\\alpha}_1-4 \\boldsymbol{A}^3 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_1\\\\\r\n=(1-4+1) \\boldsymbol{\\alpha}_1=-2 \\boldsymbol{\\alpha}_1$,\r\n\r\n则 $\\boldsymbol{\\alpha}_1$ 为矩阵 $\\boldsymbol{B}$ 的属于特征值 $\\mu_1=-2$ 的特征向量,\r\n\r\n$\\boldsymbol{B}$ 的其他两个特征值为 $\\mu_2=\\lambda_2^5-4 \\lambda_2^3+1=1,\\\\\r\n\\mu_3=\\lambda_3^5-4 \\lambda_3^3+1=1$, \r\n即 $\\mu_2=\\mu_3=1$,\r\n\r\n因为 $\\boldsymbol{A}$ 为实对称矩阵, 所以 $\\boldsymbol{B}$ 为实对称矩阵, \r\n\r\n不妨设 $\\boldsymbol{B}$ 的属于特征值 $\\mu_2=\\mu_3=1$ 的特征向量为\r\n\r\n$\\boldsymbol{\\alpha}=\\left(x_1, x_2, x_3\\right)^{\\mathrm{T}}$,\r\n\r\n因为实对称矩阵不同特征值对应的特征向量正交, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1^{\\mathrm{T}} \\boldsymbol{\\alpha}=0$, 即 $x_1-x_2+x_3=0$, \r\n\r\n于是 $\\boldsymbol{B}$ 的属于特征值 $\\mu_2=\\mu_3=1$ 的线性无关的特征向量为\r\n\r\n $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\alpha}_3=\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{B}$ 的属于特征值 $\\mu_1=-2$ 的全部特征向量为 $k_1 \\boldsymbol{\\alpha}_1$ ( $k_1$ 为任意的非零常数),\r\n\r\n$\\boldsymbol{B}$ 的属于特征值 $\\mu_2=\\mu_3=1$ 的全部特征向量为 $k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3\\left(k_2, k_3\\right.$ 为任意的不全为零的常数),\r\n\r\n(2) 令 $\\boldsymbol P=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)=\\left(\\begin{array}{ccc}1 & 1 & -1 \\\\ -1 & 1 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$,\r\n\r\n由 $\\boldsymbol{P}^{-1} \\boldsymbol{B} \\boldsymbol{P}=\\left(\\begin{array}{ccc}-2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, \r\n\r\n得 $\\boldsymbol{B}=\\boldsymbol{P}\\left(\\begin{array}{ccc}-2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right) \\boldsymbol{P}^{-1}\\\\\r\n=\\left(\\begin{array}{ccc}0 & 1 & -1 \\\\ 1 & 0 & 1 \\\\ -1 & 1 & 0\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "B 与 A 特征向量相同，特征值是把 A 的特征值代多项式 g(λ)=λ⁵-4λ³+1，得 μ₁=-2、μ₂=μ₃=1；注意 λ=2 与 λ=-2 代入都得 1",
+        "求 B 时利用 A 实对称⇒B 实对称，属 μ=1 的特征子空间是 α₁ 的正交补；可直接用 B=I·(投影到补空间)+(-2)·(投影到α₁)=I-3·α₁α₁^T/(α₁^Tα₁)=I-α₁α₁^T"
+      ],
+      "key_point": "B 特征值 -2,1,1，B=I-α₁α₁^T=[[0,1,-1],[1,0,1],[-1,1,0]]。"
+    },
+    {
+      "id": 817,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\dfrac{\\left(\\mathrm{e}^{\\frac{1}{x}}+\\mathrm{e}\\right) \\tan x}{x\\left(\\mathrm{e}^{\\frac{1}{x}}-\\mathrm{e}\\right)}$ 在 $[-\\pi, \\pi]$ 上的第一类间断点是 $x=(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$-\\dfrac{\\pi}{2}$",
+        "D": "$\\dfrac{\\pi}{2}$"
+      },
+      "answer": "A",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=\\lim _{x \\rightarrow 0^{+}} \\frac{\\tan x}{x} \\cdot \\frac{\\mathrm{e}^{\\frac{1}{x}}+\\mathrm{e}}{\\mathrm{e}^{\\frac{1}{x}}-\\mathrm{e}}=1,\\\\\r\n\\lim _{x \\rightarrow 0^{-}} f(x)=\\lim _{x \\rightarrow 0^{-}} \\frac{\\tan x}{x} \\cdot \\frac{\\mathrm{e}^{\\frac{1}{x}}+\\mathrm{e}}{\\mathrm{e}^{\\frac{1}{x}}-\\mathrm{e}}=-1$,\r\n\r\n得 $x=0$ 为 $f(x)$ 的第一类间断点中的跳跃间断点, 应选 (A)",
+      "wrong_options": {
+        "B": "x=1 处分母 e^{1/x}−e→0 使 f→∞，是第二类间断点，不是第一类",
+        "C": "x=−π/2 处 tanx→∞ 为第二类间断，非第一类",
+        "D": "x=π/2 处 tanx→∞ 为第二类间断，非第一类"
+      },
+      "pitfalls": [
+        "x=0 处 e^{1/x} 左极限 0、右极限 +∞，使 f 左右极限为 ∓1 有限不等，是第一类跳跃间断",
+        "x=1 处 e^{1/x}−e→0 分母为零 f→∞、x=±π/2 处 tanx→∞，都是第二类，别误判成第一类"
+      ],
+      "key_point": "x=0 处左右极限 ∓1 有限为第一类跳跃；x=1、±π/2 均为第二类，选A。"
+    },
+    {
+      "id": 818,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二元函数 $f(x, y)$ 在点 $(0,0)$ 处可微的一个充分条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)}[f(x, y)-f(0,0)]=0$",
+        "B": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=0$, 且 $\\displaystyle \\lim _{y \\rightarrow 0} \\frac{f(0, y)-f(0,0)}{y}=0$",
+        "C": "$\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{f(x, y)-f(0,0)}{\\sqrt{x^2+y^2}}=0$",
+        "D": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left[f_x^{\\prime}(x, 0)-f_x^{\\prime}(0,0)\\right]=0$, 且 $\\displaystyle \\lim _{y \\rightarrow 0}\\left[f_y^{\\prime}(0, y)-f_y^{\\prime}(0,0)\\right]=0$"
+      },
+      "answer": "C",
+      "analysis": "方法一 由 $\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{f(x, y)-f(0,0)}{\\sqrt{x^2+y^2}}=0$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{|x|}=0$, \r\n\r\n从而 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=0$, \r\n\r\n即 $f_x^{\\prime}(0,0)=0$, \r\n\r\n同理可得 $f_y^{\\prime}(0,0)=0$, 即 $f(x, y)$ 在 $(0,0)$ 处可偏导,\r\n\r\n$f(x, y)$ 在 $(0,0)$ 处可微的充分条件是 $\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{\\Delta z-f_x^{\\prime}(0,0) x-f_y^{\\prime}(0,0) y}{\\sqrt{x^2+y^2}}=0$, \r\n\r\n即 $\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{f(x, y)-f(0,0)}{\\sqrt{x^2+y^2}}=0$, 应选 (C)\r\n\r\n方法二 令 $\\rho=\\sqrt{x^2+y^2}$, \r\n\r\n由 $\\displaystyle \\lim _{(x, y) \\rightarrow(0,0)} \\frac{f(x, y)-f(0,0)}{\\sqrt{x^2+y^2}}=0$, \r\n\r\n得 $f(x, y)-f(0,0)=o(\\rho)$, 或 $\\Delta z=f(x, y)-f(0,0)=0 x+0 y+o(\\rho)$, \r\n\r\n根据可微的定义得 $f(x, y)$ 在 $(0,0)$ 处可微, 应选 (C),\r\n\r\n方法三 由 $\\displaystyle \\lim _{x \\rightarrow 0}[f(x, y)-f(0,0)]=0$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 0} f(x, y)=f(0,0)$, \r\n\r\n即 $f(x, y)$ 在 $(0,0)$ 处连续, \r\n\r\n但连续不一定可微, (A) 不对;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=0$ 及 $\\displaystyle \\lim _{y \\rightarrow 0} \\frac{f(0, y)-f(0,0)}{y}=0$, \r\n\r\n得 $f(x, y)$ 在 $(0,0)$ 处可偏导, \r\n\r\n但可偏导不一定可微, (B) 不对;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0}\\left[f_x^{\\prime}(x, 0)-f_x^{\\prime}(0,0)\\right]=0$ 及 $\\displaystyle \\lim _{y \\rightarrow 0}\\left[f_y^{\\prime}(0, y)-f_y^{\\prime}(0,0)\\right]=0$,\r\n\r\n得 $f_x^{\\prime}(x, 0)$ 在 $x=0$ 处连续及 $f_y^{\\prime}(0, y)$ 在 $y=0$ 处连续, \r\n\r\n不同于 $f_x^{\\prime}(x, y)$ 与 $f_y^{\\prime}(x, y)$ 在 $(0,0)$ 处连续, \r\n\r\n前者为一元函数, 后者为二元函数), \r\n\r\n不能得到 $f(x, y)$ 在 $(0,0)$ 处可微, 应选 (C)",
+      "wrong_options": {
+        "A": "只说明 f 在 (0,0) 连续（极限等于函数值），连续推不出可微",
+        "B": "只说明两个偏导数存在，可偏导推不出可微",
+        "D": "只说明 f_x(x,0)、f_y(0,y) 作为一元函数在 0 点连续，不等于二元偏导数在 (0,0) 连续，推不出可微"
+      },
+      "pitfalls": [
+        "C 恰是可微定义的充要形式：由极限=0 先得 f_x=f_y=0，再回代即 Δz=o(ρ)，故可微",
+        "D 的陷阱在‘一元连续≠二元偏导连续’——偏导连续是可微的充分条件须是 f_x(x,y)、f_y(x,y) 二元连续"
+      ],
+      "key_point": "只有 C 满足可微定义 [f(x,y)−f(0,0)]/√(x²+y²)→0；连续、可偏导、偏导一元连续都不够，选C。"
+    },
+    {
+      "id": 819,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-\\sin x}{x^3}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{1}{6}$",
+      "analysis": "方法一 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-\\sin x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0}\\left(\\frac{\\arctan x-x}{x^3}+\\frac{x-\\sin x}{x^3}\\right)\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{x^3}+\\lim _{x \\rightarrow 0} \\frac{x-\\sin x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\frac{1}{1+x^2}-1}{3 x^2}+\\lim _{x \\rightarrow 0} \\frac{1-\\cos x}{3 x^2}\\\\\r\n=-\\frac{1}{3}+\\frac{1}{6}=-\\frac{1}{6}$\r\n\r\n方法二\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-\\sin x}{x^3} \\\\\r\n=\\frac{1}{3} \\lim _{x \\rightarrow 0} \\frac{\\frac{1}{1+x^2}-\\cos x}{x^2}\\\\\r\n=\\frac{1}{3} \\lim _{x \\rightarrow 0} \\frac{1-\\left(1+x^2\\right) \\cos x}{x^2\\left(1+x^2\\right)} \\\\\r\n=\\frac{1}{3} \\lim _{x \\rightarrow 0} \\frac{1-\\cos x-x^2 \\cos x}{x^2}\\\\\r\n=\\frac{1}{3} \\lim _{x \\rightarrow 0}\\left(\\frac{1-\\cos x}{x^2}-\\cos x\\right) \\\\\r\n=\\frac{1}{3} \\times\\left(\\frac{1}{2}-1\\right)=-\\frac{1}{6}$\r\n\r\n方法三 由 $\\arctan x=x-\\dfrac{x^3}{3}+o\\left(x^3\\right), \\quad \\sin x=x-\\dfrac{x^3}{3 !}+o\\left(x^3\\right)$ \r\n\r\n得 $\\arctan x-\\sin x=-\\dfrac{1}{6} x^3+o\\left(x^3\\right) \\sim-\\dfrac{1}{6} x^3$,\r\n\r\n于是 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-\\sin x}{x^3}=-\\frac{1}{6}$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "不能对 arctanx、sinx 都用一阶等价 ~x（会得 0/0 丢阶），须展到 x³：arctanx=x−x³/3、sinx=x−x³/6",
+        "arctanx−sinx=(−1/3+1/6)x³=−x³/6，符号与系数别算错"
+      ],
+      "key_point": "arctanx−sinx~(−1/3+1/6)x³=−x³/6，故极限=−1/6。"
+    },
+    {
+      "id": 820,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\left\\{\\begin{array}{l}\r\nx=\\cos t+\\cos ^2 t \\\\\r\ny=1+\\sin t\r\n\\end{array}\\right.$ 上对应于 $t=\\dfrac{\\pi}{4}$的点处的法线斜率为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\sqrt{2}+1$",
+      "analysis": "由 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\frac{\\cos t}{-\\sin t-\\sin 2 t}$,\r\n\r\n得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=\\frac{\\pi}{4}}=-\\dfrac{1}{\\sqrt{2}+1}$, 则法线的斜率为 $\\sqrt{2}+1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "dx/dt=−sint−sin2t（x=cost+cos²t，cos²t 求导得 −sin2t），别漏第二项",
+        "切线斜率 dy/dx|_{t=π/4}=−1/(√2+1)，法线斜率取负倒数为 √2+1（有理化 1/(√2−1)=√2+1）"
+      ],
+      "key_point": "dy/dx|_{t=π/4}=−1/(√2+1)，法线斜率为其负倒数 √2+1。"
+    },
+    {
+      "id": 821,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=\\dfrac{1}{2 x+3}$, 则 $y^{(n)}(0)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{(-1)^n 2^n n !}{3^{n+1}}$",
+      "analysis": "方法一 归纳法\r\n由 $y=(2 x+3)^{-1}$, \r\n\r\n得 $y^{(n)}=(-1)^n 2^n n !(2 x+3)^{-(n+1)}$, \r\n\r\n于是 $y^{(n)}(0)=\\dfrac{(-1)^n 2^n n !}{3^{n+1}}$\r\n\r\n方法二 麦克劳林公式法\r\n\r\n由 $\\dfrac{1}{1+x}=1-x+x^2-\\cdots+(-1)^n x^n+o\\left(x^n\\right)$, \r\n\r\n得 $\\displaystyle y =\\frac{1}{2 x+3}=\\frac{1}{3} \\cdot \\frac{1}{1+\\frac{2 x}{3}}\\\\\r\n=\\frac{1}{3} \\cdot\\left[1-\\frac{2 x}{3}+\\frac{2^2}{3^2} x^2-\\cdots+(-1)^n \\frac{2^n}{3^n} x^n+o\\left(x^n\\right)\\right] \\\\\r\n=\\frac{1}{3}-\\frac{2 x}{3^2}+\\frac{2^2}{3^3} x^2-\\cdots+(-1)^n \\frac{2^n}{3^{n+1}} x^n+o\\left(x^n\\right)$,\r\n\r\n又由 $\\displaystyle y=y(0)+y^{\\prime}(0) x+\\cdots+\\frac{y^{(n)}(0)}{n !} x^n+o\\left(x^n\\right)$, \r\n\r\n得 $\\displaystyle \\frac{y^{(n)}(0)}{n !}=(-1)^n \\frac{2^n}{3^{n+1}}$, \r\n\r\n故 $y^{(n)}(0)=\\dfrac{(-1)^n 2^n n !}{3^{n+1}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "每求一次导带出因子 (−1)·(2)（链式内层 2）与幂次，n 次后为 (−1)ⁿ2ⁿn!(2x+3)^{−(n+1)}，符号、n! 与 2ⁿ 都别漏",
+        "麦克劳林法要由 x^n 系数乘 n! 还原 y^{(n)}(0)，注意分母是 3^{n+1} 不是 3ⁿ"
+      ],
+      "key_point": "y^{(n)}=(−1)ⁿ2ⁿn!(2x+3)^{−(n+1)}，代 x=0 得 (−1)ⁿ2ⁿn!/3^{n+1}。"
+    },
+    {
+      "id": 823,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(u, v)$ 是二元可微函数, $\\displaystyle z=f\\left(\\frac{y}{x}, \\frac{x}{y}\\right)$, 则 $\\displaystyle x \\frac{\\partial z}{\\partial x}-y \\frac{\\partial z}{\\partial y}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\dfrac{2 y}{x} f_1^{\\prime}+\\dfrac{2 x}{y} f_2^{\\prime}$",
+      "analysis": "方法一 由 $\\displaystyle \\frac{\\partial z}{\\partial x}=-\\frac{y}{x^2} f_1^{\\prime}+\\frac{1}{y} f_2^{\\prime}, \\quad \\frac{\\partial z}{\\partial y}=\\frac{1}{x} f_1^{\\prime}-\\frac{x}{y^2} f_2^{\\prime}$, 得\r\n\r\n$x \\dfrac{\\partial z}{\\partial x}-y \\dfrac{\\partial z}{\\partial y}=-\\dfrac{y}{x} f_1^{\\prime}+\\dfrac{x}{y} f_2^{\\prime}-\\dfrac{y}{x} f_1^{\\prime}+\\dfrac{x}{y} f_2^{\\prime}=-\\dfrac{2 y}{x} f_1^{\\prime}+\\dfrac{2 x}{y} f_2^{\\prime}$\r\n\r\n\r\n方法二 $\\displaystyle z=f\\left(\\frac{y}{x}, \\frac{x}{y}\\right)$ 两边求微分, \r\n\r\n得 $\\displaystyle \\mathrm{d} z =f_1^{\\prime} \\cdot \\mathrm{d}\\left(\\frac{y}{x}\\right)+f_2^{\\prime} \\cdot \\mathrm{d}\\left(\\frac{x}{y}\\right)\\\\\r\n=f_1^{\\prime} \\cdot \\frac{x \\mathrm{d} y-y \\mathrm{d} x}{x^2}+f_2^{\\prime} \\cdot \\frac{y \\mathrm{d} x-x \\mathrm{d} y}{y^2} \\\\\r\n=\\left(\\frac{1}{y} f_2^{\\prime}-\\frac{y}{x^2} f_1^{\\prime}\\right) \\mathrm{d} x+\\left(\\frac{1}{x} f_1^{\\prime}-\\frac{x}{y^2} f_2^{\\prime}\\right) \\mathrm{d} y, \\\\\r\n\\frac{\\partial z}{\\partial x} =\\frac{1}{y} f_2^{\\prime}-\\frac{y}{x^2} f_1^{\\prime}, \\quad \\frac{\\partial z}{\\partial y}=\\frac{1}{x} f_1^{\\prime}-\\frac{x}{y^2} f_2^{\\prime}$,\r\n\r\n于是 $\\displaystyle \\frac{\\partial z}{\\partial x}=\\frac{1}{y} f_2^{\\prime}-\\frac{y}{x^2} f_1^{\\prime}, \\quad \\frac{\\partial z}{\\partial y}=\\frac{1}{x} f_1^{\\prime}-\\frac{x}{y^2} f_2^{\\prime}$,\r\n\r\n故 $\\displaystyle x \\frac{\\partial z}{\\partial x}-y \\frac{\\partial z}{\\partial y}\\\\\r\n=-\\frac{y}{x} f_1^{\\prime}+\\frac{x}{y} f_2^{\\prime}-\\frac{y}{x} f_1^{\\prime}+\\frac{x}{y} f_2^{\\prime}\\\\\r\n=-\\frac{2 y}{x} f_1^{\\prime}+\\frac{2 x}{y} f_2^{\\prime}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "中间变量 u=y/x 对 x 求导为 −y/x²、v=x/y 对 x 求导为 1/y；对 y 则为 1/x、−x/y²，四个偏导别写错",
+        "组合 x z_x − y z_y 时 f₁'、f₂' 的系数各自加倍成 −2y/x、2x/y，合并别漏合项"
+      ],
+      "key_point": "z_x=−(y/x²)f₁'+(1/y)f₂'，z_y=(1/x)f₁'−(x/y²)f₂'，故 x z_x−y z_y=−(2y/x)f₁'+(2x/y)f₂'。"
+    },
+    {
+      "id": 824,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是区间 $\\left[0, \\dfrac{\\pi}{4}\\right]$ 上的单调、可导函数, 且满足\r\n\r\n$\\displaystyle \\int_0^{f(x)} f^{-1}(t) \\mathrm{d} t=\\int_0^x t \\frac{\\cos t-\\sin t}{\\sin t+\\cos t} \\mathrm{d} t$,\r\n\r\n其中 $f^{-1}$ 是 $f$ 的反函数, 求 $f(x)$",
+      "options": {},
+      "answer": "$f(x)=\\ln (\\sin x+\\cos x)$",
+      "analysis": "$\\displaystyle \\int_0^{f(x)} f^{-1}(t) \\mathrm{d} t=\\int_0^x t \\frac{\\cos t-\\sin t}{\\sin t+\\cos t} \\mathrm{d} t$ \r\n\r\n两边对 $x$ 求导数, 得\r\n\r\n$f^{-1}[f(x)] f^{\\prime}(x)=x \\dfrac{\\cos x-\\sin x}{\\sin x+\\cos x}$,\r\n\r\n因为 $f^{-1}[f(x)]=x$, 所以 $f^{\\prime}(x)=\\dfrac{\\cos x-\\sin x}{\\sin x+\\cos x}$, \r\n\r\n积分得 $f(x)=\\ln (\\sin x+\\cos x)+C$, \r\n\r\n取 $x=0$ 得 $f(0)=0$, 于是 $C=0$, 故 $f(x)=\\ln (\\sin x+\\cos x)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "左端 ∫₀^{f(x)}f^{-1}(t)dt 对 x 求导，上限 f(x) 求导要乘 f'(x)，被积换成 f^{-1}[f(x)]=x，得 x·f'(x)",
+        "解出 f'(x)=(cosx−sinx)/(sinx+cosx)=(sinx+cosx)'/(sinx+cosx)，积分得 ln(sinx+cosx)+C，由 f(0)=0 定 C=0"
+      ],
+      "key_point": "两边求导得 x·f'(x)=x(cosx−sinx)/(sinx+cosx)，故 f'=(sinx+cosx)'/(sinx+cosx)，积分并由 f(0)=0 得 f=ln(sinx+cosx)。"
+    },
+    {
+      "id": 825,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $D$ 是位于曲线 $y=\\sqrt{x} a^{-\\frac{x}{2 a}}(a>1,0 \\leqslant x<+\\infty)$ 下方、 $x$ 轴上方的无界区域\r\n\r\n(1) 求区域 $D$ 绕 $x$ 轴旋转一周所成旋转体的体积 $V(a)$;\r\n\r\n(2) 求 $a$ 为何值时, $V(a)$ 最小? 并求此最小值",
+      "options": {},
+      "answer": "(1) $\\dfrac{\\pi a^2}{\\ln ^2 a}$\r\n\r\n(2) 当 $a=\\mathrm{e}$ 时, 最小体积为 $V(\\mathrm{e})=\\pi \\mathrm{e}^2$",
+      "analysis": "(1) $\\displaystyle V(a)\\\\\r\n=\\pi \\int_0^{+\\infty} y^2(x) \\mathrm{d}x\\\\\r\n=\\pi \\int_0^{+\\infty} x a^{-\\frac{x}{a}}  \\mathrm{d}x\\\\\r\n=-\\frac{a^2 \\pi}{\\ln a} \\int_0^{+\\infty} t \\mathrm{d}\\left(a^{-t}\\right)\\\\\r\n=-\\left.\\frac{a^2 \\pi}{\\ln a} \\cdot \\frac{t}{a^t}\\right|_0 ^{+\\infty}+\\frac{a^2 \\pi}{\\ln a} \\int_0^{+\\infty} a^{-t} \\mathrm{d} t \\\\\r\n=-\\left.\\frac{a^2 \\pi}{\\ln ^2 a} \\cdot \\frac{1}{a^t}\\right|_0 ^{+\\infty}=\\\\\r\n\\frac{\\pi a^2}{\\ln ^2 a}$\r\n\r\n(2) 由 $\\displaystyle V^{\\prime}(a)=\\frac{2 \\pi a(\\ln a-1)}{\\ln ^3 a}=0$ 得 $a=\\mathrm{e}$\r\n\r\n当 $a \\in(1, \\mathrm{e})$ 时, $V^{\\prime}(a)<0$; \r\n\r\n当 $a>\\mathrm{e}$ 时, $V^{\\prime}(a)>0$,\r\n\r\n故当 $a=\\mathrm{e}$ 时, $V(a)$ 最小, \r\n\r\n且最小体积为 $V(\\mathrm{e})=\\pi \\mathrm{e}^2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "y²=x·a^{−x/a}，积分 ∫₀^{+∞}x a^{−x/a}dx 是反常积分，需换元 t=x/a 后分部，注意 a^{−t}=e^{−t ln a} 使分母出现 ln²a",
+        "(2)把 V(a)=πa²/ln²a 对 a 求导，V'(a)=2πa(lna−1)/ln³a，驻点 a=e，验证 a∈(1,e) 减、a>e 增得最小"
+      ],
+      "key_point": "V(a)=π∫₀^{+∞}x a^{−x/a}dx=πa²/ln²a；V'(a)=0 得 a=e，最小体积 πe²。"
+    },
+    {
+      "id": 826,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求微分方程 $y^{\\prime \\prime}\\left(x+y^{\\prime 2}\\right)=y^{\\prime}$ 满足初始条件 $y(1)=y^{\\prime}(1)=1$ 的特解",
+      "options": {},
+      "answer": "$y=\\dfrac{2}{3} x^{\\frac{3}{2}}+\\dfrac{1}{3}$",
+      "analysis": "令 $y^{\\prime}=p$, 则 $y^{\\prime \\prime}=\\dfrac{\\mathrm{d} p}{\\mathrm{d} x}$,\r\n\r\n方程 $y^{\\prime \\prime}\\left(x+y^{\\prime 2}\\right)=y^{\\prime}$,\r\n\r\n化为 $\\left(x+p^2\\right) \\dfrac{\\mathrm{d} p}{\\mathrm{d} x}=p$, \r\n\r\n整理得 $\\dfrac{\\mathrm{d} x}{\\mathrm{d} p}-\\dfrac{1}{p} x=p$, \r\n\r\n解得 $\\displaystyle x=\\left(\\int p \\mathrm{e}^{\\int-\\frac{1}{p} \\mathrm{d} p} \\mathrm{d} p+C_1\\right) \\mathrm{e}^{-\\int-\\frac{1}{p} \\mathrm{d} p}\\\\\r\n=\\left(p+C_1\\right) p$\r\n\r\n由 $y(1)=y^{\\prime}(1)=1$, 得 $C_1=0$, 于是 $p=\\sqrt{x}$, \r\n\r\n即 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\sqrt{x}$, 解得 $y=\\dfrac{2}{3} x^{\\frac{3}{2}}+C_2$.\r\n\r\n由 $y(1)=1$ 得 $C_2=\\dfrac{1}{3}$, 故 $y=\\dfrac{2}{3} x^{\\frac{3}{2}}+\\dfrac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "化出 (x+p²)dp/dx=p 后 p 不能直接分离，需反过来把 x 看作 p 的函数得 dx/dp−x/p=p 这个一阶线性方程",
+        "由 y(1)=y'(1)=1（即 x=1 时 p=1）定 C₁=0 得 p=√x，再积 dy/dx=√x 并用 y(1)=1 定 C₂=1/3"
+      ],
+      "key_point": "令 y'=p 化为 dx/dp−x/p=p，解得 x=(p+C₁)p，由初值 C₁=0 得 p=√x，积分得 y=(2/3)x^{3/2}+1/3。"
+    },
+    {
+      "id": 827,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(u)$ 具有二阶导数, 且 $f^{\\prime}(0)=1$, 函数 $y=y(x)$ 由方程 $y-x \\mathrm{e}^{y-1}=1$ 所确定. 设 $z=f(\\ln y-\\sin x)$, 求 $\\left.\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}\\right|_{x=0},\\left.\\dfrac{\\mathrm{d}^2 z}{\\mathrm{d} x^2}\\right|_{x=0}$",
+      "options": {},
+      "answer": "$\\left.\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}\\right|_{x=0}=0,\\left.\\dfrac{\\mathrm{d}^2 z}{\\mathrm{d} x^2}\\right|_{x=0}=1$",
+      "analysis": "将 $x=0$ 代入 $y-x \\mathrm{e}^{y-1}=1$, 得 $y=1\\\\\r\ny-x \\mathrm{e}^{y-1}=1$ 两边对 $x$ 求导, \r\n\r\n得 $\\displaystyle \\frac{\\mathrm{d} y}{\\mathrm{d} x}-\\mathrm{e}^{y-1}-x \\mathrm{e}^{y-1} \\frac{\\mathrm{d} y}{\\mathrm{d} x}=0$, 则 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=1\\\\\r\n\\frac{\\mathrm{d} y}{\\mathrm{d} x}-\\mathrm{e}^{y-1}-x \\mathrm{e}^{y-1} \\frac{\\mathrm{d} y}{\\mathrm{d} x}=0$ 两边再对 $x$ 求导, \r\n\r\n得 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-\\mathrm{e}^{y-1} \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}-\\mathrm{e}^{y-1} \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}-x \\mathrm{e}^{y-1}\\left(\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^2-x \\mathrm{e}^{y-1} \\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}=0$,\r\n\r\n\r\n则 $\\left.\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}\\right|_{x=0}=2$,\r\n\r\n$z=f(\\ln y-\\sin x)$ 两边对 $x$ 求导, \r\n\r\n得 $\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}=f^{\\prime}(\\ln y-\\sin x) \\cdot\\left(\\dfrac{1}{y} \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}-\\cos x\\right)$, \r\n\r\n于是 $\\left.\\dfrac{\\mathrm{d} z}{\\mathrm{d} x}\\right|_{x=0}=0$; 两边再对 $x$ 求导, \r\n\r\n得 $\\dfrac{\\mathrm{d}^2 z}{\\mathrm{d} x^2}=f^{\\prime \\prime}(\\ln y-\\sin x) \\cdot\\left(\\dfrac{1}{y} \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}-\\cos x\\right)^2+ \\\\\r\nf^{\\prime}(\\ln y-\\sin x) \\cdot\\left[-\\dfrac{1}{y^2}\\left(\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^2+\\dfrac{1}{y} \\cdot \\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}+\\sin x\\right]$,\r\n\r\n于是 $\\left.\\dfrac{\\mathrm{d}^2 z}{\\mathrm{d} x^2}\\right|_{x=0}=f^{\\prime}(0) \\cdot(-1+2)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "隐函数须求到二阶：由 y−xe^{y−1}=1 两次求导得 y'(0)=1、y''(0)=2，二阶不能漏",
+        "z 的二阶导含 f'' 项与 f' 项，代 x=0 时 (1/y·y'−cosx)|₀=1−1=0 使 f'' 项消失，只剩 f'(0)·(−1+2)=1"
+      ],
+      "key_point": "y'(0)=1,y''(0)=2；dz/dx|₀=f'(0)(1−1)=0，d²z/dx²|₀=f'(0)(−1+2)=1。"
+    },
+    {
+      "id": 828,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二元函数\r\n$f(x, y)= \\begin{cases}x^2, & |x|+|y| \\leqslant 1 \\\\ \\dfrac{1}{\\sqrt{x^2+y^2}}, & 1<|x|+|y| \\leqslant 2 \\end{cases}$\r\n\r\n计算二重积分 $\\displaystyle \\iint\\limits_D f(x, y) \\mathrm{d} \\sigma$, 其中 $D=\\{(x, y)|| x|+| y \\mid \\leqslant 2\\}$",
+      "options": {},
+      "answer": "$I=\\dfrac{1}{3}+4 \\sqrt{2} \\ln (1+\\sqrt{2})$",
+      "analysis": "令 $\\displaystyle D_1=\\{(x, y) \\mid x+y \\leqslant 1, x \\geqslant 0, y \\geqslant 0\\},\\\\\r\nD_2=\\{(x, y) \\mid 1 \\leqslant x+y \\leqslant 2, x \\geqslant 0, y \\geqslant 0\\},\\\\\r\nI=4\\left(\\iint\\limits_{D_1} f(x, y) \\mathrm{d} x \\mathrm{d} y+\\iint_{D_2} f(x, y) \\mathrm{d} x \\mathrm{d} y\\right), \\\\\r\n\\iint\\limits_{D_1} f(x, y) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^{1-x} x^2 \\mathrm{d} y\\\\\r\n=\\int_0^1 x^2(1-x) \\mathrm{d} x=\\frac{1}{12}\\\\\r\n\\iint\\limits_{D_2} f(x, y) \\mathrm{d} x \\mathrm{d} y \\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_{\\frac{1}{\\sin \\theta+\\cos \\theta}}^{\\frac{2}{\\sin \\theta+\\cos \\theta}} \\frac{r}{r} \\mathrm{d} r\\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\frac{1}{\\sin \\theta+\\cos \\theta} \\mathrm{d} \\theta, \\\\\r\n=\\frac{1}{\\sqrt{2}} \\int_0^{\\frac{\\pi}{2}} \\csc \\left(\\theta+\\frac{\\pi}{4}\\right) \\mathrm{d}\\left(\\theta+\\frac{\\pi}{4}\\right) \\\\\r\n=\\left.\\frac{1}{\\sqrt{2}} \\ln \\left|\\csc \\left(\\theta+\\frac{\\pi}{4}\\right)-\\cot \\left(\\theta+\\frac{\\pi}{4}\\right)\\right|\\right|_0 ^{\\frac{\\pi}{2}} \\\\\r\n=\\sqrt{2} \\ln (1+\\sqrt{2})$,\r\n\r\n故 $I=\\dfrac{1}{3}+4 \\sqrt{2} \\ln (1+\\sqrt{2})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积函数分段：|x|+|y|≤1 取 x²，1<|x|+|y|≤2 取 1/√(x²+y²)，两片积法不同别混",
+        "外片 1/√(x²+y²)=1/r，极坐标下 ∬(1/r)·rdrdθ 的 r 约掉，直线边界 x+y=c 化为 r=c/(sinθ+cosθ)，积出 csc(θ+π/4) 型对数"
+      ],
+      "key_point": "对称乘4：内片 ∬x²=1/12，外片极坐标得 √2 ln(1+√2)，合计 I=1/3+4√2 ln(1+√2)。"
+    },
+    {
+      "id": 829,
+      "paper": "数学二",
+      "year": 2007,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 连续,则二次积分 $\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\pi+\\arcsin y}^\\pi f(x, y) \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\pi-\\arcsin y}^\\pi f(x, y) \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\frac{\\pi}{2}}^{\\pi+\\arcsin y} f(x, y) \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\frac{\\pi}{2}}^{\\pi-\\arcsin y} f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "B",
+      "analysis": "如图所示, $D=\\left\\{(x, y) \\mid \\dfrac{\\pi}{2} \\leqslant x \\leqslant \\pi, \\sin x \\leqslant y \\leqslant 1\\right\\}\\\\\r\n=\\{(x, y) \\mid \\pi-\\arcsin y \\leqslant x \\leqslant \\pi, 0 \\leqslant y \\leqslant 1\\}$\n\n![积分区域 D](/uploads/books/a9a6bcdf607acb8a50da97ff629678167ef56a59bdeb94710bbc33536017de59.png)\r\n\r\n则 $\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y=\\int_0^1 \\mathrm{d} y \\int_{\\pi-\\arcsin y}^\\pi f(x, y) \\mathrm{d} x$, 应选 (B)",
+      "wrong_options": {
+        "A": "反解 x 时用错反正弦分支，写成 π+arcsiny（在 [π/2,π] 上应是 π−arcsiny）",
+        "C": "x 上限误写 π+arcsiny 且下限保留 π/2，未正确反解左边界",
+        "D": "把 π−arcsiny 当成 x 上限、π/2 当下限，左右边界弄反"
+      },
+      "pitfalls": [
+        "在 [π/2,π] 上 y=sinx 单调减，反解得 x=π−arcsin y（不是 arcsin y，也不是 π+arcsin y）",
+        "交换后 y 从 0 到 1，x 从 π−arcsin y 到 π（左边界是曲线、右边界是直线 x=π）"
+      ],
+      "key_point": "区域 D:{π−arcsiny≤x≤π,0≤y≤1}，交换次序得 ∫₀¹dy∫_{π−arcsiny}^π f dx，选B。"
+    }
+  ]
+}
