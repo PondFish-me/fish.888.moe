@@ -376,7 +376,7 @@
       "index": 20,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设 $D$ 是由曲线 $y=\\sqrt{1-x^2}(0 \\leqslant x \\leqslant 1)$ 与 $\\left\\{\\begin{array}{l}x=\\cos ^3 t \\\\ y=\\sin ^3 t\\end{array},\\left(0 \\leqslant t \\leqslant \\frac{\\pi}{2}\\right)\\right.$ 围成的平面区域, 求 $D$ 绕 $x$ 轴旋转一周所得旋转体的体积和表面积\n\n![平面区域 D](/figures/386.svg)",
+      "stem": "设 $D$ 是由曲线 $y=\\sqrt{1-x^2}(0 \\leqslant x \\leqslant 1)$ 与 $\\left\\{\\begin{array}{l}x=\\cos ^3 t \\\\ y=\\sin ^3 t\\end{array},\\left(0 \\leqslant t \\leqslant \\frac{\\pi}{2}\\right)\\right.$ 围成的平面区域, 求 $D$ 绕 $x$ 轴旋转一周所得旋转体的体积和表面积\n\n![平面区域 D](assets/figures/386.svg)",
       "options": {},
       "answer": "V=\\dfrac{18\\pi}{35},\\ S=\\dfrac{16\\pi}{5}",
       "analysis": "【分析】先看清两条边界曲线的范围：$y=\\sqrt{1-x^2}\\,(0\\le x\\le1)$ 是单位圆在第一象限的四分之一弧，从 $(1,0)$ 到 $(0,1)$；星形线 $x=\\cos^3 t,\\ y=\\sin^3 t\\,(0\\le t\\le\\frac{\\pi}{2})$ 同样从 $(1,0)$ 到 $(0,1)$，且整段在圆弧内侧。所以 $D$ 是圆弧与星形线之间的月牙形区域。\n\n体积用旋转体的圆盘（垫圈）法：$V=\\pi\\int_0^1(y_{\\text{圆}}^2-y_{\\text{星}}^2)\\,\\mathrm{d}x$。表面积是两段曲线分别绕 $x$ 轴旋转所得侧面之和，用 $S=2\\pi\\int y\\,\\mathrm{d}s$，星形线部分注意参数式弧微分。\n\n【解答】\n（1）体积。圆弧部分 $\\pi\\int_0^1(1-x^2)\\,\\mathrm{d}x=\\pi\\left(1-\\dfrac{1}{3}\\right)=\\dfrac{2\\pi}{3}$。\n\n星形线部分用参数式，$x=\\cos^3 t,\\ y=\\sin^3 t,\\ \\mathrm{d}x=-3\\cos^2 t\\sin t\\,\\mathrm{d}t$，$x:0\\to1$ 对应 $t:\\frac{\\pi}{2}\\to0$：\n$$\\pi\\int_0^1 y^2\\,\\mathrm{d}x=3\\pi\\int_0^{\\pi/2}\\sin^7 t\\cos^2 t\\,\\mathrm{d}t=3\\pi\\cdot\\dfrac{6!!\\cdot1!!}{9!!}=3\\pi\\cdot\\dfrac{48}{945}=\\dfrac{16\\pi}{105}.$$\n所以 $V=\\dfrac{2\\pi}{3}-\\dfrac{16\\pi}{105}=\\dfrac{70\\pi-16\\pi}{105}=\\dfrac{54\\pi}{105}=\\dfrac{18\\pi}{35}.$\n\n（2）表面积。圆弧绕 $x$ 轴旋转得半球面，$S_1=2\\pi r^2=2\\pi$（$r=1$）。\n\n星形线段：$x'=-3\\cos^2 t\\sin t,\\ y'=3\\sin^2 t\\cos t$，\n$$x'^2+y'^2=9\\sin^2 t\\cos^2 t(\\cos^2 t+\\sin^2 t)=9\\sin^2 t\\cos^2 t,\\quad \\mathrm{d}s=3\\sin t\\cos t\\,\\mathrm{d}t.$$\n$$S_2=2\\pi\\int_0^{\\pi/2}\\sin^3 t\\cdot3\\sin t\\cos t\\,\\mathrm{d}t=6\\pi\\int_0^{\\pi/2}\\sin^4 t\\cos t\\,\\mathrm{d}t=6\\pi\\cdot\\dfrac{1}{5}=\\dfrac{6\\pi}{5}.$$\n故 $S=S_1+S_2=2\\pi+\\dfrac{6\\pi}{5}=\\dfrac{16\\pi}{5}.$",
@@ -413,7 +413,7 @@
       "index": 4,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](/figures/388.png)",
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](assets/figures/388.png)",
       "options": {
         "A": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 2 个拐点",
         "B": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 3 个拐点",

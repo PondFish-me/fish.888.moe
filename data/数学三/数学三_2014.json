@@ -396,7 +396,7 @@
       "index": 10,
       "type": "填空题",
       "difficulty": 0,
-      "stem": "设 $D$ 是由曲线 $x y+1=0$ 与直线 $y+x=0$ 及 $y=2$ 围成的有界区域, 则 $D$ 的面积为 $\\rule{0.5cm}{0.2mm}$\n\n![区域 D](/figures/487.svg)",
+      "stem": "设 $D$ 是由曲线 $x y+1=0$ 与直线 $y+x=0$ 及 $y=2$ 围成的有界区域, 则 $D$ 的面积为 $\\rule{0.5cm}{0.2mm}$\n\n![区域 D](assets/figures/487.svg)",
       "options": {},
       "answer": "$\\dfrac{3}{2}-\\ln 2$",
       "analysis": "【分析】三条边界：双曲线 $xy+1=0$（即 $x=-\\dfrac1y$）、直线 $y+x=0$（即 $x=-y$）、水平线 $y=2$。先求三个交点确定区域，再选「横条」积分（对 $y$ 积分，左右边界用 $x=-y$ 与 $x=-\\dfrac1y$），最简洁。\n\n【解答】交点：直线与双曲线 $-y=-\\dfrac1y\\Rightarrow y^2=1\\Rightarrow(y=1$ 处 $x=-1)$；$y=2$ 与直线交于 $(-2,2)$；$y=2$ 与双曲线交于 $(-\\tfrac12,2)$。区域顶点 $(-1,1),(-2,2),(-\\tfrac12,2)$，$y$ 从 $1$ 到 $2$。\n\n对固定 $y\\in[1,2]$，左边界为直线 $x=-y$，右边界为双曲线 $x=-\\dfrac1y$（因 $-y<-\\dfrac1y$ 当 $y>1$）。面积\n$$S=\\int_1^2\\Big[\\Big(-\\frac1y\\Big)-(-y)\\Big]\\mathrm{d}y=\\int_1^2\\Big(y-\\frac1y\\Big)\\mathrm{d}y.$$\n$$=\\Big[\\frac{y^2}{2}-\\ln y\\Big]_1^2=\\Big(2-\\ln2\\Big)-\\Big(\\frac12-0\\Big)=\\frac32-\\ln2.$$",

@@ -118,7 +118,7 @@
       "index": 7,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](/uploads/books/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](assets/figures/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
       "options": {
         "A": "一个极小值点和两个极大值点",
         "B": "两个极小值点和一个极大值点",

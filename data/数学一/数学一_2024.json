@@ -121,7 +121,7 @@
       "index": 5,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "在空间直角坐标系 $O-x y z$ 中，三张平面 $\\pi_i: a_i x+b_i y+c_i z=d_i(i=1,2,3)$ 的位置关系如图所示，记 $\\boldsymbol{\\alpha}_i=\\left(a_i, b_i, c_i\\right), \\boldsymbol{\\beta}_i=\\left(a_i, b_i, c_i, d_i\\right)$ ，若 $r\\left(\\begin{array}{l}\\boldsymbol{\\alpha}_1 \\\\ \\boldsymbol{\\alpha}_2 \\\\ \\boldsymbol{\\alpha}_3\\end{array}\\right)=m$ ， $r\\left(\\begin{array}{l}\\boldsymbol{\\beta}_1 \\\\ \\boldsymbol{\\beta}_2 \\\\ \\boldsymbol{\\beta}_3\\end{array}\\right)=n$ ，则 $(\\quad)$\r\n![2452.png](/figures/2452.png)",
+      "stem": "在空间直角坐标系 $O-x y z$ 中，三张平面 $\\pi_i: a_i x+b_i y+c_i z=d_i(i=1,2,3)$ 的位置关系如图所示，记 $\\boldsymbol{\\alpha}_i=\\left(a_i, b_i, c_i\\right), \\boldsymbol{\\beta}_i=\\left(a_i, b_i, c_i, d_i\\right)$ ，若 $r\\left(\\begin{array}{l}\\boldsymbol{\\alpha}_1 \\\\ \\boldsymbol{\\alpha}_2 \\\\ \\boldsymbol{\\alpha}_3\\end{array}\\right)=m$ ， $r\\left(\\begin{array}{l}\\boldsymbol{\\beta}_1 \\\\ \\boldsymbol{\\beta}_2 \\\\ \\boldsymbol{\\beta}_3\\end{array}\\right)=n$ ，则 $(\\quad)$\r\n![2452.png](assets/figures/2452.png)",
       "options": {
         "A": "$m=1, n=2$",
         "B": "$m=n=2$",

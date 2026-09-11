@@ -172,7 +172,7 @@
       "index": 2,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "如图所示, 曲线段的方程为 $y=f(x)$, 函数 $f(x)$ 在区间 $[0, a]$ 上有连续的导数, 则定积分 $\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 等于 $(\\quad)$\n\n![曲线段 y=f(x) 与矩形 OBAC](/uploads/books/ad3ebc4e9c2d40c745d3211478189ef8b8923674f023ad5417ea6a26c11f5185.png)",
+      "stem": "如图所示, 曲线段的方程为 $y=f(x)$, 函数 $f(x)$ 在区间 $[0, a]$ 上有连续的导数, 则定积分 $\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 等于 $(\\quad)$\n\n![曲线段 y=f(x) 与矩形 OBAC](assets/figures/ad3ebc4e9c2d40c745d3211478189ef8b8923674f023ad5417ea6a26c11f5185.png)",
       "options": {
         "A": "曲边梯形 $A B O D$ 的面积",
         "B": "梯形 $A B O D$ 的面积",
@@ -226,7 +226,7 @@
       "index": 6,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f$ 连续. 若 $\\displaystyle F(u, v)=\\iint\\limits_{D_{u v}} \\frac{f\\left(x^2+y^2\\right)}{\\sqrt{x^2+y^2}} \\mathrm{d} x \\mathrm{d} y$, 其中区域 $D_{u v}$ 为图中阴影部分, 则 $\\dfrac{\\partial F}{\\partial u}=(\\quad)$\n\n![积分区域 Duv](/uploads/books/adb38d99a3e4fc4d31f3c1cde0e685e5e5c914c5f88e5e69118e037ae1612adb.jpg)",
+      "stem": "设函数 $f$ 连续. 若 $\\displaystyle F(u, v)=\\iint\\limits_{D_{u v}} \\frac{f\\left(x^2+y^2\\right)}{\\sqrt{x^2+y^2}} \\mathrm{d} x \\mathrm{d} y$, 其中区域 $D_{u v}$ 为图中阴影部分, 则 $\\dfrac{\\partial F}{\\partial u}=(\\quad)$\n\n![积分区域 Duv](assets/figures/adb38d99a3e4fc4d31f3c1cde0e685e5e5c914c5f88e5e69118e037ae1612adb.jpg)",
       "options": {
         "A": "$v f\\left(u^2\\right)$",
         "B": "$\\dfrac{v}{u} f\\left(u^2\\right)$",

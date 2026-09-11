@@ -183,10 +183,10 @@
       "difficulty": 0,
       "stem": "设有三张不同平面的方程 $a_{i 1} x+a_{i 2} y+a_{i 3} z=b_{i}, i=1,2,3$, 它们所组成的线性方程组的系数矩阵与增广矩阵的秩都为 $2$ , 则这三张平面可能的位置关系为 $(\\quad)$",
       "options": {
-        "A": "![](/figures/958-a.jpg)",
-        "B": "![](/figures/958-b.jpg)",
-        "C": "![](/figures/958-c.jpg)",
-        "D": "![](/figures/958-d.jpg)"
+        "A": "![](assets/figures/958-a.jpg)",
+        "B": "![](assets/figures/958-b.jpg)",
+        "C": "![](assets/figures/958-c.jpg)",
+        "D": "![](assets/figures/958-d.jpg)"
       },
       "answer": "B",
       "analysis": "因为 $\\boldsymbol{A}=\\left(\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right), \\\\\r\n\\boldsymbol{x}=\\left(\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{l}b_1 \\\\ b_2 \\\\ b_3\\end{array}\\right)$. \r\n\r\n因为 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2<3$, 所以方程组 $\\boldsymbol{Ax} =\\boldsymbol{b}$ 有无数个解, \r\n\r\n即三个平面有无数个交点, 因为 (A) 只有一个交点, \r\n\r\n而 (C), (D) 没有公共交点, 所以应选 (B)",

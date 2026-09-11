@@ -193,7 +193,7 @@
       "index": 1,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](/figures/388.png)",
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](assets/figures/388.png)",
       "options": {
         "A": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 2 个拐点",
         "B": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 3 个拐点",

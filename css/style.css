@@ -361,6 +361,24 @@ h1,h2,h3,h4 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2
   padding-left: .25rem;
 }
 
+/* 题干 / 选项 / 解析里的函数图像、几何图。
+   原图多为白底 PNG-JPG，在宣纸底色上压一道细边，避免"浮"在页面上。 */
+.fig {
+  display: block;
+  max-width: min(100%, 420px);
+  height: auto;
+  margin: .875rem 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: .375rem;
+}
+/* 选项内的图更小，四个并排时不至于把卡片撑长 */
+.opt__text .fig {
+  max-width: min(100%, 220px);
+  margin: .5rem 0 .25rem;
+}
+
 /* options */
 .options { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
 .opt {

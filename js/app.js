@@ -114,23 +114,25 @@
           const badge = k === q.answer ? '正确答案' : (k === userAns && k !== q.answer ? '你的选择' : '');
           return `<div class="opt ${cls.join(' ')}" data-key="${k}" data-qid="${q.id}">
             <span class="opt__marker">${k}</span>
-            <span class="opt__text render-me">${escHtml(v)}</span>
+            <span class="opt__text render-me">${renderRich(v)}</span>
             <span class="opt__badge">${badge}</span>
           </div>`;
         }).join('')
       : `<div class="meta" style="margin-bottom:1rem">本题为${q.type}，无选项。</div>`;
 
-    const analysisHtml = q.analysis
+    /* 有解析就展示解析；没有解析但有答案时，仍要把答案给出来
+       （数学一 1990 第 1 题站方本身无解析文字，旧代码会整块吞掉，用户看到空卡片）。 */
+    const analysisHtml = (q.analysis || q.answer)
       ? `<div class="analysis${isSubmitted ? ' visible' : ''}" id="analysis">
-           <div class="analysis__label">【解析】</div>
-           <div class="analysis__body render-me">${formatAnalysis(escHtml(q.analysis))}</div>
-           <div class="analysis__answer">答案：${q.answer}</div>
+           ${q.analysis ? `<div class="analysis__label">【解析】</div>
+           <div class="analysis__body render-me">${formatAnalysis(renderRich(q.analysis))}</div>` : ''}
+           ${q.answer ? `<div class="analysis__answer">答案：${escHtml(q.answer)}</div>` : ''}
            ${q.key_point ? `<div class="analysis__key">关键点：${escHtml(q.key_point)}</div>` : ''}
            ${q.pitfalls && q.pitfalls.length ? `<div class="analysis__pitfalls">${q.pitfalls.map(p => `<div class="pitfall">⚠ ${escHtml(p)}</div>`).join('')}</div>` : ''}
          </div>`
       : '';
 
-    const stemHtml = `<div class="card__stem render-me">${escHtml(q.stem)}</div>`;
+    const stemHtml = `<div class="card__stem render-me">${renderRich(q.stem)}</div>`;
 
     $('#inner').innerHTML = `
       <article class="card">
@@ -168,18 +170,11 @@
 
     if ($('#submitBtn')) $('#submitBtn').onclick = submitCurrent;
 
-    // render katex
-    requestAnimationFrame(() => {
-      if (typeof renderMathInElement === 'function') {
-        renderMathInElement($('#inner'), {
-          delimiters: [
-            { left: '$$', right: '$$', display: true },
-            { left: '$', right: '$', display: false },
-          ],
-          throwOnError: false
-        });
-      }
-    });
+    // render katex —— 不能只挂在 requestAnimationFrame 上：
+    // 后台标签页 / 最小化窗口不触发 rAF，公式会一直停在 $...$ 原文，
+    // 直到用户切回前台。改为直接渲染，rAF 仅作二次兜底。
+    renderMath();
+    requestAnimationFrame(renderMath);
 
     // scroll to top
     $('#canvas').scrollTop = 0;
@@ -257,6 +252,20 @@
     if (window.innerWidth <= 860) { sidebar.classList.remove('open'); menuBtn?.setAttribute('aria-expanded', 'false'); }
   });
 
+  /* 渲染 #inner 里的 LaTeX。KaTeX 会跳过已带 .katex 的节点，重复调用安全。 */
+  function renderMath() {
+    if (typeof renderMathInElement !== 'function') return;
+    const host = $('#inner');
+    if (!host) return;
+    renderMathInElement(host, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      throwOnError: false
+    });
+  }
+
   /* ── helpers ─────────────────────────────── */
   function escHtml(s) {
     return String(s)
@@ -264,6 +273,24 @@
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+  }
+
+  /* 题干/选项/解析里夹着 markdown 图片 ![alt](src)。
+     必须在 escHtml 之后调用：此时 " 已是 &quot;，src/alt 无法逃出属性。
+     src 再做一次白名单校验，只放行本仓库 assets/ 下的相对路径。 */
+  function renderImages(escaped) {
+    return String(escaped).replace(
+      /!\[([^\]]*)\]\(([^)\s]+)\)/g,
+      (whole, alt, src) => {
+        if (!/^assets\/[\w./-]+$/.test(src)) return whole;
+        return `<img class="fig" src="${src}" alt="${alt}" loading="lazy" decoding="async">`;
+      }
+    );
+  }
+
+  /* 转义 + 图片，供题干与选项使用 */
+  function renderRich(s) {
+    return renderImages(escHtml(s));
   }
 
   function formatAnalysis(raw) {

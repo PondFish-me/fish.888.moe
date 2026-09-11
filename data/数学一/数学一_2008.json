@@ -145,7 +145,7 @@
       "index": 6,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, 如果二次曲面方程 $(x, y, z) \\boldsymbol{A}\\left(\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right)=1$ 在正交变换下的标准方程的图形如图所示, 则 $\\boldsymbol{A}$ 的正特征值的个数为  $(\\quad)$\n\n![二次曲面在正交变换下标准方程的图形](/uploads/books/8c0be165d219b2adbfb8f250374c5aa58411dce664a7385ace9b12767e99b6d6.png)",
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, 如果二次曲面方程 $(x, y, z) \\boldsymbol{A}\\left(\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right)=1$ 在正交变换下的标准方程的图形如图所示, 则 $\\boldsymbol{A}$ 的正特征值的个数为  $(\\quad)$\n\n![二次曲面在正交变换下标准方程的图形](assets/figures/8c0be165d219b2adbfb8f250374c5aa58411dce664a7385ace9b12767e99b6d6.png)",
       "options": {
         "A": "$0$",
         "B": "$1$",

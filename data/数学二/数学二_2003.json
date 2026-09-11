@@ -10,7 +10,7 @@
       "index": 10,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](/uploads/books/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](assets/figures/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
       "options": {
         "A": "一个极小值点和两个极大值点",
         "B": "两个极小值点和一个极大值点",
@@ -406,7 +406,7 @@
       "index": 19,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "有一平底容器, 其内侧壁是由曲线 $x=\\varphi(y)(y \\geqslant 0)$ 绕 $y$ 轴旋转而成的旋转曲面 (如图所示), 容器的底面圆的半径为 $2 \\mathrm{m}$, 根据设计要求, 当以 $3 \\mathrm{m}^3 / \\mathrm{min}$ 的速率向容器内注入液体时, 液面的面积将以 $\\pi \\mathrm{m}^2 / \\mathrm{min}$ 的速率均匀扩大(假设注入液体前, 容器内无液体)\r\n\r\n(1) 根据 $t$ 时刻液面的面积, 写出 $t$ 与 $\\varphi(y)$ 之间的关系式;\r\n\r\n(2) 求曲线 $x=\\varphi(y)$ 的方程\r\n\r\n(注: $\\mathrm{m}$ 表示长度单位米, $\\min$ 表示时间单位分)\n\n![平底容器示意图](/uploads/books/a4c6d3880014ba2e893e49ef502af9efd7164eac32d0633451b4f4fc700b52ee.jpg)",
+      "stem": "有一平底容器, 其内侧壁是由曲线 $x=\\varphi(y)(y \\geqslant 0)$ 绕 $y$ 轴旋转而成的旋转曲面 (如图所示), 容器的底面圆的半径为 $2 \\mathrm{m}$, 根据设计要求, 当以 $3 \\mathrm{m}^3 / \\mathrm{min}$ 的速率向容器内注入液体时, 液面的面积将以 $\\pi \\mathrm{m}^2 / \\mathrm{min}$ 的速率均匀扩大(假设注入液体前, 容器内无液体)\r\n\r\n(1) 根据 $t$ 时刻液面的面积, 写出 $t$ 与 $\\varphi(y)$ 之间的关系式;\r\n\r\n(2) 求曲线 $x=\\varphi(y)$ 的方程\r\n\r\n(注: $\\mathrm{m}$ 表示长度单位米, $\\min$ 表示时间单位分)\n\n![平底容器示意图](assets/figures/a4c6d3880014ba2e893e49ef502af9efd7164eac32d0633451b4f4fc700b52ee.jpg)",
       "options": {},
       "answer": "(1) $t=\\varphi^2(y)-4$\r\n\r\n(2) $x=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$",
       "analysis": "(1) 设 $t$ 时刻液面高度为 $y$, \r\n\r\n由题意得液面面积为 \r\n\r\n$\\pi \\varphi^2(y)=\\pi t+4 \\pi$, \r\n\r\n即 $t=\\varphi^2(y)-4$\r\n\r\n(2) 当液面高度为 $y$ 时,液体的体积为 \r\n\r\n$\\displaystyle \\pi \\int_0^y \\varphi^2(y) \\mathrm{d} y=3 t$, \r\n\r\n即 $\\displaystyle \\pi \\int_0^y \\varphi^2(x) \\mathrm{d} x=3 \\varphi^2(y)-12$\r\n\r\n两边对 $y$ 求导得 $\\pi \\varphi^2(y)=6 \\varphi(y) \\varphi^{\\prime}(y)$, \r\n\r\n即 $\\varphi(y)-\\dfrac{6}{\\pi} \\varphi^{\\prime}(y)=0$, \r\n\r\n解得 $\\varphi(y)=C \\mathrm{e}^{\\frac{\\pi}{6} y}$, \r\n\r\n由 $\\varphi(0)=2$ 得 $C=2$, \r\n\r\n故曲线方程为 $\\varphi(y)=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$ 或 $x=2 \\mathrm{e}^{\\frac{\\pi}{6} y}$",

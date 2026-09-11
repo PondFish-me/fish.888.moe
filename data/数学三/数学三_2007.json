@@ -64,7 +64,7 @@
       "index": 3,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "如图所示, 连续函数 $y=f(x)$ 在区间 $[-3,-2],[2,3]$ 上的图形分别是直径为 $1$ 的上、下半圆周, 在区间 $[-2,0]$, $[0,2]$ 上的图形分别是直径为 $2$ 的下、上半圆周. 设 $F(x)=$ $\\displaystyle \\int_{0}^{x} f(t) \\mathrm{d} t$, 则下列结论正确的是 $(\\quad)$\n\n![y=f(x) 的图形：四段半圆周](/uploads/books/7da8d101738688cb56bbd4fae80993f6c05a861880a2bb57b8b25c55f96ca17f.png)",
+      "stem": "如图所示, 连续函数 $y=f(x)$ 在区间 $[-3,-2],[2,3]$ 上的图形分别是直径为 $1$ 的上、下半圆周, 在区间 $[-2,0]$, $[0,2]$ 上的图形分别是直径为 $2$ 的下、上半圆周. 设 $F(x)=$ $\\displaystyle \\int_{0}^{x} f(t) \\mathrm{d} t$, 则下列结论正确的是 $(\\quad)$\n\n![y=f(x) 的图形：四段半圆周](assets/figures/7da8d101738688cb56bbd4fae80993f6c05a861880a2bb57b8b25c55f96ca17f.png)",
       "options": {
         "A": "$F(3)=-\\dfrac{3}{4} F(-2)$",
         "B": "$F(3)=\\dfrac{5}{4} F(2)$",
@@ -414,7 +414,7 @@
         "D": "$\\displaystyle \\int_0^1 \\mathrm{d} y \\int_{\\frac{\\pi}{2}}^{\\pi-\\arcsin y} f(x, y) \\mathrm{d} x$"
       },
       "answer": "B",
-      "analysis": "如图所示, $D=\\left\\{(x, y) \\mid \\dfrac{\\pi}{2} \\leqslant x \\leqslant \\pi, \\sin x \\leqslant y \\leqslant 1\\right\\}\\\\\r\n=\\{(x, y) \\mid \\pi-\\arcsin y \\leqslant x \\leqslant \\pi, 0 \\leqslant y \\leqslant 1\\}$\n\n![积分区域 D](/uploads/books/a9a6bcdf607acb8a50da97ff629678167ef56a59bdeb94710bbc33536017de59.png)\r\n\r\n则 $\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y=\\int_0^1 \\mathrm{d} y \\int_{\\pi-\\arcsin y}^\\pi f(x, y) \\mathrm{d} x$, 应选 (B)",
+      "analysis": "如图所示, $D=\\left\\{(x, y) \\mid \\dfrac{\\pi}{2} \\leqslant x \\leqslant \\pi, \\sin x \\leqslant y \\leqslant 1\\right\\}\\\\\r\n=\\{(x, y) \\mid \\pi-\\arcsin y \\leqslant x \\leqslant \\pi, 0 \\leqslant y \\leqslant 1\\}$\n\n![积分区域 D](assets/figures/a9a6bcdf607acb8a50da97ff629678167ef56a59bdeb94710bbc33536017de59.png)\r\n\r\n则 $\\displaystyle \\int_{\\frac{\\pi}{2}}^\\pi \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y=\\int_0^1 \\mathrm{d} y \\int_{\\pi-\\arcsin y}^\\pi f(x, y) \\mathrm{d} x$, 应选 (B)",
       "wrong_options": {
         "A": "反解 x 时用错反正弦分支，写成 π+arcsiny（在 [π/2,π] 上应是 π−arcsiny）",
         "C": "x 上限误写 π+arcsiny 且下限保留 π/2，未正确反解左边界",

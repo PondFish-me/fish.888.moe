@@ -325,7 +325,7 @@
       "index": 16,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设有一正椭圆柱体, 其底面的长、短轴分别为 $2 a 、 2 b$, 用过此柱体底面的短轴且与底面成 $\\alpha$ 角 $\\left(0<\\alpha<\\dfrac{\\pi}{2}\\right)$ 的平面截此柱体, 得一楔形体 (如图所示), 求此楔形体的体积 $V$\n\n![楔形体示意图](/uploads/books/03b068c385c1dc20bf39e8f8f7c443dc21c66e979bd97d0813ed7a9916c7ab60.jpg)",
+      "stem": "设有一正椭圆柱体, 其底面的长、短轴分别为 $2 a 、 2 b$, 用过此柱体底面的短轴且与底面成 $\\alpha$ 角 $\\left(0<\\alpha<\\dfrac{\\pi}{2}\\right)$ 的平面截此柱体, 得一楔形体 (如图所示), 求此楔形体的体积 $V$\n\n![楔形体示意图](assets/figures/03b068c385c1dc20bf39e8f8f7c443dc21c66e979bd97d0813ed7a9916c7ab60.jpg)",
       "options": {},
       "answer": "$\\dfrac{2 a^2 b}{3} \\tan \\alpha$",
       "analysis": "取 $[y, y+\\mathrm{d} y] \\subset[-b, b]$,\r\n\r\n由 $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$ \r\n\r\n得 $x=\\dfrac{a}{b} \\sqrt{b^2-y^2}, h=x \\tan\\alpha$,\r\n\r\n截面面积 $\\displaystyle A(y)=\\frac{1}{2}xh\\\\=\\frac{1}{2} \\cdot\\left(\\frac{a}{b} \\sqrt{b^2-y^2}\\right)^2 \\cdot \\tan \\alpha\\\\=\\frac{a^2}{2 b^2} \\tan \\alpha \\cdot\\left(b^2-y^2\\right)$,\r\n\r\n则所求的体积为 $\\displaystyle V=\\int_{-b}^b A(y) \\mathrm{d} y\\\\=\\frac{a^2}{b^2} \\tan \\alpha \\cdot \\int_{-b}^b\\left(b^2-y^2\\right) \\mathrm{d} y\\\\=\\frac{2 a^2 b}{3} \\tan \\alpha$",

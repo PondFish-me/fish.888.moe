@@ -38,7 +38,7 @@
       "index": 2,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "如图所示, 正方形 $\\{(x, y) \\mid | x|\\leqslant 1, |y| \\leqslant 1\\}$ 被其对角线划分为四个区域 $D_{k}(k=1,2,3$, 4), $\\displaystyle I_{k}=\\iint\\limits_{D_{k}} y \\cos x \\mathrm{d} x \\mathrm{d} y$, 则 $\\max \\limits_{1 \\leqslant k \\leqslant 4}\\left\\{I_{k}\\right\\}=(\\quad)$\n\n![正方形区域 D1-D4](/figures/695.png)",
+      "stem": "如图所示, 正方形 $\\{(x, y) \\mid | x|\\leqslant 1, |y| \\leqslant 1\\}$ 被其对角线划分为四个区域 $D_{k}(k=1,2,3$, 4), $\\displaystyle I_{k}=\\iint\\limits_{D_{k}} y \\cos x \\mathrm{d} x \\mathrm{d} y$, 则 $\\max \\limits_{1 \\leqslant k \\leqslant 4}\\left\\{I_{k}\\right\\}=(\\quad)$\n\n![正方形区域 D1-D4](assets/figures/695.png)",
       "options": {
         "A": "$I_{1}$",
         "B": "$I_{2}$",
@@ -66,12 +66,12 @@
       "index": 3,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $y=f(x)$ 在区间 $[-1,3]$ 上的图形如上图所示, 则函数 $\\displaystyle F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t$ 的图形为 $(\\quad)$\n\n![f(x) 的图形](/figures/696.png)",
+      "stem": "设函数 $y=f(x)$ 在区间 $[-1,3]$ 上的图形如上图所示, 则函数 $\\displaystyle F(x)=\\int_{0}^{x} f(t) \\mathrm{d} t$ 的图形为 $(\\quad)$\n\n![f(x) 的图形](assets/figures/696.png)",
       "options": {
-        "A": "![](/figures/696-a.png)",
-        "B": "![](/figures/696-b.png)",
-        "C": "![](/figures/696-c.png)",
-        "D": "![](/figures/696-d.png)"
+        "A": "![](assets/figures/696-a.png)",
+        "B": "![](assets/figures/696-b.png)",
+        "C": "![](assets/figures/696-c.png)",
+        "D": "![](assets/figures/696-d.png)"
       },
       "answer": "D",
       "analysis": "【分析】本题给出 $f(x)$ 在 $[-1,3]$ 上的图形，要识别 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$ 的图形。**先看清 $f$ 是分段给出的，且在 $x=0$ 与 $x=2$ 处有跳跃间断**——这决定了该用哪三道筛子：(1) $F(0)=0$，图形必过原点；(2) 在 $f$ 的连续点处 $F'(x)=f(x)$，故 $f>0$ 处 $F$ 递增、$f<0$ 处 $F$ 递减、$f$ 变号处 $F$ 取极值；(3) $f$ 有界且分段连续 $\\Rightarrow$ $F$ **处处连续**，凡是跳断的候选图直接排除。\n\n⚠️ 不能拿\"光滑、无尖角\"当筛子：$F$ 在 $f$ 的跳跃点处左右导数分别等于 $f$ 的左右极限，**并不相等**，所以正确图形在 $x=0$ 与 $x=2$ 各有一个**折点**。用光滑性去筛会把正确答案一起排除掉。\n\n【解答】依 $F(x)=\\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$：\n\n第一，$F(0)=\\displaystyle\\int_0^0 f=0$，图形必过原点。C 的图形在 $x=0$ 处取值为 $1$，即 $F(0)=1\\neq0$，**排除 C**。\n\n第二，读原图 $f$ 的符号：$[-1,0)$ 上 $f\\equiv1>0$，故 $F(x)=\\displaystyle\\int_0^x 1\\,\\mathrm{d}t=x$ 是斜率为 $1$ 的**上升**直线，$F(-1)=-1$；$(0,1)$ 上 $f<0$、$(1,2)$ 上 $f>0$，故 $F$ 先降后升、在 $x=1$ 取极小值；$[2,3]$ 上 $f\\equiv0$，故 $F$ 是水平直线。A 在 $[-1,0)$ 上是**下降**的，与 $f>0$ 矛盾，**排除 A**。\n\n第三，$F$ 必处处连续。B 在 $x=2$ 处**跳断**（图上空心点加竖直虚线），变上限积分不可能跳跃，**排除 B**。\n\n于是只剩 D。回头核对 D 的两个折点：$F'(0^-)=1$、$F'(0^+)=-1$；$F'(2^-)=2$、$F'(2^+)=0$——恰与 $f$ 在这两点的左右极限一致，D 完全相容。\n\n综合\"过原点 + 增减随 $f$ 的正负 + 处处连续\"三项筛选，正确图形为 D。",

@@ -148,7 +148,7 @@
       "index": 6,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "如图所示, 有 3 张平面两两相交, 交线相互平行,它们的方程 $a_{i 1} x+a_{i 2} y+a_{i 3} z=d_{i}(i=1,2,3)$ 组成的线性方程组的系数矩阵及增广矩阵分别记为 $\\boldsymbol{A}, \\overline{\\boldsymbol{A}}$, 则 $(\\quad)$\n\n![3 张平面的位置关系](/figures/210.png)",
+      "stem": "如图所示, 有 3 张平面两两相交, 交线相互平行,它们的方程 $a_{i 1} x+a_{i 2} y+a_{i 3} z=d_{i}(i=1,2,3)$ 组成的线性方程组的系数矩阵及增广矩阵分别记为 $\\boldsymbol{A}, \\overline{\\boldsymbol{A}}$, 则 $(\\quad)$\n\n![3 张平面的位置关系](assets/figures/210.png)",
       "options": {
         "A": "$r(\\boldsymbol{A})=2, r(\\overline{\\boldsymbol{A}})=3$",
         "B": "$r(\\boldsymbol{A})=2, r(\\overline{\\boldsymbol{A}})=2$",

@@ -416,7 +416,7 @@
       "index": 19,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "已知 $L$ 是第一象限中从点 $(0,0)$ 沿圆周 $x^{2}+y^{2}=2 x$ 到点 $(2,0)$, 再沿圆周 $x^{2}+y^{2}=4$ 到 点 $(0,2)$ 的曲线段, 计算曲线积分 $\\displaystyle I=\\int_{L} 3 x^{2} y \\mathrm{d} x+\\left(x^{3}+x-2 y\\right) \\mathrm{d} y$\n\n![积分路径 L](/figures/562.svg)",
+      "stem": "已知 $L$ 是第一象限中从点 $(0,0)$ 沿圆周 $x^{2}+y^{2}=2 x$ 到点 $(2,0)$, 再沿圆周 $x^{2}+y^{2}=4$ 到 点 $(0,2)$ 的曲线段, 计算曲线积分 $\\displaystyle I=\\int_{L} 3 x^{2} y \\mathrm{d} x+\\left(x^{3}+x-2 y\\right) \\mathrm{d} y$\n\n![积分路径 L](assets/figures/562.svg)",
       "options": {},
       "answer": "$\\dfrac{\\pi}{2}-4$",
       "analysis": "【分析】$P=3x^2y,\\ Q=x^3+x-2y$，注意 $\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}=3x^2+1-3x^2=1$，是常数，提示用格林公式。$L$ 不是闭曲线，故补一段从 $(0,2)$ 沿 $y$ 轴回到 $(0,0)$ 的线段 $L_1$ 使其封闭，再在补段上单独积分扣除。\n\n【解答】$L$ 从 $(0,0)$ 沿小圆 $x^2+y^2=2x$ 到 $(2,0)$，再沿大圆 $x^2+y^2=4$ 到 $(0,2)$。补线段 $L_1:(0,2)\\to(0,0)$（沿 $y$ 轴），则 $L+L_1$ 为一条正向（逆时针）闭曲线，所围区域 $D$ 位于第一象限、大圆 $x^2+y^2=4$ 之内、小圆 $x^2+y^2=2x$ 之外。\n\n由格林公式：\n\n$$\\oint_{L+L_1}P\\,\\mathrm{d}x+Q\\,\\mathrm{d}y=\\iint_D\\left(\\dfrac{\\partial Q}{\\partial x}-\\dfrac{\\partial P}{\\partial y}\\right)\\mathrm{d}\\sigma=\\iint_D 1\\,\\mathrm{d}\\sigma=\\text{面积}(D).$$\n\n面积 $(D)=$ 大圆在第一象限的四分之一圆盘面积 $-$ 小圆上半圆盘面积 $=\\dfrac{1}{4}\\pi\\cdot2^2-\\dfrac{1}{2}\\pi\\cdot1^2=\\pi-\\dfrac{\\pi}{2}=\\dfrac{\\pi}{2}.$\n\n再算补段 $L_1$ 上的积分：在 $L_1$ 上 $x=0,\\ \\mathrm{d}x=0$，$Q=x^3+x-2y=-2y$，$y$ 由 $2$ 到 $0$：\n\n$$\\int_{L_1}P\\,\\mathrm{d}x+Q\\,\\mathrm{d}y=\\int_2^0(-2y)\\,\\mathrm{d}y=\\big[-y^2\\big]_2^0=0-(-4)=4.$$\n\n于是\n\n$$I=\\oint_{L+L_1}-\\int_{L_1}=\\dfrac{\\pi}{2}-4.$$",

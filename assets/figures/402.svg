@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="300" height="220" font-family="'Times New Roman', serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1c2330"/>
+    </marker>
+  </defs>
+  <!-- axes -->
+  <line x1="18" y1="150" x2="284" y2="150" stroke="#1c2330" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="140" y1="206" x2="140" y2="18" stroke="#1c2330" stroke-width="1.6" marker-end="url(#ah)"/>
+  <!-- left branch: positive, tangent-touches the x-axis once (no sign change), then →+∞ as x→0⁻ -->
+  <path d="M40,50 C56,108 80,150 93,150 C106,150 122,96 130,30" fill="none" stroke="#1c2330" stroke-width="2"/>
+  <!-- right branch: −∞ as x→0⁺, crosses the x-axis once (sign change), then →+∞ -->
+  <path d="M147,206 C145,180 151,159 161,152 C168,147 171,139 177,126 C187,92 192,66 198,30" fill="none" stroke="#1c2330" stroke-width="2"/>
+  <!-- labels -->
+  <text x="134" y="28" text-anchor="end" font-style="italic" font-size="15">f''(x)</text>
+  <text x="288" y="166" font-style="italic" font-size="15">x</text>
+  <text x="131" y="167" text-anchor="end" font-style="italic" font-size="14">O</text>
+</svg>

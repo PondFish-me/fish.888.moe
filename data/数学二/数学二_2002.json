@@ -325,7 +325,7 @@
       "index": 15,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "某闸门的形状与大小如图所示, 其中直线 $l$ 为对称轴, 闸门的 上部为矩形 $A B C D$, 下部由二次抛物线与线段 $A B$ 所围成. 当水面与闸门的上端相平时, 要使闸门矩形部分承受的水压力与下部承受的水压力之比为 $5: 4$, 闸门矩形部分的高 $h$ 应为多少米?\n\n![闸门形状与尺寸](/uploads/books/e0c25a08822236631666aa178bb73b9e5a7049d5ee231671f8aa25514fd023df.jpg)",
+      "stem": "某闸门的形状与大小如图所示, 其中直线 $l$ 为对称轴, 闸门的 上部为矩形 $A B C D$, 下部由二次抛物线与线段 $A B$ 所围成. 当水面与闸门的上端相平时, 要使闸门矩形部分承受的水压力与下部承受的水压力之比为 $5: 4$, 闸门矩形部分的高 $h$ 应为多少米?\n\n![闸门形状与尺寸](assets/figures/e0c25a08822236631666aa178bb73b9e5a7049d5ee231671f8aa25514fd023df.jpg)",
       "options": {},
       "answer": "$2$",
       "analysis": "建立坐标系如图所示\r\n\r\n抛物线方程为 $y=x^2$,\r\n\r\n设闸门上部的压力大小为 $F_1$,\r\n\r\n取 $[y, y+\\mathrm{d} y] \\subset[1, h+1]$,\r\n\r\n$\\mathrm{d} F_1=\\rho g(h+1-y) \\cdot 2 \\cdot \\mathrm{d} y$, \r\n\r\n则\r\n$\\displaystyle F_1=2 \\rho g \\int_1^{h+1}(h+1-y) \\mathrm{d} y=\\rho g h^2 ;$\r\n\r\n设下部的压力大小为 $F_2$,\r\n\r\n取 $[y, y+\\mathrm{d} y] \\subset[0,1]$,\r\n\r\n$\\mathrm{d} F_2=\\rho g(h+1-y) \\cdot 2 \\sqrt{y} \\mathrm{d} y$, 则\r\n\r\n$\\displaystyle F_2=2 \\rho g \\int_0^1(h+1-y) \\sqrt{y} \\mathrm{d} y=4 \\rho g\\left(\\frac{h}{3}+\\frac{2}{15}\\right)$,\r\n\r\n由 $F_1: F_2=5: 4$ 得 $h=2$, 即闸门高度应为 2 米",

@@ -10,7 +10,7 @@
       "index": 1,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其二阶导数 $f^{\\prime \\prime}(x)$ 的图形如图所示, 则曲线 $y=f(x)$ 的拐点的个数为 $(\\quad)$\n\n![二阶导函数 f''(x) 的图形](/figures/402.svg)",
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其二阶导数 $f^{\\prime \\prime}(x)$ 的图形如图所示, 则曲线 $y=f(x)$ 的拐点的个数为 $(\\quad)$\n\n![二阶导函数 f''(x) 的图形](assets/figures/402.svg)",
       "options": {
         "A": "$0$",
         "B": "$1$",

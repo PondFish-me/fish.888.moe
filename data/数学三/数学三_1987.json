@@ -293,7 +293,7 @@
       "index": 15,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设 $\\displaystyle y=\\sin x, 0 \\leqslant x \\leqslant \\frac{\\pi}{2}$, 问:\r\n\r\n(1) $t$ 取何值时, 图中阴影部分的面积 $S_1$ 与 $S_2$ 之和 $S=S_1+S_2$ 最小?\r\n\r\n(2) $t$ 取何值时, 面积 $S=S_1+S_2$ 最大?\n\n![阴影部分 S1 与 S2](/uploads/books/3a1ac2da904e650b73f23b182ccfee503459024a81035eadde9b0634e3624a89.png)",
+      "stem": "设 $\\displaystyle y=\\sin x, 0 \\leqslant x \\leqslant \\frac{\\pi}{2}$, 问:\r\n\r\n(1) $t$ 取何值时, 图中阴影部分的面积 $S_1$ 与 $S_2$ 之和 $S=S_1+S_2$ 最小?\r\n\r\n(2) $t$ 取何值时, 面积 $S=S_1+S_2$ 最大?\n\n![阴影部分 S1 与 S2](assets/figures/3a1ac2da904e650b73f23b182ccfee503459024a81035eadde9b0634e3624a89.png)",
       "options": {},
       "answer": "(1)当 $\\displaystyle t=\\frac{\\pi}{4}$ 时, 两部分面积之和最小; \r\n\r\n(2) 当 $t=0$ 时, 两部分面积之和最大",
       "analysis": "$$\r\n\\begin{aligned}\r\n& S_1=\\int_0^t(\\sin t-\\sin x) \\mathrm{d} x=t \\sin t+\\cos t-1,\\\\\r\n& S_2=\\int_t^{\\frac{\\pi}{2}}(\\sin x-\\sin t) \\mathrm{d} x=\\cos t-\\left(\\frac{\\pi}{2}-t\\right) \\sin t, \\\\\r\n& S=S_1+S_2=\\left(2 t-\\frac{\\pi}{2}\\right) \\sin t+2 \\cos t-1,\r\n\\end{aligned}\r\n$$\r\n\r\n令 $\\displaystyle S^{\\prime}=\\left(2 t-\\frac{\\pi}{2}\\right) \\cos t=0$, \r\n\r\n得 $\\displaystyle t=\\frac{\\pi}{4}$ 或 $\\displaystyle t=\\frac{\\pi}{2}$,\r\n\r\n由 $\\displaystyle S(0)=1, S\\left(\\frac{\\pi}{4}\\right)=\\sqrt{2}-1, S\\left(\\frac{\\pi}{2}\\right)=\\frac{\\pi}{2}-1$, \r\n\r\n(1)当 $\\displaystyle t=\\frac{\\pi}{4}$ 时, 两部分面积之和最小; \r\n\r\n(2) 当 $t=0$ 时, 两部分面积之和最大",

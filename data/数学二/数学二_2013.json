@@ -276,7 +276,7 @@
       "index": 6,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设 $D_k$ 是圆域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1\\right\\}$ 在第 $k$ 象限的部分, 记 $\\displaystyle I_k=\\iint_{D_k}(y-x) \\mathrm{d} x \\mathrm{d} y$ $(k=1,2,3,4)$, 则 $(\\quad)$\n\n![单位圆四象限 D1-D4](/figures/521.svg)",
+      "stem": "设 $D_k$ 是圆域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1\\right\\}$ 在第 $k$ 象限的部分, 记 $\\displaystyle I_k=\\iint_{D_k}(y-x) \\mathrm{d} x \\mathrm{d} y$ $(k=1,2,3,4)$, 则 $(\\quad)$\n\n![单位圆四象限 D1-D4](assets/figures/521.svg)",
       "options": {
         "A": "$I_1>0$",
         "B": "$I_2>0$",
@@ -473,7 +473,7 @@
       "index": 17,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设平面区域 $D$ 由直线 $x=3 y, y=3 x$ 及 $x+y=8$ 围成, 计算 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](/figures/540.svg)",
+      "stem": "设平面区域 $D$ 由直线 $x=3 y, y=3 x$ 及 $x+y=8$ 围成, 计算 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](assets/figures/540.svg)",
       "options": {},
       "answer": "$\\dfrac{416}{3}$",
       "analysis": "【分析】$D$ 由两条过原点的直线 $y=3x$、$y=\\dfrac{x}{3}$（即 $x=3y$）和直线 $x+y=8$ 围成，是以 $(0,0)$ 为顶点、底边在 $x+y=8$ 上的三角形。被积函数 $x^2$ 只含 $x$，宜采用 X 型区域（先对 $y$ 后对 $x$），并在 $x=2$ 处分段，因为上边界从直线 $y=3x$ 切换到 $x+y=8$。\n\n【解答】**第一步：定顶点。**\n$y=3x$ 与 $x+y=8$：$4x=8\\Rightarrow(2,6)$；$y=\\dfrac{x}{3}$ 与 $x+y=8$：$\\dfrac{4x}{3}=8\\Rightarrow(6,2)$；两直线交于 $(0,0)$。故 $D$ 为三角形，顶点 $(0,0),(2,6),(6,2)$。\n\n**第二步：分段写积分限。** 下边界恒为 $y=\\dfrac{x}{3}$。\n当 $0\\le x\\le 2$ 时上边界为 $y=3x$；当 $2\\le x\\le 6$ 时上边界为 $y=8-x$。于是\n$$\\iint_D x^2\\,dxdy=\\int_0^2 x^2\\!\\int_{x/3}^{3x}dy\\,dx+\\int_2^6 x^2\\!\\int_{x/3}^{8-x}dy\\,dx.$$\n\n**第三步：逐段计算。**\n第一段：$\\displaystyle\\int_0^2 x^2\\Big(3x-\\dfrac{x}{3}\\Big)dx=\\int_0^2 \\dfrac{8}{3}x^3\\,dx=\\dfrac{8}{3}\\cdot\\dfrac{x^4}{4}\\Big|_0^2=\\dfrac{2}{3}\\cdot16=\\dfrac{32}{3}.$\n第二段：$\\displaystyle\\int_2^6 x^2\\Big(8-x-\\dfrac{x}{3}\\Big)dx=\\int_2^6\\Big(8x^2-\\dfrac{4}{3}x^3\\Big)dx$。\n$\\int_2^6 8x^2 dx=\\dfrac83(216-8)=\\dfrac{8}{3}\\cdot208=\\dfrac{1664}{3}$；$\\int_2^6 \\dfrac43 x^3 dx=\\dfrac43\\cdot\\dfrac{6^4-2^4}{4}=\\dfrac13(1296-16)=\\dfrac{1280}{3}$。\n第二段 $=\\dfrac{1664}{3}-\\dfrac{1280}{3}=\\dfrac{384}{3}=128.$\n\n**第四步：合计。** $\\dfrac{32}{3}+128=\\dfrac{32+384}{3}=\\dfrac{416}{3}.$\n所以 $\\displaystyle\\iint_D x^2\\,dxdy=\\dfrac{416}{3}.$",

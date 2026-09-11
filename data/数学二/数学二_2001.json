@@ -10,12 +10,12 @@
       "index": 10,
       "type": "选择题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](/figures/976.jpg)",
+      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](assets/figures/976.jpg)",
       "options": {
-        "A": "![](/figures/976-a.jpg)",
-        "B": "![](/figures/976-b.jpg)",
-        "C": "![](/figures/976-c.jpg)",
-        "D": "![](/figures/976-d.jpg)"
+        "A": "![](assets/figures/976-a.jpg)",
+        "B": "![](assets/figures/976-b.jpg)",
+        "C": "![](assets/figures/976-c.jpg)",
+        "D": "![](assets/figures/976-d.jpg)"
       },
       "answer": "D",
       "analysis": "当 $x<0$ 时, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (A), (C) 不对; \r\n\r\n在 $x=0$ 的右邻域内, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (B) 不对, 应选 (D)",
