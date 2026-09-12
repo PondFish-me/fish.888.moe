@@ -146,6 +146,50 @@ h1,h2,h3,h4 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2
   gap: 1rem;
 }
 .header__stats strong { color: var(--ink); }
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.social-link {
+  min-height: 36px;
+  padding: .45rem .7rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color .18s ease, color .18s ease, background .18s ease, transform .18s ease;
+}
+.social-link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+.social-link:hover {
+  border-color: var(--ink);
+  background: var(--paper-warm);
+  transform: translateY(-1px);
+}
+.social-link--qq { color: var(--verm); }
+.social-link--qq:hover { border-color: var(--verm); }
+.social-link:focus-visible {
+  outline: 2px solid var(--verm);
+  outline-offset: 2px;
+}
 
 /* hamburger (mobile) */
 .menu-btn {
@@ -531,6 +575,7 @@ kbd {
   .menu-btn { display: flex; }
   .canvas { padding: 1.5rem 1rem 5rem; }
   .header__stats { display: none; }
+  .header__right { margin-left: auto; }
 }
 
 /* reduced motion */
@@ -544,3 +589,18 @@ kbd {
 /* ── KaTeX overrides ─────────────────────────── */
 .katex { font-size: 1em !important; }
 .katex-display { margin: .75em 0; overflow-x: auto; overflow-y: hidden; }
+@media (max-width: 560px) {
+  .header { padding: .75rem; }
+  .header__brand { gap: .5rem; min-width: 0; }
+  .seal { width: 36px; height: 36px; }
+  .header__title { font-size: var(--fs-md); }
+  .header__sub { display: none; }
+  .header__right { gap: 0; }
+  .social-links { gap: .35rem; }
+  .social-link {
+    width: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+  .social-link span { display: none; }
+}
