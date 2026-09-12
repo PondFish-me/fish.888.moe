@@ -12,6 +12,7 @@
   let mode = 'quiz';
   let submitted = new Set();
   let activeCat = '数学一';
+  let loadSequence = 0;
 
   /* ── DOM refs ────────────────────────────── */
   const $ = s => document.querySelector(s);
@@ -20,16 +21,19 @@
   /* ── init ────────────────────────────────── */
   async function boot() {
     try {
-      const idx = await fetch(DATA_URL).then(r => r.json());
+      const response = await fetch(DATA_URL);
+      if (!response.ok) throw new Error('题库索引暂时无法读取，请刷新重试。');
+      const idx = await response.json();
       papers = idx.papers;
       $('#statTotal').textContent = idx.total_unique_questions;
       $('#statPapers').textContent = idx.papers.length;
       renderSidebar();
       updateDoneCount();
-      loadPaperAt(0);
+      await loadPaperAt(0);
     } catch (e) {
       console.error('启动失败:', e);
-      $('#inner').innerHTML = '<div class="card"><p>加载失败：' + e.message + '</p></div>';
+      $('#inner').innerHTML = '<div class="card" role="alert"><p>加载失败：' + escHtml(e.message) + '</p></div>';
+      $('#progressText').textContent = '题库加载失败，请刷新重试';
     }
   }
 
@@ -47,10 +51,10 @@
     refreshYears();
   }
 
-  function refreshYears() {
+  function refreshYears(selectedYear = currentPaper?.year) {
     const list = papers.filter(p => p.paper === activeCat).sort((a, b) => b.year - a.year);
     $('#years').innerHTML = list.map(p => {
-      return `<button class="year-btn${p.year === currentPaper?.year ? ' active' : ''}" data-year="${p.year}">${p.year}</button>`;
+      return `<button class="year-btn${p.year === selectedYear ? ' active' : ''}" data-year="${p.year}">${p.year}</button>`;
     }).join('');
     $('#years').onclick = e => {
       const btn = e.target.closest('.year-btn');
@@ -58,7 +62,6 @@
       const yr = +btn.dataset.year;
       loadPaperByYear(yr);
     };
-    $('#progressText').textContent = `正在加载 ${activeCat} …`;
   }
 
   /* ── load paper ──────────────────────────── */
@@ -69,15 +72,33 @@
   }
 
   async function loadPaper(p) {
-    currentPaper = p;
+    const sequence = ++loadSequence;
+    closeScore();
+    currentPaper = null;
     currentQIndex = 0;
     answers = {};
     submitted = new Set();
-    $$('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === p.paper));
     activeCat = p.paper;
-    $$('.year-btn').forEach(b => b.classList.toggle('active', +b.dataset.year === p.year));
-    renderQuestion();
+    $$('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === p.paper));
+    refreshYears(p.year);
+    updateDoneCount();
     renderNavButtons();
+    $('#progressText').textContent = `正在加载 ${p.paper} · ${p.year} …`;
+    $('#inner').innerHTML = '<div class="card" role="status"><p>正在加载试卷…</p></div>';
+    try {
+      const data = await loadPaperJSON(p.file);
+      // 连续切换年份/类别时，只接纳最后一次选择的响应。
+      if (sequence !== loadSequence) return;
+      if (!Array.isArray(data.questions) || !data.questions.length) throw new Error('试卷暂无题目');
+      currentPaper = { ...p, questions: data.questions };
+      renderQuestion();
+    } catch (e) {
+      if (sequence !== loadSequence) return;
+      console.error('加载试卷失败:', e);
+      $('#progressText').textContent = `${p.paper} · ${p.year} 加载失败`;
+      $('#inner').innerHTML = '<div class="card" role="alert"><p>加载失败：' + escHtml(e.message) + '</p><p>请重新选择年份重试。</p></div>';
+      renderNavButtons();
+    }
   }
 
   async function loadPaperAt(idx) {
@@ -88,42 +109,43 @@
 
   /* ── render single question ─────────────── */
   function renderQuestion() {
-    const list = papers.filter(p => p.paper === activeCat).sort((a, b) => b.year - a.year);
     if (!currentPaper) return;
     const p = currentPaper;
     const q = p.questions[currentQIndex];
     if (!q) return;
 
-    const total = p.count;
+    const total = p.questions.length;
     $('#progressText').textContent = `${p.year} · 第 ${currentQIndex + 1} / ${total} 题`;
 
     const isSubmitted = submitted.has(q.id);
     const userAns = answers[q.id];
+    const showAnswers = isSubmitted || mode === 'read';
+    const showAnalysis = submitted.size > 0 || mode === 'read';
 
     const diffLabel = q.difficulty === 0 ? '基础' : q.difficulty === 1 ? '中等' : '困难';
 
-    const optionsHtml = q.options && Object.keys(q.options).length
+    const optionsHtml = isChoiceQuestion(q)
       ? Object.entries(q.options).map(([k, v]) => {
           const cls = [];
-          if (isSubmitted) {
+          if (showAnswers) {
             if (k === q.answer) cls.push('correct');
-            else if (k === userAns && userAns !== q.answer) cls.push('wrong');
+            else if (k === userAns) cls.push('wrong');
             cls.push('disabled');
           }
           if (userAns === k) cls.push('selected');
-          const badge = k === q.answer ? '正确答案' : (k === userAns && k !== q.answer ? '你的选择' : '');
-          return `<div class="opt ${cls.join(' ')}" data-key="${k}" data-qid="${q.id}">
+          const badge = !showAnswers ? '' : k === q.answer ? '正确答案' : k === userAns ? '你的选择' : '';
+          return `<button type="button" class="opt ${cls.join(' ')}" data-key="${k}" data-qid="${q.id}" aria-pressed="${userAns === k}" ${showAnswers ? 'disabled' : ''}>
             <span class="opt__marker">${k}</span>
             <span class="opt__text render-me">${renderRich(v)}</span>
             <span class="opt__badge">${badge}</span>
-          </div>`;
+          </button>`;
         }).join('')
-      : `<div class="meta" style="margin-bottom:1rem">本题为${q.type}，无选项。</div>`;
+      : `<div class="meta" style="margin-bottom:1rem">本题为${escHtml(q.type)}，不计入自动评分；可在「纯浏览」中查看答案与解析。</div>`;
 
     /* 有解析就展示解析；没有解析但有答案时，仍要把答案给出来
        （数学一 1990 第 1 题站方本身无解析文字，旧代码会整块吞掉，用户看到空卡片）。 */
     const analysisHtml = (q.analysis || q.answer)
-      ? `<div class="analysis${isSubmitted ? ' visible' : ''}" id="analysis">
+      ? `<div class="analysis${showAnalysis ? ' visible' : ''}" id="analysis"${showAnalysis ? '' : ' hidden'}>
            ${q.analysis ? `<div class="analysis__label">【解析】</div>
            <div class="analysis__body render-me">${formatAnalysis(renderRich(q.analysis))}</div>` : ''}
            ${q.answer ? `<div class="analysis__answer">答案：${escHtml(q.answer)}</div>` : ''}
@@ -158,8 +180,10 @@
       const qid = +opt.dataset.qid;
       const key = opt.dataset.key;
       answers[qid] = key;
-      $$('.opt').forEach(o => o.classList.remove('selected'));
-      opt.classList.add('selected');
+      $$('.opt').forEach(o => {
+        o.classList.toggle('selected', o === opt);
+        o.setAttribute('aria-pressed', String(o === opt));
+      });
     };
 
     // nav buttons
@@ -167,9 +191,7 @@
       if (b.dataset.nav === 'prev') goPrev();
       else goNext();
     });
-
-    if ($('#submitBtn')) $('#submitBtn').onclick = submitCurrent;
-
+    renderNavButtons();
     // render katex —— 不能只挂在 requestAnimationFrame 上：
     // 后台标签页 / 最小化窗口不触发 rAF，公式会一直停在 $...$ 原文，
     // 直到用户切回前台。改为直接渲染，rAF 仅作二次兜底。
@@ -181,53 +203,157 @@
   }
 
   /* ── submit / grade ──────────────────────── */
-  function submitCurrent() {
-    const list = papers.filter(p => p.paper === activeCat).sort((a, b) => b.year - a.year);
-    const p = list.find(x => x.year === currentPaper?.year);
-    if (!p) return;
-    const q = p.questions[currentQIndex];
-    if (!q) return;
-    if (submitted.has(q.id)) return;
-    submitted.add(q.id);
-    answers[q.id] = answers[q.id] || q.answer;
+  function isChoiceQuestion(q) {
+    return Boolean(q?.options && Object.keys(q.options).length);
+  }
+
+  function submitPaper() {
+    if (!currentPaper?.questions || mode !== 'quiz') return;
+    const choiceQuestions = currentPaper.questions.filter(isChoiceQuestion);
+    if (!choiceQuestions.length) return;
+
+    let correct = 0;
+    let wrong = 0;
+    let blank = 0;
+    for (const q of choiceQuestions) {
+      submitted.add(q.id);
+      if (!answers[q.id]) blank++;
+      else if (answers[q.id] === q.answer) correct++;
+      else wrong++;
+    }
+
+    const score = Math.round(correct / choiceQuestions.length * 100);
     updateDoneCount();
+    renderQuestion();
+    showScore({ score, correct, wrong, blank, total: choiceQuestions.length });
+  }
+
+  function showScore(result) {
+    const dialog = $('#scoreDialog');
+    if (!dialog) return;
+    $('#scoreValue').textContent = result.score;
+    $('#scoreCorrect').textContent = result.correct;
+    $('#scoreWrong').textContent = result.wrong;
+    $('#scoreBlank').textContent = result.blank;
+    $('#scoreSummary').textContent = `${currentPaper.year} ${currentPaper.paper} · 共 ${result.total} 道选择题`;
+    $('#reviewBtn').textContent = result.correct === result.total ? '查看解析' : '查看错题';
+    if (!dialog.open) dialog.showModal();
+    dialog.scrollTop = 0;
+    document.body.classList.add('dialog-open');
+    $('#reviewBtn').focus();
+  }
+
+  function closeScore() {
+    const dialog = $('#scoreDialog');
+    if (!dialog?.open) return;
+    dialog.close();
+    document.body.classList.remove('dialog-open');
+    if (!$('#submitBtn').disabled) $('#submitBtn').focus();
+  }
+
+  function reviewFirstMistake() {
+    const index = currentPaper?.questions?.findIndex(q => isChoiceQuestion(q) && answers[q.id] !== q.answer) ?? -1;
+    closeScore();
+    currentQIndex = index >= 0 ? index : Math.max(0, currentPaper.questions.findIndex(isChoiceQuestion));
+    renderQuestion();
+  }
+
+  function retryPaper() {
+    answers = {};
+    submitted = new Set();
+    currentQIndex = currentPaper?.questions?.findIndex(isChoiceQuestion) ?? 0;
+    if (currentQIndex < 0) currentQIndex = 0;
+    updateDoneCount();
+    closeScore();
     renderQuestion();
   }
 
   /* ── nav ─────────────────────────────────── */
   function goPrev() {
-    if (currentQIndex > 0) { currentQIndex--; renderQuestion(); renderNavButtons(); }
+    if (currentQIndex <= 0) return;
+    currentQIndex--;
+    renderQuestion();
   }
+
   function goNext() {
-    if (currentPaper && currentQIndex < currentPaper.count - 1) { currentQIndex++; renderQuestion(); renderNavButtons(); }
+    const total = currentPaper?.questions?.length || 0;
+    if (!total || currentQIndex >= total - 1) return;
+    currentQIndex++;
+    renderQuestion();
   }
+
   function renderNavButtons() {
-    const prev = $('#prevBtn');
-    const next = $('#nextBtn');
-    if (prev) prev.disabled = !currentPaper || currentQIndex === 0;
-    if (next) next.disabled = !currentPaper || currentQIndex >= (currentPaper?.count || 1) - 1;
-    if (prev) prev.style.opacity = prev.disabled ? '.35' : '1';
-    if (next) next.style.opacity = next.disabled ? '.35' : '1';
+    const total = currentPaper?.questions?.length || 0;
+    const atStart = !total || currentQIndex === 0;
+    const atEnd = !total || currentQIndex >= total - 1;
+    $$('[data-nav="prev"], #prevBtn').forEach(button => { button.disabled = atStart; });
+    $$('[data-nav="next"], #nextBtn').forEach(button => { button.disabled = atEnd; });
+    const choices = currentPaper?.questions?.filter(isChoiceQuestion).length || 0;
+    const submit = $('#submitBtn');
+    submit.disabled = !choices || mode !== 'quiz';
+    submit.style.display = mode === 'read' ? 'none' : '';
+    submit.textContent = submitted.size ? '查看成绩' : '交卷';
+    submit.title = !choices ? '本卷没有可自动批阅的选择题' : '统一批阅本卷选择题（Ctrl / ⌘ + Enter）';
   }
 
   /* ── keyboard ────────────────────────────── */
   document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft' || e.key === 'j' || e.key === 'J') goPrev();
-    if (e.key === 'ArrowRight' || e.key === 'k' || e.key === 'K') goNext();
-    if ((e.key === 'Enter' || e.key === ' ') && mode === 'quiz') { e.preventDefault(); submitCurrent(); }
+    // 原生 dialog 负责焦点约束与 Esc 关闭，弹窗内不触发切题快捷键。
+    if ($('#scoreDialog')?.open || e.defaultPrevented) return;
+    if (e.target.closest('input, textarea, select, [contenteditable]')) return;
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && mode === 'quiz') {
+      e.preventDefault();
+      submitPaper();
+      return;
+    }
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === 'ArrowLeft' || e.key === 'j' || e.key === 'J') {
+      e.preventDefault();
+      goPrev();
+    }
+    if (e.key === 'ArrowRight' || e.key === 'k' || e.key === 'K') {
+      e.preventDefault();
+      goNext();
+    }
   });
 
+  $('#prevBtn')?.addEventListener('click', goPrev);
+  $('#nextBtn')?.addEventListener('click', goNext);
+  $('#submitBtn')?.addEventListener('click', submitPaper);
+  $('#scoreDialog')?.addEventListener('click', e => {
+    const dialog = $('#scoreDialog');
+    if (e.target.closest('[data-score-close]') || e.target === dialog) closeScore();
+  });
+  $('#scoreDialog')?.addEventListener('cancel', e => {
+    e.preventDefault();
+    closeScore();
+  });
+  $('#scoreDialog')?.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const buttons = e.currentTarget.querySelectorAll('button:not(:disabled)');
+    const first = buttons[0];
+    const last = buttons[buttons.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+  $('#scoreDialog')?.addEventListener('close', () => {
+    if (!$('#scoreDialog').open) document.body.classList.remove('dialog-open');
+  });
+  $('#reviewBtn')?.addEventListener('click', reviewFirstMistake);
+  $('#retryBtn')?.addEventListener('click', retryPaper);
   /* ── mode toggle ─────────────────────────── */
   $$('.mode-tab').forEach(btn => {
     btn.onclick = () => {
       $$('.mode-tab').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       mode = btn.dataset.mode;
-      const sub = $('#submitBtn');
-      if (sub) sub.style.display = mode === 'read' ? 'none' : '';
-      if (mode === 'read') {
-        $$('.analysis').forEach(el => el.classList.add('visible'));
-      }
+      renderNavButtons();
+      renderQuestion();
     };
   });
 
@@ -319,26 +445,6 @@
     return r.json();
   }
 
-  // override loadPaper to fetch questions from JSON
-  const _origLoadPaper = loadPaper;
-  loadPaper = async p => {
-    try {
-      const data = await loadPaperJSON(p.file);
-      currentPaper = { ...p, questions: data.questions };
-      currentQIndex = 0;
-      answers = {};
-      submitted = new Set();
-      $$('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === p.paper));
-      activeCat = p.paper;
-      $$('.year-btn').forEach(b => b.classList.toggle('active', +b.dataset.year === p.year));
-      refreshYears();
-      renderQuestion();
-      renderNavButtons();
-    } catch (e) {
-      console.error('加载试卷失败:', e);
-      $('#inner').innerHTML = '<div class="card"><p>加载失败：' + e.message + '</p></div>';
-    }
-  };
-
+  renderNavButtons();
   boot();
 })();
