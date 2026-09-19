@@ -421,15 +421,43 @@
     return renderImages(escHtml(s));
   }
 
+  /* 私有区哨兵，包住占位下标，绝不与正文数字冲突 */
+  const MATH_OPEN = '\uE000', MATH_CLOSE = '\uE001';
+
   function formatAnalysis(raw) {
-    let html = raw
+    /* 先抽取数学公式再按行拆段。否则跨行的 $...$ / $$...$$ 会被 split('\n')
+       拆散到不同 <p>，KaTeX 找不到成对定界符，整段公式就以 LaTeX 源码显示出来
+       （数三 1993 第 12 题等 800+ 道多步推导题即此症状）。 */
+    const text = String(raw).replace(/\r\n?/g, '\n');
+    const math = [];
+    let out = '';
+    for (let i = 0, n = text.length; i < n;) {
+      if (text[i] === '$') {
+        const display = text[i + 1] === '$';
+        const close = display ? '$$' : '$';
+        const end = text.indexOf(close, i + close.length);
+        if (end === -1) { out += text[i++]; continue; } // 无闭合，按普通字符
+        const inner = text.slice(i + close.length, end);
+        /* 仅当源码真正跨行（含换行）且带显式换行 \\ 的多步推导才升级为块级公式，
+           这样每步换行才能渲染、居中；单行内的 \\（行内矩阵/cases）保持行内不破句。 */
+        const asDisplay = display || (inner.includes('\n') && /\\\\/.test(inner));
+        math.push(asDisplay ? '$$' + inner + '$$' : '$' + inner + '$');
+        out += MATH_OPEN + (math.length - 1) + MATH_CLOSE;
+        i = end + close.length;
+      } else {
+        out += text[i++];
+      }
+    }
+    out = out
       .replace(/\[分析\]/g, '<strong>【分析】</strong>')
       .replace(/\[解答\]/g, '<strong>【解答】</strong>');
-    html = html.split('\n').map(line => {
+    let html = out.split('\n').map(line => {
       line = line.replace(/^【(.+?)】/, '<strong>【$1】</strong>');
       return `<p>${line}</p>`;
     }).join('');
-    return html.replace(/<p><\/p>/g, '');
+    html = html.replace(/<p>\s*<\/p>/g, '');
+    // 还原公式占位符
+    return html.replace(new RegExp(MATH_OPEN + '(\\d+)' + MATH_CLOSE, 'g'), (_, k) => math[+k]);
   }
 
   function updateDoneCount() {
