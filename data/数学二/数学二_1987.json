@@ -4,33 +4,6 @@
   "count": 18,
   "questions": [
     {
-      "id": 1290,
-      "paper": "数学二",
-      "year": 1987,
-      "index": 17,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\displaystyle I=t \\int_{0}^{\\frac{s}{t}} f(t x) \\mathrm{d} x$, 其中 $f(x)$ 为连续数, $s>0, t>0$, 则 $I$ 的值 $(\\quad)$",
-      "options": {
-        "A": "依赖于 $s, t$",
-        "B": "依赖于 $s, t, x$",
-        "C": "依赖于 $t, x$, 不依赖于 $s$",
-        "D": "依赖于 $s$, 不依赖于 $t$"
-      },
-      "answer": "D",
-      "analysis": "$\\displaystyle I=t \\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d} x=\\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d}(t x) \\stackrel{t x=u}{=} \\int_0^s f(u) \\mathrm{d} u$, 显然 $I$ 与 $s$ 有关, 与 $t$ 无关, 应选 (D)",
-      "wrong_options": {
-        "A": "未换元，误以为被积中的 $t$ 也影响结果；实际 $u=tx$ 后 $t$ 被抵消，只余 $s$。",
-        "B": "把积分变量 $x$（哑变量）当成结果自变量，混淆定积分值与积分变量。",
-        "C": "换元方向弄反，误判保留 $t$ 消去 $s$；实为 $s$ 决定上限、$t$ 抵消。"
-      },
-      "pitfalls": [
-        "$t\\,dx=d(tx)$ 与上限 $t\\cdot(s/t)=s$ 配合，$t$ 恰好全部抵消",
-        "积分变量 $x$ 是哑变量，定积分值只由上下限决定"
-      ],
-      "key_point": "换元 $u=tx$ 得 $I=\\int_0^s f(u)du$，仅依赖 $s$，与 $t$ 无关，选 D。"
-    },
-    {
       "id": 1301,
       "paper": "数学二",
       "year": 1987,
@@ -328,6 +301,33 @@
         "分子是 f(a+x)-f(a-x)，拆项后两半都贡献 f′(a)，合为 2f′(a)，不是 f′(a) 或 0"
       ],
       "key_point": "拆为 [f(a+x)-f(a)]/x+[f(a-x)-f(a)]/(-x)→2f′(a)。"
+    },
+    {
+      "id": 1290,
+      "paper": "数学二",
+      "year": 1987,
+      "index": 17,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I=t \\int_{0}^{\\frac{s}{t}} f(t x) \\mathrm{d} x$, 其中 $f(x)$ 为连续数, $s>0, t>0$, 则 $I$ 的值 $(\\quad)$",
+      "options": {
+        "A": "依赖于 $s, t$",
+        "B": "依赖于 $s, t, x$",
+        "C": "依赖于 $t, x$, 不依赖于 $s$",
+        "D": "依赖于 $s$, 不依赖于 $t$"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle I=t \\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d} x=\\int_0^{\\frac{s}{t}} f(t x) \\mathrm{d}(t x) \\stackrel{t x=u}{=} \\int_0^s f(u) \\mathrm{d} u$, 显然 $I$ 与 $s$ 有关, 与 $t$ 无关, 应选 (D)",
+      "wrong_options": {
+        "A": "未换元，误以为被积中的 $t$ 也影响结果；实际 $u=tx$ 后 $t$ 被抵消，只余 $s$。",
+        "B": "把积分变量 $x$（哑变量）当成结果自变量，混淆定积分值与积分变量。",
+        "C": "换元方向弄反，误判保留 $t$ 消去 $s$；实为 $s$ 决定上限、$t$ 抵消。"
+      },
+      "pitfalls": [
+        "$t\\,dx=d(tx)$ 与上限 $t\\cdot(s/t)=s$ 配合，$t$ 恰好全部抵消",
+        "积分变量 $x$ 是哑变量，定积分值只由上下限决定"
+      ],
+      "key_point": "换元 $u=tx$ 得 $I=\\int_0^s f(u)du$，仅依赖 $s$，与 $t$ 无关，选 D。"
     },
     {
       "id": 1319,

@@ -4,33 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 976,
-      "paper": "数学二",
-      "year": 2001,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](assets/figures/976.jpg)",
-      "options": {
-        "A": "![](assets/figures/976-a.jpg)",
-        "B": "![](assets/figures/976-b.jpg)",
-        "C": "![](assets/figures/976-c.jpg)",
-        "D": "![](assets/figures/976-d.jpg)"
-      },
-      "answer": "D",
-      "analysis": "当 $x<0$ 时, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (A), (C) 不对; \r\n\r\n在 $x=0$ 的右邻域内, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (B) 不对, 应选 (D)",
-      "wrong_options": {
-        "A": "x<0 时 f 单调增本应 f'≥0，A 图此处取负值，把递增段的切线斜率符号读反。",
-        "B": "x=0 右邻域 f 单调增 f'≥0，B 图此处为负，漏判右侧单调性对应的导数符号。",
-        "C": "同 A，x<0 段 f 递增却给出 f'<0，仍是把递增误当导数为负。"
-      },
-      "pitfalls": [
-        "判据是导数符号对应原函数单调性，不是图形形状相似",
-        "x<0 与 x=0 右侧两段都要 f'≥0，任一段符号不符即排除"
-      ],
-      "key_point": "f 递增处 f'≥0、递减处 f'≤0，逐段核对符号，仅 D 全部相符。"
-    },
-    {
       "id": 1563,
       "paper": "数学二",
       "year": 2001,
@@ -227,6 +200,33 @@
         "关键是 f'(ξ)(x-1) 与 x-1 的比较随 x-1 正负要各判一次"
       ],
       "key_point": "拉格朗日+f'严格递减，两区间均得 f(x)<x，选A。"
+    },
+    {
+      "id": 976,
+      "paper": "数学二",
+      "year": 2001,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在定义域内可导, $y=f(x)$ 的图形如右图所示, 则导函数 $y=f^{\\prime}(x)$ 的图形为 $(\\quad)$\n\n![y=f(x) 的图形](assets/figures/976.jpg)",
+      "options": {
+        "A": "![](assets/figures/976-a.jpg)",
+        "B": "![](assets/figures/976-b.jpg)",
+        "C": "![](assets/figures/976-c.jpg)",
+        "D": "![](assets/figures/976-d.jpg)"
+      },
+      "answer": "D",
+      "analysis": "当 $x<0$ 时, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (A), (C) 不对; \r\n\r\n在 $x=0$ 的右邻域内, 由 $f(x)$ 单调增加, \r\n\r\n得 $f^{\\prime}(x) \\geqslant 0$, 则 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "x<0 时 f 单调增本应 f'≥0，A 图此处取负值，把递增段的切线斜率符号读反。",
+        "B": "x=0 右邻域 f 单调增 f'≥0，B 图此处为负，漏判右侧单调性对应的导数符号。",
+        "C": "同 A，x<0 段 f 递增却给出 f'<0，仍是把递增误当导数为负。"
+      },
+      "pitfalls": [
+        "判据是导数符号对应原函数单调性，不是图形形状相似",
+        "x<0 与 x=0 右侧两段都要 f'≥0，任一段符号不符即排除"
+      ],
+      "key_point": "f 递增处 f'≥0、递减处 f'≤0，逐段核对符号，仅 D 全部相符。"
     },
     {
       "id": 1572,

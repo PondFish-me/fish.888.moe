@@ -4,49 +4,58 @@
   "count": 21,
   "questions": [
     {
-      "id": 996,
+      "id": 1645,
       "paper": "数学二",
       "year": 2000,
-      "index": 8,
-      "type": "选择题",
+      "index": 1,
+      "type": "填空题",
       "difficulty": 0,
-      "stem": "设 $f(x), g(x)$ 是恒大于零的可导函数, 且 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, 则当 $a<x<b$ 时, 有 $(\\quad)$",
-      "options": {
-        "A": "$f(x) g(b)>f(b) g(x)$",
-        "B": "$f(x) g(a)>f(a) g(x)$",
-        "C": "$f(x) g(x)>f(b) g(b)$",
-        "D": "$f(x) g(x)>f(a) g(a)$"
-      },
-      "answer": "A",
-      "analysis": "由 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, \r\n\r\n得 $\\displaystyle \\left[\\frac{f(x)}{g(x)}\\right]^{\\prime}=\\frac{f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)}{g^2(x)}<0$, \r\n\r\n即 $\\displaystyle \\frac{f(x)}{g(x)}$ 为减函数, \r\n\r\n当 $a<x<b$ 时, 有 $\\displaystyle \\frac{f(a)}{g(a)}>\\frac{f(x)}{g(x)}>\\frac{f(b)}{g(b)}$. \r\n\r\n于是 $f(x) g(b)>f(b) g(x)$, 应选 (A).",
-      "wrong_options": {
-        "B": "把不等式方向弄反：f/g 递减给出 f(a)/g(a)>f(x)/g(x)，交叉相乘应得 f(x)g(a)<f(a)g(x)，B 恰好反了。",
-        "C": "误以为乘积 f(x)g(x) 单调，条件只保证商 f/g 单调，乘积的单调性无法判定。",
-        "D": "同 C 误判乘积 fg 单调，且不等号方向也选错。"
-      },
-      "pitfalls": [
-        "关键是构造商 f/g（分子恰为所给导数式），不是构造乘积 fg",
-        "f/g 递减 ⇒ a<x<b 时 f(a)/g(a)>f(x)/g(x)>f(b)/g(b)，交叉相乘时 g>0 不变号"
-      ],
-      "key_point": "(f/g)'<0 ⇒ f/g 递减，f(x)/g(x)>f(b)/g(b) ⇒ f(x)g(b)>f(b)g(x)。"
-    },
-    {
-      "id": 1007,
-      "paper": "数学二",
-      "year": 2000,
-      "index": 16,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{\\ln \\left(1+2 x^3\\right)}=\\rule{0.5cm}{0.2mm}$",
       "options": {},
-      "answer": "略",
-      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
+      "answer": "$-\\dfrac{1}{6}$",
+      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{\\ln \\left(1+2 x^3\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{2 x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\frac{1}{1+x^2}-1}{6 x^2}=-\\frac{1}{6}$",
       "wrong_options": {},
       "pitfalls": [
-        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
-        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
+        "分母用等价2x³降次，分子arctanx-x是x³量级(~-x³/3)，别把分子当0",
+        "洛必达后分子1/(1+x²)-1~-x²，与6x²约得-1/6"
       ],
-      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
+      "key_point": "分母~2x³，分子~-x³/3，比值-1/6。"
+    },
+    {
+      "id": 1646,
+      "paper": "数学二",
+      "year": 2000,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由方程 $2^{x y}=x+y$ 所确定, 则 $\\left.\\mathrm{d} y\\right|_{x=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(\\ln 2-1) \\mathrm{d} x$.",
+      "analysis": "当 $x=0$ 时, $y=1$,\r\n$2^{x y}=x+y$ 两边对 $x$ 求导, \r\n\r\n得 $2^{x y} \\ln 2 \\cdot\\left(y+x \\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)=1+\\frac{\\mathrm{d} y}{\\mathrm{d} x}$,\r\n\r\n将 $x=0, y=1$ 代入, \r\n\r\n得 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=\\ln 2-1$,\r\n\r\n故 $\\left.\\mathrm{d} y\\right|_{x=0}=(\\ln 2-1) \\mathrm{d} x$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "2^{xy}求导要乘ln2及内层(xy)'=y+xy'",
+        "代x=0,y=1解出y'=ln2-1，最后写成dy=y'dx别漏dx"
+      ],
+      "key_point": "两边求导代x=0,y=1得y'=ln2-1，dy|_{x=0}=(ln2-1)dx。"
+    },
+    {
+      "id": 1647,
+      "paper": "数学二",
+      "year": 2000,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\mathrm{d} x}{(x+7) \\sqrt{x-2}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{3}$",
+      "analysis": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\mathrm{d} x}{(x+7) \\sqrt{x-2}}\\\\\r\n=2 \\int_2^{+\\infty} \\frac{\\mathrm{d}(\\sqrt{x-2})}{3^2+(\\sqrt{x-2})^2}\\\\\r\n=\\left.\\frac{2}{3} \\arctan \\frac{\\sqrt{x-2}}{3}\\right|_2 ^{+\\infty}=\\frac{\\pi}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令t=√(x-2)则x+7=t²+9，dx=2tdt约掉√得2∫dt/(9+t²)",
+        "上限x→∞即t→∞，arctan→π/2，最终结果π/3"
+      ],
+      "key_point": "换元化成(2/3)arctan(√(x-2)/3)|_2^∞=π/3。"
     },
     {
       "id": 1547,
@@ -137,6 +146,33 @@
         "由f''(x)/x→1及保号性，x<0时f''<0、x>0时f''>0，f''变号⇒(0,f(0))是拐点"
       ],
       "key_point": "f''(0)=0且f''两侧变号，(0,f(0))为拐点，选C。"
+    },
+    {
+      "id": 996,
+      "paper": "数学二",
+      "year": 2000,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x), g(x)$ 是恒大于零的可导函数, 且 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, 则当 $a<x<b$ 时, 有 $(\\quad)$",
+      "options": {
+        "A": "$f(x) g(b)>f(b) g(x)$",
+        "B": "$f(x) g(a)>f(a) g(x)$",
+        "C": "$f(x) g(x)>f(b) g(b)$",
+        "D": "$f(x) g(x)>f(a) g(a)$"
+      },
+      "answer": "A",
+      "analysis": "由 $f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)<0$, \r\n\r\n得 $\\displaystyle \\left[\\frac{f(x)}{g(x)}\\right]^{\\prime}=\\frac{f^{\\prime}(x) g(x)-f(x) g^{\\prime}(x)}{g^2(x)}<0$, \r\n\r\n即 $\\displaystyle \\frac{f(x)}{g(x)}$ 为减函数, \r\n\r\n当 $a<x<b$ 时, 有 $\\displaystyle \\frac{f(a)}{g(a)}>\\frac{f(x)}{g(x)}>\\frac{f(b)}{g(b)}$. \r\n\r\n于是 $f(x) g(b)>f(b) g(x)$, 应选 (A).",
+      "wrong_options": {
+        "B": "把不等式方向弄反：f/g 递减给出 f(a)/g(a)>f(x)/g(x)，交叉相乘应得 f(x)g(a)<f(a)g(x)，B 恰好反了。",
+        "C": "误以为乘积 f(x)g(x) 单调，条件只保证商 f/g 单调，乘积的单调性无法判定。",
+        "D": "同 C 误判乘积 fg 单调，且不等号方向也选错。"
+      },
+      "pitfalls": [
+        "关键是构造商 f/g（分子恰为所给导数式），不是构造乘积 fg",
+        "f/g 递减 ⇒ a<x<b 时 f(a)/g(a)>f(x)/g(x)>f(b)/g(b)，交叉相乘时 g>0 不变号"
+      ],
+      "key_point": "(f/g)'<0 ⇒ f/g 递减，f(x)/g(x)>f(b)/g(b) ⇒ f(x)g(b)>f(b)g(x)。"
     },
     {
       "id": 1551,
@@ -283,6 +319,24 @@
       "key_point": "dm/dt+m/3=m₀/6，m(t)=(9/2)m₀e^{-t/3}+m₀/2，令=m₀得t=6ln3年。"
     },
     {
+      "id": 1007,
+      "paper": "数学二",
+      "year": 2000,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
+        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
+      ],
+      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
+    },
+    {
       "id": 1558,
       "paper": "数学二",
       "year": 2000,
@@ -371,60 +425,6 @@
         "再用β₃可由α组表示即r(α₁,α₂,α₃,β₃)=2补出(5-b)/30=0得b=5，联立得a=15,b=5"
       ],
       "key_point": "同秩条件给a=3b，β₃可表示给b=5，故a=15、b=5。"
-    },
-    {
-      "id": 1645,
-      "paper": "数学二",
-      "year": 2000,
-      "index": 1,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{\\ln \\left(1+2 x^3\\right)}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-\\dfrac{1}{6}$",
-      "analysis": "$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{\\ln \\left(1+2 x^3\\right)}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\arctan x-x}{2 x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\frac{1}{1+x^2}-1}{6 x^2}=-\\frac{1}{6}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "分母用等价2x³降次，分子arctanx-x是x³量级(~-x³/3)，别把分子当0",
-        "洛必达后分子1/(1+x²)-1~-x²，与6x²约得-1/6"
-      ],
-      "key_point": "分母~2x³，分子~-x³/3，比值-1/6。"
-    },
-    {
-      "id": 1646,
-      "paper": "数学二",
-      "year": 2000,
-      "index": 2,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $y=y(x)$ 由方程 $2^{x y}=x+y$ 所确定, 则 $\\left.\\mathrm{d} y\\right|_{x=0}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$(\\ln 2-1) \\mathrm{d} x$.",
-      "analysis": "当 $x=0$ 时, $y=1$,\r\n$2^{x y}=x+y$ 两边对 $x$ 求导, \r\n\r\n得 $2^{x y} \\ln 2 \\cdot\\left(y+x \\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)=1+\\frac{\\mathrm{d} y}{\\mathrm{d} x}$,\r\n\r\n将 $x=0, y=1$ 代入, \r\n\r\n得 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=\\ln 2-1$,\r\n\r\n故 $\\left.\\mathrm{d} y\\right|_{x=0}=(\\ln 2-1) \\mathrm{d} x$.",
-      "wrong_options": {},
-      "pitfalls": [
-        "2^{xy}求导要乘ln2及内层(xy)'=y+xy'",
-        "代x=0,y=1解出y'=ln2-1，最后写成dy=y'dx别漏dx"
-      ],
-      "key_point": "两边求导代x=0,y=1得y'=ln2-1，dy|_{x=0}=(ln2-1)dx。"
-    },
-    {
-      "id": 1647,
-      "paper": "数学二",
-      "year": 2000,
-      "index": 3,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\mathrm{d} x}{(x+7) \\sqrt{x-2}}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{\\pi}{3}$",
-      "analysis": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\mathrm{d} x}{(x+7) \\sqrt{x-2}}\\\\\r\n=2 \\int_2^{+\\infty} \\frac{\\mathrm{d}(\\sqrt{x-2})}{3^2+(\\sqrt{x-2})^2}\\\\\r\n=\\left.\\frac{2}{3} \\arctan \\frac{\\sqrt{x-2}}{3}\\right|_2 ^{+\\infty}=\\frac{\\pi}{3}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "令t=√(x-2)则x+7=t²+9，dx=2tdt约掉√得2∫dt/(9+t²)",
-        "上限x→∞即t→∞，arctan→π/2，最终结果π/3"
-      ],
-      "key_point": "换元化成(2/3)arctan(√(x-2)/3)|_2^∞=π/3。"
     }
   ]
 }

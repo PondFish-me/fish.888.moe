@@ -4,189 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 353,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为可逆矩阵, 且 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, 则下列结论错误的是 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
-        "B": "$\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}^{-1}$ 相似",
-        "C": "$\\boldsymbol{A}+\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
-        "D": "$\\boldsymbol{A}+\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{-1}$ 相似"
-      },
-      "answer": "C",
-      "analysis": "【分析】题目问“结论错误的”。相似关系 $A=P^{-1}BP$ 在取逆、取转置、以及对 $A,A^{-1}$ 的多项式组合时是否仍能用同一个相似矩阵 $P$ 实现，是判断的关键。涉及转置时相似矩阵会变成 $P^{T}$，从而破坏组合的相似性。\n\n【解答】设 $A=P^{-1}BP$（$P$ 可逆）。逐项检验：\n\nA 选项：$A^{T}=(P^{-1}BP)^{T}=P^{T}B^{T}(P^{T})^{-1}$，取 $Q=(P^{T})^{-1}$ 即 $A^{T}=Q^{-1}B^{T}Q$，故 $A^{T}\\sim B^{T}$，正确。\n\nB 选项：$A^{-1}=P^{-1}B^{-1}P$，故 $A^{-1}\\sim B^{-1}$，正确。\n\nD 选项：$A+A^{-1}=P^{-1}BP+P^{-1}B^{-1}P=P^{-1}(B+B^{-1})P$，用同一个 $P$，故 $A+A^{-1}\\sim B+B^{-1}$，正确。\n\nC 选项：$A+A^{T}=P^{-1}BP+P^{T}B^{T}(P^{T})^{-1}$。两项用的相似矩阵分别是 $P$ 与 $(P^{T})^{-1}$，一般 $P\\ne(P^{T})^{-1}$，无法提成 $P^{-1}(B+B^{T})P$ 的形式，故 $A+A^{T}$ 与 $B+B^{T}$ 一般不相似。\n\n举反例佐证：取 $B=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$，$P=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，$A=P^{-1}BP=\\begin{pmatrix}1&-1\\\\0&2\\end{pmatrix}$。则 $A+A^{T}=\\begin{pmatrix}2&-1\\\\-1&4\\end{pmatrix}$，特征值之和（迹）为 $6$、行列式为 $7$；而 $B+B^{T}=\\begin{pmatrix}2&0\\\\0&4\\end{pmatrix}$，迹 $6$、行列式 $8$。行列式不等，故二者不相似。结论错误的是 C。",
-      "wrong_options": {
-        "A": "$A^{T}=(P^{T})B^{T}(P^{T})^{-1}$，确为相似，结论正确（非所选）。",
-        "B": "$A^{-1}=P^{-1}B^{-1}P$，确为相似，结论正确（非所选）。",
-        "D": "$A+A^{-1}=P^{-1}(B+B^{-1})P$ 用同一 $P$，确为相似，结论正确（非所选）。"
-      },
-      "pitfalls": [
-        "相似对“取逆”“关于 $A,A^{-1}$ 的多项式”封闭（同一 $P$），但对“加转置”不封闭（$P$ 变 $P^T$）。",
-        "本题选“错误”的结论，是 C。"
-      ],
-      "key_point": "相似变换对含转置的运算不封闭：$A+A^{T}$ 用到 $P$ 与 $(P^T)^{-1}$ 两个矩阵，故不保相似。"
-    },
-    {
-      "id": 359,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $f(u, v)$ 可微, $z=z(x, y)$ 由方程 $(x+1) z-y^{2}=x^{2} f(x-z, y)$ 确定, 则 $\\left.\\mathrm{d} z\\right|_{(0,1)}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-\\mathrm{d} x+2 \\mathrm{d} y$",
-      "analysis": "【分析】求隐函数在一点的全微分，最利落的办法是对方程两边取全微分（利用全微分形式不变性），代入该点的数值，直接解出 $\\mathrm dz$，避免逐个求偏导。先要确定该点处的 $z$ 值。\n\n【解答】方程为 $(x+1)z-y^{2}=x^{2}f(x-z,y)$。\n\n先求 $(0,1)$ 处的 $z$：代入 $x=0,y=1$ 得 $(0+1)z-1=0\\cdot f=0$，故 $z=1$。即考察点为 $x=0,\\,y=1,\\,z=1$。\n\n两边取全微分（$u=x-z,\\,v=y$）：\n$$(x+1)\\,\\mathrm dz+z\\,\\mathrm dx-2y\\,\\mathrm dy=2x\\,f\\,\\mathrm dx+x^{2}\\big[f_{u}(\\mathrm dx-\\mathrm dz)+f_{v}\\,\\mathrm dy\\big].$$\n\n在 $(0,1)$ 处代入 $x=0,y=1,z=1$，右端含 $x$ 与 $x^{2}$ 的项全部为 $0$：\n$$(0+1)\\,\\mathrm dz+1\\cdot\\mathrm dx-2\\cdot1\\cdot\\mathrm dy=0,$$\n即 $\\mathrm dz+\\mathrm dx-2\\,\\mathrm dy=0$，解得\n$$\\left.\\mathrm dz\\right|_{(0,1)}=-\\mathrm dx+2\\,\\mathrm dy.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "先由原方程定出 $(0,1)$ 处 $z=1$，否则无法代值。",
-        "$x=0$ 时含 $x$、$x^2$ 的项以及 $f$ 的偏导项全被消去，无需知道 $f$ 的具体形式。"
-      ],
-      "key_point": "隐函数定点全微分：两边取全微分后代入该点，含因子 $x$ 的项归零，直接解 $\\mathrm dz$。"
-    },
-    {
-      "id": 361,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\left|\\begin{array}{cccc}\\lambda & -1 & 0 & 0 \\\\ 0 & \\lambda & -1 & 0 \\\\ 0 & 0 & \\lambda & -1 \\\\ 4 & 3 & 2 & \\lambda+1\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\lambda^4+\\lambda^3+2 \\lambda^2+3 \\lambda+4$",
-      "analysis": "【分析】这是“伴随式”结构的行列式（上次对角 $-1$、最后一行装系数）。按第一列展开最简，第一列只有 $\\lambda$（位于 $(1,1)$）和 $4$（位于 $(4,1)$）两个非零元。\n\n【解答】记行列式为 $D$，按第一列展开：\n$$D=\\lambda\\cdot M_{11}+4\\cdot(-1)^{4+1}M_{41},$$\n其中 $M_{11},M_{41}$ 为相应余子式。\n\n$M_{11}=\\begin{vmatrix}\\lambda&-1&0\\\\0&\\lambda&-1\\\\3&2&\\lambda+1\\end{vmatrix}$。再按其第一列展开：\n$$M_{11}=\\lambda\\begin{vmatrix}\\lambda&-1\\\\2&\\lambda+1\\end{vmatrix}+3\\begin{vmatrix}-1&0\\\\\\lambda&-1\\end{vmatrix}=\\lambda\\big[\\lambda(\\lambda+1)+2\\big]+3\\cdot1=\\lambda^{3}+\\lambda^{2}+2\\lambda+3.$$\n\n$M_{41}=\\begin{vmatrix}-1&0&0\\\\\\lambda&-1&0\\\\0&\\lambda&-1\\end{vmatrix}$，为下三角行列式，等于对角线之积 $(-1)^{3}=-1$。\n\n故\n$$4\\cdot(-1)^{5}M_{41}=4\\cdot(-1)\\cdot(-1)=4.$$\n\n合并：\n$$D=\\lambda(\\lambda^{3}+\\lambda^{2}+2\\lambda+3)+4=\\lambda^{4}+\\lambda^{3}+2\\lambda^{2}+3\\lambda+4.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "$(4,1)$ 位置的代数余子式符号为 $(-1)^{4+1}=-1$，与子式中的 $-1$ 相乘得正，最终常数项为 $+4$。",
-        "按第一列展开只剩两项，比硬算四阶省力。"
-      ],
-      "key_point": "稀疏列行列式按该列展开；此类“伴随式”结果即由末行系数构成的多项式。"
-    },
-    {
-      "id": 369,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 1 \\\\ 2 & -3 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$.\r\n\r\n(1) 求 $\\boldsymbol{A}^{99}$;\r\n\r\n(2) 设 $3$ 阶矩阵 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$ 满足 $\\boldsymbol{B}^{2}=\\boldsymbol{B} \\boldsymbol{A}$, 记 $\\boldsymbol{B}^{100}=\\left(\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}\\right)$, 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 分别表示为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 的线性组合",
-      "options": {},
-      "answer": "$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}$；$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,\\ \\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,\\ \\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2$",
-      "analysis": "【分析】(1) $A$ 有三个互异特征值，可相似对角化，用 $A^{99}=PD^{99}P^{-1}$ 计算高次幂。(2) 由 $B^{2}=BA$ 归纳出 $B^{n}=BA^{n-1}$，于是 $B^{100}=BA^{99}$，从而 $B^{100}$ 的各列是 $B=(\\alpha_1,\\alpha_2,\\alpha_3)$ 各列以 $A^{99}$ 对应列为系数的线性组合。\n\n【解答】\n（1）特征多项式 $\\det(A-\\lambda I)=-\\lambda(\\lambda+1)(\\lambda+2)$，特征值 $\\lambda=0,-1,-2$，互异故可对角化。\n求特征向量：\n$\\lambda=0$：$\\xi_1=(3,2,2)^{T}$；$\\lambda=-1$：$\\xi_2=(1,1,0)^{T}$；$\\lambda=-2$：$\\xi_3=(1,2,0)^{T}$。\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}3&1&1\\\\2&1&2\\\\2&0&0\\end{pmatrix}$，则 $P^{-1}AP=D=\\mathrm{diag}(0,-1,-2)$。\n算得 $P^{-1}=\\begin{pmatrix}0&0&\\frac12\\\\2&-1&-2\\\\-1&1&\\frac12\\end{pmatrix}$。\n于是 $A^{99}=P\\,\\mathrm{diag}(0,(-1)^{99},(-2)^{99})\\,P^{-1}=P\\,\\mathrm{diag}(0,-1,-2^{99})\\,P^{-1}$。\n计算：\n$$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}.$$\n（验算：取指数为 $1$ 时同样的乘法还原出 $A$ 本身，方法正确。）\n\n（2）由 $B^{2}=BA$，归纳：设 $B^{n}=BA^{n-1}$，则 $B^{n+1}=B\\cdot B^{n}=B\\cdot BA^{n-1}=B^{2}A^{n-1}=BA\\cdot A^{n-1}=BA^{n}$。故对一切 $n\\ge1$ 有 $B^{n}=BA^{n-1}$，特别地\n$$B^{100}=BA^{99}.$$\n记 $A^{99}=(c_{ij})$。$B=(\\alpha_1,\\alpha_2,\\alpha_3)$，则 $B^{100}=BA^{99}$ 的第 $j$ 列\n$$\\beta_j=B\\cdot(A^{99}\\text{的第}j\\text{列})=c_{1j}\\alpha_1+c_{2j}\\alpha_2+c_{3j}\\alpha_3.$$\n由 $A^{99}$ 第三行全为 $0$（$c_{3j}=0$），代入各列：\n$$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,$$\n$$\\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,$$\n$$\\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "三个互异特征值保证可对角化，$A^{99}$ 通过 $PD^{99}P^{-1}$ 求，$(-2)^{99}=-2^{99}$ 符号别错。",
-        "$B^2=BA$ 归纳得 $B^{100}=BA^{99}$ 是第二问的桥梁。",
-        "$\\beta_j$ 的系数取自 $A^{99}$ 的第 $j$ 列；因 $A^{99}$ 第三行为 $0$，$\\alpha_3$ 不出现。"
-      ],
-      "key_point": "可对角化矩阵求高次幂 $PD^nP^{-1}$；$B^2=BA\\Rightarrow B^{100}=BA^{99}$，列组合系数即 $A^{99}$ 的列。"
-    },
-    {
-      "id": 370,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设二维随机变量 $(X, Y)$ 在区域 $D=\\left\\{(x, y) \\mid 0<x<1, x^{2}<y<\\sqrt{x}\\right\\}$ 上服从均匀分布, 令 $U= \\begin{cases}1, & X \\leqslant Y, \\\\ 0, & X>Y .\\end{cases}$\r\n\r\n(1) 写出 $(X, Y)$ 的概率密度;\r\n\r\n(2) 问 $U$ 与 $X$ 是否独立? 并说明理由；\r\n\r\n(3) 求 $Z=U+X$ 的分布函数 $F(z)$",
-      "options": {},
-      "answer": "(1) $f(x, y)= \\begin{cases}3, & (x, y) \\in D, \\\\ 0, & (x, y) \\notin D .\\end{cases}$\r\n\r\n(2) 不独立\r\n\r\n(3) $F(z)= \\begin{cases}0, & z<0, \\\\ \\dfrac{3}{2} z^2-z^3, & 0 \\leqslant z<1, \\\\ \\dfrac{1}{2}+2(z-1)^{\\frac{3}{2}}-\\dfrac{3}{2}(z-1)^2, & 1 \\leqslant z<2, \\\\ 1, & z \\geqslant 2 .\\end{cases}$",
-      "analysis": "【分析】均匀分布密度为 $1/\\text{面积}$。判独立看 $U$ 关于 $X$ 的条件概率是否随 $x$ 变化。求 $Z=U+X$ 的分布函数要分段：$U=0$ 时 $Z=X\\in(0,1)$，$U=1$ 时 $Z=1+X\\in(1,2)$，按 $z$ 落在哪段累加概率。\n\n【解答】\n（1）区域面积\n$$S_D=\\int_{0}^{1}(\\sqrt x-x^{2})\\,\\mathrm dx=\\left[\\tfrac23 x^{3/2}-\\tfrac13x^{3}\\right]_0^1=\\tfrac23-\\tfrac13=\\tfrac13.$$\n故密度\n$$f(x,y)=\\begin{cases}3,&(x,y)\\in D,\\\\0,&\\text{其他}.\\end{cases}$$\n\n（2）在 $0<x<1$ 上有 $x^{2}<x<\\sqrt x$，故直线 $y=x$ 穿过区域。给定 $X=x$，$Y$ 在 $(x^{2},\\sqrt x)$ 上均匀，事件 $\\{X\\le Y\\}$ 即 $\\{Y\\in(x,\\sqrt x)\\}$，其条件概率\n$$P(U=1\\mid X=x)=\\frac{\\sqrt x-x}{\\sqrt x-x^{2}}$$\n随 $x$ 变化，故 $U$ 的分布依赖 $X$，$U$ 与 $X$ 不独立。\n\n（3）$U\\in\\{0,1\\}$。先备用两个概率：\n$$P(U=0)=P(X>Y)=\\int_0^1 3(x-x^2)\\,\\mathrm dx=3\\left(\\tfrac12-\\tfrac13\\right)=\\tfrac12,$$\n（对称地 $P(U=1)=\\tfrac12$）。\n\n• $z<0$：$F(z)=0$。\n\n• $0\\le z<1$：此时只能 $U=0$ 且 $X\\le z$，对应 $x\\in(0,z]$、$y\\in(x^2,x)$：\n$$F(z)=\\int_0^z 3(x-x^2)\\,\\mathrm dx=3\\left(\\tfrac{z^2}{2}-\\tfrac{z^3}{3}\\right)=\\tfrac32 z^2-z^3.$$\n\n• $1\\le z<2$：$\\{Z\\le z\\}=\\{U=0\\}\\cup\\{U=1,\\,X\\le z-1\\}$，\n$$P(U=1,X\\le z-1)=\\int_0^{z-1}3(\\sqrt x-x)\\,\\mathrm dx=3\\left[\\tfrac23(z-1)^{3/2}-\\tfrac12(z-1)^2\\right]=2(z-1)^{3/2}-\\tfrac32(z-1)^2.$$\n故\n$$F(z)=\\tfrac12+2(z-1)^{3/2}-\\tfrac32(z-1)^2.$$\n\n• $z\\ge2$：$F(z)=1$。\n\n（验算连续性：$z\\to1^-$ 时 $\\tfrac32-1=\\tfrac12$；$z\\to1^+$ 时 $\\tfrac12+0=\\tfrac12$，衔接；$z\\to2^-$ 时 $\\tfrac12+2-\\tfrac32=1$，衔接。）\n\n综上\n$$F(z)=\\begin{cases}0,&z<0,\\\\[2pt]\\dfrac32 z^{2}-z^{3},&0\\le z<1,\\\\[4pt]\\dfrac12+2(z-1)^{3/2}-\\dfrac32(z-1)^{2},&1\\le z<2,\\\\[4pt]1,&z\\ge2.\\end{cases}$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "均匀分布密度是面积的倒数，本题 $S_D=\\frac13$ 故密度为 $3$。",
-        "判独立看条件概率 $P(U=1\\mid X=x)$ 是否含 $x$；含 $x$ 即不独立。",
-        "$Z=U+X$ 分段：$0\\le z<1$ 只来自 $U=0$；$1\\le z<2$ 要加上 $P(U=0)=\\frac12$ 再加 $U=1$ 部分。注意各段端点衔接。"
-      ],
-      "key_point": "离散+连续之和的分布函数分段累加：先算 $P(U=0)$，在 $[1,2)$ 段把它整体加进来再叠加 $U=1$ 部分。"
-    },
-    {
-      "id": 371,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)=\\left\\{\\begin{array}{ll}\\dfrac{3 x^{2}}{\\theta^{3}}, & 0<x<\\theta, \\\\ 0, & \\text { 其他, }\\end{array}\\right.$ 其中 $\\theta \\in (0,+\\infty)$ 为未知参数, $X_{1}, X_{2}, X_{3}$ 为来自总体 $X$ 的简单随机样本, 令 $T=\\max \\left\\{X_{1}, X_{2}, X_{3}\\right\\}$\r\n\r\n(1) 求 $T$ 的概率密度;\r\n\r\n(2) 确定 $a$, 使得 $a T$ 为 $\\theta$ 的无偏估计",
-      "options": {},
-      "answer": "(1) $f_T(t)= \\begin{cases}\\dfrac{9 t^8}{\\theta^9}, & 0<t<\\theta, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) 当 $\\displaystyle a=\\frac{10}{9}$ 时, $a T$ 为参数 $\\theta$ 的无偏估计",
-      "analysis": "【分析】(1) 最大值统计量的分布用“分布函数法”：$F_T(t)=[F_X(t)]^{3}$，再求导得密度。(2) 无偏即 $E(aT)=\\theta$，先算 $E(T)$ 再定 $a$。\n\n【解答】\n（1）总体分布函数：当 $0<x<\\theta$ 时\n$$F_X(x)=\\int_0^x\\frac{3u^{2}}{\\theta^{3}}\\,\\mathrm du=\\frac{x^{3}}{\\theta^{3}},$$\n且 $x\\le0$ 时为 $0$，$x\\ge\\theta$ 时为 $1$。\n\n$T=\\max\\{X_1,X_2,X_3\\}$，三样本独立同分布，故\n$$F_T(t)=P(T\\le t)=[F_X(t)]^{3}=\\frac{t^{9}}{\\theta^{9}}\\quad(0<t<\\theta).$$\n求导得密度\n$$f_T(t)=\\begin{cases}\\dfrac{9t^{8}}{\\theta^{9}},&0<t<\\theta,\\\\[4pt]0,&\\text{其他}.\\end{cases}$$\n\n（2）\n$$E(T)=\\int_0^{\\theta}t\\cdot\\frac{9t^{8}}{\\theta^{9}}\\,\\mathrm dt=\\frac{9}{\\theta^{9}}\\int_0^{\\theta}t^{9}\\,\\mathrm dt=\\frac{9}{\\theta^{9}}\\cdot\\frac{\\theta^{10}}{10}=\\frac{9}{10}\\theta.$$\n要使 $aT$ 为 $\\theta$ 的无偏估计，需 $E(aT)=a\\cdot\\dfrac{9}{10}\\theta=\\theta$，解得\n$$a=\\frac{10}{9}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "最大值的分布函数是各自分布函数的乘积 $[F_X(t)]^n$（独立同分布），再求导得密度。",
-        "$E(T)=\\frac{9}{10}\\theta<\\theta$，故无偏需放大系数 $a=\\frac{10}{9}>1$。"
-      ],
-      "key_point": "极大值统计量用 $F_T=[F_X]^n$ 求密度；无偏估计由 $E(aT)=\\theta$ 定系数。"
-    },
-    {
-      "id": 375,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设二次型 $f\\left(x_1, x_2, x_3\\right)=a\\left(x_1^2+x_2^2+x_3^2\\right)+2 x_1 x_2+2 x_1 x_3+2 x_2 x_3$ 的正、负惯性指数分别为 $1,2$ , 则 $(\\quad)$",
-      "options": {
-        "A": "$a>1$",
-        "B": "$a<-2$",
-        "C": "$-2<a<1$",
-        "D": "$a=1$ 或 $a=-2$"
-      },
-      "answer": "C",
-      "analysis": "【分析】惯性指数由特征值符号决定：正惯性指数=正特征值个数，负惯性指数=负特征值个数。先写出二次型矩阵 $A$，求其特征值（这个矩阵结构特殊，行和相等，能直接算出特征值），再据\"正、负惯性指数为 $1,2$\"即\"一个正特征值、两个负特征值\"列不等式定 $a$ 的范围。\n\n【解答】二次型对应实对称矩阵\n$$A=\\begin{pmatrix}a&1&1\\\\1&a&1\\\\1&1&a\\end{pmatrix}.$$\n这是 $A=(a-1)E+J$ 型（$J$ 为全 $1$ 矩阵）。$J$ 的特征值为 $3$（一重，特征向量 $(1,1,1)^T$）和 $0$（二重）。故 $A$ 的特征值为\n$$\\lambda_1=(a-1)+3=a+2\\ (\\text{一重}),\\qquad \\lambda_{2,3}=(a-1)+0=a-1\\ (\\text{二重}).$$\n要正惯性指数 $=1$、负惯性指数 $=2$，即一个特征值为正、两个为负：\n$$\\begin{cases}a+2>0\\\\ a-1<0\\end{cases}\\Longrightarrow\\ -2<a<1.$$\n（此时 $a+2>0$ 给出唯一正值，$a-1<0$ 给出两个负值，无零特征值，秩 $3$，符合 $1+2=3$。）故选 **C**。",
-      "wrong_options": {
-        "A": "$a>1$ 时 $a-1>0$、$a+2>0$，三个特征值全正，正惯性指数为 $3$，与题设不符。",
-        "B": "$a<-2$ 时 $a+2<0$、$a-1<0$，三个全负，负惯性指数为 $3$，正惯性指数为 $0$，不符。",
-        "D": "$a=1$ 时 $\\lambda_{2,3}=0$，出现零特征值（矩阵退化），负惯性指数不足 $2$；$a=-2$ 时 $\\lambda_1=0$，正惯性指数为 $0$，均不符。"
-      },
-      "pitfalls": [
-        "正/负惯性指数就是正/负特征值的个数，零特征值都不计入，要排除使特征值为 $0$ 的 $a$。",
-        "利用 $A=(a-1)E+J$ 一步写出特征值 $a+2$（单）与 $a-1$（双），比解三次方程快得多。"
-      ],
-      "key_point": "$A=(a-1)E+J$ → 特征值 $a+2,a-1,a-1$；一正两负 ⇔ $a+2>0$ 且 $a-1<0$。"
-    },
-    {
-      "id": 377,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 10,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{1}{n^2}\\left(\\sin \\frac{1}{n}+2 \\sin \\frac{2}{n}+\\cdots+n \\sin \\frac{n}{n}\\right)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\sin 1-\\cos 1$",
-      "analysis": "【分析】把和式凑成定积分的黎曼和。$\\dfrac{1}{n^2}\\sum_{k=1}^n k\\sin\\dfrac{k}{n}=\\dfrac{1}{n}\\sum_{k=1}^n \\dfrac{k}{n}\\sin\\dfrac{k}{n}$，其中 $\\dfrac{k}{n}$ 是 $[0,1]$ 的等分点，$\\dfrac{1}{n}$ 是区间宽度，故极限即 $\\displaystyle\\int_0^1 x\\sin x\\,\\mathrm{d}x$，分部积分求出。\n\n【解答】改写：\n$$\\frac{1}{n^2}\\sum_{k=1}^n k\\sin\\frac{k}{n}=\\frac{1}{n}\\sum_{k=1}^n \\frac{k}{n}\\sin\\frac{k}{n}.$$\n这是函数 $f(x)=x\\sin x$ 在 $[0,1]$ 上取分点 $x_k=\\dfrac{k}{n}$、步长 $\\dfrac{1}{n}$ 的黎曼和，$f$ 连续故可积，极限为\n$$\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{k=1}^n \\frac{k}{n}\\sin\\frac{k}{n}=\\int_0^1 x\\sin x\\,\\mathrm{d}x.$$\n分部积分（$u=x,\\ \\mathrm{d}v=\\sin x\\,\\mathrm{d}x$）：\n$$\\int_0^1 x\\sin x\\,\\mathrm{d}x=\\left[-x\\cos x\\right]_0^1+\\int_0^1\\cos x\\,\\mathrm{d}x=-\\cos 1+\\left[\\sin x\\right]_0^1=-\\cos 1+\\sin 1.$$\n故原极限 $=\\sin 1-\\cos 1$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "先把 1/n² 拆成 (1/n)·(k/n)，凑出步长 1/n 与分点 k/n，才能识别为 ∫₀¹ x sin x dx",
-        "被积函数是 x sin x，不是 sin x；分部积分别把 u、dv 选反",
-        "结果保留 sin1、cos1（弧度），不要代成角度或近似值"
-      ],
-      "key_point": "和式极限凑黎曼和：(1/n)Σf(k/n)→∫₀¹f，本题 f(x)=x sin x，分部积分即得 sin1−cos1。"
-    },
-    {
-      "id": 382,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $\\displaystyle f(x)=\\int_0^1\\left|t^2-x^2\\right| \\mathrm{d} t(x>0)$, 求 $f^{\\prime}(x)$, 并求 $f(x)$ 的最小值",
-      "options": {},
-      "answer": "f'(x)=2x(2x-1)\\ (0<x<1),\\ f'(x)=2x\\ (x\\ge 1);\\ 最小值\\ f(1/2)=\\dfrac{1}{4}",
-      "analysis": "【分析】被积函数含绝对值 $|t^2-x^2|$，关键是按 $t$ 与 $x$ 的大小关系分段去掉绝对值。由于积分区间是 $[0,1]$、参数 $x>0$，要分 $0<x<1$（分界点 $x$ 落在区间内）与 $x\\ge 1$（区间内恒有 $t\\le x$）两种情形先把 $f(x)$ 算成分段显式表达式，再求导、找驻点比较取最小值。\n\n【解答】**第一步：分段求 $f(x)$。**\n\n当 $0<x<1$ 时，区间 $[0,x]$ 上 $t^2\\le x^2$，$[x,1]$ 上 $t^2\\ge x^2$，故\n$$f(x)=\\int_0^x(x^2-t^2)\\,dt+\\int_x^1(t^2-x^2)\\,dt.$$\n$\\int_0^x(x^2-t^2)dt=x^3-\\dfrac{x^3}{3}=\\dfrac{2x^3}{3}$；\n$\\int_x^1(t^2-x^2)dt=\\left[\\dfrac{t^3}{3}-x^2t\\right]_x^1=\\left(\\dfrac13-x^2\\right)-\\left(\\dfrac{x^3}{3}-x^3\\right)=\\dfrac13-x^2+\\dfrac{2x^3}{3}$。\n相加得 $f(x)=\\dfrac{4x^3}{3}-x^2+\\dfrac13\\ (0<x<1)$。\n\n当 $x\\ge 1$ 时，$[0,1]$ 上恒有 $t^2\\le x^2$，故\n$$f(x)=\\int_0^1(x^2-t^2)\\,dt=x^2-\\dfrac13.$$\n\n**第二步：求 $f'(x)$。**\n$0<x<1$ 时 $f'(x)=4x^2-2x=2x(2x-1)$；$x>1$ 时 $f'(x)=2x$。在 $x=1$ 处两侧导数皆为 $2$，连续。\n\n**第三步：求最小值。** 在 $(0,1)$ 内令 $f'(x)=2x(2x-1)=0$ 得 $x=\\dfrac12$；$x<\\dfrac12$ 时 $f'<0$，$x>\\dfrac12$ 时 $f'>0$，故 $x=\\dfrac12$ 为极小值点；当 $x\\ge1$ 时 $f'(x)=2x>0$ 单调增。故全局最小值在 $x=\\dfrac12$：\n$$f\\!\\left(\\tfrac12\\right)=\\dfrac{4}{3}\\cdot\\dfrac18-\\dfrac14+\\dfrac13=\\dfrac16-\\dfrac14+\\dfrac13=\\dfrac{2-3+4}{12}=\\dfrac14.$$\n所以 $f(x)$ 的最小值为 $\\dfrac14$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "去绝对值必须分 0<x<1 与 x≥1 两种情形，漏掉分界点会导致 f' 与最小值都错。",
-        "求驻点后要确认它落在对应分段区间内，并比较各段单调性确认是全局最小而非局部。"
-      ],
-      "key_point": "变限积分含绝对值：按被积变量与参数大小关系分段写出显式 f(x)，再求导找驻点。"
-    },
-    {
       "id": 388,
       "paper": "数学三",
       "year": 2016,
@@ -298,6 +115,60 @@
       "key_point": "$\\frac{1}{\\sqrt n}-\\frac{1}{\\sqrt{n+1}}$ 有理化后是 $O(n^{-3/2})$，乘有界因子绝对收敛。"
     },
     {
+      "id": 353,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为可逆矩阵, 且 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, 则下列结论错误的是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
+        "B": "$\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}^{-1}$ 相似",
+        "C": "$\\boldsymbol{A}+\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
+        "D": "$\\boldsymbol{A}+\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{-1}$ 相似"
+      },
+      "answer": "C",
+      "analysis": "【分析】题目问“结论错误的”。相似关系 $A=P^{-1}BP$ 在取逆、取转置、以及对 $A,A^{-1}$ 的多项式组合时是否仍能用同一个相似矩阵 $P$ 实现，是判断的关键。涉及转置时相似矩阵会变成 $P^{T}$，从而破坏组合的相似性。\n\n【解答】设 $A=P^{-1}BP$（$P$ 可逆）。逐项检验：\n\nA 选项：$A^{T}=(P^{-1}BP)^{T}=P^{T}B^{T}(P^{T})^{-1}$，取 $Q=(P^{T})^{-1}$ 即 $A^{T}=Q^{-1}B^{T}Q$，故 $A^{T}\\sim B^{T}$，正确。\n\nB 选项：$A^{-1}=P^{-1}B^{-1}P$，故 $A^{-1}\\sim B^{-1}$，正确。\n\nD 选项：$A+A^{-1}=P^{-1}BP+P^{-1}B^{-1}P=P^{-1}(B+B^{-1})P$，用同一个 $P$，故 $A+A^{-1}\\sim B+B^{-1}$，正确。\n\nC 选项：$A+A^{T}=P^{-1}BP+P^{T}B^{T}(P^{T})^{-1}$。两项用的相似矩阵分别是 $P$ 与 $(P^{T})^{-1}$，一般 $P\\ne(P^{T})^{-1}$，无法提成 $P^{-1}(B+B^{T})P$ 的形式，故 $A+A^{T}$ 与 $B+B^{T}$ 一般不相似。\n\n举反例佐证：取 $B=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$，$P=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，$A=P^{-1}BP=\\begin{pmatrix}1&-1\\\\0&2\\end{pmatrix}$。则 $A+A^{T}=\\begin{pmatrix}2&-1\\\\-1&4\\end{pmatrix}$，特征值之和（迹）为 $6$、行列式为 $7$；而 $B+B^{T}=\\begin{pmatrix}2&0\\\\0&4\\end{pmatrix}$，迹 $6$、行列式 $8$。行列式不等，故二者不相似。结论错误的是 C。",
+      "wrong_options": {
+        "A": "$A^{T}=(P^{T})B^{T}(P^{T})^{-1}$，确为相似，结论正确（非所选）。",
+        "B": "$A^{-1}=P^{-1}B^{-1}P$，确为相似，结论正确（非所选）。",
+        "D": "$A+A^{-1}=P^{-1}(B+B^{-1})P$ 用同一 $P$，确为相似，结论正确（非所选）。"
+      },
+      "pitfalls": [
+        "相似对“取逆”“关于 $A,A^{-1}$ 的多项式”封闭（同一 $P$），但对“加转置”不封闭（$P$ 变 $P^T$）。",
+        "本题选“错误”的结论，是 C。"
+      ],
+      "key_point": "相似变换对含转置的运算不封闭：$A+A^{T}$ 用到 $P$ 与 $(P^T)^{-1}$ 两个矩阵，故不保相似。"
+    },
+    {
+      "id": 375,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设二次型 $f\\left(x_1, x_2, x_3\\right)=a\\left(x_1^2+x_2^2+x_3^2\\right)+2 x_1 x_2+2 x_1 x_3+2 x_2 x_3$ 的正、负惯性指数分别为 $1,2$ , 则 $(\\quad)$",
+      "options": {
+        "A": "$a>1$",
+        "B": "$a<-2$",
+        "C": "$-2<a<1$",
+        "D": "$a=1$ 或 $a=-2$"
+      },
+      "answer": "C",
+      "analysis": "【分析】惯性指数由特征值符号决定：正惯性指数=正特征值个数，负惯性指数=负特征值个数。先写出二次型矩阵 $A$，求其特征值（这个矩阵结构特殊，行和相等，能直接算出特征值），再据\"正、负惯性指数为 $1,2$\"即\"一个正特征值、两个负特征值\"列不等式定 $a$ 的范围。\n\n【解答】二次型对应实对称矩阵\n$$A=\\begin{pmatrix}a&1&1\\\\1&a&1\\\\1&1&a\\end{pmatrix}.$$\n这是 $A=(a-1)E+J$ 型（$J$ 为全 $1$ 矩阵）。$J$ 的特征值为 $3$（一重，特征向量 $(1,1,1)^T$）和 $0$（二重）。故 $A$ 的特征值为\n$$\\lambda_1=(a-1)+3=a+2\\ (\\text{一重}),\\qquad \\lambda_{2,3}=(a-1)+0=a-1\\ (\\text{二重}).$$\n要正惯性指数 $=1$、负惯性指数 $=2$，即一个特征值为正、两个为负：\n$$\\begin{cases}a+2>0\\\\ a-1<0\\end{cases}\\Longrightarrow\\ -2<a<1.$$\n（此时 $a+2>0$ 给出唯一正值，$a-1<0$ 给出两个负值，无零特征值，秩 $3$，符合 $1+2=3$。）故选 **C**。",
+      "wrong_options": {
+        "A": "$a>1$ 时 $a-1>0$、$a+2>0$，三个特征值全正，正惯性指数为 $3$，与题设不符。",
+        "B": "$a<-2$ 时 $a+2<0$、$a-1<0$，三个全负，负惯性指数为 $3$，正惯性指数为 $0$，不符。",
+        "D": "$a=1$ 时 $\\lambda_{2,3}=0$，出现零特征值（矩阵退化），负惯性指数不足 $2$；$a=-2$ 时 $\\lambda_1=0$，正惯性指数为 $0$，均不符。"
+      },
+      "pitfalls": [
+        "正/负惯性指数就是正/负特征值的个数，零特征值都不计入，要排除使特征值为 $0$ 的 $a$。",
+        "利用 $A=(a-1)E+J$ 一步写出特征值 $a+2$（单）与 $a-1$（双），比解三次方程快得多。"
+      ],
+      "key_point": "$A=(a-1)E+J$ → 特征值 $a+2,a-1,a-1$；一正两负 ⇔ $a+2>0$ 且 $a-1<0$。"
+    },
+    {
       "id": 392,
       "paper": "数学三",
       "year": 2016,
@@ -371,6 +242,79 @@
       "key_point": "由极限值反求 $\\lim f$：分子分母同阶无穷小逐一等价替换，约去 $x$ 解方程。"
     },
     {
+      "id": 377,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{1}{n^2}\\left(\\sin \\frac{1}{n}+2 \\sin \\frac{2}{n}+\\cdots+n \\sin \\frac{n}{n}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\sin 1-\\cos 1$",
+      "analysis": "【分析】把和式凑成定积分的黎曼和。$\\dfrac{1}{n^2}\\sum_{k=1}^n k\\sin\\dfrac{k}{n}=\\dfrac{1}{n}\\sum_{k=1}^n \\dfrac{k}{n}\\sin\\dfrac{k}{n}$，其中 $\\dfrac{k}{n}$ 是 $[0,1]$ 的等分点，$\\dfrac{1}{n}$ 是区间宽度，故极限即 $\\displaystyle\\int_0^1 x\\sin x\\,\\mathrm{d}x$，分部积分求出。\n\n【解答】改写：\n$$\\frac{1}{n^2}\\sum_{k=1}^n k\\sin\\frac{k}{n}=\\frac{1}{n}\\sum_{k=1}^n \\frac{k}{n}\\sin\\frac{k}{n}.$$\n这是函数 $f(x)=x\\sin x$ 在 $[0,1]$ 上取分点 $x_k=\\dfrac{k}{n}$、步长 $\\dfrac{1}{n}$ 的黎曼和，$f$ 连续故可积，极限为\n$$\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{k=1}^n \\frac{k}{n}\\sin\\frac{k}{n}=\\int_0^1 x\\sin x\\,\\mathrm{d}x.$$\n分部积分（$u=x,\\ \\mathrm{d}v=\\sin x\\,\\mathrm{d}x$）：\n$$\\int_0^1 x\\sin x\\,\\mathrm{d}x=\\left[-x\\cos x\\right]_0^1+\\int_0^1\\cos x\\,\\mathrm{d}x=-\\cos 1+\\left[\\sin x\\right]_0^1=-\\cos 1+\\sin 1.$$\n故原极限 $=\\sin 1-\\cos 1$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "先把 1/n² 拆成 (1/n)·(k/n)，凑出步长 1/n 与分点 k/n，才能识别为 ∫₀¹ x sin x dx",
+        "被积函数是 x sin x，不是 sin x；分部积分别把 u、dv 选反",
+        "结果保留 sin1、cos1（弧度），不要代成角度或近似值"
+      ],
+      "key_point": "和式极限凑黎曼和：(1/n)Σf(k/n)→∫₀¹f，本题 f(x)=x sin x，分部积分即得 sin1−cos1。"
+    },
+    {
+      "id": 359,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u, v)$ 可微, $z=z(x, y)$ 由方程 $(x+1) z-y^{2}=x^{2} f(x-z, y)$ 确定, 则 $\\left.\\mathrm{d} z\\right|_{(0,1)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\mathrm{d} x+2 \\mathrm{d} y$",
+      "analysis": "【分析】求隐函数在一点的全微分，最利落的办法是对方程两边取全微分（利用全微分形式不变性），代入该点的数值，直接解出 $\\mathrm dz$，避免逐个求偏导。先要确定该点处的 $z$ 值。\n\n【解答】方程为 $(x+1)z-y^{2}=x^{2}f(x-z,y)$。\n\n先求 $(0,1)$ 处的 $z$：代入 $x=0,y=1$ 得 $(0+1)z-1=0\\cdot f=0$，故 $z=1$。即考察点为 $x=0,\\,y=1,\\,z=1$。\n\n两边取全微分（$u=x-z,\\,v=y$）：\n$$(x+1)\\,\\mathrm dz+z\\,\\mathrm dx-2y\\,\\mathrm dy=2x\\,f\\,\\mathrm dx+x^{2}\\big[f_{u}(\\mathrm dx-\\mathrm dz)+f_{v}\\,\\mathrm dy\\big].$$\n\n在 $(0,1)$ 处代入 $x=0,y=1,z=1$，右端含 $x$ 与 $x^{2}$ 的项全部为 $0$：\n$$(0+1)\\,\\mathrm dz+1\\cdot\\mathrm dx-2\\cdot1\\cdot\\mathrm dy=0,$$\n即 $\\mathrm dz+\\mathrm dx-2\\,\\mathrm dy=0$，解得\n$$\\left.\\mathrm dz\\right|_{(0,1)}=-\\mathrm dx+2\\,\\mathrm dy.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由原方程定出 $(0,1)$ 处 $z=1$，否则无法代值。",
+        "$x=0$ 时含 $x$、$x^2$ 的项以及 $f$ 的偏导项全被消去，无需知道 $f$ 的具体形式。"
+      ],
+      "key_point": "隐函数定点全微分：两边取全微分后代入该点，含因子 $x$ 的项归零，直接解 $\\mathrm dz$。"
+    },
+    {
+      "id": 397,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $D=\\{(x, y)|| x \\mid \\leqslant y \\leqslant 1,-1 \\leqslant x \\leqslant 1\\}$ 则 $\\iint x^2 \\mathrm{e}^{-y^2} \\mathrm{d} x \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{3}-\\dfrac{2}{3 \\mathrm{e}}$",
+      "analysis": "【分析】区域 $D=\\{(x,y):|x|\\le y\\le1,\\,-1\\le x\\le1\\}$ 是顶点 $(-1,1),(1,1),(0,0)$ 的三角形。被积函数含 $\\mathrm{e}^{-y^2}$，对 $x$ 无原函数障碍，故按 $y$ 为外层、$x$ 为内层（$-y\\le x\\le y$）积分，把难积的 $\\mathrm{e}^{-y^2}$ 留到外层并配 $y$ 凑微分。\n\n【解答】\n$$\\iint_D x^2\\mathrm{e}^{-y^2}\\,\\mathrm{d}x\\mathrm{d}y=\\int_0^1\\mathrm{e}^{-y^2}\\!\\left(\\int_{-y}^{y}x^2\\,\\mathrm{d}x\\right)\\mathrm{d}y=\\int_0^1\\mathrm{e}^{-y^2}\\cdot\\dfrac{2y^3}{3}\\,\\mathrm{d}y=\\dfrac23\\int_0^1 y^3\\mathrm{e}^{-y^2}\\,\\mathrm{d}y.$$\n令 $u=y^2,\\ \\mathrm{d}u=2y\\,\\mathrm{d}y$：\n$$\\int_0^1 y^3\\mathrm{e}^{-y^2}\\,\\mathrm{d}y=\\dfrac12\\int_0^1 u\\mathrm{e}^{-u}\\,\\mathrm{d}u=\\dfrac12\\big[-(u+1)\\mathrm{e}^{-u}\\big]_0^1=\\dfrac12\\big[1-2\\mathrm{e}^{-1}\\big]=\\dfrac12-\\mathrm{e}^{-1}.$$\n故\n$$\\iint_D x^2\\mathrm{e}^{-y^2}\\,\\mathrm{d}x\\mathrm{d}y=\\dfrac23\\left(\\dfrac12-\\mathrm{e}^{-1}\\right)=\\dfrac13-\\dfrac{2}{3\\mathrm{e}}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "积分次序要选先 $x$ 后 $y$，把 $\\mathrm{e}^{-y^2}$ 留在外层用 $y\\,\\mathrm{d}y$ 凑微分；先 $y$ 后 $x$ 会卡在 $\\int\\mathrm{e}^{-y^2}\\mathrm{d}y$",
+        "内层 $\\int_{-y}^{y}x^2\\mathrm{d}x=\\frac{2y^3}{3}$（偶函数对称区间取 2 倍）"
+      ],
+      "key_point": "含 $\\mathrm{e}^{-y^2}$ 的二重积分选 $\\mathrm{e}^{-y^2}$ 不被先积的次序，再用 $y\\,\\mathrm{d}y$ 换元 $u=y^2$ 化简。"
+    },
+    {
+      "id": 361,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\left|\\begin{array}{cccc}\\lambda & -1 & 0 & 0 \\\\ 0 & \\lambda & -1 & 0 \\\\ 0 & 0 & \\lambda & -1 \\\\ 4 & 3 & 2 & \\lambda+1\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\lambda^4+\\lambda^3+2 \\lambda^2+3 \\lambda+4$",
+      "analysis": "【分析】这是“伴随式”结构的行列式（上次对角 $-1$、最后一行装系数）。按第一列展开最简，第一列只有 $\\lambda$（位于 $(1,1)$）和 $4$（位于 $(4,1)$）两个非零元。\n\n【解答】记行列式为 $D$，按第一列展开：\n$$D=\\lambda\\cdot M_{11}+4\\cdot(-1)^{4+1}M_{41},$$\n其中 $M_{11},M_{41}$ 为相应余子式。\n\n$M_{11}=\\begin{vmatrix}\\lambda&-1&0\\\\0&\\lambda&-1\\\\3&2&\\lambda+1\\end{vmatrix}$。再按其第一列展开：\n$$M_{11}=\\lambda\\begin{vmatrix}\\lambda&-1\\\\2&\\lambda+1\\end{vmatrix}+3\\begin{vmatrix}-1&0\\\\\\lambda&-1\\end{vmatrix}=\\lambda\\big[\\lambda(\\lambda+1)+2\\big]+3\\cdot1=\\lambda^{3}+\\lambda^{2}+2\\lambda+3.$$\n\n$M_{41}=\\begin{vmatrix}-1&0&0\\\\\\lambda&-1&0\\\\0&\\lambda&-1\\end{vmatrix}$，为下三角行列式，等于对角线之积 $(-1)^{3}=-1$。\n\n故\n$$4\\cdot(-1)^{5}M_{41}=4\\cdot(-1)\\cdot(-1)=4.$$\n\n合并：\n$$D=\\lambda(\\lambda^{3}+\\lambda^{2}+2\\lambda+3)+4=\\lambda^{4}+\\lambda^{3}+2\\lambda^{2}+3\\lambda+4.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$(4,1)$ 位置的代数余子式符号为 $(-1)^{4+1}=-1$，与子式中的 $-1$ 相乘得正，最终常数项为 $+4$。",
+        "按第一列展开只剩两项，比硬算四阶省力。"
+      ],
+      "key_point": "稀疏列行列式按该列展开；此类“伴随式”结果即由末行系数构成的多项式。"
+    },
+    {
       "id": 395,
       "paper": "数学三",
       "year": 2016,
@@ -408,24 +352,6 @@
       "key_point": "$1^{\\infty}$ 取对数 + 泰勒展开到与分母同阶（这里 $x^4$），$x^2$ 项相消是题眼。"
     },
     {
-      "id": 397,
-      "paper": "数学三",
-      "year": 2016,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $D=\\{(x, y)|| x \\mid \\leqslant y \\leqslant 1,-1 \\leqslant x \\leqslant 1\\}$ 则 $\\iint x^2 \\mathrm{e}^{-y^2} \\mathrm{d} x \\mathrm{d} y=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{3}-\\dfrac{2}{3 \\mathrm{e}}$",
-      "analysis": "【分析】区域 $D=\\{(x,y):|x|\\le y\\le1,\\,-1\\le x\\le1\\}$ 是顶点 $(-1,1),(1,1),(0,0)$ 的三角形。被积函数含 $\\mathrm{e}^{-y^2}$，对 $x$ 无原函数障碍，故按 $y$ 为外层、$x$ 为内层（$-y\\le x\\le y$）积分，把难积的 $\\mathrm{e}^{-y^2}$ 留到外层并配 $y$ 凑微分。\n\n【解答】\n$$\\iint_D x^2\\mathrm{e}^{-y^2}\\,\\mathrm{d}x\\mathrm{d}y=\\int_0^1\\mathrm{e}^{-y^2}\\!\\left(\\int_{-y}^{y}x^2\\,\\mathrm{d}x\\right)\\mathrm{d}y=\\int_0^1\\mathrm{e}^{-y^2}\\cdot\\dfrac{2y^3}{3}\\,\\mathrm{d}y=\\dfrac23\\int_0^1 y^3\\mathrm{e}^{-y^2}\\,\\mathrm{d}y.$$\n令 $u=y^2,\\ \\mathrm{d}u=2y\\,\\mathrm{d}y$：\n$$\\int_0^1 y^3\\mathrm{e}^{-y^2}\\,\\mathrm{d}y=\\dfrac12\\int_0^1 u\\mathrm{e}^{-u}\\,\\mathrm{d}u=\\dfrac12\\big[-(u+1)\\mathrm{e}^{-u}\\big]_0^1=\\dfrac12\\big[1-2\\mathrm{e}^{-1}\\big]=\\dfrac12-\\mathrm{e}^{-1}.$$\n故\n$$\\iint_D x^2\\mathrm{e}^{-y^2}\\,\\mathrm{d}x\\mathrm{d}y=\\dfrac23\\left(\\dfrac12-\\mathrm{e}^{-1}\\right)=\\dfrac13-\\dfrac{2}{3\\mathrm{e}}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "积分次序要选先 $x$ 后 $y$，把 $\\mathrm{e}^{-y^2}$ 留在外层用 $y\\,\\mathrm{d}y$ 凑微分；先 $y$ 后 $x$ 会卡在 $\\int\\mathrm{e}^{-y^2}\\mathrm{d}y$",
-        "内层 $\\int_{-y}^{y}x^2\\mathrm{d}x=\\frac{2y^3}{3}$（偶函数对称区间取 2 倍）"
-      ],
-      "key_point": "含 $\\mathrm{e}^{-y^2}$ 的二重积分选 $\\mathrm{e}^{-y^2}$ 不被先积的次序，再用 $y\\,\\mathrm{d}y$ 换元 $u=y^2$ 化简。"
-    },
-    {
       "id": 398,
       "paper": "数学三",
       "year": 2016,
@@ -442,6 +368,42 @@
         "边际收益是对销量 $Q$ 求导，不是对价格 $P$ 求导，必须用链式法则换算。"
       ],
       "key_point": "弹性方程分离变量求 Q(P)，最大需求定常数；边际收益 dR/dQ 用 (dR/dP)/(dQ/dP)。"
+    },
+    {
+      "id": 382,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x)=\\int_0^1\\left|t^2-x^2\\right| \\mathrm{d} t(x>0)$, 求 $f^{\\prime}(x)$, 并求 $f(x)$ 的最小值",
+      "options": {},
+      "answer": "f'(x)=2x(2x-1)\\ (0<x<1),\\ f'(x)=2x\\ (x\\ge 1);\\ 最小值\\ f(1/2)=\\dfrac{1}{4}",
+      "analysis": "【分析】被积函数含绝对值 $|t^2-x^2|$，关键是按 $t$ 与 $x$ 的大小关系分段去掉绝对值。由于积分区间是 $[0,1]$、参数 $x>0$，要分 $0<x<1$（分界点 $x$ 落在区间内）与 $x\\ge 1$（区间内恒有 $t\\le x$）两种情形先把 $f(x)$ 算成分段显式表达式，再求导、找驻点比较取最小值。\n\n【解答】**第一步：分段求 $f(x)$。**\n\n当 $0<x<1$ 时，区间 $[0,x]$ 上 $t^2\\le x^2$，$[x,1]$ 上 $t^2\\ge x^2$，故\n$$f(x)=\\int_0^x(x^2-t^2)\\,dt+\\int_x^1(t^2-x^2)\\,dt.$$\n$\\int_0^x(x^2-t^2)dt=x^3-\\dfrac{x^3}{3}=\\dfrac{2x^3}{3}$；\n$\\int_x^1(t^2-x^2)dt=\\left[\\dfrac{t^3}{3}-x^2t\\right]_x^1=\\left(\\dfrac13-x^2\\right)-\\left(\\dfrac{x^3}{3}-x^3\\right)=\\dfrac13-x^2+\\dfrac{2x^3}{3}$。\n相加得 $f(x)=\\dfrac{4x^3}{3}-x^2+\\dfrac13\\ (0<x<1)$。\n\n当 $x\\ge 1$ 时，$[0,1]$ 上恒有 $t^2\\le x^2$，故\n$$f(x)=\\int_0^1(x^2-t^2)\\,dt=x^2-\\dfrac13.$$\n\n**第二步：求 $f'(x)$。**\n$0<x<1$ 时 $f'(x)=4x^2-2x=2x(2x-1)$；$x>1$ 时 $f'(x)=2x$。在 $x=1$ 处两侧导数皆为 $2$，连续。\n\n**第三步：求最小值。** 在 $(0,1)$ 内令 $f'(x)=2x(2x-1)=0$ 得 $x=\\dfrac12$；$x<\\dfrac12$ 时 $f'<0$，$x>\\dfrac12$ 时 $f'>0$，故 $x=\\dfrac12$ 为极小值点；当 $x\\ge1$ 时 $f'(x)=2x>0$ 单调增。故全局最小值在 $x=\\dfrac12$：\n$$f\\!\\left(\\tfrac12\\right)=\\dfrac{4}{3}\\cdot\\dfrac18-\\dfrac14+\\dfrac13=\\dfrac16-\\dfrac14+\\dfrac13=\\dfrac{2-3+4}{12}=\\dfrac14.$$\n所以 $f(x)$ 的最小值为 $\\dfrac14$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "去绝对值必须分 0<x<1 与 x≥1 两种情形，漏掉分界点会导致 f' 与最小值都错。",
+        "求驻点后要确认它落在对应分段区间内，并比较各段单调性确认是全局最小而非局部。"
+      ],
+      "key_point": "变限积分含绝对值：按被积变量与参数大小关系分段写出显式 f(x)，再求导找驻点。"
+    },
+    {
+      "id": 401,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, 且满足 $\\displaystyle \\int_0^x f(x-t) \\mathrm{d} t=\\int_0^x(x-t) f(t) \\mathrm{d} t+\\mathrm{e}^{-x}-1$, 求 $f(x)$.",
+      "options": {},
+      "answer": "$f(x)=-\\dfrac{1}{2}\\left(\\mathrm{e}^{x}+\\mathrm{e}^{-x}\\right)$",
+      "analysis": "令 $u=x-t$, 则 $\\displaystyle \\int_0^x f(x-t) \\mathrm{d} t=\\int_0^x f(u) \\mathrm{d} u$.\n\n由题设 $\\displaystyle \\int_0^x f(u) \\mathrm{d} u=x \\int_0^x f(t) \\mathrm{d} t-\\int_0^x t f(t) \\mathrm{d} t+\\mathrm{e}^{-x}-1$.\n\n两边求导得 $\\displaystyle f(x)=\\int_0^x f(t) \\mathrm{d} t-\\mathrm{e}^{-x}$, 且 $f(0)=-1$.\n\n再求导得一阶线性微分方程 $f^{\\prime}(x)-f(x)=\\mathrm{e}^{-x}$.\n\n由通解公式 $\\displaystyle f(x)=\\mathrm{e}^{\\int \\mathrm{d} x}\\left(C+\\int \\mathrm{e}^{-x} \\mathrm{e}^{-\\int \\mathrm{d} x} \\mathrm{d} x\\right)=C \\mathrm{e}^x-\\frac{\\mathrm{e}^{-x}}{2}$.\n\n由 $f(0)=-1$ 得 $C=-\\dfrac{1}{2}$, 所以 $f(x)=-\\dfrac{1}{2}\\left(\\mathrm{e}^x+\\mathrm{e}^{-x}\\right)$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "去绝对值要按 $t$ 与 $x$ 的大小分段，注意 $x>0$ 还需分 $0<x<1$ 与 $x\\ge1$ 两种位置情形",
+        "在分段点 $x=1$ 处要验证左右导数一致（本题可导），否则求最小值时易遗漏端点"
+      ],
+      "key_point": "含 $f(x-t)$ 的积分方程: 先令 $u=x-t$ 把它化成 $\\int_0^x f(u)\\mathrm{d}u$, 再两边求导降为一阶线性方程 $f^{\\prime}-f=\\mathrm{e}^{-x}$, 最后由 $f(0)=-1$ 定常数."
     },
     {
       "id": 399,
@@ -481,22 +443,60 @@
       "key_point": "无解⇔r(A)<r(A,β)；先用行列式锁定候选值再逐一验秩；A^T A X=A^T β 必有解。"
     },
     {
-      "id": 401,
+      "id": 369,
       "paper": "数学三",
       "year": 2016,
-      "index": 18,
+      "index": 21,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 连续, 且满足 $\\displaystyle \\int_0^x f(x-t) \\mathrm{d} t=\\int_0^x(x-t) f(t) \\mathrm{d} t+\\mathrm{e}^{-x}-1$, 求 $f(x)$.",
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 1 \\\\ 2 & -3 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$.\r\n\r\n(1) 求 $\\boldsymbol{A}^{99}$;\r\n\r\n(2) 设 $3$ 阶矩阵 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$ 满足 $\\boldsymbol{B}^{2}=\\boldsymbol{B} \\boldsymbol{A}$, 记 $\\boldsymbol{B}^{100}=\\left(\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}\\right)$, 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 分别表示为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 的线性组合",
       "options": {},
-      "answer": "$f(x)=-\\dfrac{1}{2}\\left(\\mathrm{e}^{x}+\\mathrm{e}^{-x}\\right)$",
-      "analysis": "令 $u=x-t$, 则 $\\displaystyle \\int_0^x f(x-t) \\mathrm{d} t=\\int_0^x f(u) \\mathrm{d} u$.\n\n由题设 $\\displaystyle \\int_0^x f(u) \\mathrm{d} u=x \\int_0^x f(t) \\mathrm{d} t-\\int_0^x t f(t) \\mathrm{d} t+\\mathrm{e}^{-x}-1$.\n\n两边求导得 $\\displaystyle f(x)=\\int_0^x f(t) \\mathrm{d} t-\\mathrm{e}^{-x}$, 且 $f(0)=-1$.\n\n再求导得一阶线性微分方程 $f^{\\prime}(x)-f(x)=\\mathrm{e}^{-x}$.\n\n由通解公式 $\\displaystyle f(x)=\\mathrm{e}^{\\int \\mathrm{d} x}\\left(C+\\int \\mathrm{e}^{-x} \\mathrm{e}^{-\\int \\mathrm{d} x} \\mathrm{d} x\\right)=C \\mathrm{e}^x-\\frac{\\mathrm{e}^{-x}}{2}$.\n\n由 $f(0)=-1$ 得 $C=-\\dfrac{1}{2}$, 所以 $f(x)=-\\dfrac{1}{2}\\left(\\mathrm{e}^x+\\mathrm{e}^{-x}\\right)$.",
+      "answer": "$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}$；$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,\\ \\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,\\ \\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2$",
+      "analysis": "【分析】(1) $A$ 有三个互异特征值，可相似对角化，用 $A^{99}=PD^{99}P^{-1}$ 计算高次幂。(2) 由 $B^{2}=BA$ 归纳出 $B^{n}=BA^{n-1}$，于是 $B^{100}=BA^{99}$，从而 $B^{100}$ 的各列是 $B=(\\alpha_1,\\alpha_2,\\alpha_3)$ 各列以 $A^{99}$ 对应列为系数的线性组合。\n\n【解答】\n（1）特征多项式 $\\det(A-\\lambda I)=-\\lambda(\\lambda+1)(\\lambda+2)$，特征值 $\\lambda=0,-1,-2$，互异故可对角化。\n求特征向量：\n$\\lambda=0$：$\\xi_1=(3,2,2)^{T}$；$\\lambda=-1$：$\\xi_2=(1,1,0)^{T}$；$\\lambda=-2$：$\\xi_3=(1,2,0)^{T}$。\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}3&1&1\\\\2&1&2\\\\2&0&0\\end{pmatrix}$，则 $P^{-1}AP=D=\\mathrm{diag}(0,-1,-2)$。\n算得 $P^{-1}=\\begin{pmatrix}0&0&\\frac12\\\\2&-1&-2\\\\-1&1&\\frac12\\end{pmatrix}$。\n于是 $A^{99}=P\\,\\mathrm{diag}(0,(-1)^{99},(-2)^{99})\\,P^{-1}=P\\,\\mathrm{diag}(0,-1,-2^{99})\\,P^{-1}$。\n计算：\n$$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}.$$\n（验算：取指数为 $1$ 时同样的乘法还原出 $A$ 本身，方法正确。）\n\n（2）由 $B^{2}=BA$，归纳：设 $B^{n}=BA^{n-1}$，则 $B^{n+1}=B\\cdot B^{n}=B\\cdot BA^{n-1}=B^{2}A^{n-1}=BA\\cdot A^{n-1}=BA^{n}$。故对一切 $n\\ge1$ 有 $B^{n}=BA^{n-1}$，特别地\n$$B^{100}=BA^{99}.$$\n记 $A^{99}=(c_{ij})$。$B=(\\alpha_1,\\alpha_2,\\alpha_3)$，则 $B^{100}=BA^{99}$ 的第 $j$ 列\n$$\\beta_j=B\\cdot(A^{99}\\text{的第}j\\text{列})=c_{1j}\\alpha_1+c_{2j}\\alpha_2+c_{3j}\\alpha_3.$$\n由 $A^{99}$ 第三行全为 $0$（$c_{3j}=0$），代入各列：\n$$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,$$\n$$\\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,$$\n$$\\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2.$$",
       "wrong_options": {},
       "pitfalls": [
-        "去绝对值要按 $t$ 与 $x$ 的大小分段，注意 $x>0$ 还需分 $0<x<1$ 与 $x\\ge1$ 两种位置情形",
-        "在分段点 $x=1$ 处要验证左右导数一致（本题可导），否则求最小值时易遗漏端点"
+        "三个互异特征值保证可对角化，$A^{99}$ 通过 $PD^{99}P^{-1}$ 求，$(-2)^{99}=-2^{99}$ 符号别错。",
+        "$B^2=BA$ 归纳得 $B^{100}=BA^{99}$ 是第二问的桥梁。",
+        "$\\beta_j$ 的系数取自 $A^{99}$ 的第 $j$ 列；因 $A^{99}$ 第三行为 $0$，$\\alpha_3$ 不出现。"
       ],
-      "key_point": "含 $f(x-t)$ 的积分方程: 先令 $u=x-t$ 把它化成 $\\int_0^x f(u)\\mathrm{d}u$, 再两边求导降为一阶线性方程 $f^{\\prime}-f=\\mathrm{e}^{-x}$, 最后由 $f(0)=-1$ 定常数."
+      "key_point": "可对角化矩阵求高次幂 $PD^nP^{-1}$；$B^2=BA\\Rightarrow B^{100}=BA^{99}$，列组合系数即 $A^{99}$ 的列。"
+    },
+    {
+      "id": 370,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 在区域 $D=\\left\\{(x, y) \\mid 0<x<1, x^{2}<y<\\sqrt{x}\\right\\}$ 上服从均匀分布, 令 $U= \\begin{cases}1, & X \\leqslant Y, \\\\ 0, & X>Y .\\end{cases}$\r\n\r\n(1) 写出 $(X, Y)$ 的概率密度;\r\n\r\n(2) 问 $U$ 与 $X$ 是否独立? 并说明理由；\r\n\r\n(3) 求 $Z=U+X$ 的分布函数 $F(z)$",
+      "options": {},
+      "answer": "(1) $f(x, y)= \\begin{cases}3, & (x, y) \\in D, \\\\ 0, & (x, y) \\notin D .\\end{cases}$\r\n\r\n(2) 不独立\r\n\r\n(3) $F(z)= \\begin{cases}0, & z<0, \\\\ \\dfrac{3}{2} z^2-z^3, & 0 \\leqslant z<1, \\\\ \\dfrac{1}{2}+2(z-1)^{\\frac{3}{2}}-\\dfrac{3}{2}(z-1)^2, & 1 \\leqslant z<2, \\\\ 1, & z \\geqslant 2 .\\end{cases}$",
+      "analysis": "【分析】均匀分布密度为 $1/\\text{面积}$。判独立看 $U$ 关于 $X$ 的条件概率是否随 $x$ 变化。求 $Z=U+X$ 的分布函数要分段：$U=0$ 时 $Z=X\\in(0,1)$，$U=1$ 时 $Z=1+X\\in(1,2)$，按 $z$ 落在哪段累加概率。\n\n【解答】\n（1）区域面积\n$$S_D=\\int_{0}^{1}(\\sqrt x-x^{2})\\,\\mathrm dx=\\left[\\tfrac23 x^{3/2}-\\tfrac13x^{3}\\right]_0^1=\\tfrac23-\\tfrac13=\\tfrac13.$$\n故密度\n$$f(x,y)=\\begin{cases}3,&(x,y)\\in D,\\\\0,&\\text{其他}.\\end{cases}$$\n\n（2）在 $0<x<1$ 上有 $x^{2}<x<\\sqrt x$，故直线 $y=x$ 穿过区域。给定 $X=x$，$Y$ 在 $(x^{2},\\sqrt x)$ 上均匀，事件 $\\{X\\le Y\\}$ 即 $\\{Y\\in(x,\\sqrt x)\\}$，其条件概率\n$$P(U=1\\mid X=x)=\\frac{\\sqrt x-x}{\\sqrt x-x^{2}}$$\n随 $x$ 变化，故 $U$ 的分布依赖 $X$，$U$ 与 $X$ 不独立。\n\n（3）$U\\in\\{0,1\\}$。先备用两个概率：\n$$P(U=0)=P(X>Y)=\\int_0^1 3(x-x^2)\\,\\mathrm dx=3\\left(\\tfrac12-\\tfrac13\\right)=\\tfrac12,$$\n（对称地 $P(U=1)=\\tfrac12$）。\n\n• $z<0$：$F(z)=0$。\n\n• $0\\le z<1$：此时只能 $U=0$ 且 $X\\le z$，对应 $x\\in(0,z]$、$y\\in(x^2,x)$：\n$$F(z)=\\int_0^z 3(x-x^2)\\,\\mathrm dx=3\\left(\\tfrac{z^2}{2}-\\tfrac{z^3}{3}\\right)=\\tfrac32 z^2-z^3.$$\n\n• $1\\le z<2$：$\\{Z\\le z\\}=\\{U=0\\}\\cup\\{U=1,\\,X\\le z-1\\}$，\n$$P(U=1,X\\le z-1)=\\int_0^{z-1}3(\\sqrt x-x)\\,\\mathrm dx=3\\left[\\tfrac23(z-1)^{3/2}-\\tfrac12(z-1)^2\\right]=2(z-1)^{3/2}-\\tfrac32(z-1)^2.$$\n故\n$$F(z)=\\tfrac12+2(z-1)^{3/2}-\\tfrac32(z-1)^2.$$\n\n• $z\\ge2$：$F(z)=1$。\n\n（验算连续性：$z\\to1^-$ 时 $\\tfrac32-1=\\tfrac12$；$z\\to1^+$ 时 $\\tfrac12+0=\\tfrac12$，衔接；$z\\to2^-$ 时 $\\tfrac12+2-\\tfrac32=1$，衔接。）\n\n综上\n$$F(z)=\\begin{cases}0,&z<0,\\\\[2pt]\\dfrac32 z^{2}-z^{3},&0\\le z<1,\\\\[4pt]\\dfrac12+2(z-1)^{3/2}-\\dfrac32(z-1)^{2},&1\\le z<2,\\\\[4pt]1,&z\\ge2.\\end{cases}$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "均匀分布密度是面积的倒数，本题 $S_D=\\frac13$ 故密度为 $3$。",
+        "判独立看条件概率 $P(U=1\\mid X=x)$ 是否含 $x$；含 $x$ 即不独立。",
+        "$Z=U+X$ 分段：$0\\le z<1$ 只来自 $U=0$；$1\\le z<2$ 要加上 $P(U=0)=\\frac12$ 再加 $U=1$ 部分。注意各段端点衔接。"
+      ],
+      "key_point": "离散+连续之和的分布函数分段累加：先算 $P(U=0)$，在 $[1,2)$ 段把它整体加进来再叠加 $U=1$ 部分。"
+    },
+    {
+      "id": 371,
+      "paper": "数学三",
+      "year": 2016,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)=\\left\\{\\begin{array}{ll}\\dfrac{3 x^{2}}{\\theta^{3}}, & 0<x<\\theta, \\\\ 0, & \\text { 其他, }\\end{array}\\right.$ 其中 $\\theta \\in (0,+\\infty)$ 为未知参数, $X_{1}, X_{2}, X_{3}$ 为来自总体 $X$ 的简单随机样本, 令 $T=\\max \\left\\{X_{1}, X_{2}, X_{3}\\right\\}$\r\n\r\n(1) 求 $T$ 的概率密度;\r\n\r\n(2) 确定 $a$, 使得 $a T$ 为 $\\theta$ 的无偏估计",
+      "options": {},
+      "answer": "(1) $f_T(t)= \\begin{cases}\\dfrac{9 t^8}{\\theta^9}, & 0<t<\\theta, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) 当 $\\displaystyle a=\\frac{10}{9}$ 时, $a T$ 为参数 $\\theta$ 的无偏估计",
+      "analysis": "【分析】(1) 最大值统计量的分布用“分布函数法”：$F_T(t)=[F_X(t)]^{3}$，再求导得密度。(2) 无偏即 $E(aT)=\\theta$，先算 $E(T)$ 再定 $a$。\n\n【解答】\n（1）总体分布函数：当 $0<x<\\theta$ 时\n$$F_X(x)=\\int_0^x\\frac{3u^{2}}{\\theta^{3}}\\,\\mathrm du=\\frac{x^{3}}{\\theta^{3}},$$\n且 $x\\le0$ 时为 $0$，$x\\ge\\theta$ 时为 $1$。\n\n$T=\\max\\{X_1,X_2,X_3\\}$，三样本独立同分布，故\n$$F_T(t)=P(T\\le t)=[F_X(t)]^{3}=\\frac{t^{9}}{\\theta^{9}}\\quad(0<t<\\theta).$$\n求导得密度\n$$f_T(t)=\\begin{cases}\\dfrac{9t^{8}}{\\theta^{9}},&0<t<\\theta,\\\\[4pt]0,&\\text{其他}.\\end{cases}$$\n\n（2）\n$$E(T)=\\int_0^{\\theta}t\\cdot\\frac{9t^{8}}{\\theta^{9}}\\,\\mathrm dt=\\frac{9}{\\theta^{9}}\\int_0^{\\theta}t^{9}\\,\\mathrm dt=\\frac{9}{\\theta^{9}}\\cdot\\frac{\\theta^{10}}{10}=\\frac{9}{10}\\theta.$$\n要使 $aT$ 为 $\\theta$ 的无偏估计，需 $E(aT)=a\\cdot\\dfrac{9}{10}\\theta=\\theta$，解得\n$$a=\\frac{10}{9}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "最大值的分布函数是各自分布函数的乘积 $[F_X(t)]^n$（独立同分布），再求导得密度。",
+        "$E(T)=\\frac{9}{10}\\theta<\\theta$，故无偏需放大系数 $a=\\frac{10}{9}>1$。"
+      ],
+      "key_point": "极大值统计量用 $F_T=[F_X]^n$ 求密度；无偏估计由 $E(aT)=\\theta$ 定系数。"
     }
   ]
 }

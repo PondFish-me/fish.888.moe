@@ -32,146 +32,6 @@
       "key_point": "斜渐近线先取 k=lim y/x，再把 ln 凑成 ln(1+小量) 用 ln(1+t)~t 算 b=lim(y-kx)。"
     },
     {
-      "id": 2,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "若微分方程 $y^{\\prime \\prime}+a y^{\\prime} +by=0$ 的解在 $(-\\infty,+\\infty)$ 上有界, 则 $(\\quad)$",
-      "options": {
-        "A": "$a<0, b>0$",
-        "B": "$a>0, b>0$",
-        "C": "$a=0, b>0$",
-        "D": "$a=0, b<0$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n二阶常系数齐次线性方程 $y''+ay'+by=0$ 的所有解由特征方程 $r^2+ar+b=0$ 的根决定。题目要求**所有解**都在 $(-\\infty,+\\infty)$ 上有界，需逐类讨论特征根：\n\n- 两不等实根 $r_1,r_2$：通解含 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$。只要有一个非零实根，对应指数函数在某一端 $x\\to\\pm\\infty$ 必无界；若有零根，另一根非零仍无界。\n- 二重实根 $r$：通解含 $\\mathrm e^{rx},x\\mathrm e^{rx}$。即使 $r=0$（得 $1,x$），$x$ 也在 $\\mathbb R$ 上无界。\n- 共轭复根 $r=\\alpha\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$：通解含 $\\mathrm e^{\\alpha x}\\cos\\beta x,\\ \\mathrm e^{\\alpha x}\\sin\\beta x$。在 $(-\\infty,+\\infty)$ 上有界当且仅当 $\\alpha=0$。\n\n据此只有“纯虚根”一种情形能让全体解有界。\n\n【解答】\n\n特征方程 $r^2+ar+b=0$，根为 $r=\\dfrac{-a\\pm\\sqrt{a^2-4b}}{2}$，注意 $r_1+r_2=-a,\\ r_1r_2=b$。\n\n要使两个基本解 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$（或重根、复根情形对应的解）在整个 $\\mathbb R$ 上都有界，唯一可行的是特征根为**纯虚数** $\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$，此时通解\n\n$$y=C_1\\cos\\beta x+C_2\\sin\\beta x$$\n\n有界。纯虚根要求实部为零且为共轭复根，即\n\n$$r_1+r_2=-a=0\\ \\Rightarrow\\ a=0,\\qquad r_1r_2=b=\\beta^2>0\\ \\Rightarrow\\ b>0.$$\n\n反过来验证：\n\n- 若 $a=0,b>0$：根 $\\pm\\sqrt b\\,\\mathrm i$，解为 $\\cos\\sqrt b\\,x,\\ \\sin\\sqrt b\\,x$，有界。✓\n- 若 $a=0,b<0$（选项 D）：根 $\\pm\\sqrt{-b}$ 为非零实根，$\\mathrm e^{\\sqrt{-b}\\,x}$ 当 $x\\to+\\infty$ 无界。✗\n- 若 $a=0,b=0$：根为二重 $0$，解含 $x$，无界。\n- 若 $a>0,b>0$（选项 B）：根实部 $-a/2<0$，解当 $x\\to-\\infty$ 无界。✗\n- 若 $a<0,b>0$（选项 A）：根实部 $-a/2>0$，解当 $x\\to+\\infty$ 无界。✗\n\n故仅有 $a=0,b>0$ 满足要求，选 **C**。",
-      "wrong_options": {
-        "A": "a<0 时特征根实部 -a/2>0（或存在正实根），解含 e^{正数·x}，当 x→+∞ 无界。",
-        "B": "a>0 时根实部 -a/2<0，解当 x→+∞ 衰减到 0 没问题，但当 x→-∞ 时 e^{(负实部)x}→∞，在整个 (-∞,+∞) 上无界。",
-        "D": "a=0,b<0 时特征方程 r²=-b>0 有两个非零实根 ±√(-b)，对应 e^{±√(-b)x} 在某一端无界。"
-      },
-      "pitfalls": [
-        "题目要求在整个 (-∞,+∞) 上有界，而非只在 x→+∞。a>0 的衰减解在 x→-∞ 会爆掉，所以 B 错。",
-        "复根有界的充要条件是实部 α=0；别误以为只要是复根就有界。",
-        "a=b=0 或重根 r=0 会出现 x 这一项，仍然无界，必须 b>0 给出真正的纯虚根。"
-      ],
-      "key_point": "全体解在 R 上有界 ⇔ 特征根为纯虚数 ⇔ 实部为零且共轭复根，即 a=0 且 b>0。"
-    },
-    {
-      "id": 3,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $y=f(x)$ 由 $\\left\\{\\begin{array}{l}x=2 t+|t| \\\\ y=|t| \\sin t\\end{array}\\right.$ 确定, 则 $(\\quad)$",
-      "options": {
-        "A": "$f(x)$ 连续, $f^{\\prime}(0)$ 不存在",
-        "B": "$f^{\\prime}(0)$ 存在, $f^{\\prime}(x)$ 在 $x=0$ 处不连续",
-        "C": "$f^{\\prime}(x)$ 连续, $f^{\\prime \\prime}(0)$ 不存在",
-        "D": "$f^{\\prime \\prime}(0)$ 存在, $f^{\\prime}(x)$ 在 $x=0$ 处不连续"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n参数里带 $|t|$，本质是**分段函数**，必须以 $t=0$ 为界把 $x,y$ 分别写成两段，再各自消参得到 $y=f(x)$ 的显式分段表达式。判断 $f'(0)$、$f''(0)$ 是否存在、$f'(x)$ 是否连续，统一用**左右单侧极限**来比较：$f'(0)$ 存在 $\\Leftrightarrow$ 左右两段在 $x=0$ 处导数相等；$f'(x)$ 在 $0$ 处连续 $\\Leftrightarrow \\lim_{x\\to0^\\pm}f'(x)=f'(0)$；$f''(0)$ 存在 $\\Leftrightarrow$ 左右两段二阶导在 $x=0$ 的极限相等。\n\n【解答】\n\n**第一步：分段消参。**\n\n当 $t\\ge0$ 时 $|t|=t$，$x=2t+t=3t\\ge0$，$y=t\\sin t$，由 $t=\\dfrac{x}{3}$ 得\n$$f(x)=\\dfrac{x}{3}\\sin\\dfrac{x}{3},\\qquad x\\ge0.$$\n\n当 $t<0$ 时 $|t|=-t$，$x=2t-t=t<0$，$y=-t\\sin t$，由 $t=x$ 得\n$$f(x)=-x\\sin x,\\qquad x<0.$$\n\n**第二步：连续性与 $f'(0)$。**\n\n两段在 $x=0$ 处的值均为 $0$，故 $f$ 连续。\n\n$x>0$ 时 $f'(x)=\\dfrac13\\sin\\dfrac{x}{3}+\\dfrac{x}{9}\\cos\\dfrac{x}{3}$，$\\lim_{x\\to0^+}f'(x)=0$；\n\n$x<0$ 时 $f'(x)=-\\sin x-x\\cos x$，$\\lim_{x\\to0^-}f'(x)=0$。\n\n两段在 $0$ 处都可导且导数为 $0$，再由导函数极限定理可知 $f'(0)=0$ 存在，且 $\\lim_{x\\to0}f'(x)=0=f'(0)$，所以 $f'(x)$ 在 $x=0$ 处**连续**。\n\n**第三步：$f''(0)$ 是否存在。**\n\n$x>0$ 时 $f''(x)=\\dfrac29\\cos\\dfrac{x}{3}-\\dfrac{x}{27}\\sin\\dfrac{x}{3}$，$\\lim_{x\\to0^+}f''(x)=\\dfrac29$；\n\n$x<0$ 时 $f''(x)=-2\\cos x+x\\sin x$，$\\lim_{x\\to0^-}f''(x)=-2$。\n\n用导数定义看 $f''(0)$：右导数 $\\displaystyle\\lim_{x\\to0^+}\\dfrac{f'(x)-f'(0)}{x}=\\dfrac29$，左导数 $=-2$，两者不等，故 $f''(0)$**不存在**。\n\n综上：$f'(x)$ 连续而 $f''(0)$ 不存在，选 **C**。",
-      "wrong_options": {
-        "A": "$f'(0)$ 左右导数均为 $0$，确实存在，故 A 错。",
-        "B": "$f'(x)$ 左右极限都为 $0$ 且等于 $f'(0)$，$f'(x)$ 在 $0$ 处连续，不是不连续，故 B 错。",
-        "D": "$f''(0)$ 左右导数为 $-2$ 与 $\\dfrac29$，不相等，$f''(0)$ 不存在；且 $f'(x)$ 是连续的，D 两处都错。"
-      },
-      "pitfalls": [
-        "含 $|t|$ 必须以 $t=0$ 为界分段，且要分别确认每段对应的 $x$ 的范围（$x\\ge0$ 与 $x<0$）。",
-        "判断 $f''(0)$ 是否存在要用 $f'$ 的左右导数（即 $f''$ 的单侧极限）比较，不能只算其中一侧。"
-      ],
-      "key_point": "带绝对值的参数方程先分段消参得显式分段函数，再用左右单侧极限逐阶判断可导与连续。"
-    },
-    {
-      "id": 7,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知向量 $\\boldsymbol \\alpha_{1}=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right), \\quad \\boldsymbol \\alpha_{2}=\\left(\\begin{array}{l}2 \\\\ 1 \\\\ 1\\end{array}\\right), \\quad \\boldsymbol \\beta_{1}=\\left(\\begin{array}{l}2 \\\\ 5 \\\\ 9\\end{array}\\right), \\quad \\boldsymbol \\beta_{2}=\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)$, 若 $\\boldsymbol \\gamma$ 既可由 $\\boldsymbol \\alpha_{1}, \\boldsymbol \\alpha_{2}$ 线性表示, 也可由 $\\boldsymbol \\beta_{1}, \\boldsymbol \\beta_{2}$ 线性表示, 则 $\\boldsymbol \\gamma=(\\quad)$",
-      "options": {
-        "A": "$k\\left(\\begin{array}{l}3 \\\\ 3 \\\\ 4\\end{array}\\right), k \\in \\mathbb{R}$",
-        "B": "$k\\left(\\begin{array}{c}3 \\\\ 5 \\\\ 10\\end{array}\\right), k \\in \\mathbb{R}$",
-        "C": "$k\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 2\\end{array}\\right), k \\in \\mathbb{R}$",
-        "D": "$k\\left(\\begin{array}{l}1 \\\\ 5 \\\\ 8\\end{array}\\right), k \\in \\mathbb{R}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n本题求两个生成子空间的交：$\\gamma$ 既属于 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$，又属于 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$。标准做法是设两种表示相等，转化为一个齐次线性方程组求解：\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=y_1\\boldsymbol\\beta_1+y_2\\boldsymbol\\beta_2,$$\n\n即 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$。对系数矩阵 $[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]$ 做初等行变换求基础解系，再回代即可得到 $\\gamma$。\n\n【解答】\n\n设 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$，其系数矩阵为\n\n$$A=[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]=\\begin{pmatrix}1&2&2&1\\\\2&1&5&0\\\\3&1&9&1\\end{pmatrix}.$$\n\n行变换：$r_2-2r_1,\\\\;r_3-3r_1$ 得\n\n$$\\begin{pmatrix}1&2&2&1\\\\0&-3&1&-2\\\\0&-5&3&-2\\end{pmatrix},$$\n\n继续消元化为行最简形\n\n$$\\begin{pmatrix}1&0&0&-3\\\\0&1&0&1\\\\0&0&1&1\\end{pmatrix}.$$\n\n秩为 $3$，自由变量取 $y_2$。令 $y_2=1$，得基础解系\n\n$$(x_1,x_2,y_1,y_2)^{T}=(3,-1,-1,1)^{T}.$$\n\n于是\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=3\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}-\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix}.$$\n\n验算另一侧：$-\\boldsymbol\\beta_1+\\boldsymbol\\beta_2=-(2,5,9)^{T}+(1,0,1)^{T}=(-1,-5,-8)^{T}=-\\gamma$，方向一致（差一个非零常数因子），表明 $\\gamma$ 确实同时被两组向量表示。故\n\n$$\\gamma=k\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix},\\quad k\\in\\mathbb R.$$\n\n选 **D**。",
-      "wrong_options": {
-        "A": "$(3,3,4)^{T}$ 不在 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$ 与 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$ 的交中，不满足联立方程组。",
-        "B": "$(3,5,10)^{T}$ 不能同时由两组向量线性表示，验证方程组无相容解。",
-        "C": "$(-1,1,2)^{T}$ 同样不属于两个子空间的交，代入后方程组矛盾。"
-      },
-      "pitfalls": [
-        "公共向量需同时满足两种表示，必须联立成齐次方程组求解，而不是分别判断。",
-        "求出基础解系后要回代到 $\\boldsymbol\\alpha$ 一侧（或 $\\boldsymbol\\beta$ 一侧）算出 $\\gamma$ 本身，符号别弄反。",
-        "答案是含任意常数 $k$ 的一维直线，注意交空间是子空间而非单个向量。"
-      ],
-      "key_point": "两子空间的交：令两种线性表示相等，化为齐次方程组求基础解系再回代。"
-    },
-    {
-      "id": 11,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "当 $x \\rightarrow 0$ 时, 函数 $f(x)=a x+b x^{2}+\\ln (1+x)$ 与 $g(x)= \\mathrm{e}^{x^{2}}-\\cos x$ 是等价无穷小,  则 $a b=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-2$",
-      "analysis": "【分析】\n\n两个函数当 $x\\to 0$ 时是等价无穷小，本质要求二者的最低阶非零项**同阶且系数相等**。$g(x)=\\mathrm{e}^{x^2}-\\cos x$ 的最低阶可由麦克劳林展开看出是 $x^2$ 阶；因此 $f(x)$ 也必须从 $x^2$ 阶起头，即 $f(x)$ 中 $x$ 的一次项系数必须为零，且 $x^2$ 项系数与 $g(x)$ 的 $x^2$ 系数相等。把 $\\ln(1+x)$ 展开后逐阶匹配即可定出 $a,b$。\n\n【解答】\n\n先展开 $g(x)$。利用 $\\mathrm{e}^{x^2}=1+x^2+o(x^2)$，$\\cos x=1-\\dfrac{x^2}{2}+o(x^2)$，得\n\n$$g(x)=\\mathrm{e}^{x^2}-\\cos x=\\Big(1+x^2\\Big)-\\Big(1-\\dfrac{x^2}{2}\\Big)+o(x^2)=\\dfrac{3}{2}x^2+o(x^2).$$\n\n故 $g(x)\\sim\\dfrac{3}{2}x^2$，是二阶无穷小。\n\n再展开 $f(x)$。由 $\\ln(1+x)=x-\\dfrac{x^2}{2}+o(x^2)$，得\n\n$$f(x)=ax+bx^2+\\ln(1+x)=(a+1)x+\\Big(b-\\dfrac{1}{2}\\Big)x^2+o(x^2).$$\n\n要使 $f(x)\\sim g(x)$，须使 $f(x)$ 与 $g(x)$ 同为二阶无穷小且二阶系数相同：\n\n- 一次项消失：$a+1=0\\Rightarrow a=-1$；\n- 二次项匹配：$b-\\dfrac{1}{2}=\\dfrac{3}{2}\\Rightarrow b=2$。\n\n此时 $f(x)\\sim 2x^2$？需复核：$b-\\dfrac12=\\dfrac32$ 给出 $f$ 的二阶系数为 $\\dfrac32$，与 $g$ 一致，故 $f(x)\\sim\\dfrac32 x^2\\sim g(x)$，等价成立。\n\n因此\n\n$$ab=(-1)\\times 2=-2.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "只展开到一阶就草率比较，漏掉一次项系数必须为零这一条件。",
-        "误以为 $\\mathrm{e}^{x^2}$ 的二阶系数是 $\\dfrac12$（那是 $\\mathrm{e}^{x}$），实际 $\\mathrm{e}^{x^2}$ 的 $x^2$ 系数为 $1$。",
-        "求出 $a,b$ 后忘了题目问的是乘积 $ab$ 而非分别的值。"
-      ],
-      "key_point": "等价无穷小即最低阶非零项同阶同系数，麦克劳林展开后逐阶匹配定参数。"
-    },
-    {
-      "id": 14,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 15,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设连续函数 $f(x)$ 满足 $\\displaystyle f(x+2)-f(x)=x, \\int_{0}^{2} f(x) \\mathrm{d} x=0$, 则 $\\displaystyle \\int_{1}^{3} f(x) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{2}$",
-      "analysis": "【分析】\n\n所求区间 $[1,3]$ 与已知区间 $[0,2]$ 错开了一段。思路是把 $[1,3]$ 拆成 $[1,2]\\cup[2,3]$，对 $[2,3]$ 上的积分作平移换元 $x=t+2$，利用差分关系 $f(x+2)-f(x)=x$（即 $f(t+2)=f(t)+t$）把它转化回 $[0,1]$ 上的积分，从而拼出整段 $[0,2]$ 的积分（已知为 $0$），剩下一个普通定积分即可。\n\n【解答】\n\n将所求积分拆开：\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_1^2 f(x)\\,\\mathrm{d}x+\\int_2^3 f(x)\\,\\mathrm{d}x.$$\n\n对第二个积分令 $x=t+2$，$\\mathrm{d}x=\\mathrm{d}t$，当 $x:2\\to3$ 时 $t:0\\to1$：\n\n$$\\int_2^3 f(x)\\,\\mathrm{d}x=\\int_0^1 f(t+2)\\,\\mathrm{d}t.$$\n\n由差分关系 $f(t+2)=f(t)+t$，故\n\n$$\\int_0^1 f(t+2)\\,\\mathrm{d}t=\\int_0^1\\big[f(t)+t\\big]\\,\\mathrm{d}t=\\int_0^1 f(t)\\,\\mathrm{d}t+\\int_0^1 t\\,\\mathrm{d}t=\\int_0^1 f(t)\\,\\mathrm{d}t+\\dfrac{1}{2}.$$\n\n代回：\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_1^2 f(x)\\,\\mathrm{d}x+\\int_0^1 f(x)\\,\\mathrm{d}x+\\dfrac{1}{2}.$$\n\n注意 $\\displaystyle\\int_0^1 f+\\int_1^2 f=\\int_0^2 f=0$，于是\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_0^2 f(x)\\,\\mathrm{d}x+\\dfrac{1}{2}=0+\\dfrac{1}{2}=\\dfrac{1}{2}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "换元 $x=t+2$ 后要同步把被积函数写成 $f(t+2)$ 并用差分关系替换，不要只换积分限。",
-        "拆区间时把 $\\int_1^2 f+\\int_0^1 f$ 凑成 $\\int_0^2 f$ 是关键一步，别拆错区间。",
-        "$\\int_0^1 t\\,\\mathrm{d}t=\\dfrac12$，别漏算这个常数项。"
-      ],
-      "key_point": "差分关系 $f(x+2)-f(x)=x$ 配合平移换元，把错开的积分区间拼回已知整段。"
-    },
-    {
-      "id": 20,
-      "paper": "数学二",
-      "year": 2023,
-      "index": 21,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $[-a, a]$ 上具有二阶连续导数, 证明:\r\n\r\n(1) 若 $f(0)=0$, 则存在 $\\xi \\in(-a, a)$, 使得 $f^{\\prime \\prime}(\\xi)=\\dfrac{1}{a^{2}}[f(a)+f(-a)]$;\r\n\r\n(2) 若 $f(x)$ 在 $(-a, a)$ 内取得极值, 则存在 $\\eta \\in(-a, a)$ 使得  $\r\n\\left|f^{\\prime \\prime}(\\eta)\\right| \\geq \\dfrac{1}{2 a^{2}}|f(a)-f(-a)|$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】\n\n两小问的共同武器都是带拉格朗日余项的泰勒公式，把 $f(a)$、$f(-a)$ 在某个内点展开到二阶。第（1）问在 $x=0$ 展开，利用 $f(0)=0$，把 $f(a)+f(-a)$ 表示成两个二阶导数之和的形式；再借助 $f''$ 连续，用介值定理把 \"两点二阶导的平均值\" 实现为某一点 $\\xi$ 处的值。第（2）问在极值点 $c$ 处展开，此时 $f'(c)=0$，作差消去一阶项后取绝对值放大，关键是用 $|c|<a$ 把 $(a-c)^2+(a+c)^2$ 控制住。\n\n【解答】\n\n**(1)** 因 $f$ 在 $[-a,a]$ 上有二阶连续导数，在 $x=0$ 处用泰勒公式展开（带拉格朗日余项），存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使得\n\n$$f(a)=f(0)+f'(0)\\,a+\\dfrac{f''(\\xi_1)}{2}a^2,$$\n\n$$f(-a)=f(0)+f'(0)(-a)+\\dfrac{f''(\\xi_2)}{2}a^2.$$\n\n两式相加，并代入 $f(0)=0$，一阶项相消：\n\n$$f(a)+f(-a)=\\dfrac{a^2}{2}\\left[f''(\\xi_1)+f''(\\xi_2)\\right],$$\n\n即\n\n$$\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n由于 $f''$ 在闭区间 $[\\xi_2,\\xi_1]$ 上连续，记 $m=\\min\\{f''(\\xi_1),f''(\\xi_2)\\}$，$M=\\max\\{f''(\\xi_1),f''(\\xi_2)\\}$，则上式右端的平均值介于 $m$ 与 $M$ 之间。由介值定理，存在 $\\xi$ 介于 $\\xi_1,\\xi_2$ 之间（从而 $\\xi\\in(-a,a)$），使得\n\n$$f''(\\xi)=\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n证毕。\n\n**(2)** 设 $f$ 在 $c\\in(-a,a)$ 处取得极值，由费马定理 $f'(c)=0$。在 $x=c$ 处对端点作二阶泰勒展开：存在 $\\xi_1$ 介于 $c$ 与 $a$ 之间、$\\xi_2$ 介于 $-a$ 与 $c$ 之间，使得\n\n$$f(a)=f(c)+f'(c)(a-c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2=f(c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2,$$\n\n$$f(-a)=f(c)+\\dfrac{f''(\\xi_2)}{2}(-a-c)^2=f(c)+\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n两式相减，消去 $f(c)$：\n\n$$f(a)-f(-a)=\\dfrac{f''(\\xi_1)}{2}(a-c)^2-\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n取绝对值并放大，令 $M=\\max\\{|f''(\\xi_1)|,|f''(\\xi_2)|\\}$，则记达到此最大值的点为 $\\eta\\in(-a,a)$，有 $|f''(\\eta)|=M$，且\n\n$$|f(a)-f(-a)|\\le \\dfrac{|f''(\\xi_1)|}{2}(a-c)^2+\\dfrac{|f''(\\xi_2)|}{2}(a+c)^2\\le \\dfrac{M}{2}\\left[(a-c)^2+(a+c)^2\\right].$$\n\n而 $(a-c)^2+(a+c)^2=2a^2+2c^2$，因 $|c|<a$ 有 $c^2< a^2$，故\n\n$$(a-c)^2+(a+c)^2=2a^2+2c^2\\le 4a^2.$$\n\n于是\n\n$$|f(a)-f(-a)|\\le \\dfrac{M}{2}\\cdot 4a^2=2a^2 M=2a^2\\,|f''(\\eta)|,$$\n\n即\n\n$$|f''(\\eta)|\\ge \\dfrac{1}{2a^2}\\,|f(a)-f(-a)|.$$\n\n证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "第（1）问相加时务必用 $f(0)=0$ 消掉一阶项，两个余项的展开点 $\\xi_1,\\xi_2$ 分居 $0$ 两侧。",
-        "由 $f''(\\xi_1),f''(\\xi_2)$ 的平均值得到 $f''(\\xi)$ 需要 $f''$ 连续这一条件，用的是介值定理而非中值定理。",
-        "第（2）问放大时关键不等式是 $2a^2+2c^2\\le 4a^2$，用到了极值点 $|c|<a$；$\\eta$ 取 $|f''|$ 较大的那个点。"
-      ],
-      "key_point": "对称端点的二阶导估计，套路是在内点（$0$ 或极值点 $c$）泰勒展开后相加/相减，再用介值定理或绝对值放大。"
-    },
-    {
       "id": 23,
       "paper": "数学二",
       "year": 2023,
@@ -226,6 +86,61 @@
         "判断高阶无穷小看比值极限：lim y_n/x_n=0 说明 y_n 是高阶（分子衰减更快者为高阶无穷小）。"
       ],
       "key_point": "平方迭代 y_n=(1/2)^{2^{n-1}} 双指数趋零，sin 迭代 x_n~√(3/n) 幂级趋零；比值趋 0 故 y_n 是 x_n 的高阶无穷小。"
+    },
+    {
+      "id": 2,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "若微分方程 $y^{\\prime \\prime}+a y^{\\prime} +by=0$ 的解在 $(-\\infty,+\\infty)$ 上有界, 则 $(\\quad)$",
+      "options": {
+        "A": "$a<0, b>0$",
+        "B": "$a>0, b>0$",
+        "C": "$a=0, b>0$",
+        "D": "$a=0, b<0$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n二阶常系数齐次线性方程 $y''+ay'+by=0$ 的所有解由特征方程 $r^2+ar+b=0$ 的根决定。题目要求**所有解**都在 $(-\\infty,+\\infty)$ 上有界，需逐类讨论特征根：\n\n- 两不等实根 $r_1,r_2$：通解含 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$。只要有一个非零实根，对应指数函数在某一端 $x\\to\\pm\\infty$ 必无界；若有零根，另一根非零仍无界。\n- 二重实根 $r$：通解含 $\\mathrm e^{rx},x\\mathrm e^{rx}$。即使 $r=0$（得 $1,x$），$x$ 也在 $\\mathbb R$ 上无界。\n- 共轭复根 $r=\\alpha\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$：通解含 $\\mathrm e^{\\alpha x}\\cos\\beta x,\\ \\mathrm e^{\\alpha x}\\sin\\beta x$。在 $(-\\infty,+\\infty)$ 上有界当且仅当 $\\alpha=0$。\n\n据此只有“纯虚根”一种情形能让全体解有界。\n\n【解答】\n\n特征方程 $r^2+ar+b=0$，根为 $r=\\dfrac{-a\\pm\\sqrt{a^2-4b}}{2}$，注意 $r_1+r_2=-a,\\ r_1r_2=b$。\n\n要使两个基本解 $\\mathrm e^{r_1x},\\mathrm e^{r_2x}$（或重根、复根情形对应的解）在整个 $\\mathbb R$ 上都有界，唯一可行的是特征根为**纯虚数** $\\pm\\beta\\mathrm i\\ (\\beta\\ne0)$，此时通解\n\n$$y=C_1\\cos\\beta x+C_2\\sin\\beta x$$\n\n有界。纯虚根要求实部为零且为共轭复根，即\n\n$$r_1+r_2=-a=0\\ \\Rightarrow\\ a=0,\\qquad r_1r_2=b=\\beta^2>0\\ \\Rightarrow\\ b>0.$$\n\n反过来验证：\n\n- 若 $a=0,b>0$：根 $\\pm\\sqrt b\\,\\mathrm i$，解为 $\\cos\\sqrt b\\,x,\\ \\sin\\sqrt b\\,x$，有界。✓\n- 若 $a=0,b<0$（选项 D）：根 $\\pm\\sqrt{-b}$ 为非零实根，$\\mathrm e^{\\sqrt{-b}\\,x}$ 当 $x\\to+\\infty$ 无界。✗\n- 若 $a=0,b=0$：根为二重 $0$，解含 $x$，无界。\n- 若 $a>0,b>0$（选项 B）：根实部 $-a/2<0$，解当 $x\\to-\\infty$ 无界。✗\n- 若 $a<0,b>0$（选项 A）：根实部 $-a/2>0$，解当 $x\\to+\\infty$ 无界。✗\n\n故仅有 $a=0,b>0$ 满足要求，选 **C**。",
+      "wrong_options": {
+        "A": "a<0 时特征根实部 -a/2>0（或存在正实根），解含 e^{正数·x}，当 x→+∞ 无界。",
+        "B": "a>0 时根实部 -a/2<0，解当 x→+∞ 衰减到 0 没问题，但当 x→-∞ 时 e^{(负实部)x}→∞，在整个 (-∞,+∞) 上无界。",
+        "D": "a=0,b<0 时特征方程 r²=-b>0 有两个非零实根 ±√(-b)，对应 e^{±√(-b)x} 在某一端无界。"
+      },
+      "pitfalls": [
+        "题目要求在整个 (-∞,+∞) 上有界，而非只在 x→+∞。a>0 的衰减解在 x→-∞ 会爆掉，所以 B 错。",
+        "复根有界的充要条件是实部 α=0；别误以为只要是复根就有界。",
+        "a=b=0 或重根 r=0 会出现 x 这一项，仍然无界，必须 b>0 给出真正的纯虚根。"
+      ],
+      "key_point": "全体解在 R 上有界 ⇔ 特征根为纯虚数 ⇔ 实部为零且共轭复根，即 a=0 且 b>0。"
+    },
+    {
+      "id": 3,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 由 $\\left\\{\\begin{array}{l}x=2 t+|t| \\\\ y=|t| \\sin t\\end{array}\\right.$ 确定, 则 $(\\quad)$",
+      "options": {
+        "A": "$f(x)$ 连续, $f^{\\prime}(0)$ 不存在",
+        "B": "$f^{\\prime}(0)$ 存在, $f^{\\prime}(x)$ 在 $x=0$ 处不连续",
+        "C": "$f^{\\prime}(x)$ 连续, $f^{\\prime \\prime}(0)$ 不存在",
+        "D": "$f^{\\prime \\prime}(0)$ 存在, $f^{\\prime}(x)$ 在 $x=0$ 处不连续"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n参数里带 $|t|$，本质是**分段函数**，必须以 $t=0$ 为界把 $x,y$ 分别写成两段，再各自消参得到 $y=f(x)$ 的显式分段表达式。判断 $f'(0)$、$f''(0)$ 是否存在、$f'(x)$ 是否连续，统一用**左右单侧极限**来比较：$f'(0)$ 存在 $\\Leftrightarrow$ 左右两段在 $x=0$ 处导数相等；$f'(x)$ 在 $0$ 处连续 $\\Leftrightarrow \\lim_{x\\to0^\\pm}f'(x)=f'(0)$；$f''(0)$ 存在 $\\Leftrightarrow$ 左右两段二阶导在 $x=0$ 的极限相等。\n\n【解答】\n\n**第一步：分段消参。**\n\n当 $t\\ge0$ 时 $|t|=t$，$x=2t+t=3t\\ge0$，$y=t\\sin t$，由 $t=\\dfrac{x}{3}$ 得\n$$f(x)=\\dfrac{x}{3}\\sin\\dfrac{x}{3},\\qquad x\\ge0.$$\n\n当 $t<0$ 时 $|t|=-t$，$x=2t-t=t<0$，$y=-t\\sin t$，由 $t=x$ 得\n$$f(x)=-x\\sin x,\\qquad x<0.$$\n\n**第二步：连续性与 $f'(0)$。**\n\n两段在 $x=0$ 处的值均为 $0$，故 $f$ 连续。\n\n$x>0$ 时 $f'(x)=\\dfrac13\\sin\\dfrac{x}{3}+\\dfrac{x}{9}\\cos\\dfrac{x}{3}$，$\\lim_{x\\to0^+}f'(x)=0$；\n\n$x<0$ 时 $f'(x)=-\\sin x-x\\cos x$，$\\lim_{x\\to0^-}f'(x)=0$。\n\n两段在 $0$ 处都可导且导数为 $0$，再由导函数极限定理可知 $f'(0)=0$ 存在，且 $\\lim_{x\\to0}f'(x)=0=f'(0)$，所以 $f'(x)$ 在 $x=0$ 处**连续**。\n\n**第三步：$f''(0)$ 是否存在。**\n\n$x>0$ 时 $f''(x)=\\dfrac29\\cos\\dfrac{x}{3}-\\dfrac{x}{27}\\sin\\dfrac{x}{3}$，$\\lim_{x\\to0^+}f''(x)=\\dfrac29$；\n\n$x<0$ 时 $f''(x)=-2\\cos x+x\\sin x$，$\\lim_{x\\to0^-}f''(x)=-2$。\n\n用导数定义看 $f''(0)$：右导数 $\\displaystyle\\lim_{x\\to0^+}\\dfrac{f'(x)-f'(0)}{x}=\\dfrac29$，左导数 $=-2$，两者不等，故 $f''(0)$**不存在**。\n\n综上：$f'(x)$ 连续而 $f''(0)$ 不存在，选 **C**。",
+      "wrong_options": {
+        "A": "$f'(0)$ 左右导数均为 $0$，确实存在，故 A 错。",
+        "B": "$f'(x)$ 左右极限都为 $0$ 且等于 $f'(0)$，$f'(x)$ 在 $0$ 处连续，不是不连续，故 B 错。",
+        "D": "$f''(0)$ 左右导数为 $-2$ 与 $\\dfrac29$，不相等，$f''(0)$ 不存在；且 $f'(x)$ 是连续的，D 两处都错。"
+      },
+      "pitfalls": [
+        "含 $|t|$ 必须以 $t=0$ 为界分段，且要分别确认每段对应的 $x$ 的范围（$x\\ge0$ 与 $x<0$）。",
+        "判断 $f''(0)$ 是否存在要用 $f'$ 的左右导数（即 $f''$ 的单侧极限）比较，不能只算其中一侧。"
+      ],
+      "key_point": "带绝对值的参数方程先分段消参得显式分段函数，再用左右单侧极限逐阶判断可导与连续。"
     },
     {
       "id": 25,
@@ -338,6 +253,53 @@
       "key_point": "看穿三线性形式的线性相关，降为二元二次型配方，正负惯性指数定规范形。"
     },
     {
+      "id": 7,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知向量 $\\boldsymbol \\alpha_{1}=\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right), \\quad \\boldsymbol \\alpha_{2}=\\left(\\begin{array}{l}2 \\\\ 1 \\\\ 1\\end{array}\\right), \\quad \\boldsymbol \\beta_{1}=\\left(\\begin{array}{l}2 \\\\ 5 \\\\ 9\\end{array}\\right), \\quad \\boldsymbol \\beta_{2}=\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)$, 若 $\\boldsymbol \\gamma$ 既可由 $\\boldsymbol \\alpha_{1}, \\boldsymbol \\alpha_{2}$ 线性表示, 也可由 $\\boldsymbol \\beta_{1}, \\boldsymbol \\beta_{2}$ 线性表示, 则 $\\boldsymbol \\gamma=(\\quad)$",
+      "options": {
+        "A": "$k\\left(\\begin{array}{l}3 \\\\ 3 \\\\ 4\\end{array}\\right), k \\in \\mathbb{R}$",
+        "B": "$k\\left(\\begin{array}{c}3 \\\\ 5 \\\\ 10\\end{array}\\right), k \\in \\mathbb{R}$",
+        "C": "$k\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ 2\\end{array}\\right), k \\in \\mathbb{R}$",
+        "D": "$k\\left(\\begin{array}{l}1 \\\\ 5 \\\\ 8\\end{array}\\right), k \\in \\mathbb{R}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题求两个生成子空间的交：$\\gamma$ 既属于 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$，又属于 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$。标准做法是设两种表示相等，转化为一个齐次线性方程组求解：\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=y_1\\boldsymbol\\beta_1+y_2\\boldsymbol\\beta_2,$$\n\n即 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$。对系数矩阵 $[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]$ 做初等行变换求基础解系，再回代即可得到 $\\gamma$。\n\n【解答】\n\n设 $x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2-y_1\\boldsymbol\\beta_1-y_2\\boldsymbol\\beta_2=\\boldsymbol 0$，其系数矩阵为\n\n$$A=[\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\beta_1,\\boldsymbol\\beta_2]=\\begin{pmatrix}1&2&2&1\\\\2&1&5&0\\\\3&1&9&1\\end{pmatrix}.$$\n\n行变换：$r_2-2r_1,\\\\;r_3-3r_1$ 得\n\n$$\\begin{pmatrix}1&2&2&1\\\\0&-3&1&-2\\\\0&-5&3&-2\\end{pmatrix},$$\n\n继续消元化为行最简形\n\n$$\\begin{pmatrix}1&0&0&-3\\\\0&1&0&1\\\\0&0&1&1\\end{pmatrix}.$$\n\n秩为 $3$，自由变量取 $y_2$。令 $y_2=1$，得基础解系\n\n$$(x_1,x_2,y_1,y_2)^{T}=(3,-1,-1,1)^{T}.$$\n\n于是\n\n$$\\gamma=x_1\\boldsymbol\\alpha_1+x_2\\boldsymbol\\alpha_2=3\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}-\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix}.$$\n\n验算另一侧：$-\\boldsymbol\\beta_1+\\boldsymbol\\beta_2=-(2,5,9)^{T}+(1,0,1)^{T}=(-1,-5,-8)^{T}=-\\gamma$，方向一致（差一个非零常数因子），表明 $\\gamma$ 确实同时被两组向量表示。故\n\n$$\\gamma=k\\begin{pmatrix}1\\\\5\\\\8\\end{pmatrix},\\quad k\\in\\mathbb R.$$\n\n选 **D**。",
+      "wrong_options": {
+        "A": "$(3,3,4)^{T}$ 不在 $\\mathrm{span}\\\\{\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2\\\\}$ 与 $\\mathrm{span}\\\\{\\boldsymbol\\beta_1,\\boldsymbol\\beta_2\\\\}$ 的交中，不满足联立方程组。",
+        "B": "$(3,5,10)^{T}$ 不能同时由两组向量线性表示，验证方程组无相容解。",
+        "C": "$(-1,1,2)^{T}$ 同样不属于两个子空间的交，代入后方程组矛盾。"
+      },
+      "pitfalls": [
+        "公共向量需同时满足两种表示，必须联立成齐次方程组求解，而不是分别判断。",
+        "求出基础解系后要回代到 $\\boldsymbol\\alpha$ 一侧（或 $\\boldsymbol\\beta$ 一侧）算出 $\\gamma$ 本身，符号别弄反。",
+        "答案是含任意常数 $k$ 的一维直线，注意交空间是子空间而非单个向量。"
+      ],
+      "key_point": "两子空间的交：令两种线性表示相等，化为齐次方程组求基础解系再回代。"
+    },
+    {
+      "id": 11,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, 函数 $f(x)=a x+b x^{2}+\\ln (1+x)$ 与 $g(x)= \\mathrm{e}^{x^{2}}-\\cos x$ 是等价无穷小,  则 $a b=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-2$",
+      "analysis": "【分析】\n\n两个函数当 $x\\to 0$ 时是等价无穷小，本质要求二者的最低阶非零项**同阶且系数相等**。$g(x)=\\mathrm{e}^{x^2}-\\cos x$ 的最低阶可由麦克劳林展开看出是 $x^2$ 阶；因此 $f(x)$ 也必须从 $x^2$ 阶起头，即 $f(x)$ 中 $x$ 的一次项系数必须为零，且 $x^2$ 项系数与 $g(x)$ 的 $x^2$ 系数相等。把 $\\ln(1+x)$ 展开后逐阶匹配即可定出 $a,b$。\n\n【解答】\n\n先展开 $g(x)$。利用 $\\mathrm{e}^{x^2}=1+x^2+o(x^2)$，$\\cos x=1-\\dfrac{x^2}{2}+o(x^2)$，得\n\n$$g(x)=\\mathrm{e}^{x^2}-\\cos x=\\Big(1+x^2\\Big)-\\Big(1-\\dfrac{x^2}{2}\\Big)+o(x^2)=\\dfrac{3}{2}x^2+o(x^2).$$\n\n故 $g(x)\\sim\\dfrac{3}{2}x^2$，是二阶无穷小。\n\n再展开 $f(x)$。由 $\\ln(1+x)=x-\\dfrac{x^2}{2}+o(x^2)$，得\n\n$$f(x)=ax+bx^2+\\ln(1+x)=(a+1)x+\\Big(b-\\dfrac{1}{2}\\Big)x^2+o(x^2).$$\n\n要使 $f(x)\\sim g(x)$，须使 $f(x)$ 与 $g(x)$ 同为二阶无穷小且二阶系数相同：\n\n- 一次项消失：$a+1=0\\Rightarrow a=-1$；\n- 二次项匹配：$b-\\dfrac{1}{2}=\\dfrac{3}{2}\\Rightarrow b=2$。\n\n此时 $f(x)\\sim 2x^2$？需复核：$b-\\dfrac12=\\dfrac32$ 给出 $f$ 的二阶系数为 $\\dfrac32$，与 $g$ 一致，故 $f(x)\\sim\\dfrac32 x^2\\sim g(x)$，等价成立。\n\n因此\n\n$$ab=(-1)\\times 2=-2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "只展开到一阶就草率比较，漏掉一次项系数必须为零这一条件。",
+        "误以为 $\\mathrm{e}^{x^2}$ 的二阶系数是 $\\dfrac12$（那是 $\\mathrm{e}^{x}$），实际 $\\mathrm{e}^{x^2}$ 的 $x^2$ 系数为 $1$。",
+        "求出 $a,b$ 后忘了题目问的是乘积 $ab$ 而非分别的值。"
+      ],
+      "key_point": "等价无穷小即最低阶非零项同阶同系数，麦克劳林展开后逐阶匹配定参数。"
+    },
+    {
       "id": 29,
       "paper": "数学二",
       "year": 2023,
@@ -392,6 +354,25 @@
         "代入 x=1 后漏判 y 的取值，或没意识到 y=1 是唯一实根"
       ],
       "key_point": "隐函数求导得切线斜率，法线斜率等于切线斜率的负倒数。"
+    },
+    {
+      "id": 14,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设连续函数 $f(x)$ 满足 $\\displaystyle f(x+2)-f(x)=x, \\int_{0}^{2} f(x) \\mathrm{d} x=0$, 则 $\\displaystyle \\int_{1}^{3} f(x) \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "【分析】\n\n所求区间 $[1,3]$ 与已知区间 $[0,2]$ 错开了一段。思路是把 $[1,3]$ 拆成 $[1,2]\\cup[2,3]$，对 $[2,3]$ 上的积分作平移换元 $x=t+2$，利用差分关系 $f(x+2)-f(x)=x$（即 $f(t+2)=f(t)+t$）把它转化回 $[0,1]$ 上的积分，从而拼出整段 $[0,2]$ 的积分（已知为 $0$），剩下一个普通定积分即可。\n\n【解答】\n\n将所求积分拆开：\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_1^2 f(x)\\,\\mathrm{d}x+\\int_2^3 f(x)\\,\\mathrm{d}x.$$\n\n对第二个积分令 $x=t+2$，$\\mathrm{d}x=\\mathrm{d}t$，当 $x:2\\to3$ 时 $t:0\\to1$：\n\n$$\\int_2^3 f(x)\\,\\mathrm{d}x=\\int_0^1 f(t+2)\\,\\mathrm{d}t.$$\n\n由差分关系 $f(t+2)=f(t)+t$，故\n\n$$\\int_0^1 f(t+2)\\,\\mathrm{d}t=\\int_0^1\\big[f(t)+t\\big]\\,\\mathrm{d}t=\\int_0^1 f(t)\\,\\mathrm{d}t+\\int_0^1 t\\,\\mathrm{d}t=\\int_0^1 f(t)\\,\\mathrm{d}t+\\dfrac{1}{2}.$$\n\n代回：\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_1^2 f(x)\\,\\mathrm{d}x+\\int_0^1 f(x)\\,\\mathrm{d}x+\\dfrac{1}{2}.$$\n\n注意 $\\displaystyle\\int_0^1 f+\\int_1^2 f=\\int_0^2 f=0$，于是\n\n$$\\int_1^3 f(x)\\,\\mathrm{d}x=\\int_0^2 f(x)\\,\\mathrm{d}x+\\dfrac{1}{2}=0+\\dfrac{1}{2}=\\dfrac{1}{2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元 $x=t+2$ 后要同步把被积函数写成 $f(t+2)$ 并用差分关系替换，不要只换积分限。",
+        "拆区间时把 $\\int_1^2 f+\\int_0^1 f$ 凑成 $\\int_0^2 f$ 是关键一步，别拆错区间。",
+        "$\\int_0^1 t\\,\\mathrm{d}t=\\dfrac12$，别漏算这个常数项。"
+      ],
+      "key_point": "差分关系 $f(x+2)-f(x)=x$ 配合平移换元，把错开的积分区间拼回已知整段。"
     },
     {
       "id": 32,
@@ -487,6 +468,25 @@
         "θ 上限是 π/3（直线 y=√3x），不是 π/4 或 π/6"
       ],
       "key_point": "极坐标下 r₂²/r₁²=2 使径向积分为常数 ½ln2，分母配出 1+2cos²θ，r、θ 分离后角向用 t=tanθ 代换。"
+    },
+    {
+      "id": 20,
+      "paper": "数学二",
+      "year": 2023,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[-a, a]$ 上具有二阶连续导数, 证明:\r\n\r\n(1) 若 $f(0)=0$, 则存在 $\\xi \\in(-a, a)$, 使得 $f^{\\prime \\prime}(\\xi)=\\dfrac{1}{a^{2}}[f(a)+f(-a)]$;\r\n\r\n(2) 若 $f(x)$ 在 $(-a, a)$ 内取得极值, 则存在 $\\eta \\in(-a, a)$ 使得  $\r\n\\left|f^{\\prime \\prime}(\\eta)\\right| \\geq \\dfrac{1}{2 a^{2}}|f(a)-f(-a)|$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n两小问的共同武器都是带拉格朗日余项的泰勒公式，把 $f(a)$、$f(-a)$ 在某个内点展开到二阶。第（1）问在 $x=0$ 展开，利用 $f(0)=0$，把 $f(a)+f(-a)$ 表示成两个二阶导数之和的形式；再借助 $f''$ 连续，用介值定理把 \"两点二阶导的平均值\" 实现为某一点 $\\xi$ 处的值。第（2）问在极值点 $c$ 处展开，此时 $f'(c)=0$，作差消去一阶项后取绝对值放大，关键是用 $|c|<a$ 把 $(a-c)^2+(a+c)^2$ 控制住。\n\n【解答】\n\n**(1)** 因 $f$ 在 $[-a,a]$ 上有二阶连续导数，在 $x=0$ 处用泰勒公式展开（带拉格朗日余项），存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使得\n\n$$f(a)=f(0)+f'(0)\\,a+\\dfrac{f''(\\xi_1)}{2}a^2,$$\n\n$$f(-a)=f(0)+f'(0)(-a)+\\dfrac{f''(\\xi_2)}{2}a^2.$$\n\n两式相加，并代入 $f(0)=0$，一阶项相消：\n\n$$f(a)+f(-a)=\\dfrac{a^2}{2}\\left[f''(\\xi_1)+f''(\\xi_2)\\right],$$\n\n即\n\n$$\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n由于 $f''$ 在闭区间 $[\\xi_2,\\xi_1]$ 上连续，记 $m=\\min\\{f''(\\xi_1),f''(\\xi_2)\\}$，$M=\\max\\{f''(\\xi_1),f''(\\xi_2)\\}$，则上式右端的平均值介于 $m$ 与 $M$ 之间。由介值定理，存在 $\\xi$ 介于 $\\xi_1,\\xi_2$ 之间（从而 $\\xi\\in(-a,a)$），使得\n\n$$f''(\\xi)=\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n证毕。\n\n**(2)** 设 $f$ 在 $c\\in(-a,a)$ 处取得极值，由费马定理 $f'(c)=0$。在 $x=c$ 处对端点作二阶泰勒展开：存在 $\\xi_1$ 介于 $c$ 与 $a$ 之间、$\\xi_2$ 介于 $-a$ 与 $c$ 之间，使得\n\n$$f(a)=f(c)+f'(c)(a-c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2=f(c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2,$$\n\n$$f(-a)=f(c)+\\dfrac{f''(\\xi_2)}{2}(-a-c)^2=f(c)+\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n两式相减，消去 $f(c)$：\n\n$$f(a)-f(-a)=\\dfrac{f''(\\xi_1)}{2}(a-c)^2-\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n取绝对值并放大，令 $M=\\max\\{|f''(\\xi_1)|,|f''(\\xi_2)|\\}$，则记达到此最大值的点为 $\\eta\\in(-a,a)$，有 $|f''(\\eta)|=M$，且\n\n$$|f(a)-f(-a)|\\le \\dfrac{|f''(\\xi_1)|}{2}(a-c)^2+\\dfrac{|f''(\\xi_2)|}{2}(a+c)^2\\le \\dfrac{M}{2}\\left[(a-c)^2+(a+c)^2\\right].$$\n\n而 $(a-c)^2+(a+c)^2=2a^2+2c^2$，因 $|c|<a$ 有 $c^2< a^2$，故\n\n$$(a-c)^2+(a+c)^2=2a^2+2c^2\\le 4a^2.$$\n\n于是\n\n$$|f(a)-f(-a)|\\le \\dfrac{M}{2}\\cdot 4a^2=2a^2 M=2a^2\\,|f''(\\eta)|,$$\n\n即\n\n$$|f''(\\eta)|\\ge \\dfrac{1}{2a^2}\\,|f(a)-f(-a)|.$$\n\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第（1）问相加时务必用 $f(0)=0$ 消掉一阶项，两个余项的展开点 $\\xi_1,\\xi_2$ 分居 $0$ 两侧。",
+        "由 $f''(\\xi_1),f''(\\xi_2)$ 的平均值得到 $f''(\\xi)$ 需要 $f''$ 连续这一条件，用的是介值定理而非中值定理。",
+        "第（2）问放大时关键不等式是 $2a^2+2c^2\\le 4a^2$，用到了极值点 $|c|<a$；$\\eta$ 取 $|f''|$ 较大的那个点。"
+      ],
+      "key_point": "对称端点的二阶导估计，套路是在内点（$0$ 或极值点 $c$）泰勒展开后相加/相减，再用介值定理或绝对值放大。"
     },
     {
       "id": 37,

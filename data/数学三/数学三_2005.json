@@ -4,87 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 885,
-      "paper": "数学三",
-      "year": 2005,
-      "index": 5,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "从数 $1,2,3,4$ 中任取一个数, 记为 $X$, 再从 $1, \\cdots, X$ 中任取一个数, 记为 $Y$, 则 $P\\{Y=2\\}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{13}{48}$",
-      "analysis": "式得 $\\displaystyle P\\{Y=2\\}=P(B)\\\\\r\n=\\sum_{i=1}^4 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)\\\\\r\n=\\frac{1}{4}\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right)\\\\\r\n=\\frac{13}{48}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "X=1 时取不到 Y=2，该项为 0，不能算进去",
-        "每个 X=i 的概率都是 1/4，条件概率才是 1/i"
-      ],
-      "key_point": "P(Y=2)=1/4·(1/2+1/3+1/4)=13/48。"
-    },
-    {
-      "id": 890,
-      "paper": "数学三",
-      "year": 2005,
-      "index": 13,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\lambda_{1}, \\lambda_{2}$ 是矩阵 $\\boldsymbol{A}$ 的两个不同的特征值, 对应的特征向量分别为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$, 则 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)$ 线性无关的充分必要条件是 $(\\quad)$",
-      "options": {
-        "A": "$\\lambda_{1} \\neq 0$",
-        "B": "$\\lambda_{2} \\neq 0$",
-        "C": "$\\lambda_{1}=0$",
-        "D": "$\\lambda_{2}=0$"
-      },
-      "answer": "B",
-      "analysis": "方法一 因为矩阵的不同特征值对应的特征向量线性无关, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关. \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\lambda_1 \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2\\\\\r\n\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right)\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right),\\\\\r\n\\boldsymbol{\\alpha}_1, \r\n\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是\r\n\r\n矩阵 $\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right)$ 可逆, \r\n\r\n即 $\\left|\\begin{array}{cc}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)\r\n\r\n方法二 令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\lambda_1 \\boldsymbol{\\alpha}_1+\\right.$ $\\left.\\lambda_2 \\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n整理得 $\\left(k_1+\\lambda_1 k_2\\right) \\boldsymbol{\\alpha}_1+\\lambda_2 k_2 \\boldsymbol{\\alpha}_2=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0,\\end{array}\\right.$ \r\n\r\n于是 $\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是 \r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$ 当且仅当 $k_1=k_2=0$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0\\end{array}\\right.$ \r\n\r\n只有零解, 于是 $\\left|\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)",
-      "wrong_options": {
-        "A": "误以为决定无关性的是 λ₁，实际 α₁ 前的系数不影响与 α₁ 的相关性。",
-        "C": "把充要条件方向取反（写成 λ₁=0）。",
-        "D": "λ₂=0 时 A(α₁+α₂)=λ₁α₁ 与 α₁ 共线反而相关，结论正好取反。"
-      },
-      "pitfalls": [
-        "不同特征值的 α₁,α₂ 必线性无关，这是化简前提",
-        "决定无关性的关键行列式为 λ₂，与 λ₁ 无关"
-      ],
-      "key_point": "整体无关 ⟺ 系数阵行列式 λ₂≠0（选 B）。"
-    },
-    {
-      "id": 901,
-      "paper": "数学三",
-      "year": 2005,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & 0<x<1,0<y<2 x \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n求: (1) $(X, Y)$ 的边缘概率密度 $f_{X}(x), f_{Y}(y)$;\r\n\r\n(2) $Z=2 X-Y$ 的概率密度 $f_{Z}(z)$\r\n\r\n(3) (数三) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}$",
-      "options": {},
-      "answer": "(1) $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n$f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{1}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) (数三) $\\dfrac{3}{4}$",
-      "analysis": "(1) $\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时, $f_X(x)=0$; \r\n\r\n当 $0<x<1$ 时, $\\displaystyle f_X(x)=\\int_0^{2 x} \\mathrm{d} y=2 x$,\r\n\r\n则 $X$ 的边缘密度为 $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n$\\displaystyle f_Y(y)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} x$,\r\n\r\n当 $y \\leqslant 0$ 或 $y \\geqslant 2$ 时, $f_Y(y)=0$; \r\n\r\n当 $0<y<2$ 时, $\\displaystyle f_Y(y)=\\int_{\\frac{y}{2}}^1 \\mathrm{d} x=1-\\frac{y}{2}$,\r\n\r\n则 $Y$ 的边缘密度为 $f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F_Z(z)=P\\{Z \\leqslant z\\}\\\\\r\n=P\\{2 X-Y \\leqslant z\\}\\\\\r\n=\\iint\\limits_{2 x-y \\leqslant z} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n当 $z<0$ 时, $F_Z(z)=0$;\r\n\r\n当 $0 \\leqslant z<2$ 时 (如图所示),\n\n![区域 2X-Y 不超过 z](assets/figures/8e9ef298fb201896f93e99a533e4d871d32906dcf5a9530ca4f617e85d7c55d2.jpg)\r\n\r\n$\\displaystyle F_Z(z)=1-\\int_{\\frac{z}{2}}^1 \\mathrm{d} x \\int_0^{2 x-z} \\mathrm{d} y\\\\\r\n=1-\\int_{\\frac{z}{2}}^1(2 x-z) \\mathrm{d} x=z-\\frac{z^2}{4} ;$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$,\r\n\r\n即 $\\displaystyle F_Z(z)= \\begin{cases}0, & z<0 \\\\\r\nz-\\dfrac{z^2}{4}, & 0 \\leqslant z<2\\\\ 1, & z \\geqslant 2\\end{cases}$\r\n\r\n于是 $Z$ 的密度函数为 $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{z}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\frac{P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}}{P\\left\\{X \\leqslant \\frac{1}{2}\\right\\}}$,\r\n\r\n而 $\\displaystyle P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\int_0^{\\frac{1}{4}} \\mathrm{d} x \\int_0^{2 x} \\mathrm{d} y+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} x \\int_0^{\\frac{1}{2}} \\mathrm{d} y=\\frac{3}{16},\\\\\r\nP\\left\\{X \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} f_X(x) \\mathrm{d} x=\\frac{1}{4}$,\r\n\r\n于是 $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}=\\frac{3}{4}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "f_X 对 y 积分限 0→2x 得 2x；f_Y 对 x 积分限 y/2→1 得 1-y/2",
-        "Z=2X-Y 的密度不是常数：F_Z(z)=z-z²/4，求导得 f_Z=1-z/2"
-      ],
-      "key_point": "f_X=2x(0<x<1)、f_Y=1-y/2(0<y<2)、f_Z=1-z/2(0<z<2)；注：官方答案键 f_Z 处为 OCR 残缺（显示 1-1/2），经 F_Z(z)=∫₀¹min(2x,z)dx=z-z²/4 求导核实应为 1-z/2。"
-    },
-    {
-      "id": 1643,
-      "paper": "数学三",
-      "year": 2005,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} \\sigma$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1\\}$",
-      "options": {},
-      "answer": "$\\dfrac{\\pi}{4}-\\dfrac{1}{3}$",
-      "analysis": "令 $D_1=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1, x \\geqslant 0, y \\geqslant 0\\right\\}, D_2=D-D_1$, \r\n\r\n如图所示, $\\left|x^2+y^2-1\\right|= \\begin{cases}1-x^2-y^2, &(x, y) \\in D_1 \\\\ x^2+y^2-1, & (x, y) \\in D_2\\end{cases}$ \n\n![单位圆把 D 分成 D1 与 D2](assets/figures/28d97cd0a68f0911bb4c7b241523cbd36b63dba7c99d06709cc717f2d48548fa.jpg)\r\n\r\n则 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2}\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y+2 \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y$\r\n\r\n而 $\\displaystyle \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^1\\left(x^2+y^2-1\\right) \\mathrm{d} y=-\\frac{1}{3}, \\\\\r\n\\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^1 r\\left(1-r^2\\right) \\mathrm{d} r=\\frac{\\pi}{8}$\r\n\r\n\r\n故 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y=\\frac{\\pi}{4}-\\frac{1}{3}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "去绝对值：圆内 x²+y²≤1 取 1−x²−y²，圆外取 x²+y²−1，两块符号相反别写反",
-        "凑成整正方形积分（直角坐标 −1/3）加两倍圆内 1/4 圆盘积分（极坐标 π/8），合并 π/4−1/3"
-      ],
-      "key_point": "按单位圆拆域，∬=∬_D(x²+y²−1)+2∬_{D₁}(1−x²−y²)=−1/3+2·π/8=π/4−1/3。"
-    },
-    {
       "id": 2023,
       "paper": "数学三",
       "year": 2005,
@@ -155,6 +74,24 @@
         "解得 a=1/2 或 a=1，题设 a≠1 故取 a=1/2"
       ],
       "key_point": "行列式=(2a−1)(a−1)=0 且 a≠1，得 a=1/2。"
+    },
+    {
+      "id": 885,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "从数 $1,2,3,4$ 中任取一个数, 记为 $X$, 再从 $1, \\cdots, X$ 中任取一个数, 记为 $Y$, 则 $P\\{Y=2\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{13}{48}$",
+      "analysis": "式得 $\\displaystyle P\\{Y=2\\}=P(B)\\\\\r\n=\\sum_{i=1}^4 P\\left(A_i\\right) P\\left(B \\mid A_i\\right)\\\\\r\n=\\frac{1}{4}\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right)\\\\\r\n=\\frac{13}{48}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X=1 时取不到 Y=2，该项为 0，不能算进去",
+        "每个 X=i 的概率都是 1/4，条件概率才是 1/i"
+      ],
+      "key_point": "P(Y=2)=1/4·(1/2+1/3+1/4)=13/48。"
     },
     {
       "id": 2027,
@@ -337,6 +274,33 @@
       "key_point": "|A|=3a²、|A|³=|A|²⇒|A|=1，故 3a²=1，a_11=√3/3。"
     },
     {
+      "id": 890,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\lambda_{1}, \\lambda_{2}$ 是矩阵 $\\boldsymbol{A}$ 的两个不同的特征值, 对应的特征向量分别为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}$, 则 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)$ 线性无关的充分必要条件是 $(\\quad)$",
+      "options": {
+        "A": "$\\lambda_{1} \\neq 0$",
+        "B": "$\\lambda_{2} \\neq 0$",
+        "C": "$\\lambda_{1}=0$",
+        "D": "$\\lambda_{2}=0$"
+      },
+      "answer": "B",
+      "analysis": "方法一 因为矩阵的不同特征值对应的特征向量线性无关, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关. \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=\\lambda_1 \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2\\\\\r\n\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)\\right)=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2\\right)\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right),\\\\\r\n\\boldsymbol{\\alpha}_1, \r\n\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是\r\n\r\n矩阵 $\\left(\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right)$ 可逆, \r\n\r\n即 $\\left|\\begin{array}{cc}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)\r\n\r\n方法二 令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\lambda_1 \\boldsymbol{\\alpha}_1+\\lambda_2 \\boldsymbol{\\alpha}_2$, \r\n\r\n得 $k_1 \\boldsymbol{\\alpha}_1+k_2\\left(\\lambda_1 \\boldsymbol{\\alpha}_1+\\right.$ $\\left.\\lambda_2 \\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$, \r\n\r\n整理得 $\\left(k_1+\\lambda_1 k_2\\right) \\boldsymbol{\\alpha}_1+\\lambda_2 k_2 \\boldsymbol{\\alpha}_2=\\mathbf{0}$,\r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0,\\end{array}\\right.$ \r\n\r\n于是 $\\boldsymbol{\\alpha}_1, \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)$ 线性无关的充分必要条件是 \r\n$k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\\right)=\\mathbf{0}$ 当且仅当 $k_1=k_2=0$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}k_1+\\lambda_1 k_2=0, \\\\ \\lambda_2 k_2=0\\end{array}\\right.$ \r\n\r\n只有零解, 于是 $\\left|\\begin{array}{ll}1 & \\lambda_1 \\\\ 0 & \\lambda_2\\end{array}\\right| \\neq 0$, 故 $\\lambda_2 \\neq 0$, 应选 (B)",
+      "wrong_options": {
+        "A": "误以为决定无关性的是 λ₁，实际 α₁ 前的系数不影响与 α₁ 的相关性。",
+        "C": "把充要条件方向取反（写成 λ₁=0）。",
+        "D": "λ₂=0 时 A(α₁+α₂)=λ₁α₁ 与 α₁ 共线反而相关，结论正好取反。"
+      },
+      "pitfalls": [
+        "不同特征值的 α₁,α₂ 必线性无关，这是化简前提",
+        "决定无关性的关键行列式为 λ₂，与 λ₁ 无关"
+      ],
+      "key_point": "整体无关 ⟺ 系数阵行列式 λ₂≠0（选 B）。"
+    },
+    {
       "id": 2034,
       "paper": "数学三",
       "year": 2005,
@@ -398,6 +362,24 @@
         "组合后所有 f'' 项系数相消，验算时重点核对 f'' 抵消"
       ],
       "key_point": "g_xx、g_yy 代入组合，f''(y/x)、f''(x/y) 全消，结果为 (2y/x)f'(y/x)。"
+    },
+    {
+      "id": 1643,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} \\sigma$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1\\}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}-\\dfrac{1}{3}$",
+      "analysis": "令 $D_1=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 1, x \\geqslant 0, y \\geqslant 0\\right\\}, D_2=D-D_1$, \r\n\r\n如图所示, $\\left|x^2+y^2-1\\right|= \\begin{cases}1-x^2-y^2, &(x, y) \\in D_1 \\\\ x^2+y^2-1, & (x, y) \\in D_2\\end{cases}$ \n\n![单位圆把 D 分成 D1 与 D2](assets/figures/28d97cd0a68f0911bb4c7b241523cbd36b63dba7c99d06709cc717f2d48548fa.jpg)\r\n\r\n则 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2}\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y \\\\\r\n= \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y+2 \\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y$\r\n\r\n而 $\\displaystyle \\iint\\limits_D\\left(x^2+y^2-1\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^1 \\mathrm{d} x \\int_0^1\\left(x^2+y^2-1\\right) \\mathrm{d} y=-\\frac{1}{3}, \\\\\r\n\\iint\\limits_{D_1}\\left(1-x^2-y^2\\right) \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_0^1 r\\left(1-r^2\\right) \\mathrm{d} r=\\frac{\\pi}{8}$\r\n\r\n\r\n故 $\\displaystyle \\iint\\limits_D\\left|x^2+y^2-1\\right| \\mathrm{d} x \\mathrm{d} y=\\frac{\\pi}{4}-\\frac{1}{3}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "去绝对值：圆内 x²+y²≤1 取 1−x²−y²，圆外取 x²+y²−1，两块符号相反别写反",
+        "凑成整正方形积分（直角坐标 −1/3）加两倍圆内 1/4 圆盘积分（极坐标 π/8），合并 π/4−1/3"
+      ],
+      "key_point": "按单位圆拆域，∬=∬_D(x²+y²−1)+2∬_{D₁}(1−x²−y²)=−1/3+2·π/8=π/4−1/3。"
     },
     {
       "id": 2037,
@@ -470,6 +452,24 @@
         "取 x=(0,y)^T 代 x^TP^TDPx 即得 y^T(B−C^TA^{−1}C)y>0，是最快的证法"
       ],
       "key_point": "P^TDP=diag(A, B−C^TA^{−1}C)，D 正定⇒B−C^TA^{−1}C 正定。"
+    },
+    {
+      "id": 901,
+      "paper": "数学三",
+      "year": 2005,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 的概率密度为\r\n\r\n$f(x, y)= \\begin{cases}1, & 0<x<1,0<y<2 x \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n求: (1) $(X, Y)$ 的边缘概率密度 $f_{X}(x), f_{Y}(y)$;\r\n\r\n(2) $Z=2 X-Y$ 的概率密度 $f_{Z}(z)$\r\n\r\n(3) (数三) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}$",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n$f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{1}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) (数三) $\\dfrac{3}{4}$",
+      "analysis": "(1) $\\displaystyle f_X(x)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} y$,\r\n\r\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时, $f_X(x)=0$; \r\n\r\n当 $0<x<1$ 时, $\\displaystyle f_X(x)=\\int_0^{2 x} \\mathrm{d} y=2 x$,\r\n\r\n则 $X$ 的边缘密度为 $f_X(x)= \\begin{cases}2 x, & 0<x<1 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n$\\displaystyle f_Y(y)=\\int_{-\\infty}^{+\\infty} f(x, y) \\mathrm{d} x$,\r\n\r\n当 $y \\leqslant 0$ 或 $y \\geqslant 2$ 时, $f_Y(y)=0$; \r\n\r\n当 $0<y<2$ 时, $\\displaystyle f_Y(y)=\\int_{\\frac{y}{2}}^1 \\mathrm{d} x=1-\\frac{y}{2}$,\r\n\r\n则 $Y$ 的边缘密度为 $f_Y(y)= \\begin{cases}1-\\dfrac{y}{2}, & 0<y<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F_Z(z)=P\\{Z \\leqslant z\\}\\\\\r\n=P\\{2 X-Y \\leqslant z\\}\\\\\r\n=\\iint\\limits_{2 x-y \\leqslant z} f(x, y) \\mathrm{d} x \\mathrm{d} y$,\r\n\r\n当 $z<0$ 时, $F_Z(z)=0$;\r\n\r\n当 $0 \\leqslant z<2$ 时 (如图所示),\n\n![区域 2X-Y 不超过 z](assets/figures/8e9ef298fb201896f93e99a533e4d871d32906dcf5a9530ca4f617e85d7c55d2.jpg)\r\n\r\n$\\displaystyle F_Z(z)=1-\\int_{\\frac{z}{2}}^1 \\mathrm{d} x \\int_0^{2 x-z} \\mathrm{d} y\\\\\r\n=1-\\int_{\\frac{z}{2}}^1(2 x-z) \\mathrm{d} x=z-\\frac{z^2}{4} ;$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$,\r\n\r\n即 $\\displaystyle F_Z(z)= \\begin{cases}0, & z<0 \\\\\r\nz-\\dfrac{z^2}{4}, & 0 \\leqslant z<2\\\\ 1, & z \\geqslant 2\\end{cases}$\r\n\r\n于是 $Z$ 的密度函数为 $\\displaystyle f_Z(z)= \\begin{cases}1-\\dfrac{z}{2}, & 0<z<2 \\\\\r\n0, &\\text { 其他 }\\end{cases}$\r\n\r\n(3) $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\frac{P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}}{P\\left\\{X \\leqslant \\frac{1}{2}\\right\\}}$,\r\n\r\n而 $\\displaystyle P\\left\\{X \\leqslant \\frac{1}{2}, Y \\leqslant \\frac{1}{2}\\right\\}\\\\\r\n=\\int_0^{\\frac{1}{4}} \\mathrm{d} x \\int_0^{2 x} \\mathrm{d} y+\\int_{\\frac{1}{4}}^{\\frac{1}{2}} \\mathrm{d} x \\int_0^{\\frac{1}{2}} \\mathrm{d} y=\\frac{3}{16},\\\\\r\nP\\left\\{X \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} f_X(x) \\mathrm{d} x=\\frac{1}{4}$,\r\n\r\n于是 $\\displaystyle P\\left\\{Y \\leqslant \\frac{1}{2} \\mid X \\leqslant \\frac{1}{2}\\right\\}=\\frac{3}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f_X 对 y 积分限 0→2x 得 2x；f_Y 对 x 积分限 y/2→1 得 1-y/2",
+        "Z=2X-Y 的密度不是常数：F_Z(z)=z-z²/4，求导得 f_Z=1-z/2"
+      ],
+      "key_point": "f_X=2x(0<x<1)、f_Y=1-y/2(0<y<2)、f_Z=1-z/2(0<z<2)；注：官方答案键 f_Z 处为 OCR 残缺（显示 1-1/2），经 F_Z(z)=∫₀¹min(2x,z)dx=z-z²/4 求导核实应为 1-z/2。"
     },
     {
       "id": 2042,

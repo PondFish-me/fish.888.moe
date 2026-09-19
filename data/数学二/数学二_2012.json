@@ -59,163 +59,6 @@
       "key_point": "多因子乘积在某因子零点处求导,只剩\"导该零因子×其余代值\"一项;细数符号与阶乘项数。"
     },
     {
-      "id": 547,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\displaystyle I_{k}=\\int_{0}^{k \\pi} \\mathrm{e}^{x^{2}} \\sin x \\mathrm{d} x(k=1,2,3)$, 则有 $(\\quad)$",
-      "options": {
-        "A": "$I_{1}<I_{2}<I_{3}$",
-        "B": "$I_{3}<I_{2}<I_{1}$",
-        "C": "$I_{2}<I_{3}<I_{1}$",
-        "D": "$I_{2}<I_{1}<I_{3}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】$I_k=\\int_0^{k\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，被积函数 $\\mathrm e^{x^2}\\sin x$ 在 $\\sin x$ 的每个半周期上符号交替，且 $\\mathrm e^{x^2}$ 单调暴增。按 $[\\,m\\pi,(m+1)\\pi\\,]$ 把积分拆成逐段增量 $J_m=\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，分析每段的符号与大小即可比较 $I_1,I_2,I_3$。\n\n【解答】记 $J_m=\\displaystyle\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，则 $I_1=J_0$，$I_2=J_0+J_1$，$I_3=J_0+J_1+J_2$。\n\n在 $[0,\\pi]$ 上 $\\sin x\\ge0$，故 $J_0>0$，即 $I_1>0$。\n\n在 $[\\pi,2\\pi]$ 上 $\\sin x\\le0$，故 $J_1<0$，于是 $I_2=I_1+J_1<I_1$。\n\n比较 $J_1$ 与 $J_0$ 的大小：作代换 $x=t+\\pi$，$J_1=\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin(t+\\pi)\\,\\mathrm dt=-\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt$。因 $(t+\\pi)^2>t^2$，故 $\\mathrm e^{(t+\\pi)^2}>\\mathrm e^{t^2}$，从而 $|J_1|=\\int_0^\\pi\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt>\\int_0^\\pi\\mathrm e^{t^2}\\sin t\\,\\mathrm dt=J_0$。所以 $I_2=J_0+J_1<0$，即 $I_2<0<I_1$。\n\n在 $[2\\pi,3\\pi]$ 上 $\\sin x\\ge0$，$J_2>0$；同理 $J_2$ 的被积函数 $\\mathrm e^{x^2}$ 比 $[\\pi,2\\pi]$ 段更大，$|J_2|>|J_1|$，故 $I_3=I_2+J_2$，且 $J_2>|J_1|$ 使 $I_3=J_0+J_1+J_2>J_0=I_1>0$。\n\n综上 $I_2<0<I_1<I_3$，即\n$$I_2<I_1<I_3.$$\n选 D。（数值验证：$I_1\\approx5.7\\times10^2>0$，$I_2\\approx-9.1\\times10^{14}<0$，$I_3\\approx1.1\\times10^{36}>0$，符合 $I_2<I_1<I_3$。）",
-      "wrong_options": {
-        "A": "I₁<I₂<I₃ 错：[π,2π] 段 sin x≤0 且 e^{x²} 更大，使 I₂ 比 I₁ 还小且为负，故 I₂<I₁，不是 I₁<I₂。",
-        "B": "I₃<I₂<I₁ 完全反序：实际 I₃ 最大（[2π,3π] 正段增量巨大）、I₂ 最小（负），顺序恰好相反。",
-        "C": "I₂<I₃<I₁ 错在 I₃ 与 I₁：[2π,3π] 正增量 J₂ 因 e^{x²} 暴增远超 |J₁|，使 I₃>I₁，而非 I₃<I₁。"
-      },
-      "pitfalls": [
-        "按 [mπ,(m+1)π] 分段，奇数段(sin≤0)为负、偶数段为正；增量 |Jₘ| 因 e^{x²} 随 m 暴增",
-        "关键比较 |J₁|>J₀ ⟹ I₂<0；J₂>|J₁| ⟹ I₃>I₁，故最终 I₂<I₁<I₃",
-        "不要被 e^{x²} 不可初等积分吓住，本题只需符号与逐段大小比较，无需求出值"
-      ],
-      "key_point": "积分含正负交替的 sin x 时按半周期分段比较增量符号与量级；e^{x²} 暴增使后段主导。"
-    },
-    {
-      "id": 548,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{\\alpha}_{1}=\\left(\\begin{array}{l}0 \\\\ 0 \\\\ c_{1}\\end{array}\\right), \\boldsymbol{\\alpha}_{2}=\\left(\\begin{array}{l}0 \\\\ 1 \\\\ c_{2}\\end{array}\\right), \\boldsymbol{\\alpha}_{3}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ c_{3}\\end{array}\\right), \\boldsymbol{\\alpha}_{4}=\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ c_{4}\\end{array}\\right)$, 其中 $c_{1}, c_{2}, c_{3}, c_{4}$ 为任意常数, 则下列向量组线性相关的为 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$",
-        "B": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{4}$",
-        "C": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$",
-        "D": "$\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$"
-      },
-      "answer": "C",
-      "analysis": "【分析】四个向量都是三维列向量，$c_1,c_2,c_3,c_4$ 任意。三个向量线性相关 $\\iff$ 以它们为列的 $3\\times3$ 行列式为 $0$。题目要选“无论 $c_i$ 取何值都线性相关”的那一组，即对应行列式恒为 $0$（与 $c_i$ 无关）。观察 $\\boldsymbol\\alpha_3=(1,-1,c_3)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_4=(-1,1,c_4)^{\\mathrm T}$ 的前两个分量互为相反数，这是突破口。\n\n【解答】逐组计算行列式（按列排）。\n选项 C，$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$：\n$$\\begin{vmatrix}0&1&-1\\\\0&-1&1\\\\c_1&c_3&c_4\\end{vmatrix}.$$\n按第一列展开（只有第三行 $c_1$ 非零项有效）：\n$$=c_1\\cdot(-1)^{3+1}\\begin{vmatrix}1&-1\\\\-1&1\\end{vmatrix}=c_1\\big(1\\cdot1-(-1)(-1)\\big)=c_1(1-1)=0.$$\n行列式恒为 $0$（与 $c_1,c_3,c_4$ 无关），故 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ **恒线性相关**。本质原因：$\\boldsymbol\\alpha_3$ 与 $\\boldsymbol\\alpha_4$ 的前两个分量对应成相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4=(0,0,c_3+c_4)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_1=(0,0,c_1)^{\\mathrm T}$ 都落在 $e_3$ 方向，三者必线性相关。\n其余各组行列式含 $c_i$、一般不为零，未必相关。故选 C。",
-      "wrong_options": {
-        "A": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3$ 行列式 $=\\begin{vmatrix}0&0&1\\\\0&1&-1\\\\c_1&c_2&c_3\\end{vmatrix}=1\\cdot(0\\cdot c_2-1\\cdot c_1)\\cdot(\\pm)= -c_1$（按规则计算得 $\\pm c_1$），一般 $c_1\\neq0$ 时线性无关，不是恒相关。",
-        "B": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4$ 同理行列式正比于 $c_1$，$c_1\\neq0$ 时无关，不恒相关。",
-        "D": "$\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 行列式 $=\\begin{vmatrix}0&1&-1\\\\1&-1&1\\\\c_2&c_3&c_4\\end{vmatrix}$，展开后含 $c_i$ 的项一般非零，不恒相关。"
-      },
-      "pitfalls": [
-        "要选的是“无论常数取何值都相关”，即行列式恒为 $0$（与 $c_i$ 无关），而非某些取值下相关。",
-        "题眼：$\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 前两分量互为相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4$ 与 $\\boldsymbol\\alpha_1$ 共线于 $e_3$ 方向。",
-        "三个三维向量相关 $\\iff$ 行列式为 $0$，按含 $c_1$ 那一列展开最省。"
-      ],
-      "key_point": "选行列式恒为 $0$（与 $c_i$ 无关）的组：$\\alpha_3+\\alpha_4$ 与 $\\alpha_1$ 同在 $e_3$ 方向，故 $\\alpha_1,\\alpha_3,\\alpha_4$ 恒相关。"
-    },
-    {
-      "id": 549,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, $\\boldsymbol{P}$ 为 $3$ 阶可逆矩阵, 且 $\\boldsymbol{P}^{-1} \\boldsymbol{A} \\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, 若 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, $\\boldsymbol Q=\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, 则 $\\boldsymbol{Q}^{-1} \\boldsymbol{AQ} =(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
-      },
-      "answer": "B",
-      "analysis": "【分析】$Q$ 的列由 $P$ 的列线性组合而来，可写成 $Q=PC$，其中 $C$ 是把列变换记下来的可逆矩阵。则 $Q^{-1}AQ=C^{-1}(P^{-1}AP)C=C^{-1}\\Lambda C$，其中 $\\Lambda=\\mathrm{diag}(1,1,2)$。由于前两个特征值相等（都是 1），$C$ 只在前两列做组合，结果仍是 $\\Lambda$。\n\n【解答】由 $Q=(\\alpha_1+\\alpha_2,\\ \\alpha_2,\\ \\alpha_3)$ 与 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$，有 $Q=PC$，\n$$C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix},\\qquad C^{-1}=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}.$$\n（验证：$PC$ 第 1 列 $=\\alpha_1+\\alpha_2$，第 2 列 $=\\alpha_2$，第 3 列 $=\\alpha_3$，正确。）\n于是\n$$Q^{-1}AQ=C^{-1}P^{-1}APC=C^{-1}\\Lambda C,\\quad \\Lambda=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}.$$\n先算 $\\Lambda C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}$，再左乘 $C^{-1}$：\n$$C^{-1}\\Lambda C=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}=\\Lambda.$$\n故 $Q^{-1}AQ=\\mathrm{diag}(1,1,2)$，选 **B**。\n\n（本质：$\\alpha_1,\\alpha_2$ 同属特征值 1 的特征子空间，其任意线性组合 $\\alpha_1+\\alpha_2$ 仍是属于 1 的特征向量，$\\alpha_2,\\alpha_3$ 不变，故对角矩阵不变。）",
-      "wrong_options": {
-        "A": "把第 2、3 个对角元当成被交换/改动，得到 diag(1,2,1)。但 α₃ 仍对应 2、新第 2 列仍对应 1，对角阵不应变成这样。",
-        "C": "diag(2,1,2) 错误地认为第 1 列对应特征值 2；实际 α₁+α₂ 属于特征值 1。",
-        "D": "diag(2,2,1) 把特征值整体搞错；列组合只发生在特征值同为 1 的前两列之间，2 始终对应 α₃。"
-      },
-      "pitfalls": [
-        "列组合写成 Q=PC，则 Q⁻¹AQ=C⁻¹ΛC，不是简单地搬动对角元。",
-        "关键在 α₁、α₂ 同属特征值 1，其线性组合仍是该特征值的特征向量，故对角阵不变。"
-      ],
-      "key_point": "相似变换列重组：Q=PC ⇒ Q⁻¹AQ=C⁻¹ΛC；同特征值子空间内组合不改变 Λ。"
-    },
-    {
-      "id": 558,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 20,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "证明: $\\displaystyle  x \\ln \\frac{1+x}{1-x}+\\cos x \\geqslant 1+\\frac{x^{2}}{2}(-1<x<1)$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】不等式左边含 $x\\ln\\dfrac{1+x}{1-x}$ 与 $\\cos x$ 两个性质迥异的部分，硬求导会很乱。注意到这两块各有现成的标准放缩：$\\cos x\\geq 1-\\dfrac{x^2}{2}$（恒成立），而 $x\\ln\\dfrac{1+x}{1-x}$ 利用 $\\ln\\dfrac{1+x}{1-x}$ 的幂级数恰好可放到 $2x^2$。两块拼起来即得。\n\n【解答】先看第一项。当 $-1<x<1$ 时，由 $\\ln(1+x)$ 的展开式作差得\n$$\\ln\\frac{1+x}{1-x}=\\ln(1+x)-\\ln(1-x)=2\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right).$$\n于是\n$$x\\ln\\frac{1+x}{1-x}=2x\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right)=2x^2+\\frac{2x^4}{3}+\\frac{2x^6}{5}+\\cdots.$$\n该级数每一项均非负（$x^{2k}\\geq 0$），故\n$$x\\ln\\frac{1+x}{1-x}\\geq 2x^2,\\quad -1<x<1.$$\n再看第二项。由 $\\cos x$ 的标准放缩（可由 $g(x)=\\cos x-1+\\dfrac{x^2}{2}$ 求导验证：$g'(x)=x-\\sin x\\geq 0\\,(x\\geq0)$，$g(0)=0$，结合偶性得 $g(x)\\geq0$）有\n$$\\cos x\\geq 1-\\frac{x^2}{2},\\quad x\\in\\mathbb{R}.$$\n两式相加：\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 2x^2+\\left(1-\\frac{x^2}{2}\\right)=1+\\frac{3x^2}{2}\\geq 1+\\frac{x^2}{2}.$$\n最后一步因 $\\dfrac{3x^2}{2}\\geq\\dfrac{x^2}{2}$。故对一切 $-1<x<1$，\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^2}{2},$$\n等号当且仅当 $x=0$ 时成立。证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$x\\ln\\dfrac{1+x}{1-x}$ 是偶函数且恒非负，不要被对数里出现负号吓住——$x$ 与 $\\ln$ 同号，乘积非负。",
-        "$\\cos x\\geq 1-\\dfrac{x^2}{2}$ 是对全体实数成立的标准结论，可直接引用或现场两次求导证明。"
-      ],
-      "key_point": "证明含混合函数的不等式时，把左边拆成可独立放缩的几块，各用现成的级数/标准不等式放缩后相加。"
-    },
-    {
-      "id": 559,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 16,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求函数 $\\displaystyle f(x, y)=x \\mathrm{e}^{-\\frac{x^{2}+y^{2}}{2}}$ 的极值",
-      "options": {},
-      "answer": "$(1,0)$ 为 $f(x, y)$ 的极大值点, \r\n极大值为 $f(1,0)=\\mathrm{e}^{-\\frac{1}{2}}$; \r\n\r\n$(-1,0)$ 为 $f(x, y)$ 的极小值点, \r\n极小值为 $f(-1,0)=-\\mathrm{e}^{-\\frac{1}{2}}$",
-      "analysis": "【分析】无条件极值，标准三步：求一阶偏导找驻点，求二阶偏导算 $AC-B^2$ 判别。注意指数因子 $\\mathrm{e}^{-(x^2+y^2)/2}$ 恒正，求导时把它提出来分析符号更省力。\n\n【解答】记 $g=\\mathrm{e}^{-(x^2+y^2)/2}>0$。\n$$f_x=g(1-x^2),\\qquad f_y=-xy\\,g.$$\n令 $f_x=f_y=0$：由 $f_x=0$ 得 $x^2=1$，$x=\\pm1$；由 $f_y=0$ 且 $x\\neq0$ 得 $y=0$。驻点为 $(1,0)$ 与 $(-1,0)$。\n\n二阶偏导：\n$$f_{xx}=g(x^3-3x),\\quad f_{xy}=-y(1-x^2)g,\\quad f_{yy}=x(y^2-1)g.$$\n在 $(1,0)$：$A=f_{xx}=\\mathrm{e}^{-1/2}(1-3)=-2\\mathrm{e}^{-1/2}$，$B=f_{xy}=0$，$C=f_{yy}=\\mathrm{e}^{-1/2}(0-1)=-\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A<0$，为极大值点，\n$$f(1,0)=1\\cdot\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}.$$\n在 $(-1,0)$：$A=\\mathrm{e}^{-1/2}((-1)+3)=2\\mathrm{e}^{-1/2}$，$B=0$，$C=(-1)(0-1)\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A>0$，为极小值点，\n$$f(-1,0)=-1\\cdot\\mathrm{e}^{-1/2}=-\\mathrm{e}^{-1/2}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "f_y=-xyg=0 时 x=±1≠0，故只能 y=0，不要误增 x=0 的驻点。",
-        "判别用 AC-B² 而非 B²-AC；A<0 取极大、A>0 取极小，符号别记反。",
-        "极值是 f 的取值（带指数），不要只写出驻点坐标。"
-      ],
-      "key_point": "二元无条件极值：解 f_x=f_y=0 得驻点，再用 Hessian AC-B² 判型。"
-    },
-    {
-      "id": 563,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & a & 0 & 0 \\\\ 0 & 1 & a & 0 \\\\ 0 & 0 & 1 & a \\\\ a & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0 \\\\ 0\\end{array}\\right)$\r\n\r\n(1) 计算行列式 $|\\boldsymbol{A}|$;\r\n\r\n(2) 当实数 $a$ 为何值时, 方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有无穷多解, 并求其通解",
-      "options": {},
-      "answer": "(1) $1-a^4$\r\n\r\n(2) 当 $a=-1$ 时, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n0 \\\\-1 \\\\0 \\\\0\r\n\\end{array}\\right)  ( C$为任意常数 )\r\n\r\n当 $a=1$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 无解",
-      "analysis": "【分析】(1) 这是\"循环型\"系数矩阵（对角线为 $1$，次对角线及左下角为 $a$），按第一列展开即可。(2) 方程组有无穷多解需 $|A|=0$，即 $a^4=1$，实数解 $a=\\pm1$；再对每个值用初等行变换判定相容性并求通解。\n\n【解答】(1) 按第一列展开（第一列只有 $a_{11}=1$ 与 $a_{41}=a$ 非零）：\n$$|A|=1\\cdot\\begin{vmatrix}1&a&0\\\\0&1&a\\\\0&0&1\\end{vmatrix}+(-1)^{4+1}a\\begin{vmatrix}a&0&0\\\\1&a&0\\\\0&1&a\\end{vmatrix}=1\\cdot1-a\\cdot a^3=\\boxed{1-a^4}.$$\n\n(2) 无穷多解要求 $|A|=1-a^4=0$，即 $a=1$ 或 $a=-1$。\n\n当 $a=-1$ 时，对增广矩阵 $(A\\mid\\beta)$ 作行变换：\n$$\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\-1&0&0&1&0\\end{array}\\right)\\xrightarrow{R_4+R_1}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&-1&0&1&1\\end{array}\\right)$$\n$$\\xrightarrow{R_4+R_2}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&-1&1&0\\end{array}\\right)\\xrightarrow{R_4+R_3}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&0&0&0\\end{array}\\right).$$\n$r(A)=r(A\\mid\\beta)=3<4$，有无穷多解。取 $x_4$ 为自由变量，回代：$x_3=x_4$，$x_2=x_3-1=x_4-1$，$x_1=x_2+1=x_4$。令 $x_4=C$（亦即取齐次解方向）：\n$$x=C\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}+\\begin{pmatrix}0\\\\-1\\\\0\\\\0\\end{pmatrix}\\quad(C\\ \\text{为任意常数}).$$\n\n当 $a=1$ 时，$(A\\mid\\beta)$ 的第 1、3 行相加得 $x_1+x_2+x_3+x_4=1$，第 2、4 行相加得 $x_1+x_2+x_3+x_4=-1$，矛盾，故 $r(A)=3<r(A\\mid\\beta)=4$，**方程组无解**。\n\n验算：$a=-1$ 时取 $C=0$，$x=(0,-1,0,0)^T$，$Ax$：第一行 $1\\cdot0+(-1)(-1)=1$，第二行 $1\\cdot(-1)=-1$，第三、四行均 $0$，即得 $\\beta=(1,-1,0,0)^T$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$|A|=0$ 给出 $a^4=1$，在实数范围内只有 $a=\\pm1$，别漏掉 $a=1$ 这一支（该支无解）。",
-        "$a=1$ 与 $a=-1$ 都使行列式为零，但相容性不同：必须逐一判定 $r(A)$ 与 $r(A\\mid\\beta)$ 是否相等。"
-      ],
-      "key_point": "循环矩阵按首列展开得 1-a^4；行列式为零的每个 a 都要单独验相容性，不能想当然都有解。"
-    },
-    {
-      "id": 564,
-      "paper": "数学二",
-      "year": 2012,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & 0 & a \\\\ 0 & a & -1\\end{array}\\right)$, 二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{x}$ 的秩为 $2$ ,\r\n\r\n(1) 求实数 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f$ 化为标准形",
-      "options": {},
-      "answer": "(1) $a=-1$\r\n\r\n(2) $\\boldsymbol Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ -\\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}}\\end{array}\\right)$, 在正交变换 $\\boldsymbol{x}= \\boldsymbol{Qy}$ 下, 二次型 $f$ 的标准形为 $f=2 y_2^2+6 y_3^2$",
-      "analysis": "【分析】二次型矩阵是 $A^{\\mathrm T}A$，其秩等于 $A$ 的秩。由 $r(A^{\\mathrm T}A)=r(A)=2$ 且 $A$ 为 $4\\times3$ 列向量数 3，知三列线性相关，由此定 $a$。第（2）问对实对称阵 $A^{\\mathrm T}A$ 求特征值、单位正交特征向量，拼成正交矩阵 $Q$。\n\n【解答】**(1)** 记 $A$ 三列 $\\alpha_1=(1,0,-1,0)^{\\mathrm T},\\ \\alpha_2=(0,1,0,a)^{\\mathrm T},\\ \\alpha_3=(1,1,a,-1)^{\\mathrm T}$。由 $r(A^{\\mathrm T}A)=r(A)=2<3$，三列相关。$\\alpha_1,\\alpha_2$ 线性无关，故 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$。比较前两个分量得 $k_1=1,k_2=1$，于是 $\\alpha_1+\\alpha_2=(1,1,-1,a)^{\\mathrm T}$。与 $\\alpha_3=(1,1,a,-1)^{\\mathrm T}$ 比较第 3、4 分量：$-1=a$ 且 $a=-1$，故 $a=-1$。\n\n**(2)** 取 $a=-1$，$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\-1&0&-1\\\\0&-1&-1\\end{pmatrix}$，则\n$$B=A^{\\mathrm T}A=\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}.$$\n特征多项式 $|B-\\lambda E|=-\\lambda^3+8\\lambda^2-12\\lambda=-\\lambda(\\lambda-2)(\\lambda-6)$（迹 $=8$，二阶主子式之和 $=12$，行列式 $=0$），故特征值 $\\lambda_1=0,\\lambda_2=2,\\lambda_3=6$。\n求单位特征向量：\n$\\lambda=0$：$(B)x=0\\Rightarrow x_1=-x_3,x_2=-x_3$，取 $\\xi_1=\\dfrac{1}{\\sqrt3}(-1,-1,1)^{\\mathrm T}$；\n$\\lambda=2$：$(B-2E)x=0\\Rightarrow x_3=0,\\ x_1+x_2=0$，取 $\\xi_2=\\dfrac{1}{\\sqrt2}(1,-1,0)^{\\mathrm T}$；\n$\\lambda=6$：$(B-6E)x=0\\Rightarrow x_1=x_2,\\ x_3=2x_1$，取 $\\xi_3=\\dfrac{1}{\\sqrt6}(1,1,2)^{\\mathrm T}$。\n三个特征值互异，特征向量自动正交。令\n$$Q=\\begin{pmatrix}-\\frac{1}{\\sqrt3}&\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]-\\frac{1}{\\sqrt3}&-\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]\\frac{1}{\\sqrt3}&0&\\frac{2}{\\sqrt6}\\end{pmatrix},$$\n则正交变换 $x=Qy$ 把二次型化为标准形\n$$f=0\\cdot y_1^2+2y_2^2+6y_3^2=2y_2^2+6y_3^2.$$\n\n**验算**：迹 $0+2+6=8=2+2+4$，零特征值与 $r(B)=2$ 相符；$B\\xi_3=6\\xi_3$ 即 $\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}(1,1,2)^{\\mathrm T}=(6,6,12)^{\\mathrm T}=6(1,1,2)^{\\mathrm T}$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "r(A^TA)=r(A) 是定理，秩为 2 说明 A 三列相关，由此定 a 最快；不必先算出 A^TA 再求秩。",
-        "特征值互异时特征向量天然正交，只需单位化；若有重根需正交化。",
-        "标准形系数即特征值，零特征值对应项消失，写成 2y_2^2+6y_3^2。"
-      ],
-      "key_point": "二次型矩阵 A^TA 的秩=r(A)，由列相关定参数；正交变换化标准形=求 A^TA 特征值与单位正交特征向量。"
-    },
-    {
       "id": 567,
       "paper": "数学二",
       "year": 2012,
@@ -242,6 +85,34 @@
         "找反例 a_n≡1：通项收敛但部分和无界，直接否定必要性。"
       ],
       "key_point": "判定充分必要：分别检验两个方向，单调有界准则 + 反例（a_n≡1）即可定夺。"
+    },
+    {
+      "id": 547,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I_{k}=\\int_{0}^{k \\pi} \\mathrm{e}^{x^{2}} \\sin x \\mathrm{d} x(k=1,2,3)$, 则有 $(\\quad)$",
+      "options": {
+        "A": "$I_{1}<I_{2}<I_{3}$",
+        "B": "$I_{3}<I_{2}<I_{1}$",
+        "C": "$I_{2}<I_{3}<I_{1}$",
+        "D": "$I_{2}<I_{1}<I_{3}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】$I_k=\\int_0^{k\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，被积函数 $\\mathrm e^{x^2}\\sin x$ 在 $\\sin x$ 的每个半周期上符号交替，且 $\\mathrm e^{x^2}$ 单调暴增。按 $[\\,m\\pi,(m+1)\\pi\\,]$ 把积分拆成逐段增量 $J_m=\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，分析每段的符号与大小即可比较 $I_1,I_2,I_3$。\n\n【解答】记 $J_m=\\displaystyle\\int_{m\\pi}^{(m+1)\\pi}\\mathrm e^{x^2}\\sin x\\,\\mathrm dx$，则 $I_1=J_0$，$I_2=J_0+J_1$，$I_3=J_0+J_1+J_2$。\n\n在 $[0,\\pi]$ 上 $\\sin x\\ge0$，故 $J_0>0$，即 $I_1>0$。\n\n在 $[\\pi,2\\pi]$ 上 $\\sin x\\le0$，故 $J_1<0$，于是 $I_2=I_1+J_1<I_1$。\n\n比较 $J_1$ 与 $J_0$ 的大小：作代换 $x=t+\\pi$，$J_1=\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin(t+\\pi)\\,\\mathrm dt=-\\int_0^{\\pi}\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt$。因 $(t+\\pi)^2>t^2$，故 $\\mathrm e^{(t+\\pi)^2}>\\mathrm e^{t^2}$，从而 $|J_1|=\\int_0^\\pi\\mathrm e^{(t+\\pi)^2}\\sin t\\,\\mathrm dt>\\int_0^\\pi\\mathrm e^{t^2}\\sin t\\,\\mathrm dt=J_0$。所以 $I_2=J_0+J_1<0$，即 $I_2<0<I_1$。\n\n在 $[2\\pi,3\\pi]$ 上 $\\sin x\\ge0$，$J_2>0$；同理 $J_2$ 的被积函数 $\\mathrm e^{x^2}$ 比 $[\\pi,2\\pi]$ 段更大，$|J_2|>|J_1|$，故 $I_3=I_2+J_2$，且 $J_2>|J_1|$ 使 $I_3=J_0+J_1+J_2>J_0=I_1>0$。\n\n综上 $I_2<0<I_1<I_3$，即\n$$I_2<I_1<I_3.$$\n选 D。（数值验证：$I_1\\approx5.7\\times10^2>0$，$I_2\\approx-9.1\\times10^{14}<0$，$I_3\\approx1.1\\times10^{36}>0$，符合 $I_2<I_1<I_3$。）",
+      "wrong_options": {
+        "A": "I₁<I₂<I₃ 错：[π,2π] 段 sin x≤0 且 e^{x²} 更大，使 I₂ 比 I₁ 还小且为负，故 I₂<I₁，不是 I₁<I₂。",
+        "B": "I₃<I₂<I₁ 完全反序：实际 I₃ 最大（[2π,3π] 正段增量巨大）、I₂ 最小（负），顺序恰好相反。",
+        "C": "I₂<I₃<I₁ 错在 I₃ 与 I₁：[2π,3π] 正增量 J₂ 因 e^{x²} 暴增远超 |J₁|，使 I₃>I₁，而非 I₃<I₁。"
+      },
+      "pitfalls": [
+        "按 [mπ,(m+1)π] 分段，奇数段(sin≤0)为负、偶数段为正；增量 |Jₘ| 因 e^{x²} 随 m 暴增",
+        "关键比较 |J₁|>J₀ ⟹ I₂<0；J₂>|J₁| ⟹ I₃>I₁，故最终 I₂<I₁<I₃",
+        "不要被 e^{x²} 不可初等积分吓住，本题只需符号与逐段大小比较，无需求出值"
+      ],
+      "key_point": "积分含正负交替的 sin x 时按半周期分段比较增量符号与量级；e^{x²} 暴增使后段主导。"
     },
     {
       "id": 568,
@@ -297,6 +168,61 @@
         "别忘了被积函数里的 -1 贡献的是 -面积，整体取负号"
       ],
       "key_point": "二重积分拆项 + 奇偶对称性：奇函数项归零，常数项化为 -面积"
+    },
+    {
+      "id": 548,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{\\alpha}_{1}=\\left(\\begin{array}{l}0 \\\\ 0 \\\\ c_{1}\\end{array}\\right), \\boldsymbol{\\alpha}_{2}=\\left(\\begin{array}{l}0 \\\\ 1 \\\\ c_{2}\\end{array}\\right), \\boldsymbol{\\alpha}_{3}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ c_{3}\\end{array}\\right), \\boldsymbol{\\alpha}_{4}=\\left(\\begin{array}{c}-1 \\\\ 1 \\\\ c_{4}\\end{array}\\right)$, 其中 $c_{1}, c_{2}, c_{3}, c_{4}$ 为任意常数, 则下列向量组线性相关的为 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$",
+        "B": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{4}$",
+        "C": "$\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$",
+        "D": "$\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】四个向量都是三维列向量，$c_1,c_2,c_3,c_4$ 任意。三个向量线性相关 $\\iff$ 以它们为列的 $3\\times3$ 行列式为 $0$。题目要选“无论 $c_i$ 取何值都线性相关”的那一组，即对应行列式恒为 $0$（与 $c_i$ 无关）。观察 $\\boldsymbol\\alpha_3=(1,-1,c_3)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_4=(-1,1,c_4)^{\\mathrm T}$ 的前两个分量互为相反数，这是突破口。\n\n【解答】逐组计算行列式（按列排）。\n选项 C，$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$：\n$$\\begin{vmatrix}0&1&-1\\\\0&-1&1\\\\c_1&c_3&c_4\\end{vmatrix}.$$\n按第一列展开（只有第三行 $c_1$ 非零项有效）：\n$$=c_1\\cdot(-1)^{3+1}\\begin{vmatrix}1&-1\\\\-1&1\\end{vmatrix}=c_1\\big(1\\cdot1-(-1)(-1)\\big)=c_1(1-1)=0.$$\n行列式恒为 $0$（与 $c_1,c_3,c_4$ 无关），故 $\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ **恒线性相关**。本质原因：$\\boldsymbol\\alpha_3$ 与 $\\boldsymbol\\alpha_4$ 的前两个分量对应成相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4=(0,0,c_3+c_4)^{\\mathrm T}$ 与 $\\boldsymbol\\alpha_1=(0,0,c_1)^{\\mathrm T}$ 都落在 $e_3$ 方向，三者必线性相关。\n其余各组行列式含 $c_i$、一般不为零，未必相关。故选 C。",
+      "wrong_options": {
+        "A": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3$ 行列式 $=\\begin{vmatrix}0&0&1\\\\0&1&-1\\\\c_1&c_2&c_3\\end{vmatrix}=1\\cdot(0\\cdot c_2-1\\cdot c_1)\\cdot(\\pm)= -c_1$（按规则计算得 $\\pm c_1$），一般 $c_1\\neq0$ 时线性无关，不是恒相关。",
+        "B": "$\\boldsymbol\\alpha_1,\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_4$ 同理行列式正比于 $c_1$，$c_1\\neq0$ 时无关，不恒相关。",
+        "D": "$\\boldsymbol\\alpha_2,\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 行列式 $=\\begin{vmatrix}0&1&-1\\\\1&-1&1\\\\c_2&c_3&c_4\\end{vmatrix}$，展开后含 $c_i$ 的项一般非零，不恒相关。"
+      },
+      "pitfalls": [
+        "要选的是“无论常数取何值都相关”，即行列式恒为 $0$（与 $c_i$ 无关），而非某些取值下相关。",
+        "题眼：$\\boldsymbol\\alpha_3,\\boldsymbol\\alpha_4$ 前两分量互为相反数，$\\boldsymbol\\alpha_3+\\boldsymbol\\alpha_4$ 与 $\\boldsymbol\\alpha_1$ 共线于 $e_3$ 方向。",
+        "三个三维向量相关 $\\iff$ 行列式为 $0$，按含 $c_1$ 那一列展开最省。"
+      ],
+      "key_point": "选行列式恒为 $0$（与 $c_i$ 无关）的组：$\\alpha_3+\\alpha_4$ 与 $\\alpha_1$ 同在 $e_3$ 方向，故 $\\alpha_1,\\alpha_3,\\alpha_4$ 恒相关。"
+    },
+    {
+      "id": 549,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, $\\boldsymbol{P}$ 为 $3$ 阶可逆矩阵, 且 $\\boldsymbol{P}^{-1} \\boldsymbol{A} \\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$, 若 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, $\\boldsymbol Q=\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$, 则 $\\boldsymbol{Q}^{-1} \\boldsymbol{AQ} =(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】$Q$ 的列由 $P$ 的列线性组合而来，可写成 $Q=PC$，其中 $C$ 是把列变换记下来的可逆矩阵。则 $Q^{-1}AQ=C^{-1}(P^{-1}AP)C=C^{-1}\\Lambda C$，其中 $\\Lambda=\\mathrm{diag}(1,1,2)$。由于前两个特征值相等（都是 1），$C$ 只在前两列做组合，结果仍是 $\\Lambda$。\n\n【解答】由 $Q=(\\alpha_1+\\alpha_2,\\ \\alpha_2,\\ \\alpha_3)$ 与 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$，有 $Q=PC$，\n$$C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix},\\qquad C^{-1}=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}.$$\n（验证：$PC$ 第 1 列 $=\\alpha_1+\\alpha_2$，第 2 列 $=\\alpha_2$，第 3 列 $=\\alpha_3$，正确。）\n于是\n$$Q^{-1}AQ=C^{-1}P^{-1}APC=C^{-1}\\Lambda C,\\quad \\Lambda=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}.$$\n先算 $\\Lambda C=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}$，再左乘 $C^{-1}$：\n$$C^{-1}\\Lambda C=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\0&0&1\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&2\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}=\\Lambda.$$\n故 $Q^{-1}AQ=\\mathrm{diag}(1,1,2)$，选 **B**。\n\n（本质：$\\alpha_1,\\alpha_2$ 同属特征值 1 的特征子空间，其任意线性组合 $\\alpha_1+\\alpha_2$ 仍是属于 1 的特征向量，$\\alpha_2,\\alpha_3$ 不变，故对角矩阵不变。）",
+      "wrong_options": {
+        "A": "把第 2、3 个对角元当成被交换/改动，得到 diag(1,2,1)。但 α₃ 仍对应 2、新第 2 列仍对应 1，对角阵不应变成这样。",
+        "C": "diag(2,1,2) 错误地认为第 1 列对应特征值 2；实际 α₁+α₂ 属于特征值 1。",
+        "D": "diag(2,2,1) 把特征值整体搞错；列组合只发生在特征值同为 1 的前两列之间，2 始终对应 α₃。"
+      },
+      "pitfalls": [
+        "列组合写成 Q=PC，则 Q⁻¹AQ=C⁻¹ΛC，不是简单地搬动对角元。",
+        "关键在 α₁、α₂ 同属特征值 1，其线性组合仍是该特征值的特征向量，故对角阵不变。"
+      ],
+      "key_point": "相似变换列重组：Q=PC ⇒ Q⁻¹AQ=C⁻¹ΛC；同特征值子空间内组合不改变 Λ。"
     },
     {
       "id": 570,
@@ -390,6 +316,24 @@
       "key_point": "曲率 $K=\\frac{|y''|}{(1+y'^2)^{3/2}}$，代入解方程后按定义域筛根。"
     },
     {
+      "id": 587,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, $|\\boldsymbol{A}|=3, \\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 若交换 $\\boldsymbol{A}$ 的第 $1$ 行与第 $2$ 行得矩阵 $\\boldsymbol{B}$, 则 $\\left|\\boldsymbol{B} \\boldsymbol{A}^*\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-27$",
+      "analysis": "【分析】用三件事：交换两行使行列式变号 $\\Rightarrow|B|=-|A|$；伴随行列式 $|A^*|=|A|^{n-1}$；乘积行列式 $|BA^*|=|B|\\,|A^*|$。三阶 $n=3$，逐步代入即可。\n\n【解答】$A$ 为 $3$ 阶矩阵，$|A|=3$。\n\n第一步，交换 $A$ 的第 $1$、$2$ 两行得 $B$，行列式变号：\n$$|B|=-|A|=-3.$$\n第二步，伴随矩阵行列式（$n=3$）：\n$$|A^*|=|A|^{n-1}=|A|^2=3^2=9.$$\n第三步，由行列式乘积性质：\n$$|BA^*|=|B|\\cdot|A^*|=(-3)\\times9=-27.$$\n故 $|BA^*|=-27$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "交换两行行列式变号，是 $|B|=-|A|$ 而非 $|B|=|A|$。",
+        "$|A^*|=|A|^{n-1}$，三阶为平方 $|A|^2=9$，别误写成 $|A|=3$。"
+      ],
+      "key_point": "换行变号 + $|A^*|=|A|^{n-1}$ + $|BA^*|=|B||A^*|$ 三连。"
+    },
+    {
       "id": 575,
       "paper": "数学二",
       "year": 2012,
@@ -406,6 +350,25 @@
         "同阶无穷小看的是 f-a 的最低非零幂次，分子分母都要展够阶数，别提前丢项。"
       ],
       "key_point": "求极限+同阶 k：通分化为 0/0，泰勒展开取分子分母最低阶，比商即得阶数 k=1。"
+    },
+    {
+      "id": 559,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x, y)=x \\mathrm{e}^{-\\frac{x^{2}+y^{2}}{2}}$ 的极值",
+      "options": {},
+      "answer": "$(1,0)$ 为 $f(x, y)$ 的极大值点, \r\n极大值为 $f(1,0)=\\mathrm{e}^{-\\frac{1}{2}}$; \r\n\r\n$(-1,0)$ 为 $f(x, y)$ 的极小值点, \r\n极小值为 $f(-1,0)=-\\mathrm{e}^{-\\frac{1}{2}}$",
+      "analysis": "【分析】无条件极值，标准三步：求一阶偏导找驻点，求二阶偏导算 $AC-B^2$ 判别。注意指数因子 $\\mathrm{e}^{-(x^2+y^2)/2}$ 恒正，求导时把它提出来分析符号更省力。\n\n【解答】记 $g=\\mathrm{e}^{-(x^2+y^2)/2}>0$。\n$$f_x=g(1-x^2),\\qquad f_y=-xy\\,g.$$\n令 $f_x=f_y=0$：由 $f_x=0$ 得 $x^2=1$，$x=\\pm1$；由 $f_y=0$ 且 $x\\neq0$ 得 $y=0$。驻点为 $(1,0)$ 与 $(-1,0)$。\n\n二阶偏导：\n$$f_{xx}=g(x^3-3x),\\quad f_{xy}=-y(1-x^2)g,\\quad f_{yy}=x(y^2-1)g.$$\n在 $(1,0)$：$A=f_{xx}=\\mathrm{e}^{-1/2}(1-3)=-2\\mathrm{e}^{-1/2}$，$B=f_{xy}=0$，$C=f_{yy}=\\mathrm{e}^{-1/2}(0-1)=-\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A<0$，为极大值点，\n$$f(1,0)=1\\cdot\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}.$$\n在 $(-1,0)$：$A=\\mathrm{e}^{-1/2}((-1)+3)=2\\mathrm{e}^{-1/2}$，$B=0$，$C=(-1)(0-1)\\mathrm{e}^{-1/2}=\\mathrm{e}^{-1/2}$。\n$AC-B^2=2\\mathrm{e}^{-1}>0$ 且 $A>0$，为极小值点，\n$$f(-1,0)=-1\\cdot\\mathrm{e}^{-1/2}=-\\mathrm{e}^{-1/2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "f_y=-xyg=0 时 x=±1≠0，故只能 y=0，不要误增 x=0 的驻点。",
+        "判别用 AC-B² 而非 B²-AC；A<0 取极大、A>0 取极小，符号别记反。",
+        "极值是 f 的取值（带指数），不要只写出驻点坐标。"
+      ],
+      "key_point": "二元无条件极值：解 f_x=f_y=0 得驻点，再用 Hessian AC-B² 判型。"
     },
     {
       "id": 576,
@@ -465,6 +428,24 @@
       "key_point": "联立线性微分方程用通解定常数求 $f$；变限积分函数求拐点靠 $y''$ 的奇偶性与符号变化定位。"
     },
     {
+      "id": 558,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: $\\displaystyle  x \\ln \\frac{1+x}{1-x}+\\cos x \\geqslant 1+\\frac{x^{2}}{2}(-1<x<1)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】不等式左边含 $x\\ln\\dfrac{1+x}{1-x}$ 与 $\\cos x$ 两个性质迥异的部分，硬求导会很乱。注意到这两块各有现成的标准放缩：$\\cos x\\geq 1-\\dfrac{x^2}{2}$（恒成立），而 $x\\ln\\dfrac{1+x}{1-x}$ 利用 $\\ln\\dfrac{1+x}{1-x}$ 的幂级数恰好可放到 $2x^2$。两块拼起来即得。\n\n【解答】先看第一项。当 $-1<x<1$ 时，由 $\\ln(1+x)$ 的展开式作差得\n$$\\ln\\frac{1+x}{1-x}=\\ln(1+x)-\\ln(1-x)=2\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right).$$\n于是\n$$x\\ln\\frac{1+x}{1-x}=2x\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right)=2x^2+\\frac{2x^4}{3}+\\frac{2x^6}{5}+\\cdots.$$\n该级数每一项均非负（$x^{2k}\\geq 0$），故\n$$x\\ln\\frac{1+x}{1-x}\\geq 2x^2,\\quad -1<x<1.$$\n再看第二项。由 $\\cos x$ 的标准放缩（可由 $g(x)=\\cos x-1+\\dfrac{x^2}{2}$ 求导验证：$g'(x)=x-\\sin x\\geq 0\\,(x\\geq0)$，$g(0)=0$，结合偶性得 $g(x)\\geq0$）有\n$$\\cos x\\geq 1-\\frac{x^2}{2},\\quad x\\in\\mathbb{R}.$$\n两式相加：\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 2x^2+\\left(1-\\frac{x^2}{2}\\right)=1+\\frac{3x^2}{2}\\geq 1+\\frac{x^2}{2}.$$\n最后一步因 $\\dfrac{3x^2}{2}\\geq\\dfrac{x^2}{2}$。故对一切 $-1<x<1$，\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^2}{2},$$\n等号当且仅当 $x=0$ 时成立。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x\\ln\\dfrac{1+x}{1-x}$ 是偶函数且恒非负，不要被对数里出现负号吓住——$x$ 与 $\\ln$ 同号，乘积非负。",
+        "$\\cos x\\geq 1-\\dfrac{x^2}{2}$ 是对全体实数成立的标准结论，可直接引用或现场两次求导证明。"
+      ],
+      "key_point": "证明含混合函数的不等式时，把左边拆成可独立放缩的几块，各用现成的级数/标准不等式放缩后相加。"
+    },
+    {
       "id": 579,
       "paper": "数学二",
       "year": 2012,
@@ -484,22 +465,41 @@
       "key_point": "数列由方程隐式定义求极限：等比求和化简方程 → 单调有界证收敛 → 在化简式中取极限解出。"
     },
     {
-      "id": 587,
+      "id": 563,
       "paper": "数学二",
       "year": 2012,
-      "index": 14,
-      "type": "填空题",
+      "index": 22,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, $|\\boldsymbol{A}|=3, \\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 若交换 $\\boldsymbol{A}$ 的第 $1$ 行与第 $2$ 行得矩阵 $\\boldsymbol{B}$, 则 $\\left|\\boldsymbol{B} \\boldsymbol{A}^*\\right|=\\rule{0.5cm}{0.2mm}$",
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & a & 0 & 0 \\\\ 0 & 1 & a & 0 \\\\ 0 & 0 & 1 & a \\\\ a & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0 \\\\ 0\\end{array}\\right)$\r\n\r\n(1) 计算行列式 $|\\boldsymbol{A}|$;\r\n\r\n(2) 当实数 $a$ 为何值时, 方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有无穷多解, 并求其通解",
       "options": {},
-      "answer": "$-27$",
-      "analysis": "【分析】用三件事：交换两行使行列式变号 $\\Rightarrow|B|=-|A|$；伴随行列式 $|A^*|=|A|^{n-1}$；乘积行列式 $|BA^*|=|B|\\,|A^*|$。三阶 $n=3$，逐步代入即可。\n\n【解答】$A$ 为 $3$ 阶矩阵，$|A|=3$。\n\n第一步，交换 $A$ 的第 $1$、$2$ 两行得 $B$，行列式变号：\n$$|B|=-|A|=-3.$$\n第二步，伴随矩阵行列式（$n=3$）：\n$$|A^*|=|A|^{n-1}=|A|^2=3^2=9.$$\n第三步，由行列式乘积性质：\n$$|BA^*|=|B|\\cdot|A^*|=(-3)\\times9=-27.$$\n故 $|BA^*|=-27$。",
+      "answer": "(1) $1-a^4$\r\n\r\n(2) 当 $a=-1$ 时, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n0 \\\\-1 \\\\0 \\\\0\r\n\\end{array}\\right)  ( C$为任意常数 )\r\n\r\n当 $a=1$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 无解",
+      "analysis": "【分析】(1) 这是\"循环型\"系数矩阵（对角线为 $1$，次对角线及左下角为 $a$），按第一列展开即可。(2) 方程组有无穷多解需 $|A|=0$，即 $a^4=1$，实数解 $a=\\pm1$；再对每个值用初等行变换判定相容性并求通解。\n\n【解答】(1) 按第一列展开（第一列只有 $a_{11}=1$ 与 $a_{41}=a$ 非零）：\n$$|A|=1\\cdot\\begin{vmatrix}1&a&0\\\\0&1&a\\\\0&0&1\\end{vmatrix}+(-1)^{4+1}a\\begin{vmatrix}a&0&0\\\\1&a&0\\\\0&1&a\\end{vmatrix}=1\\cdot1-a\\cdot a^3=\\boxed{1-a^4}.$$\n\n(2) 无穷多解要求 $|A|=1-a^4=0$，即 $a=1$ 或 $a=-1$。\n\n当 $a=-1$ 时，对增广矩阵 $(A\\mid\\beta)$ 作行变换：\n$$\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\-1&0&0&1&0\\end{array}\\right)\\xrightarrow{R_4+R_1}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&-1&0&1&1\\end{array}\\right)$$\n$$\\xrightarrow{R_4+R_2}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&-1&1&0\\end{array}\\right)\\xrightarrow{R_4+R_3}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&0&0&0\\end{array}\\right).$$\n$r(A)=r(A\\mid\\beta)=3<4$，有无穷多解。取 $x_4$ 为自由变量，回代：$x_3=x_4$，$x_2=x_3-1=x_4-1$，$x_1=x_2+1=x_4$。令 $x_4=C$（亦即取齐次解方向）：\n$$x=C\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}+\\begin{pmatrix}0\\\\-1\\\\0\\\\0\\end{pmatrix}\\quad(C\\ \\text{为任意常数}).$$\n\n当 $a=1$ 时，$(A\\mid\\beta)$ 的第 1、3 行相加得 $x_1+x_2+x_3+x_4=1$，第 2、4 行相加得 $x_1+x_2+x_3+x_4=-1$，矛盾，故 $r(A)=3<r(A\\mid\\beta)=4$，**方程组无解**。\n\n验算：$a=-1$ 时取 $C=0$，$x=(0,-1,0,0)^T$，$Ax$：第一行 $1\\cdot0+(-1)(-1)=1$，第二行 $1\\cdot(-1)=-1$，第三、四行均 $0$，即得 $\\beta=(1,-1,0,0)^T$，正确。",
       "wrong_options": {},
       "pitfalls": [
-        "交换两行行列式变号，是 $|B|=-|A|$ 而非 $|B|=|A|$。",
-        "$|A^*|=|A|^{n-1}$，三阶为平方 $|A|^2=9$，别误写成 $|A|=3$。"
+        "$|A|=0$ 给出 $a^4=1$，在实数范围内只有 $a=\\pm1$，别漏掉 $a=1$ 这一支（该支无解）。",
+        "$a=1$ 与 $a=-1$ 都使行列式为零，但相容性不同：必须逐一判定 $r(A)$ 与 $r(A\\mid\\beta)$ 是否相等。"
       ],
-      "key_point": "换行变号 + $|A^*|=|A|^{n-1}$ + $|BA^*|=|B||A^*|$ 三连。"
+      "key_point": "循环矩阵按首列展开得 1-a^4；行列式为零的每个 a 都要单独验相容性，不能想当然都有解。"
+    },
+    {
+      "id": 564,
+      "paper": "数学二",
+      "year": 2012,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & 0 & a \\\\ 0 & a & -1\\end{array}\\right)$, 二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{x}$ 的秩为 $2$ ,\r\n\r\n(1) 求实数 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f$ 化为标准形",
+      "options": {},
+      "answer": "(1) $a=-1$\r\n\r\n(2) $\\boldsymbol Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ -\\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}}\\end{array}\\right)$, 在正交变换 $\\boldsymbol{x}= \\boldsymbol{Qy}$ 下, 二次型 $f$ 的标准形为 $f=2 y_2^2+6 y_3^2$",
+      "analysis": "【分析】二次型矩阵是 $A^{\\mathrm T}A$，其秩等于 $A$ 的秩。由 $r(A^{\\mathrm T}A)=r(A)=2$ 且 $A$ 为 $4\\times3$ 列向量数 3，知三列线性相关，由此定 $a$。第（2）问对实对称阵 $A^{\\mathrm T}A$ 求特征值、单位正交特征向量，拼成正交矩阵 $Q$。\n\n【解答】**(1)** 记 $A$ 三列 $\\alpha_1=(1,0,-1,0)^{\\mathrm T},\\ \\alpha_2=(0,1,0,a)^{\\mathrm T},\\ \\alpha_3=(1,1,a,-1)^{\\mathrm T}$。由 $r(A^{\\mathrm T}A)=r(A)=2<3$，三列相关。$\\alpha_1,\\alpha_2$ 线性无关，故 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$。比较前两个分量得 $k_1=1,k_2=1$，于是 $\\alpha_1+\\alpha_2=(1,1,-1,a)^{\\mathrm T}$。与 $\\alpha_3=(1,1,a,-1)^{\\mathrm T}$ 比较第 3、4 分量：$-1=a$ 且 $a=-1$，故 $a=-1$。\n\n**(2)** 取 $a=-1$，$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\-1&0&-1\\\\0&-1&-1\\end{pmatrix}$，则\n$$B=A^{\\mathrm T}A=\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}.$$\n特征多项式 $|B-\\lambda E|=-\\lambda^3+8\\lambda^2-12\\lambda=-\\lambda(\\lambda-2)(\\lambda-6)$（迹 $=8$，二阶主子式之和 $=12$，行列式 $=0$），故特征值 $\\lambda_1=0,\\lambda_2=2,\\lambda_3=6$。\n求单位特征向量：\n$\\lambda=0$：$(B)x=0\\Rightarrow x_1=-x_3,x_2=-x_3$，取 $\\xi_1=\\dfrac{1}{\\sqrt3}(-1,-1,1)^{\\mathrm T}$；\n$\\lambda=2$：$(B-2E)x=0\\Rightarrow x_3=0,\\ x_1+x_2=0$，取 $\\xi_2=\\dfrac{1}{\\sqrt2}(1,-1,0)^{\\mathrm T}$；\n$\\lambda=6$：$(B-6E)x=0\\Rightarrow x_1=x_2,\\ x_3=2x_1$，取 $\\xi_3=\\dfrac{1}{\\sqrt6}(1,1,2)^{\\mathrm T}$。\n三个特征值互异，特征向量自动正交。令\n$$Q=\\begin{pmatrix}-\\frac{1}{\\sqrt3}&\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]-\\frac{1}{\\sqrt3}&-\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]\\frac{1}{\\sqrt3}&0&\\frac{2}{\\sqrt6}\\end{pmatrix},$$\n则正交变换 $x=Qy$ 把二次型化为标准形\n$$f=0\\cdot y_1^2+2y_2^2+6y_3^2=2y_2^2+6y_3^2.$$\n\n**验算**：迹 $0+2+6=8=2+2+4$，零特征值与 $r(B)=2$ 相符；$B\\xi_3=6\\xi_3$ 即 $\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}(1,1,2)^{\\mathrm T}=(6,6,12)^{\\mathrm T}=6(1,1,2)^{\\mathrm T}$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(A^TA)=r(A) 是定理，秩为 2 说明 A 三列相关，由此定 a 最快；不必先算出 A^TA 再求秩。",
+        "特征值互异时特征向量天然正交，只需单位化；若有重根需正交化。",
+        "标准形系数即特征值，零特征值对应项消失，写成 2y_2^2+6y_3^2。"
+      ],
+      "key_point": "二次型矩阵 A^TA 的秩=r(A)，由列相关定参数；正交变换化标准形=求 A^TA 特征值与单位正交特征向量。"
     }
   ]
 }

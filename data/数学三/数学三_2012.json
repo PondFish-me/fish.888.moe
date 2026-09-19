@@ -59,6 +59,61 @@
       "key_point": "多因子乘积在某因子零点处求导,只剩\"导该零因子×其余代值\"一项;细数符号与阶乘项数。"
     },
     {
+      "id": 580,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(t)$ 连续, 则二次积分 $\\displaystyle \\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_{2 \\cos \\theta}^2 f\\left(r^2\\right) r \\mathrm{d} r=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^2 \\mathrm{d} x \\int_{\\sqrt{2 x-x^2}}^{\\sqrt{4-x^2}} \\sqrt{x^2+y^2} f\\left(x^2+y^2\\right) \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_0^2 \\mathrm{d} x \\int_{\\sqrt{2 x-x^2}}^{\\sqrt{4-x^2}} f\\left(x^2+y^2\\right) \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_0^2 \\mathrm{d} y \\int_{1+\\sqrt{1-y^2}}^{\\sqrt{4-y^2}} \\sqrt{x^2+y^2} f\\left(x^2+y^2\\right) \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_0^2 \\mathrm{d} y \\int_{1+\\sqrt{1-y^2}}^{\\sqrt{4-y^2}} f\\left(x^2+y^2\\right) \\mathrm{d} x$"
+      },
+      "answer": "B",
+      "analysis": "【分析】把极坐标二次积分还原为区域上的二重积分，再换成直角坐标。注意极坐标下 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$，被积式中的那个 $r$ 正是雅可比因子，转直角坐标后会被吸收掉，不应再出现 $\\sqrt{x^2+y^2}$。\n\n【解答】积分区域用极坐标描述：$\\theta\\in[0,\\frac{\\pi}{2}]$，$r\\in[2\\cos\\theta,\\,2]$。\n\n下边界 $r=2\\cos\\theta$ 即 $r^2=2r\\cos\\theta$，化为 $x^2+y^2=2x$，即圆 $(x-1)^2+y^2=1$；上边界 $r=2$ 即 $x^2+y^2=4$。$\\theta$ 从 0 到 $\\frac{\\pi}{2}$ 限定在第一象限。故区域 $D$ 是：第一象限内、单位偏心圆 $x^2+y^2=2x$ 之外、大圆 $x^2+y^2=4$ 之内的部分。\n\n被积函数 $f(r^2)=f(x^2+y^2)$，而 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$，所以\n\n$$I=\\iint_D f(x^2+y^2)\\,\\mathrm{d}x\\,\\mathrm{d}y,$$\n\n被积函数中没有多余的 $\\sqrt{x^2+y^2}$ 因子。\n\n按先 $y$ 后 $x$ 投影：$x\\in[0,2]$，对每个 $x$，$y$ 自下边界 $y=\\sqrt{2x-x^2}$（小圆）到上边界 $y=\\sqrt{4-x^2}$（大圆）。故\n\n$$I=\\int_0^2\\mathrm{d}x\\int_{\\sqrt{2x-x^2}}^{\\sqrt{4-x^2}}f(x^2+y^2)\\,\\mathrm{d}y.$$\n\n这正是选项 B。",
+      "wrong_options": {
+        "A": "多了 $\\sqrt{x^2+y^2}$ 因子。极坐标里的 $r$ 是 $\\mathrm{d}x\\mathrm{d}y$ 的雅可比，转直角坐标后被吸收，不应保留为 $\\sqrt{x^2+y^2}$。",
+        "C": "既错误保留 $\\sqrt{x^2+y^2}$，又把积分次序与上下限写成对 $x$ 积分但限 $1+\\sqrt{1-y^2}$，对应圆 $(x-1)^2+y^2=1$ 的右半支，与本题左/下边界描述不符。",
+        "D": "积分次序与边界写法对应 $x$ 从 $1+\\sqrt{1-y^2}$ 到 $\\sqrt{4-y^2}$，这是另一种投影；但小圆下界应取 $y=\\sqrt{2x-x^2}$ 形式，本题标准化简结果为先 $y$ 后 $x$ 的 B，D 的边界形式不匹配区域。"
+      },
+      "pitfalls": [
+        "极坐标 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$：被积式里的 $r$ 是雅可比，转直角坐标后消失，绝不能再写成 $\\sqrt{x^2+y^2}$。",
+        "下边界 $r=2\\cos\\theta\\Rightarrow x^2+y^2=2x\\Rightarrow y=\\sqrt{2x-x^2}$，上边界 $r=2\\Rightarrow y=\\sqrt{4-x^2}$。"
+      ],
+      "key_point": "极坐标化直角坐标：$r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\mathrm{d}y$，$r$ 是雅可比不留；$r=2\\cos\\theta$ 即 $x^2+y^2=2x$。"
+    },
+    {
+      "id": 592,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n \\sqrt{n} \\sin \\frac{1}{n^\\alpha}$ 绝对收敛, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^{2-\\alpha}}$ 条件收敛, 则 $\\alpha$ 的范围为 $(\\quad)$",
+      "options": {
+        "A": "$0<\\alpha \\leqslant \\dfrac{1}{2}$",
+        "B": "$\\dfrac{1}{2}<\\alpha \\leqslant 1$",
+        "C": "$1<\\alpha \\leqslant \\dfrac{3}{2}$",
+        "D": "$\\dfrac{3}{2}<\\alpha<2$"
+      },
+      "answer": "D",
+      "analysis": "【分析】两个条件分别给出对 $\\alpha$ 的约束，取交集。第一个级数“绝对收敛”用等价无穷小定通项的阶，化为 $p$-级数判别；第二个级数“条件收敛”要求其绝对值级数发散而交错级数收敛，定出区间，两者求交。\n\n【解答】\n第一个：$\\displaystyle\\sum_{n=1}^{\\infty}(-1)^n\\sqrt n\\sin\\dfrac{1}{n^\\alpha}$ 绝对收敛。绝对值通项为 $\\sqrt n\\left|\\sin\\dfrac{1}{n^\\alpha}\\right|$。要级数有意义需 $\\alpha>0$（否则 $\\frac{1}{n^\\alpha}$ 不趋 0，通项不趋 0 必发散）。当 $\\alpha>0$ 时 $\\dfrac{1}{n^\\alpha}\\to0$，故\n$$\\sqrt n\\sin\\dfrac{1}{n^\\alpha}\\sim\\sqrt n\\cdot\\dfrac{1}{n^\\alpha}=\\dfrac{1}{n^{\\alpha-\\frac12}}.$$\n这是 $p$-级数，绝对收敛 $\\iff\\alpha-\\dfrac12>1\\iff\\alpha>\\dfrac32.$\n\n第二个：$\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{(-1)^n}{n^{2-\\alpha}}$ 条件收敛。记 $p=2-\\alpha$。\n- 交错级数收敛（莱布尼茨）要求 $\\dfrac{1}{n^{2-\\alpha}}\\to0$ 且单调，即 $2-\\alpha>0$，$\\alpha<2$。\n- “条件”收敛要求绝对值级数 $\\displaystyle\\sum\\dfrac{1}{n^{2-\\alpha}}$ 发散，即 $2-\\alpha\\le1$，$\\alpha\\ge1$。\n\n故第二个条件给出 $1\\le\\alpha<2$。\n\n取交集：$\\alpha>\\dfrac32$ 与 $1\\le\\alpha<2$ 的公共部分为\n$$\\dfrac32<\\alpha<2,$$\n即选 D。\n\n验算端点：$\\alpha=\\dfrac32$ 时第一级数绝对值通项为 $\\dfrac1n$，发散，故须严格 $>\\dfrac32$；$\\alpha=2$ 时第二级数通项 $(-1)^n$ 不趋 0，须严格 $<2$。区间 $\\left(\\dfrac32,2\\right)$ 正确。",
+      "wrong_options": {
+        "A": "$0<\\alpha\\le\\frac12$ 时第一级数绝对值通项 $\\sim n^{1/2-\\alpha}$ 指数 $\\ge0$，根本不趋 0，发散，不满足绝对收敛。",
+        "B": "$\\frac12<\\alpha\\le1$ 时第一级数指数 $\\alpha-\\frac12\\le\\frac12<1$，绝对值级数发散，第一条件不满足。",
+        "C": "$1<\\alpha\\le\\frac32$ 时第一级数需 $\\alpha>\\frac32$ 才绝对收敛，此段（含 $\\frac32$）不满足；交集应严格大于 $\\frac32$。"
+      },
+      "pitfalls": [
+        "第一级数先用 $\\sin\\frac{1}{n^\\alpha}\\sim\\frac{1}{n^\\alpha}$ 化阶，绝对收敛归结到 $p=\\alpha-\\frac12>1$。",
+        "条件收敛 = 交错收敛（$2-\\alpha>0$）且绝对发散（$2-\\alpha\\le1$），两端都要卡到，得 $1\\le\\alpha<2$。",
+        "端点 $\\frac32$、$2$ 都取不到，最终是开区间 $(\\frac32,2)$。"
+      ],
+      "key_point": "绝对收敛化 $p$-级数得 $\\alpha>\\frac32$；条件收敛得 $1\\le\\alpha<2$；交集 $\\frac32<\\alpha<2$。"
+    },
+    {
       "id": 548,
       "paper": "数学三",
       "year": 2012,
@@ -112,145 +167,6 @@
         "关键在 α₁、α₂ 同属特征值 1，其线性组合仍是该特征值的特征向量，故对角阵不变。"
       ],
       "key_point": "相似变换列重组：Q=PC ⇒ Q⁻¹AQ=C⁻¹ΛC；同特征值子空间内组合不改变 Λ。"
-    },
-    {
-      "id": 557,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $A, B, C$ 是随机事件, $A, C$ 互不相容, $\\displaystyle P(A B)=\\frac{1}{2}, P(C)=\\frac{1}{3}$, 则 $P(A B \\mid \\bar{C})=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{3}{4}$",
-      "analysis": "【分析】求条件概率 $P(AB\\mid\\bar C)=\\dfrac{P(AB\\bar C)}{P(\\bar C)}$。关键用上 $A,C$ 互不相容：$AC=\\varnothing$，从而 $ABC\\subseteq AC=\\varnothing$，于是 $AB\\bar C=AB$。这样分子直接变成 $P(AB)$。\n\n【解答】由 $A,C$ 互不相容知 $AC=\\varnothing$，故 $ABC=\\varnothing$，从而\n$$AB=AB(C\\cup\\bar C)=ABC\\cup AB\\bar C=AB\\bar C,$$\n即 $P(AB\\bar C)=P(AB)=\\dfrac12$。又 $P(\\bar C)=1-P(C)=1-\\dfrac13=\\dfrac23$。所以\n$$P(AB\\mid\\bar C)=\\frac{P(AB\\bar C)}{P(\\bar C)}=\\frac{\\tfrac12}{\\tfrac23}=\\frac12\\cdot\\frac32=\\frac34.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "互不相容 $A,C$ 推出 $AC=\\varnothing$，故 $ABC=\\varnothing$，分子 $P(AB\\bar C)=P(AB)$，这是题眼。",
-        "条件概率分母是 $P(\\bar C)=2/3$，不要误用 $P(C)$。",
-        "不要去推 $A,B$ 的独立性等无关信息，本题不需要。"
-      ],
-      "key_point": "$A,C$ 互斥 $\\Rightarrow ABC=\\varnothing\\Rightarrow P(AB\\bar C)=P(AB)$，直接除以 $P(\\bar C)$。"
-    },
-    {
-      "id": 558,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 18,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "证明: $\\displaystyle  x \\ln \\frac{1+x}{1-x}+\\cos x \\geqslant 1+\\frac{x^{2}}{2}(-1<x<1)$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】不等式左边含 $x\\ln\\dfrac{1+x}{1-x}$ 与 $\\cos x$ 两个性质迥异的部分，硬求导会很乱。注意到这两块各有现成的标准放缩：$\\cos x\\geq 1-\\dfrac{x^2}{2}$（恒成立），而 $x\\ln\\dfrac{1+x}{1-x}$ 利用 $\\ln\\dfrac{1+x}{1-x}$ 的幂级数恰好可放到 $2x^2$。两块拼起来即得。\n\n【解答】先看第一项。当 $-1<x<1$ 时，由 $\\ln(1+x)$ 的展开式作差得\n$$\\ln\\frac{1+x}{1-x}=\\ln(1+x)-\\ln(1-x)=2\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right).$$\n于是\n$$x\\ln\\frac{1+x}{1-x}=2x\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right)=2x^2+\\frac{2x^4}{3}+\\frac{2x^6}{5}+\\cdots.$$\n该级数每一项均非负（$x^{2k}\\geq 0$），故\n$$x\\ln\\frac{1+x}{1-x}\\geq 2x^2,\\quad -1<x<1.$$\n再看第二项。由 $\\cos x$ 的标准放缩（可由 $g(x)=\\cos x-1+\\dfrac{x^2}{2}$ 求导验证：$g'(x)=x-\\sin x\\geq 0\\,(x\\geq0)$，$g(0)=0$，结合偶性得 $g(x)\\geq0$）有\n$$\\cos x\\geq 1-\\frac{x^2}{2},\\quad x\\in\\mathbb{R}.$$\n两式相加：\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 2x^2+\\left(1-\\frac{x^2}{2}\\right)=1+\\frac{3x^2}{2}\\geq 1+\\frac{x^2}{2}.$$\n最后一步因 $\\dfrac{3x^2}{2}\\geq\\dfrac{x^2}{2}$。故对一切 $-1<x<1$，\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^2}{2},$$\n等号当且仅当 $x=0$ 时成立。证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$x\\ln\\dfrac{1+x}{1-x}$ 是偶函数且恒非负，不要被对数里出现负号吓住——$x$ 与 $\\ln$ 同号，乘积非负。",
-        "$\\cos x\\geq 1-\\dfrac{x^2}{2}$ 是对全体实数成立的标准结论，可直接引用或现场两次求导证明。"
-      ],
-      "key_point": "证明含混合函数的不等式时，把左边拆成可独立放缩的几块，各用现成的级数/标准不等式放缩后相加。"
-    },
-    {
-      "id": 563,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & a & 0 & 0 \\\\ 0 & 1 & a & 0 \\\\ 0 & 0 & 1 & a \\\\ a & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0 \\\\ 0\\end{array}\\right)$\r\n\r\n(1) 计算行列式 $|\\boldsymbol{A}|$;\r\n\r\n(2) 当实数 $a$ 为何值时, 方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有无穷多解, 并求其通解",
-      "options": {},
-      "answer": "(1) $1-a^4$\r\n\r\n(2) 当 $a=-1$ 时, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n0 \\\\-1 \\\\0 \\\\0\r\n\\end{array}\\right)  ( C$为任意常数 )\r\n\r\n当 $a=1$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 无解",
-      "analysis": "【分析】(1) 这是\"循环型\"系数矩阵（对角线为 $1$，次对角线及左下角为 $a$），按第一列展开即可。(2) 方程组有无穷多解需 $|A|=0$，即 $a^4=1$，实数解 $a=\\pm1$；再对每个值用初等行变换判定相容性并求通解。\n\n【解答】(1) 按第一列展开（第一列只有 $a_{11}=1$ 与 $a_{41}=a$ 非零）：\n$$|A|=1\\cdot\\begin{vmatrix}1&a&0\\\\0&1&a\\\\0&0&1\\end{vmatrix}+(-1)^{4+1}a\\begin{vmatrix}a&0&0\\\\1&a&0\\\\0&1&a\\end{vmatrix}=1\\cdot1-a\\cdot a^3=\\boxed{1-a^4}.$$\n\n(2) 无穷多解要求 $|A|=1-a^4=0$，即 $a=1$ 或 $a=-1$。\n\n当 $a=-1$ 时，对增广矩阵 $(A\\mid\\beta)$ 作行变换：\n$$\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\-1&0&0&1&0\\end{array}\\right)\\xrightarrow{R_4+R_1}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&-1&0&1&1\\end{array}\\right)$$\n$$\\xrightarrow{R_4+R_2}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&-1&1&0\\end{array}\\right)\\xrightarrow{R_4+R_3}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&0&0&0\\end{array}\\right).$$\n$r(A)=r(A\\mid\\beta)=3<4$，有无穷多解。取 $x_4$ 为自由变量，回代：$x_3=x_4$，$x_2=x_3-1=x_4-1$，$x_1=x_2+1=x_4$。令 $x_4=C$（亦即取齐次解方向）：\n$$x=C\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}+\\begin{pmatrix}0\\\\-1\\\\0\\\\0\\end{pmatrix}\\quad(C\\ \\text{为任意常数}).$$\n\n当 $a=1$ 时，$(A\\mid\\beta)$ 的第 1、3 行相加得 $x_1+x_2+x_3+x_4=1$，第 2、4 行相加得 $x_1+x_2+x_3+x_4=-1$，矛盾，故 $r(A)=3<r(A\\mid\\beta)=4$，**方程组无解**。\n\n验算：$a=-1$ 时取 $C=0$，$x=(0,-1,0,0)^T$，$Ax$：第一行 $1\\cdot0+(-1)(-1)=1$，第二行 $1\\cdot(-1)=-1$，第三、四行均 $0$，即得 $\\beta=(1,-1,0,0)^T$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$|A|=0$ 给出 $a^4=1$，在实数范围内只有 $a=\\pm1$，别漏掉 $a=1$ 这一支（该支无解）。",
-        "$a=1$ 与 $a=-1$ 都使行列式为零，但相容性不同：必须逐一判定 $r(A)$ 与 $r(A\\mid\\beta)$ 是否相等。"
-      ],
-      "key_point": "循环矩阵按首列展开得 1-a^4；行列式为零的每个 a 都要单独验相容性，不能想当然都有解。"
-    },
-    {
-      "id": 564,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & 0 & a \\\\ 0 & a & -1\\end{array}\\right)$, 二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{x}$ 的秩为 $2$ ,\r\n\r\n(1) 求实数 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f$ 化为标准形",
-      "options": {},
-      "answer": "(1) $a=-1$\r\n\r\n(2) $\\boldsymbol Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ -\\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}}\\end{array}\\right)$, 在正交变换 $\\boldsymbol{x}= \\boldsymbol{Qy}$ 下, 二次型 $f$ 的标准形为 $f=2 y_2^2+6 y_3^2$",
-      "analysis": "【分析】二次型矩阵是 $A^{\\mathrm T}A$，其秩等于 $A$ 的秩。由 $r(A^{\\mathrm T}A)=r(A)=2$ 且 $A$ 为 $4\\times3$ 列向量数 3，知三列线性相关，由此定 $a$。第（2）问对实对称阵 $A^{\\mathrm T}A$ 求特征值、单位正交特征向量，拼成正交矩阵 $Q$。\n\n【解答】**(1)** 记 $A$ 三列 $\\alpha_1=(1,0,-1,0)^{\\mathrm T},\\ \\alpha_2=(0,1,0,a)^{\\mathrm T},\\ \\alpha_3=(1,1,a,-1)^{\\mathrm T}$。由 $r(A^{\\mathrm T}A)=r(A)=2<3$，三列相关。$\\alpha_1,\\alpha_2$ 线性无关，故 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$。比较前两个分量得 $k_1=1,k_2=1$，于是 $\\alpha_1+\\alpha_2=(1,1,-1,a)^{\\mathrm T}$。与 $\\alpha_3=(1,1,a,-1)^{\\mathrm T}$ 比较第 3、4 分量：$-1=a$ 且 $a=-1$，故 $a=-1$。\n\n**(2)** 取 $a=-1$，$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\-1&0&-1\\\\0&-1&-1\\end{pmatrix}$，则\n$$B=A^{\\mathrm T}A=\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}.$$\n特征多项式 $|B-\\lambda E|=-\\lambda^3+8\\lambda^2-12\\lambda=-\\lambda(\\lambda-2)(\\lambda-6)$（迹 $=8$，二阶主子式之和 $=12$，行列式 $=0$），故特征值 $\\lambda_1=0,\\lambda_2=2,\\lambda_3=6$。\n求单位特征向量：\n$\\lambda=0$：$(B)x=0\\Rightarrow x_1=-x_3,x_2=-x_3$，取 $\\xi_1=\\dfrac{1}{\\sqrt3}(-1,-1,1)^{\\mathrm T}$；\n$\\lambda=2$：$(B-2E)x=0\\Rightarrow x_3=0,\\ x_1+x_2=0$，取 $\\xi_2=\\dfrac{1}{\\sqrt2}(1,-1,0)^{\\mathrm T}$；\n$\\lambda=6$：$(B-6E)x=0\\Rightarrow x_1=x_2,\\ x_3=2x_1$，取 $\\xi_3=\\dfrac{1}{\\sqrt6}(1,1,2)^{\\mathrm T}$。\n三个特征值互异，特征向量自动正交。令\n$$Q=\\begin{pmatrix}-\\frac{1}{\\sqrt3}&\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]-\\frac{1}{\\sqrt3}&-\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]\\frac{1}{\\sqrt3}&0&\\frac{2}{\\sqrt6}\\end{pmatrix},$$\n则正交变换 $x=Qy$ 把二次型化为标准形\n$$f=0\\cdot y_1^2+2y_2^2+6y_3^2=2y_2^2+6y_3^2.$$\n\n**验算**：迹 $0+2+6=8=2+2+4$，零特征值与 $r(B)=2$ 相符；$B\\xi_3=6\\xi_3$ 即 $\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}(1,1,2)^{\\mathrm T}=(6,6,12)^{\\mathrm T}=6(1,1,2)^{\\mathrm T}$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "r(A^TA)=r(A) 是定理，秩为 2 说明 A 三列相关，由此定 a 最快；不必先算出 A^TA 再求秩。",
-        "特征值互异时特征向量天然正交，只需单位化；若有重根需正交化。",
-        "标准形系数即特征值，零特征值对应项消失，写成 2y_2^2+6y_3^2。"
-      ],
-      "key_point": "二次型矩阵 A^TA 的秩=r(A)，由列相关定参数；正交变换化标准形=求 A^TA 特征值与单位正交特征向量。"
-    },
-    {
-      "id": 565,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设二维离散型随机变量 $X, Y$ 的概率分布为\r\n\r\n$\\begin{array}{|c|c|c|c|c|}\r\n\\hline\r\nX \\diagdown Y  & 0 & 1 & 2 \\\\\r\n\\hline\r\n0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4}  \\\\\r\n\\hline\r\n1 & 0 & \\dfrac{1}{3} & 0 \\\\\r\n\\hline\r\n2 & \\dfrac{1}{12} & 0 & \\dfrac{1}{12}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(1) 求 $P\\{X=2 Y\\}$;\r\n\r\n(2) 求 $\\operatorname{Cov}(X-Y, Y)$",
-      "options": {},
-      "answer": "(1) $\\dfrac{1}{4}$\r\n\r\n(2) $-\\dfrac{2}{3}$",
-      "analysis": "【分析】(1) 事件 $\\{X=2Y\\}$ 把满足 $x=2y$ 的格点 $(x,y)$ 挑出来求概率之和。(2) 用协方差性质 $\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-\\mathrm{Cov}(Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)$，再由联合分布算 $E(XY),E(X),E(Y),E(Y^2)$ 即可。\n\n【解答】(1) 满足 $x=2y$ 的格点：$(x,y)=(0,0)$ 和 $(2,1)$。\n$$P\\{X=2Y\\}=P(0,0)+P(2,1)=\\frac14+0=\\frac14.$$\n（注：$(2,1)$ 处概率为 $0$。）\n\n(2) 先求边缘与各期望。由联合分布：\n$E(X)$：$X$ 取 $0$ 概率 $\\tfrac14+0+\\tfrac14=\\tfrac12$，取 $1$ 概率 $\\tfrac13$，取 $2$ 概率 $\\tfrac1{12}+0+\\tfrac1{12}=\\tfrac16$。\n$$E(X)=0\\cdot\\tfrac12+1\\cdot\\tfrac13+2\\cdot\\tfrac16=\\tfrac13+\\tfrac13=\\tfrac23.$$\n由对称性 $Y$ 的边缘与 $X$ 相同（列和：$Y=0$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$，$Y=1$ 概率 $\\tfrac13$，$Y=2$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$）：\n$$E(Y)=0\\cdot\\tfrac13+1\\cdot\\tfrac13+2\\cdot\\tfrac13=1.$$\n$$E(Y^2)=0+1\\cdot\\tfrac13+4\\cdot\\tfrac13=\\tfrac53,\\quad D(Y)=\\tfrac53-1^2=\\tfrac23.$$\n求 $E(XY)$，只有 $xy\\neq0$ 的格点贡献：$(1,1)$ 贡献 $1\\cdot\\tfrac13$，$(2,2)$ 贡献 $4\\cdot\\tfrac1{12}=\\tfrac13$，其余含 $0$。\n$$E(XY)=\\tfrac13+\\tfrac13=\\tfrac23.$$\n$$\\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=\\tfrac23-\\tfrac23\\cdot1=0.$$\n所以\n$$\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)=0-\\tfrac23=-\\frac23.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "P{X=2Y} 要把所有满足 x=2y 的格点都数到，包括 (0,0)；(2,1) 概率恰为 0",
-        "Cov(X-Y,Y)=Cov(X,Y)-Cov(Y,Y)，第二项是 D(Y) 不能漏",
-        "E(XY) 只需累加 xy≠0 的格点，含 0 的项不贡献"
-      ],
-      "key_point": "联合分布求 Cov：拆 Cov(X-Y,Y)=Cov(X,Y)-D(Y)，分别用 E(XY)、边缘期望、E(Y²) 代入。"
-    },
-    {
-      "id": 578,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 19,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x)$ 满足方程 $f^{\\prime \\prime}(x)+f^{\\prime}(x)-2 f(x)=0$ 及 $f^{\\prime \\prime}(x)+f(x)=2 \\mathrm{e}^x$\r\n\r\n(1) 求 $f(x)$ 的表达式;\r\n\r\n(2) 求曲线 $\\displaystyle y=f\\left(x^2\\right) \\int_0^x f\\left(-t^2\\right) \\mathrm{d} t$ 的拐点",
-      "options": {},
-      "answer": "(1) $f(x)=\\mathrm{e}^x$\r\n\r\n(2) $(0,0)$ 为曲线的拐点",
-      "analysis": "【分析】(1) 两个方程联立。把两式相减可消去 $f''$ 得到一阶关系，但更稳妥的是先解齐次方程 $f''+f'-2f=0$ 得通解，再用 $f''+f=2e^x$ 定常数（这样保证唯一）。(2) 求拐点即找 $y''$ 变号的点。被积函数含变限积分，求导时用乘积法则和变限积分求导，得到 $y''$ 后利用奇偶性与符号分析判断变号点。\n\n【解答】**(1)** 解齐次方程 $f''+f'-2f=0$，特征方程 $r^2+r-2=0$，$r=1,-2$，故\n$$f(x)=C_1e^{x}+C_2e^{-2x}.$$\n代入第二个方程 $f''+f=2e^x$：$f''=C_1e^x+4C_2e^{-2x}$，\n$$f''+f=2C_1e^x+5C_2e^{-2x}=2e^x.$$\n比较系数得 $2C_1=2,\\ 5C_2=0$，即 $C_1=1,\\ C_2=0$。所以\n$$\\boxed{f(x)=e^{x}}.$$\n（验证：$f''+f'-2f=e^x+e^x-2e^x=0$，$f''+f=e^x+e^x=2e^x$，均成立。）\n\n**(2)** 由 (1)，$f(x^2)=e^{x^2}$，$f(-t^2)=e^{-t^2}$，令 $g(x)=\\displaystyle\\int_0^x e^{-t^2}\\,\\mathrm{d}t$，则\n$$y=e^{x^2}\\int_0^x e^{-t^2}\\,\\mathrm{d}t=e^{x^2}g(x),\\qquad g'(x)=e^{-x^2},\\ g(0)=0.$$\n求导：\n$$y'=2x\\,e^{x^2}g(x)+e^{x^2}\\cdot e^{-x^2}=2x\\,e^{x^2}g(x)+1.$$\n$$y''=2e^{x^2}g(x)+4x^2e^{x^2}g(x)+2x\\,e^{x^2}\\cdot e^{-x^2}=2(1+2x^2)e^{x^2}g(x)+2x.$$\n\n**判断变号：** 注意 $g(x)=\\int_0^x e^{-t^2}\\mathrm{d}t$ 是奇函数，$(1+2x^2)e^{x^2}$ 为偶函数，故 $2(1+2x^2)e^{x^2}g(x)$ 为奇函数，加上奇函数 $2x$，得 $y''$ 为奇函数。\n- 当 $x>0$：$g(x)>0$，且 $2x>0$，故 $y''>0$（曲线为凹，即下凸）；\n- 当 $x<0$：由奇性 $y''<0$（曲线为凸，即上凸）；\n- $x=0$：$y''(0)=0$。\n\n$y''$ 在 $x=0$ 两侧异号，故 $x=0$ 为拐点的横坐标。又 $y(0)=e^{0}\\cdot g(0)=0$。\n\n所以曲线的拐点为 $\\boxed{(0,0)}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "第(1)问别只靠两式相减凑出 $f=e^x$ 就完事，要用通解定常数说明唯一性（$C_2$ 必须为 0）。",
-        "第(2)问求 $y''$ 时变限积分求导 $g'(x)=e^{-x^2}$ 与乘积求导都要到位，漏项会算错。",
-        "判拐点要确认 $y''$ 在该点两侧变号，仅 $y''=0$ 不够；这里用奇函数性质一眼看出 $x=0$ 处变号。"
-      ],
-      "key_point": "联立线性微分方程用通解定常数求 $f$；变限积分函数求拐点靠 $y''$ 的奇偶性与符号变化定位。"
-    },
-    {
-      "id": 580,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(t)$ 连续, 则二次积分 $\\displaystyle \\int_0^{\\frac{\\pi}{2}} \\mathrm{d} \\theta \\int_{2 \\cos \\theta}^2 f\\left(r^2\\right) r \\mathrm{d} r=(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\int_0^2 \\mathrm{d} x \\int_{\\sqrt{2 x-x^2}}^{\\sqrt{4-x^2}} \\sqrt{x^2+y^2} f\\left(x^2+y^2\\right) \\mathrm{d} y$",
-        "B": "$\\displaystyle \\int_0^2 \\mathrm{d} x \\int_{\\sqrt{2 x-x^2}}^{\\sqrt{4-x^2}} f\\left(x^2+y^2\\right) \\mathrm{d} y$",
-        "C": "$\\displaystyle \\int_0^2 \\mathrm{d} y \\int_{1+\\sqrt{1-y^2}}^{\\sqrt{4-y^2}} \\sqrt{x^2+y^2} f\\left(x^2+y^2\\right) \\mathrm{d} x$",
-        "D": "$\\displaystyle \\int_0^2 \\mathrm{d} y \\int_{1+\\sqrt{1-y^2}}^{\\sqrt{4-y^2}} f\\left(x^2+y^2\\right) \\mathrm{d} x$"
-      },
-      "answer": "B",
-      "analysis": "【分析】把极坐标二次积分还原为区域上的二重积分，再换成直角坐标。注意极坐标下 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$，被积式中的那个 $r$ 正是雅可比因子，转直角坐标后会被吸收掉，不应再出现 $\\sqrt{x^2+y^2}$。\n\n【解答】积分区域用极坐标描述：$\\theta\\in[0,\\frac{\\pi}{2}]$，$r\\in[2\\cos\\theta,\\,2]$。\n\n下边界 $r=2\\cos\\theta$ 即 $r^2=2r\\cos\\theta$，化为 $x^2+y^2=2x$，即圆 $(x-1)^2+y^2=1$；上边界 $r=2$ 即 $x^2+y^2=4$。$\\theta$ 从 0 到 $\\frac{\\pi}{2}$ 限定在第一象限。故区域 $D$ 是：第一象限内、单位偏心圆 $x^2+y^2=2x$ 之外、大圆 $x^2+y^2=4$ 之内的部分。\n\n被积函数 $f(r^2)=f(x^2+y^2)$，而 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$，所以\n\n$$I=\\iint_D f(x^2+y^2)\\,\\mathrm{d}x\\,\\mathrm{d}y,$$\n\n被积函数中没有多余的 $\\sqrt{x^2+y^2}$ 因子。\n\n按先 $y$ 后 $x$ 投影：$x\\in[0,2]$，对每个 $x$，$y$ 自下边界 $y=\\sqrt{2x-x^2}$（小圆）到上边界 $y=\\sqrt{4-x^2}$（大圆）。故\n\n$$I=\\int_0^2\\mathrm{d}x\\int_{\\sqrt{2x-x^2}}^{\\sqrt{4-x^2}}f(x^2+y^2)\\,\\mathrm{d}y.$$\n\n这正是选项 B。",
-      "wrong_options": {
-        "A": "多了 $\\sqrt{x^2+y^2}$ 因子。极坐标里的 $r$ 是 $\\mathrm{d}x\\mathrm{d}y$ 的雅可比，转直角坐标后被吸收，不应保留为 $\\sqrt{x^2+y^2}$。",
-        "C": "既错误保留 $\\sqrt{x^2+y^2}$，又把积分次序与上下限写成对 $x$ 积分但限 $1+\\sqrt{1-y^2}$，对应圆 $(x-1)^2+y^2=1$ 的右半支，与本题左/下边界描述不符。",
-        "D": "积分次序与边界写法对应 $x$ 从 $1+\\sqrt{1-y^2}$ 到 $\\sqrt{4-y^2}$，这是另一种投影；但小圆下界应取 $y=\\sqrt{2x-x^2}$ 形式，本题标准化简结果为先 $y$ 后 $x$ 的 B，D 的边界形式不匹配区域。"
-      },
-      "pitfalls": [
-        "极坐标 $r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\,\\mathrm{d}y$：被积式里的 $r$ 是雅可比，转直角坐标后消失，绝不能再写成 $\\sqrt{x^2+y^2}$。",
-        "下边界 $r=2\\cos\\theta\\Rightarrow x^2+y^2=2x\\Rightarrow y=\\sqrt{2x-x^2}$，上边界 $r=2\\Rightarrow y=\\sqrt{4-x^2}$。"
-      ],
-      "key_point": "极坐标化直角坐标：$r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta=\\mathrm{d}x\\mathrm{d}y$，$r$ 是雅可比不留；$r=2\\cos\\theta$ 即 $x^2+y^2=2x$。"
     },
     {
       "id": 581,
@@ -400,6 +316,25 @@
       "key_point": "换行变号 + $|A^*|=|A|^{n-1}$ + $|BA^*|=|B||A^*|$ 三连。"
     },
     {
+      "id": 557,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $A, B, C$ 是随机事件, $A, C$ 互不相容, $\\displaystyle P(A B)=\\frac{1}{2}, P(C)=\\frac{1}{3}$, 则 $P(A B \\mid \\bar{C})=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{4}$",
+      "analysis": "【分析】求条件概率 $P(AB\\mid\\bar C)=\\dfrac{P(AB\\bar C)}{P(\\bar C)}$。关键用上 $A,C$ 互不相容：$AC=\\varnothing$，从而 $ABC\\subseteq AC=\\varnothing$，于是 $AB\\bar C=AB$。这样分子直接变成 $P(AB)$。\n\n【解答】由 $A,C$ 互不相容知 $AC=\\varnothing$，故 $ABC=\\varnothing$，从而\n$$AB=AB(C\\cup\\bar C)=ABC\\cup AB\\bar C=AB\\bar C,$$\n即 $P(AB\\bar C)=P(AB)=\\dfrac12$。又 $P(\\bar C)=1-P(C)=1-\\dfrac13=\\dfrac23$。所以\n$$P(AB\\mid\\bar C)=\\frac{P(AB\\bar C)}{P(\\bar C)}=\\frac{\\tfrac12}{\\tfrac23}=\\frac12\\cdot\\frac32=\\frac34.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "互不相容 $A,C$ 推出 $AC=\\varnothing$，故 $ABC=\\varnothing$，分子 $P(AB\\bar C)=P(AB)$，这是题眼。",
+        "条件概率分母是 $P(\\bar C)=2/3$，不要误用 $P(C)$。",
+        "不要去推 $A,B$ 的独立性等无关信息，本题不需要。"
+      ],
+      "key_point": "$A,C$ 互斥 $\\Rightarrow ABC=\\varnothing\\Rightarrow P(AB\\bar C)=P(AB)$，直接除以 $P(\\bar C)$。"
+    },
+    {
       "id": 588,
       "paper": "数学三",
       "year": 2012,
@@ -455,6 +390,99 @@
       "key_point": "边际成本积分得总成本；约束下条件极值用代入或 Lagrange；边际成本的经济意义=多产一单位的增量成本。"
     },
     {
+      "id": 558,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: $\\displaystyle  x \\ln \\frac{1+x}{1-x}+\\cos x \\geqslant 1+\\frac{x^{2}}{2}(-1<x<1)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】不等式左边含 $x\\ln\\dfrac{1+x}{1-x}$ 与 $\\cos x$ 两个性质迥异的部分，硬求导会很乱。注意到这两块各有现成的标准放缩：$\\cos x\\geq 1-\\dfrac{x^2}{2}$（恒成立），而 $x\\ln\\dfrac{1+x}{1-x}$ 利用 $\\ln\\dfrac{1+x}{1-x}$ 的幂级数恰好可放到 $2x^2$。两块拼起来即得。\n\n【解答】先看第一项。当 $-1<x<1$ 时，由 $\\ln(1+x)$ 的展开式作差得\n$$\\ln\\frac{1+x}{1-x}=\\ln(1+x)-\\ln(1-x)=2\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right).$$\n于是\n$$x\\ln\\frac{1+x}{1-x}=2x\\left(x+\\frac{x^3}{3}+\\frac{x^5}{5}+\\cdots\\right)=2x^2+\\frac{2x^4}{3}+\\frac{2x^6}{5}+\\cdots.$$\n该级数每一项均非负（$x^{2k}\\geq 0$），故\n$$x\\ln\\frac{1+x}{1-x}\\geq 2x^2,\\quad -1<x<1.$$\n再看第二项。由 $\\cos x$ 的标准放缩（可由 $g(x)=\\cos x-1+\\dfrac{x^2}{2}$ 求导验证：$g'(x)=x-\\sin x\\geq 0\\,(x\\geq0)$，$g(0)=0$，结合偶性得 $g(x)\\geq0$）有\n$$\\cos x\\geq 1-\\frac{x^2}{2},\\quad x\\in\\mathbb{R}.$$\n两式相加：\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 2x^2+\\left(1-\\frac{x^2}{2}\\right)=1+\\frac{3x^2}{2}\\geq 1+\\frac{x^2}{2}.$$\n最后一步因 $\\dfrac{3x^2}{2}\\geq\\dfrac{x^2}{2}$。故对一切 $-1<x<1$，\n$$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^2}{2},$$\n等号当且仅当 $x=0$ 时成立。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x\\ln\\dfrac{1+x}{1-x}$ 是偶函数且恒非负，不要被对数里出现负号吓住——$x$ 与 $\\ln$ 同号，乘积非负。",
+        "$\\cos x\\geq 1-\\dfrac{x^2}{2}$ 是对全体实数成立的标准结论，可直接引用或现场两次求导证明。"
+      ],
+      "key_point": "证明含混合函数的不等式时，把左边拆成可独立放缩的几块，各用现成的级数/标准不等式放缩后相加。"
+    },
+    {
+      "id": 578,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 满足方程 $f^{\\prime \\prime}(x)+f^{\\prime}(x)-2 f(x)=0$ 及 $f^{\\prime \\prime}(x)+f(x)=2 \\mathrm{e}^x$\r\n\r\n(1) 求 $f(x)$ 的表达式;\r\n\r\n(2) 求曲线 $\\displaystyle y=f\\left(x^2\\right) \\int_0^x f\\left(-t^2\\right) \\mathrm{d} t$ 的拐点",
+      "options": {},
+      "answer": "(1) $f(x)=\\mathrm{e}^x$\r\n\r\n(2) $(0,0)$ 为曲线的拐点",
+      "analysis": "【分析】(1) 两个方程联立。把两式相减可消去 $f''$ 得到一阶关系，但更稳妥的是先解齐次方程 $f''+f'-2f=0$ 得通解，再用 $f''+f=2e^x$ 定常数（这样保证唯一）。(2) 求拐点即找 $y''$ 变号的点。被积函数含变限积分，求导时用乘积法则和变限积分求导，得到 $y''$ 后利用奇偶性与符号分析判断变号点。\n\n【解答】**(1)** 解齐次方程 $f''+f'-2f=0$，特征方程 $r^2+r-2=0$，$r=1,-2$，故\n$$f(x)=C_1e^{x}+C_2e^{-2x}.$$\n代入第二个方程 $f''+f=2e^x$：$f''=C_1e^x+4C_2e^{-2x}$，\n$$f''+f=2C_1e^x+5C_2e^{-2x}=2e^x.$$\n比较系数得 $2C_1=2,\\ 5C_2=0$，即 $C_1=1,\\ C_2=0$。所以\n$$\\boxed{f(x)=e^{x}}.$$\n（验证：$f''+f'-2f=e^x+e^x-2e^x=0$，$f''+f=e^x+e^x=2e^x$，均成立。）\n\n**(2)** 由 (1)，$f(x^2)=e^{x^2}$，$f(-t^2)=e^{-t^2}$，令 $g(x)=\\displaystyle\\int_0^x e^{-t^2}\\,\\mathrm{d}t$，则\n$$y=e^{x^2}\\int_0^x e^{-t^2}\\,\\mathrm{d}t=e^{x^2}g(x),\\qquad g'(x)=e^{-x^2},\\ g(0)=0.$$\n求导：\n$$y'=2x\\,e^{x^2}g(x)+e^{x^2}\\cdot e^{-x^2}=2x\\,e^{x^2}g(x)+1.$$\n$$y''=2e^{x^2}g(x)+4x^2e^{x^2}g(x)+2x\\,e^{x^2}\\cdot e^{-x^2}=2(1+2x^2)e^{x^2}g(x)+2x.$$\n\n**判断变号：** 注意 $g(x)=\\int_0^x e^{-t^2}\\mathrm{d}t$ 是奇函数，$(1+2x^2)e^{x^2}$ 为偶函数，故 $2(1+2x^2)e^{x^2}g(x)$ 为奇函数，加上奇函数 $2x$，得 $y''$ 为奇函数。\n- 当 $x>0$：$g(x)>0$，且 $2x>0$，故 $y''>0$（曲线为凹，即下凸）；\n- 当 $x<0$：由奇性 $y''<0$（曲线为凸，即上凸）；\n- $x=0$：$y''(0)=0$。\n\n$y''$ 在 $x=0$ 两侧异号，故 $x=0$ 为拐点的横坐标。又 $y(0)=e^{0}\\cdot g(0)=0$。\n\n所以曲线的拐点为 $\\boxed{(0,0)}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第(1)问别只靠两式相减凑出 $f=e^x$ 就完事，要用通解定常数说明唯一性（$C_2$ 必须为 0）。",
+        "第(2)问求 $y''$ 时变限积分求导 $g'(x)=e^{-x^2}$ 与乘积求导都要到位，漏项会算错。",
+        "判拐点要确认 $y''$ 在该点两侧变号，仅 $y''=0$ 不够；这里用奇函数性质一眼看出 $x=0$ 处变号。"
+      ],
+      "key_point": "联立线性微分方程用通解定常数求 $f$；变限积分函数求拐点靠 $y''$ 的奇偶性与符号变化定位。"
+    },
+    {
+      "id": 563,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{cccc}1 & a & 0 & 0 \\\\ 0 & 1 & a & 0 \\\\ 0 & 0 & 1 & a \\\\ a & 0 & 0 & 1\\end{array}\\right), \\boldsymbol{\\beta}=\\left(\\begin{array}{c}1 \\\\ -1 \\\\ 0 \\\\ 0\\end{array}\\right)$\r\n\r\n(1) 计算行列式 $|\\boldsymbol{A}|$;\r\n\r\n(2) 当实数 $a$ 为何值时, 方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 有无穷多解, 并求其通解",
+      "options": {},
+      "answer": "(1) $1-a^4$\r\n\r\n(2) 当 $a=-1$ 时, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right)+\\left(\\begin{array}{c}\r\n0 \\\\-1 \\\\0 \\\\0\r\n\\end{array}\\right)  ( C$为任意常数 )\r\n\r\n当 $a=1$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 无解",
+      "analysis": "【分析】(1) 这是\"循环型\"系数矩阵（对角线为 $1$，次对角线及左下角为 $a$），按第一列展开即可。(2) 方程组有无穷多解需 $|A|=0$，即 $a^4=1$，实数解 $a=\\pm1$；再对每个值用初等行变换判定相容性并求通解。\n\n【解答】(1) 按第一列展开（第一列只有 $a_{11}=1$ 与 $a_{41}=a$ 非零）：\n$$|A|=1\\cdot\\begin{vmatrix}1&a&0\\\\0&1&a\\\\0&0&1\\end{vmatrix}+(-1)^{4+1}a\\begin{vmatrix}a&0&0\\\\1&a&0\\\\0&1&a\\end{vmatrix}=1\\cdot1-a\\cdot a^3=\\boxed{1-a^4}.$$\n\n(2) 无穷多解要求 $|A|=1-a^4=0$，即 $a=1$ 或 $a=-1$。\n\n当 $a=-1$ 时，对增广矩阵 $(A\\mid\\beta)$ 作行变换：\n$$\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\-1&0&0&1&0\\end{array}\\right)\\xrightarrow{R_4+R_1}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&-1&0&1&1\\end{array}\\right)$$\n$$\\xrightarrow{R_4+R_2}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&-1&1&0\\end{array}\\right)\\xrightarrow{R_4+R_3}\\left(\\begin{array}{cccc|c}1&-1&0&0&1\\\\0&1&-1&0&-1\\\\0&0&1&-1&0\\\\0&0&0&0&0\\end{array}\\right).$$\n$r(A)=r(A\\mid\\beta)=3<4$，有无穷多解。取 $x_4$ 为自由变量，回代：$x_3=x_4$，$x_2=x_3-1=x_4-1$，$x_1=x_2+1=x_4$。令 $x_4=C$（亦即取齐次解方向）：\n$$x=C\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}+\\begin{pmatrix}0\\\\-1\\\\0\\\\0\\end{pmatrix}\\quad(C\\ \\text{为任意常数}).$$\n\n当 $a=1$ 时，$(A\\mid\\beta)$ 的第 1、3 行相加得 $x_1+x_2+x_3+x_4=1$，第 2、4 行相加得 $x_1+x_2+x_3+x_4=-1$，矛盾，故 $r(A)=3<r(A\\mid\\beta)=4$，**方程组无解**。\n\n验算：$a=-1$ 时取 $C=0$，$x=(0,-1,0,0)^T$，$Ax$：第一行 $1\\cdot0+(-1)(-1)=1$，第二行 $1\\cdot(-1)=-1$，第三、四行均 $0$，即得 $\\beta=(1,-1,0,0)^T$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|A|=0$ 给出 $a^4=1$，在实数范围内只有 $a=\\pm1$，别漏掉 $a=1$ 这一支（该支无解）。",
+        "$a=1$ 与 $a=-1$ 都使行列式为零，但相容性不同：必须逐一判定 $r(A)$ 与 $r(A\\mid\\beta)$ 是否相等。"
+      ],
+      "key_point": "循环矩阵按首列展开得 1-a^4；行列式为零的每个 a 都要单独验相容性，不能想当然都有解。"
+    },
+    {
+      "id": 564,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ -1 & 0 & a \\\\ 0 & a & -1\\end{array}\\right)$, 二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=\\boldsymbol{x}^{\\mathrm{T}}\\left(\\boldsymbol{A}^{\\mathrm{T}} \\boldsymbol{A}\\right) \\boldsymbol{x}$ 的秩为 $2$ ,\r\n\r\n(1) 求实数 $a$ 的值;\r\n\r\n(2) 求正交变换 $\\boldsymbol{x}=\\boldsymbol{Q y}$ 将 $f$ 化为标准形",
+      "options": {},
+      "answer": "(1) $a=-1$\r\n\r\n(2) $\\boldsymbol Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ -\\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}}\\end{array}\\right)$, 在正交变换 $\\boldsymbol{x}= \\boldsymbol{Qy}$ 下, 二次型 $f$ 的标准形为 $f=2 y_2^2+6 y_3^2$",
+      "analysis": "【分析】二次型矩阵是 $A^{\\mathrm T}A$，其秩等于 $A$ 的秩。由 $r(A^{\\mathrm T}A)=r(A)=2$ 且 $A$ 为 $4\\times3$ 列向量数 3，知三列线性相关，由此定 $a$。第（2）问对实对称阵 $A^{\\mathrm T}A$ 求特征值、单位正交特征向量，拼成正交矩阵 $Q$。\n\n【解答】**(1)** 记 $A$ 三列 $\\alpha_1=(1,0,-1,0)^{\\mathrm T},\\ \\alpha_2=(0,1,0,a)^{\\mathrm T},\\ \\alpha_3=(1,1,a,-1)^{\\mathrm T}$。由 $r(A^{\\mathrm T}A)=r(A)=2<3$，三列相关。$\\alpha_1,\\alpha_2$ 线性无关，故 $\\alpha_3=k_1\\alpha_1+k_2\\alpha_2$。比较前两个分量得 $k_1=1,k_2=1$，于是 $\\alpha_1+\\alpha_2=(1,1,-1,a)^{\\mathrm T}$。与 $\\alpha_3=(1,1,a,-1)^{\\mathrm T}$ 比较第 3、4 分量：$-1=a$ 且 $a=-1$，故 $a=-1$。\n\n**(2)** 取 $a=-1$，$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\-1&0&-1\\\\0&-1&-1\\end{pmatrix}$，则\n$$B=A^{\\mathrm T}A=\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}.$$\n特征多项式 $|B-\\lambda E|=-\\lambda^3+8\\lambda^2-12\\lambda=-\\lambda(\\lambda-2)(\\lambda-6)$（迹 $=8$，二阶主子式之和 $=12$，行列式 $=0$），故特征值 $\\lambda_1=0,\\lambda_2=2,\\lambda_3=6$。\n求单位特征向量：\n$\\lambda=0$：$(B)x=0\\Rightarrow x_1=-x_3,x_2=-x_3$，取 $\\xi_1=\\dfrac{1}{\\sqrt3}(-1,-1,1)^{\\mathrm T}$；\n$\\lambda=2$：$(B-2E)x=0\\Rightarrow x_3=0,\\ x_1+x_2=0$，取 $\\xi_2=\\dfrac{1}{\\sqrt2}(1,-1,0)^{\\mathrm T}$；\n$\\lambda=6$：$(B-6E)x=0\\Rightarrow x_1=x_2,\\ x_3=2x_1$，取 $\\xi_3=\\dfrac{1}{\\sqrt6}(1,1,2)^{\\mathrm T}$。\n三个特征值互异，特征向量自动正交。令\n$$Q=\\begin{pmatrix}-\\frac{1}{\\sqrt3}&\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]-\\frac{1}{\\sqrt3}&-\\frac{1}{\\sqrt2}&\\frac{1}{\\sqrt6}\\\\[4pt]\\frac{1}{\\sqrt3}&0&\\frac{2}{\\sqrt6}\\end{pmatrix},$$\n则正交变换 $x=Qy$ 把二次型化为标准形\n$$f=0\\cdot y_1^2+2y_2^2+6y_3^2=2y_2^2+6y_3^2.$$\n\n**验算**：迹 $0+2+6=8=2+2+4$，零特征值与 $r(B)=2$ 相符；$B\\xi_3=6\\xi_3$ 即 $\\begin{pmatrix}2&0&2\\\\0&2&2\\\\2&2&4\\end{pmatrix}(1,1,2)^{\\mathrm T}=(6,6,12)^{\\mathrm T}=6(1,1,2)^{\\mathrm T}$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "r(A^TA)=r(A) 是定理，秩为 2 说明 A 三列相关，由此定 a 最快；不必先算出 A^TA 再求秩。",
+        "特征值互异时特征向量天然正交，只需单位化；若有重根需正交化。",
+        "标准形系数即特征值，零特征值对应项消失，写成 2y_2^2+6y_3^2。"
+      ],
+      "key_point": "二次型矩阵 A^TA 的秩=r(A)，由列相关定参数；正交变换化标准形=求 A^TA 特征值与单位正交特征向量。"
+    },
+    {
+      "id": 565,
+      "paper": "数学三",
+      "year": 2012,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维离散型随机变量 $X, Y$ 的概率分布为\r\n\r\n$\\begin{array}{|c|c|c|c|c|}\r\n\\hline\r\nX \\diagdown Y  & 0 & 1 & 2 \\\\\r\n\\hline\r\n0 & \\dfrac{1}{4} & 0 & \\dfrac{1}{4}  \\\\\r\n\\hline\r\n1 & 0 & \\dfrac{1}{3} & 0 \\\\\r\n\\hline\r\n2 & \\dfrac{1}{12} & 0 & \\dfrac{1}{12}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(1) 求 $P\\{X=2 Y\\}$;\r\n\r\n(2) 求 $\\operatorname{Cov}(X-Y, Y)$",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{4}$\r\n\r\n(2) $-\\dfrac{2}{3}$",
+      "analysis": "【分析】(1) 事件 $\\{X=2Y\\}$ 把满足 $x=2y$ 的格点 $(x,y)$ 挑出来求概率之和。(2) 用协方差性质 $\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-\\mathrm{Cov}(Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)$，再由联合分布算 $E(XY),E(X),E(Y),E(Y^2)$ 即可。\n\n【解答】(1) 满足 $x=2y$ 的格点：$(x,y)=(0,0)$ 和 $(2,1)$。\n$$P\\{X=2Y\\}=P(0,0)+P(2,1)=\\frac14+0=\\frac14.$$\n（注：$(2,1)$ 处概率为 $0$。）\n\n(2) 先求边缘与各期望。由联合分布：\n$E(X)$：$X$ 取 $0$ 概率 $\\tfrac14+0+\\tfrac14=\\tfrac12$，取 $1$ 概率 $\\tfrac13$，取 $2$ 概率 $\\tfrac1{12}+0+\\tfrac1{12}=\\tfrac16$。\n$$E(X)=0\\cdot\\tfrac12+1\\cdot\\tfrac13+2\\cdot\\tfrac16=\\tfrac13+\\tfrac13=\\tfrac23.$$\n由对称性 $Y$ 的边缘与 $X$ 相同（列和：$Y=0$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$，$Y=1$ 概率 $\\tfrac13$，$Y=2$ 概率 $\\tfrac14+\\tfrac1{12}=\\tfrac13$）：\n$$E(Y)=0\\cdot\\tfrac13+1\\cdot\\tfrac13+2\\cdot\\tfrac13=1.$$\n$$E(Y^2)=0+1\\cdot\\tfrac13+4\\cdot\\tfrac13=\\tfrac53,\\quad D(Y)=\\tfrac53-1^2=\\tfrac23.$$\n求 $E(XY)$，只有 $xy\\neq0$ 的格点贡献：$(1,1)$ 贡献 $1\\cdot\\tfrac13$，$(2,2)$ 贡献 $4\\cdot\\tfrac1{12}=\\tfrac13$，其余含 $0$。\n$$E(XY)=\\tfrac13+\\tfrac13=\\tfrac23.$$\n$$\\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=\\tfrac23-\\tfrac23\\cdot1=0.$$\n所以\n$$\\mathrm{Cov}(X-Y,Y)=\\mathrm{Cov}(X,Y)-D(Y)=0-\\tfrac23=-\\frac23.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "P{X=2Y} 要把所有满足 x=2y 的格点都数到，包括 (0,0)；(2,1) 概率恰为 0",
+        "Cov(X-Y,Y)=Cov(X,Y)-Cov(Y,Y)，第二项是 D(Y) 不能漏",
+        "E(XY) 只需累加 xy≠0 的格点，含 0 的项不贡献"
+      ],
+      "key_point": "联合分布求 Cov：拆 Cov(X-Y,Y)=Cov(X,Y)-D(Y)，分别用 E(XY)、边缘期望、E(Y²) 代入。"
+    },
+    {
       "id": 591,
       "paper": "数学三",
       "year": 2012,
@@ -471,34 +499,6 @@
         "$U+V=X+Y$ 是恒等式，求 $E(U+V)$ 不必先求 $U$ 的分布，避免繁琐积分。"
       ],
       "key_point": "独立同分布的极值问题：min 走生存函数；并善用 $\\max+\\min=$ 和 这一恒等式简化期望。"
-    },
-    {
-      "id": 592,
-      "paper": "数学三",
-      "year": 2012,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知级数 $\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n \\sqrt{n} \\sin \\frac{1}{n^\\alpha}$ 绝对收敛, 级数 $\\displaystyle \\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^{2-\\alpha}}$ 条件收敛, 则 $\\alpha$ 的范围为 $(\\quad)$",
-      "options": {
-        "A": "$0<\\alpha \\leqslant \\dfrac{1}{2}$",
-        "B": "$\\dfrac{1}{2}<\\alpha \\leqslant 1$",
-        "C": "$1<\\alpha \\leqslant \\dfrac{3}{2}$",
-        "D": "$\\dfrac{3}{2}<\\alpha<2$"
-      },
-      "answer": "D",
-      "analysis": "【分析】两个条件分别给出对 $\\alpha$ 的约束，取交集。第一个级数“绝对收敛”用等价无穷小定通项的阶，化为 $p$-级数判别；第二个级数“条件收敛”要求其绝对值级数发散而交错级数收敛，定出区间，两者求交。\n\n【解答】\n第一个：$\\displaystyle\\sum_{n=1}^{\\infty}(-1)^n\\sqrt n\\sin\\dfrac{1}{n^\\alpha}$ 绝对收敛。绝对值通项为 $\\sqrt n\\left|\\sin\\dfrac{1}{n^\\alpha}\\right|$。要级数有意义需 $\\alpha>0$（否则 $\\frac{1}{n^\\alpha}$ 不趋 0，通项不趋 0 必发散）。当 $\\alpha>0$ 时 $\\dfrac{1}{n^\\alpha}\\to0$，故\n$$\\sqrt n\\sin\\dfrac{1}{n^\\alpha}\\sim\\sqrt n\\cdot\\dfrac{1}{n^\\alpha}=\\dfrac{1}{n^{\\alpha-\\frac12}}.$$\n这是 $p$-级数，绝对收敛 $\\iff\\alpha-\\dfrac12>1\\iff\\alpha>\\dfrac32.$\n\n第二个：$\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{(-1)^n}{n^{2-\\alpha}}$ 条件收敛。记 $p=2-\\alpha$。\n- 交错级数收敛（莱布尼茨）要求 $\\dfrac{1}{n^{2-\\alpha}}\\to0$ 且单调，即 $2-\\alpha>0$，$\\alpha<2$。\n- “条件”收敛要求绝对值级数 $\\displaystyle\\sum\\dfrac{1}{n^{2-\\alpha}}$ 发散，即 $2-\\alpha\\le1$，$\\alpha\\ge1$。\n\n故第二个条件给出 $1\\le\\alpha<2$。\n\n取交集：$\\alpha>\\dfrac32$ 与 $1\\le\\alpha<2$ 的公共部分为\n$$\\dfrac32<\\alpha<2,$$\n即选 D。\n\n验算端点：$\\alpha=\\dfrac32$ 时第一级数绝对值通项为 $\\dfrac1n$，发散，故须严格 $>\\dfrac32$；$\\alpha=2$ 时第二级数通项 $(-1)^n$ 不趋 0，须严格 $<2$。区间 $\\left(\\dfrac32,2\\right)$ 正确。",
-      "wrong_options": {
-        "A": "$0<\\alpha\\le\\frac12$ 时第一级数绝对值通项 $\\sim n^{1/2-\\alpha}$ 指数 $\\ge0$，根本不趋 0，发散，不满足绝对收敛。",
-        "B": "$\\frac12<\\alpha\\le1$ 时第一级数指数 $\\alpha-\\frac12\\le\\frac12<1$，绝对值级数发散，第一条件不满足。",
-        "C": "$1<\\alpha\\le\\frac32$ 时第一级数需 $\\alpha>\\frac32$ 才绝对收敛，此段（含 $\\frac32$）不满足；交集应严格大于 $\\frac32$。"
-      },
-      "pitfalls": [
-        "第一级数先用 $\\sin\\frac{1}{n^\\alpha}\\sim\\frac{1}{n^\\alpha}$ 化阶，绝对收敛归结到 $p=\\alpha-\\frac12>1$。",
-        "条件收敛 = 交错收敛（$2-\\alpha>0$）且绝对发散（$2-\\alpha\\le1$），两端都要卡到，得 $1\\le\\alpha<2$。",
-        "端点 $\\frac32$、$2$ 都取不到，最终是开区间 $(\\frac32,2)$。"
-      ],
-      "key_point": "绝对收敛化 $p$-级数得 $\\alpha>\\frac32$；条件收敛得 $1\\le\\alpha<2$；交集 $\\frac32<\\alpha<2$。"
     }
   ]
 }

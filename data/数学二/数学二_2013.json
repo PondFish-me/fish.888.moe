@@ -4,135 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 496,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}, \\boldsymbol{C}$ 均为 $n$ 阶矩阵, 若 $\\boldsymbol{A B}=\\boldsymbol{C}$, 且 $\\boldsymbol{B}$ 可逆, 则 $(\\quad)$",
-      "options": {
-        "A": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{A}$ 的行向量组等价",
-        "B": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{A}$ 的列向量组等价",
-        "C": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{B}$ 的行向量组等价",
-        "D": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{B}$ 的列向量组等价"
-      },
-      "answer": "B",
-      "analysis": "【分析】$AB=C$ 且 $B$ 可逆。矩阵乘法的列视角：$C=AB$ 的每一列是 $A$ 的列向量的线性组合（组合系数取自 $B$ 的对应列）；反过来 $A=CB^{-1}$，$A$ 的列也是 $C$ 的列的线性组合。故 $C$ 与 $A$ 的列向量组可互相线性表示，即等价。行向量组没有这种关系。\n\n【解答】因 $B$ 可逆，由 $AB=C$ 得 $A=CB^{-1}$。\n列向量看：$C=AB$ 表明 $C$ 的列向量组可由 $A$ 的列向量组线性表示；$A=CB^{-1}$ 表明 $A$ 的列向量组可由 $C$ 的列向量组线性表示。两组列向量可互相表示，故\n$$C\\text{ 的列向量组与 }A\\text{ 的列向量组等价}.$$\n（本质上右乘可逆矩阵相当于对 $A$ 的列做可逆线性变换，不改变列空间。）故选 B。\n行向量方面：$AB=C$ 是对 $A$ 右乘，作用在列上，对行向量组没有“可逆线性变换”关系，故 A、C 错；C 与 B、A 与 B 的向量组维数/含义都不同，D 错。",
-      "wrong_options": {
-        "A": "右乘 B 作用于 A 的列，不是行；行向量组未必等价，C 的行空间与 A 的行空间一般不同",
-        "C": "C 的行向量组与 B 的行向量组无等价关系，B 是右乘的变换矩阵而非行的生成元",
-        "D": "C 的列虽由 A 的列组合而成，但与 B 的列向量组无等价关系，混淆了乘法两侧的角色"
-      },
-      "pitfalls": [
-        "右乘可逆矩阵 = 对列做可逆线性变换，保持列向量组等价（列空间不变）",
-        "左乘可逆矩阵才对应行向量组等价，二者别混",
-        "等价指两组向量可互相线性表示，需 B 可逆才能反推 A=CB^{-1}"
-      ],
-      "key_point": "AB=C、B 可逆：右乘可逆阵不改变列向量组等价关系（列空间）"
-    },
-    {
-      "id": 497,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "矩阵 $\\left(\\begin{array}{lll}1 & a & 1 \\\\ a & b & a \\\\ 1 & a & 1\\end{array}\\right)$ 与 $\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ 相似的充分必要条件为 $(\\quad)$",
-      "options": {
-        "A": "$a=0, b=2$",
-        "B": "$a=0, b$ 为任意常数",
-        "C": "$a=2, b=0$",
-        "D": "$a=2, b$ 为任意常数"
-      },
-      "answer": "B",
-      "analysis": "【分析】记 $A=\\begin{pmatrix}1&a&1\\\\a&b&a\\\\1&a&1\\end{pmatrix}$，$\\Lambda=\\begin{pmatrix}2&0&0\\\\0&b&0\\\\0&0&0\\end{pmatrix}$。两矩阵相似的必要条件是同特征值（含重数）、同迹、同秩、同行列式。$A$ 是实对称矩阵，必可正交对角化，因此 $A\\sim\\Lambda$ 当且仅当 $\\Lambda$ 恰是 $A$ 的特征值对角阵。关键看 $A$ 的特征值能否恰为 $2,b,0$，从而定出 $a$。\n\n【解答】$\\Lambda$ 的特征值为 $2,b,0$，迹 $=2+b$，且有零特征值。\n\n$A$ 的迹 $=1+b+1=2+b$，与 $\\Lambda$ 自动相等。又 $A$ 的第一、三行相同，故 $\\det A=0$，$0$ 必是 $A$ 的特征值。设其余两特征值为 $\\lambda_1,\\lambda_2$，则 $\\lambda_1+\\lambda_2=2+b$。\n\n要使 $A$ 的特征值恰为 $\\{2,b,0\\}$，须 $\\{\\lambda_1,\\lambda_2\\}=\\{2,b\\}$，即 $\\lambda_1\\lambda_2=2b$。而 $\\lambda_1\\lambda_2$ 等于 $A$ 的二阶主子式之和（因有零特征值，三阶主子式和 $=\\det A=0$）。计算二阶主子式之和：\n\n$$\\begin{vmatrix}1&a\\\\a&b\\end{vmatrix}+\\begin{vmatrix}1&1\\\\1&1\\end{vmatrix}+\\begin{vmatrix}b&a\\\\a&1\\end{vmatrix}=(b-a^2)+0+(b-a^2)=2b-2a^2.$$\n\n令其等于 $2b$，得 $2b-2a^2=2b$，即 $a^2=0$，故 $a=0$。\n\n反之，当 $a=0$ 时，$A=\\begin{pmatrix}1&0&1\\\\0&b&0\\\\1&0&1\\end{pmatrix}$，由 1、3 行（列）构成的块 $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ 特征值为 $0,2$，中间解耦出 $b$，故 $A$ 特征值恰为 $\\{2,b,0\\}$。$A$ 对称必可对角化，对任意 $b$ 均有 $A\\sim\\Lambda$。\n\n故充要条件为 $a=0$，$b$ 为任意常数，选 B。",
-      "wrong_options": {
-        "A": "$a=0$ 确为必要，但 $b=2$ 是多余约束。$a=0$ 时对任意 $b$ 都相似，把 $b$ 限死为 2 缩小了条件，非充要。",
-        "C": "$a=2$ 时二阶主子式之和 $=2b-2a^2=2b-8\\ne2b$，$A$ 的非零特征值之积不等于 $2b$，特征值不再是 $\\{2,b,0\\}$，不相似。",
-        "D": "同 C，$a=2$ 不满足特征值匹配（$a^2=0$ 才行），无论 $b$ 取何值都不相似。"
-      },
-      "pitfalls": [
-        "实对称矩阵必可对角化，故相似归结为特征值（含重数）完全一致，不必另查可对角化性。",
-        "由迹自动相等、$\\det A=0$ 得零特征值，再用二阶主子式之和 $=2b-2a^2$ 匹配 $2b$，定出 $a=0$。",
-        "$b$ 不受约束：$a=0$ 时对任意 $b$ 均相似，因此答案是‘$b$ 任意’而非某固定值。"
-      ],
-      "key_point": "对称阵相似于对角阵 $\\iff$ 特征值一致；用迹、$\\det$、主子式之和把待定参数逼出来。"
-    },
-    {
-      "id": 505,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 是 $3$ 阶非零矩阵, $|\\boldsymbol{A}|$ 为 $\\boldsymbol{A}$ 的行列式, $A_{i j}$ 为 $a_{i j}$ 的代数余子式,\r\n若 $a_{i j}+A_{i j}=0(i, j=1,2,3)$, 则 $|\\boldsymbol{A}|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-1$",
-      "analysis": "【分析】条件 $a_{ij}+A_{ij}=0$ 即每个元素与其代数余子式互为相反数：$A_{ij}=-a_{ij}$。要联系 $|A|$，有两条线索：一是按行展开 $|A|=\\sum_j a_{ij}A_{ij}$，二是伴随矩阵 $A^*=(A_{ij})^T$。两者结合可定出 $|A|$，并需排除 $|A|=0$。\n\n【解答】由 $A_{ij}=-a_{ij}$，把 $|A|$ 按第 $i$ 行展开：\n$$|A|=\\sum_{j=1}^3 a_{ij}A_{ij}=\\sum_{j=1}^3 a_{ij}(-a_{ij})=-\\sum_{j=1}^3 a_{ij}^2\\le0.$$\n因 $A$ 为非零矩阵，至少某一行存在非零元，取该行展开则 $-\\sum_j a_{ij}^2<0$，故 $|A|<0$，特别地 $|A|\\neq0$。\n\n再用伴随矩阵确定具体值。$A^*=(A_{ij})^T$，由 $A_{ij}=-a_{ij}$ 得 $A^*=-A^T$。对 $3$ 阶矩阵取行列式：\n$$|A^*|=|-A^T|=(-1)^3|A^T|=-|A|.$$\n另一方面 $|A^*|=|A|^{\\,n-1}=|A|^2$。于是\n$$|A|^2=-|A|\\ \\Rightarrow\\ |A|\\,(|A|+1)=0.$$\n结合 $|A|\\neq0$，得 $|A|=-1$。\n\n验算：$|A|=-1$ 时 $|A^*|=|A|^2=1$，而 $-|A|=1$，两式相符。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$|A^*|=|A|^{n-1}$，三阶时为 $|A|^2$，指数别记错。",
-        "必须用「按行展开 $|A|=-\\sum a_{ij}^2<0$」排除 $|A|=0$，否则会漏掉一个根。"
-      ],
-      "key_point": "$A_{ij}=-a_{ij}\\Rightarrow A^*=-A^T$，配合 $|A^*|=|A|^2$ 解出 $|A|$。"
-    },
-    {
-      "id": 510,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 18,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设奇函数 $f(x)$ 在 $[-1,1]$ 上具有二阶导数, 且 $f(1)=1$, 证明:\r\n\r\n(1) 存在 $\\xi \\in(0,1)$, 使得 $f^{\\prime}(\\xi)=1$;\r\n\r\n(2) 存在 $\\eta \\in(-1,1)$, 使得 $f^{\\prime \\prime}(\\eta)+f^{\\prime}(\\eta)=1$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】（1）要找 $f'(\\xi)=1$，由 $f$ 是奇函数有 $f(0)=0$，又 $f(1)=1$，在 $[0,1]$ 上对 $f$ 用拉格朗日中值定理立得。（2）出现 $f''+f'=1$ 这种\"导数的组合\"，标准手法是构造辅助函数把它凑成某个函数的导数等于零，用罗尔定理。注意到 $(e^x f'(x))'=e^x(f''+f')$，所以令 $g(x)=e^x\\big(f'(x)-1\\big)$，则 $g'(x)=e^x\\big(f''(x)+f'(x)-1\\big)$，要证的就是 $g'(\\eta)=0$。需在区间端点找出 $g$ 的两个相等值——这就要用到 $f$ 的奇性给出 $f'(-1)=f'(1)$ 之类的信息。\n\n【解答】因 $f$ 为 $[-1,1]$ 上的奇函数，故 $f(0)=0$，且 $f'(x)$ 为偶函数（奇函数求导为偶函数）。\n\n（1）在 $[0,1]$ 上 $f$ 连续、可导，由拉格朗日中值定理，存在 $\\xi\\in(0,1)$ 使\n$$f'(\\xi)=\\frac{f(1)-f(0)}{1-0}=\\frac{1-0}{1}=1.$$\n（1）得证。\n\n（2）由（1），存在 $\\xi\\in(0,1)$ 使 $f'(\\xi)=1$。又因 $f'$ 为偶函数，$f'(-\\xi)=f'(\\xi)=1$，且 $-\\xi\\in(-1,0)$。\n\n构造 $g(x)=e^x\\big(f'(x)-1\\big)$，它在 $[-\\xi,\\xi]\\subset(-1,1)$ 上连续、可导（因 $f$ 有二阶导）。计算两端点值：\n$$g(\\xi)=e^{\\xi}\\big(f'(\\xi)-1\\big)=e^{\\xi}\\cdot 0=0,\\qquad g(-\\xi)=e^{-\\xi}\\big(f'(-\\xi)-1\\big)=e^{-\\xi}\\cdot 0=0.$$\n即 $g(-\\xi)=g(\\xi)=0$。由罗尔定理，存在 $\\eta\\in(-\\xi,\\xi)\\subset(-1,1)$ 使 $g'(\\eta)=0$。而\n$$g'(x)=e^x\\big(f'(x)-1\\big)+e^x f''(x)=e^x\\big(f''(x)+f'(x)-1\\big),$$\n故 $g'(\\eta)=e^{\\eta}\\big(f''(\\eta)+f'(\\eta)-1\\big)=0$。因 $e^{\\eta}\\neq 0$，得\n$$f''(\\eta)+f'(\\eta)=1.$$\n（2）得证。",
-      "wrong_options": {},
-      "pitfalls": [
-        "奇函数关键信息：f(0)=0，且 f' 为偶函数——第（2）问用 f'(-ξ)=f'(ξ)=1 才能凑出罗尔定理所需的两个相等端点值。",
-        "见到 f''+f' 形式的结论应想到乘 e^x：(e^x f')'=e^x(f''+f')，把待证式凑成某函数导数为零。"
-      ],
-      "key_point": "f''+f'=c 型中值证明 → 辅助函数 e^x(f'-c)，配合奇偶性提供罗尔定理的等值端点。"
-    },
-    {
-      "id": 512,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ll}1 & a \\\\ 1 & 0\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & b\\end{array}\\right)$, 当 $a, b$ 为何值时, 存在矩阵 $\\boldsymbol{C}$ 使得 $\\boldsymbol{A} \\boldsymbol{C}-\\boldsymbol{C} \\boldsymbol{A}=\\boldsymbol{B}$, 并求所有矩阵 $\\boldsymbol{C}$",
-      "options": {},
-      "answer": "当 $a=-1,\\ b=0$ 时存在；$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix}$（$k_1,k_2$ 为任意常数）",
-      "analysis": "【分析】把 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$ 设成未知，直接展开 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 得到关于 $x_1,x_2,x_3,x_4$ 的线性方程组。注意一个关键恒等式：对任意方阵 $\\operatorname{tr}(\\boldsymbol{AC})=\\operatorname{tr}(\\boldsymbol{CA})$，故 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$，这就强制 $\\operatorname{tr}\\boldsymbol{B}=0$，先定出 $b$；再让方程组有解定出 $a$，并解出全部 $\\boldsymbol{C}$。\n\n【解答】设 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$。计算\n$$\\boldsymbol{AC}=\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}=\\begin{pmatrix}x_1+ax_3 & x_2+ax_4\\\\ x_1 & x_2\\end{pmatrix},$$\n$$\\boldsymbol{CA}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}=\\begin{pmatrix}x_1+x_2 & ax_1\\\\ x_3+x_4 & ax_3\\end{pmatrix}.$$\n于是\n$$\\boldsymbol{AC}-\\boldsymbol{CA}=\\begin{pmatrix}ax_3-x_2 & x_2+ax_4-ax_1\\\\ x_1-x_3-x_4 & x_2-ax_3\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&b\\end{pmatrix}.$$\n比较四个元素得方程组\n$$\\begin{cases}ax_3-x_2=0,\\\\ -ax_1+x_2+ax_4=1,\\\\ x_1-x_3-x_4=1,\\\\ x_2-ax_3=b.\\end{cases}$$\n第 1 式给 $x_2=ax_3$，代入第 4 式得 $ax_3-ax_3=b$，即 $b=0$。这与恒等式 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 要求 $\\operatorname{tr}\\boldsymbol{B}=0+b=0$ 一致。\n\n取 $b=0$。此时第 1、4 式合并为 $x_2=ax_3$。把第 2 式整理：$-ax_1+ax_3+ax_4=1$（已用 $x_2=ax_3$），即 $-a(x_1-x_3-x_4)=1$。而第 3 式给 $x_1-x_3-x_4=1$，代入得 $-a\\cdot1=1$，故 $a=-1$。\n\n所以仅当 $a=-1,\\ b=0$ 时方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 有解。此时方程组退化为两个独立约束：\n$$x_2=ax_3=-x_3,\\qquad x_1=x_3+x_4+1.$$\n令自由参数 $x_3=k_1,\\ x_4=k_2$，则 $x_2=-k_1,\\ x_1=k_1+k_2+1$。故全部解为\n$$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix},\\qquad k_1,k_2\\ \\text{为任意常数}.$$\n验算（取 $a=-1$）：$\\boldsymbol{AC}-\\boldsymbol{CA}$ 的 $(1,1)$ 元 $=ax_3-x_2=-k_1-(-k_1)=0$，$(1,2)$ 元 $=x_2+ax_4-ax_1=-k_1-k_2+(k_1+k_2+1)=1$，$(2,1)$ 元 $=x_1-x_3-x_4=(k_1+k_2+1)-k_1-k_2=1$，$(2,2)$ 元 $=x_2-ax_3=-k_1+k_1=0=b$，与 $\\boldsymbol{B}$ 完全吻合。",
-      "wrong_options": {},
-      "pitfalls": [
-        "先用迹关系 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 卡出 $b=0$，能避免漫无目的地解方程",
-        "$a=-1$ 是\"方程组相容\"的条件，若直接代具体数容易漏掉，需把第 2、3 式联立才暴露 $-a=1$",
-        "最终 $\\boldsymbol{C}$ 含两个自由参数，写成通解形式，别只给一个特解"
-      ],
-      "key_point": "矩阵方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 设元展开化为线性方程组；先用 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})\\equiv0$ 得相容必要条件 $\\operatorname{tr}\\boldsymbol{B}=0$"
-    },
-    {
-      "id": 513,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 23,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=2\\left(a_{1} x_{1}+a_{2} x_{2}+a_{3} x_{3}\\right)^{2}+\\left(b_{1} x_{1}+b_{2} x_{2}+b_{3} x_{3}\\right)^{2}$, 记\r\n\r\n$\\boldsymbol{\\alpha}=\\left(\\begin{array}{l}\r\na_{1} \\\\a_{2} \\\\a_{3}\\end{array}\\right), \r\n\\boldsymbol{\\beta}=\\left(\\begin{array}{l}\r\nb_{1} \\\\b_{2} \\\\b_{3}\\end{array}\\right)$\r\n\r\n(1) 证明:二次型 $f$ 对应的矩阵为 $2 \\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}$;\r\n\r\n(2) 若 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 正交且均为单位向量, 证明 $f$ 在正交变换下的标准形为 $2 y_{1}^{2}+y_{2}^{2}$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】第(1)问要证二次型矩阵就是 $2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，关键在于把 $(a_1x_1+a_2x_2+a_3x_3)^2$ 这种\"线性组合的平方\"写成 $(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$，并验证 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 对称。第(2)问当 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是正交单位向量时，直接求 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 的特征值：用 $A\\boldsymbol{\\alpha}$、$A\\boldsymbol{\\beta}$ 看 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是不是特征向量，再补上第三个正交方向，特征值即为标准形系数。\n\n【解答】（1）记 $\\boldsymbol{x}=(x_1,x_2,x_3)^{\\mathrm{T}}$。则\n$$a_1x_1+a_2x_2+a_3x_3=\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x},\\qquad b_1x_1+b_2x_2+b_3x_3=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x}.$$\n由于 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是数，转置等于自身，故\n$$(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=(\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})\\boldsymbol{x}.$$\n同理 $(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})\\boldsymbol{x}$。于是\n$$f=2(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2+(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\left(2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}\\right)\\boldsymbol{x}.$$\n又 $(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$，$(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，故 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 是对称矩阵，它就是二次型 $f$ 对应的矩阵。证毕。\n\n（2）设 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 正交且为单位向量，即\n$$\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}=1,\\quad \\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta}=1,\\quad \\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta}=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha}=0.$$\n考察 $A$ 作用在 $\\boldsymbol{\\alpha}$ 上：\n$$A\\boldsymbol{\\alpha}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha})=2\\boldsymbol{\\alpha}\\cdot1+\\boldsymbol{\\beta}\\cdot0=2\\boldsymbol{\\alpha},$$\n故 $\\lambda_1=2$ 是特征值，$\\boldsymbol{\\alpha}$ 为对应特征向量。再看 $\\boldsymbol{\\beta}$：\n$$A\\boldsymbol{\\beta}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta})=0+\\boldsymbol{\\beta}\\cdot1=\\boldsymbol{\\beta},$$\n故 $\\lambda_2=1$，$\\boldsymbol{\\beta}$ 为对应特征向量。取与 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 都正交的非零向量 $\\boldsymbol{\\gamma}$（三维空间中必存在），则\n$$A\\boldsymbol{\\gamma}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\gamma})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\gamma})=0+0=\\boldsymbol{0}=0\\cdot\\boldsymbol{\\gamma},$$\n故 $\\lambda_3=0$。于是 $A$ 的特征值为 $2,1,0$。\n\n由于 $A$ 是实对称矩阵，必存在正交矩阵 $Q$ 使 $\\boldsymbol{x}=Q\\boldsymbol{y}$ 把 $f$ 化为标准形，对应系数即特征值，故\n$$f=2y_1^2+y_2^2+0\\cdot y_3^2=2y_1^2+y_2^2.$$\n证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "把线性组合平方写成 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 时务必说明 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是标量从而可转置交换",
-        "第(2)问不要硬算特征多项式，利用 $A\\boldsymbol{\\alpha},A\\boldsymbol{\\beta}$ 直接读出特征值最干净，第三个特征值由正交补给出 $0$"
-      ],
-      "key_point": "秩 1 矩阵 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 的特征值是 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}$（特征向量 $\\boldsymbol{\\alpha}$）和 $0$；正交单位向量让两个秩 1 块互不干扰，特征值直接叠加"
-    },
-    {
       "id": 516,
       "paper": "数学二",
       "year": 2013,
@@ -298,6 +169,62 @@
       "key_point": "对称区域上奇函数积分为零（$I_1=I_3=0$），再按象限定 $y-x$ 符号判 $I_2>0$。"
     },
     {
+      "id": 496,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}, \\boldsymbol{C}$ 均为 $n$ 阶矩阵, 若 $\\boldsymbol{A B}=\\boldsymbol{C}$, 且 $\\boldsymbol{B}$ 可逆, 则 $(\\quad)$",
+      "options": {
+        "A": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{A}$ 的行向量组等价",
+        "B": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{A}$ 的列向量组等价",
+        "C": "矩阵 $\\boldsymbol{C}$ 的行向量组与矩阵 $\\boldsymbol{B}$ 的行向量组等价",
+        "D": "矩阵 $\\boldsymbol{C}$ 的列向量组与矩阵 $\\boldsymbol{B}$ 的列向量组等价"
+      },
+      "answer": "B",
+      "analysis": "【分析】$AB=C$ 且 $B$ 可逆。矩阵乘法的列视角：$C=AB$ 的每一列是 $A$ 的列向量的线性组合（组合系数取自 $B$ 的对应列）；反过来 $A=CB^{-1}$，$A$ 的列也是 $C$ 的列的线性组合。故 $C$ 与 $A$ 的列向量组可互相线性表示，即等价。行向量组没有这种关系。\n\n【解答】因 $B$ 可逆，由 $AB=C$ 得 $A=CB^{-1}$。\n列向量看：$C=AB$ 表明 $C$ 的列向量组可由 $A$ 的列向量组线性表示；$A=CB^{-1}$ 表明 $A$ 的列向量组可由 $C$ 的列向量组线性表示。两组列向量可互相表示，故\n$$C\\text{ 的列向量组与 }A\\text{ 的列向量组等价}.$$\n（本质上右乘可逆矩阵相当于对 $A$ 的列做可逆线性变换，不改变列空间。）故选 B。\n行向量方面：$AB=C$ 是对 $A$ 右乘，作用在列上，对行向量组没有“可逆线性变换”关系，故 A、C 错；C 与 B、A 与 B 的向量组维数/含义都不同，D 错。",
+      "wrong_options": {
+        "A": "右乘 B 作用于 A 的列，不是行；行向量组未必等价，C 的行空间与 A 的行空间一般不同",
+        "C": "C 的行向量组与 B 的行向量组无等价关系，B 是右乘的变换矩阵而非行的生成元",
+        "D": "C 的列虽由 A 的列组合而成，但与 B 的列向量组无等价关系，混淆了乘法两侧的角色"
+      },
+      "pitfalls": [
+        "右乘可逆矩阵 = 对列做可逆线性变换，保持列向量组等价（列空间不变）",
+        "左乘可逆矩阵才对应行向量组等价，二者别混",
+        "等价指两组向量可互相线性表示，需 B 可逆才能反推 A=CB^{-1}"
+      ],
+      "key_point": "AB=C、B 可逆：右乘可逆阵不改变列向量组等价关系（列空间）"
+    },
+    {
+      "id": 497,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "矩阵 $\\left(\\begin{array}{lll}1 & a & 1 \\\\ a & b & a \\\\ 1 & a & 1\\end{array}\\right)$ 与 $\\left(\\begin{array}{lll}2 & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$ 相似的充分必要条件为 $(\\quad)$",
+      "options": {
+        "A": "$a=0, b=2$",
+        "B": "$a=0, b$ 为任意常数",
+        "C": "$a=2, b=0$",
+        "D": "$a=2, b$ 为任意常数"
+      },
+      "answer": "B",
+      "analysis": "【分析】记 $A=\\begin{pmatrix}1&a&1\\\\a&b&a\\\\1&a&1\\end{pmatrix}$，$\\Lambda=\\begin{pmatrix}2&0&0\\\\0&b&0\\\\0&0&0\\end{pmatrix}$。两矩阵相似的必要条件是同特征值（含重数）、同迹、同秩、同行列式。$A$ 是实对称矩阵，必可正交对角化，因此 $A\\sim\\Lambda$ 当且仅当 $\\Lambda$ 恰是 $A$ 的特征值对角阵。关键看 $A$ 的特征值能否恰为 $2,b,0$，从而定出 $a$。\n\n【解答】$\\Lambda$ 的特征值为 $2,b,0$，迹 $=2+b$，且有零特征值。\n\n$A$ 的迹 $=1+b+1=2+b$，与 $\\Lambda$ 自动相等。又 $A$ 的第一、三行相同，故 $\\det A=0$，$0$ 必是 $A$ 的特征值。设其余两特征值为 $\\lambda_1,\\lambda_2$，则 $\\lambda_1+\\lambda_2=2+b$。\n\n要使 $A$ 的特征值恰为 $\\{2,b,0\\}$，须 $\\{\\lambda_1,\\lambda_2\\}=\\{2,b\\}$，即 $\\lambda_1\\lambda_2=2b$。而 $\\lambda_1\\lambda_2$ 等于 $A$ 的二阶主子式之和（因有零特征值，三阶主子式和 $=\\det A=0$）。计算二阶主子式之和：\n\n$$\\begin{vmatrix}1&a\\\\a&b\\end{vmatrix}+\\begin{vmatrix}1&1\\\\1&1\\end{vmatrix}+\\begin{vmatrix}b&a\\\\a&1\\end{vmatrix}=(b-a^2)+0+(b-a^2)=2b-2a^2.$$\n\n令其等于 $2b$，得 $2b-2a^2=2b$，即 $a^2=0$，故 $a=0$。\n\n反之，当 $a=0$ 时，$A=\\begin{pmatrix}1&0&1\\\\0&b&0\\\\1&0&1\\end{pmatrix}$，由 1、3 行（列）构成的块 $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ 特征值为 $0,2$，中间解耦出 $b$，故 $A$ 特征值恰为 $\\{2,b,0\\}$。$A$ 对称必可对角化，对任意 $b$ 均有 $A\\sim\\Lambda$。\n\n故充要条件为 $a=0$，$b$ 为任意常数，选 B。",
+      "wrong_options": {
+        "A": "$a=0$ 确为必要，但 $b=2$ 是多余约束。$a=0$ 时对任意 $b$ 都相似，把 $b$ 限死为 2 缩小了条件，非充要。",
+        "C": "$a=2$ 时二阶主子式之和 $=2b-2a^2=2b-8\\ne2b$，$A$ 的非零特征值之积不等于 $2b$，特征值不再是 $\\{2,b,0\\}$，不相似。",
+        "D": "同 C，$a=2$ 不满足特征值匹配（$a^2=0$ 才行），无论 $b$ 取何值都不相似。"
+      },
+      "pitfalls": [
+        "实对称矩阵必可对角化，故相似归结为特征值（含重数）完全一致，不必另查可对角化性。",
+        "由迹自动相等、$\\det A=0$ 得零特征值，再用二阶主子式之和 $=2b-2a^2$ 匹配 $2b$，定出 $a=0$。",
+        "$b$ 不受约束：$a=0$ 时对任意 $b$ 均相似，因此答案是‘$b$ 任意’而非某固定值。"
+      ],
+      "key_point": "对称阵相似于对角阵 $\\iff$ 特征值一致；用迹、$\\det$、主子式之和把待定参数逼出来。"
+    },
+    {
       "id": 522,
       "paper": "数学二",
       "year": 2013,
@@ -373,6 +300,62 @@
       "key_point": "参数方程法线：斜率 dy/dx=(dy/dt)/(dx/dt)，法线取负倒数，点斜式成方程。"
     },
     {
+      "id": 90407,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知 $y_{1}=\\mathrm{e}^{3x}-x\\mathrm{e}^{2x},\\ y_{2}=\\mathrm{e}^{x}-x\\mathrm{e}^{2x},\\ y_{3}=-x\\mathrm{e}^{2x}$ 是某二阶常系数非齐次线性微分方程的 3 个解，该方程满足条件 $\\left.y\\right|_{x=0}=0,\\ \\left.y'\\right|_{x=0}=1$ 的解为 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "y=\\mathrm{e}^{3x}-\\mathrm{e}^{x}-x\\mathrm{e}^{2x}",
+      "analysis": "【分析】$y_1-y_3=\\mathrm{e}^{3x}$，$y_2-y_3=\\mathrm{e}^{x}$ 是对应齐次方程的两个线性无关解，$y_3=-x\\mathrm{e}^{2x}$ 可作一个非齐次特解。\n\n【解答】通解为\n$$y=C_1\\mathrm{e}^{3x}+C_2\\mathrm{e}^{x}-x\\mathrm{e}^{2x}.$$\n由 $y(0)=0$ 得 $C_1+C_2=0$；由 $y'(0)=1$ 得 $3C_1+C_2-1=1$，即 $3C_1+C_2=2$。\n解得 $C_1=1, C_2=-1$，故\n$$y=\\mathrm{e}^{3x}-\\mathrm{e}^{x}-x\\mathrm{e}^{2x}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "两个解之差才是齐次解；不要把某个特解本身当成齐次解去凑特征根",
+        "三个特解作差要保证得到线性无关的两个齐次解，才能定出两个特征根",
+        "通解必须含两个任意常数 C1、C2，缺一不可"
+      ],
+      "key_point": "解之差为齐次解：作差读特征根，留一个特解，拼出 齐次通解+特解。"
+    },
+    {
+      "id": 505,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 是 $3$ 阶非零矩阵, $|\\boldsymbol{A}|$ 为 $\\boldsymbol{A}$ 的行列式, $A_{i j}$ 为 $a_{i j}$ 的代数余子式,\r\n若 $a_{i j}+A_{i j}=0(i, j=1,2,3)$, 则 $|\\boldsymbol{A}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "【分析】条件 $a_{ij}+A_{ij}=0$ 即每个元素与其代数余子式互为相反数：$A_{ij}=-a_{ij}$。要联系 $|A|$，有两条线索：一是按行展开 $|A|=\\sum_j a_{ij}A_{ij}$，二是伴随矩阵 $A^*=(A_{ij})^T$。两者结合可定出 $|A|$，并需排除 $|A|=0$。\n\n【解答】由 $A_{ij}=-a_{ij}$，把 $|A|$ 按第 $i$ 行展开：\n$$|A|=\\sum_{j=1}^3 a_{ij}A_{ij}=\\sum_{j=1}^3 a_{ij}(-a_{ij})=-\\sum_{j=1}^3 a_{ij}^2\\le0.$$\n因 $A$ 为非零矩阵，至少某一行存在非零元，取该行展开则 $-\\sum_j a_{ij}^2<0$，故 $|A|<0$，特别地 $|A|\\neq0$。\n\n再用伴随矩阵确定具体值。$A^*=(A_{ij})^T$，由 $A_{ij}=-a_{ij}$ 得 $A^*=-A^T$。对 $3$ 阶矩阵取行列式：\n$$|A^*|=|-A^T|=(-1)^3|A^T|=-|A|.$$\n另一方面 $|A^*|=|A|^{\\,n-1}=|A|^2$。于是\n$$|A|^2=-|A|\\ \\Rightarrow\\ |A|\\,(|A|+1)=0.$$\n结合 $|A|\\neq0$，得 $|A|=-1$。\n\n验算：$|A|=-1$ 时 $|A^*|=|A|^2=1$，而 $-|A|=1$，两式相符。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|A^*|=|A|^{n-1}$，三阶时为 $|A|^2$，指数别记错。",
+        "必须用「按行展开 $|A|=-\\sum a_{ij}^2<0$」排除 $|A|=0$，否则会漏掉一个根。"
+      ],
+      "key_point": "$A_{ij}=-a_{ij}\\Rightarrow A^*=-A^T$，配合 $|A^*|=|A|^2$ 解出 $|A|$。"
+    },
+    {
+      "id": 538,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $1-\\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x$ 与 $a x^n$ 为等价无穷小量, 求 $n$ 与 $a$ 的值",
+      "options": {},
+      "answer": "$n=2, a=7$",
+      "analysis": "【分析】当 $x\\to0$ 时，要把 $1-\\cos x\\cos2x\\cos3x$ 展成 $x$ 的最低次幂，配出 $ax^n$。最稳妥是用泰勒展开 $\\cos kx=1-\\dfrac{(kx)^2}{2}+o(x^2)$，相乘后保留到 $x^2$ 即可。也可记结论：$1-\\prod\\cos(k x)\\sim\\dfrac{1}{2}\\left(\\sum k^2\\right)x^2$。\n\n【解答】对每个因子作泰勒展开（保留到 $x^2$）：\n$$\\cos x=1-\\frac{x^2}{2}+o(x^2),\\quad \\cos2x=1-2x^2+o(x^2),\\quad \\cos3x=1-\\frac{9x^2}{2}+o(x^2).$$\n相乘时只保留到 $x^2$ 项（更高次并入 $o(x^2)$）：\n$$\\cos x\\cos2x\\cos3x=1-\\left(\\frac{1}{2}+2+\\frac{9}{2}\\right)x^2+o(x^2)=1-7x^2+o(x^2).$$\n于是\n$$1-\\cos x\\cos2x\\cos3x=7x^2+o(x^2).$$\n要与 $ax^n$ 为等价无穷小，须最低次幂相同且系数相等，故 $n=2,\\ a=7$。\n\n验算：$\\dfrac{1}{2}+2+\\dfrac{9}{2}=\\dfrac{1+4+9}{2}=\\dfrac{14}{2}=7$，即 $\\dfrac{1}{2}(1^2+2^2+3^2)=7$，与结论一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "相乘时只需保留到 $x^2$，但展开每个 $\\cos kx$ 都要用 $(kx)^2/2$，别把系数 $k^2$ 漏掉。",
+        "等价无穷小要求最低次数与系数都对上：$n$ 取最低次幂的次数，$a$ 取其系数。",
+        "可用速记结论 $1-\\prod_{k}\\cos(kx)\\sim\\tfrac12(\\sum k^2)x^2$ 快速核对。"
+      ],
+      "key_point": "多个余弦之积取对数或直接泰勒展开到 $x^2$，系数 $a=\\tfrac12\\sum k^2$。"
+    },
+    {
       "id": 526,
       "paper": "数学二",
       "year": 2013,
@@ -390,6 +373,42 @@
         "区域上界是曲线 $y=x^{1/3}$、下界是 $x$ 轴，积分上下限 $0$ 到 $a$ 别弄反"
       ],
       "key_point": "旋转体体积：绕 $x$ 轴圆盘 $\\pi\\int y^2\\mathrm dx$、绕 $y$ 轴柱壳 $2\\pi\\int xy\\,\\mathrm dx$；代入比例关系解参数。"
+    },
+    {
+      "id": 540,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设平面区域 $D$ 由直线 $x=3 y, y=3 x$ 及 $x+y=8$ 围成, 计算 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](assets/figures/540.svg)",
+      "options": {},
+      "answer": "$\\dfrac{416}{3}$",
+      "analysis": "【分析】$D$ 由两条过原点的直线 $y=3x$、$y=\\dfrac{x}{3}$（即 $x=3y$）和直线 $x+y=8$ 围成，是以 $(0,0)$ 为顶点、底边在 $x+y=8$ 上的三角形。被积函数 $x^2$ 只含 $x$，宜采用 X 型区域（先对 $y$ 后对 $x$），并在 $x=2$ 处分段，因为上边界从直线 $y=3x$ 切换到 $x+y=8$。\n\n【解答】**第一步：定顶点。**\n$y=3x$ 与 $x+y=8$：$4x=8\\Rightarrow(2,6)$；$y=\\dfrac{x}{3}$ 与 $x+y=8$：$\\dfrac{4x}{3}=8\\Rightarrow(6,2)$；两直线交于 $(0,0)$。故 $D$ 为三角形，顶点 $(0,0),(2,6),(6,2)$。\n\n**第二步：分段写积分限。** 下边界恒为 $y=\\dfrac{x}{3}$。\n当 $0\\le x\\le 2$ 时上边界为 $y=3x$；当 $2\\le x\\le 6$ 时上边界为 $y=8-x$。于是\n$$\\iint_D x^2\\,dxdy=\\int_0^2 x^2\\!\\int_{x/3}^{3x}dy\\,dx+\\int_2^6 x^2\\!\\int_{x/3}^{8-x}dy\\,dx.$$\n\n**第三步：逐段计算。**\n第一段：$\\displaystyle\\int_0^2 x^2\\Big(3x-\\dfrac{x}{3}\\Big)dx=\\int_0^2 \\dfrac{8}{3}x^3\\,dx=\\dfrac{8}{3}\\cdot\\dfrac{x^4}{4}\\Big|_0^2=\\dfrac{2}{3}\\cdot16=\\dfrac{32}{3}.$\n第二段：$\\displaystyle\\int_2^6 x^2\\Big(8-x-\\dfrac{x}{3}\\Big)dx=\\int_2^6\\Big(8x^2-\\dfrac{4}{3}x^3\\Big)dx$。\n$\\int_2^6 8x^2 dx=\\dfrac83(216-8)=\\dfrac{8}{3}\\cdot208=\\dfrac{1664}{3}$；$\\int_2^6 \\dfrac43 x^3 dx=\\dfrac43\\cdot\\dfrac{6^4-2^4}{4}=\\dfrac13(1296-16)=\\dfrac{1280}{3}$。\n第二段 $=\\dfrac{1664}{3}-\\dfrac{1280}{3}=\\dfrac{384}{3}=128.$\n\n**第四步：合计。** $\\dfrac{32}{3}+128=\\dfrac{32+384}{3}=\\dfrac{416}{3}.$\n所以 $\\displaystyle\\iint_D x^2\\,dxdy=\\dfrac{416}{3}.$",
+      "wrong_options": {},
+      "pitfalls": [
+        "上边界在 x=2 处由直线 y=3x 换成 x+y=8，必须分段，否则积分限错。",
+        "x=3y 表示 y=x/3 是较平缓的下边界，别把斜率 3 与 1/3 搞反。"
+      ],
+      "key_point": "二重积分被积函数只含 x：用 X 型区域，按上边界换线处分段定限。"
+    },
+    {
+      "id": 510,
+      "paper": "数学二",
+      "year": 2013,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设奇函数 $f(x)$ 在 $[-1,1]$ 上具有二阶导数, 且 $f(1)=1$, 证明:\r\n\r\n(1) 存在 $\\xi \\in(0,1)$, 使得 $f^{\\prime}(\\xi)=1$;\r\n\r\n(2) 存在 $\\eta \\in(-1,1)$, 使得 $f^{\\prime \\prime}(\\eta)+f^{\\prime}(\\eta)=1$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】（1）要找 $f'(\\xi)=1$，由 $f$ 是奇函数有 $f(0)=0$，又 $f(1)=1$，在 $[0,1]$ 上对 $f$ 用拉格朗日中值定理立得。（2）出现 $f''+f'=1$ 这种\"导数的组合\"，标准手法是构造辅助函数把它凑成某个函数的导数等于零，用罗尔定理。注意到 $(e^x f'(x))'=e^x(f''+f')$，所以令 $g(x)=e^x\\big(f'(x)-1\\big)$，则 $g'(x)=e^x\\big(f''(x)+f'(x)-1\\big)$，要证的就是 $g'(\\eta)=0$。需在区间端点找出 $g$ 的两个相等值——这就要用到 $f$ 的奇性给出 $f'(-1)=f'(1)$ 之类的信息。\n\n【解答】因 $f$ 为 $[-1,1]$ 上的奇函数，故 $f(0)=0$，且 $f'(x)$ 为偶函数（奇函数求导为偶函数）。\n\n（1）在 $[0,1]$ 上 $f$ 连续、可导，由拉格朗日中值定理，存在 $\\xi\\in(0,1)$ 使\n$$f'(\\xi)=\\frac{f(1)-f(0)}{1-0}=\\frac{1-0}{1}=1.$$\n（1）得证。\n\n（2）由（1），存在 $\\xi\\in(0,1)$ 使 $f'(\\xi)=1$。又因 $f'$ 为偶函数，$f'(-\\xi)=f'(\\xi)=1$，且 $-\\xi\\in(-1,0)$。\n\n构造 $g(x)=e^x\\big(f'(x)-1\\big)$，它在 $[-\\xi,\\xi]\\subset(-1,1)$ 上连续、可导（因 $f$ 有二阶导）。计算两端点值：\n$$g(\\xi)=e^{\\xi}\\big(f'(\\xi)-1\\big)=e^{\\xi}\\cdot 0=0,\\qquad g(-\\xi)=e^{-\\xi}\\big(f'(-\\xi)-1\\big)=e^{-\\xi}\\cdot 0=0.$$\n即 $g(-\\xi)=g(\\xi)=0$。由罗尔定理，存在 $\\eta\\in(-\\xi,\\xi)\\subset(-1,1)$ 使 $g'(\\eta)=0$。而\n$$g'(x)=e^x\\big(f'(x)-1\\big)+e^x f''(x)=e^x\\big(f''(x)+f'(x)-1\\big),$$\n故 $g'(\\eta)=e^{\\eta}\\big(f''(\\eta)+f'(\\eta)-1\\big)=0$。因 $e^{\\eta}\\neq 0$，得\n$$f''(\\eta)+f'(\\eta)=1.$$\n（2）得证。",
+      "wrong_options": {},
+      "pitfalls": [
+        "奇函数关键信息：f(0)=0，且 f' 为偶函数——第（2）问用 f'(-ξ)=f'(ξ)=1 才能凑出罗尔定理所需的两个相等端点值。",
+        "见到 f''+f' 形式的结论应想到乘 e^x：(e^x f')'=e^x(f''+f')，把待证式凑成某函数导数为零。"
+      ],
+      "key_point": "f''+f'=c 型中值证明 → 辅助函数 e^x(f'-c)，配合奇偶性提供罗尔定理的等值端点。"
     },
     {
       "id": 527,
@@ -448,60 +467,41 @@
       "key_point": "弧长凑完全平方；平面薄片形心 x̄ = ∫₁ᵉ xy dx / ∫₁ᵉ y dx，分部积分处理 ln x。"
     },
     {
-      "id": 538,
+      "id": 512,
       "paper": "数学二",
       "year": 2013,
-      "index": 15,
+      "index": 22,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "当 $x \\rightarrow 0$ 时, $1-\\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x$ 与 $a x^n$ 为等价无穷小量, 求 $n$ 与 $a$ 的值",
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ll}1 & a \\\\ 1 & 0\\end{array}\\right), \\boldsymbol{B}=\\left(\\begin{array}{ll}0 & 1 \\\\ 1 & b\\end{array}\\right)$, 当 $a, b$ 为何值时, 存在矩阵 $\\boldsymbol{C}$ 使得 $\\boldsymbol{A} \\boldsymbol{C}-\\boldsymbol{C} \\boldsymbol{A}=\\boldsymbol{B}$, 并求所有矩阵 $\\boldsymbol{C}$",
       "options": {},
-      "answer": "$n=2, a=7$",
-      "analysis": "【分析】当 $x\\to0$ 时，要把 $1-\\cos x\\cos2x\\cos3x$ 展成 $x$ 的最低次幂，配出 $ax^n$。最稳妥是用泰勒展开 $\\cos kx=1-\\dfrac{(kx)^2}{2}+o(x^2)$，相乘后保留到 $x^2$ 即可。也可记结论：$1-\\prod\\cos(k x)\\sim\\dfrac{1}{2}\\left(\\sum k^2\\right)x^2$。\n\n【解答】对每个因子作泰勒展开（保留到 $x^2$）：\n$$\\cos x=1-\\frac{x^2}{2}+o(x^2),\\quad \\cos2x=1-2x^2+o(x^2),\\quad \\cos3x=1-\\frac{9x^2}{2}+o(x^2).$$\n相乘时只保留到 $x^2$ 项（更高次并入 $o(x^2)$）：\n$$\\cos x\\cos2x\\cos3x=1-\\left(\\frac{1}{2}+2+\\frac{9}{2}\\right)x^2+o(x^2)=1-7x^2+o(x^2).$$\n于是\n$$1-\\cos x\\cos2x\\cos3x=7x^2+o(x^2).$$\n要与 $ax^n$ 为等价无穷小，须最低次幂相同且系数相等，故 $n=2,\\ a=7$。\n\n验算：$\\dfrac{1}{2}+2+\\dfrac{9}{2}=\\dfrac{1+4+9}{2}=\\dfrac{14}{2}=7$，即 $\\dfrac{1}{2}(1^2+2^2+3^2)=7$，与结论一致。",
+      "answer": "当 $a=-1,\\ b=0$ 时存在；$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix}$（$k_1,k_2$ 为任意常数）",
+      "analysis": "【分析】把 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$ 设成未知，直接展开 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 得到关于 $x_1,x_2,x_3,x_4$ 的线性方程组。注意一个关键恒等式：对任意方阵 $\\operatorname{tr}(\\boldsymbol{AC})=\\operatorname{tr}(\\boldsymbol{CA})$，故 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$，这就强制 $\\operatorname{tr}\\boldsymbol{B}=0$，先定出 $b$；再让方程组有解定出 $a$，并解出全部 $\\boldsymbol{C}$。\n\n【解答】设 $\\boldsymbol{C}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}$。计算\n$$\\boldsymbol{AC}=\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}=\\begin{pmatrix}x_1+ax_3 & x_2+ax_4\\\\ x_1 & x_2\\end{pmatrix},$$\n$$\\boldsymbol{CA}=\\begin{pmatrix}x_1&x_2\\\\x_3&x_4\\end{pmatrix}\\begin{pmatrix}1&a\\\\1&0\\end{pmatrix}=\\begin{pmatrix}x_1+x_2 & ax_1\\\\ x_3+x_4 & ax_3\\end{pmatrix}.$$\n于是\n$$\\boldsymbol{AC}-\\boldsymbol{CA}=\\begin{pmatrix}ax_3-x_2 & x_2+ax_4-ax_1\\\\ x_1-x_3-x_4 & x_2-ax_3\\end{pmatrix}=\\begin{pmatrix}0&1\\\\1&b\\end{pmatrix}.$$\n比较四个元素得方程组\n$$\\begin{cases}ax_3-x_2=0,\\\\ -ax_1+x_2+ax_4=1,\\\\ x_1-x_3-x_4=1,\\\\ x_2-ax_3=b.\\end{cases}$$\n第 1 式给 $x_2=ax_3$，代入第 4 式得 $ax_3-ax_3=b$，即 $b=0$。这与恒等式 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 要求 $\\operatorname{tr}\\boldsymbol{B}=0+b=0$ 一致。\n\n取 $b=0$。此时第 1、4 式合并为 $x_2=ax_3$。把第 2 式整理：$-ax_1+ax_3+ax_4=1$（已用 $x_2=ax_3$），即 $-a(x_1-x_3-x_4)=1$。而第 3 式给 $x_1-x_3-x_4=1$，代入得 $-a\\cdot1=1$，故 $a=-1$。\n\n所以仅当 $a=-1,\\ b=0$ 时方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 有解。此时方程组退化为两个独立约束：\n$$x_2=ax_3=-x_3,\\qquad x_1=x_3+x_4+1.$$\n令自由参数 $x_3=k_1,\\ x_4=k_2$，则 $x_2=-k_1,\\ x_1=k_1+k_2+1$。故全部解为\n$$\\boldsymbol{C}=\\begin{pmatrix}k_1+k_2+1 & -k_1\\\\ k_1 & k_2\\end{pmatrix},\\qquad k_1,k_2\\ \\text{为任意常数}.$$\n验算（取 $a=-1$）：$\\boldsymbol{AC}-\\boldsymbol{CA}$ 的 $(1,1)$ 元 $=ax_3-x_2=-k_1-(-k_1)=0$，$(1,2)$ 元 $=x_2+ax_4-ax_1=-k_1-k_2+(k_1+k_2+1)=1$，$(2,1)$ 元 $=x_1-x_3-x_4=(k_1+k_2+1)-k_1-k_2=1$，$(2,2)$ 元 $=x_2-ax_3=-k_1+k_1=0=b$，与 $\\boldsymbol{B}$ 完全吻合。",
       "wrong_options": {},
       "pitfalls": [
-        "相乘时只需保留到 $x^2$，但展开每个 $\\cos kx$ 都要用 $(kx)^2/2$，别把系数 $k^2$ 漏掉。",
-        "等价无穷小要求最低次数与系数都对上：$n$ 取最低次幂的次数，$a$ 取其系数。",
-        "可用速记结论 $1-\\prod_{k}\\cos(kx)\\sim\\tfrac12(\\sum k^2)x^2$ 快速核对。"
+        "先用迹关系 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})=0$ 卡出 $b=0$，能避免漫无目的地解方程",
+        "$a=-1$ 是\"方程组相容\"的条件，若直接代具体数容易漏掉，需把第 2、3 式联立才暴露 $-a=1$",
+        "最终 $\\boldsymbol{C}$ 含两个自由参数，写成通解形式，别只给一个特解"
       ],
-      "key_point": "多个余弦之积取对数或直接泰勒展开到 $x^2$，系数 $a=\\tfrac12\\sum k^2$。"
+      "key_point": "矩阵方程 $\\boldsymbol{AC}-\\boldsymbol{CA}=\\boldsymbol{B}$ 设元展开化为线性方程组；先用 $\\operatorname{tr}(\\boldsymbol{AC}-\\boldsymbol{CA})\\equiv0$ 得相容必要条件 $\\operatorname{tr}\\boldsymbol{B}=0$"
     },
     {
-      "id": 540,
+      "id": 513,
       "paper": "数学二",
       "year": 2013,
-      "index": 17,
-      "type": "解答题",
+      "index": 23,
+      "type": "证明题",
       "difficulty": 0,
-      "stem": "设平面区域 $D$ 由直线 $x=3 y, y=3 x$ 及 $x+y=8$ 围成, 计算 $\\displaystyle \\iint\\limits_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](assets/figures/540.svg)",
+      "stem": "设二次型 $f\\left(x_{1}, x_{2}, x_{3}\\right)=2\\left(a_{1} x_{1}+a_{2} x_{2}+a_{3} x_{3}\\right)^{2}+\\left(b_{1} x_{1}+b_{2} x_{2}+b_{3} x_{3}\\right)^{2}$, 记\r\n\r\n$\\boldsymbol{\\alpha}=\\left(\\begin{array}{l}\r\na_{1} \\\\a_{2} \\\\a_{3}\\end{array}\\right), \r\n\\boldsymbol{\\beta}=\\left(\\begin{array}{l}\r\nb_{1} \\\\b_{2} \\\\b_{3}\\end{array}\\right)$\r\n\r\n(1) 证明:二次型 $f$ 对应的矩阵为 $2 \\boldsymbol{\\alpha} \\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta} \\boldsymbol{\\beta}^{\\mathrm{T}}$;\r\n\r\n(2) 若 $\\boldsymbol{\\alpha}, \\boldsymbol{\\beta}$ 正交且均为单位向量, 证明 $f$ 在正交变换下的标准形为 $2 y_{1}^{2}+y_{2}^{2}$",
       "options": {},
-      "answer": "$\\dfrac{416}{3}$",
-      "analysis": "【分析】$D$ 由两条过原点的直线 $y=3x$、$y=\\dfrac{x}{3}$（即 $x=3y$）和直线 $x+y=8$ 围成，是以 $(0,0)$ 为顶点、底边在 $x+y=8$ 上的三角形。被积函数 $x^2$ 只含 $x$，宜采用 X 型区域（先对 $y$ 后对 $x$），并在 $x=2$ 处分段，因为上边界从直线 $y=3x$ 切换到 $x+y=8$。\n\n【解答】**第一步：定顶点。**\n$y=3x$ 与 $x+y=8$：$4x=8\\Rightarrow(2,6)$；$y=\\dfrac{x}{3}$ 与 $x+y=8$：$\\dfrac{4x}{3}=8\\Rightarrow(6,2)$；两直线交于 $(0,0)$。故 $D$ 为三角形，顶点 $(0,0),(2,6),(6,2)$。\n\n**第二步：分段写积分限。** 下边界恒为 $y=\\dfrac{x}{3}$。\n当 $0\\le x\\le 2$ 时上边界为 $y=3x$；当 $2\\le x\\le 6$ 时上边界为 $y=8-x$。于是\n$$\\iint_D x^2\\,dxdy=\\int_0^2 x^2\\!\\int_{x/3}^{3x}dy\\,dx+\\int_2^6 x^2\\!\\int_{x/3}^{8-x}dy\\,dx.$$\n\n**第三步：逐段计算。**\n第一段：$\\displaystyle\\int_0^2 x^2\\Big(3x-\\dfrac{x}{3}\\Big)dx=\\int_0^2 \\dfrac{8}{3}x^3\\,dx=\\dfrac{8}{3}\\cdot\\dfrac{x^4}{4}\\Big|_0^2=\\dfrac{2}{3}\\cdot16=\\dfrac{32}{3}.$\n第二段：$\\displaystyle\\int_2^6 x^2\\Big(8-x-\\dfrac{x}{3}\\Big)dx=\\int_2^6\\Big(8x^2-\\dfrac{4}{3}x^3\\Big)dx$。\n$\\int_2^6 8x^2 dx=\\dfrac83(216-8)=\\dfrac{8}{3}\\cdot208=\\dfrac{1664}{3}$；$\\int_2^6 \\dfrac43 x^3 dx=\\dfrac43\\cdot\\dfrac{6^4-2^4}{4}=\\dfrac13(1296-16)=\\dfrac{1280}{3}$。\n第二段 $=\\dfrac{1664}{3}-\\dfrac{1280}{3}=\\dfrac{384}{3}=128.$\n\n**第四步：合计。** $\\dfrac{32}{3}+128=\\dfrac{32+384}{3}=\\dfrac{416}{3}.$\n所以 $\\displaystyle\\iint_D x^2\\,dxdy=\\dfrac{416}{3}.$",
+      "answer": "略",
+      "analysis": "【分析】第(1)问要证二次型矩阵就是 $2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，关键在于把 $(a_1x_1+a_2x_2+a_3x_3)^2$ 这种\"线性组合的平方\"写成 $(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$，并验证 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 对称。第(2)问当 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是正交单位向量时，直接求 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 的特征值：用 $A\\boldsymbol{\\alpha}$、$A\\boldsymbol{\\beta}$ 看 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 是不是特征向量，再补上第三个正交方向，特征值即为标准形系数。\n\n【解答】（1）记 $\\boldsymbol{x}=(x_1,x_2,x_3)^{\\mathrm{T}}$。则\n$$a_1x_1+a_2x_2+a_3x_3=\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x},\\qquad b_1x_1+b_2x_2+b_3x_3=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x}.$$\n由于 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是数，转置等于自身，故\n$$(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2=(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=(\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha})(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})\\boldsymbol{x}.$$\n同理 $(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})\\boldsymbol{x}$。于是\n$$f=2(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x})^2+(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{x})^2=\\boldsymbol{x}^{\\mathrm{T}}\\left(2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}\\right)\\boldsymbol{x}.$$\n又 $(\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$，$(\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}})^{\\mathrm{T}}=\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$，故 $A=2\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}+\\boldsymbol{\\beta}\\boldsymbol{\\beta}^{\\mathrm{T}}$ 是对称矩阵，它就是二次型 $f$ 对应的矩阵。证毕。\n\n（2）设 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 正交且为单位向量，即\n$$\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}=1,\\quad \\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta}=1,\\quad \\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta}=\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha}=0.$$\n考察 $A$ 作用在 $\\boldsymbol{\\alpha}$ 上：\n$$A\\boldsymbol{\\alpha}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\alpha})=2\\boldsymbol{\\alpha}\\cdot1+\\boldsymbol{\\beta}\\cdot0=2\\boldsymbol{\\alpha},$$\n故 $\\lambda_1=2$ 是特征值，$\\boldsymbol{\\alpha}$ 为对应特征向量。再看 $\\boldsymbol{\\beta}$：\n$$A\\boldsymbol{\\beta}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\beta})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\beta})=0+\\boldsymbol{\\beta}\\cdot1=\\boldsymbol{\\beta},$$\n故 $\\lambda_2=1$，$\\boldsymbol{\\beta}$ 为对应特征向量。取与 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$ 都正交的非零向量 $\\boldsymbol{\\gamma}$（三维空间中必存在），则\n$$A\\boldsymbol{\\gamma}=2\\boldsymbol{\\alpha}(\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\gamma})+\\boldsymbol{\\beta}(\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{\\gamma})=0+0=\\boldsymbol{0}=0\\cdot\\boldsymbol{\\gamma},$$\n故 $\\lambda_3=0$。于是 $A$ 的特征值为 $2,1,0$。\n\n由于 $A$ 是实对称矩阵，必存在正交矩阵 $Q$ 使 $\\boldsymbol{x}=Q\\boldsymbol{y}$ 把 $f$ 化为标准形，对应系数即特征值，故\n$$f=2y_1^2+y_2^2+0\\cdot y_3^2=2y_1^2+y_2^2.$$\n证毕。",
       "wrong_options": {},
       "pitfalls": [
-        "上边界在 x=2 处由直线 y=3x 换成 x+y=8，必须分段，否则积分限错。",
-        "x=3y 表示 y=x/3 是较平缓的下边界，别把斜率 3 与 1/3 搞反。"
+        "把线性组合平方写成 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 时务必说明 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{x}$ 是标量从而可转置交换",
+        "第(2)问不要硬算特征多项式，利用 $A\\boldsymbol{\\alpha},A\\boldsymbol{\\beta}$ 直接读出特征值最干净，第三个特征值由正交补给出 $0$"
       ],
-      "key_point": "二重积分被积函数只含 x：用 X 型区域，按上边界换线处分段定限。"
-    },
-    {
-      "id": 90407,
-      "paper": "数学二",
-      "year": 2013,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "已知 $y_{1}=\\mathrm{e}^{3x}-x\\mathrm{e}^{2x},\\ y_{2}=\\mathrm{e}^{x}-x\\mathrm{e}^{2x},\\ y_{3}=-x\\mathrm{e}^{2x}$ 是某二阶常系数非齐次线性微分方程的 3 个解，该方程满足条件 $\\left.y\\right|_{x=0}=0,\\ \\left.y'\\right|_{x=0}=1$ 的解为 $y=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "y=\\mathrm{e}^{3x}-\\mathrm{e}^{x}-x\\mathrm{e}^{2x}",
-      "analysis": "【分析】$y_1-y_3=\\mathrm{e}^{3x}$，$y_2-y_3=\\mathrm{e}^{x}$ 是对应齐次方程的两个线性无关解，$y_3=-x\\mathrm{e}^{2x}$ 可作一个非齐次特解。\n\n【解答】通解为\n$$y=C_1\\mathrm{e}^{3x}+C_2\\mathrm{e}^{x}-x\\mathrm{e}^{2x}.$$\n由 $y(0)=0$ 得 $C_1+C_2=0$；由 $y'(0)=1$ 得 $3C_1+C_2-1=1$，即 $3C_1+C_2=2$。\n解得 $C_1=1, C_2=-1$，故\n$$y=\\mathrm{e}^{3x}-\\mathrm{e}^{x}-x\\mathrm{e}^{2x}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "两个解之差才是齐次解；不要把某个特解本身当成齐次解去凑特征根",
-        "三个特解作差要保证得到线性无关的两个齐次解，才能定出两个特征根",
-        "通解必须含两个任意常数 C1、C2，缺一不可"
-      ],
-      "key_point": "解之差为齐次解：作差读特征根，留一个特解，拼出 齐次通解+特解。"
+      "key_point": "秩 1 矩阵 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{\\mathrm{T}}$ 的特征值是 $\\boldsymbol{\\alpha}^{\\mathrm{T}}\\boldsymbol{\\alpha}$（特征向量 $\\boldsymbol{\\alpha}$）和 $0$；正交单位向量让两个秩 1 块互不干扰，特征值直接叠加"
     }
   ]
 }

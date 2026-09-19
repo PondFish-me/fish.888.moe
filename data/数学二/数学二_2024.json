@@ -4,44 +4,6 @@
   "count": 22,
   "questions": [
     {
-      "id": 2461,
-      "paper": "数学二",
-      "year": 2024,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "微分方程 $y^{\\prime}=\\dfrac{1}{(x+y)^2}$ 满足 $y(1)=0$ 的解为 $\\qquad$",
-      "options": {},
-      "answer": "$y-\\arctan (x+y)+\\dfrac{\\pi}{4}=0$",
-      "analysis": "【分析】\n\n方程 $y'=\\dfrac{1}{(x+y)^2}$ 右端只依赖 $x+y$，是典型的「$y'=f(x+y)$」型。作变量代换 $u=x+y$，则 $u'=1+y'$，方程化为关于 $u$ 的**可分离变量**方程，分离后积分，最后用初值 $y(1)=0$ 定常数。结果是隐式解，无需解出 $y$。\n\n【解答】\n\n令 $u=x+y$，则 $\\dfrac{du}{dx}=1+\\dfrac{dy}{dx}=1+\\dfrac{1}{u^2}=\\dfrac{u^2+1}{u^2}.$\n\n分离变量：\n$$\\frac{u^2}{u^2+1}\\,du=dx,\\qquad \\Big(1-\\frac{1}{u^2+1}\\Big)du=dx.$$\n\n两边积分得\n$$u-\\arctan u=x+C.$$\n\n回代 $u=x+y$：\n$$x+y-\\arctan(x+y)=x+C\\ \\Longrightarrow\\ y-\\arctan(x+y)=C.$$\n\n代入初值 $y(1)=0$（此时 $x+y=1$）：\n$$0-\\arctan 1=C\\ \\Longrightarrow\\ C=-\\frac{\\pi}{4}.$$\n\n故所求解为\n$$y-\\arctan(x+y)=-\\frac{\\pi}{4},\\qquad\\text{即}\\qquad y-\\arctan(x+y)+\\frac{\\pi}{4}=0.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "代换后是 $u'=1+y'$，别漏掉那个 $+1$。",
-        "$\\dfrac{u^2}{u^2+1}=1-\\dfrac{1}{u^2+1}$，要拆项后积分，直接积会卡住。",
-        "本题为隐式解，强行解出 $y$ 反而出错，保留隐式形式即可。"
-      ],
-      "key_point": "见到 $y'=f(x+y)$ 就令 $u=x+y$ 化为可分离变量方程。"
-    },
-    {
-      "id": 2466,
-      "paper": "数学二",
-      "year": 2024,
-      "index": 21,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 具有二阶导数，且 $f^{\\prime}(0)=f^{\\prime}(1),\\left|f^{\\prime \\prime}(x)\\right| \\leqslant 1$ ，证明:\r\n\r\n(1) 当 $x \\in(0,1)$ 时，$\\displaystyle |f(x)-f(0)(1-x)-f(1) x| \\leqslant \\frac{x(1-x)}{2}$;\r\n\r\n(2) $\\displaystyle \\left|\\int_0^1 f(x) \\mathrm{d} x-\\frac{f(0)+f(1)}{2}\\right| \\leqslant \\frac{1}{12}$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】第 (1) 问要把 $f(x)$ 与端点值 $f(0),f(1)$ 的线性组合作比较，自然想到在动点 $x$ 处对两个端点作带拉格朗日余项的一阶泰勒展开，二阶余项里出现 $f''$，再用 $|f''|\\le1$ 放缩。第 (2) 问是 (1) 的“积分版”：注意到 $f(0)(1-x)+f(1)x$ 在 $[0,1]$ 上的积分恰是梯形值 $\\dfrac{f(0)+f(1)}{2}$，于是把 (1) 的逐点不等式两端在 $[0,1]$ 上积分即可。（条件 $f'(0)=f'(1)$ 在本解法中不被用到，结论对 $|f''|\\le1$ 已成立。）\n\n【解答】\n\n（1）固定 $x\\in(0,1)$，分别对端点 $0$ 与 $1$ 在点 $x$ 处作一阶泰勒展开（带拉格朗日余项），存在 $\\xi_1\\in(0,x)$，$\\xi_2\\in(x,1)$ 使\n$$f(0)=f(x)+f'(x)(0-x)+\\frac{f''(\\xi_1)}{2}(0-x)^2=f(x)-f'(x)x+\\frac{f''(\\xi_1)}{2}x^2,$$\n$$f(1)=f(x)+f'(x)(1-x)+\\frac{f''(\\xi_2)}{2}(1-x)^2.$$\n以 $(1-x)$、$x$ 为权作组合：\n$$f(0)(1-x)+f(1)x=f(x)\\big[(1-x)+x\\big]+f'(x)\\big[-x(1-x)+(1-x)x\\big]+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n中间 $f'(x)$ 的系数 $-x(1-x)+x(1-x)=0$ 相消，故\n$$f(0)(1-x)+f(1)x=f(x)+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n移项：\n$$f(x)-f(0)(1-x)-f(1)x=-\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n用 $|f''|\\le1$ 及 $x,1-x>0$ 放缩：\n$$\\big|f(x)-f(0)(1-x)-f(1)x\\big|\\le\\frac12\\big[x^2(1-x)+(1-x)^2x\\big]=\\frac12\\,x(1-x)\\big[x+(1-x)\\big]=\\frac{x(1-x)}{2}.$$\n这对 $x\\in(0,1)$ 成立，第 (1) 问得证。\n\n（2）记 $g(x)=f(x)-f(0)(1-x)-f(1)x$，由 (1) 知 $|g(x)|\\le\\dfrac{x(1-x)}{2}$（在 $x=0,1$ 处两端均为 $0$，仍成立）。先算线性部分的积分：\n$$\\int_0^1\\big[f(0)(1-x)+f(1)x\\big]dx=f(0)\\cdot\\frac12+f(1)\\cdot\\frac12=\\frac{f(0)+f(1)}{2},$$\n故\n$$\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}=\\int_0^1 g(x)\\,dx.$$\n于是\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|=\\left|\\int_0^1 g(x)\\,dx\\right|\\le\\int_0^1|g(x)|\\,dx\\le\\int_0^1\\frac{x(1-x)}{2}\\,dx.$$\n而 $\\displaystyle\\int_0^1 x(1-x)\\,dx=\\frac12-\\frac13=\\frac16$，故上式 $\\le\\dfrac12\\cdot\\dfrac16=\\dfrac{1}{12}$。\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|\\le\\frac{1}{12}.$$\n证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "（1）要在动点 $x$ 处对两个端点展开（展开中心是 $x$，不是 $0$），这样 $f'(x)$ 项才会因加权相消。",
-        "放缩时 $x^2(1-x)+(1-x)^2x$ 要提取公因子 $x(1-x)$ 得 $x(1-x)$，别误算系数。",
-        "（2）的关键是认出 $\\int_0^1[f(0)(1-x)+f(1)x]dx=\\dfrac{f(0)+f(1)}{2}$，从而把第 (2) 问归结为对 (1) 的逐点估计取积分。"
-      ],
-      "key_point": "端点值的线性插值差用“以动点为中心的二阶泰勒余项”估计；积分型不等式由逐点不等式两端积分得到（梯形公式误差思路）。"
-    },
-    {
       "id": 2470,
       "paper": "数学二",
       "year": 2024,
@@ -359,6 +321,25 @@
       "key_point": "联立一阶偏导求驻点，再用 $AC-B^2$ 判别：本题两驻点中仅 $(1,1)$ 满足 $AC-B^2>0$ 且 $A<0$ 为极大值点，$(2,1)$ 为鞍点。"
     },
     {
+      "id": 2461,
+      "paper": "数学二",
+      "year": 2024,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime}=\\dfrac{1}{(x+y)^2}$ 满足 $y(1)=0$ 的解为 $\\qquad$",
+      "options": {},
+      "answer": "$y-\\arctan (x+y)+\\dfrac{\\pi}{4}=0$",
+      "analysis": "【分析】\n\n方程 $y'=\\dfrac{1}{(x+y)^2}$ 右端只依赖 $x+y$，是典型的「$y'=f(x+y)$」型。作变量代换 $u=x+y$，则 $u'=1+y'$，方程化为关于 $u$ 的**可分离变量**方程，分离后积分，最后用初值 $y(1)=0$ 定常数。结果是隐式解，无需解出 $y$。\n\n【解答】\n\n令 $u=x+y$，则 $\\dfrac{du}{dx}=1+\\dfrac{dy}{dx}=1+\\dfrac{1}{u^2}=\\dfrac{u^2+1}{u^2}.$\n\n分离变量：\n$$\\frac{u^2}{u^2+1}\\,du=dx,\\qquad \\Big(1-\\frac{1}{u^2+1}\\Big)du=dx.$$\n\n两边积分得\n$$u-\\arctan u=x+C.$$\n\n回代 $u=x+y$：\n$$x+y-\\arctan(x+y)=x+C\\ \\Longrightarrow\\ y-\\arctan(x+y)=C.$$\n\n代入初值 $y(1)=0$（此时 $x+y=1$）：\n$$0-\\arctan 1=C\\ \\Longrightarrow\\ C=-\\frac{\\pi}{4}.$$\n\n故所求解为\n$$y-\\arctan(x+y)=-\\frac{\\pi}{4},\\qquad\\text{即}\\qquad y-\\arctan(x+y)+\\frac{\\pi}{4}=0.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "代换后是 $u'=1+y'$，别漏掉那个 $+1$。",
+        "$\\dfrac{u^2}{u^2+1}=1-\\dfrac{1}{u^2+1}$，要拆项后积分，直接积会卡住。",
+        "本题为隐式解，强行解出 $y$ 反而出错，保留隐式形式即可。"
+      ],
+      "key_point": "见到 $y'=f(x+y)$ 就令 $u=x+y$ 化为可分离变量方程。"
+    },
+    {
       "id": 2482,
       "paper": "数学二",
       "year": 2024,
@@ -489,6 +470,25 @@
         "两次积分各产生一个‘任意函数’（不是任意常数），必须用两个边界条件分别确定 φ(u) 与 ψ(v)。"
       ],
       "key_point": "链式法则把恒等式中的 f_{uu}、f_{vv} 系数化为零，逼出 f_{uv}；再两步偏积分、各用一个边界条件还原 f。"
+    },
+    {
+      "id": 2466,
+      "paper": "数学二",
+      "year": 2024,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 具有二阶导数，且 $f^{\\prime}(0)=f^{\\prime}(1),\\left|f^{\\prime \\prime}(x)\\right| \\leqslant 1$ ，证明:\r\n\r\n(1) 当 $x \\in(0,1)$ 时，$\\displaystyle |f(x)-f(0)(1-x)-f(1) x| \\leqslant \\frac{x(1-x)}{2}$;\r\n\r\n(2) $\\displaystyle \\left|\\int_0^1 f(x) \\mathrm{d} x-\\frac{f(0)+f(1)}{2}\\right| \\leqslant \\frac{1}{12}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第 (1) 问要把 $f(x)$ 与端点值 $f(0),f(1)$ 的线性组合作比较，自然想到在动点 $x$ 处对两个端点作带拉格朗日余项的一阶泰勒展开，二阶余项里出现 $f''$，再用 $|f''|\\le1$ 放缩。第 (2) 问是 (1) 的“积分版”：注意到 $f(0)(1-x)+f(1)x$ 在 $[0,1]$ 上的积分恰是梯形值 $\\dfrac{f(0)+f(1)}{2}$，于是把 (1) 的逐点不等式两端在 $[0,1]$ 上积分即可。（条件 $f'(0)=f'(1)$ 在本解法中不被用到，结论对 $|f''|\\le1$ 已成立。）\n\n【解答】\n\n（1）固定 $x\\in(0,1)$，分别对端点 $0$ 与 $1$ 在点 $x$ 处作一阶泰勒展开（带拉格朗日余项），存在 $\\xi_1\\in(0,x)$，$\\xi_2\\in(x,1)$ 使\n$$f(0)=f(x)+f'(x)(0-x)+\\frac{f''(\\xi_1)}{2}(0-x)^2=f(x)-f'(x)x+\\frac{f''(\\xi_1)}{2}x^2,$$\n$$f(1)=f(x)+f'(x)(1-x)+\\frac{f''(\\xi_2)}{2}(1-x)^2.$$\n以 $(1-x)$、$x$ 为权作组合：\n$$f(0)(1-x)+f(1)x=f(x)\\big[(1-x)+x\\big]+f'(x)\\big[-x(1-x)+(1-x)x\\big]+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n中间 $f'(x)$ 的系数 $-x(1-x)+x(1-x)=0$ 相消，故\n$$f(0)(1-x)+f(1)x=f(x)+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n移项：\n$$f(x)-f(0)(1-x)-f(1)x=-\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n用 $|f''|\\le1$ 及 $x,1-x>0$ 放缩：\n$$\\big|f(x)-f(0)(1-x)-f(1)x\\big|\\le\\frac12\\big[x^2(1-x)+(1-x)^2x\\big]=\\frac12\\,x(1-x)\\big[x+(1-x)\\big]=\\frac{x(1-x)}{2}.$$\n这对 $x\\in(0,1)$ 成立，第 (1) 问得证。\n\n（2）记 $g(x)=f(x)-f(0)(1-x)-f(1)x$，由 (1) 知 $|g(x)|\\le\\dfrac{x(1-x)}{2}$（在 $x=0,1$ 处两端均为 $0$，仍成立）。先算线性部分的积分：\n$$\\int_0^1\\big[f(0)(1-x)+f(1)x\\big]dx=f(0)\\cdot\\frac12+f(1)\\cdot\\frac12=\\frac{f(0)+f(1)}{2},$$\n故\n$$\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}=\\int_0^1 g(x)\\,dx.$$\n于是\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|=\\left|\\int_0^1 g(x)\\,dx\\right|\\le\\int_0^1|g(x)|\\,dx\\le\\int_0^1\\frac{x(1-x)}{2}\\,dx.$$\n而 $\\displaystyle\\int_0^1 x(1-x)\\,dx=\\frac12-\\frac13=\\frac16$，故上式 $\\le\\dfrac12\\cdot\\dfrac16=\\dfrac{1}{12}$。\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|\\le\\frac{1}{12}.$$\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "（1）要在动点 $x$ 处对两个端点展开（展开中心是 $x$，不是 $0$），这样 $f'(x)$ 项才会因加权相消。",
+        "放缩时 $x^2(1-x)+(1-x)^2x$ 要提取公因子 $x(1-x)$ 得 $x(1-x)$，别误算系数。",
+        "（2）的关键是认出 $\\int_0^1[f(0)(1-x)+f(1)x]dx=\\dfrac{f(0)+f(1)}{2}$，从而把第 (2) 问归结为对 (1) 的逐点估计取积分。"
+      ],
+      "key_point": "端点值的线性插值差用“以动点为中心的二阶泰勒余项”估计；积分型不等式由逐点不等式两端积分得到（梯形公式误差思路）。"
     },
     {
       "id": 2489,

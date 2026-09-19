@@ -4,6 +4,34 @@
   "count": 22,
   "questions": [
     {
+      "id": 132,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $\\displaystyle \\int_0^{x^2}\\left(\\mathrm{e}^{\\mathrm{t}^3}-1\\right) \\mathrm{d} t$ 是 $x^7$ 的 $(\\quad)$",
+      "options": {
+        "A": "低阶无穷小",
+        "B": "等价无穷小",
+        "C": "高阶无穷小",
+        "D": "同阶但非等价无穷小"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n这是变上限积分与幂函数的阶数比较问题。核心思路：被积函数在 $t\\to 0$ 时用等价无穷小化简，再用变限积分的估阶（积分后阶数升一级）确定整个积分的无穷小阶数，最后与 $x^7$ 比较。关键等价无穷小：$e^{u}-1\\sim u\\,(u\\to 0)$。\n\n【解答】\n\n记 $F(x)=\\displaystyle\\int_0^{x^2}\\left(e^{t^3}-1\\right)\\mathrm{d}t$。\n\n当 $t\\to 0$ 时，$e^{t^3}-1\\sim t^3$，故被积函数的主部为 $t^3$。于是\n\n$$F(x)\\sim\\int_0^{x^2}t^3\\,\\mathrm{d}t=\\dfrac{(x^2)^4}{4}=\\dfrac{x^8}{4}\\quad(x\\to 0).$$\n\n更严格地，由等价无穷小可写 $e^{t^3}-1=t^3+o(t^3)$，逐项积分得 $F(x)=\\dfrac{x^8}{4}+o(x^8)$，所以 $F(x)$ 是 $x^8$ 阶的无穷小。\n\n将其与 $x^7$ 比较：\n\n$$\\lim_{x\\to 0}\\dfrac{F(x)}{x^7}=\\lim_{x\\to 0}\\dfrac{\\frac{1}{4}x^8+o(x^8)}{x^7}=\\lim_{x\\to 0}\\dfrac{x}{4}=0.$$\n\n极限为 $0$，说明 $F(x)$ 比 $x^7$ 更高阶，即 $F(x)$ 是 $x^7$ 的高阶无穷小。\n\n也可用洛必达验证：$\\dfrac{F(x)}{x^7}$ 求导，$F'(x)=\\left(e^{x^6}-1\\right)\\cdot 2x\\sim x^6\\cdot 2x=2x^7$，分母导数为 $7x^6$，比值 $\\sim\\dfrac{2x^7}{7x^6}=\\dfrac{2x}{7}\\to 0$，结论一致。\n\n故选 C。",
+      "wrong_options": {
+        "A": "低阶无穷小要求 $\\lim F(x)/x^7=\\infty$，而此处极限为 $0$，恰恰相反，故错。",
+        "B": "等价无穷小要求 $\\lim F(x)/x^7=1$，但 $F(x)$ 是 $x^8$ 阶，极限为 $0$，故错。",
+        "D": "同阶非等价要求极限为非零常数，而此处为 $0$，故错。"
+      },
+      "pitfalls": [
+        "上限是 $x^2$ 不是 $x$，积分后阶数是 $(x^2)^4=x^8$，容易误算成 $x^4$ 或 $x^3$。",
+        "等价无穷小 $e^{t^3}-1\\sim t^3$ 的指数是 $3$，不要写成 $t$ 或 $t^2$。",
+        "比较阶数时分清谁是谁的高阶：极限为 $0$ 表示分子（积分）比分母 $x^7$ 高阶。"
+      ],
+      "key_point": "变限积分估阶：被积函数取等价无穷小主部后积分，阶数随上限幂次放大，再与目标幂函数求极限定阶。"
+    },
+    {
       "id": 99,
       "paper": "数学二",
       "year": 2021,
@@ -30,6 +58,90 @@
         "可导点取极值的必要条件是导数为零；本题导数非零，直接排除极值选项。"
       ],
       "key_point": "分段点用导数定义求导，结合 $e^x$ 的麦克劳林展开把 $\\dfrac{e^x-1-x}{x^2}$ 算到 $\\dfrac12$。"
+    },
+    {
+      "id": 121,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "有一圆柱体, 底面半径与高随时间变化的速率分别为 $2 \\mathrm{cm} / \\mathrm{s},-3 \\mathrm{cm} / \\mathrm{s}$, 当底面半径为 $10 \\mathrm{cm}$, 高为 $5 \\mathrm{cm}$ 时, 圆柱体的体积与表面积随时间变化的速率分别为 $(\\quad)$",
+      "options": {
+        "A": "$125 \\pi \\mathrm{cm}^3 / \\mathrm{s}, 40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
+        "B": "$125 \\pi \\mathrm{cm}^3 / \\mathrm{s},-40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
+        "C": "$-100 \\pi \\mathrm{cm}^3 / \\mathrm{s}, 40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
+        "D": "$-100 \\pi \\mathrm{cm}^3 / \\mathrm{s},-40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n这是典型的\"相关变化率\"问题：几何量（体积 $V$、表面积 $S$）都是底面半径 $r$ 与高 $h$ 的函数，而 $r,h$ 又都随时间 $t$ 变化。核心思路是先写出 $V,S$ 关于 $r,h$ 的公式，再对 $t$ 求导（用复合函数/链式法则），最后把瞬时值 $r=10,\\\\ h=5,\\\\ \\dfrac{dr}{dt}=2,\\\\ \\dfrac{dh}{dt}=-3$ 一并代入即可。注意表面积取整个封闭圆柱的全面积（上下两底 $+$ 侧面）。\n\n【解答】\n\n**体积变化率。** 圆柱体积 $V=\\pi r^2 h$，两边对 $t$ 求导：\n$$\\frac{dV}{dt}=\\pi\\left(2r\\,\\frac{dr}{dt}\\,h+r^2\\,\\frac{dh}{dt}\\right).$$\n代入 $r=10,h=5,\\dfrac{dr}{dt}=2,\\dfrac{dh}{dt}=-3$：\n$$\\frac{dV}{dt}=\\pi\\big(2\\cdot10\\cdot2\\cdot5+10^2\\cdot(-3)\\big)=\\pi(200-300)=-100\\pi\\ \\text{cm}^3/\\text{s}.$$\n\n**表面积变化率。** 封闭圆柱全面积 $S=2\\pi r^2+2\\pi r h$，对 $t$ 求导：\n$$\\frac{dS}{dt}=4\\pi r\\,\\frac{dr}{dt}+2\\pi\\left(\\frac{dr}{dt}\\,h+r\\,\\frac{dh}{dt}\\right).$$\n代入数值：\n$$\\frac{dS}{dt}=4\\pi\\cdot10\\cdot2+2\\pi\\big(2\\cdot5+10\\cdot(-3)\\big)=80\\pi+2\\pi(10-30)=80\\pi-40\\pi=40\\pi\\ \\text{cm}^2/\\text{s}.$$\n\n故两速率分别为 $-100\\pi\\ \\text{cm}^3/\\text{s}$ 与 $40\\pi\\ \\text{cm}^2/\\text{s}$，选 **C**。",
+      "wrong_options": {
+        "A": "体积速率写成 $125\\pi$ 是只算了 $2r\\frac{dr}{dt}h$ 一项（或漏掉 $r^2\\frac{dh}{dt}$ 的负贡献），忽视了高在减小使体积应当减小。",
+        "B": "体积同 A 算错为正值，且表面积符号也弄反。",
+        "D": "体积 $-100\\pi$ 正确，但表面积算成 $-40\\pi$：把侧面项 $2\\pi(\\frac{dr}{dt}h+r\\frac{dh}{dt})=-40\\pi$ 当成了全部，漏掉了上下底贡献 $4\\pi r\\frac{dr}{dt}=80\\pi$。"
+      },
+      "pitfalls": [
+        "表面积一定是封闭圆柱：$S=2\\pi r^2+2\\pi r h$，别只算侧面 $2\\pi r h$。",
+        "求导时 $V,S$ 中含 $r$ 与 $h$ 的乘积项，必须用乘积法则，两项都不能漏。",
+        "$\\frac{dh}{dt}=-3$ 是负的，代入时要带符号，决定了体积速率为负。"
+      ],
+      "key_point": "先把几何量写成 $r,h$ 的显式公式，对 $t$ 链式求导后再代入瞬时值，符号随导数走。"
+    },
+    {
+      "id": 133,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=a x-b \\ln x(a>0)$ 有两个零点, 则 $\\displaystyle \\frac{b}{a}$ 的取值范围是 $(\\quad)$",
+      "options": {
+        "A": "$(\\mathrm{e},+\\infty)$",
+        "B": "$(0, \\mathrm{e})$",
+        "C": "$\\displaystyle \\left(0, \\frac{1}{\\mathrm{e}}\\right)$",
+        "D": "$\\displaystyle \\left(\\frac{1}{\\mathrm{e}},+\\infty\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n含参函数零点个数问题。思路：$f(x)=ax-b\\ln x$ 定义域 $x>0$。先求导找唯一极值点，分析端点极限（$x\\to 0^+$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$），由“两个零点”的几何要求转化为“极小值 $<0$”的条件，再解出 $\\dfrac{b}{a}$ 的范围。隐含判断：必须 $b>0$ 才可能有极小值（否则单调无两零点）。\n\n【解答】\n\n定义域 $x>0$，$a>0$。求导：\n\n$$f'(x)=a-\\dfrac{b}{x}=\\dfrac{ax-b}{x}.$$\n\n**第一步：确定 $b$ 的符号。** 若 $b\\le 0$，则 $f'(x)=a-\\dfrac{b}{x}>0$ 恒成立，$f$ 在 $(0,+\\infty)$ 上严格单调递增，至多一个零点，不满足要求。故必有 $b>0$。\n\n**第二步：求极值。** 当 $b>0$ 时，令 $f'(x)=0$ 得唯一驻点 $x_0=\\dfrac{b}{a}>0$。当 $0<x<x_0$ 时 $f'(x)<0$，当 $x>x_0$ 时 $f'(x)>0$，故 $x_0$ 是极小值点（也是最小值点）。\n\n端点行为：$x\\to 0^+$ 时 $-b\\ln x\\to+\\infty$，故 $f\\to+\\infty$；$x\\to+\\infty$ 时 $ax$ 占主导，$f\\to+\\infty$。\n\n**第三步：两个零点的条件。** 由于函数在两端都趋于 $+\\infty$ 且只有一个极小值，要有两个零点当且仅当最小值严格小于零：\n\n$$f(x_0)=a\\cdot\\dfrac{b}{a}-b\\ln\\dfrac{b}{a}=b-b\\ln\\dfrac{b}{a}=b\\left(1-\\ln\\dfrac{b}{a}\\right)<0.$$\n\n因 $b>0$，两边除以 $b$ 得\n\n$$1-\\ln\\dfrac{b}{a}<0\\ \\Longrightarrow\\ \\ln\\dfrac{b}{a}>1\\ \\Longrightarrow\\ \\dfrac{b}{a}>e.$$\n\n（若 $f(x_0)=0$ 只有一个零点，$f(x_0)>0$ 无零点，均排除。）\n\n所以 $\\dfrac{b}{a}\\in(e,+\\infty)$，选 A。",
+      "wrong_options": {
+        "B": "$(0,e)$ 时极小值 $f(x_0)=b(1-\\ln(b/a))>0$，函数恒正无零点，故错。",
+        "C": "$\\left(0,\\dfrac{1}{e}\\right)$ 同样使极小值为正（无零点），且区间界限 $1/e$ 与本题阈值无关，故错。",
+        "D": "$\\left(\\dfrac{1}{e},+\\infty\\right)$ 把临界值错当成 $1/e$；正确阈值是 $e$，该区间包含了 $(1/e,e]$ 这段无两零点的情形，故错。"
+      },
+      "pitfalls": [
+        "先判断 $b>0$：$b\\le 0$ 时函数单调，不可能有两个零点，这是隐含前提。",
+        "极小值点是 $x_0=b/a$，代入时 $ax_0=b$，得 $f(x_0)=b(1-\\ln(b/a))$，别漏掉 $\\ln(b/a)$ 里的 $b/a$。",
+        "两零点对应极小值严格小于 $0$（取等只有一个零点），不等号方向要正确。"
+      ],
+      "key_point": "含参零点问题：求唯一极值，结合两端趋于 $+\\infty$，令极小值 $<0$ 解参数范围。"
+    },
+    {
+      "id": 122,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\sec x$ 在 $x=0$ 处的 2 次泰勒多项式为 $1+a x+b x^2$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle a=1, b=-\\frac{1}{2}$",
+        "B": "$\\displaystyle a=1, b=\\frac{1}{2}$",
+        "C": "$\\displaystyle a=0, b=-\\frac{1}{2}$",
+        "D": "$\\displaystyle a=0, b=\\frac{1}{2}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n$x=0$ 处的 $2$ 次泰勒多项式即麦克劳林展开取到 $x^2$：$f(x)\\approx f(0)+f'(0)x+\\dfrac{f''(0)}{2}x^2$，故 $a=f'(0)$，$b=\\dfrac{f''(0)}{2}$。求 $a,b$ 只需在 $x=0$ 处算出一、二阶导数取值。也可直接利用奇偶性与已知展开 $\\cos x=1-\\dfrac{x^2}{2}+\\cdots$ 取倒数，更快。\n\n【解答】\n\n**方法一（求导取值）。** $f(x)=\\sec x$，$f(0)=1$。\n\n一阶导：$f'(x)=\\sec x\\tan x$，故 $f'(0)=\\sec0\\cdot\\tan0=1\\cdot0=0$，即 $a=0$。\n\n二阶导：\n$$f''(x)=\\frac{d}{dx}(\\sec x\\tan x)=\\sec x\\tan^2 x+\\sec x\\cdot\\sec^2 x=\\sec x\\tan^2x+\\sec^3 x.$$\n在 $x=0$：$f''(0)=1\\cdot0+1=1$，故 $b=\\dfrac{f''(0)}{2}=\\dfrac12$。\n\n**方法二（倒数展开）。** $\\sec x=\\dfrac{1}{\\cos x}$，由 $\\cos x=1-\\dfrac{x^2}{2}+o(x^2)$，\n$$\\sec x=\\frac{1}{1-\\frac{x^2}{2}+o(x^2)}=1+\\frac{x^2}{2}+o(x^2).$$\n对照 $1+ax+bx^2$ 得 $a=0,\\ b=\\dfrac12$。\n\n两法一致，选 **D**。",
+      "wrong_options": {
+        "A": "把 $a$ 当成 $1$（误以为 $f'(0)=1$，实际 $\\sec x\\tan x$ 在 $0$ 处为 $0$），$b$ 符号也取反。",
+        "B": "$b=\\frac12$ 正确，但 $a$ 误写为 $1$；$\\sec x$ 是偶函数，一次项系数必为 $0$。",
+        "C": "$a=0$ 正确，但 $b$ 取成 $-\\frac12$：这是把 $\\sec x$ 错当 $\\cos x$ 展开（$\\cos$ 的二次系数才是 $-\\frac12$）。"
+      },
+      "pitfalls": [
+        "$\\sec x$ 是偶函数，展开式只含偶次幂，$a=0$ 可直接断定。",
+        "易把 $\\sec x$ 的二次系数与 $\\cos x$ 的 $-\\frac12$ 混淆；取倒数后符号变正，$b=+\\frac12$。",
+        "$f''(0)$ 要完整求 $\\sec x\\tan^2x+\\sec^3x$，别漏掉 $\\sec^3x$ 项。"
+      ],
+      "key_point": "偶函数定 $a=0$，再用 $\\sec x=1/\\cos x$ 由 $\\cos x$ 展开取倒数得 $b=\\frac12$。"
     },
     {
       "id": 100,
@@ -116,100 +228,6 @@
       "key_point": "先展开成标准二次型，再用特征值符号或配方法定正负惯性指数；特征值 $3,0,-1$ 给出 $p=q=1$。"
     },
     {
-      "id": 110,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $y=y(x)$ 由参数方程 $\\left\\{\\begin{array}{l}x=2 \\mathrm{e}^{t}+t+1 \\text {, } \\\\ y=4(t-1) \\mathrm{e}^{t}+t^{2}\\end{array}\\right.$ 所确定, 则 $\\displaystyle \\left.\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=0}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{2}{3}$",
-      "analysis": "【分析】\n\n参数方程求二阶导数的核心公式：\n\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{y'_t}{x'_t},\\qquad \\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\!\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)=\\frac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\!\\left(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\right)}{x'_t}.$$\n\n注意第二步分母仍是 $x'_t$，绝不能再除一次或漏除。本题只需 $t=0$ 处的值，可以先求出 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$ 作为 $t$ 的函数，再对 $t$ 求导，最后代入 $t=0$。\n\n【解答】\n\n先求一阶导数。\n\n$$x'_t=\\frac{\\mathrm{d}}{\\mathrm{d}t}\\big(2\\mathrm{e}^t+t+1\\big)=2\\mathrm{e}^t+1.$$\n\n$$y'_t=\\frac{\\mathrm{d}}{\\mathrm{d}t}\\big(4(t-1)\\mathrm{e}^t+t^2\\big)=4\\mathrm{e}^t+4(t-1)\\mathrm{e}^t+2t=4t\\mathrm{e}^t+2t.$$\n\n所以\n\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{4t\\mathrm{e}^t+2t}{2\\mathrm{e}^t+1}.$$\n\n再对 $t$ 求导。记分子 $u=4t\\mathrm{e}^t+2t$，分母 $v=2\\mathrm{e}^t+1$，则\n\n$$u'=4\\mathrm{e}^t+4t\\mathrm{e}^t+2,\\qquad v'=2\\mathrm{e}^t.$$\n\n在 $t=0$ 处：$u=0$，$u'=4+0+2=6$，$v=2+1=3$，$v'=2$，$x'_t=2+1=3$。\n\n由商的求导法则，\n\n$$\\left.\\frac{\\mathrm{d}}{\\mathrm{d}t}\\!\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)\\right|_{t=0}=\\frac{u'v-uv'}{v^2}\\bigg|_{t=0}=\\frac{6\\times 3-0\\times 2}{3^2}=\\frac{18}{9}=2.$$\n\n最后除以 $x'_t$：\n\n$$\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=0}=\\frac{2}{x'_t\\big|_{t=0}}=\\frac{2}{3}.$$\n\n故所求二阶导数为 $\\dfrac{2}{3}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "二阶导公式第二步分母仍是 $x'_t$，不是 $(x'_t)^2$，也不能漏除——这是参数方程二阶导最常见的错。",
-        "对 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$ 求的是关于 $t$ 的导数（用商法则），不要误对 $x$ 直接求导。",
-        "代值要在“求完导之后”代 $t=0$；提前代入会丢掉导数项。"
-      ],
-      "key_point": "参数方程二阶导 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\frac{\\mathrm{d}}{\\mathrm{d}t}(y'_t/x'_t)}{x'_t}$，关键是末尾再除一次 $x'_t$。"
-    },
-    {
-      "id": 115,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+\\int_{0}^{x} \\mathrm{e}^{t^{2}} \\mathrm{d} t}{\\mathrm{e}^{x}-1}-\\frac{1}{\\sin x}\\right)$",
-      "options": {},
-      "answer": "$\\dfrac{1}{2}$",
-      "analysis": "【分析】\n\n这是 $\\infty-\\infty$ 型极限，含变限积分 $\\displaystyle\\int_0^x e^{t^2}\\,dt$。思路：先通分合并为 $\\dfrac{0}{0}$ 型，分母用等价无穷小 $e^x-1\\sim x$、$\\sin x\\sim x$ 简化为 $x^2$ 量级，再把分子各部分用泰勒（麦克劳林）展开到 $x^2$ 项即可定出系数。其中变限积分用 $e^{t^2}=1+t^2+o(t^2)$ 逐项积分得 $\\displaystyle\\int_0^x e^{t^2}\\,dt=x+\\tfrac{x^3}{3}+o(x^3)$。\n\n【解答】\n\n记原式\n$$L=\\lim_{x\\to 0}\\left(\\frac{1+\\int_0^x e^{t^2}\\,dt}{e^x-1}-\\frac{1}{\\sin x}\\right).$$\n\n**通分：**\n$$L=\\lim_{x\\to 0}\\frac{\\big(1+\\int_0^x e^{t^2}\\,dt\\big)\\sin x-(e^x-1)}{(e^x-1)\\sin x}.$$\n\n**分母等价无穷小：** $e^x-1\\sim x,\\ \\sin x\\sim x$，故分母 $(e^x-1)\\sin x\\sim x^2$。因此只需把分子展开到 $x^2$ 阶。\n\n**分子各部分泰勒展开（到 $x^2$）：**\n- $\\displaystyle\\int_0^x e^{t^2}\\,dt$：由 $e^{t^2}=1+t^2+o(t^2)$，积分得 $x+\\dfrac{x^3}{3}+o(x^3)$，故 $1+\\displaystyle\\int_0^x e^{t^2}\\,dt=1+x+\\dfrac{x^3}{3}+o(x^3)$；\n- $\\sin x=x-\\dfrac{x^3}{6}+o(x^3)$；\n- $e^x-1=x+\\dfrac{x^2}{2}+\\dfrac{x^3}{6}+o(x^3)$。\n\n先算 $\\big(1+\\int_0^x e^{t^2}\\,dt\\big)\\sin x$，保留到 $x^2$ 即可：\n$$\\big(1+x+o(x)\\big)\\big(x+o(x^2)\\big)=x+x^2+o(x^2).$$\n（更精确地，乘积 $=\\big(1+x+\\tfrac{x^3}{3}\\big)\\big(x-\\tfrac{x^3}{6}\\big)=x+x^2-\\tfrac{x^3}{6}+\\tfrac{x^4}{3}+\\cdots$，到 $x^2$ 为 $x+x^2$。）\n\n于是分子\n$$\\big(1+\\textstyle\\int_0^x e^{t^2}\\,dt\\big)\\sin x-(e^x-1)=\\big(x+x^2+o(x^2)\\big)-\\big(x+\\tfrac{x^2}{2}+o(x^2)\\big)=\\frac{x^2}{2}+o(x^2).$$\n\n**取极限：**\n$$L=\\lim_{x\\to 0}\\frac{\\tfrac{x^2}{2}+o(x^2)}{x^2}=\\frac{1}{2}.$$\n\n所以原极限 $=\\dfrac{1}{2}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$\\infty-\\infty$ 必须先通分成 $\\tfrac00$ 再处理，不能对两项分别取极限。",
-        "分母 $(e^x-1)\\sin x\\sim x^2$，因此分子必须展开到 $x^2$ 项；$e^x-1$ 的 $x^2$ 系数是 $\\tfrac12$ 不能漏。",
-        "变限积分 $\\int_0^x e^{t^2}\\,dt$ 要把被积函数 $e^{t^2}$ 先展开再逐项积分，最低阶贡献到分子的 $x$ 项与常数 $1$ 配合。"
-      ],
-      "key_point": "含变限积分的 $\\infty-\\infty$ 极限：通分定阶（分母 $\\sim x^2$）后，对分子各项统一泰勒展开到同阶比系数。"
-    },
-    {
-      "id": 121,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "有一圆柱体, 底面半径与高随时间变化的速率分别为 $2 \\mathrm{cm} / \\mathrm{s},-3 \\mathrm{cm} / \\mathrm{s}$, 当底面半径为 $10 \\mathrm{cm}$, 高为 $5 \\mathrm{cm}$ 时, 圆柱体的体积与表面积随时间变化的速率分别为 $(\\quad)$",
-      "options": {
-        "A": "$125 \\pi \\mathrm{cm}^3 / \\mathrm{s}, 40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
-        "B": "$125 \\pi \\mathrm{cm}^3 / \\mathrm{s},-40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
-        "C": "$-100 \\pi \\mathrm{cm}^3 / \\mathrm{s}, 40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$",
-        "D": "$-100 \\pi \\mathrm{cm}^3 / \\mathrm{s},-40 \\pi \\mathrm{cm}^2 / \\mathrm{s}$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n这是典型的\"相关变化率\"问题：几何量（体积 $V$、表面积 $S$）都是底面半径 $r$ 与高 $h$ 的函数，而 $r,h$ 又都随时间 $t$ 变化。核心思路是先写出 $V,S$ 关于 $r,h$ 的公式，再对 $t$ 求导（用复合函数/链式法则），最后把瞬时值 $r=10,\\\\ h=5,\\\\ \\dfrac{dr}{dt}=2,\\\\ \\dfrac{dh}{dt}=-3$ 一并代入即可。注意表面积取整个封闭圆柱的全面积（上下两底 $+$ 侧面）。\n\n【解答】\n\n**体积变化率。** 圆柱体积 $V=\\pi r^2 h$，两边对 $t$ 求导：\n$$\\frac{dV}{dt}=\\pi\\left(2r\\,\\frac{dr}{dt}\\,h+r^2\\,\\frac{dh}{dt}\\right).$$\n代入 $r=10,h=5,\\dfrac{dr}{dt}=2,\\dfrac{dh}{dt}=-3$：\n$$\\frac{dV}{dt}=\\pi\\big(2\\cdot10\\cdot2\\cdot5+10^2\\cdot(-3)\\big)=\\pi(200-300)=-100\\pi\\ \\text{cm}^3/\\text{s}.$$\n\n**表面积变化率。** 封闭圆柱全面积 $S=2\\pi r^2+2\\pi r h$，对 $t$ 求导：\n$$\\frac{dS}{dt}=4\\pi r\\,\\frac{dr}{dt}+2\\pi\\left(\\frac{dr}{dt}\\,h+r\\,\\frac{dh}{dt}\\right).$$\n代入数值：\n$$\\frac{dS}{dt}=4\\pi\\cdot10\\cdot2+2\\pi\\big(2\\cdot5+10\\cdot(-3)\\big)=80\\pi+2\\pi(10-30)=80\\pi-40\\pi=40\\pi\\ \\text{cm}^2/\\text{s}.$$\n\n故两速率分别为 $-100\\pi\\ \\text{cm}^3/\\text{s}$ 与 $40\\pi\\ \\text{cm}^2/\\text{s}$，选 **C**。",
-      "wrong_options": {
-        "A": "体积速率写成 $125\\pi$ 是只算了 $2r\\frac{dr}{dt}h$ 一项（或漏掉 $r^2\\frac{dh}{dt}$ 的负贡献），忽视了高在减小使体积应当减小。",
-        "B": "体积同 A 算错为正值，且表面积符号也弄反。",
-        "D": "体积 $-100\\pi$ 正确，但表面积算成 $-40\\pi$：把侧面项 $2\\pi(\\frac{dr}{dt}h+r\\frac{dh}{dt})=-40\\pi$ 当成了全部，漏掉了上下底贡献 $4\\pi r\\frac{dr}{dt}=80\\pi$。"
-      },
-      "pitfalls": [
-        "表面积一定是封闭圆柱：$S=2\\pi r^2+2\\pi r h$，别只算侧面 $2\\pi r h$。",
-        "求导时 $V,S$ 中含 $r$ 与 $h$ 的乘积项，必须用乘积法则，两项都不能漏。",
-        "$\\frac{dh}{dt}=-3$ 是负的，代入时要带符号，决定了体积速率为负。"
-      ],
-      "key_point": "先把几何量写成 $r,h$ 的显式公式，对 $t$ 链式求导后再代入瞬时值，符号随导数走。"
-    },
-    {
-      "id": 122,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=\\sec x$ 在 $x=0$ 处的 2 次泰勒多项式为 $1+a x+b x^2$, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle a=1, b=-\\frac{1}{2}$",
-        "B": "$\\displaystyle a=1, b=\\frac{1}{2}$",
-        "C": "$\\displaystyle a=0, b=-\\frac{1}{2}$",
-        "D": "$\\displaystyle a=0, b=\\frac{1}{2}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n$x=0$ 处的 $2$ 次泰勒多项式即麦克劳林展开取到 $x^2$：$f(x)\\approx f(0)+f'(0)x+\\dfrac{f''(0)}{2}x^2$，故 $a=f'(0)$，$b=\\dfrac{f''(0)}{2}$。求 $a,b$ 只需在 $x=0$ 处算出一、二阶导数取值。也可直接利用奇偶性与已知展开 $\\cos x=1-\\dfrac{x^2}{2}+\\cdots$ 取倒数，更快。\n\n【解答】\n\n**方法一（求导取值）。** $f(x)=\\sec x$，$f(0)=1$。\n\n一阶导：$f'(x)=\\sec x\\tan x$，故 $f'(0)=\\sec0\\cdot\\tan0=1\\cdot0=0$，即 $a=0$。\n\n二阶导：\n$$f''(x)=\\frac{d}{dx}(\\sec x\\tan x)=\\sec x\\tan^2 x+\\sec x\\cdot\\sec^2 x=\\sec x\\tan^2x+\\sec^3 x.$$\n在 $x=0$：$f''(0)=1\\cdot0+1=1$，故 $b=\\dfrac{f''(0)}{2}=\\dfrac12$。\n\n**方法二（倒数展开）。** $\\sec x=\\dfrac{1}{\\cos x}$，由 $\\cos x=1-\\dfrac{x^2}{2}+o(x^2)$，\n$$\\sec x=\\frac{1}{1-\\frac{x^2}{2}+o(x^2)}=1+\\frac{x^2}{2}+o(x^2).$$\n对照 $1+ax+bx^2$ 得 $a=0,\\ b=\\dfrac12$。\n\n两法一致，选 **D**。",
-      "wrong_options": {
-        "A": "把 $a$ 当成 $1$（误以为 $f'(0)=1$，实际 $\\sec x\\tan x$ 在 $0$ 处为 $0$），$b$ 符号也取反。",
-        "B": "$b=\\frac12$ 正确，但 $a$ 误写为 $1$；$\\sec x$ 是偶函数，一次项系数必为 $0$。",
-        "C": "$a=0$ 正确，但 $b$ 取成 $-\\frac12$：这是把 $\\sec x$ 错当 $\\cos x$ 展开（$\\cos$ 的二次系数才是 $-\\frac12$）。"
-      },
-      "pitfalls": [
-        "$\\sec x$ 是偶函数，展开式只含偶次幂，$a=0$ 可直接断定。",
-        "易把 $\\sec x$ 的二次系数与 $\\cos x$ 的 $-\\frac12$ 混淆；取倒数后符号变正，$b=+\\frac12$。",
-        "$f''(0)$ 要完整求 $\\sec x\\tan^2x+\\sec^3x$，别漏掉 $\\sec^3x$ 项。"
-      ],
-      "key_point": "偶函数定 $a=0$，再用 $\\sec x=1/\\cos x$ 由 $\\cos x$ 展开取倒数得 $b=\\frac12$。"
-    },
-    {
       "id": 123,
       "paper": "数学二",
       "year": 2021,
@@ -238,6 +256,34 @@
       "key_point": "线性表出转 $A=BC$，再转置成 $A^{T}=C^{T}B^{T}$，立得 $B^{T}x=0$ 的解必是 $A^{T}x=0$ 的解。"
     },
     {
+      "id": 135,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & -1 \\\\ 2 & -1 & 1 \\\\ -1 & 2 & -5\\end{array}\\right)$, 若存在下三角可逆矩阵 $\\boldsymbol{P}$ 和上三角可逆矩阵 $\\boldsymbol{Q}$, 使 $\\boldsymbol{P A Q}$ 为对角矩阵, 则 $\\boldsymbol{P}, Q$ 可以分别取 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ -3 & 2 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ -3 & 2 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 3 & 1\\end{array}\\right),\\left(\\begin{array}{ccc}1 & 2 & -3 \\\\ 0 & -1 & 2 \\\\ 0 & 0 & 1\\end{array}\\right)$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题考查初等变换与初等矩阵的对应关系：左乘对应行变换，右乘对应列变换；下三角初等矩阵对应“用上面的行去消下面的行/把倍数加到下行”这类向下的行变换，上三角初等矩阵对应向右的列变换。要把 $\\boldsymbol{A}$ 化为对角阵，先用下三角的 $\\boldsymbol{P}$ 做行变换把主对角线下方化零，再用上三角的 $\\boldsymbol{Q}$ 做列变换把主对角线右方化零。\n\n判断选项最稳妥的办法就是直接计算 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 是否为对角阵，同时注意 $\\boldsymbol{P}$ 必须下三角、$\\boldsymbol{Q}$ 必须上三角且二者均可逆。\n\n【解答】\n\n先做行变换。取\n$$\\boldsymbol{P}=\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-3&2&1\\end{pmatrix}\\;(\\text{下三角，可逆}).$$\n计算 $\\boldsymbol{P}\\boldsymbol{A}$，其中 $\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\2&-1&1\\\\-1&2&-5\\end{pmatrix}$：\n$$\\boldsymbol{P}\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}.$$\n（验算第 2 行：$2\\cdot(1,0,-1)+(-1)\\cdot(2,-1,1)=(0,1,-3)$；第 3 行：$-3\\cdot(1,0,-1)+2\\cdot(2,-1,1)+1\\cdot(-1,2,-5)=(0,0,0)$。）此时主对角线下方已全为 $0$，但右上方还有 $-1,-3$ 未消去，所以仅有 $\\boldsymbol{P}$、$\\boldsymbol{Q}=\\boldsymbol{E}$ 还不够。\n\n再做列变换消去右上元素。对 $\\boldsymbol{P}\\boldsymbol{A}$ 右乘上三角阵\n$$\\boldsymbol{Q}=\\begin{pmatrix}1&0&1\\\\0&1&3\\\\0&0&1\\end{pmatrix}.$$\n这相当于把第 1 列的 1 倍、第 2 列的 3 倍加到第 3 列：\n$$\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}\\begin{pmatrix}1&0&1\\\\0&1&3\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&0\\end{pmatrix}.$$\n结果为对角矩阵 $\\mathrm{diag}(1,1,0)$。$\\boldsymbol{P}$ 下三角、$\\boldsymbol{Q}$ 上三角且均可逆，完全满足要求，故选 C。",
+      "wrong_options": {
+        "A": "$\\boldsymbol{P}=\\boldsymbol{E}$ 不做行变换，仅 $\\boldsymbol{A}\\boldsymbol{Q}$ 无法把对角线下方的 $2,-1,2$ 化零，结果非对角阵。",
+        "B": "$\\boldsymbol{P}$ 正确但 $\\boldsymbol{Q}=\\boldsymbol{E}$。此时 $\\boldsymbol{P}\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}$ 仍有右上元素 $-1,-3$，不是对角阵。",
+        "D": "这里 $\\boldsymbol{P}$ 取成上三角、$\\boldsymbol{Q}$ 取成下三角，与题目对 $\\boldsymbol{P}$（下三角）、$\\boldsymbol{Q}$（上三角）的要求恰好相反，且 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 算出来不是对角阵。"
+      },
+      "pitfalls": [
+        "只做行变换（$\\boldsymbol{Q}=\\boldsymbol{E}$）只能得到上三角阵，右上方的非零元必须再用上三角 $\\boldsymbol{Q}$ 的列变换消去，否则不是对角阵。",
+        "务必核对 $\\boldsymbol{P}$ 是下三角、$\\boldsymbol{Q}$ 是上三角，不要被选项 D 的位置对调迷惑。",
+        "化简结果允许出现对角元为 0（这里是 $\\mathrm{diag}(1,1,0)$），因为 $\\mathrm{rank}(\\boldsymbol{A})=2$，对角阵不必满秩。"
+      ],
+      "key_point": "左乘下三角做行变换清左下、右乘上三角做列变换清右上，直接算 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 验证是否对角即可定选项。"
+    },
+    {
       "id": 124,
       "paper": "数学二",
       "year": 2021,
@@ -255,6 +301,25 @@
         "底数不是 $e$：$3^{-u}=e^{-u\\ln 3}$，积分出来分母是 $\\ln 3$ 而非 $1$。"
       ],
       "key_point": "偶函数对称化 $+$ 凑微分 $u=x^2$，化为 $\\int_0^{+\\infty}3^{-u}du=\\dfrac{1}{\\ln 3}$。"
+    },
+    {
+      "id": 110,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由参数方程 $\\left\\{\\begin{array}{l}x=2 \\mathrm{e}^{t}+t+1 \\text {, } \\\\ y=4(t-1) \\mathrm{e}^{t}+t^{2}\\end{array}\\right.$ 所确定, 则 $\\displaystyle \\left.\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=0}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "【分析】\n\n参数方程求二阶导数的核心公式：\n\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{y'_t}{x'_t},\\qquad \\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\!\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)=\\frac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\!\\left(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\right)}{x'_t}.$$\n\n注意第二步分母仍是 $x'_t$，绝不能再除一次或漏除。本题只需 $t=0$ 处的值，可以先求出 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$ 作为 $t$ 的函数，再对 $t$ 求导，最后代入 $t=0$。\n\n【解答】\n\n先求一阶导数。\n\n$$x'_t=\\frac{\\mathrm{d}}{\\mathrm{d}t}\\big(2\\mathrm{e}^t+t+1\\big)=2\\mathrm{e}^t+1.$$\n\n$$y'_t=\\frac{\\mathrm{d}}{\\mathrm{d}t}\\big(4(t-1)\\mathrm{e}^t+t^2\\big)=4\\mathrm{e}^t+4(t-1)\\mathrm{e}^t+2t=4t\\mathrm{e}^t+2t.$$\n\n所以\n\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{4t\\mathrm{e}^t+2t}{2\\mathrm{e}^t+1}.$$\n\n再对 $t$ 求导。记分子 $u=4t\\mathrm{e}^t+2t$，分母 $v=2\\mathrm{e}^t+1$，则\n\n$$u'=4\\mathrm{e}^t+4t\\mathrm{e}^t+2,\\qquad v'=2\\mathrm{e}^t.$$\n\n在 $t=0$ 处：$u=0$，$u'=4+0+2=6$，$v=2+1=3$，$v'=2$，$x'_t=2+1=3$。\n\n由商的求导法则，\n\n$$\\left.\\frac{\\mathrm{d}}{\\mathrm{d}t}\\!\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)\\right|_{t=0}=\\frac{u'v-uv'}{v^2}\\bigg|_{t=0}=\\frac{6\\times 3-0\\times 2}{3^2}=\\frac{18}{9}=2.$$\n\n最后除以 $x'_t$：\n\n$$\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=0}=\\frac{2}{x'_t\\big|_{t=0}}=\\frac{2}{3}.$$\n\n故所求二阶导数为 $\\dfrac{2}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导公式第二步分母仍是 $x'_t$，不是 $(x'_t)^2$，也不能漏除——这是参数方程二阶导最常见的错。",
+        "对 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$ 求的是关于 $t$ 的导数（用商法则），不要误对 $x$ 直接求导。",
+        "代值要在“求完导之后”代 $t=0$；提前代入会丢掉导数项。"
+      ],
+      "key_point": "参数方程二阶导 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\frac{\\mathrm{d}}{\\mathrm{d}t}(y'_t/x'_t)}{x'_t}$，关键是末尾再除一次 $x'_t$。"
     },
     {
       "id": 125,
@@ -313,6 +378,44 @@
         "三阶方程通解必须含三个独立任意常数 $C_1,C_2,C_3$。"
       ],
       "key_point": "特征方程 $r^3-1=(r-1)(r^2+r+1)$，实根配指数解、共轭复根配 $e^{\\alpha x}(\\cos\\beta x,\\sin\\beta x)$。"
+    },
+    {
+      "id": 141,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "多项式 $f(x)=\\left|\\begin{array}{cccc}x & x & 1 & 2 x \\\\ 1 & x & 2 & -1 \\\\ 2 & 1 & x & 1 \\\\ 2 & -1 & 1 & x\\end{array}\\right|$ 中 $x^3$ 项的系数为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "-5",
+      "analysis": "【分析】\n\n四阶行列式按定义是 $4!=24$ 个项之和，每项取自不同行不同列的元素之积并带符号。含 $x$ 的元素只在以下位置：$(1,1)=x,\\ (1,2)=x,\\ (1,4)=2x,\\ (2,2)=x,\\ (3,3)=x,\\ (4,4)=x$。要得到 $x^3$，必须在“不同行不同列”的约束下恰好选中 $3$ 个带 $x$ 的元素、$1$ 个常数元素。逐一枚举满足约束的选法，按逆序数定符号并累加系数即可。也可直接展开行列式收集 $x^3$。\n\n【解答】\n\n记行列式按列指标的排列 $(\\sigma_1,\\sigma_2,\\sigma_3,\\sigma_4)$ 展开，项为 $\\mathrm{sgn}(\\sigma)\\,a_{1\\sigma_1}a_{2\\sigma_2}a_{3\\sigma_3}a_{4\\sigma_4}$。\n\n带 $x$ 的元素：第 1 行有列 $1,2,4$（值 $x,x,2x$），第 2 行只有列 $2$（值 $x$），第 3 行只有列 $3$（值 $x$），第 4 行只有列 $4$（值 $x$）。\n\n要凑 $x^3$：第 2、3、4 行各只有一个 $x$，分别占列 $2,3,4$；它们一旦被选，第 1 行只能取**常数元素**（提供那个不含 $x$ 的因子）。\n\n**情形 A：选第 1、2、3 行的 $x$，第 4 行取常数。** 但第 2 行的 $x$ 在列 $2$、第 3 行的 $x$ 在列 $3$，第 1 行的 $x$ 可取列 $1$（值 $x$）或列 $4$（值 $2x$，但列 $4$ 后面要留给第 4 行）。逐个排列分析较繁，下面用统一枚举。\n\n由于第 $2,3,4$ 行的 $x$ 唯一地占列 $2,3,4$，凡用到它们三个就必须让第 1 行取列 $1$ 的常数——但列 $1$ 元素 $a_{11}=x$ 不是常数。故“同时用满第 2,3,4 行的 $x$”不可行。于是 $x^3$ 只能来自“第 1 行的 $x$ + 第 2,3,4 行中的两个 $x$”，剩下一行取常数。枚举：\n\n1) 第 1 行列 $1$（$x$）、第 2 行列 $2$（$x$）、第 3 行列 $3$（$x$）、第 4 行取常数列 $1?$——列 $1$ 已用，第 4 行可用列为 $4$，但 $a_{44}=x$ 非常数；无常数可取。排列 $(1,2,3,4)$ 全是 $x$，给出 $x^4$，不计入 $x^3$。\n\n直接以展开结果为准：将行列式整理为关于 $x$ 的多项式\n\n$$f(x)=x^4-5x^3-2x^2+13x+5.$$\n\n下面验证 $x^4$ 与 $x^3$ 两项以确信无误。\n\n- $x^4$：唯一来自主对角线 $a_{11}a_{22}a_{33}a_{44}=x\\cdot x\\cdot x\\cdot x$，排列为恒等排列，符号 $+$，系数 $1$。$\\checkmark$\n\n- $x^3$：需三个 $x$ 因子与一个常数因子，且四个元素同列异行同行异列。可行的列排列只有：\n  - $\\sigma=(2,?,3,4)$ 型与 $\\sigma=(4,2,3,?)$ 型。逐一得到两项：\n    - 取 $a_{12}=x,\\ a_{21}=1,\\ a_{33}=x,\\ a_{44}=x$，列排列 $(2,1,3,4)$，逆序数 $1$，符号 $-$，积 $=x\\cdot1\\cdot x\\cdot x=x^3$，贡献 $-x^3$。\n    - 取 $a_{14}=2x,\\ a_{22}=x,\\ a_{33}=x,\\ a_{41}=2$，列排列 $(4,2,3,1)$，逆序数为 $5$（$4{>}2,4{>}3,4{>}1,2{>}1,3{>}1$），符号 $-$，积 $=2x\\cdot x\\cdot x\\cdot2=4x^3$，贡献 $-4x^3$。\n  - 其余把第 $2,3,4$ 行的 $x$ 用满的排列都迫使第 1 行取 $a_{11}=x$，得到 $x^4$ 而非 $x^3$；含两个以上常数的项次数低于 $3$。\n\n合计 $x^3$ 系数 $=-1+(-4)=-5$。\n\n故所求 $x^3$ 项的系数为\n\n$$\\boxed{-5}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$a_{14}=2x$ 与 $a_{41}=2$ 都带系数，凑出的项是 $2\\cdot2=4$ 倍，容易只算成 $1$ 倍而漏掉。",
+        "定符号要按列排列的逆序数，$(4,2,3,1)$ 逆序数为 5 取负号，别数错。",
+        "只盯主对角线会漏掉非对角的 $x$（如 $a_{12},a_{14}$），导致 $x^3$ 项算不全。"
+      ],
+      "key_point": "求行列式某次幂系数：锁定含 $x$ 的元素位置，在“异行异列”约束下枚举可凑该次数的排列，按逆序数定号求和。"
+    },
+    {
+      "id": 115,
+      "paper": "数学二",
+      "year": 2021,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+\\int_{0}^{x} \\mathrm{e}^{t^{2}} \\mathrm{d} t}{\\mathrm{e}^{x}-1}-\\frac{1}{\\sin x}\\right)$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}$",
+      "analysis": "【分析】\n\n这是 $\\infty-\\infty$ 型极限，含变限积分 $\\displaystyle\\int_0^x e^{t^2}\\,dt$。思路：先通分合并为 $\\dfrac{0}{0}$ 型，分母用等价无穷小 $e^x-1\\sim x$、$\\sin x\\sim x$ 简化为 $x^2$ 量级，再把分子各部分用泰勒（麦克劳林）展开到 $x^2$ 项即可定出系数。其中变限积分用 $e^{t^2}=1+t^2+o(t^2)$ 逐项积分得 $\\displaystyle\\int_0^x e^{t^2}\\,dt=x+\\tfrac{x^3}{3}+o(x^3)$。\n\n【解答】\n\n记原式\n$$L=\\lim_{x\\to 0}\\left(\\frac{1+\\int_0^x e^{t^2}\\,dt}{e^x-1}-\\frac{1}{\\sin x}\\right).$$\n\n**通分：**\n$$L=\\lim_{x\\to 0}\\frac{\\big(1+\\int_0^x e^{t^2}\\,dt\\big)\\sin x-(e^x-1)}{(e^x-1)\\sin x}.$$\n\n**分母等价无穷小：** $e^x-1\\sim x,\\ \\sin x\\sim x$，故分母 $(e^x-1)\\sin x\\sim x^2$。因此只需把分子展开到 $x^2$ 阶。\n\n**分子各部分泰勒展开（到 $x^2$）：**\n- $\\displaystyle\\int_0^x e^{t^2}\\,dt$：由 $e^{t^2}=1+t^2+o(t^2)$，积分得 $x+\\dfrac{x^3}{3}+o(x^3)$，故 $1+\\displaystyle\\int_0^x e^{t^2}\\,dt=1+x+\\dfrac{x^3}{3}+o(x^3)$；\n- $\\sin x=x-\\dfrac{x^3}{6}+o(x^3)$；\n- $e^x-1=x+\\dfrac{x^2}{2}+\\dfrac{x^3}{6}+o(x^3)$。\n\n先算 $\\big(1+\\int_0^x e^{t^2}\\,dt\\big)\\sin x$，保留到 $x^2$ 即可：\n$$\\big(1+x+o(x)\\big)\\big(x+o(x^2)\\big)=x+x^2+o(x^2).$$\n（更精确地，乘积 $=\\big(1+x+\\tfrac{x^3}{3}\\big)\\big(x-\\tfrac{x^3}{6}\\big)=x+x^2-\\tfrac{x^3}{6}+\\tfrac{x^4}{3}+\\cdots$，到 $x^2$ 为 $x+x^2$。）\n\n于是分子\n$$\\big(1+\\textstyle\\int_0^x e^{t^2}\\,dt\\big)\\sin x-(e^x-1)=\\big(x+x^2+o(x^2)\\big)-\\big(x+\\tfrac{x^2}{2}+o(x^2)\\big)=\\frac{x^2}{2}+o(x^2).$$\n\n**取极限：**\n$$L=\\lim_{x\\to 0}\\frac{\\tfrac{x^2}{2}+o(x^2)}{x^2}=\\frac{1}{2}.$$\n\n所以原极限 $=\\dfrac{1}{2}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\infty-\\infty$ 必须先通分成 $\\tfrac00$ 再处理，不能对两项分别取极限。",
+        "分母 $(e^x-1)\\sin x\\sim x^2$，因此分子必须展开到 $x^2$ 项；$e^x-1$ 的 $x^2$ 系数是 $\\tfrac12$ 不能漏。",
+        "变限积分 $\\int_0^x e^{t^2}\\,dt$ 要把被积函数 $e^{t^2}$ 先展开再逐项积分，最低阶贡献到分子的 $x$ 项与常数 $1$ 配合。"
+      ],
+      "key_point": "含变限积分的 $\\infty-\\infty$ 极限：通分定阶（分母 $\\sim x^2$）后，对分子各项统一泰勒展开到同阶比系数。"
     },
     {
       "id": 128,
@@ -389,109 +492,6 @@
         "$r$ 的上限是 $\\sqrt{\\cos2\\theta}$（由 $r^2=\\cos2\\theta$），不是 $\\cos2\\theta$。"
       ],
       "key_point": "双纽线 $r^2=\\cos2\\theta$ 走极坐标，定好 $\\theta\\in[0,\\frac{\\pi}{4}]$ 后先积 $r$ 再用 $\\cos2\\theta$ 换元。"
-    },
-    {
-      "id": 132,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "当 $x \\rightarrow 0$ 时, $\\displaystyle \\int_0^{x^2}\\left(\\mathrm{e}^{\\mathrm{t}^3}-1\\right) \\mathrm{d} t$ 是 $x^7$ 的 $(\\quad)$",
-      "options": {
-        "A": "低阶无穷小",
-        "B": "等价无穷小",
-        "C": "高阶无穷小",
-        "D": "同阶但非等价无穷小"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n这是变上限积分与幂函数的阶数比较问题。核心思路：被积函数在 $t\\to 0$ 时用等价无穷小化简，再用变限积分的估阶（积分后阶数升一级）确定整个积分的无穷小阶数，最后与 $x^7$ 比较。关键等价无穷小：$e^{u}-1\\sim u\\,(u\\to 0)$。\n\n【解答】\n\n记 $F(x)=\\displaystyle\\int_0^{x^2}\\left(e^{t^3}-1\\right)\\mathrm{d}t$。\n\n当 $t\\to 0$ 时，$e^{t^3}-1\\sim t^3$，故被积函数的主部为 $t^3$。于是\n\n$$F(x)\\sim\\int_0^{x^2}t^3\\,\\mathrm{d}t=\\dfrac{(x^2)^4}{4}=\\dfrac{x^8}{4}\\quad(x\\to 0).$$\n\n更严格地，由等价无穷小可写 $e^{t^3}-1=t^3+o(t^3)$，逐项积分得 $F(x)=\\dfrac{x^8}{4}+o(x^8)$，所以 $F(x)$ 是 $x^8$ 阶的无穷小。\n\n将其与 $x^7$ 比较：\n\n$$\\lim_{x\\to 0}\\dfrac{F(x)}{x^7}=\\lim_{x\\to 0}\\dfrac{\\frac{1}{4}x^8+o(x^8)}{x^7}=\\lim_{x\\to 0}\\dfrac{x}{4}=0.$$\n\n极限为 $0$，说明 $F(x)$ 比 $x^7$ 更高阶，即 $F(x)$ 是 $x^7$ 的高阶无穷小。\n\n也可用洛必达验证：$\\dfrac{F(x)}{x^7}$ 求导，$F'(x)=\\left(e^{x^6}-1\\right)\\cdot 2x\\sim x^6\\cdot 2x=2x^7$，分母导数为 $7x^6$，比值 $\\sim\\dfrac{2x^7}{7x^6}=\\dfrac{2x}{7}\\to 0$，结论一致。\n\n故选 C。",
-      "wrong_options": {
-        "A": "低阶无穷小要求 $\\lim F(x)/x^7=\\infty$，而此处极限为 $0$，恰恰相反，故错。",
-        "B": "等价无穷小要求 $\\lim F(x)/x^7=1$，但 $F(x)$ 是 $x^8$ 阶，极限为 $0$，故错。",
-        "D": "同阶非等价要求极限为非零常数，而此处为 $0$，故错。"
-      },
-      "pitfalls": [
-        "上限是 $x^2$ 不是 $x$，积分后阶数是 $(x^2)^4=x^8$，容易误算成 $x^4$ 或 $x^3$。",
-        "等价无穷小 $e^{t^3}-1\\sim t^3$ 的指数是 $3$，不要写成 $t$ 或 $t^2$。",
-        "比较阶数时分清谁是谁的高阶：极限为 $0$ 表示分子（积分）比分母 $x^7$ 高阶。"
-      ],
-      "key_point": "变限积分估阶：被积函数取等价无穷小主部后积分，阶数随上限幂次放大，再与目标幂函数求极限定阶。"
-    },
-    {
-      "id": 133,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=a x-b \\ln x(a>0)$ 有两个零点, 则 $\\displaystyle \\frac{b}{a}$ 的取值范围是 $(\\quad)$",
-      "options": {
-        "A": "$(\\mathrm{e},+\\infty)$",
-        "B": "$(0, \\mathrm{e})$",
-        "C": "$\\displaystyle \\left(0, \\frac{1}{\\mathrm{e}}\\right)$",
-        "D": "$\\displaystyle \\left(\\frac{1}{\\mathrm{e}},+\\infty\\right)$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n含参函数零点个数问题。思路：$f(x)=ax-b\\ln x$ 定义域 $x>0$。先求导找唯一极值点，分析端点极限（$x\\to 0^+$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$），由“两个零点”的几何要求转化为“极小值 $<0$”的条件，再解出 $\\dfrac{b}{a}$ 的范围。隐含判断：必须 $b>0$ 才可能有极小值（否则单调无两零点）。\n\n【解答】\n\n定义域 $x>0$，$a>0$。求导：\n\n$$f'(x)=a-\\dfrac{b}{x}=\\dfrac{ax-b}{x}.$$\n\n**第一步：确定 $b$ 的符号。** 若 $b\\le 0$，则 $f'(x)=a-\\dfrac{b}{x}>0$ 恒成立，$f$ 在 $(0,+\\infty)$ 上严格单调递增，至多一个零点，不满足要求。故必有 $b>0$。\n\n**第二步：求极值。** 当 $b>0$ 时，令 $f'(x)=0$ 得唯一驻点 $x_0=\\dfrac{b}{a}>0$。当 $0<x<x_0$ 时 $f'(x)<0$，当 $x>x_0$ 时 $f'(x)>0$，故 $x_0$ 是极小值点（也是最小值点）。\n\n端点行为：$x\\to 0^+$ 时 $-b\\ln x\\to+\\infty$，故 $f\\to+\\infty$；$x\\to+\\infty$ 时 $ax$ 占主导，$f\\to+\\infty$。\n\n**第三步：两个零点的条件。** 由于函数在两端都趋于 $+\\infty$ 且只有一个极小值，要有两个零点当且仅当最小值严格小于零：\n\n$$f(x_0)=a\\cdot\\dfrac{b}{a}-b\\ln\\dfrac{b}{a}=b-b\\ln\\dfrac{b}{a}=b\\left(1-\\ln\\dfrac{b}{a}\\right)<0.$$\n\n因 $b>0$，两边除以 $b$ 得\n\n$$1-\\ln\\dfrac{b}{a}<0\\ \\Longrightarrow\\ \\ln\\dfrac{b}{a}>1\\ \\Longrightarrow\\ \\dfrac{b}{a}>e.$$\n\n（若 $f(x_0)=0$ 只有一个零点，$f(x_0)>0$ 无零点，均排除。）\n\n所以 $\\dfrac{b}{a}\\in(e,+\\infty)$，选 A。",
-      "wrong_options": {
-        "B": "$(0,e)$ 时极小值 $f(x_0)=b(1-\\ln(b/a))>0$，函数恒正无零点，故错。",
-        "C": "$\\left(0,\\dfrac{1}{e}\\right)$ 同样使极小值为正（无零点），且区间界限 $1/e$ 与本题阈值无关，故错。",
-        "D": "$\\left(\\dfrac{1}{e},+\\infty\\right)$ 把临界值错当成 $1/e$；正确阈值是 $e$，该区间包含了 $(1/e,e]$ 这段无两零点的情形，故错。"
-      },
-      "pitfalls": [
-        "先判断 $b>0$：$b\\le 0$ 时函数单调，不可能有两个零点，这是隐含前提。",
-        "极小值点是 $x_0=b/a$，代入时 $ax_0=b$，得 $f(x_0)=b(1-\\ln(b/a))$，别漏掉 $\\ln(b/a)$ 里的 $b/a$。",
-        "两零点对应极小值严格小于 $0$（取等只有一个零点），不等号方向要正确。"
-      ],
-      "key_point": "含参零点问题：求唯一极值，结合两端趋于 $+\\infty$，令极小值 $<0$ 解参数范围。"
-    },
-    {
-      "id": 135,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 0 & -1 \\\\ 2 & -1 & 1 \\\\ -1 & 2 & -5\\end{array}\\right)$, 若存在下三角可逆矩阵 $\\boldsymbol{P}$ 和上三角可逆矩阵 $\\boldsymbol{Q}$, 使 $\\boldsymbol{P A Q}$ 为对角矩阵, 则 $\\boldsymbol{P}, Q$ 可以分别取 $(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ -3 & 2 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 2 & -1 & 0 \\\\ -3 & 2 & 1\\end{array}\\right),\\left(\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 3 & 1\\end{array}\\right),\\left(\\begin{array}{ccc}1 & 2 & -3 \\\\ 0 & -1 & 2 \\\\ 0 & 0 & 1\\end{array}\\right)$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n本题考查初等变换与初等矩阵的对应关系：左乘对应行变换，右乘对应列变换；下三角初等矩阵对应“用上面的行去消下面的行/把倍数加到下行”这类向下的行变换，上三角初等矩阵对应向右的列变换。要把 $\\boldsymbol{A}$ 化为对角阵，先用下三角的 $\\boldsymbol{P}$ 做行变换把主对角线下方化零，再用上三角的 $\\boldsymbol{Q}$ 做列变换把主对角线右方化零。\n\n判断选项最稳妥的办法就是直接计算 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 是否为对角阵，同时注意 $\\boldsymbol{P}$ 必须下三角、$\\boldsymbol{Q}$ 必须上三角且二者均可逆。\n\n【解答】\n\n先做行变换。取\n$$\\boldsymbol{P}=\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-3&2&1\\end{pmatrix}\\;(\\text{下三角，可逆}).$$\n计算 $\\boldsymbol{P}\\boldsymbol{A}$，其中 $\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\2&-1&1\\\\-1&2&-5\\end{pmatrix}$：\n$$\\boldsymbol{P}\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}.$$\n（验算第 2 行：$2\\cdot(1,0,-1)+(-1)\\cdot(2,-1,1)=(0,1,-3)$；第 3 行：$-3\\cdot(1,0,-1)+2\\cdot(2,-1,1)+1\\cdot(-1,2,-5)=(0,0,0)$。）此时主对角线下方已全为 $0$，但右上方还有 $-1,-3$ 未消去，所以仅有 $\\boldsymbol{P}$、$\\boldsymbol{Q}=\\boldsymbol{E}$ 还不够。\n\n再做列变换消去右上元素。对 $\\boldsymbol{P}\\boldsymbol{A}$ 右乘上三角阵\n$$\\boldsymbol{Q}=\\begin{pmatrix}1&0&1\\\\0&1&3\\\\0&0&1\\end{pmatrix}.$$\n这相当于把第 1 列的 1 倍、第 2 列的 3 倍加到第 3 列：\n$$\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}\\begin{pmatrix}1&0&1\\\\0&1&3\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&0\\end{pmatrix}.$$\n结果为对角矩阵 $\\mathrm{diag}(1,1,0)$。$\\boldsymbol{P}$ 下三角、$\\boldsymbol{Q}$ 上三角且均可逆，完全满足要求，故选 C。",
-      "wrong_options": {
-        "A": "$\\boldsymbol{P}=\\boldsymbol{E}$ 不做行变换，仅 $\\boldsymbol{A}\\boldsymbol{Q}$ 无法把对角线下方的 $2,-1,2$ 化零，结果非对角阵。",
-        "B": "$\\boldsymbol{P}$ 正确但 $\\boldsymbol{Q}=\\boldsymbol{E}$。此时 $\\boldsymbol{P}\\boldsymbol{A}=\\begin{pmatrix}1&0&-1\\\\0&1&-3\\\\0&0&0\\end{pmatrix}$ 仍有右上元素 $-1,-3$，不是对角阵。",
-        "D": "这里 $\\boldsymbol{P}$ 取成上三角、$\\boldsymbol{Q}$ 取成下三角，与题目对 $\\boldsymbol{P}$（下三角）、$\\boldsymbol{Q}$（上三角）的要求恰好相反，且 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 算出来不是对角阵。"
-      },
-      "pitfalls": [
-        "只做行变换（$\\boldsymbol{Q}=\\boldsymbol{E}$）只能得到上三角阵，右上方的非零元必须再用上三角 $\\boldsymbol{Q}$ 的列变换消去，否则不是对角阵。",
-        "务必核对 $\\boldsymbol{P}$ 是下三角、$\\boldsymbol{Q}$ 是上三角，不要被选项 D 的位置对调迷惑。",
-        "化简结果允许出现对角元为 0（这里是 $\\mathrm{diag}(1,1,0)$），因为 $\\mathrm{rank}(\\boldsymbol{A})=2$，对角阵不必满秩。"
-      ],
-      "key_point": "左乘下三角做行变换清左下、右乘上三角做列变换清右上，直接算 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 验证是否对角即可定选项。"
-    },
-    {
-      "id": 141,
-      "paper": "数学二",
-      "year": 2021,
-      "index": 16,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "多项式 $f(x)=\\left|\\begin{array}{cccc}x & x & 1 & 2 x \\\\ 1 & x & 2 & -1 \\\\ 2 & 1 & x & 1 \\\\ 2 & -1 & 1 & x\\end{array}\\right|$ 中 $x^3$ 项的系数为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "-5",
-      "analysis": "【分析】\n\n四阶行列式按定义是 $4!=24$ 个项之和，每项取自不同行不同列的元素之积并带符号。含 $x$ 的元素只在以下位置：$(1,1)=x,\\ (1,2)=x,\\ (1,4)=2x,\\ (2,2)=x,\\ (3,3)=x,\\ (4,4)=x$。要得到 $x^3$，必须在“不同行不同列”的约束下恰好选中 $3$ 个带 $x$ 的元素、$1$ 个常数元素。逐一枚举满足约束的选法，按逆序数定符号并累加系数即可。也可直接展开行列式收集 $x^3$。\n\n【解答】\n\n记行列式按列指标的排列 $(\\sigma_1,\\sigma_2,\\sigma_3,\\sigma_4)$ 展开，项为 $\\mathrm{sgn}(\\sigma)\\,a_{1\\sigma_1}a_{2\\sigma_2}a_{3\\sigma_3}a_{4\\sigma_4}$。\n\n带 $x$ 的元素：第 1 行有列 $1,2,4$（值 $x,x,2x$），第 2 行只有列 $2$（值 $x$），第 3 行只有列 $3$（值 $x$），第 4 行只有列 $4$（值 $x$）。\n\n要凑 $x^3$：第 2、3、4 行各只有一个 $x$，分别占列 $2,3,4$；它们一旦被选，第 1 行只能取**常数元素**（提供那个不含 $x$ 的因子）。\n\n**情形 A：选第 1、2、3 行的 $x$，第 4 行取常数。** 但第 2 行的 $x$ 在列 $2$、第 3 行的 $x$ 在列 $3$，第 1 行的 $x$ 可取列 $1$（值 $x$）或列 $4$（值 $2x$，但列 $4$ 后面要留给第 4 行）。逐个排列分析较繁，下面用统一枚举。\n\n由于第 $2,3,4$ 行的 $x$ 唯一地占列 $2,3,4$，凡用到它们三个就必须让第 1 行取列 $1$ 的常数——但列 $1$ 元素 $a_{11}=x$ 不是常数。故“同时用满第 2,3,4 行的 $x$”不可行。于是 $x^3$ 只能来自“第 1 行的 $x$ + 第 2,3,4 行中的两个 $x$”，剩下一行取常数。枚举：\n\n1) 第 1 行列 $1$（$x$）、第 2 行列 $2$（$x$）、第 3 行列 $3$（$x$）、第 4 行取常数列 $1?$——列 $1$ 已用，第 4 行可用列为 $4$，但 $a_{44}=x$ 非常数；无常数可取。排列 $(1,2,3,4)$ 全是 $x$，给出 $x^4$，不计入 $x^3$。\n\n直接以展开结果为准：将行列式整理为关于 $x$ 的多项式\n\n$$f(x)=x^4-5x^3-2x^2+13x+5.$$\n\n下面验证 $x^4$ 与 $x^3$ 两项以确信无误。\n\n- $x^4$：唯一来自主对角线 $a_{11}a_{22}a_{33}a_{44}=x\\cdot x\\cdot x\\cdot x$，排列为恒等排列，符号 $+$，系数 $1$。$\\checkmark$\n\n- $x^3$：需三个 $x$ 因子与一个常数因子，且四个元素同列异行同行异列。可行的列排列只有：\n  - $\\sigma=(2,?,3,4)$ 型与 $\\sigma=(4,2,3,?)$ 型。逐一得到两项：\n    - 取 $a_{12}=x,\\ a_{21}=1,\\ a_{33}=x,\\ a_{44}=x$，列排列 $(2,1,3,4)$，逆序数 $1$，符号 $-$，积 $=x\\cdot1\\cdot x\\cdot x=x^3$，贡献 $-x^3$。\n    - 取 $a_{14}=2x,\\ a_{22}=x,\\ a_{33}=x,\\ a_{41}=2$，列排列 $(4,2,3,1)$，逆序数为 $5$（$4{>}2,4{>}3,4{>}1,2{>}1,3{>}1$），符号 $-$，积 $=2x\\cdot x\\cdot x\\cdot2=4x^3$，贡献 $-4x^3$。\n  - 其余把第 $2,3,4$ 行的 $x$ 用满的排列都迫使第 1 行取 $a_{11}=x$，得到 $x^4$ 而非 $x^3$；含两个以上常数的项次数低于 $3$。\n\n合计 $x^3$ 系数 $=-1+(-4)=-5$。\n\n故所求 $x^3$ 项的系数为\n\n$$\\boxed{-5}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "$a_{14}=2x$ 与 $a_{41}=2$ 都带系数，凑出的项是 $2\\cdot2=4$ 倍，容易只算成 $1$ 倍而漏掉。",
-        "定符号要按列排列的逆序数，$(4,2,3,1)$ 逆序数为 5 取负号，别数错。",
-        "只盯主对角线会漏掉非对角的 $x$（如 $a_{12},a_{14}$），导致 $x^3$ 项算不全。"
-      ],
-      "key_point": "求行列式某次幂系数：锁定含 $x$ 的元素位置，在“异行异列”约束下枚举可凑该次数的排列，按逆序数定号求和。"
     },
     {
       "id": 146,

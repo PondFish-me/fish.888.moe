@@ -4,6 +4,143 @@
   "count": 23,
   "questions": [
     {
+      "id": 626,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知当 $x \\rightarrow 0$ 时, 函数 $f(x)=3 \\sin x-\\sin 3 x$ 与 $c x^k$ 是等价无穷小, 则 $(\\quad)$",
+      "options": {
+        "A": "$k=1, c=4$",
+        "B": "$k=1, c=-4$",
+        "C": "$k=3, c=4$",
+        "D": "$k=3, c=-4$"
+      },
+      "answer": "C",
+      "analysis": "【分析】等价无穷小 $f(x)\\sim cx^k$ 即把 $f(x)$ 在 $0$ 处泰勒展开，取最低非零次项，其幂次就是 $k$、系数就是 $c$。把 $\\sin x$ 与 $\\sin3x$ 都展开到足够阶（$x^3$）相减即可。\n\n【解答】用泰勒展开（到 $x^3$）：\n$$\\sin x=x-\\frac{x^3}{6}+o(x^3),\\qquad \\sin3x=3x-\\frac{(3x)^3}{6}+o(x^3)=3x-\\frac{27x^3}{6}+o(x^3).$$\n于是\n$$f(x)=3\\sin x-\\sin3x=3\\left(x-\\frac{x^3}{6}\\right)-\\left(3x-\\frac{27x^3}{6}\\right)+o(x^3).$$\n一次项：$3x-3x=0$，相消；三次项：\n$$-\\frac{3x^3}{6}+\\frac{27x^3}{6}=\\frac{24x^3}{6}=4x^3.$$\n故 $f(x)=4x^3+o(x^3)\\sim4x^3$，即 $k=3,\\ c=4$，选 **C**。\n\n（验证：$f(x)/x^3\\to4$，且更高阶项 $-2x^5$ 不影响首项，吻合。）",
+      "wrong_options": {
+        "A": "$k=1,c=4$：误以为最低次是一次项。实际一次项 $3x-3x=0$ 完全抵消，首项是三次。",
+        "B": "$k=1,c=-4$：既错判阶数为 $1$，符号也错。",
+        "D": "$k=3,c=-4$：阶数对，但系数符号错。三次项系数为 $+4$（$-\\frac{3}{6}+\\frac{27}{6}=+4$），不是 $-4$。"
+      },
+      "pitfalls": [
+        "$\\sin3x$ 展开时 $(3x)^3=27x^3$，立方系数别只写 $3$",
+        "一次项相消是关键，必须展到 $x^3$ 才能取到首个非零项",
+        "三次项符号：$\\sin$ 的展开是 $-\\frac{x^3}{6}$，相减后得正的 $4x^3$"
+      ],
+      "key_point": "等价无穷小取泰勒展开首个非零项；本题一次项抵消，首项为 $4x^3$，故 $k=3,c=4$。"
+    },
+    {
+      "id": 627,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 处可导, 且 $f(0)=0$, 则 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x^2 f(x)-2 f\\left(x^3\\right)}{x^3}=(\\quad)$",
+      "options": {
+        "A": "$-2 f^{\\prime}(0)$",
+        "B": "$-f^{\\prime}(0)$",
+        "C": "$f^{\\prime}(0)$",
+        "D": "0"
+      },
+      "answer": "B",
+      "analysis": "【分析】$f$ 仅在 $x=0$ 处可导且 $f(0)=0$,只能用导数定义 $\\lim_{u\\to0}\\dfrac{f(u)}{u}=f'(0)$。把分式拆成两部分,分别凑成 $\\dfrac{f(\\cdot)}{\\cdot}$ 的形式取极限,不能用洛必达(没有 $f$ 在 $0$ 邻域可导的条件)。\n\n【解答】将分子拆开:\n$$\\dfrac{x^2 f(x)-2f(x^3)}{x^3}=\\dfrac{x^2 f(x)}{x^3}-\\dfrac{2f(x^3)}{x^3}=\\dfrac{f(x)}{x}-2\\cdot\\dfrac{f(x^3)}{x^3}.$$\n由 $f(0)=0$ 及可导定义:\n$$\\lim_{x\\to0}\\dfrac{f(x)}{x}=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x-0}=f'(0),$$\n$$\\lim_{x\\to0}\\dfrac{f(x^3)}{x^3}=\\lim_{t\\to0}\\dfrac{f(t)-f(0)}{t-0}=f'(0)\\quad(t=x^3\\to0).$$\n故原极限\n$$=f'(0)-2f'(0)=-f'(0),$$\n选 B。",
+      "wrong_options": {
+        "A": "$-2f'(0)$ 多半漏算了第一项 $\\dfrac{f(x)}{x}\\to f'(0)$,只取了后半部分。",
+        "C": "$f'(0)$ 漏掉了系数 $2$ 或把两项符号合错;正确是 $f'(0)-2f'(0)=-f'(0)$。",
+        "D": "误以为两项相消为 $0$;实际系数 $1$ 与 $2$ 不同,差为 $-f'(0)$。"
+      },
+      "pitfalls": [
+        "只在 $x=0$ 可导,不能用洛必达(它要求邻域可导),必须回到导数定义。",
+        "$\\dfrac{f(x^3)}{x^3}$ 作换元 $t=x^3$ 后仍趋于 $f'(0)$,分母要与自变量匹配($x^3$ 配 $x^3$,不是 $x$)。"
+      ],
+      "key_point": "仅一点可导用定义 $\\dfrac{f(u)}{u}\\to f'(0)$;拆项凑分母,系数算清。"
+    },
+    {
+      "id": 616,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\ln |(x-1)(x-2)(x-3)|$ 的驻点个数为 $(\\quad)$",
+      "options": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$"
+      },
+      "answer": "C",
+      "analysis": "【分析】$f(x)=\\ln|(x-1)(x-2)(x-3)|$ 定义域为 $x\\ne1,2,3$。驻点指 $f'(x)=0$ 的点。利用 $\\ln|uvw|=\\ln|u|+\\ln|v|+\\ln|w|$ 拆开求导，$f'(x)=\\dfrac1{x-1}+\\dfrac1{x-2}+\\dfrac1{x-3}$，令其为零通分后是二次方程，判别其根个数及是否落在定义域内。\n\n【解答】在定义域内\n$$f(x)=\\ln|x-1|+\\ln|x-2|+\\ln|x-3|,$$\n$$f'(x)=\\frac1{x-1}+\\frac1{x-2}+\\frac1{x-3}.$$\n令 $f'(x)=0$，通分（公共分母 $(x-1)(x-2)(x-3)\\ne0$），分子为\n$$(x-2)(x-3)+(x-1)(x-3)+(x-1)(x-2)=0.$$\n展开：$(x^2-5x+6)+(x^2-4x+3)+(x^2-3x+2)=3x^2-12x+11=0$，\n$$x=\\frac{12\\pm\\sqrt{144-132}}{6}=2\\pm\\frac{\\sqrt3}{3}.$$\n两根约为 $1.423$ 和 $2.577$，判别式 $>0$ 故为两个不同实根，且均不等于 $1,2,3$（在定义域内）。所以 $f(x)$ 有 $2$ 个驻点。选 C。\n\n（从区间看：在 $(1,2)$ 与 $(2,3)$ 上 $f'$ 各变号一次，对应一个驻点，合计 $2$ 个，印证结论。）",
+      "wrong_options": {
+        "A": "$0$ 错在以为绝对值或对数使函数无驻点；实际拆成对数和后导数为有理式，确有零点。",
+        "B": "$1$ 可能只考虑了某一个区间，漏掉另一区间内的驻点。",
+        "D": "$3$ 把三个使原式为零/无定义的点 $x=1,2,3$ 误当驻点；这些点不在定义域内，更非 $f'=0$ 的点。"
+      },
+      "pitfalls": [
+        "$x=1,2,3$ 是定义域外的点（对数无定义），不是驻点，别误数进去。",
+        "求导前先用 $\\ln|uvw|=\\sum\\ln|u|$ 拆开，导数与绝对值无关（$(\\ln|u|)'=\\dfrac{u'}{u}$）。"
+      ],
+      "key_point": "$\\ln|$乘积$|$ 先拆成对数和再求导，驻点即 $f'=0$ 的有理方程实根（须在定义域内）。"
+    },
+    {
+      "id": 617,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}-\\lambda^2 y=\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}(\\lambda>0)$ 的特解形式为 $(\\quad)$",
+      "options": {
+        "A": "$a\\left(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}\\right)$",
+        "B": "$a x\\left(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}\\right)$",
+        "C": "$x\\left(a \\mathrm{e}^{\\lambda x}+b \\mathrm{e}^{-\\lambda x}\\right)$",
+        "D": "$x^2\\left(a \\mathrm{e}^{\\lambda x}+b \\mathrm{e}^{-\\lambda x}\\right)$"
+      },
+      "answer": "C",
+      "analysis": "【分析】二阶常系数非齐次线性方程求特解形式，关键看右端每个指数 $\\mathrm{e}^{kx}$ 的 $k$ 是否为特征方程的根，以及是几重根，据此决定是否乘 $x$（共振时升幂）。本题右端是两个不同指数之和，按叠加原理分别判定再合并。\n\n【解答】对应齐次方程 $y''-\\lambda^2 y=0$，特征方程 $r^2-\\lambda^2=0$，根 $r=\\pm\\lambda$（$\\lambda>0$，两个相异单根）。\n\n右端 $\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}$ 拆成两项：\n- 对 $\\mathrm{e}^{\\lambda x}$：指数 $\\lambda$ 恰是特征单根，发生共振，特解形式需乘 $x$：$a x\\mathrm{e}^{\\lambda x}$。\n- 对 $\\mathrm{e}^{-\\lambda x}$：指数 $-\\lambda$ 也是特征单根，同样共振，特解形式 $b x\\mathrm{e}^{-\\lambda x}$。\n\n由叠加原理，总特解形式为\n$$y^*=a x\\mathrm{e}^{\\lambda x}+b x\\mathrm{e}^{-\\lambda x}=x\\bigl(a\\mathrm{e}^{\\lambda x}+b\\mathrm{e}^{-\\lambda x}\\bigr).$$\n这正是选项 C。",
+      "wrong_options": {
+        "A": "$a(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x})$ 没有乘 $x$，忽略了 $\\pm\\lambda$ 都是特征根的共振；且两指数用同一系数 $a$ 也不对。",
+        "B": "$ax(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x})$ 乘了 $x$ 是对的，但两项强行共用系数 $a$，而 $\\mathrm{e}^{\\lambda x}$ 与 $\\mathrm{e}^{-\\lambda x}$ 对应不同的待定系数，应各自取 $a,b$。",
+        "D": "$x^2(\\cdots)$ 多乘了一个 $x$：$\\pm\\lambda$ 都是单根（一重），只需乘 $x^1$，乘 $x^2$ 对应二重根，过度升幂。"
+      },
+      "pitfalls": [
+        "$\\pm\\lambda$ 是两个不同的单根，对 $\\mathrm{e}^{\\lambda x}$ 和 $\\mathrm{e}^{-\\lambda x}$ 各乘一次 $x$（升一幂），不是 $x^2$。",
+        "两个不同指数的特解系数相互独立，必须写成 $a\\mathrm{e}^{\\lambda x}+b\\mathrm{e}^{-\\lambda x}$ 而非共用一个系数。"
+      ],
+      "key_point": "非齐次特解形式：指数 $k$ 是特征方程 $m$ 重根则形式乘 $x^m$；多个指数和按叠加分别定形再合并，系数各自独立。"
+    },
+    {
+      "id": 90409,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x), g(x)$ 均有二阶连续导数, 满足 $f(0)>0, g(0)<0$, 且 $f^{\\prime}(0)=g^{\\prime}(0)=0$, 则函数 $z=f(x) g(y)$ 在点 $(0,0)$ 处取得极小值的一个充分条件是 $(\\quad)$",
+      "options": {
+        "A": "$f^{\\prime \\prime}(0)<0, g^{\\prime \\prime}(0)>0$",
+        "B": "$f^{\\prime \\prime}(0)<0, g^{\\prime \\prime}(0)<0$",
+        "C": "$f^{\\prime \\prime}(0)>0, g^{\\prime \\prime}(0)>0$",
+        "D": "$f^{\\prime \\prime}(0)>0, g^{\\prime \\prime}(0)<0$"
+      },
+      "answer": "A",
+      "analysis": "【分析】二元函数取极小值的充分条件：先验 $(0,0)$ 是驻点（一阶偏导为零），再用二阶判别法，要求 $A=z_{xx}>0$ 且 $AC-B^2>0$。本题 $z=f(x)g(y)$ 是两个一元函数相乘，偏导数各只作用在自己那一个因子上，代入 $(0,0)$ 后条件就翻译成对 $f''(0)$、$g''(0)$ 正负的要求。\n\n【解答】一阶偏导\n$$z_x=f'(x)g(y),\\qquad z_y=f(x)g'(y).$$\n在 $(0,0)$ 处，由 $f'(0)=g'(0)=0$ 得 $z_x(0,0)=f'(0)g(0)=0$，$z_y(0,0)=f(0)g'(0)=0$，故 $(0,0)$ 是驻点。\n\n二阶偏导\n$$z_{xx}=f''(x)g(y),\\qquad z_{xy}=f'(x)g'(y),\\qquad z_{yy}=f(x)g''(y),$$\n代入 $(0,0)$ 得\n$$A=f''(0)g(0),\\qquad B=f'(0)g'(0)=0,\\qquad C=f(0)g''(0).$$\n\n取极小值的充分条件是 $A>0$ 且 $AC-B^2>0$。因 $B=0$，后者即 $AC>0$，结合 $A>0$ 可知 $C>0$。于是\n* 由 $A=f''(0)g(0)>0$ 与已知 $g(0)<0$，得 $f''(0)<0$；\n* 由 $C=f(0)g''(0)>0$ 与已知 $f(0)>0$，得 $g''(0)>0$。\n\n因此充分条件是 $f''(0)<0,\\ g''(0)>0$，选 (A)。",
+      "wrong_options": {
+        "B": "$g^{\\prime\\prime}(0)<0$ 时 $C=f(0)g^{\\prime\\prime}(0)<0$，而 $A=f^{\\prime\\prime}(0)g(0)>0$，$AC-B^2=AC<0$，$(0,0)$ 是鞍点，没有极值。",
+        "C": "$f^{\\prime\\prime}(0)>0$ 时 $A=f^{\\prime\\prime}(0)g(0)<0$（因 $g(0)<0$），$A<0$ 对应的是**极大**不是极小。",
+        "D": "此时 $A=f^{\\prime\\prime}(0)g(0)<0$、$C=f(0)g^{\\prime\\prime}(0)<0$，$AC>0$ 但 $A<0$，取到的是极大值。"
+      },
+      "pitfalls": [
+        "先确认 $(0,0)$ 是驻点（靠 $f^{\\prime}(0)=g^{\\prime}(0)=0$），否则二阶判别法用不上。",
+        "$A=f^{\\prime\\prime}(0)g(0)$ 里带着 $g(0)<0$，符号会翻一次——想当然地写成「极小要 $f^{\\prime\\prime}(0)>0$」正好选反。",
+        "极小要 $A>0$，极大要 $A<0$，两者的 $AC-B^2>0$ 是一样的，别只看判别式就下结论。"
+      ],
+      "key_point": "$A=f^{\\prime\\prime}(0)g(0)$、$B=0$、$C=f(0)g^{\\prime\\prime}(0)$；极小需 $A>0$ 且 $AC>0$，代入 $f(0)>0,g(0)<0$ 得 $f^{\\prime\\prime}(0)<0$、$g^{\\prime\\prime}(0)>0$。"
+    },
+    {
       "id": 596,
       "paper": "数学二",
       "year": 2011,
@@ -88,22 +225,22 @@
       "key_point": "rank(A)=n-1 时 rank(A*)=1，A 的列空间极大无关组就是 A*x=0 的基础解系；用 A*A=O 串联。"
     },
     {
-      "id": 601,
+      "id": 618,
       "paper": "数学二",
       "year": 2011,
-      "index": 11,
+      "index": 9,
       "type": "填空题",
       "difficulty": 0,
-      "stem": "曲线 $\\displaystyle y=\\int_{0}^{x} \\tan t \\mathrm{d} t\\left(0 \\leqslant x \\leqslant \\frac{\\pi}{4}\\right)$ 的弧长 $s=\\rule{0.5cm}{0.2mm}$",
+      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+2^x}{2}\\right)^{\\frac{1}{x}}=\\rule{0.5cm}{0.2mm}$",
       "options": {},
-      "answer": "$\\ln (1+\\sqrt{2})$",
-      "analysis": "【分析】曲线由变限积分给出，$y'=\\tan x$ 直接可得（变限积分求导）。弧长公式 $s=\\int\\sqrt{1+(y')^2}\\,\\mathrm{d}x$，注意 $1+\\tan^2x=\\sec^2x$，被开方量化为完全平方，积分立即简化为 $\\int\\sec x\\,\\mathrm{d}x$。\n\n【解答】由 $y=\\displaystyle\\int_0^x\\tan t\\,\\mathrm{d}t$，得 $y'=\\tan x$。在 $\\left[0,\\dfrac{\\pi}{4}\\right]$ 上 $\\sec x>0$，弧长\n$$s=\\int_0^{\\pi/4}\\sqrt{1+(y')^2}\\,\\mathrm{d}x=\\int_0^{\\pi/4}\\sqrt{1+\\tan^2x}\\,\\mathrm{d}x=\\int_0^{\\pi/4}\\sec x\\,\\mathrm{d}x.$$\n而 $\\displaystyle\\int\\sec x\\,\\mathrm{d}x=\\ln|\\sec x+\\tan x|+C$，故\n$$s=\\Big[\\ln(\\sec x+\\tan x)\\Big]_0^{\\pi/4}=\\ln(\\sqrt{2}+1)-\\ln(1+0)=\\ln(1+\\sqrt{2}).$$\n验算：$\\sec\\dfrac{\\pi}{4}=\\sqrt2$，$\\tan\\dfrac{\\pi}{4}=1$，下限处 $\\sec0+\\tan0=1$，$\\ln1=0$，结果 $\\ln(1+\\sqrt2)$ 无误。",
+      "answer": "$\\sqrt{2}$",
+      "analysis": "【分析】$1^\\infty$ 型极限，取对数化为 $\\dfrac{1}{x}\\ln\\dfrac{1+2^x}{2}$，底数趋于 $1$，用 $\\ln(1+u)\\sim u$ 及 $2^x-1\\sim x\\ln2$ 求等价无穷小即可。\n\n【解答】这是 $1^\\infty$ 型。设 $A=\\lim_{x\\to0}\\left(\\dfrac{1+2^x}{2}\\right)^{1/x}$，取对数：\n$$\\ln A=\\lim_{x\\to0}\\frac{1}{x}\\ln\\frac{1+2^x}{2}.$$\n当 $x\\to0$，$\\dfrac{1+2^x}{2}\\to1$。令 $u=\\dfrac{1+2^x}{2}-1=\\dfrac{2^x-1}{2}$，则 $u\\to0$，且 $\\ln(1+u)\\sim u$。又 $2^x-1=e^{x\\ln2}-1\\sim x\\ln2$，故\n$$\\ln\\frac{1+2^x}{2}\\sim \\frac{2^x-1}{2}\\sim\\frac{x\\ln2}{2}.$$\n于是\n$$\\ln A=\\lim_{x\\to0}\\frac{1}{x}\\cdot\\frac{x\\ln2}{2}=\\frac{\\ln2}{2}.$$\n所以 $A=e^{\\frac{\\ln2}{2}}=2^{1/2}=\\sqrt2$。",
       "wrong_options": {},
       "pitfalls": [
-        "$1+\\tan^2x=\\sec^2x$ 是化简关键，开方后得 $\\sec x$（区间内为正）。",
-        "$\\int\\sec x\\,\\mathrm{d}x=\\ln|\\sec x+\\tan x|+C$ 要记牢，别误成 $\\ln|\\cos x|$。"
+        "$1^\\infty$ 必须先取对数，不能直接把底数当成 $1$。",
+        "$2^x-1\\sim x\\ln2$（不是 $\\sim x$），漏掉 $\\ln2$ 会得错误结果。"
       ],
-      "key_point": "变限积分求导得 $y'=\\tan x$，弧长归结为 $\\int\\sec x\\,\\mathrm{d}x$。"
+      "key_point": "$1^\\infty$ 取对数；$a^x-1\\sim x\\ln a$ 配合 $\\ln(1+u)\\sim u$。"
     },
     {
       "id": 602,
@@ -124,171 +261,22 @@
       "key_point": "一阶线性方程套积分因子公式；本题 $\\mathrm{e}^{x}\\cdot\\mathrm{e}^{-x}=1$，积分立刻化为 $\\int\\cos x\\,\\mathrm{d}x$。"
     },
     {
-      "id": 608,
+      "id": 601,
       "paper": "数学二",
       "year": 2011,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $z=f[x y, y g(x)]$, 其中函数 $f$ 具有二阶连续偏导数, 函数 $g(x)$ 可导且在 $x=1$ 处取得极值 $g(1)=1$, 求 $\\left.\\dfrac{\\partial^{2} z}{\\partial x \\partial y}\\right|_{\\substack{x=1 \\\\ y=1}}$",
-      "options": {},
-      "answer": "$f_1^{\\prime}(1,1)+f_{11}^{\\prime \\prime}(1,1)+f_{12}^{\\prime \\prime}(1,1)$",
-      "analysis": "【分析】复合函数二阶混合偏导。设两个中间变量 $u=xy$、$v=yg(x)$,先对 $x$ 求一阶偏导(会出现 $f_1,f_2$),再对 $y$ 求导(注意 $f_1,f_2$ 仍是 $u,v$ 的函数,要继续用链式法则)。最后代入 $x=1,y=1$,利用 $g(x)$ 在 $x=1$ 取极值即 $g'(1)=0$、$g(1)=1$ 大幅化简。\n\n【解答】记 $u=xy,\\ v=yg(x)$,则 $z=f(u,v)$。先求 $\\dfrac{\\partial z}{\\partial x}$:\n$$\\dfrac{\\partial z}{\\partial x}=f_1\\cdot\\dfrac{\\partial u}{\\partial x}+f_2\\cdot\\dfrac{\\partial v}{\\partial x}=y f_1+y g'(x) f_2.$$\n再对 $y$ 求导。注意 $f_1,f_2$ 是 $u,v$ 的函数,而 $\\dfrac{\\partial u}{\\partial y}=x,\\ \\dfrac{\\partial v}{\\partial y}=g(x)$:\n$$\\dfrac{\\partial^2 z}{\\partial x\\partial y}=\\dfrac{\\partial}{\\partial y}\\big[y f_1+y g'(x) f_2\\big].$$\n对第一项:$\\dfrac{\\partial}{\\partial y}(y f_1)=f_1+y\\big(x f_{11}+g(x) f_{12}\\big)$。\n对第二项:$\\dfrac{\\partial}{\\partial y}\\big(y g'(x) f_2\\big)=g'(x) f_2+y g'(x)\\big(x f_{21}+g(x) f_{22}\\big)$。\n合并:\n$$\\dfrac{\\partial^2 z}{\\partial x\\partial y}=f_1+y\\big(x f_{11}+g(x) f_{12}\\big)+g'(x) f_2+y g'(x)\\big(x f_{21}+g(x) f_{22}\\big).$$\n代入 $x=1,y=1$,此时 $g(1)=1,\\ g'(1)=0$(极值点),且中间变量取值 $u=xy=1,\\ v=yg(x)=1$:\n$$\\left.\\dfrac{\\partial^2 z}{\\partial x\\partial y}\\right|_{(1,1)}=f_1(1,1)+\\big(f_{11}(1,1)+f_{12}(1,1)\\big)+0+0.$$\n即\n$$\\left.\\dfrac{\\partial^2 z}{\\partial x\\partial y}\\right|_{(1,1)}=f_1'(1,1)+f_{11}''(1,1)+f_{12}''(1,1).$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "对 $y$ 求二阶导时,$f_1$、$f_2$ 仍是复合函数,要继续对 $u,v$ 用链式法则展开,漏掉这一层是最常见错误。",
-        "\"在 $x=1$ 取极值\"翻译成 $g'(1)=0$ 是化简的钥匙,带 $g'(x)$ 的两项因此全部归零。",
-        "$f$ 有二阶连续偏导,$f_{12}=f_{21}$,可直接合并。"
-      ],
-      "key_point": "多元复合二阶偏导:中间变量 $u,v$ 法,对一阶导继续链式;极值条件 $g'(1)=0$ 用于消项。"
-    },
-    {
-      "id": 610,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 19,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "(1) 证明: 对任意的正整数 $n$, 都有 $\\displaystyle \\frac{1}{n+1}<\\ln \\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}$ 成立;\r\n\r\n(2) 设 $\\displaystyle a_{n}=1+\\frac{1}{2}+\\cdots+\\frac{1}{n}-\\ln n(n=1,2, \\cdots)$, 证明:数列 $\\left\\{a_{n}\\right\\}$ 收敛",
-      "options": {},
-      "answer": "",
-      "analysis": "【分析】第 (1) 问的不等式 $\\dfrac{1}{n+1}<\\ln\\left(1+\\dfrac{1}{n}\\right)<\\dfrac{1}{n}$ 把 $\\ln(1+\\frac1n)=\\ln(n+1)-\\ln n$ 看成函数 $\\ln x$ 在 $[n,n+1]$ 上的增量，用拉格朗日中值定理一击即破。第 (2) 问证收敛，思路是单调有界准则：用第 (1) 问的不等式估计相邻项之差，证明 $\\{a_n\\}$ 单调递减且有下界。\n\n【解答】**(1)** 设 $f(x)=\\ln x$，在 $[n,n+1]$ 上连续、在 $(n,n+1)$ 内可导，由拉格朗日中值定理，存在 $\\xi\\in(n,n+1)$ 使\n$$\\ln(n+1)-\\ln n=\\frac{1}{\\xi}.$$\n而 $n<\\xi<n+1$，故 $\\dfrac{1}{n+1}<\\dfrac{1}{\\xi}<\\dfrac{1}{n}$。又 $\\ln(n+1)-\\ln n=\\ln\\dfrac{n+1}{n}=\\ln\\left(1+\\dfrac1n\\right)$，于是\n$$\\frac{1}{n+1}<\\ln\\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}.$$\n\n**(2)** 记 $a_n=1+\\dfrac12+\\cdots+\\dfrac1n-\\ln n$。\n\n先证单调递减：\n$$a_{n+1}-a_n=\\frac{1}{n+1}-\\big(\\ln(n+1)-\\ln n\\big)=\\frac{1}{n+1}-\\ln\\left(1+\\frac1n\\right).$$\n由 (1) 知 $\\ln\\left(1+\\dfrac1n\\right)>\\dfrac{1}{n+1}$，故 $a_{n+1}-a_n<0$，即 $\\{a_n\\}$ 严格递减。\n\n再证有下界：由 (1) 的右半 $\\ln\\left(1+\\dfrac1k\\right)<\\dfrac1k$，即 $\\dfrac1k>\\ln(k+1)-\\ln k$。对 $k=1,2,\\cdots,n$ 求和得\n$$\\sum_{k=1}^{n}\\frac1k>\\sum_{k=1}^{n}\\big(\\ln(k+1)-\\ln k\\big)=\\ln(n+1)>\\ln n,$$\n故 $a_n=\\displaystyle\\sum_{k=1}^{n}\\frac1k-\\ln n>0$，即 $\\{a_n\\}$ 有下界 $0$。\n\n综上，$\\{a_n\\}$ 单调递减且有下界，由单调有界准则知数列 $\\{a_n\\}$ 收敛。",
-      "wrong_options": {},
-      "pitfalls": [
-        "第 (1) 问首选拉格朗日中值定理，比直接用 $\\ln(1+x)$ 与 $x$ 的不等式更干净，且为 (2) 提供现成工具",
-        "证收敛是单调有界准则，必须同时给出单调与有界两件事，缺一不可；下界用右半不等式求和得 $a_n>0$",
-        "求和裂项 $\\sum(\\ln(k+1)-\\ln k)=\\ln(n+1)$ 是关键中间量，别算错"
-      ],
-      "key_point": "$\\ln(1+\\frac1n)$ 即 $\\ln x$ 在 $[n,n+1]$ 的增量，拉格朗日中值定理夹出双边估计；调和级数减 $\\ln n$ 的收敛用单调有界准则。"
-    },
-    {
-      "id": 611,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x, y)$ 具有二阶连续偏导数, 且 $\\displaystyle f(1, y)=0, f(x, 1)=0, \\iint\\limits_{D} f(x, y) \\mathrm{d} x \\mathrm{d} y=a$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1\\}$, 计算二重积分 $\\displaystyle I=\\iint_{D} x y f_{x y}^{\\prime \\prime}(x, y) \\mathrm{d} x \\mathrm{d} y$",
-      "options": {},
-      "answer": "$a$",
-      "analysis": "【分析】被积函数 $xy\\,f''_{xy}$ 含二阶混合偏导，目标是把它降阶并用上三个条件 $f(1,y)=0$、$f(x,1)=0$、$\\iint_D f=a$。思路：先对 $y$ 积分把 $f''_{xy}$ 降成 $f'_x$，分部积分用掉边界条件 $f(x,1)=0$；再对 $x$ 积分把 $f'_x$ 降成 $f$，分部积分用掉 $f(1,y)=0$，最后凑出 $\\iint_D f$。\n\n【解答】写成累次积分（先 $y$ 后 $x$）：\n$$I=\\int_0^1 x\\Big(\\int_0^1 y\\,f''_{xy}(x,y)\\,\\mathrm dy\\Big)\\mathrm dx.$$\n对内层关于 $y$ 分部积分，注意 $f''_{xy}=\\dfrac{\\partial}{\\partial y}f'_x$：\n$$\\int_0^1 y\\,\\dfrac{\\partial f'_x}{\\partial y}\\,\\mathrm dy=\\big[y\\,f'_x(x,y)\\big]_0^1-\\int_0^1 f'_x(x,y)\\,\\mathrm dy=f'_x(x,1)-\\int_0^1 f'_x(x,y)\\,\\mathrm dy.$$\n由 $f(x,1)=0$ 对 $x$ 求导得 $f'_x(x,1)=0$。故内层 $=-\\displaystyle\\int_0^1 f'_x(x,y)\\,\\mathrm dy$。代回：\n$$I=-\\int_0^1 x\\Big(\\int_0^1 f'_x(x,y)\\,\\mathrm dy\\Big)\\mathrm dx=-\\int_0^1\\Big(\\int_0^1 x\\,f'_x(x,y)\\,\\mathrm dx\\Big)\\mathrm dy.$$\n交换积分次序后，对内层关于 $x$ 分部积分（$f'_x=\\dfrac{\\partial f}{\\partial x}$）：\n$$\\int_0^1 x\\,f'_x(x,y)\\,\\mathrm dx=\\big[x\\,f(x,y)\\big]_0^1-\\int_0^1 f(x,y)\\,\\mathrm dx=f(1,y)-\\int_0^1 f(x,y)\\,\\mathrm dx.$$\n由 $f(1,y)=0$，上式 $=-\\displaystyle\\int_0^1 f(x,y)\\,\\mathrm dx$。代回：\n$$I=-\\int_0^1\\Big(-\\int_0^1 f(x,y)\\,\\mathrm dx\\Big)\\mathrm dy=\\int_0^1\\int_0^1 f(x,y)\\,\\mathrm dx\\mathrm dy=\\iint_D f(x,y)\\,\\mathrm dx\\mathrm dy=a.$$\n故 $I=a$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "两次分部积分顺序：先对 y（用掉 f(x,1)=0 ⟹ fₓ(x,1)=0），再对 x（用掉 f(1,y)=0）",
-        "f(x,1)=0 是 x 的恒等式，对 x 求导得 fₓ(x,1)=0；不要误用成 f_y",
-        "两次分部各产生一个负号，最终两负相乘还原为 +∬f，符号别丢"
-      ],
-      "key_point": "含 fₓᵧ'' 的积分用两次分部降阶，依次吃掉两个边界齐零条件，凑出 ∬f=a。"
-    },
-    {
-      "id": 612,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设向量组 $\\boldsymbol{\\alpha}_{1}=(1,0,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,1,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(1,3,5)^{\\mathrm{T}}$ 不能由向量组 $\\boldsymbol{\\beta}_{1}=(1,1,1)^{\\mathrm{T}}$, $\\boldsymbol{\\beta}_{2}=(1,2,3)^{\\mathrm{T}}, \\boldsymbol{\\beta}_{3}=(3,4, a)^{\\mathrm{T}}$ 线性表示\r\n\r\n(1) 求 $a$ 的值;\r\n\r\n(2) 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 用 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
-      "options": {},
-      "answer": "(1) $a=5$\r\n\r\n(2) $\\left\\{ \\begin{array}{l}\\boldsymbol{\\beta}_1=2 \\boldsymbol{\\alpha}_1+4 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_3=5 \\boldsymbol{\\alpha}_1+10 \\boldsymbol{\\alpha}_2-2 \\boldsymbol{\\alpha}_3 \\end{array}\\right.$",
-      "analysis": "【分析】(1) “$\\alpha$ 组不能由 $\\beta$ 组线性表示”是关键条件。记 $A=(\\alpha_1,\\alpha_2,\\alpha_3)$，$B=(\\beta_1,\\beta_2,\\beta_3)$。注意到 $\\det A=\\begin{vmatrix}1&0&1\\\\0&1&3\\\\1&1&5\\end{vmatrix}=1\\neq0$，故 $\\alpha$ 组线性无关、$A$ 可逆。若 $B$ 可逆，则任何向量都能由 $\\beta$ 组表示，与条件矛盾，故必有 $\\det B=0$，由此定出 $a$。(2) 求表示式即解 $B=AX$，$X=A^{-1}B$，第 $j$ 列给出 $\\beta_j$ 关于 $\\alpha$ 的坐标。\n\n【解答】**(1)** \n$$\\det B=\\begin{vmatrix}1&1&3\\\\1&2&4\\\\1&3&a\\end{vmatrix}.$$\n按第一列消元：$R_2-R_1,\\ R_3-R_1$ 得 $\\begin{vmatrix}1&1&3\\\\0&1&1\\\\0&2&a-3\\end{vmatrix}=1\\cdot[1\\cdot(a-3)-1\\cdot2]=a-5.$\n因 $\\det A\\neq0$，要使 $\\alpha$ 组不能由 $\\beta$ 组表示，必须 $\\det B=0$，即 $a-5=0$，$a=5$。（此时 $\\beta$ 组秩为 $2<3$，张成的空间不含全部 $\\alpha$，符合“不能表示”。）\n\n**(2)** 设 $B=AX$，则 $X=A^{-1}B$。先求 $A^{-1}$：由 $\\det A=1$，\n$$A^{-1}=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}.$$\n（验证 $AA^{-1}=I$ 成立。）于是\n$$X=A^{-1}B=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}\\begin{pmatrix}1&1&3\\\\1&2&4\\\\1&3&5\\end{pmatrix}=\\begin{pmatrix}2&1&5\\\\4&2&10\\\\-1&0&-2\\end{pmatrix}.$$\n$X$ 的各列即坐标，故\n$$\\beta_1=2\\alpha_1+4\\alpha_2-\\alpha_3,\\quad \\beta_2=\\alpha_1+2\\alpha_2+0\\cdot\\alpha_3,\\quad \\beta_3=5\\alpha_1+10\\alpha_2-2\\alpha_3.$$\n验算 $\\beta_1$：$2(1,0,1)+4(0,1,1)-(1,3,5)=(2-1,\\,4-3,\\,2+4-5)=(1,1,1)=\\beta_1$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "“不能线性表示”要转化为行列式条件：$A$ 可逆而 $B$ 不可逆（$\\det B=0$），不是反过来。",
-        "求表示式本质是解 $B=AX$，$X$ 的第 $j$ 列才是 $\\beta_j$ 的坐标，别把行列搞反。",
-        "结果务必回代验算（如 $\\beta_1=(1,1,1)$），系数算错很常见。"
-      ],
-      "key_point": "$\\det A\\neq0$、$\\det B=0$ 定参数；表示式由 $X=A^{-1}B$ 逐列读出。"
-    },
-    {
-      "id": 613,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, $r(\\boldsymbol{A})=2$ , 且\r\n\r\n$\\boldsymbol{A}\\left(\\begin{array}{cc}\r\n1 & 1 \\\\\r\n0 & 0 \\\\\r\n-1 & 1\r\n\\end{array}\\right)=\\left(\\begin{array}{cc}\r\n-1 & 1 \\\\\r\n0 & 0 \\\\\r\n1 & 1\r\n\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的所有特征值与特征向量;\r\n\r\n(2) 求矩阵 $\\boldsymbol{A}$",
-      "options": {},
-      "answer": "(1) $\\lambda_1=0$ 对应的一个特征向量\r\n\r\n故 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=-1, \\lambda_3=1$;\r\n\r\n$\\lambda_2=-1$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\xi}_2=\\left(\\begin{array}{c}1 \\\\ 0 \\\\ -1\\end{array}\\right)$; \r\n\r\n$\\lambda_3=1$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\xi}_3=\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)$\r\n\r\n(3) $\\left(\\begin{array}{lll}\r\n0 & 0 & 1 \\\\\r\n0 & 0 & 0 \\\\\r\n1 & 0 & 0\r\n\\end{array}\\right)$",
-      "analysis": "【分析】题给的矩阵等式把两列拆开看，就是 $A$ 作用在两个具体向量上的结果，正好凑成特征向量方程：$A(1,0,-1)^T=(-1,0,1)^T=-1\\cdot(1,0,-1)^T$，$A(1,0,1)^T=(1,0,1)^T=1\\cdot(1,0,1)^T$。这就读出两个特征值 $-1,1$ 及其特征向量。再由 $r(A)=2$ 知 $A$ 不满秩，必有特征值 $0$；利用实对称矩阵不同特征值的特征向量正交，求出 $\\lambda=0$ 的特征向量。最后用 $A=P\\Lambda P^{-1}$（正交对角化 $P^{-1}=P^T$）还原 $A$。\n\n【解答】**(1) 特征值与特征向量。**\n把已知等式按列拆开：\n$$A\\begin{pmatrix}1\\\\0\\\\-1\\end{pmatrix}=\\begin{pmatrix}-1\\\\0\\\\1\\end{pmatrix}=-\\begin{pmatrix}1\\\\0\\\\-1\\end{pmatrix},\\qquad A\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}=1\\cdot\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}.$$\n故 $\\lambda_2=-1$，特征向量 $\\xi_2=(1,0,-1)^T$；$\\lambda_3=1$，特征向量 $\\xi_3=(1,0,1)^T$。\n由 $r(A)=2<3$，$A$ 奇异，$0$ 是特征值，记 $\\lambda_1=0$。$A$ 实对称，$\\xi_1$ 须与 $\\xi_2,\\xi_3$ 正交。设 $\\xi_1=(a,b,c)^T$，由 $\\xi_1\\cdot\\xi_2=a-c=0$、$\\xi_1\\cdot\\xi_3=a+c=0$ 得 $a=c=0$，故取 $\\xi_1=(0,1,0)^T$。\n所以特征值为 $0,-1,1$；对应特征向量（任意非零倍数）分别为 $k_1(0,1,0)^T,\\ k_2(1,0,-1)^T,\\ k_3(1,0,1)^T$（$k_i\\ne0$）。\n\n**(2) 求 $A$。** 单位化：$e_1=(0,1,0)^T$，$e_2=\\dfrac{1}{\\sqrt2}(1,0,-1)^T$，$e_3=\\dfrac{1}{\\sqrt2}(1,0,1)^T$，构成正交矩阵 $P=(e_1,e_2,e_3)$，$\\Lambda=\\mathrm{diag}(0,-1,1)$。则 $A=P\\Lambda P^T$。\n直接用 $A=\\sum\\lambda_i e_i e_i^T=0\\cdot e_1e_1^T+(-1)e_2e_2^T+1\\cdot e_3e_3^T$。\n$e_2e_2^T=\\dfrac12\\begin{pmatrix}1&0&-1\\\\0&0&0\\\\-1&0&1\\end{pmatrix}$，$e_3e_3^T=\\dfrac12\\begin{pmatrix}1&0&1\\\\0&0&0\\\\1&0&1\\end{pmatrix}$。\n$A=-e_2e_2^T+e_3e_3^T=\\dfrac12\\begin{pmatrix}-1+1&0&1+1\\\\0&0&0\\\\1+1&0&-1+1\\end{pmatrix}=\\begin{pmatrix}0&0&1\\\\0&0&0\\\\1&0&0\\end{pmatrix}.$\n验证：$A(1,0,-1)^T=(-1,0,1)^T$✓，$A(1,0,1)^T=(1,0,1)^T$✓，$r(A)=2$✓。\n故 $A=\\begin{pmatrix}0&0&1\\\\0&0&0\\\\1&0&0\\end{pmatrix}.$",
-      "wrong_options": {},
-      "pitfalls": [
-        "已知矩阵等式要按列拆成 Aξ=λξ 来识别特征对，这是题眼。",
-        "第三个特征值 0 由 r(A)=2 得出；其特征向量靠实对称矩阵不同特征值正交性确定，不能随便取。",
-        "还原 A 用谱分解 A=Σλᵢeᵢeᵢᵀ 最省事，且天然保证对称。"
-      ],
-      "key_point": "实对称矩阵：把已知作用关系读成特征对，秩定零特征值，正交性补特征向量，谱分解还原 A。"
-    },
-    {
-      "id": 616,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "函数 $f(x)=\\ln |(x-1)(x-2)(x-3)|$ 的驻点个数为 $(\\quad)$",
-      "options": {
-        "A": "$0$",
-        "B": "$1$",
-        "C": "$2$",
-        "D": "$3$"
-      },
-      "answer": "C",
-      "analysis": "【分析】$f(x)=\\ln|(x-1)(x-2)(x-3)|$ 定义域为 $x\\ne1,2,3$。驻点指 $f'(x)=0$ 的点。利用 $\\ln|uvw|=\\ln|u|+\\ln|v|+\\ln|w|$ 拆开求导，$f'(x)=\\dfrac1{x-1}+\\dfrac1{x-2}+\\dfrac1{x-3}$，令其为零通分后是二次方程，判别其根个数及是否落在定义域内。\n\n【解答】在定义域内\n$$f(x)=\\ln|x-1|+\\ln|x-2|+\\ln|x-3|,$$\n$$f'(x)=\\frac1{x-1}+\\frac1{x-2}+\\frac1{x-3}.$$\n令 $f'(x)=0$，通分（公共分母 $(x-1)(x-2)(x-3)\\ne0$），分子为\n$$(x-2)(x-3)+(x-1)(x-3)+(x-1)(x-2)=0.$$\n展开：$(x^2-5x+6)+(x^2-4x+3)+(x^2-3x+2)=3x^2-12x+11=0$，\n$$x=\\frac{12\\pm\\sqrt{144-132}}{6}=2\\pm\\frac{\\sqrt3}{3}.$$\n两根约为 $1.423$ 和 $2.577$，判别式 $>0$ 故为两个不同实根，且均不等于 $1,2,3$（在定义域内）。所以 $f(x)$ 有 $2$ 个驻点。选 C。\n\n（从区间看：在 $(1,2)$ 与 $(2,3)$ 上 $f'$ 各变号一次，对应一个驻点，合计 $2$ 个，印证结论。）",
-      "wrong_options": {
-        "A": "$0$ 错在以为绝对值或对数使函数无驻点；实际拆成对数和后导数为有理式，确有零点。",
-        "B": "$1$ 可能只考虑了某一个区间，漏掉另一区间内的驻点。",
-        "D": "$3$ 把三个使原式为零/无定义的点 $x=1,2,3$ 误当驻点；这些点不在定义域内，更非 $f'=0$ 的点。"
-      },
-      "pitfalls": [
-        "$x=1,2,3$ 是定义域外的点（对数无定义），不是驻点，别误数进去。",
-        "求导前先用 $\\ln|uvw|=\\sum\\ln|u|$ 拆开，导数与绝对值无关（$(\\ln|u|)'=\\dfrac{u'}{u}$）。"
-      ],
-      "key_point": "$\\ln|$乘积$|$ 先拆成对数和再求导，驻点即 $f'=0$ 的有理方程实根（须在定义域内）。"
-    },
-    {
-      "id": 617,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "微分方程 $y^{\\prime \\prime}-\\lambda^2 y=\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}(\\lambda>0)$ 的特解形式为 $(\\quad)$",
-      "options": {
-        "A": "$a\\left(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}\\right)$",
-        "B": "$a x\\left(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}\\right)$",
-        "C": "$x\\left(a \\mathrm{e}^{\\lambda x}+b \\mathrm{e}^{-\\lambda x}\\right)$",
-        "D": "$x^2\\left(a \\mathrm{e}^{\\lambda x}+b \\mathrm{e}^{-\\lambda x}\\right)$"
-      },
-      "answer": "C",
-      "analysis": "【分析】二阶常系数非齐次线性方程求特解形式，关键看右端每个指数 $\\mathrm{e}^{kx}$ 的 $k$ 是否为特征方程的根，以及是几重根，据此决定是否乘 $x$（共振时升幂）。本题右端是两个不同指数之和，按叠加原理分别判定再合并。\n\n【解答】对应齐次方程 $y''-\\lambda^2 y=0$，特征方程 $r^2-\\lambda^2=0$，根 $r=\\pm\\lambda$（$\\lambda>0$，两个相异单根）。\n\n右端 $\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x}$ 拆成两项：\n- 对 $\\mathrm{e}^{\\lambda x}$：指数 $\\lambda$ 恰是特征单根，发生共振，特解形式需乘 $x$：$a x\\mathrm{e}^{\\lambda x}$。\n- 对 $\\mathrm{e}^{-\\lambda x}$：指数 $-\\lambda$ 也是特征单根，同样共振，特解形式 $b x\\mathrm{e}^{-\\lambda x}$。\n\n由叠加原理，总特解形式为\n$$y^*=a x\\mathrm{e}^{\\lambda x}+b x\\mathrm{e}^{-\\lambda x}=x\\bigl(a\\mathrm{e}^{\\lambda x}+b\\mathrm{e}^{-\\lambda x}\\bigr).$$\n这正是选项 C。",
-      "wrong_options": {
-        "A": "$a(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x})$ 没有乘 $x$，忽略了 $\\pm\\lambda$ 都是特征根的共振；且两指数用同一系数 $a$ 也不对。",
-        "B": "$ax(\\mathrm{e}^{\\lambda x}+\\mathrm{e}^{-\\lambda x})$ 乘了 $x$ 是对的，但两项强行共用系数 $a$，而 $\\mathrm{e}^{\\lambda x}$ 与 $\\mathrm{e}^{-\\lambda x}$ 对应不同的待定系数，应各自取 $a,b$。",
-        "D": "$x^2(\\cdots)$ 多乘了一个 $x$：$\\pm\\lambda$ 都是单根（一重），只需乘 $x^1$，乘 $x^2$ 对应二重根，过度升幂。"
-      },
-      "pitfalls": [
-        "$\\pm\\lambda$ 是两个不同的单根，对 $\\mathrm{e}^{\\lambda x}$ 和 $\\mathrm{e}^{-\\lambda x}$ 各乘一次 $x$（升一幂），不是 $x^2$。",
-        "两个不同指数的特解系数相互独立，必须写成 $a\\mathrm{e}^{\\lambda x}+b\\mathrm{e}^{-\\lambda x}$ 而非共用一个系数。"
-      ],
-      "key_point": "非齐次特解形式：指数 $k$ 是特征方程 $m$ 重根则形式乘 $x^m$；多个指数和按叠加分别定形再合并，系数各自独立。"
-    },
-    {
-      "id": 618,
-      "paper": "数学二",
-      "year": 2011,
-      "index": 9,
+      "index": 11,
       "type": "填空题",
       "difficulty": 0,
-      "stem": "$\\displaystyle \\lim _{x \\rightarrow 0}\\left(\\frac{1+2^x}{2}\\right)^{\\frac{1}{x}}=\\rule{0.5cm}{0.2mm}$",
+      "stem": "曲线 $\\displaystyle y=\\int_{0}^{x} \\tan t \\mathrm{d} t\\left(0 \\leqslant x \\leqslant \\frac{\\pi}{4}\\right)$ 的弧长 $s=\\rule{0.5cm}{0.2mm}$",
       "options": {},
-      "answer": "$\\sqrt{2}$",
-      "analysis": "【分析】$1^\\infty$ 型极限，取对数化为 $\\dfrac{1}{x}\\ln\\dfrac{1+2^x}{2}$，底数趋于 $1$，用 $\\ln(1+u)\\sim u$ 及 $2^x-1\\sim x\\ln2$ 求等价无穷小即可。\n\n【解答】这是 $1^\\infty$ 型。设 $A=\\lim_{x\\to0}\\left(\\dfrac{1+2^x}{2}\\right)^{1/x}$，取对数：\n$$\\ln A=\\lim_{x\\to0}\\frac{1}{x}\\ln\\frac{1+2^x}{2}.$$\n当 $x\\to0$，$\\dfrac{1+2^x}{2}\\to1$。令 $u=\\dfrac{1+2^x}{2}-1=\\dfrac{2^x-1}{2}$，则 $u\\to0$，且 $\\ln(1+u)\\sim u$。又 $2^x-1=e^{x\\ln2}-1\\sim x\\ln2$，故\n$$\\ln\\frac{1+2^x}{2}\\sim \\frac{2^x-1}{2}\\sim\\frac{x\\ln2}{2}.$$\n于是\n$$\\ln A=\\lim_{x\\to0}\\frac{1}{x}\\cdot\\frac{x\\ln2}{2}=\\frac{\\ln2}{2}.$$\n所以 $A=e^{\\frac{\\ln2}{2}}=2^{1/2}=\\sqrt2$。",
+      "answer": "$\\ln (1+\\sqrt{2})$",
+      "analysis": "【分析】曲线由变限积分给出，$y'=\\tan x$ 直接可得（变限积分求导）。弧长公式 $s=\\int\\sqrt{1+(y')^2}\\,\\mathrm{d}x$，注意 $1+\\tan^2x=\\sec^2x$，被开方量化为完全平方，积分立即简化为 $\\int\\sec x\\,\\mathrm{d}x$。\n\n【解答】由 $y=\\displaystyle\\int_0^x\\tan t\\,\\mathrm{d}t$，得 $y'=\\tan x$。在 $\\left[0,\\dfrac{\\pi}{4}\\right]$ 上 $\\sec x>0$，弧长\n$$s=\\int_0^{\\pi/4}\\sqrt{1+(y')^2}\\,\\mathrm{d}x=\\int_0^{\\pi/4}\\sqrt{1+\\tan^2x}\\,\\mathrm{d}x=\\int_0^{\\pi/4}\\sec x\\,\\mathrm{d}x.$$\n而 $\\displaystyle\\int\\sec x\\,\\mathrm{d}x=\\ln|\\sec x+\\tan x|+C$，故\n$$s=\\Big[\\ln(\\sec x+\\tan x)\\Big]_0^{\\pi/4}=\\ln(\\sqrt{2}+1)-\\ln(1+0)=\\ln(1+\\sqrt{2}).$$\n验算：$\\sec\\dfrac{\\pi}{4}=\\sqrt2$，$\\tan\\dfrac{\\pi}{4}=1$，下限处 $\\sec0+\\tan0=1$，$\\ln1=0$，结果 $\\ln(1+\\sqrt2)$ 无误。",
       "wrong_options": {},
       "pitfalls": [
-        "$1^\\infty$ 必须先取对数，不能直接把底数当成 $1$。",
-        "$2^x-1\\sim x\\ln2$（不是 $\\sim x$），漏掉 $\\ln2$ 会得错误结果。"
+        "$1+\\tan^2x=\\sec^2x$ 是化简关键，开方后得 $\\sec x$（区间内为正）。",
+        "$\\int\\sec x\\,\\mathrm{d}x=\\ln|\\sec x+\\tan x|+C$ 要记牢，别误成 $\\ln|\\cos x|$。"
       ],
-      "key_point": "$1^\\infty$ 取对数；$a^x-1\\sim x\\ln a$ 配合 $\\ln(1+u)\\sim u$。"
+      "key_point": "变限积分求导得 $y'=\\tan x$，弧长归结为 $\\int\\sec x\\,\\mathrm{d}x$。"
     },
     {
       "id": 619,
@@ -382,6 +370,25 @@
       "key_point": "参数方程：一阶导 $y'/x'$ 求驻点定极值，二阶导 $\\frac{(\\mathrm{d}y/\\mathrm{d}x)'_t}{x'}$ 定凹凸；$x'>0$ 时 $t$ 与 $x$ 同向，判号最省事。"
     },
     {
+      "id": 608,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $z=f[x y, y g(x)]$, 其中函数 $f$ 具有二阶连续偏导数, 函数 $g(x)$ 可导且在 $x=1$ 处取得极值 $g(1)=1$, 求 $\\left.\\dfrac{\\partial^{2} z}{\\partial x \\partial y}\\right|_{\\substack{x=1 \\\\ y=1}}$",
+      "options": {},
+      "answer": "$f_1^{\\prime}(1,1)+f_{11}^{\\prime \\prime}(1,1)+f_{12}^{\\prime \\prime}(1,1)$",
+      "analysis": "【分析】复合函数二阶混合偏导。设两个中间变量 $u=xy$、$v=yg(x)$,先对 $x$ 求一阶偏导(会出现 $f_1,f_2$),再对 $y$ 求导(注意 $f_1,f_2$ 仍是 $u,v$ 的函数,要继续用链式法则)。最后代入 $x=1,y=1$,利用 $g(x)$ 在 $x=1$ 取极值即 $g'(1)=0$、$g(1)=1$ 大幅化简。\n\n【解答】记 $u=xy,\\ v=yg(x)$,则 $z=f(u,v)$。先求 $\\dfrac{\\partial z}{\\partial x}$:\n$$\\dfrac{\\partial z}{\\partial x}=f_1\\cdot\\dfrac{\\partial u}{\\partial x}+f_2\\cdot\\dfrac{\\partial v}{\\partial x}=y f_1+y g'(x) f_2.$$\n再对 $y$ 求导。注意 $f_1,f_2$ 是 $u,v$ 的函数,而 $\\dfrac{\\partial u}{\\partial y}=x,\\ \\dfrac{\\partial v}{\\partial y}=g(x)$:\n$$\\dfrac{\\partial^2 z}{\\partial x\\partial y}=\\dfrac{\\partial}{\\partial y}\\big[y f_1+y g'(x) f_2\\big].$$\n对第一项:$\\dfrac{\\partial}{\\partial y}(y f_1)=f_1+y\\big(x f_{11}+g(x) f_{12}\\big)$。\n对第二项:$\\dfrac{\\partial}{\\partial y}\\big(y g'(x) f_2\\big)=g'(x) f_2+y g'(x)\\big(x f_{21}+g(x) f_{22}\\big)$。\n合并:\n$$\\dfrac{\\partial^2 z}{\\partial x\\partial y}=f_1+y\\big(x f_{11}+g(x) f_{12}\\big)+g'(x) f_2+y g'(x)\\big(x f_{21}+g(x) f_{22}\\big).$$\n代入 $x=1,y=1$,此时 $g(1)=1,\\ g'(1)=0$(极值点),且中间变量取值 $u=xy=1,\\ v=yg(x)=1$:\n$$\\left.\\dfrac{\\partial^2 z}{\\partial x\\partial y}\\right|_{(1,1)}=f_1(1,1)+\\big(f_{11}(1,1)+f_{12}(1,1)\\big)+0+0.$$\n即\n$$\\left.\\dfrac{\\partial^2 z}{\\partial x\\partial y}\\right|_{(1,1)}=f_1'(1,1)+f_{11}''(1,1)+f_{12}''(1,1).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 $y$ 求二阶导时,$f_1$、$f_2$ 仍是复合函数,要继续对 $u,v$ 用链式法则展开,漏掉这一层是最常见错误。",
+        "\"在 $x=1$ 取极值\"翻译成 $g'(1)=0$ 是化简的钥匙,带 $g'(x)$ 的两项因此全部归零。",
+        "$f$ 有二阶连续偏导,$f_{12}=f_{21}$,可直接合并。"
+      ],
+      "key_point": "多元复合二阶偏导:中间变量 $u,v$ 法,对一阶导继续链式;极值条件 $g'(1)=0$ 用于消项。"
+    },
+    {
       "id": 624,
       "paper": "数学二",
       "year": 2011,
@@ -399,6 +406,25 @@
         "两个积分常数分别由 y'(0)=1 与 y(0)=0 定，相切条件提供这两个初值"
       ],
       "key_point": "倾角问题 $\\tan\\alpha=y' → d\\alpha/dx=y''/(1+y'^2)$；缺 y 用 p=y' 降阶"
+    },
+    {
+      "id": 610,
+      "paper": "数学二",
+      "year": 2011,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "(1) 证明: 对任意的正整数 $n$, 都有 $\\displaystyle \\frac{1}{n+1}<\\ln \\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}$ 成立;\r\n\r\n(2) 设 $\\displaystyle a_{n}=1+\\frac{1}{2}+\\cdots+\\frac{1}{n}-\\ln n(n=1,2, \\cdots)$, 证明:数列 $\\left\\{a_{n}\\right\\}$ 收敛",
+      "options": {},
+      "answer": "",
+      "analysis": "【分析】第 (1) 问的不等式 $\\dfrac{1}{n+1}<\\ln\\left(1+\\dfrac{1}{n}\\right)<\\dfrac{1}{n}$ 把 $\\ln(1+\\frac1n)=\\ln(n+1)-\\ln n$ 看成函数 $\\ln x$ 在 $[n,n+1]$ 上的增量，用拉格朗日中值定理一击即破。第 (2) 问证收敛，思路是单调有界准则：用第 (1) 问的不等式估计相邻项之差，证明 $\\{a_n\\}$ 单调递减且有下界。\n\n【解答】**(1)** 设 $f(x)=\\ln x$，在 $[n,n+1]$ 上连续、在 $(n,n+1)$ 内可导，由拉格朗日中值定理，存在 $\\xi\\in(n,n+1)$ 使\n$$\\ln(n+1)-\\ln n=\\frac{1}{\\xi}.$$\n而 $n<\\xi<n+1$，故 $\\dfrac{1}{n+1}<\\dfrac{1}{\\xi}<\\dfrac{1}{n}$。又 $\\ln(n+1)-\\ln n=\\ln\\dfrac{n+1}{n}=\\ln\\left(1+\\dfrac1n\\right)$，于是\n$$\\frac{1}{n+1}<\\ln\\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}.$$\n\n**(2)** 记 $a_n=1+\\dfrac12+\\cdots+\\dfrac1n-\\ln n$。\n\n先证单调递减：\n$$a_{n+1}-a_n=\\frac{1}{n+1}-\\big(\\ln(n+1)-\\ln n\\big)=\\frac{1}{n+1}-\\ln\\left(1+\\frac1n\\right).$$\n由 (1) 知 $\\ln\\left(1+\\dfrac1n\\right)>\\dfrac{1}{n+1}$，故 $a_{n+1}-a_n<0$，即 $\\{a_n\\}$ 严格递减。\n\n再证有下界：由 (1) 的右半 $\\ln\\left(1+\\dfrac1k\\right)<\\dfrac1k$，即 $\\dfrac1k>\\ln(k+1)-\\ln k$。对 $k=1,2,\\cdots,n$ 求和得\n$$\\sum_{k=1}^{n}\\frac1k>\\sum_{k=1}^{n}\\big(\\ln(k+1)-\\ln k\\big)=\\ln(n+1)>\\ln n,$$\n故 $a_n=\\displaystyle\\sum_{k=1}^{n}\\frac1k-\\ln n>0$，即 $\\{a_n\\}$ 有下界 $0$。\n\n综上，$\\{a_n\\}$ 单调递减且有下界，由单调有界准则知数列 $\\{a_n\\}$ 收敛。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第 (1) 问首选拉格朗日中值定理，比直接用 $\\ln(1+x)$ 与 $x$ 的不等式更干净，且为 (2) 提供现成工具",
+        "证收敛是单调有界准则，必须同时给出单调与有界两件事，缺一不可；下界用右半不等式求和得 $a_n>0$",
+        "求和裂项 $\\sum(\\ln(k+1)-\\ln k)=\\ln(n+1)$ 是关键中间量，别算错"
+      ],
+      "key_point": "$\\ln(1+\\frac1n)$ 即 $\\ln x$ 在 $[n,n+1]$ 的增量，拉格朗日中值定理夹出双边估计；调和级数减 $\\ln n$ 的收敛用单调有界准则。"
     },
     {
       "id": 625,
@@ -419,87 +445,61 @@
       "key_point": "旋转体容积用圆盘法 $\\pi\\int x^2\\mathrm{d}y$；抽水做功微元 $\\rho g\\,\\pi x^2(顶部-y)\\mathrm{d}y$ 分段积分。"
     },
     {
-      "id": 626,
+      "id": 611,
       "paper": "数学二",
       "year": 2011,
-      "index": 1,
-      "type": "选择题",
+      "index": 21,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "已知当 $x \\rightarrow 0$ 时, 函数 $f(x)=3 \\sin x-\\sin 3 x$ 与 $c x^k$ 是等价无穷小, 则 $(\\quad)$",
-      "options": {
-        "A": "$k=1, c=4$",
-        "B": "$k=1, c=-4$",
-        "C": "$k=3, c=4$",
-        "D": "$k=3, c=-4$"
-      },
-      "answer": "C",
-      "analysis": "【分析】等价无穷小 $f(x)\\sim cx^k$ 即把 $f(x)$ 在 $0$ 处泰勒展开，取最低非零次项，其幂次就是 $k$、系数就是 $c$。把 $\\sin x$ 与 $\\sin3x$ 都展开到足够阶（$x^3$）相减即可。\n\n【解答】用泰勒展开（到 $x^3$）：\n$$\\sin x=x-\\frac{x^3}{6}+o(x^3),\\qquad \\sin3x=3x-\\frac{(3x)^3}{6}+o(x^3)=3x-\\frac{27x^3}{6}+o(x^3).$$\n于是\n$$f(x)=3\\sin x-\\sin3x=3\\left(x-\\frac{x^3}{6}\\right)-\\left(3x-\\frac{27x^3}{6}\\right)+o(x^3).$$\n一次项：$3x-3x=0$，相消；三次项：\n$$-\\frac{3x^3}{6}+\\frac{27x^3}{6}=\\frac{24x^3}{6}=4x^3.$$\n故 $f(x)=4x^3+o(x^3)\\sim4x^3$，即 $k=3,\\ c=4$，选 **C**。\n\n（验证：$f(x)/x^3\\to4$，且更高阶项 $-2x^5$ 不影响首项，吻合。）",
-      "wrong_options": {
-        "A": "$k=1,c=4$：误以为最低次是一次项。实际一次项 $3x-3x=0$ 完全抵消，首项是三次。",
-        "B": "$k=1,c=-4$：既错判阶数为 $1$，符号也错。",
-        "D": "$k=3,c=-4$：阶数对，但系数符号错。三次项系数为 $+4$（$-\\frac{3}{6}+\\frac{27}{6}=+4$），不是 $-4$。"
-      },
+      "stem": "已知函数 $f(x, y)$ 具有二阶连续偏导数, 且 $\\displaystyle f(1, y)=0, f(x, 1)=0, \\iint\\limits_{D} f(x, y) \\mathrm{d} x \\mathrm{d} y=a$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 1,0 \\leqslant y \\leqslant 1\\}$, 计算二重积分 $\\displaystyle I=\\iint_{D} x y f_{x y}^{\\prime \\prime}(x, y) \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$a$",
+      "analysis": "【分析】被积函数 $xy\\,f''_{xy}$ 含二阶混合偏导，目标是把它降阶并用上三个条件 $f(1,y)=0$、$f(x,1)=0$、$\\iint_D f=a$。思路：先对 $y$ 积分把 $f''_{xy}$ 降成 $f'_x$，分部积分用掉边界条件 $f(x,1)=0$；再对 $x$ 积分把 $f'_x$ 降成 $f$，分部积分用掉 $f(1,y)=0$，最后凑出 $\\iint_D f$。\n\n【解答】写成累次积分（先 $y$ 后 $x$）：\n$$I=\\int_0^1 x\\Big(\\int_0^1 y\\,f''_{xy}(x,y)\\,\\mathrm dy\\Big)\\mathrm dx.$$\n对内层关于 $y$ 分部积分，注意 $f''_{xy}=\\dfrac{\\partial}{\\partial y}f'_x$：\n$$\\int_0^1 y\\,\\dfrac{\\partial f'_x}{\\partial y}\\,\\mathrm dy=\\big[y\\,f'_x(x,y)\\big]_0^1-\\int_0^1 f'_x(x,y)\\,\\mathrm dy=f'_x(x,1)-\\int_0^1 f'_x(x,y)\\,\\mathrm dy.$$\n由 $f(x,1)=0$ 对 $x$ 求导得 $f'_x(x,1)=0$。故内层 $=-\\displaystyle\\int_0^1 f'_x(x,y)\\,\\mathrm dy$。代回：\n$$I=-\\int_0^1 x\\Big(\\int_0^1 f'_x(x,y)\\,\\mathrm dy\\Big)\\mathrm dx=-\\int_0^1\\Big(\\int_0^1 x\\,f'_x(x,y)\\,\\mathrm dx\\Big)\\mathrm dy.$$\n交换积分次序后，对内层关于 $x$ 分部积分（$f'_x=\\dfrac{\\partial f}{\\partial x}$）：\n$$\\int_0^1 x\\,f'_x(x,y)\\,\\mathrm dx=\\big[x\\,f(x,y)\\big]_0^1-\\int_0^1 f(x,y)\\,\\mathrm dx=f(1,y)-\\int_0^1 f(x,y)\\,\\mathrm dx.$$\n由 $f(1,y)=0$，上式 $=-\\displaystyle\\int_0^1 f(x,y)\\,\\mathrm dx$。代回：\n$$I=-\\int_0^1\\Big(-\\int_0^1 f(x,y)\\,\\mathrm dx\\Big)\\mathrm dy=\\int_0^1\\int_0^1 f(x,y)\\,\\mathrm dx\\mathrm dy=\\iint_D f(x,y)\\,\\mathrm dx\\mathrm dy=a.$$\n故 $I=a$。",
+      "wrong_options": {},
       "pitfalls": [
-        "$\\sin3x$ 展开时 $(3x)^3=27x^3$，立方系数别只写 $3$",
-        "一次项相消是关键，必须展到 $x^3$ 才能取到首个非零项",
-        "三次项符号：$\\sin$ 的展开是 $-\\frac{x^3}{6}$，相减后得正的 $4x^3$"
+        "两次分部积分顺序：先对 y（用掉 f(x,1)=0 ⟹ fₓ(x,1)=0），再对 x（用掉 f(1,y)=0）",
+        "f(x,1)=0 是 x 的恒等式，对 x 求导得 fₓ(x,1)=0；不要误用成 f_y",
+        "两次分部各产生一个负号，最终两负相乘还原为 +∬f，符号别丢"
       ],
-      "key_point": "等价无穷小取泰勒展开首个非零项；本题一次项抵消，首项为 $4x^3$，故 $k=3,c=4$。"
+      "key_point": "含 fₓᵧ'' 的积分用两次分部降阶，依次吃掉两个边界齐零条件，凑出 ∬f=a。"
     },
     {
-      "id": 627,
+      "id": 612,
       "paper": "数学二",
       "year": 2011,
-      "index": 2,
-      "type": "选择题",
+      "index": 22,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $x=0$ 处可导, 且 $f(0)=0$, 则 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{x^2 f(x)-2 f\\left(x^3\\right)}{x^3}=(\\quad)$",
-      "options": {
-        "A": "$-2 f^{\\prime}(0)$",
-        "B": "$-f^{\\prime}(0)$",
-        "C": "$f^{\\prime}(0)$",
-        "D": "0"
-      },
-      "answer": "B",
-      "analysis": "【分析】$f$ 仅在 $x=0$ 处可导且 $f(0)=0$,只能用导数定义 $\\lim_{u\\to0}\\dfrac{f(u)}{u}=f'(0)$。把分式拆成两部分,分别凑成 $\\dfrac{f(\\cdot)}{\\cdot}$ 的形式取极限,不能用洛必达(没有 $f$ 在 $0$ 邻域可导的条件)。\n\n【解答】将分子拆开:\n$$\\dfrac{x^2 f(x)-2f(x^3)}{x^3}=\\dfrac{x^2 f(x)}{x^3}-\\dfrac{2f(x^3)}{x^3}=\\dfrac{f(x)}{x}-2\\cdot\\dfrac{f(x^3)}{x^3}.$$\n由 $f(0)=0$ 及可导定义:\n$$\\lim_{x\\to0}\\dfrac{f(x)}{x}=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x-0}=f'(0),$$\n$$\\lim_{x\\to0}\\dfrac{f(x^3)}{x^3}=\\lim_{t\\to0}\\dfrac{f(t)-f(0)}{t-0}=f'(0)\\quad(t=x^3\\to0).$$\n故原极限\n$$=f'(0)-2f'(0)=-f'(0),$$\n选 B。",
-      "wrong_options": {
-        "A": "$-2f'(0)$ 多半漏算了第一项 $\\dfrac{f(x)}{x}\\to f'(0)$,只取了后半部分。",
-        "C": "$f'(0)$ 漏掉了系数 $2$ 或把两项符号合错;正确是 $f'(0)-2f'(0)=-f'(0)$。",
-        "D": "误以为两项相消为 $0$;实际系数 $1$ 与 $2$ 不同,差为 $-f'(0)$。"
-      },
+      "stem": "设向量组 $\\boldsymbol{\\alpha}_{1}=(1,0,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,1,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(1,3,5)^{\\mathrm{T}}$ 不能由向量组 $\\boldsymbol{\\beta}_{1}=(1,1,1)^{\\mathrm{T}}$, $\\boldsymbol{\\beta}_{2}=(1,2,3)^{\\mathrm{T}}, \\boldsymbol{\\beta}_{3}=(3,4, a)^{\\mathrm{T}}$ 线性表示\r\n\r\n(1) 求 $a$ 的值;\r\n\r\n(2) 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 用 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
+      "options": {},
+      "answer": "(1) $a=5$\r\n\r\n(2) $\\left\\{ \\begin{array}{l}\\boldsymbol{\\beta}_1=2 \\boldsymbol{\\alpha}_1+4 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_3=5 \\boldsymbol{\\alpha}_1+10 \\boldsymbol{\\alpha}_2-2 \\boldsymbol{\\alpha}_3 \\end{array}\\right.$",
+      "analysis": "【分析】(1) “$\\alpha$ 组不能由 $\\beta$ 组线性表示”是关键条件。记 $A=(\\alpha_1,\\alpha_2,\\alpha_3)$，$B=(\\beta_1,\\beta_2,\\beta_3)$。注意到 $\\det A=\\begin{vmatrix}1&0&1\\\\0&1&3\\\\1&1&5\\end{vmatrix}=1\\neq0$，故 $\\alpha$ 组线性无关、$A$ 可逆。若 $B$ 可逆，则任何向量都能由 $\\beta$ 组表示，与条件矛盾，故必有 $\\det B=0$，由此定出 $a$。(2) 求表示式即解 $B=AX$，$X=A^{-1}B$，第 $j$ 列给出 $\\beta_j$ 关于 $\\alpha$ 的坐标。\n\n【解答】**(1)** \n$$\\det B=\\begin{vmatrix}1&1&3\\\\1&2&4\\\\1&3&a\\end{vmatrix}.$$\n按第一列消元：$R_2-R_1,\\ R_3-R_1$ 得 $\\begin{vmatrix}1&1&3\\\\0&1&1\\\\0&2&a-3\\end{vmatrix}=1\\cdot[1\\cdot(a-3)-1\\cdot2]=a-5.$\n因 $\\det A\\neq0$，要使 $\\alpha$ 组不能由 $\\beta$ 组表示，必须 $\\det B=0$，即 $a-5=0$，$a=5$。（此时 $\\beta$ 组秩为 $2<3$，张成的空间不含全部 $\\alpha$，符合“不能表示”。）\n\n**(2)** 设 $B=AX$，则 $X=A^{-1}B$。先求 $A^{-1}$：由 $\\det A=1$，\n$$A^{-1}=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}.$$\n（验证 $AA^{-1}=I$ 成立。）于是\n$$X=A^{-1}B=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}\\begin{pmatrix}1&1&3\\\\1&2&4\\\\1&3&5\\end{pmatrix}=\\begin{pmatrix}2&1&5\\\\4&2&10\\\\-1&0&-2\\end{pmatrix}.$$\n$X$ 的各列即坐标，故\n$$\\beta_1=2\\alpha_1+4\\alpha_2-\\alpha_3,\\quad \\beta_2=\\alpha_1+2\\alpha_2+0\\cdot\\alpha_3,\\quad \\beta_3=5\\alpha_1+10\\alpha_2-2\\alpha_3.$$\n验算 $\\beta_1$：$2(1,0,1)+4(0,1,1)-(1,3,5)=(2-1,\\,4-3,\\,2+4-5)=(1,1,1)=\\beta_1$，正确。",
+      "wrong_options": {},
       "pitfalls": [
-        "只在 $x=0$ 可导,不能用洛必达(它要求邻域可导),必须回到导数定义。",
-        "$\\dfrac{f(x^3)}{x^3}$ 作换元 $t=x^3$ 后仍趋于 $f'(0)$,分母要与自变量匹配($x^3$ 配 $x^3$,不是 $x$)。"
+        "“不能线性表示”要转化为行列式条件：$A$ 可逆而 $B$ 不可逆（$\\det B=0$），不是反过来。",
+        "求表示式本质是解 $B=AX$，$X$ 的第 $j$ 列才是 $\\beta_j$ 的坐标，别把行列搞反。",
+        "结果务必回代验算（如 $\\beta_1=(1,1,1)$），系数算错很常见。"
       ],
-      "key_point": "仅一点可导用定义 $\\dfrac{f(u)}{u}\\to f'(0)$;拆项凑分母,系数算清。"
+      "key_point": "$\\det A\\neq0$、$\\det B=0$ 定参数；表示式由 $X=A^{-1}B$ 逐列读出。"
     },
     {
-      "id": 90409,
+      "id": 613,
       "paper": "数学二",
       "year": 2011,
-      "index": 5,
-      "type": "选择题",
+      "index": 23,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设函数 $f(x), g(x)$ 均有二阶连续导数, 满足 $f(0)>0, g(0)<0$, 且 $f^{\\prime}(0)=g^{\\prime}(0)=0$, 则函数 $z=f(x) g(y)$ 在点 $(0,0)$ 处取得极小值的一个充分条件是 $(\\quad)$",
-      "options": {
-        "A": "$f^{\\prime \\prime}(0)<0, g^{\\prime \\prime}(0)>0$",
-        "B": "$f^{\\prime \\prime}(0)<0, g^{\\prime \\prime}(0)<0$",
-        "C": "$f^{\\prime \\prime}(0)>0, g^{\\prime \\prime}(0)>0$",
-        "D": "$f^{\\prime \\prime}(0)>0, g^{\\prime \\prime}(0)<0$"
-      },
-      "answer": "A",
-      "analysis": "【分析】二元函数取极小值的充分条件：先验 $(0,0)$ 是驻点（一阶偏导为零），再用二阶判别法，要求 $A=z_{xx}>0$ 且 $AC-B^2>0$。本题 $z=f(x)g(y)$ 是两个一元函数相乘，偏导数各只作用在自己那一个因子上，代入 $(0,0)$ 后条件就翻译成对 $f''(0)$、$g''(0)$ 正负的要求。\n\n【解答】一阶偏导\n$$z_x=f'(x)g(y),\\qquad z_y=f(x)g'(y).$$\n在 $(0,0)$ 处，由 $f'(0)=g'(0)=0$ 得 $z_x(0,0)=f'(0)g(0)=0$，$z_y(0,0)=f(0)g'(0)=0$，故 $(0,0)$ 是驻点。\n\n二阶偏导\n$$z_{xx}=f''(x)g(y),\\qquad z_{xy}=f'(x)g'(y),\\qquad z_{yy}=f(x)g''(y),$$\n代入 $(0,0)$ 得\n$$A=f''(0)g(0),\\qquad B=f'(0)g'(0)=0,\\qquad C=f(0)g''(0).$$\n\n取极小值的充分条件是 $A>0$ 且 $AC-B^2>0$。因 $B=0$，后者即 $AC>0$，结合 $A>0$ 可知 $C>0$。于是\n* 由 $A=f''(0)g(0)>0$ 与已知 $g(0)<0$，得 $f''(0)<0$；\n* 由 $C=f(0)g''(0)>0$ 与已知 $f(0)>0$，得 $g''(0)>0$。\n\n因此充分条件是 $f''(0)<0,\\ g''(0)>0$，选 (A)。",
-      "wrong_options": {
-        "B": "$g^{\\prime\\prime}(0)<0$ 时 $C=f(0)g^{\\prime\\prime}(0)<0$，而 $A=f^{\\prime\\prime}(0)g(0)>0$，$AC-B^2=AC<0$，$(0,0)$ 是鞍点，没有极值。",
-        "C": "$f^{\\prime\\prime}(0)>0$ 时 $A=f^{\\prime\\prime}(0)g(0)<0$（因 $g(0)<0$），$A<0$ 对应的是**极大**不是极小。",
-        "D": "此时 $A=f^{\\prime\\prime}(0)g(0)<0$、$C=f(0)g^{\\prime\\prime}(0)<0$，$AC>0$ 但 $A<0$，取到的是极大值。"
-      },
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶实对称矩阵, $r(\\boldsymbol{A})=2$ , 且\r\n\r\n$\\boldsymbol{A}\\left(\\begin{array}{cc}\r\n1 & 1 \\\\\r\n0 & 0 \\\\\r\n-1 & 1\r\n\\end{array}\\right)=\\left(\\begin{array}{cc}\r\n-1 & 1 \\\\\r\n0 & 0 \\\\\r\n1 & 1\r\n\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的所有特征值与特征向量;\r\n\r\n(2) 求矩阵 $\\boldsymbol{A}$",
+      "options": {},
+      "answer": "(1) $\\lambda_1=0$ 对应的一个特征向量\r\n\r\n故 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=0, \\lambda_2=-1, \\lambda_3=1$;\r\n\r\n$\\lambda_2=-1$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\xi}_2=\\left(\\begin{array}{c}1 \\\\ 0 \\\\ -1\\end{array}\\right)$; \r\n\r\n$\\lambda_3=1$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\xi}_3=\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)$\r\n\r\n(3) $\\left(\\begin{array}{lll}\r\n0 & 0 & 1 \\\\\r\n0 & 0 & 0 \\\\\r\n1 & 0 & 0\r\n\\end{array}\\right)$",
+      "analysis": "【分析】题给的矩阵等式把两列拆开看，就是 $A$ 作用在两个具体向量上的结果，正好凑成特征向量方程：$A(1,0,-1)^T=(-1,0,1)^T=-1\\cdot(1,0,-1)^T$，$A(1,0,1)^T=(1,0,1)^T=1\\cdot(1,0,1)^T$。这就读出两个特征值 $-1,1$ 及其特征向量。再由 $r(A)=2$ 知 $A$ 不满秩，必有特征值 $0$；利用实对称矩阵不同特征值的特征向量正交，求出 $\\lambda=0$ 的特征向量。最后用 $A=P\\Lambda P^{-1}$（正交对角化 $P^{-1}=P^T$）还原 $A$。\n\n【解答】**(1) 特征值与特征向量。**\n把已知等式按列拆开：\n$$A\\begin{pmatrix}1\\\\0\\\\-1\\end{pmatrix}=\\begin{pmatrix}-1\\\\0\\\\1\\end{pmatrix}=-\\begin{pmatrix}1\\\\0\\\\-1\\end{pmatrix},\\qquad A\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}=1\\cdot\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}.$$\n故 $\\lambda_2=-1$，特征向量 $\\xi_2=(1,0,-1)^T$；$\\lambda_3=1$，特征向量 $\\xi_3=(1,0,1)^T$。\n由 $r(A)=2<3$，$A$ 奇异，$0$ 是特征值，记 $\\lambda_1=0$。$A$ 实对称，$\\xi_1$ 须与 $\\xi_2,\\xi_3$ 正交。设 $\\xi_1=(a,b,c)^T$，由 $\\xi_1\\cdot\\xi_2=a-c=0$、$\\xi_1\\cdot\\xi_3=a+c=0$ 得 $a=c=0$，故取 $\\xi_1=(0,1,0)^T$。\n所以特征值为 $0,-1,1$；对应特征向量（任意非零倍数）分别为 $k_1(0,1,0)^T,\\ k_2(1,0,-1)^T,\\ k_3(1,0,1)^T$（$k_i\\ne0$）。\n\n**(2) 求 $A$。** 单位化：$e_1=(0,1,0)^T$，$e_2=\\dfrac{1}{\\sqrt2}(1,0,-1)^T$，$e_3=\\dfrac{1}{\\sqrt2}(1,0,1)^T$，构成正交矩阵 $P=(e_1,e_2,e_3)$，$\\Lambda=\\mathrm{diag}(0,-1,1)$。则 $A=P\\Lambda P^T$。\n直接用 $A=\\sum\\lambda_i e_i e_i^T=0\\cdot e_1e_1^T+(-1)e_2e_2^T+1\\cdot e_3e_3^T$。\n$e_2e_2^T=\\dfrac12\\begin{pmatrix}1&0&-1\\\\0&0&0\\\\-1&0&1\\end{pmatrix}$，$e_3e_3^T=\\dfrac12\\begin{pmatrix}1&0&1\\\\0&0&0\\\\1&0&1\\end{pmatrix}$。\n$A=-e_2e_2^T+e_3e_3^T=\\dfrac12\\begin{pmatrix}-1+1&0&1+1\\\\0&0&0\\\\1+1&0&-1+1\\end{pmatrix}=\\begin{pmatrix}0&0&1\\\\0&0&0\\\\1&0&0\\end{pmatrix}.$\n验证：$A(1,0,-1)^T=(-1,0,1)^T$✓，$A(1,0,1)^T=(1,0,1)^T$✓，$r(A)=2$✓。\n故 $A=\\begin{pmatrix}0&0&1\\\\0&0&0\\\\1&0&0\\end{pmatrix}.$",
+      "wrong_options": {},
       "pitfalls": [
-        "先确认 $(0,0)$ 是驻点（靠 $f^{\\prime}(0)=g^{\\prime}(0)=0$），否则二阶判别法用不上。",
-        "$A=f^{\\prime\\prime}(0)g(0)$ 里带着 $g(0)<0$，符号会翻一次——想当然地写成「极小要 $f^{\\prime\\prime}(0)>0$」正好选反。",
-        "极小要 $A>0$，极大要 $A<0$，两者的 $AC-B^2>0$ 是一样的，别只看判别式就下结论。"
+        "已知矩阵等式要按列拆成 Aξ=λξ 来识别特征对，这是题眼。",
+        "第三个特征值 0 由 r(A)=2 得出；其特征向量靠实对称矩阵不同特征值正交性确定，不能随便取。",
+        "还原 A 用谱分解 A=Σλᵢeᵢeᵢᵀ 最省事，且天然保证对称。"
       ],
-      "key_point": "$A=f^{\\prime\\prime}(0)g(0)$、$B=0$、$C=f(0)g^{\\prime\\prime}(0)$；极小需 $A>0$ 且 $AC>0$，代入 $f(0)>0,g(0)<0$ 得 $f^{\\prime\\prime}(0)<0$、$g^{\\prime\\prime}(0)>0$。"
+      "key_point": "实对称矩阵：把已知作用关系读成特征对，秩定零特征值，正交性补特征向量，谱分解还原 A。"
     }
   ]
 }

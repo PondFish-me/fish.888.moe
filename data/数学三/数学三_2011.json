@@ -4,145 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 596,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\displaystyle I=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\sin x \\mathrm{d} x, J=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\cot x \\mathrm{d} x, K=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\cos x \\mathrm{d} x$, 则 $I, J, K$ 的大小关系为 $(\\quad)$",
-      "options": {
-        "A": "$I<J<K$",
-        "B": "$I<K<J$",
-        "C": "$J<I<K$",
-        "D": "$K<J<I$"
-      },
-      "answer": "B",
-      "analysis": "【分析】三个积分区间相同，都在 $\\left(0,\\dfrac{\\pi}{4}\\right)$ 上。比较大小只需在该区间上比较被积函数 $\\ln\\sin x,\\ \\ln\\cos x,\\ \\ln\\cot x$ 的大小：积分保序，被积函数大者积分大。\n\n【解答】在 $\\left(0,\\dfrac{\\pi}{4}\\right)$ 上，$0<\\sin x<\\cos x<1$，且 $\\cot x=\\dfrac{\\cos x}{\\sin x}>1$。$\\ln$ 单调增，故\n$$\\ln\\sin x<\\ln\\cos x<0<\\ln\\cot x.$$\n（前两个为负，$\\sin x<\\cos x$ 给出 $\\ln\\sin x<\\ln\\cos x$；$\\cot x>1$ 给出 $\\ln\\cot x>0$。）\n\n在区间上逐点有 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$，由定积分的保序性（严格不等且非处处相等）：\n$$\\int_0^{\\pi/4}\\ln\\sin x\\,\\mathrm{d}x<\\int_0^{\\pi/4}\\ln\\cos x\\,\\mathrm{d}x<\\int_0^{\\pi/4}\\ln\\cot x\\,\\mathrm{d}x,$$\n即 $I<K<J$。选 **B**。\n（附注：$\\ln\\cot x=\\ln\\cos x-\\ln\\sin x=K\\text{被积}-I\\text{被积}$，亦可见 $J$ 对应被积函数最大。）",
-      "wrong_options": {
-        "A": "把 $K$ 与 $J$ 的大小排反。$\\ln\\cos x<0<\\ln\\cot x$，故 $K<J$，不是 $J<K$，正确顺序是 $I<K<J$。",
-        "C": "$I$ 与 $J$ 排反。$\\ln\\sin x$ 最小（最负），$\\ln\\cot x$ 最大（为正），应 $I$ 最小、$J$ 最大。",
-        "D": "整体顺序完全颠倒。被积函数大小为 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$，对应 $I<K<J$。"
-      },
-      "pitfalls": [
-        "区间相同，比较积分即比较被积函数；不必真算出积分值。",
-        "$\\left(0,\\frac{\\pi}{4}\\right)$ 上 $\\sin x<\\cos x$，故 $\\ln\\sin x<\\ln\\cos x$（都为负）。",
-        "$\\cot x>1\\Rightarrow\\ln\\cot x>0$，故 $J$ 最大；切勿把 $K,J$ 顺序弄反。"
-      ],
-      "key_point": "同区间积分比大小 → 比被积函数；在 $(0,\\pi/4)$ 上 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$。"
-    },
-    {
-      "id": 597,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, 将 $\\boldsymbol{A}$ 的第 $2$ 列加到第 $1$ 列得矩阵 $\\boldsymbol{B}$, 再交换 $\\boldsymbol{B}$ 的第 $2$ 行与第 $3$ 行得单位矩阵, 记 $\\boldsymbol{P}_{1}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right), \\boldsymbol{P}_{2}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 1 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}=(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{P}_{1} \\boldsymbol{P}_{2}$",
-        "B": "$\\boldsymbol{P}_{1}^{-1} \\boldsymbol{P}_{2}$",
-        "C": "$\\boldsymbol{P}_{2} \\boldsymbol{P}_{1}$",
-        "D": "$\\boldsymbol{P}_{2} \\boldsymbol{P}_{1}^{-1}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】初等变换的矩阵语言：对矩阵作**列变换**等价于**右乘**初等矩阵，作**行变换**等价于**左乘**初等矩阵。逐句翻译题意列出方程，再解出 $A$，注意行交换矩阵的逆是它自身。\n\n【解答】观察 $P_1=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix}$ 正是\"把第 2 列加到第 1 列\"的初等矩阵，$P_2=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}$ 正是\"交换第 2、3 行\"的初等矩阵。\n\n**第一步：$A$ 的第 2 列加到第 1 列得 $B$。** 列变换 = 右乘，故\n$$B=AP_1.$$\n\n**第二步：交换 $B$ 的第 2、3 行得单位矩阵。** 行变换 = 左乘，故\n$$P_2B=E\\ (\\text{单位阵}).$$\n\n**第三步：联立求 $A$。** 代入 $B=AP_1$：\n$$P_2\\,A\\,P_1=E\\ \\Longrightarrow\\ A=P_2^{-1}E\\,P_1^{-1}=P_2^{-1}P_1^{-1}.$$\n而 $P_2$ 为行交换矩阵，$P_2^{-1}=P_2$，所以\n$$A=P_2P_1^{-1}.$$\n选 **D**。\n\n（验证：取 $A=P_2P_1^{-1}=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\-1&1&0\\end{pmatrix}$，则 $B=AP_1=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}$，再交换 2、3 行 $P_2B=E$，完全符合题意。）",
-      "wrong_options": {
-        "A": "$P_1P_2$ 把行、列操作的左右乘关系全搞反，且未取逆，错。",
-        "B": "$P_1^{-1}P_2$ 顺序与左右乘都不对：列变换应右乘 $P_1$、行变换应左乘 $P_2$，解得的是 $P_2^{-1}P_1^{-1}$，不是此式。",
-        "C": "$P_2P_1$ 中 $P_1$ 没取逆。由 $P_2AP_1=E$ 解出的应是 $A=P_2^{-1}P_1^{-1}=P_2P_1^{-1}$，$P_1$ 必须是逆。"
-      },
-      "pitfalls": [
-        "列变换右乘、行变换左乘——这是最易记反的点；本题先右乘 $P_1$ 再左乘 $P_2$。",
-        "由 $P_2AP_1=E$ 解 $A$ 时两边分别左乘 $P_2^{-1}$、右乘 $P_1^{-1}$，得 $A=P_2^{-1}P_1^{-1}$。",
-        "行交换矩阵 $P_2$ 是对合阵，$P_2^{-1}=P_2$，所以最终写成 $P_2P_1^{-1}$。"
-      ],
-      "key_point": "列变换右乘、行变换左乘，列出 $P_2AP_1=E$ 解得 $A=P_2P_1^{-1}$（$P_2^{-1}=P_2$）。"
-    },
-    {
-      "id": 599,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $F_{1}(x)$ 与 $F_{2}(x)$ 为两个分布函数, 其相应的概率密度 $f_{1}(x)$ 与 $f_{2}(x)$ 是连续函数, 则必为概率密度的是 $(\\quad)$",
-      "options": {
-        "A": "$f_{1}(x) f_{2}(x)$",
-        "B": "$2 f_{2}(x) F_{1}(x)$",
-        "C": "$f_{1}(x) F_{2}(x)$",
-        "D": "$f_{1}(x) F_{2}(x)+f_{2}(x) F_{1}(x)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】判断某表达式是否为概率密度，需满足两条：处处非负，且在 $(-\\infty,+\\infty)$ 上积分为 $1$。$F_i$ 是分布函数（$0\\le F_i\\le1$，$F_i(-\\infty)=0,\\,F_i(+\\infty)=1$），$f_i\\ge0$ 是其密度。逐项检验积分值。\n\n【解答】关键看选项 D：$f_1(x)F_2(x)+f_2(x)F_1(x)$。注意这恰是乘积的导数：\n$$\\frac{d}{dx}\\big[F_1(x)F_2(x)\\big]=F_1'(x)F_2(x)+F_1(x)F_2'(x)=f_1(x)F_2(x)+f_2(x)F_1(x).$$\n因此\n$$\\int_{-\\infty}^{+\\infty}\\big[f_1F_2+f_2F_1\\big]\\,dx=\\big[F_1(x)F_2(x)\\big]_{-\\infty}^{+\\infty}=1\\cdot1-0\\cdot0=1.$$\n又 $f_i\\ge0$、$F_i\\ge0$，故被积式非负。两条件均满足，D 是概率密度。选 D。",
-      "wrong_options": {
-        "A": "$f_1f_2$ 虽非负，但 $\\int f_1f_2\\,dx$ 一般不等于 1（如两者都是标准正态密度时积分为 $\\frac{1}{2\\sqrt\\pi}\\ne1$），故不是密度。",
-        "B": "$2f_2F_1$ 非负，但 $\\int 2f_2(x)F_1(x)\\,dx$ 一般不为 1。事实上 $\\int f_2F_1\\,dx$ 介于 0 与 1 之间，乘 2 后也不恒为 1。",
-        "C": "$f_1F_2$ 非负，但 $\\int f_1(x)F_2(x)\\,dx\\le\\int f_1\\,dx=1$，一般严格小于 1，不满足归一性。"
-      },
-      "pitfalls": [
-        "概率密度两要件：非负 + 全空间积分为 1，缺一不可；A 漏的是归一性。",
-        "认出 D 是 $(F_1F_2)'$ 是解题钥匙，直接用牛顿-莱布尼茨把积分算成 $1$。",
-        "只有同时含 $f_iF_j$ 两项相加（凑成乘积导数）才能保证积分恰为 1，单项 C 不行。"
-      ],
-      "key_point": "$f_1F_2+f_2F_1=(F_1F_2)'$，积分为 1 且非负，是概率密度；其余选项归一性不成立。"
-    },
-    {
-      "id": 606,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设二维随机变量 $(X, Y)$ 服从正态分布 $N\\left(\\mu, \\mu ; \\sigma^{2}, \\sigma^{2} ; 0\\right)$, 则 $E\\left(X Y^{2}\\right)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\mu \\sigma^2+\\mu^3$",
-      "analysis": "【分析】记号 $N(\\mu,\\mu;\\sigma^2,\\sigma^2;0)$ 表示 $X,Y$ 均服从 $N(\\mu,\\sigma^2)$，相关系数 $\\rho=0$。对二维正态分布，$\\rho=0$ 等价于 $X,Y$ 相互独立。于是 $E(XY^2)=E(X)\\,E(Y^2)$，分别用一维正态的期望与二阶矩求出。\n\n【解答】由 $\\rho=0$ 及联合正态性，$X$ 与 $Y$ 独立，故\n$$E(XY^2)=E(X)\\cdot E(Y^2).$$\n其中 $E(X)=\\mu$。对 $Y\\sim N(\\mu,\\sigma^2)$，\n$$E(Y^2)=D(Y)+\\big(E(Y)\\big)^2=\\sigma^2+\\mu^2.$$\n所以\n$$E(XY^2)=\\mu(\\sigma^2+\\mu^2)=\\mu\\sigma^2+\\mu^3.$$\n与标准答案一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "二维正态分布中 ρ=0 ⇔ 独立（一般分布无此结论，但正态成立），独立才能拆 E(XY²)=E(X)E(Y²)。",
-        "E(Y²)=D(Y)+[E(Y)]²=σ²+μ²，别只写成 μ² 或漏掉方差项。"
-      ],
-      "key_point": "联合正态 + ρ=0 ⇒ 独立；E(XY²)=E(X)E(Y²)=μ(σ²+μ²)。"
-    },
-    {
-      "id": 612,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设向量组 $\\boldsymbol{\\alpha}_{1}=(1,0,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,1,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(1,3,5)^{\\mathrm{T}}$ 不能由向量组 $\\boldsymbol{\\beta}_{1}=(1,1,1)^{\\mathrm{T}}$, $\\boldsymbol{\\beta}_{2}=(1,2,3)^{\\mathrm{T}}, \\boldsymbol{\\beta}_{3}=(3,4, a)^{\\mathrm{T}}$ 线性表示\r\n\r\n(1) 求 $a$ 的值;\r\n\r\n(2) 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 用 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
-      "options": {},
-      "answer": "(1) $a=5$\r\n\r\n(2) $\\left\\{ \\begin{array}{l}\\boldsymbol{\\beta}_1=2 \\boldsymbol{\\alpha}_1+4 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_3=5 \\boldsymbol{\\alpha}_1+10 \\boldsymbol{\\alpha}_2-2 \\boldsymbol{\\alpha}_3 \\end{array}\\right.$",
-      "analysis": "【分析】(1) “$\\alpha$ 组不能由 $\\beta$ 组线性表示”是关键条件。记 $A=(\\alpha_1,\\alpha_2,\\alpha_3)$，$B=(\\beta_1,\\beta_2,\\beta_3)$。注意到 $\\det A=\\begin{vmatrix}1&0&1\\\\0&1&3\\\\1&1&5\\end{vmatrix}=1\\neq0$，故 $\\alpha$ 组线性无关、$A$ 可逆。若 $B$ 可逆，则任何向量都能由 $\\beta$ 组表示，与条件矛盾，故必有 $\\det B=0$，由此定出 $a$。(2) 求表示式即解 $B=AX$，$X=A^{-1}B$，第 $j$ 列给出 $\\beta_j$ 关于 $\\alpha$ 的坐标。\n\n【解答】**(1)** \n$$\\det B=\\begin{vmatrix}1&1&3\\\\1&2&4\\\\1&3&a\\end{vmatrix}.$$\n按第一列消元：$R_2-R_1,\\ R_3-R_1$ 得 $\\begin{vmatrix}1&1&3\\\\0&1&1\\\\0&2&a-3\\end{vmatrix}=1\\cdot[1\\cdot(a-3)-1\\cdot2]=a-5.$\n因 $\\det A\\neq0$，要使 $\\alpha$ 组不能由 $\\beta$ 组表示，必须 $\\det B=0$，即 $a-5=0$，$a=5$。（此时 $\\beta$ 组秩为 $2<3$，张成的空间不含全部 $\\alpha$，符合“不能表示”。）\n\n**(2)** 设 $B=AX$，则 $X=A^{-1}B$。先求 $A^{-1}$：由 $\\det A=1$，\n$$A^{-1}=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}.$$\n（验证 $AA^{-1}=I$ 成立。）于是\n$$X=A^{-1}B=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}\\begin{pmatrix}1&1&3\\\\1&2&4\\\\1&3&5\\end{pmatrix}=\\begin{pmatrix}2&1&5\\\\4&2&10\\\\-1&0&-2\\end{pmatrix}.$$\n$X$ 的各列即坐标，故\n$$\\beta_1=2\\alpha_1+4\\alpha_2-\\alpha_3,\\quad \\beta_2=\\alpha_1+2\\alpha_2+0\\cdot\\alpha_3,\\quad \\beta_3=5\\alpha_1+10\\alpha_2-2\\alpha_3.$$\n验算 $\\beta_1$：$2(1,0,1)+4(0,1,1)-(1,3,5)=(2-1,\\,4-3,\\,2+4-5)=(1,1,1)=\\beta_1$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "“不能线性表示”要转化为行列式条件：$A$ 可逆而 $B$ 不可逆（$\\det B=0$），不是反过来。",
-        "求表示式本质是解 $B=AX$，$X$ 的第 $j$ 列才是 $\\beta_j$ 的坐标，别把行列搞反。",
-        "结果务必回代验算（如 $\\beta_1=(1,1,1)$），系数算错很常见。"
-      ],
-      "key_point": "$\\det A\\neq0$、$\\det B=0$ 定参数；表示式由 $X=A^{-1}B$ 逐列读出。"
-    },
-    {
-      "id": 614,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 与 $Y$ 的概率分布分别为 $\\begin{array}{c|cc}\\hline\r\nX & 0 & 1 \\\\\r\n\\hline P & \\dfrac{1}{3} & \\dfrac{2}{3}\\\\\r\n\\hline\r\n\\end{array}$,  $\\begin{array}{c|cc}\\hline\r\nY & -1 & 0 & 1 \\\\\r\n\\hline P & \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n且 $P\\left\\{X^{2}=Y^{2}\\right\\}=1$.\r\n\r\n(1) 求二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) 求 $Z=X Y$ 的概率分布;\r\n\r\n(3) 求 $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$",
-      "options": {},
-      "answer": "(1) $\\begin{array}{c|ccc}\r\n\\hline X \\diagdown Y & -1 & 0 & 1 \\\\\r\n\\hline 0 & 0 &  \\dfrac{1}{3} & 0 \\\\\r\n\\hline 1 &  \\dfrac{1}{3} & 0 & \\dfrac{1}{3} \\\\\r\n\\hline\\end{array}$\r\n\r\n(2) $Z \\sim\\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3}\\end{array}\\right)$\r\n\r\n(3) $\\rho_{X Y}=0$",
-      "analysis": "【分析】离散型二维分布题。核心条件是 $P\\{X^2=Y^2\\}=1$，它把许多联合概率强制为 $0$；再结合两个边缘分布把剩下的格点概率定出来。第（2）问由联合分布算 $Z=XY$ 的分布；第（3）问算协方差与方差得相关系数。\n\n【解答】$X$ 取 $0,1$，概率 $\\dfrac13,\\dfrac23$；$Y$ 取 $-1,0,1$，各 $\\dfrac13$。\n\n（1）由 $P\\{X^2=Y^2\\}=1$：当 $X=0$ 时必有 $Y^2=0$，即 $Y=0$；当 $X=1$ 时必有 $Y^2=1$，即 $Y=\\pm1$。于是 $P\\{X=0,Y=\\pm1\\}=0$、$P\\{X=1,Y=0\\}=0$。\n\n由边缘：$P\\{X=0,Y=0\\}=P\\{X=0\\}=\\dfrac13$。\n$Y=-1$ 的概率 $\\dfrac13$ 全部落在 $X=1$：$P\\{X=1,Y=-1\\}=\\dfrac13$；同理 $P\\{X=1,Y=1\\}=\\dfrac13$。\n校验 $X=1$ 行：$\\dfrac13+0+\\dfrac13=\\dfrac23=P\\{X=1\\}$，吻合。联合分布表：\n$$\\begin{array}{c|ccc}\\hline X\\backslash Y & -1 & 0 & 1\\\\\\hline 0 & 0 & \\tfrac13 & 0\\\\\\hline 1 & \\tfrac13 & 0 & \\tfrac13\\\\\\hline\\end{array}$$\n\n（2）$Z=XY$。当 $X=0$ 时 $Z=0$（概率 $\\dfrac13$）；当 $X=1,Y=-1$ 时 $Z=-1$（概率 $\\dfrac13$）；当 $X=1,Y=1$ 时 $Z=1$（概率 $\\dfrac13$）。故\n$$Z\\sim\\begin{pmatrix}-1 & 0 & 1\\\\ \\tfrac13 & \\tfrac13 & \\tfrac13\\end{pmatrix}.$$\n\n（3）$E(X)=\\dfrac23,\\ E(Y)=0$。$E(XY)=E(Z)=(-1)\\cdot\\tfrac13+0+1\\cdot\\tfrac13=0$。于是 $\\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=0-\\dfrac23\\cdot0=0$。故相关系数 $\\rho_{XY}=\\dfrac{\\mathrm{Cov}(X,Y)}{\\sqrt{D(X)D(Y)}}=0$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "P{X²=Y²}=1 是把不可能格点置零的钥匙，要先用它再用边缘分布补齐",
-        "ρ=0 只说明不相关，本题 X、Y 显然不独立（如 P{X=0,Y=-1}=0≠P{X=0}P{Y=-1}）"
-      ],
-      "key_point": "二维离散分布：用‘几乎必然’事件锁死零格点，配合边缘分布定表；ρ=0 即协方差为零。"
-    },
-    {
       "id": 626,
       "paper": "数学三",
       "year": 2011,
@@ -226,6 +87,62 @@
       "key_point": "收敛级数加括号必收敛（A 的部分和是 S_{2N} 子列）；去括号、变号不保收敛，用反例排除。"
     },
     {
+      "id": 596,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle I=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\sin x \\mathrm{d} x, J=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\cot x \\mathrm{d} x, K=\\int_{0}^{\\frac{\\pi}{4}} \\ln \\cos x \\mathrm{d} x$, 则 $I, J, K$ 的大小关系为 $(\\quad)$",
+      "options": {
+        "A": "$I<J<K$",
+        "B": "$I<K<J$",
+        "C": "$J<I<K$",
+        "D": "$K<J<I$"
+      },
+      "answer": "B",
+      "analysis": "【分析】三个积分区间相同，都在 $\\left(0,\\dfrac{\\pi}{4}\\right)$ 上。比较大小只需在该区间上比较被积函数 $\\ln\\sin x,\\ \\ln\\cos x,\\ \\ln\\cot x$ 的大小：积分保序，被积函数大者积分大。\n\n【解答】在 $\\left(0,\\dfrac{\\pi}{4}\\right)$ 上，$0<\\sin x<\\cos x<1$，且 $\\cot x=\\dfrac{\\cos x}{\\sin x}>1$。$\\ln$ 单调增，故\n$$\\ln\\sin x<\\ln\\cos x<0<\\ln\\cot x.$$\n（前两个为负，$\\sin x<\\cos x$ 给出 $\\ln\\sin x<\\ln\\cos x$；$\\cot x>1$ 给出 $\\ln\\cot x>0$。）\n\n在区间上逐点有 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$，由定积分的保序性（严格不等且非处处相等）：\n$$\\int_0^{\\pi/4}\\ln\\sin x\\,\\mathrm{d}x<\\int_0^{\\pi/4}\\ln\\cos x\\,\\mathrm{d}x<\\int_0^{\\pi/4}\\ln\\cot x\\,\\mathrm{d}x,$$\n即 $I<K<J$。选 **B**。\n（附注：$\\ln\\cot x=\\ln\\cos x-\\ln\\sin x=K\\text{被积}-I\\text{被积}$，亦可见 $J$ 对应被积函数最大。）",
+      "wrong_options": {
+        "A": "把 $K$ 与 $J$ 的大小排反。$\\ln\\cos x<0<\\ln\\cot x$，故 $K<J$，不是 $J<K$，正确顺序是 $I<K<J$。",
+        "C": "$I$ 与 $J$ 排反。$\\ln\\sin x$ 最小（最负），$\\ln\\cot x$ 最大（为正），应 $I$ 最小、$J$ 最大。",
+        "D": "整体顺序完全颠倒。被积函数大小为 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$，对应 $I<K<J$。"
+      },
+      "pitfalls": [
+        "区间相同，比较积分即比较被积函数；不必真算出积分值。",
+        "$\\left(0,\\frac{\\pi}{4}\\right)$ 上 $\\sin x<\\cos x$，故 $\\ln\\sin x<\\ln\\cos x$（都为负）。",
+        "$\\cot x>1\\Rightarrow\\ln\\cot x>0$，故 $J$ 最大；切勿把 $K,J$ 顺序弄反。"
+      ],
+      "key_point": "同区间积分比大小 → 比被积函数；在 $(0,\\pi/4)$ 上 $\\ln\\sin x<\\ln\\cos x<\\ln\\cot x$。"
+    },
+    {
+      "id": 597,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $3$ 阶矩阵, 将 $\\boldsymbol{A}$ 的第 $2$ 列加到第 $1$ 列得矩阵 $\\boldsymbol{B}$, 再交换 $\\boldsymbol{B}$ 的第 $2$ 行与第 $3$ 行得单位矩阵, 记 $\\boldsymbol{P}_{1}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right), \\boldsymbol{P}_{2}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 1 & 0\\end{array}\\right)$, 则 $\\boldsymbol{A}=(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{P}_{1} \\boldsymbol{P}_{2}$",
+        "B": "$\\boldsymbol{P}_{1}^{-1} \\boldsymbol{P}_{2}$",
+        "C": "$\\boldsymbol{P}_{2} \\boldsymbol{P}_{1}$",
+        "D": "$\\boldsymbol{P}_{2} \\boldsymbol{P}_{1}^{-1}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】初等变换的矩阵语言：对矩阵作**列变换**等价于**右乘**初等矩阵，作**行变换**等价于**左乘**初等矩阵。逐句翻译题意列出方程，再解出 $A$，注意行交换矩阵的逆是它自身。\n\n【解答】观察 $P_1=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{pmatrix}$ 正是\"把第 2 列加到第 1 列\"的初等矩阵，$P_2=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}$ 正是\"交换第 2、3 行\"的初等矩阵。\n\n**第一步：$A$ 的第 2 列加到第 1 列得 $B$。** 列变换 = 右乘，故\n$$B=AP_1.$$\n\n**第二步：交换 $B$ 的第 2、3 行得单位矩阵。** 行变换 = 左乘，故\n$$P_2B=E\\ (\\text{单位阵}).$$\n\n**第三步：联立求 $A$。** 代入 $B=AP_1$：\n$$P_2\\,A\\,P_1=E\\ \\Longrightarrow\\ A=P_2^{-1}E\\,P_1^{-1}=P_2^{-1}P_1^{-1}.$$\n而 $P_2$ 为行交换矩阵，$P_2^{-1}=P_2$，所以\n$$A=P_2P_1^{-1}.$$\n选 **D**。\n\n（验证：取 $A=P_2P_1^{-1}=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\-1&1&0\\end{pmatrix}$，则 $B=AP_1=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}$，再交换 2、3 行 $P_2B=E$，完全符合题意。）",
+      "wrong_options": {
+        "A": "$P_1P_2$ 把行、列操作的左右乘关系全搞反，且未取逆，错。",
+        "B": "$P_1^{-1}P_2$ 顺序与左右乘都不对：列变换应右乘 $P_1$、行变换应左乘 $P_2$，解得的是 $P_2^{-1}P_1^{-1}$，不是此式。",
+        "C": "$P_2P_1$ 中 $P_1$ 没取逆。由 $P_2AP_1=E$ 解出的应是 $A=P_2^{-1}P_1^{-1}=P_2P_1^{-1}$，$P_1$ 必须是逆。"
+      },
+      "pitfalls": [
+        "列变换右乘、行变换左乘——这是最易记反的点；本题先右乘 $P_1$ 再左乘 $P_2$。",
+        "由 $P_2AP_1=E$ 解 $A$ 时两边分别左乘 $P_2^{-1}$、右乘 $P_1^{-1}$，得 $A=P_2^{-1}P_1^{-1}$。",
+        "行交换矩阵 $P_2$ 是对合阵，$P_2^{-1}=P_2$，所以最终写成 $P_2P_1^{-1}$。"
+      ],
+      "key_point": "列变换右乘、行变换左乘，列出 $P_2AP_1=E$ 解得 $A=P_2P_1^{-1}$（$P_2^{-1}=P_2$）。"
+    },
+    {
       "id": 629,
       "paper": "数学三",
       "year": 2011,
@@ -252,6 +169,34 @@
         "η₂-η₁、η₃-η₁ 由 η 线性无关推出彼此无关，构成基础解系"
       ],
       "key_point": "非齐次通解=特解(系数和为1的η组合)+齐次通解(两个无关差向量×任意常数)；查常数个数与特解合法性。"
+    },
+    {
+      "id": 599,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $F_{1}(x)$ 与 $F_{2}(x)$ 为两个分布函数, 其相应的概率密度 $f_{1}(x)$ 与 $f_{2}(x)$ 是连续函数, 则必为概率密度的是 $(\\quad)$",
+      "options": {
+        "A": "$f_{1}(x) f_{2}(x)$",
+        "B": "$2 f_{2}(x) F_{1}(x)$",
+        "C": "$f_{1}(x) F_{2}(x)$",
+        "D": "$f_{1}(x) F_{2}(x)+f_{2}(x) F_{1}(x)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】判断某表达式是否为概率密度，需满足两条：处处非负，且在 $(-\\infty,+\\infty)$ 上积分为 $1$。$F_i$ 是分布函数（$0\\le F_i\\le1$，$F_i(-\\infty)=0,\\,F_i(+\\infty)=1$），$f_i\\ge0$ 是其密度。逐项检验积分值。\n\n【解答】关键看选项 D：$f_1(x)F_2(x)+f_2(x)F_1(x)$。注意这恰是乘积的导数：\n$$\\frac{d}{dx}\\big[F_1(x)F_2(x)\\big]=F_1'(x)F_2(x)+F_1(x)F_2'(x)=f_1(x)F_2(x)+f_2(x)F_1(x).$$\n因此\n$$\\int_{-\\infty}^{+\\infty}\\big[f_1F_2+f_2F_1\\big]\\,dx=\\big[F_1(x)F_2(x)\\big]_{-\\infty}^{+\\infty}=1\\cdot1-0\\cdot0=1.$$\n又 $f_i\\ge0$、$F_i\\ge0$，故被积式非负。两条件均满足，D 是概率密度。选 D。",
+      "wrong_options": {
+        "A": "$f_1f_2$ 虽非负，但 $\\int f_1f_2\\,dx$ 一般不等于 1（如两者都是标准正态密度时积分为 $\\frac{1}{2\\sqrt\\pi}\\ne1$），故不是密度。",
+        "B": "$2f_2F_1$ 非负，但 $\\int 2f_2(x)F_1(x)\\,dx$ 一般不为 1。事实上 $\\int f_2F_1\\,dx$ 介于 0 与 1 之间，乘 2 后也不恒为 1。",
+        "C": "$f_1F_2$ 非负，但 $\\int f_1(x)F_2(x)\\,dx\\le\\int f_1\\,dx=1$，一般严格小于 1，不满足归一性。"
+      },
+      "pitfalls": [
+        "概率密度两要件：非负 + 全空间积分为 1，缺一不可；A 漏的是归一性。",
+        "认出 D 是 $(F_1F_2)'$ 是解题钥匙，直接用牛顿-莱布尼茨把积分算成 $1$。",
+        "只有同时含 $f_iF_j$ 两项相加（凑成乘积导数）才能保证积分恰为 1，单项 C 不行。"
+      ],
+      "key_point": "$f_1F_2+f_2F_1=(F_1F_2)'$，积分为 1 且非负，是概率密度；其余选项归一性不成立。"
     },
     {
       "id": 630,
@@ -376,6 +321,24 @@
       "key_point": "行和为 $3$ 给出特征值 $3$，秩 $1$ 给出另两特征值为 $0$，标准形即 $3y_1^2$。"
     },
     {
+      "id": 606,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 服从正态分布 $N\\left(\\mu, \\mu ; \\sigma^{2}, \\sigma^{2} ; 0\\right)$, 则 $E\\left(X Y^{2}\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mu \\sigma^2+\\mu^3$",
+      "analysis": "【分析】记号 $N(\\mu,\\mu;\\sigma^2,\\sigma^2;0)$ 表示 $X,Y$ 均服从 $N(\\mu,\\sigma^2)$，相关系数 $\\rho=0$。对二维正态分布，$\\rho=0$ 等价于 $X,Y$ 相互独立。于是 $E(XY^2)=E(X)\\,E(Y^2)$，分别用一维正态的期望与二阶矩求出。\n\n【解答】由 $\\rho=0$ 及联合正态性，$X$ 与 $Y$ 独立，故\n$$E(XY^2)=E(X)\\cdot E(Y^2).$$\n其中 $E(X)=\\mu$。对 $Y\\sim N(\\mu,\\sigma^2)$，\n$$E(Y^2)=D(Y)+\\big(E(Y)\\big)^2=\\sigma^2+\\mu^2.$$\n所以\n$$E(XY^2)=\\mu(\\sigma^2+\\mu^2)=\\mu\\sigma^2+\\mu^3.$$\n与标准答案一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "二维正态分布中 ρ=0 ⇔ 独立（一般分布无此结论，但正态成立），独立才能拆 E(XY²)=E(X)E(Y²)。",
+        "E(Y²)=D(Y)+[E(Y)]²=σ²+μ²，别只写成 μ² 或漏掉方差项。"
+      ],
+      "key_point": "联合正态 + ρ=0 ⇒ 独立；E(XY²)=E(X)E(Y²)=μ(σ²+μ²)。"
+    },
+    {
       "id": 636,
       "paper": "数学三",
       "year": 2011,
@@ -432,6 +395,24 @@
       "key_point": "含 $\\sqrt{x}$ 与反/对数复合：令 $t=\\sqrt{x}$ 去根号，再对 $\\arcsin t$、$\\ln t$ 分部积分。"
     },
     {
+      "id": 641,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 18,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "证明: 方程 $4 \\arctan x-x+\\dfrac{4 \\pi}{3}-\\sqrt{3}=0$ 恰有两个实根",
+      "options": {},
+      "answer": "",
+      "analysis": "【分析】证明方程根的个数,核心是把方程左端看成函数 $f(x)=4\\arctan x-x+\\dfrac{4\\pi}{3}-\\sqrt{3}$,用单调性把数轴切成几段,在每段上用零点定理与单调性确定根的个数。关键是求 $f'(x)$ 定出单调区间和极值点,再算极值的符号。\n\n【解答】令 $f(x)=4\\arctan x-x+\\dfrac{4\\pi}{3}-\\sqrt{3}$,则\n$$f'(x)=\\dfrac{4}{1+x^2}-1=\\dfrac{3-x^2}{1+x^2}.$$\n令 $f'(x)=0$ 得 $x=\\pm\\sqrt{3}$。于是 $f$ 在 $(-\\infty,-\\sqrt{3})$ 递减,在 $(-\\sqrt{3},\\sqrt{3})$ 递增,在 $(\\sqrt{3},+\\infty)$ 递减。$x=-\\sqrt{3}$ 为极小值点,$x=\\sqrt{3}$ 为极大值点。\n\n计算极值。因 $\\arctan(-\\sqrt{3})=-\\dfrac{\\pi}{3}$,\n$$f(-\\sqrt{3})=4\\left(-\\dfrac{\\pi}{3}\\right)+\\sqrt{3}+\\dfrac{4\\pi}{3}-\\sqrt{3}=-\\dfrac{4\\pi}{3}+\\dfrac{4\\pi}{3}=0.$$\n因 $\\arctan\\sqrt{3}=\\dfrac{\\pi}{3}$,\n$$f(\\sqrt{3})=\\dfrac{4\\pi}{3}-\\sqrt{3}+\\dfrac{4\\pi}{3}-\\sqrt{3}=\\dfrac{8\\pi}{3}-2\\sqrt{3}>0$$\n(因 $\\dfrac{8\\pi}{3}\\approx 8.38>2\\sqrt{3}\\approx 3.46$)。\n\n再看两端:$x\\to-\\infty$ 时 $4\\arctan x\\to-2\\pi$ 有界而 $-x\\to+\\infty$,故 $f(x)\\to+\\infty$;$x\\to+\\infty$ 时 $4\\arctan x\\to 2\\pi$ 有界而 $-x\\to-\\infty$,故 $f(x)\\to-\\infty$。\n\n逐段分析:\n（1）在 $(-\\infty,-\\sqrt{3}]$ 上 $f$ 由 $+\\infty$ 单调减至 $f(-\\sqrt{3})=0$,故此段 $f(x)>0$,仅在端点 $x=-\\sqrt{3}$ 处取得唯一零点。\n（2）在 $[-\\sqrt{3},\\sqrt{3}]$ 上 $f$ 由 $0$ 单调增至 $f(\\sqrt{3})>0$,除左端点 $x=-\\sqrt{3}$ 外 $f(x)>0$,无新增零点。\n（3）在 $[\\sqrt{3},+\\infty)$ 上 $f$ 由 $f(\\sqrt{3})>0$ 单调减至 $-\\infty$,由零点定理且严格单调,恰有一个零点。\n\n综上,方程恰有两个实根:一个是 $x=-\\sqrt{3}$,另一个落在 $(\\sqrt{3},+\\infty)$ 内。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "极小值 $f(-\\sqrt{3})=0$ 恰好落在 $x$ 轴上,这一个就是重根性质的临界——它本身就是一个根,而不是\"无根\";算错符号会误判成两段各一根共三根或全无根。",
+        "务必核实极大值 $\\dfrac{8\\pi}{3}-2\\sqrt{3}$ 的正负,这是定根数的关键。"
+      ],
+      "key_point": "构造函数+求导定单调区间,逐段用极值符号与零点定理数根的个数。"
+    },
+    {
       "id": 639,
       "paper": "数学三",
       "year": 2011,
@@ -450,40 +431,23 @@
       "key_point": "积分方程：先把二重积分化为含 $t$ 的一元积分方程，再对 $t$ 求导转化为可分离变量的 ODE，用初值定常数。"
     },
     {
-      "id": 640,
+      "id": 612,
       "paper": "数学三",
       "year": 2011,
-      "index": 23,
+      "index": 20,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设二维随机变量 $(X, Y)$ 服从区域 $G$ 上的均匀分布, 其中 $G$ 是由 $x-y=0, x+y=2$ 与 $y=0$ 所围成的三角形区域\r\n\r\n(1) 求 $X$ 的概率密度 $f_X(x)$;\r\n\r\n(2) 求条件概率密度 $f_{X \\mid Y}(x \\mid y)$\n\n![区域 G](assets/figures/640.svg)",
+      "stem": "设向量组 $\\boldsymbol{\\alpha}_{1}=(1,0,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,1,1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{3}=(1,3,5)^{\\mathrm{T}}$ 不能由向量组 $\\boldsymbol{\\beta}_{1}=(1,1,1)^{\\mathrm{T}}$, $\\boldsymbol{\\beta}_{2}=(1,2,3)^{\\mathrm{T}}, \\boldsymbol{\\beta}_{3}=(3,4, a)^{\\mathrm{T}}$ 线性表示\r\n\r\n(1) 求 $a$ 的值;\r\n\r\n(2) 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 用 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 线性表示",
       "options": {},
-      "answer": "(1) $f_X(x)= \\begin{cases}x, & 0<x<1, \\\\ 2-x, & 1 \\leqslant x<2, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) $f_{X \\mid Y}(x \\mid y)=\\frac{f(x, y)}{f_Y(y)}= \\begin{cases}\\dfrac{1}{2(1-y)}, & y<x<2-y \\\\ 0, & \\text { 其他 }\\end{cases}$",
-      "analysis": "【分析】先定区域 $G$：三直线 $y=x$、$x+y=2$、$y=0$ 的交点为 $(0,0),(2,0),(1,1)$，构成顶点在上的三角形。面积 $=\\dfrac12\\cdot2\\cdot1=1$，故均匀分布密度 $f(x,y)=1$（$(x,y)\\in G$）。(1) 求边缘 $f_X(x)=\\int f(x,y)\\,\\mathrm dy$，按 $x$ 在 $(0,1)$ 与 $(1,2)$ 分段确定 $y$ 的范围。(2) 条件密度 $f_{X|Y}=f(x,y)/f_Y(y)$，先求 $f_Y(y)$。\n\n【解答】区域 $G=\\{(x,y):0\\le y\\le x,\\ x+y\\le2\\}$，即 $0<y<1$ 时 $y<x<2-y$。密度 $f(x,y)=1$ 于 $G$，否则 $0$。\n(1) 固定 $x$ 对 $y$ 积分。约束 $0\\le y$、$y\\le x$、$y\\le 2-x$。\n- 当 $0<x<1$：$y$ 上界为 $\\min(x,2-x)=x$，故 $f_X(x)=\\int_0^x1\\,\\mathrm dy=x$；\n- 当 $1\\le x<2$：上界为 $\\min(x,2-x)=2-x$，故 $f_X(x)=\\int_0^{2-x}1\\,\\mathrm dy=2-x$；\n- 其余 $f_X(x)=0$。\n即 $f_X(x)=\\begin{cases}x,&0<x<1\\\\ 2-x,&1\\le x<2\\\\ 0,&\\text{其他}\\end{cases}$（验：$\\int_0^1x\\,\\mathrm dx+\\int_1^2(2-x)\\,\\mathrm dx=\\tfrac12+\\tfrac12=1$）。\n(2) 先求 $f_Y(y)$：固定 $y\\in(0,1)$，$x$ 从 $y$ 到 $2-y$，\n$$f_Y(y)=\\int_y^{2-y}1\\,\\mathrm dx=2-2y=2(1-y),\\quad 0<y<1.$$\n于是当 $0<y<1$ 时\n$$f_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}=\\frac{1}{2(1-y)},\\quad y<x<2-y;$$\n其余为 $0$。（验：$\\int_y^{2-y}\\dfrac{1}{2(1-y)}\\,\\mathrm dx=\\dfrac{2-2y}{2(1-y)}=1$。）",
+      "answer": "(1) $a=5$\r\n\r\n(2) $\\left\\{ \\begin{array}{l}\\boldsymbol{\\beta}_1=2 \\boldsymbol{\\alpha}_1+4 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1+2 \\boldsymbol{\\alpha}_2+0 \\boldsymbol{\\alpha}_3, \\\\\r\n\\boldsymbol{\\beta}_3=5 \\boldsymbol{\\alpha}_1+10 \\boldsymbol{\\alpha}_2-2 \\boldsymbol{\\alpha}_3 \\end{array}\\right.$",
+      "analysis": "【分析】(1) “$\\alpha$ 组不能由 $\\beta$ 组线性表示”是关键条件。记 $A=(\\alpha_1,\\alpha_2,\\alpha_3)$，$B=(\\beta_1,\\beta_2,\\beta_3)$。注意到 $\\det A=\\begin{vmatrix}1&0&1\\\\0&1&3\\\\1&1&5\\end{vmatrix}=1\\neq0$，故 $\\alpha$ 组线性无关、$A$ 可逆。若 $B$ 可逆，则任何向量都能由 $\\beta$ 组表示，与条件矛盾，故必有 $\\det B=0$，由此定出 $a$。(2) 求表示式即解 $B=AX$，$X=A^{-1}B$，第 $j$ 列给出 $\\beta_j$ 关于 $\\alpha$ 的坐标。\n\n【解答】**(1)** \n$$\\det B=\\begin{vmatrix}1&1&3\\\\1&2&4\\\\1&3&a\\end{vmatrix}.$$\n按第一列消元：$R_2-R_1,\\ R_3-R_1$ 得 $\\begin{vmatrix}1&1&3\\\\0&1&1\\\\0&2&a-3\\end{vmatrix}=1\\cdot[1\\cdot(a-3)-1\\cdot2]=a-5.$\n因 $\\det A\\neq0$，要使 $\\alpha$ 组不能由 $\\beta$ 组表示，必须 $\\det B=0$，即 $a-5=0$，$a=5$。（此时 $\\beta$ 组秩为 $2<3$，张成的空间不含全部 $\\alpha$，符合“不能表示”。）\n\n**(2)** 设 $B=AX$，则 $X=A^{-1}B$。先求 $A^{-1}$：由 $\\det A=1$，\n$$A^{-1}=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}.$$\n（验证 $AA^{-1}=I$ 成立。）于是\n$$X=A^{-1}B=\\begin{pmatrix}2&1&-1\\\\3&4&-3\\\\-1&-1&1\\end{pmatrix}\\begin{pmatrix}1&1&3\\\\1&2&4\\\\1&3&5\\end{pmatrix}=\\begin{pmatrix}2&1&5\\\\4&2&10\\\\-1&0&-2\\end{pmatrix}.$$\n$X$ 的各列即坐标，故\n$$\\beta_1=2\\alpha_1+4\\alpha_2-\\alpha_3,\\quad \\beta_2=\\alpha_1+2\\alpha_2+0\\cdot\\alpha_3,\\quad \\beta_3=5\\alpha_1+10\\alpha_2-2\\alpha_3.$$\n验算 $\\beta_1$：$2(1,0,1)+4(0,1,1)-(1,3,5)=(2-1,\\,4-3,\\,2+4-5)=(1,1,1)=\\beta_1$，正确。",
       "wrong_options": {},
       "pitfalls": [
-        "依赖原图：务必先正确求出三角形三顶点 (0,0),(2,0),(1,1)，再判断 y 的上界是 x 还是 2-x。",
-        "边缘密度要按 x 分段（以 x=1 为界），积分上限取 min(x,2-x)；条件密度别忘记写出 x 的有效区间 y<x<2-y。"
+        "“不能线性表示”要转化为行列式条件：$A$ 可逆而 $B$ 不可逆（$\\det B=0$），不是反过来。",
+        "求表示式本质是解 $B=AX$，$X$ 的第 $j$ 列才是 $\\beta_j$ 的坐标，别把行列搞反。",
+        "结果务必回代验算（如 $\\beta_1=(1,1,1)$），系数算错很常见。"
       ],
-      "key_point": "均匀分布密度=1/面积；边缘密度=沿另一变量的截面长度，条件密度=联合÷边缘，截面长度法一气呵成。"
-    },
-    {
-      "id": 641,
-      "paper": "数学三",
-      "year": 2011,
-      "index": 18,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "证明: 方程 $4 \\arctan x-x+\\dfrac{4 \\pi}{3}-\\sqrt{3}=0$ 恰有两个实根",
-      "options": {},
-      "answer": "",
-      "analysis": "【分析】证明方程根的个数,核心是把方程左端看成函数 $f(x)=4\\arctan x-x+\\dfrac{4\\pi}{3}-\\sqrt{3}$,用单调性把数轴切成几段,在每段上用零点定理与单调性确定根的个数。关键是求 $f'(x)$ 定出单调区间和极值点,再算极值的符号。\n\n【解答】令 $f(x)=4\\arctan x-x+\\dfrac{4\\pi}{3}-\\sqrt{3}$,则\n$$f'(x)=\\dfrac{4}{1+x^2}-1=\\dfrac{3-x^2}{1+x^2}.$$\n令 $f'(x)=0$ 得 $x=\\pm\\sqrt{3}$。于是 $f$ 在 $(-\\infty,-\\sqrt{3})$ 递减,在 $(-\\sqrt{3},\\sqrt{3})$ 递增,在 $(\\sqrt{3},+\\infty)$ 递减。$x=-\\sqrt{3}$ 为极小值点,$x=\\sqrt{3}$ 为极大值点。\n\n计算极值。因 $\\arctan(-\\sqrt{3})=-\\dfrac{\\pi}{3}$,\n$$f(-\\sqrt{3})=4\\left(-\\dfrac{\\pi}{3}\\right)+\\sqrt{3}+\\dfrac{4\\pi}{3}-\\sqrt{3}=-\\dfrac{4\\pi}{3}+\\dfrac{4\\pi}{3}=0.$$\n因 $\\arctan\\sqrt{3}=\\dfrac{\\pi}{3}$,\n$$f(\\sqrt{3})=\\dfrac{4\\pi}{3}-\\sqrt{3}+\\dfrac{4\\pi}{3}-\\sqrt{3}=\\dfrac{8\\pi}{3}-2\\sqrt{3}>0$$\n(因 $\\dfrac{8\\pi}{3}\\approx 8.38>2\\sqrt{3}\\approx 3.46$)。\n\n再看两端:$x\\to-\\infty$ 时 $4\\arctan x\\to-2\\pi$ 有界而 $-x\\to+\\infty$,故 $f(x)\\to+\\infty$;$x\\to+\\infty$ 时 $4\\arctan x\\to 2\\pi$ 有界而 $-x\\to-\\infty$,故 $f(x)\\to-\\infty$。\n\n逐段分析:\n（1）在 $(-\\infty,-\\sqrt{3}]$ 上 $f$ 由 $+\\infty$ 单调减至 $f(-\\sqrt{3})=0$,故此段 $f(x)>0$,仅在端点 $x=-\\sqrt{3}$ 处取得唯一零点。\n（2）在 $[-\\sqrt{3},\\sqrt{3}]$ 上 $f$ 由 $0$ 单调增至 $f(\\sqrt{3})>0$,除左端点 $x=-\\sqrt{3}$ 外 $f(x)>0$,无新增零点。\n（3）在 $[\\sqrt{3},+\\infty)$ 上 $f$ 由 $f(\\sqrt{3})>0$ 单调减至 $-\\infty$,由零点定理且严格单调,恰有一个零点。\n\n综上,方程恰有两个实根:一个是 $x=-\\sqrt{3}$,另一个落在 $(\\sqrt{3},+\\infty)$ 内。证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "极小值 $f(-\\sqrt{3})=0$ 恰好落在 $x$ 轴上,这一个就是重根性质的临界——它本身就是一个根,而不是\"无根\";算错符号会误判成两段各一根共三根或全无根。",
-        "务必核实极大值 $\\dfrac{8\\pi}{3}-2\\sqrt{3}$ 的正负,这是定根数的关键。"
-      ],
-      "key_point": "构造函数+求导定单调区间,逐段用极值符号与零点定理数根的个数。"
+      "key_point": "$\\det A\\neq0$、$\\det B=0$ 定参数；表示式由 $X=A^{-1}B$ 逐列读出。"
     },
     {
       "id": 90324,
@@ -503,6 +467,42 @@
         "第三个特征向量靠「实对称阵不同特征值特征向量正交」求，而不是再去解 $A$。"
       ],
       "key_point": "由 $A\\alpha=\\lambda\\alpha$ 读特征对 + 秩定零特征值 + 实对称正交性补向量 + 谱分解 $A=\\sum\\lambda_i\\beta_i\\beta_i^{\\mathrm T}$。"
+    },
+    {
+      "id": 614,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 的概率分布分别为 $\\begin{array}{c|cc}\\hline\r\nX & 0 & 1 \\\\\r\n\\hline P & \\dfrac{1}{3} & \\dfrac{2}{3}\\\\\r\n\\hline\r\n\\end{array}$,  $\\begin{array}{c|cc}\\hline\r\nY & -1 & 0 & 1 \\\\\r\n\\hline P & \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3}\\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n且 $P\\left\\{X^{2}=Y^{2}\\right\\}=1$.\r\n\r\n(1) 求二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) 求 $Z=X Y$ 的概率分布;\r\n\r\n(3) 求 $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$",
+      "options": {},
+      "answer": "(1) $\\begin{array}{c|ccc}\r\n\\hline X \\diagdown Y & -1 & 0 & 1 \\\\\r\n\\hline 0 & 0 &  \\dfrac{1}{3} & 0 \\\\\r\n\\hline 1 &  \\dfrac{1}{3} & 0 & \\dfrac{1}{3} \\\\\r\n\\hline\\end{array}$\r\n\r\n(2) $Z \\sim\\left(\\begin{array}{ccc}-1 & 0 & 1 \\\\ \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3}\\end{array}\\right)$\r\n\r\n(3) $\\rho_{X Y}=0$",
+      "analysis": "【分析】离散型二维分布题。核心条件是 $P\\{X^2=Y^2\\}=1$，它把许多联合概率强制为 $0$；再结合两个边缘分布把剩下的格点概率定出来。第（2）问由联合分布算 $Z=XY$ 的分布；第（3）问算协方差与方差得相关系数。\n\n【解答】$X$ 取 $0,1$，概率 $\\dfrac13,\\dfrac23$；$Y$ 取 $-1,0,1$，各 $\\dfrac13$。\n\n（1）由 $P\\{X^2=Y^2\\}=1$：当 $X=0$ 时必有 $Y^2=0$，即 $Y=0$；当 $X=1$ 时必有 $Y^2=1$，即 $Y=\\pm1$。于是 $P\\{X=0,Y=\\pm1\\}=0$、$P\\{X=1,Y=0\\}=0$。\n\n由边缘：$P\\{X=0,Y=0\\}=P\\{X=0\\}=\\dfrac13$。\n$Y=-1$ 的概率 $\\dfrac13$ 全部落在 $X=1$：$P\\{X=1,Y=-1\\}=\\dfrac13$；同理 $P\\{X=1,Y=1\\}=\\dfrac13$。\n校验 $X=1$ 行：$\\dfrac13+0+\\dfrac13=\\dfrac23=P\\{X=1\\}$，吻合。联合分布表：\n$$\\begin{array}{c|ccc}\\hline X\\backslash Y & -1 & 0 & 1\\\\\\hline 0 & 0 & \\tfrac13 & 0\\\\\\hline 1 & \\tfrac13 & 0 & \\tfrac13\\\\\\hline\\end{array}$$\n\n（2）$Z=XY$。当 $X=0$ 时 $Z=0$（概率 $\\dfrac13$）；当 $X=1,Y=-1$ 时 $Z=-1$（概率 $\\dfrac13$）；当 $X=1,Y=1$ 时 $Z=1$（概率 $\\dfrac13$）。故\n$$Z\\sim\\begin{pmatrix}-1 & 0 & 1\\\\ \\tfrac13 & \\tfrac13 & \\tfrac13\\end{pmatrix}.$$\n\n（3）$E(X)=\\dfrac23,\\ E(Y)=0$。$E(XY)=E(Z)=(-1)\\cdot\\tfrac13+0+1\\cdot\\tfrac13=0$。于是 $\\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=0-\\dfrac23\\cdot0=0$。故相关系数 $\\rho_{XY}=\\dfrac{\\mathrm{Cov}(X,Y)}{\\sqrt{D(X)D(Y)}}=0$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "P{X²=Y²}=1 是把不可能格点置零的钥匙，要先用它再用边缘分布补齐",
+        "ρ=0 只说明不相关，本题 X、Y 显然不独立（如 P{X=0,Y=-1}=0≠P{X=0}P{Y=-1}）"
+      ],
+      "key_point": "二维离散分布：用‘几乎必然’事件锁死零格点，配合边缘分布定表；ρ=0 即协方差为零。"
+    },
+    {
+      "id": 640,
+      "paper": "数学三",
+      "year": 2011,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设二维随机变量 $(X, Y)$ 服从区域 $G$ 上的均匀分布, 其中 $G$ 是由 $x-y=0, x+y=2$ 与 $y=0$ 所围成的三角形区域\r\n\r\n(1) 求 $X$ 的概率密度 $f_X(x)$;\r\n\r\n(2) 求条件概率密度 $f_{X \\mid Y}(x \\mid y)$\n\n![区域 G](assets/figures/640.svg)",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}x, & 0<x<1, \\\\ 2-x, & 1 \\leqslant x<2, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) $f_{X \\mid Y}(x \\mid y)=\\frac{f(x, y)}{f_Y(y)}= \\begin{cases}\\dfrac{1}{2(1-y)}, & y<x<2-y \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "【分析】先定区域 $G$：三直线 $y=x$、$x+y=2$、$y=0$ 的交点为 $(0,0),(2,0),(1,1)$，构成顶点在上的三角形。面积 $=\\dfrac12\\cdot2\\cdot1=1$，故均匀分布密度 $f(x,y)=1$（$(x,y)\\in G$）。(1) 求边缘 $f_X(x)=\\int f(x,y)\\,\\mathrm dy$，按 $x$ 在 $(0,1)$ 与 $(1,2)$ 分段确定 $y$ 的范围。(2) 条件密度 $f_{X|Y}=f(x,y)/f_Y(y)$，先求 $f_Y(y)$。\n\n【解答】区域 $G=\\{(x,y):0\\le y\\le x,\\ x+y\\le2\\}$，即 $0<y<1$ 时 $y<x<2-y$。密度 $f(x,y)=1$ 于 $G$，否则 $0$。\n(1) 固定 $x$ 对 $y$ 积分。约束 $0\\le y$、$y\\le x$、$y\\le 2-x$。\n- 当 $0<x<1$：$y$ 上界为 $\\min(x,2-x)=x$，故 $f_X(x)=\\int_0^x1\\,\\mathrm dy=x$；\n- 当 $1\\le x<2$：上界为 $\\min(x,2-x)=2-x$，故 $f_X(x)=\\int_0^{2-x}1\\,\\mathrm dy=2-x$；\n- 其余 $f_X(x)=0$。\n即 $f_X(x)=\\begin{cases}x,&0<x<1\\\\ 2-x,&1\\le x<2\\\\ 0,&\\text{其他}\\end{cases}$（验：$\\int_0^1x\\,\\mathrm dx+\\int_1^2(2-x)\\,\\mathrm dx=\\tfrac12+\\tfrac12=1$）。\n(2) 先求 $f_Y(y)$：固定 $y\\in(0,1)$，$x$ 从 $y$ 到 $2-y$，\n$$f_Y(y)=\\int_y^{2-y}1\\,\\mathrm dx=2-2y=2(1-y),\\quad 0<y<1.$$\n于是当 $0<y<1$ 时\n$$f_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}=\\frac{1}{2(1-y)},\\quad y<x<2-y;$$\n其余为 $0$。（验：$\\int_y^{2-y}\\dfrac{1}{2(1-y)}\\,\\mathrm dx=\\dfrac{2-2y}{2(1-y)}=1$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "依赖原图：务必先正确求出三角形三顶点 (0,0),(2,0),(1,1)，再判断 y 的上界是 x 还是 2-x。",
+        "边缘密度要按 x 分段（以 x=1 为界），积分上限取 min(x,2-x)；条件密度别忘记写出 x 的有效区间 y<x<2-y。"
+      ],
+      "key_point": "均匀分布密度=1/面积；边缘密度=沿另一变量的截面长度，条件密度=联合÷边缘，截面长度法一气呵成。"
     }
   ]
 }

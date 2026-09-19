@@ -4,156 +4,6 @@
   "count": 22,
   "questions": [
     {
-      "id": 2426,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知 $\\displaystyle f(x)=\\int_0^x \\mathrm{e}^{t^2} \\sin t \\mathrm{d} t, g(x)=\\int_0^x \\mathrm{e}^{t^2} \\mathrm{d} t \\cdot \\sin ^2 x$ ，则 $(\\quad)$",
-      "options": {
-        "A": "$x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点．",
-        "B": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点．",
-        "C": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点",
-        "D": "$(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点"
-      },
-      "answer": "B",
-      "analysis": "【分析】\n\n本题考查变限积分求导、极值的充分条件与拐点判定。对 $f(x)$，用变限积分求导得 $f'(x)$，再判断 $x=0$ 是否极值点、是否拐点；对 $g(x)$，因其是“变限积分 $\\times\\sin^2x$”的乘积，最快的办法是用等价无穷小定出其在 $0$ 附近的主项（首项幂次），由主项的奇偶/次数直接判断极值与拐点：偶次主项 $\\Rightarrow$ 极值点，奇次（且 $\\ge3$）主项 $\\Rightarrow$ 拐点。\n\n【解答】\n\n**对 $f(x)=\\displaystyle\\int_0^x e^{t^2}\\sin t\\,dt$：**\n\n求导 $f'(x)=e^{x^2}\\sin x$，$f'(0)=0$。当 $t\\to0$，$e^{t^2}\\sin t\\sim t$，故\n$$f(x)=\\int_0^x e^{t^2}\\sin t\\,dt\\sim \\int_0^x t\\,dt=\\frac{x^2}{2}>0\\quad(x\\ne0\\,\\text{附近}),$$\n即 $f(x)$ 在 $x=0$ 处取**极小值**，$x=0$ **是 $f$ 的极值点**。\n\n再看拐点：$f''(x)=e^{x^2}(2x\\sin x+\\cos x)$，$f''(0)=1\\ne0$，二阶导在 $0$ 处不变号，故 $(0,0)$ **不是** $y=f(x)$ 的拐点。于是含“$(0,0)$ 是 $f$ 的拐点”的 C、D 被排除。\n\n**对 $g(x)=\\displaystyle\\Big(\\int_0^x e^{t^2}dt\\Big)\\sin^2x$：**\n\n当 $x\\to0$：$\\displaystyle\\int_0^x e^{t^2}dt\\sim x$，$\\sin^2x\\sim x^2$，故\n$$g(x)\\sim x\\cdot x^2=x^3.$$\n主项为奇次 $x^3$：$g(x)$ 在 $0$ 两侧异号，故 $x=0$ **不是 $g$ 的极值点**（排除 A）；而 $g''(x)$ 的主项 $\\sim 6x$ 在 $0$ 处变号，故 $(0,0)$ **是 $y=g(x)$ 的拐点**。\n\n综合：$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是 $y=g(x)$ 的拐点，故选 **B**。",
-      "wrong_options": {
-        "A": "$g(x)\\sim x^3$ 在 $0$ 两侧异号，$x=0$ 不是 $g$ 的极值点，故 A 错。",
-        "C": "$f''(0)=1\\ne0$，二阶导不变号，$(0,0)$ 不是 $y=f(x)$ 的拐点，故 C 错。",
-        "D": "$(0,0)$ 不是 $y=f(x)$ 的拐点（$f''(0)\\ne0$），故 D 错。"
-      },
-      "pitfalls": [
-        "判定极值/拐点最稳妥的是定出函数在 $0$ 附近的主项幂次：偶次主项对应极值点，奇次（$\\ge3$）主项对应拐点。",
-        "$f''(0)=1\\ne0$ 是排除“$f$ 在原点有拐点”的关键，别被 $f'(0)=0$ 误导成既是极值又是拐点。",
-        "$g$ 是乘积，需把变限积分与 $\\sin^2x$ 各自的等价无穷小相乘得主项，不可只看其中一个因子。"
-      ],
-      "key_point": "用等价无穷小定出函数在 $0$ 附近的最低次主项：偶次幂 $\\Rightarrow$ 极值点，奇次幂 $\\Rightarrow$ 拐点。"
-    },
-    {
-      "id": 2434,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $x_1, x_2, \\cdots, x_{20}$ 是总体 $B(1,0.1)$ 的简单随机样本，令 $\\displaystyle T=\\sum_{i=1}^{20} x_i$ ，利用泊松分布近似表示二项分布的方法可得 $P\\{T \\leqslant 1\\} \\approx(\\quad)$",
-      "options": {
-        "A": "$\\dfrac{1}{\\mathrm{e}^2}$",
-        "B": "$\\dfrac{2}{\\mathrm{e}^2}$",
-        "C": "$\\dfrac{3}{\\mathrm{e}^2}$",
-        "D": "$\\dfrac{4}{\\mathrm{e}^2}$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n$x_1,\\dots,x_{20}$ 独立同分布于 $B(1,0.1)$（两点分布），其和 $T=\\sum_{i=1}^{20}x_i\\sim B(20,0.1)$。当 $n$ 较大、$p$ 较小时，二项分布可用泊松分布近似，参数 $\\lambda=np=20\\times0.1=2$。于是 $T$ 近似服从泊松分布 $P(2)$，再按泊松分布概率公式计算 $P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}$。\n\n【解答】\n\n由泊松定理，$T\\sim B(20,0.1)$ 可用 $\\lambda=np=2$ 的泊松分布近似，泊松分布概率为 $P\\{T=k\\}=\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$。\n\n故\n$$P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}=\\dfrac{2^0}{0!}e^{-2}+\\dfrac{2^1}{1!}e^{-2}=e^{-2}+2e^{-2}=3e^{-2}=\\dfrac{3}{e^{2}}.$$\n\n选 **C**。",
-      "wrong_options": {
-        "A": "只算了 $P\\{T=0\\}=e^{-2}$，漏掉了 $P\\{T=1\\}$。",
-        "B": "只算了 $P\\{T=1\\}=2e^{-2}$，漏掉了 $P\\{T=0\\}$。",
-        "D": "误把 $P\\{T=1\\}$ 当成 $\\dfrac{2^2}{2!}e^{-2}$ 之类，或多加了 $P\\{T=2\\}$，导致系数错为 $4$。"
-      },
-      "pitfalls": [
-        "泊松近似参数 $\\lambda=np=2$，不要错取成 $0.1$ 或 $20$。",
-        "$P\\{T\\le1\\}$ 含 $T=0$ 与 $T=1$ 两项，注意 $0!=1$，不要漏掉 $T=0$ 项。"
-      ],
-      "key_point": "二项 $B(n,p)$ 当 $n$ 大 $p$ 小时用泊松近似，$\\lambda=np$，再按 $\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$ 求和。"
-    },
-    {
-      "id": 2442,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
-      "options": {},
-      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
-      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
-        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
-        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
-      ],
-      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
-    },
-    {
-      "id": 2444,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 20,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
-        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
-        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
-      ],
-      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
-    },
-    {
-      "id": 2447,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "投保人的损失事件发生时，保险公司的赔付额  $Y$ 与投保人的损失额 $X$ 的关系为\r\n\r\n$Y=\\left\\{\\begin{array}{ll}0, & X \\leqslant 100, \\\\ X-100, & X>100 .\\end{array}\\right.$\r\n\r\n损失事件发生时，投保人的损失额 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}\\dfrac{2 \\times 100^2}{(100+x)^3}, & x>0, \\\\ 0, & x \\leqslant 0 .\\end{cases}$\r\n\r\n（1）求 $P\\{Y>0\\}$ 及 $E(Y)$ ；\r\n\r\n（2）这种损失事件在一年内发生的次数记为 $N$ ，保险公司在一年内就这种损失事件产生的理赔次数记为 $M$ ，假设 $N$ 服从参数为 8 的泊松分布，在 $N=n(n \\geqslant 1)$ 的条件下，$M$ 服从二项分布 $B(n, p)$ ，其中 $p=P\\{Y>0)$ ，求 $M$ 的概率分布",
-      "options": {},
-      "answer": "(1) P{Y>0}=\\dfrac14，E(Y)=50；(2) P{M=m}=\\dfrac{2^m}{m!}e^{-2}，m=0,1,2,\\cdots（即 M\\sim P(2)）",
-      "analysis": "【分析】\n\n(1) $Y>0$ 当且仅当 $X>100$，故 $P\\{Y>0\\}=P\\{X>100\\}$ 由密度积分得到。$E(Y)$ 用随机变量函数的期望：$Y$ 在 $X\\le100$ 时取 $0$，故 $E(Y)=\\int_{100}^{+\\infty}(x-100)f(x)\\,\\mathrm dx$。\n\n(2) $N\\sim P(8)$，给定 $N=n$ 时 $M\\sim B(n,p)$，$p=P\\{Y>0\\}$。这是“泊松流被以概率 $p$ 独立稀疏”的经典模型，结论是 $M\\sim P(8p)$。用全概率公式对 $n$ 求和即可严格证明。\n\n【解答】\n\n**(1)** $P\\{Y>0\\}=P\\{X>100\\}=\\displaystyle\\int_{100}^{+\\infty}\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$\n令 $u=100+x$，原式 $=\\displaystyle\\int_{200}^{+\\infty}\\frac{2\\cdot100^2}{u^3}\\,\\mathrm du=2\\cdot100^2\\cdot\\Big[-\\frac{1}{2u^2}\\Big]_{200}^{+\\infty}=\\frac{100^2}{200^2}=\\frac14.$\n\n再求 $E(Y)$：\n$$E(Y)=\\int_{100}^{+\\infty}(x-100)\\cdot\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$$\n仍令 $u=100+x$（则 $x-100=u-200$，$x:100\\to\\infty$ 对应 $u:200\\to\\infty$）：\n$$E(Y)=2\\cdot100^2\\int_{200}^{+\\infty}\\frac{u-200}{u^3}\\,\\mathrm du=2\\cdot100^2\\int_{200}^{+\\infty}\\Big(\\frac{1}{u^2}-\\frac{200}{u^3}\\Big)\\mathrm du.$$\n$$\\int_{200}^{+\\infty}\\frac{1}{u^2}\\mathrm du=\\frac{1}{200},\\qquad \\int_{200}^{+\\infty}\\frac{200}{u^3}\\mathrm du=200\\cdot\\frac{1}{2\\cdot200^2}=\\frac{1}{400}.$$\n故 $E(Y)=2\\cdot100^2\\Big(\\dfrac{1}{200}-\\dfrac{1}{400}\\Big)=2\\cdot10000\\cdot\\dfrac{1}{400}=50.$\n\n即 $P\\{Y>0\\}=\\dfrac14,\\quad E(Y)=50.$\n\n**(2)** 由 (1) 知 $p=P\\{Y>0\\}=\\dfrac14$。已知 $N\\sim P(8)$：$P\\{N=n\\}=\\dfrac{8^n}{n!}e^{-8}$，且 $M\\mid N=n\\sim B(n,p)$。对固定 $m\\ge0$，由全概率公式（注意 $n\\ge m$ 才有非零项）：\n$$P\\{M=m\\}=\\sum_{n=m}^{\\infty}P\\{N=n\\}\\binom{n}{m}p^m(1-p)^{n-m}=\\sum_{n=m}^{\\infty}\\frac{8^n}{n!}e^{-8}\\cdot\\frac{n!}{m!(n-m)!}p^m(1-p)^{n-m}.$$\n约去 $n!$，令 $k=n-m$：\n$$P\\{M=m\\}=\\frac{e^{-8}p^m}{m!}\\sum_{k=0}^{\\infty}\\frac{8^{m+k}(1-p)^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}\\sum_{k=0}^{\\infty}\\frac{[8(1-p)]^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}e^{8(1-p)}.$$\n合并指数：$e^{-8}\\cdot e^{8(1-p)}=e^{-8p}$，故\n$$P\\{M=m\\}=\\frac{(8p)^m}{m!}e^{-8p}.$$\n代入 $p=\\dfrac14$，$8p=2$：\n$$\\boxed{\\,P\\{M=m\\}=\\frac{2^m}{m!}e^{-2},\\quad m=0,1,2,\\cdots\\,}$$\n即 $M$ 服从参数为 $2$ 的泊松分布 $P(2)$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "E(Y) 是 Y=g(X) 的函数期望，积分下限取 100（X≤100 时 Y=0 贡献为 0），不要错写成 ∫(x-100)f 在 (0,∞) 上。",
-        "求和时下限是 n=m（二项系数要求 n≥m），换元 k=n-m 后才能凑出 e 的级数。",
-        "复合结论 8p=2，最终参数是 8p 而非 8 或 p；务必把 e^{-8}·e^{8(1-p)} 合并成 e^{-8p}。"
-      ],
-      "key_point": "Y=g(X) 用分段积分求 E(Y)；泊松流以概率 p 稀疏后仍为泊松，参数变为 8p=2。"
-    },
-    {
-      "id": 2499,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $\\int_1^{+\\infty} \\frac{a}{x(2 x+a)} \\mathrm{d} x=\\ln 2$ ，则 $a=$ $\\qquad$ ．",
-      "options": {},
-      "answer": "$a=2$",
-      "analysis": "【分析】\n\n本题是含参反常积分定参数：先把被积函数作部分分式分解，算出反常积分（结果含对数与参数 $a$），令其等于 $\\ln2$ 解出 $a$。\n\n关键技巧是分解 $\\dfrac{a}{x(2x+a)}$。注意到分子恰好等于分母两因子之差 $(2x+a)-2x=a$，因此可直接拆为\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a}.$$\n\n这样两项的原函数都是对数，组合后取上下限即可。计算反常积分时关键是 $x\\to+\\infty$ 处用 $\\ln\\dfrac{x}{2x+a}$ 的合并形式求极限，避免出现 $\\infty-\\infty$。\n\n【解答】\n\n为使积分收敛且分解合法，先设 $a>0$（这样在 $[1,+\\infty)$ 上分母 $2x+a>0$ 不变号）。\n\n**第一步：部分分式分解。**\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a},$$\n\n验证：$\\dfrac{1}{x}-\\dfrac{2}{2x+a}=\\dfrac{(2x+a)-2x}{x(2x+a)}=\\dfrac{a}{x(2x+a)}$，成立。\n\n**第二步：求原函数。**\n\n$$\\int\\left(\\frac1x-\\frac{2}{2x+a}\\right)\\mathrm{d}x=\\ln x-\\ln(2x+a)=\\ln\\frac{x}{2x+a}+C\\qquad(x\\ge1).$$\n\n**第三步：计算反常积分。**\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\left[\\ln\\frac{x}{2x+a}\\right]_1^{+\\infty}=\\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}-\\ln\\frac{1}{2+a}.$$\n\n其中\n\n$$\\lim_{x\\to+\\infty}\\frac{x}{2x+a}=\\frac12\\\\ \\Longrightarrow\\\\ \\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}=\\ln\\frac12.$$\n\n于是\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\ln\\frac12-\\ln\\frac{1}{2+a}=\\ln\\frac{1/2}{1/(2+a)}=\\ln\\frac{2+a}{2}.$$\n\n**第四步：由积分值定 $a$。**\n\n令 $\\ln\\dfrac{2+a}{2}=\\ln2$，得\n\n$$\\frac{2+a}{2}=2\\\\ \\Longrightarrow\\\\ 2+a=4\\\\ \\Longrightarrow\\\\ a=2.$$\n\n此时 $a=2>0$，满足收敛性假设。故 $a=2$。\n\n（验算：$a=2$ 时被积函数为 $\\dfrac{2}{x(2x+2)}=\\dfrac{1}{x(x+1)}=\\dfrac1x-\\dfrac1{x+1}$，积分 $\\big[\\ln\\tfrac{x}{x+1}\\big]_1^{+\\infty}=0-\\ln\\tfrac12=\\ln2$，正确。）",
-      "wrong_options": {},
-      "pitfalls": [
-        "在 $x\\to+\\infty$ 处不要分开取 $\\ln x-\\ln(2x+a)$，那是 $\\infty-\\infty$ 不定式；应先合并成 $\\ln\\dfrac{x}{2x+a}$ 再取极限得 $\\ln\\tfrac12$。",
-        "积分上限极限项 $\\ln\\tfrac12\\ne0$，容易误以为反常积分上限处为 $0$ 而漏算，导致少一项。",
-        "需注意 $a>0$ 才保证积分收敛与分解有效，所得 $a=2$ 恰满足该条件。"
-      ],
-      "key_point": "分子等于分母两因子之差时可直接拆项 $\\dfrac{a}{x(2x+a)}=\\dfrac1x-\\dfrac{2}{2x+a}$，上限处合并成 $\\ln\\dfrac{x}{2x+a}$ 取极限避免 $\\infty-\\infty$。"
-    },
-    {
-      "id": 2505,
-      "paper": "数学三",
-      "year": 2025,
-      "index": 18,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续，且 $\\lim _{x \\rightarrow 0} \\frac{x f(x)-\\mathrm{e}^{2 \\sin x}+1}{\\ln (1+x)+\\ln (1-x)}=-3$ ，证明： $f(x)$ 在 $x=0$ 处可导，并求 $f^{\\prime}(0)$ ．",
-      "options": {},
-      "answer": "$f^{\\prime}(0)=5$",
-      "analysis": "【分析】\n\n要证 $f$ 在 $0$ 处可导并求 $f'(0)$，本质是从已知极限把 $f(x)$ 的低阶展开“反解”出来。思路：先把分母 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)$ 用等价无穷小化为 $-x^2$；再把分子里的 $e^{2\\sin x}$ 用泰勒展开到 $x^2$ 项。由极限存在可定出 $xf(x)$ 的展开，从而得到 $f(x)$ 在 $0$ 附近的形如 $a+bx+o(x)$ 的结构。再用连续性确定 $f(0)$，用导数定义 $f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}$ 求出导数。\n\n【解答】\n\n**第一步：化简分母。** 由 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)\\sim -x^2\\ (x\\to0)$。\n\n**第二步：展开分子中的 $e^{2\\sin x}$ 到 $x^2$。** 由 $\\sin x=x-\\dfrac{x^3}{6}+\\cdots$，得 $2\\sin x=2x+o(x^2)$。再由 $e^{u}=1+u+\\dfrac{u^2}{2}+o(u^2)$，取 $u=2x+o(x^2)$：\n$$e^{2\\sin x}=1+2x+\\dfrac{(2x)^2}{2}+o(x^2)=1+2x+2x^2+o(x^2).$$\n于是\n$$-e^{2\\sin x}+1=-2x-2x^2+o(x^2).$$\n\n**第三步：由极限定出 $xf(x)$ 的展开。** 已知\n$$\\lim_{x\\to0}\\dfrac{xf(x)-e^{2\\sin x}+1}{\\ln(1-x^2)}=-3.$$\n因分母 $\\sim -x^2$，故分子 $\\sim -3\\cdot(-x^2)=3x^2$，即\n$$xf(x)-e^{2\\sin x}+1=3x^2+o(x^2).$$\n代入第二步：\n$$xf(x)=e^{2\\sin x}-1+3x^2+o(x^2)=2x+2x^2+3x^2+o(x^2)=2x+5x^2+o(x^2).$$\n两端除以 $x\\ (x\\neq0)$：\n$$f(x)=2+5x+o(x)\\qquad(x\\to0,\\ x\\neq0).$$\n\n**第四步：求 $f(0)$ 与 $f'(0)$。** 由 $f$ 在 $0$ 处连续，\n$$f(0)=\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\big(2+5x+o(x)\\big)=2.$$\n再按导数定义：\n$$f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}=\\lim_{x\\to0}\\dfrac{(2+5x+o(x))-2}{x}=\\lim_{x\\to0}\\dfrac{5x+o(x)}{x}=5.$$\n\n故 $f(x)$ 在 $x=0$ 处可导，且 $f'(0)=5$。\n\n**验算：** $f(x)\\approx2+5x$ 时 $xf(x)\\approx2x+5x^2$，分子 $=2x+5x^2-(2x+2x^2)+o(x^2)=3x^2+o(x^2)$，除以分母 $-x^2$ 得 $-3$，与条件一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$e^{2\\sin x}$ 必须展开到 $x^2$ 项；只展开到一次项会丢失 $2x^2$，导致 $f'(0)$ 算错。",
-        "$f(0)$ 不能直接代入原式，要由“连续”这一条件取极限得到 $f(0)=2$，再用导数定义。",
-        "确定 $xf(x)$ 展开时注意分母 $\\sim -x^2$ 带负号，分子应 $\\sim 3x^2$ 而非 $-3x^2$。"
-      ],
-      "key_point": "分母用等价无穷小、分子用泰勒展开反解出 $f(x)=2+5x+o(x)$，再用连续性定 $f(0)$、导数定义求 $f'(0)$。"
-    },
-    {
       "id": 2509,
       "paper": "数学三",
       "year": 2025,
@@ -180,6 +30,34 @@
         "对 $1-\\dfrac{\\ln(1+x)}{x}$ 必须把 $\\ln(1+x)$ 展开到 $x^2$ 项才能定出首项，仅用 $\\ln(1+x)\\sim x$ 会得 0 而失效。"
       ],
       "key_point": "等价无穷小=同阶且首项系数为 1，逐项泰勒展开比首项系数即可。"
+    },
+    {
+      "id": 2426,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle f(x)=\\int_0^x \\mathrm{e}^{t^2} \\sin t \\mathrm{d} t, g(x)=\\int_0^x \\mathrm{e}^{t^2} \\mathrm{d} t \\cdot \\sin ^2 x$ ，则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点．",
+        "B": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=g(x)$ 的拐点．",
+        "C": "$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是曲线 $y=f(x)$ 的拐点",
+        "D": "$(0,0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查变限积分求导、极值的充分条件与拐点判定。对 $f(x)$，用变限积分求导得 $f'(x)$，再判断 $x=0$ 是否极值点、是否拐点；对 $g(x)$，因其是“变限积分 $\\times\\sin^2x$”的乘积，最快的办法是用等价无穷小定出其在 $0$ 附近的主项（首项幂次），由主项的奇偶/次数直接判断极值与拐点：偶次主项 $\\Rightarrow$ 极值点，奇次（且 $\\ge3$）主项 $\\Rightarrow$ 拐点。\n\n【解答】\n\n**对 $f(x)=\\displaystyle\\int_0^x e^{t^2}\\sin t\\,dt$：**\n\n求导 $f'(x)=e^{x^2}\\sin x$，$f'(0)=0$。当 $t\\to0$，$e^{t^2}\\sin t\\sim t$，故\n$$f(x)=\\int_0^x e^{t^2}\\sin t\\,dt\\sim \\int_0^x t\\,dt=\\frac{x^2}{2}>0\\quad(x\\ne0\\,\\text{附近}),$$\n即 $f(x)$ 在 $x=0$ 处取**极小值**，$x=0$ **是 $f$ 的极值点**。\n\n再看拐点：$f''(x)=e^{x^2}(2x\\sin x+\\cos x)$，$f''(0)=1\\ne0$，二阶导在 $0$ 处不变号，故 $(0,0)$ **不是** $y=f(x)$ 的拐点。于是含“$(0,0)$ 是 $f$ 的拐点”的 C、D 被排除。\n\n**对 $g(x)=\\displaystyle\\Big(\\int_0^x e^{t^2}dt\\Big)\\sin^2x$：**\n\n当 $x\\to0$：$\\displaystyle\\int_0^x e^{t^2}dt\\sim x$，$\\sin^2x\\sim x^2$，故\n$$g(x)\\sim x\\cdot x^2=x^3.$$\n主项为奇次 $x^3$：$g(x)$ 在 $0$ 两侧异号，故 $x=0$ **不是 $g$ 的极值点**（排除 A）；而 $g''(x)$ 的主项 $\\sim 6x$ 在 $0$ 处变号，故 $(0,0)$ **是 $y=g(x)$ 的拐点**。\n\n综合：$x=0$ 是 $f(x)$ 的极值点，$(0,0)$ 是 $y=g(x)$ 的拐点，故选 **B**。",
+      "wrong_options": {
+        "A": "$g(x)\\sim x^3$ 在 $0$ 两侧异号，$x=0$ 不是 $g$ 的极值点，故 A 错。",
+        "C": "$f''(0)=1\\ne0$，二阶导不变号，$(0,0)$ 不是 $y=f(x)$ 的拐点，故 C 错。",
+        "D": "$(0,0)$ 不是 $y=f(x)$ 的拐点（$f''(0)\\ne0$），故 D 错。"
+      },
+      "pitfalls": [
+        "判定极值/拐点最稳妥的是定出函数在 $0$ 附近的主项幂次：偶次主项对应极值点，奇次（$\\ge3$）主项对应拐点。",
+        "$f''(0)=1\\ne0$ 是排除“$f$ 在原点有拐点”的关键，别被 $f'(0)=0$ 误导成既是极值又是拐点。",
+        "$g$ 是乘积，需把变限积分与 $\\sin^2x$ 各自的等价无穷小相乘得主项，不可只看其中一个因子。"
+      ],
+      "key_point": "用等价无穷小定出函数在 $0$ 附近的最低次主项：偶次幂 $\\Rightarrow$ 极值点，奇次幂 $\\Rightarrow$ 拐点。"
     },
     {
       "id": 2510,
@@ -350,6 +228,33 @@
       "key_point": "先用“不相关即协方差为零”定出未知协方差，再用双线性展开求 $\\mathrm{Cov}$ 与 $D$，最后套相关系数公式。"
     },
     {
+      "id": 2434,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $x_1, x_2, \\cdots, x_{20}$ 是总体 $B(1,0.1)$ 的简单随机样本，令 $\\displaystyle T=\\sum_{i=1}^{20} x_i$ ，利用泊松分布近似表示二项分布的方法可得 $P\\{T \\leqslant 1\\} \\approx(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{\\mathrm{e}^2}$",
+        "B": "$\\dfrac{2}{\\mathrm{e}^2}$",
+        "C": "$\\dfrac{3}{\\mathrm{e}^2}$",
+        "D": "$\\dfrac{4}{\\mathrm{e}^2}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n$x_1,\\dots,x_{20}$ 独立同分布于 $B(1,0.1)$（两点分布），其和 $T=\\sum_{i=1}^{20}x_i\\sim B(20,0.1)$。当 $n$ 较大、$p$ 较小时，二项分布可用泊松分布近似，参数 $\\lambda=np=20\\times0.1=2$。于是 $T$ 近似服从泊松分布 $P(2)$，再按泊松分布概率公式计算 $P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}$。\n\n【解答】\n\n由泊松定理，$T\\sim B(20,0.1)$ 可用 $\\lambda=np=2$ 的泊松分布近似，泊松分布概率为 $P\\{T=k\\}=\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$。\n\n故\n$$P\\{T\\le1\\}=P\\{T=0\\}+P\\{T=1\\}=\\dfrac{2^0}{0!}e^{-2}+\\dfrac{2^1}{1!}e^{-2}=e^{-2}+2e^{-2}=3e^{-2}=\\dfrac{3}{e^{2}}.$$\n\n选 **C**。",
+      "wrong_options": {
+        "A": "只算了 $P\\{T=0\\}=e^{-2}$，漏掉了 $P\\{T=1\\}$。",
+        "B": "只算了 $P\\{T=1\\}=2e^{-2}$，漏掉了 $P\\{T=0\\}$。",
+        "D": "误把 $P\\{T=1\\}$ 当成 $\\dfrac{2^2}{2!}e^{-2}$ 之类，或多加了 $P\\{T=2\\}$，导致系数错为 $4$。"
+      },
+      "pitfalls": [
+        "泊松近似参数 $\\lambda=np=2$，不要错取成 $0.1$ 或 $20$。",
+        "$P\\{T\\le1\\}$ 含 $T=0$ 与 $T=1$ 两项，注意 $0!=1$，不要漏掉 $T=0$ 项。"
+      ],
+      "key_point": "二项 $B(n,p)$ 当 $n$ 大 $p$ 小时用泊松近似，$\\lambda=np$，再按 $\\dfrac{\\lambda^k}{k!}e^{-\\lambda}$ 求和。"
+    },
+    {
       "id": 2516,
       "paper": "数学三",
       "year": 2025,
@@ -395,6 +300,25 @@
         "反函数 $g$ 的定义域是全体实数（原函数值域），不存在垂直渐近线，也不必再找斜渐近线。"
       ],
       "key_point": "反函数定义域=原函数值域；原函数定义域的有限端点 $\\pm3$ 翻转为反函数的水平渐近线 $y=\\pm3$。"
+    },
+    {
+      "id": 2499,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\int_1^{+\\infty} \\frac{a}{x(2 x+a)} \\mathrm{d} x=\\ln 2$ ，则 $a=$ $\\qquad$ ．",
+      "options": {},
+      "answer": "$a=2$",
+      "analysis": "【分析】\n\n本题是含参反常积分定参数：先把被积函数作部分分式分解，算出反常积分（结果含对数与参数 $a$），令其等于 $\\ln2$ 解出 $a$。\n\n关键技巧是分解 $\\dfrac{a}{x(2x+a)}$。注意到分子恰好等于分母两因子之差 $(2x+a)-2x=a$，因此可直接拆为\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a}.$$\n\n这样两项的原函数都是对数，组合后取上下限即可。计算反常积分时关键是 $x\\to+\\infty$ 处用 $\\ln\\dfrac{x}{2x+a}$ 的合并形式求极限，避免出现 $\\infty-\\infty$。\n\n【解答】\n\n为使积分收敛且分解合法，先设 $a>0$（这样在 $[1,+\\infty)$ 上分母 $2x+a>0$ 不变号）。\n\n**第一步：部分分式分解。**\n\n$$\\frac{a}{x(2x+a)}=\\frac{1}{x}-\\frac{2}{2x+a},$$\n\n验证：$\\dfrac{1}{x}-\\dfrac{2}{2x+a}=\\dfrac{(2x+a)-2x}{x(2x+a)}=\\dfrac{a}{x(2x+a)}$，成立。\n\n**第二步：求原函数。**\n\n$$\\int\\left(\\frac1x-\\frac{2}{2x+a}\\right)\\mathrm{d}x=\\ln x-\\ln(2x+a)=\\ln\\frac{x}{2x+a}+C\\qquad(x\\ge1).$$\n\n**第三步：计算反常积分。**\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\left[\\ln\\frac{x}{2x+a}\\right]_1^{+\\infty}=\\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}-\\ln\\frac{1}{2+a}.$$\n\n其中\n\n$$\\lim_{x\\to+\\infty}\\frac{x}{2x+a}=\\frac12\\\\ \\Longrightarrow\\\\ \\lim_{x\\to+\\infty}\\ln\\frac{x}{2x+a}=\\ln\\frac12.$$\n\n于是\n\n$$\\int_1^{+\\infty}\\frac{a}{x(2x+a)}\\mathrm{d}x=\\ln\\frac12-\\ln\\frac{1}{2+a}=\\ln\\frac{1/2}{1/(2+a)}=\\ln\\frac{2+a}{2}.$$\n\n**第四步：由积分值定 $a$。**\n\n令 $\\ln\\dfrac{2+a}{2}=\\ln2$，得\n\n$$\\frac{2+a}{2}=2\\\\ \\Longrightarrow\\\\ 2+a=4\\\\ \\Longrightarrow\\\\ a=2.$$\n\n此时 $a=2>0$，满足收敛性假设。故 $a=2$。\n\n（验算：$a=2$ 时被积函数为 $\\dfrac{2}{x(2x+2)}=\\dfrac{1}{x(x+1)}=\\dfrac1x-\\dfrac1{x+1}$，积分 $\\big[\\ln\\tfrac{x}{x+1}\\big]_1^{+\\infty}=0-\\ln\\tfrac12=\\ln2$，正确。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "在 $x\\to+\\infty$ 处不要分开取 $\\ln x-\\ln(2x+a)$，那是 $\\infty-\\infty$ 不定式；应先合并成 $\\ln\\dfrac{x}{2x+a}$ 再取极限得 $\\ln\\tfrac12$。",
+        "积分上限极限项 $\\ln\\tfrac12\\ne0$，容易误以为反常积分上限处为 $0$ 而漏算，导致少一项。",
+        "需注意 $a>0$ 才保证积分收敛与分解有效，所得 $a=2$ 恰满足该条件。"
+      ],
+      "key_point": "分子等于分母两因子之差时可直接拆项 $\\dfrac{a}{x(2x+a)}=\\dfrac1x-\\dfrac{2}{2x+a}$，上限处合并成 $\\ln\\dfrac{x}{2x+a}$ 取极限避免 $\\infty-\\infty$。"
     },
     {
       "id": 2518,
@@ -473,6 +397,44 @@
       "key_point": "独立取积、互斥取零并连带 $P(ABC)=0$，分别用容斥求“至少一个”和“恰一个”，再作商得条件概率。"
     },
     {
+      "id": 2442,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
+      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
+        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
+        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
+      ],
+      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
+    },
+    {
+      "id": 2505,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续，且 $\\lim _{x \\rightarrow 0} \\frac{x f(x)-\\mathrm{e}^{2 \\sin x}+1}{\\ln (1+x)+\\ln (1-x)}=-3$ ，证明： $f(x)$ 在 $x=0$ 处可导，并求 $f^{\\prime}(0)$ ．",
+      "options": {},
+      "answer": "$f^{\\prime}(0)=5$",
+      "analysis": "【分析】\n\n要证 $f$ 在 $0$ 处可导并求 $f'(0)$，本质是从已知极限把 $f(x)$ 的低阶展开“反解”出来。思路：先把分母 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)$ 用等价无穷小化为 $-x^2$；再把分子里的 $e^{2\\sin x}$ 用泰勒展开到 $x^2$ 项。由极限存在可定出 $xf(x)$ 的展开，从而得到 $f(x)$ 在 $0$ 附近的形如 $a+bx+o(x)$ 的结构。再用连续性确定 $f(0)$，用导数定义 $f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}$ 求出导数。\n\n【解答】\n\n**第一步：化简分母。** 由 $\\ln(1+x)+\\ln(1-x)=\\ln(1-x^2)\\sim -x^2\\ (x\\to0)$。\n\n**第二步：展开分子中的 $e^{2\\sin x}$ 到 $x^2$。** 由 $\\sin x=x-\\dfrac{x^3}{6}+\\cdots$，得 $2\\sin x=2x+o(x^2)$。再由 $e^{u}=1+u+\\dfrac{u^2}{2}+o(u^2)$，取 $u=2x+o(x^2)$：\n$$e^{2\\sin x}=1+2x+\\dfrac{(2x)^2}{2}+o(x^2)=1+2x+2x^2+o(x^2).$$\n于是\n$$-e^{2\\sin x}+1=-2x-2x^2+o(x^2).$$\n\n**第三步：由极限定出 $xf(x)$ 的展开。** 已知\n$$\\lim_{x\\to0}\\dfrac{xf(x)-e^{2\\sin x}+1}{\\ln(1-x^2)}=-3.$$\n因分母 $\\sim -x^2$，故分子 $\\sim -3\\cdot(-x^2)=3x^2$，即\n$$xf(x)-e^{2\\sin x}+1=3x^2+o(x^2).$$\n代入第二步：\n$$xf(x)=e^{2\\sin x}-1+3x^2+o(x^2)=2x+2x^2+3x^2+o(x^2)=2x+5x^2+o(x^2).$$\n两端除以 $x\\ (x\\neq0)$：\n$$f(x)=2+5x+o(x)\\qquad(x\\to0,\\ x\\neq0).$$\n\n**第四步：求 $f(0)$ 与 $f'(0)$。** 由 $f$ 在 $0$ 处连续，\n$$f(0)=\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\big(2+5x+o(x)\\big)=2.$$\n再按导数定义：\n$$f'(0)=\\lim_{x\\to0}\\dfrac{f(x)-f(0)}{x}=\\lim_{x\\to0}\\dfrac{(2+5x+o(x))-2}{x}=\\lim_{x\\to0}\\dfrac{5x+o(x)}{x}=5.$$\n\n故 $f(x)$ 在 $x=0$ 处可导，且 $f'(0)=5$。\n\n**验算：** $f(x)\\approx2+5x$ 时 $xf(x)\\approx2x+5x^2$，分子 $=2x+5x^2-(2x+2x^2)+o(x^2)=3x^2+o(x^2)$，除以分母 $-x^2$ 得 $-3$，与条件一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$e^{2\\sin x}$ 必须展开到 $x^2$ 项；只展开到一次项会丢失 $2x^2$，导致 $f'(0)$ 算错。",
+        "$f(0)$ 不能直接代入原式，要由“连续”这一条件取极限得到 $f(0)=2$，再用导数定义。",
+        "确定 $xf(x)$ 展开时注意分母 $\\sim -x^2$ 带负号，分子应 $\\sim 3x^2$ 而非 $-3x^2$。"
+      ],
+      "key_point": "分母用等价无穷小、分子用泰勒展开反解出 $f(x)=2+5x+o(x)$，再用连续性定 $f(0)$、导数定义求 $f'(0)$。"
+    },
+    {
       "id": 2522,
       "paper": "数学三",
       "year": 2025,
@@ -492,6 +454,25 @@
       "key_point": "先定交点 $(0,0),(1,1)$ 与上下界 $x^2\\le y\\le\\sqrt{x}$，选先 $y$ 后 $x$，展开被积多项式逐项积分。"
     },
     {
+      "id": 2444,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
+        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
+        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
+      ],
+      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
+    },
+    {
       "id": 2523,
       "paper": "数学三",
       "year": 2025,
@@ -509,6 +490,25 @@
         "极大无关组取主元所在列对应的“原矩阵”列向量 $\\alpha,\\beta$，不要错取成行最简形里的单位列。"
       ],
       "key_point": "行变换出现零行定 $a=1$；化行最简形后主元列取 $G$，非零行即 $H$，$A=GH$ 为满秩分解。"
+    },
+    {
+      "id": 2447,
+      "paper": "数学三",
+      "year": 2025,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "投保人的损失事件发生时，保险公司的赔付额  $Y$ 与投保人的损失额 $X$ 的关系为\r\n\r\n$Y=\\left\\{\\begin{array}{ll}0, & X \\leqslant 100, \\\\ X-100, & X>100 .\\end{array}\\right.$\r\n\r\n损失事件发生时，投保人的损失额 $X$ 的概率密度为\r\n\r\n$f(x)= \\begin{cases}\\dfrac{2 \\times 100^2}{(100+x)^3}, & x>0, \\\\ 0, & x \\leqslant 0 .\\end{cases}$\r\n\r\n（1）求 $P\\{Y>0\\}$ 及 $E(Y)$ ；\r\n\r\n（2）这种损失事件在一年内发生的次数记为 $N$ ，保险公司在一年内就这种损失事件产生的理赔次数记为 $M$ ，假设 $N$ 服从参数为 8 的泊松分布，在 $N=n(n \\geqslant 1)$ 的条件下，$M$ 服从二项分布 $B(n, p)$ ，其中 $p=P\\{Y>0)$ ，求 $M$ 的概率分布",
+      "options": {},
+      "answer": "(1) P{Y>0}=\\dfrac14，E(Y)=50；(2) P{M=m}=\\dfrac{2^m}{m!}e^{-2}，m=0,1,2,\\cdots（即 M\\sim P(2)）",
+      "analysis": "【分析】\n\n(1) $Y>0$ 当且仅当 $X>100$，故 $P\\{Y>0\\}=P\\{X>100\\}$ 由密度积分得到。$E(Y)$ 用随机变量函数的期望：$Y$ 在 $X\\le100$ 时取 $0$，故 $E(Y)=\\int_{100}^{+\\infty}(x-100)f(x)\\,\\mathrm dx$。\n\n(2) $N\\sim P(8)$，给定 $N=n$ 时 $M\\sim B(n,p)$，$p=P\\{Y>0\\}$。这是“泊松流被以概率 $p$ 独立稀疏”的经典模型，结论是 $M\\sim P(8p)$。用全概率公式对 $n$ 求和即可严格证明。\n\n【解答】\n\n**(1)** $P\\{Y>0\\}=P\\{X>100\\}=\\displaystyle\\int_{100}^{+\\infty}\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$\n令 $u=100+x$，原式 $=\\displaystyle\\int_{200}^{+\\infty}\\frac{2\\cdot100^2}{u^3}\\,\\mathrm du=2\\cdot100^2\\cdot\\Big[-\\frac{1}{2u^2}\\Big]_{200}^{+\\infty}=\\frac{100^2}{200^2}=\\frac14.$\n\n再求 $E(Y)$：\n$$E(Y)=\\int_{100}^{+\\infty}(x-100)\\cdot\\frac{2\\cdot100^2}{(100+x)^3}\\,\\mathrm dx.$$\n仍令 $u=100+x$（则 $x-100=u-200$，$x:100\\to\\infty$ 对应 $u:200\\to\\infty$）：\n$$E(Y)=2\\cdot100^2\\int_{200}^{+\\infty}\\frac{u-200}{u^3}\\,\\mathrm du=2\\cdot100^2\\int_{200}^{+\\infty}\\Big(\\frac{1}{u^2}-\\frac{200}{u^3}\\Big)\\mathrm du.$$\n$$\\int_{200}^{+\\infty}\\frac{1}{u^2}\\mathrm du=\\frac{1}{200},\\qquad \\int_{200}^{+\\infty}\\frac{200}{u^3}\\mathrm du=200\\cdot\\frac{1}{2\\cdot200^2}=\\frac{1}{400}.$$\n故 $E(Y)=2\\cdot100^2\\Big(\\dfrac{1}{200}-\\dfrac{1}{400}\\Big)=2\\cdot10000\\cdot\\dfrac{1}{400}=50.$\n\n即 $P\\{Y>0\\}=\\dfrac14,\\quad E(Y)=50.$\n\n**(2)** 由 (1) 知 $p=P\\{Y>0\\}=\\dfrac14$。已知 $N\\sim P(8)$：$P\\{N=n\\}=\\dfrac{8^n}{n!}e^{-8}$，且 $M\\mid N=n\\sim B(n,p)$。对固定 $m\\ge0$，由全概率公式（注意 $n\\ge m$ 才有非零项）：\n$$P\\{M=m\\}=\\sum_{n=m}^{\\infty}P\\{N=n\\}\\binom{n}{m}p^m(1-p)^{n-m}=\\sum_{n=m}^{\\infty}\\frac{8^n}{n!}e^{-8}\\cdot\\frac{n!}{m!(n-m)!}p^m(1-p)^{n-m}.$$\n约去 $n!$，令 $k=n-m$：\n$$P\\{M=m\\}=\\frac{e^{-8}p^m}{m!}\\sum_{k=0}^{\\infty}\\frac{8^{m+k}(1-p)^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}\\sum_{k=0}^{\\infty}\\frac{[8(1-p)]^{k}}{k!}=\\frac{e^{-8}(8p)^m}{m!}e^{8(1-p)}.$$\n合并指数：$e^{-8}\\cdot e^{8(1-p)}=e^{-8p}$，故\n$$P\\{M=m\\}=\\frac{(8p)^m}{m!}e^{-8p}.$$\n代入 $p=\\dfrac14$，$8p=2$：\n$$\\boxed{\\,P\\{M=m\\}=\\frac{2^m}{m!}e^{-2},\\quad m=0,1,2,\\cdots\\,}$$\n即 $M$ 服从参数为 $2$ 的泊松分布 $P(2)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(Y) 是 Y=g(X) 的函数期望，积分下限取 100（X≤100 时 Y=0 贡献为 0），不要错写成 ∫(x-100)f 在 (0,∞) 上。",
+        "求和时下限是 n=m（二项系数要求 n≥m），换元 k=n-m 后才能凑出 e 的级数。",
+        "复合结论 8p=2，最终参数是 8p 而非 8 或 p；务必把 e^{-8}·e^{8(1-p)} 合并成 e^{-8p}。"
+      ],
+      "key_point": "Y=g(X) 用分段积分求 E(Y)；泊松流以概率 p 稀疏后仍为泊松，参数变为 8p=2。"
     }
   ]
 }

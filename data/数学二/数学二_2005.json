@@ -4,6 +4,60 @@
   "count": 23,
   "questions": [
     {
+      "id": 1632,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $y=(1+\\sin x)^x$, 则 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\pi \\mathrm{d} x$",
+      "analysis": "方法一 \r\n由 $y=(1+\\sin x)^x$, 得 $y=\\mathrm{e}^{x \\ln (1+\\sin x)}$, 求导得\r\n\r\n$y^{\\prime} =\\mathrm{e}^{x \\ln (1+\\sin x)} \\cdot\\left[\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}\\right] \\\\\r\n=(1+\\sin x)^x \\cdot\\left[\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}\\right]$\r\n\r\n从而 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=\\pi}=-\\pi$,\r\n\r\n于是 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=-\\pi \\mathrm{d} x$\r\n\r\n方法二 $x=\\pi$ 时, $y=1$\r\n\r\n$y=(1+\\sin x)^x$ 两边取对数, 得 $\\ln y=x \\ln (1+\\sin x)$, \r\n\r\n两边对 $x$ 求导, 得\r\n\r\n$\\dfrac{1}{y} \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}$,\r\n\r\n将 $x=\\pi, y=1$ 代入得 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=\\pi}=-\\pi$, \r\n\r\n于是 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=-\\pi \\mathrm{d} x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "幂指函数不能直接套幂函数或指数函数公式，必须先取对数（或写成 e^{x ln(1+sinx)}）再求导",
+        "x=π 时 sinπ=0，ln(1+sinx)=ln1=0 一项消失，只剩 xcosx/(1+sinx)=π·(−1)/1=−π；dy=y'dx 别漏 dx"
+      ],
+      "key_point": "y'=(1+sinx)^x[ln(1+sinx)+xcosx/(1+sinx)]，代 x=π 得 y'=−π，故 dy|_{x=π}=−πdx。"
+    },
+    {
+      "id": 1633,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\dfrac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}$ 的斜渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x+\\dfrac{3}{2}$",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{y}{x}=1,\\\\\r\n\\lim _{x \\rightarrow+\\infty}(y-x)\\\\\r\n=\\lim _{x \\rightarrow+\\infty}\\left[\\frac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}-x\\right]\\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{(1+x)^{\\frac{3}{2}}-x^{\\frac{3}{2}}}{\\sqrt{x}} \\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{\\left(1+\\frac{1}{x}\\right)^{\\frac{3}{2}}-1}{\\frac{1}{x}}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{(1+t)^{\\frac{3}{2}}-1}{t}=\\frac{3}{2}$\r\n\r\n得曲线 $y=\\dfrac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}$ 的斜渐近线方程为 $y=x+\\dfrac{3}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "本题只有 x→+∞ 的斜渐近线（√x 要求 x>0），别去凑 x→−∞",
+        "求 b 时 (1+x)^{3/2}−x^{3/2} 提取 x^{3/2} 换元 t=1/x，用 (1+t)^{3/2}−1~(3/2)t 得 b=3/2，别漏 3/2 这个截距"
+      ],
+      "key_point": "k=lim y/x=1，b=lim(y−x)=3/2，斜渐近线 y=x+3/2。"
+    },
+    {
+      "id": 1634,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{4}$",
+      "analysis": "方法一 $\\displaystyle \\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n \\stackrel{x=\\sin t}{=} \\int_0^{\\frac{\\pi}{2}} \\frac{\\sin t \\cos t \\mathrm{d} t}{\\left(2-\\sin ^2 t\\right) \\cos t}\\\\\r\n=-\\int_0^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}(\\cos t)}{1+\\cos ^2 t}\\\\\r\n=-\\left.\\arctan (\\cos t)\\right|_0 ^{\\frac{\\pi}{2}}=\\frac{\\pi}{4}$\r\n\r\n方法二 \r\n\r\n$\\displaystyle \r\n\\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_0^1 \\frac{\\mathrm{d}\\left(1-x^2\\right)}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_0^1 \\frac{\\mathrm{d}\\left(1-x^2\\right)}{\\left[1+\\left(1-x^2\\right)\\right] \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_1^0 \\frac{\\mathrm{d} t}{(1+t) \\sqrt{t}}\\\\\r\n=\\int_0^1 \\frac{\\mathrm{d}(\\sqrt{t})}{1+(\\sqrt{t})^2}=\\left.\\arctan \\sqrt{t}\\right|_0 ^1=\\frac{\\pi}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x=sint 后 2−sin²t=1+cos²t，凑成 −d(cost)/(1+cos²t) 是 arctan(cost) 型，别漏负号",
+        "换元同时要换上下限：x:0→1 对应 t:0→π/2，cost:1→0"
+      ],
+      "key_point": "x=sint 化为 −∫d(cost)/(1+cos²t)=−arctan(cost)|₀^{π/2}=π/4。"
+    },
+    {
       "id": 881,
       "paper": "数学二",
       "year": 2005,
@@ -20,6 +74,24 @@
         "解出含 C 的通解后必须代 y(1)=-1/9 定 C=0，漏代不得分"
       ],
       "key_point": "(x²y)'=x²lnx ⇒ y=xlnx/3-x/9，代初值得 C=0。"
+    },
+    {
+      "id": 1635,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $\\alpha(x)=k x^2$ 与 $\\beta(x)=\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}$ 是等价无穷小, 则 $k=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{3}{4}$",
+      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\beta(x)}{k x^2}\\\\\r\n=\\frac{1}{k} \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}}{x^2}\\\\\r\n=\\frac{1}{k} \\lim _{x \\rightarrow 0} \\frac{x \\arcsin x+1-\\cos x}{x^2(\\sqrt{1+x \\arcsin x}+\\sqrt{\\cos x})} \\\\\r\n=\\frac{1}{2 k} \\lim _{x \\rightarrow 0} \\frac{x \\arcsin x+1-\\cos x}{x^2} \\\\\r\n=\\frac{1}{2 k} \\lim _{x \\rightarrow 0}\\left(\\frac{\\arcsin x}{x}+\\frac{1-\\cos x}{x^2}\\right) \\\\\r\n=\\frac{3}{4 k}=1$,\r\n\r\n得 $k=\\dfrac{3}{4}$\r\n\r\n方法二 $\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}=(\\sqrt{1+x \\arcsin x}-1)+(1-\\sqrt{\\cos x})$,\r\n\r\n由 $\\displaystyle \\sqrt{1+x \\arcsin x}-1=(1+x \\arcsin x)^{\\frac{1}{2}}-1 \\sim \\frac{1}{2} x \\arcsin x \\sim \\frac{1}{2} x^2\\\\\r\n1-\\sqrt{\\cos x}=\\frac{1-\\cos x}{1+\\sqrt{\\cos x}} \\sim \\frac{1}{4} x^2$,\r\n\r\n得 $\\displaystyle \\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x} \\sim \\frac{3}{4} x^2$, 于是 $\\displaystyle k=\\frac{3}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "√(1+u)−1~u/2、1−√cosx=（1−cosx)/(1+√cosx)~x²/4，两处的 1/2、1/4 系数别弄混",
+        "arcsinx~x 使 xarcsinx~x²，√(1+xarcsinx)−1~x²/2；合并得 β~(3/4)x²，故 k=3/4"
+      ],
+      "key_point": "√(1+xarcsinx)−1~x²/2，1−√cosx~x²/4，β~(3/4)x²，等价于 kx² 得 k=3/4。"
     },
     {
       "id": 884,
@@ -94,6 +166,60 @@
       "key_point": "f 奇 ⟺ 其原函数 F 偶（选 A）；周期/单调均不传递。"
     },
     {
+      "id": 1636,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 由参数方程 $\\left\\{\\begin{array}{l}x=t^2+2 t \\\\ y=\\ln (1+t)\\end{array}\\right.$ 确定, 则曲线 $y=y(x)$ 在 $x=3$ 处的法线与 $x$ 轴交点的横坐标是 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{8} \\ln 2+3$",
+        "B": "$-\\dfrac{1}{8} \\ln 2+3$",
+        "C": "$-8 \\ln 2+3$",
+        "D": "$8 \\ln 2+3$"
+      },
+      "answer": "A",
+      "analysis": "当 $x=3$ 时, 由 $t^2+2 t=3$, 得 $t=-3$ (舍去), $t=1$, \r\n\r\n于是 $y=\\ln 2$.\r\n\r\n$\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\dfrac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\dfrac{\\frac{1}{1+t}}{2 t+2}=\\dfrac{1}{2(t+1)^2}$, \r\n\r\n则 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=1}=\\dfrac{1}{8}$\r\n\r\n于是曲线 $y=y(x)$ 在点 $(3, \\ln 2)$ 处的法线方程为\r\n\r\n$y-\\ln 2=-8(x-3)$ 或 $y=-8 x+24+\\ln 2$, \r\n\r\n令 $y=0$ 得 $x=\\dfrac{1}{8} \\ln 2+3$, 应选 (A)",
+      "wrong_options": {
+        "B": "斜率、截距都对但求横截距时移项符号弄反，把 +ln2/8 写成 −ln2/8",
+        "C": "把法线斜率 −8 当成乘 ln2 的系数（应是除以 −8），且符号取负，得 −8ln2",
+        "D": "混淆切线与法线斜率的作用，把 −8 当乘数得 8ln2"
+      },
+      "pitfalls": [
+        "法线斜率是切线斜率的负倒数：dy/dx|_{t=1}=1/8，法线斜率为 −8，不是 1/8",
+        "由 t²+2t=3 得 t=1（t=−3 使 1+t<0 无定义须舍），横截距 x=ln2/8+3 是 ln2 除以 8"
+      ],
+      "key_point": "t=1 处 dy/dx=1/8，法线斜率 −8，法线 y=−8x+24+ln2 令 y=0 得 x=ln2/8+3，选A。"
+    },
+    {
+      "id": 1637,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设区域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 4, x \\geqslant 0, y \\geqslant 0\\right\\},\\\\ f(x)$ 为 $D$ 上的正值连续函数, $a, b$ 为常数, 则 $\\displaystyle \\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma=(\\quad)$",
+      "options": {
+        "A": "$a b \\pi$",
+        "B": "$\\dfrac{a b}{2} \\pi$",
+        "C": "$(a+b) \\pi$",
+        "D": "$\\dfrac{a+b}{2} \\pi$"
+      },
+      "answer": "D",
+      "analysis": "方法一\r\n\r\n将抽象的被积函数 $f(x)$ 取为具体的 $f(x)=1$,\r\n\r\n则 $\\displaystyle I=\\dfrac{a+b}{2} \\iint\\limits_D \\mathrm{d} x \\mathrm{d} y=\\dfrac{(a+b)}{2} \\pi$, 应选 (D)\r\n\r\n方法二\r\n\r\n因为区域 $D$ 关于 $y=x$ 对称，\r\n\r\n所以 $\\displaystyle I=\\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma=\\iint\\limits_D \\frac{a \\sqrt{f(y)}+b \\sqrt{f(x)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma\r\n=\\frac{1}{2} \\iint\\limits_D\\left[\\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}}+\\frac{a \\sqrt{f(y)}+b \\sqrt{f(x)}}{\\sqrt{f(x)}+\\sqrt{f(y)}}\\right] \\mathrm{d} \\sigma\\\\\r\n=\\frac{a+b}{2} \\iint\\limits_D \\mathrm{d} \\sigma=\\frac{a+b}{2} \\pi$,\r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "把轮换相加得到的平均值 (a+b)/2 误当成乘积 ab",
+        "B": "同样错取乘积 ab，再对半得 ab/2",
+        "C": "轮换对称相加后漏掉平均的 1/2 因子，得 (a+b) 而非 (a+b)/2"
+      },
+      "pitfalls": [
+        "D 关于 y=x 对称，轮换后原式+互换式=a+b（被积为常数），故原积分=(a+b)/2·面积，1/2 别漏",
+        "D 是半径2的1/4圆盘，面积=(1/4)π·2²=π，不是 2π"
+      ],
+      "key_point": "轮换对称使被积平均为 (a+b)/2，乘 1/4 圆盘面积 π 得 (a+b)π/2，选D。"
+    },
+    {
       "id": 888,
       "paper": "数学二",
       "year": 2005,
@@ -119,6 +245,33 @@
         "变限积分项偏导为 ψ(x+y)、ψ(x-y)，y 侧同样注意符号"
       ],
       "key_point": "u_xx=u_yy=φ''(x+y)+φ''(x-y)+ψ'(x+y)-ψ'(x-y)（选 B）。"
+    },
+    {
+      "id": 1638,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $\\displaystyle f(x)=\\frac{1}{\\mathrm{e}^{\\frac{x}{x-1}}-1}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$x=0, x=1$ 都是 $f(x)$ 的第一类间断点",
+        "B": "$x=0, x=1$ 都是 $f(x)$ 的第二类间断点",
+        "C": "$x=0$ 是 $f(x)$ 的第一类间断点, $x=1$ 是 $f(x)$ 的第二类间断点",
+        "D": "$x=0$ 是 $f(x)$ 的第二类间断点, $x=1$ 是 $f(x)$ 的第一类间断点"
+      },
+      "answer": "D",
+      "analysis": "由于函数 $f(x)$ 在 $x=0, x=1$ 点处无定义, 因此是间断点,\r\n\r\n$\\lim _{x \\rightarrow 0} f(x)=\\infty$, 所以 $x=0$ 为第二类间断点,\r\n\r\n$\\lim _{x \\rightarrow 1^{+}} f(x)=0, \\lim _{x \\rightarrow 1^{-}} f(x)=-1$, \r\n\r\n所以 $x=1$ 为第一类间断点, 故应选(D)",
+      "wrong_options": {
+        "A": "把 x=0 也判成第一类——漏看 x=0 处指数 x/(x−1)→0，e^0−1=0 使 f→∞ 为第二类",
+        "B": "把 x=1 也判成第二类——漏看 x=1 处左右极限有限（0 与 −1）为第一类跳跃",
+        "C": "恰好把两点类型判反：x=0 判第一类、x=1 判第二类"
+      },
+      "pitfalls": [
+        "x=0 处 x/(x−1)→0，分母 e^0−1=0 使 f→∞，是第二类（无穷）间断",
+        "x=1 处 x/(x−1)→±∞ 使 e^{+∞}、e^{−∞} 得右极限0、左极限−1，有限不等为第一类跳跃"
+      ],
+      "key_point": "x=0 极限为∞属第二类，x=1 左右极限 −1、0 有限不等属第一类，选D。"
     },
     {
       "id": 890,
@@ -175,213 +328,6 @@
       "key_point": "交换 A* 的第 1、2 列得 -B*（选 C）。"
     },
     {
-      "id": 896,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "如图所示, 曲线 $C$ 的方程为 $y=f(x)$, 点 $(3,2)$ 是它的一个拐点, 直线 $l_{1}$ 与 $l_{2}$ 分别是曲线 $C$ 在点 $(0,0)$ 与 $(3,2)$ 处的切线, 其交点为 $(2,4)$. 设函数 $f(x)$ 具有三阶连续导数, 计算定积分 $\\displaystyle \\int_{0}^{3}\\left(x^{2}+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x$\n\n![曲线 C 与两条切线 l1、l2](assets/figures/ef6946383f64e55c6821e7d95d0a743aa20df0441881b8cb378cee621f66cbad.jpg)",
-      "options": {},
-      "answer": "$20$",
-      "analysis": "由图得 $f(0)=0, f(3)=2, f^{\\prime}(0)=2, f^{\\prime}(3)=-2, f^{\\prime \\prime}(3)=0$, \r\n\r\n由分部积分得 $\\displaystyle \\int_0^3\\left(x^2+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x\\\\\r\n=\\int_0^3\\left(x^2+x\\right) \\mathrm{d} f^{\\prime \\prime}(x) \\\\\r\n=\\left.\\left(x^2+x\\right) f^{\\prime \\prime}(x)\\right|_0 ^3-\\int_0^3(2 x+1) f^{\\prime \\prime}(x) \\mathrm{d} x \\\\\r\n=-\\int_0^3(2 x+1) \\mathrm{d} f^{\\prime}(x)\\\\\r\n=-\\left.(2 x+1) f^{\\prime}(x)\\right|_0 ^3+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x \\\\\r\n=-7 f^{\\prime}(3)+f^{\\prime}(0)+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=16+\\left.2 f(x)\\right|_0 ^3=20$",
-      "wrong_options": {},
-      "pitfalls": [
-        "拐点 (3,2) 给出 f''(3)=0，是首次分部消项的关键",
-        "两切线斜率：l₁ 过 (0,0)(2,4) 得 f'(0)=2，l₂ 过 (3,2)(2,4) 得 f'(3)=-2"
-      ],
-      "key_point": "两次分部积分并代入几何条件，原积分=20。"
-    },
-    {
-      "id": 897,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 19,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且 $f(0)=0, f(1)=1$. 证明 :\r\n\r\n(1) 存在 $\\xi \\in(0,1)$, 使得 $f(\\xi)=1-\\xi$;\r\n\r\n(2) 存在两个不同的点 $\\eta, \\zeta \\in(0,1)$, 使得 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
-      "options": {},
-      "answer": "略",
-      "analysis": "(1) 令 $\\varphi(x)=f(x)-1+x, \\varphi(0)=-1, \\varphi(1)=1$\r\n\r\n因为 $\\varphi(0) \\varphi(1)<0$, 所以由零点定理, \r\n\r\n存在 $\\xi \\in(0,1)$, 使得 $\\varphi(\\xi)=0$, 即 $f(\\xi)=1-\\xi$.\r\n\r\n(2) 由拉格朗日中值定理, 存在 $\\eta \\in(0, \\xi), \\zeta \\in(\\xi, 1)$, 使得\r\n\r\n$f^{\\prime}(\\eta)=\\dfrac{f(\\xi)-f(0)}{\\xi}=\\dfrac{1-\\xi}{\\xi}, \\\\\r\nf^{\\prime}(\\zeta)=\\dfrac{f(1)-f(\\xi)}{1-\\xi}=\\dfrac{\\xi}{1-\\xi}$,\r\n\r\n故 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
-      "wrong_options": {},
-      "pitfalls": [
-        "(1) φ(0)=-1、φ(1)=1 异号，才能用零点定理",
-        "(2) 必须分成两个子区间取不同的 η、ζ，乘积 (1-ξ)/ξ·ξ/(1-ξ) 才约为 1"
-      ],
-      "key_point": "零点定理得 f(ξ)=1-ξ；分区间拉氏中值定理得 f'(η)f'(ζ)=1。"
-    },
-    {
-      "id": 900,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $3$ 阶矩阵 $\\boldsymbol{A}$ 的第一行是 $(a, b, c), a, b, c$ 不全为零, 矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & k\\end{array}\\right)$ ( $k$ 为常数), 且 $\\boldsymbol{A B}=\\boldsymbol O$, 求线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解",
-      "options": {},
-      "answer": "$k\\neq9$ 时 $r(A)=1$，通解 $x=C_1(1,2,3)^{\\mathrm T}+C_2(3,6,k)^{\\mathrm T}$；$k=9$ 时若 $r(A)=2$ 则 $x=C(1,2,3)^{\\mathrm T}$，若 $r(A)=1$ 则解为 $ax_1+bx_2+cx_3=0$ 的全部解（$C,C_1,C_2$ 为任意常数）",
-      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$,\r\n\r\n因为 $\\boldsymbol{A}$ 为非零矩阵, 所以 $r(\\boldsymbol{A}) \\geqslant 1$,\r\n\r\n当 $k \\neq 9$ 时, 由 $r(\\boldsymbol{B})=2$ 得 $r(\\boldsymbol{A})=1$,\r\n\r\n因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为\r\n$\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right)+C_2\\left(\\begin{array}{l}3 \\\\ 6 \\\\ k\\end{array}\\right)(C_1, C_2$ 为任意常数),\r\n\r\n当 $k=9$ 时, $r(\\boldsymbol{B})=1$, 则 $1 \\leqslant r(\\boldsymbol{A}) \\leqslant 2$.\r\n\r\n当 $r(\\boldsymbol{A})=2$ 时, 因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为 $\\boldsymbol{Ax}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right) (C$ 为任意常数)\r\n\r\n当 $r(\\boldsymbol{A})=1$ 时, 不妨设 $a \\neq 0$, \r\n\r\n由 $\\boldsymbol{A}\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}a & b & c \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll}1 & \\frac{b}{a} & \\frac{c}{a} \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C_1\\left(\\begin{array}{c}-\\frac{b}{a} \\\\ 1 \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}-\\frac{c}{a} \\\\ 0 \\\\ 1\\end{array}\\right) (C_1, C_2$ 为任意常数)",
-      "wrong_options": {},
-      "pitfalls": [
-        "k≠9 时 r(B)=2，由 r(A)+r(B)≤3 及 A 非零得 r(A)=1，解空间维数 2",
-        "k=9 时 r(B)=1，r(A) 可能为 1 或 2，必须分别讨论给通解"
-      ],
-      "key_point": "k≠9：x=C₁(1,2,3)ᵀ+C₂(3,6,k)ᵀ；k=9 时按 r(A)=1 或 2 分类讨论。"
-    },
-    {
-      "id": 1632,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 1,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $y=(1+\\sin x)^x$, 则 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-\\pi \\mathrm{d} x$",
-      "analysis": "方法一 \r\n由 $y=(1+\\sin x)^x$, 得 $y=\\mathrm{e}^{x \\ln (1+\\sin x)}$, 求导得\r\n\r\n$y^{\\prime} =\\mathrm{e}^{x \\ln (1+\\sin x)} \\cdot\\left[\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}\\right] \\\\\r\n=(1+\\sin x)^x \\cdot\\left[\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}\\right]$\r\n\r\n从而 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=\\pi}=-\\pi$,\r\n\r\n于是 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=-\\pi \\mathrm{d} x$\r\n\r\n方法二 $x=\\pi$ 时, $y=1$\r\n\r\n$y=(1+\\sin x)^x$ 两边取对数, 得 $\\ln y=x \\ln (1+\\sin x)$, \r\n\r\n两边对 $x$ 求导, 得\r\n\r\n$\\dfrac{1}{y} \\cdot \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\ln (1+\\sin x)+\\dfrac{x \\cos x}{1+\\sin x}$,\r\n\r\n将 $x=\\pi, y=1$ 代入得 $\\displaystyle \\left.\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=\\pi}=-\\pi$, \r\n\r\n于是 $\\left.\\mathrm{d} y\\right|_{x=\\pi}=-\\pi \\mathrm{d} x$",
-      "wrong_options": {},
-      "pitfalls": [
-        "幂指函数不能直接套幂函数或指数函数公式，必须先取对数（或写成 e^{x ln(1+sinx)}）再求导",
-        "x=π 时 sinπ=0，ln(1+sinx)=ln1=0 一项消失，只剩 xcosx/(1+sinx)=π·(−1)/1=−π；dy=y'dx 别漏 dx"
-      ],
-      "key_point": "y'=(1+sinx)^x[ln(1+sinx)+xcosx/(1+sinx)]，代 x=π 得 y'=−π，故 dy|_{x=π}=−πdx。"
-    },
-    {
-      "id": 1633,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 2,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "曲线 $y=\\dfrac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}$ 的斜渐近线方程为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$y=x+\\dfrac{3}{2}$",
-      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow+\\infty} \\frac{y}{x}=1,\\\\\r\n\\lim _{x \\rightarrow+\\infty}(y-x)\\\\\r\n=\\lim _{x \\rightarrow+\\infty}\\left[\\frac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}-x\\right]\\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{(1+x)^{\\frac{3}{2}}-x^{\\frac{3}{2}}}{\\sqrt{x}} \\\\\r\n=\\lim _{x \\rightarrow+\\infty} \\frac{\\left(1+\\frac{1}{x}\\right)^{\\frac{3}{2}}-1}{\\frac{1}{x}}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{(1+t)^{\\frac{3}{2}}-1}{t}=\\frac{3}{2}$\r\n\r\n得曲线 $y=\\dfrac{(1+x)^{\\frac{3}{2}}}{\\sqrt{x}}$ 的斜渐近线方程为 $y=x+\\dfrac{3}{2}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "本题只有 x→+∞ 的斜渐近线（√x 要求 x>0），别去凑 x→−∞",
-        "求 b 时 (1+x)^{3/2}−x^{3/2} 提取 x^{3/2} 换元 t=1/x，用 (1+t)^{3/2}−1~(3/2)t 得 b=3/2，别漏 3/2 这个截距"
-      ],
-      "key_point": "k=lim y/x=1，b=lim(y−x)=3/2，斜渐近线 y=x+3/2。"
-    },
-    {
-      "id": 1634,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 3,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{\\pi}{4}$",
-      "analysis": "方法一 $\\displaystyle \\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n \\stackrel{x=\\sin t}{=} \\int_0^{\\frac{\\pi}{2}} \\frac{\\sin t \\cos t \\mathrm{d} t}{\\left(2-\\sin ^2 t\\right) \\cos t}\\\\\r\n=-\\int_0^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}(\\cos t)}{1+\\cos ^2 t}\\\\\r\n=-\\left.\\arctan (\\cos t)\\right|_0 ^{\\frac{\\pi}{2}}=\\frac{\\pi}{4}$\r\n\r\n方法二 \r\n\r\n$\\displaystyle \r\n\\int_0^1 \\frac{x \\mathrm{d} x}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_0^1 \\frac{\\mathrm{d}\\left(1-x^2\\right)}{\\left(2-x^2\\right) \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_0^1 \\frac{\\mathrm{d}\\left(1-x^2\\right)}{\\left[1+\\left(1-x^2\\right)\\right] \\sqrt{1-x^2}}\\\\\r\n=-\\frac{1}{2} \\int_1^0 \\frac{\\mathrm{d} t}{(1+t) \\sqrt{t}}\\\\\r\n=\\int_0^1 \\frac{\\mathrm{d}(\\sqrt{t})}{1+(\\sqrt{t})^2}=\\left.\\arctan \\sqrt{t}\\right|_0 ^1=\\frac{\\pi}{4}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "x=sint 后 2−sin²t=1+cos²t，凑成 −d(cost)/(1+cos²t) 是 arctan(cost) 型，别漏负号",
-        "换元同时要换上下限：x:0→1 对应 t:0→π/2，cost:1→0"
-      ],
-      "key_point": "x=sint 化为 −∫d(cost)/(1+cos²t)=−arctan(cost)|₀^{π/2}=π/4。"
-    },
-    {
-      "id": 1635,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 5,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "当 $x \\rightarrow 0$ 时, $\\alpha(x)=k x^2$ 与 $\\beta(x)=\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}$ 是等价无穷小, 则 $k=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{3}{4}$",
-      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\beta(x)}{k x^2}\\\\\r\n=\\frac{1}{k} \\lim _{x \\rightarrow 0} \\frac{\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}}{x^2}\\\\\r\n=\\frac{1}{k} \\lim _{x \\rightarrow 0} \\frac{x \\arcsin x+1-\\cos x}{x^2(\\sqrt{1+x \\arcsin x}+\\sqrt{\\cos x})} \\\\\r\n=\\frac{1}{2 k} \\lim _{x \\rightarrow 0} \\frac{x \\arcsin x+1-\\cos x}{x^2} \\\\\r\n=\\frac{1}{2 k} \\lim _{x \\rightarrow 0}\\left(\\frac{\\arcsin x}{x}+\\frac{1-\\cos x}{x^2}\\right) \\\\\r\n=\\frac{3}{4 k}=1$,\r\n\r\n得 $k=\\dfrac{3}{4}$\r\n\r\n方法二 $\\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x}=(\\sqrt{1+x \\arcsin x}-1)+(1-\\sqrt{\\cos x})$,\r\n\r\n由 $\\displaystyle \\sqrt{1+x \\arcsin x}-1=(1+x \\arcsin x)^{\\frac{1}{2}}-1 \\sim \\frac{1}{2} x \\arcsin x \\sim \\frac{1}{2} x^2\\\\\r\n1-\\sqrt{\\cos x}=\\frac{1-\\cos x}{1+\\sqrt{\\cos x}} \\sim \\frac{1}{4} x^2$,\r\n\r\n得 $\\displaystyle \\sqrt{1+x \\arcsin x}-\\sqrt{\\cos x} \\sim \\frac{3}{4} x^2$, 于是 $\\displaystyle k=\\frac{3}{4}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "√(1+u)−1~u/2、1−√cosx=（1−cosx)/(1+√cosx)~x²/4，两处的 1/2、1/4 系数别弄混",
-        "arcsinx~x 使 xarcsinx~x²，√(1+xarcsinx)−1~x²/2；合并得 β~(3/4)x²，故 k=3/4"
-      ],
-      "key_point": "√(1+xarcsinx)−1~x²/2，1−√cosx~x²/4，β~(3/4)x²，等价于 kx² 得 k=3/4。"
-    },
-    {
-      "id": 1636,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $y=y(x)$ 由参数方程 $\\left\\{\\begin{array}{l}x=t^2+2 t \\\\ y=\\ln (1+t)\\end{array}\\right.$ 确定, 则曲线 $y=y(x)$ 在 $x=3$ 处的法线与 $x$ 轴交点的横坐标是 $(\\quad)$",
-      "options": {
-        "A": "$\\dfrac{1}{8} \\ln 2+3$",
-        "B": "$-\\dfrac{1}{8} \\ln 2+3$",
-        "C": "$-8 \\ln 2+3$",
-        "D": "$8 \\ln 2+3$"
-      },
-      "answer": "A",
-      "analysis": "当 $x=3$ 时, 由 $t^2+2 t=3$, 得 $t=-3$ (舍去), $t=1$, \r\n\r\n于是 $y=\\ln 2$.\r\n\r\n$\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\dfrac{\\mathrm{d} y / \\mathrm{d} t}{\\mathrm{d} x / \\mathrm{d} t}=\\dfrac{\\frac{1}{1+t}}{2 t+2}=\\dfrac{1}{2(t+1)^2}$, \r\n\r\n则 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{t=1}=\\dfrac{1}{8}$\r\n\r\n于是曲线 $y=y(x)$ 在点 $(3, \\ln 2)$ 处的法线方程为\r\n\r\n$y-\\ln 2=-8(x-3)$ 或 $y=-8 x+24+\\ln 2$, \r\n\r\n令 $y=0$ 得 $x=\\dfrac{1}{8} \\ln 2+3$, 应选 (A)",
-      "wrong_options": {
-        "B": "斜率、截距都对但求横截距时移项符号弄反，把 +ln2/8 写成 −ln2/8",
-        "C": "把法线斜率 −8 当成乘 ln2 的系数（应是除以 −8），且符号取负，得 −8ln2",
-        "D": "混淆切线与法线斜率的作用，把 −8 当乘数得 8ln2"
-      },
-      "pitfalls": [
-        "法线斜率是切线斜率的负倒数：dy/dx|_{t=1}=1/8，法线斜率为 −8，不是 1/8",
-        "由 t²+2t=3 得 t=1（t=−3 使 1+t<0 无定义须舍），横截距 x=ln2/8+3 是 ln2 除以 8"
-      ],
-      "key_point": "t=1 处 dy/dx=1/8，法线斜率 −8，法线 y=−8x+24+ln2 令 y=0 得 x=ln2/8+3，选A。"
-    },
-    {
-      "id": 1637,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设区域 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 4, x \\geqslant 0, y \\geqslant 0\\right\\},\\\\ f(x)$ 为 $D$ 上的正值连续函数, $a, b$ 为常数, 则 $\\displaystyle \\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma=(\\quad)$",
-      "options": {
-        "A": "$a b \\pi$",
-        "B": "$\\dfrac{a b}{2} \\pi$",
-        "C": "$(a+b) \\pi$",
-        "D": "$\\dfrac{a+b}{2} \\pi$"
-      },
-      "answer": "D",
-      "analysis": "方法一\r\n\r\n将抽象的被积函数 $f(x)$ 取为具体的 $f(x)=1$,\r\n\r\n则 $\\displaystyle I=\\dfrac{a+b}{2} \\iint\\limits_D \\mathrm{d} x \\mathrm{d} y=\\dfrac{(a+b)}{2} \\pi$, 应选 (D)\r\n\r\n方法二\r\n\r\n因为区域 $D$ 关于 $y=x$ 对称，\r\n\r\n所以 $\\displaystyle I=\\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma=\\iint\\limits_D \\frac{a \\sqrt{f(y)}+b \\sqrt{f(x)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}} \\mathrm{d} \\sigma\r\n=\\frac{1}{2} \\iint\\limits_D\\left[\\frac{a \\sqrt{f(x)}+b \\sqrt{f(y)}}{\\sqrt{f(x)}+\\sqrt{f(y)}}+\\frac{a \\sqrt{f(y)}+b \\sqrt{f(x)}}{\\sqrt{f(x)}+\\sqrt{f(y)}}\\right] \\mathrm{d} \\sigma\\\\\r\n=\\frac{a+b}{2} \\iint\\limits_D \\mathrm{d} \\sigma=\\frac{a+b}{2} \\pi$,\r\n\r\n应选 (D)",
-      "wrong_options": {
-        "A": "把轮换相加得到的平均值 (a+b)/2 误当成乘积 ab",
-        "B": "同样错取乘积 ab，再对半得 ab/2",
-        "C": "轮换对称相加后漏掉平均的 1/2 因子，得 (a+b) 而非 (a+b)/2"
-      },
-      "pitfalls": [
-        "D 关于 y=x 对称，轮换后原式+互换式=a+b（被积为常数），故原积分=(a+b)/2·面积，1/2 别漏",
-        "D 是半径2的1/4圆盘，面积=(1/4)π·2²=π，不是 2π"
-      ],
-      "key_point": "轮换对称使被积平均为 (a+b)/2，乘 1/4 圆盘面积 π 得 (a+b)π/2，选D。"
-    },
-    {
-      "id": 1638,
-      "paper": "数学二",
-      "year": 2005,
-      "index": 12,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $\\displaystyle f(x)=\\frac{1}{\\mathrm{e}^{\\frac{x}{x-1}}-1}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$x=0, x=1$ 都是 $f(x)$ 的第一类间断点",
-        "B": "$x=0, x=1$ 都是 $f(x)$ 的第二类间断点",
-        "C": "$x=0$ 是 $f(x)$ 的第一类间断点, $x=1$ 是 $f(x)$ 的第二类间断点",
-        "D": "$x=0$ 是 $f(x)$ 的第二类间断点, $x=1$ 是 $f(x)$ 的第一类间断点"
-      },
-      "answer": "D",
-      "analysis": "由于函数 $f(x)$ 在 $x=0, x=1$ 点处无定义, 因此是间断点,\r\n\r\n$\\lim _{x \\rightarrow 0} f(x)=\\infty$, 所以 $x=0$ 为第二类间断点,\r\n\r\n$\\lim _{x \\rightarrow 1^{+}} f(x)=0, \\lim _{x \\rightarrow 1^{-}} f(x)=-1$, \r\n\r\n所以 $x=1$ 为第一类间断点, 故应选(D)",
-      "wrong_options": {
-        "A": "把 x=0 也判成第一类——漏看 x=0 处指数 x/(x−1)→0，e^0−1=0 使 f→∞ 为第二类",
-        "B": "把 x=1 也判成第二类——漏看 x=1 处左右极限有限（0 与 −1）为第一类跳跃",
-        "C": "恰好把两点类型判反：x=0 判第一类、x=1 判第二类"
-      },
-      "pitfalls": [
-        "x=0 处 x/(x−1)→0，分母 e^0−1=0 使 f→∞，是第二类（无穷）间断",
-        "x=1 处 x/(x−1)→±∞ 使 e^{+∞}、e^{−∞} 得右极限0、左极限−1，有限不等为第一类跳跃"
-      ],
-      "key_point": "x=0 极限为∞属第二类，x=1 左右极限 −1、0 有限不等属第一类，选D。"
-    },
-    {
       "id": 1639,
       "paper": "数学二",
       "year": 2005,
@@ -418,6 +364,24 @@
       "key_point": "S₁=S₂ 两边对 x 求导得 eˣ[x−φ(eˣ)]=½(eˣ−1)，解得 φ(y)=lny+1/(2y)−1/2。"
     },
     {
+      "id": 896,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "如图所示, 曲线 $C$ 的方程为 $y=f(x)$, 点 $(3,2)$ 是它的一个拐点, 直线 $l_{1}$ 与 $l_{2}$ 分别是曲线 $C$ 在点 $(0,0)$ 与 $(3,2)$ 处的切线, 其交点为 $(2,4)$. 设函数 $f(x)$ 具有三阶连续导数, 计算定积分 $\\displaystyle \\int_{0}^{3}\\left(x^{2}+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x$\n\n![曲线 C 与两条切线 l1、l2](assets/figures/ef6946383f64e55c6821e7d95d0a743aa20df0441881b8cb378cee621f66cbad.jpg)",
+      "options": {},
+      "answer": "$20$",
+      "analysis": "由图得 $f(0)=0, f(3)=2, f^{\\prime}(0)=2, f^{\\prime}(3)=-2, f^{\\prime \\prime}(3)=0$, \r\n\r\n由分部积分得 $\\displaystyle \\int_0^3\\left(x^2+x\\right) f^{\\prime \\prime \\prime}(x) \\mathrm{d} x\\\\\r\n=\\int_0^3\\left(x^2+x\\right) \\mathrm{d} f^{\\prime \\prime}(x) \\\\\r\n=\\left.\\left(x^2+x\\right) f^{\\prime \\prime}(x)\\right|_0 ^3-\\int_0^3(2 x+1) f^{\\prime \\prime}(x) \\mathrm{d} x \\\\\r\n=-\\int_0^3(2 x+1) \\mathrm{d} f^{\\prime}(x)\\\\\r\n=-\\left.(2 x+1) f^{\\prime}(x)\\right|_0 ^3+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x \\\\\r\n=-7 f^{\\prime}(3)+f^{\\prime}(0)+2 \\int_0^3 f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=16+\\left.2 f(x)\\right|_0 ^3=20$",
+      "wrong_options": {},
+      "pitfalls": [
+        "拐点 (3,2) 给出 f''(3)=0，是首次分部消项的关键",
+        "两切线斜率：l₁ 过 (0,0)(2,4) 得 f'(0)=2，l₂ 过 (3,2)(2,4) 得 f'(3)=-2"
+      ],
+      "key_point": "两次分部积分并代入几何条件，原积分=20。"
+    },
+    {
       "id": 1641,
       "paper": "数学二",
       "year": 2005,
@@ -434,6 +398,24 @@
         "回代 x=cost 时 sint=√(1−x²)（0<t<π 取正根）；由 x=0 对应 t=π/2 定常数 C₁=2、C₂=1"
       ],
       "key_point": "x=cost 化原方程为 y''(t)+y=0，通解 y=C₁x+C₂√(1−x²)，代初值得 y=√(1−x²)+2x。"
+    },
+    {
+      "id": 897,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导, 且 $f(0)=0, f(1)=1$. 证明 :\r\n\r\n(1) 存在 $\\xi \\in(0,1)$, 使得 $f(\\xi)=1-\\xi$;\r\n\r\n(2) 存在两个不同的点 $\\eta, \\zeta \\in(0,1)$, 使得 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
+      "options": {},
+      "answer": "略",
+      "analysis": "(1) 令 $\\varphi(x)=f(x)-1+x, \\varphi(0)=-1, \\varphi(1)=1$\r\n\r\n因为 $\\varphi(0) \\varphi(1)<0$, 所以由零点定理, \r\n\r\n存在 $\\xi \\in(0,1)$, 使得 $\\varphi(\\xi)=0$, 即 $f(\\xi)=1-\\xi$.\r\n\r\n(2) 由拉格朗日中值定理, 存在 $\\eta \\in(0, \\xi), \\zeta \\in(\\xi, 1)$, 使得\r\n\r\n$f^{\\prime}(\\eta)=\\dfrac{f(\\xi)-f(0)}{\\xi}=\\dfrac{1-\\xi}{\\xi}, \\\\\r\nf^{\\prime}(\\zeta)=\\dfrac{f(1)-f(\\xi)}{1-\\xi}=\\dfrac{\\xi}{1-\\xi}$,\r\n\r\n故 $f^{\\prime}(\\eta) f^{\\prime}(\\zeta)=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1) φ(0)=-1、φ(1)=1 异号，才能用零点定理",
+        "(2) 必须分成两个子区间取不同的 η、ζ，乘积 (1-ξ)/ξ·ξ/(1-ξ) 才约为 1"
+      ],
+      "key_point": "零点定理得 f(ξ)=1-ξ；分区间拉氏中值定理得 f'(η)f'(ζ)=1。"
     },
     {
       "id": 1642,
@@ -488,6 +470,24 @@
         "|α|=0 给 a=−2 与 a=1 两候选，须逐个代回算秩：a=−2 时 r(α)=r(β)=2 不满足严格小于要舍去，只有 a=1 成立"
       ],
       "key_point": "α 可由 β 表示且 β 不可由 α 表示 ⇔ r(α)<r(β)；|α|=0 得 a=−2 或 1，验秩后仅 a=1。"
+    },
+    {
+      "id": 900,
+      "paper": "数学二",
+      "year": 2005,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $3$ 阶矩阵 $\\boldsymbol{A}$ 的第一行是 $(a, b, c), a, b, c$ 不全为零, 矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & k\\end{array}\\right)$ ( $k$ 为常数), 且 $\\boldsymbol{A B}=\\boldsymbol O$, 求线性方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解",
+      "options": {},
+      "answer": "$k\\neq9$ 时 $r(A)=1$，通解 $x=C_1(1,2,3)^{\\mathrm T}+C_2(3,6,k)^{\\mathrm T}$；$k=9$ 时若 $r(A)=2$ 则 $x=C(1,2,3)^{\\mathrm T}$，若 $r(A)=1$ 则解为 $ax_1+bx_2+cx_3=0$ 的全部解（$C,C_1,C_2$ 为任意常数）",
+      "analysis": "由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant 3$,\r\n\r\n因为 $\\boldsymbol{A}$ 为非零矩阵, 所以 $r(\\boldsymbol{A}) \\geqslant 1$,\r\n\r\n当 $k \\neq 9$ 时, 由 $r(\\boldsymbol{B})=2$ 得 $r(\\boldsymbol{A})=1$,\r\n\r\n因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为\r\n$\\boldsymbol{x}=\\\\\r\nC_1\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right)+C_2\\left(\\begin{array}{l}3 \\\\ 6 \\\\ k\\end{array}\\right)(C_1, C_2$ 为任意常数),\r\n\r\n当 $k=9$ 时, $r(\\boldsymbol{B})=1$, 则 $1 \\leqslant r(\\boldsymbol{A}) \\leqslant 2$.\r\n\r\n当 $r(\\boldsymbol{A})=2$ 时, 因为 $\\boldsymbol{A B}=\\boldsymbol{O}$, \r\n\r\n所以 $\\boldsymbol{B}$ 的列向量为 $\\boldsymbol{Ax}=\\mathbf{0}$ 的解, \r\n\r\n于是方程组 $\\boldsymbol{A x}=\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C\\left(\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right) (C$ 为任意常数)\r\n\r\n当 $r(\\boldsymbol{A})=1$ 时, 不妨设 $a \\neq 0$, \r\n\r\n由 $\\boldsymbol{A}\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}a & b & c \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right) \\\\\r\n\\rightarrow\\left(\\begin{array}{lll}1 & \\frac{b}{a} & \\frac{c}{a} \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$, \r\n\r\n得方程组 $\\boldsymbol{Ax} =\\mathbf{0}$ 的通解为 \r\n\r\n$\\boldsymbol{x}=C_1\\left(\\begin{array}{c}-\\frac{b}{a} \\\\ 1 \\\\ 0\\end{array}\\right)+C_2\\left(\\begin{array}{c}-\\frac{c}{a} \\\\ 0 \\\\ 1\\end{array}\\right) (C_1, C_2$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "k≠9 时 r(B)=2，由 r(A)+r(B)≤3 及 A 非零得 r(A)=1，解空间维数 2",
+        "k=9 时 r(B)=1，r(A) 可能为 1 或 2，必须分别讨论给通解"
+      ],
+      "key_point": "k≠9：x=C₁(1,2,3)ᵀ+C₂(3,6,k)ᵀ；k=9 时按 r(A)=1 或 2 分类讨论。"
     }
   ]
 }

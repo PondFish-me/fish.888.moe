@@ -32,82 +32,6 @@
       "key_point": "变限积分定阶口诀：被积 $\\sim t^{\\alpha}$、上限 $\\sim x^{\\beta}$，则积分阶 $=(\\alpha+1)\\beta$，取最大者。"
     },
     {
-      "id": 157,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 9,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $\\left\\{\\begin{array}{l}x=\\sqrt{t^{2}+1}, \\\\ y=\\ln \\left(t+\\sqrt{t^{2}+1}\\right),\\end{array}\\right.$ 则 $\\left.\\dfrac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=1}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-\\sqrt{2}$",
-      "analysis": "【分析】\n\n参数方程 $\\begin{cases}x=x(t)\\\\ y=y(t)\\end{cases}$ 求二阶导,核心是两步链式法则:先求 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}$,得到的仍是 $t$ 的函数,记作 $\\varphi(t)$;再对 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}$ 套同样的公式:\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\Big)=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\varphi(t)}{x'(t)}.$$\n\n最关键也最容易错的一点:第二步分母仍是 $x'(t)$,**不是** $[x'(t)]^2$。本题里 $y$ 恰好是反双曲正弦,先把 $y'(t)$、$x'(t)$ 老实算出来,会发现 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{1}{t}$,后面就很干净了。\n\n【解答】\n\n先求一阶导数。\n\n$$x'(t)=\\dfrac{t}{\\sqrt{t^2+1}}.$$\n\n对 $y=\\ln\\big(t+\\sqrt{t^2+1}\\big)$,\n\n$$y'(t)=\\dfrac{1+\\dfrac{t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{\\dfrac{\\sqrt{t^2+1}+t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{1}{\\sqrt{t^2+1}}.$$\n\n于是\n\n$$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}=\\dfrac{\\dfrac{1}{\\sqrt{t^2+1}}}{\\dfrac{t}{\\sqrt{t^2+1}}}=\\dfrac{1}{t}.$$\n\n再求二阶导数。对 $\\dfrac{1}{t}$ 关于 $t$ 求导得 $-\\dfrac{1}{t^2}$,故\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\Big(\\dfrac{1}{t}\\Big)}{x'(t)}=\\dfrac{-\\dfrac{1}{t^2}}{\\dfrac{t}{\\sqrt{t^2+1}}}=-\\dfrac{\\sqrt{t^2+1}}{t^3}.$$\n\n代入 $t=1$:\n\n$$\\left.\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1}=-\\dfrac{\\sqrt{2}}{1}=-\\sqrt{2}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "二阶导数公式分母是 x'(t),不是 [x'(t)]^2,这是参数方程二阶导最高频错误。",
-        "求 dy/dx 后得到的是 t 的函数,第二步必须再对 t 求导,不能直接对 x 求。",
-        "化简 y'(t) 时注意 1+t/√(t²+1) 要通分成 (√(t²+1)+t)/√(t²+1),否则约不掉。"
-      ],
-      "key_point": "参数方程二阶导=对(dy/dx)再求一次t的导,然后整体除以x'(t)。"
-    },
-    {
-      "id": 160,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "行列式 $\\left|\\begin{array}{cccc}a & 0 & -1 & 1 \\\\ 0 & a & 1 & -1 \\\\ -1 & 1 & a & 0 \\\\ 1 & -1 & 0 & a\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-4 a^2+a^4$",
-      "analysis": "【分析】\n\n这是一个带参数 $a$ 的四阶行列式。直接按行展开会出现一堆三阶行列式,容易算错。观察系数结构:第 1、2 行的非零非对角元 $(-1,1)$ 与第 3、4 行有明显的对称/相反关系。可以用行(列)的线性运算先制造零、降低复杂度,再按含零最多的行(列)展开。这里给一条稳妥又好验算的思路:把它看成分块或直接做列变换化简。下面用列变换 + 按列展开,过程清楚、可逐步验算。\n\n【解答】\n\n记\n\n$$D=\\begin{vmatrix}a&0&-1&1\\\\ 0&a&1&-1\\\\ -1&1&a&0\\\\ 1&-1&0&a\\end{vmatrix}.$$\n\n做列变换 $c_3\\to c_3+c_4$(行列式值不变),注意第 3、4 列对应元素之和:\n\n第1行 $-1+1=0$;第2行 $1+(-1)=0$;第3行 $a+0=a$;第4行 $0+a=a$。于是\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 1&-1&a&a\\end{vmatrix}.$$\n\n再做行变换 $r_4\\to r_4-r_3$(值不变):\n\n第4行变为 $(1-(-1),\\,-1-1,\\,a-a,\\,a-0)=(2,\\,-2,\\,0,\\,a)$,得\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 2&-2&0&a\\end{vmatrix}.$$\n\n此时第 3 列只有第 3 行元素 $a$ 非零,按第 3 列展开(该元素位于第 3 行第 3 列,代数余子式符号 $(-1)^{3+3}=+1$):\n\n$$D=a\\cdot\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}.$$\n\n展开这个三阶行列式(按第一行):\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}-0+1\\cdot\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}.$$\n\n其中 $\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}=a^2-2$,$\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}=0-2a=-2a$。故\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a(a^2-2)+(-2a)=a^3-2a-2a=a^3-4a.$$\n\n于是\n\n$$D=a\\cdot(a^3-4a)=a^4-4a^2.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "列(行)变换 c_i→c_i+c_j、r_i→r_i-r_j 不改变行列式值;若用了交换两行/列或某行乘常数,要相应变号或除回。",
-        "按某列展开时代数余子式符号 (-1)^{i+j} 别弄错,本题展开元素在 (3,3) 位置符号为 +。",
-        "最终化简 a(a³-2a)-2a 时注意是 a³-2a-2a=a³-4a,不要漏掉或多算 a。"
-      ],
-      "key_point": "高阶含参行列式先用行列变换造零降阶,再按零最多的行列展开。"
-    },
-    {
-      "id": 162,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求函数 $f(x, y)=x^{3}+8 y^{3}-x y$ 的极值",
-      "options": {},
-      "answer": "极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点",
-      "analysis": "【分析】\n\n二元函数无条件极值的标准流程: 先令两个一阶偏导同时为零解出所有驻点; 再用二阶判别式 $AC-B^2$ 判定每个驻点是否为极值, 其中 $A=f_{xx}$, $B=f_{xy}$, $C=f_{yy}$。判别准则: 当 $AC-B^2>0$ 时为极值($A>0$ 极小, $A<0$ 极大); 当 $AC-B^2<0$ 时非极值(鞍点); 当 $AC-B^2=0$ 时方法失效需另判。本题关键是解驻点方程组时不要漏掉 $(0,0)$。\n\n【解答】\n\n**第一步: 求驻点。** 计算一阶偏导并令其为零:\n\n$$f_x=3x^2-y=0,\\qquad f_y=24y^2-x=0.$$\n\n由第一式得 $y=3x^2$, 代入第二式:\n\n$$24(3x^2)^2-x=216x^4-x=x(216x^3-1)=0.$$\n\n故 $x=0$ 或 $x^3=\\dfrac{1}{216}$, 即 $x=\\dfrac{1}{6}$。\n\n- 当 $x=0$ 时, $y=3\\cdot 0^2=0$, 得驻点 $(0,0)$;\n- 当 $x=\\dfrac{1}{6}$ 时, $y=3\\cdot\\dfrac{1}{36}=\\dfrac{1}{12}$, 得驻点 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$。\n\n**第二步: 求二阶偏导。**\n\n$$A=f_{xx}=6x,\\quad B=f_{xy}=-1,\\quad C=f_{yy}=48y.$$\n\n**第三步: 判别。**\n\n在 $(0,0)$ 处: $A=0,\\ B=-1,\\ C=0$, 故\n\n$$AC-B^2=0\\cdot 0-(-1)^2=-1<0,$$\n\n所以 $(0,0)$ **不是极值点**(鞍点)。\n\n在 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$ 处: $A=6\\cdot\\dfrac{1}{6}=1,\\ B=-1,\\ C=48\\cdot\\dfrac{1}{12}=4$, 故\n\n$$AC-B^2=1\\cdot 4-(-1)^2=3>0,$$\n\n且 $A=1>0$, 所以该点取**极小值**。\n\n**第四步: 求极小值。**\n\n$$f\\left(\\frac{1}{6},\\frac{1}{12}\\right)=\\left(\\frac{1}{6}\\right)^3+8\\left(\\frac{1}{12}\\right)^3-\\frac{1}{6}\\cdot\\frac{1}{12}=\\frac{1}{216}+\\frac{8}{1728}-\\frac{1}{72}.$$\n\n通分(以 $216$ 为分母): $\\dfrac{1}{216}+\\dfrac{1}{216}-\\dfrac{3}{216}=-\\dfrac{1}{216}$。\n\n所以函数有极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点。",
-      "wrong_options": {},
-      "pitfalls": [
-        "解 $216x^4-x=0$ 时漏掉 $x=0$ 这个根, 从而漏掉驻点 $(0,0)$。",
-        "$(0,0)$ 处 $AC-B^2<0$ 说明它是鞍点, 不能误判为极值点。",
-        "代入求极小值时 $8\\left(\\dfrac{1}{12}\\right)^3=\\dfrac{8}{1728}=\\dfrac{1}{216}$, 通分易算错符号或分母。"
-      ],
-      "key_point": "无条件极值: 一阶偏导联立求全部驻点, 再用 $AC-B^2$ 逐点判别, 别漏零驻点。"
-    },
-    {
-      "id": 168,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $2$ 阶矩阵, $\\boldsymbol{P}=(\\boldsymbol{\\alpha}, \\boldsymbol{A} \\boldsymbol{\\alpha})$, 其中 $\\boldsymbol{\\alpha}$ 是非零向量且不是 $\\boldsymbol{A}$ 的特征向量\r\n\r\n(1) 证明 $\\boldsymbol{P}$ 为可逆矩阵;\r\n\r\n(2) 若 $\\boldsymbol{A}^{2} \\boldsymbol{\\alpha}+\\boldsymbol{A} \\boldsymbol{\\alpha}-6 \\boldsymbol{\\alpha}=\\mathbf{0}$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$, 并判断 $\\boldsymbol{A}$ 是否相似于对角矩阵",
-      "options": {},
-      "answer": "P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}，A 相似于对角矩阵 \\operatorname{diag}(2,-3)",
-      "analysis": "【分析】\n\n本题考查“向量在一组基下的坐标”与相似对角化判别。\n\n- (1) 要证 $P=(\\alpha,\\,A\\alpha)$ 可逆，即证 $\\alpha,\\,A\\alpha$ **线性无关**。用反证：若相关，则 $A\\alpha=\\lambda\\alpha$，与“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n- (2) 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 把 $A^2\\alpha$ 用 $\\alpha,A\\alpha$ 线性表示，从而把 $A\\alpha$、$A(A\\alpha)$ 在基 $\\{\\alpha,A\\alpha\\}$ 下写出坐标，得到 $P^{-1}AP$。再看其特征值是否互异判断可对角化。\n\n【解答】\n\n**(1)** 反设 $\\alpha,\\,A\\alpha$ 线性相关。因 $\\alpha\\ne0$，必存在数 $\\lambda$ 使 $A\\alpha=\\lambda\\alpha$。这说明 $\\alpha$ 是 $A$ 的属于特征值 $\\lambda$ 的特征向量，与题设“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n\n故 $\\alpha,\\,A\\alpha$ 线性无关。又 $A$ 为 $2$ 阶矩阵，$P=(\\alpha,\\,A\\alpha)$ 的两列线性无关，$\\operatorname{rank}P=2$，所以 $P$ 可逆。$\\blacksquare$\n\n**(2)** 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 得\n$$A^2\\alpha=6\\alpha-A\\alpha.$$\n考察 $A$ 作用在 $P$ 的两列上，并在基 $\\{\\alpha,\\,A\\alpha\\}$ 下表示：\n$$A\\alpha=0\\cdot\\alpha+1\\cdot(A\\alpha),$$\n$$A(A\\alpha)=A^2\\alpha=6\\alpha-A\\alpha=6\\cdot\\alpha+(-1)\\cdot(A\\alpha).$$\n于是\n$$AP=A(\\alpha,\\,A\\alpha)=(A\\alpha,\\,A^2\\alpha)=(\\alpha,\\,A\\alpha)\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}=P\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix},$$\n两边左乘 $P^{-1}$：\n$$P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}.$$\n\n**判断相似对角化**：设 $B=P^{-1}AP$，$A$ 与 $B$ 相似，故二者同时（或同不）可对角化。求 $B$ 的特征值：\n$$\\det(B-\\lambda I)=\\begin{vmatrix}-\\lambda&6\\\\1&-1-\\lambda\\end{vmatrix}=\\lambda(\\lambda+1)-6=\\lambda^2+\\lambda-6=(\\lambda-2)(\\lambda+3)=0,$$\n得 $\\lambda_1=2,\\ \\lambda_2=-3$，是两个**互异**特征值。$2$ 阶矩阵有 $2$ 个不同特征值，必可对角化，故 $A$ 相似于对角矩阵\n$$A\\sim\\begin{pmatrix}2&0\\\\0&-3\\end{pmatrix}.$$\n\n所以 $A$ 可以相似对角化。",
-      "wrong_options": {},
-      "pitfalls": [
-        "证 P 可逆的关键是“α 不是特征向量 ⇒ α 与 Aα 线性无关”，不能直接说 P 列不为零就可逆。",
-        "求 P^{-1}AP 用的是“Aα、A(Aα) 在基 {α,Aα} 下的坐标按列排成矩阵”，注意 A^2α=6α−Aα 给出第二列 (6,−1)^T，列序别写反。",
-        "判别对角化看 P^{-1}AP（与 A 相似）的特征值：2 阶有两个相异特征值即可对角化，无需再算特征向量。"
-      ],
-      "key_point": "α 非特征向量 ⇒ {α,Aα} 是基从而 P 可逆；将 Aα、A^2α 在该基下取坐标得 P^{-1}AP，特征值相异即相似对角化。"
-    },
-    {
       "id": 173,
       "paper": "数学二",
       "year": 2020,
@@ -247,6 +171,81 @@
       "key_point": "$f'>f$ 提示构造 $g(x)=f(x)/\\mathrm{e}^x$，其严格递增把各选项统一化为 $g$ 两点比较。"
     },
     {
+      "id": 193,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 4 阶矩阵 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 不可逆, $a_{12}$ 的代数余子式 $A_{12} \\neq 0, \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 为矩阵 $\\boldsymbol{A}$ 的列向量 组, $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 则方程组 $\\boldsymbol{A}^* \\boldsymbol{X}=\\mathbf{0}$ 的通解为 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "B": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "C": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
+        "D": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_2+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n本题综合考查：(1) 伴随矩阵秩公式 $r(A^*)$ 与 $r(A)$ 的关系；(2) 由秩定基础解系个数；(3) 利用 $A^*A=|A|E$ 把 $A$ 的列向量识别为 $A^*X=0$ 的解；(4) 由具体代数余子式 $A_{12}\\neq0$ 锁定哪三个列向量线性无关。\n\n四阶方阵 $A$ 的伴随矩阵秩公式为\n$$r(A^*)=\\begin{cases} 4,& r(A)=4,\\\\ 1,& r(A)=3,\\\\ 0,& r(A)<3.\\end{cases}$$\n\n【解答】\n\n第一步：确定 $r(A)$ 与解空间维数。\n\n$A$ 不可逆 $\\Rightarrow r(A)\\le 3$。又代数余子式 $A_{12}\\neq0$，说明 $A$ 存在非零的三阶子式（$A_{12}$ 对应删去第 1 行、第 2 列后的三阶子式），故 $r(A)\\ge 3$。两者结合得 $r(A)=3$。\n\n由伴随秩公式，$r(A^*)=1$。于是 $A^*X=0$ 的解空间维数为 $4-r(A^*)=4-1=3$，基础解系含 3 个线性无关向量。\n\n第二步：找出 $A^*X=0$ 的解。\n\n由 $A^*A=|A|E$，而 $A$ 不可逆，$|A|=0$，故\n$$A^*A=O.$$\n把 $A=(\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4)$ 按列代入，得 $A^*\\alpha_i=0\\,(i=1,2,3,4)$，即 $A$ 的每一列都是 $A^*X=0$ 的解。\n\n第三步：选出 3 个线性无关的列。\n\n解空间是 3 维，需要从 $\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4$ 中取出 3 个线性无关者作为基础解系。由 $r(A)=3$，四列中恰有某三列线性无关。\n\n$A_{12}$ 是删去第 1 行、第 2 列所得三阶子式（带符号）。$A_{12}\\neq0$ 意味着 $A$ 去掉第 2 列后、再去掉第 1 行剩下的三阶矩阵可逆，该三阶矩阵的列正是 $\\alpha_1,\\alpha_3,\\alpha_4$ 的第 2、3、4 个分量构成的列。其行列式非零，说明 $\\alpha_1,\\alpha_3,\\alpha_4$ 这三个四维列向量线性无关（它们的某个三阶子式非零）。\n\n因此 $\\alpha_1,\\alpha_3,\\alpha_4$ 构成 $A^*X=0$ 的一个基础解系，通解为\n$$X=k_1\\alpha_1+k_2\\alpha_3+k_3\\alpha_4\\quad(k_1,k_2,k_3\\text{ 任意}).$$\n\n选 C。",
+      "wrong_options": {
+        "A": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_3\\\\}$ 不一定线性无关：$A_{12}\\neq0$ 保证无关的是去掉第 2 列的 $\\alpha_1,\\alpha_3,\\alpha_4$，这里含被去掉的 $\\alpha_2$，无法断定其无关。",
+        "B": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_4\\\\}$ 含 $\\alpha_2$，同样无法由 $A_{12}\\neq0$ 保证线性无关。",
+        "D": "$\\\\{\\alpha_2,\\alpha_3,\\alpha_4\\\\}$ 含 $\\alpha_2$ 却不含 $\\alpha_1$，而 $A_{12}\\neq0$ 锁定的无关组恰是 $\\alpha_1,\\alpha_3,\\alpha_4$，故不能保证 D 中三列无关。"
+      },
+      "pitfalls": [
+        "把 $r(A^*)$ 算错：四阶矩阵在 $r(A)=3$ 时 $r(A^*)=1$，解空间是 3 维而非 1 维。",
+        "知道列向量是解，却选错了线性无关的三列——$A_{12}$ 删的是第 2 列，故无关组应排除 $\\alpha_2$。",
+        "忘记用 $A^*A=|A|E=O$ 这一桥梁，导致不知道 $A$ 的列就是 $A^*X=0$ 的解。"
+      ],
+      "key_point": "$r(A)=3\\Rightarrow r(A^*)=1$，解空间 3 维；由 $A^*A=O$ 知列向量皆为解，再用 $A_{12}\\neq0$ 锁定无关列 $\\alpha_1,\\alpha_3,\\alpha_4$。"
+    },
+    {
+      "id": 194,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的属于特征值 1 的线性无关的特征向量, $\\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{A}$ 的属于特征 值 -1 的特征向量, 则满足 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$ 的可逆矩阵 $\\boldsymbol{P}$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
+        "B": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
+        "C": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$",
+        "D": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题考查相似对角化中 $P$ 各列与对角矩阵对角元的对应关系。若 $P^{-1}AP=\\Lambda=\\mathrm{diag}(\\lambda_1,\\lambda_2,\\lambda_3)$，即 $AP=P\\Lambda$，逐列比较得 $A p_i=\\lambda_i p_i$，所以 $P$ 的第 $i$ 列必须是属于特征值 $\\lambda_i$ 的特征向量，且三列线性无关（$P$ 可逆）。本题 $\\Lambda=\\mathrm{diag}(1,-1,1)$，故 $P$ 的第 1 列、第 3 列要是属于特征值 $1$ 的特征向量，第 2 列要是属于特征值 $-1$ 的特征向量。\n\n【解答】\n\n设 $P=(p_1,p_2,p_3)$。由 $AP=P\\Lambda$ 且 $\\Lambda=\\mathrm{diag}(1,-1,1)$，需满足\n$$Ap_1=1\\cdot p_1,\\qquad Ap_2=-1\\cdot p_2,\\qquad Ap_3=1\\cdot p_3,$$\n即 $p_1,p_3$ 是特征值 $1$ 的特征向量，$p_2$ 是特征值 $-1$ 的特征向量，且 $p_1,p_2,p_3$ 线性无关。\n\n已知：$\\alpha_1,\\alpha_2$ 是特征值 $1$ 的线性无关特征向量；$\\alpha_3$ 是特征值 $-1$ 的特征向量。\n\n关于特征值 $1$ 的特征向量：$\\alpha_1,\\alpha_2$ 及其非零线性组合（如 $\\alpha_1+\\alpha_2$）都是特征值 $1$ 的特征向量。注意 $\\alpha_1+\\alpha_3$ 不是任何单一特征值的特征向量（因为 $A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$ 不是 $\\alpha_1+\\alpha_3$ 的倍数），故凡含 $\\alpha_1+\\alpha_3$ 作为某列的选项都不合格。\n\n关于特征值 $-1$ 的特征向量：$\\alpha_3$ 与 $-\\alpha_3$ 都是特征值 $-1$ 的特征向量。\n\n逐项核对位置（第 1、3 列需属于 $1$，第 2 列需属于 $-1$）：\n\n- A $=(\\alpha_1+\\alpha_3,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，且第 2 列 $\\alpha_2$ 属于 $1$ 而该位置要 $-1$，错。\n- B $=(\\alpha_1+\\alpha_2,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$（对），但第 2 列 $\\alpha_2$ 属于 $1$，而该位置要求属于 $-1$，错。\n- C $=(\\alpha_1+\\alpha_3,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，错。\n- D $=(\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$；第 2 列 $-\\alpha_3$ 属于 $-1$；第 3 列 $\\alpha_2$ 属于 $1$，位置全部吻合。\n\n再验线性无关：$\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2$。由于 $\\alpha_1,\\alpha_2$ 无关且分属特征值 $1$、$\\alpha_3$ 属特征值 $-1$（不同特征值特征向量无关），可验证这三个向量线性无关：若 $c_1(\\alpha_1+\\alpha_2)+c_2(-\\alpha_3)+c_3\\alpha_2=0$，即 $c_1\\alpha_1+(c_1+c_3)\\alpha_2-c_2\\alpha_3=0$，因 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关得 $c_1=0,\\\\;c_1+c_3=0,\\\\;c_2=0$，故 $c_1=c_2=c_3=0$。$P$ 可逆。\n\n选 D。",
+      "wrong_options": {
+        "A": "第 2 列 $\\alpha_2$ 属于特征值 $1$，但该位置对应对角元 $-1$，需属于 $-1$；且第 1 列 $\\alpha_1+\\alpha_3$ 根本不是特征向量。",
+        "B": "第 2 列 $\\alpha_2$ 属于特征值 $1$，而第 2 个对角元为 $-1$，位置不匹配。",
+        "C": "第 1 列 $\\alpha_1+\\alpha_3$ 是不同特征值特征向量之和，已不是 $A$ 的特征向量（$A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$），不满足 $Ap_1=p_1$。"
+      },
+      "pitfalls": [
+        "忽视 $P$ 各列与 $\\Lambda$ 对角元的「按序对应」：第 2 列必须配特征值 $-1$，不能放属于 $1$ 的向量。",
+        "误以为 $\\alpha_1+\\alpha_3$（不同特征值特征向量之和）仍是特征向量——它一般不是。",
+        "$-\\alpha_3$ 仍是属于 $-1$ 的特征向量（特征向量的非零倍数仍是特征向量），不要因为负号而排除。"
+      ],
+      "key_point": "$AP=P\\Lambda$ 要求 $P$ 第 $i$ 列是属于第 $i$ 个对角元的特征向量，按 $1,-1,1$ 的顺序对号入座。"
+    },
+    {
+      "id": 157,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{\\begin{array}{l}x=\\sqrt{t^{2}+1}, \\\\ y=\\ln \\left(t+\\sqrt{t^{2}+1}\\right),\\end{array}\\right.$ 则 $\\left.\\dfrac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\\right|_{t=1}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-\\sqrt{2}$",
+      "analysis": "【分析】\n\n参数方程 $\\begin{cases}x=x(t)\\\\ y=y(t)\\end{cases}$ 求二阶导,核心是两步链式法则:先求 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}$,得到的仍是 $t$ 的函数,记作 $\\varphi(t)$;再对 $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}$ 套同样的公式:\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}\\Big)=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\varphi(t)}{x'(t)}.$$\n\n最关键也最容易错的一点:第二步分母仍是 $x'(t)$,**不是** $[x'(t)]^2$。本题里 $y$ 恰好是反双曲正弦,先把 $y'(t)$、$x'(t)$ 老实算出来,会发现 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{1}{t}$,后面就很干净了。\n\n【解答】\n\n先求一阶导数。\n\n$$x'(t)=\\dfrac{t}{\\sqrt{t^2+1}}.$$\n\n对 $y=\\ln\\big(t+\\sqrt{t^2+1}\\big)$,\n\n$$y'(t)=\\dfrac{1+\\dfrac{t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{\\dfrac{\\sqrt{t^2+1}+t}{\\sqrt{t^2+1}}}{t+\\sqrt{t^2+1}}=\\dfrac{1}{\\sqrt{t^2+1}}.$$\n\n于是\n\n$$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{y'(t)}{x'(t)}=\\dfrac{\\dfrac{1}{\\sqrt{t^2+1}}}{\\dfrac{t}{\\sqrt{t^2+1}}}=\\dfrac{1}{t}.$$\n\n再求二阶导数。对 $\\dfrac{1}{t}$ 关于 $t$ 求导得 $-\\dfrac{1}{t^2}$,故\n\n$$\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}=\\dfrac{\\dfrac{\\mathrm{d}}{\\mathrm{d}t}\\Big(\\dfrac{1}{t}\\Big)}{x'(t)}=\\dfrac{-\\dfrac{1}{t^2}}{\\dfrac{t}{\\sqrt{t^2+1}}}=-\\dfrac{\\sqrt{t^2+1}}{t^3}.$$\n\n代入 $t=1$:\n\n$$\\left.\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1}=-\\dfrac{\\sqrt{2}}{1}=-\\sqrt{2}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二阶导数公式分母是 x'(t),不是 [x'(t)]^2,这是参数方程二阶导最高频错误。",
+        "求 dy/dx 后得到的是 t 的函数,第二步必须再对 t 求导,不能直接对 x 求。",
+        "化简 y'(t) 时注意 1+t/√(t²+1) 要通分成 (√(t²+1)+t)/√(t²+1),否则约不掉。"
+      ],
+      "key_point": "参数方程二阶导=对(dy/dx)再求一次t的导,然后整体除以x'(t)。"
+    },
+    {
       "id": 179,
       "paper": "数学二",
       "year": 2020,
@@ -263,6 +262,25 @@
         "换元后上限 $u=2$ 时 $u^{3/2}=2\\sqrt{2}$，别误写成 $2$ 或 $\\sqrt2$。"
       ],
       "key_point": "$\\sqrt{x^3+1}$ 无初等原函数，交换次序先对 $y$ 积分凑出 $x^2\\,\\mathrm{d}x$ 再换元。"
+    },
+    {
+      "id": 196,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $z=\\arctan [x y+\\sin (x+y)]$, 则 $\\left.\\mathrm{d} z\\right|_{(0, \\pi)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$(\\pi-1) \\mathrm{d} x-\\mathrm{d} y$",
+      "analysis": "【分析】\n这是复合函数求全微分。设外层 $z=\\arctan u$，内层 $u=xy+\\sin(x+y)$。利用 $(\\arctan u)'=\\dfrac{1}{1+u^2}$ 配合链式法则分别求 $z_x,z_y$，再代入点 $(0,\\pi)$，按全微分公式 $\\mathrm{d}z=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y$ 写出结果。关键是先算出该点处内层 $u$ 的值，从而确定因子 $\\dfrac{1}{1+u^2}$。\n\n【解答】\n令 $u=xy+\\sin(x+y)$。在点 $(0,\\pi)$ 处：\n$$u\\big|_{(0,\\pi)}=0\\cdot\\pi+\\sin(0+\\pi)=0,\\qquad \\dfrac{1}{1+u^2}\\Big|_{(0,\\pi)}=\\dfrac{1}{1+0}=1.$$\n\n求偏导（链式法则）：\n$$z_x=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial x}=\\dfrac{1}{1+u^2}\\big[y+\\cos(x+y)\\big],$$\n$$z_y=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial y}=\\dfrac{1}{1+u^2}\\big[x+\\cos(x+y)\\big].$$\n\n代入 $(0,\\pi)$，注意 $\\cos(0+\\pi)=-1$：\n$$z_x\\big|_{(0,\\pi)}=1\\cdot\\big[\\pi+(-1)\\big]=\\pi-1,$$\n$$z_y\\big|_{(0,\\pi)}=1\\cdot\\big[0+(-1)\\big]=-1.$$\n\n故全微分\n$$\\mathrm{d}z\\big|_{(0,\\pi)}=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y=(\\pi-1)\\,\\mathrm{d}x-\\mathrm{d}y.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先在该点求出内层 $u=0$，使外层因子 $\\dfrac{1}{1+u^2}=1$，否则容易漏掉这个系数。",
+        "$\\cos(x+y)$ 在求 $z_x$ 和 $z_y$ 时都出现，别只在一处求导。",
+        "$\\dfrac{\\partial}{\\partial y}(xy)=x$ 在 $x=0$ 处为 0，但 $\\cos(x+y)$ 的贡献仍在，结果 $z_y=-1$ 不为 0。"
+      ],
+      "key_point": "复合函数链式求偏导，先算该点内层值定因子，再套全微分公式。"
     },
     {
       "id": 181,
@@ -302,6 +320,25 @@
       "key_point": "二重特征根解带 $x$ 因子；$\\int_0^{+\\infty}xe^{-x}\\mathrm{d}x=\\Gamma(2)=1$。"
     },
     {
+      "id": 160,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "行列式 $\\left|\\begin{array}{cccc}a & 0 & -1 & 1 \\\\ 0 & a & 1 & -1 \\\\ -1 & 1 & a & 0 \\\\ 1 & -1 & 0 & a\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-4 a^2+a^4$",
+      "analysis": "【分析】\n\n这是一个带参数 $a$ 的四阶行列式。直接按行展开会出现一堆三阶行列式,容易算错。观察系数结构:第 1、2 行的非零非对角元 $(-1,1)$ 与第 3、4 行有明显的对称/相反关系。可以用行(列)的线性运算先制造零、降低复杂度,再按含零最多的行(列)展开。这里给一条稳妥又好验算的思路:把它看成分块或直接做列变换化简。下面用列变换 + 按列展开,过程清楚、可逐步验算。\n\n【解答】\n\n记\n\n$$D=\\begin{vmatrix}a&0&-1&1\\\\ 0&a&1&-1\\\\ -1&1&a&0\\\\ 1&-1&0&a\\end{vmatrix}.$$\n\n做列变换 $c_3\\to c_3+c_4$(行列式值不变),注意第 3、4 列对应元素之和:\n\n第1行 $-1+1=0$;第2行 $1+(-1)=0$;第3行 $a+0=a$;第4行 $0+a=a$。于是\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 1&-1&a&a\\end{vmatrix}.$$\n\n再做行变换 $r_4\\to r_4-r_3$(值不变):\n\n第4行变为 $(1-(-1),\\,-1-1,\\,a-a,\\,a-0)=(2,\\,-2,\\,0,\\,a)$,得\n\n$$D=\\begin{vmatrix}a&0&0&1\\\\ 0&a&0&-1\\\\ -1&1&a&0\\\\ 2&-2&0&a\\end{vmatrix}.$$\n\n此时第 3 列只有第 3 行元素 $a$ 非零,按第 3 列展开(该元素位于第 3 行第 3 列,代数余子式符号 $(-1)^{3+3}=+1$):\n\n$$D=a\\cdot\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}.$$\n\n展开这个三阶行列式(按第一行):\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}-0+1\\cdot\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}.$$\n\n其中 $\\begin{vmatrix}a&-1\\\\ -2&a\\end{vmatrix}=a^2-2$,$\\begin{vmatrix}0&a\\\\ 2&-2\\end{vmatrix}=0-2a=-2a$。故\n\n$$\\begin{vmatrix}a&0&1\\\\ 0&a&-1\\\\ 2&-2&a\\end{vmatrix}=a(a^2-2)+(-2a)=a^3-2a-2a=a^3-4a.$$\n\n于是\n\n$$D=a\\cdot(a^3-4a)=a^4-4a^2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "列(行)变换 c_i→c_i+c_j、r_i→r_i-r_j 不改变行列式值;若用了交换两行/列或某行乘常数,要相应变号或除回。",
+        "按某列展开时代数余子式符号 (-1)^{i+j} 别弄错,本题展开元素在 (3,3) 位置符号为 +。",
+        "最终化简 a(a³-2a)-2a 时注意是 a³-2a-2a=a³-4a,不要漏掉或多算 a。"
+      ],
+      "key_point": "高阶含参行列式先用行列变换造零降阶,再按零最多的行列展开。"
+    },
+    {
       "id": 183,
       "paper": "数学二",
       "year": 2020,
@@ -338,6 +375,25 @@
         "证连续要回到\"极限等于函数值\"的定义：$\\lim_{x\\to0}g'(x)=g'(0)$，而不是只把表达式形式上代 $0$。"
       ],
       "key_point": "含参积分换元 $u=xt$ 化为 $g(x)=\\frac1x\\int_0^x f$，分段求导后用 $\\lim g'(x)=g'(0)$ 验连续。"
+    },
+    {
+      "id": 162,
+      "paper": "数学二",
+      "year": 2020,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $f(x, y)=x^{3}+8 y^{3}-x y$ 的极值",
+      "options": {},
+      "answer": "极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点",
+      "analysis": "【分析】\n\n二元函数无条件极值的标准流程: 先令两个一阶偏导同时为零解出所有驻点; 再用二阶判别式 $AC-B^2$ 判定每个驻点是否为极值, 其中 $A=f_{xx}$, $B=f_{xy}$, $C=f_{yy}$。判别准则: 当 $AC-B^2>0$ 时为极值($A>0$ 极小, $A<0$ 极大); 当 $AC-B^2<0$ 时非极值(鞍点); 当 $AC-B^2=0$ 时方法失效需另判。本题关键是解驻点方程组时不要漏掉 $(0,0)$。\n\n【解答】\n\n**第一步: 求驻点。** 计算一阶偏导并令其为零:\n\n$$f_x=3x^2-y=0,\\qquad f_y=24y^2-x=0.$$\n\n由第一式得 $y=3x^2$, 代入第二式:\n\n$$24(3x^2)^2-x=216x^4-x=x(216x^3-1)=0.$$\n\n故 $x=0$ 或 $x^3=\\dfrac{1}{216}$, 即 $x=\\dfrac{1}{6}$。\n\n- 当 $x=0$ 时, $y=3\\cdot 0^2=0$, 得驻点 $(0,0)$;\n- 当 $x=\\dfrac{1}{6}$ 时, $y=3\\cdot\\dfrac{1}{36}=\\dfrac{1}{12}$, 得驻点 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$。\n\n**第二步: 求二阶偏导。**\n\n$$A=f_{xx}=6x,\\quad B=f_{xy}=-1,\\quad C=f_{yy}=48y.$$\n\n**第三步: 判别。**\n\n在 $(0,0)$ 处: $A=0,\\ B=-1,\\ C=0$, 故\n\n$$AC-B^2=0\\cdot 0-(-1)^2=-1<0,$$\n\n所以 $(0,0)$ **不是极值点**(鞍点)。\n\n在 $\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)$ 处: $A=6\\cdot\\dfrac{1}{6}=1,\\ B=-1,\\ C=48\\cdot\\dfrac{1}{12}=4$, 故\n\n$$AC-B^2=1\\cdot 4-(-1)^2=3>0,$$\n\n且 $A=1>0$, 所以该点取**极小值**。\n\n**第四步: 求极小值。**\n\n$$f\\left(\\frac{1}{6},\\frac{1}{12}\\right)=\\left(\\frac{1}{6}\\right)^3+8\\left(\\frac{1}{12}\\right)^3-\\frac{1}{6}\\cdot\\frac{1}{12}=\\frac{1}{216}+\\frac{8}{1728}-\\frac{1}{72}.$$\n\n通分(以 $216$ 为分母): $\\dfrac{1}{216}+\\dfrac{1}{216}-\\dfrac{3}{216}=-\\dfrac{1}{216}$。\n\n所以函数有极小值 $f\\left(\\dfrac{1}{6},\\dfrac{1}{12}\\right)=-\\dfrac{1}{216}$, 点 $(0,0)$ 不是极值点。",
+      "wrong_options": {},
+      "pitfalls": [
+        "解 $216x^4-x=0$ 时漏掉 $x=0$ 这个根, 从而漏掉驻点 $(0,0)$。",
+        "$(0,0)$ 处 $AC-B^2<0$ 说明它是鞍点, 不能误判为极值点。",
+        "代入求极小值时 $8\\left(\\dfrac{1}{12}\\right)^3=\\dfrac{8}{1728}=\\dfrac{1}{216}$, 通分易算错符号或分母。"
+      ],
+      "key_point": "无条件极值: 一阶偏导联立求全部驻点, 再用 $AC-B^2$ 逐点判别, 别漏零驻点。"
     },
     {
       "id": 185,
@@ -435,79 +491,23 @@
       "key_point": "两二次型可逆互化即矩阵合同, 用惯性定理定参数; 各自配方化同一标准形后 $P=C_1C_2^{-1}$。"
     },
     {
-      "id": 193,
+      "id": 168,
       "paper": "数学二",
       "year": 2020,
-      "index": 7,
-      "type": "选择题",
+      "index": 23,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设 4 阶矩阵 $\\boldsymbol{A}=\\left(a_{i j}\\right)$ 不可逆, $a_{12}$ 的代数余子式 $A_{12} \\neq 0, \\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 为矩阵 $\\boldsymbol{A}$ 的列向量 组, $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵, 则方程组 $\\boldsymbol{A}^* \\boldsymbol{X}=\\mathbf{0}$ 的通解为 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3$, 其中 $k_1, k_2, k_3$ 为任意常数",
-        "B": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
-        "C": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数",
-        "D": "$\\boldsymbol{X}=k_1 \\boldsymbol{\\alpha}_2+k_2 \\boldsymbol{\\alpha}_3+k_3 \\boldsymbol{\\alpha}_4$, 其中 $k_1, k_2, k_3$ 为任意常数"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n本题综合考查：(1) 伴随矩阵秩公式 $r(A^*)$ 与 $r(A)$ 的关系；(2) 由秩定基础解系个数；(3) 利用 $A^*A=|A|E$ 把 $A$ 的列向量识别为 $A^*X=0$ 的解；(4) 由具体代数余子式 $A_{12}\\neq0$ 锁定哪三个列向量线性无关。\n\n四阶方阵 $A$ 的伴随矩阵秩公式为\n$$r(A^*)=\\begin{cases} 4,& r(A)=4,\\\\ 1,& r(A)=3,\\\\ 0,& r(A)<3.\\end{cases}$$\n\n【解答】\n\n第一步：确定 $r(A)$ 与解空间维数。\n\n$A$ 不可逆 $\\Rightarrow r(A)\\le 3$。又代数余子式 $A_{12}\\neq0$，说明 $A$ 存在非零的三阶子式（$A_{12}$ 对应删去第 1 行、第 2 列后的三阶子式），故 $r(A)\\ge 3$。两者结合得 $r(A)=3$。\n\n由伴随秩公式，$r(A^*)=1$。于是 $A^*X=0$ 的解空间维数为 $4-r(A^*)=4-1=3$，基础解系含 3 个线性无关向量。\n\n第二步：找出 $A^*X=0$ 的解。\n\n由 $A^*A=|A|E$，而 $A$ 不可逆，$|A|=0$，故\n$$A^*A=O.$$\n把 $A=(\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4)$ 按列代入，得 $A^*\\alpha_i=0\\,(i=1,2,3,4)$，即 $A$ 的每一列都是 $A^*X=0$ 的解。\n\n第三步：选出 3 个线性无关的列。\n\n解空间是 3 维，需要从 $\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4$ 中取出 3 个线性无关者作为基础解系。由 $r(A)=3$，四列中恰有某三列线性无关。\n\n$A_{12}$ 是删去第 1 行、第 2 列所得三阶子式（带符号）。$A_{12}\\neq0$ 意味着 $A$ 去掉第 2 列后、再去掉第 1 行剩下的三阶矩阵可逆，该三阶矩阵的列正是 $\\alpha_1,\\alpha_3,\\alpha_4$ 的第 2、3、4 个分量构成的列。其行列式非零，说明 $\\alpha_1,\\alpha_3,\\alpha_4$ 这三个四维列向量线性无关（它们的某个三阶子式非零）。\n\n因此 $\\alpha_1,\\alpha_3,\\alpha_4$ 构成 $A^*X=0$ 的一个基础解系，通解为\n$$X=k_1\\alpha_1+k_2\\alpha_3+k_3\\alpha_4\\quad(k_1,k_2,k_3\\text{ 任意}).$$\n\n选 C。",
-      "wrong_options": {
-        "A": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_3\\\\}$ 不一定线性无关：$A_{12}\\neq0$ 保证无关的是去掉第 2 列的 $\\alpha_1,\\alpha_3,\\alpha_4$，这里含被去掉的 $\\alpha_2$，无法断定其无关。",
-        "B": "$\\\\{\\alpha_1,\\alpha_2,\\alpha_4\\\\}$ 含 $\\alpha_2$，同样无法由 $A_{12}\\neq0$ 保证线性无关。",
-        "D": "$\\\\{\\alpha_2,\\alpha_3,\\alpha_4\\\\}$ 含 $\\alpha_2$ 却不含 $\\alpha_1$，而 $A_{12}\\neq0$ 锁定的无关组恰是 $\\alpha_1,\\alpha_3,\\alpha_4$，故不能保证 D 中三列无关。"
-      },
-      "pitfalls": [
-        "把 $r(A^*)$ 算错：四阶矩阵在 $r(A)=3$ 时 $r(A^*)=1$，解空间是 3 维而非 1 维。",
-        "知道列向量是解，却选错了线性无关的三列——$A_{12}$ 删的是第 2 列，故无关组应排除 $\\alpha_2$。",
-        "忘记用 $A^*A=|A|E=O$ 这一桥梁，导致不知道 $A$ 的列就是 $A^*X=0$ 的解。"
-      ],
-      "key_point": "$r(A)=3\\Rightarrow r(A^*)=1$，解空间 3 维；由 $A^*A=O$ 知列向量皆为解，再用 $A_{12}\\neq0$ 锁定无关列 $\\alpha_1,\\alpha_3,\\alpha_4$。"
-    },
-    {
-      "id": 194,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的属于特征值 1 的线性无关的特征向量, $\\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{A}$ 的属于特征 值 -1 的特征向量, 则满足 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$ 的可逆矩阵 $\\boldsymbol{P}$ 为 $(\\quad)$",
-      "options": {
-        "A": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
-        "B": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3\\right)$",
-        "C": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$",
-        "D": "$\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,-\\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_2\\right)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n本题考查相似对角化中 $P$ 各列与对角矩阵对角元的对应关系。若 $P^{-1}AP=\\Lambda=\\mathrm{diag}(\\lambda_1,\\lambda_2,\\lambda_3)$，即 $AP=P\\Lambda$，逐列比较得 $A p_i=\\lambda_i p_i$，所以 $P$ 的第 $i$ 列必须是属于特征值 $\\lambda_i$ 的特征向量，且三列线性无关（$P$ 可逆）。本题 $\\Lambda=\\mathrm{diag}(1,-1,1)$，故 $P$ 的第 1 列、第 3 列要是属于特征值 $1$ 的特征向量，第 2 列要是属于特征值 $-1$ 的特征向量。\n\n【解答】\n\n设 $P=(p_1,p_2,p_3)$。由 $AP=P\\Lambda$ 且 $\\Lambda=\\mathrm{diag}(1,-1,1)$，需满足\n$$Ap_1=1\\cdot p_1,\\qquad Ap_2=-1\\cdot p_2,\\qquad Ap_3=1\\cdot p_3,$$\n即 $p_1,p_3$ 是特征值 $1$ 的特征向量，$p_2$ 是特征值 $-1$ 的特征向量，且 $p_1,p_2,p_3$ 线性无关。\n\n已知：$\\alpha_1,\\alpha_2$ 是特征值 $1$ 的线性无关特征向量；$\\alpha_3$ 是特征值 $-1$ 的特征向量。\n\n关于特征值 $1$ 的特征向量：$\\alpha_1,\\alpha_2$ 及其非零线性组合（如 $\\alpha_1+\\alpha_2$）都是特征值 $1$ 的特征向量。注意 $\\alpha_1+\\alpha_3$ 不是任何单一特征值的特征向量（因为 $A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$ 不是 $\\alpha_1+\\alpha_3$ 的倍数），故凡含 $\\alpha_1+\\alpha_3$ 作为某列的选项都不合格。\n\n关于特征值 $-1$ 的特征向量：$\\alpha_3$ 与 $-\\alpha_3$ 都是特征值 $-1$ 的特征向量。\n\n逐项核对位置（第 1、3 列需属于 $1$，第 2 列需属于 $-1$）：\n\n- A $=(\\alpha_1+\\alpha_3,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，且第 2 列 $\\alpha_2$ 属于 $1$ 而该位置要 $-1$，错。\n- B $=(\\alpha_1+\\alpha_2,\\\\;\\alpha_2,\\\\;-\\alpha_3)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$（对），但第 2 列 $\\alpha_2$ 属于 $1$，而该位置要求属于 $-1$，错。\n- C $=(\\alpha_1+\\alpha_3,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_3$ 不是特征向量，错。\n- D $=(\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2)$：第 1 列 $\\alpha_1+\\alpha_2$ 属于 $1$；第 2 列 $-\\alpha_3$ 属于 $-1$；第 3 列 $\\alpha_2$ 属于 $1$，位置全部吻合。\n\n再验线性无关：$\\alpha_1+\\alpha_2,\\\\;-\\alpha_3,\\\\;\\alpha_2$。由于 $\\alpha_1,\\alpha_2$ 无关且分属特征值 $1$、$\\alpha_3$ 属特征值 $-1$（不同特征值特征向量无关），可验证这三个向量线性无关：若 $c_1(\\alpha_1+\\alpha_2)+c_2(-\\alpha_3)+c_3\\alpha_2=0$，即 $c_1\\alpha_1+(c_1+c_3)\\alpha_2-c_2\\alpha_3=0$，因 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关得 $c_1=0,\\\\;c_1+c_3=0,\\\\;c_2=0$，故 $c_1=c_2=c_3=0$。$P$ 可逆。\n\n选 D。",
-      "wrong_options": {
-        "A": "第 2 列 $\\alpha_2$ 属于特征值 $1$，但该位置对应对角元 $-1$，需属于 $-1$；且第 1 列 $\\alpha_1+\\alpha_3$ 根本不是特征向量。",
-        "B": "第 2 列 $\\alpha_2$ 属于特征值 $1$，而第 2 个对角元为 $-1$，位置不匹配。",
-        "C": "第 1 列 $\\alpha_1+\\alpha_3$ 是不同特征值特征向量之和，已不是 $A$ 的特征向量（$A(\\alpha_1+\\alpha_3)=\\alpha_1-\\alpha_3$），不满足 $Ap_1=p_1$。"
-      },
-      "pitfalls": [
-        "忽视 $P$ 各列与 $\\Lambda$ 对角元的「按序对应」：第 2 列必须配特征值 $-1$，不能放属于 $1$ 的向量。",
-        "误以为 $\\alpha_1+\\alpha_3$（不同特征值特征向量之和）仍是特征向量——它一般不是。",
-        "$-\\alpha_3$ 仍是属于 $-1$ 的特征向量（特征向量的非零倍数仍是特征向量），不要因为负号而排除。"
-      ],
-      "key_point": "$AP=P\\Lambda$ 要求 $P$ 第 $i$ 列是属于第 $i$ 个对角元的特征向量，按 $1,-1,1$ 的顺序对号入座。"
-    },
-    {
-      "id": 196,
-      "paper": "数学二",
-      "year": 2020,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $z=\\arctan [x y+\\sin (x+y)]$, 则 $\\left.\\mathrm{d} z\\right|_{(0, \\pi)}=\\rule{0.5cm}{0.2mm}$",
+      "stem": "设 $\\boldsymbol{A}$ 为 $2$ 阶矩阵, $\\boldsymbol{P}=(\\boldsymbol{\\alpha}, \\boldsymbol{A} \\boldsymbol{\\alpha})$, 其中 $\\boldsymbol{\\alpha}$ 是非零向量且不是 $\\boldsymbol{A}$ 的特征向量\r\n\r\n(1) 证明 $\\boldsymbol{P}$ 为可逆矩阵;\r\n\r\n(2) 若 $\\boldsymbol{A}^{2} \\boldsymbol{\\alpha}+\\boldsymbol{A} \\boldsymbol{\\alpha}-6 \\boldsymbol{\\alpha}=\\mathbf{0}$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$, 并判断 $\\boldsymbol{A}$ 是否相似于对角矩阵",
       "options": {},
-      "answer": "$(\\pi-1) \\mathrm{d} x-\\mathrm{d} y$",
-      "analysis": "【分析】\n这是复合函数求全微分。设外层 $z=\\arctan u$，内层 $u=xy+\\sin(x+y)$。利用 $(\\arctan u)'=\\dfrac{1}{1+u^2}$ 配合链式法则分别求 $z_x,z_y$，再代入点 $(0,\\pi)$，按全微分公式 $\\mathrm{d}z=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y$ 写出结果。关键是先算出该点处内层 $u$ 的值，从而确定因子 $\\dfrac{1}{1+u^2}$。\n\n【解答】\n令 $u=xy+\\sin(x+y)$。在点 $(0,\\pi)$ 处：\n$$u\\big|_{(0,\\pi)}=0\\cdot\\pi+\\sin(0+\\pi)=0,\\qquad \\dfrac{1}{1+u^2}\\Big|_{(0,\\pi)}=\\dfrac{1}{1+0}=1.$$\n\n求偏导（链式法则）：\n$$z_x=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial x}=\\dfrac{1}{1+u^2}\\big[y+\\cos(x+y)\\big],$$\n$$z_y=\\dfrac{1}{1+u^2}\\cdot\\dfrac{\\partial u}{\\partial y}=\\dfrac{1}{1+u^2}\\big[x+\\cos(x+y)\\big].$$\n\n代入 $(0,\\pi)$，注意 $\\cos(0+\\pi)=-1$：\n$$z_x\\big|_{(0,\\pi)}=1\\cdot\\big[\\pi+(-1)\\big]=\\pi-1,$$\n$$z_y\\big|_{(0,\\pi)}=1\\cdot\\big[0+(-1)\\big]=-1.$$\n\n故全微分\n$$\\mathrm{d}z\\big|_{(0,\\pi)}=z_x\\,\\mathrm{d}x+z_y\\,\\mathrm{d}y=(\\pi-1)\\,\\mathrm{d}x-\\mathrm{d}y.$$",
+      "answer": "P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}，A 相似于对角矩阵 \\operatorname{diag}(2,-3)",
+      "analysis": "【分析】\n\n本题考查“向量在一组基下的坐标”与相似对角化判别。\n\n- (1) 要证 $P=(\\alpha,\\,A\\alpha)$ 可逆，即证 $\\alpha,\\,A\\alpha$ **线性无关**。用反证：若相关，则 $A\\alpha=\\lambda\\alpha$，与“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n- (2) 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 把 $A^2\\alpha$ 用 $\\alpha,A\\alpha$ 线性表示，从而把 $A\\alpha$、$A(A\\alpha)$ 在基 $\\{\\alpha,A\\alpha\\}$ 下写出坐标，得到 $P^{-1}AP$。再看其特征值是否互异判断可对角化。\n\n【解答】\n\n**(1)** 反设 $\\alpha,\\,A\\alpha$ 线性相关。因 $\\alpha\\ne0$，必存在数 $\\lambda$ 使 $A\\alpha=\\lambda\\alpha$。这说明 $\\alpha$ 是 $A$ 的属于特征值 $\\lambda$ 的特征向量，与题设“$\\alpha$ 不是 $A$ 的特征向量”矛盾。\n\n故 $\\alpha,\\,A\\alpha$ 线性无关。又 $A$ 为 $2$ 阶矩阵，$P=(\\alpha,\\,A\\alpha)$ 的两列线性无关，$\\operatorname{rank}P=2$，所以 $P$ 可逆。$\\blacksquare$\n\n**(2)** 由 $A^2\\alpha+A\\alpha-6\\alpha=0$ 得\n$$A^2\\alpha=6\\alpha-A\\alpha.$$\n考察 $A$ 作用在 $P$ 的两列上，并在基 $\\{\\alpha,\\,A\\alpha\\}$ 下表示：\n$$A\\alpha=0\\cdot\\alpha+1\\cdot(A\\alpha),$$\n$$A(A\\alpha)=A^2\\alpha=6\\alpha-A\\alpha=6\\cdot\\alpha+(-1)\\cdot(A\\alpha).$$\n于是\n$$AP=A(\\alpha,\\,A\\alpha)=(A\\alpha,\\,A^2\\alpha)=(\\alpha,\\,A\\alpha)\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}=P\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix},$$\n两边左乘 $P^{-1}$：\n$$P^{-1}AP=\\begin{pmatrix}0&6\\\\1&-1\\end{pmatrix}.$$\n\n**判断相似对角化**：设 $B=P^{-1}AP$，$A$ 与 $B$ 相似，故二者同时（或同不）可对角化。求 $B$ 的特征值：\n$$\\det(B-\\lambda I)=\\begin{vmatrix}-\\lambda&6\\\\1&-1-\\lambda\\end{vmatrix}=\\lambda(\\lambda+1)-6=\\lambda^2+\\lambda-6=(\\lambda-2)(\\lambda+3)=0,$$\n得 $\\lambda_1=2,\\ \\lambda_2=-3$，是两个**互异**特征值。$2$ 阶矩阵有 $2$ 个不同特征值，必可对角化，故 $A$ 相似于对角矩阵\n$$A\\sim\\begin{pmatrix}2&0\\\\0&-3\\end{pmatrix}.$$\n\n所以 $A$ 可以相似对角化。",
       "wrong_options": {},
       "pitfalls": [
-        "先在该点求出内层 $u=0$，使外层因子 $\\dfrac{1}{1+u^2}=1$，否则容易漏掉这个系数。",
-        "$\\cos(x+y)$ 在求 $z_x$ 和 $z_y$ 时都出现，别只在一处求导。",
-        "$\\dfrac{\\partial}{\\partial y}(xy)=x$ 在 $x=0$ 处为 0，但 $\\cos(x+y)$ 的贡献仍在，结果 $z_y=-1$ 不为 0。"
+        "证 P 可逆的关键是“α 不是特征向量 ⇒ α 与 Aα 线性无关”，不能直接说 P 列不为零就可逆。",
+        "求 P^{-1}AP 用的是“Aα、A(Aα) 在基 {α,Aα} 下的坐标按列排成矩阵”，注意 A^2α=6α−Aα 给出第二列 (6,−1)^T，列序别写反。",
+        "判别对角化看 P^{-1}AP（与 A 相似）的特征值：2 阶有两个相异特征值即可对角化，无需再算特征向量。"
       ],
-      "key_point": "复合函数链式求偏导，先算该点内层值定因子，再套全微分公式。"
+      "key_point": "α 非特征向量 ⇒ {α,Aα} 是基从而 P 可逆；将 Aα、A^2α 在该基下取坐标得 P^{-1}AP，特征值相异即相似对角化。"
     }
   ]
 }

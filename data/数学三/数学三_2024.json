@@ -4,213 +4,6 @@
   "count": 22,
   "questions": [
     {
-      "id": 2450,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的和函数为 $\\ln (2+x)$ ，则 $\\displaystyle\\sum_{n=0}^{\\infty} n a_{2 n}=(\\quad)$",
-      "options": {
-        "A": "$-\\dfrac{1}{6}$",
-        "B": "$-\\dfrac{1}{3}$",
-        "C": "$\\dfrac{1}{6}$",
-        "D": "$\\dfrac{1}{3}$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n先由和函数 $\\ln(2+x)$ 反求幂级数系数 $a_n$，再代入 $\\sum n\\,a_{2n}$ 求和。求展开式用 $\\ln(1+u)=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{n}u^n$。求 $\\sum n a_{2n}$ 时，把 $a_{2n}$ 的通项写出来，它本身是一个等比型数项级数，直接用等比级数求和即可（也可用逐项求导的视角，但这里直接代入更干净）。\n\n【解答】\n\n第一步：求系数。\n\n$$\\ln(2+x)=\\ln\\!\\left[2\\left(1+\\frac{x}{2}\\right)\\right]=\\ln 2+\\ln\\!\\left(1+\\frac{x}{2}\\right).$$\n\n利用 $\\ln(1+u)=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{n}u^n\\\\;(|u|<1)$，取 $u=\\dfrac{x}{2}$：\n\n$$\\ln(2+x)=\\ln 2+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n}\\cdot\\frac{x^n}{2^n}=\\ln 2+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n\\,2^n}x^n.$$\n\n对比 $\\sum_{n=0}^{\\infty}a_n x^n$ 得 $a_0=\\ln 2$，且对 $n\\ge 1$，\n\n$$a_n=\\frac{(-1)^{n-1}}{n\\,2^n}.$$\n\n第二步：求 $a_{2n}$。将下标 $n$ 换为 $2n$（$n\\ge1$）：\n\n$$a_{2n}=\\frac{(-1)^{2n-1}}{2n\\cdot 2^{2n}}=\\frac{-1}{2n\\cdot 4^{n}}.$$\n\n第三步：求和。注意 $n=0$ 项为 $0\\cdot a_0=0$，故\n\n$$\\sum_{n=0}^{\\infty}n\\,a_{2n}=\\sum_{n=1}^{\\infty}n\\cdot\\frac{-1}{2n\\cdot 4^{n}}=-\\frac{1}{2}\\sum_{n=1}^{\\infty}\\frac{1}{4^{n}}.$$\n\n而 $\\sum_{n=1}^{\\infty}\\dfrac{1}{4^n}=\\dfrac{1/4}{1-1/4}=\\dfrac{1}{3}$，所以\n\n$$\\sum_{n=0}^{\\infty}n\\,a_{2n}=-\\frac{1}{2}\\cdot\\frac{1}{3}=-\\frac{1}{6}.$$\n\n故选 A。",
-      "wrong_options": {
-        "B": "$-\\dfrac13$ 漏掉了 $na_{2n}$ 中 $n$ 与分母 $2n$ 约分后产生的系数 $\\frac12$，直接把 $\\sum\\frac1{4^n}=\\frac13$ 取了负号。",
-        "C": "$\\dfrac16$ 符号错。$(-1)^{2n-1}=-1$，$a_{2n}$ 为负，求和结果应为负。",
-        "D": "$\\dfrac13$ 既弄错符号又漏掉系数 $\\frac12$。"
-      },
-      "pitfalls": [
-        "求 $a_{2n}$ 时要把通项 $a_n$ 里的 $n$ 整体替换为 $2n$，注意 $(-1)^{2n-1}=-1$ 恒为负、$2^{2n}=4^n$。",
-        "$na_{2n}$ 中的 $n$ 会与分母里的 $2n$ 约掉，剩下系数 $\\frac12$，别忘了这一步。",
-        "求和下标从 $n=0$ 起，但 $n=0$ 项为 $0$，实际从 $n=1$ 求等比级数。"
-      ],
-      "key_point": "先用 $\\ln(1+x/2)$ 标准展开定 $a_n$，代入 $a_{2n}$ 后 $na_{2n}$ 约简成等比级数求和。"
-    },
-    {
-      "id": 2457,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X, Y$ 相互独立，且均服从参数为 $\\lambda$ 的指数分布，令 $Z=|X-Y|$ ，则下列随机变量与 $Z$ 同分布的是（ ）",
-      "options": {
-        "A": "$X+Y$",
-        "B": "$\\dfrac{X+Y}{2}$",
-        "C": "$2 X$",
-        "D": "$X$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n$X,Y$ 独立同服从参数 $\\lambda$ 的指数分布，问 $Z=|X-Y|$ 与谁同分布。判定同分布最稳妥的办法是直接求出 $Z$ 的分布函数（或生存函数 $P(Z>z)$）。结论上，由指数分布的无记忆性可预判 $Z$ 仍是参数 $\\lambda$ 的指数分布，从而与 $X$ 同分布。下面给出严格推导。\n\n【解答】\n\n对 $z\\ge 0$，由对称性 $P(Z>z)=2P(X-Y>z)=2P(X>Y+z)$。在 $Y=y$ 条件下 $X$ 独立，利用指数分布生存函数 $P(X>t)=e^{-\\lambda t}\\\\ (t\\ge 0)$：\n$$P(Z>z)=2\\int_0^{\\infty}\\lambda e^{-\\lambda y}\\,P(X>y+z)\\,dy=2\\int_0^{\\infty}\\lambda e^{-\\lambda y}e^{-\\lambda(y+z)}\\,dy.$$\n提出 $e^{-\\lambda z}$：\n$$P(Z>z)=2e^{-\\lambda z}\\int_0^{\\infty}\\lambda e^{-2\\lambda y}\\,dy=2e^{-\\lambda z}\\cdot\\frac12=e^{-\\lambda z}.$$\n因此 $P(Z\\le z)=1-e^{-\\lambda z}\\\\ (z\\ge 0)$，即 $Z\\sim E(\\lambda)$，与 $X$ 的分布完全相同。\n\n这也可由无记忆性直观理解：以 $\\min(X,Y)$ 为起点，先发生的那个变量已“用掉”，剩下那个变量到再次发生还需等待的时间，因无记忆性仍服从 $E(\\lambda)$，而 $Z$ 正是这段等待时间。\n\n再排除其他选项：$X+Y$ 服从参数 $\\lambda$、形状 2 的伽马分布，方差为 $\\dfrac{2}{\\lambda^2}$，与 $Z$ 不同；$\\dfrac{X+Y}{2}$ 与 $2X$ 的均值分别为 $\\dfrac1\\lambda$ 和 $\\dfrac2\\lambda$，前者均值虽对但并非指数分布、后者均值都不对。故只有 $X$ 与 $Z$ 同分布，选 D。",
-      "wrong_options": {
-        "A": "$X+Y\\sim\\Gamma(2,\\lambda)$，其密度在 0 处为 0 且 $E(X+Y)=\\dfrac2\\lambda$，与 $Z\\sim E(\\lambda)$（均值 $\\dfrac1\\lambda$）不同。",
-        "B": "$\\dfrac{X+Y}{2}$ 虽然均值为 $\\dfrac1\\lambda$ 与 $Z$ 相同，但它是伽马分布的线性缩放，方差为 $\\dfrac{1}{2\\lambda^2}\\ne\\dfrac{1}{\\lambda^2}$，并非指数分布。",
-        "C": "$2X\\sim E\\left(\\dfrac\\lambda2\\right)$，均值为 $\\dfrac2\\lambda$，是参数减半的指数分布，与 $Z$ 不同。"
-      },
-      "pitfalls": [
-        "“均值相同”不等于“同分布”，B 选项均值对但分布不对，必须比较整条分布（生存函数）。",
-        "积分中第二个指数的指数应为 $-\\lambda(y+z)$，别漏掉 $z$ 这一项。",
-        "对称性给出的因子 2 不能丢，否则会误得 $\\dfrac12 e^{-\\lambda z}$。"
-      ],
-      "key_point": "两独立同参指数变量之差的绝对值仍服从同参数指数分布——由生存函数 $P(Z>z)=e^{-\\lambda z}$ 或无记忆性即可断定。"
-    },
-    {
-      "id": 2463,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 16,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设随机试验每次成功的概率为 $p$, 现进行三次独立重复实验, 已知至少成功一次的条件下全部成功的概率为 $\\dfrac{4}{13}$, 则 $p=\\qquad$",
-      "options": {},
-      "answer": "$\\dfrac{2}{3}$",
-      "analysis": "【分析】\n\n三次独立重复试验，每次成功概率为 $p$。设事件 $A$=「至少成功一次」，$B$=「全部成功」。注意 $B\\subset A$，故 $AB=B$。由条件概率公式 $P(B\\mid A)=\\dfrac{P(B)}{P(A)}$。其中 $P(B)=p^3$，$P(A)=1-(1-p)^3$（用对立事件「一次都不成功」）。令此比值等于 $\\dfrac{4}{13}$，解关于 $p$ 的方程即可。\n\n【解答】\n\n由 $B\\subset A$ 得 $P(AB)=P(B)=p^3$，且 $P(A)=1-P(\\text{全败})=1-(1-p)^3$。于是\n$$P(B\\mid A)=\\frac{p^3}{1-(1-p)^3}=\\frac{4}{13}.$$\n\n展开 $1-(1-p)^3=3p-3p^2+p^3$，方程化为\n$$13p^3=4(3p-3p^2+p^3)=12p-12p^2+4p^3,$$\n$$9p^3+12p^2-12p=0.$$\n\n因 $0<p\\leqslant 1$，$p\\neq 0$，两边除以 $3p$：\n$$3p^2+4p-4=0\\ \\Longrightarrow\\ p=\\frac{-4\\pm\\sqrt{16+48}}{6}=\\frac{-4\\pm 8}{6}.$$\n\n取正根 $p=\\dfrac{4}{6}=\\dfrac{2}{3}$（另一根 $-2$ 舍去）。\n\n验证：$p=\\tfrac23$ 时 $p^3=\\tfrac{8}{27}$，$1-(1-p)^3=1-\\tfrac{1}{27}=\\tfrac{26}{27}$，比值 $=\\dfrac{8/27}{26/27}=\\dfrac{8}{26}=\\dfrac{4}{13}$，正确。\n\n故 $p=\\dfrac{2}{3}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "因 $B\\subset A$，$P(AB)=P(B)=p^3$，不要错算交事件。",
-        "$P(\\text{至少一次})$ 用对立事件 $1-(1-p)^3$，别直接展开成繁琐组合式。",
-        "解出二次方程后舍去负根，并验证落在 $(0,1]$ 内。"
-      ],
-      "key_point": "条件概率 $P(\\text{全成功}\\mid\\text{至少一次})=\\dfrac{p^3}{1-(1-p)^3}$，列方程解 $p$ 即可。"
-    },
-    {
-      "id": 2466,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 20,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 具有二阶导数，且 $f^{\\prime}(0)=f^{\\prime}(1),\\left|f^{\\prime \\prime}(x)\\right| \\leqslant 1$ ，证明:\r\n\r\n(1) 当 $x \\in(0,1)$ 时，$\\displaystyle |f(x)-f(0)(1-x)-f(1) x| \\leqslant \\frac{x(1-x)}{2}$;\r\n\r\n(2) $\\displaystyle \\left|\\int_0^1 f(x) \\mathrm{d} x-\\frac{f(0)+f(1)}{2}\\right| \\leqslant \\frac{1}{12}$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】第 (1) 问要把 $f(x)$ 与端点值 $f(0),f(1)$ 的线性组合作比较，自然想到在动点 $x$ 处对两个端点作带拉格朗日余项的一阶泰勒展开，二阶余项里出现 $f''$，再用 $|f''|\\le1$ 放缩。第 (2) 问是 (1) 的“积分版”：注意到 $f(0)(1-x)+f(1)x$ 在 $[0,1]$ 上的积分恰是梯形值 $\\dfrac{f(0)+f(1)}{2}$，于是把 (1) 的逐点不等式两端在 $[0,1]$ 上积分即可。（条件 $f'(0)=f'(1)$ 在本解法中不被用到，结论对 $|f''|\\le1$ 已成立。）\n\n【解答】\n\n（1）固定 $x\\in(0,1)$，分别对端点 $0$ 与 $1$ 在点 $x$ 处作一阶泰勒展开（带拉格朗日余项），存在 $\\xi_1\\in(0,x)$，$\\xi_2\\in(x,1)$ 使\n$$f(0)=f(x)+f'(x)(0-x)+\\frac{f''(\\xi_1)}{2}(0-x)^2=f(x)-f'(x)x+\\frac{f''(\\xi_1)}{2}x^2,$$\n$$f(1)=f(x)+f'(x)(1-x)+\\frac{f''(\\xi_2)}{2}(1-x)^2.$$\n以 $(1-x)$、$x$ 为权作组合：\n$$f(0)(1-x)+f(1)x=f(x)\\big[(1-x)+x\\big]+f'(x)\\big[-x(1-x)+(1-x)x\\big]+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n中间 $f'(x)$ 的系数 $-x(1-x)+x(1-x)=0$ 相消，故\n$$f(0)(1-x)+f(1)x=f(x)+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n移项：\n$$f(x)-f(0)(1-x)-f(1)x=-\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n用 $|f''|\\le1$ 及 $x,1-x>0$ 放缩：\n$$\\big|f(x)-f(0)(1-x)-f(1)x\\big|\\le\\frac12\\big[x^2(1-x)+(1-x)^2x\\big]=\\frac12\\,x(1-x)\\big[x+(1-x)\\big]=\\frac{x(1-x)}{2}.$$\n这对 $x\\in(0,1)$ 成立，第 (1) 问得证。\n\n（2）记 $g(x)=f(x)-f(0)(1-x)-f(1)x$，由 (1) 知 $|g(x)|\\le\\dfrac{x(1-x)}{2}$（在 $x=0,1$ 处两端均为 $0$，仍成立）。先算线性部分的积分：\n$$\\int_0^1\\big[f(0)(1-x)+f(1)x\\big]dx=f(0)\\cdot\\frac12+f(1)\\cdot\\frac12=\\frac{f(0)+f(1)}{2},$$\n故\n$$\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}=\\int_0^1 g(x)\\,dx.$$\n于是\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|=\\left|\\int_0^1 g(x)\\,dx\\right|\\le\\int_0^1|g(x)|\\,dx\\le\\int_0^1\\frac{x(1-x)}{2}\\,dx.$$\n而 $\\displaystyle\\int_0^1 x(1-x)\\,dx=\\frac12-\\frac13=\\frac16$，故上式 $\\le\\dfrac12\\cdot\\dfrac16=\\dfrac{1}{12}$。\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|\\le\\frac{1}{12}.$$\n证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "（1）要在动点 $x$ 处对两个端点展开（展开中心是 $x$，不是 $0$），这样 $f'(x)$ 项才会因加权相消。",
-        "放缩时 $x^2(1-x)+(1-x)^2x$ 要提取公因子 $x(1-x)$ 得 $x(1-x)$，别误算系数。",
-        "（2）的关键是认出 $\\int_0^1[f(0)(1-x)+f(1)x]dx=\\dfrac{f(0)+f(1)}{2}$，从而把第 (2) 问归结为对 (1) 的逐点估计取积分。"
-      ],
-      "key_point": "端点值的线性插值差用“以动点为中心的二阶泰勒余项”估计；积分型不等式由逐点不等式两端积分得到（梯形公式误差思路）。"
-    },
-    {
-      "id": 2469,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设总体 $X \\sim U(0, \\theta), \\theta>0$ 未知, $X_1, X_2 \\cdots X_n$ 为简单随机样本, $X_{(n)}=\\max \\left(X_1, X_2 \\cdots X_n\\right),  T_c=c X_{(n)}$\r\n\r\n(1) 求 $c$, 得 $T_c$ 为 $\\theta$ 的无偏估计; (数三: $E\\left(T_c\\right)=\\theta$)\r\n\r\n(2) 记 $h(c)=E\\left(T_c-\\theta\\right)^2$, 求 $c$ 使得 $h(c)$ 取最小值",
-      "options": {},
-      "answer": "(1) $\\dfrac{n+1}{n}$;\r\n\r\n(2) $\\dfrac{n+2}{n+1}$",
-      "analysis": "【分析】\n\n本题考查最大次序统计量 $X_{(n)}=\\max\\{X_1,\\dots,X_n\\}$ 的分布及其矩。核心是先写出 $X_{(n)}$ 的分布函数与密度，求出 $E(X_{(n)})$ 与 $E(X_{(n)}^2)$。第 (1) 问用无偏性 $E(T_c)=\\theta$ 解出 $c$；第 (2) 问把均方误差 $h(c)=E(T_c-\\theta)^2$ 展开成关于 $c$ 的二次函数，对 $c$ 求导（或配方）取最小值。注意无偏估计并不一定使均方误差最小，这正是本题的考点。\n\n【解答】\n\n因 $X\\sim U(0,\\theta)$，单个 $X_i$ 的分布函数为 $F(x)=\\dfrac{x}{\\theta}\\ (0\\le x\\le\\theta)$。于是 $X_{(n)}$ 的分布函数为\n\n$$F_{(n)}(x)=\\left(\\dfrac{x}{\\theta}\\right)^{n},\\quad 0\\le x\\le\\theta,$$\n\n密度为\n\n$$f_{(n)}(x)=\\dfrac{n x^{n-1}}{\\theta^{n}},\\quad 0\\le x\\le\\theta.$$\n\n由此\n\n$$E\\big(X_{(n)}\\big)=\\int_0^{\\theta} x\\cdot\\dfrac{n x^{n-1}}{\\theta^{n}}\\,dx=\\dfrac{n}{\\theta^{n}}\\cdot\\dfrac{\\theta^{n+1}}{n+1}=\\dfrac{n}{n+1}\\,\\theta,$$\n\n$$E\\big(X_{(n)}^{2}\\big)=\\int_0^{\\theta} x^{2}\\cdot\\dfrac{n x^{n-1}}{\\theta^{n}}\\,dx=\\dfrac{n}{\\theta^{n}}\\cdot\\dfrac{\\theta^{n+2}}{n+2}=\\dfrac{n}{n+2}\\,\\theta^{2}.$$\n\n**(1)** 由 $T_c=cX_{(n)}$ 无偏，需 $E(T_c)=c\\,E(X_{(n)})=c\\cdot\\dfrac{n}{n+1}\\theta=\\theta$，故\n\n$$c=\\dfrac{n+1}{n}.$$\n\n**(2)** 展开均方误差\n\n$$h(c)=E\\big(cX_{(n)}-\\theta\\big)^2=c^{2}E\\big(X_{(n)}^{2}\\big)-2c\\theta E\\big(X_{(n)}\\big)+\\theta^{2}=\\dfrac{n}{n+2}\\theta^{2}c^{2}-\\dfrac{2n}{n+1}\\theta^{2}c+\\theta^{2}.$$\n\n这是关于 $c$ 的开口向上的二次函数。令\n\n$$h'(c)=\\dfrac{2n}{n+2}\\theta^{2}c-\\dfrac{2n}{n+1}\\theta^{2}=0,$$\n\n解得\n\n$$c=\\dfrac{n+2}{n+1}.$$\n\n因 $h''(c)=\\dfrac{2n}{n+2}\\theta^2>0$，该点为最小值点。故当 $c=\\dfrac{n+2}{n+1}$ 时 $h(c)$ 取最小值。\n\n注意此处 $\\dfrac{n+2}{n+1}\\neq\\dfrac{n+1}{n}$，即使均方误差最小的系数与无偏系数不同，说明无偏估计未必是均方误差最优的。",
-      "wrong_options": {},
-      "pitfalls": [
-        "把 $X_{(n)}$ 的密度写错：分布函数是 $(x/\\theta)^n$，密度要再乘上幂次 $n$，得 $nx^{n-1}/\\theta^n$。",
-        "第(2)问直接套用第(1)问的无偏系数，误以为无偏就最优；均方误差最小的 $c$ 另有其值。",
-        "积分上下限应为 $0$ 到 $\\theta$，不要漏掉 $\\theta^n$ 分母。"
-      ],
-      "key_point": "先求 $X_{(n)}$ 密度得一、二阶矩，无偏性定 $c$；均方误差是 $c$ 的二次函数，求导取最小。"
-    },
-    {
-      "id": 2475,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $f(x, y)$ 是连续函数，则 $\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{2}} \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y=(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\int_{\\frac{1}{2}}^1 \\mathrm{d} y \\int_{\\frac{\\pi}{6}}^{\\operatorname{arc} \\sin y} f(x, y) \\mathrm{d} x$",
-        "B": "$\\displaystyle \\int_{\\frac{1}{2}}^1 \\mathrm{d} y \\int_{\\operatorname{arc} \\sin y}^{\\frac{\\pi}{2}} f(x, y) \\mathrm{d} x$",
-        "C": "$\\displaystyle \\int_0^{\\frac{1}{2}} \\mathrm{d} y \\int_{\\frac{\\pi}{6}}^{\\arcsin y} f(x, y) \\mathrm{d} x$",
-        "D": "$\\displaystyle \\int_0^{\\frac{1}{2}} \\mathrm{d} y \\int_{\\operatorname{arc} \\sin y}^{\\frac{\\pi}{2}} f(x, y) \\mathrm{d} x$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n交换二次积分次序的标准方法：先画出积分区域，再把“先 $y$ 后 $x$”改为“先 $x$ 后 $y$”。原积分区域由 $\\dfrac{\\pi}{6}\\le x\\le\\dfrac{\\pi}{2}$、$\\sin x\\le y\\le 1$ 确定。注意 $\\sin x$ 在 $[\\pi/6,\\pi/2]$ 上单调递增，端点处 $\\sin\\dfrac{\\pi}{6}=\\dfrac12$、$\\sin\\dfrac{\\pi}{2}=1$，故 $y$ 的总范围是 $\\left[\\dfrac12,1\\right]$。\n\n【解答】\n\n区域 $D=\\left\\{(x,y):\\dfrac{\\pi}{6}\\le x\\le\\dfrac{\\pi}{2},\\ \\sin x\\le y\\le 1\\right\\}$。\n\n下边界曲线 $y=\\sin x$ 过点 $\\left(\\dfrac{\\pi}{6},\\dfrac12\\right)$ 与 $\\left(\\dfrac{\\pi}{2},1\\right)$，上边界为水平线 $y=1$，左边界为竖直线 $x=\\dfrac{\\pi}{6}$。由于 $\\sin x$ 在该段单调增，$y$ 的整体取值范围为 $\\dfrac12\\le y\\le 1$。\n\n改为先对 $x$ 积分：固定 $y\\in\\left[\\dfrac12,1\\right]$，由 $\\sin x\\le y$ 得 $x\\le\\arcsin y$（因 $x\\in[\\pi/6,\\pi/2]$ 落在 $\\sin$ 的单调增区间，可取反函数），又有左边界 $x\\ge\\dfrac{\\pi}{6}$。故对每个 $y$，$x$ 从 $\\dfrac{\\pi}{6}$ 到 $\\arcsin y$。于是\n\n$$\\int_{\\pi/6}^{\\pi/2}dx\\int_{\\sin x}^{1}f(x,y)\\,dy=\\int_{1/2}^{1}dy\\int_{\\pi/6}^{\\arcsin y}f(x,y)\\,dx.$$\n\n这正是选项 **A**。\n\n**验证**：把 A 再换回去。A 中 $\\dfrac12\\le y\\le1$、$\\dfrac{\\pi}{6}\\le x\\le\\arcsin y$。由 $x\\le\\arcsin y$ 得 $\\sin x\\le y$（$x$ 在单调增区间），即 $y\\ge\\sin x$；又 $y\\le1$。$x$ 的范围：由 $x\\ge\\pi/6$ 及存在 $y\\ge\\sin x$ 的 $y\\le1$ 知 $\\sin x\\le1$ 恒成立，且 $\\arcsin y\\le\\pi/2$，故 $x\\le\\pi/2$。区域与原式完全一致，验证无误。",
-      "wrong_options": {
-        "B": "内层 $x$ 范围写成 $\\arcsin y$ 到 $\\dfrac{\\pi}{2}$，对应的是 $\\sin x\\ge y$ 的另一侧区域，与原区域 $\\sin x\\le y$ 相反。",
-        "C": "外层 $y$ 范围取成 $0$ 到 $\\dfrac12$，错误；区域内 $y$ 的最小值是下边界端点 $\\sin\\dfrac{\\pi}{6}=\\dfrac12$，不会低于 $\\dfrac12$。",
-        "D": "$y$ 范围 $0$ 到 $\\dfrac12$ 与内层 $x$ 方向都错，双重出错，不对应原区域。"
-      },
-      "pitfalls": [
-        "$y$ 的下限是 $\\dfrac12$（即 $\\sin\\dfrac{\\pi}{6}$）而非 $0$，因为下边界曲线最低点在 $x=\\pi/6$ 处取 $1/2$。",
-        "由 $\\sin x\\le y$ 解 $x$ 时，因 $x\\in[\\pi/6,\\pi/2]$ 在 $\\sin$ 单调增区间，得 $x\\le\\arcsin y$，方向不要弄反。",
-        "务必画区域图确认上下/左右边界，凭直觉换限极易选成 B 或 D。"
-      ],
-      "key_point": "画出区域后按 $y$ 分层：$\\dfrac12\\le y\\le1$，$x$ 从左边界 $\\dfrac{\\pi}{6}$ 到曲线 $x=\\arcsin y$。"
-    },
-    {
-      "id": 2477,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为三阶矩阵， $\\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$, 若 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{P}^2=\\left(\\begin{array}{ccc}a+2 c & 0 & c \\\\ 0 & b & 0 \\\\ 2 c & 0 & c\\end{array}\\right)$, 则 $\\boldsymbol{A}=(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{lll}c & 0 & 0 \\\\ 0 & a & 0 \\\\ 0 & 0 & b\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{lll}b & 0 & 0 \\\\ 0 & c & 0 \\\\ 0 & 0 & a\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{lll}a & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & c\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{lll}c & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & a\\end{array}\\right)$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n$\\boldsymbol{P}$ 是初等矩阵：它由单位阵把第 1 行的 1 倍加到第 3 行（即 $r_3+r_1$）得到。回顾初等矩阵的左右乘规则——左乘做行变换、右乘做列变换。本题给出 $\\boldsymbol{P}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{P}^2=\\boldsymbol{B}$，最稳妥的做法是直接解矩阵方程 $\\boldsymbol{A}=(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}(\\boldsymbol{P}^2)^{-1}$，初等矩阵的逆仍是初等矩阵，且 $\\boldsymbol{P}^2$ 易求，全程只做几次行列变换即可。\n\n【解答】\n\n先求所需逆矩阵。$\\boldsymbol{P}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\1&0&1\\end{pmatrix}$，其逆把 $r_3+r_1$ 还原为 $r_3-r_1$：\n$$\\boldsymbol{P}^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-1&0&1\\end{pmatrix},\\qquad (\\boldsymbol{P}^{\\mathrm{T}})^{-1}=(\\boldsymbol{P}^{-1})^{\\mathrm{T}}=\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}.$$\n\n又 $\\boldsymbol{P}^2=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\2&0&1\\end{pmatrix}$，故 $(\\boldsymbol{P}^2)^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}$。\n\n记 $\\boldsymbol{B}=\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}$。先算 $(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}$（即 $\\boldsymbol{B}$ 的 $r_1-r_3$）：\n$$(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}=\\begin{pmatrix}a+2c-2c&0&c-c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c&0&c\\end{pmatrix}.$$\n\n再右乘 $(\\boldsymbol{P}^2)^{-1}$（即列变换 $c_1-2c_3$）：\n$$\\boldsymbol{A}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c&0&c\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c-2c&0&c\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\0&0&c\\end{pmatrix}.$$\n\n故 $\\boldsymbol{A}=\\mathrm{diag}(a,b,c)$，选 **C**。（可回代验证：$\\boldsymbol{P}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{P}^2$ 恰等于题给 $\\boldsymbol{B}$。）",
-      "wrong_options": {
-        "A": "把对角元顺序排错为 $c,a,b$，是没厘清 $\\boldsymbol{P}^{\\mathrm{T}}$ 与 $\\boldsymbol{P}^2$ 各自对应行/列变换的方向。",
-        "B": "对角元排成 $b,c,a$，同样是行列变换方向或顺序判断错误。",
-        "D": "对角元排成 $c,b,a$，把第 1、3 个位置颠倒，属误把 $r_1-r_3$ 与 $c_1-2c_3$ 的作用张冠李戴。"
-      },
-      "pitfalls": [
-        "$\\boldsymbol{P}^{\\mathrm{T}}$ 的逆等于 $\\boldsymbol{P}$ 的逆的转置，别直接对 $\\boldsymbol{P}$ 转置当成逆。",
-        "$(\\boldsymbol{P}^2)^{-1}=(\\boldsymbol{P}^{-1})^2$，注意 $\\boldsymbol{P}^2$ 第 3 行第 1 列是 $2$ 不是 $1$。",
-        "左乘做行变换、右乘做列变换，两侧作用对象不同，顺序不能混。"
-      ],
-      "key_point": "把矩阵方程解成 $\\boldsymbol{A}=(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}(\\boldsymbol{P}^2)^{-1}$，用初等矩阵的行列变换逐步消元。"
-    },
-    {
-      "id": 2481,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$f(x, y)=2 x^3-9 x^2-6 y^4+12 x+24 y$ 的极值点是 $(\\qquad)$",
-      "options": {},
-      "answer": "$(1,1)$",
-      "analysis": "【分析】\n\n本题求二元函数的无条件极值点。标准步骤：先求一阶偏导 $f_x,f_y$，联立 $f_x=0,f_y=0$ 求出所有驻点；再求二阶偏导，用 $AC-B^2$ 判别法（$A=f_{xx},B=f_{xy},C=f_{yy}$）逐个判断：$AC-B^2>0$ 且 $A<0$ 为极大值点，$A>0$ 为极小值点；$AC-B^2<0$ 为鞍点（非极值）；$AC-B^2=0$ 需另判。由于 $f$ 关于 $x,y$ 可分离，偏导各自只含一个变量，求驻点较简单。\n\n【解答】\n\n**第一步：求驻点。**\n$$f_x=6x^2-18x+12=6(x^2-3x+2)=6(x-1)(x-2),$$\n$$f_y=-24y^3+24=-24(y^3-1).$$\n令 $f_x=0$ 得 $x=1$ 或 $x=2$；令 $f_y=0$ 得 $y^3=1$，即 $y=1$。\n故驻点为 $(1,1)$ 与 $(2,1)$。\n\n**第二步：二阶偏导。**\n$$f_{xx}=12x-18,\\qquad f_{yy}=-72y^2,\\qquad f_{xy}=0.$$\n\n**第三步：判别法。**\n\n在 $(1,1)$：$A=f_{xx}=12-18=-6$，$C=f_{yy}=-72$，$B=0$。\n$$AC-B^2=(-6)(-72)-0=432>0,\\quad A=-6<0,$$\n故 $(1,1)$ 为**极大值点**，极大值 $f(1,1)=2-9-6+12+24=23$。\n\n在 $(2,1)$：$A=f_{xx}=24-18=6$，$C=f_{yy}=-72$，$B=0$。\n$$AC-B^2=(6)(-72)-0=-432<0,$$\n故 $(2,1)$ 为鞍点，不是极值点。\n\n综上，$f(x,y)$ 的极值点是 $(1,1)$（且为极大值点）。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$f_x=0$ 解得 $x=1,2$ 两个值，对应两个驻点，必须对每个驻点都做判别，不能漏掉 $(2,1)$ 而误以为它也是极值点。",
-        "$(2,1)$ 处 $AC-B^2=-432<0$ 为鞍点，应排除；本题只有 $(1,1)$ 是极值点。",
-        "$AC-B^2>0$ 时再看 $A$ 的符号定极大/极小，本题 $A<0$ 为极大值，别写反。"
-      ],
-      "key_point": "联立一阶偏导求驻点，再用 $AC-B^2$ 判别：本题两驻点中仅 $(1,1)$ 满足 $AC-B^2>0$ 且 $A<0$ 为极大值点，$(2,1)$ 为鞍点。"
-    },
-    {
-      "id": 2485,
-      "paper": "数学三",
-      "year": 2024,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设平面有界区域 $D$ 位于第一象限, 由曲线 $x y=\\dfrac{1}{3}, x y=3$ 与直线 $y=\\dfrac{1}{3} x, y=3 x$ 围成的平面区域, 计算 $\\displaystyle \\iint\\limits_D(1+x-y) \\mathrm{d} x \\mathrm{d} y$",
-      "options": {},
-      "answer": "$\\dfrac{8}{3} \\ln 3$",
-      "analysis": "【分析】\n\n积分区域 $D$ 由双曲线 $xy=\\tfrac13,\\\\ xy=3$ 与过原点直线 $y=\\tfrac13 x,\\\\ y=3x$ 围成，位于第一象限。两点观察：\n\n1. **对称性。** 把 $x,y$ 互换，曲线 $xy=c$ 不变，直线 $y=\\tfrac13 x$ 与 $y=3x$ 互相交换（因为它们斜率互为倒数）。故 $D$ 关于直线 $y=x$ 对称。于是 $\\iint_D x\\,\\mathrm dx\\mathrm dy=\\iint_D y\\,\\mathrm dx\\mathrm dy$，从而 $\\iint_D(x-y)\\,\\mathrm dx\\mathrm dy=0$。被积函数中含 $x-y$ 的部分自动消去，只剩常数 $1$，即积分等于 $D$ 的面积。\n\n2. **换元算面积。** 令 $u=xy,\\\\ v=\\dfrac{y}{x}$，则区域变为矩形 $u\\in[\\tfrac13,3],\\\\ v\\in[\\tfrac13,3]$，用雅可比行列式把面积积出来。\n\n【解答】\n\n**第一步：利用对称性化简。**\n\n区域 $D$ 关于 $y=x$ 对称，故\n$$\\iint_D x\\,\\mathrm dx\\mathrm dy=\\iint_D y\\,\\mathrm dx\\mathrm dy\\\\ \\Longrightarrow\\\\ \\iint_D (x-y)\\,\\mathrm dx\\mathrm dy=0.$$\n因此\n$$\\iint_D(1+x-y)\\,\\mathrm dx\\mathrm dy=\\iint_D 1\\,\\mathrm dx\\mathrm dy=\\text{面积}(D).$$\n\n**第二步：换元求面积。** 令\n$$u=xy,\\qquad v=\\frac{y}{x}\\quad(x>0,y>0),$$\n则 $D$ 对应 $u\\in[\\tfrac13,3],\\\\ v\\in[\\tfrac13,3]$。反解：由 $uv=y^2,\\\\ u/v=x^2$ 得 $x=\\sqrt{u/v},\\\\ y=\\sqrt{uv}$。\n\n计算雅可比（先算正变换再取倒数较快）：\n$$\\frac{\\partial(u,v)}{\\partial(x,y)}=\\begin{vmatrix} y & x \\\\[2pt] -\\dfrac{y}{x^2} & \\dfrac{1}{x}\\end{vmatrix}=\\frac{y}{x}+\\frac{y}{x}=\\frac{2y}{x}=2v.$$\n所以\n$$\\left|\\frac{\\partial(x,y)}{\\partial(u,v)}\\right|=\\frac{1}{|2v|}=\\frac{1}{2v},\\qquad \\mathrm dx\\,\\mathrm dy=\\frac{1}{2v}\\,\\mathrm du\\,\\mathrm dv.$$\n\n**第三步：积分。**\n$$\\text{面积}(D)=\\int_{1/3}^{3}\\!\\!\\int_{1/3}^{3}\\frac{1}{2v}\\,\\mathrm du\\,\\mathrm dv=\\frac12\\left(\\int_{1/3}^{3}\\mathrm du\\right)\\left(\\int_{1/3}^{3}\\frac{\\mathrm dv}{v}\\right).$$\n其中\n$$\\int_{1/3}^{3}\\mathrm du=3-\\frac13=\\frac83,\\qquad \\int_{1/3}^{3}\\frac{\\mathrm dv}{v}=\\ln 3-\\ln\\frac13=2\\ln 3.$$\n故\n$$\\iint_D(1+x-y)\\,\\mathrm dx\\mathrm dy=\\frac12\\cdot\\frac83\\cdot 2\\ln 3=\\frac{8}{3}\\ln 3.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "看清区域对 y=x 对称的依据：xy=c 不变、两条直线斜率 1/3 与 3 互为倒数恰好互换",
-        "换元面积元是 dxdy = 1/(2v) du dv，雅可比要取倒数且带绝对值，别漏 1/2",
-        "∫ dv/v 的下限是 1/3，ln3 − ln(1/3) = 2ln3，不要算成 ln3"
-      ],
-      "key_point": "先用 y=x 对称性消去 ∬(x−y)=0 把积分降为求面积，再用 u=xy、v=y/x 把区域拉成矩形积出。"
-    },
-    {
       "id": 2524,
       "paper": "数学三",
       "year": 2024,
@@ -267,6 +60,62 @@
       "key_point": "区间长为整数倍周期时，周期函数定积分与起点无关，$I=k\\int_0^{\\pi}|\\sin x|\\,dx=2k$。"
     },
     {
+      "id": 2475,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x, y)$ 是连续函数，则 $\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{2}} \\mathrm{d} x \\int_{\\sin x}^1 f(x, y) \\mathrm{d} y=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{\\frac{1}{2}}^1 \\mathrm{d} y \\int_{\\frac{\\pi}{6}}^{\\operatorname{arc} \\sin y} f(x, y) \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_{\\frac{1}{2}}^1 \\mathrm{d} y \\int_{\\operatorname{arc} \\sin y}^{\\frac{\\pi}{2}} f(x, y) \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_0^{\\frac{1}{2}} \\mathrm{d} y \\int_{\\frac{\\pi}{6}}^{\\arcsin y} f(x, y) \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_0^{\\frac{1}{2}} \\mathrm{d} y \\int_{\\operatorname{arc} \\sin y}^{\\frac{\\pi}{2}} f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n交换二次积分次序的标准方法：先画出积分区域，再把“先 $y$ 后 $x$”改为“先 $x$ 后 $y$”。原积分区域由 $\\dfrac{\\pi}{6}\\le x\\le\\dfrac{\\pi}{2}$、$\\sin x\\le y\\le 1$ 确定。注意 $\\sin x$ 在 $[\\pi/6,\\pi/2]$ 上单调递增，端点处 $\\sin\\dfrac{\\pi}{6}=\\dfrac12$、$\\sin\\dfrac{\\pi}{2}=1$，故 $y$ 的总范围是 $\\left[\\dfrac12,1\\right]$。\n\n【解答】\n\n区域 $D=\\left\\{(x,y):\\dfrac{\\pi}{6}\\le x\\le\\dfrac{\\pi}{2},\\ \\sin x\\le y\\le 1\\right\\}$。\n\n下边界曲线 $y=\\sin x$ 过点 $\\left(\\dfrac{\\pi}{6},\\dfrac12\\right)$ 与 $\\left(\\dfrac{\\pi}{2},1\\right)$，上边界为水平线 $y=1$，左边界为竖直线 $x=\\dfrac{\\pi}{6}$。由于 $\\sin x$ 在该段单调增，$y$ 的整体取值范围为 $\\dfrac12\\le y\\le 1$。\n\n改为先对 $x$ 积分：固定 $y\\in\\left[\\dfrac12,1\\right]$，由 $\\sin x\\le y$ 得 $x\\le\\arcsin y$（因 $x\\in[\\pi/6,\\pi/2]$ 落在 $\\sin$ 的单调增区间，可取反函数），又有左边界 $x\\ge\\dfrac{\\pi}{6}$。故对每个 $y$，$x$ 从 $\\dfrac{\\pi}{6}$ 到 $\\arcsin y$。于是\n\n$$\\int_{\\pi/6}^{\\pi/2}dx\\int_{\\sin x}^{1}f(x,y)\\,dy=\\int_{1/2}^{1}dy\\int_{\\pi/6}^{\\arcsin y}f(x,y)\\,dx.$$\n\n这正是选项 **A**。\n\n**验证**：把 A 再换回去。A 中 $\\dfrac12\\le y\\le1$、$\\dfrac{\\pi}{6}\\le x\\le\\arcsin y$。由 $x\\le\\arcsin y$ 得 $\\sin x\\le y$（$x$ 在单调增区间），即 $y\\ge\\sin x$；又 $y\\le1$。$x$ 的范围：由 $x\\ge\\pi/6$ 及存在 $y\\ge\\sin x$ 的 $y\\le1$ 知 $\\sin x\\le1$ 恒成立，且 $\\arcsin y\\le\\pi/2$，故 $x\\le\\pi/2$。区域与原式完全一致，验证无误。",
+      "wrong_options": {
+        "B": "内层 $x$ 范围写成 $\\arcsin y$ 到 $\\dfrac{\\pi}{2}$，对应的是 $\\sin x\\ge y$ 的另一侧区域，与原区域 $\\sin x\\le y$ 相反。",
+        "C": "外层 $y$ 范围取成 $0$ 到 $\\dfrac12$，错误；区域内 $y$ 的最小值是下边界端点 $\\sin\\dfrac{\\pi}{6}=\\dfrac12$，不会低于 $\\dfrac12$。",
+        "D": "$y$ 范围 $0$ 到 $\\dfrac12$ 与内层 $x$ 方向都错，双重出错，不对应原区域。"
+      },
+      "pitfalls": [
+        "$y$ 的下限是 $\\dfrac12$（即 $\\sin\\dfrac{\\pi}{6}$）而非 $0$，因为下边界曲线最低点在 $x=\\pi/6$ 处取 $1/2$。",
+        "由 $\\sin x\\le y$ 解 $x$ 时，因 $x\\in[\\pi/6,\\pi/2]$ 在 $\\sin$ 单调增区间，得 $x\\le\\arcsin y$，方向不要弄反。",
+        "务必画区域图确认上下/左右边界，凭直觉换限极易选成 B 或 D。"
+      ],
+      "key_point": "画出区域后按 $y$ 分层：$\\dfrac12\\le y\\le1$，$x$ 从左边界 $\\dfrac{\\pi}{6}$ 到曲线 $x=\\arcsin y$。"
+    },
+    {
+      "id": 2450,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} a_n x^n$ 的和函数为 $\\ln (2+x)$ ，则 $\\displaystyle\\sum_{n=0}^{\\infty} n a_{2 n}=(\\quad)$",
+      "options": {
+        "A": "$-\\dfrac{1}{6}$",
+        "B": "$-\\dfrac{1}{3}$",
+        "C": "$\\dfrac{1}{6}$",
+        "D": "$\\dfrac{1}{3}$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n先由和函数 $\\ln(2+x)$ 反求幂级数系数 $a_n$，再代入 $\\sum n\\,a_{2n}$ 求和。求展开式用 $\\ln(1+u)=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{n}u^n$。求 $\\sum n a_{2n}$ 时，把 $a_{2n}$ 的通项写出来，它本身是一个等比型数项级数，直接用等比级数求和即可（也可用逐项求导的视角，但这里直接代入更干净）。\n\n【解答】\n\n第一步：求系数。\n\n$$\\ln(2+x)=\\ln\\!\\left[2\\left(1+\\frac{x}{2}\\right)\\right]=\\ln 2+\\ln\\!\\left(1+\\frac{x}{2}\\right).$$\n\n利用 $\\ln(1+u)=\\sum_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{n}u^n\\\\;(|u|<1)$，取 $u=\\dfrac{x}{2}$：\n\n$$\\ln(2+x)=\\ln 2+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n}\\cdot\\frac{x^n}{2^n}=\\ln 2+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n\\,2^n}x^n.$$\n\n对比 $\\sum_{n=0}^{\\infty}a_n x^n$ 得 $a_0=\\ln 2$，且对 $n\\ge 1$，\n\n$$a_n=\\frac{(-1)^{n-1}}{n\\,2^n}.$$\n\n第二步：求 $a_{2n}$。将下标 $n$ 换为 $2n$（$n\\ge1$）：\n\n$$a_{2n}=\\frac{(-1)^{2n-1}}{2n\\cdot 2^{2n}}=\\frac{-1}{2n\\cdot 4^{n}}.$$\n\n第三步：求和。注意 $n=0$ 项为 $0\\cdot a_0=0$，故\n\n$$\\sum_{n=0}^{\\infty}n\\,a_{2n}=\\sum_{n=1}^{\\infty}n\\cdot\\frac{-1}{2n\\cdot 4^{n}}=-\\frac{1}{2}\\sum_{n=1}^{\\infty}\\frac{1}{4^{n}}.$$\n\n而 $\\sum_{n=1}^{\\infty}\\dfrac{1}{4^n}=\\dfrac{1/4}{1-1/4}=\\dfrac{1}{3}$，所以\n\n$$\\sum_{n=0}^{\\infty}n\\,a_{2n}=-\\frac{1}{2}\\cdot\\frac{1}{3}=-\\frac{1}{6}.$$\n\n故选 A。",
+      "wrong_options": {
+        "B": "$-\\dfrac13$ 漏掉了 $na_{2n}$ 中 $n$ 与分母 $2n$ 约分后产生的系数 $\\frac12$，直接把 $\\sum\\frac1{4^n}=\\frac13$ 取了负号。",
+        "C": "$\\dfrac16$ 符号错。$(-1)^{2n-1}=-1$，$a_{2n}$ 为负，求和结果应为负。",
+        "D": "$\\dfrac13$ 既弄错符号又漏掉系数 $\\frac12$。"
+      },
+      "pitfalls": [
+        "求 $a_{2n}$ 时要把通项 $a_n$ 里的 $n$ 整体替换为 $2n$，注意 $(-1)^{2n-1}=-1$ 恒为负、$2^{2n}=4^n$。",
+        "$na_{2n}$ 中的 $n$ 会与分母里的 $2n$ 约掉，剩下系数 $\\frac12$，别忘了这一步。",
+        "求和下标从 $n=0$ 起，但 $n=0$ 项为 $0$，实际从 $n=1$ 求等比级数。"
+      ],
+      "key_point": "先用 $\\ln(1+x/2)$ 标准展开定 $a_n$，代入 $a_{2n}$ 后 $na_{2n}$ 约简成等比级数求和。"
+    },
+    {
       "id": 2526,
       "paper": "数学三",
       "year": 2024,
@@ -292,6 +141,34 @@
         "行列式是特征值之积、迹是特征值之和，别把两者算反或漏掉负特征值的符号。"
       ],
       "key_point": "正交变换下标准形系数即特征值，行列式取其积、迹取其和。"
+    },
+    {
+      "id": 2477,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为三阶矩阵， $\\boldsymbol{P}=\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$, 若 $\\boldsymbol{P}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{P}^2=\\left(\\begin{array}{ccc}a+2 c & 0 & c \\\\ 0 & b & 0 \\\\ 2 c & 0 & c\\end{array}\\right)$, 则 $\\boldsymbol{A}=(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}c & 0 & 0 \\\\ 0 & a & 0 \\\\ 0 & 0 & b\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}b & 0 & 0 \\\\ 0 & c & 0 \\\\ 0 & 0 & a\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}a & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & c\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}c & 0 & 0 \\\\ 0 & b & 0 \\\\ 0 & 0 & a\\end{array}\\right)$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n$\\boldsymbol{P}$ 是初等矩阵：它由单位阵把第 1 行的 1 倍加到第 3 行（即 $r_3+r_1$）得到。回顾初等矩阵的左右乘规则——左乘做行变换、右乘做列变换。本题给出 $\\boldsymbol{P}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{P}^2=\\boldsymbol{B}$，最稳妥的做法是直接解矩阵方程 $\\boldsymbol{A}=(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}(\\boldsymbol{P}^2)^{-1}$，初等矩阵的逆仍是初等矩阵，且 $\\boldsymbol{P}^2$ 易求，全程只做几次行列变换即可。\n\n【解答】\n\n先求所需逆矩阵。$\\boldsymbol{P}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\1&0&1\\end{pmatrix}$，其逆把 $r_3+r_1$ 还原为 $r_3-r_1$：\n$$\\boldsymbol{P}^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-1&0&1\\end{pmatrix},\\qquad (\\boldsymbol{P}^{\\mathrm{T}})^{-1}=(\\boldsymbol{P}^{-1})^{\\mathrm{T}}=\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}.$$\n\n又 $\\boldsymbol{P}^2=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\2&0&1\\end{pmatrix}$，故 $(\\boldsymbol{P}^2)^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}$。\n\n记 $\\boldsymbol{B}=\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}$。先算 $(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}$（即 $\\boldsymbol{B}$ 的 $r_1-r_3$）：\n$$(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}=\\begin{pmatrix}a+2c-2c&0&c-c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c&0&c\\end{pmatrix}.$$\n\n再右乘 $(\\boldsymbol{P}^2)^{-1}$（即列变换 $c_1-2c_3$）：\n$$\\boldsymbol{A}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c&0&c\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\2c-2c&0&c\\end{pmatrix}=\\begin{pmatrix}a&0&0\\\\0&b&0\\\\0&0&c\\end{pmatrix}.$$\n\n故 $\\boldsymbol{A}=\\mathrm{diag}(a,b,c)$，选 **C**。（可回代验证：$\\boldsymbol{P}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{P}^2$ 恰等于题给 $\\boldsymbol{B}$。）",
+      "wrong_options": {
+        "A": "把对角元顺序排错为 $c,a,b$，是没厘清 $\\boldsymbol{P}^{\\mathrm{T}}$ 与 $\\boldsymbol{P}^2$ 各自对应行/列变换的方向。",
+        "B": "对角元排成 $b,c,a$，同样是行列变换方向或顺序判断错误。",
+        "D": "对角元排成 $c,b,a$，把第 1、3 个位置颠倒，属误把 $r_1-r_3$ 与 $c_1-2c_3$ 的作用张冠李戴。"
+      },
+      "pitfalls": [
+        "$\\boldsymbol{P}^{\\mathrm{T}}$ 的逆等于 $\\boldsymbol{P}$ 的逆的转置，别直接对 $\\boldsymbol{P}$ 转置当成逆。",
+        "$(\\boldsymbol{P}^2)^{-1}=(\\boldsymbol{P}^{-1})^2$，注意 $\\boldsymbol{P}^2$ 第 3 行第 1 列是 $2$ 不是 $1$。",
+        "左乘做行变换、右乘做列变换，两侧作用对象不同，顺序不能混。"
+      ],
+      "key_point": "把矩阵方程解成 $\\boldsymbol{A}=(\\boldsymbol{P}^{\\mathrm{T}})^{-1}\\boldsymbol{B}(\\boldsymbol{P}^2)^{-1}$，用初等矩阵的行列变换逐步消元。"
     },
     {
       "id": 2527,
@@ -378,6 +255,53 @@
       "key_point": "独立正态的线性组合仍正态，标准化为 $\\Phi(\\cdot)$ 后利用单调性比较：阈值为正则概率大于 $\\tfrac12$，自变量大者概率大。"
     },
     {
+      "id": 2457,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X, Y$ 相互独立，且均服从参数为 $\\lambda$ 的指数分布，令 $Z=|X-Y|$ ，则下列随机变量与 $Z$ 同分布的是（ ）",
+      "options": {
+        "A": "$X+Y$",
+        "B": "$\\dfrac{X+Y}{2}$",
+        "C": "$2 X$",
+        "D": "$X$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n$X,Y$ 独立同服从参数 $\\lambda$ 的指数分布，问 $Z=|X-Y|$ 与谁同分布。判定同分布最稳妥的办法是直接求出 $Z$ 的分布函数（或生存函数 $P(Z>z)$）。结论上，由指数分布的无记忆性可预判 $Z$ 仍是参数 $\\lambda$ 的指数分布，从而与 $X$ 同分布。下面给出严格推导。\n\n【解答】\n\n对 $z\\ge 0$，由对称性 $P(Z>z)=2P(X-Y>z)=2P(X>Y+z)$。在 $Y=y$ 条件下 $X$ 独立，利用指数分布生存函数 $P(X>t)=e^{-\\lambda t}\\\\ (t\\ge 0)$：\n$$P(Z>z)=2\\int_0^{\\infty}\\lambda e^{-\\lambda y}\\,P(X>y+z)\\,dy=2\\int_0^{\\infty}\\lambda e^{-\\lambda y}e^{-\\lambda(y+z)}\\,dy.$$\n提出 $e^{-\\lambda z}$：\n$$P(Z>z)=2e^{-\\lambda z}\\int_0^{\\infty}\\lambda e^{-2\\lambda y}\\,dy=2e^{-\\lambda z}\\cdot\\frac12=e^{-\\lambda z}.$$\n因此 $P(Z\\le z)=1-e^{-\\lambda z}\\\\ (z\\ge 0)$，即 $Z\\sim E(\\lambda)$，与 $X$ 的分布完全相同。\n\n这也可由无记忆性直观理解：以 $\\min(X,Y)$ 为起点，先发生的那个变量已“用掉”，剩下那个变量到再次发生还需等待的时间，因无记忆性仍服从 $E(\\lambda)$，而 $Z$ 正是这段等待时间。\n\n再排除其他选项：$X+Y$ 服从参数 $\\lambda$、形状 2 的伽马分布，方差为 $\\dfrac{2}{\\lambda^2}$，与 $Z$ 不同；$\\dfrac{X+Y}{2}$ 与 $2X$ 的均值分别为 $\\dfrac1\\lambda$ 和 $\\dfrac2\\lambda$，前者均值虽对但并非指数分布、后者均值都不对。故只有 $X$ 与 $Z$ 同分布，选 D。",
+      "wrong_options": {
+        "A": "$X+Y\\sim\\Gamma(2,\\lambda)$，其密度在 0 处为 0 且 $E(X+Y)=\\dfrac2\\lambda$，与 $Z\\sim E(\\lambda)$（均值 $\\dfrac1\\lambda$）不同。",
+        "B": "$\\dfrac{X+Y}{2}$ 虽然均值为 $\\dfrac1\\lambda$ 与 $Z$ 相同，但它是伽马分布的线性缩放，方差为 $\\dfrac{1}{2\\lambda^2}\\ne\\dfrac{1}{\\lambda^2}$，并非指数分布。",
+        "C": "$2X\\sim E\\left(\\dfrac\\lambda2\\right)$，均值为 $\\dfrac2\\lambda$，是参数减半的指数分布，与 $Z$ 不同。"
+      },
+      "pitfalls": [
+        "“均值相同”不等于“同分布”，B 选项均值对但分布不对，必须比较整条分布（生存函数）。",
+        "积分中第二个指数的指数应为 $-\\lambda(y+z)$，别漏掉 $z$ 这一项。",
+        "对称性给出的因子 2 不能丢，否则会误得 $\\dfrac12 e^{-\\lambda z}$。"
+      ],
+      "key_point": "两独立同参指数变量之差的绝对值仍服从同参数指数分布——由生存函数 $P(Z>z)=e^{-\\lambda z}$ 或无记忆性即可断定。"
+    },
+    {
+      "id": 90326,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$x\\to 0$ 时，$\\displaystyle\\int_0^x \\dfrac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\,\\mathrm{d}t$ 与 $x^k$ 是同阶无穷小，则 $k=$ ______.",
+      "options": {},
+      "answer": "$k=3$",
+      "analysis": "【分析】\n\n「与 $x^k$ 同阶无穷小」就是求变限积分当 $x\\to0$ 时的无穷小阶数。核心工具：**变限积分的等价估计**——若 $t\\to0$ 时被积函数 $g(t)\\sim c\\,t^{n}$，则 $\\displaystyle\\int_0^x g(t)\\,dt\\sim \\frac{c}{\\,n+1\\,}x^{\\,n+1}$。所以只要求出被积函数在 $t\\to0$ 的等价无穷小即可。\n\n【解答】\n\n**第一步：被积函数在 $t\\to0$ 的等价无穷小。**\n$$1+t^2\\to1,\\qquad \\sin t^2\\sim t^2,\\qquad 1+\\cos^2 t\\to 1+1=2,$$\n故\n$$\\frac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\sim\\frac{t^2}{2}\\quad(t\\to0).$$\n\n**第二步：对变限积分作等价估计。**\n$$\\int_0^x\\frac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\,dt\\sim\\int_0^x\\frac{t^2}{2}\\,dt=\\frac{x^3}{6}\\quad(x\\to0).$$\n\n**第三步：定阶。** 该积分 $\\sim\\dfrac{1}{6}x^3$，与 $x^k$ 同阶即 $k=3$。\n\n$$\\boxed{k=3}$$\n\n（也可对 $\\dfrac{\\int_0^x(\\cdots)dt}{x^k}$ 用洛必达：分子求导得被积函数 $\\sim \\tfrac12x^2$，与 $kx^{k-1}$ 比较，$k-1=2$ 得 $k=3$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\sin t^2$ 是 $\\sin(t^2)\\sim t^2$，不是 $(\\sin t)^2$。",
+        "分母 $1+\\cos^2 t$ 在 $t\\to0$ 取 $2$（不是 $1$），会影响系数但不影响阶数。",
+        "变限积分定阶：被积 $\\sim c\\,t^n$ ⇒ 积分 $\\sim \\dfrac{c}{n+1}x^{n+1}$，阶数加 1。"
+      ],
+      "key_point": "变限积分等价估计：被积函数等价无穷小的阶数 +1 即积分的阶数。"
+    },
+    {
       "id": 2531,
       "paper": "数学三",
       "year": 2024,
@@ -395,6 +319,25 @@
         "取极限时 $\\arctan\\dfrac{b}{2}\\to\\dfrac{\\pi}{2}$、对数项 $\\to\\ln 1=0$，下限 $\\arctan 1=\\dfrac{\\pi}{4}$ 别漏。"
       ],
       "key_point": "把 $x^4+3x^2-4$ 当作 $x^2$ 的二次式分解为 $(x^2-1)(x^2+4)$，部分分式后分别积出 $\\ln$ 与 $\\arctan$ 再取极限。"
+    },
+    {
+      "id": 2481,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$f(x, y)=2 x^3-9 x^2-6 y^4+12 x+24 y$ 的极值点是 $(\\qquad)$",
+      "options": {},
+      "answer": "$(1,1)$",
+      "analysis": "【分析】\n\n本题求二元函数的无条件极值点。标准步骤：先求一阶偏导 $f_x,f_y$，联立 $f_x=0,f_y=0$ 求出所有驻点；再求二阶偏导，用 $AC-B^2$ 判别法（$A=f_{xx},B=f_{xy},C=f_{yy}$）逐个判断：$AC-B^2>0$ 且 $A<0$ 为极大值点，$A>0$ 为极小值点；$AC-B^2<0$ 为鞍点（非极值）；$AC-B^2=0$ 需另判。由于 $f$ 关于 $x,y$ 可分离，偏导各自只含一个变量，求驻点较简单。\n\n【解答】\n\n**第一步：求驻点。**\n$$f_x=6x^2-18x+12=6(x^2-3x+2)=6(x-1)(x-2),$$\n$$f_y=-24y^3+24=-24(y^3-1).$$\n令 $f_x=0$ 得 $x=1$ 或 $x=2$；令 $f_y=0$ 得 $y^3=1$，即 $y=1$。\n故驻点为 $(1,1)$ 与 $(2,1)$。\n\n**第二步：二阶偏导。**\n$$f_{xx}=12x-18,\\qquad f_{yy}=-72y^2,\\qquad f_{xy}=0.$$\n\n**第三步：判别法。**\n\n在 $(1,1)$：$A=f_{xx}=12-18=-6$，$C=f_{yy}=-72$，$B=0$。\n$$AC-B^2=(-6)(-72)-0=432>0,\\quad A=-6<0,$$\n故 $(1,1)$ 为**极大值点**，极大值 $f(1,1)=2-9-6+12+24=23$。\n\n在 $(2,1)$：$A=f_{xx}=24-18=6$，$C=f_{yy}=-72$，$B=0$。\n$$AC-B^2=(6)(-72)-0=-432<0,$$\n故 $(2,1)$ 为鞍点，不是极值点。\n\n综上，$f(x,y)$ 的极值点是 $(1,1)$（且为极大值点）。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$f_x=0$ 解得 $x=1,2$ 两个值，对应两个驻点，必须对每个驻点都做判别，不能漏掉 $(2,1)$ 而误以为它也是极值点。",
+        "$(2,1)$ 处 $AC-B^2=-432<0$ 为鞍点，应排除；本题只有 $(1,1)$ 是极值点。",
+        "$AC-B^2>0$ 时再看 $A$ 的符号定极大/极小，本题 $A<0$ 为极大值，别写反。"
+      ],
+      "key_point": "联立一阶偏导求驻点，再用 $AC-B^2$ 判别：本题两驻点中仅 $(1,1)$ 满足 $AC-B^2>0$ 且 $A<0$ 为极大值点，$(2,1)$ 为鞍点。"
     },
     {
       "id": 2532,
@@ -435,6 +378,44 @@
       "key_point": "秩条件→几何重数 n−r→定特征值及重数→|A|=各特征值之积→再套 |A*|=|A|^{n-1}。"
     },
     {
+      "id": 2463,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机试验每次成功的概率为 $p$, 现进行三次独立重复实验, 已知至少成功一次的条件下全部成功的概率为 $\\dfrac{4}{13}$, 则 $p=\\qquad$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "【分析】\n\n三次独立重复试验，每次成功概率为 $p$。设事件 $A$=「至少成功一次」，$B$=「全部成功」。注意 $B\\subset A$，故 $AB=B$。由条件概率公式 $P(B\\mid A)=\\dfrac{P(B)}{P(A)}$。其中 $P(B)=p^3$，$P(A)=1-(1-p)^3$（用对立事件「一次都不成功」）。令此比值等于 $\\dfrac{4}{13}$，解关于 $p$ 的方程即可。\n\n【解答】\n\n由 $B\\subset A$ 得 $P(AB)=P(B)=p^3$，且 $P(A)=1-P(\\text{全败})=1-(1-p)^3$。于是\n$$P(B\\mid A)=\\frac{p^3}{1-(1-p)^3}=\\frac{4}{13}.$$\n\n展开 $1-(1-p)^3=3p-3p^2+p^3$，方程化为\n$$13p^3=4(3p-3p^2+p^3)=12p-12p^2+4p^3,$$\n$$9p^3+12p^2-12p=0.$$\n\n因 $0<p\\leqslant 1$，$p\\neq 0$，两边除以 $3p$：\n$$3p^2+4p-4=0\\ \\Longrightarrow\\ p=\\frac{-4\\pm\\sqrt{16+48}}{6}=\\frac{-4\\pm 8}{6}.$$\n\n取正根 $p=\\dfrac{4}{6}=\\dfrac{2}{3}$（另一根 $-2$ 舍去）。\n\n验证：$p=\\tfrac23$ 时 $p^3=\\tfrac{8}{27}$，$1-(1-p)^3=1-\\tfrac{1}{27}=\\tfrac{26}{27}$，比值 $=\\dfrac{8/27}{26/27}=\\dfrac{8}{26}=\\dfrac{4}{13}$，正确。\n\n故 $p=\\dfrac{2}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "因 $B\\subset A$，$P(AB)=P(B)=p^3$，不要错算交事件。",
+        "$P(\\text{至少一次})$ 用对立事件 $1-(1-p)^3$，别直接展开成繁琐组合式。",
+        "解出二次方程后舍去负根，并验证落在 $(0,1]$ 内。"
+      ],
+      "key_point": "条件概率 $P(\\text{全成功}\\mid\\text{至少一次})=\\dfrac{p^3}{1-(1-p)^3}$，列方程解 $p$ 即可。"
+    },
+    {
+      "id": 2485,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设平面有界区域 $D$ 位于第一象限, 由曲线 $x y=\\dfrac{1}{3}, x y=3$ 与直线 $y=\\dfrac{1}{3} x, y=3 x$ 围成的平面区域, 计算 $\\displaystyle \\iint\\limits_D(1+x-y) \\mathrm{d} x \\mathrm{d} y$",
+      "options": {},
+      "answer": "$\\dfrac{8}{3} \\ln 3$",
+      "analysis": "【分析】\n\n积分区域 $D$ 由双曲线 $xy=\\tfrac13,\\\\ xy=3$ 与过原点直线 $y=\\tfrac13 x,\\\\ y=3x$ 围成，位于第一象限。两点观察：\n\n1. **对称性。** 把 $x,y$ 互换，曲线 $xy=c$ 不变，直线 $y=\\tfrac13 x$ 与 $y=3x$ 互相交换（因为它们斜率互为倒数）。故 $D$ 关于直线 $y=x$ 对称。于是 $\\iint_D x\\,\\mathrm dx\\mathrm dy=\\iint_D y\\,\\mathrm dx\\mathrm dy$，从而 $\\iint_D(x-y)\\,\\mathrm dx\\mathrm dy=0$。被积函数中含 $x-y$ 的部分自动消去，只剩常数 $1$，即积分等于 $D$ 的面积。\n\n2. **换元算面积。** 令 $u=xy,\\\\ v=\\dfrac{y}{x}$，则区域变为矩形 $u\\in[\\tfrac13,3],\\\\ v\\in[\\tfrac13,3]$，用雅可比行列式把面积积出来。\n\n【解答】\n\n**第一步：利用对称性化简。**\n\n区域 $D$ 关于 $y=x$ 对称，故\n$$\\iint_D x\\,\\mathrm dx\\mathrm dy=\\iint_D y\\,\\mathrm dx\\mathrm dy\\\\ \\Longrightarrow\\\\ \\iint_D (x-y)\\,\\mathrm dx\\mathrm dy=0.$$\n因此\n$$\\iint_D(1+x-y)\\,\\mathrm dx\\mathrm dy=\\iint_D 1\\,\\mathrm dx\\mathrm dy=\\text{面积}(D).$$\n\n**第二步：换元求面积。** 令\n$$u=xy,\\qquad v=\\frac{y}{x}\\quad(x>0,y>0),$$\n则 $D$ 对应 $u\\in[\\tfrac13,3],\\\\ v\\in[\\tfrac13,3]$。反解：由 $uv=y^2,\\\\ u/v=x^2$ 得 $x=\\sqrt{u/v},\\\\ y=\\sqrt{uv}$。\n\n计算雅可比（先算正变换再取倒数较快）：\n$$\\frac{\\partial(u,v)}{\\partial(x,y)}=\\begin{vmatrix} y & x \\\\[2pt] -\\dfrac{y}{x^2} & \\dfrac{1}{x}\\end{vmatrix}=\\frac{y}{x}+\\frac{y}{x}=\\frac{2y}{x}=2v.$$\n所以\n$$\\left|\\frac{\\partial(x,y)}{\\partial(u,v)}\\right|=\\frac{1}{|2v|}=\\frac{1}{2v},\\qquad \\mathrm dx\\,\\mathrm dy=\\frac{1}{2v}\\,\\mathrm du\\,\\mathrm dv.$$\n\n**第三步：积分。**\n$$\\text{面积}(D)=\\int_{1/3}^{3}\\!\\!\\int_{1/3}^{3}\\frac{1}{2v}\\,\\mathrm du\\,\\mathrm dv=\\frac12\\left(\\int_{1/3}^{3}\\mathrm du\\right)\\left(\\int_{1/3}^{3}\\frac{\\mathrm dv}{v}\\right).$$\n其中\n$$\\int_{1/3}^{3}\\mathrm du=3-\\frac13=\\frac83,\\qquad \\int_{1/3}^{3}\\frac{\\mathrm dv}{v}=\\ln 3-\\ln\\frac13=2\\ln 3.$$\n故\n$$\\iint_D(1+x-y)\\,\\mathrm dx\\mathrm dy=\\frac12\\cdot\\frac83\\cdot 2\\ln 3=\\frac{8}{3}\\ln 3.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "看清区域对 y=x 对称的依据：xy=c 不变、两条直线斜率 1/3 与 3 互为倒数恰好互换",
+        "换元面积元是 dxdy = 1/(2v) du dv，雅可比要取倒数且带绝对值，别漏 1/2",
+        "∫ dv/v 的下限是 1/3，ln3 − ln(1/3) = 2ln3，不要算成 ln3"
+      ],
+      "key_point": "先用 y=x 对称性消去 ∬(x−y)=0 把积分降为求面积，再用 u=xy、v=y/x 把区域拉成矩形积出。"
+    },
+    {
       "id": 2534,
       "paper": "数学三",
       "year": 2024,
@@ -473,6 +454,25 @@
       "key_point": "面积写成变限定积分后直接用 $S'(t)=h(2t)\\cdot2-h(t)$ 求导定极值，驻点处 $e^{-2t}=\\tfrac14$ 代回即得最大值。"
     },
     {
+      "id": 2466,
+      "paper": "数学三",
+      "year": 2024,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 具有二阶导数，且 $f^{\\prime}(0)=f^{\\prime}(1),\\left|f^{\\prime \\prime}(x)\\right| \\leqslant 1$ ，证明:\r\n\r\n(1) 当 $x \\in(0,1)$ 时，$\\displaystyle |f(x)-f(0)(1-x)-f(1) x| \\leqslant \\frac{x(1-x)}{2}$;\r\n\r\n(2) $\\displaystyle \\left|\\int_0^1 f(x) \\mathrm{d} x-\\frac{f(0)+f(1)}{2}\\right| \\leqslant \\frac{1}{12}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】第 (1) 问要把 $f(x)$ 与端点值 $f(0),f(1)$ 的线性组合作比较，自然想到在动点 $x$ 处对两个端点作带拉格朗日余项的一阶泰勒展开，二阶余项里出现 $f''$，再用 $|f''|\\le1$ 放缩。第 (2) 问是 (1) 的“积分版”：注意到 $f(0)(1-x)+f(1)x$ 在 $[0,1]$ 上的积分恰是梯形值 $\\dfrac{f(0)+f(1)}{2}$，于是把 (1) 的逐点不等式两端在 $[0,1]$ 上积分即可。（条件 $f'(0)=f'(1)$ 在本解法中不被用到，结论对 $|f''|\\le1$ 已成立。）\n\n【解答】\n\n（1）固定 $x\\in(0,1)$，分别对端点 $0$ 与 $1$ 在点 $x$ 处作一阶泰勒展开（带拉格朗日余项），存在 $\\xi_1\\in(0,x)$，$\\xi_2\\in(x,1)$ 使\n$$f(0)=f(x)+f'(x)(0-x)+\\frac{f''(\\xi_1)}{2}(0-x)^2=f(x)-f'(x)x+\\frac{f''(\\xi_1)}{2}x^2,$$\n$$f(1)=f(x)+f'(x)(1-x)+\\frac{f''(\\xi_2)}{2}(1-x)^2.$$\n以 $(1-x)$、$x$ 为权作组合：\n$$f(0)(1-x)+f(1)x=f(x)\\big[(1-x)+x\\big]+f'(x)\\big[-x(1-x)+(1-x)x\\big]+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n中间 $f'(x)$ 的系数 $-x(1-x)+x(1-x)=0$ 相消，故\n$$f(0)(1-x)+f(1)x=f(x)+\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n移项：\n$$f(x)-f(0)(1-x)-f(1)x=-\\frac12\\Big[f''(\\xi_1)x^2(1-x)+f''(\\xi_2)(1-x)^2x\\Big].$$\n用 $|f''|\\le1$ 及 $x,1-x>0$ 放缩：\n$$\\big|f(x)-f(0)(1-x)-f(1)x\\big|\\le\\frac12\\big[x^2(1-x)+(1-x)^2x\\big]=\\frac12\\,x(1-x)\\big[x+(1-x)\\big]=\\frac{x(1-x)}{2}.$$\n这对 $x\\in(0,1)$ 成立，第 (1) 问得证。\n\n（2）记 $g(x)=f(x)-f(0)(1-x)-f(1)x$，由 (1) 知 $|g(x)|\\le\\dfrac{x(1-x)}{2}$（在 $x=0,1$ 处两端均为 $0$，仍成立）。先算线性部分的积分：\n$$\\int_0^1\\big[f(0)(1-x)+f(1)x\\big]dx=f(0)\\cdot\\frac12+f(1)\\cdot\\frac12=\\frac{f(0)+f(1)}{2},$$\n故\n$$\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}=\\int_0^1 g(x)\\,dx.$$\n于是\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|=\\left|\\int_0^1 g(x)\\,dx\\right|\\le\\int_0^1|g(x)|\\,dx\\le\\int_0^1\\frac{x(1-x)}{2}\\,dx.$$\n而 $\\displaystyle\\int_0^1 x(1-x)\\,dx=\\frac12-\\frac13=\\frac16$，故上式 $\\le\\dfrac12\\cdot\\dfrac16=\\dfrac{1}{12}$。\n$$\\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|\\le\\frac{1}{12}.$$\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "（1）要在动点 $x$ 处对两个端点展开（展开中心是 $x$，不是 $0$），这样 $f'(x)$ 项才会因加权相消。",
+        "放缩时 $x^2(1-x)+(1-x)^2x$ 要提取公因子 $x(1-x)$ 得 $x(1-x)$，别误算系数。",
+        "（2）的关键是认出 $\\int_0^1[f(0)(1-x)+f(1)x]dx=\\dfrac{f(0)+f(1)}{2}$，从而把第 (2) 问归结为对 (1) 的逐点估计取积分。"
+      ],
+      "key_point": "端点值的线性插值差用“以动点为中心的二阶泰勒余项”估计；积分型不等式由逐点不等式两端积分得到（梯形公式误差思路）。"
+    },
+    {
       "id": 2536,
       "paper": "数学三",
       "year": 2024,
@@ -492,23 +492,23 @@
       "key_point": "先求 $Ax=\\alpha$ 通解并验证 $B\\xi_0=\\beta,B\\eta=0$ 得包含关系；两组解不同当且仅当 $\\mathrm{rank}\\,B<\\mathrm{rank}\\,A=3$，行变换得 $a=1$。"
     },
     {
-      "id": 90326,
+      "id": 2469,
       "paper": "数学三",
       "year": 2024,
-      "index": 11,
-      "type": "填空题",
+      "index": 22,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "$x\\to 0$ 时，$\\displaystyle\\int_0^x \\dfrac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\,\\mathrm{d}t$ 与 $x^k$ 是同阶无穷小，则 $k=$ ______.",
+      "stem": "设总体 $X \\sim U(0, \\theta), \\theta>0$ 未知, $X_1, X_2 \\cdots X_n$ 为简单随机样本, $X_{(n)}=\\max \\left(X_1, X_2 \\cdots X_n\\right),  T_c=c X_{(n)}$\r\n\r\n(1) 求 $c$, 得 $T_c$ 为 $\\theta$ 的无偏估计; (数三: $E\\left(T_c\\right)=\\theta$)\r\n\r\n(2) 记 $h(c)=E\\left(T_c-\\theta\\right)^2$, 求 $c$ 使得 $h(c)$ 取最小值",
       "options": {},
-      "answer": "$k=3$",
-      "analysis": "【分析】\n\n「与 $x^k$ 同阶无穷小」就是求变限积分当 $x\\to0$ 时的无穷小阶数。核心工具：**变限积分的等价估计**——若 $t\\to0$ 时被积函数 $g(t)\\sim c\\,t^{n}$，则 $\\displaystyle\\int_0^x g(t)\\,dt\\sim \\frac{c}{\\,n+1\\,}x^{\\,n+1}$。所以只要求出被积函数在 $t\\to0$ 的等价无穷小即可。\n\n【解答】\n\n**第一步：被积函数在 $t\\to0$ 的等价无穷小。**\n$$1+t^2\\to1,\\qquad \\sin t^2\\sim t^2,\\qquad 1+\\cos^2 t\\to 1+1=2,$$\n故\n$$\\frac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\sim\\frac{t^2}{2}\\quad(t\\to0).$$\n\n**第二步：对变限积分作等价估计。**\n$$\\int_0^x\\frac{(1+t^2)\\sin t^2}{1+\\cos^2 t}\\,dt\\sim\\int_0^x\\frac{t^2}{2}\\,dt=\\frac{x^3}{6}\\quad(x\\to0).$$\n\n**第三步：定阶。** 该积分 $\\sim\\dfrac{1}{6}x^3$，与 $x^k$ 同阶即 $k=3$。\n\n$$\\boxed{k=3}$$\n\n（也可对 $\\dfrac{\\int_0^x(\\cdots)dt}{x^k}$ 用洛必达：分子求导得被积函数 $\\sim \\tfrac12x^2$，与 $kx^{k-1}$ 比较，$k-1=2$ 得 $k=3$。）",
+      "answer": "(1) $\\dfrac{n+1}{n}$;\r\n\r\n(2) $\\dfrac{n+2}{n+1}$",
+      "analysis": "【分析】\n\n本题考查最大次序统计量 $X_{(n)}=\\max\\{X_1,\\dots,X_n\\}$ 的分布及其矩。核心是先写出 $X_{(n)}$ 的分布函数与密度，求出 $E(X_{(n)})$ 与 $E(X_{(n)}^2)$。第 (1) 问用无偏性 $E(T_c)=\\theta$ 解出 $c$；第 (2) 问把均方误差 $h(c)=E(T_c-\\theta)^2$ 展开成关于 $c$ 的二次函数，对 $c$ 求导（或配方）取最小值。注意无偏估计并不一定使均方误差最小，这正是本题的考点。\n\n【解答】\n\n因 $X\\sim U(0,\\theta)$，单个 $X_i$ 的分布函数为 $F(x)=\\dfrac{x}{\\theta}\\ (0\\le x\\le\\theta)$。于是 $X_{(n)}$ 的分布函数为\n\n$$F_{(n)}(x)=\\left(\\dfrac{x}{\\theta}\\right)^{n},\\quad 0\\le x\\le\\theta,$$\n\n密度为\n\n$$f_{(n)}(x)=\\dfrac{n x^{n-1}}{\\theta^{n}},\\quad 0\\le x\\le\\theta.$$\n\n由此\n\n$$E\\big(X_{(n)}\\big)=\\int_0^{\\theta} x\\cdot\\dfrac{n x^{n-1}}{\\theta^{n}}\\,dx=\\dfrac{n}{\\theta^{n}}\\cdot\\dfrac{\\theta^{n+1}}{n+1}=\\dfrac{n}{n+1}\\,\\theta,$$\n\n$$E\\big(X_{(n)}^{2}\\big)=\\int_0^{\\theta} x^{2}\\cdot\\dfrac{n x^{n-1}}{\\theta^{n}}\\,dx=\\dfrac{n}{\\theta^{n}}\\cdot\\dfrac{\\theta^{n+2}}{n+2}=\\dfrac{n}{n+2}\\,\\theta^{2}.$$\n\n**(1)** 由 $T_c=cX_{(n)}$ 无偏，需 $E(T_c)=c\\,E(X_{(n)})=c\\cdot\\dfrac{n}{n+1}\\theta=\\theta$，故\n\n$$c=\\dfrac{n+1}{n}.$$\n\n**(2)** 展开均方误差\n\n$$h(c)=E\\big(cX_{(n)}-\\theta\\big)^2=c^{2}E\\big(X_{(n)}^{2}\\big)-2c\\theta E\\big(X_{(n)}\\big)+\\theta^{2}=\\dfrac{n}{n+2}\\theta^{2}c^{2}-\\dfrac{2n}{n+1}\\theta^{2}c+\\theta^{2}.$$\n\n这是关于 $c$ 的开口向上的二次函数。令\n\n$$h'(c)=\\dfrac{2n}{n+2}\\theta^{2}c-\\dfrac{2n}{n+1}\\theta^{2}=0,$$\n\n解得\n\n$$c=\\dfrac{n+2}{n+1}.$$\n\n因 $h''(c)=\\dfrac{2n}{n+2}\\theta^2>0$，该点为最小值点。故当 $c=\\dfrac{n+2}{n+1}$ 时 $h(c)$ 取最小值。\n\n注意此处 $\\dfrac{n+2}{n+1}\\neq\\dfrac{n+1}{n}$，即使均方误差最小的系数与无偏系数不同，说明无偏估计未必是均方误差最优的。",
       "wrong_options": {},
       "pitfalls": [
-        "$\\sin t^2$ 是 $\\sin(t^2)\\sim t^2$，不是 $(\\sin t)^2$。",
-        "分母 $1+\\cos^2 t$ 在 $t\\to0$ 取 $2$（不是 $1$），会影响系数但不影响阶数。",
-        "变限积分定阶：被积 $\\sim c\\,t^n$ ⇒ 积分 $\\sim \\dfrac{c}{n+1}x^{n+1}$，阶数加 1。"
+        "把 $X_{(n)}$ 的密度写错：分布函数是 $(x/\\theta)^n$，密度要再乘上幂次 $n$，得 $nx^{n-1}/\\theta^n$。",
+        "第(2)问直接套用第(1)问的无偏系数，误以为无偏就最优；均方误差最小的 $c$ 另有其值。",
+        "积分上下限应为 $0$ 到 $\\theta$，不要漏掉 $\\theta^n$ 分母。"
       ],
-      "key_point": "变限积分等价估计：被积函数等价无穷小的阶数 +1 即积分的阶数。"
+      "key_point": "先求 $X_{(n)}$ 密度得一、二阶矩，无偏性定 $c$；均方误差是 $c$ 的二次函数，求导取最小。"
     }
   ]
 }

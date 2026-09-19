@@ -31,249 +31,6 @@
       "key_point": "同阶无穷小比阶数, 用泰勒展开抓最低次主部最稳."
     },
     {
-      "id": 209,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶实对称矩阵, $\\boldsymbol{E}$ 是 $3$ 阶单位矩阵, 若 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=2 \\boldsymbol{E}$, 且 $|\\boldsymbol{A}|=4$, 则二次型 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 的规范形为 $(\\quad)$",
-      "options": {
-        "A": "$y_{1}^{2}+y_{2}^{2}+y_{3}^{2}$",
-        "B": "$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$",
-        "C": "$y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$",
-        "D": "$-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n关键在于由矩阵多项式方程 $\\boldsymbol{A}^2+\\boldsymbol{A}=2\\boldsymbol{E}$ 反推特征值。若 $\\lambda$ 是实对称矩阵 $\\boldsymbol{A}$ 的特征值，则 $\\lambda$ 必满足同一个数量方程 $\\lambda^2+\\lambda-2=0$。再用 $|\\boldsymbol{A}|$ 等于全体特征值之积，定出三个特征值的具体取值，从而得到正、负惯性指数，写出规范形。\n\n【解答】\n\n由 $\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E}=\\boldsymbol{O}$，设 $\\lambda$ 为 $\\boldsymbol{A}$ 的任一特征值，对应特征向量 $\\boldsymbol{\\xi}\\neq\\boldsymbol{0}$，则\n$$(\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E})\\boldsymbol{\\xi}=(\\lambda^2+\\lambda-2)\\boldsymbol{\\xi}=\\boldsymbol{0},$$\n故 $\\lambda^2+\\lambda-2=0$，即 $(\\lambda-1)(\\lambda+2)=0$，所以每个特征值只能取 $\\lambda=1$ 或 $\\lambda=-2$。\n\n设三个特征值（计重数）取值情况，记 $1$ 出现 $k$ 次，$-2$ 出现 $3-k$ 次，则\n$$|\\boldsymbol{A}|=1^{k}\\cdot(-2)^{3-k}=(-2)^{3-k}=4.$$\n由 $(-2)^{3-k}=4=(-2)^2$ 得 $3-k=2$，即 $k=1$。\n\n因此 $\\boldsymbol{A}$ 的特征值为 $1,\\,-2,\\,-2$：一个正特征值、两个负特征值。$\\boldsymbol{A}$ 为实对称矩阵，二次型 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x}$ 的正惯性指数 $p=1$，负惯性指数 $q=2$，故规范形为\n$$y_1^2-y_2^2-y_3^2.$$\n\n对照选项，应选 **C**。",
-      "wrong_options": {
-        "A": "对应特征值全为正，需 $p=3$，但本题有两个负特征值。",
-        "B": "对应 $p=2,q=1$，但实际是 $p=1,q=2$，正负个数恰好弄反。",
-        "D": "对应特征值全为负，则 $|\\boldsymbol{A}|=(-2)^3=-8\\neq4$，与条件矛盾。"
-      },
-      "pitfalls": [
-        "由 $|\\boldsymbol{A}|=4$ 定特征值时，要保证特征值只能取 $1$ 或 $-2$，不能随意搭配，注意 $(-2)^{3-k}=4$ 唯一解 $k=1$。",
-        "规范形只看正负惯性指数（即正、负特征值个数），与特征值的具体大小无关，别把系数写成 $\\pm2$。"
-      ],
-      "key_point": "矩阵多项式方程把特征值限定在代数方程的根上，再用行列式（特征值之积）定符号个数，即得规范形。"
-    },
-    {
-      "id": 211,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $A, B$ 为随机事件,则 $P(A)=P(B)$ 的充分必要条件是 $(\\quad)$",
-      "options": {
-        "A": "$P(A \\cup B)=P(A)+P(B)$",
-        "B": "$P(A B)=P(A) P(B)$",
-        "C": "$P(A \\bar{B})=P(B \\bar{A})$",
-        "D": "$P(A B)=P(\\bar{A} \\bar{B})$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n要找 $P(A)=P(B)$ 的充要条件，最稳妥的办法是用事件差的减法公式 $P(A\\bar{B})=P(A)-P(AB)$ 把各选项化简，看哪一个能与 $P(A)=P(B)$ 互相等价。注意 $P(AB)$ 是两式公共部分，是化简的桥梁。\n\n【解答】\n\n由减法公式：\n$$P(A\\bar{B})=P(A)-P(AB),\\qquad P(B\\bar{A})=P(B)-P(AB).$$\n\n逐项分析：\n\n- 选项 C：$P(A\\bar{B})=P(B\\bar{A})$ 等价于\n$$P(A)-P(AB)=P(B)-P(AB)\\\\ \\Longleftrightarrow\\\\ P(A)=P(B).$$\n两边的 $P(AB)$ 恰好抵消，故 C 与 $P(A)=P(B)$ 互为充要条件。\n\n再验证其余选项不是充要条件：\n\n- 选项 A：$P(A\\cup B)=P(A)+P(B)\\Leftrightarrow P(AB)=0$（$A,B$ 几乎不相容），与 $P(A)=P(B)$ 无必然联系。\n- 选项 B：$P(AB)=P(A)P(B)$ 是 $A,B$ 相互独立，与 $P(A)=P(B)$ 不等价。\n- 选项 D：$P(AB)=P(\\bar{A}\\bar{B})$，由 $P(\\bar{A}\\bar{B})=1-P(A\\cup B)=1-P(A)-P(B)+P(AB)$，该式等价于 $P(A)+P(B)=1$，与 $P(A)=P(B)$ 不等价。\n\n故选 **C**。",
-      "wrong_options": {
-        "A": "$P(A\\cup B)=P(A)+P(B)$ 等价于 $P(AB)=0$，是“几乎互斥”，与两概率相等无关。",
-        "B": "$P(AB)=P(A)P(B)$ 是 $A,B$ 独立的定义，独立与概率相等是两回事。",
-        "D": "$P(AB)=P(\\bar{A}\\bar{B})$ 整理后等价于 $P(A)+P(B)=1$，并不能推出 $P(A)=P(B)$。"
-      },
-      "pitfalls": [
-        "用减法公式 $P(A\\bar{B})=P(A)-P(AB)$ 时，$\\bar{B}$ 表示 $B$ 的对立事件，$A\\bar{B}=A-AB$。",
-        "充要条件必须双向成立，选项 A、B、D 都只是某种特殊关系，与概率相等并不互推。"
-      ],
-      "key_point": "用 $P(A\\bar{B})=P(A)-P(AB)$、$P(B\\bar{A})=P(B)-P(AB)$ 作差，公共项 $P(AB)$ 抵消后直接得 $P(A)=P(B)$。"
-    },
-    {
-      "id": 212,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且都服从正态分布 $N\\left(\\mu, \\sigma^{2}\\right)$, 则 $P\\{|X-Y|<1\\}(\\quad)$",
-      "options": {
-        "A": "与 $\\mu$ 无关, 而与 $\\sigma^{2}$ 有关",
-        "B": "与 $\\mu$ 有关, 而与 $\\sigma^{2}$ 无关",
-        "C": "与 $\\mu, \\sigma^{2}$ 都有关",
-        "D": "与 $\\mu, \\sigma^{2}$ 都无关"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n本题考查独立正态变量线性组合仍服从正态分布。$X-Y$ 是两个独立正态变量之差，其分布完全由 $X-Y$ 的期望和方差决定。算出 $X-Y$ 的分布后标准化，看 $P\\{|X-Y|<1\\}$ 最终依赖哪些参数即可。\n\n【解答】\n\n**$X-Y$ 的分布。** $X,Y$ 独立且都服从 $N(\\mu,\\sigma^2)$，故\n\n$$E(X-Y)=\\mu-\\mu=0,\\qquad D(X-Y)=D(X)+D(Y)=\\sigma^2+\\sigma^2=2\\sigma^2.$$\n\n由独立正态变量线性组合的正态性，$X-Y\\sim N(0,\\,2\\sigma^2)$。注意期望恒为 $0$，与 $\\mu$ 无关。\n\n**计算概率。** 标准化 $\\dfrac{X-Y}{\\sqrt{2}\\,\\sigma}\\sim N(0,1)$，于是\n\n$$P\\{|X-Y|<1\\}=P\\!\\left\\{\\left|\\frac{X-Y}{\\sqrt2\\,\\sigma}\\right|<\\frac{1}{\\sqrt2\\,\\sigma}\\right\\}=2\\Phi\\!\\left(\\frac{1}{\\sqrt2\\,\\sigma}\\right)-1.$$\n\n该结果中 $\\mu$ 被消去，只含 $\\sigma$。因此 $P\\{|X-Y|<1\\}$ 与 $\\mu$ 无关，而与 $\\sigma^2$ 有关。选 **A**。",
-      "wrong_options": {
-        "B": "结论恰好说反。$X-Y$ 的期望为 $0$ 与 $\\mu$ 无关，而方差 $2\\sigma^2$ 含 $\\sigma^2$，故应是与 $\\mu$ 无关、与 $\\sigma^2$ 有关。",
-        "C": "误以为期望 $E(X-Y)$ 仍含 $\\mu$。实际上两者相减使 $\\mu$ 抵消，概率不依赖 $\\mu$。",
-        "D": "忽略了方差 $2\\sigma^2$ 的作用，误认为标准化后概率是常数；其实 $\\sigma$ 出现在标准化分母中，概率随 $\\sigma$ 变化。"
-      },
-      "pitfalls": [
-        "$D(X-Y)=D(X)+D(Y)=2\\sigma^2$（独立时方差相加，与减号无关），不要写成 $\\sigma^2$ 或 $0$。",
-        "$E(X-Y)=\\mu-\\mu=0$，故 $\\mu$ 被消去，概率与 $\\mu$ 无关。",
-        "标准化分母是 $\\sqrt{2}\\,\\sigma$，$\\sigma$ 留在表达式里，所以概率与 $\\sigma^2$ 有关。"
-      ],
-      "key_point": "独立正态之差 $X-Y\\sim N(0,2\\sigma^2)$，期望消去 $\\mu$、方差保留 $\\sigma^2$，故 $P\\{|X-Y|<1\\}$ 只依赖 $\\sigma^2$。"
-    },
-    {
-      "id": 218,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 的概率密度为 $f(x)= \\begin{cases}\\dfrac{x}{2}, & 0<x<2, \\\\ 0, & \\text { 其他, }\\end{cases}$ 为 $X$ 的数学期望, 则 $P\\{F(X)>E(X)-1\\}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{2}{3}$",
-      "analysis": "【分析】\n\n本题有三层：先算期望 $E(X)$，再写出分布函数 $F(x)$，最后把事件 $\\{F(X)>E(X)-1\\}$ 翻译成关于 $X$ 的普通事件求概率。注意 $F(X)$ 是\"把随机变量 $X$ 代入分布函数 $F$\"得到的新随机变量，不是常数。由于在支撑 $(0,2)$ 上 $F$ 严格单调递增，可把关于 $F(X)$ 的不等式反解为关于 $X$ 的不等式，再用密度积分求概率。\n\n【解答】\n\n第一步，求期望：\n\n$$E(X)=\\int_0^2 x\\cdot\\frac{x}{2}\\,\\mathrm{d}x=\\int_0^2\\frac{x^2}{2}\\,\\mathrm{d}x=\\frac{1}{2}\\cdot\\frac{x^3}{3}\\Big|_0^2=\\frac{1}{2}\\cdot\\frac{8}{3}=\\frac{4}{3}.$$\n\n故 $E(X)-1=\\dfrac{1}{3}$。\n\n第二步，求分布函数 $F(x)$。当 $0\\leqslant x<2$ 时\n\n$$F(x)=\\int_0^x\\frac{t}{2}\\,\\mathrm{d}t=\\frac{x^2}{4};$$\n\n当 $x<0$ 时 $F(x)=0$，当 $x\\geqslant 2$ 时 $F(x)=1$。\n\n第三步，求 $P\\{F(X)>\\tfrac{1}{3}\\}$。因 $X$ 几乎必然取值于 $(0,2)$，在该区间上 $F(X)=\\dfrac{X^2}{4}$，于是\n\n$$F(X)>\\frac{1}{3}\\iff \\frac{X^2}{4}>\\frac{1}{3}\\iff X^2>\\frac{4}{3}\\iff X>\\frac{2}{\\sqrt{3}}$$\n\n（因为 $X>0$，舍去负根）。注意 $\\dfrac{2}{\\sqrt{3}}=\\dfrac{2\\sqrt3}{3}\\approx1.155\\in(0,2)$。所以\n\n$$P\\{F(X)>\\tfrac{1}{3}\\}=P\\Big\\{X>\\frac{2}{\\sqrt3}\\Big\\}=\\int_{2/\\sqrt3}^{2}\\frac{x}{2}\\,\\mathrm{d}x=\\frac{x^2}{4}\\Big|_{2/\\sqrt3}^{2}.$$\n\n代入：\n\n$$=\\frac{4}{4}-\\frac{(4/3)}{4}=1-\\frac{1}{3}=\\frac{2}{3}.$$\n\n所以 $P\\{F(X)>E(X)-1\\}=\\dfrac{2}{3}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$F(X)$ 是随机变量（把 $X$ 代入 $F$），不要当成常数直接比较。",
-        "解 $X^2>\\tfrac{4}{3}$ 时因 $X>0$ 只取正根 $X>\\tfrac{2}{\\sqrt3}$，别把负半轴也算进去。",
-        "积分下限要用 $\\tfrac{2}{\\sqrt3}$ 的精确值，化简时 $(2/\\sqrt3)^2=4/3$ 不要算错。"
-      ],
-      "key_point": "把 $F(X)$ 当随机变量，利用 $F$ 在支撑上的单调性反解成 $X$ 的不等式，再用密度积分求概率。"
-    },
-    {
-      "id": 221,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 18,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求曲线 $y=\\mathrm{e}^{-x} \\sin x(x \\geqslant 0)$ 与 $x$ 轴之间图形的面积\r\n\r\n(数二问法：设 $n$ 是正整数,记 $S_n$ 为曲线 $y=\\mathrm{e}^{-x} \\sin x(0 \\leqslant x \\leqslant n \\pi)$ 与 $x$ 轴所围图形的面积, 求 $S_n$, 并求 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n$)",
-      "options": {},
-      "answer": "$\\dfrac{1}{2}+\\frac{1}{\\mathrm{e}^\\pi-1}$",
-      "analysis": "【分析】\n\n曲线 $y=\\mathrm{e}^{-x}\\sin x$ 在 $x\\geqslant 0$ 上随 $\\sin x$ 的符号反复穿越 $x$ 轴：在区间 $[k\\pi,(k+1)\\pi]$ 上 $\\sin x$ 符号不变。所求\"图形面积\"是曲线与 $x$ 轴所夹的**各块面积的绝对值之和**，因此应把每个半周期上的面积 $A_k$ 单独算出再求和。由于 $\\mathrm{e}^{-x}$ 的衰减，$\\{A_k\\}$ 恰好构成一个公比为 $\\mathrm{e}^{-\\pi}$ 的**几何级数**，用等比级数求和即可。计算单块面积时对 $\\displaystyle\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x$ 用两次分部积分（或直接套公式）。\n\n【解答】\n\n先求原函数。由两次分部积分得\n\n$$\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)+C.$$\n\n记 $F(x)=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)$。在 $[k\\pi,(k+1)\\pi]$（$k=0,1,2,\\dots$）上 $\\sin x$ 不变号，该块面积\n\n$$A_k=\\left|\\int_{k\\pi}^{(k+1)\\pi}\\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x\\right|=\\bigl|F((k+1)\\pi)-F(k\\pi)\\bigr|.$$\n\n注意 $\\sin(k\\pi)=0,\\ \\cos(k\\pi)=(-1)^k$，故 $F(k\\pi)=-\\dfrac{1}{2}(-1)^k\\mathrm{e}^{-k\\pi}$，于是\n\n$$F((k+1)\\pi)-F(k\\pi)=\\dfrac{1}{2}(-1)^k\\bigl(\\mathrm{e}^{-(k+1)\\pi}+\\mathrm{e}^{-k\\pi}\\bigr),$$\n\n$$A_k=\\dfrac{1}{2}\\mathrm{e}^{-k\\pi}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr).$$\n\n所求总面积为各块之和（这是公比 $\\mathrm{e}^{-\\pi}<1$ 的等比级数）：\n\n$$S=\\sum_{k=0}^{\\infty}A_k=\\dfrac{1}{2}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr)\\sum_{k=0}^{\\infty}\\mathrm{e}^{-k\\pi}=\\dfrac{1}{2}\\cdot\\dfrac{1+\\mathrm{e}^{-\\pi}}{1-\\mathrm{e}^{-\\pi}}=\\dfrac{1}{2}\\cdot\\dfrac{\\mathrm{e}^{\\pi}+1}{\\mathrm{e}^{\\pi}-1}.$$\n\n化简（分子配凑）：\n\n$$S=\\dfrac{\\mathrm{e}^{\\pi}+1}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{(\\mathrm{e}^{\\pi}-1)+2}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}.$$\n\n**数二问法补充**：$S_n=\\displaystyle\\sum_{k=0}^{n-1}A_k=\\dfrac{1}{2}(1+\\mathrm{e}^{-\\pi})\\cdot\\dfrac{1-\\mathrm{e}^{-n\\pi}}{1-\\mathrm{e}^{-\\pi}}$，于是 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}$，与上面一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "求\"面积\"必须对每段取绝对值后相加，不能直接对 $\\mathrm{e}^{-x}\\sin x$ 在 $[0,+\\infty)$ 上积分（那样正负相消得到的是代数和，不是面积）。",
-        "等比级数公比是 $\\mathrm{e}^{-\\pi}$ 而非 $\\mathrm{e}^{-\\pi}$ 以外的值，求和时分母应为 $1-\\mathrm{e}^{-\\pi}$。",
-        "分部积分得到的原函数系数 $-\\dfrac{1}{2}$ 容易写错符号，建议求导回验。"
-      ],
-      "key_point": "半周期面积取绝对值，发现是公比 $\\mathrm{e}^{-\\pi}$ 的等比级数，求和即得。"
-    },
-    {
-      "id": 222,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 19,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $a_{n}=\\int_{0}^{1} x^{n} \\sqrt{1-x^{2}} \\mathrm{d} x(n=0,1,2, \\cdots)$.\r\n\r\n(1) 证明: 数列 $\\left\\{a_{n}\\right\\}$ 单调减少, 且 $a_{n}=\\dfrac{n-1}{n+2} a_{n-2}(n=2,3, \\cdots)$;\r\n\r\n(2) 求 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{a_{n}}{a_{n-1}}$",
-      "options": {},
-      "answer": "(2) $1$",
-      "analysis": "【分析】\n\n第 (1) 问两件事：单调性用\"作差\"——比较 $a_n$ 与 $a_{n-1}$，被积函数差出一个 $x^{n-1}(x-1)\\sqrt{1-x^2}$，在 $[0,1]$ 上非正，立得单调减少；递推式则把 $x^n$ 拆成 $x^{n-1}\\cdot x$，用 $x\\sqrt{1-x^2}\\,\\mathrm{d}x$ 凑微分作**分部积分**，自然把 $a_n$ 与 $a_{n-2}$ 联系起来。第 (2) 问求相邻项之比的极限，关键是用单调性把 $\\dfrac{a_n}{a_{n-1}}$ **夹**在 $\\dfrac{a_n}{a_{n-2}}$ 与 $1$ 之间，再借助 (1) 的递推式得 $\\dfrac{a_n}{a_{n-2}}=\\dfrac{n-1}{n+2}\\to 1$，由夹逼准则得极限。\n\n【解答】\n\n**(1) 单调减少。** 因 $a_n,a_{n-1}$ 被积函数均非负，且\n\n$$a_n-a_{n-1}=\\int_0^1\\bigl(x^n-x^{n-1}\\bigr)\\sqrt{1-x^2}\\,\\mathrm{d}x=\\int_0^1 x^{n-1}(x-1)\\sqrt{1-x^2}\\,\\mathrm{d}x.$$\n\n在 $[0,1]$ 上 $x^{n-1}\\geqslant 0,\\ x-1\\leqslant 0,\\ \\sqrt{1-x^2}\\geqslant 0$，故被积函数 $\\leqslant 0$，从而 $a_n-a_{n-1}\\leqslant 0$，即 $a_n\\leqslant a_{n-1}$，数列单调减少。\n\n**递推式。** 当 $n\\geqslant 2$，把 $x^n=x^{n-1}\\cdot x$，并令 $\\mathrm{d}v=x\\sqrt{1-x^2}\\,\\mathrm{d}x$，则 $v=-\\dfrac{1}{3}(1-x^2)^{3/2}$，$u=x^{n-1}$：\n\n$$a_n=\\Bigl[-\\dfrac{1}{3}x^{n-1}(1-x^2)^{3/2}\\Bigr]_0^1+\\dfrac{n-1}{3}\\int_0^1 x^{n-2}(1-x^2)^{3/2}\\,\\mathrm{d}x.$$\n\n端点项在 $x=0,1$ 处均为 $0$，且 $(1-x^2)^{3/2}=(1-x^2)\\sqrt{1-x^2}$，故\n\n$$a_n=\\dfrac{n-1}{3}\\int_0^1 x^{n-2}(1-x^2)\\sqrt{1-x^2}\\,\\mathrm{d}x=\\dfrac{n-1}{3}\\bigl(a_{n-2}-a_n\\bigr).$$\n\n移项整理：$3a_n=(n-1)a_{n-2}-(n-1)a_n$，即 $(n+2)a_n=(n-1)a_{n-2}$，故\n\n$$a_n=\\dfrac{n-1}{n+2}\\,a_{n-2}\\quad(n=2,3,\\cdots).$$\n\n**(2) 求极限。** 由 (1) 数列单调减少且各项为正（被积函数非负且不恒为零），故\n\n$$0<a_n\\leqslant a_{n-1}\\leqslant a_{n-2},$$\n\n各项除以 $a_{n-1}>0$ 得 $\\dfrac{a_n}{a_{n-2}}\\leqslant\\dfrac{a_n}{a_{n-1}}\\leqslant 1$（注意第一个不等号来自 $a_{n-1}\\leqslant a_{n-2}$，即 $\\dfrac{1}{a_{n-1}}\\geqslant\\dfrac{1}{a_{n-2}}$）。又由递推式\n\n$$\\dfrac{a_n}{a_{n-2}}=\\dfrac{n-1}{n+2}\\xrightarrow{\\ n\\to\\infty\\ }1.$$\n\n由夹逼准则，\n\n$$\\lim_{n\\to\\infty}\\dfrac{a_n}{a_{n-1}}=1.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "分部积分时端点项 $-\\dfrac{1}{3}x^{n-1}(1-x^2)^{3/2}\\big|_0^1$ 在两端都为 $0$，不能漏算或写错。",
-        "夹逼的左端不等式 $\\dfrac{a_n}{a_{n-2}}\\leqslant\\dfrac{a_n}{a_{n-1}}$ 用的是 $a_{n-1}\\leqslant a_{n-2}$，方向别弄反。",
-        "要先说明 $a_n>0$ 才能放心地用正数去除不等式并保号。"
-      ],
-      "key_point": "拆 $x^n=x^{n-1}\\cdot x$ 凑微分分部积分建递推，再用单调性夹逼求比值极限。"
-    },
-    {
-      "id": 225,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-2 & -2 & 1 \\\\ 2 & x & -2 \\\\ 0 & 0 & -2\\end{array}\\right)$ 与 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & 1 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & y\\end{array}\\right)$ 相似\r\n\r\n(1) 求 $x, y$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$ 使得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
-      "options": {},
-      "answer": "(1) $x=3, y=-2$\r\n\r\n(2) $\\boldsymbol{P}=\\boldsymbol{P}_1 \\boldsymbol{P}_2^{-1}=\\left(\\begin{array}{ccc}-1 & -1 & -1 \\\\ 2 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right)$",
-      "analysis": "【分析】\n\n第(1)问利用相似的两个不变量：相似矩阵有相同的迹与相同的行列式，列两个方程解出 $x,y$。\n\n第(2)问的标准套路是\"借道对角化\"。$A$ 与 $B$ 相似当且仅当它们与同一个对角阵 $\\Lambda$ 相似。先求出可逆 $P_1$ 使 $P_1^{-1}AP_1=\\Lambda$，再求出可逆 $P_2$ 使 $P_2^{-1}BP_2=\\Lambda$，则 $P_1^{-1}AP_1=P_2^{-1}BP_2$，整理得 $(P_1P_2^{-1})^{-1}A(P_1P_2^{-1})=B$，故所求 $P=P_1P_2^{-1}$。注意 $P_1,P_2$ 的特征向量要按同一组特征值顺序排列。\n\n【解答】\n\n**(1)** 由相似的不变量：\n\n迹相等：$\\operatorname{tr}A=-2+x-2=x-4$，$\\operatorname{tr}B=2+(-1)+y=1+y$，得 $x-4=1+y$。\n\n行列式相等：$A$ 按第三行展开，\n$$\\det A=(-2)\\begin{vmatrix}-2&-2\\\\2&x\\end{vmatrix}=(-2)(-2x+4)=4x-8,$$\n$$\\det B=2\\cdot(-1)\\cdot y=-2y,$$\n得 $4x-8=-2y$。\n\n联立 $x-4=1+y$ 与 $4x-8=-2y$：由前式 $y=x-5$，代入后式 $4x-8=-2(x-5)=-2x+10$，即 $6x=18$，故 $x=3$，$y=-2$。\n\n**(2)** 此时\n$$A=\\begin{pmatrix}-2&-2&1\\\\2&3&-2\\\\0&0&-2\\end{pmatrix},\\qquad B=\\begin{pmatrix}2&1&0\\\\0&-1&0\\\\0&0&-2\\end{pmatrix}.$$\n\n先求 $A$ 的特征值。$|\\lambda E-A|$ 中第三行为 $(0,0,\\lambda+2)$，沿其展开：\n$$|\\lambda E-A|=(\\lambda+2)\\begin{vmatrix}\\lambda+2&2\\\\-2&\\lambda-3\\end{vmatrix}=(\\lambda+2)\\big[(\\lambda+2)(\\lambda-3)+4\\big]=(\\lambda+2)(\\lambda^2-\\lambda-2)=(\\lambda+2)(\\lambda-2)(\\lambda+1).$$\n特征值 $\\lambda_1=2,\\\\ \\lambda_2=-1,\\\\ \\lambda_3=-2$。\n\n求 $A$ 的特征向量（解 $(\\lambda E-A)\\xi=0$）：\n\n- $\\lambda_1=2$：$\\begin{pmatrix}4&2&-1\\\\-2&-1&2\\\\0&0&4\\end{pmatrix}$，第三行得 $\\xi_3=0$，再由 $4\\xi_1+2\\xi_2=0$ 取 $\\xi_1=(-1,2,0)^{\\mathsf T}$。\n- $\\lambda_2=-1$：$\\begin{pmatrix}1&2&-1\\\\-2&-4&2\\\\0&0&1\\end{pmatrix}$，得 $\\xi_3=0$，$\\xi_1+2\\xi_2=0$，取 $\\xi_2=(-2,1,0)^{\\mathsf T}$。\n- $\\lambda_3=-2$：$\\begin{pmatrix}0&2&-1\\\\-2&-5&2\\\\0&0&0\\end{pmatrix}$，由 $2x_2=x_3$ 取 $x_2=1,x_3=2$，再 $-2x_1-5+2\\cdot2=0$ 得 $x_1=-\\tfrac12$，取 $\\xi_3=(-1,2,4)^{\\mathsf T}$。\n\n故 $P_1=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}$，$P_1^{-1}AP_1=\\Lambda=\\operatorname{diag}(2,-1,-2)$。\n\n再求 $B$ 的特征向量（$B$ 显然特征值同为 $2,-1,-2$）：\n\n- $\\lambda=2$：$(2E-B)=\\begin{pmatrix}0&-1&0\\\\0&3&0\\\\0&0&4\\end{pmatrix}$，得 $\\eta_2=\\eta_3=0$，取 $\\eta_1=(1,0,0)^{\\mathsf T}$。\n- $\\lambda=-1$：$(-E-B)=\\begin{pmatrix}-3&-1&0\\\\0&0&0\\\\0&0&-1\\end{pmatrix}$，得 $\\eta_3=0$，$3\\eta_1+\\eta_2=0$，取 $\\eta_2=(1,-3,0)^{\\mathsf T}$。\n- $\\lambda=-2$：$(-2E-B)=\\begin{pmatrix}-4&-1&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}$，得 $\\eta_1=\\eta_2=0$，取 $\\eta_3=(0,0,1)^{\\mathsf T}$。\n\n故 $P_2=\\begin{pmatrix}1&1&0\\\\0&-3&0\\\\0&0&1\\end{pmatrix}$，$P_2^{-1}BP_2=\\Lambda$。\n\n由 $P_1^{-1}AP_1=P_2^{-1}BP_2$，令 $P=P_1P_2^{-1}$，则 $P^{-1}AP=B$。\n\n计算 $P_2^{-1}$：$P_2^{-1}=\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}$。于是\n$$P=P_1P_2^{-1}=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}-1&-\\tfrac13+\\tfrac23&-1\\\\2&\\tfrac23-\\tfrac13&2\\\\0&0&4\\end{pmatrix}=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}.$$\n\n验证：$\\det P=4\\cdot\\begin{vmatrix}-1&-1\\\\2&1\\end{vmatrix}=4\\cdot(-1+2)=4\\ne0$，可逆。所以\n$$\\boxed{x=3,\\\\ y=-2,\\qquad P=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}}.$$\n（注：$P$ 不唯一，取不同特征向量倍数会得到不同但同样正确的 $P$。）",
-      "wrong_options": {},
-      "pitfalls": [
-        "P1 与 P2 的特征向量必须按同一特征值顺序排列，否则 P1P2^{-1} 不能把 A 化成 B。",
-        "P 的方向是 P=P1P2^{-1} 而非 P2P1^{-1}，写反会得到 PAP^{-1}=B 的错误关系。",
-        "答案 P 不唯一，特征向量取不同非零倍数都对，验算时应核对 P^{-1}AP=B 而非死记某一个 P。"
-      ],
-      "key_point": "A 与 B 相似先用迹、行列式定参数；求过渡阵借道同一对角阵：P=P1P2^{-1}。"
-    },
-    {
-      "id": 226,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, $X$ 服从参数为 $1$ 的指数分布, $Y$ 的概率分布为\r\n\r\n$P\\{Y=-1\\}=p, \\quad P\\{Y=1\\}=1-p(0<p<1)$,\r\n\r\n令 $Z=X Y$\r\n\r\n(1) 求 $Z$ 的概率密度;\r\n\r\n(2) $p$ 为何值时, $X$ 与 $Z$ 不相关?\r\n\r\n(3) $X$ 与 $Z$ 是否相互独立?",
-      "options": {},
-      "answer": "(1) $f_Z(z)= \\begin{cases}p \\mathrm{e}^z, & z<0 \\\\ (1-p) \\mathrm{e}^{-z}, & z \\geqslant 0 \\end{cases}$\r\n\r\n(2) 不相关\r\n\r\n(3) 不独立",
-      "analysis": "【分析】\n\n$Z=XY$ 中 $X$ 连续、$Y$ 离散，求 $Z$ 的密度宜用全概率公式按 $Y=\\pm1$ 分情形讨论：先求分布函数 $F_Z(z)$ 再求导。第（2）问用协方差 $\\operatorname{Cov}(X,Z)=0$ 定 $p$。第（3）问通过找一个使联合概率不等于边缘概率之积的事件，说明不独立。\n\n【解答】\n\n**（1）求密度。** $X$ 服从参数 $1$ 的指数分布，密度 $f_X(x)=\\mathrm e^{-x}\\,(x>0)$，故 $X>0$。用全概率公式按 $Y$ 取值分情形：\n\n$$F_Z(z)=P\\{XY\\le z\\}=p\\,P\\{-X\\le z\\}+(1-p)\\,P\\{X\\le z\\}.$$\n\n注意 $X>0$，故 $-X<0$。\n\n当 $z\\ge0$ 时：$P\\{-X\\le z\\}=1$，$P\\{X\\le z\\}=1-\\mathrm e^{-z}$，得\n\n$$F_Z(z)=p+(1-p)(1-\\mathrm e^{-z}).$$\n\n当 $z<0$ 时：$P\\{X\\le z\\}=0$，$P\\{-X\\le z\\}=P\\{X\\ge -z\\}=\\mathrm e^{z}$（因 $-z>0$），得\n\n$$F_Z(z)=p\\,\\mathrm e^{z}.$$\n\n求导得密度\n\n$$f_Z(z)=\\begin{cases}p\\,\\mathrm e^{z},&z<0,\\\\[2pt](1-p)\\,\\mathrm e^{-z},&z\\ge0.\\end{cases}$$\n\n**（2）求 $p$ 使 $X,Z$ 不相关。** 需 $\\operatorname{Cov}(X,Z)=E(XZ)-E(X)E(Z)=0$。由 $Z=XY$ 且 $X,Y$ 独立：\n\n$$E(XZ)=E(X^2Y)=E(X^2)E(Y),\\qquad E(Z)=E(X)E(Y).$$\n\n对指数分布 $E(X)=1,\\ E(X^2)=2$；又 $E(Y)=(-1)p+1\\cdot(1-p)=1-2p$。故\n\n$$\\operatorname{Cov}(X,Z)=E(X^2)E(Y)-E(X)\\cdot E(X)E(Y)=\\big(E(X^2)-E(X)^2\\big)E(Y)=D(X)\\,E(Y)=1\\cdot(1-2p).$$\n\n令其为 $0$，得 $1-2p=0$，即 $p=\\dfrac12$。\n\n**（3）判独立性。** 取 $p=\\dfrac12$（不相关时）考察。注意当 $X$ 取定一个值后 $|Z|=X$，故 $Z$ 的取值范围被 $X$ 限制。例如\n\n$$P\\{Z>1\\}=(1-p)\\,P\\{X>1\\}>0,$$\n\n但在事件 $\\{X\\le1\\}$ 下必有 $|Z|=X\\le1$，从而 $\\{Z>1\\}$ 不可能发生：\n\n$$P\\{Z>1,\\ X\\le1\\}=0\\ne P\\{Z>1\\}\\,P\\{X\\le1\\}.$$\n\n联合概率不等于边缘概率之积，故 $X$ 与 $Z$ 不独立。综上：不相关未必独立，本题 $X$ 与 $Z$ 不相互独立。",
-      "wrong_options": {},
-      "pitfalls": [
-        "求密度要按 $Y=\\pm1$ 用全概率分情形，并利用 $X>0$ 确定各段范围；先求 $F_Z$ 再求导更稳妥。",
-        "求协方差善用 $E(XZ)=E(X^2Y)=E(X^2)E(Y)$，化简得 $\\operatorname{Cov}(X,Z)=D(X)E(Y)$，避免硬积分。",
-        "不相关只是 $\\operatorname{Cov}=0$，不蕴含独立；本题 $|Z|=X$ 的约束使二者不可能独立。"
-      ],
-      "key_point": "离散乘连续 $Z=XY$ 的密度用全概率按离散值分段；$\\operatorname{Cov}(X,Z)=D(X)E(Y)$ 定不相关，再用联合概率反例证不独立。"
-    },
-    {
-      "id": 227,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设总体 $X$ 的概率密度为\r\n\r\n$f\\left(x ; \\sigma^{2}\\right)= \\begin{cases}\\dfrac{A}{\\sigma} \\mathrm{e}^{-\\frac{(x-\\mu)^{2}}{2 \\sigma^{2}}}, & x \\geqslant \\mu, \\\\ 0, & x<\\mu,\\end{cases}$\r\n\r\n其中 $\\mu$ 是已知参数, $\\sigma>0$ 是未知参数, $A$ 是常数, $X_{1}, X_{2}, \\cdots, X_{n}$ 是来自总体 $X$ 的简单随机样本\r\n\r\n(1) 求 $A$;\r\n\r\n(2) 求 $\\sigma^{2}$ 的最大似然估计量",
-      "options": {},
-      "answer": "(1) $A=\\sqrt{\\dfrac{2}{\\pi}}$\r\n\r\n(2) $\\sigma^2$ 的最大似然估计值为 $\\displaystyle \\hat{\\sigma}^2=\\frac{1}{n} \\sum_{i=1}^n\\left(x_i-\\mu\\right)^2$",
-      "analysis": "【分析】\n\n第(1)问用密度的归一化条件 $\\int_{-\\infty}^{+\\infty}f\\,dx=1$ 定常数 $A$。被积函数是\"半个正态\"，用换元 $t=\\dfrac{x-\\mu}{\\sigma}$ 化成 $\\int_0^{+\\infty}e^{-t^2/2}\\,dt$，再借助高斯积分 $\\int_{-\\infty}^{+\\infty}e^{-t^2/2}\\,dt=\\sqrt{2\\pi}$ 得半区间积分为 $\\sqrt{\\pi/2}$。\n\n第(2)问求 $\\sigma^2$ 的最大似然估计：写出似然函数，取对数，把 $\\sigma^2$ 当作一个整体参数 $\\theta$ 对其求导（这样最干净），令导数为零解出。注意样本都落在 $x\\ge\\mu$ 区域，似然函数在该区域才非零。\n\n【解答】\n\n**(1)** 由 $\\int_{-\\infty}^{+\\infty}f(x;\\sigma^2)\\,dx=1$，仅 $x\\ge\\mu$ 处非零：\n$$\\int_{\\mu}^{+\\infty}\\frac{A}{\\sigma}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\\,dx=1.$$\n令 $t=\\dfrac{x-\\mu}{\\sigma}$，则 $dx=\\sigma\\,dt$，$x:\\mu\\to+\\infty$ 对应 $t:0\\to+\\infty$：\n$$\\frac{A}{\\sigma}\\int_0^{+\\infty}e^{-t^2/2}\\,\\sigma\\,dt=A\\int_0^{+\\infty}e^{-t^2/2}\\,dt=1.$$\n由 $\\int_{-\\infty}^{+\\infty}e^{-t^2/2}\\,dt=\\sqrt{2\\pi}$ 及偶函数性质，$\\int_0^{+\\infty}e^{-t^2/2}\\,dt=\\dfrac{\\sqrt{2\\pi}}{2}=\\sqrt{\\dfrac{\\pi}{2}}$。故\n$$A\\sqrt{\\frac{\\pi}{2}}=1\\quad\\Longrightarrow\\quad A=\\sqrt{\\frac{2}{\\pi}}.$$\n\n**(2)** 设样本观测值 $x_1,\\dots,x_n$（均满足 $x_i\\ge\\mu$），似然函数\n$$L(\\sigma^2)=\\prod_{i=1}^n\\frac{A}{\\sigma}e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}=A^n\\,(\\sigma^2)^{-n/2}\\exp\\!\\Big(-\\frac{1}{2\\sigma^2}\\sum_{i=1}^n(x_i-\\mu)^2\\Big).$$\n记 $\\theta=\\sigma^2$，取对数：\n$$\\ln L=n\\ln A-\\frac{n}{2}\\ln\\theta-\\frac{1}{2\\theta}\\sum_{i=1}^n(x_i-\\mu)^2.$$\n对 $\\theta$ 求导并令其为零：\n$$\\frac{d\\ln L}{d\\theta}=-\\frac{n}{2\\theta}+\\frac{1}{2\\theta^2}\\sum_{i=1}^n(x_i-\\mu)^2=0.$$\n两边乘 $2\\theta^2$：$-n\\theta+\\sum_{i=1}^n(x_i-\\mu)^2=0$，解得\n$$\\hat{\\theta}=\\hat{\\sigma}^2=\\frac{1}{n}\\sum_{i=1}^n(x_i-\\mu)^2.$$\n（二阶导在该驻点处为负，确为极大。）写成统计量即 $\\sigma^2$ 的最大似然估计量为\n$$\\boxed{\\hat{\\sigma}^2=\\frac{1}{n}\\sum_{i=1}^n(X_i-\\mu)^2.}$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "归一化是半区间 [μ,+∞) 积分，结果是 √(π/2) 而非 √(2π)，A=√(2/π) 别漏掉因子 1/2。",
-        "μ 是已知参数，求 MLE 时偏差用 (X_i-μ) 而不是样本均值 X̄，分母是 n 不是 n-1。",
-        "把 σ² 整体看作一个参数 θ 求导最简洁；若对 σ 求导要注意链式法则，结论一致。"
-      ],
-      "key_point": "半正态密度归一化用换元化高斯积分定 A；σ² 的 MLE 对 θ=σ² 求导，得 (1/n)Σ(X_i-μ)²。"
-    },
-    {
-      "id": 232,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 是 4 阶矩阵, $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵,若线性方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 的基础解系中只有 2 个向量, 则 $r\\left(\\boldsymbol{A}^*\\right)=(\\quad)$",
-      "options": {
-        "A": "0",
-        "B": "1",
-        "C": "2",
-        "D": "3"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n本题考查两个核心结论的串联：齐次方程组基础解系所含向量个数与系数矩阵秩的关系，以及伴随矩阵秩的公式。\n\n（1）对 $n$ 阶矩阵 $\\boldsymbol A$，齐次方程组 $\\boldsymbol{AX}=\\mathbf 0$ 的解空间维数（即基础解系所含向量个数）为 $n-r(\\boldsymbol A)$。\n\n（2）伴随矩阵的秩公式：\n$$r(\\boldsymbol A^*)=\\begin{cases} n, & r(\\boldsymbol A)=n,\\\\ 1, & r(\\boldsymbol A)=n-1,\\\\ 0, & r(\\boldsymbol A)\\le n-2.\\end{cases}$$\n\n【解答】\n\n**第一步：由基础解系个数求 $r(\\boldsymbol A)$。**\n\n$\\boldsymbol A$ 为 $4$ 阶矩阵，即 $n=4$。基础解系中恰有 $2$ 个向量，故解空间维数为 $2$：\n$$n-r(\\boldsymbol A)=2\\ \\Longrightarrow\\ r(\\boldsymbol A)=4-2=2.$$\n\n**第二步：用伴随矩阵秩公式求 $r(\\boldsymbol A^*)$。**\n\n此时 $r(\\boldsymbol A)=2$，而 $n-2=4-2=2$，即 $r(\\boldsymbol A)=2\\le n-2$。\n\n按公式，当 $r(\\boldsymbol A)\\le n-2$ 时，$\\boldsymbol A$ 的所有 $n-1=3$ 阶子式全为零（因为 $r(\\boldsymbol A)=2<3$，任意 3 阶子式必为 0），故伴随矩阵 $\\boldsymbol A^*$ 的每个元素（均为 $\\boldsymbol A$ 的 3 阶代数余子式）都为 $0$，即 $\\boldsymbol A^*=\\boldsymbol O$，从而\n$$r(\\boldsymbol A^*)=0.$$\n\n**结论：** 选 **A**。",
-      "wrong_options": {
-        "B": "$r(\\boldsymbol A^*)=1$ 只在 $r(\\boldsymbol A)=n-1=3$ 时成立，对应基础解系仅 1 个向量；本题基础解系有 2 个向量，不符。",
-        "C": "$r(\\boldsymbol A^*)=2$ 没有对应的伴随秩取值，伴随矩阵秩只能取 $n,1,0$，不可能为 2。",
-        "D": "$r(\\boldsymbol A^*)=3$ 即 $n-1$，只有 $r(\\boldsymbol A)=n=4$（满秩）时才有 $r(\\boldsymbol A^*)=n=4$，更不会是 3；本题 $\\boldsymbol A$ 不满秩，排除。"
-      },
-      "pitfalls": [
-        "基础解系个数 = $n-r(\\boldsymbol A)$，本题给的是\"2 个向量\"对应 $r(\\boldsymbol A)=2$，不要直接把 2 当成秩。",
-        "伴随矩阵秩只有三种取值 $n,1,0$，绝不会等于 2 这类中间值；$r(\\boldsymbol A)\\le n-2$ 时必为 0。",
-        "$r(\\boldsymbol A)=2$ 恰好等于 $n-2$，仍属\"$\\le n-2$\"情形，对应 $r(\\boldsymbol A^*)=0$，注意是\"小于等于\"。"
-      ],
-      "key_point": "基础解系个数定 $r(\\boldsymbol A)$，再套伴随秩公式：$r(\\boldsymbol A)\\le n-2\\Rightarrow r(\\boldsymbol A^*)=0$。"
-    },
-    {
-      "id": 239,
-      "paper": "数学三",
-      "year": 2019,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}x^{2 x}, & x>0, \\\\ x \\mathrm{e}^x+1, & x \\leqslant 0,\\end{array}\\right.$ 求 $f^{\\prime}(x)$, 并求 $f(x)$ 的极值.",
-      "options": {},
-      "answer": "f'(x)=\\begin{cases}2x^{2x}(\\ln x+1),&x>0\\\\(1+x)\\mathrm{e}^x,&x<0\\end{cases};极小值 f(-1)=1-\\dfrac{1}{\\mathrm{e}}、f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\mathrm{e}^{-2/\\mathrm{e}}，极大值 f(0)=1",
-      "analysis": "【分析】\n\n这是分段函数求导加极值的综合题，难点有三：\n\n1. $x>0$ 段是幂指函数 $x^{2x}$，底和指数都含 $x$，必须用**对数求导法**（或写成 $\\mathrm{e}^{2x\\ln x}$）求导，不能套幂函数或指数函数公式。\n2. 分段点 $x=0$ 处要单独讨论连续性与可导性：左导数用左段公式的极限，右导数要用定义考察 $x\\to0^+$ 的行为。这里右侧导数趋于 $-\\infty$，所以 $x=0$ 处不可导，但仍可能是极值点。\n3. 求极值用**一阶导数变号判别法**最稳妥。注意 $x=0$ 这种不可导点也是极值的候选点，不能只盯着 $f'=0$。\n\n【解答】\n\n**第一步：分段求导。**\n\n当 $x>0$ 时，$f(x)=x^{2x}=\\mathrm{e}^{2x\\ln x}$。两边取对数 $\\ln f=2x\\ln x$，求导得\n$$\\dfrac{f'(x)}{f(x)}=2\\ln x+2x\\cdot\\dfrac1x=2\\ln x+2,$$\n故 $f'(x)=2x^{2x}(\\ln x+1)$。\n\n当 $x<0$ 时，$f(x)=x\\mathrm{e}^x+1$，$f'(x)=\\mathrm{e}^x+x\\mathrm{e}^x=(1+x)\\mathrm{e}^x$。\n\n**第二步：讨论 $x=0$ 处。**\n\n$f(0)=0\\cdot\\mathrm{e}^0+1=1$。当 $x\\to0^+$，$2x\\ln x\\to0$，故 $f(0^+)=\\mathrm{e}^0=1=f(0)$；$x\\to0^-$ 时 $f\\to1$。所以 $f$ 在 $x=0$ 连续。\n\n左导数 $f'_-(0)=\\lim_{x\\to0^-}(1+x)\\mathrm{e}^x=1$。\n\n右导数 $f'_+(0)=\\lim_{x\\to0^+}2x^{2x}(\\ln x+1)$，其中 $x^{2x}\\to1$，$\\ln x+1\\to-\\infty$，故 $f'_+(0)=-\\infty$。左右不一致，**$f(x)$ 在 $x=0$ 处不可导**。于是\n$$f'(x)=\\begin{cases}2x^{2x}(\\ln x+1),&x>0,\\\\(1+x)\\mathrm{e}^x,&x<0.\\end{cases}$$\n\n**第三步：求驻点并用一阶导数变号判别。**\n\n$x<0$ 段：$(1+x)\\mathrm{e}^x=0\\Rightarrow x=-1$。当 $x<-1$ 时 $f'<0$，$-1<x<0$ 时 $f'>0$，故 $x=-1$ 为**极小值点**，$f(-1)=-\\mathrm{e}^{-1}+1=1-\\dfrac1{\\mathrm{e}}$。\n\n$x>0$ 段：$2x^{2x}(\\ln x+1)=0\\Rightarrow \\ln x=-1\\Rightarrow x=\\dfrac1{\\mathrm{e}}$（$x^{2x}>0$）。当 $0<x<\\dfrac1{\\mathrm{e}}$ 时 $\\ln x+1<0$，$f'<0$；当 $x>\\dfrac1{\\mathrm{e}}$ 时 $f'>0$，故 $x=\\dfrac1{\\mathrm{e}}$ 为**极小值点**，$f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\left(\\dfrac1{\\mathrm{e}}\\right)^{2/\\mathrm{e}}=\\mathrm{e}^{-2/\\mathrm{e}}$。\n\n$x=0$ 处：左侧 $(-1,0)$ 上 $f'>0$（递增），右侧 $\\left(0,\\dfrac1{\\mathrm{e}}\\right)$ 上 $f'<0$（递减），故虽不可导，$x=0$ 仍是**极大值点**，$f(0)=1$。\n\n**结论：** $f(x)$ 的极大值为 $f(0)=1$；极小值为 $f(-1)=1-\\dfrac1{\\mathrm{e}}$ 和 $f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\mathrm{e}^{-2/\\mathrm{e}}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "幂指函数 $x^{2x}$ 必须取对数或写成 $\\mathrm{e}^{2x\\ln x}$ 求导，套幂函数公式 $2x\\cdot x^{2x-1}$ 是错的。",
-        "极值候选点不仅是 $f'=0$ 的点，还包括不可导点 $x=0$；漏掉它会丢掉极大值。",
-        "判断 $x=0$ 可导性时，右导数是 $-\\infty$（不存在有限值），不能因为左右极限都为 1 就误判可导。"
-      ],
-      "key_point": "幂指函数取对数求导，分段点单独验连续与可导，极值用一阶导变号法并把不可导点也纳入候选。"
-    },
-    {
       "id": 245,
       "paper": "数学三",
       "year": 2019,
@@ -354,6 +111,116 @@
         "由 $nu_n$ 绝对收敛要顺手得到 $\\sum u_n$ 也绝对收敛（因 $|u_n|\\le n|u_n|$），这是排除 C/D 的依据。"
       ],
       "key_point": "把待判通项拆成\"绝对收敛因子 × 有界因子\"，用比较判别法直接得绝对收敛。"
+    },
+    {
+      "id": 232,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 4 阶矩阵, $\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵,若线性方程组 $\\boldsymbol{A X}=\\mathbf{0}$ 的基础解系中只有 2 个向量, 则 $r\\left(\\boldsymbol{A}^*\\right)=(\\quad)$",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查两个核心结论的串联：齐次方程组基础解系所含向量个数与系数矩阵秩的关系，以及伴随矩阵秩的公式。\n\n（1）对 $n$ 阶矩阵 $\\boldsymbol A$，齐次方程组 $\\boldsymbol{AX}=\\mathbf 0$ 的解空间维数（即基础解系所含向量个数）为 $n-r(\\boldsymbol A)$。\n\n（2）伴随矩阵的秩公式：\n$$r(\\boldsymbol A^*)=\\begin{cases} n, & r(\\boldsymbol A)=n,\\\\ 1, & r(\\boldsymbol A)=n-1,\\\\ 0, & r(\\boldsymbol A)\\le n-2.\\end{cases}$$\n\n【解答】\n\n**第一步：由基础解系个数求 $r(\\boldsymbol A)$。**\n\n$\\boldsymbol A$ 为 $4$ 阶矩阵，即 $n=4$。基础解系中恰有 $2$ 个向量，故解空间维数为 $2$：\n$$n-r(\\boldsymbol A)=2\\ \\Longrightarrow\\ r(\\boldsymbol A)=4-2=2.$$\n\n**第二步：用伴随矩阵秩公式求 $r(\\boldsymbol A^*)$。**\n\n此时 $r(\\boldsymbol A)=2$，而 $n-2=4-2=2$，即 $r(\\boldsymbol A)=2\\le n-2$。\n\n按公式，当 $r(\\boldsymbol A)\\le n-2$ 时，$\\boldsymbol A$ 的所有 $n-1=3$ 阶子式全为零（因为 $r(\\boldsymbol A)=2<3$，任意 3 阶子式必为 0），故伴随矩阵 $\\boldsymbol A^*$ 的每个元素（均为 $\\boldsymbol A$ 的 3 阶代数余子式）都为 $0$，即 $\\boldsymbol A^*=\\boldsymbol O$，从而\n$$r(\\boldsymbol A^*)=0.$$\n\n**结论：** 选 **A**。",
+      "wrong_options": {
+        "B": "$r(\\boldsymbol A^*)=1$ 只在 $r(\\boldsymbol A)=n-1=3$ 时成立，对应基础解系仅 1 个向量；本题基础解系有 2 个向量，不符。",
+        "C": "$r(\\boldsymbol A^*)=2$ 没有对应的伴随秩取值，伴随矩阵秩只能取 $n,1,0$，不可能为 2。",
+        "D": "$r(\\boldsymbol A^*)=3$ 即 $n-1$，只有 $r(\\boldsymbol A)=n=4$（满秩）时才有 $r(\\boldsymbol A^*)=n=4$，更不会是 3；本题 $\\boldsymbol A$ 不满秩，排除。"
+      },
+      "pitfalls": [
+        "基础解系个数 = $n-r(\\boldsymbol A)$，本题给的是\"2 个向量\"对应 $r(\\boldsymbol A)=2$，不要直接把 2 当成秩。",
+        "伴随矩阵秩只有三种取值 $n,1,0$，绝不会等于 2 这类中间值；$r(\\boldsymbol A)\\le n-2$ 时必为 0。",
+        "$r(\\boldsymbol A)=2$ 恰好等于 $n-2$，仍属\"$\\le n-2$\"情形，对应 $r(\\boldsymbol A^*)=0$，注意是\"小于等于\"。"
+      ],
+      "key_point": "基础解系个数定 $r(\\boldsymbol A)$，再套伴随秩公式：$r(\\boldsymbol A)\\le n-2\\Rightarrow r(\\boldsymbol A^*)=0$。"
+    },
+    {
+      "id": 209,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶实对称矩阵, $\\boldsymbol{E}$ 是 $3$ 阶单位矩阵, 若 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=2 \\boldsymbol{E}$, 且 $|\\boldsymbol{A}|=4$, 则二次型 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 的规范形为 $(\\quad)$",
+      "options": {
+        "A": "$y_{1}^{2}+y_{2}^{2}+y_{3}^{2}$",
+        "B": "$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$",
+        "C": "$y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$",
+        "D": "$-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n关键在于由矩阵多项式方程 $\\boldsymbol{A}^2+\\boldsymbol{A}=2\\boldsymbol{E}$ 反推特征值。若 $\\lambda$ 是实对称矩阵 $\\boldsymbol{A}$ 的特征值，则 $\\lambda$ 必满足同一个数量方程 $\\lambda^2+\\lambda-2=0$。再用 $|\\boldsymbol{A}|$ 等于全体特征值之积，定出三个特征值的具体取值，从而得到正、负惯性指数，写出规范形。\n\n【解答】\n\n由 $\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E}=\\boldsymbol{O}$，设 $\\lambda$ 为 $\\boldsymbol{A}$ 的任一特征值，对应特征向量 $\\boldsymbol{\\xi}\\neq\\boldsymbol{0}$，则\n$$(\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E})\\boldsymbol{\\xi}=(\\lambda^2+\\lambda-2)\\boldsymbol{\\xi}=\\boldsymbol{0},$$\n故 $\\lambda^2+\\lambda-2=0$，即 $(\\lambda-1)(\\lambda+2)=0$，所以每个特征值只能取 $\\lambda=1$ 或 $\\lambda=-2$。\n\n设三个特征值（计重数）取值情况，记 $1$ 出现 $k$ 次，$-2$ 出现 $3-k$ 次，则\n$$|\\boldsymbol{A}|=1^{k}\\cdot(-2)^{3-k}=(-2)^{3-k}=4.$$\n由 $(-2)^{3-k}=4=(-2)^2$ 得 $3-k=2$，即 $k=1$。\n\n因此 $\\boldsymbol{A}$ 的特征值为 $1,\\,-2,\\,-2$：一个正特征值、两个负特征值。$\\boldsymbol{A}$ 为实对称矩阵，二次型 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x}$ 的正惯性指数 $p=1$，负惯性指数 $q=2$，故规范形为\n$$y_1^2-y_2^2-y_3^2.$$\n\n对照选项，应选 **C**。",
+      "wrong_options": {
+        "A": "对应特征值全为正，需 $p=3$，但本题有两个负特征值。",
+        "B": "对应 $p=2,q=1$，但实际是 $p=1,q=2$，正负个数恰好弄反。",
+        "D": "对应特征值全为负，则 $|\\boldsymbol{A}|=(-2)^3=-8\\neq4$，与条件矛盾。"
+      },
+      "pitfalls": [
+        "由 $|\\boldsymbol{A}|=4$ 定特征值时，要保证特征值只能取 $1$ 或 $-2$，不能随意搭配，注意 $(-2)^{3-k}=4$ 唯一解 $k=1$。",
+        "规范形只看正负惯性指数（即正、负特征值个数），与特征值的具体大小无关，别把系数写成 $\\pm2$。"
+      ],
+      "key_point": "矩阵多项式方程把特征值限定在代数方程的根上，再用行列式（特征值之积）定符号个数，即得规范形。"
+    },
+    {
+      "id": 211,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为随机事件,则 $P(A)=P(B)$ 的充分必要条件是 $(\\quad)$",
+      "options": {
+        "A": "$P(A \\cup B)=P(A)+P(B)$",
+        "B": "$P(A B)=P(A) P(B)$",
+        "C": "$P(A \\bar{B})=P(B \\bar{A})$",
+        "D": "$P(A B)=P(\\bar{A} \\bar{B})$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n要找 $P(A)=P(B)$ 的充要条件，最稳妥的办法是用事件差的减法公式 $P(A\\bar{B})=P(A)-P(AB)$ 把各选项化简，看哪一个能与 $P(A)=P(B)$ 互相等价。注意 $P(AB)$ 是两式公共部分，是化简的桥梁。\n\n【解答】\n\n由减法公式：\n$$P(A\\bar{B})=P(A)-P(AB),\\qquad P(B\\bar{A})=P(B)-P(AB).$$\n\n逐项分析：\n\n- 选项 C：$P(A\\bar{B})=P(B\\bar{A})$ 等价于\n$$P(A)-P(AB)=P(B)-P(AB)\\\\ \\Longleftrightarrow\\\\ P(A)=P(B).$$\n两边的 $P(AB)$ 恰好抵消，故 C 与 $P(A)=P(B)$ 互为充要条件。\n\n再验证其余选项不是充要条件：\n\n- 选项 A：$P(A\\cup B)=P(A)+P(B)\\Leftrightarrow P(AB)=0$（$A,B$ 几乎不相容），与 $P(A)=P(B)$ 无必然联系。\n- 选项 B：$P(AB)=P(A)P(B)$ 是 $A,B$ 相互独立，与 $P(A)=P(B)$ 不等价。\n- 选项 D：$P(AB)=P(\\bar{A}\\bar{B})$，由 $P(\\bar{A}\\bar{B})=1-P(A\\cup B)=1-P(A)-P(B)+P(AB)$，该式等价于 $P(A)+P(B)=1$，与 $P(A)=P(B)$ 不等价。\n\n故选 **C**。",
+      "wrong_options": {
+        "A": "$P(A\\cup B)=P(A)+P(B)$ 等价于 $P(AB)=0$，是“几乎互斥”，与两概率相等无关。",
+        "B": "$P(AB)=P(A)P(B)$ 是 $A,B$ 独立的定义，独立与概率相等是两回事。",
+        "D": "$P(AB)=P(\\bar{A}\\bar{B})$ 整理后等价于 $P(A)+P(B)=1$，并不能推出 $P(A)=P(B)$。"
+      },
+      "pitfalls": [
+        "用减法公式 $P(A\\bar{B})=P(A)-P(AB)$ 时，$\\bar{B}$ 表示 $B$ 的对立事件，$A\\bar{B}=A-AB$。",
+        "充要条件必须双向成立，选项 A、B、D 都只是某种特殊关系，与概率相等并不互推。"
+      ],
+      "key_point": "用 $P(A\\bar{B})=P(A)-P(AB)$、$P(B\\bar{A})=P(B)-P(AB)$ 作差，公共项 $P(AB)$ 抵消后直接得 $P(A)=P(B)$。"
+    },
+    {
+      "id": 212,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 且都服从正态分布 $N\\left(\\mu, \\sigma^{2}\\right)$, 则 $P\\{|X-Y|<1\\}(\\quad)$",
+      "options": {
+        "A": "与 $\\mu$ 无关, 而与 $\\sigma^{2}$ 有关",
+        "B": "与 $\\mu$ 有关, 而与 $\\sigma^{2}$ 无关",
+        "C": "与 $\\mu, \\sigma^{2}$ 都有关",
+        "D": "与 $\\mu, \\sigma^{2}$ 都无关"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查独立正态变量线性组合仍服从正态分布。$X-Y$ 是两个独立正态变量之差，其分布完全由 $X-Y$ 的期望和方差决定。算出 $X-Y$ 的分布后标准化，看 $P\\{|X-Y|<1\\}$ 最终依赖哪些参数即可。\n\n【解答】\n\n**$X-Y$ 的分布。** $X,Y$ 独立且都服从 $N(\\mu,\\sigma^2)$，故\n\n$$E(X-Y)=\\mu-\\mu=0,\\qquad D(X-Y)=D(X)+D(Y)=\\sigma^2+\\sigma^2=2\\sigma^2.$$\n\n由独立正态变量线性组合的正态性，$X-Y\\sim N(0,\\,2\\sigma^2)$。注意期望恒为 $0$，与 $\\mu$ 无关。\n\n**计算概率。** 标准化 $\\dfrac{X-Y}{\\sqrt{2}\\,\\sigma}\\sim N(0,1)$，于是\n\n$$P\\{|X-Y|<1\\}=P\\!\\left\\{\\left|\\frac{X-Y}{\\sqrt2\\,\\sigma}\\right|<\\frac{1}{\\sqrt2\\,\\sigma}\\right\\}=2\\Phi\\!\\left(\\frac{1}{\\sqrt2\\,\\sigma}\\right)-1.$$\n\n该结果中 $\\mu$ 被消去，只含 $\\sigma$。因此 $P\\{|X-Y|<1\\}$ 与 $\\mu$ 无关，而与 $\\sigma^2$ 有关。选 **A**。",
+      "wrong_options": {
+        "B": "结论恰好说反。$X-Y$ 的期望为 $0$ 与 $\\mu$ 无关，而方差 $2\\sigma^2$ 含 $\\sigma^2$，故应是与 $\\mu$ 无关、与 $\\sigma^2$ 有关。",
+        "C": "误以为期望 $E(X-Y)$ 仍含 $\\mu$。实际上两者相减使 $\\mu$ 抵消，概率不依赖 $\\mu$。",
+        "D": "忽略了方差 $2\\sigma^2$ 的作用，误认为标准化后概率是常数；其实 $\\sigma$ 出现在标准化分母中，概率随 $\\sigma$ 变化。"
+      },
+      "pitfalls": [
+        "$D(X-Y)=D(X)+D(Y)=2\\sigma^2$（独立时方差相加，与减号无关），不要写成 $\\sigma^2$ 或 $0$。",
+        "$E(X-Y)=\\mu-\\mu=0$，故 $\\mu$ 被消去，概率与 $\\mu$ 无关。",
+        "标准化分母是 $\\sqrt{2}\\,\\sigma$，$\\sigma$ 留在表达式里，所以概率与 $\\sigma^2$ 有关。"
+      ],
+      "key_point": "独立正态之差 $X-Y\\sim N(0,2\\sigma^2)$，期望消去 $\\mu$、方差保留 $\\sigma^2$，故 $P\\{|X-Y|<1\\}$ 只依赖 $\\sigma^2$。"
     },
     {
       "id": 248,
@@ -450,6 +317,44 @@
       "key_point": "非齐次组无穷多解 $\\iff r(\\boldsymbol{A})=r(\\boldsymbol{A},\\boldsymbol{b})<n$：先令 $\\det\\boldsymbol{A}=0$ 缩参，再用增广矩阵行变换检验秩相等排除无解伪根。"
     },
     {
+      "id": 218,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为 $f(x)= \\begin{cases}\\dfrac{x}{2}, & 0<x<2, \\\\ 0, & \\text { 其他, }\\end{cases}$ 为 $X$ 的数学期望, 则 $P\\{F(X)>E(X)-1\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{2}{3}$",
+      "analysis": "【分析】\n\n本题有三层：先算期望 $E(X)$，再写出分布函数 $F(x)$，最后把事件 $\\{F(X)>E(X)-1\\}$ 翻译成关于 $X$ 的普通事件求概率。注意 $F(X)$ 是\"把随机变量 $X$ 代入分布函数 $F$\"得到的新随机变量，不是常数。由于在支撑 $(0,2)$ 上 $F$ 严格单调递增，可把关于 $F(X)$ 的不等式反解为关于 $X$ 的不等式，再用密度积分求概率。\n\n【解答】\n\n第一步，求期望：\n\n$$E(X)=\\int_0^2 x\\cdot\\frac{x}{2}\\,\\mathrm{d}x=\\int_0^2\\frac{x^2}{2}\\,\\mathrm{d}x=\\frac{1}{2}\\cdot\\frac{x^3}{3}\\Big|_0^2=\\frac{1}{2}\\cdot\\frac{8}{3}=\\frac{4}{3}.$$\n\n故 $E(X)-1=\\dfrac{1}{3}$。\n\n第二步，求分布函数 $F(x)$。当 $0\\leqslant x<2$ 时\n\n$$F(x)=\\int_0^x\\frac{t}{2}\\,\\mathrm{d}t=\\frac{x^2}{4};$$\n\n当 $x<0$ 时 $F(x)=0$，当 $x\\geqslant 2$ 时 $F(x)=1$。\n\n第三步，求 $P\\{F(X)>\\tfrac{1}{3}\\}$。因 $X$ 几乎必然取值于 $(0,2)$，在该区间上 $F(X)=\\dfrac{X^2}{4}$，于是\n\n$$F(X)>\\frac{1}{3}\\iff \\frac{X^2}{4}>\\frac{1}{3}\\iff X^2>\\frac{4}{3}\\iff X>\\frac{2}{\\sqrt{3}}$$\n\n（因为 $X>0$，舍去负根）。注意 $\\dfrac{2}{\\sqrt{3}}=\\dfrac{2\\sqrt3}{3}\\approx1.155\\in(0,2)$。所以\n\n$$P\\{F(X)>\\tfrac{1}{3}\\}=P\\Big\\{X>\\frac{2}{\\sqrt3}\\Big\\}=\\int_{2/\\sqrt3}^{2}\\frac{x}{2}\\,\\mathrm{d}x=\\frac{x^2}{4}\\Big|_{2/\\sqrt3}^{2}.$$\n\n代入：\n\n$$=\\frac{4}{4}-\\frac{(4/3)}{4}=1-\\frac{1}{3}=\\frac{2}{3}.$$\n\n所以 $P\\{F(X)>E(X)-1\\}=\\dfrac{2}{3}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$F(X)$ 是随机变量（把 $X$ 代入 $F$），不要当成常数直接比较。",
+        "解 $X^2>\\tfrac{4}{3}$ 时因 $X>0$ 只取正根 $X>\\tfrac{2}{\\sqrt3}$，别把负半轴也算进去。",
+        "积分下限要用 $\\tfrac{2}{\\sqrt3}$ 的精确值，化简时 $(2/\\sqrt3)^2=4/3$ 不要算错。"
+      ],
+      "key_point": "把 $F(X)$ 当随机变量，利用 $F$ 在支撑上的单调性反解成 $X$ 的不等式，再用密度积分求概率。"
+    },
+    {
+      "id": 239,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}x^{2 x}, & x>0, \\\\ x \\mathrm{e}^x+1, & x \\leqslant 0,\\end{array}\\right.$ 求 $f^{\\prime}(x)$, 并求 $f(x)$ 的极值.",
+      "options": {},
+      "answer": "f'(x)=\\begin{cases}2x^{2x}(\\ln x+1),&x>0\\\\(1+x)\\mathrm{e}^x,&x<0\\end{cases};极小值 f(-1)=1-\\dfrac{1}{\\mathrm{e}}、f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\mathrm{e}^{-2/\\mathrm{e}}，极大值 f(0)=1",
+      "analysis": "【分析】\n\n这是分段函数求导加极值的综合题，难点有三：\n\n1. $x>0$ 段是幂指函数 $x^{2x}$，底和指数都含 $x$，必须用**对数求导法**（或写成 $\\mathrm{e}^{2x\\ln x}$）求导，不能套幂函数或指数函数公式。\n2. 分段点 $x=0$ 处要单独讨论连续性与可导性：左导数用左段公式的极限，右导数要用定义考察 $x\\to0^+$ 的行为。这里右侧导数趋于 $-\\infty$，所以 $x=0$ 处不可导，但仍可能是极值点。\n3. 求极值用**一阶导数变号判别法**最稳妥。注意 $x=0$ 这种不可导点也是极值的候选点，不能只盯着 $f'=0$。\n\n【解答】\n\n**第一步：分段求导。**\n\n当 $x>0$ 时，$f(x)=x^{2x}=\\mathrm{e}^{2x\\ln x}$。两边取对数 $\\ln f=2x\\ln x$，求导得\n$$\\dfrac{f'(x)}{f(x)}=2\\ln x+2x\\cdot\\dfrac1x=2\\ln x+2,$$\n故 $f'(x)=2x^{2x}(\\ln x+1)$。\n\n当 $x<0$ 时，$f(x)=x\\mathrm{e}^x+1$，$f'(x)=\\mathrm{e}^x+x\\mathrm{e}^x=(1+x)\\mathrm{e}^x$。\n\n**第二步：讨论 $x=0$ 处。**\n\n$f(0)=0\\cdot\\mathrm{e}^0+1=1$。当 $x\\to0^+$，$2x\\ln x\\to0$，故 $f(0^+)=\\mathrm{e}^0=1=f(0)$；$x\\to0^-$ 时 $f\\to1$。所以 $f$ 在 $x=0$ 连续。\n\n左导数 $f'_-(0)=\\lim_{x\\to0^-}(1+x)\\mathrm{e}^x=1$。\n\n右导数 $f'_+(0)=\\lim_{x\\to0^+}2x^{2x}(\\ln x+1)$，其中 $x^{2x}\\to1$，$\\ln x+1\\to-\\infty$，故 $f'_+(0)=-\\infty$。左右不一致，**$f(x)$ 在 $x=0$ 处不可导**。于是\n$$f'(x)=\\begin{cases}2x^{2x}(\\ln x+1),&x>0,\\\\(1+x)\\mathrm{e}^x,&x<0.\\end{cases}$$\n\n**第三步：求驻点并用一阶导数变号判别。**\n\n$x<0$ 段：$(1+x)\\mathrm{e}^x=0\\Rightarrow x=-1$。当 $x<-1$ 时 $f'<0$，$-1<x<0$ 时 $f'>0$，故 $x=-1$ 为**极小值点**，$f(-1)=-\\mathrm{e}^{-1}+1=1-\\dfrac1{\\mathrm{e}}$。\n\n$x>0$ 段：$2x^{2x}(\\ln x+1)=0\\Rightarrow \\ln x=-1\\Rightarrow x=\\dfrac1{\\mathrm{e}}$（$x^{2x}>0$）。当 $0<x<\\dfrac1{\\mathrm{e}}$ 时 $\\ln x+1<0$，$f'<0$；当 $x>\\dfrac1{\\mathrm{e}}$ 时 $f'>0$，故 $x=\\dfrac1{\\mathrm{e}}$ 为**极小值点**，$f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\left(\\dfrac1{\\mathrm{e}}\\right)^{2/\\mathrm{e}}=\\mathrm{e}^{-2/\\mathrm{e}}$。\n\n$x=0$ 处：左侧 $(-1,0)$ 上 $f'>0$（递增），右侧 $\\left(0,\\dfrac1{\\mathrm{e}}\\right)$ 上 $f'<0$（递减），故虽不可导，$x=0$ 仍是**极大值点**，$f(0)=1$。\n\n**结论：** $f(x)$ 的极大值为 $f(0)=1$；极小值为 $f(-1)=1-\\dfrac1{\\mathrm{e}}$ 和 $f\\left(\\dfrac1{\\mathrm{e}}\\right)=\\mathrm{e}^{-2/\\mathrm{e}}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "幂指函数 $x^{2x}$ 必须取对数或写成 $\\mathrm{e}^{2x\\ln x}$ 求导，套幂函数公式 $2x\\cdot x^{2x-1}$ 是错的。",
+        "极值候选点不仅是 $f'=0$ 的点，还包括不可导点 $x=0$；漏掉它会丢掉极大值。",
+        "判断 $x=0$ 可导性时，右导数是 $-\\infty$（不存在有限值），不能因为左右极限都为 1 就误判可导。"
+      ],
+      "key_point": "幂指函数取对数求导，分段点单独验连续与可导，极值用一阶导变号法并把不可导点也纳入候选。"
+    },
+    {
       "id": 254,
       "paper": "数学三",
       "year": 2019,
@@ -488,6 +393,44 @@
       "key_point": "一阶线性方程套通解公式定常数，旋转体体积用圆盘法 V=π∫y²dx 并凑微分积出。"
     },
     {
+      "id": 221,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求曲线 $y=\\mathrm{e}^{-x} \\sin x(x \\geqslant 0)$ 与 $x$ 轴之间图形的面积\r\n\r\n(数二问法：设 $n$ 是正整数,记 $S_n$ 为曲线 $y=\\mathrm{e}^{-x} \\sin x(0 \\leqslant x \\leqslant n \\pi)$ 与 $x$ 轴所围图形的面积, 求 $S_n$, 并求 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n$)",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}+\\frac{1}{\\mathrm{e}^\\pi-1}$",
+      "analysis": "【分析】\n\n曲线 $y=\\mathrm{e}^{-x}\\sin x$ 在 $x\\geqslant 0$ 上随 $\\sin x$ 的符号反复穿越 $x$ 轴：在区间 $[k\\pi,(k+1)\\pi]$ 上 $\\sin x$ 符号不变。所求\"图形面积\"是曲线与 $x$ 轴所夹的**各块面积的绝对值之和**，因此应把每个半周期上的面积 $A_k$ 单独算出再求和。由于 $\\mathrm{e}^{-x}$ 的衰减，$\\{A_k\\}$ 恰好构成一个公比为 $\\mathrm{e}^{-\\pi}$ 的**几何级数**，用等比级数求和即可。计算单块面积时对 $\\displaystyle\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x$ 用两次分部积分（或直接套公式）。\n\n【解答】\n\n先求原函数。由两次分部积分得\n\n$$\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)+C.$$\n\n记 $F(x)=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)$。在 $[k\\pi,(k+1)\\pi]$（$k=0,1,2,\\dots$）上 $\\sin x$ 不变号，该块面积\n\n$$A_k=\\left|\\int_{k\\pi}^{(k+1)\\pi}\\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x\\right|=\\bigl|F((k+1)\\pi)-F(k\\pi)\\bigr|.$$\n\n注意 $\\sin(k\\pi)=0,\\ \\cos(k\\pi)=(-1)^k$，故 $F(k\\pi)=-\\dfrac{1}{2}(-1)^k\\mathrm{e}^{-k\\pi}$，于是\n\n$$F((k+1)\\pi)-F(k\\pi)=\\dfrac{1}{2}(-1)^k\\bigl(\\mathrm{e}^{-(k+1)\\pi}+\\mathrm{e}^{-k\\pi}\\bigr),$$\n\n$$A_k=\\dfrac{1}{2}\\mathrm{e}^{-k\\pi}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr).$$\n\n所求总面积为各块之和（这是公比 $\\mathrm{e}^{-\\pi}<1$ 的等比级数）：\n\n$$S=\\sum_{k=0}^{\\infty}A_k=\\dfrac{1}{2}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr)\\sum_{k=0}^{\\infty}\\mathrm{e}^{-k\\pi}=\\dfrac{1}{2}\\cdot\\dfrac{1+\\mathrm{e}^{-\\pi}}{1-\\mathrm{e}^{-\\pi}}=\\dfrac{1}{2}\\cdot\\dfrac{\\mathrm{e}^{\\pi}+1}{\\mathrm{e}^{\\pi}-1}.$$\n\n化简（分子配凑）：\n\n$$S=\\dfrac{\\mathrm{e}^{\\pi}+1}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{(\\mathrm{e}^{\\pi}-1)+2}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}.$$\n\n**数二问法补充**：$S_n=\\displaystyle\\sum_{k=0}^{n-1}A_k=\\dfrac{1}{2}(1+\\mathrm{e}^{-\\pi})\\cdot\\dfrac{1-\\mathrm{e}^{-n\\pi}}{1-\\mathrm{e}^{-\\pi}}$，于是 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}$，与上面一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "求\"面积\"必须对每段取绝对值后相加，不能直接对 $\\mathrm{e}^{-x}\\sin x$ 在 $[0,+\\infty)$ 上积分（那样正负相消得到的是代数和，不是面积）。",
+        "等比级数公比是 $\\mathrm{e}^{-\\pi}$ 而非 $\\mathrm{e}^{-\\pi}$ 以外的值，求和时分母应为 $1-\\mathrm{e}^{-\\pi}$。",
+        "分部积分得到的原函数系数 $-\\dfrac{1}{2}$ 容易写错符号，建议求导回验。"
+      ],
+      "key_point": "半周期面积取绝对值，发现是公比 $\\mathrm{e}^{-\\pi}$ 的等比级数，求和即得。"
+    },
+    {
+      "id": 222,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $a_{n}=\\int_{0}^{1} x^{n} \\sqrt{1-x^{2}} \\mathrm{d} x(n=0,1,2, \\cdots)$.\r\n\r\n(1) 证明: 数列 $\\left\\{a_{n}\\right\\}$ 单调减少, 且 $a_{n}=\\dfrac{n-1}{n+2} a_{n-2}(n=2,3, \\cdots)$;\r\n\r\n(2) 求 $\\displaystyle \\lim _{n \\rightarrow \\infty} \\frac{a_{n}}{a_{n-1}}$",
+      "options": {},
+      "answer": "(2) $1$",
+      "analysis": "【分析】\n\n第 (1) 问两件事：单调性用\"作差\"——比较 $a_n$ 与 $a_{n-1}$，被积函数差出一个 $x^{n-1}(x-1)\\sqrt{1-x^2}$，在 $[0,1]$ 上非正，立得单调减少；递推式则把 $x^n$ 拆成 $x^{n-1}\\cdot x$，用 $x\\sqrt{1-x^2}\\,\\mathrm{d}x$ 凑微分作**分部积分**，自然把 $a_n$ 与 $a_{n-2}$ 联系起来。第 (2) 问求相邻项之比的极限，关键是用单调性把 $\\dfrac{a_n}{a_{n-1}}$ **夹**在 $\\dfrac{a_n}{a_{n-2}}$ 与 $1$ 之间，再借助 (1) 的递推式得 $\\dfrac{a_n}{a_{n-2}}=\\dfrac{n-1}{n+2}\\to 1$，由夹逼准则得极限。\n\n【解答】\n\n**(1) 单调减少。** 因 $a_n,a_{n-1}$ 被积函数均非负，且\n\n$$a_n-a_{n-1}=\\int_0^1\\bigl(x^n-x^{n-1}\\bigr)\\sqrt{1-x^2}\\,\\mathrm{d}x=\\int_0^1 x^{n-1}(x-1)\\sqrt{1-x^2}\\,\\mathrm{d}x.$$\n\n在 $[0,1]$ 上 $x^{n-1}\\geqslant 0,\\ x-1\\leqslant 0,\\ \\sqrt{1-x^2}\\geqslant 0$，故被积函数 $\\leqslant 0$，从而 $a_n-a_{n-1}\\leqslant 0$，即 $a_n\\leqslant a_{n-1}$，数列单调减少。\n\n**递推式。** 当 $n\\geqslant 2$，把 $x^n=x^{n-1}\\cdot x$，并令 $\\mathrm{d}v=x\\sqrt{1-x^2}\\,\\mathrm{d}x$，则 $v=-\\dfrac{1}{3}(1-x^2)^{3/2}$，$u=x^{n-1}$：\n\n$$a_n=\\Bigl[-\\dfrac{1}{3}x^{n-1}(1-x^2)^{3/2}\\Bigr]_0^1+\\dfrac{n-1}{3}\\int_0^1 x^{n-2}(1-x^2)^{3/2}\\,\\mathrm{d}x.$$\n\n端点项在 $x=0,1$ 处均为 $0$，且 $(1-x^2)^{3/2}=(1-x^2)\\sqrt{1-x^2}$，故\n\n$$a_n=\\dfrac{n-1}{3}\\int_0^1 x^{n-2}(1-x^2)\\sqrt{1-x^2}\\,\\mathrm{d}x=\\dfrac{n-1}{3}\\bigl(a_{n-2}-a_n\\bigr).$$\n\n移项整理：$3a_n=(n-1)a_{n-2}-(n-1)a_n$，即 $(n+2)a_n=(n-1)a_{n-2}$，故\n\n$$a_n=\\dfrac{n-1}{n+2}\\,a_{n-2}\\quad(n=2,3,\\cdots).$$\n\n**(2) 求极限。** 由 (1) 数列单调减少且各项为正（被积函数非负且不恒为零），故\n\n$$0<a_n\\leqslant a_{n-1}\\leqslant a_{n-2},$$\n\n各项除以 $a_{n-1}>0$ 得 $\\dfrac{a_n}{a_{n-2}}\\leqslant\\dfrac{a_n}{a_{n-1}}\\leqslant 1$（注意第一个不等号来自 $a_{n-1}\\leqslant a_{n-2}$，即 $\\dfrac{1}{a_{n-1}}\\geqslant\\dfrac{1}{a_{n-2}}$）。又由递推式\n\n$$\\dfrac{a_n}{a_{n-2}}=\\dfrac{n-1}{n+2}\\xrightarrow{\\ n\\to\\infty\\ }1.$$\n\n由夹逼准则，\n\n$$\\lim_{n\\to\\infty}\\dfrac{a_n}{a_{n-1}}=1.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "分部积分时端点项 $-\\dfrac{1}{3}x^{n-1}(1-x^2)^{3/2}\\big|_0^1$ 在两端都为 $0$，不能漏算或写错。",
+        "夹逼的左端不等式 $\\dfrac{a_n}{a_{n-2}}\\leqslant\\dfrac{a_n}{a_{n-1}}$ 用的是 $a_{n-1}\\leqslant a_{n-2}$，方向别弄反。",
+        "要先说明 $a_n>0$ 才能放心地用正数去除不等式并保号。"
+      ],
+      "key_point": "拆 $x^n=x^{n-1}\\cdot x$ 凑微分分部积分建递推，再用单调性夹逼求比值极限。"
+    },
+    {
       "id": 256,
       "paper": "数学三",
       "year": 2019,
@@ -505,6 +448,63 @@
         "$a=1$ 时秩降为 2，$\\beta_3$ 的表示不唯一，但 $\\alpha_1-\\alpha_2+\\alpha_3$ 这一组对所有 $a$ 都成立，写它最稳妥。"
       ],
       "key_point": "向量组等价的判据是 $r(I)=r(II)=r(I,II)$；行列式零点处必须回代验证张成空间。"
+    },
+    {
+      "id": 225,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-2 & -2 & 1 \\\\ 2 & x & -2 \\\\ 0 & 0 & -2\\end{array}\\right)$ 与 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & 1 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & y\\end{array}\\right)$ 相似\r\n\r\n(1) 求 $x, y$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$ 使得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
+      "options": {},
+      "answer": "(1) $x=3, y=-2$\r\n\r\n(2) $\\boldsymbol{P}=\\boldsymbol{P}_1 \\boldsymbol{P}_2^{-1}=\\left(\\begin{array}{ccc}-1 & -1 & -1 \\\\ 2 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right)$",
+      "analysis": "【分析】\n\n第(1)问利用相似的两个不变量：相似矩阵有相同的迹与相同的行列式，列两个方程解出 $x,y$。\n\n第(2)问的标准套路是\"借道对角化\"。$A$ 与 $B$ 相似当且仅当它们与同一个对角阵 $\\Lambda$ 相似。先求出可逆 $P_1$ 使 $P_1^{-1}AP_1=\\Lambda$，再求出可逆 $P_2$ 使 $P_2^{-1}BP_2=\\Lambda$，则 $P_1^{-1}AP_1=P_2^{-1}BP_2$，整理得 $(P_1P_2^{-1})^{-1}A(P_1P_2^{-1})=B$，故所求 $P=P_1P_2^{-1}$。注意 $P_1,P_2$ 的特征向量要按同一组特征值顺序排列。\n\n【解答】\n\n**(1)** 由相似的不变量：\n\n迹相等：$\\operatorname{tr}A=-2+x-2=x-4$，$\\operatorname{tr}B=2+(-1)+y=1+y$，得 $x-4=1+y$。\n\n行列式相等：$A$ 按第三行展开，\n$$\\det A=(-2)\\begin{vmatrix}-2&-2\\\\2&x\\end{vmatrix}=(-2)(-2x+4)=4x-8,$$\n$$\\det B=2\\cdot(-1)\\cdot y=-2y,$$\n得 $4x-8=-2y$。\n\n联立 $x-4=1+y$ 与 $4x-8=-2y$：由前式 $y=x-5$，代入后式 $4x-8=-2(x-5)=-2x+10$，即 $6x=18$，故 $x=3$，$y=-2$。\n\n**(2)** 此时\n$$A=\\begin{pmatrix}-2&-2&1\\\\2&3&-2\\\\0&0&-2\\end{pmatrix},\\qquad B=\\begin{pmatrix}2&1&0\\\\0&-1&0\\\\0&0&-2\\end{pmatrix}.$$\n\n先求 $A$ 的特征值。$|\\lambda E-A|$ 中第三行为 $(0,0,\\lambda+2)$，沿其展开：\n$$|\\lambda E-A|=(\\lambda+2)\\begin{vmatrix}\\lambda+2&2\\\\-2&\\lambda-3\\end{vmatrix}=(\\lambda+2)\\big[(\\lambda+2)(\\lambda-3)+4\\big]=(\\lambda+2)(\\lambda^2-\\lambda-2)=(\\lambda+2)(\\lambda-2)(\\lambda+1).$$\n特征值 $\\lambda_1=2,\\\\ \\lambda_2=-1,\\\\ \\lambda_3=-2$。\n\n求 $A$ 的特征向量（解 $(\\lambda E-A)\\xi=0$）：\n\n- $\\lambda_1=2$：$\\begin{pmatrix}4&2&-1\\\\-2&-1&2\\\\0&0&4\\end{pmatrix}$，第三行得 $\\xi_3=0$，再由 $4\\xi_1+2\\xi_2=0$ 取 $\\xi_1=(-1,2,0)^{\\mathsf T}$。\n- $\\lambda_2=-1$：$\\begin{pmatrix}1&2&-1\\\\-2&-4&2\\\\0&0&1\\end{pmatrix}$，得 $\\xi_3=0$，$\\xi_1+2\\xi_2=0$，取 $\\xi_2=(-2,1,0)^{\\mathsf T}$。\n- $\\lambda_3=-2$：$\\begin{pmatrix}0&2&-1\\\\-2&-5&2\\\\0&0&0\\end{pmatrix}$，由 $2x_2=x_3$ 取 $x_2=1,x_3=2$，再 $-2x_1-5+2\\cdot2=0$ 得 $x_1=-\\tfrac12$，取 $\\xi_3=(-1,2,4)^{\\mathsf T}$。\n\n故 $P_1=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}$，$P_1^{-1}AP_1=\\Lambda=\\operatorname{diag}(2,-1,-2)$。\n\n再求 $B$ 的特征向量（$B$ 显然特征值同为 $2,-1,-2$）：\n\n- $\\lambda=2$：$(2E-B)=\\begin{pmatrix}0&-1&0\\\\0&3&0\\\\0&0&4\\end{pmatrix}$，得 $\\eta_2=\\eta_3=0$，取 $\\eta_1=(1,0,0)^{\\mathsf T}$。\n- $\\lambda=-1$：$(-E-B)=\\begin{pmatrix}-3&-1&0\\\\0&0&0\\\\0&0&-1\\end{pmatrix}$，得 $\\eta_3=0$，$3\\eta_1+\\eta_2=0$，取 $\\eta_2=(1,-3,0)^{\\mathsf T}$。\n- $\\lambda=-2$：$(-2E-B)=\\begin{pmatrix}-4&-1&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}$，得 $\\eta_1=\\eta_2=0$，取 $\\eta_3=(0,0,1)^{\\mathsf T}$。\n\n故 $P_2=\\begin{pmatrix}1&1&0\\\\0&-3&0\\\\0&0&1\\end{pmatrix}$，$P_2^{-1}BP_2=\\Lambda$。\n\n由 $P_1^{-1}AP_1=P_2^{-1}BP_2$，令 $P=P_1P_2^{-1}$，则 $P^{-1}AP=B$。\n\n计算 $P_2^{-1}$：$P_2^{-1}=\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}$。于是\n$$P=P_1P_2^{-1}=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}-1&-\\tfrac13+\\tfrac23&-1\\\\2&\\tfrac23-\\tfrac13&2\\\\0&0&4\\end{pmatrix}=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}.$$\n\n验证：$\\det P=4\\cdot\\begin{vmatrix}-1&-1\\\\2&1\\end{vmatrix}=4\\cdot(-1+2)=4\\ne0$，可逆。所以\n$$\\boxed{x=3,\\\\ y=-2,\\qquad P=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}}.$$\n（注：$P$ 不唯一，取不同特征向量倍数会得到不同但同样正确的 $P$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "P1 与 P2 的特征向量必须按同一特征值顺序排列，否则 P1P2^{-1} 不能把 A 化成 B。",
+        "P 的方向是 P=P1P2^{-1} 而非 P2P1^{-1}，写反会得到 PAP^{-1}=B 的错误关系。",
+        "答案 P 不唯一，特征向量取不同非零倍数都对，验算时应核对 P^{-1}AP=B 而非死记某一个 P。"
+      ],
+      "key_point": "A 与 B 相似先用迹、行列式定参数；求过渡阵借道同一对角阵：P=P1P2^{-1}。"
+    },
+    {
+      "id": 226,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, $X$ 服从参数为 $1$ 的指数分布, $Y$ 的概率分布为\r\n\r\n$P\\{Y=-1\\}=p, \\quad P\\{Y=1\\}=1-p(0<p<1)$,\r\n\r\n令 $Z=X Y$\r\n\r\n(1) 求 $Z$ 的概率密度;\r\n\r\n(2) $p$ 为何值时, $X$ 与 $Z$ 不相关?\r\n\r\n(3) $X$ 与 $Z$ 是否相互独立?",
+      "options": {},
+      "answer": "(1) $f_Z(z)= \\begin{cases}p \\mathrm{e}^z, & z<0 \\\\ (1-p) \\mathrm{e}^{-z}, & z \\geqslant 0 \\end{cases}$\r\n\r\n(2) 不相关\r\n\r\n(3) 不独立",
+      "analysis": "【分析】\n\n$Z=XY$ 中 $X$ 连续、$Y$ 离散，求 $Z$ 的密度宜用全概率公式按 $Y=\\pm1$ 分情形讨论：先求分布函数 $F_Z(z)$ 再求导。第（2）问用协方差 $\\operatorname{Cov}(X,Z)=0$ 定 $p$。第（3）问通过找一个使联合概率不等于边缘概率之积的事件，说明不独立。\n\n【解答】\n\n**（1）求密度。** $X$ 服从参数 $1$ 的指数分布，密度 $f_X(x)=\\mathrm e^{-x}\\,(x>0)$，故 $X>0$。用全概率公式按 $Y$ 取值分情形：\n\n$$F_Z(z)=P\\{XY\\le z\\}=p\\,P\\{-X\\le z\\}+(1-p)\\,P\\{X\\le z\\}.$$\n\n注意 $X>0$，故 $-X<0$。\n\n当 $z\\ge0$ 时：$P\\{-X\\le z\\}=1$，$P\\{X\\le z\\}=1-\\mathrm e^{-z}$，得\n\n$$F_Z(z)=p+(1-p)(1-\\mathrm e^{-z}).$$\n\n当 $z<0$ 时：$P\\{X\\le z\\}=0$，$P\\{-X\\le z\\}=P\\{X\\ge -z\\}=\\mathrm e^{z}$（因 $-z>0$），得\n\n$$F_Z(z)=p\\,\\mathrm e^{z}.$$\n\n求导得密度\n\n$$f_Z(z)=\\begin{cases}p\\,\\mathrm e^{z},&z<0,\\\\[2pt](1-p)\\,\\mathrm e^{-z},&z\\ge0.\\end{cases}$$\n\n**（2）求 $p$ 使 $X,Z$ 不相关。** 需 $\\operatorname{Cov}(X,Z)=E(XZ)-E(X)E(Z)=0$。由 $Z=XY$ 且 $X,Y$ 独立：\n\n$$E(XZ)=E(X^2Y)=E(X^2)E(Y),\\qquad E(Z)=E(X)E(Y).$$\n\n对指数分布 $E(X)=1,\\ E(X^2)=2$；又 $E(Y)=(-1)p+1\\cdot(1-p)=1-2p$。故\n\n$$\\operatorname{Cov}(X,Z)=E(X^2)E(Y)-E(X)\\cdot E(X)E(Y)=\\big(E(X^2)-E(X)^2\\big)E(Y)=D(X)\\,E(Y)=1\\cdot(1-2p).$$\n\n令其为 $0$，得 $1-2p=0$，即 $p=\\dfrac12$。\n\n**（3）判独立性。** 取 $p=\\dfrac12$（不相关时）考察。注意当 $X$ 取定一个值后 $|Z|=X$，故 $Z$ 的取值范围被 $X$ 限制。例如\n\n$$P\\{Z>1\\}=(1-p)\\,P\\{X>1\\}>0,$$\n\n但在事件 $\\{X\\le1\\}$ 下必有 $|Z|=X\\le1$，从而 $\\{Z>1\\}$ 不可能发生：\n\n$$P\\{Z>1,\\ X\\le1\\}=0\\ne P\\{Z>1\\}\\,P\\{X\\le1\\}.$$\n\n联合概率不等于边缘概率之积，故 $X$ 与 $Z$ 不独立。综上：不相关未必独立，本题 $X$ 与 $Z$ 不相互独立。",
+      "wrong_options": {},
+      "pitfalls": [
+        "求密度要按 $Y=\\pm1$ 用全概率分情形，并利用 $X>0$ 确定各段范围；先求 $F_Z$ 再求导更稳妥。",
+        "求协方差善用 $E(XZ)=E(X^2Y)=E(X^2)E(Y)$，化简得 $\\operatorname{Cov}(X,Z)=D(X)E(Y)$，避免硬积分。",
+        "不相关只是 $\\operatorname{Cov}=0$，不蕴含独立；本题 $|Z|=X$ 的约束使二者不可能独立。"
+      ],
+      "key_point": "离散乘连续 $Z=XY$ 的密度用全概率按离散值分段；$\\operatorname{Cov}(X,Z)=D(X)E(Y)$ 定不相关，再用联合概率反例证不独立。"
+    },
+    {
+      "id": 227,
+      "paper": "数学三",
+      "year": 2019,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为\r\n\r\n$f\\left(x ; \\sigma^{2}\\right)= \\begin{cases}\\dfrac{A}{\\sigma} \\mathrm{e}^{-\\frac{(x-\\mu)^{2}}{2 \\sigma^{2}}}, & x \\geqslant \\mu, \\\\ 0, & x<\\mu,\\end{cases}$\r\n\r\n其中 $\\mu$ 是已知参数, $\\sigma>0$ 是未知参数, $A$ 是常数, $X_{1}, X_{2}, \\cdots, X_{n}$ 是来自总体 $X$ 的简单随机样本\r\n\r\n(1) 求 $A$;\r\n\r\n(2) 求 $\\sigma^{2}$ 的最大似然估计量",
+      "options": {},
+      "answer": "(1) $A=\\sqrt{\\dfrac{2}{\\pi}}$\r\n\r\n(2) $\\sigma^2$ 的最大似然估计值为 $\\displaystyle \\hat{\\sigma}^2=\\frac{1}{n} \\sum_{i=1}^n\\left(x_i-\\mu\\right)^2$",
+      "analysis": "【分析】\n\n第(1)问用密度的归一化条件 $\\int_{-\\infty}^{+\\infty}f\\,dx=1$ 定常数 $A$。被积函数是\"半个正态\"，用换元 $t=\\dfrac{x-\\mu}{\\sigma}$ 化成 $\\int_0^{+\\infty}e^{-t^2/2}\\,dt$，再借助高斯积分 $\\int_{-\\infty}^{+\\infty}e^{-t^2/2}\\,dt=\\sqrt{2\\pi}$ 得半区间积分为 $\\sqrt{\\pi/2}$。\n\n第(2)问求 $\\sigma^2$ 的最大似然估计：写出似然函数，取对数，把 $\\sigma^2$ 当作一个整体参数 $\\theta$ 对其求导（这样最干净），令导数为零解出。注意样本都落在 $x\\ge\\mu$ 区域，似然函数在该区域才非零。\n\n【解答】\n\n**(1)** 由 $\\int_{-\\infty}^{+\\infty}f(x;\\sigma^2)\\,dx=1$，仅 $x\\ge\\mu$ 处非零：\n$$\\int_{\\mu}^{+\\infty}\\frac{A}{\\sigma}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\\,dx=1.$$\n令 $t=\\dfrac{x-\\mu}{\\sigma}$，则 $dx=\\sigma\\,dt$，$x:\\mu\\to+\\infty$ 对应 $t:0\\to+\\infty$：\n$$\\frac{A}{\\sigma}\\int_0^{+\\infty}e^{-t^2/2}\\,\\sigma\\,dt=A\\int_0^{+\\infty}e^{-t^2/2}\\,dt=1.$$\n由 $\\int_{-\\infty}^{+\\infty}e^{-t^2/2}\\,dt=\\sqrt{2\\pi}$ 及偶函数性质，$\\int_0^{+\\infty}e^{-t^2/2}\\,dt=\\dfrac{\\sqrt{2\\pi}}{2}=\\sqrt{\\dfrac{\\pi}{2}}$。故\n$$A\\sqrt{\\frac{\\pi}{2}}=1\\quad\\Longrightarrow\\quad A=\\sqrt{\\frac{2}{\\pi}}.$$\n\n**(2)** 设样本观测值 $x_1,\\dots,x_n$（均满足 $x_i\\ge\\mu$），似然函数\n$$L(\\sigma^2)=\\prod_{i=1}^n\\frac{A}{\\sigma}e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}=A^n\\,(\\sigma^2)^{-n/2}\\exp\\!\\Big(-\\frac{1}{2\\sigma^2}\\sum_{i=1}^n(x_i-\\mu)^2\\Big).$$\n记 $\\theta=\\sigma^2$，取对数：\n$$\\ln L=n\\ln A-\\frac{n}{2}\\ln\\theta-\\frac{1}{2\\theta}\\sum_{i=1}^n(x_i-\\mu)^2.$$\n对 $\\theta$ 求导并令其为零：\n$$\\frac{d\\ln L}{d\\theta}=-\\frac{n}{2\\theta}+\\frac{1}{2\\theta^2}\\sum_{i=1}^n(x_i-\\mu)^2=0.$$\n两边乘 $2\\theta^2$：$-n\\theta+\\sum_{i=1}^n(x_i-\\mu)^2=0$，解得\n$$\\hat{\\theta}=\\hat{\\sigma}^2=\\frac{1}{n}\\sum_{i=1}^n(x_i-\\mu)^2.$$\n（二阶导在该驻点处为负，确为极大。）写成统计量即 $\\sigma^2$ 的最大似然估计量为\n$$\\boxed{\\hat{\\sigma}^2=\\frac{1}{n}\\sum_{i=1}^n(X_i-\\mu)^2.}$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "归一化是半区间 [μ,+∞) 积分，结果是 √(π/2) 而非 √(2π)，A=√(2/π) 别漏掉因子 1/2。",
+        "μ 是已知参数，求 MLE 时偏差用 (X_i-μ) 而不是样本均值 X̄，分母是 n 不是 n-1。",
+        "把 σ² 整体看作一个参数 θ 求导最简洁；若对 σ 求导要注意链式法则，结论一致。"
+      ],
+      "key_point": "半正态密度归一化用换元化高斯积分定 A；σ² 的 MLE 对 θ=σ² 求导，得 (1/n)Σ(X_i-μ)²。"
     }
   ]
 }

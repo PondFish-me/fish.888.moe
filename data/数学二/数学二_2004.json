@@ -4,213 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 906,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 11,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "微分方程 $y^{\\prime \\prime}+y=x^2+1+\\sin x$ 的特解形式可设为 $(\\quad)$",
-      "options": {
-        "A": "$y^*=a x^2+b x+c+x(A \\sin x+B \\cos x)$",
-        "B": "$y^*=x\\left(a x^2+b x+c+A \\sin x+B \\cos x\\right)$",
-        "C": "$y^*=a x^2+b x+c+A \\sin x$",
-        "D": "$y^*=a x^2+b x+c+A \\cos x$"
-      },
-      "answer": "A",
-      "analysis": "原方程对应齐次方程的特征方程是 $r^2+1=0$,\r\n\r\n其根为 $r= \\pm i$, 与等号右边 $x^2+1$ 形式无重根，\r\n\r\n故其特解形式为 $y_1{ }^*=a x^2+b x+c$,\r\n\r\n对于方程 $y^{\\prime \\prime}+y=\\sin x ， \\pm i$ 是特征方程的根，\r\n\r\n故其特解形式为 $y_2{ }^*=x(A \\sin x+B \\cos x)$,\r\n\r\n根据叠加原理，原方程的特解形式为:\r\n\r\n$y=y_1{ }^*+y_2{ }^* \\\\\r\n=a x^2+b x+c+x(A \\sin x+B \\cos x)$,\r\n\r\n故选 (A)",
-      "wrong_options": {
-        "B": "把多项式项也乘了 x，多项式部分不共振不该乘",
-        "C": "sinx 项漏掉 x 因子且只设 sin 不设 cos",
-        "D": "sinx 项设成 cos 且漏 x 因子"
-      },
-      "pitfalls": [
-        "特征根 ±i，sinx 对应的 ±i 是特征根⟹共振，特解须乘 x：x(Asinx+Bcosx)",
-        "多项式项 x²+1 不共振（0 非特征根），设 ax²+bx+c 不乘 x"
-      ],
-      "key_point": "多项式项 ax²+bx+c + 共振项 x(Asinx+Bcosx)，选A。"
-    },
-    {
-      "id": 909,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 6,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}2 & 1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 矩阵 $\\boldsymbol{B}$ 满足 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^{*}=2 \\boldsymbol{B} \\boldsymbol{A}^{*}+\\boldsymbol{E}$, 其中 $\\boldsymbol{A}^{*}$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{E}$ 是单位矩阵, 则 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\displaystyle \\frac{1}{9}$",
-      "analysis": "$|\\boldsymbol{A}|=3$, \r\n\r\n在 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^*=2 \\boldsymbol{B} \\boldsymbol{A}^*+\\boldsymbol{E}$ 两边右乘 $\\boldsymbol{A}$, \r\n\r\n得 $3 \\boldsymbol{A} \\boldsymbol{B}=6 \\boldsymbol{B}+\\boldsymbol{A}$, 即 $3(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=\\boldsymbol{A}$, \r\n\r\n于是 $3^3|\\boldsymbol{A}-2 \\boldsymbol{E}| \\cdot|\\boldsymbol{B}|=|\\boldsymbol{A}|$,\r\n\r\n而 $\\boldsymbol{A}-2 \\boldsymbol{E}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1\\end{array}\\right),|\\boldsymbol{A}-2 \\boldsymbol{E}|=1$, \r\n\r\n故 $\\displaystyle |\\boldsymbol{B}|=\\frac{1}{9}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "右乘 A 用 A*A=|A|E=3E，化为 3(A-2E)B=A，别把 A* 当成 A 的逆直接消去",
-        "取行列式 3³|A-2E|·|B|=|A|，|A-2E|=1、|A|=3 ⇒ |B|=3/27=1/9，注意 3 阶行列式提公因子是 3³"
-      ],
-      "key_point": "右乘 A 用 AA*=|A|E 化简，取行列式得 |B|=|A|/(27|A-2E|)=1/9。"
-    },
-    {
-      "id": 911,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "把 $x \\rightarrow 0^{+}$时的无穷小量 $\\displaystyle \\alpha=\\int_{0}^{x} \\cos t^{2} \\mathrm{d} t, \\\\\r\n\\beta=\\int_{0}^{x^{2}} \\tan \\sqrt{t} \\mathrm{d} t, \\gamma=\\int_{0}^{\\sqrt{x}} \\sin t^{3} \\mathrm{d} t$ 排列起来, 使排在 后面的是前一个的高阶无穷小量, 则正确的排列次序是 $(\\quad)$",
-      "options": {
-        "A": "$\\alpha, \\beta, \\gamma$",
-        "B": "$\\alpha, \\gamma, \\beta$",
-        "C": "$\\beta, \\alpha, \\gamma$",
-        "D": "$\\beta, \\gamma, \\alpha$"
-      },
-      "answer": "B",
-      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\cos x^2=1$, 得 $\\alpha \\sim x$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{m x^{m-1}}$, 得 $m-1=2$, 即 $m=3$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^3}=\\frac{2}{3}$, 于是 $\\beta \\sim \\dfrac{2}{3} x^3$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\sin x \\sqrt{x}}{m x^{m-1}}$, 得 $m-1=1$, 即 $m=2$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^2}=\\frac{1}{4}$, 于是 $\\gamma \\sim \\dfrac{1}{4} x^2$\r\n\r\n故无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)\r\n\r\n方法二 因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{\\beta}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\cos x^2}{2 x \\tan x}=+\\infty,\\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{\\gamma}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}=0, \\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{\\alpha}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{\\int_0^x \\cos t^2 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}{\\cos x^2}=0$,\r\n\r\n所以无穷小量的阶数从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B).\r\n\r\n方法三 由 $t \\rightarrow 0^{+}$时, \r\n\r\n$\\cos t^2 \\rightarrow 1, \\tan \\sqrt{t} \\sim \\sqrt{t}, \\sin t^3 \\sim t^3$ 得\r\n\r\n$\\displaystyle \\alpha \\sim \\int_0^x 1 \\mathrm{d} t=x, \\beta \\sim \\int_0^{x^2} \\sqrt{t} \\mathrm{d} t=\\left.\\frac{2}{3} t^{\\frac{3}{2}}\\right|_0 ^{x^2}=\\frac{2}{3} x^3, \\gamma \\sim \\int_0^{\\sqrt{x}} t^3 \\mathrm{d} t=\\frac{1}{4} x^2$,\r\n\r\n显然无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)",
-      "wrong_options": {
-        "A": "误把 β 当 2 阶、γ 当 3 阶，弄反了 γ 与 β 的阶数（实际 γ 是 2 阶、β 是 3 阶）。",
-        "C": "误判 β 阶数最低（当成 1 阶），实际 β 是最高阶（3 阶）应排最后。",
-        "D": "阶数完全倒序，误以为 β 最低阶、α 最高阶，与实际 α<γ<β 相反。"
-      },
-      "pitfalls": [
-        "上限含 x²、√x，求导须乘链式因子后才能定准阶：α~x（1 阶）、γ~x²/4（2 阶）、β~(2/3)x³（3 阶）",
-        "“后者是前者的高阶无穷小”指阶数更高（趋 0 更快），故按阶数升序排 α,γ,β"
-      ],
-      "key_point": "三者阶数 α(1)<γ(2)<β(3)，后者为前者高阶无穷小，排列为 α,γ,β。"
-    },
-    {
-      "id": 912,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 连续, 且 $f^{\\prime}(0)>0$, 则存在 $\\delta>0$, 使得 $(\\quad)$",
-      "options": {
-        "A": "$f(x)$ 在 $(0, \\delta)$ 内单调增加",
-        "B": "$f(x)$ 在 $(-\\delta, 0)$ 内单调减少",
-        "C": "对任意的 $x \\in(0, \\delta)$ 有 $f(x)>f(0)$",
-        "D": "对任意的 $x \\in(-\\delta, 0)$ 有 $f(x)>f(0)$"
-      },
-      "answer": "C",
-      "analysis": "根据导数的定义, $\\displaystyle f^{\\prime}(0)=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}>0$. \r\n\r\n由极限保号性, 存在 $\\delta>0$, \r\n\r\n当 $0<|x|<\\delta$ 时, $\\dfrac{f(x)-f(0)}{x}>0$. \r\n\r\n于是当 $x \\in(-\\delta, 0)$ 时, $f(x)<f(0)$; \r\n\r\n当 $x \\in(0, \\delta)$ 时, $f(x)>f(0)$, 应选 (C)",
-      "wrong_options": {
-        "A": "f'(0)>0 只给 0 点的信息，推不出 f 在整个 (0,δ) 上单调增（其余点导数符号未知）。",
-        "B": "同理一点导数正推不出 f 在 (-δ,0) 上单调减少，单调性需区间上导数符号。",
-        "D": "由保号性 x∈(-δ,0) 时 x<0 而商>0，得 f(x)<f(0)，与 D 所述 f(x)>f(0) 相反。"
-      },
-      "pitfalls": [
-        "f'(0)>0 只是一点信息，推不出邻域内的单调性（A、B 都错）",
-        "由 (f(x)-f(0))/x>0：x>0 得 f(x)>f(0)、x<0 得 f(x)<f(0)，符号随 x 正负而变"
-      ],
-      "key_point": "极限保号性给去心邻域 (f(x)-f(0))/x>0，故 x∈(0,δ) 时 f(x)>f(0)（选 C）。"
-    },
-    {
-      "id": 915,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 13,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶方阵, 将 $\\boldsymbol{A}$ 的第 $1$ 列与第 $2$ 列交换得 $\\boldsymbol{B}$, 再将 $\\boldsymbol{B}$ 的第 $2$ 列加到第 $3$ 列得 $\\boldsymbol{C}$, 则满足 $\\boldsymbol{A Q}=\\boldsymbol C$ 的可逆矩阵 $\\boldsymbol Q$ 为 $(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 1 & 1\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{lll}0 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
-      },
-      "answer": "D",
-      "analysis": "由初等变换的定义, 得\r\n\r\n$\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right), \\\\\r\n\\boldsymbol{C}=\\boldsymbol{B}\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{C}=\\boldsymbol{A}\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{Q}=\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{lll}\r\n0 & 1 & 1 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$, 应选 (D)",
-      "wrong_options": {
-        "A": "把“第 2 列加到第 3 列”对应的初等矩阵位置写错（非对角元放错行列）。",
-        "B": "两初等矩阵相乘顺序颠倒（左右乘弄反），得错误 Q。",
-        "C": "把列变换误当左乘（用了行变换矩阵），非对角元位置随之出错。"
-      },
-      "pitfalls": [
-        "列变换=右乘初等矩阵、行变换=左乘，不能混",
-        "Q=E(交换1、2列)·E(第2列加到第3列)，右乘要按操作先后从左往右相乘"
-      ],
-      "key_point": "Q=E₁(交换 1、2 列)·E₂(2 列加到 3 列)=选项 D 的矩阵。"
-    },
-    {
-      "id": 916,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 14,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为满足 $\\boldsymbol{A B}=\\boldsymbol{O}$ 的任意两个非零矩阵, 则必有 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
-        "B": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关",
-        "C": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
-        "D": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关"
-      },
-      "answer": "A",
-      "analysis": "方法一 设 $\\boldsymbol{A}$ 为 $m \\times n$ 矩阵, $\\boldsymbol{B}$ 为 $n \\times s$ 矩阵.\r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant n$.\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以 $r(\\boldsymbol{A}) \\geqslant 1, r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n于是 $r(\\boldsymbol{A})<n, r(\\boldsymbol{B})<n$.\r\n\r\n因为矩阵的秩、矩阵行向量组的秩、矩阵列向量组的秩都相等, \r\n\r\n于是 $\\boldsymbol{A}$ 的列向量组的秩小于列数, \r\n\r\n$\\boldsymbol{B}$ 的行向量组的秩小于行数, \r\n\r\n$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关, \r\n\r\n应选 (A)\r\n\r\n方法二\r\n\r\n设 $\\boldsymbol{A}\\\\\r\n=\\left(\\begin{array}{cccc}a_{11} & a_{12} & \\cdots & a_{1 n} \\\\ a_{21} & a_{22} & \\cdots & a_{2 n} \\\\ \\vdots & \\vdots & & \\vdots \\\\ a_{m 1} & a_{m 2} & \\cdots & a_{m n}\\end{array}\\right)\\\\\r\n=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n\\right), \\\\\r\n\\boldsymbol{B}\\\\\r\n=\\left(\\begin{array}{cccc}b_{11} & b_{12} & \\cdots & b_{1 s} \\\\ b_{21} & b_{22} & \\cdots & b_{2 s} \\\\ \\vdots & \\vdots & & \\vdots \\\\ b_{n 1} & b_{n 2} & \\cdots & b_{n s}\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{c}\\boldsymbol{\\beta}_1 \\\\ \\boldsymbol{\\beta}_2 \\\\ \\vdots \\\\ \\boldsymbol{\\beta}_n\\end{array}\\right)$, \r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$ 得\r\n\r\n$\\left\\{\\begin{array} { l }\r\n b _ { 1 1 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 1 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 1 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n b _ { 1 2 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 2 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 2 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n \\vdots  \\\\\r\n b _ { 1 s } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 s } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n s } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }  \r\n\\end{array}\\right.$\r\n\r\n及 $\\left\\{\\begin{array}{l}\r\na_{11} \\boldsymbol{\\beta}_1+a_{12} \\boldsymbol{\\beta}_2+\\cdots+a_{1 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\na_{21} \\boldsymbol{\\beta}_1+a_{22} \\boldsymbol{\\beta}_2+\\cdots+a_{2 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\n\\vdots \\\\\r\na_{m 1} \\boldsymbol{\\beta}_1+a_{m 2} \\boldsymbol{\\beta}_2+\\cdots+a_{m n} \\boldsymbol{\\beta}_n=\\mathbf{0}\r\n\\end{array}\\right.$\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以存在不全为零的常数 $b_{1 j}, b_{2 j}, \\cdots, b_{n j}$ 及 $a_{i 1}, a_{i 2}, \\cdots, a_{i n}$, \r\n\r\n使得 $b_{1 j} \\boldsymbol{\\alpha}_1+b_{2 j} \\boldsymbol{\\alpha}_2+\\cdots+b_{n j} \\boldsymbol{\\alpha}_n=\\mathbf{0}$ \r\n\r\n及 $a_{i 1} \\boldsymbol{\\beta}_1+a_{i 2} \\boldsymbol{\\beta}_2+\\cdots+a_{i n} \\boldsymbol{\\beta}_n=\\mathbf{0}$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 与 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_n$ 都线性相关, \r\n\r\n应选 (A)",
-      "wrong_options": {
-        "B": "误判 B 列向量组相关；受约束的是 B 的行（r(B)<n=B 的行数），列数 s 未定。",
-        "C": "误判 A 行相关；由 Ax=0 有非零解只能推 A 的列向量组相关，不是行。",
-        "D": "A、B 的相关方向都判反（应为 A 列相关、B 行相关）。"
-      },
-      "pitfalls": [
-        "AB=O 表示 B 每列都是 Ax=0 的解，A 有非零解 ⇒ A 列向量组相关",
-        "r(A)+r(B)≤n 且 A、B 非零使二者秩≥1，故 r(B)<n=B 的行数 ⇒ B 行向量组相关"
-      ],
-      "key_point": "AB=O 且 A、B 非零 ⇒ A 列向量组线性相关、B 行向量组线性相关（选 A）。"
-    },
-    {
-      "id": 919,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 19,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设 $\\mathrm{e}<a<b<\\mathrm{e}^{2}$, 证明 $\\displaystyle : \\ln ^{2} b-\\ln ^{2} a>\\frac{4}{\\mathrm{e}^{2}}(b-a)$",
-      "options": {},
-      "answer": "证明题（详见解析）",
-      "analysis": "方法一 辅助函数法 (单调性)\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\\\ \r\n\\ln ^2 b-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(b-a)>0$,\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(x-a), \\quad f(a)=0\\\\\r\nf^{\\prime}(x)=\\frac{2 \\ln x}{x}-\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n因为 $\\displaystyle f^{\\prime \\prime}(x)=\\frac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以当 $x>\\mathrm{e}$ 时, $f^{\\prime}(x)$ 单调减少.\r\n\r\n由 $\\left\\{\\begin{array}{l}f^{\\prime}\\left(\\mathrm{e}^2\\right)=0 \\\\ f^{\\prime \\prime}(x)<0(x>\\mathrm{e})\\end{array}\\right.$ \r\n\r\n得 $f^{\\prime}(x)>0\\left(\\mathrm{e}<x<\\mathrm{e}^2\\right)$, \r\n\r\n即 $f(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调增加, \r\n\r\n由 $\\mathrm{e}<a<b<\\mathrm{e}^2$ 及 $f(a)=0$ 得 $f(b)>0$, \r\n\r\n故 $\\ln ^2 b-\\ln ^2 a>\\dfrac{4}{\\mathrm{e}^2}(b-a)$\r\n\r\n方法二 中值定理法\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x, f^{\\prime}(x)=\\frac{2 \\ln x}{x}$, \r\n\r\n由拉格朗日中值定理得\r\n\r\n$\\dfrac{\\ln ^2 b-\\ln ^2 a}{b-a}=\\dfrac{2 \\ln c}{c}$, 其中 $c \\in(a, b)$\r\n\r\n令 $\\varphi(x)=\\dfrac{2 \\ln x}{x}$, \r\n\r\n因为 $\\varphi^{\\prime}(x)=\\dfrac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以 $\\varphi(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调减少且 $\\varphi\\left(\\mathrm{e}^2\\right)=\\dfrac{4}{\\mathrm{e}^2}$, \r\n\r\n从而 $\\displaystyle \\frac{2 \\ln c}{c}>\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n即 $\\displaystyle \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "令 f(x)=ln²x-ln²a-4(x-a)/e²，须由 f''(x)<0(x>e) 得 f' 单减、f'(e²)=0，才推出 f'>0 于 (e,e²)",
-        "或用拉氏定理 ln²b-ln²a=(2lnξ/ξ)(b-a)，还要证 e<ξ<e² 时 2lnξ/ξ>4/e²，不能想当然"
-      ],
-      "key_point": "辅助函数 f(x)=ln²x-4x/e² 在 (e,e²) 内单调增，得 ln²b-ln²a>4(b-a)/e²。"
-    },
-    {
-      "id": 920,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "某种飞机在机场降落时, 为了减少滑行距离, 在触地的瞬间, 飞机尾部张开减速伞, 以增大阻力, 使飞机迅速减速并停下. 现有一质量为 $9000 \\mathrm{kg}$ 的飞机, 着陆时的水平速度为 $700 \\mathrm{km} / \\mathrm{h}$. 经测试, 减速伞打开后, 飞机所受的总阻力与飞机的速度成正比 (比例系数为 $k=6.0 \\times 10^{6}$ ). 问从着陆点算起, 飞机滑行的最长距离是多少? (注 $: \\mathrm{kg}$ 表示千克, $\\mathrm{km} / \\mathrm{h}$ 表示千米/小时)",
-      "options": {},
-      "answer": "$1.05(\\mathrm{km})$",
-      "analysis": "设从着陆 $(t=0)$ 开始 $t$ 时刻飞机滑行的速度为 $v(t)$, \r\n\r\n根据题意和牛顿第二定律得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nm \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v \\\\\r\nv(0)=700\r\n\\end{array}\\right.$\r\n\r\n由 $m \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v$, 得 $\\dfrac{\\mathrm{d} v}{\\mathrm{d} t}+\\dfrac{k}{m} v=0$, \r\n\r\n解得 $\\displaystyle v(t)=C \\mathrm{e}^{-\\int \\frac{k}{m} \\mathrm{d} t}=C \\mathrm{e}^{-\\frac{k}{m} t}$,\r\n\r\n由 $v(0)=700$ 得 $C=700$, 于是 $\\displaystyle v(t)=700 \\mathrm{e}^{-\\frac{k}{m} t}$\r\n\r\n故飞机滑行的最大距离为\r\n\r\n$\\displaystyle \r\nS =\\int_0^{+\\infty} v(t) \\mathrm{d} t\\\\\r\n=700 \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d} t \\\\\r\n=\\frac{700 m}{k} \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d}\\left(\\frac{k}{m} t\\right)\\\\\r\n=\\frac{700 m}{k} \\Gamma(1)\\\\\r\n=\\frac{700 m}{k}=1.05(\\mathrm{km})$",
-      "wrong_options": {},
-      "pitfalls": [
-        "由 m dv/dt=-kv 解得 v(t)=700e^{-kt/m}，v(0)=700 定常数",
-        "最长距离是 t→+∞ 的总路程 S=∫₀^{+∞}v dt=700m/k（反常积分），代 m=9000、k=6×10⁶ 得 1.05 km；v 用 km/h、结果自然为 km"
-      ],
-      "key_point": "阻力∝v 建立 mv'=-kv，S=∫₀^{+∞}v dt=700m/k=1.05 km。"
-    },
-    {
-      "id": 925,
-      "paper": "数学二",
-      "year": 2004,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 2 & -3 \\\\ -1 & 4 & -3 \\\\ 1 & a & 5\\end{array}\\right)$ 的特征方程有一个二重根, 求 $a$ 的值, 并讨论 $\\boldsymbol{A}$ 是否可相似对角化",
-      "options": {},
-      "answer": "略",
-      "analysis": "$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-1 & -2 & 3 \\\\ 1 & \\lambda-4 & 3 \\\\ -1 & -a & \\lambda-5\\end{array}\\right|\\\\\r\n=(\\lambda-2)\\left(\\lambda^2-8 \\lambda+3 a+18\\right)$,\r\n\r\n- 情形一 $: \\lambda=2$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n则当 $\\lambda=2$ 时, $\\lambda^2-8 \\lambda+3 a+18=0$, \r\n\r\n即 $4-16+3 a+$ $18=0$, 解得 $a=-2$.\r\n\r\n$2 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n1 & -2 & 3 \\\\\r\n-1 & 2 & -3\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$,\r\n\r\n因为 $r(2 \\boldsymbol{E}-\\boldsymbol{A})=1$, \r\n\r\n所以方程组 $(2 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$ 的基础解系只含两个线性无关的解向量, \r\n\r\n即 $\\lambda=2$ 有两个线性无关的特征向量,\r\n\r\n故 $\\boldsymbol{A}$ 可相似对角化\r\n\r\n- 情形二 $: \\lambda=2$ 为一重特征值, 则 $\\lambda^2-8 \\lambda+3 a+18=0$ 有二重根, \r\n\r\n即 $\\Delta=64-4(3 a+18)=0$,\r\n\r\n解得 $a=-\\dfrac{2}{3}$, \r\n\r\n二重特征值为 $\\lambda_2=\\lambda_3=-\\dfrac{-8}{2}=4$,\r\n\r\n$4 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n-1 & \\frac{2}{3} & -1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$\r\n\r\n因为 $r(4 \\boldsymbol{E}-\\boldsymbol{A})=2$, 所以 $\\boldsymbol{A}$ 不可相似对角化",
-      "wrong_options": {},
-      "pitfalls": [
-        "二重根有两条来路：λ=2 代入 λ²-8λ+18+3a=0 得 a=-2；或该二次判别式为 0 得 a=-2/3（二重根 λ=4），两种都要讨论",
-        "a=-2 时特征值 2,2,6，r(2E-A)=1 ⇒ 几何重数 2=代数重数 ⇒ 可对角化；a=-2/3 时特征值 2,4,4，r(4E-A)=2 ⇒ 几何重数 1<2 ⇒ 不可对角化"
-      ],
-      "key_point": "a=-2（特征值 2,2,6）可对角化；a=-2/3（特征值 2,4,4，几何重数不足）不可对角化。"
-    },
-    {
       "id": 1616,
       "paper": "数学二",
       "year": 2004,
@@ -301,6 +94,51 @@
       "key_point": "一阶线性通解 y=C√x+x³/5，C=1，故 y=x³/5+√x。"
     },
     {
+      "id": 909,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{lll}2 & 1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$, 矩阵 $\\boldsymbol{B}$ 满足 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^{*}=2 \\boldsymbol{B} \\boldsymbol{A}^{*}+\\boldsymbol{E}$, 其中 $\\boldsymbol{A}^{*}$ 为 $\\boldsymbol{A}$ 的伴随矩阵, $\\boldsymbol{E}$ 是单位矩阵, 则 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{9}$",
+      "analysis": "$|\\boldsymbol{A}|=3$, \r\n\r\n在 $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{A}^*=2 \\boldsymbol{B} \\boldsymbol{A}^*+\\boldsymbol{E}$ 两边右乘 $\\boldsymbol{A}$, \r\n\r\n得 $3 \\boldsymbol{A} \\boldsymbol{B}=6 \\boldsymbol{B}+\\boldsymbol{A}$, 即 $3(\\boldsymbol{A}-2 \\boldsymbol{E}) \\boldsymbol{B}=\\boldsymbol{A}$, \r\n\r\n于是 $3^3|\\boldsymbol{A}-2 \\boldsymbol{E}| \\cdot|\\boldsymbol{B}|=|\\boldsymbol{A}|$,\r\n\r\n而 $\\boldsymbol{A}-2 \\boldsymbol{E}=\\left(\\begin{array}{ccc}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1\\end{array}\\right),|\\boldsymbol{A}-2 \\boldsymbol{E}|=1$, \r\n\r\n故 $\\displaystyle |\\boldsymbol{B}|=\\frac{1}{9}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "右乘 A 用 A*A=|A|E=3E，化为 3(A-2E)B=A，别把 A* 当成 A 的逆直接消去",
+        "取行列式 3³|A-2E|·|B|=|A|，|A-2E|=1、|A|=3 ⇒ |B|=3/27=1/9，注意 3 阶行列式提公因子是 3³"
+      ],
+      "key_point": "右乘 A 用 AA*=|A|E 化简，取行列式得 |B|=|A|/(27|A-2E|)=1/9。"
+    },
+    {
+      "id": 911,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "把 $x \\rightarrow 0^{+}$时的无穷小量 $\\displaystyle \\alpha=\\int_{0}^{x} \\cos t^{2} \\mathrm{d} t, \\\\\r\n\\beta=\\int_{0}^{x^{2}} \\tan \\sqrt{t} \\mathrm{d} t, \\gamma=\\int_{0}^{\\sqrt{x}} \\sin t^{3} \\mathrm{d} t$ 排列起来, 使排在 后面的是前一个的高阶无穷小量, 则正确的排列次序是 $(\\quad)$",
+      "options": {
+        "A": "$\\alpha, \\beta, \\gamma$",
+        "B": "$\\alpha, \\gamma, \\beta$",
+        "C": "$\\beta, \\alpha, \\gamma$",
+        "D": "$\\beta, \\gamma, \\alpha$"
+      },
+      "answer": "B",
+      "analysis": "方法一 由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{x}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\cos x^2=1$, 得 $\\alpha \\sim x$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{m x^{m-1}}$, 得 $m-1=2$, 即 $m=3$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{x^3}=\\frac{2}{3}$, 于是 $\\beta \\sim \\dfrac{2}{3} x^3$;\r\n\r\n由 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{x^m}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\sin x \\sqrt{x}}{m x^{m-1}}$, 得 $m-1=1$, 即 $m=2$, \r\n\r\n且 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{x^2}=\\frac{1}{4}$, 于是 $\\gamma \\sim \\dfrac{1}{4} x^2$\r\n\r\n故无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)\r\n\r\n方法二 因为 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} \\frac{\\alpha}{\\beta}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^x \\cos t^2 \\mathrm{d} t}{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\cos x^2}{2 x \\tan x}=+\\infty,\\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\beta}{\\gamma}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{x^2} \\tan \\sqrt{t} \\mathrm{d} t}{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{2 x \\tan x}{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}=0, \\\\\r\n\\lim _{x \\rightarrow 0^{+}} \\frac{\\gamma}{\\alpha}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\int_0^{\\sqrt{x}} \\sin t^3 \\mathrm{d} t}{\\int_0^x \\cos t^2 \\mathrm{d} t}\\\\\r\n=\\lim _{x \\rightarrow 0^{+}} \\frac{\\frac{1}{2 \\sqrt{x}} \\cdot \\sin x \\sqrt{x}}{\\cos x^2}=0$,\r\n\r\n所以无穷小量的阶数从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B).\r\n\r\n方法三 由 $t \\rightarrow 0^{+}$时, \r\n\r\n$\\cos t^2 \\rightarrow 1, \\tan \\sqrt{t} \\sim \\sqrt{t}, \\sin t^3 \\sim t^3$ 得\r\n\r\n$\\displaystyle \\alpha \\sim \\int_0^x 1 \\mathrm{d} t=x, \\beta \\sim \\int_0^{x^2} \\sqrt{t} \\mathrm{d} t=\\left.\\frac{2}{3} t^{\\frac{3}{2}}\\right|_0 ^{x^2}=\\frac{2}{3} x^3, \\gamma \\sim \\int_0^{\\sqrt{x}} t^3 \\mathrm{d} t=\\frac{1}{4} x^2$,\r\n\r\n显然无穷小量从低阶到高阶的次序为 $\\alpha, \\gamma, \\beta$, 应选 (B)",
+      "wrong_options": {
+        "A": "误把 β 当 2 阶、γ 当 3 阶，弄反了 γ 与 β 的阶数（实际 γ 是 2 阶、β 是 3 阶）。",
+        "C": "误判 β 阶数最低（当成 1 阶），实际 β 是最高阶（3 阶）应排最后。",
+        "D": "阶数完全倒序，误以为 β 最低阶、α 最高阶，与实际 α<γ<β 相反。"
+      },
+      "pitfalls": [
+        "上限含 x²、√x，求导须乘链式因子后才能定准阶：α~x（1 阶）、γ~x²/4（2 阶）、β~(2/3)x³（3 阶）",
+        "“后者是前者的高阶无穷小”指阶数更高（趋 0 更快），故按阶数升序排 α,γ,β"
+      ],
+      "key_point": "三者阶数 α(1)<γ(2)<β(3)，后者为前者高阶无穷小，排列为 α,γ,β。"
+    },
+    {
       "id": 1621,
       "paper": "数学二",
       "year": 2004,
@@ -355,6 +193,60 @@
       "key_point": "极限=2∫₀¹ln(1+x)dx=2∫₁²lnx dx，选B。"
     },
     {
+      "id": 912,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 连续, 且 $f^{\\prime}(0)>0$, 则存在 $\\delta>0$, 使得 $(\\quad)$",
+      "options": {
+        "A": "$f(x)$ 在 $(0, \\delta)$ 内单调增加",
+        "B": "$f(x)$ 在 $(-\\delta, 0)$ 内单调减少",
+        "C": "对任意的 $x \\in(0, \\delta)$ 有 $f(x)>f(0)$",
+        "D": "对任意的 $x \\in(-\\delta, 0)$ 有 $f(x)>f(0)$"
+      },
+      "answer": "C",
+      "analysis": "根据导数的定义, $\\displaystyle f^{\\prime}(0)=\\lim _{x \\rightarrow 0} \\frac{f(x)-f(0)}{x}>0$. \r\n\r\n由极限保号性, 存在 $\\delta>0$, \r\n\r\n当 $0<|x|<\\delta$ 时, $\\dfrac{f(x)-f(0)}{x}>0$. \r\n\r\n于是当 $x \\in(-\\delta, 0)$ 时, $f(x)<f(0)$; \r\n\r\n当 $x \\in(0, \\delta)$ 时, $f(x)>f(0)$, 应选 (C)",
+      "wrong_options": {
+        "A": "f'(0)>0 只给 0 点的信息，推不出 f 在整个 (0,δ) 上单调增（其余点导数符号未知）。",
+        "B": "同理一点导数正推不出 f 在 (-δ,0) 上单调减少，单调性需区间上导数符号。",
+        "D": "由保号性 x∈(-δ,0) 时 x<0 而商>0，得 f(x)<f(0)，与 D 所述 f(x)>f(0) 相反。"
+      },
+      "pitfalls": [
+        "f'(0)>0 只是一点信息，推不出邻域内的单调性（A、B 都错）",
+        "由 (f(x)-f(0))/x>0：x>0 得 f(x)>f(0)、x<0 得 f(x)<f(0)，符号随 x 正负而变"
+      ],
+      "key_point": "极限保号性给去心邻域 (f(x)-f(0))/x>0，故 x∈(0,δ) 时 f(x)>f(0)（选 C）。"
+    },
+    {
+      "id": 906,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 11,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "微分方程 $y^{\\prime \\prime}+y=x^2+1+\\sin x$ 的特解形式可设为 $(\\quad)$",
+      "options": {
+        "A": "$y^*=a x^2+b x+c+x(A \\sin x+B \\cos x)$",
+        "B": "$y^*=x\\left(a x^2+b x+c+A \\sin x+B \\cos x\\right)$",
+        "C": "$y^*=a x^2+b x+c+A \\sin x$",
+        "D": "$y^*=a x^2+b x+c+A \\cos x$"
+      },
+      "answer": "A",
+      "analysis": "原方程对应齐次方程的特征方程是 $r^2+1=0$,\r\n\r\n其根为 $r= \\pm i$, 与等号右边 $x^2+1$ 形式无重根，\r\n\r\n故其特解形式为 $y_1{ }^*=a x^2+b x+c$,\r\n\r\n对于方程 $y^{\\prime \\prime}+y=\\sin x ， \\pm i$ 是特征方程的根，\r\n\r\n故其特解形式为 $y_2{ }^*=x(A \\sin x+B \\cos x)$,\r\n\r\n根据叠加原理，原方程的特解形式为:\r\n\r\n$y=y_1{ }^*+y_2{ }^* \\\\\r\n=a x^2+b x+c+x(A \\sin x+B \\cos x)$,\r\n\r\n故选 (A)",
+      "wrong_options": {
+        "B": "把多项式项也乘了 x，多项式部分不共振不该乘",
+        "C": "sinx 项漏掉 x 因子且只设 sin 不设 cos",
+        "D": "sinx 项设成 cos 且漏 x 因子"
+      },
+      "pitfalls": [
+        "特征根 ±i，sinx 对应的 ±i 是特征根⟹共振，特解须乘 x：x(Asinx+Bcosx)",
+        "多项式项 x²+1 不共振（0 非特征根），设 ax²+bx+c 不乘 x"
+      ],
+      "key_point": "多项式项 ax²+bx+c + 共振项 x(Asinx+Bcosx)，选A。"
+    },
+    {
       "id": 1624,
       "paper": "数学二",
       "year": 2004,
@@ -380,6 +272,60 @@
         "圆 x²+y²≤2y 即 r≤2sinθ，θ 从 0 到 π"
       ],
       "key_point": "极坐标 ∫₀^π dθ∫₀^{2sinθ}f(r²sinθcosθ)r dr，选D。"
+    },
+    {
+      "id": 915,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 13,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶方阵, 将 $\\boldsymbol{A}$ 的第 $1$ 列与第 $2$ 列交换得 $\\boldsymbol{B}$, 再将 $\\boldsymbol{B}$ 的第 $2$ 列加到第 $3$ 列得 $\\boldsymbol{C}$, 则满足 $\\boldsymbol{A Q}=\\boldsymbol C$ 的可逆矩阵 $\\boldsymbol Q$ 为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 1\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 1 & 1\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{lll}0 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "由初等变换的定义, 得\r\n\r\n$\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right), \\\\\r\n\\boldsymbol{C}=\\boldsymbol{B}\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{C}=\\boldsymbol{A}\\left(\\begin{array}{lll}0 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1\\end{array}\\right)\\left(\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$,\r\n\r\n故 $\\boldsymbol{Q}=\\left(\\begin{array}{lll}\r\n0 & 1 & 0 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\left(\\begin{array}{lll}\r\n1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{lll}\r\n0 & 1 & 1 \\\\\r\n1 & 0 & 0 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$, 应选 (D)",
+      "wrong_options": {
+        "A": "把“第 2 列加到第 3 列”对应的初等矩阵位置写错（非对角元放错行列）。",
+        "B": "两初等矩阵相乘顺序颠倒（左右乘弄反），得错误 Q。",
+        "C": "把列变换误当左乘（用了行变换矩阵），非对角元位置随之出错。"
+      },
+      "pitfalls": [
+        "列变换=右乘初等矩阵、行变换=左乘，不能混",
+        "Q=E(交换1、2列)·E(第2列加到第3列)，右乘要按操作先后从左往右相乘"
+      ],
+      "key_point": "Q=E₁(交换 1、2 列)·E₂(2 列加到 3 列)=选项 D 的矩阵。"
+    },
+    {
+      "id": 916,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为满足 $\\boldsymbol{A B}=\\boldsymbol{O}$ 的任意两个非零矩阵, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
+        "B": "$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关",
+        "C": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关",
+        "D": "$\\boldsymbol{A}$ 的行向量组线性相关, $\\boldsymbol{B}$ 的列向量组线性相关"
+      },
+      "answer": "A",
+      "analysis": "方法一 设 $\\boldsymbol{A}$ 为 $m \\times n$ 矩阵, $\\boldsymbol{B}$ 为 $n \\times s$ 矩阵.\r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$, 得 $r(\\boldsymbol{A})+r(\\boldsymbol{B}) \\leqslant n$.\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以 $r(\\boldsymbol{A}) \\geqslant 1, r(\\boldsymbol{B}) \\geqslant 1$, \r\n\r\n于是 $r(\\boldsymbol{A})<n, r(\\boldsymbol{B})<n$.\r\n\r\n因为矩阵的秩、矩阵行向量组的秩、矩阵列向量组的秩都相等, \r\n\r\n于是 $\\boldsymbol{A}$ 的列向量组的秩小于列数, \r\n\r\n$\\boldsymbol{B}$ 的行向量组的秩小于行数, \r\n\r\n$\\boldsymbol{A}$ 的列向量组线性相关, $\\boldsymbol{B}$ 的行向量组线性相关, \r\n\r\n应选 (A)\r\n\r\n方法二\r\n\r\n设 $\\boldsymbol{A}\\\\\r\n=\\left(\\begin{array}{cccc}a_{11} & a_{12} & \\cdots & a_{1 n} \\\\ a_{21} & a_{22} & \\cdots & a_{2 n} \\\\ \\vdots & \\vdots & & \\vdots \\\\ a_{m 1} & a_{m 2} & \\cdots & a_{m n}\\end{array}\\right)\\\\\r\n=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n\\right), \\\\\r\n\\boldsymbol{B}\\\\\r\n=\\left(\\begin{array}{cccc}b_{11} & b_{12} & \\cdots & b_{1 s} \\\\ b_{21} & b_{22} & \\cdots & b_{2 s} \\\\ \\vdots & \\vdots & & \\vdots \\\\ b_{n 1} & b_{n 2} & \\cdots & b_{n s}\\end{array}\\right)\\\\\r\n=\\left(\\begin{array}{c}\\boldsymbol{\\beta}_1 \\\\ \\boldsymbol{\\beta}_2 \\\\ \\vdots \\\\ \\boldsymbol{\\beta}_n\\end{array}\\right)$, \r\n\r\n由 $\\boldsymbol{A B}=\\boldsymbol{O}$ 得\r\n\r\n$\\left\\{\\begin{array} { l }\r\n b _ { 1 1 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 1 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 1 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n b _ { 1 2 } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 2 } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n 2 } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }   \\\\\r\n \\vdots  \\\\\r\n b _ { 1 s } \\boldsymbol { \\alpha } _ { 1 } + b _ { 2 s } \\boldsymbol { \\alpha } _ { 2 } + \\cdots + b _ { n s } \\boldsymbol { \\alpha } _ { n } = \\mathbf { 0 }  \r\n\\end{array}\\right.$\r\n\r\n及 $\\left\\{\\begin{array}{l}\r\na_{11} \\boldsymbol{\\beta}_1+a_{12} \\boldsymbol{\\beta}_2+\\cdots+a_{1 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\na_{21} \\boldsymbol{\\beta}_1+a_{22} \\boldsymbol{\\beta}_2+\\cdots+a_{2 n} \\boldsymbol{\\beta}_n=\\mathbf{0} \\\\\r\n\\vdots \\\\\r\na_{m 1} \\boldsymbol{\\beta}_1+a_{m 2} \\boldsymbol{\\beta}_2+\\cdots+a_{m n} \\boldsymbol{\\beta}_n=\\mathbf{0}\r\n\\end{array}\\right.$\r\n\r\n因为 $\\boldsymbol{A}, \\boldsymbol{B}$ 为非零矩阵, \r\n\r\n所以存在不全为零的常数 $b_{1 j}, b_{2 j}, \\cdots, b_{n j}$ 及 $a_{i 1}, a_{i 2}, \\cdots, a_{i n}$, \r\n\r\n使得 $b_{1 j} \\boldsymbol{\\alpha}_1+b_{2 j} \\boldsymbol{\\alpha}_2+\\cdots+b_{n j} \\boldsymbol{\\alpha}_n=\\mathbf{0}$ \r\n\r\n及 $a_{i 1} \\boldsymbol{\\beta}_1+a_{i 2} \\boldsymbol{\\beta}_2+\\cdots+a_{i n} \\boldsymbol{\\beta}_n=\\mathbf{0}$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\cdots, \\boldsymbol{\\alpha}_n$ 与 $\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_2, \\cdots, \\boldsymbol{\\beta}_n$ 都线性相关, \r\n\r\n应选 (A)",
+      "wrong_options": {
+        "B": "误判 B 列向量组相关；受约束的是 B 的行（r(B)<n=B 的行数），列数 s 未定。",
+        "C": "误判 A 行相关；由 Ax=0 有非零解只能推 A 的列向量组相关，不是行。",
+        "D": "A、B 的相关方向都判反（应为 A 列相关、B 行相关）。"
+      },
+      "pitfalls": [
+        "AB=O 表示 B 每列都是 Ax=0 的解，A 有非零解 ⇒ A 列向量组相关",
+        "r(A)+r(B)≤n 且 A、B 非零使二者秩≥1，故 r(B)<n=B 的行数 ⇒ B 行向量组相关"
+      ],
+      "key_point": "AB=O 且 A、B 非零 ⇒ A 列向量组线性相关、B 行向量组线性相关（选 A）。"
     },
     {
       "id": 1625,
@@ -454,6 +400,42 @@
       "key_point": "√(1+y'²)=y 使 S=2V 故 S/V=2；主项比较 lim S/F=1。"
     },
     {
+      "id": 919,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 19,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设 $\\mathrm{e}<a<b<\\mathrm{e}^{2}$, 证明 $\\displaystyle : \\ln ^{2} b-\\ln ^{2} a>\\frac{4}{\\mathrm{e}^{2}}(b-a)$",
+      "options": {},
+      "answer": "证明题（详见解析）",
+      "analysis": "方法一 辅助函数法 (单调性)\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\\\ \r\n\\ln ^2 b-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(b-a)>0$,\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x-\\ln ^2 a-\\frac{4}{\\mathrm{e}^2}(x-a), \\quad f(a)=0\\\\\r\nf^{\\prime}(x)=\\frac{2 \\ln x}{x}-\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n因为 $\\displaystyle f^{\\prime \\prime}(x)=\\frac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以当 $x>\\mathrm{e}$ 时, $f^{\\prime}(x)$ 单调减少.\r\n\r\n由 $\\left\\{\\begin{array}{l}f^{\\prime}\\left(\\mathrm{e}^2\\right)=0 \\\\ f^{\\prime \\prime}(x)<0(x>\\mathrm{e})\\end{array}\\right.$ \r\n\r\n得 $f^{\\prime}(x)>0\\left(\\mathrm{e}<x<\\mathrm{e}^2\\right)$, \r\n\r\n即 $f(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调增加, \r\n\r\n由 $\\mathrm{e}<a<b<\\mathrm{e}^2$ 及 $f(a)=0$ 得 $f(b)>0$, \r\n\r\n故 $\\ln ^2 b-\\ln ^2 a>\\dfrac{4}{\\mathrm{e}^2}(b-a)$\r\n\r\n方法二 中值定理法\r\n\r\n$\\displaystyle \\ln ^2 b-\\ln ^2 a>\\frac{4}{\\mathrm{e}^2}(b-a) \\Longleftrightarrow \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$\r\n\r\n令 $\\displaystyle f(x)=\\ln ^2 x, f^{\\prime}(x)=\\frac{2 \\ln x}{x}$, \r\n\r\n由拉格朗日中值定理得\r\n\r\n$\\dfrac{\\ln ^2 b-\\ln ^2 a}{b-a}=\\dfrac{2 \\ln c}{c}$, 其中 $c \\in(a, b)$\r\n\r\n令 $\\varphi(x)=\\dfrac{2 \\ln x}{x}$, \r\n\r\n因为 $\\varphi^{\\prime}(x)=\\dfrac{2(1-\\ln x)}{x^2}<0(x>\\mathrm{e})$, \r\n\r\n所以 $\\varphi(x)$ 在 $\\left(\\mathrm{e}, \\mathrm{e}^2\\right)$ 内单调减少且 $\\varphi\\left(\\mathrm{e}^2\\right)=\\dfrac{4}{\\mathrm{e}^2}$, \r\n\r\n从而 $\\displaystyle \\frac{2 \\ln c}{c}>\\frac{4}{\\mathrm{e}^2}$, \r\n\r\n即 $\\displaystyle \\frac{\\ln ^2 b-\\ln ^2 a}{b-a}>\\frac{4}{\\mathrm{e}^2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "令 f(x)=ln²x-ln²a-4(x-a)/e²，须由 f''(x)<0(x>e) 得 f' 单减、f'(e²)=0，才推出 f'>0 于 (e,e²)",
+        "或用拉氏定理 ln²b-ln²a=(2lnξ/ξ)(b-a)，还要证 e<ξ<e² 时 2lnξ/ξ>4/e²，不能想当然"
+      ],
+      "key_point": "辅助函数 f(x)=ln²x-4x/e² 在 (e,e²) 内单调增，得 ln²b-ln²a>4(b-a)/e²。"
+    },
+    {
+      "id": 920,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "某种飞机在机场降落时, 为了减少滑行距离, 在触地的瞬间, 飞机尾部张开减速伞, 以增大阻力, 使飞机迅速减速并停下. 现有一质量为 $9000 \\mathrm{kg}$ 的飞机, 着陆时的水平速度为 $700 \\mathrm{km} / \\mathrm{h}$. 经测试, 减速伞打开后, 飞机所受的总阻力与飞机的速度成正比 (比例系数为 $k=6.0 \\times 10^{6}$ ). 问从着陆点算起, 飞机滑行的最长距离是多少? (注 $: \\mathrm{kg}$ 表示千克, $\\mathrm{km} / \\mathrm{h}$ 表示千米/小时)",
+      "options": {},
+      "answer": "$1.05(\\mathrm{km})$",
+      "analysis": "设从着陆 $(t=0)$ 开始 $t$ 时刻飞机滑行的速度为 $v(t)$, \r\n\r\n根据题意和牛顿第二定律得\r\n\r\n$\\left\\{\\begin{array}{l}\r\nm \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v \\\\\r\nv(0)=700\r\n\\end{array}\\right.$\r\n\r\n由 $m \\dfrac{\\mathrm{d} v}{\\mathrm{d} t}=-k v$, 得 $\\dfrac{\\mathrm{d} v}{\\mathrm{d} t}+\\dfrac{k}{m} v=0$, \r\n\r\n解得 $\\displaystyle v(t)=C \\mathrm{e}^{-\\int \\frac{k}{m} \\mathrm{d} t}=C \\mathrm{e}^{-\\frac{k}{m} t}$,\r\n\r\n由 $v(0)=700$ 得 $C=700$, 于是 $\\displaystyle v(t)=700 \\mathrm{e}^{-\\frac{k}{m} t}$\r\n\r\n故飞机滑行的最大距离为\r\n\r\n$\\displaystyle \r\nS =\\int_0^{+\\infty} v(t) \\mathrm{d} t\\\\\r\n=700 \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d} t \\\\\r\n=\\frac{700 m}{k} \\int_0^{+\\infty} \\mathrm{e}^{-\\frac{k}{m} t} \\mathrm{d}\\left(\\frac{k}{m} t\\right)\\\\\r\n=\\frac{700 m}{k} \\Gamma(1)\\\\\r\n=\\frac{700 m}{k}=1.05(\\mathrm{km})$",
+      "wrong_options": {},
+      "pitfalls": [
+        "由 m dv/dt=-kv 解得 v(t)=700e^{-kt/m}，v(0)=700 定常数",
+        "最长距离是 t→+∞ 的总路程 S=∫₀^{+∞}v dt=700m/k（反常积分），代 m=9000、k=6×10⁶ 得 1.05 km；v 用 km/h、结果自然为 km"
+      ],
+      "key_point": "阻力∝v 建立 mv'=-kv，S=∫₀^{+∞}v dt=700m/k=1.05 km。"
+    },
+    {
       "id": 1629,
       "paper": "数学二",
       "year": 2004,
@@ -488,6 +470,24 @@
         "a=-10 时秩3只1个自由变量，a=0 时秩1有3个自由变量，两情形解结构不同"
       ],
       "key_point": "|A|=(a+10)a³=0；a=-10 通解 C(1,2,3,4)ᵀ，a=0 通解3参数。"
+    },
+    {
+      "id": 925,
+      "paper": "数学二",
+      "year": 2004,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}1 & 2 & -3 \\\\ -1 & 4 & -3 \\\\ 1 & a & 5\\end{array}\\right)$ 的特征方程有一个二重根, 求 $a$ 的值, 并讨论 $\\boldsymbol{A}$ 是否可相似对角化",
+      "options": {},
+      "answer": "略",
+      "analysis": "$|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccc}\\lambda-1 & -2 & 3 \\\\ 1 & \\lambda-4 & 3 \\\\ -1 & -a & \\lambda-5\\end{array}\\right|\\\\\r\n=(\\lambda-2)\\left(\\lambda^2-8 \\lambda+3 a+18\\right)$,\r\n\r\n- 情形一 $: \\lambda=2$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n则当 $\\lambda=2$ 时, $\\lambda^2-8 \\lambda+3 a+18=0$, \r\n\r\n即 $4-16+3 a+$ $18=0$, 解得 $a=-2$.\r\n\r\n$2 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n1 & -2 & 3 \\\\\r\n-1 & 2 & -3\r\n\\end{array}\\right)\\\\\r\n\\rightarrow\\left(\\begin{array}{ccc}\r\n1 & -2 & 3 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$,\r\n\r\n因为 $r(2 \\boldsymbol{E}-\\boldsymbol{A})=1$, \r\n\r\n所以方程组 $(2 \\boldsymbol{E}-\\boldsymbol{A}) \\boldsymbol{x}=\\mathbf{0}$ 的基础解系只含两个线性无关的解向量, \r\n\r\n即 $\\lambda=2$ 有两个线性无关的特征向量,\r\n\r\n故 $\\boldsymbol{A}$ 可相似对角化\r\n\r\n- 情形二 $: \\lambda=2$ 为一重特征值, 则 $\\lambda^2-8 \\lambda+3 a+18=0$ 有二重根, \r\n\r\n即 $\\Delta=64-4(3 a+18)=0$,\r\n\r\n解得 $a=-\\dfrac{2}{3}$, \r\n\r\n二重特征值为 $\\lambda_2=\\lambda_3=-\\dfrac{-8}{2}=4$,\r\n\r\n$4 \\boldsymbol{E}-\\boldsymbol{A}=\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n-1 & \\frac{2}{3} & -1\r\n\\end{array}\\right)\\\\\r\n \\rightarrow\\left(\\begin{array}{ccc}\r\n3 & -2 & 3 \\\\\r\n1 & 0 & 3 \\\\\r\n0 & 0 & 0\r\n\\end{array}\\right)$\r\n\r\n因为 $r(4 \\boldsymbol{E}-\\boldsymbol{A})=2$, 所以 $\\boldsymbol{A}$ 不可相似对角化",
+      "wrong_options": {},
+      "pitfalls": [
+        "二重根有两条来路：λ=2 代入 λ²-8λ+18+3a=0 得 a=-2；或该二次判别式为 0 得 a=-2/3（二重根 λ=4），两种都要讨论",
+        "a=-2 时特征值 2,2,6，r(2E-A)=1 ⇒ 几何重数 2=代数重数 ⇒ 可对角化；a=-2/3 时特征值 2,4,4，r(4E-A)=2 ⇒ 几何重数 1<2 ⇒ 不可对角化"
+      ],
+      "key_point": "a=-2（特征值 2,2,6）可对角化；a=-2/3（特征值 2,4,4，几何重数不足）不可对角化。"
     }
   ]
 }

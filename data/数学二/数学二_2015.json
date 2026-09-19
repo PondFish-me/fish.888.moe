@@ -4,6 +4,88 @@
   "count": 23,
   "questions": [
     {
+      "id": 425,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "下列反常积分中收敛的是 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_2^{+\\infty} \\frac{1}{\\sqrt{x}} \\mathrm{d} x$",
+        "B": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\ln x}{x} \\mathrm{d} x$",
+        "C": "$\\displaystyle \\int_2^{+\\infty} \\frac{1}{x \\ln x} \\mathrm{d} x$",
+        "D": "$\\displaystyle \\int_2^{+\\infty} \\frac{x}{\\mathrm{e}^x} \\mathrm{d} x$"
+      },
+      "answer": "D",
+      "analysis": "【分析】四个都是 $[2,+\\infty)$ 上无穷限反常积分，逐一判敛散。$p$-型用 $\\displaystyle\\int^{+\\infty}\\dfrac{\\mathrm dx}{x^p}$（$p>1$ 收敛）；对数型用换元 $t=\\ln x$；指数压制型 $\\dfrac{x}{\\mathrm e^x}$ 衰减极快必收敛。\n\n【解答】逐项分析见各选项。其中 D 项：\n$$\\int_2^{+\\infty}\\frac{x}{\\mathrm e^x}\\,\\mathrm dx,$$\n分部积分 $\\displaystyle\\int x\\mathrm e^{-x}\\mathrm dx=-(x+1)\\mathrm e^{-x}$，故\n$$\\int_2^{+\\infty}x\\mathrm e^{-x}\\mathrm dx=\\Big[-(x+1)\\mathrm e^{-x}\\Big]_2^{+\\infty}=0-\\big(-3\\mathrm e^{-2}\\big)=3\\mathrm e^{-2},$$\n极限存在且有限，收敛。故选 **D**。",
+      "wrong_options": {
+        "A": "$\\displaystyle\\int_2^{+\\infty}x^{-1/2}\\mathrm dx$ 是 $p=\\dfrac12<1$ 的 $p$-积分，发散（$2\\sqrt x\\to+\\infty$）。",
+        "B": "$\\dfrac{\\ln x}{x}$ 的原函数为 $\\dfrac{(\\ln x)^2}{2}\\to+\\infty$，发散。",
+        "C": "换元 $t=\\ln x$，$\\displaystyle\\int\\dfrac{\\mathrm dx}{x\\ln x}=\\int\\dfrac{\\mathrm dt}{t}=\\ln(\\ln x)\\to+\\infty$，发散。"
+      },
+      "pitfalls": [
+        "$\\dfrac{1}{x\\ln x}$ 看着衰减很快，但其积分是 $\\ln(\\ln x)$，仍发散——这是最易误判的干扰项。",
+        "指数函数压制多项式，$\\dfrac{x}{\\mathrm e^x}$ 型在无穷限积分总收敛。"
+      ],
+      "key_point": "无穷限反常积分敛散：$p$-判别、对数换元、指数压制三招逐项排查。"
+    },
+    {
+      "id": 426,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $\\displaystyle f(x)=\\lim _{t \\rightarrow 0}\\left(1+\\frac{\\sin t}{x}\\right)^{\\frac{x^2}{t}}$ 在 $(-\\infty,+\\infty)$ 内 $(\\quad)$",
+      "options": {
+        "A": "连续",
+        "B": "有可去间断点",
+        "C": "有跳跃间断点",
+        "D": "有无穷间断点"
+      },
+      "answer": "B",
+      "analysis": "【分析】先求出 $f(x)$ 的显式表达。极限对 $t\\to0$ 取，$x$ 视为参数（$x\\neq0$ 才有意义）。这是 $1^\\infty$ 型，取对数用等价无穷小算指数极限。求出 $f$ 后判断在 $(-\\infty,+\\infty)$ 上的连续性，重点看 $x=0$ 处。\n\n【解答】对 $x\\neq0$，设 $L=\\lim_{t\\to0}\\Big(1+\\dfrac{\\sin t}{x}\\Big)^{x^2/t}$，取对数\n$$\\ln L=\\lim_{t\\to0}\\frac{x^2}{t}\\ln\\Big(1+\\frac{\\sin t}{x}\\Big).$$\n当 $t\\to0$，$\\dfrac{\\sin t}{x}\\to0$，$\\ln\\Big(1+\\dfrac{\\sin t}{x}\\Big)\\sim\\dfrac{\\sin t}{x}\\sim\\dfrac{t}{x}$，故\n$$\\ln L=\\lim_{t\\to0}\\frac{x^2}{t}\\cdot\\frac{t}{x}=x\\ \\Longrightarrow\\ f(x)=\\mathrm{e}^{x}\\quad(x\\neq0).$$\n在 $x=0$ 处原式因含 $\\dfrac{\\sin t}{x}$ 无定义，故 $f$ 的定义域是 $x\\neq0$。但 $\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\mathrm{e}^x=1$ 存在且有限，是可去间断点；其余各点 $f=\\mathrm{e}^x$ 连续。故选 B。",
+      "wrong_options": {
+        "A": "错。x=0 不在定义域内（原式出现 sin t/x），f 在 x=0 处并非连续，整条直线上并非处处连续。",
+        "C": "错。x=0 处左右极限都等于 e^0=1，相等，故不是跳跃间断点。",
+        "D": "错。lim_{x→0}f(x)=1 为有限值，不是无穷间断点。"
+      },
+      "pitfalls": [
+        "先把极限算出 f(x)=e^x（x≠0），再讨论连续性，切勿凭表面臆断。",
+        "x=0 处函数无定义但极限存在且有限，正是可去间断点的特征。",
+        "1^∞ 型务必取对数化为指数极限，用 ln(1+u)~u、sin t~t。"
+      ],
+      "key_point": "含参极限定义的函数先求显式表达，间断点类型看该点极限是否存在/有限/左右相等。"
+    },
+    {
+      "id": 427,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{ll}x^\\alpha \\cos \\frac{1}{x^\\beta}, & x>0, \\\\ 0, & x \\leqslant 0\\end{array}(\\alpha>0, \\beta>0)\\right.$, 若 $f^{\\prime}(x)$ 在 $x=0$ 处连续, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\alpha-\\beta>1$",
+        "B": "$0<\\alpha-\\beta \\leqslant 1$",
+        "C": "$\\alpha-\\beta>2$",
+        "D": "$0<\\alpha-\\beta \\leqslant 2$"
+      },
+      "answer": "A",
+      "analysis": "【分析】$f'(x)$ 在 $x=0$ 连续，意味着两件事同时成立：$f'(0)$ 存在（且左导为 0，故 $f'(0)=0$），以及 $\\lim_{x\\to0^+}f'(x)=f'(0)=0$。后者通常更苛刻，是判据的关键。分别写出 $x>0$ 时的 $f'(x)$，看各项幂次何时趋于 0。\n\n【解答】\n当 $x>0$：\n$$f'(x)=\\alpha x^{\\alpha-1}\\cos\\dfrac{1}{x^\\beta}+\\beta x^{\\alpha-\\beta-1}\\sin\\dfrac{1}{x^\\beta}.$$\n（第二项由链式：$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\cos\\frac{1}{x^\\beta}=\\sin\\frac{1}{x^\\beta}\\cdot\\beta x^{-\\beta-1}$，乘 $x^\\alpha$ 得 $\\beta x^{\\alpha-\\beta-1}\\sin\\frac{1}{x^\\beta}$。）\n\n当 $x\\le0$ 时 $f'(x)=0$，故 $f'(0^-)=0$，要求 $f'(x)$ 连续即需 $\\lim_{x\\to0^+}f'(x)=0$。\n\n$\\cos,\\sin$ 有界，故：\n- 第一项 $\\to0$ 需要 $\\alpha-1>0$；\n- 第二项 $\\to0$ 需要 $\\alpha-\\beta-1>0$，即 $\\alpha-\\beta>1$。\n\n由 $\\beta>0$，$\\alpha-\\beta>1$ 已蕴含 $\\alpha>1+\\beta>1$，第一项条件自动满足。故 $f'(x)$ 在 $0$ 连续的充要条件是 $\\boldsymbol{\\alpha-\\beta>1}$，选 A。\n\n（验证：取 $\\alpha=3,\\beta=1$ 满足 A，$f'(x)=3x^2\\cos\\frac1x+x\\sin\\frac1x\\to0$，连续；取 $\\alpha-\\beta=1$，第二项 $\\beta\\sin\\frac{1}{x^\\beta}$ 不趋于 0，不连续。）",
+      "wrong_options": {
+        "B": "$0<\\alpha-\\beta\\le1$ 时 $\\alpha-\\beta-1\\le0$，第二项 $\\beta x^{\\alpha-\\beta-1}\\sin\\frac{1}{x^\\beta}$ 不趋于 0（$\\alpha-\\beta=1$ 时为有界不收敛，$<1$ 时发散），$f'$ 在 0 不连续，条件不充分。",
+        "C": "$\\alpha-\\beta>2$ 是充分但不必要的更强条件，真正的临界线是 $\\alpha-\\beta>1$，把范围卡得过窄，漏掉了 $1<\\alpha-\\beta\\le2$ 这段合法情形。",
+        "D": "$0<\\alpha-\\beta\\le2$ 包含了 $\\alpha-\\beta\\le1$ 的不连续情形（如 $\\alpha-\\beta=1$），不能保证 $f'$ 连续，故不正确。"
+      },
+      "pitfalls": [
+        "导数连续比导数存在更强：要算 $\\lim_{x\\to0^+}f'(x)$ 而非仅用定义算 $f'(0)$，后者只需 $\\alpha>1$",
+        "起决定作用的是含 $\\sin$ 的那一项 $x^{\\alpha-\\beta-1}$，幂次 $\\alpha-\\beta-1>0$ 才能压住有界振荡使其趋 0"
+      ],
+      "key_point": "导数在分段点连续 = $\\lim f'(x)$ 等于该点导数；逐项看幂次能否压住有界振荡因子，取最苛刻的一项定条件。"
+    },
+    {
       "id": 402,
       "paper": "数学二",
       "year": 2015,
@@ -29,6 +111,34 @@
         "拐点的判据是 $f''$ 变号，不是 $f''=0$ 的零点个数；与 $x$ 轴相切而不穿越的点不是拐点。"
       ],
       "key_point": "由 $f''$ 的图象判拐点个数，数的是 $f''$ 穿过 $x$ 轴（变号）的次数，相切不变号不算。"
+    },
+    {
+      "id": 428,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u, v)$ 满足 $f\\left(x+y, \\frac{y}{x}\\right)=x^2-y^2$, 则 $\\left.\\frac{\\partial f}{\\partial u}\\right|_{\\substack{u=1 \\\\ v=1}}$ 和 $\\left.\\frac{\\partial f}{\\partial v}\\right|_{\\substack{u=1 \\\\ v=1}}$ 依次是 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{1}{2}, 0$",
+        "B": "$0, \\dfrac{1}{2}$",
+        "C": "$-\\dfrac{1}{2}, 0$",
+        "D": "$0,-\\dfrac{1}{2}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】关键是把 $f(u,v)$ 的显式表达式求出来：令 $u=x+y,\\ v=\\dfrac yx$，反解出 $x,y$ 用 $u,v$ 表示，代入右端 $x^2-y^2$ 即得 $f(u,v)$，再分别对 $u,v$ 求偏导并在 $(1,1)$ 取值。\n\n【解答】设 $u=x+y,\\ v=\\dfrac yx$。由 $y=vx$ 代入 $u=x+vx=x(1+v)$ 得 $x=\\dfrac{u}{1+v},\\ y=\\dfrac{uv}{1+v}$。于是\n$$x^2-y^2=(x+y)(x-y)=u\\cdot x(1-v)=u\\cdot\\frac{u}{1+v}(1-v)=u^2\\cdot\\frac{1-v}{1+v}.$$\n故 $f(u,v)=u^2\\cdot\\dfrac{1-v}{1+v}$。求偏导：\n$$\\frac{\\partial f}{\\partial u}=2u\\cdot\\frac{1-v}{1+v},\\qquad \\frac{\\partial f}{\\partial v}=u^2\\cdot\\frac{-(1+v)-(1-v)}{(1+v)^2}=u^2\\cdot\\frac{-2}{(1+v)^2}.$$\n在 $u=1,\\ v=1$ 处：\n$$\\left.\\frac{\\partial f}{\\partial u}\\right|_{(1,1)}=2\\cdot\\frac{1-1}{2}=0,\\qquad \\left.\\frac{\\partial f}{\\partial v}\\right|_{(1,1)}=1\\cdot\\frac{-2}{4}=-\\frac12.$$\n依次为 $0,-\\dfrac12$，选 D。",
+      "wrong_options": {
+        "A": "把两个偏导记反且符号错，$\\partial f/\\partial u$ 在 (1,1) 应为 0 而非 1/2",
+        "B": "次序颠倒，第一个应是 $\\partial f/\\partial u=0$，第二个才是 $\\partial f/\\partial v=-1/2$",
+        "C": "$\\partial f/\\partial u$ 在 (1,1) 为 0 不是 -1/2，符号与数值都不对"
+      },
+      "pitfalls": [
+        "必须反解出 x=u/(1+v),y=uv/(1+v) 求出 f(u,v) 的显式式子再求偏导",
+        "用 $x^2-y^2=(x+y)(x-y)=u\\cdot x(1-v)$ 化简最省力",
+        "$\\partial f/\\partial u$ 含因子 (1-v)，在 v=1 处恰为 0，别误算成非零"
+      ],
+      "key_point": "复合函数定义题：换元反解求出 f 的显式表达式，再逐个求偏导代值"
     },
     {
       "id": 405,
@@ -115,153 +225,6 @@
       "key_point": "正交变换标准形系数即各列特征向量的特征值，列重排即系数重排，反号不变特征值。"
     },
     {
-      "id": 416,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=x+a \\ln (1+x)+b x \\sin x, g(x)=k x^{3}$. 若 $f(x)$ 与 $g(x)$ 在 $x \\rightarrow 0$ 时是等价无穷小, 求 $a, b, k$ 的值",
-      "options": {},
-      "answer": "$a=-1, b=-\\dfrac{1}{2}, k=-\\dfrac{1}{3}$",
-      "analysis": "【分析】$f$ 与 $g=kx^3$ 等价无穷小，意味着 $x\\to0$ 时 $f(x)=kx^3+o(x^3)$，即 $f(x)$ 的泰勒展开里 $x$、$x^2$ 项系数必须为 $0$，而 $x^3$ 项系数恰为 $k$。把 $\\ln(1+x)$、$\\sin x$ 展到 $x^3$ 阶，按幂次比较系数即可。\n\n【解答】在 $x\\to0$ 处展开到 $x^3$：\n$$\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3),\\qquad x\\sin x=x\\Big(x-\\frac{x^3}{6}+\\cdots\\Big)=x^2+o(x^3).$$\n代入 $f(x)=x+a\\ln(1+x)+bx\\sin x$：\n$$f(x)=x+a\\Big(x-\\frac{x^2}{2}+\\frac{x^3}{3}\\Big)+b x^2+o(x^3)$$\n$$=(1+a)x+\\Big(b-\\frac{a}{2}\\Big)x^2+\\frac{a}{3}x^3+o(x^3).$$\n要与 $kx^3$ 等价，须使前两阶系数为零、三阶系数等于 $k$：\n$$1+a=0\\ \\Rightarrow\\ a=-1;$$\n$$b-\\frac{a}{2}=0\\ \\Rightarrow\\ b=\\frac{a}{2}=-\\frac12;$$\n$$k=\\frac{a}{3}=-\\frac13.$$\n验算：此时 $f(x)=-\\dfrac{1}{3}x^3+o(x^3)$，确与 $g(x)=-\\dfrac{1}{3}x^3$ 等价。故\n$$a=-1,\\quad b=-\\frac12,\\quad k=-\\frac13.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "x sin x 是 x²+o(x³)，没有 x³ 项，别误展到把 -x⁴/6 当三阶项混进来。",
-        "等价无穷小要求一、二阶系数同时为 0，缺一不可；k 由三阶系数定，符号是负的别丢。"
-      ],
-      "key_point": "等价无穷小求待定常数：泰勒展开按幂次逐阶配系数，低阶系数清零、目标阶系数定 k。"
-    },
-    {
-      "id": 422,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & 2 & -3 \\\\ -1 & 3 & -3 \\\\ 1 & -2 & a\\end{array}\\right)$ 相似于矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & -2 & 0 \\\\ 0 & b & 0 \\\\ 0 & 3 & 1\\end{array}\\right)$\r\n\r\n(1) 求 $a, b$ 的值;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$, 使 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$ 为对角矩阵",
-      "options": {},
-      "answer": "(1) $a=4, b=5$\r\n\r\n(2) $\\boldsymbol{P}=\\left(\\begin{array}{ccc}2 & -3 & -1 \\\\ 1 & 0 & -1 \\\\ 0 & 1 & 1\\end{array}\\right)$",
-      "analysis": "【分析】相似矩阵有相同的迹与行列式，可据此列两个方程定出 $a,b$。$B$ 呈分块下三角，特征值即对角元 $1,b,1$，故 $A$ 的特征值也是 $1,1,b$。第(2)问对 $A$ 求三个线性无关的特征向量拼成 $P$，使 $P^{-1}AP$ 为对角阵；注意 $\\lambda=1$ 为二重根，要凑齐两个无关特征向量。\n\n【解答】**(1) 求 $a,b$。** $B=\\begin{pmatrix}1&-2&0\\\\0&b&0\\\\0&3&1\\end{pmatrix}$ 的特征值为 $1,b,1$。\n相似 $\\Rightarrow$ 迹相等：$\\operatorname{tr}A=0+3+a=3+a$，$\\operatorname{tr}B=1+b+1=2+b$，得\n$$3+a=2+b\\ \\Rightarrow\\ b=a+1.$$\n相似 $\\Rightarrow$ 行列式相等：$\\det B=1\\cdot b\\cdot1=b$，而\n$$\\det A=\\begin{vmatrix}0&2&-3\\\\-1&3&-3\\\\1&-2&a\\end{vmatrix}.$$\n按第一列展开：\n$$\\det A=0-(-1)\\begin{vmatrix}2&-3\\\\-2&a\\end{vmatrix}+1\\cdot\\begin{vmatrix}2&-3\\\\3&-3\\end{vmatrix}=(2a-6)+(-6+9)=2a-3.$$\n令 $\\det A=\\det B$，即 $2a-3=b=a+1$，解得 $a=4,\\ b=5$。\n\n**(2) 求 $P$。** 代入 $a=4$：\n$$A=\\begin{pmatrix}0&2&-3\\\\-1&3&-3\\\\1&-2&4\\end{pmatrix},\\qquad \\text{特征值}\\ 1,1,5.$$\n\n对 $\\lambda=1$：$A-E=\\begin{pmatrix}-1&2&-3\\\\-1&2&-3\\\\1&-2&3\\end{pmatrix}$，行初等变换化为 $\\begin{pmatrix}1&-2&3\\\\0&0&0\\\\0&0&0\\end{pmatrix}$，秩为 $1$，方程为 $x_1-2x_2+3x_3=0$，即 $x_1=2x_2-3x_3$。取两个线性无关解\n$$\\xi_1=(2,1,0)^T\\ (x_2{=}1,x_3{=}0),\\qquad \\xi_2=(-3,0,1)^T\\ (x_2{=}0,x_3{=}1).$$\n\n对 $\\lambda=5$：$A-5E=\\begin{pmatrix}-5&2&-3\\\\-1&-2&-3\\\\1&-2&-1\\end{pmatrix}$，行初等变换化为 $\\begin{pmatrix}1&0&1\\\\0&1&1\\\\0&0&0\\end{pmatrix}$，方程为 $x_1+x_3=0,\\ x_2+x_3=0$。取 $x_3=1$ 得\n$$\\xi_3=(-1,-1,1)^T.$$\n验证：$A\\xi_3=\\big(2(-1)-3(1),\\ -1(-1)+3(-1)-3(1),\\ 1(-1)-2(-1)+4(1)\\big)^T=(-5,-5,5)^T=5\\xi_3$，成立。\n\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}2&-3&-1\\\\1&0&-1\\\\0&1&1\\end{pmatrix}$，则\n$$P^{-1}AP=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&5\\end{pmatrix}.$$\n核验 $P$ 可逆：$\\det P=2\\begin{vmatrix}0&-1\\\\1&1\\end{vmatrix}-(-3)\\begin{vmatrix}1&-1\\\\0&1\\end{vmatrix}+(-1)\\begin{vmatrix}1&0\\\\0&1\\end{vmatrix}=2\\cdot1+3\\cdot1-1\\cdot1=4\\neq0$，故结论成立。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$B$ 呈分块下三角，特征值仍是对角线 $1,b,1$，不要被第 2 列的 $-2,3$ 迷惑。",
-        "$\\lambda=1$ 是二重根且 $\\operatorname{rank}(A-E)=1$，须取两个线性无关的特征向量，否则不可对角化。",
-        "$P$ 的列向量顺序要与对角阵特征值顺序一一对应。"
-      ],
-      "key_point": "相似 $\\Rightarrow$ 迹、行列式相等定参数；对每个特征值解齐次方程取无关特征向量，二重根要凑两个，按序拼成 $P$。"
-    },
-    {
-      "id": 425,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "下列反常积分中收敛的是 $(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\int_2^{+\\infty} \\frac{1}{\\sqrt{x}} \\mathrm{d} x$",
-        "B": "$\\displaystyle \\int_2^{+\\infty} \\frac{\\ln x}{x} \\mathrm{d} x$",
-        "C": "$\\displaystyle \\int_2^{+\\infty} \\frac{1}{x \\ln x} \\mathrm{d} x$",
-        "D": "$\\displaystyle \\int_2^{+\\infty} \\frac{x}{\\mathrm{e}^x} \\mathrm{d} x$"
-      },
-      "answer": "D",
-      "analysis": "【分析】四个都是 $[2,+\\infty)$ 上无穷限反常积分，逐一判敛散。$p$-型用 $\\displaystyle\\int^{+\\infty}\\dfrac{\\mathrm dx}{x^p}$（$p>1$ 收敛）；对数型用换元 $t=\\ln x$；指数压制型 $\\dfrac{x}{\\mathrm e^x}$ 衰减极快必收敛。\n\n【解答】逐项分析见各选项。其中 D 项：\n$$\\int_2^{+\\infty}\\frac{x}{\\mathrm e^x}\\,\\mathrm dx,$$\n分部积分 $\\displaystyle\\int x\\mathrm e^{-x}\\mathrm dx=-(x+1)\\mathrm e^{-x}$，故\n$$\\int_2^{+\\infty}x\\mathrm e^{-x}\\mathrm dx=\\Big[-(x+1)\\mathrm e^{-x}\\Big]_2^{+\\infty}=0-\\big(-3\\mathrm e^{-2}\\big)=3\\mathrm e^{-2},$$\n极限存在且有限，收敛。故选 **D**。",
-      "wrong_options": {
-        "A": "$\\displaystyle\\int_2^{+\\infty}x^{-1/2}\\mathrm dx$ 是 $p=\\dfrac12<1$ 的 $p$-积分，发散（$2\\sqrt x\\to+\\infty$）。",
-        "B": "$\\dfrac{\\ln x}{x}$ 的原函数为 $\\dfrac{(\\ln x)^2}{2}\\to+\\infty$，发散。",
-        "C": "换元 $t=\\ln x$，$\\displaystyle\\int\\dfrac{\\mathrm dx}{x\\ln x}=\\int\\dfrac{\\mathrm dt}{t}=\\ln(\\ln x)\\to+\\infty$，发散。"
-      },
-      "pitfalls": [
-        "$\\dfrac{1}{x\\ln x}$ 看着衰减很快，但其积分是 $\\ln(\\ln x)$，仍发散——这是最易误判的干扰项。",
-        "指数函数压制多项式，$\\dfrac{x}{\\mathrm e^x}$ 型在无穷限积分总收敛。"
-      ],
-      "key_point": "无穷限反常积分敛散：$p$-判别、对数换元、指数压制三招逐项排查。"
-    },
-    {
-      "id": 426,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "函数 $\\displaystyle f(x)=\\lim _{t \\rightarrow 0}\\left(1+\\frac{\\sin t}{x}\\right)^{\\frac{x^2}{t}}$ 在 $(-\\infty,+\\infty)$ 内 $(\\quad)$",
-      "options": {
-        "A": "连续",
-        "B": "有可去间断点",
-        "C": "有跳跃间断点",
-        "D": "有无穷间断点"
-      },
-      "answer": "B",
-      "analysis": "【分析】先求出 $f(x)$ 的显式表达。极限对 $t\\to0$ 取，$x$ 视为参数（$x\\neq0$ 才有意义）。这是 $1^\\infty$ 型，取对数用等价无穷小算指数极限。求出 $f$ 后判断在 $(-\\infty,+\\infty)$ 上的连续性，重点看 $x=0$ 处。\n\n【解答】对 $x\\neq0$，设 $L=\\lim_{t\\to0}\\Big(1+\\dfrac{\\sin t}{x}\\Big)^{x^2/t}$，取对数\n$$\\ln L=\\lim_{t\\to0}\\frac{x^2}{t}\\ln\\Big(1+\\frac{\\sin t}{x}\\Big).$$\n当 $t\\to0$，$\\dfrac{\\sin t}{x}\\to0$，$\\ln\\Big(1+\\dfrac{\\sin t}{x}\\Big)\\sim\\dfrac{\\sin t}{x}\\sim\\dfrac{t}{x}$，故\n$$\\ln L=\\lim_{t\\to0}\\frac{x^2}{t}\\cdot\\frac{t}{x}=x\\ \\Longrightarrow\\ f(x)=\\mathrm{e}^{x}\\quad(x\\neq0).$$\n在 $x=0$ 处原式因含 $\\dfrac{\\sin t}{x}$ 无定义，故 $f$ 的定义域是 $x\\neq0$。但 $\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\mathrm{e}^x=1$ 存在且有限，是可去间断点；其余各点 $f=\\mathrm{e}^x$ 连续。故选 B。",
-      "wrong_options": {
-        "A": "错。x=0 不在定义域内（原式出现 sin t/x），f 在 x=0 处并非连续，整条直线上并非处处连续。",
-        "C": "错。x=0 处左右极限都等于 e^0=1，相等，故不是跳跃间断点。",
-        "D": "错。lim_{x→0}f(x)=1 为有限值，不是无穷间断点。"
-      },
-      "pitfalls": [
-        "先把极限算出 f(x)=e^x（x≠0），再讨论连续性，切勿凭表面臆断。",
-        "x=0 处函数无定义但极限存在且有限，正是可去间断点的特征。",
-        "1^∞ 型务必取对数化为指数极限，用 ln(1+u)~u、sin t~t。"
-      ],
-      "key_point": "含参极限定义的函数先求显式表达，间断点类型看该点极限是否存在/有限/左右相等。"
-    },
-    {
-      "id": 427,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{ll}x^\\alpha \\cos \\frac{1}{x^\\beta}, & x>0, \\\\ 0, & x \\leqslant 0\\end{array}(\\alpha>0, \\beta>0)\\right.$, 若 $f^{\\prime}(x)$ 在 $x=0$ 处连续, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\alpha-\\beta>1$",
-        "B": "$0<\\alpha-\\beta \\leqslant 1$",
-        "C": "$\\alpha-\\beta>2$",
-        "D": "$0<\\alpha-\\beta \\leqslant 2$"
-      },
-      "answer": "A",
-      "analysis": "【分析】$f'(x)$ 在 $x=0$ 连续，意味着两件事同时成立：$f'(0)$ 存在（且左导为 0，故 $f'(0)=0$），以及 $\\lim_{x\\to0^+}f'(x)=f'(0)=0$。后者通常更苛刻，是判据的关键。分别写出 $x>0$ 时的 $f'(x)$，看各项幂次何时趋于 0。\n\n【解答】\n当 $x>0$：\n$$f'(x)=\\alpha x^{\\alpha-1}\\cos\\dfrac{1}{x^\\beta}+\\beta x^{\\alpha-\\beta-1}\\sin\\dfrac{1}{x^\\beta}.$$\n（第二项由链式：$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\cos\\frac{1}{x^\\beta}=\\sin\\frac{1}{x^\\beta}\\cdot\\beta x^{-\\beta-1}$，乘 $x^\\alpha$ 得 $\\beta x^{\\alpha-\\beta-1}\\sin\\frac{1}{x^\\beta}$。）\n\n当 $x\\le0$ 时 $f'(x)=0$，故 $f'(0^-)=0$，要求 $f'(x)$ 连续即需 $\\lim_{x\\to0^+}f'(x)=0$。\n\n$\\cos,\\sin$ 有界，故：\n- 第一项 $\\to0$ 需要 $\\alpha-1>0$；\n- 第二项 $\\to0$ 需要 $\\alpha-\\beta-1>0$，即 $\\alpha-\\beta>1$。\n\n由 $\\beta>0$，$\\alpha-\\beta>1$ 已蕴含 $\\alpha>1+\\beta>1$，第一项条件自动满足。故 $f'(x)$ 在 $0$ 连续的充要条件是 $\\boldsymbol{\\alpha-\\beta>1}$，选 A。\n\n（验证：取 $\\alpha=3,\\beta=1$ 满足 A，$f'(x)=3x^2\\cos\\frac1x+x\\sin\\frac1x\\to0$，连续；取 $\\alpha-\\beta=1$，第二项 $\\beta\\sin\\frac{1}{x^\\beta}$ 不趋于 0，不连续。）",
-      "wrong_options": {
-        "B": "$0<\\alpha-\\beta\\le1$ 时 $\\alpha-\\beta-1\\le0$，第二项 $\\beta x^{\\alpha-\\beta-1}\\sin\\frac{1}{x^\\beta}$ 不趋于 0（$\\alpha-\\beta=1$ 时为有界不收敛，$<1$ 时发散），$f'$ 在 0 不连续，条件不充分。",
-        "C": "$\\alpha-\\beta>2$ 是充分但不必要的更强条件，真正的临界线是 $\\alpha-\\beta>1$，把范围卡得过窄，漏掉了 $1<\\alpha-\\beta\\le2$ 这段合法情形。",
-        "D": "$0<\\alpha-\\beta\\le2$ 包含了 $\\alpha-\\beta\\le1$ 的不连续情形（如 $\\alpha-\\beta=1$），不能保证 $f'$ 连续，故不正确。"
-      },
-      "pitfalls": [
-        "导数连续比导数存在更强：要算 $\\lim_{x\\to0^+}f'(x)$ 而非仅用定义算 $f'(0)$，后者只需 $\\alpha>1$",
-        "起决定作用的是含 $\\sin$ 的那一项 $x^{\\alpha-\\beta-1}$，幂次 $\\alpha-\\beta-1>0$ 才能压住有界振荡使其趋 0"
-      ],
-      "key_point": "导数在分段点连续 = $\\lim f'(x)$ 等于该点导数；逐项看幂次能否压住有界振荡因子，取最苛刻的一项定条件。"
-    },
-    {
-      "id": 428,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(u, v)$ 满足 $f\\left(x+y, \\frac{y}{x}\\right)=x^2-y^2$, 则 $\\left.\\frac{\\partial f}{\\partial u}\\right|_{\\substack{u=1 \\\\ v=1}}$ 和 $\\left.\\frac{\\partial f}{\\partial v}\\right|_{\\substack{u=1 \\\\ v=1}}$ 依次是 $(\\quad)$",
-      "options": {
-        "A": "$\\dfrac{1}{2}, 0$",
-        "B": "$0, \\dfrac{1}{2}$",
-        "C": "$-\\dfrac{1}{2}, 0$",
-        "D": "$0,-\\dfrac{1}{2}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】关键是把 $f(u,v)$ 的显式表达式求出来：令 $u=x+y,\\ v=\\dfrac yx$，反解出 $x,y$ 用 $u,v$ 表示，代入右端 $x^2-y^2$ 即得 $f(u,v)$，再分别对 $u,v$ 求偏导并在 $(1,1)$ 取值。\n\n【解答】设 $u=x+y,\\ v=\\dfrac yx$。由 $y=vx$ 代入 $u=x+vx=x(1+v)$ 得 $x=\\dfrac{u}{1+v},\\ y=\\dfrac{uv}{1+v}$。于是\n$$x^2-y^2=(x+y)(x-y)=u\\cdot x(1-v)=u\\cdot\\frac{u}{1+v}(1-v)=u^2\\cdot\\frac{1-v}{1+v}.$$\n故 $f(u,v)=u^2\\cdot\\dfrac{1-v}{1+v}$。求偏导：\n$$\\frac{\\partial f}{\\partial u}=2u\\cdot\\frac{1-v}{1+v},\\qquad \\frac{\\partial f}{\\partial v}=u^2\\cdot\\frac{-(1+v)-(1-v)}{(1+v)^2}=u^2\\cdot\\frac{-2}{(1+v)^2}.$$\n在 $u=1,\\ v=1$ 处：\n$$\\left.\\frac{\\partial f}{\\partial u}\\right|_{(1,1)}=2\\cdot\\frac{1-1}{2}=0,\\qquad \\left.\\frac{\\partial f}{\\partial v}\\right|_{(1,1)}=1\\cdot\\frac{-2}{4}=-\\frac12.$$\n依次为 $0,-\\dfrac12$，选 D。",
-      "wrong_options": {
-        "A": "把两个偏导记反且符号错，$\\partial f/\\partial u$ 在 (1,1) 应为 0 而非 1/2",
-        "B": "次序颠倒，第一个应是 $\\partial f/\\partial u=0$，第二个才是 $\\partial f/\\partial v=-1/2$",
-        "C": "$\\partial f/\\partial u$ 在 (1,1) 为 0 不是 -1/2，符号与数值都不对"
-      },
-      "pitfalls": [
-        "必须反解出 x=u/(1+v),y=uv/(1+v) 求出 f(u,v) 的显式式子再求偏导",
-        "用 $x^2-y^2=(x+y)(x-y)=u\\cdot x(1-v)$ 化简最省力",
-        "$\\partial f/\\partial u$ 含因子 (1-v)，在 v=1 处恰为 0，别误算成非零"
-      ],
-      "key_point": "复合函数定义题：换元反解求出 f 的显式表达式，再逐个求偏导代值"
-    },
-    {
       "id": 429,
       "paper": "数学二",
       "year": 2015,
@@ -296,6 +259,98 @@
         "乘 x² 让幂次整体右移 2，x^n 系数来自 2^x 的 x^{n-2} 项，别把指数 n-2 写错。"
       ],
       "key_point": "求 f^(n)(0) 的通法：展成幂级数取 x^n 系数乘 n!；2^x=e^{x ln2} 套指数级数立等可取。"
+    },
+    {
+      "id": 439,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 连续, $\\displaystyle \\varphi(x)=\\int_0^{x^2} x f(t) \\mathrm{d} t$. 若 $\\varphi(1)=1, \\varphi^{\\prime}(1)=5$, 则 $f(1)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "2",
+      "analysis": "【分析】$\\varphi(x)=\\displaystyle\\int_0^{x^2}xf(t)\\mathrm{d}t$ 中 $x$ 既出现在被积函数里又出现在上限，先把与 $t$ 无关的 $x$ 提到积分号外：$\\varphi(x)=x\\displaystyle\\int_0^{x^2}f(t)\\mathrm{d}t$。再用乘积法则求导，上限求导用变限积分链式法则。把 $\\varphi(1)=1,\\ \\varphi'(1)=5$ 两条件联立即可解出 $f(1)$。\n\n【解答】记 $G(u)=\\displaystyle\\int_0^u f(t)\\mathrm{d}t$，则\n$$\\varphi(x)=x\\int_0^{x^2}f(t)\\mathrm{d}t=x\\,G(x^2).$$\n求导（乘积法则 + 链式法则，$G'(u)=f(u)$）：\n$$\\varphi'(x)=G(x^2)+x\\cdot f(x^2)\\cdot 2x=G(x^2)+2x^2 f(x^2).$$\n由 $\\varphi(1)=1$：$\\varphi(1)=1\\cdot G(1)=G(1)=1$，故 $G(1)=1$。\n由 $\\varphi'(1)=5$：$\\varphi'(1)=G(1)+2\\cdot1\\cdot f(1)=1+2f(1)=5$，\n解得\n$$f(1)=\\dfrac{5-1}{2}=2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "$x$ 与积分变量 $t$ 无关，必须先提到积分号外，否则乘积求导会出错。",
+        "上限 $x^2$ 求导要乘上 $(x^2)'=2x$（链式法则），易漏。"
+      ],
+      "key_point": "把不含 $t$ 的因子提出积分号，$\\varphi(x)=xG(x^2)$ 后乘积+链式求导，两条件联立解 $f(1)$。"
+    },
+    {
+      "id": 441,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 是微分方程 $y^{\\prime \\prime}+y^{\\prime}-2 y=0$ 的解, 且在 $x=0$ 处 $y(x)$ 取得极值 3 , 则 $y(x)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^{-2 x}+2 \\mathrm{e}^x$",
+      "analysis": "【分析】二阶常系数齐次线性方程，先写特征方程定通解，再用\"在 $x=0$ 处取得极值 3\"翻译成两个定解条件：极值 $\\Rightarrow y'(0)=0$，极值为 3 $\\Rightarrow y(0)=3$，解出两个常数即可。\n\n【解答】特征方程 $r^2+r-2=0$，$(r+2)(r-1)=0$，$r=1,\\ r=-2$，故通解\n$$y(x)=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{-2x}.$$\n由\"在 $x=0$ 取得极值 3\"：\n- 极值条件：$y'(0)=0$。$y'=C_1\\mathrm{e}^{x}-2C_2\\mathrm{e}^{-2x}$，故 $y'(0)=C_1-2C_2=0$。\n- 极值大小：$y(0)=C_1+C_2=3$。\n\n联立 $C_1=2C_2,\\ C_1+C_2=3$，得 $C_2=1,\\ C_1=2$。所以\n$$y(x)=2\\mathrm{e}^{x}+\\mathrm{e}^{-2x}.$$\n验证：$y'(0)=2-2=0$（驻点），$y''=2\\mathrm{e}^x+4\\mathrm{e}^{-2x}$，$y''(0)=6>0$（确为极小值），$y(0)=3$，全部吻合。",
+      "wrong_options": {},
+      "pitfalls": [
+        "\"取得极值\"务必同时用上 $y'(0)=0$ 和 $y(0)=3$ 两个条件，缺一不可。",
+        "特征根 $r=1,-2$ 别写反符号，导致 $\\mathrm{e}^{2x}$ 之类错误。",
+        "可顺手验 $y''(0)\\ne0$ 确认确实是极值（这里 $y''(0)=6>0$ 是极小值）。"
+      ],
+      "key_point": "齐次方程通解 + 极值翻译为 $y'(0)=0,\\ y(0)=$极值，两条件定常数。"
+    },
+    {
+      "id": 440,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "若函数 $z=z(x, y)$ 由方程 $\\mathrm{e}^{x+2 y+3 z}+x y z=1$ 确定, 则 $\\left.\\mathrm{d} z\\right|_{(0,0)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle -\\frac{1}{3} \\mathrm{d} x-\\frac{2}{3} \\mathrm{d} y$",
+      "analysis": "【分析】隐函数求全微分，最快捷的是对方程两边直接求全微分，得到含 $\\mathrm{d}x,\\mathrm{d}y,\\mathrm{d}z$ 的关系式，再在指定点 $(0,0)$ 处代入解出 $\\mathrm{d}z$。先确定该点的 $z$ 值。\n\n【解答】方程 $\\mathrm{e}^{x+2y+3z}+xyz=1$。在 $(x,y)=(0,0)$ 处：$\\mathrm{e}^{3z}+0=1\\Rightarrow 3z=0\\Rightarrow z=0$。\n\n两边求全微分：\n$$\\mathrm{e}^{x+2y+3z}\\,(\\mathrm{d}x+2\\,\\mathrm{d}y+3\\,\\mathrm{d}z)+(yz\\,\\mathrm{d}x+xz\\,\\mathrm{d}y+xy\\,\\mathrm{d}z)=0.$$\n在点 $(0,0,0)$ 代入：$\\mathrm{e}^{0}=1$，且 $yz=xz=xy=0$，故\n$$\\mathrm{d}x+2\\,\\mathrm{d}y+3\\,\\mathrm{d}z=0\\;\\Rightarrow\\;\\mathrm{d}z=-\\frac13\\,\\mathrm{d}x-\\frac23\\,\\mathrm{d}y.$$\n即 $\\left.\\mathrm{d}z\\right|_{(0,0)}=-\\dfrac13\\,\\mathrm{d}x-\\dfrac23\\,\\mathrm{d}y$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由方程定出 $(0,0)$ 处 $z=0$，否则无法代入。",
+        "对 $xyz$ 求全微分得 $yz\\,\\mathrm{d}x+xz\\,\\mathrm{d}y+xy\\,\\mathrm{d}z$，在原点三项全为零。",
+        "全微分法比分别求 $\\partial z/\\partial x,\\partial z/\\partial y$ 更直接，注意指数因子在原点等于 $1$。"
+      ],
+      "key_point": "隐函数全微分：两边取 $\\mathrm{d}$，代入定点（先求该点 $z$）解出 $\\mathrm{d}z$。"
+    },
+    {
+      "id": 442,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 3 阶矩阵 $\\boldsymbol{A}$ 的特征值为 $2,-2,1, \\boldsymbol{B}=\\boldsymbol{A}^2-\\boldsymbol{A}+\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 3 阶单位矩阵, 则行列式 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "21",
+      "analysis": "【分析】矩阵多项式的特征值规律：若 $\\lambda$ 是 $A$ 的特征值，则对多项式 $g(t)$，$g(\\lambda)$ 是 $g(A)$ 的特征值。这里 $g(t)=t^2-t+1$，$B=g(A)$。$3$ 阶矩阵行列式等于三个特征值之积，把 $A$ 的三个特征值代入 $g$ 即可。\n\n【解答】设 $g(t)=t^2-t+1$，则 $B=A^2-A+E=g(A)$。$A$ 的特征值为 $2,-2,1$，故 $B$ 的特征值为\n$$g(2)=4-2+1=3,\\quad g(-2)=4+2+1=7,\\quad g(1)=1-1+1=1.$$\n所以\n$$|B|=3\\times 7\\times 1=21.$$\n结论与标准答案一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "g(A) 的特征值是把 A 的特征值代入同一多项式 g，而不是对特征值做别的运算；注意 g(-2)=4+2+1=7（符号别算错）。",
+        "行列式 = 全部特征值之积，无需真去算 A^2。"
+      ],
+      "key_point": "矩阵多项式行列式：B=g(A) 的特征值为 g(λ_i)，|B|=∏ g(λ_i)。"
+    },
+    {
+      "id": 416,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=x+a \\ln (1+x)+b x \\sin x, g(x)=k x^{3}$. 若 $f(x)$ 与 $g(x)$ 在 $x \\rightarrow 0$ 时是等价无穷小, 求 $a, b, k$ 的值",
+      "options": {},
+      "answer": "$a=-1, b=-\\dfrac{1}{2}, k=-\\dfrac{1}{3}$",
+      "analysis": "【分析】$f$ 与 $g=kx^3$ 等价无穷小，意味着 $x\\to0$ 时 $f(x)=kx^3+o(x^3)$，即 $f(x)$ 的泰勒展开里 $x$、$x^2$ 项系数必须为 $0$，而 $x^3$ 项系数恰为 $k$。把 $\\ln(1+x)$、$\\sin x$ 展到 $x^3$ 阶，按幂次比较系数即可。\n\n【解答】在 $x\\to0$ 处展开到 $x^3$：\n$$\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3),\\qquad x\\sin x=x\\Big(x-\\frac{x^3}{6}+\\cdots\\Big)=x^2+o(x^3).$$\n代入 $f(x)=x+a\\ln(1+x)+bx\\sin x$：\n$$f(x)=x+a\\Big(x-\\frac{x^2}{2}+\\frac{x^3}{3}\\Big)+b x^2+o(x^3)$$\n$$=(1+a)x+\\Big(b-\\frac{a}{2}\\Big)x^2+\\frac{a}{3}x^3+o(x^3).$$\n要与 $kx^3$ 等价，须使前两阶系数为零、三阶系数等于 $k$：\n$$1+a=0\\ \\Rightarrow\\ a=-1;$$\n$$b-\\frac{a}{2}=0\\ \\Rightarrow\\ b=\\frac{a}{2}=-\\frac12;$$\n$$k=\\frac{a}{3}=-\\frac13.$$\n验算：此时 $f(x)=-\\dfrac{1}{3}x^3+o(x^3)$，确与 $g(x)=-\\dfrac{1}{3}x^3$ 等价。故\n$$a=-1,\\quad b=-\\frac12,\\quad k=-\\frac13.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x sin x 是 x²+o(x³)，没有 x³ 项，别误展到把 -x⁴/6 当三阶项混进来。",
+        "等价无穷小要求一、二阶系数同时为 0，缺一不可；k 由三阶系数定，符号是负的别丢。"
+      ],
+      "key_point": "等价无穷小求待定常数：泰勒展开按幂次逐阶配系数，低阶系数清零、目标阶系数定 k。"
     },
     {
       "id": 431,
@@ -333,6 +388,43 @@
         "判极值要算全 $A,B,C$ 并验 $AC-B^2$ 与 $A$ 的符号，只看 $A>0$ 不够"
       ],
       "key_point": "已知高阶混合偏导反求函数：逐次积分、用边界条件逐个确定待定函数；还原后按 $AC-B^2$ 判极值。"
+    },
+    {
+      "id": 443,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算二重积分 $\\displaystyle \\iint_D x(x+y) \\mathrm{d} x \\mathrm{d} y$, 其中 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 2, y \\geqslant x^2\\right\\}$",
+      "options": {},
+      "answer": "\\dfrac{\\pi}{4}-\\dfrac{2}{5}",
+      "analysis": "【分析】积分区域 $D=\\{x^2+y^2\\le2,\\ y\\ge x^2\\}$ 关于 $y$ 轴对称（两条边界 $x^2+y^2=2$、$y=x^2$ 都对称）。被积函数 $x(x+y)=x^2+xy$ 中，$xy$ 关于 $x$ 是奇函数，在对称区域上积分为 $0$，可直接丢掉，只算 $\\iint_D x^2\\,\\mathrm dx\\mathrm dy$。先求两曲线交点定出 $x$ 范围，再用先 $y$ 后 $x$ 的直角坐标累次积分。\n\n【解答】先定区域。联立 $y=x^2$ 与 $x^2+y^2=2$：$x^2+x^4=2$，即 $(x^2-1)(x^2+2)=0$，得 $x^2=1$，$x=\\pm1$，对应 $y=1$。故 $-1\\le x\\le1$，且对每个 $x$，$y$ 从抛物线 $x^2$ 到上半圆 $\\sqrt{2-x^2}$。\n\n利用对称性：\n$$\\iint_D xy\\,\\mathrm dx\\mathrm dy=0\\quad(\\text{被积函数关于 }x\\text{ 为奇，}D\\text{ 关于 }y\\text{ 轴对称}),$$\n故\n$$I=\\iint_D x^2\\,\\mathrm dx\\mathrm dy=\\int_{-1}^{1}x^2\\Big(\\int_{x^2}^{\\sqrt{2-x^2}}\\mathrm dy\\Big)\\mathrm dx=\\int_{-1}^{1}x^2\\big(\\sqrt{2-x^2}-x^2\\big)\\,\\mathrm dx.$$\n再用 $x^2$ 部分的偶性（$0$ 到 $1$ 乘 $2$）：\n$$I=2\\int_0^1 x^2\\sqrt{2-x^2}\\,\\mathrm dx-2\\int_0^1 x^4\\,\\mathrm dx.$$\n第二项：$2\\cdot\\dfrac{1}{5}=\\dfrac25$。\n第一项令 $x=\\sqrt2\\sin t$（$t:0\\to\\frac\\pi4$），$\\mathrm dx=\\sqrt2\\cos t\\,\\mathrm dt$，$\\sqrt{2-x^2}=\\sqrt2\\cos t$：\n$$2\\int_0^{\\pi/4}2\\sin^2t\\cdot\\sqrt2\\cos t\\cdot\\sqrt2\\cos t\\,\\mathrm dt=8\\int_0^{\\pi/4}\\sin^2t\\cos^2t\\,\\mathrm dt=2\\int_0^{\\pi/4}\\sin^2 2t\\,\\mathrm dt.$$\n$\\sin^2 2t=\\dfrac{1-\\cos4t}{2}$，故\n$$2\\int_0^{\\pi/4}\\dfrac{1-\\cos4t}{2}\\mathrm dt=\\Big[t-\\tfrac14\\sin4t\\Big]_0^{\\pi/4}=\\dfrac\\pi4-0=\\dfrac\\pi4.$$\n所以\n$$I=\\dfrac\\pi4-\\dfrac25.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用对称性把 xy 项扔掉是关键提速点，硬算 xy 也得 0 但费时",
+        "上边界是圆 y=√(2-x²)、下边界是抛物线 y=x²，别把上下界写反",
+        "三角换元后 x²√(2-x²) 项要算到 π/4，注意 t 上限是 π/4 不是 π/2"
+      ],
+      "key_point": "对称区域 + 奇函数项直接置零；剩 x² 项用直角坐标累次积分，圆弧段三角换元。"
+    },
+    {
+      "id": 446,
+      "paper": "数学二",
+      "year": 2015,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)=\\int_x^1 \\sqrt{1+t^2} \\mathrm{d} t+\\int_1^{x^2} \\sqrt{1+t} \\mathrm{d} t$, 求 $f(x)$ 零点的个数 $(\\quad)$",
+      "options": {},
+      "answer": "f(x) 共有 2 个零点",
+      "analysis": "【分析】要数 $f(x)=\\int_x^1\\sqrt{1+t^2}\\,\\mathrm dt+\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt$ 的零点个数，标准做法是分析单调性与取值：先求 $f'(x)$ 确定单调区间，找到最小值，再用零点定理在各单调段计数。变上限/下限积分求导：$\\dfrac{\\mathrm d}{\\mathrm dx}\\int_x^1=-\\sqrt{1+x^2}$，$\\dfrac{\\mathrm d}{\\mathrm dx}\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt=\\sqrt{1+x^2}\\cdot2x$。\n\n【解答】注意 $\\sqrt{1+x^2}=\\sqrt{1+(x^2)}$ 与第二个积分上限处 $\\sqrt{1+t}\\big|_{t=x^2}=\\sqrt{1+x^2}$ 一致，故\n$$f'(x)=-\\sqrt{1+x^2}+\\sqrt{1+x^2}\\cdot2x=\\sqrt{1+x^2}\\,(2x-1).$$\n因 $\\sqrt{1+x^2}>0$，$f'(x)$ 的符号随 $2x-1$：$x<\\tfrac12$ 时 $f'<0$（递减），$x>\\tfrac12$ 时 $f'>0$（递增）。故 $f$ 在 $x=\\tfrac12$ 取唯一极小值。\n求几个关键值：\n- $x=1$：两段积分上下限均相同，$f(1)=0+0=0$；\n- $x=\\tfrac12<1$：在递减段且 $f(1)=0$，故 $f\\big(\\tfrac12\\big)<f(1)=0$，即最小值为负；\n- $x\\to+\\infty$：第二段 $\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt\\to+\\infty$ 主导，$f\\to+\\infty$；$x\\to-\\infty$：$\\int_x^1\\sqrt{1+t^2}\\,\\mathrm dt\\to+\\infty$，$f\\to+\\infty$。\n由此：$f$ 在 $(-\\infty,\\tfrac12)$ 严格递减，从 $+\\infty$ 降到 $f(\\tfrac12)<0$，由零点定理恰有 $1$ 个零点；在 $(\\tfrac12,+\\infty)$ 严格递增，从 $f(\\tfrac12)<0$ 升到 $+\\infty$，恰有 $1$ 个零点（且该零点正是 $x=1$）。\n所以 $f(x)$ 共有 **$2$ 个零点**（一个位于极小点 $x=\\tfrac12$ 左侧的递减段上，另一个恰为 $x=1$）。",
+      "wrong_options": {},
+      "pitfalls": [
+        "关键化简：第二段上限 t=x² 代入 √(1+t)=√(1+x²)，与第一段的 √(1+x²) 合并，f'(x)=√(1+x²)(2x-1) 极简。",
+        "x=1 是显然的零点（两积分均退化为 0），别漏；最小值 f(1/2)<0 是判定两侧各一零点的关键。"
+      ],
+      "key_point": "数零点=单调性+介值：求 f' 定唯一极小点 x=1/2，最小值为负且两端→+∞，故恰 2 个零点。"
     },
     {
       "id": 433,
@@ -390,115 +482,23 @@
       "key_point": "矩阵方程先按公因式分组分解成 (E-A)X(E-A^2)=E，再两边乘逆矩阵求 X。"
     },
     {
-      "id": 439,
+      "id": 422,
       "paper": "数学二",
       "year": 2015,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $f(x)$ 连续, $\\displaystyle \\varphi(x)=\\int_0^{x^2} x f(t) \\mathrm{d} t$. 若 $\\varphi(1)=1, \\varphi^{\\prime}(1)=5$, 则 $f(1)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "2",
-      "analysis": "【分析】$\\varphi(x)=\\displaystyle\\int_0^{x^2}xf(t)\\mathrm{d}t$ 中 $x$ 既出现在被积函数里又出现在上限，先把与 $t$ 无关的 $x$ 提到积分号外：$\\varphi(x)=x\\displaystyle\\int_0^{x^2}f(t)\\mathrm{d}t$。再用乘积法则求导，上限求导用变限积分链式法则。把 $\\varphi(1)=1,\\ \\varphi'(1)=5$ 两条件联立即可解出 $f(1)$。\n\n【解答】记 $G(u)=\\displaystyle\\int_0^u f(t)\\mathrm{d}t$，则\n$$\\varphi(x)=x\\int_0^{x^2}f(t)\\mathrm{d}t=x\\,G(x^2).$$\n求导（乘积法则 + 链式法则，$G'(u)=f(u)$）：\n$$\\varphi'(x)=G(x^2)+x\\cdot f(x^2)\\cdot 2x=G(x^2)+2x^2 f(x^2).$$\n由 $\\varphi(1)=1$：$\\varphi(1)=1\\cdot G(1)=G(1)=1$，故 $G(1)=1$。\n由 $\\varphi'(1)=5$：$\\varphi'(1)=G(1)+2\\cdot1\\cdot f(1)=1+2f(1)=5$，\n解得\n$$f(1)=\\dfrac{5-1}{2}=2.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "$x$ 与积分变量 $t$ 无关，必须先提到积分号外，否则乘积求导会出错。",
-        "上限 $x^2$ 求导要乘上 $(x^2)'=2x$（链式法则），易漏。"
-      ],
-      "key_point": "把不含 $t$ 的因子提出积分号，$\\varphi(x)=xG(x^2)$ 后乘积+链式求导，两条件联立解 $f(1)$。"
-    },
-    {
-      "id": 440,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "若函数 $z=z(x, y)$ 由方程 $\\mathrm{e}^{x+2 y+3 z}+x y z=1$ 确定, 则 $\\left.\\mathrm{d} z\\right|_{(0,0)}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\displaystyle -\\frac{1}{3} \\mathrm{d} x-\\frac{2}{3} \\mathrm{d} y$",
-      "analysis": "【分析】隐函数求全微分，最快捷的是对方程两边直接求全微分，得到含 $\\mathrm{d}x,\\mathrm{d}y,\\mathrm{d}z$ 的关系式，再在指定点 $(0,0)$ 处代入解出 $\\mathrm{d}z$。先确定该点的 $z$ 值。\n\n【解答】方程 $\\mathrm{e}^{x+2y+3z}+xyz=1$。在 $(x,y)=(0,0)$ 处：$\\mathrm{e}^{3z}+0=1\\Rightarrow 3z=0\\Rightarrow z=0$。\n\n两边求全微分：\n$$\\mathrm{e}^{x+2y+3z}\\,(\\mathrm{d}x+2\\,\\mathrm{d}y+3\\,\\mathrm{d}z)+(yz\\,\\mathrm{d}x+xz\\,\\mathrm{d}y+xy\\,\\mathrm{d}z)=0.$$\n在点 $(0,0,0)$ 代入：$\\mathrm{e}^{0}=1$，且 $yz=xz=xy=0$，故\n$$\\mathrm{d}x+2\\,\\mathrm{d}y+3\\,\\mathrm{d}z=0\\;\\Rightarrow\\;\\mathrm{d}z=-\\frac13\\,\\mathrm{d}x-\\frac23\\,\\mathrm{d}y.$$\n即 $\\left.\\mathrm{d}z\\right|_{(0,0)}=-\\dfrac13\\,\\mathrm{d}x-\\dfrac23\\,\\mathrm{d}y$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "先由方程定出 $(0,0)$ 处 $z=0$，否则无法代入。",
-        "对 $xyz$ 求全微分得 $yz\\,\\mathrm{d}x+xz\\,\\mathrm{d}y+xy\\,\\mathrm{d}z$，在原点三项全为零。",
-        "全微分法比分别求 $\\partial z/\\partial x,\\partial z/\\partial y$ 更直接，注意指数因子在原点等于 $1$。"
-      ],
-      "key_point": "隐函数全微分：两边取 $\\mathrm{d}$，代入定点（先求该点 $z$）解出 $\\mathrm{d}z$。"
-    },
-    {
-      "id": 441,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $y=y(x)$ 是微分方程 $y^{\\prime \\prime}+y^{\\prime}-2 y=0$ 的解, 且在 $x=0$ 处 $y(x)$ 取得极值 3 , 则 $y(x)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\mathrm{e}^{-2 x}+2 \\mathrm{e}^x$",
-      "analysis": "【分析】二阶常系数齐次线性方程，先写特征方程定通解，再用\"在 $x=0$ 处取得极值 3\"翻译成两个定解条件：极值 $\\Rightarrow y'(0)=0$，极值为 3 $\\Rightarrow y(0)=3$，解出两个常数即可。\n\n【解答】特征方程 $r^2+r-2=0$，$(r+2)(r-1)=0$，$r=1,\\ r=-2$，故通解\n$$y(x)=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{-2x}.$$\n由\"在 $x=0$ 取得极值 3\"：\n- 极值条件：$y'(0)=0$。$y'=C_1\\mathrm{e}^{x}-2C_2\\mathrm{e}^{-2x}$，故 $y'(0)=C_1-2C_2=0$。\n- 极值大小：$y(0)=C_1+C_2=3$。\n\n联立 $C_1=2C_2,\\ C_1+C_2=3$，得 $C_2=1,\\ C_1=2$。所以\n$$y(x)=2\\mathrm{e}^{x}+\\mathrm{e}^{-2x}.$$\n验证：$y'(0)=2-2=0$（驻点），$y''=2\\mathrm{e}^x+4\\mathrm{e}^{-2x}$，$y''(0)=6>0$（确为极小值），$y(0)=3$，全部吻合。",
-      "wrong_options": {},
-      "pitfalls": [
-        "\"取得极值\"务必同时用上 $y'(0)=0$ 和 $y(0)=3$ 两个条件，缺一不可。",
-        "特征根 $r=1,-2$ 别写反符号，导致 $\\mathrm{e}^{2x}$ 之类错误。",
-        "可顺手验 $y''(0)\\ne0$ 确认确实是极值（这里 $y''(0)=6>0$ 是极小值）。"
-      ],
-      "key_point": "齐次方程通解 + 极值翻译为 $y'(0)=0,\\ y(0)=$极值，两条件定常数。"
-    },
-    {
-      "id": 442,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 3 阶矩阵 $\\boldsymbol{A}$ 的特征值为 $2,-2,1, \\boldsymbol{B}=\\boldsymbol{A}^2-\\boldsymbol{A}+\\boldsymbol{E}$, 其中 $\\boldsymbol{E}$ 为 3 阶单位矩阵, 则行列式 $|\\boldsymbol{B}|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "21",
-      "analysis": "【分析】矩阵多项式的特征值规律：若 $\\lambda$ 是 $A$ 的特征值，则对多项式 $g(t)$，$g(\\lambda)$ 是 $g(A)$ 的特征值。这里 $g(t)=t^2-t+1$，$B=g(A)$。$3$ 阶矩阵行列式等于三个特征值之积，把 $A$ 的三个特征值代入 $g$ 即可。\n\n【解答】设 $g(t)=t^2-t+1$，则 $B=A^2-A+E=g(A)$。$A$ 的特征值为 $2,-2,1$，故 $B$ 的特征值为\n$$g(2)=4-2+1=3,\\quad g(-2)=4+2+1=7,\\quad g(1)=1-1+1=1.$$\n所以\n$$|B|=3\\times 7\\times 1=21.$$\n结论与标准答案一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "g(A) 的特征值是把 A 的特征值代入同一多项式 g，而不是对特征值做别的运算；注意 g(-2)=4+2+1=7（符号别算错）。",
-        "行列式 = 全部特征值之积，无需真去算 A^2。"
-      ],
-      "key_point": "矩阵多项式行列式：B=g(A) 的特征值为 g(λ_i)，|B|=∏ g(λ_i)。"
-    },
-    {
-      "id": 443,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 18,
+      "index": 23,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "计算二重积分 $\\displaystyle \\iint_D x(x+y) \\mathrm{d} x \\mathrm{d} y$, 其中 $D=\\left\\{(x, y) \\mid x^2+y^2 \\leqslant 2, y \\geqslant x^2\\right\\}$",
+      "stem": "设矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & 2 & -3 \\\\ -1 & 3 & -3 \\\\ 1 & -2 & a\\end{array}\\right)$ 相似于矩阵 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}1 & -2 & 0 \\\\ 0 & b & 0 \\\\ 0 & 3 & 1\\end{array}\\right)$\r\n\r\n(1) 求 $a, b$ 的值;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$, 使 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$ 为对角矩阵",
       "options": {},
-      "answer": "\\dfrac{\\pi}{4}-\\dfrac{2}{5}",
-      "analysis": "【分析】积分区域 $D=\\{x^2+y^2\\le2,\\ y\\ge x^2\\}$ 关于 $y$ 轴对称（两条边界 $x^2+y^2=2$、$y=x^2$ 都对称）。被积函数 $x(x+y)=x^2+xy$ 中，$xy$ 关于 $x$ 是奇函数，在对称区域上积分为 $0$，可直接丢掉，只算 $\\iint_D x^2\\,\\mathrm dx\\mathrm dy$。先求两曲线交点定出 $x$ 范围，再用先 $y$ 后 $x$ 的直角坐标累次积分。\n\n【解答】先定区域。联立 $y=x^2$ 与 $x^2+y^2=2$：$x^2+x^4=2$，即 $(x^2-1)(x^2+2)=0$，得 $x^2=1$，$x=\\pm1$，对应 $y=1$。故 $-1\\le x\\le1$，且对每个 $x$，$y$ 从抛物线 $x^2$ 到上半圆 $\\sqrt{2-x^2}$。\n\n利用对称性：\n$$\\iint_D xy\\,\\mathrm dx\\mathrm dy=0\\quad(\\text{被积函数关于 }x\\text{ 为奇，}D\\text{ 关于 }y\\text{ 轴对称}),$$\n故\n$$I=\\iint_D x^2\\,\\mathrm dx\\mathrm dy=\\int_{-1}^{1}x^2\\Big(\\int_{x^2}^{\\sqrt{2-x^2}}\\mathrm dy\\Big)\\mathrm dx=\\int_{-1}^{1}x^2\\big(\\sqrt{2-x^2}-x^2\\big)\\,\\mathrm dx.$$\n再用 $x^2$ 部分的偶性（$0$ 到 $1$ 乘 $2$）：\n$$I=2\\int_0^1 x^2\\sqrt{2-x^2}\\,\\mathrm dx-2\\int_0^1 x^4\\,\\mathrm dx.$$\n第二项：$2\\cdot\\dfrac{1}{5}=\\dfrac25$。\n第一项令 $x=\\sqrt2\\sin t$（$t:0\\to\\frac\\pi4$），$\\mathrm dx=\\sqrt2\\cos t\\,\\mathrm dt$，$\\sqrt{2-x^2}=\\sqrt2\\cos t$：\n$$2\\int_0^{\\pi/4}2\\sin^2t\\cdot\\sqrt2\\cos t\\cdot\\sqrt2\\cos t\\,\\mathrm dt=8\\int_0^{\\pi/4}\\sin^2t\\cos^2t\\,\\mathrm dt=2\\int_0^{\\pi/4}\\sin^2 2t\\,\\mathrm dt.$$\n$\\sin^2 2t=\\dfrac{1-\\cos4t}{2}$，故\n$$2\\int_0^{\\pi/4}\\dfrac{1-\\cos4t}{2}\\mathrm dt=\\Big[t-\\tfrac14\\sin4t\\Big]_0^{\\pi/4}=\\dfrac\\pi4-0=\\dfrac\\pi4.$$\n所以\n$$I=\\dfrac\\pi4-\\dfrac25.$$",
+      "answer": "(1) $a=4, b=5$\r\n\r\n(2) $\\boldsymbol{P}=\\left(\\begin{array}{ccc}2 & -3 & -1 \\\\ 1 & 0 & -1 \\\\ 0 & 1 & 1\\end{array}\\right)$",
+      "analysis": "【分析】相似矩阵有相同的迹与行列式，可据此列两个方程定出 $a,b$。$B$ 呈分块下三角，特征值即对角元 $1,b,1$，故 $A$ 的特征值也是 $1,1,b$。第(2)问对 $A$ 求三个线性无关的特征向量拼成 $P$，使 $P^{-1}AP$ 为对角阵；注意 $\\lambda=1$ 为二重根，要凑齐两个无关特征向量。\n\n【解答】**(1) 求 $a,b$。** $B=\\begin{pmatrix}1&-2&0\\\\0&b&0\\\\0&3&1\\end{pmatrix}$ 的特征值为 $1,b,1$。\n相似 $\\Rightarrow$ 迹相等：$\\operatorname{tr}A=0+3+a=3+a$，$\\operatorname{tr}B=1+b+1=2+b$，得\n$$3+a=2+b\\ \\Rightarrow\\ b=a+1.$$\n相似 $\\Rightarrow$ 行列式相等：$\\det B=1\\cdot b\\cdot1=b$，而\n$$\\det A=\\begin{vmatrix}0&2&-3\\\\-1&3&-3\\\\1&-2&a\\end{vmatrix}.$$\n按第一列展开：\n$$\\det A=0-(-1)\\begin{vmatrix}2&-3\\\\-2&a\\end{vmatrix}+1\\cdot\\begin{vmatrix}2&-3\\\\3&-3\\end{vmatrix}=(2a-6)+(-6+9)=2a-3.$$\n令 $\\det A=\\det B$，即 $2a-3=b=a+1$，解得 $a=4,\\ b=5$。\n\n**(2) 求 $P$。** 代入 $a=4$：\n$$A=\\begin{pmatrix}0&2&-3\\\\-1&3&-3\\\\1&-2&4\\end{pmatrix},\\qquad \\text{特征值}\\ 1,1,5.$$\n\n对 $\\lambda=1$：$A-E=\\begin{pmatrix}-1&2&-3\\\\-1&2&-3\\\\1&-2&3\\end{pmatrix}$，行初等变换化为 $\\begin{pmatrix}1&-2&3\\\\0&0&0\\\\0&0&0\\end{pmatrix}$，秩为 $1$，方程为 $x_1-2x_2+3x_3=0$，即 $x_1=2x_2-3x_3$。取两个线性无关解\n$$\\xi_1=(2,1,0)^T\\ (x_2{=}1,x_3{=}0),\\qquad \\xi_2=(-3,0,1)^T\\ (x_2{=}0,x_3{=}1).$$\n\n对 $\\lambda=5$：$A-5E=\\begin{pmatrix}-5&2&-3\\\\-1&-2&-3\\\\1&-2&-1\\end{pmatrix}$，行初等变换化为 $\\begin{pmatrix}1&0&1\\\\0&1&1\\\\0&0&0\\end{pmatrix}$，方程为 $x_1+x_3=0,\\ x_2+x_3=0$。取 $x_3=1$ 得\n$$\\xi_3=(-1,-1,1)^T.$$\n验证：$A\\xi_3=\\big(2(-1)-3(1),\\ -1(-1)+3(-1)-3(1),\\ 1(-1)-2(-1)+4(1)\\big)^T=(-5,-5,5)^T=5\\xi_3$，成立。\n\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}2&-3&-1\\\\1&0&-1\\\\0&1&1\\end{pmatrix}$，则\n$$P^{-1}AP=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&5\\end{pmatrix}.$$\n核验 $P$ 可逆：$\\det P=2\\begin{vmatrix}0&-1\\\\1&1\\end{vmatrix}-(-3)\\begin{vmatrix}1&-1\\\\0&1\\end{vmatrix}+(-1)\\begin{vmatrix}1&0\\\\0&1\\end{vmatrix}=2\\cdot1+3\\cdot1-1\\cdot1=4\\neq0$，故结论成立。",
       "wrong_options": {},
       "pitfalls": [
-        "先用对称性把 xy 项扔掉是关键提速点，硬算 xy 也得 0 但费时",
-        "上边界是圆 y=√(2-x²)、下边界是抛物线 y=x²，别把上下界写反",
-        "三角换元后 x²√(2-x²) 项要算到 π/4，注意 t 上限是 π/4 不是 π/2"
+        "$B$ 呈分块下三角，特征值仍是对角线 $1,b,1$，不要被第 2 列的 $-2,3$ 迷惑。",
+        "$\\lambda=1$ 是二重根且 $\\operatorname{rank}(A-E)=1$，须取两个线性无关的特征向量，否则不可对角化。",
+        "$P$ 的列向量顺序要与对角阵特征值顺序一一对应。"
       ],
-      "key_point": "对称区域 + 奇函数项直接置零；剩 x² 项用直角坐标累次积分，圆弧段三角换元。"
-    },
-    {
-      "id": 446,
-      "paper": "数学二",
-      "year": 2015,
-      "index": 19,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x)=\\int_x^1 \\sqrt{1+t^2} \\mathrm{d} t+\\int_1^{x^2} \\sqrt{1+t} \\mathrm{d} t$, 求 $f(x)$ 零点的个数 $(\\quad)$",
-      "options": {},
-      "answer": "f(x) 共有 2 个零点",
-      "analysis": "【分析】要数 $f(x)=\\int_x^1\\sqrt{1+t^2}\\,\\mathrm dt+\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt$ 的零点个数，标准做法是分析单调性与取值：先求 $f'(x)$ 确定单调区间，找到最小值，再用零点定理在各单调段计数。变上限/下限积分求导：$\\dfrac{\\mathrm d}{\\mathrm dx}\\int_x^1=-\\sqrt{1+x^2}$，$\\dfrac{\\mathrm d}{\\mathrm dx}\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt=\\sqrt{1+x^2}\\cdot2x$。\n\n【解答】注意 $\\sqrt{1+x^2}=\\sqrt{1+(x^2)}$ 与第二个积分上限处 $\\sqrt{1+t}\\big|_{t=x^2}=\\sqrt{1+x^2}$ 一致，故\n$$f'(x)=-\\sqrt{1+x^2}+\\sqrt{1+x^2}\\cdot2x=\\sqrt{1+x^2}\\,(2x-1).$$\n因 $\\sqrt{1+x^2}>0$，$f'(x)$ 的符号随 $2x-1$：$x<\\tfrac12$ 时 $f'<0$（递减），$x>\\tfrac12$ 时 $f'>0$（递增）。故 $f$ 在 $x=\\tfrac12$ 取唯一极小值。\n求几个关键值：\n- $x=1$：两段积分上下限均相同，$f(1)=0+0=0$；\n- $x=\\tfrac12<1$：在递减段且 $f(1)=0$，故 $f\\big(\\tfrac12\\big)<f(1)=0$，即最小值为负；\n- $x\\to+\\infty$：第二段 $\\int_1^{x^2}\\sqrt{1+t}\\,\\mathrm dt\\to+\\infty$ 主导，$f\\to+\\infty$；$x\\to-\\infty$：$\\int_x^1\\sqrt{1+t^2}\\,\\mathrm dt\\to+\\infty$，$f\\to+\\infty$。\n由此：$f$ 在 $(-\\infty,\\tfrac12)$ 严格递减，从 $+\\infty$ 降到 $f(\\tfrac12)<0$，由零点定理恰有 $1$ 个零点；在 $(\\tfrac12,+\\infty)$ 严格递增，从 $f(\\tfrac12)<0$ 升到 $+\\infty$，恰有 $1$ 个零点（且该零点正是 $x=1$）。\n所以 $f(x)$ 共有 **$2$ 个零点**（一个位于极小点 $x=\\tfrac12$ 左侧的递减段上，另一个恰为 $x=1$）。",
-      "wrong_options": {},
-      "pitfalls": [
-        "关键化简：第二段上限 t=x² 代入 √(1+t)=√(1+x²)，与第一段的 √(1+x²) 合并，f'(x)=√(1+x²)(2x-1) 极简。",
-        "x=1 是显然的零点（两积分均退化为 0），别漏；最小值 f(1/2)<0 是判定两侧各一零点的关键。"
-      ],
-      "key_point": "数零点=单调性+介值：求 f' 定唯一极小点 x=1/2，最小值为负且两端→+∞，故恰 2 个零点。"
+      "key_point": "相似 $\\Rightarrow$ 迹、行列式相等定参数；对每个特征值解齐次方程取无关特征向量，二重根要凑两个，按序拼成 $P$。"
     }
   ]
 }

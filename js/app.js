@@ -90,7 +90,9 @@
       // 连续切换年份/类别时，只接纳最后一次选择的响应。
       if (sequence !== loadSequence) return;
       if (!Array.isArray(data.questions) || !data.questions.length) throw new Error('试卷暂无题目');
-      currentPaper = { ...p, questions: data.questions };
+      // 按题号排序，防止 JSON 中题目乱序
+      const questions = data.questions.slice().sort((a, b) => (a.index || 0) - (b.index || 0));
+      currentPaper = { ...p, questions };
       renderQuestion();
     } catch (e) {
       if (sequence !== loadSequence) return;

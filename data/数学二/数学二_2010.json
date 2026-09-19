@@ -4,174 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 643,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $z=z(x, y)$ 是由方程 $\\displaystyle F\\left(\\frac{y}{x}, \\frac{z}{x}\\right)=0$ 确定的, 其中 $F$ 为可微函数, 且 $F_{2}^{\\prime} \\neq 0$, 则 $\\displaystyle x \\frac{\\partial z}{\\partial x}+y \\frac{\\partial z}{\\partial y}=(\\quad)$",
-      "options": {
-        "A": "$x$",
-        "B": "$z$",
-        "C": "$-x$",
-        "D": "$-z$"
-      },
-      "answer": "B",
-      "analysis": "【分析】复合隐函数求偏导。$F\\left(\\frac{y}{x},\\frac{z}{x}\\right)=0$ 中 $z=z(x,y)$。设 $u=\\frac{y}{x},v=\\frac{z}{x}$，对 $x,y$ 分别求偏导，再组合 $x z_x+y z_y$，利用齐次结构让 $F_1$ 项相消。\n\n【解答】记 $F_1=F_u',F_2=F_v'$。\n\n对 $x$ 求偏导（$z=z(x,y)$）：\n$$F_1\\cdot\\left(-\\dfrac{y}{x^2}\\right)+F_2\\cdot\\dfrac{z_x x-z}{x^2}=0.$$\n两边乘 $x^2$：$-F_1y+F_2(xz_x-z)=0$，故\n$$x z_x=z+\\dfrac{F_1}{F_2}\\,y.\\qquad(\\ast)$$\n\n对 $y$ 求偏导：\n$$F_1\\cdot\\dfrac1x+F_2\\cdot\\dfrac{z_y}{x}=0\\Rightarrow F_1+F_2z_y=0\\Rightarrow z_y=-\\dfrac{F_1}{F_2},$$\n于是 $y z_y=-\\dfrac{F_1}{F_2}y.\\qquad(\\ast\\ast)$\n\n$(\\ast)+(\\ast\\ast)$：\n$$x\\dfrac{\\partial z}{\\partial x}+y\\dfrac{\\partial z}{\\partial y}=z+\\dfrac{F_1}{F_2}y-\\dfrac{F_1}{F_2}y=z.$$\n（这正是 $z$ 关于 $(x,y)$ 一次齐次的欧拉关系。）对应选项 B。",
-      "wrong_options": {
-        "A": "$x$：把欧拉关系的结果误认成自变量 x；正确是齐次函数 z 本身。",
-        "C": "$-x$：符号与对象都错，缺乏依据。",
-        "D": "$-z$：求偏导时把某项符号弄反，导致 F₁ 项未相消而出现 -z。"
-      },
-      "pitfalls": [
-        "对 z/x 求 x 偏导要用商法则：∂(z/x)/∂x=(x z_x - z)/x²，别漏 -z/x²",
-        "F₂'≠0 才能解出 z_y=-F₁/F₂；最终 F₁ 项相消得到 z，体现 z 是一次齐次函数（欧拉定理）"
-      ],
-      "key_point": "F(y/x,z/x)=0 说明 z 关于 (x,y) 一次齐次，欧拉关系给出 x z_x+y z_y=z。"
-    },
-    {
-      "id": 644,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $m, n$ 均是正整数, 则反常积分 $\\displaystyle \\int_{0}^{1} \\frac{\\sqrt[m]{\\ln ^{2}(1-x)}}{\\sqrt[n]{x}} \\mathrm{d} x$ 的敛散性 $(\\quad)$",
-      "options": {
-        "A": "仅与 $m$ 的取值有关",
-        "B": "仅与 $n$ 的取值有关",
-        "C": "与 $m, n$ 的取值都有关",
-        "D": "与 $m, n$ 的取值都无关"
-      },
-      "answer": "D",
-      "analysis": "【分析】被积函数在 $x=0$ 与 $x=1$ 两处都可能奇异，需分别判敛散。$x\\to0^+$ 时用 $\\ln^2(1-x)\\sim x^2$ 把分子化成幂函数，看 $x$ 的幂次；$x\\to1^-$ 时 $\\ln(1-x)\\to-\\infty$ 但只是对数型，分母 $\\sqrt[n]{x}\\to1$ 不奇异。逐一估计两端的可积性，会发现对所有正整数 $m,n$ 都收敛。\n\n【解答】记 $g(x)=\\dfrac{\\sqrt[m]{\\ln^2(1-x)}}{\\sqrt[n]{x}}=\\dfrac{|\\ln(1-x)|^{2/m}}{x^{1/n}}$。\n\n**$x\\to0^+$**：$\\ln(1-x)\\sim-x$，故 $|\\ln(1-x)|^{2/m}\\sim x^{2/m}$，于是\n$$g(x)\\sim\\frac{x^{2/m}}{x^{1/n}}=x^{\\,2/m-1/n}.$$\n$\\displaystyle\\int_0\\frac{\\mathrm dx}{x^{\\alpha}}$ 收敛 $\\iff\\alpha<1$，这里 $\\alpha=\\dfrac1n-\\dfrac2m$。因 $m,n$ 为正整数，$\\dfrac1n\\le1$、$\\dfrac2m>0$，故 $\\alpha=\\dfrac1n-\\dfrac2m<1$ 恒成立，**在 $0$ 端总收敛**。\n\n**$x\\to1^-$**：令 $t=1-x\\to0^+$，$g\\sim\\dfrac{|\\ln t|^{2/m}}{1}=|\\ln t|^{2/m}$。对数的任意正幂在 $0$ 端可积：$\\displaystyle\\int_0|\\ln t|^{\\beta}\\mathrm dt$ 对一切 $\\beta>0$ 收敛（对数增长被任意小的幂压制）。故**在 $1$ 端也总收敛**。\n\n两端对一切正整数 $m,n$ 均收敛，故该反常积分的敛散性与 $m,n$ 取值都无关。选 **D**。",
-      "wrong_options": {
-        "A": "“仅与 $m$ 有关”错：$0$ 端的幂次 $\\dfrac1n-\\dfrac2m<1$ 恒成立、$1$ 端对数幂总可积，与 $m$ 是否变化无关。",
-        "B": "“仅与 $n$ 有关”错：$0$ 端收敛对一切 $n$（$\\dfrac1n\\le1$）都成立，不会因 $n$ 改变而发散。",
-        "C": "“与 $m,n$ 都有关”错：误以为存在某些 $m,n$ 使积分发散；实际两端对所有正整数组合都收敛。"
-      },
-      "pitfalls": [
-        "两个奇点 $x=0$ 与 $x=1$ 都要单独判，漏掉任一端都会判错。",
-        "$0$ 端幂次 $\\dfrac1n-\\dfrac2m$：因 $\\dfrac1n\\le1$ 且 $\\dfrac2m>0$，恒 $<1$，故对一切 $m,n$ 收敛——这是“无关”的根源。",
-        "$1$ 端只是对数发散，$|\\ln t|^{2/m}$ 任意正幂均可积，不影响敛散。"
-      ],
-      "key_point": "多奇点反常积分：分点用等价无穷小化幂函数比阶；对数的任意正幂在端点总可积。"
-    },
-    {
-      "id": 645,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\frac{n}{(n+i)\\left(n^{2}+j^{2}\\right)}=(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$",
-        "B": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
-        "C": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
-        "D": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$"
-      },
-      "answer": "D",
-      "analysis": "【分析】双重和的通项可按 $i$、$j$ 分离：$\\dfrac{n}{(n+i)(n^2+j^2)}=\\dfrac{1}{n+i}\\cdot\\dfrac{n}{n^2+j^2}$，于是整个和等于两个单和之积。再把每个单和凑成黎曼和 $\\dfrac1n\\sum g\\big(\\tfrac{k}{n}\\big)$，分别对应一个定积分，乘起来即得二重积分形式，与选项对照。\n\n【解答】通项分离：\n$$\\sum_{i=1}^n\\sum_{j=1}^n\\frac{n}{(n+i)(n^2+j^2)}=\\Big(\\sum_{i=1}^n\\frac{1}{n+i}\\Big)\\Big(\\sum_{j=1}^n\\frac{n}{n^2+j^2}\\Big).$$\n第一个和：$\\displaystyle\\sum_{i=1}^n\\frac{1}{n+i}=\\frac1n\\sum_{i=1}^n\\frac{1}{1+i/n}\\to\\int_0^1\\frac{1}{1+x}\\,\\mathrm{d}x.$\n第二个和：$\\displaystyle\\sum_{j=1}^n\\frac{n}{n^2+j^2}=\\frac1n\\sum_{j=1}^n\\frac{1}{1+(j/n)^2}\\to\\int_0^1\\frac{1}{1+y^2}\\,\\mathrm{d}y.$\n两极限均存在且有限，故原极限等于二者之积：\n$$\\int_0^1\\frac{\\mathrm{d}x}{1+x}\\cdot\\int_0^1\\frac{\\mathrm{d}y}{1+y^2}=\\int_0^1\\mathrm{d}x\\int_0^1\\frac{1}{(1+x)(1+y^2)}\\,\\mathrm{d}y.$$\n这正是选项 D。",
-      "wrong_options": {
-        "A": "错。内层积分上限写成 x（即 ∫₀ˣ），但 i、j 各自独立从 1 到 n，对应上限都应为 1，不存在 y≤x 的耦合。",
-        "B": "错。既把上限误写成 x，又把第二因子分母写成 (1+y) 而非 (1+y²)——n/(n²+j²) 对应的是 1/(1+y²)。",
-        "C": "错。上限正确为 1，但第二因子分母 (1+y) 错了，应是 (1+y²)。"
-      },
-      "pitfalls": [
-        "n/(n²+j²)=1/n · 1/(1+(j/n)²)，凑黎曼和后分母是 1+y²，不是 1+y。",
-        "i、j 互相独立，两个上限都是 1，不会出现 ∫₀ˣ 这种耦合上限。",
-        "先分离成两个单和之积，再各自取极限相乘，比硬凑二重和清晰。"
-      ],
-      "key_point": "可分离的双重和→两个黎曼和之积→两个定积分相乘，关键看每个分母凑出 1+x 还是 1+y²。"
-    },
-    {
-      "id": 647,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $4$ 阶实对称矩阵, 且 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=\\boldsymbol{O}$. 若 $\\boldsymbol{A}$ 的秩为 $3$, 则 $\\boldsymbol{A}$ 相似于 $(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & 1 & \\\\ & & & 0\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{llll}1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{llll}-1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】实对称矩阵必可对角化，相似标准形即其特征值排成的对角阵。由 $A^2+A=O$ 知特征值满足 $\\lambda^2+\\lambda=0$，即 $\\lambda\\in\\{0,-1\\}$。再由“$4$ 阶、秩为 $3$”确定特征值 $0$ 的个数（即 $0$ 的重数），从而定出标准形。\n\n【解答】$A$ 为实对称矩阵，必相似于对角阵，其特征值即对角元。\n设 $\\lambda$ 为特征值，对应特征向量 $\\xi\\neq0$，由 $A^2+A=O$ 得 $(\\lambda^2+\\lambda)\\xi=0$，故 $\\lambda^2+\\lambda=0$，$\\lambda=0$ 或 $\\lambda=-1$。\n$A$ 为 $4$ 阶且 $r(A)=3$，故 $A$ 的零特征值重数 $=4-r(A)=1$（即 $\\dim\\ker A=4-3=1$），其余 $3$ 个特征值均为 $-1$。所以 $A$ 的特征值为 $-1,-1,-1,0$，相似于\n$$\\begin{pmatrix}-1&&&\\\\&-1&&\\\\&&-1&\\\\&&&0\\end{pmatrix}.$$\n选 D。",
-      "wrong_options": {
-        "A": "特征值取成 1,1,1,0，但由 $\\lambda^2+\\lambda=0$ 只能取 0 或 -1，不会有 1",
-        "B": "混入了 1 作为特征值，违反 $\\lambda^2+\\lambda=0$；非零特征值只能是 -1",
-        "C": "同样错误地取了特征值 1，且 -1 的个数不对；非零特征值应全为 -1（共 3 个）"
-      },
-      "pitfalls": [
-        "实对称必可对角化，标准形就是特征值对角阵",
-        "由矩阵多项式方程 A^2+A=O 推出特征值满足 $\\lambda^2+\\lambda=0$，得 $\\lambda\\in\\{0,-1\\}$",
-        "零特征值的重数 = 4 - r(A) = 1，其余 3 个都是 -1"
-      ],
-      "key_point": "实对称对角化：特征值由 A 的零化多项式定，重数由秩 4-r(A) 定零特征值个数"
-    },
-    {
-      "id": 657,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求函数 $\\displaystyle f(x)=\\int_{1}^{x^{2}}\\left(x^{2}-t\\right) \\mathrm{e}^{-t^{2}} \\mathrm{d} t$ 的单调区间与极值",
-      "options": {},
-      "answer": "$f(x)$ 在 $(-\\infty,-1]$ 及 $[0,1]$ 上单调减少, $f(x)$ 在 $[-1,0]$ 及 $[1,+\\infty)$ 上单调增加;\r\n\r\n极小值为 $f( \\pm 1)=0$, 极大值为 $\\displaystyle f(0)=\\frac{1}{2}\\left(1-\\frac{1}{\\mathrm{e}}\\right)$",
-      "analysis": "【分析】被积函数里含参数 $x$，不能直接套变限积分求导公式，应先把 $x^2$ 提到积分号外，拆成两个变限积分，再求导。求导后会发现两个含 $\\mathrm{e}^{-x^4}$ 的项相消，得到结构清晰的 $f'(x)=2x\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。\n\n【解答】先分离参数：\n$$f(x)=x^2\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t-\\int_1^{x^2}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n求导（对第一项用乘积法则 + 变限求导，对第二项用变限求导）：\n$$f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t+x^2\\cdot\\mathrm{e}^{-x^4}\\cdot2x-x^2\\,\\mathrm{e}^{-x^4}\\cdot2x=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n记 $g(x)=\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。因 $\\mathrm{e}^{-t^2}>0$：当 $x^2>1$（即 $|x|>1$）时 $g>0$；当 $|x|<1$ 时 $g<0$；$g(\\pm1)=0$。\n\n于是 $f'(x)=2x\\,g(x)$ 的符号：\n- $x<-1$：$2x<0,\\,g>0\\Rightarrow f'<0$（减）；\n- $-1<x<0$：$2x<0,\\,g<0\\Rightarrow f'>0$（增）；\n- $0<x<1$：$2x>0,\\,g<0\\Rightarrow f'<0$（减）；\n- $x>1$：$2x>0,\\,g>0\\Rightarrow f'>0$（增）。\n\n故 $f$ 在 $(-\\infty,-1]$ 与 $[0,1]$ 上单调减少，在 $[-1,0]$ 与 $[1,+\\infty)$ 上单调增加。\n\n极值点 $x=-1,0,1$（$f'=0$）：\n- $x=\\pm1$ 处由减转增，取极小值。$f(\\pm1)=\\displaystyle\\int_1^{1}(\\cdots)\\mathrm{d}t=0$。\n- $x=0$ 处由增转减，取极大值：\n$$f(0)=\\int_1^{0}(0-t)\\mathrm{e}^{-t^2}\\mathrm{d}t=\\int_0^{1}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t=\\Big[-\\tfrac12\\mathrm{e}^{-t^2}\\Big]_0^1=\\frac12\\Big(1-\\frac{1}{\\mathrm{e}}\\Big).$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "被积函数含参数 $x$，必须先把 $x^2$ 提出积分号再求导，否则会错用变限积分求导公式。",
-        "求导后两项 $\\pm x^2\\mathrm{e}^{-x^4}\\cdot2x$ 恰好相消，得到简洁的 $f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。",
-        "判号要同时考虑 $2x$ 与 $g(x)=\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$ 两个因子的符号，$x=\\pm1,0$ 均为极值点。"
-      ],
-      "key_point": "含参变限积分先分离参数再求导；导数化为 $2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$，按两因子符号定单调性。"
-    },
-    {
-      "id": 658,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 16,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "(1) 比较 $\\displaystyle \\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t$ 与 $\\displaystyle \\int_{0}^{1} t^{n}|\\ln t| \\mathrm{d} t(n=1,2, \\cdots)$ 的大小, 说明理由;\r\n\r\n(2) 记 $\\displaystyle u_{n}=\\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t\\left(n=1,2, \\cdots\\right)$, 求极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} u_{n}$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】(1) 两个积分被积式只差一个因子：$[\\ln(1+t)]^n$ 与 $t^n$。在 $(0,1)$ 上比较 $\\ln(1+t)$ 与 $t$ 的大小即可逐点比较被积函数，进而比较积分。(2) 第(1)问已给出 $u_n$ 的上界 $\\displaystyle\\int_0^1 t^n|\\ln t|\\mathrm{d}t$，把这个上界算成 $\\dfrac{1}{(n+1)^2}$，再配下界 $0$，夹逼即得极限。\n\n【解答】**(1)** 在 $(0,1)$ 上 $t>0$，由经典不等式 $\\ln(1+t)<t$（因 $\\varphi(t)=t-\\ln(1+t)$ 有 $\\varphi'(t)=\\dfrac{t}{1+t}>0,\\ \\varphi(0)=0$）。又 $\\ln(1+t)>0$，故 $0<\\ln(1+t)<t$，从而对 $n\\ge1$\n$$[\\ln(1+t)]^n<t^n\\quad(0<t<1).$$\n而 $|\\ln t|>0$ 在 $(0,1)$ 上，故\n$$|\\ln t|[\\ln(1+t)]^n<t^n|\\ln t|\\quad(0<t<1).$$\n两端在 $(0,1)$ 上积分（被积式连续且不恒等），得严格不等式\n$$\\int_0^1|\\ln t|[\\ln(1+t)]^n\\,\\mathrm{d}t<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t.$$\n即**前者小于后者**。\n\n**(2)** 先算右端这个上界。在 $(0,1)$ 上 $\\ln t<0$，$|\\ln t|=-\\ln t$，\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t.$$\n分部积分，取 $u=-\\ln t,\\ \\mathrm{d}v=t^n\\mathrm{d}t$，$v=\\dfrac{t^{n+1}}{n+1}$：\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t=\\Big[-\\ln t\\cdot\\frac{t^{n+1}}{n+1}\\Big]_0^1+\\frac{1}{n+1}\\int_0^1 t^{n+1}\\cdot\\frac{1}{t}\\,\\mathrm{d}t.$$\n边界项：$t\\to1$ 时 $\\ln1=0$；$t\\to0^+$ 时 $t^{n+1}\\ln t\\to0$，故边界项为 $0$。剩下\n$$=\\frac{1}{n+1}\\int_0^1 t^{n}\\,\\mathrm{d}t=\\frac{1}{n+1}\\cdot\\frac{1}{n+1}=\\frac{1}{(n+1)^2}.$$\n又被积函数非负，故 $u_n\\ge0$。结合(1)得\n$$0\\le u_n<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t=\\frac{1}{(n+1)^2}.$$\n令 $n\\to\\infty$，$\\dfrac{1}{(n+1)^2}\\to0$，由夹逼准则\n$$\\boxed{\\lim_{n\\to\\infty}u_n=0}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "比较时要点明 $0<\\ln(1+t)<t$ 在 $(0,1)$ 上同时成立（正且小于 $t$），才能放心地 $n$ 次方保序。",
-        "$\\int_0^1 t^n|\\ln t|\\mathrm{d}t$ 中 $|\\ln t|=-\\ln t$（区间内 $\\ln t<0$），分部积分的边界项 $t^{n+1}\\ln t\\to0$ 要交代清楚。",
-        "第(2)问本质是用第(1)问的上界做夹逼，下界 $0$ 由被积函数非负保证，别漏。"
-      ],
-      "key_point": "用 $\\ln(1+t)<t$ 逐点比较被积函数定大小；上界积分算成 $\\tfrac{1}{(n+1)^2}$ 后夹逼求极限。"
-    },
-    {
-      "id": 661,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\\lambda & 1 & 1 \\\\ 0 & \\lambda-1 & 0 \\\\ 1 & 1 & \\lambda\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{l}a \\\\ 1 \\\\ 1\\end{array}\\right)$. 已知线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{b}$ 存在两个不同的解\r\n\r\n(1) 求 $\\lambda, a$;\r\n\r\n(2) 求方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 的通解",
-      "options": {},
-      "answer": "(1) $a=-2 \\lambda=-1$\r\n\r\n(2) $\\boldsymbol{x}=k\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}\\frac{3}{2} \\\\ -\\frac{1}{2} \\\\ 0\\end{array}\\right)$ ( $k$ 为任意常数)",
-      "analysis": "【分析】方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有两个不同解 $\\Rightarrow$ 有无穷多解 $\\Rightarrow$ 系数矩阵不满秩，即 $|\\boldsymbol{A}|=0$，由此先定 $\\lambda$；再要求增广矩阵与系数矩阵同秩（相容），定 $a$。最后对取定参数的方程组做初等行变换求通解。\n\n【解答】（1）先算行列式。按第二行（只有中间元 $\\lambda-1$ 非零）展开：\n$$|\\boldsymbol{A}|=\\begin{vmatrix}\\lambda&1&1\\\\0&\\lambda-1&0\\\\1&1&\\lambda\\end{vmatrix}=(\\lambda-1)\\begin{vmatrix}\\lambda&1\\\\1&\\lambda\\end{vmatrix}=(\\lambda-1)(\\lambda^2-1)=(\\lambda-1)^2(\\lambda+1).$$\n有无穷多解需 $|\\boldsymbol{A}|=0$，故 $\\lambda=1$ 或 $\\lambda=-1$。\n\n若 $\\lambda=1$：$\\boldsymbol{A}=\\begin{pmatrix}1&1&1\\\\0&0&0\\\\1&1&1\\end{pmatrix}$，第二行对应方程为 $0=1$（$\\boldsymbol{b}$ 第二分量为 $1$），矛盾，无解，舍去。\n\n若 $\\lambda=-1$：$\\boldsymbol{A}=\\begin{pmatrix}-1&1&1\\\\0&-2&0\\\\1&1&-1\\end{pmatrix}$，$\\boldsymbol{b}=\\begin{pmatrix}a\\\\1\\\\1\\end{pmatrix}$。对增广矩阵行变换：\n$$\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\1&1&-1&1\\end{array}\\right)\\xrightarrow{r_3+r_1}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&2&0&1+a\\end{array}\\right)\\xrightarrow{r_3+r_2}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&0&0&2+a\\end{array}\\right).$$\n相容需末行 $2+a=0$，即 $a=-2$。综上 $\\lambda=-1,\\ a=-2$。\n\n（2）取 $\\lambda=-1,\\ a=-2$，上面化简结果为\n$$\\left(\\begin{array}{ccc|c}-1&1&1&-2\\\\0&-2&0&1\\\\0&0&0&0\\end{array}\\right).$$\n由第二行 $-2x_2=1\\Rightarrow x_2=-\\dfrac12$。由第一行 $-x_1+x_2+x_3=-2\\Rightarrow x_1=x_2+x_3+2=x_3+\\dfrac32$。令自由未知量 $x_3=k$，得\n$$x_1=k+\\frac32,\\quad x_2=-\\frac12,\\quad x_3=k,$$\n即\n$$\\boldsymbol{x}=k\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}+\\begin{pmatrix}\\tfrac32\\\\-\\tfrac12\\\\0\\end{pmatrix},\\qquad k\\ \\text{为任意常数}.$$\n验算特解 $\\left(\\tfrac32,-\\tfrac12,0\\right)$：$\\boldsymbol{A}$ 第一行 $-\\tfrac32-\\tfrac12+0=-2=a$ ✓，第二行 $-2\\cdot(-\\tfrac12)=1$ ✓，第三行 $\\tfrac32-\\tfrac12-0=1$ ✓。导出组解 $(1,0,1)^{\\mathrm{T}}$ 满足 $\\boldsymbol{A}(1,0,1)^{\\mathrm{T}}=\\boldsymbol{0}$ ✓。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$|\\boldsymbol{A}|=0$ 给出 $\\lambda=1$ 或 $-1$ 两个候选，必须代回检验相容性才能排除 $\\lambda=1$（它使方程组无解）",
-        "\"两个不同解\"等价于\"无穷多解\"，不要误以为只需 $|\\boldsymbol{A}|=0$ 而漏掉对 $a$ 的相容性约束",
-        "通解 = 特解 + 导出组基础解系的线性组合，别把特解的 $x_2=-\\tfrac12$ 写进齐次解里"
-      ],
-      "key_point": "含参方程组有无穷多解：先 $|\\boldsymbol{A}|=0$ 定参，再要求 $r(\\boldsymbol{A})=r(\\boldsymbol{A}\\mid\\boldsymbol{b})<n$ 定相容参数，逐一排除不相容的候选"
-    },
-    {
       "id": 665,
       "paper": "数学二",
       "year": 2010,
@@ -254,6 +86,89 @@
       "key_point": "相切＝函数值等＋导数等，联立 $2x_0=a/x_0$ 与 $x_0^2=a\\ln x_0$ 解得 $a=2\\mathrm e$。"
     },
     {
+      "id": 644,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $m, n$ 均是正整数, 则反常积分 $\\displaystyle \\int_{0}^{1} \\frac{\\sqrt[m]{\\ln ^{2}(1-x)}}{\\sqrt[n]{x}} \\mathrm{d} x$ 的敛散性 $(\\quad)$",
+      "options": {
+        "A": "仅与 $m$ 的取值有关",
+        "B": "仅与 $n$ 的取值有关",
+        "C": "与 $m, n$ 的取值都有关",
+        "D": "与 $m, n$ 的取值都无关"
+      },
+      "answer": "D",
+      "analysis": "【分析】被积函数在 $x=0$ 与 $x=1$ 两处都可能奇异，需分别判敛散。$x\\to0^+$ 时用 $\\ln^2(1-x)\\sim x^2$ 把分子化成幂函数，看 $x$ 的幂次；$x\\to1^-$ 时 $\\ln(1-x)\\to-\\infty$ 但只是对数型，分母 $\\sqrt[n]{x}\\to1$ 不奇异。逐一估计两端的可积性，会发现对所有正整数 $m,n$ 都收敛。\n\n【解答】记 $g(x)=\\dfrac{\\sqrt[m]{\\ln^2(1-x)}}{\\sqrt[n]{x}}=\\dfrac{|\\ln(1-x)|^{2/m}}{x^{1/n}}$。\n\n**$x\\to0^+$**：$\\ln(1-x)\\sim-x$，故 $|\\ln(1-x)|^{2/m}\\sim x^{2/m}$，于是\n$$g(x)\\sim\\frac{x^{2/m}}{x^{1/n}}=x^{\\,2/m-1/n}.$$\n$\\displaystyle\\int_0\\frac{\\mathrm dx}{x^{\\alpha}}$ 收敛 $\\iff\\alpha<1$，这里 $\\alpha=\\dfrac1n-\\dfrac2m$。因 $m,n$ 为正整数，$\\dfrac1n\\le1$、$\\dfrac2m>0$，故 $\\alpha=\\dfrac1n-\\dfrac2m<1$ 恒成立，**在 $0$ 端总收敛**。\n\n**$x\\to1^-$**：令 $t=1-x\\to0^+$，$g\\sim\\dfrac{|\\ln t|^{2/m}}{1}=|\\ln t|^{2/m}$。对数的任意正幂在 $0$ 端可积：$\\displaystyle\\int_0|\\ln t|^{\\beta}\\mathrm dt$ 对一切 $\\beta>0$ 收敛（对数增长被任意小的幂压制）。故**在 $1$ 端也总收敛**。\n\n两端对一切正整数 $m,n$ 均收敛，故该反常积分的敛散性与 $m,n$ 取值都无关。选 **D**。",
+      "wrong_options": {
+        "A": "“仅与 $m$ 有关”错：$0$ 端的幂次 $\\dfrac1n-\\dfrac2m<1$ 恒成立、$1$ 端对数幂总可积，与 $m$ 是否变化无关。",
+        "B": "“仅与 $n$ 有关”错：$0$ 端收敛对一切 $n$（$\\dfrac1n\\le1$）都成立，不会因 $n$ 改变而发散。",
+        "C": "“与 $m,n$ 都有关”错：误以为存在某些 $m,n$ 使积分发散；实际两端对所有正整数组合都收敛。"
+      },
+      "pitfalls": [
+        "两个奇点 $x=0$ 与 $x=1$ 都要单独判，漏掉任一端都会判错。",
+        "$0$ 端幂次 $\\dfrac1n-\\dfrac2m$：因 $\\dfrac1n\\le1$ 且 $\\dfrac2m>0$，恒 $<1$，故对一切 $m,n$ 收敛——这是“无关”的根源。",
+        "$1$ 端只是对数发散，$|\\ln t|^{2/m}$ 任意正幂均可积，不影响敛散。"
+      ],
+      "key_point": "多奇点反常积分：分点用等价无穷小化幂函数比阶；对数的任意正幂在端点总可积。"
+    },
+    {
+      "id": 643,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $z=z(x, y)$ 是由方程 $\\displaystyle F\\left(\\frac{y}{x}, \\frac{z}{x}\\right)=0$ 确定的, 其中 $F$ 为可微函数, 且 $F_{2}^{\\prime} \\neq 0$, 则 $\\displaystyle x \\frac{\\partial z}{\\partial x}+y \\frac{\\partial z}{\\partial y}=(\\quad)$",
+      "options": {
+        "A": "$x$",
+        "B": "$z$",
+        "C": "$-x$",
+        "D": "$-z$"
+      },
+      "answer": "B",
+      "analysis": "【分析】复合隐函数求偏导。$F\\left(\\frac{y}{x},\\frac{z}{x}\\right)=0$ 中 $z=z(x,y)$。设 $u=\\frac{y}{x},v=\\frac{z}{x}$，对 $x,y$ 分别求偏导，再组合 $x z_x+y z_y$，利用齐次结构让 $F_1$ 项相消。\n\n【解答】记 $F_1=F_u',F_2=F_v'$。\n\n对 $x$ 求偏导（$z=z(x,y)$）：\n$$F_1\\cdot\\left(-\\dfrac{y}{x^2}\\right)+F_2\\cdot\\dfrac{z_x x-z}{x^2}=0.$$\n两边乘 $x^2$：$-F_1y+F_2(xz_x-z)=0$，故\n$$x z_x=z+\\dfrac{F_1}{F_2}\\,y.\\qquad(\\ast)$$\n\n对 $y$ 求偏导：\n$$F_1\\cdot\\dfrac1x+F_2\\cdot\\dfrac{z_y}{x}=0\\Rightarrow F_1+F_2z_y=0\\Rightarrow z_y=-\\dfrac{F_1}{F_2},$$\n于是 $y z_y=-\\dfrac{F_1}{F_2}y.\\qquad(\\ast\\ast)$\n\n$(\\ast)+(\\ast\\ast)$：\n$$x\\dfrac{\\partial z}{\\partial x}+y\\dfrac{\\partial z}{\\partial y}=z+\\dfrac{F_1}{F_2}y-\\dfrac{F_1}{F_2}y=z.$$\n（这正是 $z$ 关于 $(x,y)$ 一次齐次的欧拉关系。）对应选项 B。",
+      "wrong_options": {
+        "A": "$x$：把欧拉关系的结果误认成自变量 x；正确是齐次函数 z 本身。",
+        "C": "$-x$：符号与对象都错，缺乏依据。",
+        "D": "$-z$：求偏导时把某项符号弄反，导致 F₁ 项未相消而出现 -z。"
+      },
+      "pitfalls": [
+        "对 z/x 求 x 偏导要用商法则：∂(z/x)/∂x=(x z_x - z)/x²，别漏 -z/x²",
+        "F₂'≠0 才能解出 z_y=-F₁/F₂；最终 F₁ 项相消得到 z，体现 z 是一次齐次函数（欧拉定理）"
+      ],
+      "key_point": "F(y/x,z/x)=0 说明 z 关于 (x,y) 一次齐次，欧拉关系给出 x z_x+y z_y=z。"
+    },
+    {
+      "id": 645,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty} \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\frac{n}{(n+i)\\left(n^{2}+j^{2}\\right)}=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{x} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)(1+y)} \\mathrm{d} y$",
+        "D": "$\\displaystyle \\int_{0}^{1} \\mathrm{d} x \\int_{0}^{1} \\frac{1}{(1+x)\\left(1+y^{2}\\right)} \\mathrm{d} y$"
+      },
+      "answer": "D",
+      "analysis": "【分析】双重和的通项可按 $i$、$j$ 分离：$\\dfrac{n}{(n+i)(n^2+j^2)}=\\dfrac{1}{n+i}\\cdot\\dfrac{n}{n^2+j^2}$，于是整个和等于两个单和之积。再把每个单和凑成黎曼和 $\\dfrac1n\\sum g\\big(\\tfrac{k}{n}\\big)$，分别对应一个定积分，乘起来即得二重积分形式，与选项对照。\n\n【解答】通项分离：\n$$\\sum_{i=1}^n\\sum_{j=1}^n\\frac{n}{(n+i)(n^2+j^2)}=\\Big(\\sum_{i=1}^n\\frac{1}{n+i}\\Big)\\Big(\\sum_{j=1}^n\\frac{n}{n^2+j^2}\\Big).$$\n第一个和：$\\displaystyle\\sum_{i=1}^n\\frac{1}{n+i}=\\frac1n\\sum_{i=1}^n\\frac{1}{1+i/n}\\to\\int_0^1\\frac{1}{1+x}\\,\\mathrm{d}x.$\n第二个和：$\\displaystyle\\sum_{j=1}^n\\frac{n}{n^2+j^2}=\\frac1n\\sum_{j=1}^n\\frac{1}{1+(j/n)^2}\\to\\int_0^1\\frac{1}{1+y^2}\\,\\mathrm{d}y.$\n两极限均存在且有限，故原极限等于二者之积：\n$$\\int_0^1\\frac{\\mathrm{d}x}{1+x}\\cdot\\int_0^1\\frac{\\mathrm{d}y}{1+y^2}=\\int_0^1\\mathrm{d}x\\int_0^1\\frac{1}{(1+x)(1+y^2)}\\,\\mathrm{d}y.$$\n这正是选项 D。",
+      "wrong_options": {
+        "A": "错。内层积分上限写成 x（即 ∫₀ˣ），但 i、j 各自独立从 1 到 n，对应上限都应为 1，不存在 y≤x 的耦合。",
+        "B": "错。既把上限误写成 x，又把第二因子分母写成 (1+y) 而非 (1+y²)——n/(n²+j²) 对应的是 1/(1+y²)。",
+        "C": "错。上限正确为 1，但第二因子分母 (1+y) 错了，应是 (1+y²)。"
+      },
+      "pitfalls": [
+        "n/(n²+j²)=1/n · 1/(1+(j/n)²)，凑黎曼和后分母是 1+y²，不是 1+y。",
+        "i、j 互相独立，两个上限都是 1，不会出现 ∫₀ˣ 这种耦合上限。",
+        "先分离成两个单和之积，再各自取极限相乘，比硬凑二重和清晰。"
+      ],
+      "key_point": "可分离的双重和→两个黎曼和之积→两个定积分相乘，关键看每个分母凑出 1+x 还是 1+y²。"
+    },
+    {
       "id": 668,
       "paper": "数学二",
       "year": 2010,
@@ -279,6 +194,34 @@
         "只有当被表示组线性无关时，秩=个数，才能把秩不等式转成个数不等式 r≤s（选项 A 的关键）。"
       ],
       "key_point": "(I) 由 (II) 表示⇒r(I)≤r(II)≤s；唯有 (I) 无关时 r=r(I) 才得 r≤s，故选 A。"
+    },
+    {
+      "id": 647,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $4$ 阶实对称矩阵, 且 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=\\boldsymbol{O}$. 若 $\\boldsymbol{A}$ 的秩为 $3$, 则 $\\boldsymbol{A}$ 相似于 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & 1 & \\\\ & & & 0\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{llll}1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{llll}1 & & & \\\\ & 1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{llll}-1 & & & \\\\ & -1 & & \\\\ & & -1 & \\\\ & & & 0\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】实对称矩阵必可对角化，相似标准形即其特征值排成的对角阵。由 $A^2+A=O$ 知特征值满足 $\\lambda^2+\\lambda=0$，即 $\\lambda\\in\\{0,-1\\}$。再由“$4$ 阶、秩为 $3$”确定特征值 $0$ 的个数（即 $0$ 的重数），从而定出标准形。\n\n【解答】$A$ 为实对称矩阵，必相似于对角阵，其特征值即对角元。\n设 $\\lambda$ 为特征值，对应特征向量 $\\xi\\neq0$，由 $A^2+A=O$ 得 $(\\lambda^2+\\lambda)\\xi=0$，故 $\\lambda^2+\\lambda=0$，$\\lambda=0$ 或 $\\lambda=-1$。\n$A$ 为 $4$ 阶且 $r(A)=3$，故 $A$ 的零特征值重数 $=4-r(A)=1$（即 $\\dim\\ker A=4-3=1$），其余 $3$ 个特征值均为 $-1$。所以 $A$ 的特征值为 $-1,-1,-1,0$，相似于\n$$\\begin{pmatrix}-1&&&\\\\&-1&&\\\\&&-1&\\\\&&&0\\end{pmatrix}.$$\n选 D。",
+      "wrong_options": {
+        "A": "特征值取成 1,1,1,0，但由 $\\lambda^2+\\lambda=0$ 只能取 0 或 -1，不会有 1",
+        "B": "混入了 1 作为特征值，违反 $\\lambda^2+\\lambda=0$；非零特征值只能是 -1",
+        "C": "同样错误地取了特征值 1，且 -1 的个数不对；非零特征值应全为 -1（共 3 个）"
+      },
+      "pitfalls": [
+        "实对称必可对角化，标准形就是特征值对角阵",
+        "由矩阵多项式方程 A^2+A=O 推出特征值满足 $\\lambda^2+\\lambda=0$，得 $\\lambda\\in\\{0,-1\\}$",
+        "零特征值的重数 = 4 - r(A) = 1，其余 3 个都是 -1"
+      ],
+      "key_point": "实对称对角化：特征值由 A 的零化多项式定，重数由秩 4-r(A) 定零特征值个数"
     },
     {
       "id": 669,
@@ -373,6 +316,62 @@
       "key_point": "相关变化率：$D=\\sqrt{l^2+w^2}$ 对 $t$ 求导得 $\\frac{\\mathrm{d}D}{\\mathrm{d}t}=\\frac{l\\,l'+w\\,w'}{\\sqrt{l^2+w^2}}$，代值得 3。"
     },
     {
+      "id": 684,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为 3 阶矩阵, 且 $|\\boldsymbol{A}|=3,|\\boldsymbol{B}|=2,\\left|\\boldsymbol{A}{ }^{-1}+\\boldsymbol{B}\\right|=2$, 则 $\\left|\\boldsymbol{A}+\\boldsymbol{B}^{-1}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$3$",
+      "analysis": "【分析】要由 $|A^{-1}+B|=2$ 求 $|A+B^{-1}|$，关键是把 $A+B^{-1}$ 提取公因子，凑出与 $A^{-1}+B$ 相关的公共因子 $AB+E$（或 $E+AB$），再利用行列式的乘法性质 $|XY|=|X||Y|$、$|A^{-1}|=1/|A|$。\n\n【解答】注意到\n$$A^{-1}+B=A^{-1}(E+AB),\\qquad A+B^{-1}=(AB+E)B^{-1}.$$\n（验证第一式：$A^{-1}(E+AB)=A^{-1}+A^{-1}AB=A^{-1}+B$；第二式：$(AB+E)B^{-1}=ABB^{-1}+B^{-1}=A+B^{-1}$。）\n\n由第一式取行列式：\n$$|A^{-1}+B|=|A^{-1}|\\,|E+AB|=\\frac{1}{|A|}\\,|E+AB|.$$\n代入 $|A|=3,\\ |A^{-1}+B|=2$：\n$$2=\\frac{1}{3}|E+AB|\\ \\Longrightarrow\\ |E+AB|=6.$$\n注意 $|AB+E|=|E+AB|=6$。再由第二式取行列式：\n$$|A+B^{-1}|=|AB+E|\\,|B^{-1}|=6\\cdot\\frac{1}{|B|}=6\\cdot\\frac{1}{2}=3.$$\n所以 $|A+B^{-1}|=3$，与标准答案一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "提公因子方向要选对：A^{-1}+B=A^{-1}(E+AB)，A+B^{-1}=(AB+E)B^{-1}，二者共享因子 AB+E（=E+AB）。",
+        "|A^{-1}|=1/|A|，|B^{-1}|=1/|B|，别把伴随矩阵公式 |A^{-1}| 搞错。"
+      ],
+      "key_point": "行列式整体配凑：A^{-1}+B=A^{-1}(E+AB)、A+B^{-1}=(AB+E)B^{-1}，借公因子 |E+AB| 串联两式。"
+    },
+    {
+      "id": 657,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求函数 $\\displaystyle f(x)=\\int_{1}^{x^{2}}\\left(x^{2}-t\\right) \\mathrm{e}^{-t^{2}} \\mathrm{d} t$ 的单调区间与极值",
+      "options": {},
+      "answer": "$f(x)$ 在 $(-\\infty,-1]$ 及 $[0,1]$ 上单调减少, $f(x)$ 在 $[-1,0]$ 及 $[1,+\\infty)$ 上单调增加;\r\n\r\n极小值为 $f( \\pm 1)=0$, 极大值为 $\\displaystyle f(0)=\\frac{1}{2}\\left(1-\\frac{1}{\\mathrm{e}}\\right)$",
+      "analysis": "【分析】被积函数里含参数 $x$，不能直接套变限积分求导公式，应先把 $x^2$ 提到积分号外，拆成两个变限积分，再求导。求导后会发现两个含 $\\mathrm{e}^{-x^4}$ 的项相消，得到结构清晰的 $f'(x)=2x\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。\n\n【解答】先分离参数：\n$$f(x)=x^2\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t-\\int_1^{x^2}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n求导（对第一项用乘积法则 + 变限求导，对第二项用变限求导）：\n$$f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t+x^2\\cdot\\mathrm{e}^{-x^4}\\cdot2x-x^2\\,\\mathrm{e}^{-x^4}\\cdot2x=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t.$$\n记 $g(x)=\\displaystyle\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。因 $\\mathrm{e}^{-t^2}>0$：当 $x^2>1$（即 $|x|>1$）时 $g>0$；当 $|x|<1$ 时 $g<0$；$g(\\pm1)=0$。\n\n于是 $f'(x)=2x\\,g(x)$ 的符号：\n- $x<-1$：$2x<0,\\,g>0\\Rightarrow f'<0$（减）；\n- $-1<x<0$：$2x<0,\\,g<0\\Rightarrow f'>0$（增）；\n- $0<x<1$：$2x>0,\\,g<0\\Rightarrow f'<0$（减）；\n- $x>1$：$2x>0,\\,g>0\\Rightarrow f'>0$（增）。\n\n故 $f$ 在 $(-\\infty,-1]$ 与 $[0,1]$ 上单调减少，在 $[-1,0]$ 与 $[1,+\\infty)$ 上单调增加。\n\n极值点 $x=-1,0,1$（$f'=0$）：\n- $x=\\pm1$ 处由减转增，取极小值。$f(\\pm1)=\\displaystyle\\int_1^{1}(\\cdots)\\mathrm{d}t=0$。\n- $x=0$ 处由增转减，取极大值：\n$$f(0)=\\int_1^{0}(0-t)\\mathrm{e}^{-t^2}\\mathrm{d}t=\\int_0^{1}t\\,\\mathrm{e}^{-t^2}\\mathrm{d}t=\\Big[-\\tfrac12\\mathrm{e}^{-t^2}\\Big]_0^1=\\frac12\\Big(1-\\frac{1}{\\mathrm{e}}\\Big).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "被积函数含参数 $x$，必须先把 $x^2$ 提出积分号再求导，否则会错用变限积分求导公式。",
+        "求导后两项 $\\pm x^2\\mathrm{e}^{-x^4}\\cdot2x$ 恰好相消，得到简洁的 $f'(x)=2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$。",
+        "判号要同时考虑 $2x$ 与 $g(x)=\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$ 两个因子的符号，$x=\\pm1,0$ 均为极值点。"
+      ],
+      "key_point": "含参变限积分先分离参数再求导；导数化为 $2x\\int_1^{x^2}\\mathrm{e}^{-t^2}\\mathrm{d}t$，按两因子符号定单调性。"
+    },
+    {
+      "id": 658,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "(1) 比较 $\\displaystyle \\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t$ 与 $\\displaystyle \\int_{0}^{1} t^{n}|\\ln t| \\mathrm{d} t(n=1,2, \\cdots)$ 的大小, 说明理由;\r\n\r\n(2) 记 $\\displaystyle u_{n}=\\int_{0}^{1}|\\ln t|[\\ln (1+t)]^{n} \\mathrm{d} t\\left(n=1,2, \\cdots\\right)$, 求极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} u_{n}$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】(1) 两个积分被积式只差一个因子：$[\\ln(1+t)]^n$ 与 $t^n$。在 $(0,1)$ 上比较 $\\ln(1+t)$ 与 $t$ 的大小即可逐点比较被积函数，进而比较积分。(2) 第(1)问已给出 $u_n$ 的上界 $\\displaystyle\\int_0^1 t^n|\\ln t|\\mathrm{d}t$，把这个上界算成 $\\dfrac{1}{(n+1)^2}$，再配下界 $0$，夹逼即得极限。\n\n【解答】**(1)** 在 $(0,1)$ 上 $t>0$，由经典不等式 $\\ln(1+t)<t$（因 $\\varphi(t)=t-\\ln(1+t)$ 有 $\\varphi'(t)=\\dfrac{t}{1+t}>0,\\ \\varphi(0)=0$）。又 $\\ln(1+t)>0$，故 $0<\\ln(1+t)<t$，从而对 $n\\ge1$\n$$[\\ln(1+t)]^n<t^n\\quad(0<t<1).$$\n而 $|\\ln t|>0$ 在 $(0,1)$ 上，故\n$$|\\ln t|[\\ln(1+t)]^n<t^n|\\ln t|\\quad(0<t<1).$$\n两端在 $(0,1)$ 上积分（被积式连续且不恒等），得严格不等式\n$$\\int_0^1|\\ln t|[\\ln(1+t)]^n\\,\\mathrm{d}t<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t.$$\n即**前者小于后者**。\n\n**(2)** 先算右端这个上界。在 $(0,1)$ 上 $\\ln t<0$，$|\\ln t|=-\\ln t$，\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t.$$\n分部积分，取 $u=-\\ln t,\\ \\mathrm{d}v=t^n\\mathrm{d}t$，$v=\\dfrac{t^{n+1}}{n+1}$：\n$$\\int_0^1 t^n(-\\ln t)\\,\\mathrm{d}t=\\Big[-\\ln t\\cdot\\frac{t^{n+1}}{n+1}\\Big]_0^1+\\frac{1}{n+1}\\int_0^1 t^{n+1}\\cdot\\frac{1}{t}\\,\\mathrm{d}t.$$\n边界项：$t\\to1$ 时 $\\ln1=0$；$t\\to0^+$ 时 $t^{n+1}\\ln t\\to0$，故边界项为 $0$。剩下\n$$=\\frac{1}{n+1}\\int_0^1 t^{n}\\,\\mathrm{d}t=\\frac{1}{n+1}\\cdot\\frac{1}{n+1}=\\frac{1}{(n+1)^2}.$$\n又被积函数非负，故 $u_n\\ge0$。结合(1)得\n$$0\\le u_n<\\int_0^1 t^n|\\ln t|\\,\\mathrm{d}t=\\frac{1}{(n+1)^2}.$$\n令 $n\\to\\infty$，$\\dfrac{1}{(n+1)^2}\\to0$，由夹逼准则\n$$\\boxed{\\lim_{n\\to\\infty}u_n=0}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "比较时要点明 $0<\\ln(1+t)<t$ 在 $(0,1)$ 上同时成立（正且小于 $t$），才能放心地 $n$ 次方保序。",
+        "$\\int_0^1 t^n|\\ln t|\\mathrm{d}t$ 中 $|\\ln t|=-\\ln t$（区间内 $\\ln t<0$），分部积分的边界项 $t^{n+1}\\ln t\\to0$ 要交代清楚。",
+        "第(2)问本质是用第(1)问的上界做夹逼，下界 $0$ 由被积函数非负保证，别漏。"
+      ],
+      "key_point": "用 $\\ln(1+t)<t$ 逐点比较被积函数定大小；上界积分算成 $\\tfrac{1}{(n+1)^2}$ 后夹逼求极限。"
+    },
+    {
       "id": 674,
       "paper": "数学二",
       "year": 2010,
@@ -448,43 +447,6 @@
       "key_point": "看出 $r^2\\cos2\\theta=x^2-y^2$，用 $x=r\\cos\\theta,y=r\\sin\\theta$ 化直角坐标（微元乘 $1/r$），化成三角区域上 $y\\sqrt{1-x^2+y^2}$ 两步积分。"
     },
     {
-      "id": 678,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 4 \\\\ -1 & 3 & a \\\\ 4 & a & 0\\end{array}\\right)$, 有正交矩阵 $\\boldsymbol{Q}$ 使得 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}$ 为对角矩阵. 若 $\\boldsymbol{Q}$ 的第 $1$ 列为 $\\displaystyle \\frac{1}{\\sqrt{6}}(1,2,1)^{\\mathrm{T}}$,\r\n求 $a, \\boldsymbol Q$",
-      "options": {},
-      "answer": "$a=-1, \\boldsymbol{Q}=\\left(\\begin{array}{ccc}\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & -\\frac{1}{\\sqrt{3}} \\\\ \\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$",
-      "analysis": "【分析】$Q$ 正交对角化 $A$，则 $Q$ 各列是 $A$ 的单位正交特征向量。$Q$ 第 1 列 $\\dfrac{1}{\\sqrt6}(1,2,1)^T$ 即 $A$ 的一个特征向量，代入 $A\\xi=\\lambda\\xi$ 可解出参数 $a$ 及该特征值。再求其余特征值与特征向量，单位化、正交化后拼成 $Q$。\n\n【解答】**第一步：求 $a$。** 设 $\\xi_1=(1,2,1)^T$ 为特征向量，$A\\xi_1=\\lambda\\xi_1$。\n$$A\\xi_1=\\begin{pmatrix}0&-1&4\\\\-1&3&a\\\\4&a&0\\end{pmatrix}\\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix}=\\begin{pmatrix}-2+4\\\\-1+6+a\\\\4+2a\\end{pmatrix}=\\begin{pmatrix}2\\\\a+5\\\\2a+4\\end{pmatrix}.$$\n要与 $\\lambda(1,2,1)^T$ 成比例：由第 1 分量 $\\lambda=2$。则第 2 分量 $a+5=2\\cdot2=4\\Rightarrow a=-1$；第 3 分量 $2a+4=2\\cdot1=2\\Rightarrow a=-1$，一致。故 $a=-1$，对应特征值 $\\lambda_1=2$。\n\n**第二步：求全部特征值。** 代 $a=-1$，$A=\\begin{pmatrix}0&-1&4\\\\-1&3&-1\\\\4&-1&0\\end{pmatrix}$。由迹 $=3=\\lambda_1+\\lambda_2+\\lambda_3=2+\\lambda_2+\\lambda_3$，得 $\\lambda_2+\\lambda_3=1$；$\\det A$：展开得 $\\det A=-40$（$=\\lambda_1\\lambda_2\\lambda_3=2\\lambda_2\\lambda_3$），故 $\\lambda_2\\lambda_3=-20$。解 $t^2-t-20=0\\Rightarrow t=5$ 或 $t=-4$。故特征值为 $2,5,-4$。\n\n**第三步：求 $\\lambda=-4,5$ 的特征向量。**\n$\\lambda=-4$：$(A+4I)x=0$，$\\begin{pmatrix}4&-1&4\\\\-1&7&-1\\\\4&-1&4\\end{pmatrix}$，解得 $x_2=0,\\ x_1=-x_3$，取 $\\xi_2=(-1,0,1)^T$。\n$\\lambda=5$：$(A-5I)x=0$，$\\begin{pmatrix}-5&-1&4\\\\-1&-2&-1\\\\4&-1&-5\\end{pmatrix}$，解得 $\\xi_3=(1,-1,1)^T$。\n三向量两两正交（实对称、不同特征值，自动正交，可验：$\\xi_1\\cdot\\xi_2=-1+0+1=0$ 等）。\n\n**第四步：单位化拼 $Q$。**\n$\\|\\xi_1\\|=\\sqrt6,\\ \\|\\xi_2\\|=\\sqrt2,\\ \\|\\xi_3\\|=\\sqrt3$。按第 1 列为 $\\dfrac{1}{\\sqrt6}(1,2,1)^T$ 的要求顺序排列：\n$$Q=\\begin{pmatrix}\\dfrac{1}{\\sqrt6}&-\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt3}\\\\[4pt]\\dfrac{2}{\\sqrt6}&0&-\\dfrac{1}{\\sqrt3}\\\\[4pt]\\dfrac{1}{\\sqrt6}&\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt3}\\end{pmatrix},\\qquad Q^TAQ=\\mathrm{diag}(2,-4,5).$$\n（特征向量可取相反方向，故 $Q$ 第 2、3 列符号不唯一。）",
-      "wrong_options": {},
-      "pitfalls": [
-        "已知第 1 列是特征向量，用 Aξ=λξ 同时定出 a 与对应特征值，三个分量都要核对一致。",
-        "其余特征向量须单位化后才能作为正交矩阵 Q 的列；列的符号（方向）不唯一，答案不唯一。",
-        "实对称矩阵不同特征值的特征向量自动正交，本题无需额外施密特正交化。"
-      ],
-      "key_point": "正交对角化反求参数：已知特征向量代 Aξ=λξ 定 a，再补齐特征值/向量、单位化拼 Q。"
-    },
-    {
-      "id": 684,
-      "paper": "数学二",
-      "year": 2010,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为 3 阶矩阵, 且 $|\\boldsymbol{A}|=3,|\\boldsymbol{B}|=2,\\left|\\boldsymbol{A}{ }^{-1}+\\boldsymbol{B}\\right|=2$, 则 $\\left|\\boldsymbol{A}+\\boldsymbol{B}^{-1}\\right|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$3$",
-      "analysis": "【分析】要由 $|A^{-1}+B|=2$ 求 $|A+B^{-1}|$，关键是把 $A+B^{-1}$ 提取公因子，凑出与 $A^{-1}+B$ 相关的公共因子 $AB+E$（或 $E+AB$），再利用行列式的乘法性质 $|XY|=|X||Y|$、$|A^{-1}|=1/|A|$。\n\n【解答】注意到\n$$A^{-1}+B=A^{-1}(E+AB),\\qquad A+B^{-1}=(AB+E)B^{-1}.$$\n（验证第一式：$A^{-1}(E+AB)=A^{-1}+A^{-1}AB=A^{-1}+B$；第二式：$(AB+E)B^{-1}=ABB^{-1}+B^{-1}=A+B^{-1}$。）\n\n由第一式取行列式：\n$$|A^{-1}+B|=|A^{-1}|\\,|E+AB|=\\frac{1}{|A|}\\,|E+AB|.$$\n代入 $|A|=3,\\ |A^{-1}+B|=2$：\n$$2=\\frac{1}{3}|E+AB|\\ \\Longrightarrow\\ |E+AB|=6.$$\n注意 $|AB+E|=|E+AB|=6$。再由第二式取行列式：\n$$|A+B^{-1}|=|AB+E|\\,|B^{-1}|=6\\cdot\\frac{1}{|B|}=6\\cdot\\frac{1}{2}=3.$$\n所以 $|A+B^{-1}|=3$，与标准答案一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "提公因子方向要选对：A^{-1}+B=A^{-1}(E+AB)，A+B^{-1}=(AB+E)B^{-1}，二者共享因子 AB+E（=E+AB）。",
-        "|A^{-1}|=1/|A|，|B^{-1}|=1/|B|，别把伴随矩阵公式 |A^{-1}| 搞错。"
-      ],
-      "key_point": "行列式整体配凑：A^{-1}+B=A^{-1}(E+AB)、A+B^{-1}=(AB+E)B^{-1}，借公因子 |E+AB| 串联两式。"
-    },
-    {
       "id": 691,
       "paper": "数学二",
       "year": 2010,
@@ -502,6 +464,44 @@
         "相加时 g(1/2) 抵消、再代入 f(0)=0、f(1)=1/3 才得到和为 0，端点值是题眼"
       ],
       "key_point": "结论含两个独立中值点 → 在分点处把区间断成两段各用一次拉格朗日中值定理，再相加抵消中间值。"
+    },
+    {
+      "id": 661,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}\\lambda & 1 & 1 \\\\ 0 & \\lambda-1 & 0 \\\\ 1 & 1 & \\lambda\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{l}a \\\\ 1 \\\\ 1\\end{array}\\right)$. 已知线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{b}$ 存在两个不同的解\r\n\r\n(1) 求 $\\lambda, a$;\r\n\r\n(2) 求方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 的通解",
+      "options": {},
+      "answer": "(1) $a=-2 \\lambda=-1$\r\n\r\n(2) $\\boldsymbol{x}=k\\left(\\begin{array}{l}1 \\\\ 0 \\\\ 1\\end{array}\\right)+\\left(\\begin{array}{c}\\frac{3}{2} \\\\ -\\frac{1}{2} \\\\ 0\\end{array}\\right)$ ( $k$ 为任意常数)",
+      "analysis": "【分析】方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有两个不同解 $\\Rightarrow$ 有无穷多解 $\\Rightarrow$ 系数矩阵不满秩，即 $|\\boldsymbol{A}|=0$，由此先定 $\\lambda$；再要求增广矩阵与系数矩阵同秩（相容），定 $a$。最后对取定参数的方程组做初等行变换求通解。\n\n【解答】（1）先算行列式。按第二行（只有中间元 $\\lambda-1$ 非零）展开：\n$$|\\boldsymbol{A}|=\\begin{vmatrix}\\lambda&1&1\\\\0&\\lambda-1&0\\\\1&1&\\lambda\\end{vmatrix}=(\\lambda-1)\\begin{vmatrix}\\lambda&1\\\\1&\\lambda\\end{vmatrix}=(\\lambda-1)(\\lambda^2-1)=(\\lambda-1)^2(\\lambda+1).$$\n有无穷多解需 $|\\boldsymbol{A}|=0$，故 $\\lambda=1$ 或 $\\lambda=-1$。\n\n若 $\\lambda=1$：$\\boldsymbol{A}=\\begin{pmatrix}1&1&1\\\\0&0&0\\\\1&1&1\\end{pmatrix}$，第二行对应方程为 $0=1$（$\\boldsymbol{b}$ 第二分量为 $1$），矛盾，无解，舍去。\n\n若 $\\lambda=-1$：$\\boldsymbol{A}=\\begin{pmatrix}-1&1&1\\\\0&-2&0\\\\1&1&-1\\end{pmatrix}$，$\\boldsymbol{b}=\\begin{pmatrix}a\\\\1\\\\1\\end{pmatrix}$。对增广矩阵行变换：\n$$\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\1&1&-1&1\\end{array}\\right)\\xrightarrow{r_3+r_1}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&2&0&1+a\\end{array}\\right)\\xrightarrow{r_3+r_2}\\left(\\begin{array}{ccc|c}-1&1&1&a\\\\0&-2&0&1\\\\0&0&0&2+a\\end{array}\\right).$$\n相容需末行 $2+a=0$，即 $a=-2$。综上 $\\lambda=-1,\\ a=-2$。\n\n（2）取 $\\lambda=-1,\\ a=-2$，上面化简结果为\n$$\\left(\\begin{array}{ccc|c}-1&1&1&-2\\\\0&-2&0&1\\\\0&0&0&0\\end{array}\\right).$$\n由第二行 $-2x_2=1\\Rightarrow x_2=-\\dfrac12$。由第一行 $-x_1+x_2+x_3=-2\\Rightarrow x_1=x_2+x_3+2=x_3+\\dfrac32$。令自由未知量 $x_3=k$，得\n$$x_1=k+\\frac32,\\quad x_2=-\\frac12,\\quad x_3=k,$$\n即\n$$\\boldsymbol{x}=k\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}+\\begin{pmatrix}\\tfrac32\\\\-\\tfrac12\\\\0\\end{pmatrix},\\qquad k\\ \\text{为任意常数}.$$\n验算特解 $\\left(\\tfrac32,-\\tfrac12,0\\right)$：$\\boldsymbol{A}$ 第一行 $-\\tfrac32-\\tfrac12+0=-2=a$ ✓，第二行 $-2\\cdot(-\\tfrac12)=1$ ✓，第三行 $\\tfrac32-\\tfrac12-0=1$ ✓。导出组解 $(1,0,1)^{\\mathrm{T}}$ 满足 $\\boldsymbol{A}(1,0,1)^{\\mathrm{T}}=\\boldsymbol{0}$ ✓。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$|\\boldsymbol{A}|=0$ 给出 $\\lambda=1$ 或 $-1$ 两个候选，必须代回检验相容性才能排除 $\\lambda=1$（它使方程组无解）",
+        "\"两个不同解\"等价于\"无穷多解\"，不要误以为只需 $|\\boldsymbol{A}|=0$ 而漏掉对 $a$ 的相容性约束",
+        "通解 = 特解 + 导出组基础解系的线性组合，别把特解的 $x_2=-\\tfrac12$ 写进齐次解里"
+      ],
+      "key_point": "含参方程组有无穷多解：先 $|\\boldsymbol{A}|=0$ 定参，再要求 $r(\\boldsymbol{A})=r(\\boldsymbol{A}\\mid\\boldsymbol{b})<n$ 定相容参数，逐一排除不相容的候选"
+    },
+    {
+      "id": 678,
+      "paper": "数学二",
+      "year": 2010,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 4 \\\\ -1 & 3 & a \\\\ 4 & a & 0\\end{array}\\right)$, 有正交矩阵 $\\boldsymbol{Q}$ 使得 $\\boldsymbol{Q}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}$ 为对角矩阵. 若 $\\boldsymbol{Q}$ 的第 $1$ 列为 $\\displaystyle \\frac{1}{\\sqrt{6}}(1,2,1)^{\\mathrm{T}}$,\r\n求 $a, \\boldsymbol Q$",
+      "options": {},
+      "answer": "$a=-1, \\boldsymbol{Q}=\\left(\\begin{array}{ccc}\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & -\\frac{1}{\\sqrt{3}} \\\\ \\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$",
+      "analysis": "【分析】$Q$ 正交对角化 $A$，则 $Q$ 各列是 $A$ 的单位正交特征向量。$Q$ 第 1 列 $\\dfrac{1}{\\sqrt6}(1,2,1)^T$ 即 $A$ 的一个特征向量，代入 $A\\xi=\\lambda\\xi$ 可解出参数 $a$ 及该特征值。再求其余特征值与特征向量，单位化、正交化后拼成 $Q$。\n\n【解答】**第一步：求 $a$。** 设 $\\xi_1=(1,2,1)^T$ 为特征向量，$A\\xi_1=\\lambda\\xi_1$。\n$$A\\xi_1=\\begin{pmatrix}0&-1&4\\\\-1&3&a\\\\4&a&0\\end{pmatrix}\\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix}=\\begin{pmatrix}-2+4\\\\-1+6+a\\\\4+2a\\end{pmatrix}=\\begin{pmatrix}2\\\\a+5\\\\2a+4\\end{pmatrix}.$$\n要与 $\\lambda(1,2,1)^T$ 成比例：由第 1 分量 $\\lambda=2$。则第 2 分量 $a+5=2\\cdot2=4\\Rightarrow a=-1$；第 3 分量 $2a+4=2\\cdot1=2\\Rightarrow a=-1$，一致。故 $a=-1$，对应特征值 $\\lambda_1=2$。\n\n**第二步：求全部特征值。** 代 $a=-1$，$A=\\begin{pmatrix}0&-1&4\\\\-1&3&-1\\\\4&-1&0\\end{pmatrix}$。由迹 $=3=\\lambda_1+\\lambda_2+\\lambda_3=2+\\lambda_2+\\lambda_3$，得 $\\lambda_2+\\lambda_3=1$；$\\det A$：展开得 $\\det A=-40$（$=\\lambda_1\\lambda_2\\lambda_3=2\\lambda_2\\lambda_3$），故 $\\lambda_2\\lambda_3=-20$。解 $t^2-t-20=0\\Rightarrow t=5$ 或 $t=-4$。故特征值为 $2,5,-4$。\n\n**第三步：求 $\\lambda=-4,5$ 的特征向量。**\n$\\lambda=-4$：$(A+4I)x=0$，$\\begin{pmatrix}4&-1&4\\\\-1&7&-1\\\\4&-1&4\\end{pmatrix}$，解得 $x_2=0,\\ x_1=-x_3$，取 $\\xi_2=(-1,0,1)^T$。\n$\\lambda=5$：$(A-5I)x=0$，$\\begin{pmatrix}-5&-1&4\\\\-1&-2&-1\\\\4&-1&-5\\end{pmatrix}$，解得 $\\xi_3=(1,-1,1)^T$。\n三向量两两正交（实对称、不同特征值，自动正交，可验：$\\xi_1\\cdot\\xi_2=-1+0+1=0$ 等）。\n\n**第四步：单位化拼 $Q$。**\n$\\|\\xi_1\\|=\\sqrt6,\\ \\|\\xi_2\\|=\\sqrt2,\\ \\|\\xi_3\\|=\\sqrt3$。按第 1 列为 $\\dfrac{1}{\\sqrt6}(1,2,1)^T$ 的要求顺序排列：\n$$Q=\\begin{pmatrix}\\dfrac{1}{\\sqrt6}&-\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt3}\\\\[4pt]\\dfrac{2}{\\sqrt6}&0&-\\dfrac{1}{\\sqrt3}\\\\[4pt]\\dfrac{1}{\\sqrt6}&\\dfrac{1}{\\sqrt2}&\\dfrac{1}{\\sqrt3}\\end{pmatrix},\\qquad Q^TAQ=\\mathrm{diag}(2,-4,5).$$\n（特征向量可取相反方向，故 $Q$ 第 2、3 列符号不唯一。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "已知第 1 列是特征向量，用 Aξ=λξ 同时定出 a 与对应特征值，三个分量都要核对一致。",
+        "其余特征向量须单位化后才能作为正交矩阵 Q 的列；列的符号（方向）不唯一，答案不唯一。",
+        "实对称矩阵不同特征值的特征向量自动正交，本题无需额外施密特正交化。"
+      ],
+      "key_point": "正交对角化反求参数：已知特征向量代 Aξ=λξ 定 a，再补齐特征值/向量、单位化拼 Q。"
     }
   ]
 }

@@ -4,6 +4,34 @@
   "count": 22,
   "questions": [
     {
+      "id": 132,
+      "paper": "数学三",
+      "year": 2021,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 0$ 时, $\\displaystyle \\int_0^{x^2}\\left(\\mathrm{e}^{\\mathrm{t}^3}-1\\right) \\mathrm{d} t$ 是 $x^7$ 的 $(\\quad)$",
+      "options": {
+        "A": "低阶无穷小",
+        "B": "等价无穷小",
+        "C": "高阶无穷小",
+        "D": "同阶但非等价无穷小"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n这是变上限积分与幂函数的阶数比较问题。核心思路：被积函数在 $t\\to 0$ 时用等价无穷小化简，再用变限积分的估阶（积分后阶数升一级）确定整个积分的无穷小阶数，最后与 $x^7$ 比较。关键等价无穷小：$e^{u}-1\\sim u\\,(u\\to 0)$。\n\n【解答】\n\n记 $F(x)=\\displaystyle\\int_0^{x^2}\\left(e^{t^3}-1\\right)\\mathrm{d}t$。\n\n当 $t\\to 0$ 时，$e^{t^3}-1\\sim t^3$，故被积函数的主部为 $t^3$。于是\n\n$$F(x)\\sim\\int_0^{x^2}t^3\\,\\mathrm{d}t=\\dfrac{(x^2)^4}{4}=\\dfrac{x^8}{4}\\quad(x\\to 0).$$\n\n更严格地，由等价无穷小可写 $e^{t^3}-1=t^3+o(t^3)$，逐项积分得 $F(x)=\\dfrac{x^8}{4}+o(x^8)$，所以 $F(x)$ 是 $x^8$ 阶的无穷小。\n\n将其与 $x^7$ 比较：\n\n$$\\lim_{x\\to 0}\\dfrac{F(x)}{x^7}=\\lim_{x\\to 0}\\dfrac{\\frac{1}{4}x^8+o(x^8)}{x^7}=\\lim_{x\\to 0}\\dfrac{x}{4}=0.$$\n\n极限为 $0$，说明 $F(x)$ 比 $x^7$ 更高阶，即 $F(x)$ 是 $x^7$ 的高阶无穷小。\n\n也可用洛必达验证：$\\dfrac{F(x)}{x^7}$ 求导，$F'(x)=\\left(e^{x^6}-1\\right)\\cdot 2x\\sim x^6\\cdot 2x=2x^7$，分母导数为 $7x^6$，比值 $\\sim\\dfrac{2x^7}{7x^6}=\\dfrac{2x}{7}\\to 0$，结论一致。\n\n故选 C。",
+      "wrong_options": {
+        "A": "低阶无穷小要求 $\\lim F(x)/x^7=\\infty$，而此处极限为 $0$，恰恰相反，故错。",
+        "B": "等价无穷小要求 $\\lim F(x)/x^7=1$，但 $F(x)$ 是 $x^8$ 阶，极限为 $0$，故错。",
+        "D": "同阶非等价要求极限为非零常数，而此处为 $0$，故错。"
+      },
+      "pitfalls": [
+        "上限是 $x^2$ 不是 $x$，积分后阶数是 $(x^2)^4=x^8$，容易误算成 $x^4$ 或 $x^3$。",
+        "等价无穷小 $e^{t^3}-1\\sim t^3$ 的指数是 $3$，不要写成 $t$ 或 $t^2$。",
+        "比较阶数时分清谁是谁的高阶：极限为 $0$ 表示分子（积分）比分母 $x^7$ 高阶。"
+      ],
+      "key_point": "变限积分估阶：被积函数取等价无穷小主部后积分，阶数随上限幂次放大，再与目标幂函数求极限定阶。"
+    },
+    {
       "id": 99,
       "paper": "数学三",
       "year": 2021,
@@ -30,6 +58,34 @@
         "可导点取极值的必要条件是导数为零；本题导数非零，直接排除极值选项。"
       ],
       "key_point": "分段点用导数定义求导，结合 $e^x$ 的麦克劳林展开把 $\\dfrac{e^x-1-x}{x^2}$ 算到 $\\dfrac12$。"
+    },
+    {
+      "id": 133,
+      "paper": "数学三",
+      "year": 2021,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=a x-b \\ln x(a>0)$ 有两个零点, 则 $\\displaystyle \\frac{b}{a}$ 的取值范围是 $(\\quad)$",
+      "options": {
+        "A": "$(\\mathrm{e},+\\infty)$",
+        "B": "$(0, \\mathrm{e})$",
+        "C": "$\\displaystyle \\left(0, \\frac{1}{\\mathrm{e}}\\right)$",
+        "D": "$\\displaystyle \\left(\\frac{1}{\\mathrm{e}},+\\infty\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n含参函数零点个数问题。思路：$f(x)=ax-b\\ln x$ 定义域 $x>0$。先求导找唯一极值点，分析端点极限（$x\\to 0^+$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$），由“两个零点”的几何要求转化为“极小值 $<0$”的条件，再解出 $\\dfrac{b}{a}$ 的范围。隐含判断：必须 $b>0$ 才可能有极小值（否则单调无两零点）。\n\n【解答】\n\n定义域 $x>0$，$a>0$。求导：\n\n$$f'(x)=a-\\dfrac{b}{x}=\\dfrac{ax-b}{x}.$$\n\n**第一步：确定 $b$ 的符号。** 若 $b\\le 0$，则 $f'(x)=a-\\dfrac{b}{x}>0$ 恒成立，$f$ 在 $(0,+\\infty)$ 上严格单调递增，至多一个零点，不满足要求。故必有 $b>0$。\n\n**第二步：求极值。** 当 $b>0$ 时，令 $f'(x)=0$ 得唯一驻点 $x_0=\\dfrac{b}{a}>0$。当 $0<x<x_0$ 时 $f'(x)<0$，当 $x>x_0$ 时 $f'(x)>0$，故 $x_0$ 是极小值点（也是最小值点）。\n\n端点行为：$x\\to 0^+$ 时 $-b\\ln x\\to+\\infty$，故 $f\\to+\\infty$；$x\\to+\\infty$ 时 $ax$ 占主导，$f\\to+\\infty$。\n\n**第三步：两个零点的条件。** 由于函数在两端都趋于 $+\\infty$ 且只有一个极小值，要有两个零点当且仅当最小值严格小于零：\n\n$$f(x_0)=a\\cdot\\dfrac{b}{a}-b\\ln\\dfrac{b}{a}=b-b\\ln\\dfrac{b}{a}=b\\left(1-\\ln\\dfrac{b}{a}\\right)<0.$$\n\n因 $b>0$，两边除以 $b$ 得\n\n$$1-\\ln\\dfrac{b}{a}<0\\ \\Longrightarrow\\ \\ln\\dfrac{b}{a}>1\\ \\Longrightarrow\\ \\dfrac{b}{a}>e.$$\n\n（若 $f(x_0)=0$ 只有一个零点，$f(x_0)>0$ 无零点，均排除。）\n\n所以 $\\dfrac{b}{a}\\in(e,+\\infty)$，选 A。",
+      "wrong_options": {
+        "B": "$(0,e)$ 时极小值 $f(x_0)=b(1-\\ln(b/a))>0$，函数恒正无零点，故错。",
+        "C": "$\\left(0,\\dfrac{1}{e}\\right)$ 同样使极小值为正（无零点），且区间界限 $1/e$ 与本题阈值无关，故错。",
+        "D": "$\\left(\\dfrac{1}{e},+\\infty\\right)$ 把临界值错当成 $1/e$；正确阈值是 $e$，该区间包含了 $(1/e,e]$ 这段无两零点的情形，故错。"
+      },
+      "pitfalls": [
+        "先判断 $b>0$：$b\\le 0$ 时函数单调，不可能有两个零点，这是隐含前提。",
+        "极小值点是 $x_0=b/a$，代入时 $ax_0=b$，得 $f(x_0)=b(1-\\ln(b/a))$，别漏掉 $\\ln(b/a)$ 里的 $b/a$。",
+        "两零点对应极小值严格小于 $0$（取等只有一个零点），不等号方向要正确。"
+      ],
+      "key_point": "含参零点问题：求唯一极值，结合两端趋于 $+\\infty$，令极小值 $<0$ 解参数范围。"
     },
     {
       "id": 100,
@@ -88,128 +144,6 @@
       "key_point": "先展开成标准二次型，再用特征值符号或配方法定正负惯性指数；特征值 $3,0,-1$ 给出 $p=q=1$。"
     },
     {
-      "id": 106,
-      "paper": "数学三",
-      "year": 2021,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $A, B$ 为随机事件, 且 $0<P(B)<1$, 下列命题中为假命题的是 $(\\quad)$",
-      "options": {
-        "A": "若 $P(A \\mid B)=P(A)$, 则 $P(A \\mid \\bar{B})=P(A)$",
-        "B": "若 $P(A \\mid B)>P(A)$, 则 $P(\\bar{A} \\mid \\bar{B})>P(\\bar{A})$",
-        "C": "若 $P(A \\mid B)>P(A \\mid \\bar{B})$, 则 $P(A \\mid B)>P(A)$",
-        "D": "若 $P(A \\mid A \\cup B)>P(\\bar{A} \\mid A \\cup B)$, 则 $P(A)>P(B)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n本题考查条件概率与独立性的相互推证。核心工具：\n\n1. $P(A\\mid B)=P(A)\\iff A,B$ 相互独立 $\\iff A,\\bar B$ 独立 $\\iff \\bar A,\\bar B$ 独立；\n2. 由 $0<P(B)<1$ 知 $P(B),P(\\bar B)$ 均为正，可放心用全概率公式\n$$P(A)=P(A\\mid B)P(B)+P(A\\mid\\bar B)P(\\bar B);$$\n3. 这说明 $P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的加权平均，必夹在两者之间。\n\n据此逐项判断真假，找出假命题。\n\n【解答】\n\n**A（真）**：$P(A\\mid B)=P(A)$ 即 $A,B$ 独立，于是 $A,\\bar B$ 也独立，故 $P(A\\mid\\bar B)=P(A)$。成立。\n\n**B（真）**：$P(A\\mid B)>P(A)$ 表示 $B$ 的发生提高了 $A$ 的概率。由全概率公式 $P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 关于权 $P(B),P(\\bar B)$ 的加权平均，故 $P(A\\mid B)>P(A)$ 必有 $P(A\\mid\\bar B)<P(A)$。于是\n$$P(\\bar A\\mid\\bar B)=1-P(A\\mid\\bar B)>1-P(A)=P(\\bar A).$$\n成立。\n\n**C（真）**：设 $P(A\\mid B)>P(A\\mid\\bar B)$。由全概率\n$$P(A)=P(A\\mid B)P(B)+P(A\\mid\\bar B)P(\\bar B),$$\n这是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的凸组合（权重均为正且和为 1），故\n$$P(A\\mid\\bar B)<P(A)<P(A\\mid B),$$\n特别地 $P(A\\mid B)>P(A)$。成立。\n\n**D（假）**：先化简条件。在 $A\\cup B$ 已发生的条件下，$P(A\\mid A\\cup B)+P(\\bar A\\mid A\\cup B)=1$，故\n$$P(A\\mid A\\cup B)>P(\\bar A\\mid A\\cup B)\\iff P(A\\mid A\\cup B)>\\tfrac12.$$\n又\n$$P(A\\mid A\\cup B)=\\dfrac{P\\big(A\\cap(A\\cup B)\\big)}{P(A\\cup B)}=\\dfrac{P(A)}{P(A\\cup B)},$$\n$$P(\\bar A\\mid A\\cup B)=\\dfrac{P\\big(\\bar A\\cap(A\\cup B)\\big)}{P(A\\cup B)}=\\dfrac{P(\\bar A\\cap B)}{P(A\\cup B)}=\\dfrac{P(B)-P(AB)}{P(A\\cup B)}.$$\n于是条件等价于\n$$P(A)>P(B)-P(AB)\\iff P(A)+P(AB)>P(B).$$\n而命题 D 的结论是 $P(A)>P(B)$。但由 $P(A)+P(AB)>P(B)$ 推不出 $P(A)>P(B)$。举反例：\n\n取样本空间等可能，设 $P(AB)=0.3,\\ P(A\\bar B)=0,\\ P(\\bar A B)=0.4,\\ P(\\bar A\\bar B)=0.3$（总和 $=1$，且 $0<P(B)=0.7<1$）。则\n$$P(A)=P(AB)+P(A\\bar B)=0.3,\\quad P(B)=P(AB)+P(\\bar A B)=0.7.$$\n验证前提：$P(A)+P(AB)=0.3+0.3=0.6$，而 $P(B)=0.7$，$0.6>0.7$ 不成立——此例不满足前提，需调整。\n\n改取 $P(AB)=0.5,\\ P(A\\bar B)=0,\\ P(\\bar A B)=0.3,\\ P(\\bar A\\bar B)=0.2$（和 $=1$）。则\n$$P(A)=0.5,\\quad P(B)=0.5+0.3=0.8,\\quad 0<P(B)<1.$$\n前提 $P(A)+P(AB)=0.5+0.5=1.0>P(B)=0.8$ 成立，即 $P(A\\mid A\\cup B)>P(\\bar A\\mid A\\cup B)$ 成立（这里 $A\\cup B=B$，$P(A\\mid A\\cup B)=P(A)/P(B)=0.5/0.8=0.625>0.5$，确实成立）。\n但结论 $P(A)>P(B)$ 即 $0.5>0.8$ **不成立**。\n\n这就给出反例：前提成立而结论不成立，故 D 为假命题。\n\n综上，假命题是 **D**。",
-      "wrong_options": {
-        "A": "$P(A\\mid B)=P(A)\\Rightarrow A,B$ 独立 $\\Rightarrow A,\\bar B$ 独立 $\\Rightarrow P(A\\mid\\bar B)=P(A)$，真命题。",
-        "B": "$P(A)$ 是 $P(A\\mid B),P(A\\mid\\bar B)$ 的加权平均，$P(A\\mid B)>P(A)$ 迫使 $P(A\\mid\\bar B)<P(A)$，取补得 $P(\\bar A\\mid\\bar B)>P(\\bar A)$，真命题。",
-        "C": "由全概率公式，$P(A)$ 介于 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 之间，故 $P(A\\mid B)>P(A\\mid\\bar B)\\Rightarrow P(A\\mid B)>P(A)$，真命题。"
-      },
-      "pitfalls": [
-        "D 中前提化简后等价于 $P(A)+P(AB)>P(B)$，它弱于 $P(A)>P(B)$，二者不可等价混淆。",
-        "$0<P(B)<1$ 是用全概率公式的前提（保证 $P(B),P(\\bar B)$ 都为正），务必注意条件给定。",
-        "$P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的凸组合，必夹在二者之间——这是 A、B、C 都真的统一根源。"
-      ],
-      "key_point": "全概率公式把 $P(A)$ 写成 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的加权平均（介于两者之间）；D 把 $P(A)+P(AB)>P(B)$ 误当成 $P(A)>P(B)$，故假。"
-    },
-    {
-      "id": 114,
-      "paper": "数学三",
-      "year": 2021,
-      "index": 16,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "甲、乙两个盒子中各装有 $2$ 个红球和 $2$ 个白球, 先从甲盒中任取一球, 观察颜色后放人乙盒中, 再从乙盒中任取一球, 令 $X, Y$ 分别表示从甲盒和乙盒中取到的红球个数, 则 $X$ 与 $Y$ 的相关系数为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{5}$",
-      "analysis": "【分析】\n\n这是“摸球转移”型的离散概率题。$X$ 只取 $0,1$（是否从甲盒摸到红球），$Y$ 取 $0,1$（是否从乙盒摸到红球）。先写出 $X$ 的分布，再用全概率（条件分布）确定 $Y$ 以及联合概率 $P(X=1,Y=1)$，最后按相关系数公式\n$$\\rho_{XY}=\\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)}\\sqrt{D(Y)}},\\quad \\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)$$\n计算。由于 $X,Y$ 都是 $0$–$1$ 变量，$E(XY)=P(X=1,Y=1)$，计算很简洁。\n\n【解答】\n\n**第一步：$X$ 的分布。** 甲盒 $2$ 红 $2$ 白共 $4$ 球，取一球为红的概率 $\\tfrac12$，故\n$$P(X=1)=\\tfrac12,\\quad P(X=0)=\\tfrac12.$$\n于是 $E(X)=\\tfrac12$，$E(X^2)=\\tfrac12$，$D(X)=\\tfrac12-\\left(\\tfrac12\\right)^2=\\tfrac14.$\n\n**第二步：条件分布与联合概率。** 把甲盒取出的球放入乙盒后，乙盒变为 $5$ 个球：\n- 若 $X=1$（放入一个红球），乙盒为 $3$ 红 $2$ 白，$P(Y=1\\mid X=1)=\\tfrac35$；\n- 若 $X=0$（放入一个白球），乙盒为 $2$ 红 $3$ 白，$P(Y=1\\mid X=0)=\\tfrac25$。\n\n故联合概率\n$$P(X=1,Y=1)=P(X=1)P(Y=1\\mid X=1)=\\tfrac12\\cdot\\tfrac35=\\tfrac{3}{10}.$$\n\n**第三步：$Y$ 的分布（全概率公式）。**\n$$P(Y=1)=\\tfrac12\\cdot\\tfrac35+\\tfrac12\\cdot\\tfrac25=\\tfrac12.$$\n所以 $E(Y)=\\tfrac12$，$D(Y)=\\tfrac12-\\left(\\tfrac12\\right)^2=\\tfrac14.$\n\n**第四步：协方差与相关系数。** 因 $X,Y\\in\\{0,1\\}$，$E(XY)=P(X=1,Y=1)=\\tfrac{3}{10}$，于是\n$$\\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)=\\frac{3}{10}-\\frac12\\cdot\\frac12=\\frac{3}{10}-\\frac14=\\frac{6-5}{20}=\\frac{1}{20}.$$\n故\n$$\\rho_{XY}=\\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)\\,D(Y)}}=\\frac{\\tfrac{1}{20}}{\\sqrt{\\tfrac14\\cdot\\tfrac14}}=\\frac{\\tfrac{1}{20}}{\\tfrac14}=\\frac{4}{20}=\\frac{1}{5}.$$\n\n所以 $X$ 与 $Y$ 的相关系数为 $\\dfrac{1}{5}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "甲盒的球放入乙盒后，乙盒变成 $5$ 个球，条件概率分母是 $5$ 不是 $4$。",
-        "$X,Y$ 都是 $0$–$1$ 变量，$E(XY)=P(X=1,Y=1)$，不必枚举全部四种组合，但要确认 $XY$ 只在双 $1$ 时取 $1$。",
-        "相关系数分母是标准差之积 $\\sqrt{D(X)}\\sqrt{D(Y)}=\\tfrac14$，别漏开方或写成方差之积。"
-      ],
-      "key_point": "0–1 变量摸球转移题：用条件概率写联合分布，$E(XY)=P(X=1,Y=1)$，再套相关系数公式。"
-    },
-    {
-      "id": 120,
-      "paper": "数学三",
-      "year": 2021,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "在区间 $(0,2)$ 上随机取一点, 将该区间分成两段, 较短一段的长度为 $X$, 较长一段的长度 为 $Y$, 令 $Z=\\dfrac{Y}{X}$\r\n\r\n(1) 求 $X$ 的概率密度;\r\n\r\n(2) 求 $Z$ 的概率密度;\r\n\r\n(3) 求 $E\\left(\\dfrac{X}{Y}\\right)$",
-      "options": {},
-      "answer": "(1) $f_X(x)= \\begin{cases}1, & 0<x<1, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) $f_Z(z)= \\begin{cases}0, & z \\leqslant 1, \\\\ \\dfrac{2}{(z+1)^2}, & z>1\\end{cases}$;\r\n\r\n(3) $2 \\ln 2-1$",
-      "analysis": "【分析】\n\n几何概型导出连续型随机变量。设取点坐标 $U\\sim U(0,2)$，把 $(0,2)$ 分成长 $U$ 与 $2-U$ 两段。较短段 $X=\\min(U,2-U)$，较长段 $Y=2-X$。\n\n(1) 由 $X=\\min(U,2-U)$ 直接得 $X$ 的取值与分布；\n(2) $Z=\\dfrac{Y}{X}=\\dfrac{2-X}{X}$ 是 $X$ 的单调函数，用分布函数法求密度；\n(3) $\\dfrac{X}{Y}=\\dfrac{X}{2-X}$ 是 $X$ 的函数，用随机变量函数期望公式 $E(g(X))=\\int g(x)f_X(x)\\,dx$ 积分。\n\n【解答】\n\n设 $U\\sim U(0,2)$，密度 $f_U(u)=\\dfrac12,\\ 0<u<2$。\n\n**(1) 求 $X$ 的密度。** 较短段 $X=\\min(U,2-U)$，取值范围 $0<X<1$。对 $0<x<1$：\n\n$$F_X(x)=P(\\min(U,2-U)\\le x)=P(U\\le x)+P(U\\ge 2-x).$$\n\n$P(U\\le x)=\\dfrac{x}{2}$，$P(U\\ge 2-x)=\\dfrac{2-(2-x)}{2}=\\dfrac{x}{2}$，故 $F_X(x)=\\dfrac{x}{2}+\\dfrac{x}{2}=x$，$0<x<1$。求导得\n\n$$f_X(x)=\\begin{cases}1,&0<x<1,\\\\[2pt]0,&\\text{其他}.\\end{cases}$$\n\n即 $X\\sim U(0,1)$。\n\n**(2) 求 $Z$ 的密度。** 较长段 $Y=2-X$，故\n\n$$Z=\\dfrac{Y}{X}=\\dfrac{2-X}{X}=\\dfrac{2}{X}-1.$$\n\n当 $X\\in(0,1)$ 时 $\\dfrac{2}{X}>2$，故 $Z>1$。当 $z\\le 1$ 时 $F_Z(z)=0$。\n\n当 $z>1$ 时，由 $Z=\\dfrac{2}{X}-1\\le z$ 解得 $\\dfrac{2}{X}\\le z+1$，即 $X\\ge\\dfrac{2}{z+1}$。于是\n\n$$F_Z(z)=P\\!\\left(X\\ge\\dfrac{2}{z+1}\\right)=\\int_{\\frac{2}{z+1}}^{1}1\\,\\mathrm{d}x=1-\\dfrac{2}{z+1}=\\dfrac{z-1}{z+1}.$$\n\n（注意当 $z>1$ 时 $\\dfrac{2}{z+1}<1$，积分上限合理。）求导：\n\n$$f_Z(z)=\\dfrac{\\mathrm{d}}{\\mathrm{d}z}\\!\\left(1-\\dfrac{2}{z+1}\\right)=\\dfrac{2}{(z+1)^2}.$$\n\n所以\n\n$$f_Z(z)=\\begin{cases}\\dfrac{2}{(z+1)^2},&z>1,\\\\[6pt]0,&z\\le 1.\\end{cases}$$\n\n**(3) 求 $E\\left(\\dfrac{X}{Y}\\right)$。** 因 $\\dfrac{X}{Y}=\\dfrac{X}{2-X}$，且 $X\\sim U(0,1)$：\n\n$$E\\!\\left(\\dfrac{X}{Y}\\right)=\\int_0^1\\dfrac{x}{2-x}\\cdot 1\\,\\mathrm{d}x.$$\n\n作变形 $\\dfrac{x}{2-x}=\\dfrac{-(2-x)+2}{2-x}=-1+\\dfrac{2}{2-x}$，于是\n\n$$\\int_0^1\\!\\left(-1+\\dfrac{2}{2-x}\\right)\\mathrm{d}x=\\Big[-x-2\\ln(2-x)\\Big]_0^1.$$\n\n代入上下限：上限 $x=1$ 得 $-1-2\\ln 1=-1$；下限 $x=0$ 得 $-0-2\\ln 2=-2\\ln 2$。相减：\n\n$$E\\!\\left(\\dfrac{X}{Y}\\right)=(-1)-(-2\\ln 2)=2\\ln 2-1.$$\n\n综上：$f_X(x)=1\\,(0<x<1)$；$f_Z(z)=\\dfrac{2}{(z+1)^2}\\,(z>1)$；$E\\left(\\dfrac{X}{Y}\\right)=2\\ln 2-1$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "较短段 $X=\\min(U,2-U)$ 取值在 $(0,1)$ 而非 $(0,2)$；求 $F_X$ 要把两侧 $U\\le x$ 与 $U\\ge 2-x$ 都算上，否则密度会少一半。",
-        "(2) 中 $Z>1$ 恒成立（短段比长段小），$z\\le 1$ 时密度为 $0$；解不等式时 $X$ 在分母，乘除要注意方向。",
-        "(3) 用 $E(X/Y)=E(X/(2-X))$ 在 $X\\sim U(0,1)$ 上积分；分式拆成 $-1+\\dfrac{2}{2-x}$ 便于积分，注意 $\\int\\dfrac{2}{2-x}dx=-2\\ln(2-x)$ 的负号。"
-      ],
-      "key_point": "几何概型先定 $X=\\min(U,2-U)\\sim U(0,1)$，再以分布函数法求 $Z=2/X-1$ 的密度，期望用 $g(X)$ 积分。"
-    },
-    {
-      "id": 132,
-      "paper": "数学三",
-      "year": 2021,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "当 $x \\rightarrow 0$ 时, $\\displaystyle \\int_0^{x^2}\\left(\\mathrm{e}^{\\mathrm{t}^3}-1\\right) \\mathrm{d} t$ 是 $x^7$ 的 $(\\quad)$",
-      "options": {
-        "A": "低阶无穷小",
-        "B": "等价无穷小",
-        "C": "高阶无穷小",
-        "D": "同阶但非等价无穷小"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n这是变上限积分与幂函数的阶数比较问题。核心思路：被积函数在 $t\\to 0$ 时用等价无穷小化简，再用变限积分的估阶（积分后阶数升一级）确定整个积分的无穷小阶数，最后与 $x^7$ 比较。关键等价无穷小：$e^{u}-1\\sim u\\,(u\\to 0)$。\n\n【解答】\n\n记 $F(x)=\\displaystyle\\int_0^{x^2}\\left(e^{t^3}-1\\right)\\mathrm{d}t$。\n\n当 $t\\to 0$ 时，$e^{t^3}-1\\sim t^3$，故被积函数的主部为 $t^3$。于是\n\n$$F(x)\\sim\\int_0^{x^2}t^3\\,\\mathrm{d}t=\\dfrac{(x^2)^4}{4}=\\dfrac{x^8}{4}\\quad(x\\to 0).$$\n\n更严格地，由等价无穷小可写 $e^{t^3}-1=t^3+o(t^3)$，逐项积分得 $F(x)=\\dfrac{x^8}{4}+o(x^8)$，所以 $F(x)$ 是 $x^8$ 阶的无穷小。\n\n将其与 $x^7$ 比较：\n\n$$\\lim_{x\\to 0}\\dfrac{F(x)}{x^7}=\\lim_{x\\to 0}\\dfrac{\\frac{1}{4}x^8+o(x^8)}{x^7}=\\lim_{x\\to 0}\\dfrac{x}{4}=0.$$\n\n极限为 $0$，说明 $F(x)$ 比 $x^7$ 更高阶，即 $F(x)$ 是 $x^7$ 的高阶无穷小。\n\n也可用洛必达验证：$\\dfrac{F(x)}{x^7}$ 求导，$F'(x)=\\left(e^{x^6}-1\\right)\\cdot 2x\\sim x^6\\cdot 2x=2x^7$，分母导数为 $7x^6$，比值 $\\sim\\dfrac{2x^7}{7x^6}=\\dfrac{2x}{7}\\to 0$，结论一致。\n\n故选 C。",
-      "wrong_options": {
-        "A": "低阶无穷小要求 $\\lim F(x)/x^7=\\infty$，而此处极限为 $0$，恰恰相反，故错。",
-        "B": "等价无穷小要求 $\\lim F(x)/x^7=1$，但 $F(x)$ 是 $x^8$ 阶，极限为 $0$，故错。",
-        "D": "同阶非等价要求极限为非零常数，而此处为 $0$，故错。"
-      },
-      "pitfalls": [
-        "上限是 $x^2$ 不是 $x$，积分后阶数是 $(x^2)^4=x^8$，容易误算成 $x^4$ 或 $x^3$。",
-        "等价无穷小 $e^{t^3}-1\\sim t^3$ 的指数是 $3$，不要写成 $t$ 或 $t^2$。",
-        "比较阶数时分清谁是谁的高阶：极限为 $0$ 表示分子（积分）比分母 $x^7$ 高阶。"
-      ],
-      "key_point": "变限积分估阶：被积函数取等价无穷小主部后积分，阶数随上限幂次放大，再与目标幂函数求极限定阶。"
-    },
-    {
-      "id": 133,
-      "paper": "数学三",
-      "year": 2021,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=a x-b \\ln x(a>0)$ 有两个零点, 则 $\\displaystyle \\frac{b}{a}$ 的取值范围是 $(\\quad)$",
-      "options": {
-        "A": "$(\\mathrm{e},+\\infty)$",
-        "B": "$(0, \\mathrm{e})$",
-        "C": "$\\displaystyle \\left(0, \\frac{1}{\\mathrm{e}}\\right)$",
-        "D": "$\\displaystyle \\left(\\frac{1}{\\mathrm{e}},+\\infty\\right)$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n含参函数零点个数问题。思路：$f(x)=ax-b\\ln x$ 定义域 $x>0$。先求导找唯一极值点，分析端点极限（$x\\to 0^+$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$），由“两个零点”的几何要求转化为“极小值 $<0$”的条件，再解出 $\\dfrac{b}{a}$ 的范围。隐含判断：必须 $b>0$ 才可能有极小值（否则单调无两零点）。\n\n【解答】\n\n定义域 $x>0$，$a>0$。求导：\n\n$$f'(x)=a-\\dfrac{b}{x}=\\dfrac{ax-b}{x}.$$\n\n**第一步：确定 $b$ 的符号。** 若 $b\\le 0$，则 $f'(x)=a-\\dfrac{b}{x}>0$ 恒成立，$f$ 在 $(0,+\\infty)$ 上严格单调递增，至多一个零点，不满足要求。故必有 $b>0$。\n\n**第二步：求极值。** 当 $b>0$ 时，令 $f'(x)=0$ 得唯一驻点 $x_0=\\dfrac{b}{a}>0$。当 $0<x<x_0$ 时 $f'(x)<0$，当 $x>x_0$ 时 $f'(x)>0$，故 $x_0$ 是极小值点（也是最小值点）。\n\n端点行为：$x\\to 0^+$ 时 $-b\\ln x\\to+\\infty$，故 $f\\to+\\infty$；$x\\to+\\infty$ 时 $ax$ 占主导，$f\\to+\\infty$。\n\n**第三步：两个零点的条件。** 由于函数在两端都趋于 $+\\infty$ 且只有一个极小值，要有两个零点当且仅当最小值严格小于零：\n\n$$f(x_0)=a\\cdot\\dfrac{b}{a}-b\\ln\\dfrac{b}{a}=b-b\\ln\\dfrac{b}{a}=b\\left(1-\\ln\\dfrac{b}{a}\\right)<0.$$\n\n因 $b>0$，两边除以 $b$ 得\n\n$$1-\\ln\\dfrac{b}{a}<0\\ \\Longrightarrow\\ \\ln\\dfrac{b}{a}>1\\ \\Longrightarrow\\ \\dfrac{b}{a}>e.$$\n\n（若 $f(x_0)=0$ 只有一个零点，$f(x_0)>0$ 无零点，均排除。）\n\n所以 $\\dfrac{b}{a}\\in(e,+\\infty)$，选 A。",
-      "wrong_options": {
-        "B": "$(0,e)$ 时极小值 $f(x_0)=b(1-\\ln(b/a))>0$，函数恒正无零点，故错。",
-        "C": "$\\left(0,\\dfrac{1}{e}\\right)$ 同样使极小值为正（无零点），且区间界限 $1/e$ 与本题阈值无关，故错。",
-        "D": "$\\left(\\dfrac{1}{e},+\\infty\\right)$ 把临界值错当成 $1/e$；正确阈值是 $e$，该区间包含了 $(1/e,e]$ 这段无两零点的情形，故错。"
-      },
-      "pitfalls": [
-        "先判断 $b>0$：$b\\le 0$ 时函数单调，不可能有两个零点，这是隐含前提。",
-        "极小值点是 $x_0=b/a$，代入时 $ax_0=b$，得 $f(x_0)=b(1-\\ln(b/a))$，别漏掉 $\\ln(b/a)$ 里的 $b/a$。",
-        "两零点对应极小值严格小于 $0$（取等只有一个零点），不等号方向要正确。"
-      ],
-      "key_point": "含参零点问题：求唯一极值，结合两端趋于 $+\\infty$，令极小值 $<0$ 解参数范围。"
-    },
-    {
       "id": 134,
       "paper": "数学三",
       "year": 2021,
@@ -263,6 +197,62 @@
         "化简结果允许出现对角元为 0（这里是 $\\mathrm{diag}(1,1,0)$），因为 $\\mathrm{rank}(\\boldsymbol{A})=2$，对角阵不必满秩。"
       ],
       "key_point": "左乘下三角做行变换清左下、右乘上三角做列变换清右上，直接算 $\\boldsymbol{P}\\boldsymbol{A}\\boldsymbol{Q}$ 验证是否对角即可定选项。"
+    },
+    {
+      "id": 106,
+      "paper": "数学三",
+      "year": 2021,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为随机事件, 且 $0<P(B)<1$, 下列命题中为假命题的是 $(\\quad)$",
+      "options": {
+        "A": "若 $P(A \\mid B)=P(A)$, 则 $P(A \\mid \\bar{B})=P(A)$",
+        "B": "若 $P(A \\mid B)>P(A)$, 则 $P(\\bar{A} \\mid \\bar{B})>P(\\bar{A})$",
+        "C": "若 $P(A \\mid B)>P(A \\mid \\bar{B})$, 则 $P(A \\mid B)>P(A)$",
+        "D": "若 $P(A \\mid A \\cup B)>P(\\bar{A} \\mid A \\cup B)$, 则 $P(A)>P(B)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题考查条件概率与独立性的相互推证。核心工具：\n\n1. $P(A\\mid B)=P(A)\\iff A,B$ 相互独立 $\\iff A,\\bar B$ 独立 $\\iff \\bar A,\\bar B$ 独立；\n2. 由 $0<P(B)<1$ 知 $P(B),P(\\bar B)$ 均为正，可放心用全概率公式\n$$P(A)=P(A\\mid B)P(B)+P(A\\mid\\bar B)P(\\bar B);$$\n3. 这说明 $P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的加权平均，必夹在两者之间。\n\n据此逐项判断真假，找出假命题。\n\n【解答】\n\n**A（真）**：$P(A\\mid B)=P(A)$ 即 $A,B$ 独立，于是 $A,\\bar B$ 也独立，故 $P(A\\mid\\bar B)=P(A)$。成立。\n\n**B（真）**：$P(A\\mid B)>P(A)$ 表示 $B$ 的发生提高了 $A$ 的概率。由全概率公式 $P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 关于权 $P(B),P(\\bar B)$ 的加权平均，故 $P(A\\mid B)>P(A)$ 必有 $P(A\\mid\\bar B)<P(A)$。于是\n$$P(\\bar A\\mid\\bar B)=1-P(A\\mid\\bar B)>1-P(A)=P(\\bar A).$$\n成立。\n\n**C（真）**：设 $P(A\\mid B)>P(A\\mid\\bar B)$。由全概率\n$$P(A)=P(A\\mid B)P(B)+P(A\\mid\\bar B)P(\\bar B),$$\n这是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的凸组合（权重均为正且和为 1），故\n$$P(A\\mid\\bar B)<P(A)<P(A\\mid B),$$\n特别地 $P(A\\mid B)>P(A)$。成立。\n\n**D（假）**：先化简条件。在 $A\\cup B$ 已发生的条件下，$P(A\\mid A\\cup B)+P(\\bar A\\mid A\\cup B)=1$，故\n$$P(A\\mid A\\cup B)>P(\\bar A\\mid A\\cup B)\\iff P(A\\mid A\\cup B)>\\tfrac12.$$\n又\n$$P(A\\mid A\\cup B)=\\dfrac{P\\big(A\\cap(A\\cup B)\\big)}{P(A\\cup B)}=\\dfrac{P(A)}{P(A\\cup B)},$$\n$$P(\\bar A\\mid A\\cup B)=\\dfrac{P\\big(\\bar A\\cap(A\\cup B)\\big)}{P(A\\cup B)}=\\dfrac{P(\\bar A\\cap B)}{P(A\\cup B)}=\\dfrac{P(B)-P(AB)}{P(A\\cup B)}.$$\n于是条件等价于\n$$P(A)>P(B)-P(AB)\\iff P(A)+P(AB)>P(B).$$\n而命题 D 的结论是 $P(A)>P(B)$。但由 $P(A)+P(AB)>P(B)$ 推不出 $P(A)>P(B)$。举反例：\n\n取样本空间等可能，设 $P(AB)=0.3,\\ P(A\\bar B)=0,\\ P(\\bar A B)=0.4,\\ P(\\bar A\\bar B)=0.3$（总和 $=1$，且 $0<P(B)=0.7<1$）。则\n$$P(A)=P(AB)+P(A\\bar B)=0.3,\\quad P(B)=P(AB)+P(\\bar A B)=0.7.$$\n验证前提：$P(A)+P(AB)=0.3+0.3=0.6$，而 $P(B)=0.7$，$0.6>0.7$ 不成立——此例不满足前提，需调整。\n\n改取 $P(AB)=0.5,\\ P(A\\bar B)=0,\\ P(\\bar A B)=0.3,\\ P(\\bar A\\bar B)=0.2$（和 $=1$）。则\n$$P(A)=0.5,\\quad P(B)=0.5+0.3=0.8,\\quad 0<P(B)<1.$$\n前提 $P(A)+P(AB)=0.5+0.5=1.0>P(B)=0.8$ 成立，即 $P(A\\mid A\\cup B)>P(\\bar A\\mid A\\cup B)$ 成立（这里 $A\\cup B=B$，$P(A\\mid A\\cup B)=P(A)/P(B)=0.5/0.8=0.625>0.5$，确实成立）。\n但结论 $P(A)>P(B)$ 即 $0.5>0.8$ **不成立**。\n\n这就给出反例：前提成立而结论不成立，故 D 为假命题。\n\n综上，假命题是 **D**。",
+      "wrong_options": {
+        "A": "$P(A\\mid B)=P(A)\\Rightarrow A,B$ 独立 $\\Rightarrow A,\\bar B$ 独立 $\\Rightarrow P(A\\mid\\bar B)=P(A)$，真命题。",
+        "B": "$P(A)$ 是 $P(A\\mid B),P(A\\mid\\bar B)$ 的加权平均，$P(A\\mid B)>P(A)$ 迫使 $P(A\\mid\\bar B)<P(A)$，取补得 $P(\\bar A\\mid\\bar B)>P(\\bar A)$，真命题。",
+        "C": "由全概率公式，$P(A)$ 介于 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 之间，故 $P(A\\mid B)>P(A\\mid\\bar B)\\Rightarrow P(A\\mid B)>P(A)$，真命题。"
+      },
+      "pitfalls": [
+        "D 中前提化简后等价于 $P(A)+P(AB)>P(B)$，它弱于 $P(A)>P(B)$，二者不可等价混淆。",
+        "$0<P(B)<1$ 是用全概率公式的前提（保证 $P(B),P(\\bar B)$ 都为正），务必注意条件给定。",
+        "$P(A)$ 是 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的凸组合，必夹在二者之间——这是 A、B、C 都真的统一根源。"
+      ],
+      "key_point": "全概率公式把 $P(A)$ 写成 $P(A\\mid B)$ 与 $P(A\\mid\\bar B)$ 的加权平均（介于两者之间）；D 把 $P(A)+P(AB)>P(B)$ 误当成 $P(A)>P(B)$，故假。"
+    },
+    {
+      "id": 90406,
+      "paper": "数学三",
+      "year": 2021,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\left(X_{1}, Y_{1}\\right),\\left(X_{2}, Y_{2}\\right), \\cdots,\\left(X_{n}, Y_{n}\\right)$ 为来自总体 $N\\left(\\mu_{1}, \\mu_{2} ; \\sigma_{1}^{2}, \\sigma_{2}^{2} ; \\rho\\right)$ 的简单随机样本, 令 $\\displaystyle \\theta=\\mu_{1}-\\mu_{2}, \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\bar{Y}=\\frac{1}{n} \\sum_{i=1}^{n} Y_{i}, \\hat{\\theta}=\\bar{X}-\\bar{Y}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\hat{\\theta}$ 是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}}{n}$",
+        "B": "$\\hat{\\theta}$ 是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}-2\\rho\\sigma_{1}\\sigma_{2}}{n}$",
+        "C": "$\\hat{\\theta}$ 不是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}}{n}$",
+        "D": "$\\hat{\\theta}$ 不是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}-2\\rho\\sigma_{1}\\sigma_{2}}{n}$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查无偏估计的验证与相关随机变量之差的方差计算。要点：\n\n1. 无偏性：只需验证 $E(\\hat\\theta)=\\theta$，与相关性无关；\n2. 方差：$\\bar X,\\bar Y$ 由同一组二维样本算出，二者**相关**，故\n$$D(\\bar X-\\bar Y)=D(\\bar X)+D(\\bar Y)-2\\,\\mathrm{Cov}(\\bar X,\\bar Y),$$\n协方差项不可丢；\n3. 二维正态 $N(\\mu_1,\\mu_2;\\sigma_1^2,\\sigma_2^2;\\rho)$ 中 $\\mathrm{Cov}(X_i,Y_i)=\\rho\\sigma_1\\sigma_2$，且不同样本点相互独立。\n\n【解答】\n\n**无偏性**：样本来自总体，$E(X_i)=\\mu_1,\\ E(Y_i)=\\mu_2$，故\n$$E(\\bar X)=\\mu_1,\\quad E(\\bar Y)=\\mu_2,$$\n$$E(\\hat\\theta)=E(\\bar X-\\bar Y)=\\mu_1-\\mu_2=\\theta.$$\n所以 $\\hat\\theta$ 是 $\\theta$ 的无偏估计。排除 B、D。\n\n**方差**：各样本点 $(X_i,Y_i)$ 相互独立同分布，$D(X_i)=\\sigma_1^2,\\ D(Y_i)=\\sigma_2^2,\\ \\mathrm{Cov}(X_i,Y_i)=\\rho\\sigma_1\\sigma_2$。\n\n令 $Z_i=X_i-Y_i$，则 $Z_1,\\cdots,Z_n$ 独立同分布，且\n$$D(Z_i)=D(X_i)+D(Y_i)-2\\,\\mathrm{Cov}(X_i,Y_i)=\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2.$$\n而 $\\hat\\theta=\\bar X-\\bar Y=\\dfrac{1}{n}\\sum_{i=1}^n(X_i-Y_i)=\\dfrac{1}{n}\\sum_{i=1}^n Z_i=\\bar Z$，故\n$$D(\\hat\\theta)=D(\\bar Z)=\\dfrac{1}{n}D(Z_1)=\\dfrac{\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2}{n}.$$\n\n（也可直接算：$D(\\bar X)=\\dfrac{\\sigma_1^2}{n},\\ D(\\bar Y)=\\dfrac{\\sigma_2^2}{n}$，$\\mathrm{Cov}(\\bar X,\\bar Y)=\\dfrac{1}{n^2}\\sum_{i,j}\\mathrm{Cov}(X_i,Y_j)=\\dfrac{1}{n^2}\\cdot n\\cdot\\rho\\sigma_1\\sigma_2=\\dfrac{\\rho\\sigma_1\\sigma_2}{n}$，于是 $D(\\hat\\theta)=\\dfrac{\\sigma_1^2}{n}+\\dfrac{\\sigma_2^2}{n}-\\dfrac{2\\rho\\sigma_1\\sigma_2}{n}$，结果一致。）\n\n综上，$\\hat\\theta$ 无偏且 $D(\\hat\\theta)=\\dfrac{\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2}{n}$，故选 **B**。",
+      "wrong_options": {
+        "A": "无偏性判断正确，但方差漏掉了协方差项 $-2\\rho\\sigma_1\\sigma_2/n$。",
+        "C": "$E(\\hat\\theta)=\\theta$，$\\hat\\theta$ 是无偏估计；方差也漏了协方差项。",
+        "D": "方差表达式正确，但 $\\hat\\theta$ 是无偏估计，“不是无偏”错。"
+      },
+      "pitfalls": [
+        "$\\bar X$ 与 $\\bar Y$ 取自同一组二维样本，二者相关，求 $D(\\bar X-\\bar Y)$ 必须带上 $-2\\mathrm{Cov}(\\bar X,\\bar Y)$，不可当作独立直接相减方差。",
+        "无偏性只由期望决定，与相关系数 $\\rho$ 无关，不要被 $\\rho$ 干扰判断。",
+        "协方差缩放：$\\mathrm{Cov}(\\bar X,\\bar Y)=\\dfrac{\\rho\\sigma_1\\sigma_2}{n}$，分母是 $n$ 不是 $n^2$（因只有 $i=j$ 的 $n$ 项非零）。"
+      ],
+      "key_point": "无偏性看期望；$\\bar X,\\bar Y$ 同源相关，方差用 $D(\\bar X)+D(\\bar Y)-2\\mathrm{Cov}(\\bar X,\\bar Y)$，化为 $Z_i=X_i-Y_i$ 一步到位。"
     },
     {
       "id": 136,
@@ -388,6 +378,25 @@
       "key_point": "求行列式某次幂系数：锁定含 $x$ 的元素位置，在“异行异列”约束下枚举可凑该次数的排列，按逆序数定号求和。"
     },
     {
+      "id": 114,
+      "paper": "数学三",
+      "year": 2021,
+      "index": 16,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "甲、乙两个盒子中各装有 $2$ 个红球和 $2$ 个白球, 先从甲盒中任取一球, 观察颜色后放人乙盒中, 再从乙盒中任取一球, 令 $X, Y$ 分别表示从甲盒和乙盒中取到的红球个数, 则 $X$ 与 $Y$ 的相关系数为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{5}$",
+      "analysis": "【分析】\n\n这是“摸球转移”型的离散概率题。$X$ 只取 $0,1$（是否从甲盒摸到红球），$Y$ 取 $0,1$（是否从乙盒摸到红球）。先写出 $X$ 的分布，再用全概率（条件分布）确定 $Y$ 以及联合概率 $P(X=1,Y=1)$，最后按相关系数公式\n$$\\rho_{XY}=\\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)}\\sqrt{D(Y)}},\\quad \\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)$$\n计算。由于 $X,Y$ 都是 $0$–$1$ 变量，$E(XY)=P(X=1,Y=1)$，计算很简洁。\n\n【解答】\n\n**第一步：$X$ 的分布。** 甲盒 $2$ 红 $2$ 白共 $4$ 球，取一球为红的概率 $\\tfrac12$，故\n$$P(X=1)=\\tfrac12,\\quad P(X=0)=\\tfrac12.$$\n于是 $E(X)=\\tfrac12$，$E(X^2)=\\tfrac12$，$D(X)=\\tfrac12-\\left(\\tfrac12\\right)^2=\\tfrac14.$\n\n**第二步：条件分布与联合概率。** 把甲盒取出的球放入乙盒后，乙盒变为 $5$ 个球：\n- 若 $X=1$（放入一个红球），乙盒为 $3$ 红 $2$ 白，$P(Y=1\\mid X=1)=\\tfrac35$；\n- 若 $X=0$（放入一个白球），乙盒为 $2$ 红 $3$ 白，$P(Y=1\\mid X=0)=\\tfrac25$。\n\n故联合概率\n$$P(X=1,Y=1)=P(X=1)P(Y=1\\mid X=1)=\\tfrac12\\cdot\\tfrac35=\\tfrac{3}{10}.$$\n\n**第三步：$Y$ 的分布（全概率公式）。**\n$$P(Y=1)=\\tfrac12\\cdot\\tfrac35+\\tfrac12\\cdot\\tfrac25=\\tfrac12.$$\n所以 $E(Y)=\\tfrac12$，$D(Y)=\\tfrac12-\\left(\\tfrac12\\right)^2=\\tfrac14.$\n\n**第四步：协方差与相关系数。** 因 $X,Y\\in\\{0,1\\}$，$E(XY)=P(X=1,Y=1)=\\tfrac{3}{10}$，于是\n$$\\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)=\\frac{3}{10}-\\frac12\\cdot\\frac12=\\frac{3}{10}-\\frac14=\\frac{6-5}{20}=\\frac{1}{20}.$$\n故\n$$\\rho_{XY}=\\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)\\,D(Y)}}=\\frac{\\tfrac{1}{20}}{\\sqrt{\\tfrac14\\cdot\\tfrac14}}=\\frac{\\tfrac{1}{20}}{\\tfrac14}=\\frac{4}{20}=\\frac{1}{5}.$$\n\n所以 $X$ 与 $Y$ 的相关系数为 $\\dfrac{1}{5}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "甲盒的球放入乙盒后，乙盒变成 $5$ 个球，条件概率分母是 $5$ 不是 $4$。",
+        "$X,Y$ 都是 $0$–$1$ 变量，$E(XY)=P(X=1,Y=1)$，不必枚举全部四种组合，但要确认 $XY$ 只在双 $1$ 时取 $1$。",
+        "相关系数分母是标准差之积 $\\sqrt{D(X)}\\sqrt{D(Y)}=\\tfrac14$，别漏开方或写成方差之积。"
+      ],
+      "key_point": "0–1 变量摸球转移题：用条件概率写联合分布，$E(XY)=P(X=1,Y=1)$，再套相关系数公式。"
+    },
+    {
       "id": 142,
       "paper": "数学三",
       "year": 2021,
@@ -483,32 +492,23 @@
       "key_point": "沿稀疏列展开求特征值定 $b$，再用 $r(A-\\lambda_0E)=1$ 定 $a$，最后按特征值顺序拼特征向量得 $P$。"
     },
     {
-      "id": 90406,
+      "id": 120,
       "paper": "数学三",
       "year": 2021,
-      "index": 9,
-      "type": "选择题",
+      "index": 22,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设 $\\left(X_{1}, Y_{1}\\right),\\left(X_{2}, Y_{2}\\right), \\cdots,\\left(X_{n}, Y_{n}\\right)$ 为来自总体 $N\\left(\\mu_{1}, \\mu_{2} ; \\sigma_{1}^{2}, \\sigma_{2}^{2} ; \\rho\\right)$ 的简单随机样本, 令 $\\displaystyle \\theta=\\mu_{1}-\\mu_{2}, \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\bar{Y}=\\frac{1}{n} \\sum_{i=1}^{n} Y_{i}, \\hat{\\theta}=\\bar{X}-\\bar{Y}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\hat{\\theta}$ 是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}}{n}$",
-        "B": "$\\hat{\\theta}$ 是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}-2\\rho\\sigma_{1}\\sigma_{2}}{n}$",
-        "C": "$\\hat{\\theta}$ 不是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}}{n}$",
-        "D": "$\\hat{\\theta}$ 不是 $\\theta$ 的无偏估计, $\\displaystyle D(\\hat{\\theta})=\\frac{\\sigma_{1}^{2}+\\sigma_{2}^{2}-2\\rho\\sigma_{1}\\sigma_{2}}{n}$"
-      },
-      "answer": "B",
-      "analysis": "【分析】\n\n本题考查无偏估计的验证与相关随机变量之差的方差计算。要点：\n\n1. 无偏性：只需验证 $E(\\hat\\theta)=\\theta$，与相关性无关；\n2. 方差：$\\bar X,\\bar Y$ 由同一组二维样本算出，二者**相关**，故\n$$D(\\bar X-\\bar Y)=D(\\bar X)+D(\\bar Y)-2\\,\\mathrm{Cov}(\\bar X,\\bar Y),$$\n协方差项不可丢；\n3. 二维正态 $N(\\mu_1,\\mu_2;\\sigma_1^2,\\sigma_2^2;\\rho)$ 中 $\\mathrm{Cov}(X_i,Y_i)=\\rho\\sigma_1\\sigma_2$，且不同样本点相互独立。\n\n【解答】\n\n**无偏性**：样本来自总体，$E(X_i)=\\mu_1,\\ E(Y_i)=\\mu_2$，故\n$$E(\\bar X)=\\mu_1,\\quad E(\\bar Y)=\\mu_2,$$\n$$E(\\hat\\theta)=E(\\bar X-\\bar Y)=\\mu_1-\\mu_2=\\theta.$$\n所以 $\\hat\\theta$ 是 $\\theta$ 的无偏估计。排除 B、D。\n\n**方差**：各样本点 $(X_i,Y_i)$ 相互独立同分布，$D(X_i)=\\sigma_1^2,\\ D(Y_i)=\\sigma_2^2,\\ \\mathrm{Cov}(X_i,Y_i)=\\rho\\sigma_1\\sigma_2$。\n\n令 $Z_i=X_i-Y_i$，则 $Z_1,\\cdots,Z_n$ 独立同分布，且\n$$D(Z_i)=D(X_i)+D(Y_i)-2\\,\\mathrm{Cov}(X_i,Y_i)=\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2.$$\n而 $\\hat\\theta=\\bar X-\\bar Y=\\dfrac{1}{n}\\sum_{i=1}^n(X_i-Y_i)=\\dfrac{1}{n}\\sum_{i=1}^n Z_i=\\bar Z$，故\n$$D(\\hat\\theta)=D(\\bar Z)=\\dfrac{1}{n}D(Z_1)=\\dfrac{\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2}{n}.$$\n\n（也可直接算：$D(\\bar X)=\\dfrac{\\sigma_1^2}{n},\\ D(\\bar Y)=\\dfrac{\\sigma_2^2}{n}$，$\\mathrm{Cov}(\\bar X,\\bar Y)=\\dfrac{1}{n^2}\\sum_{i,j}\\mathrm{Cov}(X_i,Y_j)=\\dfrac{1}{n^2}\\cdot n\\cdot\\rho\\sigma_1\\sigma_2=\\dfrac{\\rho\\sigma_1\\sigma_2}{n}$，于是 $D(\\hat\\theta)=\\dfrac{\\sigma_1^2}{n}+\\dfrac{\\sigma_2^2}{n}-\\dfrac{2\\rho\\sigma_1\\sigma_2}{n}$，结果一致。）\n\n综上，$\\hat\\theta$ 无偏且 $D(\\hat\\theta)=\\dfrac{\\sigma_1^2+\\sigma_2^2-2\\rho\\sigma_1\\sigma_2}{n}$，故选 **B**。",
-      "wrong_options": {
-        "A": "无偏性判断正确，但方差漏掉了协方差项 $-2\\rho\\sigma_1\\sigma_2/n$。",
-        "C": "$E(\\hat\\theta)=\\theta$，$\\hat\\theta$ 是无偏估计；方差也漏了协方差项。",
-        "D": "方差表达式正确，但 $\\hat\\theta$ 是无偏估计，“不是无偏”错。"
-      },
+      "stem": "在区间 $(0,2)$ 上随机取一点, 将该区间分成两段, 较短一段的长度为 $X$, 较长一段的长度 为 $Y$, 令 $Z=\\dfrac{Y}{X}$\r\n\r\n(1) 求 $X$ 的概率密度;\r\n\r\n(2) 求 $Z$ 的概率密度;\r\n\r\n(3) 求 $E\\left(\\dfrac{X}{Y}\\right)$",
+      "options": {},
+      "answer": "(1) $f_X(x)= \\begin{cases}1, & 0<x<1, \\\\ 0, & \\text { 其他. }\\end{cases}$\r\n\r\n(2) $f_Z(z)= \\begin{cases}0, & z \\leqslant 1, \\\\ \\dfrac{2}{(z+1)^2}, & z>1\\end{cases}$;\r\n\r\n(3) $2 \\ln 2-1$",
+      "analysis": "【分析】\n\n几何概型导出连续型随机变量。设取点坐标 $U\\sim U(0,2)$，把 $(0,2)$ 分成长 $U$ 与 $2-U$ 两段。较短段 $X=\\min(U,2-U)$，较长段 $Y=2-X$。\n\n(1) 由 $X=\\min(U,2-U)$ 直接得 $X$ 的取值与分布；\n(2) $Z=\\dfrac{Y}{X}=\\dfrac{2-X}{X}$ 是 $X$ 的单调函数，用分布函数法求密度；\n(3) $\\dfrac{X}{Y}=\\dfrac{X}{2-X}$ 是 $X$ 的函数，用随机变量函数期望公式 $E(g(X))=\\int g(x)f_X(x)\\,dx$ 积分。\n\n【解答】\n\n设 $U\\sim U(0,2)$，密度 $f_U(u)=\\dfrac12,\\ 0<u<2$。\n\n**(1) 求 $X$ 的密度。** 较短段 $X=\\min(U,2-U)$，取值范围 $0<X<1$。对 $0<x<1$：\n\n$$F_X(x)=P(\\min(U,2-U)\\le x)=P(U\\le x)+P(U\\ge 2-x).$$\n\n$P(U\\le x)=\\dfrac{x}{2}$，$P(U\\ge 2-x)=\\dfrac{2-(2-x)}{2}=\\dfrac{x}{2}$，故 $F_X(x)=\\dfrac{x}{2}+\\dfrac{x}{2}=x$，$0<x<1$。求导得\n\n$$f_X(x)=\\begin{cases}1,&0<x<1,\\\\[2pt]0,&\\text{其他}.\\end{cases}$$\n\n即 $X\\sim U(0,1)$。\n\n**(2) 求 $Z$ 的密度。** 较长段 $Y=2-X$，故\n\n$$Z=\\dfrac{Y}{X}=\\dfrac{2-X}{X}=\\dfrac{2}{X}-1.$$\n\n当 $X\\in(0,1)$ 时 $\\dfrac{2}{X}>2$，故 $Z>1$。当 $z\\le 1$ 时 $F_Z(z)=0$。\n\n当 $z>1$ 时，由 $Z=\\dfrac{2}{X}-1\\le z$ 解得 $\\dfrac{2}{X}\\le z+1$，即 $X\\ge\\dfrac{2}{z+1}$。于是\n\n$$F_Z(z)=P\\!\\left(X\\ge\\dfrac{2}{z+1}\\right)=\\int_{\\frac{2}{z+1}}^{1}1\\,\\mathrm{d}x=1-\\dfrac{2}{z+1}=\\dfrac{z-1}{z+1}.$$\n\n（注意当 $z>1$ 时 $\\dfrac{2}{z+1}<1$，积分上限合理。）求导：\n\n$$f_Z(z)=\\dfrac{\\mathrm{d}}{\\mathrm{d}z}\\!\\left(1-\\dfrac{2}{z+1}\\right)=\\dfrac{2}{(z+1)^2}.$$\n\n所以\n\n$$f_Z(z)=\\begin{cases}\\dfrac{2}{(z+1)^2},&z>1,\\\\[6pt]0,&z\\le 1.\\end{cases}$$\n\n**(3) 求 $E\\left(\\dfrac{X}{Y}\\right)$。** 因 $\\dfrac{X}{Y}=\\dfrac{X}{2-X}$，且 $X\\sim U(0,1)$：\n\n$$E\\!\\left(\\dfrac{X}{Y}\\right)=\\int_0^1\\dfrac{x}{2-x}\\cdot 1\\,\\mathrm{d}x.$$\n\n作变形 $\\dfrac{x}{2-x}=\\dfrac{-(2-x)+2}{2-x}=-1+\\dfrac{2}{2-x}$，于是\n\n$$\\int_0^1\\!\\left(-1+\\dfrac{2}{2-x}\\right)\\mathrm{d}x=\\Big[-x-2\\ln(2-x)\\Big]_0^1.$$\n\n代入上下限：上限 $x=1$ 得 $-1-2\\ln 1=-1$；下限 $x=0$ 得 $-0-2\\ln 2=-2\\ln 2$。相减：\n\n$$E\\!\\left(\\dfrac{X}{Y}\\right)=(-1)-(-2\\ln 2)=2\\ln 2-1.$$\n\n综上：$f_X(x)=1\\,(0<x<1)$；$f_Z(z)=\\dfrac{2}{(z+1)^2}\\,(z>1)$；$E\\left(\\dfrac{X}{Y}\\right)=2\\ln 2-1$。",
+      "wrong_options": {},
       "pitfalls": [
-        "$\\bar X$ 与 $\\bar Y$ 取自同一组二维样本，二者相关，求 $D(\\bar X-\\bar Y)$ 必须带上 $-2\\mathrm{Cov}(\\bar X,\\bar Y)$，不可当作独立直接相减方差。",
-        "无偏性只由期望决定，与相关系数 $\\rho$ 无关，不要被 $\\rho$ 干扰判断。",
-        "协方差缩放：$\\mathrm{Cov}(\\bar X,\\bar Y)=\\dfrac{\\rho\\sigma_1\\sigma_2}{n}$，分母是 $n$ 不是 $n^2$（因只有 $i=j$ 的 $n$ 项非零）。"
+        "较短段 $X=\\min(U,2-U)$ 取值在 $(0,1)$ 而非 $(0,2)$；求 $F_X$ 要把两侧 $U\\le x$ 与 $U\\ge 2-x$ 都算上，否则密度会少一半。",
+        "(2) 中 $Z>1$ 恒成立（短段比长段小），$z\\le 1$ 时密度为 $0$；解不等式时 $X$ 在分母，乘除要注意方向。",
+        "(3) 用 $E(X/Y)=E(X/(2-X))$ 在 $X\\sim U(0,1)$ 上积分；分式拆成 $-1+\\dfrac{2}{2-x}$ 便于积分，注意 $\\int\\dfrac{2}{2-x}dx=-2\\ln(2-x)$ 的负号。"
       ],
-      "key_point": "无偏性看期望；$\\bar X,\\bar Y$ 同源相关，方差用 $D(\\bar X)+D(\\bar Y)-2\\mathrm{Cov}(\\bar X,\\bar Y)$，化为 $Z_i=X_i-Y_i$ 一步到位。"
+      "key_point": "几何概型先定 $X=\\min(U,2-U)\\sim U(0,1)$，再以分布函数法求 $Z=2/X-1$ 的密度，期望用 $g(X)$ 积分。"
     }
   ]
 }

@@ -4,96 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 910,
-      "paper": "数学三",
-      "year": 2004,
-      "index": 5,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 服从参数为 $\\lambda$ 的指数分布, 则 $P\\{X>\\sqrt{D(X)}\\}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{\\mathrm{e}}$",
-      "analysis": "由 $X \\sim E(\\lambda)$, 得 $D(X)=\\dfrac{1}{\\lambda^2}$, \r\n\r\n且其分布函数为 $F(x)= \\begin{cases}0, & x<0 \\\\ 1-\\mathrm{e}^{-\\lambda x}, & x \\geqslant 0\\end{cases}$ \r\n\r\n于是 $\\displaystyle P\\{X>\\sqrt{D(X)}\\}\\\\\r\n=P\\left\\{X>\\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-P\\left\\{X \\leqslant \\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-F\\left(\\frac{1}{\\lambda}\\right)\\\\\r\n=\\frac{1}{\\mathrm{e}}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "指数分布方差是 1/λ²（不是 1/λ），故 √D(X)=1/λ",
-        "P{X>1/λ}=e^{-λ·(1/λ)}=e^{-1}，结果与 λ 无关"
-      ],
-      "key_point": "√D(X)=1/λ，代尾概率 P{X>1/λ}=e^{-1}=1/e。"
-    },
-    {
-      "id": 917,
-      "paper": "数学三",
-      "year": 2004,
-      "index": 14,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 服从正态分布 $N(0,1)$, 对给定的 $\\alpha(0<\\alpha<1)$, 数 $u_{\\alpha}$ 满足 $P\\left\\{X>u_{\\alpha}\\right\\}=\\alpha$. 若 $P\\{|X|<x\\}=\\alpha$, 则 $x$ 等于 $(\\quad)$",
-      "options": {
-        "A": "$u_{\\frac{a}{2}}$",
-        "B": "$u_{1-\\frac{a}{2}}$",
-        "C": "$u_{\\frac{1-\\alpha}{2}}$",
-        "D": "$u_{1-\\alpha}$"
-      },
-      "answer": "C",
-      "analysis": "由 $P\\{|X|<x\\}=1-P\\{|X| \\geqslant x\\}=1-2 P\\{X \\geqslant x\\}=\\alpha$, \r\n\r\n得 $\\displaystyle P\\{X \\geqslant x\\}=\\frac{1-\\alpha}{2}$.,\r\n\r\n再由 $P\\left\\{X>u_a\\right\\}=\\alpha$, \r\n\r\n得 $x=u_{\\frac{1-a}{2}}$, 应选 (C)",
-      "wrong_options": {
-        "A": "u_{α/2}——由 P{X>x}=(1-α)/2 应取下标 (1-α)/2，误把 α 与 1-α 弄反。",
-        "B": "u_{1-α/2}——下标取错，混淆上侧与下侧分位数。",
-        "D": "u_{1-α}——漏掉双侧对称的因子 1/2。"
-      },
-      "pitfalls": [
-        "P{|X|<x}=1-2P{X≥x}=α ⇒ P{X≥x}=(1-α)/2",
-        "u_α 的定义是 P{X>u_α}=α，故 x=u_{(1-α)/2}；易误写 α/2 或漏 1/2"
-      ],
-      "key_point": "由对称性 P{X≥x}=(1-α)/2，故 x=u_{(1-α)/2}（选 C）。"
-    },
-    {
-      "id": 926,
-      "paper": "数学三",
-      "year": 2004,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $A, B$ 为随机事件, 且 $\\displaystyle P(A)=\\frac{1}{4}, P(B \\mid A)=\\frac{1}{3},\\\\ P(A \\mid B)=\\frac{1}{2}$, 令\r\n\r\n$X=\\left\\{\\begin{array}{ll}\r\n1, & A \\text { 发生 } \\\\\r\n0, & A \\text { 不发生 }\r\n\\end{array} \\quad Y= \\begin{cases}1, & B \\text { 发生 } \\\\\r\n0, & B \\text { 不发生 }\\end{cases}\\right.$\r\n\r\n求: (1) 二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$\r\n\r\n(3) $Z=X^2+Y^2$ 的概率分布(数三)",
-      "options": {},
-      "answer": "(1) $\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $\\dfrac{\\sqrt{15}}{15}$\r\n\r\n(3) (数三) $Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
-      "analysis": "由 $\\displaystyle P(B \\mid A)=\\frac{P(A B)}{P(A)}$, \r\n\r\n得 $\\displaystyle P(A B)=P(A) P(B \\mid A)=\\frac{1}{12}$,\r\n\r\n又由 $\\displaystyle P(A \\mid B)=\\frac{P(A B)}{P(B)}$, \r\n\r\n得 $\\displaystyle P(B)=\\frac{P(A B)}{P(A \\mid B)}=\\frac{1}{6}$\r\n\r\n(1) $(X, Y)$ 的可能取值为 $(0,0),(0,1),(1,0),(1,1)$,\r\n\r\n$P\\{X=0, Y=0\\}=P(\\bar{A} \\bar{B})\\\\\r\n=P(\\overline{A+B})=1-P(A+B) \\\\\r\n=1-P(A)-P(B)+P(A B)=\\dfrac{2}{3};\\\\\r\nP\\{X=0, Y=1\\}=P(\\bar{A} B)\\\\\r\n=P(B)-P(A B)=\\dfrac{1}{12} ; \\\\\r\nP\\{X=1, Y=0\\}=P(A \\bar{B})\\\\\r\n=P(A)-P(A B)=\\dfrac{1}{6} ; \\\\\r\nP\\{X=1, Y=1\\}=P(A B)=\\dfrac{1}{12}\\\\\r\n\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $X \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{3}{4} & \\frac{1}{4}\r\n\\end{array}\\right), \\\\\r\nY \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{5}{6} & \\frac{1}{6}\r\n\\end{array}\\right), \\\\\r\nX Y \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{11}{12} & \\frac{1}{12}\r\n\\end{array}\\right), \\\\\r\nE(X)=\\dfrac{1}{4}, E\\left(X^2\\right)=\\dfrac{1}{4},\\\\\r\nD(X)=E\\left(X^2\\right)-[E(X)]^2=\\dfrac{3}{16}, \\\\\r\nE(Y)=\\dfrac{1}{6}, E\\left(Y^2\\right)=\\dfrac{1}{6},\\\\\r\nD(Y)=E\\left(Y^2\\right)-[E(Y)]^2=\\dfrac{5}{36}$,\r\n\r\n由 $E(X Y)=\\dfrac{1}{12}$ 得 $\\operatorname{Cov}(X, Y)\\\\\r\n=E(X Y)-E(X) E(Y)\\\\\r\n=\\dfrac{1}{12}-\\dfrac{1}{24}=\\dfrac{1}{24}$\r\n\r\n则 $\\rho_{X Y}=\\frac{\\operatorname{Cov}(X, Y)}{\\sqrt{D(X)} \\cdot \\sqrt{D(Y)}}=\\dfrac{\\frac{1}{24}}{\\frac{\\sqrt{3}}{4} \\times \\frac{\\sqrt{5}}{6}}=\\dfrac{\\sqrt{15}}{15}$\r\n\r\n\r\n(3)(数三)\r\n\r\n$Z=X^2+Y^2$ 的可能取值为 $0,1,2$,\r\n\r\n$ P\\{Z=0\\}=P\\{X=0, Y=0\\}=\\dfrac{2}{3},\r\nP\\{Z=1\\}\\\\\r\n=P\\{X=0, Y=1\\}+P\\{X=1, Y=0\\}=\\dfrac{1}{4},\r\nP\\{Z=2\\}=P\\{X=1, Y=1\\}=\\dfrac{1}{12}$,\r\n\r\n故 $Z$ 的分布律为 $ Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
-      "wrong_options": {},
-      "pitfalls": [
-        "先由 P(AB)=P(A)P(B|A)=1/12、再由 P(B)=P(AB)/P(A|B)=1/6，才能填联合分布表",
-        "算 ρ 用 Cov=E(XY)-E(X)E(Y)=P(1,1)-P(A)P(B)=1/24，D(X)、D(Y) 为 0-1 分布 p(1-p)；第(3)问 Z=X²+Y² 是数三专属，数一不作答"
-      ],
-      "key_point": "条件概率定 P(AB)=1/12、P(B)=1/6，列联合分布得 ρ_{XY}=√15/15。"
-    },
-    {
-      "id": 1621,
-      "paper": "数学三",
-      "year": 2004,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $f(x)=|x(1-x)|$, 则 $(\\quad)$",
-      "options": {
-        "A": "$x=0$ 是 $f(x)$ 的极值点, 但 $(0,0)$ 不是 $y=f(x)$ 的拐点",
-        "B": "$x=0$ 不是 $f(x)$ 的极值点, 但 $(0,0)$ 是 $y=f(x)$ 的拐点",
-        "C": "$x=0$ 是 $f(x)$ 的极值点, 且 $(0,0)$ 是 $y=f(x)$ 的拐点",
-        "D": "$x=0$ 不是 $f(x)$ 的极值点, $(0,0)$ 也不是 $y=f(x)$ 的拐点"
-      },
-      "answer": "C",
-      "analysis": "方法一 由\r\n\r\n$f(x)= \\begin{cases}x^2-x, & x \\leqslant 0 \\\\ \r\nx-x^2, & 0<x<1 \\\\ \r\nx^2-x, & x \\geqslant 1\\end{cases}$\r\n\r\n得 $f^{\\prime}(x)=\\begin{cases}2 x-1, & x<0 \\\\ 1-2 x, & 0<x<1 \\\\ 2 x-1, & x>1\\end{cases} \\\\\r\nf^{\\prime \\prime}(x)= \\begin{cases}2, & x<0 \\\\ -2, & 0<x<1 \\\\ 2, & x>1 \\end{cases}$\r\n\r\n当 $x<0$ 时, $f^{\\prime}(x)=2 x-1<0$; \r\n\r\n当 $0<x<\\frac{1}{2}$ 时, $f^{\\prime}(x)=1-2 x>0$,\r\n\r\n则 $x=0$ 为 $f(x)$ 的极小值点;\r\n\r\n又当 $x<0$ 时, $f^{\\prime \\prime}(x)=2>0$; \r\n\r\n当 $0<x<1$ 时, $f^{\\prime \\prime}(x)=-2<0$, \r\n\r\n则 $(0,0)$ 为曲线 $y=f(x)$ 的拐点, 应选 (C).\r\n\r\n方法二 函数 $y=x(1-x)$ 是经过点 $(0,0)$ 和 $(1,0)$ 的开口向下的抛物线,\r\n\r\n画出 $y=|x(1-x)|$ 的图像, \r\n\r\n显然 $x=0$ 为 $y=|x(1-x)|$ 的极小值点, \r\n\r\n$(0,0)$ 为曲线 $y=|x(1-x)|$ 的 拐点, 应选 (C)",
-      "wrong_options": {
-        "A": "只承认极值点否认拐点，漏看 f'' 在0两侧由2变-2变号",
-        "B": "只承认拐点否认极值点",
-        "D": "极值点与拐点都否认"
-      },
-      "pitfalls": [
-        "x=0 处 f' 从负(2x-1)变正(1-2x)⟹极小值点；f'' 从2变-2⟹拐点，二者兼有",
-        "带绝对值函数在 x=0 处不可导，但仍可由左右单调性与凹凸判定极值和拐点"
-      ],
-      "key_point": "x=0 处 f' 变号为极小值点、f'' 变号为拐点，选C。"
-    },
-    {
       "id": 2004,
       "paper": "数学三",
       "year": 2004,
@@ -166,6 +76,24 @@
       "key_point": "二次型矩阵行变换后秩为 2。"
     },
     {
+      "id": 910,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $\\lambda$ 的指数分布, 则 $P\\{X>\\sqrt{D(X)}\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "由 $X \\sim E(\\lambda)$, 得 $D(X)=\\dfrac{1}{\\lambda^2}$, \r\n\r\n且其分布函数为 $F(x)= \\begin{cases}0, & x<0 \\\\ 1-\\mathrm{e}^{-\\lambda x}, & x \\geqslant 0\\end{cases}$ \r\n\r\n于是 $\\displaystyle P\\{X>\\sqrt{D(X)}\\}\\\\\r\n=P\\left\\{X>\\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-P\\left\\{X \\leqslant \\frac{1}{\\lambda}\\right\\}\\\\\r\n=1-F\\left(\\frac{1}{\\lambda}\\right)\\\\\r\n=\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "指数分布方差是 1/λ²（不是 1/λ），故 √D(X)=1/λ",
+        "P{X>1/λ}=e^{-λ·(1/λ)}=e^{-1}，结果与 λ 无关"
+      ],
+      "key_point": "√D(X)=1/λ，代尾概率 P{X>1/λ}=e^{-1}=1/e。"
+    },
+    {
       "id": 2008,
       "paper": "数学三",
       "year": 2004,
@@ -236,6 +164,60 @@
         "a=0 连续，a≠0 可去间断，故连续性“与 a 有关”"
       ],
       "key_point": "lim g=a 而 g(0)=0，连续与否取决于 a，选 D。"
+    },
+    {
+      "id": 1621,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=|x(1-x)|$, 则 $(\\quad)$",
+      "options": {
+        "A": "$x=0$ 是 $f(x)$ 的极值点, 但 $(0,0)$ 不是 $y=f(x)$ 的拐点",
+        "B": "$x=0$ 不是 $f(x)$ 的极值点, 但 $(0,0)$ 是 $y=f(x)$ 的拐点",
+        "C": "$x=0$ 是 $f(x)$ 的极值点, 且 $(0,0)$ 是 $y=f(x)$ 的拐点",
+        "D": "$x=0$ 不是 $f(x)$ 的极值点, $(0,0)$ 也不是 $y=f(x)$ 的拐点"
+      },
+      "answer": "C",
+      "analysis": "方法一 由\r\n\r\n$f(x)= \\begin{cases}x^2-x, & x \\leqslant 0 \\\\ \r\nx-x^2, & 0<x<1 \\\\ \r\nx^2-x, & x \\geqslant 1\\end{cases}$\r\n\r\n得 $f^{\\prime}(x)=\\begin{cases}2 x-1, & x<0 \\\\ 1-2 x, & 0<x<1 \\\\ 2 x-1, & x>1\\end{cases} \\\\\r\nf^{\\prime \\prime}(x)= \\begin{cases}2, & x<0 \\\\ -2, & 0<x<1 \\\\ 2, & x>1 \\end{cases}$\r\n\r\n当 $x<0$ 时, $f^{\\prime}(x)=2 x-1<0$; \r\n\r\n当 $0<x<\\frac{1}{2}$ 时, $f^{\\prime}(x)=1-2 x>0$,\r\n\r\n则 $x=0$ 为 $f(x)$ 的极小值点;\r\n\r\n又当 $x<0$ 时, $f^{\\prime \\prime}(x)=2>0$; \r\n\r\n当 $0<x<1$ 时, $f^{\\prime \\prime}(x)=-2<0$, \r\n\r\n则 $(0,0)$ 为曲线 $y=f(x)$ 的拐点, 应选 (C).\r\n\r\n方法二 函数 $y=x(1-x)$ 是经过点 $(0,0)$ 和 $(1,0)$ 的开口向下的抛物线,\r\n\r\n画出 $y=|x(1-x)|$ 的图像, \r\n\r\n显然 $x=0$ 为 $y=|x(1-x)|$ 的极小值点, \r\n\r\n$(0,0)$ 为曲线 $y=|x(1-x)|$ 的 拐点, 应选 (C)",
+      "wrong_options": {
+        "A": "只承认极值点否认拐点，漏看 f'' 在0两侧由2变-2变号",
+        "B": "只承认拐点否认极值点",
+        "D": "极值点与拐点都否认"
+      },
+      "pitfalls": [
+        "x=0 处 f' 从负(2x-1)变正(1-2x)⟹极小值点；f'' 从2变-2⟹拐点，二者兼有",
+        "带绝对值函数在 x=0 处不可导，但仍可由左右单调性与凹凸判定极值和拐点"
+      ],
+      "key_point": "x=0 处 f' 变号为极小值点、f'' 变号为拐点，选C。"
+    },
+    {
+      "id": 90401,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设有以下命题:\r\n① 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_{2n-1}+u_{2n})$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛;\r\n② 若 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_{n+100}$ 收敛;\r\n③ 若 $\\displaystyle\\lim_{n\\rightarrow\\infty}\\frac{u_{n+1}}{u_n}>1$, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 发散;\r\n④ 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_n+v_n)$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n,\\ \\sum_{n=1}^{\\infty}v_n$ 都收敛.\r\n则以上命题中正确的是 $(\\quad)$",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
+      },
+      "answer": "B",
+      "analysis": "② 去掉或添加有限项不改变级数敛散性, 故 $\\sum u_n$ 收敛 $\\Rightarrow \\sum u_{n+100}$ 收敛, 正确.\r\n③ 由 $\\lim\\frac{u_{n+1}}{u_n}>1$ 知一般项 $u_n$ 不趋于 $0$, 故 $\\sum u_n$ 发散, 正确.\r\n① 取 $u_n=(-1)^n$: $\\sum(u_{2n-1}+u_{2n})=\\sum 0$ 收敛, 但 $\\sum u_n$ 发散, ① 错.\r\n④ 取 $u_n=\\frac1n,\\ v_n=-\\frac1n$: $\\sum(u_n+v_n)=0$ 收敛, 但 $\\sum u_n$ 发散, ④ 错.\r\n故正确的是 ②③, 应选 (B).",
+      "wrong_options": {
+        "A": "含①：括号内两两配对收敛推不出原级数收敛（u_n=(-1)^n 反例），A 错",
+        "C": "含④：Σ(u_n+v_n) 收敛推不出各自收敛（1/n 与 -1/n 反例），C 错",
+        "D": "①④均可举反例证伪，D 错"
+      },
+      "pitfalls": [
+        "①的陷阱：相邻两项配对后收敛，但拆开的原级数（如 Σ(-1)^n）可发散",
+        "④的陷阱：和级数收敛不能拆分，1/n 与 -1/n 之和为 0 收敛但各自发散"
+      ],
+      "key_point": "只有②③成立（有限项不变敛散、通项不趋零则发散），选 B。"
     },
     {
       "id": 2011,
@@ -317,6 +299,33 @@
         "基础解系向量个数 = n-r(A)=1"
       ],
       "key_point": "r(A)=n-1，基础解系含 1 个非零解向量，选 B。"
+    },
+    {
+      "id": 917,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 14,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从正态分布 $N(0,1)$, 对给定的 $\\alpha(0<\\alpha<1)$, 数 $u_{\\alpha}$ 满足 $P\\left\\{X>u_{\\alpha}\\right\\}=\\alpha$. 若 $P\\{|X|<x\\}=\\alpha$, 则 $x$ 等于 $(\\quad)$",
+      "options": {
+        "A": "$u_{\\frac{a}{2}}$",
+        "B": "$u_{1-\\frac{a}{2}}$",
+        "C": "$u_{\\frac{1-\\alpha}{2}}$",
+        "D": "$u_{1-\\alpha}$"
+      },
+      "answer": "C",
+      "analysis": "由 $P\\{|X|<x\\}=1-P\\{|X| \\geqslant x\\}=1-2 P\\{X \\geqslant x\\}=\\alpha$, \r\n\r\n得 $\\displaystyle P\\{X \\geqslant x\\}=\\frac{1-\\alpha}{2}$.,\r\n\r\n再由 $P\\left\\{X>u_a\\right\\}=\\alpha$, \r\n\r\n得 $x=u_{\\frac{1-a}{2}}$, 应选 (C)",
+      "wrong_options": {
+        "A": "u_{α/2}——由 P{X>x}=(1-α)/2 应取下标 (1-α)/2，误把 α 与 1-α 弄反。",
+        "B": "u_{1-α/2}——下标取错，混淆上侧与下侧分位数。",
+        "D": "u_{1-α}——漏掉双侧对称的因子 1/2。"
+      },
+      "pitfalls": [
+        "P{|X|<x}=1-2P{X≥x}=α ⇒ P{X≥x}=(1-α)/2",
+        "u_α 的定义是 P{X>u_α}=α，故 x=u_{(1-α)/2}；易误写 α/2 或漏 1/2"
+      ],
+      "key_point": "由对称性 P{X≥x}=(1-α)/2，故 x=u_{(1-α)/2}（选 C）。"
     },
     {
       "id": 2014,
@@ -445,6 +454,24 @@
       "key_point": "cI+dJ 型：特征值 1+(n-1)b 与 1-b(重)，b≠0 取特征向量组成 P。"
     },
     {
+      "id": 926,
+      "paper": "数学三",
+      "year": 2004,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $A, B$ 为随机事件, 且 $\\displaystyle P(A)=\\frac{1}{4}, P(B \\mid A)=\\frac{1}{3},\\\\ P(A \\mid B)=\\frac{1}{2}$, 令\r\n\r\n$X=\\left\\{\\begin{array}{ll}\r\n1, & A \\text { 发生 } \\\\\r\n0, & A \\text { 不发生 }\r\n\\end{array} \\quad Y= \\begin{cases}1, & B \\text { 发生 } \\\\\r\n0, & B \\text { 不发生 }\\end{cases}\\right.$\r\n\r\n求: (1) 二维随机变量 $(X, Y)$ 的概率分布;\r\n\r\n(2) $X$ 与 $Y$ 的相关系数 $\\rho_{X Y}$\r\n\r\n(3) $Z=X^2+Y^2$ 的概率分布(数三)",
+      "options": {},
+      "answer": "(1) $\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $\\dfrac{\\sqrt{15}}{15}$\r\n\r\n(3) (数三) $Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "analysis": "由 $\\displaystyle P(B \\mid A)=\\frac{P(A B)}{P(A)}$, \r\n\r\n得 $\\displaystyle P(A B)=P(A) P(B \\mid A)=\\frac{1}{12}$,\r\n\r\n又由 $\\displaystyle P(A \\mid B)=\\frac{P(A B)}{P(B)}$, \r\n\r\n得 $\\displaystyle P(B)=\\frac{P(A B)}{P(A \\mid B)}=\\frac{1}{6}$\r\n\r\n(1) $(X, Y)$ 的可能取值为 $(0,0),(0,1),(1,0),(1,1)$,\r\n\r\n$P\\{X=0, Y=0\\}=P(\\bar{A} \\bar{B})\\\\\r\n=P(\\overline{A+B})=1-P(A+B) \\\\\r\n=1-P(A)-P(B)+P(A B)=\\dfrac{2}{3};\\\\\r\nP\\{X=0, Y=1\\}=P(\\bar{A} B)\\\\\r\n=P(B)-P(A B)=\\dfrac{1}{12} ; \\\\\r\nP\\{X=1, Y=0\\}=P(A \\bar{B})\\\\\r\n=P(A)-P(A B)=\\dfrac{1}{6} ; \\\\\r\nP\\{X=1, Y=1\\}=P(A B)=\\dfrac{1}{12}\\\\\r\n\\begin{array}{|c|c|c|c|}\r\n\\hline X \\diagdown Y & 0 & 1 & \\Sigma \\\\\r\n\\hline 0 & \\frac{2}{3} & \\frac{1}{12} & \\frac{3}{4} \\\\\r\n\\hline 1 & \\frac{1}{6} & \\frac{1}{12} & \\frac{1}{4} \\\\\r\n\\hline \\Sigma & \\frac{5}{6} & \\frac{1}{6} & 1 \\\\\r\n\\hline\r\n\\end{array}$\r\n\r\n(2) $X \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{3}{4} & \\frac{1}{4}\r\n\\end{array}\\right), \\\\\r\nY \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{5}{6} & \\frac{1}{6}\r\n\\end{array}\\right), \\\\\r\nX Y \\sim\\left(\\begin{array}{cc}\r\n0 & 1 \\\\\r\n\\frac{11}{12} & \\frac{1}{12}\r\n\\end{array}\\right), \\\\\r\nE(X)=\\dfrac{1}{4}, E\\left(X^2\\right)=\\dfrac{1}{4},\\\\\r\nD(X)=E\\left(X^2\\right)-[E(X)]^2=\\dfrac{3}{16}, \\\\\r\nE(Y)=\\dfrac{1}{6}, E\\left(Y^2\\right)=\\dfrac{1}{6},\\\\\r\nD(Y)=E\\left(Y^2\\right)-[E(Y)]^2=\\dfrac{5}{36}$,\r\n\r\n由 $E(X Y)=\\dfrac{1}{12}$ 得 $\\operatorname{Cov}(X, Y)\\\\\r\n=E(X Y)-E(X) E(Y)\\\\\r\n=\\dfrac{1}{12}-\\dfrac{1}{24}=\\dfrac{1}{24}$\r\n\r\n则 $\\rho_{X Y}=\\frac{\\operatorname{Cov}(X, Y)}{\\sqrt{D(X)} \\cdot \\sqrt{D(Y)}}=\\dfrac{\\frac{1}{24}}{\\frac{\\sqrt{3}}{4} \\times \\frac{\\sqrt{5}}{6}}=\\dfrac{\\sqrt{15}}{15}$\r\n\r\n\r\n(3)(数三)\r\n\r\n$Z=X^2+Y^2$ 的可能取值为 $0,1,2$,\r\n\r\n$ P\\{Z=0\\}=P\\{X=0, Y=0\\}=\\dfrac{2}{3},\r\nP\\{Z=1\\}\\\\\r\n=P\\{X=0, Y=1\\}+P\\{X=1, Y=0\\}=\\dfrac{1}{4},\r\nP\\{Z=2\\}=P\\{X=1, Y=1\\}=\\dfrac{1}{12}$,\r\n\r\n故 $Z$ 的分布律为 $ Z \\sim\\left(\\begin{array}{ccc}0 & 1 & 2 \\\\ \\dfrac{2}{3} & \\dfrac{1}{4} & \\dfrac{1}{12}\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先由 P(AB)=P(A)P(B|A)=1/12、再由 P(B)=P(AB)/P(A|B)=1/6，才能填联合分布表",
+        "算 ρ 用 Cov=E(XY)-E(X)E(Y)=P(1,1)-P(A)P(B)=1/24，D(X)、D(Y) 为 0-1 分布 p(1-p)；第(3)问 Z=X²+Y² 是数三专属，数一不作答"
+      ],
+      "key_point": "条件概率定 P(AB)=1/12、P(B)=1/6，列联合分布得 ρ_{XY}=√15/15。"
+    },
+    {
       "id": 2022,
       "paper": "数学三",
       "year": 2004,
@@ -461,33 +488,6 @@
         "矩估计与 MLE 对 β 结果不同（X̄/(X̄-1) 与 n/Σln X_i），勿混"
       ],
       "key_point": "β 的矩估计 X̄/(X̄-1)、MLE n/Σln X_i；α 的 MLE 为 min X_i（似然单调取边界）。"
-    },
-    {
-      "id": 90401,
-      "paper": "数学三",
-      "year": 2004,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设有以下命题:\r\n① 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_{2n-1}+u_{2n})$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛;\r\n② 若 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_{n+100}$ 收敛;\r\n③ 若 $\\displaystyle\\lim_{n\\rightarrow\\infty}\\frac{u_{n+1}}{u_n}>1$, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 发散;\r\n④ 若 $\\displaystyle\\sum_{n=1}^{\\infty}(u_n+v_n)$ 收敛, 则 $\\displaystyle\\sum_{n=1}^{\\infty}u_n,\\ \\sum_{n=1}^{\\infty}v_n$ 都收敛.\r\n则以上命题中正确的是 $(\\quad)$",
-      "options": {
-        "A": "①②",
-        "B": "②③",
-        "C": "③④",
-        "D": "①④"
-      },
-      "answer": "B",
-      "analysis": "② 去掉或添加有限项不改变级数敛散性, 故 $\\sum u_n$ 收敛 $\\Rightarrow \\sum u_{n+100}$ 收敛, 正确.\r\n③ 由 $\\lim\\frac{u_{n+1}}{u_n}>1$ 知一般项 $u_n$ 不趋于 $0$, 故 $\\sum u_n$ 发散, 正确.\r\n① 取 $u_n=(-1)^n$: $\\sum(u_{2n-1}+u_{2n})=\\sum 0$ 收敛, 但 $\\sum u_n$ 发散, ① 错.\r\n④ 取 $u_n=\\frac1n,\\ v_n=-\\frac1n$: $\\sum(u_n+v_n)=0$ 收敛, 但 $\\sum u_n$ 发散, ④ 错.\r\n故正确的是 ②③, 应选 (B).",
-      "wrong_options": {
-        "A": "含①：括号内两两配对收敛推不出原级数收敛（u_n=(-1)^n 反例），A 错",
-        "C": "含④：Σ(u_n+v_n) 收敛推不出各自收敛（1/n 与 -1/n 反例），C 错",
-        "D": "①④均可举反例证伪，D 错"
-      },
-      "pitfalls": [
-        "①的陷阱：相邻两项配对后收敛，但拆开的原级数（如 Σ(-1)^n）可发散",
-        "④的陷阱：和级数收敛不能拆分，1/n 与 -1/n 之和为 0 收敛但各自发散"
-      ],
-      "key_point": "只有②③成立（有限项不变敛散、通项不趋零则发散），选 B。"
     }
   ]
 }

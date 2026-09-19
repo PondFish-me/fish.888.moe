@@ -31,71 +31,6 @@
       "key_point": "同阶无穷小比阶数, 用泰勒展开抓最低次主部最稳."
     },
     {
-      "id": 209,
-      "paper": "数学二",
-      "year": 2019,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶实对称矩阵, $\\boldsymbol{E}$ 是 $3$ 阶单位矩阵, 若 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=2 \\boldsymbol{E}$, 且 $|\\boldsymbol{A}|=4$, 则二次型 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 的规范形为 $(\\quad)$",
-      "options": {
-        "A": "$y_{1}^{2}+y_{2}^{2}+y_{3}^{2}$",
-        "B": "$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$",
-        "C": "$y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$",
-        "D": "$-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$"
-      },
-      "answer": "C",
-      "analysis": "【分析】\n\n关键在于由矩阵多项式方程 $\\boldsymbol{A}^2+\\boldsymbol{A}=2\\boldsymbol{E}$ 反推特征值。若 $\\lambda$ 是实对称矩阵 $\\boldsymbol{A}$ 的特征值，则 $\\lambda$ 必满足同一个数量方程 $\\lambda^2+\\lambda-2=0$。再用 $|\\boldsymbol{A}|$ 等于全体特征值之积，定出三个特征值的具体取值，从而得到正、负惯性指数，写出规范形。\n\n【解答】\n\n由 $\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E}=\\boldsymbol{O}$，设 $\\lambda$ 为 $\\boldsymbol{A}$ 的任一特征值，对应特征向量 $\\boldsymbol{\\xi}\\neq\\boldsymbol{0}$，则\n$$(\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E})\\boldsymbol{\\xi}=(\\lambda^2+\\lambda-2)\\boldsymbol{\\xi}=\\boldsymbol{0},$$\n故 $\\lambda^2+\\lambda-2=0$，即 $(\\lambda-1)(\\lambda+2)=0$，所以每个特征值只能取 $\\lambda=1$ 或 $\\lambda=-2$。\n\n设三个特征值（计重数）取值情况，记 $1$ 出现 $k$ 次，$-2$ 出现 $3-k$ 次，则\n$$|\\boldsymbol{A}|=1^{k}\\cdot(-2)^{3-k}=(-2)^{3-k}=4.$$\n由 $(-2)^{3-k}=4=(-2)^2$ 得 $3-k=2$，即 $k=1$。\n\n因此 $\\boldsymbol{A}$ 的特征值为 $1,\\,-2,\\,-2$：一个正特征值、两个负特征值。$\\boldsymbol{A}$ 为实对称矩阵，二次型 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x}$ 的正惯性指数 $p=1$，负惯性指数 $q=2$，故规范形为\n$$y_1^2-y_2^2-y_3^2.$$\n\n对照选项，应选 **C**。",
-      "wrong_options": {
-        "A": "对应特征值全为正，需 $p=3$，但本题有两个负特征值。",
-        "B": "对应 $p=2,q=1$，但实际是 $p=1,q=2$，正负个数恰好弄反。",
-        "D": "对应特征值全为负，则 $|\\boldsymbol{A}|=(-2)^3=-8\\neq4$，与条件矛盾。"
-      },
-      "pitfalls": [
-        "由 $|\\boldsymbol{A}|=4$ 定特征值时，要保证特征值只能取 $1$ 或 $-2$，不能随意搭配，注意 $(-2)^{3-k}=4$ 唯一解 $k=1$。",
-        "规范形只看正负惯性指数（即正、负特征值个数），与特征值的具体大小无关，别把系数写成 $\\pm2$。"
-      ],
-      "key_point": "矩阵多项式方程把特征值限定在代数方程的根上，再用行列式（特征值之积）定符号个数，即得规范形。"
-    },
-    {
-      "id": 221,
-      "paper": "数学二",
-      "year": 2019,
-      "index": 19,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求曲线 $y=\\mathrm{e}^{-x} \\sin x(x \\geqslant 0)$ 与 $x$ 轴之间图形的面积\r\n\r\n(数二问法：设 $n$ 是正整数,记 $S_n$ 为曲线 $y=\\mathrm{e}^{-x} \\sin x(0 \\leqslant x \\leqslant n \\pi)$ 与 $x$ 轴所围图形的面积, 求 $S_n$, 并求 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n$)",
-      "options": {},
-      "answer": "$\\dfrac{1}{2}+\\frac{1}{\\mathrm{e}^\\pi-1}$",
-      "analysis": "【分析】\n\n曲线 $y=\\mathrm{e}^{-x}\\sin x$ 在 $x\\geqslant 0$ 上随 $\\sin x$ 的符号反复穿越 $x$ 轴：在区间 $[k\\pi,(k+1)\\pi]$ 上 $\\sin x$ 符号不变。所求\"图形面积\"是曲线与 $x$ 轴所夹的**各块面积的绝对值之和**，因此应把每个半周期上的面积 $A_k$ 单独算出再求和。由于 $\\mathrm{e}^{-x}$ 的衰减，$\\{A_k\\}$ 恰好构成一个公比为 $\\mathrm{e}^{-\\pi}$ 的**几何级数**，用等比级数求和即可。计算单块面积时对 $\\displaystyle\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x$ 用两次分部积分（或直接套公式）。\n\n【解答】\n\n先求原函数。由两次分部积分得\n\n$$\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)+C.$$\n\n记 $F(x)=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)$。在 $[k\\pi,(k+1)\\pi]$（$k=0,1,2,\\dots$）上 $\\sin x$ 不变号，该块面积\n\n$$A_k=\\left|\\int_{k\\pi}^{(k+1)\\pi}\\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x\\right|=\\bigl|F((k+1)\\pi)-F(k\\pi)\\bigr|.$$\n\n注意 $\\sin(k\\pi)=0,\\ \\cos(k\\pi)=(-1)^k$，故 $F(k\\pi)=-\\dfrac{1}{2}(-1)^k\\mathrm{e}^{-k\\pi}$，于是\n\n$$F((k+1)\\pi)-F(k\\pi)=\\dfrac{1}{2}(-1)^k\\bigl(\\mathrm{e}^{-(k+1)\\pi}+\\mathrm{e}^{-k\\pi}\\bigr),$$\n\n$$A_k=\\dfrac{1}{2}\\mathrm{e}^{-k\\pi}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr).$$\n\n所求总面积为各块之和（这是公比 $\\mathrm{e}^{-\\pi}<1$ 的等比级数）：\n\n$$S=\\sum_{k=0}^{\\infty}A_k=\\dfrac{1}{2}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr)\\sum_{k=0}^{\\infty}\\mathrm{e}^{-k\\pi}=\\dfrac{1}{2}\\cdot\\dfrac{1+\\mathrm{e}^{-\\pi}}{1-\\mathrm{e}^{-\\pi}}=\\dfrac{1}{2}\\cdot\\dfrac{\\mathrm{e}^{\\pi}+1}{\\mathrm{e}^{\\pi}-1}.$$\n\n化简（分子配凑）：\n\n$$S=\\dfrac{\\mathrm{e}^{\\pi}+1}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{(\\mathrm{e}^{\\pi}-1)+2}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}.$$\n\n**数二问法补充**：$S_n=\\displaystyle\\sum_{k=0}^{n-1}A_k=\\dfrac{1}{2}(1+\\mathrm{e}^{-\\pi})\\cdot\\dfrac{1-\\mathrm{e}^{-n\\pi}}{1-\\mathrm{e}^{-\\pi}}$，于是 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}$，与上面一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "求\"面积\"必须对每段取绝对值后相加，不能直接对 $\\mathrm{e}^{-x}\\sin x$ 在 $[0,+\\infty)$ 上积分（那样正负相消得到的是代数和，不是面积）。",
-        "等比级数公比是 $\\mathrm{e}^{-\\pi}$ 而非 $\\mathrm{e}^{-\\pi}$ 以外的值，求和时分母应为 $1-\\mathrm{e}^{-\\pi}$。",
-        "分部积分得到的原函数系数 $-\\dfrac{1}{2}$ 容易写错符号，建议求导回验。"
-      ],
-      "key_point": "半周期面积取绝对值，发现是公比 $\\mathrm{e}^{-\\pi}$ 的等比级数，求和即得。"
-    },
-    {
-      "id": 225,
-      "paper": "数学二",
-      "year": 2019,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-2 & -2 & 1 \\\\ 2 & x & -2 \\\\ 0 & 0 & -2\\end{array}\\right)$ 与 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & 1 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & y\\end{array}\\right)$ 相似\r\n\r\n(1) 求 $x, y$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$ 使得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
-      "options": {},
-      "answer": "(1) $x=3, y=-2$\r\n\r\n(2) $\\boldsymbol{P}=\\boldsymbol{P}_1 \\boldsymbol{P}_2^{-1}=\\left(\\begin{array}{ccc}-1 & -1 & -1 \\\\ 2 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right)$",
-      "analysis": "【分析】\n\n第(1)问利用相似的两个不变量：相似矩阵有相同的迹与相同的行列式，列两个方程解出 $x,y$。\n\n第(2)问的标准套路是\"借道对角化\"。$A$ 与 $B$ 相似当且仅当它们与同一个对角阵 $\\Lambda$ 相似。先求出可逆 $P_1$ 使 $P_1^{-1}AP_1=\\Lambda$，再求出可逆 $P_2$ 使 $P_2^{-1}BP_2=\\Lambda$，则 $P_1^{-1}AP_1=P_2^{-1}BP_2$，整理得 $(P_1P_2^{-1})^{-1}A(P_1P_2^{-1})=B$，故所求 $P=P_1P_2^{-1}$。注意 $P_1,P_2$ 的特征向量要按同一组特征值顺序排列。\n\n【解答】\n\n**(1)** 由相似的不变量：\n\n迹相等：$\\operatorname{tr}A=-2+x-2=x-4$，$\\operatorname{tr}B=2+(-1)+y=1+y$，得 $x-4=1+y$。\n\n行列式相等：$A$ 按第三行展开，\n$$\\det A=(-2)\\begin{vmatrix}-2&-2\\\\2&x\\end{vmatrix}=(-2)(-2x+4)=4x-8,$$\n$$\\det B=2\\cdot(-1)\\cdot y=-2y,$$\n得 $4x-8=-2y$。\n\n联立 $x-4=1+y$ 与 $4x-8=-2y$：由前式 $y=x-5$，代入后式 $4x-8=-2(x-5)=-2x+10$，即 $6x=18$，故 $x=3$，$y=-2$。\n\n**(2)** 此时\n$$A=\\begin{pmatrix}-2&-2&1\\\\2&3&-2\\\\0&0&-2\\end{pmatrix},\\qquad B=\\begin{pmatrix}2&1&0\\\\0&-1&0\\\\0&0&-2\\end{pmatrix}.$$\n\n先求 $A$ 的特征值。$|\\lambda E-A|$ 中第三行为 $(0,0,\\lambda+2)$，沿其展开：\n$$|\\lambda E-A|=(\\lambda+2)\\begin{vmatrix}\\lambda+2&2\\\\-2&\\lambda-3\\end{vmatrix}=(\\lambda+2)\\big[(\\lambda+2)(\\lambda-3)+4\\big]=(\\lambda+2)(\\lambda^2-\\lambda-2)=(\\lambda+2)(\\lambda-2)(\\lambda+1).$$\n特征值 $\\lambda_1=2,\\\\ \\lambda_2=-1,\\\\ \\lambda_3=-2$。\n\n求 $A$ 的特征向量（解 $(\\lambda E-A)\\xi=0$）：\n\n- $\\lambda_1=2$：$\\begin{pmatrix}4&2&-1\\\\-2&-1&2\\\\0&0&4\\end{pmatrix}$，第三行得 $\\xi_3=0$，再由 $4\\xi_1+2\\xi_2=0$ 取 $\\xi_1=(-1,2,0)^{\\mathsf T}$。\n- $\\lambda_2=-1$：$\\begin{pmatrix}1&2&-1\\\\-2&-4&2\\\\0&0&1\\end{pmatrix}$，得 $\\xi_3=0$，$\\xi_1+2\\xi_2=0$，取 $\\xi_2=(-2,1,0)^{\\mathsf T}$。\n- $\\lambda_3=-2$：$\\begin{pmatrix}0&2&-1\\\\-2&-5&2\\\\0&0&0\\end{pmatrix}$，由 $2x_2=x_3$ 取 $x_2=1,x_3=2$，再 $-2x_1-5+2\\cdot2=0$ 得 $x_1=-\\tfrac12$，取 $\\xi_3=(-1,2,4)^{\\mathsf T}$。\n\n故 $P_1=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}$，$P_1^{-1}AP_1=\\Lambda=\\operatorname{diag}(2,-1,-2)$。\n\n再求 $B$ 的特征向量（$B$ 显然特征值同为 $2,-1,-2$）：\n\n- $\\lambda=2$：$(2E-B)=\\begin{pmatrix}0&-1&0\\\\0&3&0\\\\0&0&4\\end{pmatrix}$，得 $\\eta_2=\\eta_3=0$，取 $\\eta_1=(1,0,0)^{\\mathsf T}$。\n- $\\lambda=-1$：$(-E-B)=\\begin{pmatrix}-3&-1&0\\\\0&0&0\\\\0&0&-1\\end{pmatrix}$，得 $\\eta_3=0$，$3\\eta_1+\\eta_2=0$，取 $\\eta_2=(1,-3,0)^{\\mathsf T}$。\n- $\\lambda=-2$：$(-2E-B)=\\begin{pmatrix}-4&-1&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}$，得 $\\eta_1=\\eta_2=0$，取 $\\eta_3=(0,0,1)^{\\mathsf T}$。\n\n故 $P_2=\\begin{pmatrix}1&1&0\\\\0&-3&0\\\\0&0&1\\end{pmatrix}$，$P_2^{-1}BP_2=\\Lambda$。\n\n由 $P_1^{-1}AP_1=P_2^{-1}BP_2$，令 $P=P_1P_2^{-1}$，则 $P^{-1}AP=B$。\n\n计算 $P_2^{-1}$：$P_2^{-1}=\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}$。于是\n$$P=P_1P_2^{-1}=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}-1&-\\tfrac13+\\tfrac23&-1\\\\2&\\tfrac23-\\tfrac13&2\\\\0&0&4\\end{pmatrix}=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}.$$\n\n验证：$\\det P=4\\cdot\\begin{vmatrix}-1&-1\\\\2&1\\end{vmatrix}=4\\cdot(-1+2)=4\\ne0$，可逆。所以\n$$\\boxed{x=3,\\\\ y=-2,\\qquad P=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}}.$$\n（注：$P$ 不唯一，取不同特征向量倍数会得到不同但同样正确的 $P$。）",
-      "wrong_options": {},
-      "pitfalls": [
-        "P1 与 P2 的特征向量必须按同一特征值顺序排列，否则 P1P2^{-1} 不能把 A 化成 B。",
-        "P 的方向是 P=P1P2^{-1} 而非 P2P1^{-1}，写反会得到 PAP^{-1}=B 的错误关系。",
-        "答案 P 不唯一，特征向量取不同非零倍数都对，验算时应核对 P^{-1}AP=B 而非死记某一个 P。"
-      ],
-      "key_point": "A 与 B 相似先用迹、行列式定参数；求过渡阵借道同一对角阵：P=P1P2^{-1}。"
-    },
-    {
       "id": 228,
       "paper": "数学二",
       "year": 2019,
@@ -148,6 +83,33 @@
         "C 中要看出分子恰是 $\\arctan x$ 的导数 $\\dfrac{1}{1+x^2}$ 的配对，凑成 $\\dfrac{1}{2}(\\arctan x)^2$。"
       ],
       "key_point": "无穷限收敛要看 $x\\to+\\infty$ 的衰减阶，$\\dfrac{x}{1+x^2}\\sim\\dfrac1x$（$p=1$）发散。"
+    },
+    {
+      "id": 246,
+      "paper": "数学二",
+      "year": 2019,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知微分方程 $y^{\\prime \\prime}+a y^{\\prime}+b y=c \\mathrm{e}^x$ 的通解为 $y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-x}+\\mathrm{e}^x$, 则 $a, b, c$ 依次为 $(\\quad)$",
+      "options": {
+        "A": "$1,0,1$",
+        "B": "$1,0,2$",
+        "C": "$2,1,3$",
+        "D": "$2,1,4$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n这是一道\"由通解结构反推方程系数\"的题。核心思路是：二阶常系数线性微分方程的通解 = 对应齐次方程通解 + 非齐次方程的一个特解。给定通解的齐次部分能反推特征根，进而由韦达定理（特征方程根与系数的关系）确定 $a,b$；特解部分代回原方程，比对右端即可定出 $c$。\n\n对应齐次方程 $y''+ay'+by=0$ 的特征方程为 $r^2+ar+b=0$，其根的分布完全由通解中齐次解的形式决定。\n\n【解答】\n\n**第一步：反推特征根，定 $a,b$。**\n\n通解中齐次部分为 $(C_1+C_2x)\\mathrm{e}^{-x}$，这是典型的\"二重根\"结构，说明特征方程有二重根 $r_1=r_2=-1$。\n\n于是特征方程为\n$$(r+1)^2=r^2+2r+1=0,$$\n对比 $r^2+ar+b=0$ 得\n$$a=2,\\quad b=1.$$\n\n**第二步：代入特解，定 $c$。**\n\n通解中非齐次部分（特解）为 $y^*=\\mathrm{e}^x$。注意 $1$ 不是特征根，故 $\\mathrm{e}^x$ 形式合理（无需乘 $x$）。将 $y^*=\\mathrm{e}^x$ 代入原方程 $y''+2y'+y=c\\mathrm{e}^x$：\n\n$$y^*=\\mathrm{e}^x,\\quad (y^*)'=\\mathrm{e}^x,\\quad (y^*)''=\\mathrm{e}^x,$$\n\n$$(y^*)''+2(y^*)'+y^*=\\mathrm{e}^x+2\\mathrm{e}^x+\\mathrm{e}^x=4\\mathrm{e}^x.$$\n\n令其等于右端 $c\\mathrm{e}^x$，得 $c=4$。\n\n**结论：** $a,b,c$ 依次为 $2,1,4$，选 **D**。",
+      "wrong_options": {
+        "A": "把特征根误认作单根或写错齐次结构，$a=1,b=0$ 对应特征方程 $r^2+r=0$（根 $0,-1$），与 $(C_1+C_2x)\\mathrm{e}^{-x}$ 的二重根结构不符。",
+        "B": "$a=1,b=0$ 的系数错误同 A；且 $c=2$ 也未正确代入特解计算。",
+        "C": "$a,b$ 取对（$2,1$），但代入特解时漏算了某一项，$c$ 误得 $3$ 而非 $4$。"
+      },
+      "pitfalls": [
+        "齐次解 $(C_1+C_2x)\\mathrm{e}^{-x}$ 对应的是二重根 $-1$，特征方程必须是完全平方 $(r+1)^2$，不要写成 $r(r+1)$。",
+        "求 $c$ 必须把特解真正代回方程逐项求导比对，三项相加是 $1+2+1=4$，容易漏掉中间项。"
+      ],
+      "key_point": "齐次解形式定特征根（二重根→完全平方），特解代回原方程比对右端系数定 $c$。"
     },
     {
       "id": 230,
@@ -230,6 +192,33 @@
         "$r(\\boldsymbol A)=2$ 恰好等于 $n-2$，仍属\"$\\le n-2$\"情形，对应 $r(\\boldsymbol A^*)=0$，注意是\"小于等于\"。"
       ],
       "key_point": "基础解系个数定 $r(\\boldsymbol A)$，再套伴随秩公式：$r(\\boldsymbol A)\\le n-2\\Rightarrow r(\\boldsymbol A^*)=0$。"
+    },
+    {
+      "id": 209,
+      "paper": "数学二",
+      "year": 2019,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 是 $3$ 阶实对称矩阵, $\\boldsymbol{E}$ 是 $3$ 阶单位矩阵, 若 $\\boldsymbol{A}^{2}+\\boldsymbol{A}=2 \\boldsymbol{E}$, 且 $|\\boldsymbol{A}|=4$, 则二次型 $\\boldsymbol{x}^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{x}$ 的规范形为 $(\\quad)$",
+      "options": {
+        "A": "$y_{1}^{2}+y_{2}^{2}+y_{3}^{2}$",
+        "B": "$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$",
+        "C": "$y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$",
+        "D": "$-y_{1}^{2}-y_{2}^{2}-y_{3}^{2}$"
+      },
+      "answer": "C",
+      "analysis": "【分析】\n\n关键在于由矩阵多项式方程 $\\boldsymbol{A}^2+\\boldsymbol{A}=2\\boldsymbol{E}$ 反推特征值。若 $\\lambda$ 是实对称矩阵 $\\boldsymbol{A}$ 的特征值，则 $\\lambda$ 必满足同一个数量方程 $\\lambda^2+\\lambda-2=0$。再用 $|\\boldsymbol{A}|$ 等于全体特征值之积，定出三个特征值的具体取值，从而得到正、负惯性指数，写出规范形。\n\n【解答】\n\n由 $\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E}=\\boldsymbol{O}$，设 $\\lambda$ 为 $\\boldsymbol{A}$ 的任一特征值，对应特征向量 $\\boldsymbol{\\xi}\\neq\\boldsymbol{0}$，则\n$$(\\boldsymbol{A}^2+\\boldsymbol{A}-2\\boldsymbol{E})\\boldsymbol{\\xi}=(\\lambda^2+\\lambda-2)\\boldsymbol{\\xi}=\\boldsymbol{0},$$\n故 $\\lambda^2+\\lambda-2=0$，即 $(\\lambda-1)(\\lambda+2)=0$，所以每个特征值只能取 $\\lambda=1$ 或 $\\lambda=-2$。\n\n设三个特征值（计重数）取值情况，记 $1$ 出现 $k$ 次，$-2$ 出现 $3-k$ 次，则\n$$|\\boldsymbol{A}|=1^{k}\\cdot(-2)^{3-k}=(-2)^{3-k}=4.$$\n由 $(-2)^{3-k}=4=(-2)^2$ 得 $3-k=2$，即 $k=1$。\n\n因此 $\\boldsymbol{A}$ 的特征值为 $1,\\,-2,\\,-2$：一个正特征值、两个负特征值。$\\boldsymbol{A}$ 为实对称矩阵，二次型 $\\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x}$ 的正惯性指数 $p=1$，负惯性指数 $q=2$，故规范形为\n$$y_1^2-y_2^2-y_3^2.$$\n\n对照选项，应选 **C**。",
+      "wrong_options": {
+        "A": "对应特征值全为正，需 $p=3$，但本题有两个负特征值。",
+        "B": "对应 $p=2,q=1$，但实际是 $p=1,q=2$，正负个数恰好弄反。",
+        "D": "对应特征值全为负，则 $|\\boldsymbol{A}|=(-2)^3=-8\\neq4$，与条件矛盾。"
+      },
+      "pitfalls": [
+        "由 $|\\boldsymbol{A}|=4$ 定特征值时，要保证特征值只能取 $1$ 或 $-2$，不能随意搭配，注意 $(-2)^{3-k}=4$ 唯一解 $k=1$。",
+        "规范形只看正负惯性指数（即正、负特征值个数），与特征值的具体大小无关，别把系数写成 $\\pm2$。"
+      ],
+      "key_point": "矩阵多项式方程把特征值限定在代数方程的根上，再用行列式（特征值之积）定符号个数，即得规范形。"
     },
     {
       "id": 233,
@@ -382,6 +371,25 @@
       "key_point": "真分式按实重根与不可约二次因子设部分分式；二次项分子凑成分母导数即得对数，省去配方与 arctan。"
     },
     {
+      "id": 255,
+      "paper": "数学二",
+      "year": 2019,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y(x)$ 是微分方程 $\\displaystyle y^{\\prime}-x y=\\frac{1}{2 \\sqrt{x}} \\mathrm{e}^{\\frac{x^2}{2}}$ 满足条件 $y(1)=\\sqrt{\\mathrm{e}}$ 的特解,\r\n(I) 求 $y(x)$.\r\n(II) 设平面区域 $D=\\{(x, y) \\mid 1 \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant y(x)\\}$, 求 $D$ 绕 $x$ 轴旋转所得旋转 体的体积",
+      "options": {},
+      "answer": "(I) y(x)=\\sqrt{x}\\,\\mathrm{e}^{x^2/2}；(II) V=\\dfrac{\\pi}{2}\\left(\\mathrm{e}^4-\\mathrm{e}\\right)",
+      "analysis": "【分析】\n\n第 (I) 问是标准的一阶线性微分方程 $y'+P(x)y=Q(x)$，直接套通解公式 $y=\\mathrm{e}^{-\\int P\\,dx}\\left(\\int Q\\,\\mathrm{e}^{\\int P\\,dx}\\,dx+C\\right)$，再用初值 $y(1)=\\sqrt{\\mathrm{e}}$ 定常数。这里 $P(x)=-x$，积分因子 $\\mathrm{e}^{-x^2/2}$ 恰好与右端的 $\\mathrm{e}^{x^2/2}$ 抵消，积分会变得很简洁。\n\n第 (II) 问是平面区域绕 $x$ 轴旋转的体积，用圆盘法公式 $V=\\pi\\displaystyle\\int_a^b y^2\\,\\mathrm{d}x$。把 (I) 的结果代入后 $y^2=x\\mathrm{e}^{x^2}$，凑微分即可积出。\n\n【解答】\n\n**(I) 求特解。** 方程 $y'-xy=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}$ 中 $P(x)=-x$，$\\int P\\,dx=-\\dfrac{x^2}{2}$，积分因子 $\\mathrm{e}^{-x^2/2}$。由通解公式\n$$y=\\mathrm{e}^{x^2/2}\\left(\\int \\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}\\cdot\\mathrm{e}^{-x^2/2}\\,\\mathrm{d}x+C\\right)=\\mathrm{e}^{x^2/2}\\left(\\int\\dfrac{1}{2\\sqrt{x}}\\,\\mathrm{d}x+C\\right).$$\n而 $\\displaystyle\\int\\dfrac{1}{2\\sqrt{x}}\\,\\mathrm{d}x=\\sqrt{x}$，故 $y=\\mathrm{e}^{x^2/2}(\\sqrt{x}+C)$。\n\n代入 $y(1)=\\sqrt{\\mathrm{e}}$：$\\sqrt{\\mathrm{e}}=\\mathrm{e}^{1/2}(1+C)$，得 $1+C=1$，即 $C=0$。所以\n$$\\boxed{y(x)=\\sqrt{x}\\,\\mathrm{e}^{x^2/2}}.$$\n\n（验证：$y=x^{1/2}\\mathrm{e}^{x^2/2}$，$y'=\\dfrac12x^{-1/2}\\mathrm{e}^{x^2/2}+x^{1/2}\\cdot x\\,\\mathrm{e}^{x^2/2}=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}+xy$，即 $y'-xy=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}$，且 $y(1)=\\sqrt{\\mathrm{e}}$，正确。）\n\n**(II) 求旋转体体积。** 区域 $D$ 绕 $x$ 轴旋转，用圆盘法：\n$$V=\\pi\\int_1^2 y^2\\,\\mathrm{d}x=\\pi\\int_1^2 \\left(\\sqrt{x}\\,\\mathrm{e}^{x^2/2}\\right)^2\\mathrm{d}x=\\pi\\int_1^2 x\\,\\mathrm{e}^{x^2}\\,\\mathrm{d}x.$$\n凑微分 $x\\,\\mathrm{d}x=\\dfrac12\\,\\mathrm{d}(x^2)$：\n$$V=\\pi\\cdot\\dfrac12\\,\\mathrm{e}^{x^2}\\Big|_1^2=\\dfrac{\\pi}{2}\\left(\\mathrm{e}^{4}-\\mathrm{e}\\right).$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "套一阶线性通解公式时，$P(x)=-x$ 带负号，积分因子是 $\\mathrm{e}^{-x^2/2}$，符号别弄反。",
+        "旋转体体积要用 $y^2$，即 $(\\sqrt{x}\\mathrm{e}^{x^2/2})^2=x\\mathrm{e}^{x^2}$，不要漏掉平方或写成 $\\mathrm{e}^{x^2/2}$。",
+        "定积分上下限是 $x$ 从 1 到 2，注意 $\\mathrm{e}^{x^2}$ 在 $x=2$ 处为 $\\mathrm{e}^4$ 而非 $\\mathrm{e}^2$。"
+      ],
+      "key_point": "一阶线性方程套通解公式定常数，旋转体体积用圆盘法 V=π∫y²dx 并凑微分积出。"
+    },
+    {
       "id": 241,
       "paper": "数学二",
       "year": 2019,
@@ -399,6 +407,25 @@
         "用对称性消 $\\cos\\theta$ 项要看清是关于 $y$ 轴（即 $\\theta=\\tfrac{\\pi}{2}$）对称，奇偶判断别弄反。"
       ],
       "key_point": "齐次圆形区域用极坐标，被积函数中关于对称轴的奇函数部分直接判零，只算偶部分的 $\\sin^5\\theta$ 积分。"
+    },
+    {
+      "id": 221,
+      "paper": "数学二",
+      "year": 2019,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求曲线 $y=\\mathrm{e}^{-x} \\sin x(x \\geqslant 0)$ 与 $x$ 轴之间图形的面积\r\n\r\n(数二问法：设 $n$ 是正整数,记 $S_n$ 为曲线 $y=\\mathrm{e}^{-x} \\sin x(0 \\leqslant x \\leqslant n \\pi)$ 与 $x$ 轴所围图形的面积, 求 $S_n$, 并求 $\\displaystyle \\lim _{n \\rightarrow \\infty} S_n$)",
+      "options": {},
+      "answer": "$\\dfrac{1}{2}+\\frac{1}{\\mathrm{e}^\\pi-1}$",
+      "analysis": "【分析】\n\n曲线 $y=\\mathrm{e}^{-x}\\sin x$ 在 $x\\geqslant 0$ 上随 $\\sin x$ 的符号反复穿越 $x$ 轴：在区间 $[k\\pi,(k+1)\\pi]$ 上 $\\sin x$ 符号不变。所求\"图形面积\"是曲线与 $x$ 轴所夹的**各块面积的绝对值之和**，因此应把每个半周期上的面积 $A_k$ 单独算出再求和。由于 $\\mathrm{e}^{-x}$ 的衰减，$\\{A_k\\}$ 恰好构成一个公比为 $\\mathrm{e}^{-\\pi}$ 的**几何级数**，用等比级数求和即可。计算单块面积时对 $\\displaystyle\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x$ 用两次分部积分（或直接套公式）。\n\n【解答】\n\n先求原函数。由两次分部积分得\n\n$$\\int \\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)+C.$$\n\n记 $F(x)=-\\dfrac{1}{2}\\mathrm{e}^{-x}(\\sin x+\\cos x)$。在 $[k\\pi,(k+1)\\pi]$（$k=0,1,2,\\dots$）上 $\\sin x$ 不变号，该块面积\n\n$$A_k=\\left|\\int_{k\\pi}^{(k+1)\\pi}\\mathrm{e}^{-x}\\sin x\\,\\mathrm{d}x\\right|=\\bigl|F((k+1)\\pi)-F(k\\pi)\\bigr|.$$\n\n注意 $\\sin(k\\pi)=0,\\ \\cos(k\\pi)=(-1)^k$，故 $F(k\\pi)=-\\dfrac{1}{2}(-1)^k\\mathrm{e}^{-k\\pi}$，于是\n\n$$F((k+1)\\pi)-F(k\\pi)=\\dfrac{1}{2}(-1)^k\\bigl(\\mathrm{e}^{-(k+1)\\pi}+\\mathrm{e}^{-k\\pi}\\bigr),$$\n\n$$A_k=\\dfrac{1}{2}\\mathrm{e}^{-k\\pi}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr).$$\n\n所求总面积为各块之和（这是公比 $\\mathrm{e}^{-\\pi}<1$ 的等比级数）：\n\n$$S=\\sum_{k=0}^{\\infty}A_k=\\dfrac{1}{2}\\bigl(1+\\mathrm{e}^{-\\pi}\\bigr)\\sum_{k=0}^{\\infty}\\mathrm{e}^{-k\\pi}=\\dfrac{1}{2}\\cdot\\dfrac{1+\\mathrm{e}^{-\\pi}}{1-\\mathrm{e}^{-\\pi}}=\\dfrac{1}{2}\\cdot\\dfrac{\\mathrm{e}^{\\pi}+1}{\\mathrm{e}^{\\pi}-1}.$$\n\n化简（分子配凑）：\n\n$$S=\\dfrac{\\mathrm{e}^{\\pi}+1}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{(\\mathrm{e}^{\\pi}-1)+2}{2(\\mathrm{e}^{\\pi}-1)}=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}.$$\n\n**数二问法补充**：$S_n=\\displaystyle\\sum_{k=0}^{n-1}A_k=\\dfrac{1}{2}(1+\\mathrm{e}^{-\\pi})\\cdot\\dfrac{1-\\mathrm{e}^{-n\\pi}}{1-\\mathrm{e}^{-\\pi}}$，于是 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{1}{2}+\\dfrac{1}{\\mathrm{e}^{\\pi}-1}$，与上面一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "求\"面积\"必须对每段取绝对值后相加，不能直接对 $\\mathrm{e}^{-x}\\sin x$ 在 $[0,+\\infty)$ 上积分（那样正负相消得到的是代数和，不是面积）。",
+        "等比级数公比是 $\\mathrm{e}^{-\\pi}$ 而非 $\\mathrm{e}^{-\\pi}$ 以外的值，求和时分母应为 $1-\\mathrm{e}^{-\\pi}$。",
+        "分部积分得到的原函数系数 $-\\dfrac{1}{2}$ 容易写错符号，建议求导回验。"
+      ],
+      "key_point": "半周期面积取绝对值，发现是公比 $\\mathrm{e}^{-\\pi}$ 的等比级数，求和即得。"
     },
     {
       "id": 243,
@@ -439,52 +466,6 @@
       "key_point": "由积分等于区间长度推出最大值 M>1，最大值点必在 (0,1) 内且 f'(ξ)=0；再在 ξ 处对 x=0 作泰勒展开，由 f(ξ)>1、0<ξ<1 得 f''(η)<-2。"
     },
     {
-      "id": 246,
-      "paper": "数学二",
-      "year": 2019,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知微分方程 $y^{\\prime \\prime}+a y^{\\prime}+b y=c \\mathrm{e}^x$ 的通解为 $y=\\left(C_1+C_2 x\\right) \\mathrm{e}^{-x}+\\mathrm{e}^x$, 则 $a, b, c$ 依次为 $(\\quad)$",
-      "options": {
-        "A": "$1,0,1$",
-        "B": "$1,0,2$",
-        "C": "$2,1,3$",
-        "D": "$2,1,4$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n这是一道\"由通解结构反推方程系数\"的题。核心思路是：二阶常系数线性微分方程的通解 = 对应齐次方程通解 + 非齐次方程的一个特解。给定通解的齐次部分能反推特征根，进而由韦达定理（特征方程根与系数的关系）确定 $a,b$；特解部分代回原方程，比对右端即可定出 $c$。\n\n对应齐次方程 $y''+ay'+by=0$ 的特征方程为 $r^2+ar+b=0$，其根的分布完全由通解中齐次解的形式决定。\n\n【解答】\n\n**第一步：反推特征根，定 $a,b$。**\n\n通解中齐次部分为 $(C_1+C_2x)\\mathrm{e}^{-x}$，这是典型的\"二重根\"结构，说明特征方程有二重根 $r_1=r_2=-1$。\n\n于是特征方程为\n$$(r+1)^2=r^2+2r+1=0,$$\n对比 $r^2+ar+b=0$ 得\n$$a=2,\\quad b=1.$$\n\n**第二步：代入特解，定 $c$。**\n\n通解中非齐次部分（特解）为 $y^*=\\mathrm{e}^x$。注意 $1$ 不是特征根，故 $\\mathrm{e}^x$ 形式合理（无需乘 $x$）。将 $y^*=\\mathrm{e}^x$ 代入原方程 $y''+2y'+y=c\\mathrm{e}^x$：\n\n$$y^*=\\mathrm{e}^x,\\quad (y^*)'=\\mathrm{e}^x,\\quad (y^*)''=\\mathrm{e}^x,$$\n\n$$(y^*)''+2(y^*)'+y^*=\\mathrm{e}^x+2\\mathrm{e}^x+\\mathrm{e}^x=4\\mathrm{e}^x.$$\n\n令其等于右端 $c\\mathrm{e}^x$，得 $c=4$。\n\n**结论：** $a,b,c$ 依次为 $2,1,4$，选 **D**。",
-      "wrong_options": {
-        "A": "把特征根误认作单根或写错齐次结构，$a=1,b=0$ 对应特征方程 $r^2+r=0$（根 $0,-1$），与 $(C_1+C_2x)\\mathrm{e}^{-x}$ 的二重根结构不符。",
-        "B": "$a=1,b=0$ 的系数错误同 A；且 $c=2$ 也未正确代入特解计算。",
-        "C": "$a,b$ 取对（$2,1$），但代入特解时漏算了某一项，$c$ 误得 $3$ 而非 $4$。"
-      },
-      "pitfalls": [
-        "齐次解 $(C_1+C_2x)\\mathrm{e}^{-x}$ 对应的是二重根 $-1$，特征方程必须是完全平方 $(r+1)^2$，不要写成 $r(r+1)$。",
-        "求 $c$ 必须把特解真正代回方程逐项求导比对，三项相加是 $1+2+1=4$，容易漏掉中间项。"
-      ],
-      "key_point": "齐次解形式定特征根（二重根→完全平方），特解代回原方程比对右端系数定 $c$。"
-    },
-    {
-      "id": 255,
-      "paper": "数学二",
-      "year": 2019,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $y(x)$ 是微分方程 $\\displaystyle y^{\\prime}-x y=\\frac{1}{2 \\sqrt{x}} \\mathrm{e}^{\\frac{x^2}{2}}$ 满足条件 $y(1)=\\sqrt{\\mathrm{e}}$ 的特解,\r\n(I) 求 $y(x)$.\r\n(II) 设平面区域 $D=\\{(x, y) \\mid 1 \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant y(x)\\}$, 求 $D$ 绕 $x$ 轴旋转所得旋转 体的体积",
-      "options": {},
-      "answer": "(I) y(x)=\\sqrt{x}\\,\\mathrm{e}^{x^2/2}；(II) V=\\dfrac{\\pi}{2}\\left(\\mathrm{e}^4-\\mathrm{e}\\right)",
-      "analysis": "【分析】\n\n第 (I) 问是标准的一阶线性微分方程 $y'+P(x)y=Q(x)$，直接套通解公式 $y=\\mathrm{e}^{-\\int P\\,dx}\\left(\\int Q\\,\\mathrm{e}^{\\int P\\,dx}\\,dx+C\\right)$，再用初值 $y(1)=\\sqrt{\\mathrm{e}}$ 定常数。这里 $P(x)=-x$，积分因子 $\\mathrm{e}^{-x^2/2}$ 恰好与右端的 $\\mathrm{e}^{x^2/2}$ 抵消，积分会变得很简洁。\n\n第 (II) 问是平面区域绕 $x$ 轴旋转的体积，用圆盘法公式 $V=\\pi\\displaystyle\\int_a^b y^2\\,\\mathrm{d}x$。把 (I) 的结果代入后 $y^2=x\\mathrm{e}^{x^2}$，凑微分即可积出。\n\n【解答】\n\n**(I) 求特解。** 方程 $y'-xy=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}$ 中 $P(x)=-x$，$\\int P\\,dx=-\\dfrac{x^2}{2}$，积分因子 $\\mathrm{e}^{-x^2/2}$。由通解公式\n$$y=\\mathrm{e}^{x^2/2}\\left(\\int \\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}\\cdot\\mathrm{e}^{-x^2/2}\\,\\mathrm{d}x+C\\right)=\\mathrm{e}^{x^2/2}\\left(\\int\\dfrac{1}{2\\sqrt{x}}\\,\\mathrm{d}x+C\\right).$$\n而 $\\displaystyle\\int\\dfrac{1}{2\\sqrt{x}}\\,\\mathrm{d}x=\\sqrt{x}$，故 $y=\\mathrm{e}^{x^2/2}(\\sqrt{x}+C)$。\n\n代入 $y(1)=\\sqrt{\\mathrm{e}}$：$\\sqrt{\\mathrm{e}}=\\mathrm{e}^{1/2}(1+C)$，得 $1+C=1$，即 $C=0$。所以\n$$\\boxed{y(x)=\\sqrt{x}\\,\\mathrm{e}^{x^2/2}}.$$\n\n（验证：$y=x^{1/2}\\mathrm{e}^{x^2/2}$，$y'=\\dfrac12x^{-1/2}\\mathrm{e}^{x^2/2}+x^{1/2}\\cdot x\\,\\mathrm{e}^{x^2/2}=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}+xy$，即 $y'-xy=\\dfrac{1}{2\\sqrt{x}}\\mathrm{e}^{x^2/2}$，且 $y(1)=\\sqrt{\\mathrm{e}}$，正确。）\n\n**(II) 求旋转体体积。** 区域 $D$ 绕 $x$ 轴旋转，用圆盘法：\n$$V=\\pi\\int_1^2 y^2\\,\\mathrm{d}x=\\pi\\int_1^2 \\left(\\sqrt{x}\\,\\mathrm{e}^{x^2/2}\\right)^2\\mathrm{d}x=\\pi\\int_1^2 x\\,\\mathrm{e}^{x^2}\\,\\mathrm{d}x.$$\n凑微分 $x\\,\\mathrm{d}x=\\dfrac12\\,\\mathrm{d}(x^2)$：\n$$V=\\pi\\cdot\\dfrac12\\,\\mathrm{e}^{x^2}\\Big|_1^2=\\dfrac{\\pi}{2}\\left(\\mathrm{e}^{4}-\\mathrm{e}\\right).$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "套一阶线性通解公式时，$P(x)=-x$ 带负号，积分因子是 $\\mathrm{e}^{-x^2/2}$，符号别弄反。",
-        "旋转体体积要用 $y^2$，即 $(\\sqrt{x}\\mathrm{e}^{x^2/2})^2=x\\mathrm{e}^{x^2}$，不要漏掉平方或写成 $\\mathrm{e}^{x^2/2}$。",
-        "定积分上下限是 $x$ 从 1 到 2，注意 $\\mathrm{e}^{x^2}$ 在 $x=2$ 处为 $\\mathrm{e}^4$ 而非 $\\mathrm{e}^2$。"
-      ],
-      "key_point": "一阶线性方程套通解公式定常数，旋转体体积用圆盘法 V=π∫y²dx 并凑微分积出。"
-    },
-    {
       "id": 256,
       "paper": "数学二",
       "year": 2019,
@@ -502,6 +483,25 @@
         "$a=1$ 时秩降为 2，$\\beta_3$ 的表示不唯一，但 $\\alpha_1-\\alpha_2+\\alpha_3$ 这一组对所有 $a$ 都成立，写它最稳妥。"
       ],
       "key_point": "向量组等价的判据是 $r(I)=r(II)=r(I,II)$；行列式零点处必须回代验证张成空间。"
+    },
+    {
+      "id": 225,
+      "paper": "数学二",
+      "year": 2019,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}-2 & -2 & 1 \\\\ 2 & x & -2 \\\\ 0 & 0 & -2\\end{array}\\right)$ 与 $\\boldsymbol{B}=\\left(\\begin{array}{ccc}2 & 1 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & y\\end{array}\\right)$ 相似\r\n\r\n(1) 求 $x, y$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol{P}$ 使得 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\boldsymbol{B}$",
+      "options": {},
+      "answer": "(1) $x=3, y=-2$\r\n\r\n(2) $\\boldsymbol{P}=\\boldsymbol{P}_1 \\boldsymbol{P}_2^{-1}=\\left(\\begin{array}{ccc}-1 & -1 & -1 \\\\ 2 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right)$",
+      "analysis": "【分析】\n\n第(1)问利用相似的两个不变量：相似矩阵有相同的迹与相同的行列式，列两个方程解出 $x,y$。\n\n第(2)问的标准套路是\"借道对角化\"。$A$ 与 $B$ 相似当且仅当它们与同一个对角阵 $\\Lambda$ 相似。先求出可逆 $P_1$ 使 $P_1^{-1}AP_1=\\Lambda$，再求出可逆 $P_2$ 使 $P_2^{-1}BP_2=\\Lambda$，则 $P_1^{-1}AP_1=P_2^{-1}BP_2$，整理得 $(P_1P_2^{-1})^{-1}A(P_1P_2^{-1})=B$，故所求 $P=P_1P_2^{-1}$。注意 $P_1,P_2$ 的特征向量要按同一组特征值顺序排列。\n\n【解答】\n\n**(1)** 由相似的不变量：\n\n迹相等：$\\operatorname{tr}A=-2+x-2=x-4$，$\\operatorname{tr}B=2+(-1)+y=1+y$，得 $x-4=1+y$。\n\n行列式相等：$A$ 按第三行展开，\n$$\\det A=(-2)\\begin{vmatrix}-2&-2\\\\2&x\\end{vmatrix}=(-2)(-2x+4)=4x-8,$$\n$$\\det B=2\\cdot(-1)\\cdot y=-2y,$$\n得 $4x-8=-2y$。\n\n联立 $x-4=1+y$ 与 $4x-8=-2y$：由前式 $y=x-5$，代入后式 $4x-8=-2(x-5)=-2x+10$，即 $6x=18$，故 $x=3$，$y=-2$。\n\n**(2)** 此时\n$$A=\\begin{pmatrix}-2&-2&1\\\\2&3&-2\\\\0&0&-2\\end{pmatrix},\\qquad B=\\begin{pmatrix}2&1&0\\\\0&-1&0\\\\0&0&-2\\end{pmatrix}.$$\n\n先求 $A$ 的特征值。$|\\lambda E-A|$ 中第三行为 $(0,0,\\lambda+2)$，沿其展开：\n$$|\\lambda E-A|=(\\lambda+2)\\begin{vmatrix}\\lambda+2&2\\\\-2&\\lambda-3\\end{vmatrix}=(\\lambda+2)\\big[(\\lambda+2)(\\lambda-3)+4\\big]=(\\lambda+2)(\\lambda^2-\\lambda-2)=(\\lambda+2)(\\lambda-2)(\\lambda+1).$$\n特征值 $\\lambda_1=2,\\\\ \\lambda_2=-1,\\\\ \\lambda_3=-2$。\n\n求 $A$ 的特征向量（解 $(\\lambda E-A)\\xi=0$）：\n\n- $\\lambda_1=2$：$\\begin{pmatrix}4&2&-1\\\\-2&-1&2\\\\0&0&4\\end{pmatrix}$，第三行得 $\\xi_3=0$，再由 $4\\xi_1+2\\xi_2=0$ 取 $\\xi_1=(-1,2,0)^{\\mathsf T}$。\n- $\\lambda_2=-1$：$\\begin{pmatrix}1&2&-1\\\\-2&-4&2\\\\0&0&1\\end{pmatrix}$，得 $\\xi_3=0$，$\\xi_1+2\\xi_2=0$，取 $\\xi_2=(-2,1,0)^{\\mathsf T}$。\n- $\\lambda_3=-2$：$\\begin{pmatrix}0&2&-1\\\\-2&-5&2\\\\0&0&0\\end{pmatrix}$，由 $2x_2=x_3$ 取 $x_2=1,x_3=2$，再 $-2x_1-5+2\\cdot2=0$ 得 $x_1=-\\tfrac12$，取 $\\xi_3=(-1,2,4)^{\\mathsf T}$。\n\n故 $P_1=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}$，$P_1^{-1}AP_1=\\Lambda=\\operatorname{diag}(2,-1,-2)$。\n\n再求 $B$ 的特征向量（$B$ 显然特征值同为 $2,-1,-2$）：\n\n- $\\lambda=2$：$(2E-B)=\\begin{pmatrix}0&-1&0\\\\0&3&0\\\\0&0&4\\end{pmatrix}$，得 $\\eta_2=\\eta_3=0$，取 $\\eta_1=(1,0,0)^{\\mathsf T}$。\n- $\\lambda=-1$：$(-E-B)=\\begin{pmatrix}-3&-1&0\\\\0&0&0\\\\0&0&-1\\end{pmatrix}$，得 $\\eta_3=0$，$3\\eta_1+\\eta_2=0$，取 $\\eta_2=(1,-3,0)^{\\mathsf T}$。\n- $\\lambda=-2$：$(-2E-B)=\\begin{pmatrix}-4&-1&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}$，得 $\\eta_1=\\eta_2=0$，取 $\\eta_3=(0,0,1)^{\\mathsf T}$。\n\n故 $P_2=\\begin{pmatrix}1&1&0\\\\0&-3&0\\\\0&0&1\\end{pmatrix}$，$P_2^{-1}BP_2=\\Lambda$。\n\n由 $P_1^{-1}AP_1=P_2^{-1}BP_2$，令 $P=P_1P_2^{-1}$，则 $P^{-1}AP=B$。\n\n计算 $P_2^{-1}$：$P_2^{-1}=\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}$。于是\n$$P=P_1P_2^{-1}=\\begin{pmatrix}-1&-2&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}\\begin{pmatrix}1&\\tfrac13&0\\\\0&-\\tfrac13&0\\\\0&0&1\\end{pmatrix}=\\begin{pmatrix}-1&-\\tfrac13+\\tfrac23&-1\\\\2&\\tfrac23-\\tfrac13&2\\\\0&0&4\\end{pmatrix}=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}.$$\n\n验证：$\\det P=4\\cdot\\begin{vmatrix}-1&-1\\\\2&1\\end{vmatrix}=4\\cdot(-1+2)=4\\ne0$，可逆。所以\n$$\\boxed{x=3,\\\\ y=-2,\\qquad P=\\begin{pmatrix}-1&-1&-1\\\\2&1&2\\\\0&0&4\\end{pmatrix}}.$$\n（注：$P$ 不唯一，取不同特征向量倍数会得到不同但同样正确的 $P$。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "P1 与 P2 的特征向量必须按同一特征值顺序排列，否则 P1P2^{-1} 不能把 A 化成 B。",
+        "P 的方向是 P=P1P2^{-1} 而非 P2P1^{-1}，写反会得到 PAP^{-1}=B 的错误关系。",
+        "答案 P 不唯一，特征向量取不同非零倍数都对，验算时应核对 P^{-1}AP=B 而非死记某一个 P。"
+      ],
+      "key_point": "A 与 B 相似先用迹、行列式定参数；求过渡阵借道同一对角阵：P=P1P2^{-1}。"
     }
   ]
 }

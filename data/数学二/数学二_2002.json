@@ -4,69 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 952,
-      "paper": "数学二",
-      "year": 2002,
-      "index": 3,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "微分方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 满足初始条件 $\\displaystyle \\left.y\\right|_{x=0}=1,\\\\ \\left.y^{\\prime}\\right|_{x=0}=\\frac{1}{2}$ 的特解是 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$y=\\sqrt{x+1}$",
-      "analysis": "方法一 令 $y^{\\prime}=p$, 则 $\\displaystyle y^{\\prime \\prime}=p \\frac{\\mathrm{d} p}{\\mathrm{d} y}$, \r\n\r\n方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 化为 $\\displaystyle y p \\frac{\\mathrm{d} p}{\\mathrm{d} y}+p^2=0$.\r\n\r\n因为 $p \\neq 0$, 所以 $\\displaystyle \\frac{\\mathrm{d} p}{\\mathrm{d} y}+\\frac{1}{y} p=0$, \r\n\r\n解得 $\\displaystyle p=C_1 \\mathrm{e}^{-\\int \\frac{1}{y} \\mathrm{d} y}=\\frac{C_1}{y}$,\r\n\r\n由 $\\displaystyle y(0)=1, y^{\\prime}(0)=\\frac{1}{2}$, 得 $\\displaystyle C_1=\\frac{1}{2}$, \r\n\r\n于是 $\\displaystyle y y^{\\prime}=\\frac{1}{2}$, 解得 $\\displaystyle \\frac{1}{2} y^2=\\frac{x}{2}+C$.\r\n\r\n由 $y(0)=1$, 得 $\\displaystyle C=\\frac{1}{2}$, 故 $y=\\sqrt{x+1}$\r\n\r\n方法二 由 $y y^{\\prime \\prime}+y^{\\prime 2}=0$, 得 $\\left(y y^{\\prime}\\right)^{\\prime}=0$, \r\n\r\n解得 $y y^{\\prime}=C_1$. 由 $y(0)=1, y^{\\prime}(0)=\\dfrac{1}{2}$, \r\n\r\n得 $C_1=\\dfrac{1}{2}$, 即 $y y^{\\prime}=\\dfrac{1}{2}$ 或 $\\left(y^2\\right)^{\\prime}=1$, \r\n\r\n解得 $y^2=x+C_2$, 由 $y(0)=1$, \r\n\r\n得 $C_2=1$, 故满足初始条件的特解为 $y=\\sqrt{x+1}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "看出 yy''+y'² 恰是 (yy')' 是本题关键，硬套 y''=p·dp/dy 也行但绕",
-        "两次积分要用两个初值：先由 y(0),y'(0) 定 yy'=1/2，再由 y(0) 定平方后的常数"
-      ],
-      "key_point": "(yy')'=0 ⇒ yy'=1/2 ⇒ y²=x+1 ⇒ y=√(x+1)。"
-    },
-    {
-      "id": 957,
-      "paper": "数学二",
-      "year": 2002,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $y=f(x)$ 在 $(0,+\\infty)$ 内有界且可导,则 $(\\quad)$",
-      "options": {
-        "A": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
-        "B": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
-        "C": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$",
-        "D": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$"
-      },
-      "answer": "B",
-      "analysis": "若 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x) \\neq 0$, \r\n\r\n不妨设 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=A>0$.\r\n\r\n取 $\\displaystyle \\varepsilon_0=\\frac{A}{2}>0$, 则存在 $X>0$, \r\n\r\n当 $x>X$ 时, $\\displaystyle \\left|f^{\\prime}(x)-A\\right|<\\frac{A}{2}$, \r\n\r\n于是 $\\displaystyle f^{\\prime}(x)>\\frac{A}{2}$.\r\n\r\n当 $x>X$ 时, $f(x)-f(X)=f^{\\prime}(\\xi)(x-X)$, \r\n\r\n其中 $\\xi \\in(X, x)$,\r\n\r\n则 $\\displaystyle f(x)>f(X)+\\frac{A}{2}(x-X)$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow+\\infty}\\left[f(X)+\\frac{A}{2}(x-X)\\right]=+\\infty$, \r\n\r\n所以 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, \r\n\r\n与 $f(x)$ 有界矛盾, 应选 $(\\mathrm{B})$",
-      "wrong_options": {
-        "A": "f(x)→0 推不出 f'(x)→0：可造衰减振荡函数（如 sin(x²)/x 型），值趋 0 但导数不趋 0。",
-        "C": "把 x→+∞ 的结论错移到 x→0⁺：端点邻域内无界性论证失效，命题不真。",
-        "D": "f' 在 0⁺ 存在极限也推不出该极限为 0，0 点处无'有界⇒导数趋0'的机制。"
-      },
-      "pitfalls": [
-        "正确项是'f' 存在极限则必为 0'：由中值定理 f(x)-f(X)=f'(ξ)(x-X)，f' 有非零极限会让 f 无界",
-        "有界性只在 x→+∞ 处产生矛盾；A/C/D 混淆了极限方向或颠倒了 f 与 f' 的因果"
-      ],
-      "key_point": "设 lim f'=A≠0，由拉格朗日中值定理 f(x)≈f(X)+A(x-X)/... 无界，矛盾，故 lim f'=0，选 B。"
-    },
-    {
-      "id": 967,
-      "paper": "数学二",
-      "year": 2002,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 4 阶方阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}\\right), \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 均为 $4$ 维列向量, 其中 $\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 线性无关, $\\boldsymbol{\\alpha}_{1}=2 \\boldsymbol{\\alpha}_{2}-\\boldsymbol{\\alpha}_{3}$. 如果 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{4}$, 求线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解",
-      "options": {},
-      "answer": "$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
-      "analysis": "因为 $\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 线性无关, 而 $\\boldsymbol{\\alpha}_1=2 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 的秩为 $3$, 于是 $r(\\boldsymbol{A})=3$. \r\n\r\n又因为 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n所以 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=3,\\\\\r\n \\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系含一个线性无关的解向量,\r\n\r\n而 $\\boldsymbol{A x}=\\mathbf{0}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{\\alpha}_1-2 \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3+0 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系为 $\\boldsymbol{\\xi}=(1,-2,1,0)^{\\mathrm{T}}$,\r\n\r\n又 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\boldsymbol{\\beta}$ \r\n\r\n且 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n则方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 的特解为 $\\boldsymbol{\\eta}=(1,1,1,1)^{\\mathrm{T}}$, \r\n\r\n故方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解为\r\n\r\n$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
-      "wrong_options": {},
-      "pitfalls": [
-        "α₂,α₃,α₄ 无关且 α₁=2α₂-α₃ ⇒ r(A)=3，Ax=0 基础解系恰含一个向量",
-        "关系 α₁-2α₂+α₃=0 直接读出齐次解 (1,-2,1,0)ᵀ；β=α₁+α₂+α₃+α₄ 直接读出特解 (1,1,1,1)ᵀ，不必解方程"
-      ],
-      "key_point": "r(A)=3，齐次解 (1,-2,1,0)ᵀ、特解 (1,1,1,1)ᵀ，通解 x=k(1,-2,1,0)ᵀ+(1,1,1,1)ᵀ。"
-    },
-    {
       "id": 1582,
       "paper": "数学二",
       "year": 2002,
@@ -101,6 +38,24 @@
         "∫₀^{+∞}xe^{-x}dx=Γ(2)=1!=1，别算成2"
       ],
       "key_point": "面积=∫₀^{+∞}xe^{-x}dx=1。"
+    },
+    {
+      "id": 952,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 满足初始条件 $\\displaystyle \\left.y\\right|_{x=0}=1,\\\\ \\left.y^{\\prime}\\right|_{x=0}=\\frac{1}{2}$ 的特解是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=\\sqrt{x+1}$",
+      "analysis": "方法一 令 $y^{\\prime}=p$, 则 $\\displaystyle y^{\\prime \\prime}=p \\frac{\\mathrm{d} p}{\\mathrm{d} y}$, \r\n\r\n方程 $y y^{\\prime \\prime}+y^{\\prime 2}=0$ 化为 $\\displaystyle y p \\frac{\\mathrm{d} p}{\\mathrm{d} y}+p^2=0$.\r\n\r\n因为 $p \\neq 0$, 所以 $\\displaystyle \\frac{\\mathrm{d} p}{\\mathrm{d} y}+\\frac{1}{y} p=0$, \r\n\r\n解得 $\\displaystyle p=C_1 \\mathrm{e}^{-\\int \\frac{1}{y} \\mathrm{d} y}=\\frac{C_1}{y}$,\r\n\r\n由 $\\displaystyle y(0)=1, y^{\\prime}(0)=\\frac{1}{2}$, 得 $\\displaystyle C_1=\\frac{1}{2}$, \r\n\r\n于是 $\\displaystyle y y^{\\prime}=\\frac{1}{2}$, 解得 $\\displaystyle \\frac{1}{2} y^2=\\frac{x}{2}+C$.\r\n\r\n由 $y(0)=1$, 得 $\\displaystyle C=\\frac{1}{2}$, 故 $y=\\sqrt{x+1}$\r\n\r\n方法二 由 $y y^{\\prime \\prime}+y^{\\prime 2}=0$, 得 $\\left(y y^{\\prime}\\right)^{\\prime}=0$, \r\n\r\n解得 $y y^{\\prime}=C_1$. 由 $y(0)=1, y^{\\prime}(0)=\\dfrac{1}{2}$, \r\n\r\n得 $C_1=\\dfrac{1}{2}$, 即 $y y^{\\prime}=\\dfrac{1}{2}$ 或 $\\left(y^2\\right)^{\\prime}=1$, \r\n\r\n解得 $y^2=x+C_2$, 由 $y(0)=1$, \r\n\r\n得 $C_2=1$, 故满足初始条件的特解为 $y=\\sqrt{x+1}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "看出 yy''+y'² 恰是 (yy')' 是本题关键，硬套 y''=p·dp/dy 也行但绕",
+        "两次积分要用两个初值：先由 y(0),y'(0) 定 yy'=1/2，再由 y(0) 定平方后的常数"
+      ],
+      "key_point": "(yy')'=0 ⇒ yy'=1/2 ⇒ y²=x+1 ⇒ y=√(x+1)。"
     },
     {
       "id": 1584,
@@ -218,6 +173,33 @@
         "ln(1+x²)~x²，再用 y(0)=y'(0)=0 及导数定义得极限=2/y''(0)=2"
       ],
       "key_point": "代入得 y''(0)=1，极限=2/y''(0)=2，选C。"
+    },
+    {
+      "id": 957,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $y=f(x)$ 在 $(0,+\\infty)$ 内有界且可导,则 $(\\quad)$",
+      "options": {
+        "A": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
+        "B": "当 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=0$",
+        "C": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f(x)=0$ 时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$",
+        "D": "当 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)$ 存在时, 必有 $\\displaystyle \\lim _{x \\rightarrow 0^{+}} f^{\\prime}(x)=0$"
+      },
+      "answer": "B",
+      "analysis": "若 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x) \\neq 0$, \r\n\r\n不妨设 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f^{\\prime}(x)=A>0$.\r\n\r\n取 $\\displaystyle \\varepsilon_0=\\frac{A}{2}>0$, 则存在 $X>0$, \r\n\r\n当 $x>X$ 时, $\\displaystyle \\left|f^{\\prime}(x)-A\\right|<\\frac{A}{2}$, \r\n\r\n于是 $\\displaystyle f^{\\prime}(x)>\\frac{A}{2}$.\r\n\r\n当 $x>X$ 时, $f(x)-f(X)=f^{\\prime}(\\xi)(x-X)$, \r\n\r\n其中 $\\xi \\in(X, x)$,\r\n\r\n则 $\\displaystyle f(x)>f(X)+\\frac{A}{2}(x-X)$,\r\n\r\n因为 $\\displaystyle \\lim _{x \\rightarrow+\\infty}\\left[f(X)+\\frac{A}{2}(x-X)\\right]=+\\infty$, \r\n\r\n所以 $\\displaystyle \\lim _{x \\rightarrow+\\infty} f(x)=+\\infty$, \r\n\r\n与 $f(x)$ 有界矛盾, 应选 $(\\mathrm{B})$",
+      "wrong_options": {
+        "A": "f(x)→0 推不出 f'(x)→0：可造衰减振荡函数（如 sin(x²)/x 型），值趋 0 但导数不趋 0。",
+        "C": "把 x→+∞ 的结论错移到 x→0⁺：端点邻域内无界性论证失效，命题不真。",
+        "D": "f' 在 0⁺ 存在极限也推不出该极限为 0，0 点处无'有界⇒导数趋0'的机制。"
+      },
+      "pitfalls": [
+        "正确项是'f' 存在极限则必为 0'：由中值定理 f(x)-f(X)=f'(ξ)(x-X)，f' 有非零极限会让 f 无界",
+        "有界性只在 x→+∞ 处产生矛盾；A/C/D 混淆了极限方向或颠倒了 f 与 f' 的因果"
+      ],
+      "key_point": "设 lim f'=A≠0，由拉格朗日中值定理 f(x)≈f(X)+A(x-X)/... 无界，矛盾，故 lim f'=0，选 B。"
     },
     {
       "id": 1589,
@@ -407,6 +389,24 @@
         "(2)从 2A⁻¹B=B-4E 变形要小心 A⁻¹ 位置，整理成 A=2B(B-4E)⁻¹"
       ],
       "key_point": "(A-2E)B=4A 得 A-2E 可逆；A=2B(B-4E)⁻¹ 算得所求矩阵。"
+    },
+    {
+      "id": 967,
+      "paper": "数学二",
+      "year": 2002,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 4 阶方阵 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}\\right), \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 均为 $4$ 维列向量, 其中 $\\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}, \\boldsymbol{\\alpha}_{4}$ 线性无关, $\\boldsymbol{\\alpha}_{1}=2 \\boldsymbol{\\alpha}_{2}-\\boldsymbol{\\alpha}_{3}$. 如果 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}+\\boldsymbol{\\alpha}_{3}+\\boldsymbol{\\alpha}_{4}$, 求线性方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解",
+      "options": {},
+      "answer": "$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
+      "analysis": "因为 $\\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 线性无关, 而 $\\boldsymbol{\\alpha}_1=2 \\boldsymbol{\\alpha}_2-\\boldsymbol{\\alpha}_3$, \r\n\r\n所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3, \\boldsymbol{\\alpha}_4$ 的秩为 $3$, 于是 $r(\\boldsymbol{A})=3$. \r\n\r\n又因为 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n所以 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=3,\\\\\r\n \\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系含一个线性无关的解向量,\r\n\r\n而 $\\boldsymbol{A x}=\\mathbf{0}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n由 $\\boldsymbol{\\alpha}_1-2 \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3+0 \\boldsymbol{\\alpha}_4=\\mathbf{0}$, \r\n\r\n得 $\\boldsymbol{Ax} =\\mathbf{0}$ 的基础解系为 $\\boldsymbol{\\xi}=(1,-2,1,0)^{\\mathrm{T}}$,\r\n\r\n又 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 等价于 $x_1 \\boldsymbol{\\alpha}_1+x_2 \\boldsymbol{\\alpha}_2+x_3 \\boldsymbol{\\alpha}_3+x_4 \\boldsymbol{\\alpha}_4=\\boldsymbol{\\beta}$ \r\n\r\n且 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2\r\n+\\boldsymbol{\\alpha}_3+\\boldsymbol{\\alpha}_4$, \r\n\r\n则方程组 $\\boldsymbol{Ax}=\\boldsymbol{\\beta}$ 的特解为 $\\boldsymbol{\\eta}=(1,1,1,1)^{\\mathrm{T}}$, \r\n\r\n故方程组 $\\boldsymbol{Ax} =\\boldsymbol{\\beta}$ 的通解为\r\n\r\n$\\boldsymbol{x}=k\\left(\\begin{array}{c}\r\n1 \\\\-2 \\\\1 \\\\0\r\n\\end{array}\\right)+\\left(\\begin{array}{l}\r\n1 \\\\1 \\\\1 \\\\1\r\n\\end{array}\\right) (k$为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "α₂,α₃,α₄ 无关且 α₁=2α₂-α₃ ⇒ r(A)=3，Ax=0 基础解系恰含一个向量",
+        "关系 α₁-2α₂+α₃=0 直接读出齐次解 (1,-2,1,0)ᵀ；β=α₁+α₂+α₃+α₄ 直接读出特解 (1,1,1,1)ᵀ，不必解方程"
+      ],
+      "key_point": "r(A)=3，齐次解 (1,-2,1,0)ᵀ、特解 (1,1,1,1)ᵀ，通解 x=k(1,-2,1,0)ᵀ+(1,1,1,1)ᵀ。"
     }
   ]
 }

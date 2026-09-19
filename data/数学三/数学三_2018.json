@@ -32,6 +32,34 @@
       "key_point": "在 $x=0$ 处可导性看 $f(x)-f(0)$ 相对 $|x|$ 的无穷小阶；$\\cos\\sqrt{|x|}-1\\sim-\\tfrac{|x|}{2}$ 恰为一阶，左右导数 $\\mp\\tfrac12$ 不等故不可导。"
     },
     {
+      "id": 293,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0,1]$ 上二阶可导, 且 $\\displaystyle \\int_0^1 f(x) \\mathrm{d} x=0$, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $f^{\\prime}(x)<0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
+        "B": "当 $f^{\\prime \\prime}(x)<0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
+        "C": "当 $f^{\\prime}(x)>0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
+        "D": "当 $f^{\\prime \\prime}(x)>0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n题目给出 $\\int_0^1 f(x)\\,dx=0$，问在不同凹凸性（$f''$ 的符号）或单调性（$f'$ 的符号）条件下能否判定 $f\\left(\\tfrac12\\right)$ 的符号。核心工具是带拉格朗日余项的泰勒公式：把 $f(x)$ 在 $x=\\dfrac12$ 处展开到二阶，再在 $[0,1]$ 上积分，利用一次项积分为零、$f''$ 符号固定，立刻定出 $f\\left(\\tfrac12\\right)$ 的符号。\n\n仅靠单调性（$f'$ 同号）无法定出中点函数值的符号——可举反例排除 A、C；因此应从二阶导（凹凸性）入手，答案在 B、D 之间二选一。\n\n【解答】\n\n把 $f(x)$ 在点 $x_0=\\dfrac12$ 处作一阶泰勒展开并带二阶拉格朗日余项：存在介于 $x$ 与 $\\dfrac12$ 之间的 $\\xi(x)$，使\n\n$$f(x)=f\\!\\left(\\tfrac12\\right)+f'\\!\\left(\\tfrac12\\right)\\left(x-\\tfrac12\\right)+\\dfrac12 f''(\\xi)\\left(x-\\tfrac12\\right)^2.$$\n\n两边在 $[0,1]$ 上积分。逐项计算：\n\n- $\\displaystyle\\int_0^1 f\\!\\left(\\tfrac12\\right)dx=f\\!\\left(\\tfrac12\\right)$；\n- $\\displaystyle\\int_0^1\\left(x-\\tfrac12\\right)dx=0$（关于 $x=\\tfrac12$ 对称），故一次项消失；\n- 左边 $\\displaystyle\\int_0^1 f(x)dx=0$。\n\n于是\n\n$$0=f\\!\\left(\\tfrac12\\right)+\\dfrac12\\int_0^1 f''(\\xi)\\left(x-\\tfrac12\\right)^2dx,$$\n\n即\n\n$$f\\!\\left(\\tfrac12\\right)=-\\dfrac12\\int_0^1 f''(\\xi)\\left(x-\\tfrac12\\right)^2dx.$$\n\n注意 $\\left(x-\\tfrac12\\right)^2\\ge0$ 且在区间上不恒为零。\n\n**当 $f''(x)>0$ 时**，被积函数 $f''(\\xi)\\left(x-\\tfrac12\\right)^2\\ge0$ 且不恒为零，积分严格大于 $0$，从而\n\n$$f\\!\\left(\\tfrac12\\right)=-\\dfrac12\\cdot(\\text{正数})<0.$$\n\n这正是选项 **D**，故 D 正确。\n\n相应地，当 $f''(x)<0$ 时同理得 $f\\!\\left(\\tfrac12\\right)>0$，与 B 矛盾。\n\n**验证 D（取具体函数）：** 取 $f(x)=\\left(x-\\tfrac12\\right)^2-\\dfrac{1}{12}$，则 $f''=2>0$，$\\int_0^1 f\\,dx=\\dfrac{1}{12}-\\dfrac{1}{12}=0$，而 $f\\!\\left(\\tfrac12\\right)=-\\dfrac{1}{12}<0$，与 D 一致。",
+      "wrong_options": {
+        "A": "$f'(x)<0$ 只说明 $f$ 单调递减，无法确定中点值符号。反例 $f(x)=\\tfrac12-x$ 满足 $f'<0$、$\\int_0^1 f=0$，但 $f\\\\!\\left(\\tfrac12\\right)=0$，并非 $<0$。",
+        "B": "$f''(x)<0$（上凸）时，由 $f\\\\!\\left(\\tfrac12\\right)=-\\tfrac12\\int_0^1 f''(\\xi)(x-\\tfrac12)^2dx$ 知积分为负，故 $f\\\\!\\left(\\tfrac12\\right)>0$，恰与所述相反。",
+        "C": "$f'(x)>0$ 只说明 $f$ 单调递增，同样定不出中点值符号。反例 $f(x)=x-\\tfrac12$ 满足 $f'>0$、$\\int_0^1 f=0$，而 $f\\\\!\\left(\\tfrac12\\right)=0$。"
+      },
+      "pitfalls": [
+        "应在中点 $x=\\tfrac12$ 处展开，这样一次项 $\\int_0^1(x-\\tfrac12)dx=0$ 自动消去，关系才简洁。",
+        "凹凸性（$f''$ 符号）才能锁定中点值符号；仅有单调性（$f'$ 符号）不行，A、C 用线性反例即排除。",
+        "符号别弄反：$f''>0$ 推出 $f\\\\!\\left(\\tfrac12\\right)<0$，因为等式右边有个负号。"
+      ],
+      "key_point": "在中点处作二阶泰勒展开后在 $[0,1]$ 积分，一次项消失，由 $f''$ 的固定符号经积分中值思想直接判定 $f\\\\!\\left(\\tfrac12\\right)$ 的符号。"
+    },
+    {
       "id": 260,
       "paper": "数学三",
       "year": 2018,
@@ -58,6 +86,33 @@
         "$N$ 不必分部积分求数值：把 $x,-x$ 配对成 $h(x)=(1+x)\\mathrm{e}^{-x}+(1-x)\\mathrm{e}^{x}$，证 $h(x)<h(0)=2$ 即得 $N<\\pi=M$，避免“全在估算”。"
       ],
       "key_point": "对称区间先用奇偶性化简，再以\"被积函数符号/下界\"做大小估计，避免硬算。"
+    },
+    {
+      "id": 294,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设某产品的成本函数 $C(Q)$ 可导, 其中 $Q$ 为产量, 若产量为 $Q_0$ 时平均成本最小, 则 $(\\quad)$",
+      "options": {
+        "A": "$C^{\\prime}\\left(Q_0\\right)=0$",
+        "B": "$C^{\\prime}\\left(Q_0\\right)=C\\left(Q_0\\right)$",
+        "C": "$C^{\\prime}\\left(Q_0\\right)=Q_0 C\\left(Q_0\\right)$",
+        "D": "$Q_0 C^{\\prime}\\left(Q_0\\right)=C\\left(Q_0\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n“平均成本”指单位产量成本 $\\bar C(Q)=\\dfrac{C(Q)}{Q}$。产量 $Q_0$ 使平均成本最小，是可导函数取极小值，必有一阶导数为零，即 $\\bar C'(Q_0)=0$。对商 $\\dfrac{C(Q)}{Q}$ 用商的求导法则，令分子为零即得 $Q_0$ 应满足的关系。其经济含义是著名结论：平均成本最小时，边际成本等于平均成本。\n\n【解答】\n\n平均成本函数\n\n$$\\bar C(Q)=\\dfrac{C(Q)}{Q}.$$\n\n由商的求导法则\n\n$$\\bar C'(Q)=\\dfrac{C'(Q)\\cdot Q-C(Q)\\cdot 1}{Q^2}=\\dfrac{Q\\,C'(Q)-C(Q)}{Q^2}.$$\n\n平均成本在 $Q_0$ 处取最小，且 $C$ 可导，故 $Q_0$ 是 $\\bar C$ 的极小值点，必满足一阶必要条件 $\\bar C'(Q_0)=0$。因 $Q_0>0$，分母 $Q_0^2\\ne0$，于是分子为零：\n\n$$Q_0\\,C'(Q_0)-C(Q_0)=0\\\\ \\Longrightarrow\\\\ Q_0\\,C'(Q_0)=C(Q_0).$$\n\n这正是选项 **D**。\n\n**经济解释与验证：** 上式两边除以 $Q_0$ 得 $C'(Q_0)=\\dfrac{C(Q_0)}{Q_0}$，即**边际成本 $=$ 平均成本**——这是平均成本曲线最低点的标志（边际成本曲线穿过平均成本曲线最低点）。例如取 $C(Q)=Q^2+4$，则 $\\bar C=Q+\\dfrac4Q$，由 $\\bar C'=1-\\dfrac{4}{Q^2}=0$ 得 $Q_0=2$；此时 $C'(2)=4$，$\\dfrac{C(2)}{2}=\\dfrac{8}{2}=4$，确实满足 $Q_0C'(Q_0)=C(Q_0)$（$2\\times4=8=C(2)$）。",
+      "wrong_options": {
+        "A": "$C'(Q_0)=0$ 是“总成本”取极值的条件，而非平均成本最小。一般成本递增，$C'>0$，此式通常不成立。",
+        "B": "$C'(Q_0)=C(Q_0)$ 量纲与含义都不对：正确条件是边际成本等于平均成本 $\\dfrac{C(Q_0)}{Q_0}$，而非等于总成本 $C(Q_0)$。",
+        "C": "$C'(Q_0)=Q_0C(Q_0)$ 不是由 $\\bar C'=0$ 化简得到的关系，纯属凑项错误。"
+      },
+      "pitfalls": [
+        "“平均成本”是 $C(Q)/Q$，不要与“边际成本”$C'(Q)$ 或“总成本”$C(Q)$ 混淆。",
+        "用商的求导令 $\\bar C'=0$ 时，结论是分子 $QC'-C=0$，即 $Q_0C'(Q_0)=C(Q_0)$，别把 $Q_0$ 漏掉写成 $C'(Q_0)=C(Q_0)$。"
+      ],
+      "key_point": "平均成本 $C(Q)/Q$ 取极小的一阶必要条件是其导数为零，化简即“边际成本 = 平均成本”，亦即 $Q_0C'(Q_0)=C(Q_0)$。"
     },
     {
       "id": 261,
@@ -142,6 +197,184 @@
       "key_point": "密度关于 $x=1$ 对称 $\\Rightarrow P\\{X<1\\}=0.5$ 且对称区间概率相等，再用 $P\\{X<0\\}=P\\{X<1\\}-P\\{0<X<1\\}$。"
     },
     {
+      "id": 295,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $X_1, X_2, \\cdots, X_n(n \\geqslant 2)$ 为来自总体 $N\\left(\\mu, \\sigma^2\\right)(\\sigma>0)$ 的简单随机样本, 令 $\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^n X_i, S=\\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2}, S^*=\\sqrt{\\frac{1}{n} \\sum_{i=1}^n\\left(X_i-\\mu\\right)^2}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S} \\sim t(n)$",
+        "B": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S} \\sim t(n-1)$",
+        "C": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S^*} \\sim t(n)$",
+        "D": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S^*} \\sim t(n-1)$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n本题考查正态总体三大抽样分布的构造，核心是分清 $t$ 分布的两个\"零件\"：分子是标准正态量，分母是\"卡方除以其自由度再开方\"，且二者相互独立。关键在于辨析两个不同的方差统计量：$S$ 用样本均值 $\\bar X$ 中心化（损失一个自由度），$S^*$ 用已知的真值 $\\mu$ 中心化（不损失自由度）。这一字之差决定了卡方的自由度，进而决定 $t$ 的自由度。\n\n要点：\n\n- $\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\sim N(0,1)$；\n- $\\dfrac{(n-1)S^2}{\\sigma^2}\\sim\\chi^2(n-1)$，且与 $\\bar X$ 独立；\n- 把含 $\\mu$ 的 $S^*$ 代入会得到 $\\chi^2(n)$，构造不出标准的 $t$ 统计量。\n\n【解答】\n\n由正态总体抽样分布的基本结论：\n\n$$\\frac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\sim N(0,1),\\qquad \\frac{(n-1)S^2}{\\sigma^2}\\sim\\chi^2(n-1),$$\n\n且二者相互独立。按 $t$ 分布定义 $t=\\dfrac{Z}{\\sqrt{\\chi^2(k)/k}}$，取 $k=n-1$：\n\n$$\\frac{\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}}{\\sqrt{\\dfrac{(n-1)S^2/\\sigma^2}{\\,n-1\\,}}}=\\frac{\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}}{\\sqrt{S^2/\\sigma^2}}=\\frac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1).$$\n\n$\\sigma$ 在化简中约去，故\n\n$$\\frac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1).$$\n\n故选 B。\n\n（附：若用 $S^*$，因 $\\dfrac{nS^{*2}}{\\sigma^2}=\\sum\\left(\\dfrac{X_i-\\mu}{\\sigma}\\right)^2\\sim\\chi^2(n)$，且分子 $\\sqrt n(\\bar X-\\mu)/\\sigma$ 与 $S^*$ 不独立，故 $\\dfrac{\\sqrt n(\\bar X-\\mu)}{S^*}$ 并不服从 $t$ 分布，C、D 均不成立。）",
+      "wrong_options": {
+        "A": "自由度错。用 $S$（以 $\\bar X$ 中心化）时卡方为 $\\chi^2(n-1)$，对应 $t(n-1)$ 而非 $t(n)$。",
+        "C": "分母用 $S^*$ 且自由度错。$S^*$ 以已知 $\\mu$ 中心化对应 $\\chi^2(n)$，且与分子不独立，构造不出 $t$ 分布。",
+        "D": "分母用 $S^*$ 错。$\\dfrac{\\sqrt n(\\bar X-\\mu)}{S^*}$ 中分子与分母不独立，不服从任何 $t$ 分布。"
+      },
+      "pitfalls": [
+        "混淆 $S$ 与 $S^*$：以 $\\bar X$ 中心化损失一个自由度得 $\\chi^2(n-1)$，以真值 $\\mu$ 中心化得 $\\chi^2(n)$。",
+        "构造 $t$ 必须保证分子的正态量与分母的卡方量相互独立，$\\bar X$ 与 $S^2$ 独立是关键前提。"
+      ],
+      "key_point": "$\\dfrac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1)$：分子标准正态、分母卡方除以自由度开方，且二者独立。"
+    },
+    {
+      "id": 284,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 9,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $y=x^2+2 \\ln x$ 在其拐点处的切线方程是",
+      "options": {},
+      "answer": "$y=4 x-3$",
+      "analysis": "【分析】\n\n求拐点处切线方程分两步：先由 $y''=0$ 找候选点并验证二阶导在该点两侧变号（确认是拐点），再算出该点纵坐标与切线斜率 $y'$，最后写点斜式。注意定义域 $x>0$。\n\n【解答】\n\n函数 $y=x^2+2\\ln x$，定义域 $x>0$。\n\n求导：\n\n$$y'=2x+\\frac{2}{x},\\qquad y''=2-\\frac{2}{x^2}.$$\n\n令 $y''=0$：$2-\\dfrac{2}{x^2}=0\\Rightarrow x^2=1\\Rightarrow x=1$（取正根）。\n\n在 $x=1$ 两侧：当 $0<x<1$ 时 $y''<0$，当 $x>1$ 时 $y''>0$，二阶导变号，故 $(1,\\,y(1))$ 为拐点。\n\n拐点纵坐标：$y(1)=1^2+2\\ln 1=1$。\n\n该点切线斜率：$y'(1)=2\\cdot 1+\\dfrac{2}{1}=4$。\n\n由点斜式：\n\n$$y-1=4(x-1)\\\\;\\Longrightarrow\\\\; y=4x-3.$$\n\n即拐点处切线方程为 $y=4x-3$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "定义域为 $x>0$，$x=-1$ 不在定义域内须舍去。",
+        "$y''=0$ 只是拐点的必要条件，应说明二阶导在该点两侧变号才确认是拐点。",
+        "切线斜率要用 $y'$ 在拐点处的值，别误用 $y''$。"
+      ],
+      "key_point": "拐点处切线：先解 $y''=0$ 定 $x$ 并验变号，再用 $y'$ 算斜率写点斜式。"
+    },
+    {
+      "id": 296,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 10,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int \\mathrm{e}^x \\arcsin \\sqrt{1-\\mathrm{e}^{2 x}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\mathrm{e}^x \\arcsin \\sqrt{1-\\mathrm{e}^{2 x}}-\\sqrt{1-\\mathrm{e}^{2 x}}+C$",
+      "analysis": "【分析】\n\n被积函数是 $\\mathrm e^x$ 乘一个反三角函数，典型的分部积分结构：把 $\\mathrm e^x\\,\\mathrm dx$ 凑成 $\\mathrm d(\\mathrm e^x)$，让反三角函数求导降阶。求导后会出现含 $\\sqrt{1-\\mathrm e^{2x}}$ 的式子，再凑微分即可积出。注意定义域：要求 $1-\\mathrm e^{2x}\\ge 0$，即 $x\\le 0$，此时 $\\mathrm e^x>0$，下面对 $\\sqrt{\\mathrm e^{2x}}=\\mathrm e^x$ 的化简成立。\n\n【解答】\n\n记 $I=\\displaystyle\\int \\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\,\\mathrm dx$。分部积分，取 $u=\\arcsin\\sqrt{1-\\mathrm e^{2x}}$，$\\mathrm dv=\\mathrm e^x\\,\\mathrm dx$，则 $v=\\mathrm e^x$：\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\int \\mathrm e^x\\,\\mathrm d\\!\\left(\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\right).$$\n\n先算 $u$ 的导数。令 $t=\\sqrt{1-\\mathrm e^{2x}}$，则\n\n$$\\frac{\\mathrm d}{\\mathrm dx}\\arcsin t=\\frac{1}{\\sqrt{1-t^2}}\\cdot t',\\qquad 1-t^2=\\mathrm e^{2x},\\quad \\sqrt{1-t^2}=\\mathrm e^x.$$\n\n而\n\n$$t'=\\frac{(1-\\mathrm e^{2x})'}{2\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-2\\mathrm e^{2x}}{2\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}.$$\n\n于是\n\n$$\\frac{\\mathrm d}{\\mathrm dx}\\arcsin\\sqrt{1-\\mathrm e^{2x}}=\\frac{1}{\\mathrm e^x}\\cdot\\frac{-\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-\\mathrm e^{x}}{\\sqrt{1-\\mathrm e^{2x}}}.$$\n\n代回：\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\int \\mathrm e^x\\cdot\\frac{-\\mathrm e^{x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}+\\int\\frac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx.$$\n\n对余下积分凑微分。注意 $\\mathrm d(1-\\mathrm e^{2x})=-2\\mathrm e^{2x}\\,\\mathrm dx$，故 $\\mathrm e^{2x}\\,\\mathrm dx=-\\dfrac12\\,\\mathrm d(1-\\mathrm e^{2x})$：\n\n$$\\int\\frac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx=-\\frac12\\int (1-\\mathrm e^{2x})^{-1/2}\\,\\mathrm d(1-\\mathrm e^{2x})=-\\frac12\\cdot 2\\sqrt{1-\\mathrm e^{2x}}=-\\sqrt{1-\\mathrm e^{2x}}.$$\n\n故\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\sqrt{1-\\mathrm e^{2x}}+C.$$\n\n验算：对结果求导，$\\dfrac{\\mathrm d}{\\mathrm dx}\\!\\left(\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\right)=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\dfrac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}$，而 $\\dfrac{\\mathrm d}{\\mathrm dx}\\!\\left(-\\sqrt{1-\\mathrm e^{2x}}\\right)=\\dfrac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}$，两者相加恰为 $\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}$，与被积函数一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "化简 $\\sqrt{1-t^2}=\\sqrt{\\mathrm e^{2x}}=\\mathrm e^x$ 时，因定义域 $x\\le0$ 仍有 $\\mathrm e^x>0$，取正号正确，别误写绝对值出错。",
+        "复合函数求导别漏掉内层 $\\sqrt{1-\\mathrm e^{2x}}$ 的导数（链式法则两层）。",
+        "凑微分时系数 $-\\tfrac12$ 易丢。"
+      ],
+      "key_point": "$\\mathrm e^x$ 乘反三角：分部积分把 $\\mathrm e^x\\mathrm dx$ 凑成 $\\mathrm d(\\mathrm e^x)$，余项再凑微分积出根式。"
+    },
+    {
+      "id": 297,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "差分方程 $\\Delta^2 y_x-y_x=5$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$C 2^x-5$ ( $C$ 为任意常数)",
+      "analysis": "【分析】\n\n先用差分算子定义把 $\\Delta^2 y_x$ 展开为关于 $y_{x+2},y_{x+1},y_x$ 的常系数线性差分方程，再用特征根法求齐次通解、待定系数法求特解。注意 $\\Delta y_x=y_{x+1}-y_x$，$\\Delta^2 y_x=\\Delta(\\Delta y_x)=y_{x+2}-2y_{x+1}+y_x$。\n\n【解答】\n\n由差分算子定义：\n\n$$\\Delta^2 y_x=y_{x+2}-2y_{x+1}+y_x.$$\n\n代入原方程 $\\Delta^2 y_x-y_x=5$：\n\n$$y_{x+2}-2y_{x+1}+y_x-y_x=5\\\\;\\Longrightarrow\\\\; y_{x+2}-2y_{x+1}=5.$$\n\n这是二阶常系数线性差分方程。对应齐次方程 $y_{x+2}-2y_{x+1}=0$，特征方程\n\n$$r^2-2r=0\\\\;\\Longrightarrow\\\\; r=0\\\\ \\text{或}\\\\ r=2.$$\n\n特征根 $r=0$ 对应的解 $0^x$ 当 $x\\ge1$ 恒为零，不提供有效自由度，故齐次通解为\n\n$$y_x^{(h)}=C\\cdot 2^x\\quad(C\\\\ \\text{为任意常数}).$$\n\n求特解：右端为常数，因 $r=0$ 不是使常数项失效的情形（常数 $y_x=A$ 代入左端不为零），试 $y_x^*=A$：\n\n$$A-2A=5\\\\;\\Longrightarrow\\\\;-A=5\\\\;\\Longrightarrow\\\\;A=-5.$$\n\n故特解 $y_x^*=-5$。\n\n综上，通解为\n\n$$y_x=C\\cdot 2^x-5\\quad(C\\\\ \\text{为任意常数}).$$\n\n验算：$y_{x+2}-2y_{x+1}=(C\\cdot2^{x+2}-5)-2(C\\cdot2^{x+1}-5)=C\\cdot2^{x+2}-5-C\\cdot2^{x+2}+10=5$，成立。",
+      "wrong_options": {},
+      "pitfalls": [
+        "展开 $\\Delta^2 y_x=y_{x+2}-2y_{x+1}+y_x$ 要记牢，别错成 $y_{x+2}-y_x$。",
+        "化简后 $-y_x$ 与展开式中的 $+y_x$ 恰好抵消，方程降为 $y_{x+2}-2y_{x+1}=5$。",
+        "特征根含 $r=0$，齐次解只保留 $C\\cdot2^x$ 一项。"
+      ],
+      "key_point": "差分方程先用算子定义展开成 $y_{x+k}$ 形式，再特征根法求齐次解、待定常数求特解。"
+    },
+    {
+      "id": 298,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 满足 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)(\\Delta x \\rightarrow 0)$ 且 $f(0)=2$, 则 $f(1)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\mathrm{e}$",
+      "analysis": "【分析】\n\n题目给的等式 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)$ 正是\"可微\"的定义形式。回忆可微的标准写法\n\n$$f(x+\\Delta x)-f(x)=A\\,\\Delta x+o(\\Delta x),\\quad A=f'(x).$$\n\n对照系数立刻读出 $f'(x)=2xf(x)$。这是一个可分离变量的一阶微分方程，分离变量积分即可，再用初值 $f(0)=2$ 定常数，最后代 $x=1$。\n\n【解答】\n\n由可微定义，等式 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)$ 表明 $f$ 在每点可导且\n\n$$f'(x)=2xf(x).$$\n\n这是可分离变量方程。注意由 $f(0)=2\\neq0$ 及解的连续性，$f(x)$ 在零点附近不为零，可分离变量：\n\n$$\\dfrac{f'(x)}{f(x)}=2x.$$\n\n两边积分：\n\n$$\\ln|f(x)|=x^2+C_1,\\qquad f(x)=C\\,\\mathrm{e}^{x^2}.$$\n\n代入初值 $f(0)=C\\mathrm{e}^0=C=2$，故\n\n$$f(x)=2\\mathrm{e}^{x^2}.$$\n\n因此\n\n$$f(1)=2\\mathrm{e}^{1}=2\\mathrm{e}.$$\n\n验算：$f'(x)=2\\mathrm{e}^{x^2}\\cdot 2x=2x\\cdot f(x)$，且 $f(0)=2$，均吻合。",
+      "wrong_options": {},
+      "pitfalls": [
+        "没认出题给等式就是可微定义，从而漏掉 f'(x)=2xf(x) 这一关键转化",
+        "把 2x f(x) 误当成对 x 的普通乘积而非导数系数，导致方程写错"
+      ],
+      "key_point": "可微定义 f(x+Δx)-f(x)=AΔx+o(Δx) 中的系数 A 就是导数，识别后化为可分离方程求解。"
+    },
+    {
+      "id": 288,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 13,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 是线性无关的向量组. 若 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2+2 \\boldsymbol{\\alpha}_3$, $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=-\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$. 则 $\\boldsymbol{A}$ 的实特征值为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "2",
+      "analysis": "【分析】\n\n$A$ 作用在线性无关组 $\\alpha_1,\\alpha_2,\\alpha_3$ 上的结果都用这组向量线性表示了，这正好给出 $A$ 在基 $\\alpha_1,\\alpha_2,\\alpha_3$ 下的矩阵表示。把三个像的坐标按列排成矩阵 $B$，则 $A(\\alpha_1,\\alpha_2,\\alpha_3)=(\\alpha_1,\\alpha_2,\\alpha_3)B$。由于 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关（可逆过渡），$A$ 与 $B$ 相似，特征值相同。于是只需求 $B$ 的特征值，再挑出实的。\n\n【解答】\n\n记 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$，由 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关知 $P$ 可逆。把已知写成列：\n\n$$A\\alpha_1=2\\alpha_1+\\alpha_2+\\alpha_3,\\quad A\\alpha_2=\\alpha_2+2\\alpha_3,\\quad A\\alpha_3=-\\alpha_2+\\alpha_3.$$\n\n即 $AP=PB$，其中各像的坐标按列排列：\n\n$$B=\\begin{pmatrix}2&0&0\\\\ 1&1&-1\\\\ 1&2&1\\end{pmatrix}.$$\n\n故 $A=PBP^{-1}$，$A$ 与 $B$ 相似，特征值相同。求 $B$ 的特征多项式：\n\n$$\\det(B-\\lambda I)=\\begin{vmatrix}2-\\lambda&0&0\\\\ 1&1-\\lambda&-1\\\\ 1&2&1-\\lambda\\end{vmatrix}.$$\n\n按第一行展开：\n\n$$=(2-\\lambda)\\begin{vmatrix}1-\\lambda&-1\\\\ 2&1-\\lambda\\end{vmatrix}=(2-\\lambda)\\big[(1-\\lambda)^2+2\\big].$$\n\n令其为零：$\\lambda=2$，或 $(1-\\lambda)^2=-2$。后者无实根（判别式为负，根为 $1\\pm\\sqrt{2}\\,\\mathrm{i}$）。\n\n所以 $A$ 的实特征值为 $\\lambda=2$。\n\n验算：$(1-\\lambda)^2+2=\\lambda^2-2\\lambda+3$，判别式 $4-12=-8<0$，确实无实根，结论成立。",
+      "wrong_options": {},
+      "pitfalls": [
+        "排矩阵时把像的系数按行放而非按列放，得到的是 B 的转置，虽然特征值相同但容易在展开时算错",
+        "忘记筛掉复根，把 1±√2 i 也当成答案",
+        "误以为要先求出 A 的具体元素，其实 A 与坐标矩阵 B 相似即可直接用 B 求特征值"
+      ],
+      "key_point": "线性变换在一组基下的像坐标按列拼成矩阵 B，A 与 B 相似，求 B 的特征多项式并只取实根。"
+    },
+    {
+      "id": 299,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "随机事件 $A, B, C$ 相互独立, 且 $\\displaystyle P(A)=P(B)=P(C)=\\frac{1}{2}$. 则 $P(A C \\mid A \\cup B)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\displaystyle \\frac{1}{3}$",
+      "analysis": "【分析】\n\n直接套条件概率定义 $P(AC\\mid A\\cup B)=\\dfrac{P\\big(AC\\cap(A\\cup B)\\big)}{P(A\\cup B)}$。关键观察：事件 $AC=A\\cap C$ 已经被 $A$ 包含，所以 $AC\\subseteq A\\subseteq A\\cup B$，交起来仍是 $AC$，分子直接是 $P(AC)$。再用独立性算 $P(AC)=P(A)P(C)$，用加法公式（配合独立性）算 $P(A\\cup B)$。\n\n【解答】\n\n由条件概率定义：\n\n$$P(AC\\mid A\\cup B)=\\dfrac{P\\big(AC\\cap(A\\cup B)\\big)}{P(A\\cup B)}.$$\n\n分子：因为 $AC=A\\cap C\\subseteq A\\subseteq A\\cup B$，所以 $AC\\cap(A\\cup B)=AC$。由 $A,C$ 独立，\n\n$$P(AC)=P(A)P(C)=\\dfrac12\\cdot\\dfrac12=\\dfrac14.$$\n\n分母：由加法公式及 $A,B$ 独立，\n\n$$P(A\\cup B)=P(A)+P(B)-P(AB)=\\dfrac12+\\dfrac12-\\dfrac12\\cdot\\dfrac12=\\dfrac34.$$\n\n所以\n\n$$P(AC\\mid A\\cup B)=\\dfrac{1/4}{3/4}=\\dfrac13.$$\n\n验算：$AC\\subseteq A\\cup B$ 的包含关系使分子简化无误；分母 $3/4$ 也可由 $1-P(\\overline A\\,\\overline B)=1-\\tfrac12\\cdot\\tfrac12=\\tfrac34$ 复核，一致。",
+      "wrong_options": {},
+      "pitfalls": [
+        "分子误算成 P(A)P(C)P(A∪B) 之类，没看出 AC 已被 A∪B 包含，分子就是 P(AC)",
+        "求 P(A∪B) 时忘减 P(AB)，直接写成 1/2+1/2=1",
+        "把 AC 与 A、C 的独立性混淆：A、C 独立给出 P(AC)=1/4，但不能直接说 AC 与 A∪B 独立"
+      ],
+      "key_point": "条件概率按定义展开，先用包含关系 AC⊆A∪B 化简分子，再用独立性与加法公式分别算分子分母。"
+    },
+    {
+      "id": 300,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知实数 $a, b$ 满足 $\\displaystyle \\lim _{x \\rightarrow+\\infty}\\left[(a x+b) \\mathrm{e}^{\\frac{1}{x}}-x\\right]=2$. 求 $a, b$",
+      "options": {},
+      "answer": "a=1,\\ b=1",
+      "analysis": "【分析】\n\n$x\\to+\\infty$ 时 $\\dfrac1x\\to0$，把 $\\mathrm{e}^{1/x}$ 按 $\\dfrac1x$ 做麦克劳林展开（带到 $\\dfrac1{x^2}$ 量级即够），再乘上一次函数 $ax+b$ 整理成 $x$ 的幂的形式。整个表达式减去 $x$ 后要趋于有限值 $2$：含 $x$ 的一次项系数必须为零（否则发散），由此定出 $a$；剩下的常数项即为极限值 $2$，定出 $b$。这是典型的\"展开后令各阶系数匹配\"的待定系数法。\n\n【解答】\n\n当 $x\\to+\\infty$ 时，$\\dfrac1x\\to0$，由 $\\mathrm{e}^{t}=1+t+\\dfrac{t^2}{2}+o(t^2)$，取 $t=\\dfrac1x$：\n\n$$\\mathrm{e}^{1/x}=1+\\dfrac1x+\\dfrac{1}{2x^2}+o\\!\\left(\\dfrac1{x^2}\\right).$$\n\n于是\n\n$$(ax+b)\\mathrm{e}^{1/x}=(ax+b)\\left(1+\\dfrac1x+\\dfrac1{2x^2}+o\\!\\left(\\dfrac1{x^2}\\right)\\right).$$\n\n逐项展开并按 $x$ 的幂整理：\n\n$$=ax+a+\\dfrac{a}{2x}+b+\\dfrac{b}{x}+o(1)=ax+(a+b)+\\dfrac{\\frac{a}{2}+b}{x}+o(1).$$\n\n再减去 $x$：\n\n$$(ax+b)\\mathrm{e}^{1/x}-x=(a-1)x+(a+b)+o(1).$$\n\n要使 $x\\to+\\infty$ 时极限存在且等于 $2$：\n\n首先一次项必须消失，否则极限为 $\\pm\\infty$，故\n\n$$a-1=0\\ \\Rightarrow\\ a=1.$$\n\n此时极限值为常数项：\n\n$$\\lim_{x\\to+\\infty}\\big[(a+b)+o(1)\\big]=a+b=2\\ \\Rightarrow\\ b=2-a=1.$$\n\n所以 $a=1,\\ b=1$。\n\n验算：取 $a=b=1$，$(x+1)\\mathrm{e}^{1/x}-x=(x+1)\\big(1+\\tfrac1x+\\tfrac1{2x^2}+\\cdots\\big)-x=x+1+1+o(1)-x=2+o(1)\\to2$，正确。",
+      "wrong_options": {},
+      "pitfalls": [
+        "e^{1/x} 只展开到一阶 1+1/x 就够定 a、b（常数项），但若想验算或题目变形需到 1/x^2，建议保留二阶项以防遗漏",
+        "忘记一次项系数 a-1 必须为零这一\"极限存在\"的前提，直接令常数项等于 2",
+        "把 x→+∞ 误当 x→0 而用错展开变量"
+      ],
+      "key_point": "x→+∞ 含参极限：以 1/x 为小量展开 e^{1/x}，按 x 幂整理，令发散的一次项系数为零定 a，常数项等于极限值定 b。"
+    },
+    {
+      "id": 301,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设平面区域 $D$ 由曲线 $y=\\sqrt{3\\left(1-x^2\\right)}$ 与直线 $y=\\sqrt{3} x$ 及 $y$ 轴围成, 计算二重积分 $\\displaystyle \\iint_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](assets/figures/301.svg)",
+      "options": {},
+      "answer": "\\dfrac{\\sqrt{3}\\,(\\pi-2)}{32}",
+      "analysis": "【分析】\n曲线 $y=\\sqrt{3(1-x^2)}$ 即 $x^2+\\dfrac{y^2}{3}=1\\ (y\\ge0)$,是椭圆的上半;直线 $y=\\sqrt3\\,x$ 过原点,与 $x$ 轴正向夹角 $\\dfrac{\\pi}{3}$;$y$ 轴即 $\\theta=\\dfrac{\\pi}{2}$。三者在第一象限围出一块以原点为顶点、外边界为椭圆弧的扇形状区域,故区域关于角度从 $\\dfrac{\\pi}{3}$ 到 $\\dfrac{\\pi}{2}$、半径从原点到椭圆,用极坐标最自然。把椭圆方程代入 $x=r\\cos\\theta,\\ y=r\\sin\\theta$ 解出 $r$ 的上限即可。\n\n【解答】\n确认区域:直线与椭圆交点由 $3x^2=3(1-x^2)$ 得 $x=\\dfrac{1}{\\sqrt2}$,即交点在第一象限,故 $D$ 是被 $y$ 轴($\\theta=\\frac{\\pi}{2}$)、直线($\\theta=\\frac{\\pi}{3}$)与椭圆弧夹住的区域,$\\theta\\in\\left[\\dfrac{\\pi}{3},\\dfrac{\\pi}{2}\\right]$。\n\n令 $x=r\\cos\\theta,\\ y=r\\sin\\theta$,$\\mathrm dx\\,\\mathrm dy=r\\,\\mathrm dr\\,\\mathrm d\\theta$。椭圆 $x^2+\\dfrac{y^2}{3}=1$ 化为\n$$r^2\\!\\left(\\cos^2\\theta+\\frac{\\sin^2\\theta}{3}\\right)=1\\ \\Rightarrow\\ r=r(\\theta)=\\frac{1}{\\sqrt{\\cos^2\\theta+\\frac13\\sin^2\\theta}}.$$\n于是\n$$\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\int_{\\pi/3}^{\\pi/2}\\!\\!\\int_0^{r(\\theta)}(r\\cos\\theta)^2\\,r\\,\\mathrm dr\\,\\mathrm d\\theta=\\int_{\\pi/3}^{\\pi/2}\\cos^2\\theta\\left[\\frac{r^4}{4}\\right]_0^{r(\\theta)}\\mathrm d\\theta.$$\n而 $r(\\theta)^4=\\dfrac{1}{\\left(\\cos^2\\theta+\\frac13\\sin^2\\theta\\right)^2}=\\dfrac{9}{\\left(3\\cos^2\\theta+\\sin^2\\theta\\right)^2}=\\dfrac{9}{\\left(1+2\\cos^2\\theta\\right)^2}=\\dfrac{9}{(\\cos2\\theta+2)^2}.$\n故内层积分后被积函数为\n$$\\frac{9\\cos^2\\theta}{4(\\cos2\\theta+2)^2}.$$\n用 $\\cos^2\\theta=\\dfrac{1+\\cos2\\theta}{2}$,作代换计算,得\n$$\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\int_{\\pi/3}^{\\pi/2}\\frac{9\\cos^2\\theta}{4(\\cos2\\theta+2)^2}\\,\\mathrm d\\theta=\\frac{\\sqrt3\\,(\\pi-2)}{32}.$$\n\n**校验(直角坐标)**:取竖条 $x\\in\\left[0,\\frac{1}{\\sqrt2}\\right]$,$y$ 从直线 $\\sqrt3 x$ 到椭圆 $\\sqrt{3(1-x^2)}$:\n$$\\int_0^{1/\\sqrt2}\\!\\!x^2\\Big(\\sqrt{3(1-x^2)}-\\sqrt3\\,x\\Big)\\mathrm dx=\\frac{\\sqrt3\\,(\\pi-2)}{32}\\approx0.0618,$$\n与极坐标结果一致。\n\n所以 $\\displaystyle\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\frac{\\sqrt3\\,(\\pi-2)}{32}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "曲线是椭圆 $x^2+y^2/3=1$ 而非圆,极坐标里 $r$ 上限随 $\\theta$ 变化,别误当成定值半径。",
+        "角度范围是 $[\\frac{\\pi}{3},\\frac{\\pi}{2}]$(直线到 $y$ 轴),写反成 $[0,\\frac{\\pi}{3}]$ 会算到区域外。",
+        "别忘了极坐标面积元多出的因子 $r$,被积函数应是 $r^2\\cos^2\\theta\\cdot r=r^3\\cos^2\\theta$。"
+      ],
+      "key_point": "原点为顶点、外边界为二次曲线的扇形区域用极坐标,把椭圆代入解出 $r(\\theta)$ 作上限,先对 $r$ 后对 $\\theta$ 积分。"
+    },
+    {
       "id": 272,
       "paper": "数学三",
       "year": 2018,
@@ -159,6 +392,25 @@
         "结论要回答\"存在\"并给出判定理由（正定二次型+有界闭域），不能只给驻点值。"
       ],
       "key_point": "把三块面积写成段长的二次函数，在线性约束 x+y+z=2 下用拉格朗日法；利用一阶条件 f=½k·(x+y+z) 直接得最小值 k。"
+    },
+    {
+      "id": 302,
+      "paper": "数学三",
+      "year": 2018,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知 $\\displaystyle \\cos 2 x-\\frac{1}{(1+x)^2}=\\sum_{n=0}^{\\infty} a_n x^n(-1<x<1)$, 求 $a_n$",
+      "options": {},
+      "answer": "n 为偶数时 a_n=\\dfrac{(-1)^{n/2}2^n}{n!}-(n+1);n 为奇数时 a_n=n+1",
+      "analysis": "【分析】\n直接对左端整体展开很麻烦,采取“两块分别展开再合并”的间接法。$\\cos 2x$ 用余弦的麦克劳林公式,只含偶次幂;$\\dfrac{1}{(1+x)^2}$ 注意到它是 $\\dfrac{1}{1+x}$ 的导数的相反数,从几何级数 $\\dfrac{1}{1+x}=\\sum(-1)^nx^n$ 逐项求导即可得到其幂级数。两者在 $(-1,1)$ 内都成立,逐项相减即得 $a_n$,按 $n$ 的奇偶分类。\n\n【解答】\n**第一块**:$\\displaystyle\\cos 2x=\\sum_{k=0}^{\\infty}\\frac{(-1)^k(2x)^{2k}}{(2k)!}=\\sum_{k=0}^{\\infty}\\frac{(-1)^k2^{2k}}{(2k)!}x^{2k}\\quad(x\\in\\mathbf R).$ 只有偶次幂出现,$x^{2k}$ 系数为 $\\dfrac{(-1)^k2^{2k}}{(2k)!}$。\n\n**第二块**:由 $\\displaystyle\\frac{1}{1+x}=\\sum_{n=0}^{\\infty}(-1)^nx^n\\ (|x|<1)$ 逐项求导,\n$$-\\frac{1}{(1+x)^2}=\\sum_{n=1}^{\\infty}(-1)^n n\\,x^{n-1}\\ \\Rightarrow\\ \\frac{1}{(1+x)^2}=\\sum_{n=0}^{\\infty}(-1)^n(n+1)x^n\\quad(|x|<1).$$\n\n**相减**:在 $-1<x<1$ 内,\n$$\\cos 2x-\\frac{1}{(1+x)^2}=\\sum_{k=0}^{\\infty}\\frac{(-1)^k2^{2k}}{(2k)!}x^{2k}-\\sum_{n=0}^{\\infty}(-1)^n(n+1)x^n.$$\n比较 $x^n$ 的系数:\n\n- 当 $n$ 为奇数时,$\\cos2x$ 无贡献,且 $(-1)^n=-1$,故\n$$a_n=-(-1)^n(n+1)=n+1.$$\n- 当 $n$ 为偶数,记 $n=2k$,则 $(-1)^n=1$,$\\cos2x$ 贡献 $\\dfrac{(-1)^k2^{2k}}{(2k)!}$,故\n$$a_n=\\frac{(-1)^{k}2^{2k}}{(2k)!}-(n+1)=\\frac{(-1)^{n/2}2^{n}}{n!}-(n+1).$$\n\n**结论**:\n$$a_n=\\begin{cases}\\dfrac{(-1)^{n/2}\\,2^{n}}{n!}-(n+1),&n\\ \\text{为偶数},\\\\[8pt]n+1,&n\\ \\text{为奇数}.\\end{cases}$$\n\n**验算**:$a_0=\\dfrac{1}{1}-1=0$,$a_1=2$,$a_2=\\dfrac{-4}{2}-3=-5$,$a_3=4$,$a_4=\\dfrac{16}{24}-5=-\\dfrac{13}{3}$,与对原函数直接泰勒展开所得系数 $0,2,-5,4,-\\frac{13}{3},\\dots$ 完全吻合。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\cos 2x$ 里是 $(2x)^{2k}$,系数含 $2^{2k}$,别漏掉这个 $2$ 的幂。",
+        "$\\dfrac{1}{(1+x)^2}$ 的系数是 $(-1)^n(n+1)$,常数项 $n=0$ 时为 $1$(对应 $n+1=1$),不要写成从 $n=1$ 起。",
+        "最终要按 $n$ 奇偶分类给出 $a_n$,只写偶次项是不完整的。"
+      ],
+      "key_point": "间接展开法:$\\cos2x$ 用麦克劳林公式,$\\frac{1}{(1+x)^2}$ 由几何级数逐项求导得到,再按奇偶比较系数。"
     },
     {
       "id": 275,
@@ -254,258 +506,6 @@
         "求 $D(\\hat\\sigma)$ 用的是 $D(|X|)=\\sigma^2$ 而非 $E|X|^2=2\\sigma^2$，注意先减均值平方。"
       ],
       "key_point": "拉普拉斯密度取对数似然解出 $\\hat\\sigma=\\overline{|X|}$；$|X|$ 服从均值 $\\sigma$ 的指数分布，故 $E=\\sigma$、$D=\\sigma^2$，再除以 $n$ 得样本均值的方差。"
-    },
-    {
-      "id": 284,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 9,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "曲线 $y=x^2+2 \\ln x$ 在其拐点处的切线方程是",
-      "options": {},
-      "answer": "$y=4 x-3$",
-      "analysis": "【分析】\n\n求拐点处切线方程分两步：先由 $y''=0$ 找候选点并验证二阶导在该点两侧变号（确认是拐点），再算出该点纵坐标与切线斜率 $y'$，最后写点斜式。注意定义域 $x>0$。\n\n【解答】\n\n函数 $y=x^2+2\\ln x$，定义域 $x>0$。\n\n求导：\n\n$$y'=2x+\\frac{2}{x},\\qquad y''=2-\\frac{2}{x^2}.$$\n\n令 $y''=0$：$2-\\dfrac{2}{x^2}=0\\Rightarrow x^2=1\\Rightarrow x=1$（取正根）。\n\n在 $x=1$ 两侧：当 $0<x<1$ 时 $y''<0$，当 $x>1$ 时 $y''>0$，二阶导变号，故 $(1,\\,y(1))$ 为拐点。\n\n拐点纵坐标：$y(1)=1^2+2\\ln 1=1$。\n\n该点切线斜率：$y'(1)=2\\cdot 1+\\dfrac{2}{1}=4$。\n\n由点斜式：\n\n$$y-1=4(x-1)\\\\;\\Longrightarrow\\\\; y=4x-3.$$\n\n即拐点处切线方程为 $y=4x-3$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "定义域为 $x>0$，$x=-1$ 不在定义域内须舍去。",
-        "$y''=0$ 只是拐点的必要条件，应说明二阶导在该点两侧变号才确认是拐点。",
-        "切线斜率要用 $y'$ 在拐点处的值，别误用 $y''$。"
-      ],
-      "key_point": "拐点处切线：先解 $y''=0$ 定 $x$ 并验变号，再用 $y'$ 算斜率写点斜式。"
-    },
-    {
-      "id": 288,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 13,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 是线性无关的向量组. 若 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=2 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2+2 \\boldsymbol{\\alpha}_3$, $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=-\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$. 则 $\\boldsymbol{A}$ 的实特征值为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "2",
-      "analysis": "【分析】\n\n$A$ 作用在线性无关组 $\\alpha_1,\\alpha_2,\\alpha_3$ 上的结果都用这组向量线性表示了，这正好给出 $A$ 在基 $\\alpha_1,\\alpha_2,\\alpha_3$ 下的矩阵表示。把三个像的坐标按列排成矩阵 $B$，则 $A(\\alpha_1,\\alpha_2,\\alpha_3)=(\\alpha_1,\\alpha_2,\\alpha_3)B$。由于 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关（可逆过渡），$A$ 与 $B$ 相似，特征值相同。于是只需求 $B$ 的特征值，再挑出实的。\n\n【解答】\n\n记 $P=(\\alpha_1,\\alpha_2,\\alpha_3)$，由 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关知 $P$ 可逆。把已知写成列：\n\n$$A\\alpha_1=2\\alpha_1+\\alpha_2+\\alpha_3,\\quad A\\alpha_2=\\alpha_2+2\\alpha_3,\\quad A\\alpha_3=-\\alpha_2+\\alpha_3.$$\n\n即 $AP=PB$，其中各像的坐标按列排列：\n\n$$B=\\begin{pmatrix}2&0&0\\\\ 1&1&-1\\\\ 1&2&1\\end{pmatrix}.$$\n\n故 $A=PBP^{-1}$，$A$ 与 $B$ 相似，特征值相同。求 $B$ 的特征多项式：\n\n$$\\det(B-\\lambda I)=\\begin{vmatrix}2-\\lambda&0&0\\\\ 1&1-\\lambda&-1\\\\ 1&2&1-\\lambda\\end{vmatrix}.$$\n\n按第一行展开：\n\n$$=(2-\\lambda)\\begin{vmatrix}1-\\lambda&-1\\\\ 2&1-\\lambda\\end{vmatrix}=(2-\\lambda)\\big[(1-\\lambda)^2+2\\big].$$\n\n令其为零：$\\lambda=2$，或 $(1-\\lambda)^2=-2$。后者无实根（判别式为负，根为 $1\\pm\\sqrt{2}\\,\\mathrm{i}$）。\n\n所以 $A$ 的实特征值为 $\\lambda=2$。\n\n验算：$(1-\\lambda)^2+2=\\lambda^2-2\\lambda+3$，判别式 $4-12=-8<0$，确实无实根，结论成立。",
-      "wrong_options": {},
-      "pitfalls": [
-        "排矩阵时把像的系数按行放而非按列放，得到的是 B 的转置，虽然特征值相同但容易在展开时算错",
-        "忘记筛掉复根，把 1±√2 i 也当成答案",
-        "误以为要先求出 A 的具体元素，其实 A 与坐标矩阵 B 相似即可直接用 B 求特征值"
-      ],
-      "key_point": "线性变换在一组基下的像坐标按列拼成矩阵 B，A 与 B 相似，求 B 的特征多项式并只取实根。"
-    },
-    {
-      "id": 293,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $[0,1]$ 上二阶可导, 且 $\\displaystyle \\int_0^1 f(x) \\mathrm{d} x=0$, 则 $(\\quad)$",
-      "options": {
-        "A": "当 $f^{\\prime}(x)<0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
-        "B": "当 $f^{\\prime \\prime}(x)<0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
-        "C": "当 $f^{\\prime}(x)>0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$",
-        "D": "当 $f^{\\prime \\prime}(x)>0$ 时, $\\displaystyle f\\left(\\frac{1}{2}\\right)<0$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n题目给出 $\\int_0^1 f(x)\\,dx=0$，问在不同凹凸性（$f''$ 的符号）或单调性（$f'$ 的符号）条件下能否判定 $f\\left(\\tfrac12\\right)$ 的符号。核心工具是带拉格朗日余项的泰勒公式：把 $f(x)$ 在 $x=\\dfrac12$ 处展开到二阶，再在 $[0,1]$ 上积分，利用一次项积分为零、$f''$ 符号固定，立刻定出 $f\\left(\\tfrac12\\right)$ 的符号。\n\n仅靠单调性（$f'$ 同号）无法定出中点函数值的符号——可举反例排除 A、C；因此应从二阶导（凹凸性）入手，答案在 B、D 之间二选一。\n\n【解答】\n\n把 $f(x)$ 在点 $x_0=\\dfrac12$ 处作一阶泰勒展开并带二阶拉格朗日余项：存在介于 $x$ 与 $\\dfrac12$ 之间的 $\\xi(x)$，使\n\n$$f(x)=f\\!\\left(\\tfrac12\\right)+f'\\!\\left(\\tfrac12\\right)\\left(x-\\tfrac12\\right)+\\dfrac12 f''(\\xi)\\left(x-\\tfrac12\\right)^2.$$\n\n两边在 $[0,1]$ 上积分。逐项计算：\n\n- $\\displaystyle\\int_0^1 f\\!\\left(\\tfrac12\\right)dx=f\\!\\left(\\tfrac12\\right)$；\n- $\\displaystyle\\int_0^1\\left(x-\\tfrac12\\right)dx=0$（关于 $x=\\tfrac12$ 对称），故一次项消失；\n- 左边 $\\displaystyle\\int_0^1 f(x)dx=0$。\n\n于是\n\n$$0=f\\!\\left(\\tfrac12\\right)+\\dfrac12\\int_0^1 f''(\\xi)\\left(x-\\tfrac12\\right)^2dx,$$\n\n即\n\n$$f\\!\\left(\\tfrac12\\right)=-\\dfrac12\\int_0^1 f''(\\xi)\\left(x-\\tfrac12\\right)^2dx.$$\n\n注意 $\\left(x-\\tfrac12\\right)^2\\ge0$ 且在区间上不恒为零。\n\n**当 $f''(x)>0$ 时**，被积函数 $f''(\\xi)\\left(x-\\tfrac12\\right)^2\\ge0$ 且不恒为零，积分严格大于 $0$，从而\n\n$$f\\!\\left(\\tfrac12\\right)=-\\dfrac12\\cdot(\\text{正数})<0.$$\n\n这正是选项 **D**，故 D 正确。\n\n相应地，当 $f''(x)<0$ 时同理得 $f\\!\\left(\\tfrac12\\right)>0$，与 B 矛盾。\n\n**验证 D（取具体函数）：** 取 $f(x)=\\left(x-\\tfrac12\\right)^2-\\dfrac{1}{12}$，则 $f''=2>0$，$\\int_0^1 f\\,dx=\\dfrac{1}{12}-\\dfrac{1}{12}=0$，而 $f\\!\\left(\\tfrac12\\right)=-\\dfrac{1}{12}<0$，与 D 一致。",
-      "wrong_options": {
-        "A": "$f'(x)<0$ 只说明 $f$ 单调递减，无法确定中点值符号。反例 $f(x)=\\tfrac12-x$ 满足 $f'<0$、$\\int_0^1 f=0$，但 $f\\\\!\\left(\\tfrac12\\right)=0$，并非 $<0$。",
-        "B": "$f''(x)<0$（上凸）时，由 $f\\\\!\\left(\\tfrac12\\right)=-\\tfrac12\\int_0^1 f''(\\xi)(x-\\tfrac12)^2dx$ 知积分为负，故 $f\\\\!\\left(\\tfrac12\\right)>0$，恰与所述相反。",
-        "C": "$f'(x)>0$ 只说明 $f$ 单调递增，同样定不出中点值符号。反例 $f(x)=x-\\tfrac12$ 满足 $f'>0$、$\\int_0^1 f=0$，而 $f\\\\!\\left(\\tfrac12\\right)=0$。"
-      },
-      "pitfalls": [
-        "应在中点 $x=\\tfrac12$ 处展开，这样一次项 $\\int_0^1(x-\\tfrac12)dx=0$ 自动消去，关系才简洁。",
-        "凹凸性（$f''$ 符号）才能锁定中点值符号；仅有单调性（$f'$ 符号）不行，A、C 用线性反例即排除。",
-        "符号别弄反：$f''>0$ 推出 $f\\\\!\\left(\\tfrac12\\right)<0$，因为等式右边有个负号。"
-      ],
-      "key_point": "在中点处作二阶泰勒展开后在 $[0,1]$ 积分，一次项消失，由 $f''$ 的固定符号经积分中值思想直接判定 $f\\\\!\\left(\\tfrac12\\right)$ 的符号。"
-    },
-    {
-      "id": 294,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设某产品的成本函数 $C(Q)$ 可导, 其中 $Q$ 为产量, 若产量为 $Q_0$ 时平均成本最小, 则 $(\\quad)$",
-      "options": {
-        "A": "$C^{\\prime}\\left(Q_0\\right)=0$",
-        "B": "$C^{\\prime}\\left(Q_0\\right)=C\\left(Q_0\\right)$",
-        "C": "$C^{\\prime}\\left(Q_0\\right)=Q_0 C\\left(Q_0\\right)$",
-        "D": "$Q_0 C^{\\prime}\\left(Q_0\\right)=C\\left(Q_0\\right)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n“平均成本”指单位产量成本 $\\bar C(Q)=\\dfrac{C(Q)}{Q}$。产量 $Q_0$ 使平均成本最小，是可导函数取极小值，必有一阶导数为零，即 $\\bar C'(Q_0)=0$。对商 $\\dfrac{C(Q)}{Q}$ 用商的求导法则，令分子为零即得 $Q_0$ 应满足的关系。其经济含义是著名结论：平均成本最小时，边际成本等于平均成本。\n\n【解答】\n\n平均成本函数\n\n$$\\bar C(Q)=\\dfrac{C(Q)}{Q}.$$\n\n由商的求导法则\n\n$$\\bar C'(Q)=\\dfrac{C'(Q)\\cdot Q-C(Q)\\cdot 1}{Q^2}=\\dfrac{Q\\,C'(Q)-C(Q)}{Q^2}.$$\n\n平均成本在 $Q_0$ 处取最小，且 $C$ 可导，故 $Q_0$ 是 $\\bar C$ 的极小值点，必满足一阶必要条件 $\\bar C'(Q_0)=0$。因 $Q_0>0$，分母 $Q_0^2\\ne0$，于是分子为零：\n\n$$Q_0\\,C'(Q_0)-C(Q_0)=0\\\\ \\Longrightarrow\\\\ Q_0\\,C'(Q_0)=C(Q_0).$$\n\n这正是选项 **D**。\n\n**经济解释与验证：** 上式两边除以 $Q_0$ 得 $C'(Q_0)=\\dfrac{C(Q_0)}{Q_0}$，即**边际成本 $=$ 平均成本**——这是平均成本曲线最低点的标志（边际成本曲线穿过平均成本曲线最低点）。例如取 $C(Q)=Q^2+4$，则 $\\bar C=Q+\\dfrac4Q$，由 $\\bar C'=1-\\dfrac{4}{Q^2}=0$ 得 $Q_0=2$；此时 $C'(2)=4$，$\\dfrac{C(2)}{2}=\\dfrac{8}{2}=4$，确实满足 $Q_0C'(Q_0)=C(Q_0)$（$2\\times4=8=C(2)$）。",
-      "wrong_options": {
-        "A": "$C'(Q_0)=0$ 是“总成本”取极值的条件，而非平均成本最小。一般成本递增，$C'>0$，此式通常不成立。",
-        "B": "$C'(Q_0)=C(Q_0)$ 量纲与含义都不对：正确条件是边际成本等于平均成本 $\\dfrac{C(Q_0)}{Q_0}$，而非等于总成本 $C(Q_0)$。",
-        "C": "$C'(Q_0)=Q_0C(Q_0)$ 不是由 $\\bar C'=0$ 化简得到的关系，纯属凑项错误。"
-      },
-      "pitfalls": [
-        "“平均成本”是 $C(Q)/Q$，不要与“边际成本”$C'(Q)$ 或“总成本”$C(Q)$ 混淆。",
-        "用商的求导令 $\\bar C'=0$ 时，结论是分子 $QC'-C=0$，即 $Q_0C'(Q_0)=C(Q_0)$，别把 $Q_0$ 漏掉写成 $C'(Q_0)=C(Q_0)$。"
-      ],
-      "key_point": "平均成本 $C(Q)/Q$ 取极小的一阶必要条件是其导数为零，化简即“边际成本 = 平均成本”，亦即 $Q_0C'(Q_0)=C(Q_0)$。"
-    },
-    {
-      "id": 295,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $X_1, X_2, \\cdots, X_n(n \\geqslant 2)$ 为来自总体 $N\\left(\\mu, \\sigma^2\\right)(\\sigma>0)$ 的简单随机样本, 令 $\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^n X_i, S=\\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2}, S^*=\\sqrt{\\frac{1}{n} \\sum_{i=1}^n\\left(X_i-\\mu\\right)^2}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S} \\sim t(n)$",
-        "B": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S} \\sim t(n-1)$",
-        "C": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S^*} \\sim t(n)$",
-        "D": "$\\dfrac{\\sqrt{n}(\\bar{X}-\\mu)}{S^*} \\sim t(n-1)$"
-      },
-      "answer": "B",
-      "analysis": "【分析】\n\n本题考查正态总体三大抽样分布的构造，核心是分清 $t$ 分布的两个\"零件\"：分子是标准正态量，分母是\"卡方除以其自由度再开方\"，且二者相互独立。关键在于辨析两个不同的方差统计量：$S$ 用样本均值 $\\bar X$ 中心化（损失一个自由度），$S^*$ 用已知的真值 $\\mu$ 中心化（不损失自由度）。这一字之差决定了卡方的自由度，进而决定 $t$ 的自由度。\n\n要点：\n\n- $\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\sim N(0,1)$；\n- $\\dfrac{(n-1)S^2}{\\sigma^2}\\sim\\chi^2(n-1)$，且与 $\\bar X$ 独立；\n- 把含 $\\mu$ 的 $S^*$ 代入会得到 $\\chi^2(n)$，构造不出标准的 $t$ 统计量。\n\n【解答】\n\n由正态总体抽样分布的基本结论：\n\n$$\\frac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\sim N(0,1),\\qquad \\frac{(n-1)S^2}{\\sigma^2}\\sim\\chi^2(n-1),$$\n\n且二者相互独立。按 $t$ 分布定义 $t=\\dfrac{Z}{\\sqrt{\\chi^2(k)/k}}$，取 $k=n-1$：\n\n$$\\frac{\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}}{\\sqrt{\\dfrac{(n-1)S^2/\\sigma^2}{\\,n-1\\,}}}=\\frac{\\dfrac{\\sqrt n(\\bar X-\\mu)}{\\sigma}}{\\sqrt{S^2/\\sigma^2}}=\\frac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1).$$\n\n$\\sigma$ 在化简中约去，故\n\n$$\\frac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1).$$\n\n故选 B。\n\n（附：若用 $S^*$，因 $\\dfrac{nS^{*2}}{\\sigma^2}=\\sum\\left(\\dfrac{X_i-\\mu}{\\sigma}\\right)^2\\sim\\chi^2(n)$，且分子 $\\sqrt n(\\bar X-\\mu)/\\sigma$ 与 $S^*$ 不独立，故 $\\dfrac{\\sqrt n(\\bar X-\\mu)}{S^*}$ 并不服从 $t$ 分布，C、D 均不成立。）",
-      "wrong_options": {
-        "A": "自由度错。用 $S$（以 $\\bar X$ 中心化）时卡方为 $\\chi^2(n-1)$，对应 $t(n-1)$ 而非 $t(n)$。",
-        "C": "分母用 $S^*$ 且自由度错。$S^*$ 以已知 $\\mu$ 中心化对应 $\\chi^2(n)$，且与分子不独立，构造不出 $t$ 分布。",
-        "D": "分母用 $S^*$ 错。$\\dfrac{\\sqrt n(\\bar X-\\mu)}{S^*}$ 中分子与分母不独立，不服从任何 $t$ 分布。"
-      },
-      "pitfalls": [
-        "混淆 $S$ 与 $S^*$：以 $\\bar X$ 中心化损失一个自由度得 $\\chi^2(n-1)$，以真值 $\\mu$ 中心化得 $\\chi^2(n)$。",
-        "构造 $t$ 必须保证分子的正态量与分母的卡方量相互独立，$\\bar X$ 与 $S^2$ 独立是关键前提。"
-      ],
-      "key_point": "$\\dfrac{\\sqrt n(\\bar X-\\mu)}{S}\\sim t(n-1)$：分子标准正态、分母卡方除以自由度开方，且二者独立。"
-    },
-    {
-      "id": 296,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 10,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\int \\mathrm{e}^x \\arcsin \\sqrt{1-\\mathrm{e}^{2 x}} \\mathrm{d} x=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\mathrm{e}^x \\arcsin \\sqrt{1-\\mathrm{e}^{2 x}}-\\sqrt{1-\\mathrm{e}^{2 x}}+C$",
-      "analysis": "【分析】\n\n被积函数是 $\\mathrm e^x$ 乘一个反三角函数，典型的分部积分结构：把 $\\mathrm e^x\\,\\mathrm dx$ 凑成 $\\mathrm d(\\mathrm e^x)$，让反三角函数求导降阶。求导后会出现含 $\\sqrt{1-\\mathrm e^{2x}}$ 的式子，再凑微分即可积出。注意定义域：要求 $1-\\mathrm e^{2x}\\ge 0$，即 $x\\le 0$，此时 $\\mathrm e^x>0$，下面对 $\\sqrt{\\mathrm e^{2x}}=\\mathrm e^x$ 的化简成立。\n\n【解答】\n\n记 $I=\\displaystyle\\int \\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\,\\mathrm dx$。分部积分，取 $u=\\arcsin\\sqrt{1-\\mathrm e^{2x}}$，$\\mathrm dv=\\mathrm e^x\\,\\mathrm dx$，则 $v=\\mathrm e^x$：\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\int \\mathrm e^x\\,\\mathrm d\\!\\left(\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\right).$$\n\n先算 $u$ 的导数。令 $t=\\sqrt{1-\\mathrm e^{2x}}$，则\n\n$$\\frac{\\mathrm d}{\\mathrm dx}\\arcsin t=\\frac{1}{\\sqrt{1-t^2}}\\cdot t',\\qquad 1-t^2=\\mathrm e^{2x},\\quad \\sqrt{1-t^2}=\\mathrm e^x.$$\n\n而\n\n$$t'=\\frac{(1-\\mathrm e^{2x})'}{2\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-2\\mathrm e^{2x}}{2\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}.$$\n\n于是\n\n$$\\frac{\\mathrm d}{\\mathrm dx}\\arcsin\\sqrt{1-\\mathrm e^{2x}}=\\frac{1}{\\mathrm e^x}\\cdot\\frac{-\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}=\\frac{-\\mathrm e^{x}}{\\sqrt{1-\\mathrm e^{2x}}}.$$\n\n代回：\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\int \\mathrm e^x\\cdot\\frac{-\\mathrm e^{x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}+\\int\\frac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx.$$\n\n对余下积分凑微分。注意 $\\mathrm d(1-\\mathrm e^{2x})=-2\\mathrm e^{2x}\\,\\mathrm dx$，故 $\\mathrm e^{2x}\\,\\mathrm dx=-\\dfrac12\\,\\mathrm d(1-\\mathrm e^{2x})$：\n\n$$\\int\\frac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}\\,\\mathrm dx=-\\frac12\\int (1-\\mathrm e^{2x})^{-1/2}\\,\\mathrm d(1-\\mathrm e^{2x})=-\\frac12\\cdot 2\\sqrt{1-\\mathrm e^{2x}}=-\\sqrt{1-\\mathrm e^{2x}}.$$\n\n故\n\n$$I=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\sqrt{1-\\mathrm e^{2x}}+C.$$\n\n验算：对结果求导，$\\dfrac{\\mathrm d}{\\mathrm dx}\\!\\left(\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}\\right)=\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}-\\dfrac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}$，而 $\\dfrac{\\mathrm d}{\\mathrm dx}\\!\\left(-\\sqrt{1-\\mathrm e^{2x}}\\right)=\\dfrac{\\mathrm e^{2x}}{\\sqrt{1-\\mathrm e^{2x}}}$，两者相加恰为 $\\mathrm e^x\\arcsin\\sqrt{1-\\mathrm e^{2x}}$，与被积函数一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "化简 $\\sqrt{1-t^2}=\\sqrt{\\mathrm e^{2x}}=\\mathrm e^x$ 时，因定义域 $x\\le0$ 仍有 $\\mathrm e^x>0$，取正号正确，别误写绝对值出错。",
-        "复合函数求导别漏掉内层 $\\sqrt{1-\\mathrm e^{2x}}$ 的导数（链式法则两层）。",
-        "凑微分时系数 $-\\tfrac12$ 易丢。"
-      ],
-      "key_point": "$\\mathrm e^x$ 乘反三角：分部积分把 $\\mathrm e^x\\mathrm dx$ 凑成 $\\mathrm d(\\mathrm e^x)$，余项再凑微分积出根式。"
-    },
-    {
-      "id": 297,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "差分方程 $\\Delta^2 y_x-y_x=5$ 的通解为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$C 2^x-5$ ( $C$ 为任意常数)",
-      "analysis": "【分析】\n\n先用差分算子定义把 $\\Delta^2 y_x$ 展开为关于 $y_{x+2},y_{x+1},y_x$ 的常系数线性差分方程，再用特征根法求齐次通解、待定系数法求特解。注意 $\\Delta y_x=y_{x+1}-y_x$，$\\Delta^2 y_x=\\Delta(\\Delta y_x)=y_{x+2}-2y_{x+1}+y_x$。\n\n【解答】\n\n由差分算子定义：\n\n$$\\Delta^2 y_x=y_{x+2}-2y_{x+1}+y_x.$$\n\n代入原方程 $\\Delta^2 y_x-y_x=5$：\n\n$$y_{x+2}-2y_{x+1}+y_x-y_x=5\\\\;\\Longrightarrow\\\\; y_{x+2}-2y_{x+1}=5.$$\n\n这是二阶常系数线性差分方程。对应齐次方程 $y_{x+2}-2y_{x+1}=0$，特征方程\n\n$$r^2-2r=0\\\\;\\Longrightarrow\\\\; r=0\\\\ \\text{或}\\\\ r=2.$$\n\n特征根 $r=0$ 对应的解 $0^x$ 当 $x\\ge1$ 恒为零，不提供有效自由度，故齐次通解为\n\n$$y_x^{(h)}=C\\cdot 2^x\\quad(C\\\\ \\text{为任意常数}).$$\n\n求特解：右端为常数，因 $r=0$ 不是使常数项失效的情形（常数 $y_x=A$ 代入左端不为零），试 $y_x^*=A$：\n\n$$A-2A=5\\\\;\\Longrightarrow\\\\;-A=5\\\\;\\Longrightarrow\\\\;A=-5.$$\n\n故特解 $y_x^*=-5$。\n\n综上，通解为\n\n$$y_x=C\\cdot 2^x-5\\quad(C\\\\ \\text{为任意常数}).$$\n\n验算：$y_{x+2}-2y_{x+1}=(C\\cdot2^{x+2}-5)-2(C\\cdot2^{x+1}-5)=C\\cdot2^{x+2}-5-C\\cdot2^{x+2}+10=5$，成立。",
-      "wrong_options": {},
-      "pitfalls": [
-        "展开 $\\Delta^2 y_x=y_{x+2}-2y_{x+1}+y_x$ 要记牢，别错成 $y_{x+2}-y_x$。",
-        "化简后 $-y_x$ 与展开式中的 $+y_x$ 恰好抵消，方程降为 $y_{x+2}-2y_{x+1}=5$。",
-        "特征根含 $r=0$，齐次解只保留 $C\\cdot2^x$ 一项。"
-      ],
-      "key_point": "差分方程先用算子定义展开成 $y_{x+k}$ 形式，再特征根法求齐次解、待定常数求特解。"
-    },
-    {
-      "id": 298,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 满足 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)(\\Delta x \\rightarrow 0)$ 且 $f(0)=2$, 则 $f(1)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$2 \\mathrm{e}$",
-      "analysis": "【分析】\n\n题目给的等式 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)$ 正是\"可微\"的定义形式。回忆可微的标准写法\n\n$$f(x+\\Delta x)-f(x)=A\\,\\Delta x+o(\\Delta x),\\quad A=f'(x).$$\n\n对照系数立刻读出 $f'(x)=2xf(x)$。这是一个可分离变量的一阶微分方程，分离变量积分即可，再用初值 $f(0)=2$ 定常数，最后代 $x=1$。\n\n【解答】\n\n由可微定义，等式 $f(x+\\Delta x)-f(x)=2xf(x)\\Delta x+o(\\Delta x)$ 表明 $f$ 在每点可导且\n\n$$f'(x)=2xf(x).$$\n\n这是可分离变量方程。注意由 $f(0)=2\\neq0$ 及解的连续性，$f(x)$ 在零点附近不为零，可分离变量：\n\n$$\\dfrac{f'(x)}{f(x)}=2x.$$\n\n两边积分：\n\n$$\\ln|f(x)|=x^2+C_1,\\qquad f(x)=C\\,\\mathrm{e}^{x^2}.$$\n\n代入初值 $f(0)=C\\mathrm{e}^0=C=2$，故\n\n$$f(x)=2\\mathrm{e}^{x^2}.$$\n\n因此\n\n$$f(1)=2\\mathrm{e}^{1}=2\\mathrm{e}.$$\n\n验算：$f'(x)=2\\mathrm{e}^{x^2}\\cdot 2x=2x\\cdot f(x)$，且 $f(0)=2$，均吻合。",
-      "wrong_options": {},
-      "pitfalls": [
-        "没认出题给等式就是可微定义，从而漏掉 f'(x)=2xf(x) 这一关键转化",
-        "把 2x f(x) 误当成对 x 的普通乘积而非导数系数，导致方程写错"
-      ],
-      "key_point": "可微定义 f(x+Δx)-f(x)=AΔx+o(Δx) 中的系数 A 就是导数，识别后化为可分离方程求解。"
-    },
-    {
-      "id": 299,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "随机事件 $A, B, C$ 相互独立, 且 $\\displaystyle P(A)=P(B)=P(C)=\\frac{1}{2}$. 则 $P(A C \\mid A \\cup B)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\displaystyle \\frac{1}{3}$",
-      "analysis": "【分析】\n\n直接套条件概率定义 $P(AC\\mid A\\cup B)=\\dfrac{P\\big(AC\\cap(A\\cup B)\\big)}{P(A\\cup B)}$。关键观察：事件 $AC=A\\cap C$ 已经被 $A$ 包含，所以 $AC\\subseteq A\\subseteq A\\cup B$，交起来仍是 $AC$，分子直接是 $P(AC)$。再用独立性算 $P(AC)=P(A)P(C)$，用加法公式（配合独立性）算 $P(A\\cup B)$。\n\n【解答】\n\n由条件概率定义：\n\n$$P(AC\\mid A\\cup B)=\\dfrac{P\\big(AC\\cap(A\\cup B)\\big)}{P(A\\cup B)}.$$\n\n分子：因为 $AC=A\\cap C\\subseteq A\\subseteq A\\cup B$，所以 $AC\\cap(A\\cup B)=AC$。由 $A,C$ 独立，\n\n$$P(AC)=P(A)P(C)=\\dfrac12\\cdot\\dfrac12=\\dfrac14.$$\n\n分母：由加法公式及 $A,B$ 独立，\n\n$$P(A\\cup B)=P(A)+P(B)-P(AB)=\\dfrac12+\\dfrac12-\\dfrac12\\cdot\\dfrac12=\\dfrac34.$$\n\n所以\n\n$$P(AC\\mid A\\cup B)=\\dfrac{1/4}{3/4}=\\dfrac13.$$\n\n验算：$AC\\subseteq A\\cup B$ 的包含关系使分子简化无误；分母 $3/4$ 也可由 $1-P(\\overline A\\,\\overline B)=1-\\tfrac12\\cdot\\tfrac12=\\tfrac34$ 复核，一致。",
-      "wrong_options": {},
-      "pitfalls": [
-        "分子误算成 P(A)P(C)P(A∪B) 之类，没看出 AC 已被 A∪B 包含，分子就是 P(AC)",
-        "求 P(A∪B) 时忘减 P(AB)，直接写成 1/2+1/2=1",
-        "把 AC 与 A、C 的独立性混淆：A、C 独立给出 P(AC)=1/4，但不能直接说 AC 与 A∪B 独立"
-      ],
-      "key_point": "条件概率按定义展开，先用包含关系 AC⊆A∪B 化简分子，再用独立性与加法公式分别算分子分母。"
-    },
-    {
-      "id": 300,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知实数 $a, b$ 满足 $\\displaystyle \\lim _{x \\rightarrow+\\infty}\\left[(a x+b) \\mathrm{e}^{\\frac{1}{x}}-x\\right]=2$. 求 $a, b$",
-      "options": {},
-      "answer": "a=1,\\ b=1",
-      "analysis": "【分析】\n\n$x\\to+\\infty$ 时 $\\dfrac1x\\to0$，把 $\\mathrm{e}^{1/x}$ 按 $\\dfrac1x$ 做麦克劳林展开（带到 $\\dfrac1{x^2}$ 量级即够），再乘上一次函数 $ax+b$ 整理成 $x$ 的幂的形式。整个表达式减去 $x$ 后要趋于有限值 $2$：含 $x$ 的一次项系数必须为零（否则发散），由此定出 $a$；剩下的常数项即为极限值 $2$，定出 $b$。这是典型的\"展开后令各阶系数匹配\"的待定系数法。\n\n【解答】\n\n当 $x\\to+\\infty$ 时，$\\dfrac1x\\to0$，由 $\\mathrm{e}^{t}=1+t+\\dfrac{t^2}{2}+o(t^2)$，取 $t=\\dfrac1x$：\n\n$$\\mathrm{e}^{1/x}=1+\\dfrac1x+\\dfrac{1}{2x^2}+o\\!\\left(\\dfrac1{x^2}\\right).$$\n\n于是\n\n$$(ax+b)\\mathrm{e}^{1/x}=(ax+b)\\left(1+\\dfrac1x+\\dfrac1{2x^2}+o\\!\\left(\\dfrac1{x^2}\\right)\\right).$$\n\n逐项展开并按 $x$ 的幂整理：\n\n$$=ax+a+\\dfrac{a}{2x}+b+\\dfrac{b}{x}+o(1)=ax+(a+b)+\\dfrac{\\frac{a}{2}+b}{x}+o(1).$$\n\n再减去 $x$：\n\n$$(ax+b)\\mathrm{e}^{1/x}-x=(a-1)x+(a+b)+o(1).$$\n\n要使 $x\\to+\\infty$ 时极限存在且等于 $2$：\n\n首先一次项必须消失，否则极限为 $\\pm\\infty$，故\n\n$$a-1=0\\ \\Rightarrow\\ a=1.$$\n\n此时极限值为常数项：\n\n$$\\lim_{x\\to+\\infty}\\big[(a+b)+o(1)\\big]=a+b=2\\ \\Rightarrow\\ b=2-a=1.$$\n\n所以 $a=1,\\ b=1$。\n\n验算：取 $a=b=1$，$(x+1)\\mathrm{e}^{1/x}-x=(x+1)\\big(1+\\tfrac1x+\\tfrac1{2x^2}+\\cdots\\big)-x=x+1+1+o(1)-x=2+o(1)\\to2$，正确。",
-      "wrong_options": {},
-      "pitfalls": [
-        "e^{1/x} 只展开到一阶 1+1/x 就够定 a、b（常数项），但若想验算或题目变形需到 1/x^2，建议保留二阶项以防遗漏",
-        "忘记一次项系数 a-1 必须为零这一\"极限存在\"的前提，直接令常数项等于 2",
-        "把 x→+∞ 误当 x→0 而用错展开变量"
-      ],
-      "key_point": "x→+∞ 含参极限：以 1/x 为小量展开 e^{1/x}，按 x 幂整理，令发散的一次项系数为零定 a，常数项等于极限值定 b。"
-    },
-    {
-      "id": 301,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 16,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设平面区域 $D$ 由曲线 $y=\\sqrt{3\\left(1-x^2\\right)}$ 与直线 $y=\\sqrt{3} x$ 及 $y$ 轴围成, 计算二重积分 $\\displaystyle \\iint_D x^2 \\mathrm{d} x \\mathrm{d} y$\n\n![积分区域 D](assets/figures/301.svg)",
-      "options": {},
-      "answer": "\\dfrac{\\sqrt{3}\\,(\\pi-2)}{32}",
-      "analysis": "【分析】\n曲线 $y=\\sqrt{3(1-x^2)}$ 即 $x^2+\\dfrac{y^2}{3}=1\\ (y\\ge0)$,是椭圆的上半;直线 $y=\\sqrt3\\,x$ 过原点,与 $x$ 轴正向夹角 $\\dfrac{\\pi}{3}$;$y$ 轴即 $\\theta=\\dfrac{\\pi}{2}$。三者在第一象限围出一块以原点为顶点、外边界为椭圆弧的扇形状区域,故区域关于角度从 $\\dfrac{\\pi}{3}$ 到 $\\dfrac{\\pi}{2}$、半径从原点到椭圆,用极坐标最自然。把椭圆方程代入 $x=r\\cos\\theta,\\ y=r\\sin\\theta$ 解出 $r$ 的上限即可。\n\n【解答】\n确认区域:直线与椭圆交点由 $3x^2=3(1-x^2)$ 得 $x=\\dfrac{1}{\\sqrt2}$,即交点在第一象限,故 $D$ 是被 $y$ 轴($\\theta=\\frac{\\pi}{2}$)、直线($\\theta=\\frac{\\pi}{3}$)与椭圆弧夹住的区域,$\\theta\\in\\left[\\dfrac{\\pi}{3},\\dfrac{\\pi}{2}\\right]$。\n\n令 $x=r\\cos\\theta,\\ y=r\\sin\\theta$,$\\mathrm dx\\,\\mathrm dy=r\\,\\mathrm dr\\,\\mathrm d\\theta$。椭圆 $x^2+\\dfrac{y^2}{3}=1$ 化为\n$$r^2\\!\\left(\\cos^2\\theta+\\frac{\\sin^2\\theta}{3}\\right)=1\\ \\Rightarrow\\ r=r(\\theta)=\\frac{1}{\\sqrt{\\cos^2\\theta+\\frac13\\sin^2\\theta}}.$$\n于是\n$$\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\int_{\\pi/3}^{\\pi/2}\\!\\!\\int_0^{r(\\theta)}(r\\cos\\theta)^2\\,r\\,\\mathrm dr\\,\\mathrm d\\theta=\\int_{\\pi/3}^{\\pi/2}\\cos^2\\theta\\left[\\frac{r^4}{4}\\right]_0^{r(\\theta)}\\mathrm d\\theta.$$\n而 $r(\\theta)^4=\\dfrac{1}{\\left(\\cos^2\\theta+\\frac13\\sin^2\\theta\\right)^2}=\\dfrac{9}{\\left(3\\cos^2\\theta+\\sin^2\\theta\\right)^2}=\\dfrac{9}{\\left(1+2\\cos^2\\theta\\right)^2}=\\dfrac{9}{(\\cos2\\theta+2)^2}.$\n故内层积分后被积函数为\n$$\\frac{9\\cos^2\\theta}{4(\\cos2\\theta+2)^2}.$$\n用 $\\cos^2\\theta=\\dfrac{1+\\cos2\\theta}{2}$,作代换计算,得\n$$\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\int_{\\pi/3}^{\\pi/2}\\frac{9\\cos^2\\theta}{4(\\cos2\\theta+2)^2}\\,\\mathrm d\\theta=\\frac{\\sqrt3\\,(\\pi-2)}{32}.$$\n\n**校验(直角坐标)**:取竖条 $x\\in\\left[0,\\frac{1}{\\sqrt2}\\right]$,$y$ 从直线 $\\sqrt3 x$ 到椭圆 $\\sqrt{3(1-x^2)}$:\n$$\\int_0^{1/\\sqrt2}\\!\\!x^2\\Big(\\sqrt{3(1-x^2)}-\\sqrt3\\,x\\Big)\\mathrm dx=\\frac{\\sqrt3\\,(\\pi-2)}{32}\\approx0.0618,$$\n与极坐标结果一致。\n\n所以 $\\displaystyle\\iint_D x^2\\,\\mathrm dx\\,\\mathrm dy=\\frac{\\sqrt3\\,(\\pi-2)}{32}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "曲线是椭圆 $x^2+y^2/3=1$ 而非圆,极坐标里 $r$ 上限随 $\\theta$ 变化,别误当成定值半径。",
-        "角度范围是 $[\\frac{\\pi}{3},\\frac{\\pi}{2}]$(直线到 $y$ 轴),写反成 $[0,\\frac{\\pi}{3}]$ 会算到区域外。",
-        "别忘了极坐标面积元多出的因子 $r$,被积函数应是 $r^2\\cos^2\\theta\\cdot r=r^3\\cos^2\\theta$。"
-      ],
-      "key_point": "原点为顶点、外边界为二次曲线的扇形区域用极坐标,把椭圆代入解出 $r(\\theta)$ 作上限,先对 $r$ 后对 $\\theta$ 积分。"
-    },
-    {
-      "id": 302,
-      "paper": "数学三",
-      "year": 2018,
-      "index": 18,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知 $\\displaystyle \\cos 2 x-\\frac{1}{(1+x)^2}=\\sum_{n=0}^{\\infty} a_n x^n(-1<x<1)$, 求 $a_n$",
-      "options": {},
-      "answer": "n 为偶数时 a_n=\\dfrac{(-1)^{n/2}2^n}{n!}-(n+1);n 为奇数时 a_n=n+1",
-      "analysis": "【分析】\n直接对左端整体展开很麻烦,采取“两块分别展开再合并”的间接法。$\\cos 2x$ 用余弦的麦克劳林公式,只含偶次幂;$\\dfrac{1}{(1+x)^2}$ 注意到它是 $\\dfrac{1}{1+x}$ 的导数的相反数,从几何级数 $\\dfrac{1}{1+x}=\\sum(-1)^nx^n$ 逐项求导即可得到其幂级数。两者在 $(-1,1)$ 内都成立,逐项相减即得 $a_n$,按 $n$ 的奇偶分类。\n\n【解答】\n**第一块**:$\\displaystyle\\cos 2x=\\sum_{k=0}^{\\infty}\\frac{(-1)^k(2x)^{2k}}{(2k)!}=\\sum_{k=0}^{\\infty}\\frac{(-1)^k2^{2k}}{(2k)!}x^{2k}\\quad(x\\in\\mathbf R).$ 只有偶次幂出现,$x^{2k}$ 系数为 $\\dfrac{(-1)^k2^{2k}}{(2k)!}$。\n\n**第二块**:由 $\\displaystyle\\frac{1}{1+x}=\\sum_{n=0}^{\\infty}(-1)^nx^n\\ (|x|<1)$ 逐项求导,\n$$-\\frac{1}{(1+x)^2}=\\sum_{n=1}^{\\infty}(-1)^n n\\,x^{n-1}\\ \\Rightarrow\\ \\frac{1}{(1+x)^2}=\\sum_{n=0}^{\\infty}(-1)^n(n+1)x^n\\quad(|x|<1).$$\n\n**相减**:在 $-1<x<1$ 内,\n$$\\cos 2x-\\frac{1}{(1+x)^2}=\\sum_{k=0}^{\\infty}\\frac{(-1)^k2^{2k}}{(2k)!}x^{2k}-\\sum_{n=0}^{\\infty}(-1)^n(n+1)x^n.$$\n比较 $x^n$ 的系数:\n\n- 当 $n$ 为奇数时,$\\cos2x$ 无贡献,且 $(-1)^n=-1$,故\n$$a_n=-(-1)^n(n+1)=n+1.$$\n- 当 $n$ 为偶数,记 $n=2k$,则 $(-1)^n=1$,$\\cos2x$ 贡献 $\\dfrac{(-1)^k2^{2k}}{(2k)!}$,故\n$$a_n=\\frac{(-1)^{k}2^{2k}}{(2k)!}-(n+1)=\\frac{(-1)^{n/2}2^{n}}{n!}-(n+1).$$\n\n**结论**:\n$$a_n=\\begin{cases}\\dfrac{(-1)^{n/2}\\,2^{n}}{n!}-(n+1),&n\\ \\text{为偶数},\\\\[8pt]n+1,&n\\ \\text{为奇数}.\\end{cases}$$\n\n**验算**:$a_0=\\dfrac{1}{1}-1=0$,$a_1=2$,$a_2=\\dfrac{-4}{2}-3=-5$,$a_3=4$,$a_4=\\dfrac{16}{24}-5=-\\dfrac{13}{3}$,与对原函数直接泰勒展开所得系数 $0,2,-5,4,-\\frac{13}{3},\\dots$ 完全吻合。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$\\cos 2x$ 里是 $(2x)^{2k}$,系数含 $2^{2k}$,别漏掉这个 $2$ 的幂。",
-        "$\\dfrac{1}{(1+x)^2}$ 的系数是 $(-1)^n(n+1)$,常数项 $n=0$ 时为 $1$(对应 $n+1=1$),不要写成从 $n=1$ 起。",
-        "最终要按 $n$ 奇偶分类给出 $a_n$,只写偶次项是不完整的。"
-      ],
-      "key_point": "间接展开法:$\\cos2x$ 用麦克劳林公式,$\\frac{1}{(1+x)^2}$ 由几何级数逐项求导得到,再按奇偶比较系数。"
     }
   ]
 }

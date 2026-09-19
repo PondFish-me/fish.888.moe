@@ -4,53 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 1128,
-      "paper": "数学二",
-      "year": 1994,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\displaystyle M=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^{2}} \\cos ^{4} x \\mathrm{d} x, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^{3} x+\\cos ^{4} x\\right) \\mathrm{d} x,\\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^{2} \\sin ^{3} x-\\cos ^{4} x\\right) \\mathrm{d} x$, 则 $(\\quad)$",
-      "options": {
-        "A": "$N<P<M$",
-        "B": "$M<P<N$",
-        "C": "$N<M<P$",
-        "D": "$P<M<N$"
-      },
-      "answer": "D",
-      "analysis": "$\\displaystyle \r\nM=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^2} \\cos ^4 x \\mathrm{d} x=0, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^3 x+\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x>0, \\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^2 \\sin ^3 x-\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=-2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x<0$, \r\n\r\n则 $P<M<N$, 应选 (D)",
-      "wrong_options": {
-        "A": "把 M 当最大、N 当最小，未识别 M 为奇函数积分=0、N 含 cos⁴x>0 恒为正。",
-        "B": "误判 P>0：P 中 x²sin³x 为奇函数积分=0，只剩 −cos⁴x 积分<0，实为最小。",
-        "C": "C 项 N<M<P 把三者大小全排反：实际 P<0（=−∫cos⁴x）、M=0（奇函数积分）、N>0，正确序是 P<M<N。"
-      },
-      "pitfalls": [
-        "M 的分子 sinx/(1+x²)·cos⁴x 整体是奇函数，对称区间积分恒为 0，不必硬算",
-        "P 里 x²sin³x 是奇函数(积分0)，−cos⁴x 才是主体且为负",
-        "N=2∫₀^{π/2}cos⁴x>0，三者符号定序 P<M<N"
-      ],
-      "key_point": "M=0（奇函数）、N>0、P<0，故 P<M<N，选 D。"
-    },
-    {
-      "id": 1135,
-      "paper": "数学二",
-      "year": 1994,
-      "index": 14,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\dfrac{1}{4 \\sin ^2 x}+C$",
-      "analysis": "$\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}\\\\\r\n=\\frac{1}{2} \\int \\frac{\\mathrm{d} x}{\\sin x(1+\\cos x)}\\\\\r\n=\\frac{1}{2} \\int \\frac{(1-\\cos x) \\mathrm{d} x}{\\sin ^3 x} \\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x-\\frac{1}{2} \\int \\frac{\\mathrm{d}(\\sin x)}{\\sin ^3 x}\\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x+\\frac{1}{4 \\sin ^2 x}$\r\n\r\n令 $\\displaystyle I=\\int \\csc ^3 x \\mathrm{d} x$, 则\r\n\r\n$\\displaystyle I=-\\int \\csc x \\mathrm{d}(\\cot x)\\\\\r\n=-\\csc x \\cot x-\\int \\csc x \\cot ^2 x \\mathrm{d} x \\\\\r\n=\\csc x \\cot x-I+\\ln |\\csc x-\\cot x|, \\\\\r\nI=\\frac{1}{2}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+C$,\r\n\r\n\r\n故 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}=\\frac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\frac{1}{4 \\sin ^2 x}+C$",
-      "wrong_options": {},
-      "pitfalls": [
-        "先用 sin2x=2sinxcosx 提出 2sinx(1+cosx)，再乘 (1−cosx)/(1−cosx) 化 sin³x",
-        "∫csc³x dx 须分部积分产生 I=…−I 移项解出，别硬凑",
-        "别忘 −½∫d(sinx)/sin³x=1/(4sin²x) 这一项"
-      ],
-      "key_point": "分母化 2sinx(1+cosx) 后拆成 ½∫csc³x+1/(4sin²x)，csc³x 递推得终结果。"
-    },
-    {
       "id": 1436,
       "paper": "数学二",
       "year": 1994,
@@ -249,6 +202,34 @@
       "key_point": "水平渐近线 $y=\\dfrac{\\pi}{4}$ 与铅直渐近线 $x=0$，共 2 条，选 B。"
     },
     {
+      "id": 1128,
+      "paper": "数学二",
+      "year": 1994,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle M=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^{2}} \\cos ^{4} x \\mathrm{d} x, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^{3} x+\\cos ^{4} x\\right) \\mathrm{d} x,\\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^{2} \\sin ^{3} x-\\cos ^{4} x\\right) \\mathrm{d} x$, 则 $(\\quad)$",
+      "options": {
+        "A": "$N<P<M$",
+        "B": "$M<P<N$",
+        "C": "$N<M<P$",
+        "D": "$P<M<N$"
+      },
+      "answer": "D",
+      "analysis": "$\\displaystyle \r\nM=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\sin x}{1+x^2} \\cos ^4 x \\mathrm{d} x=0, \\\\\r\nN=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\sin ^3 x+\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x>0, \\\\\r\nP=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^2 \\sin ^3 x-\\cos ^4 x\\right) \\mathrm{d} x\\\\\r\n=-2 \\int_0^{\\frac{\\pi}{2}} \\cos ^4 x \\mathrm{d} x<0$, \r\n\r\n则 $P<M<N$, 应选 (D)",
+      "wrong_options": {
+        "A": "把 M 当最大、N 当最小，未识别 M 为奇函数积分=0、N 含 cos⁴x>0 恒为正。",
+        "B": "误判 P>0：P 中 x²sin³x 为奇函数积分=0，只剩 −cos⁴x 积分<0，实为最小。",
+        "C": "C 项 N<M<P 把三者大小全排反：实际 P<0（=−∫cos⁴x）、M=0（奇函数积分）、N>0，正确序是 P<M<N。"
+      },
+      "pitfalls": [
+        "M 的分子 sinx/(1+x²)·cos⁴x 整体是奇函数，对称区间积分恒为 0，不必硬算",
+        "P 里 x²sin³x 是奇函数(积分0)，−cos⁴x 才是主体且为负",
+        "N=2∫₀^{π/2}cos⁴x>0，三者符号定序 P<M<N"
+      ],
+      "key_point": "M=0（奇函数）、N>0、P<0，故 P<M<N，选 D。"
+    },
+    {
       "id": 1445,
       "paper": "数学二",
       "year": 1994,
@@ -301,6 +282,25 @@
         "指数上 $n\\cdot\\dfrac{2\\tan(2/n)}{1-\\tan(2/n)}\\to4$"
       ],
       "key_point": "极限为 $\\mathrm{e}^4$。"
+    },
+    {
+      "id": 1135,
+      "paper": "数学二",
+      "year": 1994,
+      "index": 14,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\dfrac{1}{4 \\sin ^2 x}+C$",
+      "analysis": "$\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}\\\\\r\n=\\frac{1}{2} \\int \\frac{\\mathrm{d} x}{\\sin x(1+\\cos x)}\\\\\r\n=\\frac{1}{2} \\int \\frac{(1-\\cos x) \\mathrm{d} x}{\\sin ^3 x} \\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x-\\frac{1}{2} \\int \\frac{\\mathrm{d}(\\sin x)}{\\sin ^3 x}\\\\\r\n=\\frac{1}{2} \\int \\csc ^3 x \\mathrm{d} x+\\frac{1}{4 \\sin ^2 x}$\r\n\r\n令 $\\displaystyle I=\\int \\csc ^3 x \\mathrm{d} x$, 则\r\n\r\n$\\displaystyle I=-\\int \\csc x \\mathrm{d}(\\cot x)\\\\\r\n=-\\csc x \\cot x-\\int \\csc x \\cot ^2 x \\mathrm{d} x \\\\\r\n=\\csc x \\cot x-I+\\ln |\\csc x-\\cot x|, \\\\\r\nI=\\frac{1}{2}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+C$,\r\n\r\n\r\n故 $\\displaystyle \\int \\frac{\\mathrm{d} x}{\\sin 2 x+2 \\sin x}=\\frac{1}{4}(-\\csc x \\cot x+\\ln |\\csc x-\\cot x|)+\\frac{1}{4 \\sin ^2 x}+C$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先用 sin2x=2sinxcosx 提出 2sinx(1+cosx)，再乘 (1−cosx)/(1−cosx) 化 sin³x",
+        "∫csc³x dx 须分部积分产生 I=…−I 移项解出，别硬凑",
+        "别忘 −½∫d(sinx)/sin³x=1/(4sin²x) 这一项"
+      ],
+      "key_point": "分母化 2sinx(1+cosx) 后拆成 ½∫csc³x+1/(4sin²x)，csc³x 递推得终结果。"
     },
     {
       "id": 1448,

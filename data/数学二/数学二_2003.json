@@ -4,123 +4,6 @@
   "count": 22,
   "questions": [
     {
-      "id": 934,
-      "paper": "数学二",
-      "year": 2003,
-      "index": 10,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](assets/figures/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
-      "options": {
-        "A": "一个极小值点和两个极大值点",
-        "B": "两个极小值点和一个极大值点",
-        "C": "两个极小值点和两个极大值点",
-        "D": "三个极小值点和一个极大值点"
-      },
-      "answer": "C",
-      "analysis": "设 $f^{\\prime}(x)$ 与 $x$ 轴交点的横坐标从左到右分别为 $a, b, c$, \r\n\r\n显然 $f(x)$ 有三个驻点 $x=a$, $x=b, x=c$ 及一个不可导点 $x=0$,\r\n\r\n当 $x<a$ 时, $f^{\\prime}(x)>0$, 当 $x \\in(a, b)$ 时, $f^{\\prime}(x)<0$, 则 $x=a$ 为 $f(x)$ 的极大值点; \r\n\r\n当 $x \\in(b, 0)$ 时, $f^{\\prime}(x)>0$, 则 $x=b$ 为 $f(x)$ 的极小值点;\r\n\r\n当 $x \\in(0, c)$ 时, $f^{\\prime}(x)<0$, 则 $x=0$ 为 $f(x)$ 的极大值点;\r\n\r\n当 $x>c$ 时, $f^{\\prime}(x)>0$, 则 $x=c$ 为 $f(x)$ 的极小值点,\r\n\r\n故 $f(x)$ 有两个极大值点和两个极小值点, 应选 (C)",
-      "wrong_options": {
-        "A": "只数了三个驻点 a,b,c 忽略了 x=0 这个不可导点也是极值点，且把 a 处极大误当极小，导致极大少数一个。",
-        "B": "认定不可导点 x=0 不是极值点而丢弃，少数了 x=0 处的极大值，得两小一大。",
-        "D": "把某个 f' 不变号的点臆造成极小值点，多凑出一个极小值。"
-      },
-      "pitfalls": [
-        "x=0 是 f 的不可导点但 f' 在此变号（+→-），仍是极大值点，不能因不可导就排除",
-        "极值由 f' 的符号变号决定，不是数 f'=0 的个数；共 a,b,0,c 四个点全要判"
-      ],
-      "key_point": "a(极大)、b(极小)、0(极大)、c(极小)，共两个极大两个极小，选 C。"
-    },
-    {
-      "id": 935,
-      "paper": "数学二",
-      "year": 2003,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\},\\left\\{c_{n}\\right\\}$ 均为非负数列, 且 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}=0, \\lim _{n \\rightarrow \\infty} b_{n}=1, \\lim _{n \\rightarrow \\infty} c_{n}=\\infty$, 则必有 $(\\quad)$",
-      "options": {
-        "A": "$a_{n}<b_{n}$ 对任意 $n$ 成立",
-        "B": "$b_{n}<c_{n}$ 对任意 $n$ 成立",
-        "C": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n} c_{n}$ 不存在",
-        "D": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_{n} c_{n}$ 不存在"
-      },
-      "answer": "D",
-      "analysis": "方法一 取 $\\displaystyle a_n=\\frac{3}{n}, b_n=1, c_n=\\frac{n}{3}$, \r\n\r\n显然 (A), (B), (C) 不成立, 应选 (D). \r\n\r\n方法二 取 $\\displaystyle \\varepsilon=\\frac{1}{2}$, \r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n=1$, 所以存在 $N>0$, \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n-1\\right|<\\frac{1}{2}$, \r\n\r\n从而有 $b_n>\\dfrac{1}{2}$. \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n c_n\\right|>\\frac{1}{2}\\left|c_n\\right|$, \r\n\r\n由 $\\displaystyle \\lim _{n \\rightarrow \\infty} c_n=\\infty$ \r\n\r\n得 $\\lim\\limits  _{n \\rightarrow \\infty}\\left|b_n c_n\\right|=+\\infty$, \r\n\r\n故 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n c_n=\\infty$, 应选(D)",
-      "wrong_options": {
-        "A": "把极限值的大小关系误当成对每一项都成立的逐项不等式，忽略极限只保证 N 之后的性质。",
-        "B": "同样把 b_n<c_n 当成对任意 n 的逐项不等式，实际前有限项可能不满足。",
-        "C": "a_n→0、c_n→∞ 是 0·∞ 未定型，误判其极限必不存在；其实可为任意值（可存在）。"
-      },
-      "pitfalls": [
-        "极限的大小关系只对 N 之后的项成立，不能断言\"对任意 n\"，A、B 因此错",
-        "0·∞（a_n c_n）是未定型可存在可不存在，不能断言必不存在；而 1·∞（b_n c_n）必为∞"
-      ],
-      "key_point": "b_n→1>0、c_n→∞ ⇒ lim b_n c_n=∞ 不存在（有限），选 D。"
-    },
-    {
-      "id": 937,
-      "paper": "数学二",
-      "year": 2003,
-      "index": 12,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设向量组 (I): $ \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{r}$ 可由向量组 (II): $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\cdots, \\boldsymbol{\\beta}_s$ 线性表示, 则 $(\\quad)$",
-      "options": {
-        "A": "当 $r<s$ 时, 向量组 (II) 必线性相关",
-        "B": "当 $r>s$ 时, 向量组 (II) 必线性相关",
-        "C": "当 $r<s$ 时, 向量组 (I) 必线性相关",
-        "D": "当 $r>s$ 时, 向量组 (I) 必线性相关"
-      },
-      "answer": "D",
-      "analysis": "方法一 因为向量组 I 可由向量组 II 线性表示, \r\n\r\n所以 $r(I) \\leqslant r( II )$, 显然 $r( II ) \\leqslant s$, \r\n\r\n于是 $r(I) \\leqslant s$.\r\n\r\n当 $r>s$ 时, 因为 $r(\\mathrm{I}) \\leqslant s<r$, \r\n\r\n即向量组 (I) 的秩小于向量组 I 所含的向量个数, \r\n\r\n所以向量组 (I) 线性相关, 应选 (D).\r\n\r\n方法二 取 I : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 2\\end{array}\\right)$, II : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\beta}_2=\\left(\\begin{array}{l}0 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 (I) 可由向量组 (II) 线性表示且 $r<s$, \r\n\r\n但向量组 II 线性无关, (A), (C) 不对;\r\n\r\n取 (I) : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}2 \\\\ 2\\end{array}\\right)$, (II) : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 I 可由向量组 II 线性表示且 $r>s$, \r\n\r\n但向量组 II 线性无关 (B) 不对, 应选 (D)",
-      "wrong_options": {
-        "A": "把结论安到被表示组 II 上且方向弄反，r<s 推不出 II 相关（II 可无关）。",
-        "B": "结论对象错挂到 II，r>s 时相关的是能被表示的组 I 而非 II。",
-        "C": "方向错，r<s 时 I 反而可能无关（如 I 只含一个非零向量），推不出 I 相关。"
-      },
-      "pitfalls": [
-        "谁相关看谁：结论落在被表示组 I 上，别错挂到 II 上",
-        "r>s 才使 r(I)≤s<r 得 I 相关；r<s 时无此结论"
-      ],
-      "key_point": "r(I)≤r(II)≤s，当 r>s 时 r(I)<r ⇒ I 线性相关，选 D。"
-    },
-    {
-      "id": 944,
-      "paper": "数学二",
-      "year": 2003,
-      "index": 16,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设函数 $y=y(x)$ 在 $(-\\infty,+\\infty)$ 内具有二阶导数, 且 $y^{\\prime} \\neq 0, x=x(y)$ 是 $y=y(x)$ 的反函数\r\n\r\n(1) 试将 $x=x(y)$ 所满足的微分方程 $\\dfrac{\\mathrm{d}^{2} x}{\\mathrm{d} y^{2}}+(y+\\sin x)\\left(\\dfrac{\\mathrm{d} x}{\\mathrm{d} y}\\right)^{3}=0$ 变换为 $y=y(x)$ 满足的微分方程;\r\n\r\n(2) 求变换后的微分方程满足初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 的解",
-      "options": {},
-      "answer": "(1) $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
-      "analysis": "(1)$\\displaystyle \\frac{\\mathrm{d} x}{\\mathrm{d} y}=\\frac{1}{\\frac{\\mathrm{d} y}{\\mathrm{d} x}}=\\frac{1}{y^{\\prime}(x)}, \\\\\r\n\\frac{\\mathrm{d}^2 x}{\\mathrm{d} y^2}\r\n=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} x}{\\mathrm{d} y}\\right)}{\\mathrm{d} y}=\\frac{\\mathrm{d}\\left[\\frac{1}{y^{\\prime}(x)}\\right] / \\mathrm{d} x}{\\mathrm{d} y / \\mathrm{d} x}\r\n=\\frac{\\left[\\frac{1}{y^{\\prime}(x)}\\right]^{\\prime}}{y^{\\prime}(x)}\\\\\r\n=-\\frac{y^{\\prime \\prime}(x)}{y^{\\prime 3}(x)}\r\n=-\\frac{\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}}{\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^3}$,\r\n\r\n\r\n代入原方程整理得 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的特征方程为 $\\lambda^2-1=0$, \r\n\r\n特征值为 $\\lambda_1=-1, \\lambda_2=1,\\\\\r\n\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的通解为 $\\displaystyle y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n设 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$ 的特解为 \r\n\r\n$y_0(x)=a \\cos x+b \\sin x$, \r\n\r\n代入原方程得 $a=0, b=-\\dfrac{1}{2}$,\r\n\r\n原方程的通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x-\\dfrac{1}{2} \\sin x$,\r\n\r\n由初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 得 $C_1=-1, C_2=1$, \r\n\r\n故 $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
-      "wrong_options": {},
-      "pitfalls": [
-        "d²x/dy²=-y''/(y')³（对 y 求导要再除 dy/dx），符号与幂次别错",
-        "非齐次项 sinx 与齐次解 e^{±x} 不重根，特解设 Acosx+Bsinx；代初值 y(0)=0、y'(0)=3/2 定 C₁,C₂"
-      ],
-      "key_point": "变换得 y''-y=sinx，通解 C₁eˣ+C₂e^{-x}-½sinx，配初值得 y=eˣ-e^{-x}-½sinx。"
-    },
-    {
-      "id": 947,
-      "paper": "数学二",
-      "year": 2003,
-      "index": 22,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "已知平面上三条不同直线的方程分别为\r\n\r\n$l_{1}: a x+2 b y+3 c=0, \\\\\r\n l_{2}: b x+2 c y+3 a=0, \\\\\r\nl_{3}: c x+2 a y+3 b=0$\r\n\r\n试证: 这三条直线交于一点的充分必要条件为 $a+b+c=0$",
-      "options": {},
-      "answer": "略",
-      "analysis": "必要性: 令 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{lll}a & 2 b & -3 c \\\\ b & 2 c & -3 a \\\\ c & 2 a & -3 b\\end{array}\\right)$, \r\n\r\n由三条不同直线交于一点, 得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$,\r\n\r\n从而 $|\\overline{\\boldsymbol{A}}|\\\\\r\n=3(a+b+c)\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]=0$,\r\n\r\n而 $(a-b)^2+(b-c)^2+(c-a)^2 \\neq 0$, \r\n\r\n(若等于 $0$, 则 $a=b=c$, 矛盾)\r\n\r\n故 $a+b+c=0$\r\n\r\n充分性: 设 $a+b+c=0$, 则 $r(\\overline{\\boldsymbol{A}})<3$,\r\n\r\n又 $\\left|\\begin{array}{ll}\r\na & 2 b \\\\\r\nb & 2 c\r\n\\end{array}\\right|\\\\\r\n=2\\left(a c-b^2\\right)\\\\\r\n=-2\\left[a(a+b)+b^2\\right]\\\\\r\n=-\\left[a^2+b^2+(a+b)^2\\right] \\neq 0$,  \r\n\r\n(若等于 $0$, 则 $a=b=c=0$, 矛盾)\r\n\r\n则 $r(\\boldsymbol{A})=2$ , 从而 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}\r\na x+2 b y=-3 c \\\\\r\nb x+2 c y=-3 a \\\\\r\nc x+2 a y=-3 b\r\n\\end{array}\\right.$ 有唯一解\r\n\r\n故三条直线交于一点",
-      "wrong_options": {},
-      "pitfalls": [
-        "三线共点是三方程有唯一公共解，需 r(系数)=r(增广)=2（不是=3 也不是<2），别只写行列式为零",
-        "|Ā|=-3(a+b+c)[(a-b)²+(b-c)²+(c-a)²]，因三线不同故平方和≠0，才能由 |Ā|=0 推 a+b+c=0"
-      ],
-      "key_point": "三线共点 ⇔ r(A)=r(Ā)=2；由 |Ā|=-3(a+b+c)Σ(·)²=0 及 Σ(·)²≠0 得 a+b+c=0。"
-    },
-    {
       "id": 1599,
       "paper": "数学二",
       "year": 2003,
@@ -229,6 +112,33 @@
       "key_point": "(A²-E)B=A+E 取行列式得 |B|=1/|A-E|=1/2。"
     },
     {
+      "id": 935,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\},\\left\\{c_{n}\\right\\}$ 均为非负数列, 且 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n}=0, \\lim _{n \\rightarrow \\infty} b_{n}=1, \\lim _{n \\rightarrow \\infty} c_{n}=\\infty$, 则必有 $(\\quad)$",
+      "options": {
+        "A": "$a_{n}<b_{n}$ 对任意 $n$ 成立",
+        "B": "$b_{n}<c_{n}$ 对任意 $n$ 成立",
+        "C": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} a_{n} c_{n}$ 不存在",
+        "D": "极限 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_{n} c_{n}$ 不存在"
+      },
+      "answer": "D",
+      "analysis": "方法一 取 $\\displaystyle a_n=\\frac{3}{n}, b_n=1, c_n=\\frac{n}{3}$, \r\n\r\n显然 (A), (B), (C) 不成立, 应选 (D). \r\n\r\n方法二 取 $\\displaystyle \\varepsilon=\\frac{1}{2}$, \r\n\r\n因为 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n=1$, 所以存在 $N>0$, \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n-1\\right|<\\frac{1}{2}$, \r\n\r\n从而有 $b_n>\\dfrac{1}{2}$. \r\n\r\n当 $n>N$ 时, $\\displaystyle \\left|b_n c_n\\right|>\\frac{1}{2}\\left|c_n\\right|$, \r\n\r\n由 $\\displaystyle \\lim _{n \\rightarrow \\infty} c_n=\\infty$ \r\n\r\n得 $\\lim\\limits  _{n \\rightarrow \\infty}\\left|b_n c_n\\right|=+\\infty$, \r\n\r\n故 $\\displaystyle \\lim _{n \\rightarrow \\infty} b_n c_n=\\infty$, 应选(D)",
+      "wrong_options": {
+        "A": "把极限值的大小关系误当成对每一项都成立的逐项不等式，忽略极限只保证 N 之后的性质。",
+        "B": "同样把 b_n<c_n 当成对任意 n 的逐项不等式，实际前有限项可能不满足。",
+        "C": "a_n→0、c_n→∞ 是 0·∞ 未定型，误判其极限必不存在；其实可为任意值（可存在）。"
+      },
+      "pitfalls": [
+        "极限的大小关系只对 N 之后的项成立，不能断言\"对任意 n\"，A、B 因此错",
+        "0·∞（a_n c_n）是未定型可存在可不存在，不能断言必不存在；而 1·∞（b_n c_n）必为∞"
+      ],
+      "key_point": "b_n→1>0、c_n→∞ ⇒ lim b_n c_n=∞ 不存在（有限），选 D。"
+    },
+    {
       "id": 1605,
       "paper": "数学二",
       "year": 2003,
@@ -283,6 +193,33 @@
       "key_point": "y'=y/x-(y/x)² 代入得 φ(x/y)=-y²/x²，选A。"
     },
     {
+      "id": 934,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如图所示, 则 $f(x)$ 有 $(\\quad)$\n\n![导函数 y=f'(x) 的图形](assets/figures/12b83cc755e3b85c6968ebbc90a0acfaa71cfba0b094c86a4720c7267d1c0be1.png)",
+      "options": {
+        "A": "一个极小值点和两个极大值点",
+        "B": "两个极小值点和一个极大值点",
+        "C": "两个极小值点和两个极大值点",
+        "D": "三个极小值点和一个极大值点"
+      },
+      "answer": "C",
+      "analysis": "设 $f^{\\prime}(x)$ 与 $x$ 轴交点的横坐标从左到右分别为 $a, b, c$, \r\n\r\n显然 $f(x)$ 有三个驻点 $x=a$, $x=b, x=c$ 及一个不可导点 $x=0$,\r\n\r\n当 $x<a$ 时, $f^{\\prime}(x)>0$, 当 $x \\in(a, b)$ 时, $f^{\\prime}(x)<0$, 则 $x=a$ 为 $f(x)$ 的极大值点; \r\n\r\n当 $x \\in(b, 0)$ 时, $f^{\\prime}(x)>0$, 则 $x=b$ 为 $f(x)$ 的极小值点;\r\n\r\n当 $x \\in(0, c)$ 时, $f^{\\prime}(x)<0$, 则 $x=0$ 为 $f(x)$ 的极大值点;\r\n\r\n当 $x>c$ 时, $f^{\\prime}(x)>0$, 则 $x=c$ 为 $f(x)$ 的极小值点,\r\n\r\n故 $f(x)$ 有两个极大值点和两个极小值点, 应选 (C)",
+      "wrong_options": {
+        "A": "只数了三个驻点 a,b,c 忽略了 x=0 这个不可导点也是极值点，且把 a 处极大误当极小，导致极大少数一个。",
+        "B": "认定不可导点 x=0 不是极值点而丢弃，少数了 x=0 处的极大值，得两小一大。",
+        "D": "把某个 f' 不变号的点臆造成极小值点，多凑出一个极小值。"
+      },
+      "pitfalls": [
+        "x=0 是 f 的不可导点但 f' 在此变号（+→-），仍是极大值点，不能因不可导就排除",
+        "极值由 f' 的符号变号决定，不是数 f'=0 的个数；共 a,b,0,c 四个点全要判"
+      ],
+      "key_point": "a(极大)、b(极小)、0(极大)、c(极小)，共两个极大两个极小，选 C。"
+    },
+    {
       "id": 1607,
       "paper": "数学二",
       "year": 2003,
@@ -308,6 +245,33 @@
         "I₁<1 需证 tanx<4x/π：构造凹函数 f=tanx-4x/π，端点为0且 f''>0 故 f<0"
       ],
       "key_point": "I₂<I₁ 且 I₁<1，故 1>I₁>I₂，选B。"
+    },
+    {
+      "id": 937,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 12,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设向量组 (I): $ \\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\cdots, \\boldsymbol{\\alpha}_{r}$ 可由向量组 (II): $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\cdots, \\boldsymbol{\\beta}_s$ 线性表示, 则 $(\\quad)$",
+      "options": {
+        "A": "当 $r<s$ 时, 向量组 (II) 必线性相关",
+        "B": "当 $r>s$ 时, 向量组 (II) 必线性相关",
+        "C": "当 $r<s$ 时, 向量组 (I) 必线性相关",
+        "D": "当 $r>s$ 时, 向量组 (I) 必线性相关"
+      },
+      "answer": "D",
+      "analysis": "方法一 因为向量组 I 可由向量组 II 线性表示, \r\n\r\n所以 $r(I) \\leqslant r( II )$, 显然 $r( II ) \\leqslant s$, \r\n\r\n于是 $r(I) \\leqslant s$.\r\n\r\n当 $r>s$ 时, 因为 $r(\\mathrm{I}) \\leqslant s<r$, \r\n\r\n即向量组 (I) 的秩小于向量组 I 所含的向量个数, \r\n\r\n所以向量组 (I) 线性相关, 应选 (D).\r\n\r\n方法二 取 I : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 2\\end{array}\\right)$, II : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 0\\end{array}\\right), \\boldsymbol{\\beta}_2=\\left(\\begin{array}{l}0 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 (I) 可由向量组 (II) 线性表示且 $r<s$, \r\n\r\n但向量组 II 线性无关, (A), (C) 不对;\r\n\r\n取 (I) : $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right), \\boldsymbol{\\alpha}_2=\\left(\\begin{array}{l}2 \\\\ 2\\end{array}\\right)$, (II) : $\\boldsymbol{\\beta}_1=\\left(\\begin{array}{l}1 \\\\ 1\\end{array}\\right)$, \r\n\r\n显然向量组 I 可由向量组 II 线性表示且 $r>s$, \r\n\r\n但向量组 II 线性无关 (B) 不对, 应选 (D)",
+      "wrong_options": {
+        "A": "把结论安到被表示组 II 上且方向弄反，r<s 推不出 II 相关（II 可无关）。",
+        "B": "结论对象错挂到 II，r>s 时相关的是能被表示的组 I 而非 II。",
+        "C": "方向错，r<s 时 I 反而可能无关（如 I 只含一个非零向量），推不出 I 相关。"
+      },
+      "pitfalls": [
+        "谁相关看谁：结论落在被表示组 I 上，别错挂到 II 上",
+        "r>s 才使 r(I)≤s<r 得 I 相关；r<s 时无此结论"
+      ],
+      "key_point": "r(I)≤r(II)≤s，当 r>s 时 r(I)<r ⇒ I 线性相关，选 D。"
     },
     {
       "id": 1608,
@@ -362,6 +326,24 @@
         "回代 sint=x/√(1+x²)、cost=1/√(1+x²) 合并成 (x-1)/(2√(1+x²))"
       ],
       "key_point": "x=tant 化 ∫eᵗsint dt，循环解得 (x-1)e^{arctanx}/(2√(1+x²))+C。"
+    },
+    {
+      "id": 944,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设函数 $y=y(x)$ 在 $(-\\infty,+\\infty)$ 内具有二阶导数, 且 $y^{\\prime} \\neq 0, x=x(y)$ 是 $y=y(x)$ 的反函数\r\n\r\n(1) 试将 $x=x(y)$ 所满足的微分方程 $\\dfrac{\\mathrm{d}^{2} x}{\\mathrm{d} y^{2}}+(y+\\sin x)\\left(\\dfrac{\\mathrm{d} x}{\\mathrm{d} y}\\right)^{3}=0$ 变换为 $y=y(x)$ 满足的微分方程;\r\n\r\n(2) 求变换后的微分方程满足初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 的解",
+      "options": {},
+      "answer": "(1) $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "analysis": "(1)$\\displaystyle \\frac{\\mathrm{d} x}{\\mathrm{d} y}=\\frac{1}{\\frac{\\mathrm{d} y}{\\mathrm{d} x}}=\\frac{1}{y^{\\prime}(x)}, \\\\\r\n\\frac{\\mathrm{d}^2 x}{\\mathrm{d} y^2}\r\n=\\frac{\\mathrm{d}\\left(\\frac{\\mathrm{d} x}{\\mathrm{d} y}\\right)}{\\mathrm{d} y}=\\frac{\\mathrm{d}\\left[\\frac{1}{y^{\\prime}(x)}\\right] / \\mathrm{d} x}{\\mathrm{d} y / \\mathrm{d} x}\r\n=\\frac{\\left[\\frac{1}{y^{\\prime}(x)}\\right]^{\\prime}}{y^{\\prime}(x)}\\\\\r\n=-\\frac{y^{\\prime \\prime}(x)}{y^{\\prime 3}(x)}\r\n=-\\frac{\\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}}{\\left(\\frac{\\mathrm{d} y}{\\mathrm{d} x}\\right)^3}$,\r\n\r\n\r\n代入原方程整理得 $\\dfrac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$\r\n\r\n(2) $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的特征方程为 $\\lambda^2-1=0$, \r\n\r\n特征值为 $\\lambda_1=-1, \\lambda_2=1,\\\\\r\n\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=0$ 的通解为 $\\displaystyle y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n设 $\\displaystyle \\frac{\\mathrm{d}^2 y}{\\mathrm{d} x^2}-y=\\sin x$ 的特解为 \r\n\r\n$y_0(x)=a \\cos x+b \\sin x$, \r\n\r\n代入原方程得 $a=0, b=-\\dfrac{1}{2}$,\r\n\r\n原方程的通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x-\\dfrac{1}{2} \\sin x$,\r\n\r\n由初始条件 $y(0)=0, y^{\\prime}(0)=\\dfrac{3}{2}$ 得 $C_1=-1, C_2=1$, \r\n\r\n故 $y=\\mathrm{e}^x-\\mathrm{e}^{-x}-\\dfrac{1}{2} \\sin x$",
+      "wrong_options": {},
+      "pitfalls": [
+        "d²x/dy²=-y''/(y')³（对 y 求导要再除 dy/dx），符号与幂次别错",
+        "非齐次项 sinx 与齐次解 e^{±x} 不重根，特解设 Acosx+Bsinx；代初值 y(0)=0、y'(0)=3/2 定 C₁,C₂"
+      ],
+      "key_point": "变换得 y''-y=sinx，通解 C₁eˣ+C₂e^{-x}-½sinx，配初值得 y=eˣ-e^{-x}-½sinx。"
     },
     {
       "id": 1611,
@@ -452,6 +434,24 @@
         "P 的列是特征向量，顺序要与对角阵特征值一一对应"
       ],
       "key_point": "可对角化⟹r(6E-A)=1⟹a=0；求特征向量得 P。"
+    },
+    {
+      "id": 947,
+      "paper": "数学二",
+      "year": 2003,
+      "index": 22,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "已知平面上三条不同直线的方程分别为\r\n\r\n$l_{1}: a x+2 b y+3 c=0, \\\\\r\n l_{2}: b x+2 c y+3 a=0, \\\\\r\nl_{3}: c x+2 a y+3 b=0$\r\n\r\n试证: 这三条直线交于一点的充分必要条件为 $a+b+c=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "必要性: 令 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{lll}a & 2 b & -3 c \\\\ b & 2 c & -3 a \\\\ c & 2 a & -3 b\\end{array}\\right)$, \r\n\r\n由三条不同直线交于一点, 得 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$,\r\n\r\n从而 $|\\overline{\\boldsymbol{A}}|\\\\\r\n=3(a+b+c)\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]=0$,\r\n\r\n而 $(a-b)^2+(b-c)^2+(c-a)^2 \\neq 0$, \r\n\r\n(若等于 $0$, 则 $a=b=c$, 矛盾)\r\n\r\n故 $a+b+c=0$\r\n\r\n充分性: 设 $a+b+c=0$, 则 $r(\\overline{\\boldsymbol{A}})<3$,\r\n\r\n又 $\\left|\\begin{array}{ll}\r\na & 2 b \\\\\r\nb & 2 c\r\n\\end{array}\\right|\\\\\r\n=2\\left(a c-b^2\\right)\\\\\r\n=-2\\left[a(a+b)+b^2\\right]\\\\\r\n=-\\left[a^2+b^2+(a+b)^2\\right] \\neq 0$,  \r\n\r\n(若等于 $0$, 则 $a=b=c=0$, 矛盾)\r\n\r\n则 $r(\\boldsymbol{A})=2$ , 从而 $r(\\boldsymbol{A})=r(\\overline{\\boldsymbol{A}})=2$, \r\n\r\n即方程组 $\\left\\{\\begin{array}{l}\r\na x+2 b y=-3 c \\\\\r\nb x+2 c y=-3 a \\\\\r\nc x+2 a y=-3 b\r\n\\end{array}\\right.$ 有唯一解\r\n\r\n故三条直线交于一点",
+      "wrong_options": {},
+      "pitfalls": [
+        "三线共点是三方程有唯一公共解，需 r(系数)=r(增广)=2（不是=3 也不是<2），别只写行列式为零",
+        "|Ā|=-3(a+b+c)[(a-b)²+(b-c)²+(c-a)²]，因三线不同故平方和≠0，才能由 |Ā|=0 推 a+b+c=0"
+      ],
+      "key_point": "三线共点 ⇔ r(A)=r(Ā)=2；由 |Ā|=-3(a+b+c)Σ(·)²=0 及 Σ(·)²≠0 得 a+b+c=0。"
     }
   ]
 }

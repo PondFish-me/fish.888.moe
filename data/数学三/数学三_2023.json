@@ -4,6 +4,62 @@
   "count": 22,
   "questions": [
     {
+      "id": 38,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x, y)=\\ln (y+|x \\sin y|)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 不存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 存在",
+        "B": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 不存在",
+        "C": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均存在",
+        "D": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均不存在"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查多元函数偏导数的**定义**。题中含绝对值 $|x\\sin y|$，在 $x=0$ 处绝对值会带来左右单侧导数不一致的问题，所以求 $\\dfrac{\\partial f}{\\partial x}$ 时**不能直接套公式求导**，必须回到偏导数定义用极限判断。而对 $y$ 求偏导时把 $x=0$ 代入后绝对值项消失，函数光滑，可直接求导。\n\n核心结论：含 $|x|$ 这类因子的函数，在该因子为零的点处往往只有单侧导数、双侧导数不存在。\n\n【解答】\n\n**第一步：求 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$。**\n\n固定 $y=1$，得一元函数 $f(x,1)=\\ln\\big(1+|x\\sin 1|\\big)=\\ln\\big(1+|x|\\sin 1\\big)$（因 $\\sin 1>0$）。又 $f(0,1)=\\ln 1=0$，按定义\n\n$$\\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}=\\lim_{x\\to 0}\\frac{f(x,1)-f(0,1)}{x}=\\lim_{x\\to 0}\\frac{\\ln\\big(1+|x|\\sin 1\\big)}{x}.$$\n\n当 $x\\to 0$ 时 $\\ln(1+|x|\\sin 1)\\sim |x|\\sin 1$，于是\n\n$$\\lim_{x\\to 0^+}\\frac{|x|\\sin 1}{x}=\\sin 1,\\qquad \\lim_{x\\to 0^-}\\frac{|x|\\sin 1}{x}=-\\sin 1.$$\n\n左右极限不相等，故 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$ **不存在**。\n\n**第二步：求 $\\left.\\dfrac{\\partial f}{\\partial y}\\right|_{(0,1)}$。**\n\n固定 $x=0$，得 $f(0,y)=\\ln\\big(y+|0\\cdot\\sin y|\\big)=\\ln y$（在 $y=1$ 附近 $y>0$，函数光滑）。直接求导\n\n$$\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}=\\left.\\frac{1}{y}\\right|_{y=1}=1,$$\n\n**存在**。\n\n综上：$\\dfrac{\\partial f}{\\partial x}$ 不存在、$\\dfrac{\\partial f}{\\partial y}$ 存在，选 **A**。",
+      "wrong_options": {
+        "B": "把两个偏导的存在性判断恰好搞反了。对 x 的偏导因绝对值产生左右极限 ±sin1 而不存在；对 y 的偏导代入 x=0 后是 ln y，导数为 1 存在。",
+        "C": "误以为对 x 也可直接求导。x=0 处 |x|sin1 的差商左右极限不一致，对 x 的偏导其实不存在。",
+        "D": "对 y 求偏导时代入 x=0，绝对值项 |x sin y| 整体为 0，f(0,y)=ln y 光滑可导，故对 y 的偏导是存在的，不可能两者都不存在。"
+      },
+      "pitfalls": [
+        "求 ∂f/∂x 时不能直接对 |x sin y| 形式求导，必须回到定义算差商的左右极限。",
+        "判断 ∂f/∂y 要先代入 x=0，此时绝对值项消失为 0，别被 |x sin y| 吓住而误判不存在。",
+        "sin 1>0，因此 |x sin1|=|x|sin1，符号分析时 sin1 是正常数。"
+      ],
+      "key_point": "含绝对值的偏导在零点处要用定义查左右差商极限，是否相等决定双侧偏导是否存在。"
+    },
+    {
+      "id": 23,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "函数 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1}{\\sqrt{1+x^2}}, & x \\leqslant 0, \\\\ (x+1) \\cos x, & x>0\\end{array}\\right.$ 的一个原函数为 $(\\quad)$",
+      "options": {
+        "A": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right), & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
+        "B": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
+        "C": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right), & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$",
+        "D": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n求分段函数的原函数，分两关：\n\n1. **逐段求导验证** $F'(x)=f(x)$：每一段分别对 $F$ 求导，要恰好等于对应段的 $f$；\n2. **衔接条件**：原函数必须在分段点 $x=0$ 处**连续**（其实要可导，连续是必要前提）。若两段在 $x=0$ 处左右极限不相等，则该函数在 $x=0$ 处不连续，根本不可导，就不是原函数。\n\n据此可以淘汰导数错误的选项，再用连续性确定常数项。\n\n【解答】\n\n**第一步：验证 $x\\le 0$ 段。** 对 $\\ln\\big(\\sqrt{1+x^2}+x\\big)$ 求导：\n\n$$\\frac{d}{dx}\\ln\\big(\\sqrt{1+x^2}+x\\big)=\\frac{\\dfrac{x}{\\sqrt{1+x^2}}+1}{\\sqrt{1+x^2}+x}=\\frac{\\dfrac{x+\\sqrt{1+x^2}}{\\sqrt{1+x^2}}}{\\sqrt{1+x^2}+x}=\\frac{1}{\\sqrt{1+x^2}},$$\n\n正好等于该段的 $f(x)$。而 $\\ln\\big(\\sqrt{1+x^2}-x\\big)$ 求导得 $-\\dfrac{1}{\\sqrt{1+x^2}}$，符号相反，**错误**——排除 A、B。\n\n**第二步：验证 $x>0$ 段。** 对 $(x+1)\\sin x+\\cos x$ 求导：\n\n$$\\frac{d}{dx}\\big[(x+1)\\sin x+\\cos x\\big]=\\sin x+(x+1)\\cos x-\\sin x=(x+1)\\cos x,$$\n\n正好等于该段 $f(x)$（C、D 均满足）。而 A、B 的 $(x+1)\\cos x-\\sin x$ 求导得 $-(x+1)\\sin x$，也不对。\n\n**第三步：用连续性在 C、D 间定夺。** 分段点 $x=0$ 处必须连续：\n\n- 右极限：$\\lim\\limits_{x\\to 0^+}\\big[(x+1)\\sin x+\\cos x\\big]=0+1=1$；\n- 左值：$x\\le 0$ 段在 $x=0$ 处 $\\ln\\big(\\sqrt{1}+0\\big)=\\ln 1=0$。\n\n要连续需左 = 右 $=1$，所以 $x\\le 0$ 段须加常数 $1$，即写成 $\\ln\\big(\\sqrt{1+x^2}+x\\big)+1$。\n\n- 选项 C 左值为 $0\\ne 1$，在 $x=0$ 处**不连续**，不是原函数；\n- 选项 D 左值为 $0+1=1$，与右极限相等，连续，符合。\n\n故选 **D**。",
+      "wrong_options": {
+        "A": "x≤0 段取 ln(√(1+x²)−x)，求导得 −1/√(1+x²)，符号相反；x>0 段求导得 −(x+1)sin x，两段导数都不对。",
+        "B": "与 A 同样的导数错误（两段求导都得不到 f），加不加常数 1 都无济于事。",
+        "C": "两段导数虽正确，但在 x=0 处左值为 0、右极限为 1，函数不连续，因而不可导，不能作为原函数。"
+      },
+      "pitfalls": [
+        "ln(√(1+x²)+x) 与 ln(√(1+x²)−x) 求导差一个负号，务必算清符号（前者才得 +1/√(1+x²)）。",
+        "原函数必须在分段点连续，这一步用来定常数；只验导数不验衔接会误选 C。",
+        "(x+1)sin x+cos x 求导时 sin x 与 −sin x 相消，结果恰为 (x+1)cos x，别算漏。"
+      ],
+      "key_point": "分段函数原函数：各段求导对上 f，再用分段点连续性确定常数，缺一不可。"
+    },
+    {
       "id": 2,
       "paper": "数学三",
       "year": 2023,
@@ -57,6 +113,62 @@
         "若没有 $a_n<b_n$ 这个符号条件，$\\sum(b_n-a_n)$ 未必绝对收敛，结论就不成立，不要漏掉对它的利用。"
       ],
       "key_point": "用通项恒正的收敛辅助级数 $\\sum(b_n-a_n)$ 做桥梁，借绝对收敛级数的线性运算双向互推。"
+    },
+    {
+      "id": 27,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol A, \\boldsymbol B$ 为 $n$ 阶可逆矩阵, $\\boldsymbol E$ 为 $n$ 阶单位矩阵, $\\boldsymbol M^*$ 为矩阵 $\\boldsymbol M$ 的伴随矩阵, 则 $\\left(\\begin{array}{ll}\\boldsymbol A & \\boldsymbol E \\\\ \\boldsymbol O & \\boldsymbol B\\end{array}\\right)^*= (\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "【分析】\n\n本题考查分块上三角矩阵的伴随矩阵。核心公式是：对可逆矩阵 $M$，有 $M^*=|M|\\,M^{-1}$。因此先求分块矩阵 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$ 的行列式与逆，再相乘，最后用 $A^*=|A|A^{-1}$、$B^*=|B|B^{-1}$ 把结果换成伴随矩阵的形式。\n\n【解答】\n\n记 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$。\n\n**行列式。** 分块上三角，$|M|=|A|\\,|B|\\ne0$，故 $M$ 可逆。\n\n**求逆。** 设 $M^{-1}=\\begin{pmatrix}X&Y\\\\Z&W\\end{pmatrix}$，由 $MM^{-1}=E$ 比较分块得 $X=A^{-1}$，$Z=O$，$W=B^{-1}$，且 $AY+B^{-1}=O$ 给出 $Y=-A^{-1}B^{-1}$。于是\n\n$$M^{-1}=\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}.$$\n\n**求伴随。** 由 $M^*=|M|\\,M^{-1}=|A|\\,|B|\\,M^{-1}$：\n\n$$M^*=|A||B|\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}=\\begin{pmatrix}|B|\\big(|A|A^{-1}\\big)&-\\big(|A|A^{-1}\\big)\\big(|B|B^{-1}\\big)\\\\O&|A|\\big(|B|B^{-1}\\big)\\end{pmatrix}.$$\n\n代入 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，得\n\n$$M^*=\\begin{pmatrix}|B|A^*&-A^*B^*\\\\O&|A|B^*\\end{pmatrix}.$$\n\n对照选项，选 **D**。",
+      "wrong_options": {
+        "A": "左上、右下两块的标量系数写反，写成 $|A|B^*$、$|B|A^*$，且右上块顺序错为 $-B^*A^*$。",
+        "B": "左上、右下系数同样写反成 $|A|B^*$ 与 $|B|A^*$（虽右上块 $-A^*B^*$ 顺序正确），整体不符。",
+        "C": "右上块乘积顺序写反成 $-B^*A^*$。由 $-A^{-1}B^{-1}$ 化来应为 $-A^*B^*$，矩阵乘法不可交换，顺序不能颠倒。"
+      },
+      "pitfalls": [
+        "用 $M^*=|M|M^{-1}$ 时，$|M|=|A||B|$ 要乘进每一块，注意各块对应的标量是 $|B|A^*$ 与 $|A|B^*$（系数与块“交叉”）。",
+        "右上块由 $-A^{-1}B^{-1}$ 化为 $-A^*B^*$，乘法顺序不可交换，不能写成 $-B^*A^*$。",
+        "化简用 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，把多余的行列式因子恰好分配到两个伴随上。"
+      ],
+      "key_point": "分块矩阵伴随用 $M^*=|M|M^{-1}$：先求 $|M|=|A||B|$ 与分块逆，再用 $|A|A^{-1}=A^*$ 还原，注意乘积顺序与系数交叉。"
+    },
+    {
+      "id": 90325,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "二次型 $f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_1+x_3)^2-4(x_2-x_3)^2$ 的规范形为",
+      "options": {
+        "A": "$y_1^2+y_2^2$",
+        "B": "$y_1^2-y_2^2$",
+        "C": "$y_1^2+y_2^2-4y_3^2$",
+        "D": "$y_1^2+y_2^2-y_3^2$"
+      },
+      "answer": "B",
+      "analysis": "【分析】\n\n求规范形只需知道**正、负惯性指数**（正、负平方项各几个）。可以写出二次型矩阵求特征值，但本题有个更快的观察：三个线性形式 $x_1+x_2,\\ x_1+x_3,\\ x_2-x_3$ **线性相关**——因为 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$。作换元后二次型只含两个变量，惯性指数一眼可得。\n\n【解答】\n\n**解法一（换元降元）。** 令 $u=x_1+x_2,\\ v=x_1+x_3$，则 $x_2-x_3=u-v$，于是\n$$f=u^2+v^2-4(u-v)^2=-3u^2-3v^2+8uv.$$\n这是关于 $u,v$ 的二次型，矩阵为 $\\begin{pmatrix}-3&4\\\\4&-3\\end{pmatrix}$，特征值 $-3\\pm4=1,\\ -7$。一正一负 ⇒ 正惯性指数 $1$、负惯性指数 $1$、秩 $2$，规范形为 $y_1^2-y_2^2$。\n\n**解法二（原矩阵特征值）。** 展开得矩阵 $A=\\begin{pmatrix}2&1&1\\\\1&-3&4\\\\1&4&-3\\end{pmatrix}$，特征多项式给出特征值 $3,\\ -7,\\ 0$，同样是正、负各一，秩 $2$。\n\n两法都得正惯性指数 $p=1$、负惯性指数 $q=1$，故规范形为\n$$f=y_1^2-y_2^2.$$\n故选 **B**。",
+      "wrong_options": {
+        "A": "$y_1^2+y_2^2$ 需正定（$p=2,q=0$），但本题有负惯性指数，错。",
+        "C": "$y_1^2+y_2^2-4y_3^2$ 把系数 $4$ 也留下了——规范形系数只能是 $\\pm1,0$，且这里秩为 $2$ 而非 $3$。",
+        "D": "$y_1^2+y_2^2-y_3^2$ 误判为秩 $3$（$p=2,q=1$）。没看出三个线性形式线性相关，实际秩只有 $2$。"
+      },
+      "pitfalls": [
+        "识破 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$ 的线性相关，秩只有 2，别当成 3。",
+        "规范形的系数只允许 $+1,-1,0$，出现 $4$ 之类系数的选项一定错。",
+        "只需正、负惯性指数，不必真的把矩阵对角化到底。"
+      ],
+      "key_point": "规范形由正负惯性指数唯一决定；识别线性形式相关可快速降元定秩。"
     },
     {
       "id": 7,
@@ -171,166 +283,6 @@
       "key_point": "$X_1-X_2\\sim N(0,2\\sigma^2)$，用折叠正态 $E|Z|=\\tau\\sqrt{2/\\pi}$ 配无偏条件 $aE|X_1-X_2|=\\sigma$ 解 $a$。"
     },
     {
-      "id": 20,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 20,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $[-a, a]$ 上具有二阶连续导数, 证明:\r\n\r\n(1) 若 $f(0)=0$, 则存在 $\\xi \\in(-a, a)$, 使得 $f^{\\prime \\prime}(\\xi)=\\dfrac{1}{a^{2}}[f(a)+f(-a)]$;\r\n\r\n(2) 若 $f(x)$ 在 $(-a, a)$ 内取得极值, 则存在 $\\eta \\in(-a, a)$ 使得  $\r\n\\left|f^{\\prime \\prime}(\\eta)\\right| \\geq \\dfrac{1}{2 a^{2}}|f(a)-f(-a)|$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】\n\n两小问的共同武器都是带拉格朗日余项的泰勒公式，把 $f(a)$、$f(-a)$ 在某个内点展开到二阶。第（1）问在 $x=0$ 展开，利用 $f(0)=0$，把 $f(a)+f(-a)$ 表示成两个二阶导数之和的形式；再借助 $f''$ 连续，用介值定理把 \"两点二阶导的平均值\" 实现为某一点 $\\xi$ 处的值。第（2）问在极值点 $c$ 处展开，此时 $f'(c)=0$，作差消去一阶项后取绝对值放大，关键是用 $|c|<a$ 把 $(a-c)^2+(a+c)^2$ 控制住。\n\n【解答】\n\n**(1)** 因 $f$ 在 $[-a,a]$ 上有二阶连续导数，在 $x=0$ 处用泰勒公式展开（带拉格朗日余项），存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使得\n\n$$f(a)=f(0)+f'(0)\\,a+\\dfrac{f''(\\xi_1)}{2}a^2,$$\n\n$$f(-a)=f(0)+f'(0)(-a)+\\dfrac{f''(\\xi_2)}{2}a^2.$$\n\n两式相加，并代入 $f(0)=0$，一阶项相消：\n\n$$f(a)+f(-a)=\\dfrac{a^2}{2}\\left[f''(\\xi_1)+f''(\\xi_2)\\right],$$\n\n即\n\n$$\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n由于 $f''$ 在闭区间 $[\\xi_2,\\xi_1]$ 上连续，记 $m=\\min\\{f''(\\xi_1),f''(\\xi_2)\\}$，$M=\\max\\{f''(\\xi_1),f''(\\xi_2)\\}$，则上式右端的平均值介于 $m$ 与 $M$ 之间。由介值定理，存在 $\\xi$ 介于 $\\xi_1,\\xi_2$ 之间（从而 $\\xi\\in(-a,a)$），使得\n\n$$f''(\\xi)=\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n证毕。\n\n**(2)** 设 $f$ 在 $c\\in(-a,a)$ 处取得极值，由费马定理 $f'(c)=0$。在 $x=c$ 处对端点作二阶泰勒展开：存在 $\\xi_1$ 介于 $c$ 与 $a$ 之间、$\\xi_2$ 介于 $-a$ 与 $c$ 之间，使得\n\n$$f(a)=f(c)+f'(c)(a-c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2=f(c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2,$$\n\n$$f(-a)=f(c)+\\dfrac{f''(\\xi_2)}{2}(-a-c)^2=f(c)+\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n两式相减，消去 $f(c)$：\n\n$$f(a)-f(-a)=\\dfrac{f''(\\xi_1)}{2}(a-c)^2-\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n取绝对值并放大，令 $M=\\max\\{|f''(\\xi_1)|,|f''(\\xi_2)|\\}$，则记达到此最大值的点为 $\\eta\\in(-a,a)$，有 $|f''(\\eta)|=M$，且\n\n$$|f(a)-f(-a)|\\le \\dfrac{|f''(\\xi_1)|}{2}(a-c)^2+\\dfrac{|f''(\\xi_2)|}{2}(a+c)^2\\le \\dfrac{M}{2}\\left[(a-c)^2+(a+c)^2\\right].$$\n\n而 $(a-c)^2+(a+c)^2=2a^2+2c^2$，因 $|c|<a$ 有 $c^2< a^2$，故\n\n$$(a-c)^2+(a+c)^2=2a^2+2c^2\\le 4a^2.$$\n\n于是\n\n$$|f(a)-f(-a)|\\le \\dfrac{M}{2}\\cdot 4a^2=2a^2 M=2a^2\\,|f''(\\eta)|,$$\n\n即\n\n$$|f''(\\eta)|\\ge \\dfrac{1}{2a^2}\\,|f(a)-f(-a)|.$$\n\n证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "第（1）问相加时务必用 $f(0)=0$ 消掉一阶项，两个余项的展开点 $\\xi_1,\\xi_2$ 分居 $0$ 两侧。",
-        "由 $f''(\\xi_1),f''(\\xi_2)$ 的平均值得到 $f''(\\xi)$ 需要 $f''$ 连续这一条件，用的是介值定理而非中值定理。",
-        "第（2）问放大时关键不等式是 $2a^2+2c^2\\le 4a^2$，用到了极值点 $|c|<a$；$\\eta$ 取 $|f''|$ 较大的那个点。"
-      ],
-      "key_point": "对称端点的二阶导估计，套路是在内点（$0$ 或极值点 $c$）泰勒展开后相加/相减，再用介值定理或绝对值放大。"
-    },
-    {
-      "id": 23,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "函数 $f(x)=\\left\\{\\begin{array}{ll}\\dfrac{1}{\\sqrt{1+x^2}}, & x \\leqslant 0, \\\\ (x+1) \\cos x, & x>0\\end{array}\\right.$ 的一个原函数为 $(\\quad)$",
-      "options": {
-        "A": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right), & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
-        "B": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}-x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\cos x-\\sin x, & x>0 .\\end{cases}$",
-        "C": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right), & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$",
-        "D": "$F(x)= \\begin{cases}\\ln \\left(\\sqrt{1+x^2}+x\\right)+1, & x \\leqslant 0, \\\\ (x+1) \\sin x+\\cos x, & x>0 .\\end{cases}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n求分段函数的原函数，分两关：\n\n1. **逐段求导验证** $F'(x)=f(x)$：每一段分别对 $F$ 求导，要恰好等于对应段的 $f$；\n2. **衔接条件**：原函数必须在分段点 $x=0$ 处**连续**（其实要可导，连续是必要前提）。若两段在 $x=0$ 处左右极限不相等，则该函数在 $x=0$ 处不连续，根本不可导，就不是原函数。\n\n据此可以淘汰导数错误的选项，再用连续性确定常数项。\n\n【解答】\n\n**第一步：验证 $x\\le 0$ 段。** 对 $\\ln\\big(\\sqrt{1+x^2}+x\\big)$ 求导：\n\n$$\\frac{d}{dx}\\ln\\big(\\sqrt{1+x^2}+x\\big)=\\frac{\\dfrac{x}{\\sqrt{1+x^2}}+1}{\\sqrt{1+x^2}+x}=\\frac{\\dfrac{x+\\sqrt{1+x^2}}{\\sqrt{1+x^2}}}{\\sqrt{1+x^2}+x}=\\frac{1}{\\sqrt{1+x^2}},$$\n\n正好等于该段的 $f(x)$。而 $\\ln\\big(\\sqrt{1+x^2}-x\\big)$ 求导得 $-\\dfrac{1}{\\sqrt{1+x^2}}$，符号相反，**错误**——排除 A、B。\n\n**第二步：验证 $x>0$ 段。** 对 $(x+1)\\sin x+\\cos x$ 求导：\n\n$$\\frac{d}{dx}\\big[(x+1)\\sin x+\\cos x\\big]=\\sin x+(x+1)\\cos x-\\sin x=(x+1)\\cos x,$$\n\n正好等于该段 $f(x)$（C、D 均满足）。而 A、B 的 $(x+1)\\cos x-\\sin x$ 求导得 $-(x+1)\\sin x$，也不对。\n\n**第三步：用连续性在 C、D 间定夺。** 分段点 $x=0$ 处必须连续：\n\n- 右极限：$\\lim\\limits_{x\\to 0^+}\\big[(x+1)\\sin x+\\cos x\\big]=0+1=1$；\n- 左值：$x\\le 0$ 段在 $x=0$ 处 $\\ln\\big(\\sqrt{1}+0\\big)=\\ln 1=0$。\n\n要连续需左 = 右 $=1$，所以 $x\\le 0$ 段须加常数 $1$，即写成 $\\ln\\big(\\sqrt{1+x^2}+x\\big)+1$。\n\n- 选项 C 左值为 $0\\ne 1$，在 $x=0$ 处**不连续**，不是原函数；\n- 选项 D 左值为 $0+1=1$，与右极限相等，连续，符合。\n\n故选 **D**。",
-      "wrong_options": {
-        "A": "x≤0 段取 ln(√(1+x²)−x)，求导得 −1/√(1+x²)，符号相反；x>0 段求导得 −(x+1)sin x，两段导数都不对。",
-        "B": "与 A 同样的导数错误（两段求导都得不到 f），加不加常数 1 都无济于事。",
-        "C": "两段导数虽正确，但在 x=0 处左值为 0、右极限为 1，函数不连续，因而不可导，不能作为原函数。"
-      },
-      "pitfalls": [
-        "ln(√(1+x²)+x) 与 ln(√(1+x²)−x) 求导差一个负号，务必算清符号（前者才得 +1/√(1+x²)）。",
-        "原函数必须在分段点连续，这一步用来定常数；只验导数不验衔接会误选 C。",
-        "(x+1)sin x+cos x 求导时 sin x 与 −sin x 相消，结果恰为 (x+1)cos x，别算漏。"
-      ],
-      "key_point": "分段函数原函数：各段求导对上 f，再用分段点连续性确定常数，缺一不可。"
-    },
-    {
-      "id": 27,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol A, \\boldsymbol B$ 为 $n$ 阶可逆矩阵, $\\boldsymbol E$ 为 $n$ 阶单位矩阵, $\\boldsymbol M^*$ 为矩阵 $\\boldsymbol M$ 的伴随矩阵, 则 $\\left(\\begin{array}{ll}\\boldsymbol A & \\boldsymbol E \\\\ \\boldsymbol O & \\boldsymbol B\\end{array}\\right)^*= (\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{cc}|\\boldsymbol A| \\boldsymbol B^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol B| \\boldsymbol A^*\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol B^* \\boldsymbol A^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{cc}|\\boldsymbol B| \\boldsymbol A^* & -\\boldsymbol A^* \\boldsymbol B^* \\\\ \\boldsymbol O & |\\boldsymbol A| \\boldsymbol B^*\\end{array}\\right)$"
-      },
-      "answer": "D",
-      "analysis": "【分析】\n\n本题考查分块上三角矩阵的伴随矩阵。核心公式是：对可逆矩阵 $M$，有 $M^*=|M|\\,M^{-1}$。因此先求分块矩阵 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$ 的行列式与逆，再相乘，最后用 $A^*=|A|A^{-1}$、$B^*=|B|B^{-1}$ 把结果换成伴随矩阵的形式。\n\n【解答】\n\n记 $M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix}$。\n\n**行列式。** 分块上三角，$|M|=|A|\\,|B|\\ne0$，故 $M$ 可逆。\n\n**求逆。** 设 $M^{-1}=\\begin{pmatrix}X&Y\\\\Z&W\\end{pmatrix}$，由 $MM^{-1}=E$ 比较分块得 $X=A^{-1}$，$Z=O$，$W=B^{-1}$，且 $AY+B^{-1}=O$ 给出 $Y=-A^{-1}B^{-1}$。于是\n\n$$M^{-1}=\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}.$$\n\n**求伴随。** 由 $M^*=|M|\\,M^{-1}=|A|\\,|B|\\,M^{-1}$：\n\n$$M^*=|A||B|\\begin{pmatrix}A^{-1}&-A^{-1}B^{-1}\\\\O&B^{-1}\\end{pmatrix}=\\begin{pmatrix}|B|\\big(|A|A^{-1}\\big)&-\\big(|A|A^{-1}\\big)\\big(|B|B^{-1}\\big)\\\\O&|A|\\big(|B|B^{-1}\\big)\\end{pmatrix}.$$\n\n代入 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，得\n\n$$M^*=\\begin{pmatrix}|B|A^*&-A^*B^*\\\\O&|A|B^*\\end{pmatrix}.$$\n\n对照选项，选 **D**。",
-      "wrong_options": {
-        "A": "左上、右下两块的标量系数写反，写成 $|A|B^*$、$|B|A^*$，且右上块顺序错为 $-B^*A^*$。",
-        "B": "左上、右下系数同样写反成 $|A|B^*$ 与 $|B|A^*$（虽右上块 $-A^*B^*$ 顺序正确），整体不符。",
-        "C": "右上块乘积顺序写反成 $-B^*A^*$。由 $-A^{-1}B^{-1}$ 化来应为 $-A^*B^*$，矩阵乘法不可交换，顺序不能颠倒。"
-      },
-      "pitfalls": [
-        "用 $M^*=|M|M^{-1}$ 时，$|M|=|A||B|$ 要乘进每一块，注意各块对应的标量是 $|B|A^*$ 与 $|A|B^*$（系数与块“交叉”）。",
-        "右上块由 $-A^{-1}B^{-1}$ 化为 $-A^*B^*$，乘法顺序不可交换，不能写成 $-B^*A^*$。",
-        "化简用 $|A|A^{-1}=A^*$、$|B|B^{-1}=B^*$，把多余的行列式因子恰好分配到两个伴随上。"
-      ],
-      "key_point": "分块矩阵伴随用 $M^*=|M|M^{-1}$：先求 $|M|=|A||B|$ 与分块逆，再用 $|A|A^{-1}=A^*$ 还原，注意乘积顺序与系数交叉。"
-    },
-    {
-      "id": 32,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 15,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "已知线性方程组 $\\left\\{\\begin{array}{l}\r\na x_1+x_3=1, \\\\ \r\nx_1+a x_2+x_3=0, \\\\ \r\nx_1+2 x_2+a x_3=0, \\\\ \r\na x_1+b x_2=2\r\n\\end{array}\\right.$, 有解, 其中 $a, b$ 为常数.\r\n若 $\\left|\\begin{array}{lll}\r\na & 0 & 1 \\\\ \r\n1 & a & 1 \\\\ \r\n1 & 2 & a\r\n\\end{array}\\right|=4$, 则 $\\left|\\begin{array}{lll} \r\n1 & a & 1 \\\\ \r\n1 & 2 & a \\\\ \r\na & b & 0 \r\n\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "8",
-      "analysis": "【分析】\n\n这是一个 $4$ 个方程、$3$ 个未知量的超定方程组。前三个方程的系数矩阵恰好就是题目给的行列式\n\n$$D=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=4\\neq 0,$$\n\n说明前三个方程的系数矩阵满秩（秩为 $3$），即整个方程组的系数矩阵秩为 $3$。方程组\"有解\"（相容）的充要条件是增广矩阵的秩也等于 $3$。由于系数矩阵已有一个 $3$ 阶非零子式，增广矩阵（$4\\times4$）秩等于 $3$ 就等价于其行列式为零。把这个 $4\\times4$ 增广行列式按最后一列（常数列）展开，恰好能用题目要求的目标行列式 $T$ 和已知的 $D$ 表示，从而 $T$ 由 $D$ 直接算出，无需求解 $a,b$。\n\n【解答】\n\n记前三个方程对应的系数行列式为 $D$，已知 $D=4\\neq0$，故系数矩阵秩为 $3$。方程组有解 $\\iff$ 增广矩阵秩 $=3$ $\\iff$ 增广矩阵的 $4$ 阶行列式为零：\n\n$$\\Delta=\\begin{vmatrix} a&0&1&1\\\\ 1&a&1&0\\\\ 1&2&a&0\\\\ a&b&0&2\\end{vmatrix}=0.$$\n\n把 $\\Delta$ 按**最后一列** $(1,0,0,2)^{\\mathsf T}$ 展开。该列只有第 $1$ 行元素 $1$ 与第 $4$ 行元素 $2$ 非零：\n\n第 $1$ 行、第 $4$ 列元素 $1$，代数余子式 $(-1)^{1+4}M_{14}$，其中余子式 $M_{14}$ 是删去第 $1$ 行第 $4$ 列后的三阶行列式（即第 $2,3,4$ 行、第 $1,2,3$ 列）：\n\n$$M_{14}=\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=T,$$\n\n这正是题目要求的目标行列式 $T$。\n\n第 $4$ 行、第 $4$ 列元素 $2$，代数余子式 $(-1)^{4+4}M_{44}$，其中\n\n$$M_{44}=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=D=4.$$\n\n于是\n\n$$\\Delta=1\\cdot(-1)^{1+4}\\,T+2\\cdot(-1)^{4+4}\\,D=-T+2D.$$\n\n由相容条件 $\\Delta=0$，得\n\n$$-T+2D=0\\ \\Longrightarrow\\ T=2D=2\\times 4=8.$$\n\n所以\n\n$$\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=8.$$\n\n（可验证：$D=4$ 给出 $a=-1$ 或 $a=2$；相容条件相应定出 $b=\\tfrac72$ 或 $b=-4$，代入目标行列式两种情形都得 $8$，与上述结果一致。）",
-      "wrong_options": {},
-      "pitfalls": [
-        "要先判断系数矩阵的秩：因为 $D=4\\neq0$，系数矩阵满秩，相容条件才简化为\"增广 $4$ 阶行列式 $=0$\"；若不先确认 $D\\neq0$，相容性的等价转化不成立。",
-        "按最后一列展开时代数余子式的符号 $(-1)^{i+j}$ 不能漏：第 $1$ 行第 $4$ 列是负号，第 $4$ 行第 $4$ 列是正号。",
-        "目标行列式 $T$ 的行恰是增广行列式去掉第一行后的前三列，要看清行列对应关系，不要错排成别的子式。"
-      ],
-      "key_point": "系数阵满秩时\"有解\"等价于增广 $4$ 阶行列式为零，按常数列展开即把目标行列式 $T$ 与已知 $D$ 联系起来：$T=2D$。"
-    },
-    {
-      "id": 35,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 18,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知平面区域 $D=\\left\\{(x, y) \\mid 0 \\leqslant y \\leqslant \\dfrac{1}{x \\sqrt{1+x^2}}, x \\geqslant 1\\right\\}$\r\n\r\n(1) 求 $D$ 的面积;\r\n\r\n(2) 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积",
-      "options": {},
-      "answer": "(1) $\\ln (\\sqrt{2}+1)$\r\n\r\n(2) $\\pi\\left(1-\\dfrac{\\pi}{4}\\right) $",
-      "analysis": "【分析】\n\n区域 $D$ 在 $[1,+\\infty)$ 上无界，故面积与体积都是反常积分。(1) 面积 $S=\\displaystyle\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}$，被积形如 $\\dfrac{1}{x\\sqrt{1+x^2}}$，用倒代换 $x=\\dfrac{1}{t}$（或三角代换）化掉根号。(2) 绕 $x$ 轴旋转，用圆盘法 $V=\\pi\\displaystyle\\int_1^{+\\infty}[\\,y(x)\\,]^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}$，被积有理函数用部分分式拆开。\n\n【解答】\n\n**(1) 面积。**\n\n$$S=\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}.$$\n\n令 $x=\\dfrac{1}{t}$，则 $dx=-\\dfrac{1}{t^2}dt$，$\\sqrt{1+x^2}=\\dfrac{\\sqrt{1+t^2}}{|t|}=\\dfrac{\\sqrt{1+t^2}}{t}\\ (t>0)$；当 $x:1\\to+\\infty$ 时 $t:1\\to0^+$。\n\n$$S=\\int_{1}^{0^+}\\frac{1}{\\frac1t\\cdot\\frac{\\sqrt{1+t^2}}{t}}\\Big(-\\frac{1}{t^2}\\Big)dt=\\int_{0^+}^{1}\\frac{t^2}{\\sqrt{1+t^2}}\\cdot\\frac{1}{t^2}\\,dt=\\int_0^1\\frac{dt}{\\sqrt{1+t^2}}.$$\n\n而 $\\displaystyle\\int\\frac{dt}{\\sqrt{1+t^2}}=\\ln\\big(t+\\sqrt{1+t^2}\\big)+C$，故\n\n$$S=\\Big[\\ln\\big(t+\\sqrt{1+t^2}\\big)\\Big]_0^1=\\ln(1+\\sqrt2)-\\ln 1=\\ln(\\sqrt2+1).$$\n\n**(2) 旋转体体积。**\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x\\sqrt{1+x^2}}\\Big)^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}.$$\n\n部分分式：$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$。于是\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x^2}-\\frac{1}{1+x^2}\\Big)dx=\\pi\\Big[-\\frac{1}{x}-\\arctan x\\Big]_1^{+\\infty}.$$\n\n上限：$x\\to+\\infty$ 时 $-\\dfrac1x\\to0,\\ \\arctan x\\to\\dfrac{\\pi}{2}$，得 $0-\\dfrac{\\pi}{2}$。\n\n下限 $x=1$：$-1-\\dfrac{\\pi}{4}$。\n\n$$V=\\pi\\Big[\\Big(0-\\frac{\\pi}{2}\\Big)-\\Big(-1-\\frac{\\pi}{4}\\Big)\\Big]=\\pi\\Big(1-\\frac{\\pi}{2}+\\frac{\\pi}{4}\\Big)=\\pi\\Big(1-\\frac{\\pi}{4}\\Big).$$\n\n故 $D$ 的面积为 $\\ln(\\sqrt2+1)$，旋转体体积为 $\\pi\\left(1-\\dfrac{\\pi}{4}\\right)$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "无界区域的面积/体积是反常积分，上限要取极限 $x\\to+\\infty$ 而非直接代入",
-        "体积用圆盘法时被积是 $y^2$，即 $\\dfrac{1}{x^2(1+x^2)}$，别漏掉平方",
-        "$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$ 是关键拆分，分母 $x^2$ 与 $1+x^2$ 不要拆错"
-      ],
-      "key_point": "无界域面积/体积归结为反常积分；倒代换去 $x\\sqrt{1+x^2}$ 的根号，体积被积用部分分式 1/x²-1/(1+x²)。"
-    },
-    {
-      "id": 37,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设矩阵 $\\boldsymbol{A}$ 满足: 对任意 $x_1, x_2, x_3$ 均有 $\\boldsymbol{A}\\left(\\begin{array}{c}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{c}x_1+x_2+x_3 \\\\ 2 x_1-x_2+x_3 \\\\ x_2-x_3\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol A$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol P$ 与对角矩阵 $\\boldsymbol \\Lambda$, 使得 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\boldsymbol \\Lambda$",
-      "options": {},
-      "answer": "(1) A=[[1,1,1],[2,-1,1],[0,1,-1]]; (2) P=[[0,-1,4],[-1,0,3],[1,2,1]], Λ=diag(-2,-1,2)",
-      "analysis": "【分析】\n\n第 (1) 问的关键是读懂\"线性变换的像\"与矩阵的对应关系：若 $\\boldsymbol A\\boldsymbol x$ 的第 $i$ 个分量为 $x_1,x_2,x_3$ 的线性组合，则该组合的系数恰好就是 $\\boldsymbol A$ 的第 $i$ 行。把右端三个分量的系数逐行抄下来即得 $\\boldsymbol A$。\n\n第 (2) 问是标准的相似对角化：先解特征方程 $\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=0$ 求特征值，再对每个特征值解齐次方程组 $(\\boldsymbol A-\\lambda\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$ 求特征向量。本题 $\\boldsymbol A$ 有三个互异特征值，故必可对角化，把三个特征向量按列拼成 $\\boldsymbol P$，对应特征值按相同顺序排成 $\\boldsymbol\\Lambda$ 即可。\n\n【解答】\n\n**(1)** 由\n$$\\boldsymbol A\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix}=\\begin{pmatrix}x_1+x_2+x_3\\\\2x_1-x_2+x_3\\\\x_2-x_3\\end{pmatrix},$$\n按行抄系数得\n$$\\boldsymbol A=\\begin{pmatrix}1&1&1\\\\2&-1&1\\\\0&1&-1\\end{pmatrix}.$$\n\n**(2)** 求特征值：\n$$\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=\\begin{vmatrix}1-\\lambda&1&1\\\\2&-1-\\lambda&1\\\\0&1&-1-\\lambda\\end{vmatrix}=-(\\lambda-2)(\\lambda+1)(\\lambda+2).$$\n令其为 $0$，得 $\\lambda_1=-2,\\ \\lambda_2=-1,\\ \\lambda_3=2$。\n\n对 $\\lambda_1=-2$：解 $(\\boldsymbol A+2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_1=(0,-1,1)^{\\mathrm T}$。\n\n对 $\\lambda_2=-1$：解 $(\\boldsymbol A+\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_2=(-1,0,2)^{\\mathrm T}$。\n\n对 $\\lambda_3=2$：解 $(\\boldsymbol A-2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_3=(4,3,1)^{\\mathrm T}$。\n\n三个特征值互异，故 $\\boldsymbol A$ 可对角化。取\n$$\\boldsymbol P=(\\boldsymbol\\xi_1,\\boldsymbol\\xi_2,\\boldsymbol\\xi_3)=\\begin{pmatrix}0&-1&4\\\\-1&0&3\\\\1&2&1\\end{pmatrix},$$\n则 $\\boldsymbol P$ 可逆（$\\det\\boldsymbol P=-12\\neq 0$），且\n$$\\boldsymbol P^{-1}\\boldsymbol A\\boldsymbol P=\\boldsymbol\\Lambda=\\begin{pmatrix}-2&0&0\\\\0&-1&0\\\\0&0&2\\end{pmatrix}.$$\n（验算：直接计算 $\\boldsymbol A\\boldsymbol P$ 各列分别等于 $-2\\boldsymbol\\xi_1,\\,-\\boldsymbol\\xi_2,\\,2\\boldsymbol\\xi_3$，即 $\\boldsymbol A\\boldsymbol P=\\boldsymbol P\\boldsymbol\\Lambda$，成立。）\n\n注：$\\boldsymbol P$ 的取法不唯一，特征向量可乘任意非零常数、各列也可重排，只要 $\\boldsymbol\\Lambda$ 的对角元顺序与之对应即可。",
-      "wrong_options": {},
-      "pitfalls": [
-        "由变换写 A 时容易把系数按列填入，正确做法是\"每个输出分量的系数作为 A 的对应行\"。",
-        "特征向量与对角阵的排列顺序必须一一对应，第二列特征值 -1 对应的向量是 (-1,0,2)，验算时应满足 Aξ=λξ。",
-        "三个特征值互异即保证可对角化，无需再验线性无关，但 P 必须确认可逆。"
-      ],
-      "key_point": "像的系数按行写出 A；互异特征值各取一个特征向量按列拼成 P，对应特征值排成 Λ。"
-    },
-    {
-      "id": 38,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x, y)=\\ln (y+|x \\sin y|)$, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 不存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 存在",
-        "B": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}$ 存在, $\\displaystyle \\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 不存在",
-        "C": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均存在",
-        "D": "$\\displaystyle \\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)},\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}$ 均不存在"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n本题考查多元函数偏导数的**定义**。题中含绝对值 $|x\\sin y|$，在 $x=0$ 处绝对值会带来左右单侧导数不一致的问题，所以求 $\\dfrac{\\partial f}{\\partial x}$ 时**不能直接套公式求导**，必须回到偏导数定义用极限判断。而对 $y$ 求偏导时把 $x=0$ 代入后绝对值项消失，函数光滑，可直接求导。\n\n核心结论：含 $|x|$ 这类因子的函数，在该因子为零的点处往往只有单侧导数、双侧导数不存在。\n\n【解答】\n\n**第一步：求 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$。**\n\n固定 $y=1$，得一元函数 $f(x,1)=\\ln\\big(1+|x\\sin 1|\\big)=\\ln\\big(1+|x|\\sin 1\\big)$（因 $\\sin 1>0$）。又 $f(0,1)=\\ln 1=0$，按定义\n\n$$\\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,1)}=\\lim_{x\\to 0}\\frac{f(x,1)-f(0,1)}{x}=\\lim_{x\\to 0}\\frac{\\ln\\big(1+|x|\\sin 1\\big)}{x}.$$\n\n当 $x\\to 0$ 时 $\\ln(1+|x|\\sin 1)\\sim |x|\\sin 1$，于是\n\n$$\\lim_{x\\to 0^+}\\frac{|x|\\sin 1}{x}=\\sin 1,\\qquad \\lim_{x\\to 0^-}\\frac{|x|\\sin 1}{x}=-\\sin 1.$$\n\n左右极限不相等，故 $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,1)}$ **不存在**。\n\n**第二步：求 $\\left.\\dfrac{\\partial f}{\\partial y}\\right|_{(0,1)}$。**\n\n固定 $x=0$，得 $f(0,y)=\\ln\\big(y+|0\\cdot\\sin y|\\big)=\\ln y$（在 $y=1$ 附近 $y>0$，函数光滑）。直接求导\n\n$$\\left.\\frac{\\partial f}{\\partial y}\\right|_{(0,1)}=\\left.\\frac{1}{y}\\right|_{y=1}=1,$$\n\n**存在**。\n\n综上：$\\dfrac{\\partial f}{\\partial x}$ 不存在、$\\dfrac{\\partial f}{\\partial y}$ 存在，选 **A**。",
-      "wrong_options": {
-        "B": "把两个偏导的存在性判断恰好搞反了。对 x 的偏导因绝对值产生左右极限 ±sin1 而不存在；对 y 的偏导代入 x=0 后是 ln y，导数为 1 存在。",
-        "C": "误以为对 x 也可直接求导。x=0 处 |x|sin1 的差商左右极限不一致，对 x 的偏导其实不存在。",
-        "D": "对 y 求偏导时代入 x=0，绝对值项 |x sin y| 整体为 0，f(0,y)=ln y 光滑可导，故对 y 的偏导是存在的，不可能两者都不存在。"
-      },
-      "pitfalls": [
-        "求 ∂f/∂x 时不能直接对 |x sin y| 形式求导，必须回到定义算差商的左右极限。",
-        "判断 ∂f/∂y 要先代入 x=0，此时绝对值项消失为 0，别被 |x sin y| 吓住而误判不存在。",
-        "sin 1>0，因此 |x sin1|=|x|sin1，符号分析时 sin1 是正常数。"
-      ],
-      "key_point": "含绝对值的偏导在零点处要用定义查左右差商极限，是否相等决定双侧偏导是否存在。"
-    },
-    {
       "id": 39,
       "paper": "数学三",
       "year": 2023,
@@ -406,6 +358,25 @@
       "key_point": "积分方程先去分母再对 $t$ 求导化为一阶线性方程 $f'-f=2t$，套通解公式并用 $f(0)=0$ 定常数。"
     },
     {
+      "id": 32,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 15,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "已知线性方程组 $\\left\\{\\begin{array}{l}\r\na x_1+x_3=1, \\\\ \r\nx_1+a x_2+x_3=0, \\\\ \r\nx_1+2 x_2+a x_3=0, \\\\ \r\na x_1+b x_2=2\r\n\\end{array}\\right.$, 有解, 其中 $a, b$ 为常数.\r\n若 $\\left|\\begin{array}{lll}\r\na & 0 & 1 \\\\ \r\n1 & a & 1 \\\\ \r\n1 & 2 & a\r\n\\end{array}\\right|=4$, 则 $\\left|\\begin{array}{lll} \r\n1 & a & 1 \\\\ \r\n1 & 2 & a \\\\ \r\na & b & 0 \r\n\\end{array}\\right|=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "8",
+      "analysis": "【分析】\n\n这是一个 $4$ 个方程、$3$ 个未知量的超定方程组。前三个方程的系数矩阵恰好就是题目给的行列式\n\n$$D=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=4\\neq 0,$$\n\n说明前三个方程的系数矩阵满秩（秩为 $3$），即整个方程组的系数矩阵秩为 $3$。方程组\"有解\"（相容）的充要条件是增广矩阵的秩也等于 $3$。由于系数矩阵已有一个 $3$ 阶非零子式，增广矩阵（$4\\times4$）秩等于 $3$ 就等价于其行列式为零。把这个 $4\\times4$ 增广行列式按最后一列（常数列）展开，恰好能用题目要求的目标行列式 $T$ 和已知的 $D$ 表示，从而 $T$ 由 $D$ 直接算出，无需求解 $a,b$。\n\n【解答】\n\n记前三个方程对应的系数行列式为 $D$，已知 $D=4\\neq0$，故系数矩阵秩为 $3$。方程组有解 $\\iff$ 增广矩阵秩 $=3$ $\\iff$ 增广矩阵的 $4$ 阶行列式为零：\n\n$$\\Delta=\\begin{vmatrix} a&0&1&1\\\\ 1&a&1&0\\\\ 1&2&a&0\\\\ a&b&0&2\\end{vmatrix}=0.$$\n\n把 $\\Delta$ 按**最后一列** $(1,0,0,2)^{\\mathsf T}$ 展开。该列只有第 $1$ 行元素 $1$ 与第 $4$ 行元素 $2$ 非零：\n\n第 $1$ 行、第 $4$ 列元素 $1$，代数余子式 $(-1)^{1+4}M_{14}$，其中余子式 $M_{14}$ 是删去第 $1$ 行第 $4$ 列后的三阶行列式（即第 $2,3,4$ 行、第 $1,2,3$ 列）：\n\n$$M_{14}=\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=T,$$\n\n这正是题目要求的目标行列式 $T$。\n\n第 $4$ 行、第 $4$ 列元素 $2$，代数余子式 $(-1)^{4+4}M_{44}$，其中\n\n$$M_{44}=\\begin{vmatrix} a&0&1\\\\ 1&a&1\\\\ 1&2&a\\end{vmatrix}=D=4.$$\n\n于是\n\n$$\\Delta=1\\cdot(-1)^{1+4}\\,T+2\\cdot(-1)^{4+4}\\,D=-T+2D.$$\n\n由相容条件 $\\Delta=0$，得\n\n$$-T+2D=0\\ \\Longrightarrow\\ T=2D=2\\times 4=8.$$\n\n所以\n\n$$\\begin{vmatrix} 1&a&1\\\\ 1&2&a\\\\ a&b&0\\end{vmatrix}=8.$$\n\n（可验证：$D=4$ 给出 $a=-1$ 或 $a=2$；相容条件相应定出 $b=\\tfrac72$ 或 $b=-4$，代入目标行列式两种情形都得 $8$，与上述结果一致。）",
+      "wrong_options": {},
+      "pitfalls": [
+        "要先判断系数矩阵的秩：因为 $D=4\\neq0$，系数矩阵满秩，相容条件才简化为\"增广 $4$ 阶行列式 $=0$\"；若不先确认 $D\\neq0$，相容性的等价转化不成立。",
+        "按最后一列展开时代数余子式的符号 $(-1)^{i+j}$ 不能漏：第 $1$ 行第 $4$ 列是负号，第 $4$ 行第 $4$ 列是正号。",
+        "目标行列式 $T$ 的行恰是增广行列式去掉第一行后的前三列，要看清行列对应关系，不要错排成别的子式。"
+      ],
+      "key_point": "系数阵满秩时\"有解\"等价于增广 $4$ 阶行列式为零，按常数列展开即把目标行列式 $T$ 与已知 $D$ 联系起来：$T=2D$。"
+    },
+    {
       "id": 43,
       "paper": "数学三",
       "year": 2023,
@@ -444,6 +415,25 @@
       "key_point": "隐函数逐阶求导代点定参数；驻点处用 y''(0) 的符号判极值，负号即极大。"
     },
     {
+      "id": 35,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 18,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知平面区域 $D=\\left\\{(x, y) \\mid 0 \\leqslant y \\leqslant \\dfrac{1}{x \\sqrt{1+x^2}}, x \\geqslant 1\\right\\}$\r\n\r\n(1) 求 $D$ 的面积;\r\n\r\n(2) 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积",
+      "options": {},
+      "answer": "(1) $\\ln (\\sqrt{2}+1)$\r\n\r\n(2) $\\pi\\left(1-\\dfrac{\\pi}{4}\\right) $",
+      "analysis": "【分析】\n\n区域 $D$ 在 $[1,+\\infty)$ 上无界，故面积与体积都是反常积分。(1) 面积 $S=\\displaystyle\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}$，被积形如 $\\dfrac{1}{x\\sqrt{1+x^2}}$，用倒代换 $x=\\dfrac{1}{t}$（或三角代换）化掉根号。(2) 绕 $x$ 轴旋转，用圆盘法 $V=\\pi\\displaystyle\\int_1^{+\\infty}[\\,y(x)\\,]^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}$，被积有理函数用部分分式拆开。\n\n【解答】\n\n**(1) 面积。**\n\n$$S=\\int_1^{+\\infty}\\frac{dx}{x\\sqrt{1+x^2}}.$$\n\n令 $x=\\dfrac{1}{t}$，则 $dx=-\\dfrac{1}{t^2}dt$，$\\sqrt{1+x^2}=\\dfrac{\\sqrt{1+t^2}}{|t|}=\\dfrac{\\sqrt{1+t^2}}{t}\\ (t>0)$；当 $x:1\\to+\\infty$ 时 $t:1\\to0^+$。\n\n$$S=\\int_{1}^{0^+}\\frac{1}{\\frac1t\\cdot\\frac{\\sqrt{1+t^2}}{t}}\\Big(-\\frac{1}{t^2}\\Big)dt=\\int_{0^+}^{1}\\frac{t^2}{\\sqrt{1+t^2}}\\cdot\\frac{1}{t^2}\\,dt=\\int_0^1\\frac{dt}{\\sqrt{1+t^2}}.$$\n\n而 $\\displaystyle\\int\\frac{dt}{\\sqrt{1+t^2}}=\\ln\\big(t+\\sqrt{1+t^2}\\big)+C$，故\n\n$$S=\\Big[\\ln\\big(t+\\sqrt{1+t^2}\\big)\\Big]_0^1=\\ln(1+\\sqrt2)-\\ln 1=\\ln(\\sqrt2+1).$$\n\n**(2) 旋转体体积。**\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x\\sqrt{1+x^2}}\\Big)^2dx=\\pi\\int_1^{+\\infty}\\frac{dx}{x^2(1+x^2)}.$$\n\n部分分式：$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$。于是\n\n$$V=\\pi\\int_1^{+\\infty}\\Big(\\frac{1}{x^2}-\\frac{1}{1+x^2}\\Big)dx=\\pi\\Big[-\\frac{1}{x}-\\arctan x\\Big]_1^{+\\infty}.$$\n\n上限：$x\\to+\\infty$ 时 $-\\dfrac1x\\to0,\\ \\arctan x\\to\\dfrac{\\pi}{2}$，得 $0-\\dfrac{\\pi}{2}$。\n\n下限 $x=1$：$-1-\\dfrac{\\pi}{4}$。\n\n$$V=\\pi\\Big[\\Big(0-\\frac{\\pi}{2}\\Big)-\\Big(-1-\\frac{\\pi}{4}\\Big)\\Big]=\\pi\\Big(1-\\frac{\\pi}{2}+\\frac{\\pi}{4}\\Big)=\\pi\\Big(1-\\frac{\\pi}{4}\\Big).$$\n\n故 $D$ 的面积为 $\\ln(\\sqrt2+1)$，旋转体体积为 $\\pi\\left(1-\\dfrac{\\pi}{4}\\right)$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "无界区域的面积/体积是反常积分，上限要取极限 $x\\to+\\infty$ 而非直接代入",
+        "体积用圆盘法时被积是 $y^2$，即 $\\dfrac{1}{x^2(1+x^2)}$，别漏掉平方",
+        "$\\dfrac{1}{x^2(1+x^2)}=\\dfrac{1}{x^2}-\\dfrac{1}{1+x^2}$ 是关键拆分，分母 $x^2$ 与 $1+x^2$ 不要拆错"
+      ],
+      "key_point": "无界域面积/体积归结为反常积分；倒代换去 $x\\sqrt{1+x^2}$ 的根号，体积被积用部分分式 1/x²-1/(1+x²)。"
+    },
+    {
       "id": 45,
       "paper": "数学三",
       "year": 2023,
@@ -463,6 +453,44 @@
       "key_point": "过原点圆用 r=2cosθ；遇 |√(x²+y²)−1| 以 r=1 为界、按 θ=±π/3 分区域，分段积分再合并。"
     },
     {
+      "id": 20,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 20,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[-a, a]$ 上具有二阶连续导数, 证明:\r\n\r\n(1) 若 $f(0)=0$, 则存在 $\\xi \\in(-a, a)$, 使得 $f^{\\prime \\prime}(\\xi)=\\dfrac{1}{a^{2}}[f(a)+f(-a)]$;\r\n\r\n(2) 若 $f(x)$ 在 $(-a, a)$ 内取得极值, 则存在 $\\eta \\in(-a, a)$ 使得  $\r\n\\left|f^{\\prime \\prime}(\\eta)\\right| \\geq \\dfrac{1}{2 a^{2}}|f(a)-f(-a)|$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n两小问的共同武器都是带拉格朗日余项的泰勒公式，把 $f(a)$、$f(-a)$ 在某个内点展开到二阶。第（1）问在 $x=0$ 展开，利用 $f(0)=0$，把 $f(a)+f(-a)$ 表示成两个二阶导数之和的形式；再借助 $f''$ 连续，用介值定理把 \"两点二阶导的平均值\" 实现为某一点 $\\xi$ 处的值。第（2）问在极值点 $c$ 处展开，此时 $f'(c)=0$，作差消去一阶项后取绝对值放大，关键是用 $|c|<a$ 把 $(a-c)^2+(a+c)^2$ 控制住。\n\n【解答】\n\n**(1)** 因 $f$ 在 $[-a,a]$ 上有二阶连续导数，在 $x=0$ 处用泰勒公式展开（带拉格朗日余项），存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使得\n\n$$f(a)=f(0)+f'(0)\\,a+\\dfrac{f''(\\xi_1)}{2}a^2,$$\n\n$$f(-a)=f(0)+f'(0)(-a)+\\dfrac{f''(\\xi_2)}{2}a^2.$$\n\n两式相加，并代入 $f(0)=0$，一阶项相消：\n\n$$f(a)+f(-a)=\\dfrac{a^2}{2}\\left[f''(\\xi_1)+f''(\\xi_2)\\right],$$\n\n即\n\n$$\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n由于 $f''$ 在闭区间 $[\\xi_2,\\xi_1]$ 上连续，记 $m=\\min\\{f''(\\xi_1),f''(\\xi_2)\\}$，$M=\\max\\{f''(\\xi_1),f''(\\xi_2)\\}$，则上式右端的平均值介于 $m$ 与 $M$ 之间。由介值定理，存在 $\\xi$ 介于 $\\xi_1,\\xi_2$ 之间（从而 $\\xi\\in(-a,a)$），使得\n\n$$f''(\\xi)=\\dfrac{f''(\\xi_1)+f''(\\xi_2)}{2}=\\dfrac{1}{a^2}\\left[f(a)+f(-a)\\right].$$\n\n证毕。\n\n**(2)** 设 $f$ 在 $c\\in(-a,a)$ 处取得极值，由费马定理 $f'(c)=0$。在 $x=c$ 处对端点作二阶泰勒展开：存在 $\\xi_1$ 介于 $c$ 与 $a$ 之间、$\\xi_2$ 介于 $-a$ 与 $c$ 之间，使得\n\n$$f(a)=f(c)+f'(c)(a-c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2=f(c)+\\dfrac{f''(\\xi_1)}{2}(a-c)^2,$$\n\n$$f(-a)=f(c)+\\dfrac{f''(\\xi_2)}{2}(-a-c)^2=f(c)+\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n两式相减，消去 $f(c)$：\n\n$$f(a)-f(-a)=\\dfrac{f''(\\xi_1)}{2}(a-c)^2-\\dfrac{f''(\\xi_2)}{2}(a+c)^2.$$\n\n取绝对值并放大，令 $M=\\max\\{|f''(\\xi_1)|,|f''(\\xi_2)|\\}$，则记达到此最大值的点为 $\\eta\\in(-a,a)$，有 $|f''(\\eta)|=M$，且\n\n$$|f(a)-f(-a)|\\le \\dfrac{|f''(\\xi_1)|}{2}(a-c)^2+\\dfrac{|f''(\\xi_2)|}{2}(a+c)^2\\le \\dfrac{M}{2}\\left[(a-c)^2+(a+c)^2\\right].$$\n\n而 $(a-c)^2+(a+c)^2=2a^2+2c^2$，因 $|c|<a$ 有 $c^2< a^2$，故\n\n$$(a-c)^2+(a+c)^2=2a^2+2c^2\\le 4a^2.$$\n\n于是\n\n$$|f(a)-f(-a)|\\le \\dfrac{M}{2}\\cdot 4a^2=2a^2 M=2a^2\\,|f''(\\eta)|,$$\n\n即\n\n$$|f''(\\eta)|\\ge \\dfrac{1}{2a^2}\\,|f(a)-f(-a)|.$$\n\n证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "第（1）问相加时务必用 $f(0)=0$ 消掉一阶项，两个余项的展开点 $\\xi_1,\\xi_2$ 分居 $0$ 两侧。",
+        "由 $f''(\\xi_1),f''(\\xi_2)$ 的平均值得到 $f''(\\xi)$ 需要 $f''$ 连续这一条件，用的是介值定理而非中值定理。",
+        "第（2）问放大时关键不等式是 $2a^2+2c^2\\le 4a^2$，用到了极值点 $|c|<a$；$\\eta$ 取 $|f''|$ 较大的那个点。"
+      ],
+      "key_point": "对称端点的二阶导估计，套路是在内点（$0$ 或极值点 $c$）泰勒展开后相加/相减，再用介值定理或绝对值放大。"
+    },
+    {
+      "id": 37,
+      "paper": "数学三",
+      "year": 2023,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设矩阵 $\\boldsymbol{A}$ 满足: 对任意 $x_1, x_2, x_3$ 均有 $\\boldsymbol{A}\\left(\\begin{array}{c}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right)=\\left(\\begin{array}{c}x_1+x_2+x_3 \\\\ 2 x_1-x_2+x_3 \\\\ x_2-x_3\\end{array}\\right)$\r\n\r\n(1) 求 $\\boldsymbol A$;\r\n\r\n(2) 求可逆矩阵 $\\boldsymbol P$ 与对角矩阵 $\\boldsymbol \\Lambda$, 使得 $\\boldsymbol P^{-1} \\boldsymbol A \\boldsymbol P=\\boldsymbol \\Lambda$",
+      "options": {},
+      "answer": "(1) A=[[1,1,1],[2,-1,1],[0,1,-1]]; (2) P=[[0,-1,4],[-1,0,3],[1,2,1]], Λ=diag(-2,-1,2)",
+      "analysis": "【分析】\n\n第 (1) 问的关键是读懂\"线性变换的像\"与矩阵的对应关系：若 $\\boldsymbol A\\boldsymbol x$ 的第 $i$ 个分量为 $x_1,x_2,x_3$ 的线性组合，则该组合的系数恰好就是 $\\boldsymbol A$ 的第 $i$ 行。把右端三个分量的系数逐行抄下来即得 $\\boldsymbol A$。\n\n第 (2) 问是标准的相似对角化：先解特征方程 $\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=0$ 求特征值，再对每个特征值解齐次方程组 $(\\boldsymbol A-\\lambda\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$ 求特征向量。本题 $\\boldsymbol A$ 有三个互异特征值，故必可对角化，把三个特征向量按列拼成 $\\boldsymbol P$，对应特征值按相同顺序排成 $\\boldsymbol\\Lambda$ 即可。\n\n【解答】\n\n**(1)** 由\n$$\\boldsymbol A\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix}=\\begin{pmatrix}x_1+x_2+x_3\\\\2x_1-x_2+x_3\\\\x_2-x_3\\end{pmatrix},$$\n按行抄系数得\n$$\\boldsymbol A=\\begin{pmatrix}1&1&1\\\\2&-1&1\\\\0&1&-1\\end{pmatrix}.$$\n\n**(2)** 求特征值：\n$$\\det(\\boldsymbol A-\\lambda\\boldsymbol E)=\\begin{vmatrix}1-\\lambda&1&1\\\\2&-1-\\lambda&1\\\\0&1&-1-\\lambda\\end{vmatrix}=-(\\lambda-2)(\\lambda+1)(\\lambda+2).$$\n令其为 $0$，得 $\\lambda_1=-2,\\ \\lambda_2=-1,\\ \\lambda_3=2$。\n\n对 $\\lambda_1=-2$：解 $(\\boldsymbol A+2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_1=(0,-1,1)^{\\mathrm T}$。\n\n对 $\\lambda_2=-1$：解 $(\\boldsymbol A+\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_2=(-1,0,2)^{\\mathrm T}$。\n\n对 $\\lambda_3=2$：解 $(\\boldsymbol A-2\\boldsymbol E)\\boldsymbol x=\\boldsymbol 0$，得基础解系 $\\boldsymbol\\xi_3=(4,3,1)^{\\mathrm T}$。\n\n三个特征值互异，故 $\\boldsymbol A$ 可对角化。取\n$$\\boldsymbol P=(\\boldsymbol\\xi_1,\\boldsymbol\\xi_2,\\boldsymbol\\xi_3)=\\begin{pmatrix}0&-1&4\\\\-1&0&3\\\\1&2&1\\end{pmatrix},$$\n则 $\\boldsymbol P$ 可逆（$\\det\\boldsymbol P=-12\\neq 0$），且\n$$\\boldsymbol P^{-1}\\boldsymbol A\\boldsymbol P=\\boldsymbol\\Lambda=\\begin{pmatrix}-2&0&0\\\\0&-1&0\\\\0&0&2\\end{pmatrix}.$$\n（验算：直接计算 $\\boldsymbol A\\boldsymbol P$ 各列分别等于 $-2\\boldsymbol\\xi_1,\\,-\\boldsymbol\\xi_2,\\,2\\boldsymbol\\xi_3$，即 $\\boldsymbol A\\boldsymbol P=\\boldsymbol P\\boldsymbol\\Lambda$，成立。）\n\n注：$\\boldsymbol P$ 的取法不唯一，特征向量可乘任意非零常数、各列也可重排，只要 $\\boldsymbol\\Lambda$ 的对角元顺序与之对应即可。",
+      "wrong_options": {},
+      "pitfalls": [
+        "由变换写 A 时容易把系数按列填入，正确做法是\"每个输出分量的系数作为 A 的对应行\"。",
+        "特征向量与对角阵的排列顺序必须一一对应，第二列特征值 -1 对应的向量是 (-1,0,2)，验算时应满足 Aξ=λξ。",
+        "三个特征值互异即保证可对角化，无需再验线性无关，但 P 必须确认可逆。"
+      ],
+      "key_point": "像的系数按行写出 A；互异特征值各取一个特征向量按列拼成 P，对应特征值排成 Λ。"
+    },
+    {
       "id": 46,
       "paper": "数学三",
       "year": 2023,
@@ -480,34 +508,6 @@
         "判断期望存在性要看 ∫y·f_Y(y)dy 是否收敛；该被积函数尾部与 1/y 同阶导致发散，结论是\"不存在\"而非\"无穷大\"。"
       ],
       "key_point": "密度积分得 F(x)=e^x/(1+e^x)；单调变换用分布函数法求 f_Y；期望存在性归结为反常积分收敛性，尾部 1/y 故发散。"
-    },
-    {
-      "id": 90325,
-      "paper": "数学三",
-      "year": 2023,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "二次型 $f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_1+x_3)^2-4(x_2-x_3)^2$ 的规范形为",
-      "options": {
-        "A": "$y_1^2+y_2^2$",
-        "B": "$y_1^2-y_2^2$",
-        "C": "$y_1^2+y_2^2-4y_3^2$",
-        "D": "$y_1^2+y_2^2-y_3^2$"
-      },
-      "answer": "B",
-      "analysis": "【分析】\n\n求规范形只需知道**正、负惯性指数**（正、负平方项各几个）。可以写出二次型矩阵求特征值，但本题有个更快的观察：三个线性形式 $x_1+x_2,\\ x_1+x_3,\\ x_2-x_3$ **线性相关**——因为 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$。作换元后二次型只含两个变量，惯性指数一眼可得。\n\n【解答】\n\n**解法一（换元降元）。** 令 $u=x_1+x_2,\\ v=x_1+x_3$，则 $x_2-x_3=u-v$，于是\n$$f=u^2+v^2-4(u-v)^2=-3u^2-3v^2+8uv.$$\n这是关于 $u,v$ 的二次型，矩阵为 $\\begin{pmatrix}-3&4\\\\4&-3\\end{pmatrix}$，特征值 $-3\\pm4=1,\\ -7$。一正一负 ⇒ 正惯性指数 $1$、负惯性指数 $1$、秩 $2$，规范形为 $y_1^2-y_2^2$。\n\n**解法二（原矩阵特征值）。** 展开得矩阵 $A=\\begin{pmatrix}2&1&1\\\\1&-3&4\\\\1&4&-3\\end{pmatrix}$，特征多项式给出特征值 $3,\\ -7,\\ 0$，同样是正、负各一，秩 $2$。\n\n两法都得正惯性指数 $p=1$、负惯性指数 $q=1$，故规范形为\n$$f=y_1^2-y_2^2.$$\n故选 **B**。",
-      "wrong_options": {
-        "A": "$y_1^2+y_2^2$ 需正定（$p=2,q=0$），但本题有负惯性指数，错。",
-        "C": "$y_1^2+y_2^2-4y_3^2$ 把系数 $4$ 也留下了——规范形系数只能是 $\\pm1,0$，且这里秩为 $2$ 而非 $3$。",
-        "D": "$y_1^2+y_2^2-y_3^2$ 误判为秩 $3$（$p=2,q=1$）。没看出三个线性形式线性相关，实际秩只有 $2$。"
-      },
-      "pitfalls": [
-        "识破 $(x_1+x_2)-(x_1+x_3)=x_2-x_3$ 的线性相关，秩只有 2，别当成 3。",
-        "规范形的系数只允许 $+1,-1,0$，出现 $4$ 之类系数的选项一定错。",
-        "只需正、负惯性指数，不必真的把矩阵对角化到底。"
-      ],
-      "key_point": "规范形由正负惯性指数唯一决定；识别线性形式相关可快速降元定秩。"
     }
   ]
 }

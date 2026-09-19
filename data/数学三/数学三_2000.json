@@ -4,24 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 1007,
-      "paper": "数学三",
-      "year": 2000,
-      "index": 16,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
-      "options": {},
-      "answer": "略",
-      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
-      "wrong_options": {},
-      "pitfalls": [
-        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
-        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
-      ],
-      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
-    },
-    {
       "id": 1924,
       "paper": "数学三",
       "year": 2000,
@@ -335,6 +317,24 @@
         "级数 Σx^{n+1}/(n+1)=-ln(1-x)，代 x=√2/2 得 -ln(1-√2/2)=ln(2+√2)"
       ],
       "key_point": "S(x)=-ln(1-x)，代 √2/2 得 Σ I_n=ln(2+√2)。"
+    },
+    {
+      "id": 1007,
+      "paper": "数学三",
+      "year": 2000,
+      "index": 16,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $[0, \\pi]$ 上连续, 且 $\\displaystyle \\int_{0}^{\\pi} f(x) \\mathrm{d} x=0,\\\\ \\int_{0}^{\\pi} f(x) \\cos x \\mathrm{d} x=0$. 试证: 在 $(0, \\pi)$ 内至少存在两个不同的点 $\\xi_{1}, \\xi_{2}$, 使 $f\\left(\\xi_{1}\\right)=f\\left(\\xi_{2}\\right)=0$",
+      "options": {},
+      "answer": "略",
+      "analysis": "令 $\\displaystyle F(x)=\\int_0^x f(t) \\mathrm{d} t, F(0)=F(\\pi)=0$.\r\n\r\n由罗尔定理, 存在 $c \\in(0, \\pi)$, 使得 $F^{\\prime}(c)=0$, 即 $f(c)=0$.\r\n\r\n(用反证法) 不妨设在 $(0, \\pi)$ 内 $f(x)$ 除 $c$ 外没有其他零点, \r\n\r\n则 $f(x)$ 在 $(0, c)$ 与 $(c, \\pi)$ 内异号, \r\n\r\n不妨设当 $x \\in(0, c)$ 时, $f(x)>0$; \r\n\r\n当 $x \\in(c, \\pi)$ 时, $f(x)<0$.\r\n\r\n$\\displaystyle\r\n\\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n+\\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x$,\r\n\r\n因为 $(\\cos x-\\cos c) f(x)$ 在 $[0, c]$ 上连续, \r\n\r\n$(\\cos x-\\cos c) f(x) \\geqslant 0$ 且不恒为零, \r\n\r\n所以 $\\displaystyle \\int_0^c(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n同理 $\\displaystyle \\int_c^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$, \r\n\r\n故 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x>0$.\r\n\r\n而 $\\displaystyle \\int_0^\\pi(\\cos x-\\cos c) f(x) \\mathrm{d} x\\\\\r\n=\\int_0^\\pi \\cos x f(x) \\mathrm{d} x-\\cos c \\int_0^\\pi f(x) \\mathrm{d} x=0$, 矛盾, \r\n\r\n所以 $f(x)$ 在 $(0, \\pi)$ 内至少有两个零点",
+      "wrong_options": {},
+      "pitfalls": [
+        "第一个零点 c 由 F(x)=∫₀ˣf、F(0)=F(π)=0 罗尔得 F'(c)=f(c)=0，不能直接得到两个零点",
+        "第二零点靠反证：若仅一零点则 f 在 (0,c)、(c,π) 异号，构造 ∫(cosx-cosc)f dx>0 与 ∫f cosx=∫f·cosc=0 矛盾"
+      ],
+      "key_point": "罗尔得一零点 c；再由 ∫f cosx=0 反证 f 不能只变号一次，故至少两个零点。"
     },
     {
       "id": 1939,

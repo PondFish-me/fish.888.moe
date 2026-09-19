@@ -4,141 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 745,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "在下列微分方程中, 以 $y=C_{1} \\mathrm{e}^{x}+C_{2} \\cos 2 x+C_{3} \\sin 2 x$ ( $C_{1}, C_{2}, C_{3}$ 为任意常数) 为通解的是 $(\\quad)$",
-      "options": {
-        "A": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}-4 y^{\\prime}-4 y=0$",
-        "B": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}+4 y^{\\prime}+4 y=0$",
-        "C": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}-4 y^{\\prime}+4 y=0$",
-        "D": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$"
-      },
-      "answer": "D",
-      "analysis": "由微分方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\cos 2 x+C_3 \\sin 2 x$, \r\n\r\n得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1=1, \\lambda_{2,3}= \\pm 2 \\mathrm{i}$,\r\n\r\n特征方程为 $(\\lambda-1)\\left(\\lambda^2+4\\right)=0$, 即 $\\lambda^3-\\lambda^2+4 \\lambda-4=0$, \r\n\r\n故所求微分方程为 $y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$, 应选 (D)",
-      "wrong_options": {
-        "A": "e^x 对应根取反成 -1，且把 cos2x/sin2x 误当实根 ±2（λ²-4），两处概念错（根变 -1,±2）。",
-        "B": "把 e^x 对应的特征根 1 误取成 -1（虚根 ±2i 部分正确），得 (λ+1)(λ²+4)。",
-        "C": "e^x 根 1 正确，但把 cos2x/sin2x 误当实根 ±2（λ²-4），概念性错误（根变 1,±2）。"
-      },
-      "pitfalls": [
-        "cos2x、sin2x 对应共轭虚根 ±2i（λ²+4=0），不是 λ²-4",
-        "(λ-1)(λ²+4)=λ³-λ²+4λ-4，逐项符号别错"
-      ],
-      "key_point": "特征根 1,±2i → (λ-1)(λ²+4)=0 → y'''-y''+4y'-4y=0。"
-    },
-    {
-      "id": 746,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内单调有界, $\\left\\{x_{n}\\right\\}$ 为数列, 下列命题正确的是 $(\\quad)$",
-      "options": {
-        "A": "若 $\\left\\{x_{n}\\right\\}$ 收敛, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
-        "B": "若 $\\left\\{x_{n}\\right\\}$ 单调, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
-        "C": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛, 则 $\\left\\{x_{n}\\right\\}$ 收敛",
-        "D": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 单调, 则 $\\left\\{x_{n}\\right\\}$ 收敛"
-      },
-      "answer": "B",
-      "analysis": "方法一 极限存在定理\r\n\r\n因为 $f(x)$ 单调, 所以当 $\\left\\{x_n\\right\\}$ 单调时, $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调;\r\n\r\n又因为 $f(x)$ 有界, 所以 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调有界, \r\n\r\n由极限存在定理得 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 应选 (B)\r\n\r\n方法二 反例法\r\n\r\n取 $f(x)=\\left\\{\\begin{array}{ll}-1, & x<0 \\\\ 0, & x=0 \\\\ 1, & x>0\\end{array}\\right. \\quad x_n=\\dfrac{(-1)^n}{n^2}$, \r\n\r\n显然 $f(x)$ 单调增加, $\\left\\{x_n\\right\\}$ 收敛,\r\n\r\n$f\\left(x_n\\right)=\\left\\{\\begin{array}{ll}-1, & n=1,3,5, \\cdots, \\\\ 1, & n=2,4,6, \\cdots,\\end{array}\\right.$ \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 发散, (A) 不对;\r\n\r\n取 $f(x)=\\dfrac{x^2}{1+x^2}, x_n=n, f\\left(x_n\\right)=\\dfrac{n^2}{1+n^2}$, \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 但 $\\left\\{x_n\\right\\}$ 发散, (C) 不对;\r\n\r\n取 $f(x)=\\arctan x, x_n=n$, 显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调增加, \r\n\r\n但 $\\left\\{x_n\\right\\}$ 发散, (D) 不对, 应选 (B)",
-      "wrong_options": {
-        "A": "{x_n} 收敛推不出 {f(x_n)} 收敛（f 仅单调可有跳跃间断，反例 f=符号型、x_n=(-1)ⁿ/n²）。",
-        "C": "{f(x_n)} 收敛推不出 {x_n} 收敛（f 有界，取 x_n=n 可发散）。",
-        "D": "{f(x_n)} 单调推不出 {x_n} 收敛（同 C 类反例）。"
-      },
-      "pitfalls": [
-        "f 只是单调有界、未必连续，'x_n收敛⇒f(x_n)收敛'不成立",
-        "由 f(x_n) 的性质推不回 x_n（f 非单射/有界压缩）"
-      ],
-      "key_point": "{x_n} 单调 ⇒ {f(x_n)} 单调有界 ⇒ 收敛（选 B）；A/C/D 均有反例。"
-    },
-    {
-      "id": 747,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶非零矩阵, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵. 若 $\\boldsymbol{A}^{3}=\\boldsymbol{O}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆",
-        "B": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
-        "C": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
-        "D": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆"
-      },
-      "answer": "C",
-      "analysis": "方法一 逆矩阵的定义 由 $\\boldsymbol{A}^3=\\boldsymbol{O}$, \r\n\r\n得 $\\boldsymbol{E}=\\boldsymbol{E}-\\boldsymbol{A}^3=(\\boldsymbol{E}-\\boldsymbol{A})\\left(\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$.\r\n\r\n由可逆矩阵的定义得 $\\boldsymbol{E}-\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}-\\boldsymbol{A})^{-1}=\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2$;\r\n\r\n再由 $\\boldsymbol{E}=\\boldsymbol{E}+\\boldsymbol{A}^3=(\\boldsymbol{E}+\\boldsymbol{A})\\left(\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$ \r\n\r\n得 $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}+\\boldsymbol{A})^{-1}=\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2$,\r\n应选 (C)\r\n\r\n方法二 定义法求特征值\r\n\r\n令 $\\boldsymbol{Ax}=\\lambda \\boldsymbol{x}(\\boldsymbol{x} \\neq \\boldsymbol{0})$, \r\n\r\n则 $\\boldsymbol{Ax}^3 =\\lambda^3 \\boldsymbol{x}$, \r\n\r\n由 $\\boldsymbol{A}^3=\\boldsymbol{O}$ 得 $\\lambda^3 \\boldsymbol{X}=\\mathbf{0}$, \r\n\r\n从而 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=\\lambda_3=0$, \r\n\r\n于是 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 的特征值为 $1, 1, 1$, \r\n\r\n由 $|\\boldsymbol{E}-\\boldsymbol{A}|=|\\boldsymbol{E}+\\boldsymbol{A}|=1 \\neq 0$, \r\n\r\n得 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 都可逆, 应选 (C)",
-      "wrong_options": {
-        "A": "只对 E-A 或都未构造出逆，误判两者都不可逆。",
-        "B": "误判 E-A 不可逆（漏掉 E-A³=(E-A)(E+A+A²) 的分解）。",
-        "D": "误判 E+A 不可逆（漏掉 E+A³=(E+A)(E-A+A²) 的分解）。"
-      },
-      "pitfalls": [
-        "A³=O 时 A 本身不可逆（幂零），但 E±A 都可逆",
-        "关键：E∓A³ 的两个因式分解都要用到"
-      ],
-      "key_point": "A³=O ⇒ E-A、E+A 均可逆（由 E∓A³ 的因式分解构造逆矩阵）。"
-    },
-    {
-      "id": 752,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 11,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "曲线 $\\sin (x y)+\\ln (y-x)=x$ 在点 $(0,1)$ 处的切线方程是 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$y=x+1$",
-      "analysis": "方法一 $\\sin (x y)+\\ln (y-x)=x$ 两边对 $x$ 求导数, \r\n\r\n得 $\\cos (x y) \\cdot\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+\\dfrac{\\frac{\\mathrm{d} y}{\\mathrm{d} x}-1}{y-x}=1$,\r\n\r\n\r\n将 $x=0, y=1$ 代入得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=1$,\r\n\r\n故曲线在点 $(0,1)$ 处的切线方程为 $y-1=x-0$\r\n\r\n方法二 令 $F(x, y)=\\sin (x y)+\\ln (y-x)-x,\\\\\r\n\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\dfrac{F_x^{\\prime}}{F_y^{\\prime}}=-\\dfrac{y \\cos x y-\\frac{1}{y-x}-1}{x \\cos x y+\\frac{1}{y-x}}$,\r\n\r\n切线的斜率为 $k=\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{(0,1)}=1$, \r\n\r\n故切线方程为 $y=x+1$",
-      "wrong_options": {},
-      "pitfalls": [
-        "隐函数求导要把 y 视为 x 的函数：sin(xy) 内层 (xy)'=y+xy'，勿把 y 当常数漏掉 xy'",
-        "求出的是斜率 y'=1，最终要写成切线方程 y=x+1（别只答斜率）"
-      ],
-      "key_point": "隐函数两边求导代 (0,1) 得 y'=1，切线 y=x+1。"
-    },
-    {
-      "id": 757,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^{4}}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{6}$",
-      "analysis": "方法一\r\n\r\n$\\displaystyle  \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\cdot \\frac{\\sin x}{x}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\cdot \\frac{\\sin ^3 x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法二 \r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{\\arcsin^4 t} \\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{t^4}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法三 由 $\\sin x=x-\\dfrac{x^3}{3 !}+o\\left(x^3\\right)$ 得\r\n\r\n$\\sin (\\sin x)=\\sin x-\\dfrac{\\sin ^3 x}{3 !}+o\\left(\\sin ^3 x\\right)$,\r\n\r\n从而 $\\sin x-\\sin (\\sin x) \\sim \\dfrac{1}{6} \\sin ^3 x \\sim \\dfrac{1}{6} x^3$,\r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}=\\frac{1}{6} \\lim _{x \\rightarrow 0} \\frac{\\sin x}{x}=\\frac{1}{6}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "先分离 sinx/x→1 降次，再处理 [sinx-sin(sinx)]/x³",
-        "换元 t=sinx 后 (t-sint)/t³ 才可用 1-cost~t²/2；勿在加减中乱用等价代换"
-      ],
-      "key_point": "分离 sinx~x 因子后换元 t=sinx，(t-sint)/t³=1/6。"
-    },
-    {
-      "id": 763,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $n$ 元线性方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$, 其中\r\n\r\n$$\r\n\\boldsymbol{A}=\\left(\\begin{array}{cccccc}\r\n2 a & 1 & & & & \\\\\r\na^{2} & 2 a & 1 & & & \\\\\r\n& a^{2} & 2 a & 1 & & \\\\\r\n& & \\ddots & \\ddots & \\ddots & \\\\\r\n& & & a^{2} & 2 a & 1 \\\\\r\n& & & & a^{2} & 2 a\r\n\\end{array}\\right)_{n \\times n}, \\boldsymbol{x}=\\left(\\begin{array}{c}\r\nx_{1} \\\\\r\nx_{2} \\\\\r\n\\vdots \\\\\r\nx_{n}\r\n\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{array}\\right)\r\n$$\r\n\r\n(1) 证明 : 行列式 $|\\boldsymbol{A}|=(n+1) a^{n}$;\r\n\r\n(2) 当 $a$ 为何值时, 该方程组有唯一解, 并求 $x_{1}$;\r\n\r\n(3) 当 $a$ 为何值时, 该方程组有无穷多解, 并求通解",
-      "options": {},
-      "answer": "(1) $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n(2) $a \\neq 0$ 时, 方程组有唯一解, $x_1=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) $a=0$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
-      "analysis": "(1) 方法一 数学归纳法\r\n\r\n当 $n=1$ 时, $|\\boldsymbol{A}|=D_1=2 a$, 结论显然成立;\r\n\r\n设当 $n=k$ 时, $|\\boldsymbol{A}|=D_k=(k+1) a^k$;\r\n\r\n当$n=k+1$ 时,\r\n\r\n$|\\boldsymbol{A}|=D_{k+1}=2 a D_k-a^2 D_{k-1}=2 a(k+1) a^k-k a^{k+1} \\\\\r\n=2(k+1) a^{k+1}-k a^{k+1}=(k+2) a^{k+1}$\r\n\r\n由数学归纳法, 对一切的自然数 $n$, 有 $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n方法二 $|\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ a^2 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ 0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=\\cdots\\\\\r\n=\\left|\\begin{array}{ccccc}\r\n2 a & 1 & 0 & \\cdots & 0 \\\\\r\n0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\\r\n0 & 0 & \\frac{4 a}{3} & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & \\frac{(n+1) a}{n}\r\n\\end{array}\\right|=(n+1) a^n$\r\n\r\n方法三 \r\n\r\n令 $D_n=|\\boldsymbol{A}|$, 将 $D_n$ 按第一列展开, \r\n\r\n得 $D_n=2 a D_{n-1}-a^2 D_{n-2}$,\r\n\r\n从而 $D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)$, 由递推关系得\r\n\r\n$D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)=\\cdots=a^{n-2}\\left(D_2-a D_1\\right)=a^n$,\r\n\r\n于是 $D_n=a D_{n-1}+a^n\\\\\r\n=a\\left(a D_{n-2}+a^{n-1}\\right)+a^n\\\\\r\n=a^2 D_{n-2}+2 a^n\\\\\r\n=\\cdots=a^{n-1} D_1+(n-1) a^n\\\\\r\n=(n+1) a^n$\r\n\r\n(2) 当 $r(\\boldsymbol{A})=n$ 或 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n即 $a \\neq 0$ 时, 方程组有唯一解,\r\n\r\n由 $\\widetilde{D}_1=\\left|\\begin{array}{ccccc}1 & 1 & 0 & \\cdots & 0 \\\\ 0 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=n a^{n-1}$, \r\n\r\n得 $x_1=\\dfrac{\\widetilde{D}_1}{|\\boldsymbol{A}|}=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) 当 $r(\\boldsymbol{A})<n$ 或 $|\\boldsymbol{A}|=0$, 即 $a=0$ 时, \r\n\r\n方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解,\r\n\r\n由 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccccc:c}0 & 1 & 0 & \\cdots & 0 & 1 \\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$, \r\n\r\n得通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
-      "wrong_options": {},
-      "pitfalls": [
-        "三对角行列式按第一列展开得递推 D_n=2aD_{n-1}-a²D_{n-2}",
-        "a=0 时 A 幂零、r(A)=n-1，方程组有无穷多解"
-      ],
-      "key_point": "递推证 |A|=(n+1)aⁿ；a≠0 唯一解、a=0 无穷多解。"
-    },
-    {
       "id": 766,
       "paper": "数学二",
       "year": 2008,
@@ -193,6 +58,33 @@
       "key_point": "∫₀ᵃxf′dx=af(a)−∫₀ᵃf(x)dx=矩形OBAC−曲边梯形OBAD=曲边三角形ACD。"
     },
     {
+      "id": 745,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "在下列微分方程中, 以 $y=C_{1} \\mathrm{e}^{x}+C_{2} \\cos 2 x+C_{3} \\sin 2 x$ ( $C_{1}, C_{2}, C_{3}$ 为任意常数) 为通解的是 $(\\quad)$",
+      "options": {
+        "A": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}-4 y^{\\prime}-4 y=0$",
+        "B": "$y^{\\prime \\prime \\prime}+y^{\\prime \\prime}+4 y^{\\prime}+4 y=0$",
+        "C": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}-4 y^{\\prime}+4 y=0$",
+        "D": "$y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$"
+      },
+      "answer": "D",
+      "analysis": "由微分方程的通解为 $y=C_1 \\mathrm{e}^x+C_2 \\cos 2 x+C_3 \\sin 2 x$, \r\n\r\n得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1=1, \\lambda_{2,3}= \\pm 2 \\mathrm{i}$,\r\n\r\n特征方程为 $(\\lambda-1)\\left(\\lambda^2+4\\right)=0$, 即 $\\lambda^3-\\lambda^2+4 \\lambda-4=0$, \r\n\r\n故所求微分方程为 $y^{\\prime \\prime \\prime}-y^{\\prime \\prime}+4 y^{\\prime}-4 y=0$, 应选 (D)",
+      "wrong_options": {
+        "A": "e^x 对应根取反成 -1，且把 cos2x/sin2x 误当实根 ±2（λ²-4），两处概念错（根变 -1,±2）。",
+        "B": "把 e^x 对应的特征根 1 误取成 -1（虚根 ±2i 部分正确），得 (λ+1)(λ²+4)。",
+        "C": "e^x 根 1 正确，但把 cos2x/sin2x 误当实根 ±2（λ²-4），概念性错误（根变 1,±2）。"
+      },
+      "pitfalls": [
+        "cos2x、sin2x 对应共轭虚根 ±2i（λ²+4=0），不是 λ²-4",
+        "(λ-1)(λ²+4)=λ³-λ²+4λ-4，逐项符号别错"
+      ],
+      "key_point": "特征根 1,±2i → (λ-1)(λ²+4)=0 → y'''-y''+4y'-4y=0。"
+    },
+    {
       "id": 768,
       "paper": "数学二",
       "year": 2008,
@@ -220,6 +112,33 @@
       "key_point": "x=1 左右极限 ∓sin1 不等为跳跃间断，x=0 左右极限均为0为可去间断，故选A。"
     },
     {
+      "id": 746,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内单调有界, $\\left\\{x_{n}\\right\\}$ 为数列, 下列命题正确的是 $(\\quad)$",
+      "options": {
+        "A": "若 $\\left\\{x_{n}\\right\\}$ 收敛, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
+        "B": "若 $\\left\\{x_{n}\\right\\}$ 单调, 则 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛",
+        "C": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 收敛, 则 $\\left\\{x_{n}\\right\\}$ 收敛",
+        "D": "若 $\\left\\{f\\left(x_{n}\\right)\\right\\}$ 单调, 则 $\\left\\{x_{n}\\right\\}$ 收敛"
+      },
+      "answer": "B",
+      "analysis": "方法一 极限存在定理\r\n\r\n因为 $f(x)$ 单调, 所以当 $\\left\\{x_n\\right\\}$ 单调时, $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调;\r\n\r\n又因为 $f(x)$ 有界, 所以 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调有界, \r\n\r\n由极限存在定理得 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 应选 (B)\r\n\r\n方法二 反例法\r\n\r\n取 $f(x)=\\left\\{\\begin{array}{ll}-1, & x<0 \\\\ 0, & x=0 \\\\ 1, & x>0\\end{array}\\right. \\quad x_n=\\dfrac{(-1)^n}{n^2}$, \r\n\r\n显然 $f(x)$ 单调增加, $\\left\\{x_n\\right\\}$ 收敛,\r\n\r\n$f\\left(x_n\\right)=\\left\\{\\begin{array}{ll}-1, & n=1,3,5, \\cdots, \\\\ 1, & n=2,4,6, \\cdots,\\end{array}\\right.$ \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 发散, (A) 不对;\r\n\r\n取 $f(x)=\\dfrac{x^2}{1+x^2}, x_n=n, f\\left(x_n\\right)=\\dfrac{n^2}{1+n^2}$, \r\n\r\n显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 收敛, 但 $\\left\\{x_n\\right\\}$ 发散, (C) 不对;\r\n\r\n取 $f(x)=\\arctan x, x_n=n$, 显然 $\\left\\{f\\left(x_n\\right)\\right\\}$ 单调增加, \r\n\r\n但 $\\left\\{x_n\\right\\}$ 发散, (D) 不对, 应选 (B)",
+      "wrong_options": {
+        "A": "{x_n} 收敛推不出 {f(x_n)} 收敛（f 仅单调可有跳跃间断，反例 f=符号型、x_n=(-1)ⁿ/n²）。",
+        "C": "{f(x_n)} 收敛推不出 {x_n} 收敛（f 有界，取 x_n=n 可发散）。",
+        "D": "{f(x_n)} 单调推不出 {x_n} 收敛（同 C 类反例）。"
+      },
+      "pitfalls": [
+        "f 只是单调有界、未必连续，'x_n收敛⇒f(x_n)收敛'不成立",
+        "由 f(x_n) 的性质推不回 x_n（f 非单射/有界压缩）"
+      ],
+      "key_point": "{x_n} 单调 ⇒ {f(x_n)} 单调有界 ⇒ 收敛（选 B）；A/C/D 均有反例。"
+    },
+    {
       "id": 769,
       "paper": "数学二",
       "year": 2008,
@@ -245,6 +164,33 @@
         "被积函数是 f(r²)，对上限 u 求导得 f(u²) 不是 f(u)"
       ],
       "key_point": "F(u,v)=v∫₁ᵘf(r²)dr，故 ∂F/∂u=v·f(u²)，选A。"
+    },
+    {
+      "id": 747,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 $n$ 阶非零矩阵, $\\boldsymbol{E}$ 为 $n$ 阶单位矩阵. 若 $\\boldsymbol{A}^{3}=\\boldsymbol{O}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆",
+        "B": "$\\boldsymbol{E}-\\boldsymbol{A}$ 不可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
+        "C": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆",
+        "D": "$\\boldsymbol{E}-\\boldsymbol{A}$ 可逆, $\\boldsymbol{E}+\\boldsymbol{A}$ 不可逆"
+      },
+      "answer": "C",
+      "analysis": "方法一 逆矩阵的定义 由 $\\boldsymbol{A}^3=\\boldsymbol{O}$, \r\n\r\n得 $\\boldsymbol{E}=\\boldsymbol{E}-\\boldsymbol{A}^3=(\\boldsymbol{E}-\\boldsymbol{A})\\left(\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$.\r\n\r\n由可逆矩阵的定义得 $\\boldsymbol{E}-\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}-\\boldsymbol{A})^{-1}=\\boldsymbol{E}+\\boldsymbol{A}+\\boldsymbol{A}^2$;\r\n\r\n再由 $\\boldsymbol{E}=\\boldsymbol{E}+\\boldsymbol{A}^3=(\\boldsymbol{E}+\\boldsymbol{A})\\left(\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2\\right)$ \r\n\r\n得 $\\boldsymbol{E}+\\boldsymbol{A}$ 可逆且 $(\\boldsymbol{E}+\\boldsymbol{A})^{-1}=\\boldsymbol{E}-\\boldsymbol{A}+\\boldsymbol{A}^2$,\r\n应选 (C)\r\n\r\n方法二 定义法求特征值\r\n\r\n令 $\\boldsymbol{Ax}=\\lambda \\boldsymbol{x}(\\boldsymbol{x} \\neq \\boldsymbol{0})$, \r\n\r\n则 $\\boldsymbol{Ax}^3 =\\lambda^3 \\boldsymbol{x}$, \r\n\r\n由 $\\boldsymbol{A}^3=\\boldsymbol{O}$ 得 $\\lambda^3 \\boldsymbol{X}=\\mathbf{0}$, \r\n\r\n从而 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=\\lambda_3=0$, \r\n\r\n于是 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 的特征值为 $1, 1, 1$, \r\n\r\n由 $|\\boldsymbol{E}-\\boldsymbol{A}|=|\\boldsymbol{E}+\\boldsymbol{A}|=1 \\neq 0$, \r\n\r\n得 $\\boldsymbol{E}-\\boldsymbol{A}$ 与 $\\boldsymbol{E}+\\boldsymbol{A}$ 都可逆, 应选 (C)",
+      "wrong_options": {
+        "A": "只对 E-A 或都未构造出逆，误判两者都不可逆。",
+        "B": "误判 E-A 不可逆（漏掉 E-A³=(E-A)(E+A+A²) 的分解）。",
+        "D": "误判 E+A 不可逆（漏掉 E+A³=(E+A)(E-A+A²) 的分解）。"
+      },
+      "pitfalls": [
+        "A³=O 时 A 本身不可逆（幂零），但 E±A 都可逆",
+        "关键：E∓A³ 的两个因式分解都要用到"
+      ],
+      "key_point": "A³=O ⇒ E-A、E+A 均可逆（由 E∓A³ 的因式分解构造逆矩阵）。"
     },
     {
       "id": 770,
@@ -310,6 +256,24 @@
       "key_point": "方程为一阶线性 y′−y/x=xe^{−x}，通解 y=Cx−xe^{−x}。"
     },
     {
+      "id": 752,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 11,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "曲线 $\\sin (x y)+\\ln (y-x)=x$ 在点 $(0,1)$ 处的切线方程是 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$y=x+1$",
+      "analysis": "方法一 $\\sin (x y)+\\ln (y-x)=x$ 两边对 $x$ 求导数, \r\n\r\n得 $\\cos (x y) \\cdot\\left(y+x \\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right)+\\dfrac{\\frac{\\mathrm{d} y}{\\mathrm{d} x}-1}{y-x}=1$,\r\n\r\n\r\n将 $x=0, y=1$ 代入得 $\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{x=0}=1$,\r\n\r\n故曲线在点 $(0,1)$ 处的切线方程为 $y-1=x-0$\r\n\r\n方法二 令 $F(x, y)=\\sin (x y)+\\ln (y-x)-x,\\\\\r\n\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=-\\dfrac{F_x^{\\prime}}{F_y^{\\prime}}=-\\dfrac{y \\cos x y-\\frac{1}{y-x}-1}{x \\cos x y+\\frac{1}{y-x}}$,\r\n\r\n切线的斜率为 $k=\\left.\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}\\right|_{(0,1)}=1$, \r\n\r\n故切线方程为 $y=x+1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "隐函数求导要把 y 视为 x 的函数：sin(xy) 内层 (xy)'=y+xy'，勿把 y 当常数漏掉 xy'",
+        "求出的是斜率 y'=1，最终要写成切线方程 y=x+1（别只答斜率）"
+      ],
+      "key_point": "隐函数两边求导代 (0,1) 得 y'=1，切线 y=x+1。"
+    },
+    {
       "id": 773,
       "paper": "数学二",
       "year": 2008,
@@ -344,6 +308,42 @@
         "对 x 求偏导时 y 视为常数，(x/y)ln(y/x) 两处都含 x（对数内的 −lnx），需各自求导"
       ],
       "key_point": "lnz=(x/y)ln(y/x) 对 x 求偏导，代 (1,2)（z=√2）得 (√2/2)(ln2−1)。"
+    },
+    {
+      "id": 791,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设 $3$ 阶矩阵 $\\boldsymbol{A}$ 的特征值为 $2,3, \\lambda$, 若行列式 $|2 \\boldsymbol{A}|=-48$, 则 $\\lambda=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$-1$",
+      "analysis": "根据特征值的性质, 得 $|\\boldsymbol{A}|=\\lambda_1 \\lambda_2 \\lambda_3=6 \\lambda$. \r\n\r\n又由 $|2 \\boldsymbol{A}|=-48$, \r\n\r\n得 $8|\\boldsymbol{A}|=-48$, 即 $|\\boldsymbol{A}|=-6$, \r\n\r\n于是 $\\lambda=-1$.",
+      "wrong_options": {},
+      "pitfalls": [
+        "|2A|=2³|A|=8|A|，3阶矩阵提取的因子是 2 的3次方，不是2倍",
+        "|A| 等于各特征值之积 6λ（不是之和），由 8·6λ=−48 得 λ=−1"
+      ],
+      "key_point": "由 |2A|=8|A|=−48 得 |A|=−6=6λ，故 λ=−1。"
+    },
+    {
+      "id": 757,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^{4}}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{6}$",
+      "analysis": "方法一\r\n\r\n$\\displaystyle  \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\cdot \\frac{\\sin x}{x}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{x^3} \\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\cdot \\frac{\\sin ^3 x}{x^3}\\\\\r\n=\\lim _{x \\rightarrow 0} \\frac{\\sin x-\\sin (\\sin x)}{\\sin ^3 x} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法二 \r\n\r\n$\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4} \\\\\r\n\\stackrel{\\sin x=t}{=} \\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{\\arcsin^4 t} \\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{(t-\\sin t) t}{t^4}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{t-\\sin t}{t^3}\\\\\r\n=\\lim _{t \\rightarrow 0} \\frac{1-\\cos t}{3 t^2}=\\frac{1}{6}$\r\n\r\n方法三 由 $\\sin x=x-\\dfrac{x^3}{3 !}+o\\left(x^3\\right)$ 得\r\n\r\n$\\sin (\\sin x)=\\sin x-\\dfrac{\\sin ^3 x}{3 !}+o\\left(\\sin ^3 x\\right)$,\r\n\r\n从而 $\\sin x-\\sin (\\sin x) \\sim \\dfrac{1}{6} \\sin ^3 x \\sim \\dfrac{1}{6} x^3$,\r\n\r\n故 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{[\\sin x-\\sin (\\sin x)] \\sin x}{x^4}=\\frac{1}{6} \\lim _{x \\rightarrow 0} \\frac{\\sin x}{x}=\\frac{1}{6}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "先分离 sinx/x→1 降次，再处理 [sinx-sin(sinx)]/x³",
+        "换元 t=sinx 后 (t-sint)/t³ 才可用 1-cost~t²/2；勿在加减中乱用等价代换"
+      ],
+      "key_point": "分离 sinx~x 因子后换元 t=sinx，(t-sint)/t³=1/6。"
     },
     {
       "id": 775,
@@ -400,6 +400,24 @@
       "key_point": "以 xy=1 分区域，∬=∬_{xy≥1}xy+∬_{xy<1}1=19/4+ln2。"
     },
     {
+      "id": 792,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)$ 是区间 $[0,+\\infty)$ 上具有连续导数的单调增加函数, 且 $f(0)=1$. 对任意的 $t \\in[0,+\\infty)$, 直线 $x=0, x=t$, 曲线 $y=f(x)$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转 一周生成一旋转体, 若该旋转体的侧面面积在数值上等于其体积的 $2$ 倍, 求函数 $f(x)$ 的表达式",
+      "options": {},
+      "answer": "$f(x)=\\frac{\\mathrm{e}^{-x}+\\mathrm{e}^x}{2}$.",
+      "analysis": "设所求函数为 $y=f(x)$, 旋转体的体积为 \r\n\r\n$\\displaystyle V(t)=\\pi \\int_0^t f^2(x) \\mathrm{d} x=\\pi \\int_0^t y^2 \\mathrm{d} x$,\r\n\r\n侧面积为 $\\displaystyle S(t)=2 \\pi \\int_0^t f(x) \\sqrt{1+f^{\\prime 2}(x)} \\mathrm{d} x=2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x$,\r\n\r\n由题意得 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$\r\n\r\n方法一 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$ 两边对 $t$ 求导数, \r\n\r\n得 $y \\sqrt{1+y^{\\prime 2}}=y^2$, 整理得 $1+y^{\\prime 2}=y^2$.\r\n\r\n因为函数 $y=f(x)$ 为增函数, \r\n\r\n所以 $y=f(x)$ 为满足初始条件的微分方程 $\\left\\{\\begin{array}{l}\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\sqrt{y^2-1} \\\\ y(0)=1\\end{array}\\right.$ 的解,\r\n\r\n由 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\sqrt{y^2-1}$ 变量分离得 $\\dfrac{\\mathrm{d} y}{\\sqrt{y^2-1}}=\\mathrm{d} x$,\r\n\r\n两边积分得 $\\ln \\left(y+\\sqrt{y^2-1}\\right)=x+\\ln C$, \r\n\r\n或 $y+\\sqrt{y^2-1}=C \\mathrm{e}^x$.\r\n\r\n由 $y(0)=1$ 得 $C=1$, 即 $y+\\sqrt{y^2-1}=\\mathrm{e}^x$, \r\n\r\n由 $\\left\\{\\begin{array}{l}y+\\sqrt{y^2-1}=\\mathrm{e}^x\\\\ y-\\sqrt{y^2-1}=\\mathrm{e}^{-x}\\end{array}\\right.$, \r\n\r\n得 $y=f(x)=\\dfrac{\\mathrm{e}^x+\\mathrm{e}^{-x}}{2}$\r\n\r\n方法二 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$ 两边对 $t$ 求导数, \r\n\r\n得 $y \\sqrt{1+y^{\\prime 2}}=y^2$, 整理得 $1+y^{\\prime 2}=y^2$, \r\n\r\n两边再对 $t$ 求导数得 $2 y^{\\prime} y^{\\prime \\prime}=2 y y^{\\prime}$, \r\n\r\n于是 $y^{\\prime \\prime}-y=0$, \r\n\r\n特征方程为 $\\lambda^2-1=0$, 特征根为 $\\lambda_1=-1, \\lambda_2=1$, \r\n\r\n通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n由 $y(0)=1$ 及 $1+y^{\\prime 2}=y^2$, \r\n\r\n得 $y^{\\prime}(0)=0$, \r\n\r\n得 $C_1=C_2=\\dfrac{1}{2}$, \r\n\r\n故 $\\displaystyle y=f(x)=\\frac{\\mathrm{e}^{-x}+\\mathrm{e}^x}{2}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "旋转体侧面积公式含弧长元 √(1+y′²)，是 2π∫y√(1+y′²)dx，不是 2π∫y dx",
+        "含变限积分的等式两边对上限 t 求导消去积分号得 1+y′²=y²，再由 f 增及 f(0)=1 定解"
+      ],
+      "key_point": "由 S=2V 求导得 1+y′²=y²，解得 f(x)=(eˣ+e^{−x})/2。"
+    },
+    {
       "id": 778,
       "paper": "数学二",
       "year": 2008,
@@ -436,6 +454,24 @@
       "key_point": "消元或拉格朗日求驻点，u 在 (1,1,2) 取最小6、在 (−2,−2,8) 取最大72。"
     },
     {
+      "id": 763,
+      "paper": "数学二",
+      "year": 2008,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $n$ 元线性方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$, 其中\r\n\r\n$$\r\n\\boldsymbol{A}=\\left(\\begin{array}{cccccc}\r\n2 a & 1 & & & & \\\\\r\na^{2} & 2 a & 1 & & & \\\\\r\n& a^{2} & 2 a & 1 & & \\\\\r\n& & \\ddots & \\ddots & \\ddots & \\\\\r\n& & & a^{2} & 2 a & 1 \\\\\r\n& & & & a^{2} & 2 a\r\n\\end{array}\\right)_{n \\times n}, \\boldsymbol{x}=\\left(\\begin{array}{c}\r\nx_{1} \\\\\r\nx_{2} \\\\\r\n\\vdots \\\\\r\nx_{n}\r\n\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{array}\\right)\r\n$$\r\n\r\n(1) 证明 : 行列式 $|\\boldsymbol{A}|=(n+1) a^{n}$;\r\n\r\n(2) 当 $a$ 为何值时, 该方程组有唯一解, 并求 $x_{1}$;\r\n\r\n(3) 当 $a$ 为何值时, 该方程组有无穷多解, 并求通解",
+      "options": {},
+      "answer": "(1) $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n(2) $a \\neq 0$ 时, 方程组有唯一解, $x_1=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) $a=0$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "analysis": "(1) 方法一 数学归纳法\r\n\r\n当 $n=1$ 时, $|\\boldsymbol{A}|=D_1=2 a$, 结论显然成立;\r\n\r\n设当 $n=k$ 时, $|\\boldsymbol{A}|=D_k=(k+1) a^k$;\r\n\r\n当$n=k+1$ 时,\r\n\r\n$|\\boldsymbol{A}|=D_{k+1}=2 a D_k-a^2 D_{k-1}=2 a(k+1) a^k-k a^{k+1} \\\\\r\n=2(k+1) a^{k+1}-k a^{k+1}=(k+2) a^{k+1}$\r\n\r\n由数学归纳法, 对一切的自然数 $n$, 有 $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n方法二 $|\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ a^2 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ 0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=\\cdots\\\\\r\n=\\left|\\begin{array}{ccccc}\r\n2 a & 1 & 0 & \\cdots & 0 \\\\\r\n0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\\r\n0 & 0 & \\frac{4 a}{3} & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & \\frac{(n+1) a}{n}\r\n\\end{array}\\right|=(n+1) a^n$\r\n\r\n方法三 \r\n\r\n令 $D_n=|\\boldsymbol{A}|$, 将 $D_n$ 按第一列展开, \r\n\r\n得 $D_n=2 a D_{n-1}-a^2 D_{n-2}$,\r\n\r\n从而 $D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)$, 由递推关系得\r\n\r\n$D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)=\\cdots=a^{n-2}\\left(D_2-a D_1\\right)=a^n$,\r\n\r\n于是 $D_n=a D_{n-1}+a^n\\\\\r\n=a\\left(a D_{n-2}+a^{n-1}\\right)+a^n\\\\\r\n=a^2 D_{n-2}+2 a^n\\\\\r\n=\\cdots=a^{n-1} D_1+(n-1) a^n\\\\\r\n=(n+1) a^n$\r\n\r\n(2) 当 $r(\\boldsymbol{A})=n$ 或 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n即 $a \\neq 0$ 时, 方程组有唯一解,\r\n\r\n由 $\\widetilde{D}_1=\\left|\\begin{array}{ccccc}1 & 1 & 0 & \\cdots & 0 \\\\ 0 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=n a^{n-1}$, \r\n\r\n得 $x_1=\\dfrac{\\widetilde{D}_1}{|\\boldsymbol{A}|}=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) 当 $r(\\boldsymbol{A})<n$ 或 $|\\boldsymbol{A}|=0$, 即 $a=0$ 时, \r\n\r\n方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解,\r\n\r\n由 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccccc:c}0 & 1 & 0 & \\cdots & 0 & 1 \\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$, \r\n\r\n得通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "三对角行列式按第一列展开得递推 D_n=2aD_{n-1}-a²D_{n-2}",
+        "a=0 时 A 幂零、r(A)=n-1，方程组有无穷多解"
+      ],
+      "key_point": "递推证 |A|=(n+1)aⁿ；a≠0 唯一解、a=0 无穷多解。"
+    },
+    {
       "id": 780,
       "paper": "数学二",
       "year": 2008,
@@ -452,42 +488,6 @@
         "(2)P⁻¹AP 不是对角阵：因 α₃ 不是特征向量，Aα₃=α₂+α₃ 使第三列出现1（约当型），别强行对角化"
       ],
       "key_point": "α₁,α₂,α₃ 线性无关，P⁻¹AP 为含约当块的 [[−1,0,0],[0,1,1],[0,0,1]]。"
-    },
-    {
-      "id": 791,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设 $3$ 阶矩阵 $\\boldsymbol{A}$ 的特征值为 $2,3, \\lambda$, 若行列式 $|2 \\boldsymbol{A}|=-48$, 则 $\\lambda=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$-1$",
-      "analysis": "根据特征值的性质, 得 $|\\boldsymbol{A}|=\\lambda_1 \\lambda_2 \\lambda_3=6 \\lambda$. \r\n\r\n又由 $|2 \\boldsymbol{A}|=-48$, \r\n\r\n得 $8|\\boldsymbol{A}|=-48$, 即 $|\\boldsymbol{A}|=-6$, \r\n\r\n于是 $\\lambda=-1$.",
-      "wrong_options": {},
-      "pitfalls": [
-        "|2A|=2³|A|=8|A|，3阶矩阵提取的因子是 2 的3次方，不是2倍",
-        "|A| 等于各特征值之积 6λ（不是之和），由 8·6λ=−48 得 λ=−1"
-      ],
-      "key_point": "由 |2A|=8|A|=−48 得 |A|=−6=6λ，故 λ=−1。"
-    },
-    {
-      "id": 792,
-      "paper": "数学二",
-      "year": 2008,
-      "index": 19,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $f(x)$ 是区间 $[0,+\\infty)$ 上具有连续导数的单调增加函数, 且 $f(0)=1$. 对任意的 $t \\in[0,+\\infty)$, 直线 $x=0, x=t$, 曲线 $y=f(x)$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转 一周生成一旋转体, 若该旋转体的侧面面积在数值上等于其体积的 $2$ 倍, 求函数 $f(x)$ 的表达式",
-      "options": {},
-      "answer": "$f(x)=\\frac{\\mathrm{e}^{-x}+\\mathrm{e}^x}{2}$.",
-      "analysis": "设所求函数为 $y=f(x)$, 旋转体的体积为 \r\n\r\n$\\displaystyle V(t)=\\pi \\int_0^t f^2(x) \\mathrm{d} x=\\pi \\int_0^t y^2 \\mathrm{d} x$,\r\n\r\n侧面积为 $\\displaystyle S(t)=2 \\pi \\int_0^t f(x) \\sqrt{1+f^{\\prime 2}(x)} \\mathrm{d} x=2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x$,\r\n\r\n由题意得 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$\r\n\r\n方法一 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$ 两边对 $t$ 求导数, \r\n\r\n得 $y \\sqrt{1+y^{\\prime 2}}=y^2$, 整理得 $1+y^{\\prime 2}=y^2$.\r\n\r\n因为函数 $y=f(x)$ 为增函数, \r\n\r\n所以 $y=f(x)$ 为满足初始条件的微分方程 $\\left\\{\\begin{array}{l}\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\sqrt{y^2-1} \\\\ y(0)=1\\end{array}\\right.$ 的解,\r\n\r\n由 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}=\\sqrt{y^2-1}$ 变量分离得 $\\dfrac{\\mathrm{d} y}{\\sqrt{y^2-1}}=\\mathrm{d} x$,\r\n\r\n两边积分得 $\\ln \\left(y+\\sqrt{y^2-1}\\right)=x+\\ln C$, \r\n\r\n或 $y+\\sqrt{y^2-1}=C \\mathrm{e}^x$.\r\n\r\n由 $y(0)=1$ 得 $C=1$, 即 $y+\\sqrt{y^2-1}=\\mathrm{e}^x$, \r\n\r\n由 $\\left\\{\\begin{array}{l}y+\\sqrt{y^2-1}=\\mathrm{e}^x\\\\ y-\\sqrt{y^2-1}=\\mathrm{e}^{-x}\\end{array}\\right.$, \r\n\r\n得 $y=f(x)=\\dfrac{\\mathrm{e}^x+\\mathrm{e}^{-x}}{2}$\r\n\r\n方法二 $\\displaystyle 2 \\pi \\int_0^t y \\sqrt{1+y^{\\prime 2}} \\mathrm{d} x=2 \\pi \\int_0^t y^2 \\mathrm{d} x$ 两边对 $t$ 求导数, \r\n\r\n得 $y \\sqrt{1+y^{\\prime 2}}=y^2$, 整理得 $1+y^{\\prime 2}=y^2$, \r\n\r\n两边再对 $t$ 求导数得 $2 y^{\\prime} y^{\\prime \\prime}=2 y y^{\\prime}$, \r\n\r\n于是 $y^{\\prime \\prime}-y=0$, \r\n\r\n特征方程为 $\\lambda^2-1=0$, 特征根为 $\\lambda_1=-1, \\lambda_2=1$, \r\n\r\n通解为 $y=C_1 \\mathrm{e}^{-x}+C_2 \\mathrm{e}^x$.\r\n\r\n由 $y(0)=1$ 及 $1+y^{\\prime 2}=y^2$, \r\n\r\n得 $y^{\\prime}(0)=0$, \r\n\r\n得 $C_1=C_2=\\dfrac{1}{2}$, \r\n\r\n故 $\\displaystyle y=f(x)=\\frac{\\mathrm{e}^{-x}+\\mathrm{e}^x}{2}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "旋转体侧面积公式含弧长元 √(1+y′²)，是 2π∫y√(1+y′²)dx，不是 2π∫y dx",
-        "含变限积分的等式两边对上限 t 求导消去积分号得 1+y′²=y²，再由 f 增及 f(0)=1 定解"
-      ],
-      "key_point": "由 S=2V 求导得 1+y′²=y²，解得 f(x)=(eˣ+e^{−x})/2。"
     }
   ]
 }

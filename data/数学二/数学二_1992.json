@@ -4,69 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 1173,
-      "paper": "数学二",
-      "year": 1992,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "当 $x \\rightarrow 1$ 时, 函数 $\\displaystyle \\frac{x^{2}-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 的极限 $(\\quad)$",
-      "options": {
-        "A": "等于 $2$",
-        "B": "等于 $0$",
-        "C": "为 $\\infty$",
-        "D": "不存在但不是 $\\infty$"
-      },
-      "answer": "D",
-      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 1^{-}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{-}} \\mathrm{e}^{\\frac{1}{x-1}}=0,\\\\\r\n \\lim _{x \\rightarrow 1^{+}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{+}} \\mathrm{e}^{\\frac{1}{x-1}}=+\\infty$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 不存在但不是 $\\infty$, \r\n\r\n应选 (D)",
-      "wrong_options": {
-        "A": "只算前一因子 (x²-1)/(x-1)→2，忽略了指数因子 e^{1/(x-1)} 在 x=1 两侧的截然不同行为。",
-        "B": "只考察左极限（x→1⁻ 时 e^{1/(x-1)}→0 使乘积→0），漏掉右极限。",
-        "C": "只考察右极限（x→1⁺ 时乘积→+∞），误把它当作整体极限，得 ∞。"
-      },
-      "pitfalls": [
-        "e^{1/(x-1)} 在 x=1 处左右极限分别为 0 与 +∞，必须分侧讨论",
-        "左极限有限（0）、右极限为 +∞，故极限不存在但也不是 ∞"
-      ],
-      "key_point": "左极限 0、右极限 +∞ 不相等且一侧有限，故极限不存在但不是 ∞。"
-    },
-    {
-      "id": 1180,
-      "paper": "数学二",
-      "year": 1992,
-      "index": 16,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}1+x^{2}, & x \\leqslant 0 \\\\ \\mathrm{e}^{-x}, & x>0\\end{array}\\right.$ 求 $\\displaystyle \\int_{1}^{3} f(x-2) \\mathrm{d} x$",
-      "options": {},
-      "answer": "$\\dfrac{7}{3}-\\dfrac{1}{\\mathrm{e}}$",
-      "analysis": "$\\displaystyle \\int_1^3 f(x-2) \\mathrm{d} x \\\\\r\n=\\int_1^3 f(x-2) \\mathrm{d}(x-2)=\\int_{-1}^1 f(x) \\mathrm{d} x \\\\\r\n=\\int_{-1}^0\\left(1+x^2\\right) \\mathrm{d} x+\\int_0^1 \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\frac{7}{3}-\\frac{1}{\\mathrm{e}}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "换元 u=x-2 后积分限由 [1,3] 变为 [-1,1]，别忘同步变限",
-        "被积在 u=0 处分段，须拆成 ∫_{-1}^0(1+u²)+∫_0^1 e^{-u}，用错分支会错"
-      ],
-      "key_point": "u=x-2 化为 ∫_{-1}^{1}f，分段积分得 7/3-1/e。"
-    },
-    {
-      "id": 1183,
-      "paper": "数学二",
-      "year": 1992,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $f^{\\prime \\prime}(x)<0, f(0)=0$, 证明: 对任意的 $x_{1}>0, x_{2}>0$, 有 $f\\left(x_{1}+x_{2}\\right)<f\\left(x_{1}\\right)+f\\left(x_{2}\\right)$",
-      "options": {},
-      "answer": "略",
-      "analysis": "不妨设 $0<x_1<x_2$, 由拉格朗日中值定理得\r\n\r\n$f\\left(x_1\\right)=f\\left(x_1\\right)-f(0)=f^{\\prime}\\left(\\xi_1\\right) x_1$,\r\n\r\n其中 $0<\\xi_1<x_1$,\r\n\r\n$f\\left(x_1+x_2\\right)-f\\left(x_2\\right)=f^{\\prime}\\left(\\xi_2\\right) x_1$,\r\n\r\n其中 $x_2<\\xi_2<x_1+x_2$,\r\n\r\n\r\n因为 $f^{\\prime \\prime}(x)<0$, 所以 $f^{\\prime}(x)$ 单调递减, \r\n\r\n又因为 $\\xi_1<\\xi_2$, 所以 $f^{\\prime}\\left(\\xi_1\\right)>f^{\\prime}\\left(\\xi_2\\right)$,\r\n\r\n即 $f\\left(x_1\\right)>f\\left(x_1+x_2\\right)-f\\left(x_2\\right)$, \r\n\r\n故 $f\\left(x_1+x_2\\right)<f\\left(x_1\\right)+f\\left(x_2\\right)$",
-      "wrong_options": {},
-      "pitfalls": [
-        "对 f(x₁)-f(0) 与 f(x₁+x₂)-f(x₂) 各用一次中值定理，两个中值点 ξ₁<ξ₂ 的大小关系是要害",
-        "f''<0 给出 f' 严格递减，故 f'(ξ₁)>f'(ξ₂)，不等号方向别弄反"
-      ],
-      "key_point": "两段增量各用中值定理，f' 递减使 f'(ξ₁)>f'(ξ₂)，即得 f(x₁+x₂)<f(x₁)+f(x₂)。"
-    },
-    {
       "id": 1400,
       "paper": "数学二",
       "year": 1992,
@@ -209,6 +146,33 @@
         "注意端点开闭随反射改变（$x=0$ 归入 $x\\ge0$ 段）"
       ],
       "key_point": "$f(-x)=\\begin{cases}x^2-x,&x<0\\\\x^2,&x\\ge0\\end{cases}$，选 D。"
+    },
+    {
+      "id": 1173,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "当 $x \\rightarrow 1$ 时, 函数 $\\displaystyle \\frac{x^{2}-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 的极限 $(\\quad)$",
+      "options": {
+        "A": "等于 $2$",
+        "B": "等于 $0$",
+        "C": "为 $\\infty$",
+        "D": "不存在但不是 $\\infty$"
+      },
+      "answer": "D",
+      "analysis": "由 $\\displaystyle \\lim _{x \\rightarrow 1^{-}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{-}} \\mathrm{e}^{\\frac{1}{x-1}}=0,\\\\\r\n \\lim _{x \\rightarrow 1^{+}} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}=2 \\lim _{x \\rightarrow 1^{+}} \\mathrm{e}^{\\frac{1}{x-1}}=+\\infty$, \r\n\r\n得 $\\displaystyle \\lim _{x \\rightarrow 1} \\frac{x^2-1}{x-1} \\mathrm{e}^{\\frac{1}{x-1}}$ 不存在但不是 $\\infty$, \r\n\r\n应选 (D)",
+      "wrong_options": {
+        "A": "只算前一因子 (x²-1)/(x-1)→2，忽略了指数因子 e^{1/(x-1)} 在 x=1 两侧的截然不同行为。",
+        "B": "只考察左极限（x→1⁻ 时 e^{1/(x-1)}→0 使乘积→0），漏掉右极限。",
+        "C": "只考察右极限（x→1⁺ 时乘积→+∞），误把它当作整体极限，得 ∞。"
+      },
+      "pitfalls": [
+        "e^{1/(x-1)} 在 x=1 处左右极限分别为 0 与 +∞，必须分侧讨论",
+        "左极限有限（0）、右极限为 +∞，故极限不存在但也不是 ∞"
+      ],
+      "key_point": "左极限 0、右极限 +∞ 不相等且一侧有限，故极限不存在但不是 ∞。"
     },
     {
       "id": 1407,
@@ -355,6 +319,24 @@
       "key_point": "通解 $y=C\\sqrt{x}-\\dfrac15x^3$。"
     },
     {
+      "id": 1180,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 16,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f(x)=\\left\\{\\begin{array}{ll}1+x^{2}, & x \\leqslant 0 \\\\ \\mathrm{e}^{-x}, & x>0\\end{array}\\right.$ 求 $\\displaystyle \\int_{1}^{3} f(x-2) \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{7}{3}-\\dfrac{1}{\\mathrm{e}}$",
+      "analysis": "$\\displaystyle \\int_1^3 f(x-2) \\mathrm{d} x \\\\\r\n=\\int_1^3 f(x-2) \\mathrm{d}(x-2)=\\int_{-1}^1 f(x) \\mathrm{d} x \\\\\r\n=\\int_{-1}^0\\left(1+x^2\\right) \\mathrm{d} x+\\int_0^1 \\mathrm{e}^{-x} \\mathrm{d} x\\\\\r\n=\\frac{7}{3}-\\frac{1}{\\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "换元 u=x-2 后积分限由 [1,3] 变为 [-1,1]，别忘同步变限",
+        "被积在 u=0 处分段，须拆成 ∫_{-1}^0(1+u²)+∫_0^1 e^{-u}，用错分支会错"
+      ],
+      "key_point": "u=x-2 化为 ∫_{-1}^{1}f，分段积分得 7/3-1/e。"
+    },
+    {
       "id": 1414,
       "paper": "数学二",
       "year": 1992,
@@ -407,6 +389,24 @@
         "$S'(a)=\\dfrac{a-1}{2a\\sqrt a}=0$ 得 $a=1$，左减右增为极小值"
       ],
       "key_point": "$a=1$ 时面积最小，切线 $y=\\dfrac{x}{2}+\\dfrac12$。"
+    },
+    {
+      "id": 1183,
+      "paper": "数学二",
+      "year": 1992,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $f^{\\prime \\prime}(x)<0, f(0)=0$, 证明: 对任意的 $x_{1}>0, x_{2}>0$, 有 $f\\left(x_{1}+x_{2}\\right)<f\\left(x_{1}\\right)+f\\left(x_{2}\\right)$",
+      "options": {},
+      "answer": "略",
+      "analysis": "不妨设 $0<x_1<x_2$, 由拉格朗日中值定理得\r\n\r\n$f\\left(x_1\\right)=f\\left(x_1\\right)-f(0)=f^{\\prime}\\left(\\xi_1\\right) x_1$,\r\n\r\n其中 $0<\\xi_1<x_1$,\r\n\r\n$f\\left(x_1+x_2\\right)-f\\left(x_2\\right)=f^{\\prime}\\left(\\xi_2\\right) x_1$,\r\n\r\n其中 $x_2<\\xi_2<x_1+x_2$,\r\n\r\n\r\n因为 $f^{\\prime \\prime}(x)<0$, 所以 $f^{\\prime}(x)$ 单调递减, \r\n\r\n又因为 $\\xi_1<\\xi_2$, 所以 $f^{\\prime}\\left(\\xi_1\\right)>f^{\\prime}\\left(\\xi_2\\right)$,\r\n\r\n即 $f\\left(x_1\\right)>f\\left(x_1+x_2\\right)-f\\left(x_2\\right)$, \r\n\r\n故 $f\\left(x_1+x_2\\right)<f\\left(x_1\\right)+f\\left(x_2\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "对 f(x₁)-f(0) 与 f(x₁+x₂)-f(x₂) 各用一次中值定理，两个中值点 ξ₁<ξ₂ 的大小关系是要害",
+        "f''<0 给出 f' 严格递减，故 f'(ξ₁)>f'(ξ₂)，不等号方向别弄反"
+      ],
+      "key_point": "两段增量各用中值定理，f' 递减使 f'(ξ₁)>f'(ξ₂)，即得 f(x₁+x₂)<f(x₁)+f(x₂)。"
     }
   ]
 }

@@ -7,7 +7,7 @@
       "id": 1212,
       "paper": "数学一",
       "year": 1990,
-      "index": null,
+      "index": 1,
       "type": "填空题",
       "difficulty": 0,
       "stem": "过点 $M(1,2,-1)$ 且与直线 $\\left\\{\\begin{array}{l}x=-t+2, \\\\ y=3t-4, \\\\ z=t-1\\end{array}\\right.$ 垂直的平面方程为 $\\rule{0.5cm}{0.2mm}$",

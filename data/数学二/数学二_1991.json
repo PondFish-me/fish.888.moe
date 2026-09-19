@@ -176,6 +176,33 @@
       "key_point": "$f(-x)$ 在 $-x_0$ 取极大值，故 $-f(-x)$ 在 $-x_0$ 取极小值，选 B。"
     },
     {
+      "id": 90404,
+      "paper": "数学二",
+      "year": 1991,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "曲线 $y=\\dfrac{1+\\mathrm{e}^{-x^2}}{1-\\mathrm{e}^{-x^2}}$ $(\\quad)$",
+      "options": {
+        "A": "没有渐近线",
+        "B": "仅有水平渐近线",
+        "C": "仅有铅直渐近线",
+        "D": "既有水平渐近线又有铅直渐近线"
+      },
+      "answer": "D",
+      "analysis": "函数定义域为 $x \\neq 0$：当 $x \\neq 0$ 时 $x^2>0$，故 $\\mathrm{e}^{-x^2}<1$，分母 $1-\\mathrm{e}^{-x^2}>0$；而 $x=0$ 时分母为 $0$.\n\n**铅直渐近线**：$\\displaystyle \\lim_{x \\rightarrow 0}\\left(1+\\mathrm{e}^{-x^2}\\right)=2$，$\\displaystyle \\lim_{x \\rightarrow 0}\\left(1-\\mathrm{e}^{-x^2}\\right)=0^{+}$，故 $\\displaystyle \\lim_{x \\rightarrow 0} y=+\\infty$，即 $x=0$ 是铅直渐近线.\n\n**水平渐近线**：$\\displaystyle \\lim_{x \\rightarrow \\infty} \\mathrm{e}^{-x^2}=0$，故 $\\displaystyle \\lim_{x \\rightarrow \\infty} y=\\frac{1+0}{1-0}=1$，即 $y=1$ 是水平渐近线.\n\n两种渐近线都存在，故应选 (D).",
+      "wrong_options": {
+        "A": "既没算 x=0 处分母趋 0，也没算 x→∞ 的极限，误判无渐近线",
+        "B": "只看 x→∞ 得水平渐近线，漏掉 x=0 处分母为 0 的铅直渐近线",
+        "C": "只看 x=0 处铅直渐近线，漏掉 x→∞ 的水平渐近线"
+      },
+      "pitfalls": [
+        "$x\\to 0$ 时分母 $1-\\mathrm{e}^{-x^2}\\to 0^+$ 而分子 $\\to 2$，$y\\to+\\infty$，得铅直渐近线 $x=0$",
+        "$x\\to\\infty$ 时 $\\mathrm{e}^{-x^2}\\to0$，$y\\to1$，得水平渐近线 $y=1$"
+      ],
+      "key_point": "铅直渐近线 $x=0$、水平渐近线 $y=1$ 同时存在，选 D。"
+    },
+    {
       "id": 1389,
       "paper": "数学二",
       "year": 1991,
@@ -381,33 +408,6 @@
         "每次平移换元 $x-\\pi$ 时 $\\int\\sin x$ 的贡献不要漏"
       ],
       "key_point": "两次递推平移得 $\\int_\\pi^{3\\pi}f=\\tfrac{\\pi^2}{2}+\\int_0^\\pi f+(\\text{sin 项})=\\pi^2-2$。"
-    },
-    {
-      "id": 90404,
-      "paper": "数学二",
-      "year": 1991,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "曲线 $y=\\dfrac{1+\\mathrm{e}^{-x^2}}{1-\\mathrm{e}^{-x^2}}$ $(\\quad)$",
-      "options": {
-        "A": "没有渐近线",
-        "B": "仅有水平渐近线",
-        "C": "仅有铅直渐近线",
-        "D": "既有水平渐近线又有铅直渐近线"
-      },
-      "answer": "D",
-      "analysis": "函数定义域为 $x \\neq 0$：当 $x \\neq 0$ 时 $x^2>0$，故 $\\mathrm{e}^{-x^2}<1$，分母 $1-\\mathrm{e}^{-x^2}>0$；而 $x=0$ 时分母为 $0$.\n\n**铅直渐近线**：$\\displaystyle \\lim_{x \\rightarrow 0}\\left(1+\\mathrm{e}^{-x^2}\\right)=2$，$\\displaystyle \\lim_{x \\rightarrow 0}\\left(1-\\mathrm{e}^{-x^2}\\right)=0^{+}$，故 $\\displaystyle \\lim_{x \\rightarrow 0} y=+\\infty$，即 $x=0$ 是铅直渐近线.\n\n**水平渐近线**：$\\displaystyle \\lim_{x \\rightarrow \\infty} \\mathrm{e}^{-x^2}=0$，故 $\\displaystyle \\lim_{x \\rightarrow \\infty} y=\\frac{1+0}{1-0}=1$，即 $y=1$ 是水平渐近线.\n\n两种渐近线都存在，故应选 (D).",
-      "wrong_options": {
-        "A": "既没算 x=0 处分母趋 0，也没算 x→∞ 的极限，误判无渐近线",
-        "B": "只看 x→∞ 得水平渐近线，漏掉 x=0 处分母为 0 的铅直渐近线",
-        "C": "只看 x=0 处铅直渐近线，漏掉 x→∞ 的水平渐近线"
-      },
-      "pitfalls": [
-        "$x\\to 0$ 时分母 $1-\\mathrm{e}^{-x^2}\\to 0^+$ 而分子 $\\to 2$，$y\\to+\\infty$，得铅直渐近线 $x=0$",
-        "$x\\to\\infty$ 时 $\\mathrm{e}^{-x^2}\\to0$，$y\\to1$，得水平渐近线 $y=1$"
-      ],
-      "key_point": "铅直渐近线 $x=0$、水平渐近线 $y=1$ 同时存在，选 D。"
     }
   ]
 }

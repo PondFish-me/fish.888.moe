@@ -4,6 +4,114 @@
   "count": 23,
   "questions": [
     {
+      "id": 781,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $[-1,1]$ 上连续, 则 $x=0$ 是函数 $g(x)=\\dfrac{\\int_0^x f(t) \\mathrm{d} t}{x}$ 的 $(\\quad)$",
+      "options": {
+        "A": "跳跃间断点",
+        "B": "可去间断点",
+        "C": "无穷间断点",
+        "D": "振荡间断点"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x}=\\lim _{x \\rightarrow 0} f(x)=f(0)$,\r\n\r\n所以 $x=0$ 为 $g(x)$ 的可去间断点, 应选 (B)",
+      "wrong_options": {
+        "A": "跳跃间断需左右极限存在但不相等，此处左右极限都等于 f(0)",
+        "C": "无穷间断需极限为 ∞，此处极限有限",
+        "D": "振荡间断需极限不存在且振荡，此处极限存在"
+      },
+      "pitfalls": [
+        "极限存在且有限（等于 f(0)）⇒可去间断点",
+        "用洛必达或变限积分求导得极限为 f(0)，不是无穷"
+      ],
+      "key_point": "lim g(x)=f(0) 有限，x=0 为可去间断点，选 B。"
+    },
+    {
+      "id": 767,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "如图所示, 曲线段的方程为 $y=f(x)$, 函数 $f(x)$ 在区间 $[0, a]$ 上有连续的导数, 则定积分 $\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 等于 $(\\quad)$\n\n![曲线段 y=f(x) 与矩形 OBAC](assets/figures/ad3ebc4e9c2d40c745d3211478189ef8b8923674f023ad5417ea6a26c11f5185.png)",
+      "options": {
+        "A": "曲边梯形 $A B O D$ 的面积",
+        "B": "梯形 $A B O D$ 的面积",
+        "C": "曲边三角形 $A C D$ 的面积",
+        "D": "三角形 $A C D$ 的面积"
+      },
+      "answer": "C",
+      "analysis": "由分部积分公式得\r\n$\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=\\int_0^a x \\mathrm{d} f(x)\\\\\r\n=\\left.x f(x)\\right|_0 ^a-\\int_0^a f(x) \\mathrm{d} x\\\\\r\n=a f(a)-\\int_0^a f(x) \\mathrm{d} x$,\r\n\r\n因为 $a f(a)$ 为矩形 $O B A C$ 的面积, $\\int_0^a f(x) \\mathrm{d} x$ 为曲边梯形 $O B A D$ 的面积,\r\n\r\n所以 $\\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 表示曲边三角形 $A C D$ 的面积, 应选 (C)",
+      "wrong_options": {
+        "A": "把结果误认成曲边梯形 ABOD，混淆了‘矩形减曲边梯形’得到的图形归属",
+        "B": "把结果当成直边梯形 ABOD，既错图形又把曲边当直边",
+        "D": "图形归属对了（ACD）但把曲边三角形当成直边三角形，忽略 AD 是曲线段"
+      },
+      "pitfalls": [
+        "分部积分边界项 xf(x)|₀ᵃ 下限 x=0 处为0，只剩 af(a)，别把它整体漏写",
+        "af(a) 是矩形、∫₀ᵃf 是曲边梯形，二者之差是带一条曲边的三角形 ACD，不是直边三角形（排除D）"
+      ],
+      "key_point": "∫₀ᵃxf′dx=af(a)−∫₀ᵃf(x)dx=矩形OBAC−曲边梯形OBAD=曲边三角形ACD。"
+    },
+    {
+      "id": 782,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 3,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知 $f(x, y)=\\mathrm{e}^{\\sqrt{x^2+y^4}}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f_x^{\\prime}(0,0), f_y^{\\prime}(0,0)$ 都存在",
+        "B": "$f_x^{\\prime}(0,0)$ 不存在, $f_y^{\\prime}(0,0)$ 存在",
+        "C": "$f_x^{\\prime}(0,0)$ 存在, $f_y^{\\prime}(0,0)$ 不存在",
+        "D": "$f_x^{\\prime}(0,0), f_y^{\\prime}(0,0)$ 都不存在"
+      },
+      "answer": "B",
+      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^{|x|}-1}{x}$ 不存在, \r\n\r\n所以 $f_x^{\\prime}(0,0)$ 不存在,\r\n\r\n又因为 $\\displaystyle \\lim _{y \\rightarrow 0} \\frac{f(0, y)-f(0,0)}{y}=\\lim _{y \\rightarrow 0} \\frac{\\mathrm{e}^{y^2}-1}{y}=0$, \r\n\r\n所以 $f_y^{\\prime}(0,0)=0$, 应选 (B)",
+      "wrong_options": {
+        "A": "f_x'(0,0) 因 √(x²)=|x| 带绝对值，左右导数不等，不存在",
+        "C": "把 x、y 两个偏导的存在性判反",
+        "D": "f_y'(0,0) 实际存在且为 0"
+      },
+      "pitfalls": [
+        "√(x²+y⁴) 在 x 方向为 |x|，(e^{|x|}−1)/x 左右极限 ∓1，偏导不存在",
+        "y 方向为 e^{y²}，(e^{y²}−1)/y→0，偏导存在"
+      ],
+      "key_point": "f_x'(0,0) 不存在、f_y'(0,0)=0，选 B。"
+    },
+    {
+      "id": 769,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f$ 连续. 若 $\\displaystyle F(u, v)=\\iint\\limits_{D_{u v}} \\frac{f\\left(x^2+y^2\\right)}{\\sqrt{x^2+y^2}} \\mathrm{d} x \\mathrm{d} y$, 其中区域 $D_{u v}$ 为图中阴影部分, 则 $\\dfrac{\\partial F}{\\partial u}=(\\quad)$\n\n![积分区域 Duv](assets/figures/adb38d99a3e4fc4d31f3c1cde0e685e5e5c914c5f88e5e69118e037ae1612adb.jpg)",
+      "options": {
+        "A": "$v f\\left(u^2\\right)$",
+        "B": "$\\dfrac{v}{u} f\\left(u^2\\right)$",
+        "C": "$v f(u)$",
+        "D": "$\\dfrac{v}{u} f(u)$"
+      },
+      "answer": "A",
+      "analysis": "令 $\\left\\{\\begin{array}{l}x=r \\cos \\theta \\\\ y=r \\sin \\theta\\end{array}\\right.$, \r\n\r\n则 $\\displaystyle D_{u v}=\\{(r, \\theta) \\mid 0 \\leqslant \\theta \\leqslant v, 1 \\leqslant r \\leqslant u\\},\\\\ \r\n F(u, v)=\\int_0^v \\mathrm{d} \\theta \\int_1^u \\frac{r f\\left(r^2\\right)}{r} \\mathrm{d} r=v \\int_1^u f\\left(r^2\\right) \\mathrm{d} r$, \r\n\r\n于是 $\\dfrac{\\partial F}{\\partial u}=v f\\left(u^2\\right)$, 应选 (A)",
+      "wrong_options": {
+        "B": "多留了 1/u：把 rdrdθ 的 r 没和分母 √=r 约干净，凑出 (v/u)f(u²)",
+        "C": "把被积 f(r²) 误当 f(r)，对上限求导得 f(u) 而非 f(u²)",
+        "D": "既漏约 r 又把 f(r²) 当 f(r)，两错叠加得 (v/u)f(u)"
+      },
+      "pitfalls": [
+        "极坐标下 dxdy=r drdθ，其中 r 恰与被积分母 √(x²+y²)=r 约掉，剩下 f(r²) drdθ，别残留 1/u",
+        "被积函数是 f(r²)，对上限 u 求导得 f(u²) 不是 f(u)"
+      ],
+      "key_point": "F(u,v)=v∫₁ᵘf(r²)dr，故 ∂F/∂u=v·f(u²)，选A。"
+    },
+    {
       "id": 747,
       "paper": "数学三",
       "year": 2008,
@@ -29,6 +137,33 @@
         "关键：E∓A³ 的两个因式分解都要用到"
       ],
       "key_point": "A³=O ⇒ E-A、E+A 均可逆（由 E∓A³ 的因式分解构造逆矩阵）。"
+    },
+    {
+      "id": 770,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ll}1 & 2 \\\\ 2 & 1\\end{array}\\right)$, 则在实数域上与 $\\boldsymbol{A}$ 合同的矩阵为 $(\\quad)$",
+      "options": {
+        "A": "$\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$",
+        "B": "$\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$",
+        "C": "$\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$",
+        "D": "$\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$"
+      },
+      "answer": "D",
+      "analysis": "方法一 合同矩阵的行列式同号, 排除选项 (A) (B) (C)\r\n\r\n方法二 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{cc}\\lambda-1 & -2 \\\\ -2 & \\lambda-1\\end{array}\\right|=\\lambda^2-2 \\lambda-3=0$, \r\n\r\n得 $\\lambda_1=-1, \\lambda_2=3$, 即 $\\boldsymbol{A}$ 的正、负惯性指数都是 $1$ \r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda+2 & -1 \\\\ -1 & \\lambda+2\\end{array}\\right|=\\lambda^2+4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$ 的特征值为 $\\lambda_1=-1, \\lambda_2=-3$,\r\n\r\n$\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$ 的正惯性指数为 $0$ , \r\n\r\n负惯性指数为 $2$ , 不与 $\\boldsymbol{A}$ 合同\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-2 & 1 \\\\ 1 & \\lambda-2\\end{array}\\right|=\\lambda^2-4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$ 的特征值为 $\\lambda_1=1, \\lambda_2=3$,\r\n\r\n$\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$ 的正惯性指数为 $2$ , \r\n\r\n负惯性指数为 $0$ , 不与 $\\boldsymbol{A}$ 合同;\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-2 & -1 \\\\ -1 & \\lambda-2\\end{array}\\right|=\\lambda^2-4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$ 的特征值为 $\\lambda_1=1, \\lambda_2=3$,\r\n$\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$ 的正惯性指数为 $2$ , \r\n\r\n负惯性指数为 $0$ , 不与 $\\boldsymbol{A}$ 合同;\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-1 & 2 \\\\ 2 & \\lambda-1\\end{array}\\right|=\\lambda^2-2 \\lambda-3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$ 的特征值为 $\\lambda_1=-1, \\lambda_2=3$,\r\n\r\n$\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$ 的正、负惯性指数都是 $1$ , 与 $\\boldsymbol{A}$ 合同, 应选 (D)",
+      "wrong_options": {
+        "A": "该矩阵特征值 −1、−3，正负惯性指数为(0,2)负定，与 A 的(1,1)不同",
+        "B": "该矩阵特征值 1、3，正负惯性指数为(2,0)正定，与 A 的(1,1)不同",
+        "C": "该矩阵特征值 1、3，正负惯性指数为(2,0)正定，与 A 的(1,1)不同"
+      },
+      "pitfalls": [
+        "合同不是相似，判据是正负惯性指数（符号差）相同，不要求特征值相等",
+        "必要条件之一是行列式同号：A 的行列式为 −3，可先排除行列式为正的 A、B、C，只剩 D"
+      ],
+      "key_point": "A 特征值 −1、3，正负惯性指数各1；只有 D 同为(1,1)且行列式 −3 同号，故与 A 合同。"
     },
     {
       "id": 749,
@@ -85,266 +220,6 @@
       "key_point": "ρ=1 ⇒ Y=aX+b，a=+√(DY/DX)=2、b=EY-aEX=1，即 Y=2X+1。"
     },
     {
-      "id": 751,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 12,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "微分方程 $x y^{\\prime}+y=0$ 满足条件 $y(1)=1$ 的解是 $y=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{x}$",
-      "analysis": "方法一 由 $x y^{\\prime}+y=0$, \r\n\r\n得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}+\\dfrac{1}{x} y=0$, \r\n\r\n解得 $y=C \\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{d} x}=\\dfrac{C}{x}$,\r\n\r\n由 $y(1)=1$, 得 $C=1$, 于是 $y=\\dfrac{1}{x}$\r\n\r\n方法二 由 $x y^{\\prime}+y=0$, 得 $(x y)^{\\prime}=0$, 即 $x y=C$,\r\n\r\n再由 $y(1)=1$, 得 $C=1$, 故所求的特解为 $y=\\dfrac{1}{x}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "解出通解 y=C/x 后须代初值 y(1)=1 定 C=1，漏代只得含 C 的通解不得分"
-      ],
-      "key_point": "xy'+y=(xy)'=0 ⇒ xy=C，由 y(1)=1 得 y=1/x。"
-    },
-    {
-      "id": 756,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 14,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 服从参数为 $1$ 的泊松分布, 则 $P\\left\\{X=E\\left(X^{2}\\right)\\right\\}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\dfrac{1}{2 \\mathrm{e}}$",
-      "analysis": "由 $X \\sim P(1)$ 得 $E(X)=D(X)=1$, \r\n\r\n从而 $E\\left(X^2\\right)=D(X)+(E X)^2=2$, \r\n\r\n于是 $P\\left\\{X=E\\left(X^2\\right)\\right\\}=P\\{X=2\\}=\\dfrac{1^2}{2 !} \\cdot \\mathrm{e}^{-1}=\\dfrac{1}{2 \\mathrm{e}}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "泊松 E(X)=D(X)=λ=1 ⇒ E(X²)=D+E²=2（不是 1）",
-        "P{X=2}=λ²/2!·e^{-λ}=1/(2e)"
-      ],
-      "key_point": "P(1)：E(X²)=D+E²=2，P{X=2}=1/(2e)。"
-    },
-    {
-      "id": 763,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 20,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $n$ 元线性方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$, 其中\r\n\r\n$$\r\n\\boldsymbol{A}=\\left(\\begin{array}{cccccc}\r\n2 a & 1 & & & & \\\\\r\na^{2} & 2 a & 1 & & & \\\\\r\n& a^{2} & 2 a & 1 & & \\\\\r\n& & \\ddots & \\ddots & \\ddots & \\\\\r\n& & & a^{2} & 2 a & 1 \\\\\r\n& & & & a^{2} & 2 a\r\n\\end{array}\\right)_{n \\times n}, \\boldsymbol{x}=\\left(\\begin{array}{c}\r\nx_{1} \\\\\r\nx_{2} \\\\\r\n\\vdots \\\\\r\nx_{n}\r\n\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{array}\\right)\r\n$$\r\n\r\n(1) 证明 : 行列式 $|\\boldsymbol{A}|=(n+1) a^{n}$;\r\n\r\n(2) 当 $a$ 为何值时, 该方程组有唯一解, 并求 $x_{1}$;\r\n\r\n(3) 当 $a$ 为何值时, 该方程组有无穷多解, 并求通解",
-      "options": {},
-      "answer": "(1) $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n(2) $a \\neq 0$ 时, 方程组有唯一解, $x_1=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) $a=0$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
-      "analysis": "(1) 方法一 数学归纳法\r\n\r\n当 $n=1$ 时, $|\\boldsymbol{A}|=D_1=2 a$, 结论显然成立;\r\n\r\n设当 $n=k$ 时, $|\\boldsymbol{A}|=D_k=(k+1) a^k$;\r\n\r\n当$n=k+1$ 时,\r\n\r\n$|\\boldsymbol{A}|=D_{k+1}=2 a D_k-a^2 D_{k-1}=2 a(k+1) a^k-k a^{k+1} \\\\\r\n=2(k+1) a^{k+1}-k a^{k+1}=(k+2) a^{k+1}$\r\n\r\n由数学归纳法, 对一切的自然数 $n$, 有 $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n方法二 $|\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ a^2 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ 0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=\\cdots\\\\\r\n=\\left|\\begin{array}{ccccc}\r\n2 a & 1 & 0 & \\cdots & 0 \\\\\r\n0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\\r\n0 & 0 & \\frac{4 a}{3} & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & \\frac{(n+1) a}{n}\r\n\\end{array}\\right|=(n+1) a^n$\r\n\r\n方法三 \r\n\r\n令 $D_n=|\\boldsymbol{A}|$, 将 $D_n$ 按第一列展开, \r\n\r\n得 $D_n=2 a D_{n-1}-a^2 D_{n-2}$,\r\n\r\n从而 $D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)$, 由递推关系得\r\n\r\n$D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)=\\cdots=a^{n-2}\\left(D_2-a D_1\\right)=a^n$,\r\n\r\n于是 $D_n=a D_{n-1}+a^n\\\\\r\n=a\\left(a D_{n-2}+a^{n-1}\\right)+a^n\\\\\r\n=a^2 D_{n-2}+2 a^n\\\\\r\n=\\cdots=a^{n-1} D_1+(n-1) a^n\\\\\r\n=(n+1) a^n$\r\n\r\n(2) 当 $r(\\boldsymbol{A})=n$ 或 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n即 $a \\neq 0$ 时, 方程组有唯一解,\r\n\r\n由 $\\widetilde{D}_1=\\left|\\begin{array}{ccccc}1 & 1 & 0 & \\cdots & 0 \\\\ 0 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=n a^{n-1}$, \r\n\r\n得 $x_1=\\dfrac{\\widetilde{D}_1}{|\\boldsymbol{A}|}=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) 当 $r(\\boldsymbol{A})<n$ 或 $|\\boldsymbol{A}|=0$, 即 $a=0$ 时, \r\n\r\n方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解,\r\n\r\n由 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccccc:c}0 & 1 & 0 & \\cdots & 0 & 1 \\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$, \r\n\r\n得通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
-      "wrong_options": {},
-      "pitfalls": [
-        "三对角行列式按第一列展开得递推 D_n=2aD_{n-1}-a²D_{n-2}",
-        "a=0 时 A 幂零、r(A)=n-1，方程组有无穷多解"
-      ],
-      "key_point": "递推证 |A|=(n+1)aⁿ；a≠0 唯一解、a=0 无穷多解。"
-    },
-    {
-      "id": 764,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, $X$ 的概率分布为 $P\\{X=i\\}=\\dfrac{1}{3}(i=-1,0,1), Y$ 的概率密度为 $f_{Y}(y)=\\left\\{\\begin{array}{ll}1, & 0 \\leqslant y<1 \\\\ 0, & \\text { 其他 }\\end{array}\\right.$ 记 $Z=X+Y$\r\n\r\n(1) 求 $P\\left\\{Z \\leqslant \\dfrac{1}{2} \\mid X=0\\right\\}$;\r\n\r\n(2) 求 $Z$ 的概率密度 $f_{Z}(z)$",
-      "options": {},
-      "answer": "(1) $\\dfrac{1}{2}$\r\n\r\n(2) $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
-      "analysis": "(1) 因为随机变量 $X$ 与 $Y$ 相互独立, \r\n\r\n$\\displaystyle P\\left\\{Z \\leqslant \\frac{1}{2} \\mid X=0\\right\\}=P\\left\\{Y \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} 1 \\mathrm{d} y=\\frac{1}{2}$\r\n\r\n(2) $F_Z(z)=P\\{Z \\leqslant z\\}=P\\{X+Y \\leqslant z\\}$,\r\n\r\n当 $z<-1$ 时, $F_Z(z)=0$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$\r\n\r\n当 $-1 \\leqslant z<2$时,\r\n\r\n$\\displaystyle F_Z(z)=  P\\{X=-1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=-1\\}\\\\\r\n+P\\{X=0\\} \\cdot P\\{X+Y \\leqslant z \\mid X=0\\} \\\\\r\n+P\\{X=1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=1\\} \\\\\r\n=  \\frac{1}{3} P\\{Y \\leqslant z+1\\}+\\frac{1}{3} P\\{Y \\leqslant z\\}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}$\r\n\r\n当 $-1 \\leqslant z<0$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3} P\\{Y \\leqslant z+1\\}=\\frac{1}{3} \\int_0^{z+1} \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $0 \\leqslant z<1$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3}+\\frac{1}{3} P\\{Y \\leqslant z\\}=\\frac{1}{3}+\\frac{1}{3} \\int_0^z \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $1 \\leqslant z<2$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{2}{3}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}\\\\\r\n=\\frac{2}{3}+\\frac{1}{3} \\int_0^{z-1} \\mathrm{d} y=\\frac{1}{3}(z+1)$,\r\n\r\n从而 $F_Z(z)= \\begin{cases}0, & z<-1 \\\\ \\dfrac{1}{3}(z+1), & -1 \\leqslant z<2 \\\\ 1, & z \\geqslant 2 \\end{cases}$\r\n\r\n故 $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "X 与 Y 独立，P{Z≤1/2|X=0}=P{Y≤1/2}=1/2",
-        "Z=X+Y 在 [-1,0)、[0,1)、[1,2) 三段叠加，密度恒为 1/3，支撑 (-1,2)"
-      ],
-      "key_point": "独立离散+均匀之和：f_Z(z)=1/3 于 (-1,2)。"
-    },
-    {
-      "id": 765,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}$ 是总体 $N\\left(\\mu, \\sigma^{2}\\right)$ 的简单随机样本. 记\r\n\r\n$\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\quad S^{2}=\\frac{1}{n-1} \\sum_{i=1}^{n}\\left(X_{i}-\\bar{X}\\right)^{2}, \\quad T=\\bar{X}^{2}-\\frac{1}{n} S^{2}$\r\n\r\n(1) 证明: $T$ 是 $\\mu^{2}$ 的无偏估计量;\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, 求 $D(T)$",
-      "options": {},
-      "answer": "(2) $\\dfrac{2}{n(n-1)}$",
-      "analysis": "(1) 由 $\\bar{X} \\sim N\\left(\\mu, \\dfrac{\\sigma^2}{n}\\right)$, \r\n\r\n得 $\\displaystyle E\\left(\\bar{X}^2\\right)=D(\\bar{X})+[E(\\bar{X})]^2=\\frac{\\sigma^2}{n}+\\mu^2$,\r\n\r\n再由 $E\\left(S^2\\right)=\\sigma^2$, \r\n\r\n得 $\\displaystyle E(T)=E\\left(\\bar{X}^2\\right)-\\frac{1}{n} E\\left(S^2\\right)=\\frac{\\sigma^2}{n}+\\mu^2-\\frac{\\sigma^2}{n}=\\mu^2$. \r\n\r\n于是 $T=\\bar{X}^2-\\dfrac{1}{n} S^2$ 为 $\\mu^2$ 的无偏估计量\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, $\\bar{X} \\sim N\\left(0, \\dfrac{1}{n}\\right)$, \r\n\r\n标准化得 $\\sqrt{n} \\bar{X} \\sim N(0,1)$, \r\n\r\n于是 $n \\bar{X}^2 \\sim \\chi^2(1)$. \r\n\r\n又 $\\displaystyle \\frac{(n-1) S^2}{\\sigma^2}=(n-1) S^2 \\sim \\chi^2(n-1)$, \r\n\r\n且 $\\bar{X}$ 与 $S^2$ 独立, 得\r\n\r\n$\\displaystyle D(T)  =D\\left(\\bar{X}^2\\right)+\\frac{1}{n^2} D\\left(S^2\\right)\\\\\r\n=\\frac{1}{n^2} D\\left(n \\bar{X}^2\\right)+\\frac{1}{n^2(n-1)^2} D\\left[(n-1) S^2\\right] \\\\\r\n =\\frac{2}{n^2}+\\frac{2(n-1)}{n^2(n-1)^2}\\\\\r\n=\\frac{2}{n^2}+\\frac{2}{n^2(n-1)}=\\frac{2}{n(n-1)}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "E(X̄²)=D(X̄)+(EX̄)²=σ²/n+μ²，E(S²)=σ² ⇒ E(T)=μ²（无偏）",
-        "μ=0,σ=1 时 nX̄²~χ²(1)、(n-1)S²~χ²(n-1) 且独立，D(T)=2/(n(n-1))"
-      ],
-      "key_point": "E(T)=μ² 证无偏；用 χ² 分布方差与独立性得 D(T)=2/(n(n-1))。"
-    },
-    {
-      "id": 767,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "如图所示, 曲线段的方程为 $y=f(x)$, 函数 $f(x)$ 在区间 $[0, a]$ 上有连续的导数, 则定积分 $\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 等于 $(\\quad)$\n\n![曲线段 y=f(x) 与矩形 OBAC](assets/figures/ad3ebc4e9c2d40c745d3211478189ef8b8923674f023ad5417ea6a26c11f5185.png)",
-      "options": {
-        "A": "曲边梯形 $A B O D$ 的面积",
-        "B": "梯形 $A B O D$ 的面积",
-        "C": "曲边三角形 $A C D$ 的面积",
-        "D": "三角形 $A C D$ 的面积"
-      },
-      "answer": "C",
-      "analysis": "由分部积分公式得\r\n$\\displaystyle \\int_0^a x f^{\\prime}(x) \\mathrm{d} x\\\\\r\n=\\int_0^a x \\mathrm{d} f(x)\\\\\r\n=\\left.x f(x)\\right|_0 ^a-\\int_0^a f(x) \\mathrm{d} x\\\\\r\n=a f(a)-\\int_0^a f(x) \\mathrm{d} x$,\r\n\r\n因为 $a f(a)$ 为矩形 $O B A C$ 的面积, $\\int_0^a f(x) \\mathrm{d} x$ 为曲边梯形 $O B A D$ 的面积,\r\n\r\n所以 $\\int_0^a x f^{\\prime}(x) \\mathrm{d} x$ 表示曲边三角形 $A C D$ 的面积, 应选 (C)",
-      "wrong_options": {
-        "A": "把结果误认成曲边梯形 ABOD，混淆了‘矩形减曲边梯形’得到的图形归属",
-        "B": "把结果当成直边梯形 ABOD，既错图形又把曲边当直边",
-        "D": "图形归属对了（ACD）但把曲边三角形当成直边三角形，忽略 AD 是曲线段"
-      },
-      "pitfalls": [
-        "分部积分边界项 xf(x)|₀ᵃ 下限 x=0 处为0，只剩 af(a)，别把它整体漏写",
-        "af(a) 是矩形、∫₀ᵃf 是曲边梯形，二者之差是带一条曲边的三角形 ACD，不是直边三角形（排除D）"
-      ],
-      "key_point": "∫₀ᵃxf′dx=af(a)−∫₀ᵃf(x)dx=矩形OBAC−曲边梯形OBAD=曲边三角形ACD。"
-    },
-    {
-      "id": 769,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f$ 连续. 若 $\\displaystyle F(u, v)=\\iint\\limits_{D_{u v}} \\frac{f\\left(x^2+y^2\\right)}{\\sqrt{x^2+y^2}} \\mathrm{d} x \\mathrm{d} y$, 其中区域 $D_{u v}$ 为图中阴影部分, 则 $\\dfrac{\\partial F}{\\partial u}=(\\quad)$\n\n![积分区域 Duv](assets/figures/adb38d99a3e4fc4d31f3c1cde0e685e5e5c914c5f88e5e69118e037ae1612adb.jpg)",
-      "options": {
-        "A": "$v f\\left(u^2\\right)$",
-        "B": "$\\dfrac{v}{u} f\\left(u^2\\right)$",
-        "C": "$v f(u)$",
-        "D": "$\\dfrac{v}{u} f(u)$"
-      },
-      "answer": "A",
-      "analysis": "令 $\\left\\{\\begin{array}{l}x=r \\cos \\theta \\\\ y=r \\sin \\theta\\end{array}\\right.$, \r\n\r\n则 $\\displaystyle D_{u v}=\\{(r, \\theta) \\mid 0 \\leqslant \\theta \\leqslant v, 1 \\leqslant r \\leqslant u\\},\\\\ \r\n F(u, v)=\\int_0^v \\mathrm{d} \\theta \\int_1^u \\frac{r f\\left(r^2\\right)}{r} \\mathrm{d} r=v \\int_1^u f\\left(r^2\\right) \\mathrm{d} r$, \r\n\r\n于是 $\\dfrac{\\partial F}{\\partial u}=v f\\left(u^2\\right)$, 应选 (A)",
-      "wrong_options": {
-        "B": "多留了 1/u：把 rdrdθ 的 r 没和分母 √=r 约干净，凑出 (v/u)f(u²)",
-        "C": "把被积 f(r²) 误当 f(r)，对上限求导得 f(u) 而非 f(u²)",
-        "D": "既漏约 r 又把 f(r²) 当 f(r)，两错叠加得 (v/u)f(u)"
-      },
-      "pitfalls": [
-        "极坐标下 dxdy=r drdθ，其中 r 恰与被积分母 √(x²+y²)=r 约掉，剩下 f(r²) drdθ，别残留 1/u",
-        "被积函数是 f(r²)，对上限 u 求导得 f(u²) 不是 f(u)"
-      ],
-      "key_point": "F(u,v)=v∫₁ᵘf(r²)dr，故 ∂F/∂u=v·f(u²)，选A。"
-    },
-    {
-      "id": 770,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}=\\left(\\begin{array}{ll}1 & 2 \\\\ 2 & 1\\end{array}\\right)$, 则在实数域上与 $\\boldsymbol{A}$ 合同的矩阵为 $(\\quad)$",
-      "options": {
-        "A": "$\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$",
-        "B": "$\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$",
-        "C": "$\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$",
-        "D": "$\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$"
-      },
-      "answer": "D",
-      "analysis": "方法一 合同矩阵的行列式同号, 排除选项 (A) (B) (C)\r\n\r\n方法二 由 $|\\lambda \\boldsymbol{E}-\\boldsymbol{A}|=\\left|\\begin{array}{cc}\\lambda-1 & -2 \\\\ -2 & \\lambda-1\\end{array}\\right|=\\lambda^2-2 \\lambda-3=0$, \r\n\r\n得 $\\lambda_1=-1, \\lambda_2=3$, 即 $\\boldsymbol{A}$ 的正、负惯性指数都是 $1$ \r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda+2 & -1 \\\\ -1 & \\lambda+2\\end{array}\\right|=\\lambda^2+4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$ 的特征值为 $\\lambda_1=-1, \\lambda_2=-3$,\r\n\r\n$\\left(\\begin{array}{cc}-2 & 1 \\\\ 1 & -2\\end{array}\\right)$ 的正惯性指数为 $0$ , \r\n\r\n负惯性指数为 $2$ , 不与 $\\boldsymbol{A}$ 合同\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-2 & 1 \\\\ 1 & \\lambda-2\\end{array}\\right|=\\lambda^2-4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$ 的特征值为 $\\lambda_1=1, \\lambda_2=3$,\r\n\r\n$\\left(\\begin{array}{cc}2 & -1 \\\\ -1 & 2\\end{array}\\right)$ 的正惯性指数为 $2$ , \r\n\r\n负惯性指数为 $0$ , 不与 $\\boldsymbol{A}$ 合同;\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-2 & -1 \\\\ -1 & \\lambda-2\\end{array}\\right|=\\lambda^2-4 \\lambda+3=0$, \r\n\r\n得 $\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$ 的特征值为 $\\lambda_1=1, \\lambda_2=3$,\r\n$\\left(\\begin{array}{ll}2 & 1 \\\\ 1 & 2\\end{array}\\right)$ 的正惯性指数为 $2$ , \r\n\r\n负惯性指数为 $0$ , 不与 $\\boldsymbol{A}$ 合同;\r\n\r\n- 由 $\\left|\\begin{array}{cc}\\lambda-1 & 2 \\\\ 2 & \\lambda-1\\end{array}\\right|=\\lambda^2-2 \\lambda-3=0$, \r\n\r\n得 $\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$ 的特征值为 $\\lambda_1=-1, \\lambda_2=3$,\r\n\r\n$\\left(\\begin{array}{cc}1 & -2 \\\\ -2 & 1\\end{array}\\right)$ 的正、负惯性指数都是 $1$ , 与 $\\boldsymbol{A}$ 合同, 应选 (D)",
-      "wrong_options": {
-        "A": "该矩阵特征值 −1、−3，正负惯性指数为(0,2)负定，与 A 的(1,1)不同",
-        "B": "该矩阵特征值 1、3，正负惯性指数为(2,0)正定，与 A 的(1,1)不同",
-        "C": "该矩阵特征值 1、3，正负惯性指数为(2,0)正定，与 A 的(1,1)不同"
-      },
-      "pitfalls": [
-        "合同不是相似，判据是正负惯性指数（符号差）相同，不要求特征值相等",
-        "必要条件之一是行列式同号：A 的行列式为 −3，可先排除行列式为正的 A、B、C，只剩 D"
-      ],
-      "key_point": "A 特征值 −1、3，正负惯性指数各1；只有 D 同为(1,1)且行列式 −3 同号，故与 A 合同。"
-    },
-    {
-      "id": 777,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "计算 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant 2\\}$",
-      "options": {},
-      "answer": "$\\dfrac{19}{4}+\\ln 2$",
-      "analysis": "方法一 令 $\\displaystyle D_1=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2, \\frac{1}{x} \\leqslant y \\leqslant 2\\right\\}, D_2=D-D_1$, \r\n\r\n则 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2} \\mathrm{d} x \\mathrm{d} y \\stackrel{\\Delta}{=} I_1+I_2, \\\\\r\nI_1=\\int_{\\frac{1}{2}}^2 x \\mathrm{d} x \\int_{\\frac{1}{x}}^2 y \\mathrm{d} y=\\frac{1}{2} \\int_{\\frac{1}{2}}^2 x\\left(4-\\frac{1}{x^2}\\right) \\mathrm{d} x \\\\\r\n=\\frac{1}{2} \\int_{\\frac{1}{2}}^2\\left(4 x-\\frac{1}{x}\\right) \\mathrm{d} x=\\frac{15}{4}-\\ln 2, \\\\\r\nI_2=4-\\iint\\limits_{D_1} \\mathrm{d} x \\mathrm{d} y=4-\\int_{\\frac{1}{2}}^2 \\mathrm{d} x \\int_{\\frac{1}{x}}^2 \\mathrm{d} y \\\\\r\n=4-\\int_{\\frac{1}{2}}^2\\left(2-\\frac{1}{x}\\right) \\mathrm{d} x=1+2 \\ln 2$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y=\\frac{19}{4}+\\ln 2$\r\n\r\n方法二 令 $\\displaystyle D_1=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2, \\frac{1}{x} \\leqslant y \\leqslant 2\\right\\},\\\\\r\nD_{21}=\\left\\{(x, y) \\mid 0 \\leqslant x \\leqslant \\frac{1}{2}, 0 \\leqslant y \\leqslant 2\\right\\},\\\\\r\nD_{22}=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant \\frac{1}{x}\\right\\}$,\r\n\r\n则 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_{21}} \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_{22}} \\mathrm{d} x \\mathrm{d} y\\\\\r\n\\stackrel{\\Delta}{=} I_1+I_2 + I_3$, \r\n\r\n而 $\\displaystyle I_1=\\int_{\\frac{1}{2}}^2 x \\mathrm{d} x \\int_{\\frac{1}{x}}^2 y \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_{\\frac{1}{2}}^2\\left(4 x-\\frac{1}{x}\\right) \\mathrm{d} x=\\frac{15}{4}-\\ln 2, \\\\\r\nI_2=1,\\\\\r\nI_3=\\int_{\\frac{1}{2}}^2 \\mathrm{d} x \\int_0^{\\frac{1}{x}} \\mathrm{d} y=\\int_{\\frac{1}{2}}^2 \\frac{1}{x} \\mathrm{d} x=2 \\ln 2$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y=\\frac{19}{4}+\\ln 2$",
-      "wrong_options": {},
-      "pitfalls": [
-        "分界曲线 xy=1（y=1/x）只在 x∈[1/2,2] 才穿过 D，x<1/2 时整列 y∈[0,2] 都满足 xy<1，分区域边界别写错",
-        "max{xy,1} 取较大者：xy≥1 的区域积 xy，其余区域积 1，两者不要搞反"
-      ],
-      "key_point": "以 xy=1 分区域，∬=∬_{xy≥1}xy+∬_{xy<1}1=19/4+ln2。"
-    },
-    {
-      "id": 780,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的分别属于特征值 $-1,1$ 的特征向量, 向量 $\\boldsymbol{\\alpha}_3$ 满足 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$\r\n\r\n(1) 证明: $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关;\r\n\r\n(2) 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$",
-      "options": {},
-      "answer": "$\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-      "analysis": "(1) 方法一 定义法\r\n由已知条件得 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=-\\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2$,\r\n\r\n令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3=\\mathbf{0} \\quad \\textcircled{1}$,\r\n\r\n等式两边左乘 $\\boldsymbol{A}$ 得 $k_1 \\boldsymbol{A} \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A} \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\mathbf{0}$, \r\n\r\n整理得\r\n$-k_1 \\boldsymbol{\\alpha}_1+\\left(k_2+k_3\\right) \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3=\\mathbf{0} \\quad \\textcircled{2}$,\r\n\r\n由 $\\textcircled{1} - \\textcircled{2}$ 得 $2 k_1 \\boldsymbol{\\alpha}_1-k_3 \\boldsymbol{\\alpha}_2=\\mathbf{0}$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 是属于不同特征值的特征向量, 所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n于是 $k_1=k_3=0$, 代入 $\\textcircled{1}$ 得 $k_2=0$, 故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关\r\n\r\n方法二 反证法\r\n设 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 是属于不同特征值的特征向量, 所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n于是 $\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性表示, \r\n\r\n不妨设 $\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$.\r\n\r\n$\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$ 两边左乘 $\\boldsymbol{A}$, \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=-\\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2$ 得 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=-l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$,\r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$ 得 $\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3=-l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$.\r\n\r\n将 $\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$ 代入上式得 $2 l_1 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=\\mathbf{0}$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性相关, 矛盾, 故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关\r\n\r\n(2) 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关, 所以 $\\boldsymbol{P}$ 可逆,\r\n\r\n$\\boldsymbol{A P}=\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\boldsymbol{A} \\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\left(-\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\boldsymbol{P}\\left(\\begin{array}{ccc}\r\n-1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
-      "wrong_options": {},
-      "pitfalls": [
-        "(1)证无关时左乘 A 后利用 Aα₃=α₂+α₃ 产生 α₂ 项，再与原式相减消去 α₃；不能直接套‘不同特征值特征向量无关’（α₃ 不是特征向量）",
-        "(2)P⁻¹AP 不是对角阵：因 α₃ 不是特征向量，Aα₃=α₂+α₃ 使第三列出现1（约当型），别强行对角化"
-      ],
-      "key_point": "α₁,α₂,α₃ 线性无关，P⁻¹AP 为含约当块的 [[−1,0,0],[0,1,1],[0,0,1]]。"
-    },
-    {
-      "id": 781,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在区间 $[-1,1]$ 上连续, 则 $x=0$ 是函数 $g(x)=\\dfrac{\\int_0^x f(t) \\mathrm{d} t}{x}$ 的 $(\\quad)$",
-      "options": {
-        "A": "跳跃间断点",
-        "B": "可去间断点",
-        "C": "无穷间断点",
-        "D": "振荡间断点"
-      },
-      "answer": "B",
-      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{\\int_0^x f(t) \\mathrm{d} t}{x}=\\lim _{x \\rightarrow 0} f(x)=f(0)$,\r\n\r\n所以 $x=0$ 为 $g(x)$ 的可去间断点, 应选 (B)",
-      "wrong_options": {
-        "A": "跳跃间断需左右极限存在但不相等，此处左右极限都等于 f(0)",
-        "C": "无穷间断需极限为 ∞，此处极限有限",
-        "D": "振荡间断需极限不存在且振荡，此处极限存在"
-      },
-      "pitfalls": [
-        "极限存在且有限（等于 f(0)）⇒可去间断点",
-        "用洛必达或变限积分求导得极限为 f(0)，不是无穷"
-      ],
-      "key_point": "lim g(x)=f(0) 有限，x=0 为可去间断点，选 B。"
-    },
-    {
-      "id": 782,
-      "paper": "数学三",
-      "year": 2008,
-      "index": 3,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知 $f(x, y)=\\mathrm{e}^{\\sqrt{x^2+y^4}}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$f_x^{\\prime}(0,0), f_y^{\\prime}(0,0)$ 都存在",
-        "B": "$f_x^{\\prime}(0,0)$ 不存在, $f_y^{\\prime}(0,0)$ 存在",
-        "C": "$f_x^{\\prime}(0,0)$ 存在, $f_y^{\\prime}(0,0)$ 不存在",
-        "D": "$f_x^{\\prime}(0,0), f_y^{\\prime}(0,0)$ 都不存在"
-      },
-      "answer": "B",
-      "analysis": "因为 $\\displaystyle \\lim _{x \\rightarrow 0} \\frac{f(x, 0)-f(0,0)}{x}=\\lim _{x \\rightarrow 0} \\frac{\\mathrm{e}^{|x|}-1}{x}$ 不存在, \r\n\r\n所以 $f_x^{\\prime}(0,0)$ 不存在,\r\n\r\n又因为 $\\displaystyle \\lim _{y \\rightarrow 0} \\frac{f(0, y)-f(0,0)}{y}=\\lim _{y \\rightarrow 0} \\frac{\\mathrm{e}^{y^2}-1}{y}=0$, \r\n\r\n所以 $f_y^{\\prime}(0,0)=0$, 应选 (B)",
-      "wrong_options": {
-        "A": "f_x'(0,0) 因 √(x²)=|x| 带绝对值，左右导数不等，不存在",
-        "C": "把 x、y 两个偏导的存在性判反",
-        "D": "f_y'(0,0) 实际存在且为 0"
-      },
-      "pitfalls": [
-        "√(x²+y⁴) 在 x 方向为 |x|，(e^{|x|}−1)/x 左右极限 ∓1，偏导不存在",
-        "y 方向为 e^{y²}，(e^{y²}−1)/y→0，偏导存在"
-      ],
-      "key_point": "f_x'(0,0) 不存在、f_y'(0,0)=0，选 B。"
-    },
-    {
       "id": 783,
       "paper": "数学三",
       "year": 2008,
@@ -399,6 +274,23 @@
       "key_point": "∬(x²−y)=∬x²=π/4。"
     },
     {
+      "id": 751,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 12,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "微分方程 $x y^{\\prime}+y=0$ 满足条件 $y(1)=1$ 的解是 $y=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{x}$",
+      "analysis": "方法一 由 $x y^{\\prime}+y=0$, \r\n\r\n得 $\\dfrac{\\mathrm{d} y}{\\mathrm{d} x}+\\dfrac{1}{x} y=0$, \r\n\r\n解得 $y=C \\mathrm{e}^{-\\int \\frac{1}{x} \\mathrm{d} x}=\\dfrac{C}{x}$,\r\n\r\n由 $y(1)=1$, 得 $C=1$, 于是 $y=\\dfrac{1}{x}$\r\n\r\n方法二 由 $x y^{\\prime}+y=0$, 得 $(x y)^{\\prime}=0$, 即 $x y=C$,\r\n\r\n再由 $y(1)=1$, 得 $C=1$, 故所求的特解为 $y=\\dfrac{1}{x}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "解出通解 y=C/x 后须代初值 y(1)=1 定 C=1，漏代只得含 C 的通解不得分"
+      ],
+      "key_point": "xy'+y=(xy)'=0 ⇒ xy=C，由 y(1)=1 得 y=1/x。"
+    },
+    {
       "id": 786,
       "paper": "数学三",
       "year": 2008,
@@ -415,6 +307,24 @@
         "4A^{−1}−E 的特征值为 4λ⁻¹−1，即 3、1、1，乘积为行列式 3"
       ],
       "key_point": "|4A^{−1}−E|=3·1·1=3。"
+    },
+    {
+      "id": 756,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 14,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 服从参数为 $1$ 的泊松分布, 则 $P\\left\\{X=E\\left(X^{2}\\right)\\right\\}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\dfrac{1}{2 \\mathrm{e}}$",
+      "analysis": "由 $X \\sim P(1)$ 得 $E(X)=D(X)=1$, \r\n\r\n从而 $E\\left(X^2\\right)=D(X)+(E X)^2=2$, \r\n\r\n于是 $P\\left\\{X=E\\left(X^2\\right)\\right\\}=P\\{X=2\\}=\\dfrac{1^2}{2 !} \\cdot \\mathrm{e}^{-1}=\\dfrac{1}{2 \\mathrm{e}}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "泊松 E(X)=D(X)=λ=1 ⇒ E(X²)=D+E²=2（不是 1）",
+        "P{X=2}=λ²/2!·e^{-λ}=1/(2e)"
+      ],
+      "key_point": "P(1)：E(X²)=D+E²=2，P{X=2}=1/(2e)。"
     },
     {
       "id": 787,
@@ -453,22 +363,22 @@
       "key_point": "dz 如上；∂u/∂x=−2(1+2x)φ''/(1+φ')³。"
     },
     {
-      "id": 789,
+      "id": 777,
       "paper": "数学三",
       "year": 2008,
-      "index": 19,
+      "index": 17,
       "type": "解答题",
       "difficulty": 0,
-      "stem": "设银行存款的年利率为 $r=0.05$, 并依年复利计算, 某基金会希望通过存款 $A$ 万元实现第一年提取 $19$ 万元, 第二年提取 $28$ 万元, $\\cdots \\cdots$, 第 $n$ 年提取 $(10+9 n)$ 万元, 并能按此规律一直提取下去, 问 $A$ 至少应为多少万元",
+      "stem": "计算 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y$, 其中 $D=\\{(x, y) \\mid 0 \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant 2\\}$",
       "options": {},
-      "answer": "A≥3980 万元",
-      "analysis": "由题意得\r\n\r\n$A \\geqslant 19(1+r)^{-1}+28(1+r)^{-2}+\\cdots+(10+9 n)(1+r)^{-n}+\\cdots$,\r\n\r\n而 $19(1+r)^{-1}+28(1+r)^{-2}+\\cdots+(10+9 n)(1+r)^{-n}+\\cdots\\\\\r\n=10 \\sum_{n=1}^{\\infty}\\left(\\frac{1}{1+r}\\right)^n+9 \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^n \\\\\r\n=10 \\frac{\\frac{1}{1+r}}{1-\\frac{1}{1+r}}+\\frac{9}{1+r} \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1} \\\\\r\n=\\frac{10}{r}+\\frac{9}{1+r} \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1}$,\r\n\r\n令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty} n x^{n-1} \\quad(-1<x<1)$,\r\n\r\n则 $\\displaystyle S(x)=\\left(\\sum_{n=1}^{\\infty} x^n\\right)^{\\prime}\\\\\r\n=\\left(\\frac{x}{1-x}\\right)^{\\prime}=\\frac{1}{(1-x)^2}$,\r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1}\\\\\r\n=S\\left(\\frac{1}{1+r}\\right)=\\frac{(1+r)^2}{r^2}$, \r\n\r\n于是 $\\displaystyle A \\geqslant \\frac{10}{r}+\\frac{9(1+r)}{r^2}=3980$ (万元)",
+      "answer": "$\\dfrac{19}{4}+\\ln 2$",
+      "analysis": "方法一 令 $\\displaystyle D_1=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2, \\frac{1}{x} \\leqslant y \\leqslant 2\\right\\}, D_2=D-D_1$, \r\n\r\n则 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_2} \\mathrm{d} x \\mathrm{d} y \\stackrel{\\Delta}{=} I_1+I_2, \\\\\r\nI_1=\\int_{\\frac{1}{2}}^2 x \\mathrm{d} x \\int_{\\frac{1}{x}}^2 y \\mathrm{d} y=\\frac{1}{2} \\int_{\\frac{1}{2}}^2 x\\left(4-\\frac{1}{x^2}\\right) \\mathrm{d} x \\\\\r\n=\\frac{1}{2} \\int_{\\frac{1}{2}}^2\\left(4 x-\\frac{1}{x}\\right) \\mathrm{d} x=\\frac{15}{4}-\\ln 2, \\\\\r\nI_2=4-\\iint\\limits_{D_1} \\mathrm{d} x \\mathrm{d} y=4-\\int_{\\frac{1}{2}}^2 \\mathrm{d} x \\int_{\\frac{1}{x}}^2 \\mathrm{d} y \\\\\r\n=4-\\int_{\\frac{1}{2}}^2\\left(2-\\frac{1}{x}\\right) \\mathrm{d} x=1+2 \\ln 2$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y=\\frac{19}{4}+\\ln 2$\r\n\r\n方法二 令 $\\displaystyle D_1=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2, \\frac{1}{x} \\leqslant y \\leqslant 2\\right\\},\\\\\r\nD_{21}=\\left\\{(x, y) \\mid 0 \\leqslant x \\leqslant \\frac{1}{2}, 0 \\leqslant y \\leqslant 2\\right\\},\\\\\r\nD_{22}=\\left\\{(x, y) \\mid \\frac{1}{2} \\leqslant x \\leqslant 2,0 \\leqslant y \\leqslant \\frac{1}{x}\\right\\}$,\r\n\r\n则 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y\\\\\r\n=\\iint\\limits_{D_1} x y \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_{21}} \\mathrm{d} x \\mathrm{d} y+\\iint\\limits_{D_{22}} \\mathrm{d} x \\mathrm{d} y\\\\\r\n\\stackrel{\\Delta}{=} I_1+I_2 + I_3$, \r\n\r\n而 $\\displaystyle I_1=\\int_{\\frac{1}{2}}^2 x \\mathrm{d} x \\int_{\\frac{1}{x}}^2 y \\mathrm{d} y\\\\\r\n=\\frac{1}{2} \\int_{\\frac{1}{2}}^2\\left(4 x-\\frac{1}{x}\\right) \\mathrm{d} x=\\frac{15}{4}-\\ln 2, \\\\\r\nI_2=1,\\\\\r\nI_3=\\int_{\\frac{1}{2}}^2 \\mathrm{d} x \\int_0^{\\frac{1}{x}} \\mathrm{d} y=\\int_{\\frac{1}{2}}^2 \\frac{1}{x} \\mathrm{d} x=2 \\ln 2$,\r\n\r\n于是 $\\displaystyle \\iint\\limits_D \\max \\{x y, 1\\} \\mathrm{d} x \\mathrm{d} y=\\frac{19}{4}+\\ln 2$",
       "wrong_options": {},
       "pitfalls": [
-        "第 n 年提取 (10+9n) 的现值为 (10+9n)(1+r)^{−n}，拆成 10Σq^n+9Σnq^n",
-        "Σn x^{n−1}=(Σx^n)'=1/(1−x)²，代 x=1/(1+r) 得 (1+r)²/r²"
+        "分界曲线 xy=1（y=1/x）只在 x∈[1/2,2] 才穿过 D，x<1/2 时整列 y∈[0,2] 都满足 xy<1，分区域边界别写错",
+        "max{xy,1} 取较大者：xy≥1 的区域积 xy，其余区域积 1，两者不要搞反"
       ],
-      "key_point": "A=10/r+9(1+r)/r²=200+3780=3980（万元）。"
+      "key_point": "以 xy=1 分区域，∬=∬_{xy≥1}xy+∬_{xy<1}1=19/4+ln2。"
     },
     {
       "id": 790,
@@ -487,6 +397,96 @@
         "(2) 由 (1) 知 ∫_t^{t+2}f 为常数，被积函数周期为 2，一个周期积分为 0⇒G(x+2)=G(x)"
       ],
       "key_point": "∫_t^{t+2}f=∫₀²f（周期性）；G 的增量在一个周期上为 0，故 G 周期为 2。"
+    },
+    {
+      "id": 789,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 19,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设银行存款的年利率为 $r=0.05$, 并依年复利计算, 某基金会希望通过存款 $A$ 万元实现第一年提取 $19$ 万元, 第二年提取 $28$ 万元, $\\cdots \\cdots$, 第 $n$ 年提取 $(10+9 n)$ 万元, 并能按此规律一直提取下去, 问 $A$ 至少应为多少万元",
+      "options": {},
+      "answer": "A≥3980 万元",
+      "analysis": "由题意得\r\n\r\n$A \\geqslant 19(1+r)^{-1}+28(1+r)^{-2}+\\cdots+(10+9 n)(1+r)^{-n}+\\cdots$,\r\n\r\n而 $19(1+r)^{-1}+28(1+r)^{-2}+\\cdots+(10+9 n)(1+r)^{-n}+\\cdots\\\\\r\n=10 \\sum_{n=1}^{\\infty}\\left(\\frac{1}{1+r}\\right)^n+9 \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^n \\\\\r\n=10 \\frac{\\frac{1}{1+r}}{1-\\frac{1}{1+r}}+\\frac{9}{1+r} \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1} \\\\\r\n=\\frac{10}{r}+\\frac{9}{1+r} \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1}$,\r\n\r\n令 $\\displaystyle S(x)=\\sum_{n=1}^{\\infty} n x^{n-1} \\quad(-1<x<1)$,\r\n\r\n则 $\\displaystyle S(x)=\\left(\\sum_{n=1}^{\\infty} x^n\\right)^{\\prime}\\\\\r\n=\\left(\\frac{x}{1-x}\\right)^{\\prime}=\\frac{1}{(1-x)^2}$,\r\n\r\n所以 $\\displaystyle \\sum_{n=1}^{\\infty} n\\left(\\frac{1}{1+r}\\right)^{n-1}\\\\\r\n=S\\left(\\frac{1}{1+r}\\right)=\\frac{(1+r)^2}{r^2}$, \r\n\r\n于是 $\\displaystyle A \\geqslant \\frac{10}{r}+\\frac{9(1+r)}{r^2}=3980$ (万元)",
+      "wrong_options": {},
+      "pitfalls": [
+        "第 n 年提取 (10+9n) 的现值为 (10+9n)(1+r)^{−n}，拆成 10Σq^n+9Σnq^n",
+        "Σn x^{n−1}=(Σx^n)'=1/(1−x)²，代 x=1/(1+r) 得 (1+r)²/r²"
+      ],
+      "key_point": "A=10/r+9(1+r)/r²=200+3780=3980（万元）。"
+    },
+    {
+      "id": 763,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 20,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $n$ 元线性方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$, 其中\r\n\r\n$$\r\n\\boldsymbol{A}=\\left(\\begin{array}{cccccc}\r\n2 a & 1 & & & & \\\\\r\na^{2} & 2 a & 1 & & & \\\\\r\n& a^{2} & 2 a & 1 & & \\\\\r\n& & \\ddots & \\ddots & \\ddots & \\\\\r\n& & & a^{2} & 2 a & 1 \\\\\r\n& & & & a^{2} & 2 a\r\n\\end{array}\\right)_{n \\times n}, \\boldsymbol{x}=\\left(\\begin{array}{c}\r\nx_{1} \\\\\r\nx_{2} \\\\\r\n\\vdots \\\\\r\nx_{n}\r\n\\end{array}\\right), \\boldsymbol{b}=\\left(\\begin{array}{c}\r\n1 \\\\\r\n0 \\\\\r\n\\vdots \\\\\r\n0\r\n\\end{array}\\right)\r\n$$\r\n\r\n(1) 证明 : 行列式 $|\\boldsymbol{A}|=(n+1) a^{n}$;\r\n\r\n(2) 当 $a$ 为何值时, 该方程组有唯一解, 并求 $x_{1}$;\r\n\r\n(3) 当 $a$ 为何值时, 该方程组有无穷多解, 并求通解",
+      "options": {},
+      "answer": "(1) $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n(2) $a \\neq 0$ 时, 方程组有唯一解, $x_1=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) $a=0$ 时, 方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解, 通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "analysis": "(1) 方法一 数学归纳法\r\n\r\n当 $n=1$ 时, $|\\boldsymbol{A}|=D_1=2 a$, 结论显然成立;\r\n\r\n设当 $n=k$ 时, $|\\boldsymbol{A}|=D_k=(k+1) a^k$;\r\n\r\n当$n=k+1$ 时,\r\n\r\n$|\\boldsymbol{A}|=D_{k+1}=2 a D_k-a^2 D_{k-1}=2 a(k+1) a^k-k a^{k+1} \\\\\r\n=2(k+1) a^{k+1}-k a^{k+1}=(k+2) a^{k+1}$\r\n\r\n由数学归纳法, 对一切的自然数 $n$, 有 $|\\boldsymbol{A}|=(n+1) a^n$\r\n\r\n方法二 $|\\boldsymbol{A}|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ a^2 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|\\\\\r\n=\\left|\\begin{array}{ccccc}2 a & 1 & 0 & \\cdots & 0 \\\\ 0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=\\cdots\\\\\r\n=\\left|\\begin{array}{ccccc}\r\n2 a & 1 & 0 & \\cdots & 0 \\\\\r\n0 & \\frac{3 a}{2} & 1 & \\cdots & 0 \\\\\r\n0 & 0 & \\frac{4 a}{3} & \\cdots & 0 \\\\\r\n\\vdots & \\vdots & \\vdots & & \\vdots \\\\\r\n0 & 0 & 0 & \\cdots & 1 \\\\\r\n0 & 0 & 0 & \\cdots & \\frac{(n+1) a}{n}\r\n\\end{array}\\right|=(n+1) a^n$\r\n\r\n方法三 \r\n\r\n令 $D_n=|\\boldsymbol{A}|$, 将 $D_n$ 按第一列展开, \r\n\r\n得 $D_n=2 a D_{n-1}-a^2 D_{n-2}$,\r\n\r\n从而 $D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)$, 由递推关系得\r\n\r\n$D_n-a D_{n-1}=a\\left(D_{n-1}-a D_{n-2}\\right)=\\cdots=a^{n-2}\\left(D_2-a D_1\\right)=a^n$,\r\n\r\n于是 $D_n=a D_{n-1}+a^n\\\\\r\n=a\\left(a D_{n-2}+a^{n-1}\\right)+a^n\\\\\r\n=a^2 D_{n-2}+2 a^n\\\\\r\n=\\cdots=a^{n-1} D_1+(n-1) a^n\\\\\r\n=(n+1) a^n$\r\n\r\n(2) 当 $r(\\boldsymbol{A})=n$ 或 $|\\boldsymbol{A}| \\neq 0$, \r\n\r\n即 $a \\neq 0$ 时, 方程组有唯一解,\r\n\r\n由 $\\widetilde{D}_1=\\left|\\begin{array}{ccccc}1 & 1 & 0 & \\cdots & 0 \\\\ 0 & 2 a & 1 & \\cdots & 0 \\\\ 0 & a^2 & 2 a & \\cdots & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 2 a\\end{array}\\right|=n a^{n-1}$, \r\n\r\n得 $x_1=\\dfrac{\\widetilde{D}_1}{|\\boldsymbol{A}|}=\\dfrac{n}{(n+1) a}$\r\n\r\n(3) 当 $r(\\boldsymbol{A})<n$ 或 $|\\boldsymbol{A}|=0$, 即 $a=0$ 时, \r\n\r\n方程组 $\\boldsymbol{Ax}=\\boldsymbol{b}$ 有无数个解,\r\n\r\n由 $\\overline{\\boldsymbol{A}}=\\left(\\begin{array}{ccccc:c}0 & 1 & 0 & \\cdots & 0 & 1 \\\\ 0 & 0 & 1 & \\cdots & 0 & 0 \\\\ \\vdots & \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & 0 & \\cdots & 1 & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 & 0\\end{array}\\right)$, \r\n\r\n得通解为 $\\boldsymbol{x}=C\\left(\\begin{array}{c}1 \\\\ 0 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)+\\left(\\begin{array}{c}0 \\\\ 1 \\\\ 0 \\\\ \\vdots \\\\ 0\\end{array}\\right)$ ( $C$ 为任意常数)",
+      "wrong_options": {},
+      "pitfalls": [
+        "三对角行列式按第一列展开得递推 D_n=2aD_{n-1}-a²D_{n-2}",
+        "a=0 时 A 幂零、r(A)=n-1，方程组有无穷多解"
+      ],
+      "key_point": "递推证 |A|=(n+1)aⁿ；a≠0 唯一解、a=0 无穷多解。"
+    },
+    {
+      "id": 780,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 21,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}$ 为 3 阶矩阵, $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的分别属于特征值 $-1,1$ 的特征向量, 向量 $\\boldsymbol{\\alpha}_3$ 满足 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$\r\n\r\n(1) 证明: $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关;\r\n\r\n(2) 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, 求 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}$",
+      "options": {},
+      "answer": "$\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+      "analysis": "(1) 方法一 定义法\r\n由已知条件得 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=-\\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2$,\r\n\r\n令 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3=\\mathbf{0} \\quad \\textcircled{1}$,\r\n\r\n等式两边左乘 $\\boldsymbol{A}$ 得 $k_1 \\boldsymbol{A} \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{A} \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\mathbf{0}$, \r\n\r\n整理得\r\n$-k_1 \\boldsymbol{\\alpha}_1+\\left(k_2+k_3\\right) \\boldsymbol{\\alpha}_2+k_3 \\boldsymbol{\\alpha}_3=\\mathbf{0} \\quad \\textcircled{2}$,\r\n\r\n由 $\\textcircled{1} - \\textcircled{2}$ 得 $2 k_1 \\boldsymbol{\\alpha}_1-k_3 \\boldsymbol{\\alpha}_2=\\mathbf{0}$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 是属于不同特征值的特征向量, 所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n于是 $k_1=k_3=0$, 代入 $\\textcircled{1}$ 得 $k_2=0$, 故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关\r\n\r\n方法二 反证法\r\n设 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性相关, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 是属于不同特征值的特征向量, 所以 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n于是 $\\boldsymbol{\\alpha}_3$ 可由 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性表示, \r\n\r\n不妨设 $\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$.\r\n\r\n$\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$ 两边左乘 $\\boldsymbol{A}$, \r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_1=-\\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_2$ 得 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=-l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$,\r\n\r\n由 $\\boldsymbol{A} \\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$ 得 $\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3=-l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$.\r\n\r\n将 $\\boldsymbol{\\alpha}_3=l_1 \\boldsymbol{\\alpha}_1+l_2 \\boldsymbol{\\alpha}_2$ 代入上式得 $2 l_1 \\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=\\mathbf{0}$, \r\n\r\n即 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性相关, 矛盾, 故 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关\r\n\r\n(2) 令 $\\boldsymbol{P}=\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3$ 线性无关, 所以 $\\boldsymbol{P}$ 可逆,\r\n\r\n$\\boldsymbol{A P}=\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\left(\\boldsymbol{A} \\boldsymbol{\\alpha}_1, \\boldsymbol{A} \\boldsymbol{\\alpha}_2, \\boldsymbol{A} \\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\left(-\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2, \\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3\\right)\\\\\r\n=\\boldsymbol{P}\\left(\\begin{array}{ccc}\r\n-1 & 0 & 0 \\\\\r\n0 & 1 & 1 \\\\\r\n0 & 0 & 1\r\n\\end{array}\\right)$,\r\n\r\n于是 $\\boldsymbol{P}^{-1} \\boldsymbol{A P}=\\left(\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1\\end{array}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(1)证无关时左乘 A 后利用 Aα₃=α₂+α₃ 产生 α₂ 项，再与原式相减消去 α₃；不能直接套‘不同特征值特征向量无关’（α₃ 不是特征向量）",
+        "(2)P⁻¹AP 不是对角阵：因 α₃ 不是特征向量，Aα₃=α₂+α₃ 使第三列出现1（约当型），别强行对角化"
+      ],
+      "key_point": "α₁,α₂,α₃ 线性无关，P⁻¹AP 为含约当块的 [[−1,0,0],[0,1,1],[0,0,1]]。"
+    },
+    {
+      "id": 764,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 与 $Y$ 相互独立, $X$ 的概率分布为 $P\\{X=i\\}=\\dfrac{1}{3}(i=-1,0,1), Y$ 的概率密度为 $f_{Y}(y)=\\left\\{\\begin{array}{ll}1, & 0 \\leqslant y<1 \\\\ 0, & \\text { 其他 }\\end{array}\\right.$ 记 $Z=X+Y$\r\n\r\n(1) 求 $P\\left\\{Z \\leqslant \\dfrac{1}{2} \\mid X=0\\right\\}$;\r\n\r\n(2) 求 $Z$ 的概率密度 $f_{Z}(z)$",
+      "options": {},
+      "answer": "(1) $\\dfrac{1}{2}$\r\n\r\n(2) $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "analysis": "(1) 因为随机变量 $X$ 与 $Y$ 相互独立, \r\n\r\n$\\displaystyle P\\left\\{Z \\leqslant \\frac{1}{2} \\mid X=0\\right\\}=P\\left\\{Y \\leqslant \\frac{1}{2}\\right\\}=\\int_0^{\\frac{1}{2}} 1 \\mathrm{d} y=\\frac{1}{2}$\r\n\r\n(2) $F_Z(z)=P\\{Z \\leqslant z\\}=P\\{X+Y \\leqslant z\\}$,\r\n\r\n当 $z<-1$ 时, $F_Z(z)=0$\r\n\r\n当 $z \\geqslant 2$ 时, $F_Z(z)=1$\r\n\r\n当 $-1 \\leqslant z<2$时,\r\n\r\n$\\displaystyle F_Z(z)=  P\\{X=-1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=-1\\}\\\\\r\n+P\\{X=0\\} \\cdot P\\{X+Y \\leqslant z \\mid X=0\\} \\\\\r\n+P\\{X=1\\} \\cdot P\\{X+Y \\leqslant z \\mid X=1\\} \\\\\r\n=  \\frac{1}{3} P\\{Y \\leqslant z+1\\}+\\frac{1}{3} P\\{Y \\leqslant z\\}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}$\r\n\r\n当 $-1 \\leqslant z<0$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3} P\\{Y \\leqslant z+1\\}=\\frac{1}{3} \\int_0^{z+1} \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $0 \\leqslant z<1$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{1}{3}+\\frac{1}{3} P\\{Y \\leqslant z\\}=\\frac{1}{3}+\\frac{1}{3} \\int_0^z \\mathrm{d} y=\\frac{1}{3}(z+1)$;\r\n\r\n当 $1 \\leqslant z<2$ 时, \r\n\r\n$\\displaystyle F_Z(z)=\\frac{2}{3}+\\frac{1}{3} P\\{Y \\leqslant z-1\\}\\\\\r\n=\\frac{2}{3}+\\frac{1}{3} \\int_0^{z-1} \\mathrm{d} y=\\frac{1}{3}(z+1)$,\r\n\r\n从而 $F_Z(z)= \\begin{cases}0, & z<-1 \\\\ \\dfrac{1}{3}(z+1), & -1 \\leqslant z<2 \\\\ 1, & z \\geqslant 2 \\end{cases}$\r\n\r\n故 $f_Z(z)= \\begin{cases}\\dfrac{1}{3}, & -1<z<2 \\\\ 0, & \\text { 其他 }\\end{cases}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X 与 Y 独立，P{Z≤1/2|X=0}=P{Y≤1/2}=1/2",
+        "Z=X+Y 在 [-1,0)、[0,1)、[1,2) 三段叠加，密度恒为 1/3，支撑 (-1,2)"
+      ],
+      "key_point": "独立离散+均匀之和：f_Z(z)=1/3 于 (-1,2)。"
+    },
+    {
+      "id": 765,
+      "paper": "数学三",
+      "year": 2008,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设 $X_{1}, X_{2}, \\cdots, X_{n}$ 是总体 $N\\left(\\mu, \\sigma^{2}\\right)$ 的简单随机样本. 记\r\n\r\n$\\displaystyle \\bar{X}=\\frac{1}{n} \\sum_{i=1}^{n} X_{i}, \\quad S^{2}=\\frac{1}{n-1} \\sum_{i=1}^{n}\\left(X_{i}-\\bar{X}\\right)^{2}, \\quad T=\\bar{X}^{2}-\\frac{1}{n} S^{2}$\r\n\r\n(1) 证明: $T$ 是 $\\mu^{2}$ 的无偏估计量;\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, 求 $D(T)$",
+      "options": {},
+      "answer": "(2) $\\dfrac{2}{n(n-1)}$",
+      "analysis": "(1) 由 $\\bar{X} \\sim N\\left(\\mu, \\dfrac{\\sigma^2}{n}\\right)$, \r\n\r\n得 $\\displaystyle E\\left(\\bar{X}^2\\right)=D(\\bar{X})+[E(\\bar{X})]^2=\\frac{\\sigma^2}{n}+\\mu^2$,\r\n\r\n再由 $E\\left(S^2\\right)=\\sigma^2$, \r\n\r\n得 $\\displaystyle E(T)=E\\left(\\bar{X}^2\\right)-\\frac{1}{n} E\\left(S^2\\right)=\\frac{\\sigma^2}{n}+\\mu^2-\\frac{\\sigma^2}{n}=\\mu^2$. \r\n\r\n于是 $T=\\bar{X}^2-\\dfrac{1}{n} S^2$ 为 $\\mu^2$ 的无偏估计量\r\n\r\n(2) 当 $\\mu=0, \\sigma=1$ 时, $\\bar{X} \\sim N\\left(0, \\dfrac{1}{n}\\right)$, \r\n\r\n标准化得 $\\sqrt{n} \\bar{X} \\sim N(0,1)$, \r\n\r\n于是 $n \\bar{X}^2 \\sim \\chi^2(1)$. \r\n\r\n又 $\\displaystyle \\frac{(n-1) S^2}{\\sigma^2}=(n-1) S^2 \\sim \\chi^2(n-1)$, \r\n\r\n且 $\\bar{X}$ 与 $S^2$ 独立, 得\r\n\r\n$\\displaystyle D(T)  =D\\left(\\bar{X}^2\\right)+\\frac{1}{n^2} D\\left(S^2\\right)\\\\\r\n=\\frac{1}{n^2} D\\left(n \\bar{X}^2\\right)+\\frac{1}{n^2(n-1)^2} D\\left[(n-1) S^2\\right] \\\\\r\n =\\frac{2}{n^2}+\\frac{2(n-1)}{n^2(n-1)^2}\\\\\r\n=\\frac{2}{n^2}+\\frac{2}{n^2(n-1)}=\\frac{2}{n(n-1)}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "E(X̄²)=D(X̄)+(EX̄)²=σ²/n+μ²，E(S²)=σ² ⇒ E(T)=μ²（无偏）",
+        "μ=0,σ=1 时 nX̄²~χ²(1)、(n-1)S²~χ²(n-1) 且独立，D(T)=2/(n(n-1))"
+      ],
+      "key_point": "E(T)=μ² 证无偏；用 χ² 分布方差与独立性得 D(T)=2/(n(n-1))。"
     }
   ]
 }

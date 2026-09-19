@@ -4,24 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 1145,
-      "paper": "数学二",
-      "year": 1993,
-      "index": 3,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "函数 $\\displaystyle F(x)=\\int_{1}^{x}\\left(2-\\frac{1}{\\sqrt{t}}\\right) \\mathrm{d} t(x>0)$ 的单调减区间为 $\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$\\left(0, \\dfrac{1}{4}\\right)$",
-      "analysis": "由 $\\displaystyle F^{\\prime}(x)=2-\\frac{1}{\\sqrt{x}}=0$ 得 $x=\\dfrac{1}{4}$, \r\n\r\n当 $0<x<\\dfrac{1}{4}$ 时 $F^{\\prime}(x)<0$, 故 $F(x)$ 的单调减区间为 $\\left(0, \\dfrac{1}{4}\\right)$",
-      "wrong_options": {},
-      "pitfalls": [
-        "定义域是 x>0，减区间左端点为 0 而非 -∞",
-        "F'(x)=2-1/√x，减区间对应 F'<0，即 0<x<1/4，端点开"
-      ],
-      "key_point": "F'(x)=2-1/√x，由 F'<0 得单调减区间 (0,1/4)。"
-    },
-    {
       "id": 1417,
       "paper": "数学二",
       "year": 1993,
@@ -56,6 +38,24 @@
         "$xy^2$ 对 x 求导用乘积法则得 $y^2+2xyy'$"
       ],
       "key_point": "整理含 $y'$ 项解出 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$。"
+    },
+    {
+      "id": 1145,
+      "paper": "数学二",
+      "year": 1993,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "函数 $\\displaystyle F(x)=\\int_{1}^{x}\\left(2-\\frac{1}{\\sqrt{t}}\\right) \\mathrm{d} t(x>0)$ 的单调减区间为 $\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$\\left(0, \\dfrac{1}{4}\\right)$",
+      "analysis": "由 $\\displaystyle F^{\\prime}(x)=2-\\frac{1}{\\sqrt{x}}=0$ 得 $x=\\dfrac{1}{4}$, \r\n\r\n当 $0<x<\\dfrac{1}{4}$ 时 $F^{\\prime}(x)<0$, 故 $F(x)$ 的单调减区间为 $\\left(0, \\dfrac{1}{4}\\right)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "定义域是 x>0，减区间左端点为 0 而非 -∞",
+        "F'(x)=2-1/√x，减区间对应 F'<0，即 0<x<1/4，端点开"
+      ],
+      "key_point": "F'(x)=2-1/√x，由 F'<0 得单调减区间 (0,1/4)。"
     },
     {
       "id": 1419,

@@ -4,60 +4,6 @@
   "count": 21,
   "questions": [
     {
-      "id": 1062,
-      "paper": "数学二",
-      "year": 1997,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设在区间 $[a, b]$ 上函数 $f(x)>0, f^{\\prime}(x)<0, f^{\\prime \\prime}(x)>0$\r\n令 $\\displaystyle S_{1}=\\int_{a}^{b} f(x) \\mathrm{d} x, S_{2}=f(b)(b-a), S_{3}=\\frac{1}{2}[f(a)+f(b)](b-a)$, 则 $(\\quad)$",
-      "options": {
-        "A": "$S_{1}<S_{2}<S_{3}$",
-        "B": "$S_{2}<S_{1}<S_{3}$",
-        "C": "$S_{3}<S_{1}<S_{2}$",
-        "D": "$S_{2}<S_{3}<S_{1}$"
-      },
-      "answer": "B",
-      "analysis": "由 $f^{\\prime}(x)<0$ 得 $f(x)$ 为单调减函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x>\\int_a^b f(b) \\mathrm{d} x=f(b)(b-a)=S_2$;\r\n\r\n再由 $f^{\\prime \\prime}(x)>0$ 得 $f(x)$ 为凹函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x<\\frac{1}{2}[f(a)+f(b)](b-a)=S_3$, \r\n\r\n即 $S_2<S_1<S_3$, 应选 (B)",
-      "wrong_options": {
-        "A": "S1<S2 方向错：f 单调减使 f(x)≥f(b)，曲边梯形 S1 应大于矩形 S2。",
-        "C": "把三者顺序整体倒置，混淆矩形/梯形与曲边梯形的大小关系。",
-        "D": "凹凸方向判反：f''>0（凹）时曲线在弦(梯形)下方，应 S1<S3 而非 S3<S1。"
-      },
-      "pitfalls": [
-        "f'<0 给出 S1>S2（用 f(x)>f(b) 逐点比较后积分），别只凭直觉",
-        "f''>0 是下凸(凹)，曲线在弦(梯形)下方 ⇒ S1<S3；凹凸判反会选反"
-      ],
-      "key_point": "f 减 ⇒ S2<S1；f 凹 ⇒ S1<S3，故 S2<S1<S3，选 B。"
-    },
-    {
-      "id": 1063,
-      "paper": "数学二",
-      "year": 1997,
-      "index": 9,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\displaystyle F(x)=\\int_{x}^{x+2 \\pi} \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t$, 则 $F(x) (\\quad)$",
-      "options": {
-        "A": "为正常数",
-        "B": "为负常数",
-        "C": "恒为零",
-        "D": "不为常数"
-      },
-      "answer": "A",
-      "analysis": "被积函数是以 $2\\pi$ 为周期得周期函数, \r\n\r\n积分区间正好是一个周期, \r\n\r\n由周期函数定积分的平移性质得\r\n\r\n$\\displaystyle\r\nF(x) =\\int_{-\\pi}^\\pi \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t\\\\\r\n=\\int_0^\\pi\\left[\\mathrm{e}^{\\sin t} \\sin t+\\mathrm{e}^{\\sin (-t)} \\sin (-t)\\right] \\mathrm{d} t \\\\\r\n=\\int_0^\\pi\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\mathrm{d} t$,\r\n\r\n当 $t \\in[0, \\pi]$ 时, $\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\geqslant 0$, \r\n\r\n则 $F(x)>0$, 故 $F(x)$ 为正常数, 应选 (A)",
-      "wrong_options": {
-        "B": "判成负常数——把 (e^{sint}-e^{-sint})sint 在 [0,π] 的符号看反（该量恒≥0）。",
-        "C": "误以为被积函数在一周期上为奇函数、积分为0，忽略 e^{sint} 破坏了对称性。",
-        "D": "没看出积分区间恰一个周期使 F'(x)=0（与起点 x 无关），误判 F 随 x 变化。"
-      },
-      "pitfalls": [
-        "区间长恰为周期 2π ⇒ F'(x)=e^{sin(x+2π)}sin(x+2π)-e^{sinx}sinx=0 ⇒ F 为常数",
-        "平移到 [-π,π] 配对得 (e^{sint}-e^{-sint})sint≥0，故常数为正，不是零也不是负"
-      ],
-      "key_point": "一个周期上积分与起点无关 ⇒ F'≡0 为常数；配对后被积≥0 ⇒ 正常数，选 A。"
-    },
-    {
       "id": 1496,
       "paper": "数学二",
       "year": 1997,
@@ -112,6 +58,24 @@
       "key_point": "配方 4−(x−2)² 得 arcsin((x−2)/2)+C（或凑 √x）。"
     },
     {
+      "id": 2044,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 4,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}=$",
+      "options": {},
+      "answer": "$\\dfrac{\\pi}{8}$",
+      "analysis": "对于 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$,\r\n\r\n由于 $\\displaystyle\\lim _{x \\rightarrow+\\infty} x^2 \\cdot \\frac{1}{x^2+4 x+8}=1$,\r\n\r\n故反常积分 $\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 与 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 同敛散, \r\n\r\n且因 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 收敛可知:\r\n\r\n$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 收敛\r\n\r\n$\\displaystyle \r\n \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8} \\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{(x+2)^2+4}\\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d}(x+2)}{(x+2)^2+4} \\\\\r\n=\\left.\\frac{1}{2} \\arctan \\frac{x+2}{2}\\right|_0 ^{+\\infty} \\\\\r\n=\\frac{1}{2}\\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right) \\\\\r\n=\\frac{\\pi}{8}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "x²+4x+8=(x+2)²+4，积分得 (1/2)arctan((x+2)/2)",
+        "上限 x→+∞ 时 arctan→π/2，下限代 x=0 得 arctan1=π/4，差乘 1/2 得 π/8"
+      ],
+      "key_point": "配方后 (1/2)[π/2−π/4]=π/8。"
+    },
+    {
       "id": 1499,
       "paper": "数学二",
       "year": 1997,
@@ -157,6 +121,33 @@
       "key_point": "tan x−x~x³/3，同阶无穷小的 n=3。"
     },
     {
+      "id": 1062,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设在区间 $[a, b]$ 上函数 $f(x)>0, f^{\\prime}(x)<0, f^{\\prime \\prime}(x)>0$\r\n令 $\\displaystyle S_{1}=\\int_{a}^{b} f(x) \\mathrm{d} x, S_{2}=f(b)(b-a), S_{3}=\\frac{1}{2}[f(a)+f(b)](b-a)$, 则 $(\\quad)$",
+      "options": {
+        "A": "$S_{1}<S_{2}<S_{3}$",
+        "B": "$S_{2}<S_{1}<S_{3}$",
+        "C": "$S_{3}<S_{1}<S_{2}$",
+        "D": "$S_{2}<S_{3}<S_{1}$"
+      },
+      "answer": "B",
+      "analysis": "由 $f^{\\prime}(x)<0$ 得 $f(x)$ 为单调减函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x>\\int_a^b f(b) \\mathrm{d} x=f(b)(b-a)=S_2$;\r\n\r\n再由 $f^{\\prime \\prime}(x)>0$ 得 $f(x)$ 为凹函数,\r\n\r\n于是 $\\displaystyle S_1=\\int_a^b f(x) \\mathrm{d} x<\\frac{1}{2}[f(a)+f(b)](b-a)=S_3$, \r\n\r\n即 $S_2<S_1<S_3$, 应选 (B)",
+      "wrong_options": {
+        "A": "S1<S2 方向错：f 单调减使 f(x)≥f(b)，曲边梯形 S1 应大于矩形 S2。",
+        "C": "把三者顺序整体倒置，混淆矩形/梯形与曲边梯形的大小关系。",
+        "D": "凹凸方向判反：f''>0（凹）时曲线在弦(梯形)下方，应 S1<S3 而非 S3<S1。"
+      },
+      "pitfalls": [
+        "f'<0 给出 S1>S2（用 f(x)>f(b) 逐点比较后积分），别只凭直觉",
+        "f''>0 是下凸(凹)，曲线在弦(梯形)下方 ⇒ S1<S3；凹凸判反会选反"
+      ],
+      "key_point": "f 减 ⇒ S2<S1；f 凹 ⇒ S1<S3，故 S2<S1<S3，选 B。"
+    },
+    {
       "id": 1501,
       "paper": "数学二",
       "year": 1997,
@@ -182,6 +173,33 @@
         "无论 x₀>0 还是 x₀<0，(1−e^{−x₀})/x₀>0 恒成立，故必为极小值"
       ],
       "key_point": "f″(x₀)=(1−e^{−x₀})/x₀>0，f(x₀) 为极小值。"
+    },
+    {
+      "id": 1063,
+      "paper": "数学二",
+      "year": 1997,
+      "index": 9,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\displaystyle F(x)=\\int_{x}^{x+2 \\pi} \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t$, 则 $F(x) (\\quad)$",
+      "options": {
+        "A": "为正常数",
+        "B": "为负常数",
+        "C": "恒为零",
+        "D": "不为常数"
+      },
+      "answer": "A",
+      "analysis": "被积函数是以 $2\\pi$ 为周期得周期函数, \r\n\r\n积分区间正好是一个周期, \r\n\r\n由周期函数定积分的平移性质得\r\n\r\n$\\displaystyle\r\nF(x) =\\int_{-\\pi}^\\pi \\mathrm{e}^{\\sin t} \\sin t \\mathrm{d} t\\\\\r\n=\\int_0^\\pi\\left[\\mathrm{e}^{\\sin t} \\sin t+\\mathrm{e}^{\\sin (-t)} \\sin (-t)\\right] \\mathrm{d} t \\\\\r\n=\\int_0^\\pi\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\mathrm{d} t$,\r\n\r\n当 $t \\in[0, \\pi]$ 时, $\\left(\\mathrm{e}^{\\sin t}-\\mathrm{e}^{-\\sin t}\\right) \\sin t \\geqslant 0$, \r\n\r\n则 $F(x)>0$, 故 $F(x)$ 为正常数, 应选 (A)",
+      "wrong_options": {
+        "B": "判成负常数——把 (e^{sint}-e^{-sint})sint 在 [0,π] 的符号看反（该量恒≥0）。",
+        "C": "误以为被积函数在一周期上为奇函数、积分为0，忽略 e^{sint} 破坏了对称性。",
+        "D": "没看出积分区间恰一个周期使 F'(x)=0（与起点 x 无关），误判 F 随 x 变化。"
+      },
+      "pitfalls": [
+        "区间长恰为周期 2π ⇒ F'(x)=e^{sin(x+2π)}sin(x+2π)-e^{sinx}sinx=0 ⇒ F 为常数",
+        "平移到 [-π,π] 配对得 (e^{sint}-e^{-sint})sint≥0，故常数为正，不是零也不是负"
+      ],
+      "key_point": "一个周期上积分与起点无关 ⇒ F'≡0 为常数；配对后被积≥0 ⇒ 正常数，选 A。"
     },
     {
       "id": 1502,
@@ -407,24 +425,6 @@
         "端点 f(0)=f(π/2)=0，值域 [y₀,0)，据此按 k 分三种情形数根"
       ],
       "key_point": "值域 [y₀,0)：k=y₀ 一根、y₀<k<0 两根、其余无根。"
-    },
-    {
-      "id": 2044,
-      "paper": "数学二",
-      "year": 1997,
-      "index": 4,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}=$",
-      "options": {},
-      "answer": "$\\dfrac{\\pi}{8}$",
-      "analysis": "对于 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$,\r\n\r\n由于 $\\displaystyle\\lim _{x \\rightarrow+\\infty} x^2 \\cdot \\frac{1}{x^2+4 x+8}=1$,\r\n\r\n故反常积分 $\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 与 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 同敛散, \r\n\r\n且因 $\\displaystyle\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2}$ 收敛可知:\r\n\r\n$\\displaystyle \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8}$ 收敛\r\n\r\n$\\displaystyle \r\n \\int_0^{+\\infty} \\frac{\\mathrm{d} x}{x^2+4 x+8} \\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d} x}{(x+2)^2+4}\\\\\r\n=\\int_0^{+\\infty} \\frac{\\mathrm{d}(x+2)}{(x+2)^2+4} \\\\\r\n=\\left.\\frac{1}{2} \\arctan \\frac{x+2}{2}\\right|_0 ^{+\\infty} \\\\\r\n=\\frac{1}{2}\\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right) \\\\\r\n=\\frac{\\pi}{8}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "x²+4x+8=(x+2)²+4，积分得 (1/2)arctan((x+2)/2)",
-        "上限 x→+∞ 时 arctan→π/2，下限代 x=0 得 arctan1=π/4，差乘 1/2 得 π/8"
-      ],
-      "key_point": "配方后 (1/2)[π/2−π/4]=π/8。"
     }
   ]
 }

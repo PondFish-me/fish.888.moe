@@ -4,24 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 965,
-      "paper": "数学三",
-      "year": 2002,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "(1) 验证函数 $\\displaystyle y(x)=1+\\frac{x^{3}}{3 !}+\\frac{x^{6}}{6 !}+\\frac{x^{9}}{9 !}+\\cdots+\\frac{x^{3 n}}{(3 n) !}+\\cdots(-\\infty<x<+\\infty)$ 满足微分方程 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^{x}$\r\n\r\n(2) 利用 (1) 的结果求幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数",
-      "options": {},
-      "answer": "(2) $\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
-      "analysis": "因为级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的收敛半径为 $R=+\\infty$, \r\n\r\n所以其收敛域为 $(-\\infty,+\\infty)$\r\n\r\n(1) 由 \r\n\r\n$\\displaystyle y^{\\prime}(x) =\\frac{x^2}{2 !}+\\frac{x^5}{5 !}+\\frac{x^8}{8 !}+\\cdots+\\frac{x^{3 n-1}}{(3 n-1) !}+\\cdots, \\\\\r\ny^{\\prime \\prime}(x) =x+\\frac{x^4}{4 !}+\\frac{x^7}{7 !}+\\cdots+\\frac{x^{3 n-2}}{(3 n-2) !}+\\cdots, \\\\\r\ny^{\\prime \\prime \\prime}(x) =1+\\frac{x^3}{3 !}+\\frac{x^6}{6 !}+\\cdots+\\frac{x^{3 n-3}}{(3 n-3) !}+\\cdots$,\r\n\r\n得 $\\displaystyle y^{\\prime \\prime}+y^{\\prime}+y\\\\\r\n=1+x+\\frac{x^2}{2 !}+\\frac{x^3}{3 !}+\\frac{x^4}{4 !}+\\cdots+\\frac{x^n}{n !}+\\cdots\\\\\r\n=\\mathrm{e}^x$\r\n\r\n(2) 令 $\\displaystyle y(x)=\\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$, \r\n\r\n由 (1) 得 $y(x)$ 满足 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的特征方程为 $\\lambda^2+\\lambda+1=0$, \r\n\r\n特征根为 $\\displaystyle \\lambda_{1,2}=-\\frac{1}{2} \\pm \\frac{\\sqrt{3}}{2} \\mathrm{i}$,\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的通解为 $\\displaystyle y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\frac{\\sqrt{3}}{2} x+C_2 \\sin \\frac{\\sqrt{3}}{2} x\\right)$.\r\n\r\n又 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 有特解 $y=\\dfrac{1}{3} \\mathrm{e}^x$, \r\n\r\n故 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 的通解为\r\n\r\n$y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\dfrac{\\sqrt{3}}{2} x+C_2 \\sin \\dfrac{\\sqrt{3}}{2} x\\right)+\\dfrac{1}{3} \\mathrm{e}^x$\r\n\r\n由 $y(0)=1, y^{\\prime}(0)=0$ 得 $\\displaystyle C_1=\\frac{2}{3}, C_2=0$, \r\n\r\n故 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数为\r\n\r\n$y(x)=\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
-      "wrong_options": {},
-      "pitfalls": [
-        "逐项求导后 y''+y'+y 恰好错位对齐成 eˣ 的全展开，这一步是把级数转成 ODE 的桥梁",
-        "特征根 (-1±√3 i)/2 给出 e^{-x/2}cos(√3 x/2) 项；初值 y(0)=1、y'(0)=0（由级数首项与缺一次项）定死两常数"
-      ],
-      "key_point": "级数满足 y''+y'+y=eˣ，解得 y=⅔e^{-x/2}cos(√3 x/2)+⅓eˣ。"
-    },
-    {
       "id": 1962,
       "paper": "数学三",
       "year": 2002,
@@ -317,6 +299,24 @@
         "V'(a)=4πa³(1-a)，a=1 为极大，端点不取"
       ],
       "key_point": "V=(4π/5)(32-a^5)+πa^4，a=1 取最大 129π/5。"
+    },
+    {
+      "id": 965,
+      "paper": "数学三",
+      "year": 2002,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "(1) 验证函数 $\\displaystyle y(x)=1+\\frac{x^{3}}{3 !}+\\frac{x^{6}}{6 !}+\\frac{x^{9}}{9 !}+\\cdots+\\frac{x^{3 n}}{(3 n) !}+\\cdots(-\\infty<x<+\\infty)$ 满足微分方程 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^{x}$\r\n\r\n(2) 利用 (1) 的结果求幂级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数",
+      "options": {},
+      "answer": "(2) $\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
+      "analysis": "因为级数 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的收敛半径为 $R=+\\infty$, \r\n\r\n所以其收敛域为 $(-\\infty,+\\infty)$\r\n\r\n(1) 由 \r\n\r\n$\\displaystyle y^{\\prime}(x) =\\frac{x^2}{2 !}+\\frac{x^5}{5 !}+\\frac{x^8}{8 !}+\\cdots+\\frac{x^{3 n-1}}{(3 n-1) !}+\\cdots, \\\\\r\ny^{\\prime \\prime}(x) =x+\\frac{x^4}{4 !}+\\frac{x^7}{7 !}+\\cdots+\\frac{x^{3 n-2}}{(3 n-2) !}+\\cdots, \\\\\r\ny^{\\prime \\prime \\prime}(x) =1+\\frac{x^3}{3 !}+\\frac{x^6}{6 !}+\\cdots+\\frac{x^{3 n-3}}{(3 n-3) !}+\\cdots$,\r\n\r\n得 $\\displaystyle y^{\\prime \\prime}+y^{\\prime}+y\\\\\r\n=1+x+\\frac{x^2}{2 !}+\\frac{x^3}{3 !}+\\frac{x^4}{4 !}+\\cdots+\\frac{x^n}{n !}+\\cdots\\\\\r\n=\\mathrm{e}^x$\r\n\r\n(2) 令 $\\displaystyle y(x)=\\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$, \r\n\r\n由 (1) 得 $y(x)$ 满足 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的特征方程为 $\\lambda^2+\\lambda+1=0$, \r\n\r\n特征根为 $\\displaystyle \\lambda_{1,2}=-\\frac{1}{2} \\pm \\frac{\\sqrt{3}}{2} \\mathrm{i}$,\r\n\r\n$y^{\\prime \\prime}+y^{\\prime}+y=0$ 的通解为 $\\displaystyle y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\frac{\\sqrt{3}}{2} x+C_2 \\sin \\frac{\\sqrt{3}}{2} x\\right)$.\r\n\r\n又 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 有特解 $y=\\dfrac{1}{3} \\mathrm{e}^x$, \r\n\r\n故 $y^{\\prime \\prime}+y^{\\prime}+y=\\mathrm{e}^x$ 的通解为\r\n\r\n$y=\\mathrm{e}^{-\\frac{x}{2}}\\left(C_1 \\cos \\dfrac{\\sqrt{3}}{2} x+C_2 \\sin \\dfrac{\\sqrt{3}}{2} x\\right)+\\dfrac{1}{3} \\mathrm{e}^x$\r\n\r\n由 $y(0)=1, y^{\\prime}(0)=0$ 得 $\\displaystyle C_1=\\frac{2}{3}, C_2=0$, \r\n\r\n故 $\\displaystyle \\sum_{n=0}^{\\infty} \\frac{x^{3 n}}{(3 n) !}$ 的和函数为\r\n\r\n$y(x)=\\dfrac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\dfrac{\\sqrt{3}}{2} x+\\dfrac{1}{3} \\mathrm{e}^x(-\\infty<x<+\\infty)$",
+      "wrong_options": {},
+      "pitfalls": [
+        "逐项求导后 y''+y'+y 恰好错位对齐成 eˣ 的全展开，这一步是把级数转成 ODE 的桥梁",
+        "特征根 (-1±√3 i)/2 给出 e^{-x/2}cos(√3 x/2) 项；初值 y(0)=1、y'(0)=0（由级数首项与缺一次项）定死两常数"
+      ],
+      "key_point": "级数满足 y''+y'+y=eˣ，解得 y=⅔e^{-x/2}cos(√3 x/2)+⅓eˣ。"
     },
     {
       "id": 1977,

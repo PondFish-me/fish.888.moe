@@ -4,24 +4,6 @@
   "count": 20,
   "questions": [
     {
-      "id": 1214,
-      "paper": "数学二",
-      "year": 1990,
-      "index": 5,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{l}1,|x| \\leqslant 1 \\\\ \r\n0,|x|>1\\end{array}\\right.$ 则函数 $f[f(x)]=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$1$",
-      "analysis": "$f[f(x)]=\\left\\{\\begin{array}{l}1,|f(x)| \\leqslant 1 \\\\ 0,|f(x)|>1 \\end{array}\\right.$ \r\n\r\n因为 $|f(x)| \\leqslant 1$, 所以 $f[f(x)]=1$",
-      "wrong_options": {},
-      "pitfalls": [
-        "内层 f(x) 只取 0 或 1，恒有 |f(x)|≤1，故复合恒为 1",
-        "别按原变量 x 的分段直接套，要按内层函数值分段"
-      ],
-      "key_point": "f(x)∈{0,1} 恒满足 |f(x)|≤1，故 f[f(x)]≡1。"
-    },
-    {
       "id": 1362,
       "paper": "数学二",
       "year": 1990,
@@ -88,6 +70,24 @@
         "在 [-2,-1] 上 x³<0 故 -x³>x³，e 单增得 e^{-x³}>e^{x³}，积分区间相同保序，左>右"
       ],
       "key_point": "[-2,-1] 上 -x³>x³ ⇒ e^{-x³}>e^{x³}，故左积分>右积分。"
+    },
+    {
+      "id": 1214,
+      "paper": "数学二",
+      "year": 1990,
+      "index": 5,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)=\\left\\{\\begin{array}{l}1,|x| \\leqslant 1 \\\\ \r\n0,|x|>1\\end{array}\\right.$ 则函数 $f[f(x)]=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "$f[f(x)]=\\left\\{\\begin{array}{l}1,|f(x)| \\leqslant 1 \\\\ 0,|f(x)|>1 \\end{array}\\right.$ \r\n\r\n因为 $|f(x)| \\leqslant 1$, 所以 $f[f(x)]=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "内层 f(x) 只取 0 或 1，恒有 |f(x)|≤1，故复合恒为 1",
+        "别按原变量 x 的分段直接套，要按内层函数值分段"
+      ],
+      "key_point": "f(x)∈{0,1} 恒满足 |f(x)|≤1，故 f[f(x)]≡1。"
     },
     {
       "id": 1366,

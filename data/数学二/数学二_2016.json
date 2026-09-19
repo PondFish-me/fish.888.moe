@@ -4,79 +4,6 @@
   "count": 23,
   "questions": [
     {
-      "id": 350,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 2,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}2(x-1), & x<1, \\\\ \\ln x, & x \\geqslant 1,\\end{array}\\right.$ 则 $f(x)$ 的一个原函数是 $(\\quad)$",
-      "options": {
-        "A": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x-1), & x \\geqslant 1\\end{cases}$",
-        "B": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x+1)-1, & x \\geqslant 1 \\end{cases}$",
-        "C": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1\\\\ x(\\ln x+1)+1, & x \\geqslant 1\\end{cases}$",
-        "D": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x-1)+1, & x \\geqslant 1 \\end{cases}$"
-      },
-      "answer": "D",
-      "analysis": "【分析】原函数 $F(x)$ 必须在整个定义域上连续且处处 $F'(x)=f(x)$。分段函数的原函数关键在于 $x=1$ 处的衔接：先分段求出原函数，再用连续性确定常数，使左右两段在 $x=1$ 处对接。\n\n【解答】当 $x<1$ 时 $f(x)=2(x-1)$，原函数为 $(x-1)^{2}+C_{1}$，四个选项均取 $(x-1)^{2}$（即 $C_1=0$）。\n\n当 $x\\ge 1$ 时 $f(x)=\\ln x$，由分部积分\n$$\\int\\ln x\\,\\mathrm{d}x=x\\ln x-\\int x\\cdot\\frac1x\\,\\mathrm{d}x=x\\ln x-x+C_2=x(\\ln x-1)+C_{2}.$$\n\n由 $F(x)$ 在 $x=1$ 处连续：\n$$\\lim_{x\\to1^{-}}F(x)=(1-1)^{2}=0,\\qquad \\lim_{x\\to1^{+}}F(x)=1\\cdot(\\ln1-1)+C_{2}=-1+C_{2}.$$\n令两者相等得 $-1+C_{2}=0$，即 $C_{2}=1$。故 $x\\ge1$ 段为 $x(\\ln x-1)+1$。\n\n验算：在 $x=1$ 处 $F(1)=0$，与左极限一致；求导 $[x(\\ln x-1)+1]'=\\ln x-1+1=\\ln x=f(x)$。故选 D。",
-      "wrong_options": {
-        "A": "$x\\ge1$ 段取 $x(\\ln x-1)$ 但常数 $C_2=0$，在 $x=1$ 处值为 $-1\\ne0$，不连续，不是原函数。",
-        "B": "$x(\\ln x+1)-1$ 求导得 $\\ln x+1+1=\\ln x+2\\ne f(x)$，被积函数都求错。",
-        "C": "$x(\\ln x+1)+1$ 求导得 $\\ln x+2\\ne f(x)$，且 $\\ln x$ 的原函数符号写错。"
-      },
-      "pitfalls": [
-        "$\\int\\ln x\\,\\mathrm{d}x=x(\\ln x-1)$，分部积分后是减号，不要写成 $\\ln x+1$。",
-        "原函数必须连续，需用 $x=1$ 处对接确定常数 $C_2=1$，不能各段独立取 $0$。"
-      ],
-      "key_point": "分段函数求原函数：先各段积分，再用连续性在分界点对接常数。"
-    },
-    {
-      "id": 353,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 7,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为可逆矩阵, 且 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, 则下列结论错误的是 $(\\quad)$",
-      "options": {
-        "A": "$\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
-        "B": "$\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}^{-1}$ 相似",
-        "C": "$\\boldsymbol{A}+\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
-        "D": "$\\boldsymbol{A}+\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{-1}$ 相似"
-      },
-      "answer": "C",
-      "analysis": "【分析】题目问“结论错误的”。相似关系 $A=P^{-1}BP$ 在取逆、取转置、以及对 $A,A^{-1}$ 的多项式组合时是否仍能用同一个相似矩阵 $P$ 实现，是判断的关键。涉及转置时相似矩阵会变成 $P^{T}$，从而破坏组合的相似性。\n\n【解答】设 $A=P^{-1}BP$（$P$ 可逆）。逐项检验：\n\nA 选项：$A^{T}=(P^{-1}BP)^{T}=P^{T}B^{T}(P^{T})^{-1}$，取 $Q=(P^{T})^{-1}$ 即 $A^{T}=Q^{-1}B^{T}Q$，故 $A^{T}\\sim B^{T}$，正确。\n\nB 选项：$A^{-1}=P^{-1}B^{-1}P$，故 $A^{-1}\\sim B^{-1}$，正确。\n\nD 选项：$A+A^{-1}=P^{-1}BP+P^{-1}B^{-1}P=P^{-1}(B+B^{-1})P$，用同一个 $P$，故 $A+A^{-1}\\sim B+B^{-1}$，正确。\n\nC 选项：$A+A^{T}=P^{-1}BP+P^{T}B^{T}(P^{T})^{-1}$。两项用的相似矩阵分别是 $P$ 与 $(P^{T})^{-1}$，一般 $P\\ne(P^{T})^{-1}$，无法提成 $P^{-1}(B+B^{T})P$ 的形式，故 $A+A^{T}$ 与 $B+B^{T}$ 一般不相似。\n\n举反例佐证：取 $B=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$，$P=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，$A=P^{-1}BP=\\begin{pmatrix}1&-1\\\\0&2\\end{pmatrix}$。则 $A+A^{T}=\\begin{pmatrix}2&-1\\\\-1&4\\end{pmatrix}$，特征值之和（迹）为 $6$、行列式为 $7$；而 $B+B^{T}=\\begin{pmatrix}2&0\\\\0&4\\end{pmatrix}$，迹 $6$、行列式 $8$。行列式不等，故二者不相似。结论错误的是 C。",
-      "wrong_options": {
-        "A": "$A^{T}=(P^{T})B^{T}(P^{T})^{-1}$，确为相似，结论正确（非所选）。",
-        "B": "$A^{-1}=P^{-1}B^{-1}P$，确为相似，结论正确（非所选）。",
-        "D": "$A+A^{-1}=P^{-1}(B+B^{-1})P$ 用同一 $P$，确为相似，结论正确（非所选）。"
-      },
-      "pitfalls": [
-        "相似对“取逆”“关于 $A,A^{-1}$ 的多项式”封闭（同一 $P$），但对“加转置”不封闭（$P$ 变 $P^T$）。",
-        "本题选“错误”的结论，是 C。"
-      ],
-      "key_point": "相似变换对含转置的运算不封闭：$A+A^{T}$ 用到 $P$ 与 $(P^T)^{-1}$ 两个矩阵，故不保相似。"
-    },
-    {
-      "id": 369,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 1 \\\\ 2 & -3 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$.\r\n\r\n(1) 求 $\\boldsymbol{A}^{99}$;\r\n\r\n(2) 设 $3$ 阶矩阵 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$ 满足 $\\boldsymbol{B}^{2}=\\boldsymbol{B} \\boldsymbol{A}$, 记 $\\boldsymbol{B}^{100}=\\left(\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}\\right)$, 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 分别表示为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 的线性组合",
-      "options": {},
-      "answer": "$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}$；$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,\\ \\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,\\ \\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2$",
-      "analysis": "【分析】(1) $A$ 有三个互异特征值，可相似对角化，用 $A^{99}=PD^{99}P^{-1}$ 计算高次幂。(2) 由 $B^{2}=BA$ 归纳出 $B^{n}=BA^{n-1}$，于是 $B^{100}=BA^{99}$，从而 $B^{100}$ 的各列是 $B=(\\alpha_1,\\alpha_2,\\alpha_3)$ 各列以 $A^{99}$ 对应列为系数的线性组合。\n\n【解答】\n（1）特征多项式 $\\det(A-\\lambda I)=-\\lambda(\\lambda+1)(\\lambda+2)$，特征值 $\\lambda=0,-1,-2$，互异故可对角化。\n求特征向量：\n$\\lambda=0$：$\\xi_1=(3,2,2)^{T}$；$\\lambda=-1$：$\\xi_2=(1,1,0)^{T}$；$\\lambda=-2$：$\\xi_3=(1,2,0)^{T}$。\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}3&1&1\\\\2&1&2\\\\2&0&0\\end{pmatrix}$，则 $P^{-1}AP=D=\\mathrm{diag}(0,-1,-2)$。\n算得 $P^{-1}=\\begin{pmatrix}0&0&\\frac12\\\\2&-1&-2\\\\-1&1&\\frac12\\end{pmatrix}$。\n于是 $A^{99}=P\\,\\mathrm{diag}(0,(-1)^{99},(-2)^{99})\\,P^{-1}=P\\,\\mathrm{diag}(0,-1,-2^{99})\\,P^{-1}$。\n计算：\n$$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}.$$\n（验算：取指数为 $1$ 时同样的乘法还原出 $A$ 本身，方法正确。）\n\n（2）由 $B^{2}=BA$，归纳：设 $B^{n}=BA^{n-1}$，则 $B^{n+1}=B\\cdot B^{n}=B\\cdot BA^{n-1}=B^{2}A^{n-1}=BA\\cdot A^{n-1}=BA^{n}$。故对一切 $n\\ge1$ 有 $B^{n}=BA^{n-1}$，特别地\n$$B^{100}=BA^{99}.$$\n记 $A^{99}=(c_{ij})$。$B=(\\alpha_1,\\alpha_2,\\alpha_3)$，则 $B^{100}=BA^{99}$ 的第 $j$ 列\n$$\\beta_j=B\\cdot(A^{99}\\text{的第}j\\text{列})=c_{1j}\\alpha_1+c_{2j}\\alpha_2+c_{3j}\\alpha_3.$$\n由 $A^{99}$ 第三行全为 $0$（$c_{3j}=0$），代入各列：\n$$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,$$\n$$\\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,$$\n$$\\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "三个互异特征值保证可对角化，$A^{99}$ 通过 $PD^{99}P^{-1}$ 求，$(-2)^{99}=-2^{99}$ 符号别错。",
-        "$B^2=BA$ 归纳得 $B^{100}=BA^{99}$ 是第二问的桥梁。",
-        "$\\beta_j$ 的系数取自 $A^{99}$ 的第 $j$ 列；因 $A^{99}$ 第三行为 $0$，$\\alpha_3$ 不出现。"
-      ],
-      "key_point": "可对角化矩阵求高次幂 $PD^nP^{-1}$；$B^2=BA\\Rightarrow B^{100}=BA^{99}$，列组合系数即 $A^{99}$ 的列。"
-    },
-    {
       "id": 372,
       "paper": "数学二",
       "year": 2016,
@@ -102,6 +29,33 @@
         "$\\cos u-1\\sim-\\dfrac{u^2}{2}$ 的平方常被漏掉，记得指数翻倍。"
       ],
       "key_point": "无穷小比阶=求各自 $x^p$ 主部，幂次小者阶低。"
+    },
+    {
+      "id": 350,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 2,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $f(x)=\\left\\{\\begin{array}{ll}2(x-1), & x<1, \\\\ \\ln x, & x \\geqslant 1,\\end{array}\\right.$ 则 $f(x)$ 的一个原函数是 $(\\quad)$",
+      "options": {
+        "A": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x-1), & x \\geqslant 1\\end{cases}$",
+        "B": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x+1)-1, & x \\geqslant 1 \\end{cases}$",
+        "C": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1\\\\ x(\\ln x+1)+1, & x \\geqslant 1\\end{cases}$",
+        "D": "$F(x)= \\begin{cases}(x-1)^{2}, & x<1 \\\\ x(\\ln x-1)+1, & x \\geqslant 1 \\end{cases}$"
+      },
+      "answer": "D",
+      "analysis": "【分析】原函数 $F(x)$ 必须在整个定义域上连续且处处 $F'(x)=f(x)$。分段函数的原函数关键在于 $x=1$ 处的衔接：先分段求出原函数，再用连续性确定常数，使左右两段在 $x=1$ 处对接。\n\n【解答】当 $x<1$ 时 $f(x)=2(x-1)$，原函数为 $(x-1)^{2}+C_{1}$，四个选项均取 $(x-1)^{2}$（即 $C_1=0$）。\n\n当 $x\\ge 1$ 时 $f(x)=\\ln x$，由分部积分\n$$\\int\\ln x\\,\\mathrm{d}x=x\\ln x-\\int x\\cdot\\frac1x\\,\\mathrm{d}x=x\\ln x-x+C_2=x(\\ln x-1)+C_{2}.$$\n\n由 $F(x)$ 在 $x=1$ 处连续：\n$$\\lim_{x\\to1^{-}}F(x)=(1-1)^{2}=0,\\qquad \\lim_{x\\to1^{+}}F(x)=1\\cdot(\\ln1-1)+C_{2}=-1+C_{2}.$$\n令两者相等得 $-1+C_{2}=0$，即 $C_{2}=1$。故 $x\\ge1$ 段为 $x(\\ln x-1)+1$。\n\n验算：在 $x=1$ 处 $F(1)=0$，与左极限一致；求导 $[x(\\ln x-1)+1]'=\\ln x-1+1=\\ln x=f(x)$。故选 D。",
+      "wrong_options": {
+        "A": "$x\\ge1$ 段取 $x(\\ln x-1)$ 但常数 $C_2=0$，在 $x=1$ 处值为 $-1\\ne0$，不连续，不是原函数。",
+        "B": "$x(\\ln x+1)-1$ 求导得 $\\ln x+1+1=\\ln x+2\\ne f(x)$，被积函数都求错。",
+        "C": "$x(\\ln x+1)+1$ 求导得 $\\ln x+2\\ne f(x)$，且 $\\ln x$ 的原函数符号写错。"
+      },
+      "pitfalls": [
+        "$\\int\\ln x\\,\\mathrm{d}x=x(\\ln x-1)$，分部积分后是减号，不要写成 $\\ln x+1$。",
+        "原函数必须连续，需用 $x=1$ 处对接确定常数 $C_2=1$，不能各段独立取 $0$。"
+      ],
+      "key_point": "分段函数求原函数：先各段积分，再用连续性在分界点对接常数。"
     },
     {
       "id": 373,
@@ -131,6 +85,34 @@
       "key_point": "凑微分得原函数 $-\\mathrm{e}^{1/x}$，再看端点极限：$0^-$ 处趋 0（收敛），$0^+$ 处趋无穷（发散）。"
     },
     {
+      "id": 388,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 4,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](assets/figures/388.png)",
+      "options": {
+        "A": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 2 个拐点",
+        "B": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 3 个拐点",
+        "C": "函数 $f(x)$ 有 3 个极值点, 曲线 $y=f(x)$ 有 1 个拐点",
+        "D": "函数 $f(x)$ 有 3 个极值点, 曲线 $y=f(x)$ 有 2 个拐点"
+      },
+      "answer": "B",
+      "analysis": "【分析】本题给的是导函数 $f'(x)$ 的图形（依赖原图）。判定极值点看 $f'(x)$ **变号**的点（穿过 $x$ 轴且改变正负号）；判定拐点看 $f''(x)$ 变号，即 $f'(x)$ 的**单调性发生改变**（$f'$ 的极值点处，或 $f'$ 图形斜率变号处）。注意 $f'$ 与 $x$ 轴相切而不穿越的点不是极值点，但常对应 $f''$ 变号即拐点。\n\n【解答】（结合该题导函数图形）\n- 极值点：$f'(x)$ 真正穿过 $x$ 轴并改变符号的位置共 $2$ 处，故 $f(x)$ 有 $2$ 个极值点。\n- 拐点：$f''(x)$ 变号即 $f'(x)$ 由增变减或由减变增（$f'$ 的极值处），以及 $f'$ 与 $x$ 轴相切处往往对应二阶导变号。综合图形可数出 $f''$ 变号点共 $3$ 处，且这些点处函数连续、二阶导存在并变号，故曲线 $y=f(x)$ 有 $3$ 个拐点。\n\n因此 $f(x)$ 有 $2$ 个极值点、$y=f(x)$ 有 $3$ 个拐点，选 **B**。",
+      "wrong_options": {
+        "A": "拐点数判少了。除 $f'$ 的两个极值点外，$f'$ 与 $x$ 轴相切而不变号处也对应 $f''$ 变号，应为 $3$ 个拐点而非 $2$ 个。",
+        "C": "把 $f'$ 与 $x$ 轴相切（不变号）的点误当成极值点了——切而不穿不改变 $f'$ 符号，不是极值点；极值点应为 $2$ 个。",
+        "D": "极值点同样多数了一个相切不变号的点（应为 $2$ 个），且拐点数也判错。"
+      },
+      "pitfalls": [
+        "依赖原图：极值点只看 $f'$ 变号；$f'$ 与 $x$ 轴相切但不变号的点不是极值点。",
+        "拐点看 $f''$ 变号，对应 $f'$ 单调性改变（含 $f'$ 的极值点与相切点），勿与极值混淆。",
+        "图中的横坐标交点要区分‘穿过’与‘相切’，这是本题陷阱所在。"
+      ],
+      "key_point": "导图题：极值点数 = $f'$ 变号次数；拐点数 = $f''$ 变号次数（$f'$ 单调性改变处）。"
+    },
+    {
       "id": 374,
       "paper": "数学二",
       "year": 2016,
@@ -156,6 +138,61 @@
         "曲线与切线之差用二阶泰勒 ½f''(x₀)(x-x₀)²，f''<0 决定曲线在切线下方，二阶导越负越靠下。"
       ],
       "key_point": "公切线处比高低=比 φ=f-g 的二阶项；同凹向(f''<0)下，曲率大⇒f''更负⇒曲线更低，故 f₁≤f₂≤g。"
+    },
+    {
+      "id": 389,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 6,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "已知函数 $\\displaystyle f(x, y)=\\frac{\\mathrm{e}^x}{x-y}$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f_x^{\\prime}-f_y^{\\prime}=0$",
+        "B": "$f_x^{\\prime}+f_y^{\\prime}=0$",
+        "C": "$f_x^{\\prime}-f_y^{\\prime}=f$",
+        "D": "$f_x^{\\prime}+f_y^{\\prime}=f$"
+      },
+      "answer": "D",
+      "analysis": "【分析】直接求两个一阶偏导，再代入四个选项验证即可。把 $f=\\dfrac{e^x}{x-y}=e^x(x-y)^{-1}$ 写成幂形式，对 $x$ 求导用乘积法则，对 $y$ 求导只动 $(x-y)^{-1}$，留意 $\\partial_y(x-y)^{-1}=(x-y)^{-2}$ 的符号。\n\n【解答】记 $u=x-y$，$f=e^x u^{-1}$。\n$$f_x'=e^x u^{-1}+e^x\\cdot(-u^{-2})\\cdot 1=\\frac{e^x}{x-y}-\\frac{e^x}{(x-y)^2},$$\n$$f_y'=e^x\\cdot(-u^{-2})\\cdot(-1)=\\frac{e^x}{(x-y)^2}.$$\n相加：\n$$f_x'+f_y'=\\frac{e^x}{x-y}-\\frac{e^x}{(x-y)^2}+\\frac{e^x}{(x-y)^2}=\\frac{e^x}{x-y}=f.$$\n故 $f_x'+f_y'=f$，选 **D**。",
+      "wrong_options": {
+        "A": "$f_x'-f_y'=\\dfrac{e^x}{x-y}-\\dfrac{2e^x}{(x-y)^2}\\ne0$，错；可能误把 $f_y'$ 算成 $-\\dfrac{e^x}{(x-y)^2}$ 才会凑出 0。",
+        "B": "$f_x'+f_y'=\\dfrac{e^x}{x-y}\\ne0$，错；把和算成 0 是漏了 $f$ 中 $e^x$ 对 $x$ 求导的那一项。",
+        "C": "$f_x'-f_y'=\\dfrac{e^x}{x-y}-\\dfrac{2e^x}{(x-y)^2}\\ne f$，错；与 $f$ 相差一项 $\\dfrac{2e^x}{(x-y)^2}$。"
+      },
+      "pitfalls": [
+        "对 $y$ 求导时 $\\partial_y(x-y)^{-1}=(x-y)^{-2}$（两个负号相乘为正），符号最易出错。",
+        "对 $x$ 求导别忘了分子 $e^x$ 也要参与乘积求导，产生 $\\dfrac{e^x}{x-y}$ 这一项。",
+        "求完偏导后逐项代入选项核对，注意 $f_x'+f_y'$ 中两个 $(x-y)^{-2}$ 项恰好抵消。"
+      ],
+      "key_point": "化成幂形式求偏导，相加时 $(x-y)^{-2}$ 项相消，余下即 $f$。"
+    },
+    {
+      "id": 353,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 7,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设 $\\boldsymbol{A}, \\boldsymbol{B}$ 为可逆矩阵, 且 $\\boldsymbol{A}$ 与 $\\boldsymbol{B}$ 相似, 则下列结论错误的是 $(\\quad)$",
+      "options": {
+        "A": "$\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
+        "B": "$\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}^{-1}$ 相似",
+        "C": "$\\boldsymbol{A}+\\boldsymbol{A}^{\\mathrm{T}}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{\\mathrm{T}}$ 相似",
+        "D": "$\\boldsymbol{A}+\\boldsymbol{A}^{-1}$ 与 $\\boldsymbol{B}+\\boldsymbol{B}^{-1}$ 相似"
+      },
+      "answer": "C",
+      "analysis": "【分析】题目问“结论错误的”。相似关系 $A=P^{-1}BP$ 在取逆、取转置、以及对 $A,A^{-1}$ 的多项式组合时是否仍能用同一个相似矩阵 $P$ 实现，是判断的关键。涉及转置时相似矩阵会变成 $P^{T}$，从而破坏组合的相似性。\n\n【解答】设 $A=P^{-1}BP$（$P$ 可逆）。逐项检验：\n\nA 选项：$A^{T}=(P^{-1}BP)^{T}=P^{T}B^{T}(P^{T})^{-1}$，取 $Q=(P^{T})^{-1}$ 即 $A^{T}=Q^{-1}B^{T}Q$，故 $A^{T}\\sim B^{T}$，正确。\n\nB 选项：$A^{-1}=P^{-1}B^{-1}P$，故 $A^{-1}\\sim B^{-1}$，正确。\n\nD 选项：$A+A^{-1}=P^{-1}BP+P^{-1}B^{-1}P=P^{-1}(B+B^{-1})P$，用同一个 $P$，故 $A+A^{-1}\\sim B+B^{-1}$，正确。\n\nC 选项：$A+A^{T}=P^{-1}BP+P^{T}B^{T}(P^{T})^{-1}$。两项用的相似矩阵分别是 $P$ 与 $(P^{T})^{-1}$，一般 $P\\ne(P^{T})^{-1}$，无法提成 $P^{-1}(B+B^{T})P$ 的形式，故 $A+A^{T}$ 与 $B+B^{T}$ 一般不相似。\n\n举反例佐证：取 $B=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$，$P=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，$A=P^{-1}BP=\\begin{pmatrix}1&-1\\\\0&2\\end{pmatrix}$。则 $A+A^{T}=\\begin{pmatrix}2&-1\\\\-1&4\\end{pmatrix}$，特征值之和（迹）为 $6$、行列式为 $7$；而 $B+B^{T}=\\begin{pmatrix}2&0\\\\0&4\\end{pmatrix}$，迹 $6$、行列式 $8$。行列式不等，故二者不相似。结论错误的是 C。",
+      "wrong_options": {
+        "A": "$A^{T}=(P^{T})B^{T}(P^{T})^{-1}$，确为相似，结论正确（非所选）。",
+        "B": "$A^{-1}=P^{-1}B^{-1}P$，确为相似，结论正确（非所选）。",
+        "D": "$A+A^{-1}=P^{-1}(B+B^{-1})P$ 用同一 $P$，确为相似，结论正确（非所选）。"
+      },
+      "pitfalls": [
+        "相似对“取逆”“关于 $A,A^{-1}$ 的多项式”封闭（同一 $P$），但对“加转置”不封闭（$P$ 变 $P^T$）。",
+        "本题选“错误”的结论，是 C。"
+      ],
+      "key_point": "相似变换对含转置的运算不封闭：$A+A^{T}$ 用到 $P$ 与 $(P^T)^{-1}$ 两个矩阵，故不保相似。"
     },
     {
       "id": 375,
@@ -296,6 +333,24 @@
       "key_point": "矩阵等价 ⇔ 同型且秩相等；先求已知阵的秩，再令参数阵秩相同并验证。"
     },
     {
+      "id": 396,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 15,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}(\\cos 2 x+2 x \\sin x)^{\\frac{1}{x^4}}$",
+      "options": {},
+      "answer": "e^{\\frac{1}{3}}",
+      "analysis": "【分析】这是 $1^{\\infty}$ 型幂指极限。标准做法是取对数化为 $\\dfrac{0}{0}$ 型：$\\lim L=\\exp\\left(\\lim\\dfrac{\\ln(\\text{底})}{x^4}\\right)$。底数减 1 是高阶小量，用泰勒展开到 $x^4$ 才能与分母 $x^4$ 匹配，硬上洛必达会很繁。\n\n【解答】记底数 $u(x)=\\cos 2x+2x\\sin x$。先把它展到 $x^4$：\n\n$$\\cos 2x=1-\\dfrac{(2x)^2}{2}+\\dfrac{(2x)^4}{24}+o(x^4)=1-2x^2+\\dfrac{2}{3}x^4+o(x^4),$$\n\n$$2x\\sin x=2x\\left(x-\\dfrac{x^3}{6}+o(x^3)\\right)=2x^2-\\dfrac{1}{3}x^4+o(x^4).$$\n\n两式相加，$x^2$ 项相消：\n\n$$u(x)=1+\\left(\\dfrac{2}{3}-\\dfrac{1}{3}\\right)x^4+o(x^4)=1+\\dfrac{1}{3}x^4+o(x^4).$$\n\n于是 $u(x)-1\\to 0$，利用 $\\ln(1+t)\\sim t$：\n\n$$\\lim_{x\\to0}\\dfrac{\\ln u(x)}{x^4}=\\lim_{x\\to0}\\dfrac{u(x)-1}{x^4}=\\lim_{x\\to0}\\dfrac{\\frac{1}{3}x^4+o(x^4)}{x^4}=\\dfrac{1}{3}.$$\n\n故原极限 $=\\exp\\left(\\dfrac{1}{3}\\right)=e^{\\frac{1}{3}}$。",
+      "wrong_options": {},
+      "pitfalls": [
+        "$\\cos 2x$ 必须展到 $x^4$ 项，只展到 $x^2$ 会漏掉关键的 $\\frac{2}{3}x^4$ 导致答案错误。",
+        "$1^{\\infty}$ 型务必先取对数，切忌把底数极限 1 直接代入得 $1^{\\infty}=1$。"
+      ],
+      "key_point": "$1^{\\infty}$ 取对数 + 泰勒展开到与分母同阶（这里 $x^4$），$x^2$ 项相消是题眼。"
+    },
+    {
       "id": 382,
       "paper": "数学二",
       "year": 2016,
@@ -407,80 +462,6 @@
       "key_point": "原函数题的均值用分部积分回代 f'；零点用单调性加零点定理，端点取值定正负"
     },
     {
-      "id": 388,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 4,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $(-\\infty,+\\infty)$ 内连续, 其导函数的图形如右 图所示, 则 $(\\quad)$\n\n![导函数 f'(x) 的图形](assets/figures/388.png)",
-      "options": {
-        "A": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 2 个拐点",
-        "B": "函数 $f(x)$ 有 2 个极值点, 曲线 $y=f(x)$ 有 3 个拐点",
-        "C": "函数 $f(x)$ 有 3 个极值点, 曲线 $y=f(x)$ 有 1 个拐点",
-        "D": "函数 $f(x)$ 有 3 个极值点, 曲线 $y=f(x)$ 有 2 个拐点"
-      },
-      "answer": "B",
-      "analysis": "【分析】本题给的是导函数 $f'(x)$ 的图形（依赖原图）。判定极值点看 $f'(x)$ **变号**的点（穿过 $x$ 轴且改变正负号）；判定拐点看 $f''(x)$ 变号，即 $f'(x)$ 的**单调性发生改变**（$f'$ 的极值点处，或 $f'$ 图形斜率变号处）。注意 $f'$ 与 $x$ 轴相切而不穿越的点不是极值点，但常对应 $f''$ 变号即拐点。\n\n【解答】（结合该题导函数图形）\n- 极值点：$f'(x)$ 真正穿过 $x$ 轴并改变符号的位置共 $2$ 处，故 $f(x)$ 有 $2$ 个极值点。\n- 拐点：$f''(x)$ 变号即 $f'(x)$ 由增变减或由减变增（$f'$ 的极值处），以及 $f'$ 与 $x$ 轴相切处往往对应二阶导变号。综合图形可数出 $f''$ 变号点共 $3$ 处，且这些点处函数连续、二阶导存在并变号，故曲线 $y=f(x)$ 有 $3$ 个拐点。\n\n因此 $f(x)$ 有 $2$ 个极值点、$y=f(x)$ 有 $3$ 个拐点，选 **B**。",
-      "wrong_options": {
-        "A": "拐点数判少了。除 $f'$ 的两个极值点外，$f'$ 与 $x$ 轴相切而不变号处也对应 $f''$ 变号，应为 $3$ 个拐点而非 $2$ 个。",
-        "C": "把 $f'$ 与 $x$ 轴相切（不变号）的点误当成极值点了——切而不穿不改变 $f'$ 符号，不是极值点；极值点应为 $2$ 个。",
-        "D": "极值点同样多数了一个相切不变号的点（应为 $2$ 个），且拐点数也判错。"
-      },
-      "pitfalls": [
-        "依赖原图：极值点只看 $f'$ 变号；$f'$ 与 $x$ 轴相切但不变号的点不是极值点。",
-        "拐点看 $f''$ 变号，对应 $f'$ 单调性改变（含 $f'$ 的极值点与相切点），勿与极值混淆。",
-        "图中的横坐标交点要区分‘穿过’与‘相切’，这是本题陷阱所在。"
-      ],
-      "key_point": "导图题：极值点数 = $f'$ 变号次数；拐点数 = $f''$ 变号次数（$f'$ 单调性改变处）。"
-    },
-    {
-      "id": 389,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 6,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "已知函数 $\\displaystyle f(x, y)=\\frac{\\mathrm{e}^x}{x-y}$, 则 $(\\quad)$",
-      "options": {
-        "A": "$f_x^{\\prime}-f_y^{\\prime}=0$",
-        "B": "$f_x^{\\prime}+f_y^{\\prime}=0$",
-        "C": "$f_x^{\\prime}-f_y^{\\prime}=f$",
-        "D": "$f_x^{\\prime}+f_y^{\\prime}=f$"
-      },
-      "answer": "D",
-      "analysis": "【分析】直接求两个一阶偏导，再代入四个选项验证即可。把 $f=\\dfrac{e^x}{x-y}=e^x(x-y)^{-1}$ 写成幂形式，对 $x$ 求导用乘积法则，对 $y$ 求导只动 $(x-y)^{-1}$，留意 $\\partial_y(x-y)^{-1}=(x-y)^{-2}$ 的符号。\n\n【解答】记 $u=x-y$，$f=e^x u^{-1}$。\n$$f_x'=e^x u^{-1}+e^x\\cdot(-u^{-2})\\cdot 1=\\frac{e^x}{x-y}-\\frac{e^x}{(x-y)^2},$$\n$$f_y'=e^x\\cdot(-u^{-2})\\cdot(-1)=\\frac{e^x}{(x-y)^2}.$$\n相加：\n$$f_x'+f_y'=\\frac{e^x}{x-y}-\\frac{e^x}{(x-y)^2}+\\frac{e^x}{(x-y)^2}=\\frac{e^x}{x-y}=f.$$\n故 $f_x'+f_y'=f$，选 **D**。",
-      "wrong_options": {
-        "A": "$f_x'-f_y'=\\dfrac{e^x}{x-y}-\\dfrac{2e^x}{(x-y)^2}\\ne0$，错；可能误把 $f_y'$ 算成 $-\\dfrac{e^x}{(x-y)^2}$ 才会凑出 0。",
-        "B": "$f_x'+f_y'=\\dfrac{e^x}{x-y}\\ne0$，错；把和算成 0 是漏了 $f$ 中 $e^x$ 对 $x$ 求导的那一项。",
-        "C": "$f_x'-f_y'=\\dfrac{e^x}{x-y}-\\dfrac{2e^x}{(x-y)^2}\\ne f$，错；与 $f$ 相差一项 $\\dfrac{2e^x}{(x-y)^2}$。"
-      },
-      "pitfalls": [
-        "对 $y$ 求导时 $\\partial_y(x-y)^{-1}=(x-y)^{-2}$（两个负号相乘为正），符号最易出错。",
-        "对 $x$ 求导别忘了分子 $e^x$ 也要参与乘积求导，产生 $\\dfrac{e^x}{x-y}$ 这一项。",
-        "求完偏导后逐项代入选项核对，注意 $f_x'+f_y'$ 中两个 $(x-y)^{-2}$ 项恰好抵消。"
-      ],
-      "key_point": "化成幂形式求偏导，相加时 $(x-y)^{-2}$ 项相消，余下即 $f$。"
-    },
-    {
-      "id": 396,
-      "paper": "数学二",
-      "year": 2016,
-      "index": 15,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "求极限 $\\displaystyle \\lim _{x \\rightarrow 0}(\\cos 2 x+2 x \\sin x)^{\\frac{1}{x^4}}$",
-      "options": {},
-      "answer": "e^{\\frac{1}{3}}",
-      "analysis": "【分析】这是 $1^{\\infty}$ 型幂指极限。标准做法是取对数化为 $\\dfrac{0}{0}$ 型：$\\lim L=\\exp\\left(\\lim\\dfrac{\\ln(\\text{底})}{x^4}\\right)$。底数减 1 是高阶小量，用泰勒展开到 $x^4$ 才能与分母 $x^4$ 匹配，硬上洛必达会很繁。\n\n【解答】记底数 $u(x)=\\cos 2x+2x\\sin x$。先把它展到 $x^4$：\n\n$$\\cos 2x=1-\\dfrac{(2x)^2}{2}+\\dfrac{(2x)^4}{24}+o(x^4)=1-2x^2+\\dfrac{2}{3}x^4+o(x^4),$$\n\n$$2x\\sin x=2x\\left(x-\\dfrac{x^3}{6}+o(x^3)\\right)=2x^2-\\dfrac{1}{3}x^4+o(x^4).$$\n\n两式相加，$x^2$ 项相消：\n\n$$u(x)=1+\\left(\\dfrac{2}{3}-\\dfrac{1}{3}\\right)x^4+o(x^4)=1+\\dfrac{1}{3}x^4+o(x^4).$$\n\n于是 $u(x)-1\\to 0$，利用 $\\ln(1+t)\\sim t$：\n\n$$\\lim_{x\\to0}\\dfrac{\\ln u(x)}{x^4}=\\lim_{x\\to0}\\dfrac{u(x)-1}{x^4}=\\lim_{x\\to0}\\dfrac{\\frac{1}{3}x^4+o(x^4)}{x^4}=\\dfrac{1}{3}.$$\n\n故原极限 $=\\exp\\left(\\dfrac{1}{3}\\right)=e^{\\frac{1}{3}}$。",
-      "wrong_options": {},
-      "pitfalls": [
-        "$\\cos 2x$ 必须展到 $x^4$ 项，只展到 $x^2$ 会漏掉关键的 $\\frac{2}{3}x^4$ 导致答案错误。",
-        "$1^{\\infty}$ 型务必先取对数，切忌把底数极限 1 直接代入得 $1^{\\infty}=1$。"
-      ],
-      "key_point": "$1^{\\infty}$ 取对数 + 泰勒展开到与分母同阶（这里 $x^4$），$x^2$ 项相消是题眼。"
-    },
-    {
       "id": 400,
       "paper": "数学二",
       "year": 2016,
@@ -498,6 +479,25 @@
         "第三行与第一行相同，化简时易漏掉它带来的零行，导致秩判断出错"
       ],
       "key_point": "无解⇔r(A)<r(A,β)；先用行列式锁定候选值再逐一验秩；A^T A X=A^T β 必有解。"
+    },
+    {
+      "id": 369,
+      "paper": "数学二",
+      "year": 2016,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "已知矩阵 $\\boldsymbol{A}=\\left(\\begin{array}{ccc}0 & -1 & 1 \\\\ 2 & -3 & 0 \\\\ 0 & 0 & 0\\end{array}\\right)$.\r\n\r\n(1) 求 $\\boldsymbol{A}^{99}$;\r\n\r\n(2) 设 $3$ 阶矩阵 $\\boldsymbol{B}=\\left(\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}\\right)$ 满足 $\\boldsymbol{B}^{2}=\\boldsymbol{B} \\boldsymbol{A}$, 记 $\\boldsymbol{B}^{100}=\\left(\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}\\right)$, 将 $\\boldsymbol{\\beta}_{1}, \\boldsymbol{\\beta}_{2}, \\boldsymbol{\\beta}_{3}$ 分别表示为 $\\boldsymbol{\\alpha}_{1}, \\boldsymbol{\\alpha}_{2}, \\boldsymbol{\\alpha}_{3}$ 的线性组合",
+      "options": {},
+      "answer": "$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}$；$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,\\ \\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,\\ \\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2$",
+      "analysis": "【分析】(1) $A$ 有三个互异特征值，可相似对角化，用 $A^{99}=PD^{99}P^{-1}$ 计算高次幂。(2) 由 $B^{2}=BA$ 归纳出 $B^{n}=BA^{n-1}$，于是 $B^{100}=BA^{99}$，从而 $B^{100}$ 的各列是 $B=(\\alpha_1,\\alpha_2,\\alpha_3)$ 各列以 $A^{99}$ 对应列为系数的线性组合。\n\n【解答】\n（1）特征多项式 $\\det(A-\\lambda I)=-\\lambda(\\lambda+1)(\\lambda+2)$，特征值 $\\lambda=0,-1,-2$，互异故可对角化。\n求特征向量：\n$\\lambda=0$：$\\xi_1=(3,2,2)^{T}$；$\\lambda=-1$：$\\xi_2=(1,1,0)^{T}$；$\\lambda=-2$：$\\xi_3=(1,2,0)^{T}$。\n取 $P=(\\xi_1,\\xi_2,\\xi_3)=\\begin{pmatrix}3&1&1\\\\2&1&2\\\\2&0&0\\end{pmatrix}$，则 $P^{-1}AP=D=\\mathrm{diag}(0,-1,-2)$。\n算得 $P^{-1}=\\begin{pmatrix}0&0&\\frac12\\\\2&-1&-2\\\\-1&1&\\frac12\\end{pmatrix}$。\n于是 $A^{99}=P\\,\\mathrm{diag}(0,(-1)^{99},(-2)^{99})\\,P^{-1}=P\\,\\mathrm{diag}(0,-1,-2^{99})\\,P^{-1}$。\n计算：\n$$A^{99}=\\begin{pmatrix}2^{99}-2&1-2^{99}&2-2^{98}\\\\2^{100}-2&1-2^{100}&2-2^{99}\\\\0&0&0\\end{pmatrix}.$$\n（验算：取指数为 $1$ 时同样的乘法还原出 $A$ 本身，方法正确。）\n\n（2）由 $B^{2}=BA$，归纳：设 $B^{n}=BA^{n-1}$，则 $B^{n+1}=B\\cdot B^{n}=B\\cdot BA^{n-1}=B^{2}A^{n-1}=BA\\cdot A^{n-1}=BA^{n}$。故对一切 $n\\ge1$ 有 $B^{n}=BA^{n-1}$，特别地\n$$B^{100}=BA^{99}.$$\n记 $A^{99}=(c_{ij})$。$B=(\\alpha_1,\\alpha_2,\\alpha_3)$，则 $B^{100}=BA^{99}$ 的第 $j$ 列\n$$\\beta_j=B\\cdot(A^{99}\\text{的第}j\\text{列})=c_{1j}\\alpha_1+c_{2j}\\alpha_2+c_{3j}\\alpha_3.$$\n由 $A^{99}$ 第三行全为 $0$（$c_{3j}=0$），代入各列：\n$$\\beta_1=(2^{99}-2)\\alpha_1+(2^{100}-2)\\alpha_2,$$\n$$\\beta_2=(1-2^{99})\\alpha_1+(1-2^{100})\\alpha_2,$$\n$$\\beta_3=(2-2^{98})\\alpha_1+(2-2^{99})\\alpha_2.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "三个互异特征值保证可对角化，$A^{99}$ 通过 $PD^{99}P^{-1}$ 求，$(-2)^{99}=-2^{99}$ 符号别错。",
+        "$B^2=BA$ 归纳得 $B^{100}=BA^{99}$ 是第二问的桥梁。",
+        "$\\beta_j$ 的系数取自 $A^{99}$ 的第 $j$ 列；因 $A^{99}$ 第三行为 $0$，$\\alpha_3$ 不出现。"
+      ],
+      "key_point": "可对角化矩阵求高次幂 $PD^nP^{-1}$；$B^2=BA\\Rightarrow B^{100}=BA^{99}$，列组合系数即 $A^{99}$ 的列。"
     }
   ]
 }

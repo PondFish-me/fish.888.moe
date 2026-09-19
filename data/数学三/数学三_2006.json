@@ -4,6 +4,60 @@
   "count": 23,
   "questions": [
     {
+      "id": 868,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 1,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$1$",
+      "analysis": "当 $n$ 为偶数时, $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=\\lim _{n \\rightarrow \\infty}\\left(1+\\frac{1}{n}\\right)=1$;\r\n\r\n当 $n$ 为奇数时, $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{-1}\\\\\r\n=\\lim _{n \\rightarrow \\infty} \\frac{n}{n+1}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(1-\\frac{1}{n+1}\\right)=1$;\r\n\r\n所以 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=1$",
+      "wrong_options": {},
+      "pitfalls": [
+        "(−1)^n 无极限，须按奇偶分别求",
+        "偶数项 (1+1/n)→1，奇数项 n/(n+1)→1，两者都为 1"
+      ],
+      "key_point": "两种奇偶情形极限都为 1，故极限为 1。"
+    },
+    {
+      "id": 869,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 2,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=2$ 的某邻域内可导, 且 $f^{\\prime}(x)=\\mathrm{e}^{f(x)}, f(2)=1$, 则 $f^{\\prime \\prime \\prime}(2)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2 \\mathrm{e}^3$",
+      "analysis": "由 $f(2)=1$, 得 $f^{\\prime}(2)=\\mathrm{e}$,\r\n\r\n又由 $f^{\\prime}(x)=\\mathrm{e}^{f(x)}$, \r\n\r\n得 $f^{\\prime \\prime}(x)=\\mathrm{e}^{f(x)} f^{\\prime}(x)=\\mathrm{e}^{2 f(x)}, \\\\\r\nf^{\\prime \\prime \\prime}(x)=2 \\mathrm{e}^{2 f(x)} f^{\\prime}(x)=2 \\mathrm{e}^{3 f(x)}$, \r\n\r\n于是 $f^{\\prime \\prime \\prime}(2)=2 \\mathrm{e}^3$",
+      "wrong_options": {},
+      "pitfalls": [
+        "每次求导都要把 f'=e^f 再代回，f''=e^f·f'=e^{2f}",
+        "f'''=2e^{2f}·f'=2e^{3f}，代 f(2)=1 得 2e³"
+      ],
+      "key_point": "f'''(2)=2e^{3f(2)}=2e³。"
+    },
+    {
+      "id": 870,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 3,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设函数 $f(u)$ 可微, 且 $\\displaystyle f^{\\prime}(0)=\\frac{1}{2}$, 则 $z=f\\left(4 x^2-y^2\\right)$ 在点 $(1,2)$ 处的全微分 $\\left.\\mathrm{d} z\\right|_{(1,2)}=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$4 \\mathrm{d} x-2 \\mathrm{d} y$",
+      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=8 x f^{\\prime}\\left(4 x^2-y^2\\right), \\frac{\\partial z}{\\partial y}=-2 y f^{\\prime}\\left(4 x^2-y^2\\right),\\\\\r\n\\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,2)}=8 f^{\\prime}(0)=4,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(1,2)}=-4 f^{\\prime}(0)=-2$,\r\n\r\n于是 $\\left.\\mathrm{d} z\\right|_{(1,2)}=4 \\mathrm{d} x-2 \\mathrm{d} y$",
+      "wrong_options": {},
+      "pitfalls": [
+        "4·1²−2²=0，恰用到 f'(0)=1/2",
+        "z_x=8xf'(0)=4，z_y=−2yf'(0)=−2"
+      ],
+      "key_point": "dz|_(1,2)=4dx−2dy。"
+    },
+    {
       "id": 839,
       "paper": "数学三",
       "year": 2006,
@@ -40,6 +94,24 @@
       "key_point": "P=P{X≤1}P{Y≤1}=(1/3)²=1/9"
     },
     {
+      "id": 871,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 6,
+      "type": "填空题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 $\\displaystyle f(x)=\\frac{1}{2} \\mathrm{e}^{-|x|}(-\\infty<x<+\\infty), X_1, X_2, \\cdots, X_n$ 为总体 $X$ 的简单随机样本, 其样本方差为 $S^2$, 则 $E\\left(S^2\\right)=\\rule{0.5cm}{0.2mm}$",
+      "options": {},
+      "answer": "$2$",
+      "analysis": "$\\displaystyle E(X)=\\int_{-\\infty}^{+\\infty} x f(x) \\mathrm{d} x=0,\\\\\r\nE\\left(X^2\\right)=\\int_{-\\infty}^{+\\infty} x^2 f(x) \\mathrm{d} x=\\int_0^{+\\infty} x^2 \\mathrm{e}^{-x} \\mathrm{d} x=\\Gamma(3)=2$,\r\n\r\n于是 $E\\left(S^2\\right)=D(X)=2$",
+      "wrong_options": {},
+      "pitfalls": [
+        "样本方差 S² 是 D(X) 的无偏估计，E(S²)=D(X) 与样本量无关",
+        "密度偶函数 E(X)=0，D(X)=E(X²)=2∫₀^∞x²·½e^{−x}dx=Γ(3)=2"
+      ],
+      "key_point": "E(S²)=D(X)=E(X²)=2。"
+    },
+    {
       "id": 841,
       "paper": "数学三",
       "year": 2006,
@@ -67,6 +139,33 @@
       "key_point": "0<dy<Δy（凸函数割线增量大于切线微分）"
     },
     {
+      "id": 872,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 8,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续, 且 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}=1$, 则 $(\\quad)$",
+      "options": {
+        "A": "$f(0)=0$ 且 $f_{-}^{\\prime}(0)$ 存在",
+        "B": "$f(0)=1$ 且 $f_{-}^{\\prime}(0)$ 存在",
+        "C": "$f(0)=0$ 且 $f_{+}^{\\prime}(0)$ 存在",
+        "D": "$f(0)=1$ 且 $f_{+}^{\\prime}(0)$ 存在"
+      },
+      "answer": "C",
+      "analysis": "由 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}=1$, \r\n\r\n得 $\\displaystyle \\lim _{h \\rightarrow 0} f\\left(h^2\\right)=0$, \r\n\r\n因为 $f(x)$ 在 $x=0$ 处 连续, 所以 $f(0)=0$.\r\n\r\n又由 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}\\\\\r\n=\\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)-f(0)}{h^2}=f_{+}^{\\prime}(0)$, \r\n\r\n得 $f_{+}^{\\prime}(0)=1$, 应选 (C)",
+      "wrong_options": {
+        "A": "h²≥0 只能得右导数，得不到左导数 f'_−(0)",
+        "B": "由极限得 f(0)=0 而非 1，且只能是右导数",
+        "D": "f(0)=1 判错，应为 0"
+      },
+      "pitfalls": [
+        "h² 恒非负，x=h² 只从右侧趋于 0，只能断言右导数存在",
+        "先由 lim f(h²)=0 结合连续性得 f(0)=0，再识别极限为 f'_+(0)"
+      ],
+      "key_point": "f(0)=0 且 f'_+(0)=1，选 C。"
+    },
+    {
       "id": 843,
       "paper": "数学三",
       "year": 2006,
@@ -92,6 +191,33 @@
         "D 的部分和=S_n-a₁/2+a_{n+1}/2，n→∞ 极限存在"
       ],
       "key_point": "Σ(aₙ+aₙ₊₁)/2 部分和裂项收敛，选 D"
+    },
+    {
+      "id": 879,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 10,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设非齐次线性微分方程 $y^{\\prime}+P(x) y=Q(x)$ 有两个不同的解 $y_1(x), y_2(x), C$ 为任意常数, 则该方程的通解是 $(\\quad)$",
+      "options": {
+        "A": "$C\\left[y_1(x)-y_2(x)\\right]$",
+        "B": "$y_1(x)+C\\left[y_1(x)-y_2(x)\\right]$",
+        "C": "$C\\left[y_1(x)+y_2(x)\\right]$",
+        "D": "$y_1(x)+C\\left[y_1(x)+y_2(x)\\right]$"
+      },
+      "answer": "B",
+      "analysis": "$y_1(x)-y_2(x)$ 为齐次线性微分方程 $y^{\\prime}+P(x) y=0$ 的解, \r\n\r\n$y^{\\prime}+P(x) y=Q(x)$ 的通解为 \r\n\r\n$y^{\\prime}+P(x) y=0$ 的通解与 $y^{\\prime}+P(x) y=Q(x)$ 的特解之和,\r\n\r\n故 $y^{\\prime}+P(x) y=Q(x)$ 的通解为 $y_1(x)+C\\left[y_1(x)-y_2(x)\\right]$, \r\n\r\n应选 (B)",
+      "wrong_options": {
+        "A": "C(y1−y2) 只是齐次通解，缺少一个非齐次特解",
+        "C": "y1+y2 不是齐次方程的解（它满足右端为 2Q）",
+        "D": "含 y1+y2 的项非齐次解，解的结构错"
+      },
+      "pitfalls": [
+        "两个特解之差 y1−y2 才是齐次方程的解",
+        "通解须为『非齐次一个特解＋齐次通解』，不能只写齐次部分"
+      ],
+      "key_point": "通解=y1+C(y1−y2)，选 B。"
     },
     {
       "id": 844,
@@ -202,159 +328,6 @@
       "key_point": "σ₁<σ₂（选 A）"
     },
     {
-      "id": 855,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 21,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设 3 阶实对称矩阵 $\\boldsymbol{A}$ 的各行元素之和均为 $3$, 向量$\\boldsymbol{\\alpha}_{1}=(-1,2,-1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,-1,1)^{\\mathrm{T}}$ 是线性方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\mathbf{0}$ 的两个解.\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的特征值与特征向量;\r\n\r\n(2) 求正交矩阵 $\\boldsymbol Q$ 和对角矩阵 $\\boldsymbol{\\Lambda}$, 使得 $\\displaystyle Q^{\\mathrm{T}} \\boldsymbol{AQ}=\\boldsymbol{\\Lambda}$\r\n\r\n(3) (数三) 求 $\\boldsymbol{A}$ 及 $(\\boldsymbol{A} - \\dfrac{3}{2} \\boldsymbol{E})^6$",
-      "options": {},
-      "answer": "(1) $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$\r\n\r\n(3) $\\dfrac{729}{64}\\boldsymbol{E}$",
-      "analysis": "(1) 根据特征值与特征向量的定义, \r\n\r\n由 $\\boldsymbol{A}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)=3\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ \r\n\r\n得 $\\lambda_3=3$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n$\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ 为其对应的特征向量,\r\n\r\n因为 $\\boldsymbol{A x}=\\mathbf{0}$ 有非零解, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right)$, $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}0 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n于是 $\\lambda_1=\\lambda_2=0$, 其对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$,\r\n\r\n故 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) 令 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2-\\dfrac{\\left(\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_1\\right)}{\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1\\right)} \\boldsymbol{\\beta}_1=\\frac{1}{2}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_3=\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n单位化得 $\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{6}}\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{2}}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\boldsymbol{\\gamma}_3=\\dfrac{1}{\\sqrt{3}}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n令 $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol Q^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 3\\end{array}\\right)$\r\n\r\n(3) $\\boldsymbol{A}=\\boldsymbol{Q}\\left(\\begin{array}{lll}\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 3\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}=\\left(\\begin{array}{lll}\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1\r\n\\end{array}\\right)\\\\\r\n\\left(\\boldsymbol{A}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\\\\r\n=\\left[\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\right]^6\\\\\r\n=\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\boldsymbol{Q}^{\\mathrm{T}} \\\\\r\n=\\boldsymbol{Q}\\left(\\begin{array}{ccc}\r\n\\left(\\frac{3}{2}\\right)^6 & 0 & 0 \\\\\r\n0 & \\left(\\frac{3}{2}\\right)^6 & 0 \\\\\r\n0 & 0 & \\left(\\frac{3}{2}\\right)^6\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\\\\r\n=\\left(\\dfrac{3}{2}\\right)^6 \\boldsymbol{E}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "各行元素之和为 3 等价于 A(1,1,1)ᵀ=3(1,1,1)ᵀ，直接读出 λ=3 及其特征向量",
-        "实对称阵不同特征值向量自动正交，但 λ=0 的二重特征向量 α₁,α₂ 须施密特正交化后再单位化"
-      ],
-      "key_point": "特征值 0,0,3；Q 由正交化的特征向量拼成，Λ=diag(0,0,3)"
-    },
-    {
-      "id": 856,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 22,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设随机变量 $X$ 的概率密度为\r\n\r\n$f_{X}(x)= \\begin{cases}\\dfrac{1}{2}, & -1<x<0 \\\\ \\dfrac{1}{4}, & 0 \\leqslant x<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n令 $Y=X^{2}, F(x, y)$ 为二维随机变量 $(X, Y)$ 的分布函数, 求:\r\n\r\n(1) $Y$ 的概率密度 $f_{Y}(y)$;\r\n\r\n(2) $F\\left(-\\dfrac{1}{2}, 4\\right)$",
-      "options": {},
-      "answer": "(1) $f_Y(y)= \\begin{cases}\\dfrac{3}{8 \\sqrt{y},} & 0<y<1 \\\\ \\dfrac{1}{8 \\sqrt{y},} & 1 \\leqslant y<4 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\dfrac{1}{4}$",
-      "analysis": "(1) $F_Y(y)=P\\{Y \\leqslant y\\}=P\\left\\{X^2 \\leqslant y\\right\\}$,\r\n\r\n当 $y<0$ 时, $F_Y(y)=0$;\r\n\r\n当 $0 \\leqslant y<1$ 时, $\\displaystyle F_Y(y)\\\\\r\n=P\\{-\\sqrt{y} \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=\\int_{-\\sqrt{y}}^0 \\frac{1}{2} \\mathrm{d} x+\\int_0^{\\sqrt{y}} \\frac{1}{4} \\mathrm{d} x\\\\\r\n=\\frac{3 \\sqrt{y}}{4}$;\r\n\r\n当 $1 \\leqslant y<4$ 时, $\\displaystyle F_Y(y)\\\\\r\n=P\\{-\\sqrt{y} \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=P\\{-1 \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=\\int_{-1}^0 \\frac{1}{2} \\mathrm{d} x+\\int_0^{\\sqrt{y}} \\frac{1}{4} \\mathrm{d} x\\\\\r\n=\\frac{1}{2}+\\frac{\\sqrt{y}}{4}$\r\n\r\n当 $y \\geqslant 4$ 时, $F_Y(y)=1$,\r\n\r\n于是 $F_Y(y)=\\left\\{\\begin{array}{ll}0, & y<0 \\\\ \\dfrac{3 \\sqrt{y}}{4} & 0 \\leqslant y<1, \\\\ \\dfrac{1}{2}+\\dfrac{\\sqrt{y}}{4}, & 1 \\leqslant y<4 \\\\ 1, & y \\geqslant 4,\\end{array} \\right.$ \r\n\r\n故 $f_Y(y)= \\begin{cases}\\dfrac{3}{8 \\sqrt{y},} & 0<y<1 \\\\ \\dfrac{1}{8 \\sqrt{y},} & 1 \\leqslant y<4 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F\\left(-\\frac{1}{2}, 4\\right) \\\\\r\n=P\\left\\{X \\leqslant-\\frac{1}{2}, Y \\leqslant 4\\right\\}\\\\\r\n=P\\left\\{X \\leqslant-\\frac{1}{2},-2 \\leqslant X \\leqslant 2\\right\\} \\\\\r\n=P\\left\\{-2 \\leqslant X \\leqslant-\\frac{1}{2}\\right\\}\\\\\r\n=P\\left\\{-1 \\leqslant X \\leqslant-\\frac{1}{2}\\right\\}\\\\\r\n=\\int_{-1}^{-\\frac{1}{2}} \\frac{1}{2} \\mathrm{d} x\\\\\r\n=\\frac{1}{4}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "X 密度分段（(-1,0) 取 1/2、[0,2) 取 1/4），√y 落在不同段时 F_Y 表达式不同，分界在 y=1",
-        "F(-1/2,4)=P{X≤-1/2,Y≤4}，Y=X²≤4 恒成立，退化为 P{X≤-1/2}=∫_{-1}^{-1/2}½dx=1/4"
-      ],
-      "key_point": "分段求导得 f_Y；F(-1/2,4)=P{X≤-1/2}=1/4"
-    },
-    {
-      "id": 857,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 23,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)= \\begin{cases}\\theta, & 0<x<1 \\\\ 1-\\theta, & 1 \\leqslant x<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n其中 $\\theta(0<\\theta<1)$ 是未知参数. $X_{1}, X_{2}, \\cdots, X_{n}$ 为来自总体 $X$ 的简单随机样本, 记 $N$ 为样本值 $x_{1}, x_{2}, \\cdots, x_{n}$ 中小于 $1$ 的个数, 求 $\\theta$ 的最大似然估计",
-      "options": {},
-      "answer": "$\\hat{\\theta}=\\dfrac{N}{n}$",
-      "analysis": "似然函数为 $\\displaystyle L(\\theta)\\\\\r\n=P\\left\\{X_1=x_1\\right\\} P\\left\\{X_2=x_2\\right\\} \\cdots P\\left\\{X_n=x_n\\right\\} \\\\\r\n=P\\left\\{X=x_1\\right\\} P\\left\\{X=x_2\\right\\} \\cdots P\\left\\{X=x_n\\right\\} \\\\\r\n=\\theta^N(1-\\theta)^{n-N}, \\\\\r\n \\ln L(\\theta)=N \\ln \\theta+(n-N) \\ln (1-\\theta)$,\r\n\r\n由 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} \\theta} \\ln L(\\theta)=\\frac{N}{\\theta}-\\frac{n-N}{1-\\theta}=0$ \r\n\r\n得参数 $\\theta$ 的最大似然估计为 $\\hat{\\theta}=\\dfrac{N}{n}$",
-      "wrong_options": {},
-      "pitfalls": [
-        "密度在 (0,1) 取 θ、在 [1,2) 取 1-θ，样本按是否<1 计数，似然为 θ^N(1-θ)^{n-N}",
-        "lnL 求导 N/θ-(n-N)/(1-θ)=0 解得 θ̂=N/n（即小于 1 的样本比例）"
-      ],
-      "key_point": "θ̂=N/n（样本中小于 1 的比例）"
-    },
-    {
-      "id": 868,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 1,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "$\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$1$",
-      "analysis": "当 $n$ 为偶数时, $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=\\lim _{n \\rightarrow \\infty}\\left(1+\\frac{1}{n}\\right)=1$;\r\n\r\n当 $n$ 为奇数时, $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{-1}\\\\\r\n=\\lim _{n \\rightarrow \\infty} \\frac{n}{n+1}\\\\\r\n=\\lim _{n \\rightarrow \\infty}\\left(1-\\frac{1}{n+1}\\right)=1$;\r\n\r\n所以 $\\displaystyle \\lim _{n \\rightarrow \\infty}\\left(\\frac{n+1}{n}\\right)^{(-1)^n}=1$",
-      "wrong_options": {},
-      "pitfalls": [
-        "(−1)^n 无极限，须按奇偶分别求",
-        "偶数项 (1+1/n)→1，奇数项 n/(n+1)→1，两者都为 1"
-      ],
-      "key_point": "两种奇偶情形极限都为 1，故极限为 1。"
-    },
-    {
-      "id": 869,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 2,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $x=2$ 的某邻域内可导, 且 $f^{\\prime}(x)=\\mathrm{e}^{f(x)}, f(2)=1$, 则 $f^{\\prime \\prime \\prime}(2)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$2 \\mathrm{e}^3$",
-      "analysis": "由 $f(2)=1$, 得 $f^{\\prime}(2)=\\mathrm{e}$,\r\n\r\n又由 $f^{\\prime}(x)=\\mathrm{e}^{f(x)}$, \r\n\r\n得 $f^{\\prime \\prime}(x)=\\mathrm{e}^{f(x)} f^{\\prime}(x)=\\mathrm{e}^{2 f(x)}, \\\\\r\nf^{\\prime \\prime \\prime}(x)=2 \\mathrm{e}^{2 f(x)} f^{\\prime}(x)=2 \\mathrm{e}^{3 f(x)}$, \r\n\r\n于是 $f^{\\prime \\prime \\prime}(2)=2 \\mathrm{e}^3$",
-      "wrong_options": {},
-      "pitfalls": [
-        "每次求导都要把 f'=e^f 再代回，f''=e^f·f'=e^{2f}",
-        "f'''=2e^{2f}·f'=2e^{3f}，代 f(2)=1 得 2e³"
-      ],
-      "key_point": "f'''(2)=2e^{3f(2)}=2e³。"
-    },
-    {
-      "id": 870,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 3,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设函数 $f(u)$ 可微, 且 $\\displaystyle f^{\\prime}(0)=\\frac{1}{2}$, 则 $z=f\\left(4 x^2-y^2\\right)$ 在点 $(1,2)$ 处的全微分 $\\left.\\mathrm{d} z\\right|_{(1,2)}=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$4 \\mathrm{d} x-2 \\mathrm{d} y$",
-      "analysis": "$\\displaystyle \\frac{\\partial z}{\\partial x}=8 x f^{\\prime}\\left(4 x^2-y^2\\right), \\frac{\\partial z}{\\partial y}=-2 y f^{\\prime}\\left(4 x^2-y^2\\right),\\\\\r\n\\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,2)}=8 f^{\\prime}(0)=4,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(1,2)}=-4 f^{\\prime}(0)=-2$,\r\n\r\n于是 $\\left.\\mathrm{d} z\\right|_{(1,2)}=4 \\mathrm{d} x-2 \\mathrm{d} y$",
-      "wrong_options": {},
-      "pitfalls": [
-        "4·1²−2²=0，恰用到 f'(0)=1/2",
-        "z_x=8xf'(0)=4，z_y=−2yf'(0)=−2"
-      ],
-      "key_point": "dz|_(1,2)=4dx−2dy。"
-    },
-    {
-      "id": 871,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 6,
-      "type": "填空题",
-      "difficulty": 0,
-      "stem": "设总体 $X$ 的概率密度为 $\\displaystyle f(x)=\\frac{1}{2} \\mathrm{e}^{-|x|}(-\\infty<x<+\\infty), X_1, X_2, \\cdots, X_n$ 为总体 $X$ 的简单随机样本, 其样本方差为 $S^2$, 则 $E\\left(S^2\\right)=\\rule{0.5cm}{0.2mm}$",
-      "options": {},
-      "answer": "$2$",
-      "analysis": "$\\displaystyle E(X)=\\int_{-\\infty}^{+\\infty} x f(x) \\mathrm{d} x=0,\\\\\r\nE\\left(X^2\\right)=\\int_{-\\infty}^{+\\infty} x^2 f(x) \\mathrm{d} x=\\int_0^{+\\infty} x^2 \\mathrm{e}^{-x} \\mathrm{d} x=\\Gamma(3)=2$,\r\n\r\n于是 $E\\left(S^2\\right)=D(X)=2$",
-      "wrong_options": {},
-      "pitfalls": [
-        "样本方差 S² 是 D(X) 的无偏估计，E(S²)=D(X) 与样本量无关",
-        "密度偶函数 E(X)=0，D(X)=E(X²)=2∫₀^∞x²·½e^{−x}dx=Γ(3)=2"
-      ],
-      "key_point": "E(S²)=D(X)=E(X²)=2。"
-    },
-    {
-      "id": 872,
-      "paper": "数学三",
-      "year": 2006,
-      "index": 8,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在 $x=0$ 处连续, 且 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}=1$, 则 $(\\quad)$",
-      "options": {
-        "A": "$f(0)=0$ 且 $f_{-}^{\\prime}(0)$ 存在",
-        "B": "$f(0)=1$ 且 $f_{-}^{\\prime}(0)$ 存在",
-        "C": "$f(0)=0$ 且 $f_{+}^{\\prime}(0)$ 存在",
-        "D": "$f(0)=1$ 且 $f_{+}^{\\prime}(0)$ 存在"
-      },
-      "answer": "C",
-      "analysis": "由 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}=1$, \r\n\r\n得 $\\displaystyle \\lim _{h \\rightarrow 0} f\\left(h^2\\right)=0$, \r\n\r\n因为 $f(x)$ 在 $x=0$ 处 连续, 所以 $f(0)=0$.\r\n\r\n又由 $\\displaystyle \\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)}{h^2}\\\\\r\n=\\lim _{h \\rightarrow 0} \\frac{f\\left(h^2\\right)-f(0)}{h^2}=f_{+}^{\\prime}(0)$, \r\n\r\n得 $f_{+}^{\\prime}(0)=1$, 应选 (C)",
-      "wrong_options": {
-        "A": "h²≥0 只能得右导数，得不到左导数 f'_−(0)",
-        "B": "由极限得 f(0)=0 而非 1，且只能是右导数",
-        "D": "f(0)=1 判错，应为 0"
-      },
-      "pitfalls": [
-        "h² 恒非负，x=h² 只从右侧趋于 0，只能断言右导数存在",
-        "先由 lim f(h²)=0 结合连续性得 f(0)=0，再识别极限为 f'_+(0)"
-      ],
-      "key_point": "f(0)=0 且 f'_+(0)=1，选 C。"
-    },
-    {
       "id": 873,
       "paper": "数学三",
       "year": 2006,
@@ -463,31 +436,58 @@
       "key_point": "a=0 或 −10 相关；两种情形的极大无关组与线性表出如上。"
     },
     {
-      "id": 879,
+      "id": 855,
       "paper": "数学三",
       "year": 2006,
-      "index": 10,
-      "type": "选择题",
+      "index": 21,
+      "type": "解答题",
       "difficulty": 0,
-      "stem": "设非齐次线性微分方程 $y^{\\prime}+P(x) y=Q(x)$ 有两个不同的解 $y_1(x), y_2(x), C$ 为任意常数, 则该方程的通解是 $(\\quad)$",
-      "options": {
-        "A": "$C\\left[y_1(x)-y_2(x)\\right]$",
-        "B": "$y_1(x)+C\\left[y_1(x)-y_2(x)\\right]$",
-        "C": "$C\\left[y_1(x)+y_2(x)\\right]$",
-        "D": "$y_1(x)+C\\left[y_1(x)+y_2(x)\\right]$"
-      },
-      "answer": "B",
-      "analysis": "$y_1(x)-y_2(x)$ 为齐次线性微分方程 $y^{\\prime}+P(x) y=0$ 的解, \r\n\r\n$y^{\\prime}+P(x) y=Q(x)$ 的通解为 \r\n\r\n$y^{\\prime}+P(x) y=0$ 的通解与 $y^{\\prime}+P(x) y=Q(x)$ 的特解之和,\r\n\r\n故 $y^{\\prime}+P(x) y=Q(x)$ 的通解为 $y_1(x)+C\\left[y_1(x)-y_2(x)\\right]$, \r\n\r\n应选 (B)",
-      "wrong_options": {
-        "A": "C(y1−y2) 只是齐次通解，缺少一个非齐次特解",
-        "C": "y1+y2 不是齐次方程的解（它满足右端为 2Q）",
-        "D": "含 y1+y2 的项非齐次解，解的结构错"
-      },
+      "stem": "设 3 阶实对称矩阵 $\\boldsymbol{A}$ 的各行元素之和均为 $3$, 向量$\\boldsymbol{\\alpha}_{1}=(-1,2,-1)^{\\mathrm{T}}, \\boldsymbol{\\alpha}_{2}=(0,-1,1)^{\\mathrm{T}}$ 是线性方程组 $\\boldsymbol{A} \\boldsymbol{X}=\\mathbf{0}$ 的两个解.\r\n\r\n(1) 求 $\\boldsymbol{A}$ 的特征值与特征向量;\r\n\r\n(2) 求正交矩阵 $\\boldsymbol Q$ 和对角矩阵 $\\boldsymbol{\\Lambda}$, 使得 $\\displaystyle Q^{\\mathrm{T}} \\boldsymbol{AQ}=\\boldsymbol{\\Lambda}$\r\n\r\n(3) (数三) 求 $\\boldsymbol{A}$ 及 $(\\boldsymbol{A} - \\dfrac{3}{2} \\boldsymbol{E})^6$",
+      "options": {},
+      "answer": "(1) $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$\r\n\r\n(3) $\\dfrac{729}{64}\\boldsymbol{E}$",
+      "analysis": "(1) 根据特征值与特征向量的定义, \r\n\r\n由 $\\boldsymbol{A}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)=3\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ \r\n\r\n得 $\\lambda_3=3$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n$\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$ 为其对应的特征向量,\r\n\r\n因为 $\\boldsymbol{A x}=\\mathbf{0}$ 有非零解, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的特征值, \r\n\r\n其对应的特征向量为 $\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right)$, $\\boldsymbol{\\alpha}_2=\\left(\\begin{array}{c}0 \\\\ -1 \\\\ 1\\end{array}\\right)$, \r\n\r\n因为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$ 线性无关, \r\n\r\n所以 $\\lambda=0$ 为 $\\boldsymbol{A}$ 的二重特征值, \r\n\r\n于是 $\\lambda_1=\\lambda_2=0$, 其对应的线性无关的特征向量为 $\\boldsymbol{\\alpha}_1, \\boldsymbol{\\alpha}_2$,\r\n\r\n故 $\\boldsymbol{A}$ 的特征值为 $\\lambda_1=\\lambda_2=0, \\lambda_3=3$, \r\n\r\n其中 $\\lambda_3=3$ 对应的所有特征向量为 $k \\boldsymbol{\\alpha}_3(k$ 为任意的非零常数); \r\n\r\n$\\lambda_1=\\lambda_2=0$ 对应的所有特征向量为 $k_1 \\boldsymbol{\\alpha}_1+k_2 \\boldsymbol{\\alpha}_2 (k_1, k_2$ 为不全为零的任意常数)\r\n\r\n(2) 令 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1=\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_2-\\dfrac{\\left(\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_1\\right)}{\\left(\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1\\right)} \\boldsymbol{\\beta}_1=\\frac{1}{2}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\\\\r\n\\boldsymbol{\\beta}_3=\\boldsymbol{\\alpha}_3=\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n单位化得 $\\boldsymbol{\\gamma}_1=\\dfrac{1}{\\sqrt{6}}\\left(\\begin{array}{c}-1 \\\\ 2 \\\\ -1\\end{array}\\right), \\boldsymbol{\\gamma}_2=\\dfrac{1}{\\sqrt{2}}\\left(\\begin{array}{c}-1 \\\\ 0 \\\\ 1\\end{array}\\right), \\boldsymbol{\\gamma}_3=\\dfrac{1}{\\sqrt{3}}\\left(\\begin{array}{l}1 \\\\ 1 \\\\ 1\\end{array}\\right)$,\r\n\r\n令 $\\displaystyle Q=\\left(\\begin{array}{ccc}-\\frac{1}{\\sqrt{6}} & -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}} \\\\ \\frac{2}{\\sqrt{6}} & 0 & \\frac{1}{\\sqrt{3}} \\\\ -\\frac{1}{\\sqrt{6}} & \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{3}}\\end{array}\\right)$, \r\n\r\n则 $\\boldsymbol Q^{\\mathrm{T}} \\boldsymbol{A} \\boldsymbol{Q}=\\left(\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 3\\end{array}\\right)$\r\n\r\n(3) $\\boldsymbol{A}=\\boldsymbol{Q}\\left(\\begin{array}{lll}\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 0 \\\\\r\n0 & 0 & 3\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}=\\left(\\begin{array}{lll}\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1 \\\\\r\n1 & 1 & 1\r\n\\end{array}\\right)\\\\\r\n\\left(\\boldsymbol{A}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\\\\r\n=\\left[\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\right]^6\\\\\r\n=\\boldsymbol{Q}\\left(\\boldsymbol{\\Lambda}-\\dfrac{3}{2} \\boldsymbol{E}\\right)^6 \\boldsymbol{Q}^{\\mathrm{T}} \\\\\r\n=\\boldsymbol{Q}\\left(\\begin{array}{ccc}\r\n\\left(\\frac{3}{2}\\right)^6 & 0 & 0 \\\\\r\n0 & \\left(\\frac{3}{2}\\right)^6 & 0 \\\\\r\n0 & 0 & \\left(\\frac{3}{2}\\right)^6\r\n\\end{array}\\right) \\boldsymbol{Q}^{\\mathrm{T}}\\\\\r\n=\\left(\\dfrac{3}{2}\\right)^6 \\boldsymbol{E}$",
+      "wrong_options": {},
       "pitfalls": [
-        "两个特解之差 y1−y2 才是齐次方程的解",
-        "通解须为『非齐次一个特解＋齐次通解』，不能只写齐次部分"
+        "各行元素之和为 3 等价于 A(1,1,1)ᵀ=3(1,1,1)ᵀ，直接读出 λ=3 及其特征向量",
+        "实对称阵不同特征值向量自动正交，但 λ=0 的二重特征向量 α₁,α₂ 须施密特正交化后再单位化"
       ],
-      "key_point": "通解=y1+C(y1−y2)，选 B。"
+      "key_point": "特征值 0,0,3；Q 由正交化的特征向量拼成，Λ=diag(0,0,3)"
+    },
+    {
+      "id": 856,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 22,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设随机变量 $X$ 的概率密度为\r\n\r\n$f_{X}(x)= \\begin{cases}\\dfrac{1}{2}, & -1<x<0 \\\\ \\dfrac{1}{4}, & 0 \\leqslant x<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n令 $Y=X^{2}, F(x, y)$ 为二维随机变量 $(X, Y)$ 的分布函数, 求:\r\n\r\n(1) $Y$ 的概率密度 $f_{Y}(y)$;\r\n\r\n(2) $F\\left(-\\dfrac{1}{2}, 4\\right)$",
+      "options": {},
+      "answer": "(1) $f_Y(y)= \\begin{cases}\\dfrac{3}{8 \\sqrt{y},} & 0<y<1 \\\\ \\dfrac{1}{8 \\sqrt{y},} & 1 \\leqslant y<4 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\dfrac{1}{4}$",
+      "analysis": "(1) $F_Y(y)=P\\{Y \\leqslant y\\}=P\\left\\{X^2 \\leqslant y\\right\\}$,\r\n\r\n当 $y<0$ 时, $F_Y(y)=0$;\r\n\r\n当 $0 \\leqslant y<1$ 时, $\\displaystyle F_Y(y)\\\\\r\n=P\\{-\\sqrt{y} \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=\\int_{-\\sqrt{y}}^0 \\frac{1}{2} \\mathrm{d} x+\\int_0^{\\sqrt{y}} \\frac{1}{4} \\mathrm{d} x\\\\\r\n=\\frac{3 \\sqrt{y}}{4}$;\r\n\r\n当 $1 \\leqslant y<4$ 时, $\\displaystyle F_Y(y)\\\\\r\n=P\\{-\\sqrt{y} \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=P\\{-1 \\leqslant X \\leqslant \\sqrt{y}\\}\\\\\r\n=\\int_{-1}^0 \\frac{1}{2} \\mathrm{d} x+\\int_0^{\\sqrt{y}} \\frac{1}{4} \\mathrm{d} x\\\\\r\n=\\frac{1}{2}+\\frac{\\sqrt{y}}{4}$\r\n\r\n当 $y \\geqslant 4$ 时, $F_Y(y)=1$,\r\n\r\n于是 $F_Y(y)=\\left\\{\\begin{array}{ll}0, & y<0 \\\\ \\dfrac{3 \\sqrt{y}}{4} & 0 \\leqslant y<1, \\\\ \\dfrac{1}{2}+\\dfrac{\\sqrt{y}}{4}, & 1 \\leqslant y<4 \\\\ 1, & y \\geqslant 4,\\end{array} \\right.$ \r\n\r\n故 $f_Y(y)= \\begin{cases}\\dfrac{3}{8 \\sqrt{y},} & 0<y<1 \\\\ \\dfrac{1}{8 \\sqrt{y},} & 1 \\leqslant y<4 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n(2) $\\displaystyle F\\left(-\\frac{1}{2}, 4\\right) \\\\\r\n=P\\left\\{X \\leqslant-\\frac{1}{2}, Y \\leqslant 4\\right\\}\\\\\r\n=P\\left\\{X \\leqslant-\\frac{1}{2},-2 \\leqslant X \\leqslant 2\\right\\} \\\\\r\n=P\\left\\{-2 \\leqslant X \\leqslant-\\frac{1}{2}\\right\\}\\\\\r\n=P\\left\\{-1 \\leqslant X \\leqslant-\\frac{1}{2}\\right\\}\\\\\r\n=\\int_{-1}^{-\\frac{1}{2}} \\frac{1}{2} \\mathrm{d} x\\\\\r\n=\\frac{1}{4}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "X 密度分段（(-1,0) 取 1/2、[0,2) 取 1/4），√y 落在不同段时 F_Y 表达式不同，分界在 y=1",
+        "F(-1/2,4)=P{X≤-1/2,Y≤4}，Y=X²≤4 恒成立，退化为 P{X≤-1/2}=∫_{-1}^{-1/2}½dx=1/4"
+      ],
+      "key_point": "分段求导得 f_Y；F(-1/2,4)=P{X≤-1/2}=1/4"
+    },
+    {
+      "id": 857,
+      "paper": "数学三",
+      "year": 2006,
+      "index": 23,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "设总体 $X$ 的概率密度为 $f(x ; \\theta)= \\begin{cases}\\theta, & 0<x<1 \\\\ 1-\\theta, & 1 \\leqslant x<2 \\\\ 0, & \\text { 其他 }\\end{cases}$\r\n\r\n其中 $\\theta(0<\\theta<1)$ 是未知参数. $X_{1}, X_{2}, \\cdots, X_{n}$ 为来自总体 $X$ 的简单随机样本, 记 $N$ 为样本值 $x_{1}, x_{2}, \\cdots, x_{n}$ 中小于 $1$ 的个数, 求 $\\theta$ 的最大似然估计",
+      "options": {},
+      "answer": "$\\hat{\\theta}=\\dfrac{N}{n}$",
+      "analysis": "似然函数为 $\\displaystyle L(\\theta)\\\\\r\n=P\\left\\{X_1=x_1\\right\\} P\\left\\{X_2=x_2\\right\\} \\cdots P\\left\\{X_n=x_n\\right\\} \\\\\r\n=P\\left\\{X=x_1\\right\\} P\\left\\{X=x_2\\right\\} \\cdots P\\left\\{X=x_n\\right\\} \\\\\r\n=\\theta^N(1-\\theta)^{n-N}, \\\\\r\n \\ln L(\\theta)=N \\ln \\theta+(n-N) \\ln (1-\\theta)$,\r\n\r\n由 $\\displaystyle \\frac{\\mathrm{d}}{\\mathrm{d} \\theta} \\ln L(\\theta)=\\frac{N}{\\theta}-\\frac{n-N}{1-\\theta}=0$ \r\n\r\n得参数 $\\theta$ 的最大似然估计为 $\\hat{\\theta}=\\dfrac{N}{n}$",
+      "wrong_options": {},
+      "pitfalls": [
+        "密度在 (0,1) 取 θ、在 [1,2) 取 1-θ，样本按是否<1 计数，似然为 θ^N(1-θ)^{n-N}",
+        "lnL 求导 N/θ-(n-N)/(1-θ)=0 解得 θ̂=N/n（即小于 1 的样本比例）"
+      ],
+      "key_point": "θ̂=N/n（样本中小于 1 的比例）"
     }
   ]
 }

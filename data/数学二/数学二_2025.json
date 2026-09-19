@@ -4,6 +4,33 @@
   "count": 22,
   "questions": [
     {
+      "id": 2490,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 1,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $z=z(x, y)$ 由 $z+\\ln z-\\int_y^x \\mathrm{e}^{-t^2} \\mathrm{~d} t=0$ 确定，则 $\\frac{\\partial z}{\\partial x}+\\frac{\\partial z}{\\partial y}=(\\quad)$",
+      "options": {
+        "A": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
+        "B": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$",
+        "C": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
+        "D": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题是由含变限积分的方程确定的隐函数求偏导。核心两步：一是对方程两端分别关于 $x$、$y$ 求偏导（把 $z$ 看成 $x,y$ 的函数，用复合函数链式法则）；二是处理变限积分 $\\int_y^x e^{-t^2}\\,dt$ 的求导——它关于上限 $x$ 求导得 $e^{-x^2}$，关于下限 $y$ 求导得 $-e^{-y^2}$（变下限要带负号，这是最易错处）。求出 $z_x,z_y$ 后直接相加即可。\n\n【解答】\n\n方程为\n$$z+\\ln z-\\int_y^x e^{-t^2}\\,dt=0.$$\n\n（1）两端关于 $x$ 求偏导（$y$ 视为常数）：\n$$z_x+\\dfrac{1}{z}z_x-e^{-x^2}=0,$$\n即 $z_x\\left(1+\\dfrac1z\\right)=e^{-x^2}$，故\n$$z_x=\\dfrac{z}{z+1}\\,e^{-x^2}.$$\n\n（2）两端关于 $y$ 求偏导（$x$ 视为常数），注意 $\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$：\n$$z_y+\\dfrac{1}{z}z_y-\\left(-e^{-y^2}\\right)=0,$$\n即 $z_y\\left(1+\\dfrac1z\\right)=-e^{-y^2}$，故\n$$z_y=-\\dfrac{z}{z+1}\\,e^{-y^2}.$$\n\n（3）两式相加：\n$$\\dfrac{\\partial z}{\\partial x}+\\dfrac{\\partial z}{\\partial y}=\\dfrac{z}{z+1}\\,e^{-x^2}-\\dfrac{z}{z+1}\\,e^{-y^2}=\\dfrac{z}{z+1}\\left(e^{-x^2}-e^{-y^2}\\right).$$\n\n对照选项，选 A。",
+      "wrong_options": {
+        "B": "误把 $z_y$ 的符号取成正号（漏掉变下限求导的负号），得到两项相加，错。",
+        "C": "整体多乘了一个负号，符号全反，错。",
+        "D": "既把 $z_y$ 符号弄错、又整体反号，结果是两项之和的相反数，错。"
+      },
+      "pitfalls": [
+        "变限积分对下限 $y$ 求导必须带负号：$\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$。",
+        "求偏导时把 $z$ 当成自变量函数，$\\ln z$ 求导要乘 $\\dfrac{1}{z}z_x$，不能漏掉链式因子。"
+      ],
+      "key_point": "隐函数两端分别对 $x,y$ 求偏导，变下限积分求导记得加负号，整理后相加。"
+    },
+    {
       "id": 2426,
       "paper": "数学二",
       "year": 2025,
@@ -30,98 +57,6 @@
         "$g$ 是乘积，需把变限积分与 $\\sin^2x$ 各自的等价无穷小相乘得主项，不可只看其中一个因子。"
       ],
       "key_point": "用等价无穷小定出函数在 $0$ 附近的最低次主项：偶次幂 $\\Rightarrow$ 极值点，奇次幂 $\\Rightarrow$ 拐点。"
-    },
-    {
-      "id": 2429,
-      "paper": "数学二",
-      "year": 2025,
-      "index": 5,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x, y)$ 连续，则 $\\displaystyle \\int_{-2}^2 d x \\int_{4-x^2}^4 f(x, y) \\mathrm{d} y=(\\quad)$",
-      "options": {
-        "A": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
-        "B": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
-        "C": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_2^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
-        "D": "$\\displaystyle 2 \\int_0^4 \\mathrm{~d} y \\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n本题考查二重积分**交换积分次序**。原式是先对 $y$ 后对 $x$ 的累次积分，关键是先画出积分区域 $D$，再把它改写成先对 $x$ 后对 $y$ 的形式。难点在于反解曲线 $y=4-x^2$ 得到 $x=\\pm\\sqrt{4-y}$ 时出现两支，需要按 $x$ 的正负把区域**分块**。\n\n【解答】\n\n由原积分知区域为\n$$D=\\\\{(x,y)\\mid -2\\le x\\le 2,\\\\ 4-x^2\\le y\\le 4\\\\}.$$\n\n曲线 $y=4-x^2$ 是开口向下、顶点为 $(0,4)$ 的抛物线，在 $x=\\pm2$ 处 $y=0$。因此 $D$ 是抛物线**上方**、直线 $y=4$ **下方**、且 $-2\\le x\\le 2$ 的那块区域。\n\n现改为先对 $x$ 积分。$y$ 的取值范围为 $0\\le y\\le 4$。对固定的 $y$，约束 $y\\ge 4-x^2$ 即 $x^2\\ge 4-y$，亦即\n$$|x|\\ge\\sqrt{4-y}.$$\n再结合 $-2\\le x\\le 2$，得 $x$ 的取值为两段：\n$$x\\in[-2,\\,-\\sqrt{4-y}]\\\\ \\cup\\\\ [\\sqrt{4-y},\\,2].$$\n\n于是\n$$\\int_{-2}^{2}dx\\int_{4-x^2}^{4}f(x,y)\\,dy=\\int_0^4\\Big[\\int_{-2}^{-\\sqrt{4-y}}f(x,y)\\,dx+\\int_{\\sqrt{4-y}}^{2}f(x,y)\\,dx\\Big]dy.$$\n\n与选项 A 完全吻合，故选 **A**。",
-      "wrong_options": {
-        "B": "把左支下限写成了 $-2$ 到 $\\sqrt{4-y}$，等于把抛物线内部（$|x|<\\sqrt{4-y}$）也算了进来，积分区域出错。",
-        "C": "第二段上下限写反为 $\\int_2^{\\sqrt{4-y}}$，积分限颠倒导致符号错误。",
-        "D": "误把区域当成关于 $y$ 轴对称的同一被积函数而提出系数 $2$；但 $f(x,y)$ 一般不是 $x$ 的偶函数，左右两支不能合并，错误。"
-      },
-      "pitfalls": [
-        "反解抛物线得 $x=\\pm\\sqrt{4-y}$ 有左右两支，区域是 $|x|\\ge\\sqrt{4-y}$ 的两块，不能漏掉负支。",
-        "被积函数 $f(x,y)$ 不一定关于 $x$ 为偶函数，左右两块不能简单地用系数 2 合并。"
-      ],
-      "key_point": "交换次序先画区域、再按曲线两支把 $x$ 拆成左右两段。"
-    },
-    {
-      "id": 2442,
-      "paper": "数学二",
-      "year": 2025,
-      "index": 17,
-      "type": "解答题",
-      "difficulty": 0,
-      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
-      "options": {},
-      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
-      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
-      "wrong_options": {},
-      "pitfalls": [
-        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
-        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
-        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
-      ],
-      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
-    },
-    {
-      "id": 2444,
-      "paper": "数学二",
-      "year": 2025,
-      "index": 21,
-      "type": "证明题",
-      "difficulty": 0,
-      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
-      "options": {},
-      "answer": "略",
-      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
-      "wrong_options": {},
-      "pitfalls": [
-        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
-        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
-        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
-      ],
-      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
-    },
-    {
-      "id": 2490,
-      "paper": "数学二",
-      "year": 2025,
-      "index": 1,
-      "type": "选择题",
-      "difficulty": 0,
-      "stem": "设函数 $z=z(x, y)$ 由 $z+\\ln z-\\int_y^x \\mathrm{e}^{-t^2} \\mathrm{~d} t=0$ 确定，则 $\\frac{\\partial z}{\\partial x}+\\frac{\\partial z}{\\partial y}=(\\quad)$",
-      "options": {
-        "A": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
-        "B": "$\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$",
-        "C": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}-\\mathrm{e}^{-y^2}\\right)$",
-        "D": "$-\\frac{z}{z+1}\\left(\\mathrm{e}^{-x^2}+\\mathrm{e}^{-y^2}\\right)$"
-      },
-      "answer": "A",
-      "analysis": "【分析】\n\n本题是由含变限积分的方程确定的隐函数求偏导。核心两步：一是对方程两端分别关于 $x$、$y$ 求偏导（把 $z$ 看成 $x,y$ 的函数，用复合函数链式法则）；二是处理变限积分 $\\int_y^x e^{-t^2}\\,dt$ 的求导——它关于上限 $x$ 求导得 $e^{-x^2}$，关于下限 $y$ 求导得 $-e^{-y^2}$（变下限要带负号，这是最易错处）。求出 $z_x,z_y$ 后直接相加即可。\n\n【解答】\n\n方程为\n$$z+\\ln z-\\int_y^x e^{-t^2}\\,dt=0.$$\n\n（1）两端关于 $x$ 求偏导（$y$ 视为常数）：\n$$z_x+\\dfrac{1}{z}z_x-e^{-x^2}=0,$$\n即 $z_x\\left(1+\\dfrac1z\\right)=e^{-x^2}$，故\n$$z_x=\\dfrac{z}{z+1}\\,e^{-x^2}.$$\n\n（2）两端关于 $y$ 求偏导（$x$ 视为常数），注意 $\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$：\n$$z_y+\\dfrac{1}{z}z_y-\\left(-e^{-y^2}\\right)=0,$$\n即 $z_y\\left(1+\\dfrac1z\\right)=-e^{-y^2}$，故\n$$z_y=-\\dfrac{z}{z+1}\\,e^{-y^2}.$$\n\n（3）两式相加：\n$$\\dfrac{\\partial z}{\\partial x}+\\dfrac{\\partial z}{\\partial y}=\\dfrac{z}{z+1}\\,e^{-x^2}-\\dfrac{z}{z+1}\\,e^{-y^2}=\\dfrac{z}{z+1}\\left(e^{-x^2}-e^{-y^2}\\right).$$\n\n对照选项，选 A。",
-      "wrong_options": {
-        "B": "误把 $z_y$ 的符号取成正号（漏掉变下限求导的负号），得到两项相加，错。",
-        "C": "整体多乘了一个负号，符号全反，错。",
-        "D": "既把 $z_y$ 符号弄错、又整体反号，结果是两项之和的相反数，错。"
-      },
-      "pitfalls": [
-        "变限积分对下限 $y$ 求导必须带负号：$\\dfrac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}$。",
-        "求偏导时把 $z$ 当成自变量函数，$\\ln z$ 求导要乘 $\\dfrac{1}{z}z_x$，不能漏掉链式因子。"
-      ],
-      "key_point": "隐函数两端分别对 $x,y$ 求偏导，变下限积分求导记得加负号，整理后相加。"
     },
     {
       "id": 2491,
@@ -178,6 +113,33 @@
         "D 项是 $0\\cdot\\infty$ 不定型，'高阶'不能随意平方分母，必须举反例确认其不成立。"
       ],
       "key_point": "判断 $A=o(B)$ 一律化为 $\\lim A/B=0$；用 $e^{g}-1\\sim g$ 处理 C，用反例否定 D。"
+    },
+    {
+      "id": 2429,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 5,
+      "type": "选择题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x, y)$ 连续，则 $\\displaystyle \\int_{-2}^2 d x \\int_{4-x^2}^4 f(x, y) \\mathrm{d} y=(\\quad)$",
+      "options": {
+        "A": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "B": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "C": "$\\displaystyle \\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x, y) \\mathrm{d} x+\\int_2^{\\sqrt{4-y}} f(x, y) \\mathrm{d} x\\right] \\mathrm{d} y$",
+        "D": "$\\displaystyle 2 \\int_0^4 \\mathrm{~d} y \\int_{\\sqrt{4-y}}^2 f(x, y) \\mathrm{d} x$"
+      },
+      "answer": "A",
+      "analysis": "【分析】\n\n本题考查二重积分**交换积分次序**。原式是先对 $y$ 后对 $x$ 的累次积分，关键是先画出积分区域 $D$，再把它改写成先对 $x$ 后对 $y$ 的形式。难点在于反解曲线 $y=4-x^2$ 得到 $x=\\pm\\sqrt{4-y}$ 时出现两支，需要按 $x$ 的正负把区域**分块**。\n\n【解答】\n\n由原积分知区域为\n$$D=\\\\{(x,y)\\mid -2\\le x\\le 2,\\\\ 4-x^2\\le y\\le 4\\\\}.$$\n\n曲线 $y=4-x^2$ 是开口向下、顶点为 $(0,4)$ 的抛物线，在 $x=\\pm2$ 处 $y=0$。因此 $D$ 是抛物线**上方**、直线 $y=4$ **下方**、且 $-2\\le x\\le 2$ 的那块区域。\n\n现改为先对 $x$ 积分。$y$ 的取值范围为 $0\\le y\\le 4$。对固定的 $y$，约束 $y\\ge 4-x^2$ 即 $x^2\\ge 4-y$，亦即\n$$|x|\\ge\\sqrt{4-y}.$$\n再结合 $-2\\le x\\le 2$，得 $x$ 的取值为两段：\n$$x\\in[-2,\\,-\\sqrt{4-y}]\\\\ \\cup\\\\ [\\sqrt{4-y},\\,2].$$\n\n于是\n$$\\int_{-2}^{2}dx\\int_{4-x^2}^{4}f(x,y)\\,dy=\\int_0^4\\Big[\\int_{-2}^{-\\sqrt{4-y}}f(x,y)\\,dx+\\int_{\\sqrt{4-y}}^{2}f(x,y)\\,dx\\Big]dy.$$\n\n与选项 A 完全吻合，故选 **A**。",
+      "wrong_options": {
+        "B": "把左支下限写成了 $-2$ 到 $\\sqrt{4-y}$，等于把抛物线内部（$|x|<\\sqrt{4-y}$）也算了进来，积分区域出错。",
+        "C": "第二段上下限写反为 $\\int_2^{\\sqrt{4-y}}$，积分限颠倒导致符号错误。",
+        "D": "误把区域当成关于 $y$ 轴对称的同一被积函数而提出系数 $2$；但 $f(x,y)$ 一般不是 $x$ 的偶函数，左右两支不能合并，错误。"
+      },
+      "pitfalls": [
+        "反解抛物线得 $x=\\pm\\sqrt{4-y}$ 有左右两支，区域是 $|x|\\ge\\sqrt{4-y}$ 的两块，不能漏掉负支。",
+        "被积函数 $f(x,y)$ 不一定关于 $x$ 为偶函数，左右两块不能简单地用系数 2 合并。"
+      ],
+      "key_point": "交换次序先画区域、再按曲线两支把 $x$ 拆成左右两段。"
     },
     {
       "id": 2494,
@@ -432,6 +394,25 @@
       "key_point": "把向量等式翻译成坐标方程：用线性无关比系数求基础解系，用右端的线性表示直接读特解。"
     },
     {
+      "id": 2442,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 17,
+      "type": "解答题",
+      "difficulty": 0,
+      "stem": "计算 $\\displaystyle \\int_0^1 \\frac{1}{(x+1)\\left(x^2-2 x+2\\right)} \\mathrm{d} x$",
+      "options": {},
+      "answer": "$\\dfrac{3}{10} \\ln 2+\\dfrac{\\pi}{10}$",
+      "analysis": "【分析】\n\n被积函数是有理函数，分母含一次因式 $x+1$ 与不可约二次因式 $x^2-2x+2=(x-1)^2+1$，标准做法是部分分式分解。一次因式对应常数分子，二次因式对应一次分子 $\\dfrac{Bx+C}{x^2-2x+2}$。分解后：一次因式部分积分出 $\\ln$；二次因式部分把分子凑成\"分母的导数 + 常数\"两块，前者积出 $\\ln$，后者配方后积出 $\\arctan$。最后用牛顿-莱布尼茨公式代入上下限。\n\n【解答】\n\n设\n\n$$\\dfrac{1}{(x+1)(x^2-2x+2)}=\\dfrac{A}{x+1}+\\dfrac{Bx+C}{x^2-2x+2},$$\n\n两边乘以分母得 $1=A(x^2-2x+2)+(Bx+C)(x+1)$。\n\n令 $x=-1$：$1=A(1+2+2)=5A$，故 $A=\\dfrac{1}{5}$。\n\n比较 $x^2$ 系数：$0=A+B$，故 $B=-\\dfrac{1}{5}$。\n\n比较常数项：$1=2A+C$，故 $C=1-\\dfrac{2}{5}=\\dfrac{3}{5}$。\n\n于是\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}+\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x.$$\n\n第一部分：\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{\\mathrm{d}x}{x+1}=\\dfrac{1}{5}\\big[\\ln(x+1)\\big]_0^1=\\dfrac{1}{5}\\ln 2.$$\n\n第二部分：把分子凑成分母导数。因 $(x^2-2x+2)'=2x-2$，故 $-x+3=-\\dfrac{1}{2}(2x-2)+2$，于是\n\n$$\\dfrac{1}{5}\\int_0^1\\dfrac{-x+3}{x^2-2x+2}\\,\\mathrm{d}x=\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x+2\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}\\right].$$\n\n其中\n\n$$\\int_0^1\\dfrac{2x-2}{x^2-2x+2}\\,\\mathrm{d}x=\\big[\\ln(x^2-2x+2)\\big]_0^1=\\ln 1-\\ln 2=-\\ln 2,$$\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x-1)^2+1}=\\big[\\arctan(x-1)\\big]_0^1=\\arctan 0-\\arctan(-1)=0-\\left(-\\dfrac{\\pi}{4}\\right)=\\dfrac{\\pi}{4}.$$\n\n代入：\n\n$$\\dfrac{1}{5}\\left[-\\dfrac{1}{2}\\cdot(-\\ln 2)+2\\cdot\\dfrac{\\pi}{4}\\right]=\\dfrac{1}{5}\\left(\\dfrac{1}{2}\\ln 2+\\dfrac{\\pi}{2}\\right)=\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}.$$\n\n合并两部分：\n\n$$\\int_0^1\\dfrac{\\mathrm{d}x}{(x+1)(x^2-2x+2)}=\\dfrac{1}{5}\\ln 2+\\dfrac{1}{10}\\ln 2+\\dfrac{\\pi}{10}=\\dfrac{3}{10}\\ln 2+\\dfrac{\\pi}{10}.$$",
+      "wrong_options": {},
+      "pitfalls": [
+        "二次因式 $x^2-2x+2$ 判别式 $<0$ 不可约，分子必须设成一次式 $Bx+C$，不能设常数。",
+        "凑 $\\arctan$ 前要先配方 $(x-1)^2+1$，并把分子拆成\"分母导数的倍数 + 常数\"两块，否则会漏掉 $\\arctan$ 项或算错系数。",
+        "$\\arctan(-1)=-\\dfrac{\\pi}{4}$，代下限时负号别丢。"
+      ],
+      "key_point": "有理函数积分：部分分式分解后，二次因式分子拆成\"分母导数 + 常数\"，分别积出 $\\ln$ 与 $\\arctan$。"
+    },
+    {
       "id": 2505,
       "paper": "数学二",
       "year": 2025,
@@ -487,6 +468,25 @@
         "别忘了极坐标雅可比 r，被积函数变为 r^2(cosθ−sinθ)^2·r=r^3(cosθ−sinθ)^2。"
       ],
       "key_point": "两圆公共区域用极坐标，半径取 min(4cosθ,4sinθ) 并以 θ=π/4 分段；借 y=x 对称性只算一半乘 2。"
+    },
+    {
+      "id": 2444,
+      "paper": "数学二",
+      "year": 2025,
+      "index": 21,
+      "type": "证明题",
+      "difficulty": 0,
+      "stem": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f^{\\prime}(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$ ，当 $x_1<x_2<x_3$ 时 , $\\displaystyle  \\frac{f\\left(x_2\\right)-f\\left(x_1\\right)}{x_2-x_1}<\\frac{f\\left(x_3\\right)-f\\left(x_2\\right)}{x_3-x_2}\r\n$",
+      "options": {},
+      "answer": "略",
+      "analysis": "【分析】\n\n本题是一个充要条件的双向证明，核心工具是拉格朗日中值定理。命题左边\"$f'(x)$ 在 $(a,b)$ 内严格单调增加\"，右边是\"差商递增\"：对 $x_1<x_2<x_3$，$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$（几何上即 $f$ 严格凸）。\n\n证必要性（$\\Rightarrow$）：对区间 $[x_1,x_2]$ 与 $[x_2,x_3]$ 分别用拉格朗日中值定理，得到两个中值点 $\\xi_1<\\xi_2$，再由 $f'$ 严格增比较两个差商。\n\n证充分性（$\\Leftarrow$）：要证 $f'$ 严格增，取任意 $s<t$，需证 $f'(s)<f'(t)$。在 $s$ 与 $t$ 之间插入中间点构造差商，利用差商递增不等式取极限（令端点趋于 $s$、$t$），把差商挤成导数。\n\n【解答】\n\n**必要性。** 设 $f'(x)$ 在 $(a,b)$ 内严格单调增加。任取 $x_1<x_2<x_3$。在 $[x_1,x_2]$ 上对 $f$ 用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$ 使\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\\xi_1);$$\n\n在 $[x_2,x_3]$ 上同理存在 $\\xi_2\\in(x_2,x_3)$ 使\n\n$$\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=f'(\\xi_2).$$\n\n因为 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，所以 $\\xi_1<x_2<\\xi_2$，即 $\\xi_1<\\xi_2$。由 $f'$ 严格单调增加得 $f'(\\xi_1)<f'(\\xi_2)$，即\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.$$\n\n必要性得证。\n\n**充分性。** 设对任意 $x_1<x_2<x_3$ 恒有\n\n$$\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}.\\qquad(\\ast)$$\n\n要证 $f'$ 在 $(a,b)$ 内严格单调增加，即任取 $s,t\\in(a,b)$，$s<t$，证明 $f'(s)<f'(t)$。\n\n取定一点 $c$ 满足 $s<c<t$。一方面，在 $(\\ast)$ 中令三点为 $x_1\\to s^{+}$ 附近的 $x$、中点 $c$、右点保持，先固定结构：对任意满足 $s<x<c$ 的 $x$，取三点 $s<x<c$ 应用 $(\\ast)$ 不便直接含 $s$ 端点，故采用如下取极限的方式。\n\n对任意 $x\\in(s,c)$，在三点组 $s<x<c$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(x)-f(s)}{x-s}<\\dfrac{f(c)-f(x)}{c-x}.$$\n\n令 $x\\to s^{+}$：左端极限为 $f'(s)$（导数定义），右端极限为 $\\dfrac{f(c)-f(s)}{c-s}$，由不等式取极限（非严格）得\n\n$$f'(s)\\le \\dfrac{f(c)-f(s)}{c-s}.\\qquad(1)$$\n\n类似地，对任意 $y\\in(c,t)$，在三点组 $c<y<t$ 上用 $(\\ast)$：\n\n$$\\dfrac{f(y)-f(c)}{y-c}<\\dfrac{f(t)-f(y)}{t-y},$$\n\n令 $y\\to t^{-}$，右端极限为 $f'(t)$，左端极限为 $\\dfrac{f(t)-f(c)}{t-c}$，取极限得\n\n$$\\dfrac{f(t)-f(c)}{t-c}\\le f'(t).\\qquad(2)$$\n\n又由 $(\\ast)$ 对三点 $s<c<t$ 直接给出严格不等式\n\n$$\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}.\\qquad(3)$$\n\n联立 $(1)(3)(2)$：\n\n$$f'(s)\\le\\dfrac{f(c)-f(s)}{c-s}<\\dfrac{f(t)-f(c)}{t-c}\\le f'(t),$$\n\n故 $f'(s)<f'(t)$。由 $s<t$ 的任意性，$f'(x)$ 在 $(a,b)$ 内严格单调增加。充分性得证。\n\n综上，$f'(x)$ 在 $(a,b)$ 内严格单调增加当且仅当对任意 $x_1<x_2<x_3$ 有 $\\dfrac{f(x_2)-f(x_1)}{x_2-x_1}<\\dfrac{f(x_3)-f(x_2)}{x_3-x_2}$。证毕。",
+      "wrong_options": {},
+      "pitfalls": [
+        "必要性中两个中值点必满足 $\\xi_1<x_2<\\xi_2$，这是\"严格小于\"的来源；若只写 $\\xi_1\\le\\xi_2$ 则推不出严格不等式。",
+        "充分性中对差商不等式取极限后只能得到非严格的 $\\le$（极限会把严格不等式弱化），所以中间必须再用一次三点 $s<c<t$ 的严格不等式 $(3)$ 来\"夹\"出严格 $f'(s)<f'(t)$。",
+        "充分性证 $f'$ 严格增不能直接用 $f''>0$（题目只给可导，未必二阶可导），必须回到差商与导数定义。"
+      ],
+      "key_point": "差商递增 $\\Leftrightarrow$ $f'$ 严格增：必要性用拉格朗日中值定理比较两中值点，充分性把差商取极限化为导数并用三点严格不等式夹出严格性。"
     },
     {
       "id": 2508,
